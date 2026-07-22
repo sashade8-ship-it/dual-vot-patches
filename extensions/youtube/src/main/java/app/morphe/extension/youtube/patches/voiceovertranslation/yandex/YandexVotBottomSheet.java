@@ -37,6 +37,9 @@ import java.lang.ref.WeakReference;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.settings.IntegerSetting;
+import app.morphe.extension.shared.settings.preference.SeekBarPreference;
+import app.morphe.extension.shared.settings.preference.SeekBarPreference.SeekBarConfig;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.shared.ui.SheetBottomDialog;
 import app.morphe.extension.youtube.patches.playback.speed.CustomPlaybackSpeedPatch;
@@ -197,10 +200,14 @@ public class YandexVotBottomSheet {
      */
     private static void addVolumeControl(Context context, LinearLayout parent,
                                          String label,
-                                         app.morphe.extension.shared.settings.Setting<Integer> setting,
+                                         IntegerSetting setting,
                                          java.util.function.Consumer<Integer> onChanged) {
         final int fgColor = Utils.getAppForegroundColor();
         final int initialValue = setting.get();
+        final SeekBarConfig config = SeekBarPreference.configFor(setting);
+        if (config == null) {
+            throw new IllegalStateException("No SeekBarConfig registered for " + setting.key);
+        }
 
         // Label
         TextView labelView = new TextView(context);
@@ -226,8 +233,8 @@ public class YandexVotBottomSheet {
 
         // SeekBar
         SeekBar seekBar = new SeekBar(context);
-        seekBar.setMax(100);
-        seekBar.setProgress(initialValue);
+        seekBar.setMax((config.max() - config.min()) / config.step());
+        seekBar.setProgress(SeekBarPreference.valueToProgress(config, initialValue));
         seekBar.getProgressDrawable().setColorFilter(
                 new PorterDuffColorFilter(fgColor, PorterDuff.Mode.SRC_IN));
         seekBar.getThumb().setColorFilter(
@@ -258,9 +265,9 @@ public class YandexVotBottomSheet {
 
         // Volume change callback
         java.util.function.Consumer<Integer> applyVolume = vol -> {
-            vol = Math.max(0, Math.min(100, vol));
+            vol = Math.max(config.min(), Math.min(config.max(), vol));
             setting.save(vol);
-            seekBar.setProgress(vol);
+            seekBar.setProgress(SeekBarPreference.valueToProgress(config, vol));
             valueText.setText(vol + "%");
             labelView.setText(label + ": " + vol + "%");
             onChanged.accept(vol);
@@ -269,7 +276,9 @@ public class YandexVotBottomSheet {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (fromUser) applyVolume.accept(progress);
+                if (fromUser) {
+                    applyVolume.accept(SeekBarPreference.progressToValue(config, progress));
+                }
             }
 
             @Override
@@ -279,8 +288,8 @@ public class YandexVotBottomSheet {
             public void onStopTrackingTouch(SeekBar seekBar) { }
         });
 
-        minusButton.setOnClickListener(v -> applyVolume.accept(setting.get() - 5));
-        plusButton.setOnClickListener(v -> applyVolume.accept(setting.get() + 5));
+        minusButton.setOnClickListener(v -> applyVolume.accept(setting.get() - config.step()));
+        plusButton.setOnClickListener(v -> applyVolume.accept(setting.get() + config.step()));
     }
 
     /**
@@ -442,4 +451,3 @@ public class YandexVotBottomSheet {
     }
 
 }
-

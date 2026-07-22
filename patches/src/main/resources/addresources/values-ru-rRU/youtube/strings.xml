@@ -1119,7 +1119,7 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_target_language_title">Язык перевода</string>
     <string name="dualvot_yandex_target_language_summary">Выберите язык для перевода</string>
     <string name="dualvot_yandex_translation_volume_title">Громкость перевода</string>
-    <string name="dualvot_yandex_translation_volume_summary">Громкость переведённой аудиодорожки (0-100). По умолчанию: 100</string>
+    <string name="dualvot_yandex_translation_volume_summary">Громкость переведённой аудиодорожки (0-120). Значения выше 100 включают дополнительное усиление. По умолчанию: 100</string>
     <string name="dualvot_yandex_original_audio_volume_title">Громкость оригинального аудио</string>
     <string name="dualvot_yandex_original_audio_volume_summary">Громкость оригинальной видеодорожки во время перевода (0-100). По умолчанию: 30</string>
     <string name="dualvot_yandex_audio_proxy_title">Прокси аудиопотока</string>

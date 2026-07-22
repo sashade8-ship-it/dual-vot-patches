@@ -634,6 +634,12 @@ public final class VotBottomSheet {
         seekRowParams.topMargin = Dim.dp16;
         seekRow.setLayoutParams(seekRowParams);
 
+        final boolean preciseOriginalVolume = setting == Settings.VOT_ORIGINAL_AUDIO_VOLUME;
+        final TextView minusButton = preciseOriginalVolume
+                ? makeVolumeStepButton(context, "−", fgColor)
+                : null;
+        if (minusButton != null) seekRow.addView(minusButton);
+
         SeekBar seekBar = new SeekBar(context);
         seekBar.setMax((config.max() - config.min()) / config.step());
         seekBar.setProgress(SeekBarPreference.valueToProgress(config, initialValue));
@@ -650,22 +656,58 @@ public final class VotBottomSheet {
         seekRow.addView(valueView, new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
+        final TextView plusButton = preciseOriginalVolume
+                ? makeVolumeStepButton(context, "+", fgColor)
+                : null;
+        if (plusButton != null) seekRow.addView(plusButton);
+
         outer.addView(seekRow);
+
+        final IntConsumer applyValue = requestedValue -> {
+            final int value = Math.max(config.min(), Math.min(config.max(), requestedValue));
+            seekBar.setProgress(SeekBarPreference.valueToProgress(config, value));
+            valueView.setText(SeekBarPreference.formatLabel(value, config));
+            onChanged.accept(value);
+        };
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar bar, int progress, boolean fromUser) {
                 if (fromUser) {
                     final int value = SeekBarPreference.progressToValue(config, progress);
-                    valueView.setText(SeekBarPreference.formatLabel(value, config));
-                    onChanged.accept(value);
+                    applyValue.accept(value);
                 }
             }
             @Override public void onStartTrackingTouch(SeekBar bar) { }
             @Override public void onStopTrackingTouch(SeekBar bar) { }
         });
 
+        if (minusButton != null && plusButton != null) {
+            minusButton.setOnClickListener(v -> applyValue.accept(setting.get() - 1));
+            plusButton.setOnClickListener(v -> applyValue.accept(setting.get() + 1));
+        }
+
         return outer;
+    }
+
+    private static TextView makeVolumeStepButton(Context context, String text, int fgColor) {
+        TextView button = new TextView(context);
+        button.setText(text);
+        button.setTextColor(fgColor);
+        button.setTextSize(22);
+        button.setGravity(Gravity.CENTER);
+        button.setClickable(true);
+        button.setFocusable(true);
+
+        ShapeDrawable background = new ShapeDrawable(new OvalShape());
+        background.getPaint().setColor(Color.argb(36,
+                Color.red(fgColor), Color.green(fgColor), Color.blue(fgColor)));
+        button.setBackground(background);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(Dim.dp36, Dim.dp36);
+        params.setMargins(Dim.dp4, 0, Dim.dp4, 0);
+        button.setLayoutParams(params);
+        return button;
     }
 
     private static int secondaryColor(int fg) {
