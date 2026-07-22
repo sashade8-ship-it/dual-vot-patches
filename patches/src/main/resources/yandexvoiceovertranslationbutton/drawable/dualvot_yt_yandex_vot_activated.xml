@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Active variant of the separate Yandex translation control. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFF5252"
+        android:pathData="M12.87,15.07L10.33,12.56l0.03,-0.03c1.74,-1.94 2.96,-4.17 3.71,-6.56L17,5L17,3L12,3L12,1L10,1L10,3L5,3L5,4.99h7.17c-0.66,1.88 -1.7,3.67 -3.1,5.19c-0.91,-1 -1.67,-2.08 -2.27,-3.19L4.8,6.99c0.73,1.63 1.73,3.17 2.99,4.56L2.7,16.6L4.11,18l5.07,-5.07l3.16,3.16zM18.5,8L16.5,8L12,20h2l1.12,-3h4.25l1.13,3h2zM15.88,15l1.37,-3.67L18.63,15z" />
+</vector>

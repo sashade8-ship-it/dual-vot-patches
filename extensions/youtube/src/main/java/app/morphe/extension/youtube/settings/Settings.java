@@ -545,6 +545,18 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting VOT_SHOW_HTTP_ERROR_DIALOG = new BooleanSetting("morphe_vot_show_http_error_dialog", TRUE);
     public static final BooleanSetting VOT_HIDE_EXPORT_WARNING = new BooleanSetting("morphe_vot_hide_export_warning", FALSE, false, false);
 
+    // Dual VoT - Yandex engine. Keep every key independent from the official
+    // caption-plus-TTS engine so users can enable both buttons safely.
+    public static final BooleanSetting DUAL_VOT_YANDEX_ENABLED = new BooleanSetting("dualvot_yandex_enabled", FALSE);
+    public static final StringSetting DUAL_VOT_YANDEX_SOURCE_LANGUAGE = new StringSetting("dualvot_yandex_source_language", "auto", false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final StringSetting DUAL_VOT_YANDEX_TARGET_LANGUAGE = new StringSetting("dualvot_yandex_target_language", "ru", false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final IntegerSetting DUAL_VOT_YANDEX_TRANSLATION_VOLUME = new IntegerSetting("dualvot_yandex_translation_volume", 100, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final IntegerSetting DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME = new IntegerSetting("dualvot_yandex_original_audio_volume", 30, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final BooleanSetting DUAL_VOT_YANDEX_AUDIO_PROXY_ENABLED = new BooleanSetting("dualvot_yandex_audio_proxy_enabled", TRUE, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final StringSetting DUAL_VOT_YANDEX_PROXY_URL = new StringSetting("dualvot_yandex_proxy_url", "vot-worker.eu.cc", false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final BooleanSetting DUAL_VOT_YANDEX_USE_LIVE_VOICES = new BooleanSetting("dualvot_yandex_use_live_voices", TRUE, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final StringSetting DUAL_VOT_YANDEX_OAUTH_TOKEN = new StringSetting("dualvot_yandex_oauth_token", "", false, parent(DUAL_VOT_YANDEX_ENABLED));
+
     // ReturnYoutubeDislike settings are declared in SharedYouTubeSettings, since they are shared with YouTube Music.
 
     // SponsorBlock
@@ -782,6 +794,10 @@ public class Settings extends SharedYouTubeSettings {
         SeekBarPreference.register(new SeekBarConfig(VOT_ORIGINAL_AUDIO_VOLUME,
                 0, 100, 10, "%"));
         SeekBarPreference.register(new SeekBarConfig(VOT_TRANSLATION_VOLUME,
+                0, 100, 10, "%"));
+        SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME,
+                0, 100, 10, "%"));
+        SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_TRANSLATION_VOLUME,
                 0, 100, 10, "%"));
         SeekBarPreference.register(new SeekBarConfig(VOT_MAX_SPEECH_RATE,
                 10, 25, 1, "x", 10));
