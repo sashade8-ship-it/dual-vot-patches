@@ -89,7 +89,10 @@ val yandexVoiceOverTranslationPatch = bytecodePatch(
                         tag = "app.morphe.extension.youtube.settings.preference.YandexVotOAuthPreference",
                         selectable = true,
                     ),
-                    SwitchPreference("dualvot_yandex_audio_proxy_enabled"),
+                    SwitchPreference(
+                        key = "dualvot_yandex_audio_proxy_enabled",
+                        titleKey = "dualvot_yandex_audio_proxy_title",
+                    ),
                     TextPreference("dualvot_yandex_proxy_url"),
                 )
             )
