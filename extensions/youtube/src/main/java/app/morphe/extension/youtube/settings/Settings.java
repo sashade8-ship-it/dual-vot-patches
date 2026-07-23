@@ -793,13 +793,13 @@ public class Settings extends SharedYouTubeSettings {
         SeekBarPreference.register(new SeekBarConfig(QUICK_ACTIONS_TOP_MARGIN,
                 0, 32, 1, "dp"));
         SeekBarPreference.register(new SeekBarConfig(VOT_ORIGINAL_AUDIO_VOLUME,
-                0, 100, 1, "%"));
+                0, 100, 5, "%"));
         SeekBarPreference.register(new SeekBarConfig(VOT_TRANSLATION_VOLUME,
-                0, 100, 10, "%"));
+                0, 100, 5, "%"));
         SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME,
                 0, 100, 1, "%"));
         SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_TRANSLATION_VOLUME,
-                0, 120, 1, "%"));
+                0, 100, 1, "%"));
         SeekBarPreference.register(new SeekBarConfig(VOT_MAX_SPEECH_RATE,
                 10, 25, 1, "x", 10));
     }

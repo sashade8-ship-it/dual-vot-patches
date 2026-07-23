@@ -24,6 +24,8 @@ import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
 public final class VoiceOverTranslationButton {
+    private static final Runnable STATE_REFRESH_CALLBACK =
+            VoiceOverTranslationButton::refreshActivatedState;
 
     @Nullable
     private static LegacyPlayerControlButton legacy;
@@ -36,8 +38,7 @@ public final class VoiceOverTranslationButton {
         try {
             if (RESTORE_OLD_PLAYER_BUTTONS || !Settings.VOT_ENABLED.get()) return;
 
-            VoiceOverTranslationCoordinator.addOnStateChangeCallback(
-                    VoiceOverTranslationButton::refreshActivatedState);
+            VoiceOverTranslationCoordinator.addOnStateChangeCallback(STATE_REFRESH_CALLBACK);
 
             ImageView button = PlayerOverlayButton.addButton(
                     controlsView,
@@ -62,8 +63,7 @@ public final class VoiceOverTranslationButton {
         try {
             if (!RESTORE_OLD_PLAYER_BUTTONS) return;
 
-            VoiceOverTranslationCoordinator.addOnStateChangeCallback(
-                    VoiceOverTranslationButton::refreshActivatedState);
+            VoiceOverTranslationCoordinator.addOnStateChangeCallback(STATE_REFRESH_CALLBACK);
 
             legacy = new LegacyPlayerControlButton(
                     controlsView,

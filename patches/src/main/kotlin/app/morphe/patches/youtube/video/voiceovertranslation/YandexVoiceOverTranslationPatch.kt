@@ -31,7 +31,6 @@ private val yandexVoiceOverTranslationResourcePatch = resourcePatch {
             ResourceGroup(
                 "drawable",
                 "dualvot_yt_yandex_vot.xml",
-                "dualvot_yt_yandex_vot_activated.xml",
             )
         )
     }

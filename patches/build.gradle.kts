@@ -2,12 +2,12 @@ group = "app.morphe"
 
 patches {
     about {
-        name = "Morphe Patches"
-        description = "Patches for Morphe"
-        source = "git@github.com:MorpheApp/morphe-patches.git"
-        author = "MorpheApp"
-        contact = "na"
-        website = "https://morphe.software"
+        name = "Dual VoT Patches"
+        description = "Morphe patches with Google/other and Yandex voice-over translation"
+        source = "https://github.com/sashade8-ship-it/dual-vot-patches.git"
+        author = "sashade8-ship-it"
+        contact = "https://github.com/sashade8-ship-it"
+        website = "https://github.com/sashade8-ship-it/dual-vot-patches"
         license = "GNU General Public License v3.0, with additional GPL section 7 requirements"
     }
 }

@@ -45,8 +45,6 @@
 
 package app.morphe.extension.youtube.videoplayer;
 
-import static app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS;
-
 import android.view.View;
 import android.widget.ImageView;
 
@@ -55,26 +53,23 @@ import androidx.annotation.Nullable;
 import java.lang.ref.WeakReference;
 
 import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.ResourceType;
-import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotBottomSheet;
 import app.morphe.extension.youtube.patches.voiceovertranslation.VoiceOverTranslationCoordinator;
 import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
-public class YandexVoiceOverTranslationButton {
-    @Nullable
-    private static LegacyPlayerControlButton legacy;
+public final class YandexVoiceOverTranslationButton {
+    private static final Runnable STATE_REFRESH_CALLBACK =
+            YandexVoiceOverTranslationButton::refreshActivatedState;
 
     @Nullable
     private static WeakReference<ImageView> overlayButtonRef;
 
     public static void initializeButton(View controlsView) {
         try {
-            if (RESTORE_OLD_PLAYER_BUTTONS || !Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
-            VoiceOverTranslationCoordinator.addOnStateChangeCallback(
-                    YandexVoiceOverTranslationButton::refreshActivatedState);
+            if (!Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
+            VoiceOverTranslationCoordinator.addOnStateChangeCallback(STATE_REFRESH_CALLBACK);
             ImageView button = PlayerOverlayButton.addButton(controlsView, "dualvot_yt_yandex_vot",
                     view -> {
                         VoiceOverTranslationCoordinator.toggleYandex();
@@ -91,26 +86,6 @@ public class YandexVoiceOverTranslationButton {
         }
     }
 
-    public static void initializeLegacyButton(View controlsView) {
-        try {
-            if (!RESTORE_OLD_PLAYER_BUTTONS) return;
-            VoiceOverTranslationCoordinator.addOnStateChangeCallback(
-                    YandexVoiceOverTranslationButton::refreshActivatedState);
-            legacy = new LegacyPlayerControlButton(controlsView, "dualvot_yandex_button", "YVOT",
-                    "dualvot_yt_yandex_vot", Settings.DUAL_VOT_YANDEX_ENABLED,
-                    view -> {
-                        VoiceOverTranslationCoordinator.toggleYandex();
-                        refreshActivatedState();
-                    },
-                    view -> {
-                        YandexVotBottomSheet.show(view.getContext());
-                        return true;
-                    });
-        } catch (Exception ex) {
-            Logger.printException(() -> "YandexVoiceOverTranslationButton initializeLegacyButton failure", ex);
-        }
-    }
-
     private static void refreshActivatedState() {
         Utils.verifyOnMainThread();
         try {
@@ -121,15 +96,8 @@ public class YandexVoiceOverTranslationButton {
             if (overlay != null) {
                 overlay.setImageAlpha(alpha);
             }
-            if (legacy != null) {
-                int drawableId = ResourceUtils.getIdentifierOrThrow(ResourceType.DRAWABLE,
-                        active ? "dualvot_yt_yandex_vot_activated" : "dualvot_yt_yandex_vot");
-                legacy.setIcon(drawableId);
-                legacy.setImageAlpha(alpha);
-            }
         } catch (Exception ex) {
             Logger.printException(() -> "refreshActivatedState failure", ex);
         }
     }
-
 }

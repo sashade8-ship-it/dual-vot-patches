@@ -208,7 +208,6 @@ public class YandexVotAuthWebViewDialog extends Dialog {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
-                Logger.printDebug(() -> "VotAuthWebView: shouldOverrideUrlLoading " + url);
 
                 // Intercept the callback URL — Yandex redirects here after auth
                 if (url.contains(CALLBACK_PATH)) {
@@ -293,4 +292,3 @@ public class YandexVotAuthWebViewDialog extends Dialog {
         return (int) (dp * density + 0.5f);
     }
 }
-

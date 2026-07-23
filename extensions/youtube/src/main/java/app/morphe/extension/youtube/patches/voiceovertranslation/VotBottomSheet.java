@@ -115,7 +115,7 @@ public final class VotBottomSheet {
         translationRow.setOnClickListener(v -> showTranslationServicePicker(context, mainRef[0]));
         refreshTranslation.run();
 
-        TextView title = makeTitle(context, str("morphe_vot_enabled_title"), fg);
+        TextView title = makeTitle(context, str("morphe_vot_screen_title"), fg);
         ((LinearLayout.LayoutParams) title.getLayoutParams()).setMargins(Dim.dp16, Dim.dp8, Dim.dp16, Dim.dp16);
         root.addView(title);
 
@@ -634,15 +634,14 @@ public final class VotBottomSheet {
         seekRowParams.topMargin = Dim.dp16;
         seekRow.setLayoutParams(seekRowParams);
 
-        final boolean preciseOriginalVolume = setting == Settings.VOT_ORIGINAL_AUDIO_VOLUME;
-        final TextView minusButton = preciseOriginalVolume
-                ? makeVolumeStepButton(context, "−", fgColor)
-                : null;
-        if (minusButton != null) seekRow.addView(minusButton);
+        final TextView minusButton = makeValueStepButton(context, "−", fgColor);
+        seekRow.addView(minusButton);
 
         SeekBar seekBar = new SeekBar(context);
-        seekBar.setMax((config.max() - config.min()) / config.step());
-        seekBar.setProgress(SeekBarPreference.valueToProgress(config, initialValue));
+        // Keep every integer position available so +/- can display exact values.
+        // User dragging is snapped separately to a coarser, convenient step.
+        seekBar.setMax(config.max() - config.min());
+        seekBar.setProgress(initialValue - config.min());
         seekBar.getProgressDrawable().setColorFilter(new PorterDuffColorFilter(fgColor, PorterDuff.Mode.SRC_IN));
         seekBar.getThumb().setColorFilter(new PorterDuffColorFilter(fgColor, PorterDuff.Mode.SRC_IN));
         seekRow.addView(seekBar, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
@@ -656,16 +655,14 @@ public final class VotBottomSheet {
         seekRow.addView(valueView, new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
-        final TextView plusButton = preciseOriginalVolume
-                ? makeVolumeStepButton(context, "+", fgColor)
-                : null;
-        if (plusButton != null) seekRow.addView(plusButton);
+        final TextView plusButton = makeValueStepButton(context, "+", fgColor);
+        seekRow.addView(plusButton);
 
         outer.addView(seekRow);
 
         final IntConsumer applyValue = requestedValue -> {
             final int value = Math.max(config.min(), Math.min(config.max(), requestedValue));
-            seekBar.setProgress(SeekBarPreference.valueToProgress(config, value));
+            seekBar.setProgress(value - config.min());
             valueView.setText(SeekBarPreference.formatLabel(value, config));
             onChanged.accept(value);
         };
@@ -674,7 +671,10 @@ public final class VotBottomSheet {
             @Override
             public void onProgressChanged(SeekBar bar, int progress, boolean fromUser) {
                 if (fromUser) {
-                    final int value = SeekBarPreference.progressToValue(config, progress);
+                    final int rawValue = config.min() + progress;
+                    final int dragStep = setting == Settings.VOT_MAX_SPEECH_RATE ? 1 : 5;
+                    final int value = config.min() + Math.round(
+                            (rawValue - config.min()) / (float) dragStep) * dragStep;
                     applyValue.accept(value);
                 }
             }
@@ -682,15 +682,13 @@ public final class VotBottomSheet {
             @Override public void onStopTrackingTouch(SeekBar bar) { }
         });
 
-        if (minusButton != null && plusButton != null) {
-            minusButton.setOnClickListener(v -> applyValue.accept(setting.get() - 1));
-            plusButton.setOnClickListener(v -> applyValue.accept(setting.get() + 1));
-        }
+        minusButton.setOnClickListener(v -> applyValue.accept(setting.get() - 1));
+        plusButton.setOnClickListener(v -> applyValue.accept(setting.get() + 1));
 
         return outer;
     }
 
-    private static TextView makeVolumeStepButton(Context context, String text, int fgColor) {
+    private static TextView makeValueStepButton(Context context, String text, int fgColor) {
         TextView button = new TextView(context);
         button.setText(text);
         button.setTextColor(fgColor);

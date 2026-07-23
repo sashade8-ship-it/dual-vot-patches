@@ -74,7 +74,7 @@ public class YandexVotBottomSheet {
 
             // --- Title ---
             TextView titleText = new TextView(context);
-            titleText.setText(str("dualvot_yandex_enabled_title"));
+            titleText.setText(str("dualvot_yandex_screen_title"));
             titleText.setTextColor(fgColor);
             titleText.setTextSize(16);
             titleText.setTypeface(Typeface.DEFAULT_BOLD);

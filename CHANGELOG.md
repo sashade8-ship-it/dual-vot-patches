@@ -1,3 +1,15 @@
+## 1.36.0-dualvot.1 (2026-07-23)
+
+### Dual voice-over translation
+
+* Add Yandex voice-over translation alongside the built-in Google and other
+  translation services.
+* Add two independent player buttons with mutual exclusion between engines.
+* Add separate Yandex settings and working original-audio volume control.
+* Add 1% adjustment buttons and 5% slider steps to the built-in volume
+  controls, plus matching speech-rate controls.
+* Base the integration on Morphe Patches 1.36.0.
+
 ## [1.36.0](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0...v1.36.0) (2026-07-23)
 
 ### 🐛 Bug Fixes

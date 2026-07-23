@@ -1,3 +1,30 @@
+# Dual VoT Patches
+
+Private test build of Morphe Patches that keeps the built-in Google/other
+voice-over translation and adds Yandex voice-over translation alongside it.
+
+## What is different
+
+- Two independent player buttons: Google/other services and Yandex.
+- Enabling one translation engine stops the other one.
+- Separate settings and volume controls for both engines.
+- Fine adjustment buttons and coarse slider steps in the built-in translation
+  controls.
+- Based on Morphe Patches `1.36.0`.
+
+This repository is currently private while the integration is being tested.
+For a private Morphe Manager source, use the pull request URL together with a
+GitHub PAT that can read this repository. Never put a PAT into a repository URL
+or commit it to Git.
+
+The project is derived from
+[MorpheApp/morphe-patches](https://github.com/MorpheApp/morphe-patches) and
+retains its license and attribution requirements. The Yandex integration is
+derived from
+[123jjck/morphe-patches-yavot](https://github.com/123jjck/morphe-patches-yavot).
+
+## Upstream patch catalogue
+
 <div align="center"> 
 <picture>
     <source

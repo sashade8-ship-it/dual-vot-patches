@@ -52,7 +52,6 @@ import android.content.Context;
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.PlaybackParams;
-import android.media.audiofx.LoudnessEnhancer;
 import android.os.Handler;
 import android.os.Looper;
 
@@ -90,8 +89,6 @@ public class YandexVoiceOverTranslationPatch {
     private static final Handler mainHandler = new Handler(Looper.getMainLooper());
 
     private static final AtomicReference<MediaPlayer> mediaPlayer = new AtomicReference<>(null);
-    private static final AtomicReference<LoudnessEnhancer> translationLoudnessEnhancer =
-            new AtomicReference<>(null);
     private static final AtomicBoolean isTranslating = new AtomicBoolean(false);
     private static final AtomicReference<String> currentTranslatedVideoId = new AtomicReference<>("");
     private static volatile boolean isPaused = false;
@@ -746,8 +743,8 @@ public class YandexVoiceOverTranslationPatch {
             mp.setDataSource(filePath);
             mp.setOnPreparedListener(player -> Utils.runOnMainThread(() -> {
                 translationStarting = false;
-                applyTranslationVolumeToPlayer(
-                        player, Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME.get());
+                float vol = Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME.get() / 100.0f;
+                player.setVolume(vol, vol);
                 long videoTime = VideoInformation.getVideoTime();
                 if (videoTime > 0) player.seekTo((int) videoTime);
                 if (VideoState.getCurrent() == VideoState.PLAYING) {
@@ -812,8 +809,8 @@ public class YandexVoiceOverTranslationPatch {
             mp.setOnPreparedListener(player -> Utils.runOnMainThread(() -> {
                 translationStarting = false;
                 mainHandler.removeCallbacks(proxyPrepareTimeoutRunnable);
-                applyTranslationVolumeToPlayer(
-                        player, Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME.get());
+                float vol = Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME.get() / 100.0f;
+                player.setVolume(vol, vol);
                 long videoTime = VideoInformation.getVideoTime();
                 if (videoTime > 0) player.seekTo((int) videoTime);
 
@@ -876,7 +873,6 @@ public class YandexVoiceOverTranslationPatch {
         waitingTimeSeconds = -1;
         translationGeneration++;
         deleteTempProxyFile();
-        releaseTranslationLoudnessEnhancer();
         MediaPlayer mp = mediaPlayer.getAndSet(null);
         if (mp != null) {
             try {
@@ -935,48 +931,9 @@ public class YandexVoiceOverTranslationPatch {
     public static void applyVolumeToCurrentPlayer(int volumePercent) {
         MediaPlayer mp = mediaPlayer.get();
         if (mp == null) return;
+        float vol = Math.max(0, Math.min(100, volumePercent)) / 100.0f;
         try {
-            applyTranslationVolumeToPlayer(mp, volumePercent);
-        } catch (Exception ignored) { }
-    }
-
-    /**
-     * MediaPlayer volume is capped at 1.0. For the optional 101-120% range,
-     * attach Android's per-session LoudnessEnhancer and apply the equivalent
-     * amplitude gain (up to about +1.6 dB at 120%).
-     */
-    private static void applyTranslationVolumeToPlayer(MediaPlayer player, int volumePercent) {
-        final int clampedPercent = Math.max(0, Math.min(120, volumePercent));
-        final float baseVolume = Math.min(100, clampedPercent) / 100.0f;
-        player.setVolume(baseVolume, baseVolume);
-
-        if (clampedPercent <= 100) {
-            releaseTranslationLoudnessEnhancer();
-            return;
-        }
-
-        try {
-            LoudnessEnhancer enhancer = translationLoudnessEnhancer.get();
-            if (enhancer == null) {
-                enhancer = new LoudnessEnhancer(player.getAudioSessionId());
-                translationLoudnessEnhancer.set(enhancer);
-            }
-            final int gainMillibels = (int) Math.round(
-                    2000.0 * Math.log10(clampedPercent / 100.0));
-            enhancer.setTargetGain(gainMillibels);
-            enhancer.setEnabled(true);
-        } catch (Exception ex) {
-            releaseTranslationLoudnessEnhancer();
-            Logger.printDebug(() -> "Yandex VoT loudness boost is unavailable", ex);
-        }
-    }
-
-    private static void releaseTranslationLoudnessEnhancer() {
-        LoudnessEnhancer enhancer = translationLoudnessEnhancer.getAndSet(null);
-        if (enhancer == null) return;
-        try {
-            enhancer.setEnabled(false);
-            enhancer.release();
+            mp.setVolume(vol, vol);
         } catch (Exception ignored) { }
     }
 

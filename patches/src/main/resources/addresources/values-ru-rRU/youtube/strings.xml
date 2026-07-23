@@ -319,9 +319,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_action_button_title">Переопределить кнопку и меню \"Скачать\"</string>
   <string name="morphe_external_downloader_action_button_summary">Использует выбранный вами сторонний загрузчик вместо встроенной функции загрузки YouTube</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
-  <string name="morphe_vot_screen_title">Перевод озвучивания</string>
-  <string name="morphe_vot_screen_summary">Читайте субтитры видео вслух с помощью встроенного преобразования текста в речь, синхронизированного с воспроизведением</string>
-  <string name="morphe_vot_enabled_title">Перевод озвучивания</string>
+  <string name="morphe_vot_screen_title">Перевод от Google и других сервисов</string>
+  <string name="morphe_vot_screen_summary">Перевод субтитров через Google и другие сервисы с синхронной озвучкой</string>
+  <string name="morphe_vot_enabled_title">Включить перевод от Google и других сервисов</string>
   <string name="morphe_vot_caption_language_title">Язык</string>
   <string name="morphe_vot_translation_service_title">Поставщик перевода</string>
   <string name="morphe_vot_original_audio_volume_title">Громкость оригинального аудио</string>
@@ -1109,18 +1109,18 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Исправляет проблему с не отображением отметки «Не нравится» и невозможностью скрыть кнопки управления видео
 
 Ограничение: Возвращается к старому стилю наложения «Ещё видео»"</string>
-    <string name="dualvot_yandex_screen_title">Яндекс-перевод озвучки</string>
-    <string name="dualvot_yandex_screen_summary">Настройки движка Яндекс-перевода и его кнопки в плеере</string>
-    <string name="dualvot_yandex_enabled_title">Включить Яндекс-перевод озвучки</string>
-    <string name="dualvot_yandex_enabled_summary">Закадровый перевод от Яндекса</string>
-    <string name="dualvot_yandex_enabled_summary_on">Закадровый перевод от Яндекса включён</string>
-    <string name="dualvot_yandex_enabled_summary_off">Закадровый перевод от Яндекса отключён</string>
+    <string name="dualvot_yandex_screen_title">Яндекс-перевод</string>
+    <string name="dualvot_yandex_screen_summary">Настройки Яндекс-перевода и его кнопки в плеере</string>
+    <string name="dualvot_yandex_enabled_title">Включить Яндекс-перевод</string>
+    <string name="dualvot_yandex_enabled_summary">Перевод от Яндекса</string>
+    <string name="dualvot_yandex_enabled_summary_on">Яндекс-перевод включён</string>
+    <string name="dualvot_yandex_enabled_summary_off">Яндекс-перевод отключён</string>
     <string name="dualvot_yandex_source_language_title">Язык источника</string>
     <string name="dualvot_yandex_source_language_summary">Выберите язык аудио видео</string>
     <string name="dualvot_yandex_target_language_title">Язык перевода</string>
     <string name="dualvot_yandex_target_language_summary">Выберите язык для перевода</string>
     <string name="dualvot_yandex_translation_volume_title">Громкость перевода</string>
-    <string name="dualvot_yandex_translation_volume_summary">Громкость переведённой аудиодорожки (0-120). Значения выше 100 включают дополнительное усиление. По умолчанию: 100</string>
+    <string name="dualvot_yandex_translation_volume_summary">Громкость переведённой аудиодорожки (0-100). По умолчанию: 100</string>
     <string name="dualvot_yandex_original_audio_volume_title">Громкость оригинального аудио</string>
     <string name="dualvot_yandex_original_audio_volume_summary">Громкость оригинальной видеодорожки во время перевода (0-100). По умолчанию: 30</string>
     <string name="dualvot_yandex_audio_proxy_title">Прокси аудиопотока</string>

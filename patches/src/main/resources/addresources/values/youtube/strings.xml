@@ -351,9 +351,9 @@ Tap here to open AiSlopList.com and see downloads for other platforms"</string>
     <string name="morphe_external_downloader_action_button_summary">Uses your chosen external downloader instead of YouTube\'s built-in download feature</string>
 
     <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
-    <string name="morphe_vot_screen_title">Voice over translation</string>
-    <string name="morphe_vot_screen_summary">Read video captions aloud using on-device text-to-speech, synchronized with playback</string>
-    <string name="morphe_vot_enabled_title">Voice over translation</string>
+    <string name="morphe_vot_screen_title">Google and other translations</string>
+    <string name="morphe_vot_screen_summary">Translate captions with Google or another service and read them aloud in sync with the video</string>
+    <string name="morphe_vot_enabled_title">Enable Google and other translations</string>
     <string name="morphe_vot_caption_language_title">Language</string>
     <string name="morphe_vot_translation_service_title">Translation provider</string>
     <string name="morphe_vot_original_audio_volume_title">Original audio volume</string>
@@ -1230,18 +1230,18 @@ Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_restore_old_video_action_bar_summary">"Fixes dislikes not shown and video action buttons cannot be hidden
 
 Limitation: Reverts to old style 'More videos' overlay"</string>
-    <string name="dualvot_yandex_screen_title">Yandex voice-over translation</string>
-    <string name="dualvot_yandex_screen_summary">Configure the Yandex translation engine and its player button</string>
-    <string name="dualvot_yandex_enabled_title">Enable Yandex voice-over translation</string>
-    <string name="dualvot_yandex_enabled_summary">Yandex voice-over translation</string>
-    <string name="dualvot_yandex_enabled_summary_on">Yandex voice-over translation is enabled</string>
-    <string name="dualvot_yandex_enabled_summary_off">Yandex voice-over translation is disabled</string>
+    <string name="dualvot_yandex_screen_title">Yandex translation</string>
+    <string name="dualvot_yandex_screen_summary">Configure Yandex translation and its player button</string>
+    <string name="dualvot_yandex_enabled_title">Enable Yandex translation</string>
+    <string name="dualvot_yandex_enabled_summary">Translation by Yandex</string>
+    <string name="dualvot_yandex_enabled_summary_on">Yandex translation is enabled</string>
+    <string name="dualvot_yandex_enabled_summary_off">Yandex translation is disabled</string>
     <string name="dualvot_yandex_source_language_title">Source language</string>
     <string name="dualvot_yandex_source_language_summary">Select the language of the video audio</string>
     <string name="dualvot_yandex_target_language_title">Target language</string>
     <string name="dualvot_yandex_target_language_summary">Select the language to translate to</string>
     <string name="dualvot_yandex_translation_volume_title">Translation volume</string>
-    <string name="dualvot_yandex_translation_volume_summary">Volume of the translated audio track (0-120). Values above 100 apply extra gain. Default: 100</string>
+    <string name="dualvot_yandex_translation_volume_summary">Volume of the translated audio track (0-100). Default: 100</string>
     <string name="dualvot_yandex_original_audio_volume_title">Original audio volume</string>
     <string name="dualvot_yandex_original_audio_volume_summary">Volume of the original video track when translation is playing (0-100). Default: 30</string>
     <string name="dualvot_yandex_audio_proxy_title">Proxy audio stream</string>
