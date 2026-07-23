@@ -18,6 +18,8 @@ public final class DescriptionComponentsFilter extends Filter {
 
     private static final String INFOCARDS_SECTION_PATH = "infocards_section.e";
 
+    private final StringFilterGroup hashtagSection;
+    private final ByteArrayFilterGroup hashtagSectionBuffer;
     private final StringFilterGroup macroMarkersCarousel;
     private final ByteArrayFilterGroupList macroMarkersCarouselGroupList = new ByteArrayFilterGroupList();
     private final StringFilterGroup playlistSection;
@@ -73,6 +75,16 @@ public final class DescriptionComponentsFilter extends Filter {
                         Settings.HIDE_FEATURED_VIDEOS_SECTION,
                         "structured_description_video_lockup"
                 )
+        );
+
+        hashtagSection = new StringFilterGroup(
+                Settings.HIDE_HASHTAG_SECTION,
+                "|CellType|ScrollableContainerType|"
+        );
+
+        hashtagSectionBuffer = new ByteArrayFilterGroup(
+                null,
+                "FEhashtag"
         );
 
         final StringFilterGroup howThisWasMadeSection = new StringFilterGroup(
@@ -166,6 +178,7 @@ public final class DescriptionComponentsFilter extends Filter {
                 correctionsSection,
                 courseProgressSection,
                 featuredSection,
+                hashtagSection,
                 howThisWasMadeSection,
                 hypePoints,
                 infoCardsSection,
@@ -195,12 +208,16 @@ public final class DescriptionComponentsFilter extends Filter {
             return false;
         }
 
-        if (matchedGroup == subscribeButton) {
-            return path.startsWith(INFOCARDS_SECTION_PATH);
-        }
-
         if (matchedGroup == featuredSection) {
             return featuredSectionGroupList.check(buffer).isFiltered();
+        }
+
+        if (matchedGroup == hashtagSection) {
+            return hashtagSectionBuffer.check(buffer).isFiltered();
+        }
+
+        if (matchedGroup == macroMarkersCarousel) {
+            return contentIndex == 0 && macroMarkersCarouselGroupList.check(buffer).isFiltered();
         }
 
         if (matchedGroup == playlistSection) {
@@ -208,12 +225,12 @@ public final class DescriptionComponentsFilter extends Filter {
             return Settings.HIDE_EXPLORE_SECTION.get() || playlistSectionGroupList.check(buffer).isFiltered();
         }
 
-        if (matchedGroup == macroMarkersCarousel) {
-            return contentIndex == 0 && macroMarkersCarouselGroupList.check(buffer).isFiltered();
-        }
-
         if (matchedGroup == shortsHowThisWasMadeSection) {
             return ShortsPlayerState.isOpen() && EngagementPanel.isDescription();
+        }
+
+        if (matchedGroup == subscribeButton) {
+            return path.startsWith(INFOCARDS_SECTION_PATH);
         }
 
         if (matchedGroup == videoDetails) {
