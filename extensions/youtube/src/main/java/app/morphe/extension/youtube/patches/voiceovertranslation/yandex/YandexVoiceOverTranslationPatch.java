@@ -54,6 +54,7 @@ import android.media.MediaPlayer;
 import android.media.PlaybackParams;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.SystemClock;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -63,6 +64,8 @@ import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,15 +106,16 @@ public class YandexVoiceOverTranslationPatch {
     };
 
     private static Runnable proxyPrepareTimeoutRunnable = () -> {};
-    private static Runnable onTranslationStateChangeCallback;
+    private static final Set<Runnable> translationStateChangeCallbacks =
+            new CopyOnWriteArraySet<>();
 
-    public static void setOnTranslationStateChangeCallback(Runnable r) {
-        onTranslationStateChangeCallback = r;
+    public static void addOnTranslationStateChangeCallback(Runnable callback) {
+        if (callback != null) translationStateChangeCallbacks.add(callback);
     }
 
     private static void notifyTranslationStateChanged() {
-        if (onTranslationStateChangeCallback != null) {
-            Utils.runOnMainThread(onTranslationStateChangeCallback);
+        for (Runnable callback : translationStateChangeCallbacks) {
+            Utils.runOnMainThread(callback);
         }
     }
 
@@ -134,6 +138,20 @@ public class YandexVoiceOverTranslationPatch {
 
     /** Remaining seconds while waiting for translation. -1 when not waiting. Updated for BottomSheet countdown. */
     public static volatile int waitingTimeSeconds = -1;
+    private static volatile long waitingDeadlineMs = -1;
+
+    private static void setWaitingTimeSeconds(int seconds) {
+        waitingTimeSeconds = seconds;
+        waitingDeadlineMs = seconds < 0
+                ? -1
+                : SystemClock.elapsedRealtime() + seconds * 1000L;
+    }
+
+    public static int getWaitingTimeSeconds() {
+        if (waitingTimeSeconds < 0 || waitingDeadlineMs < 0) return -1;
+        final long remainingMs = waitingDeadlineMs - SystemClock.elapsedRealtime();
+        return (int) Math.max(1, (remainingMs + 999L) / 1000L);
+    }
 
     /** Incremented on every new video or stop, invalidates in-flight async translation chains. */
     private static volatile long translationGeneration = 0;
@@ -188,7 +206,7 @@ public class YandexVoiceOverTranslationPatch {
 
         if (isTranslationActive()) {
             translationStarting = false;
-            waitingTimeSeconds = -1;
+            setWaitingTimeSeconds(-1);
             stopAudioPlayback();
             isTranslating.set(false);
             notifyTranslationStateChanged();
@@ -232,7 +250,7 @@ public class YandexVoiceOverTranslationPatch {
     public static void cancelTranslation() {
         translationGeneration++;
         translationStarting = false;
-        waitingTimeSeconds = -1;
+        setWaitingTimeSeconds(-1);
         stopAudioPlayback();
         isTranslating.set(false);
         VotOriginalVolumePatch.clearAudioMultiplier();
@@ -403,7 +421,7 @@ public class YandexVoiceOverTranslationPatch {
                     youtubeUrl, durationSeconds, sourceLang, targetLang, videoTitle, useLiveVoices);
             if (result == null) {
                 runOnUiIfCurrentGen(generation, () -> {
-                    waitingTimeSeconds = -1;
+                    setWaitingTimeSeconds(-1);
                     translationStarting = false;
                     refreshOriginalAudioVolume();
                     showToastShort(str("dualvot_yandex_playback_error"));
@@ -422,7 +440,7 @@ public class YandexVoiceOverTranslationPatch {
                     playAudioWithProxyFallback(videoId, result.audioUrl(), generation);
                 } else {
                     runOnUiIfCurrentGen(generation, () -> {
-                        waitingTimeSeconds = -1;
+                        setWaitingTimeSeconds(-1);
                         translationStarting = false;
                         refreshOriginalAudioVolume();
                         showToastShort(str("dualvot_yandex_playback_error"));
@@ -440,7 +458,7 @@ public class YandexVoiceOverTranslationPatch {
                     return;
                 }
                 runOnUiIfCurrentGen(generation, () -> {
-                    waitingTimeSeconds = -1;
+                    setWaitingTimeSeconds(-1);
                     translationStarting = false;
                     refreshOriginalAudioVolume();
                     showToastShort(str("dualvot_yandex_playback_error"));
@@ -451,7 +469,7 @@ public class YandexVoiceOverTranslationPatch {
                     if (oauthToken == null || oauthToken.isEmpty()) {
                         // No OAuth token configured for live voices — tell user to add one.
                         runOnUiIfCurrentGen(generation, () -> {
-                            waitingTimeSeconds = -1;
+                            setWaitingTimeSeconds(-1);
                             translationStarting = false;
                             refreshOriginalAudioVolume();
                             showToastShort(str("dualvot_yandex_auth_required"));
@@ -469,7 +487,7 @@ public class YandexVoiceOverTranslationPatch {
                 }
                 // Standard voices session failed — cannot proceed.
                 runOnUiIfCurrentGen(generation, () -> {
-                    waitingTimeSeconds = -1;
+                    setWaitingTimeSeconds(-1);
                     translationStarting = false;
                     refreshOriginalAudioVolume();
                     showToastShort(str("dualvot_yandex_playback_error"));
@@ -480,14 +498,14 @@ public class YandexVoiceOverTranslationPatch {
                 String oauth = useLiveVoices ? Settings.DUAL_VOT_YANDEX_OAUTH_TOKEN.get() : null;
                 YandexVotApiClient.sendEmptyAudio(youtubeUrl, translationId, oauth);
                 int pollWaitTime = result.remainingTime() > 0 ? result.remainingTime() : 63;
-                waitingTimeSeconds = pollWaitTime;
+                setWaitingTimeSeconds(pollWaitTime);
                 notifyTranslationStateChanged();
                 runOnUiIfCurrentGen(generation, () -> Utils.showToastLong(str("dualvot_yandex_stream_waiting", formatRemainingTime(pollWaitTime))));
                 pollTranslation(videoId, videoTitle, youtubeUrl, durationSeconds, sourceLang, targetLang,
                         pollWaitTime, useLiveVoices, generation, 0);
             } else {
                 int waitTime = result.remainingTime() > 0 ? result.remainingTime() : 63;
-                waitingTimeSeconds = waitTime;
+                setWaitingTimeSeconds(waitTime);
                 notifyTranslationStateChanged();
                 runOnUiIfCurrentGen(generation, () -> Utils.showToastLong(str("dualvot_yandex_stream_waiting", formatRemainingTime(waitTime))));
                 pollTranslation(videoId, videoTitle, youtubeUrl, durationSeconds, sourceLang, targetLang, waitTime, useLiveVoices, generation, 0);
@@ -601,14 +619,14 @@ public class YandexVoiceOverTranslationPatch {
                 int pollWaitTime = result.remainingTime() > 0 ? result.remainingTime() : 63;
                 Logger.printDebug(() -> "VOT audio requested (poll), waiting " + pollWaitTime + "s");
                 if (translationGeneration != generation) return;
-                waitingTimeSeconds = pollWaitTime;
+                setWaitingTimeSeconds(pollWaitTime);
                 notifyTranslationStateChanged();
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang,
                         pollWaitTime, useLiveVoices, generation, 0);
                 return;
             } else {
                 int pollWaitTime = result.remainingTime() > 0 ? result.remainingTime() : 63;
-                waitingTimeSeconds = pollWaitTime;
+                setWaitingTimeSeconds(pollWaitTime);
                 notifyTranslationStateChanged();
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang, pollWaitTime, useLiveVoices, generation, 0);
                 return;
@@ -631,7 +649,7 @@ public class YandexVoiceOverTranslationPatch {
 
     private static void startAudioPlayback(String videoId, String audioUrl, String fallbackUrl) {
         stopAudioPlayback();
-        waitingTimeSeconds = -1;
+        setWaitingTimeSeconds(-1);
         mainHandler.removeCallbacks(proxyPrepareTimeoutRunnable);
         if (isProxyUrl(audioUrl)) {
             Context ctx = Utils.getContext();
@@ -870,7 +888,7 @@ public class YandexVoiceOverTranslationPatch {
     public static void stopAudioPlayback() {
         mainHandler.removeCallbacks(pauseCheckRunnable);
         mainHandler.removeCallbacks(proxyPrepareTimeoutRunnable);
-        waitingTimeSeconds = -1;
+        setWaitingTimeSeconds(-1);
         translationGeneration++;
         deleteTempProxyFile();
         MediaPlayer mp = mediaPlayer.getAndSet(null);

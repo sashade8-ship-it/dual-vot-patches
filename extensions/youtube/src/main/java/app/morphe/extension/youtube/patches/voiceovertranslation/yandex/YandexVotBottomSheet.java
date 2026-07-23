@@ -50,6 +50,11 @@ import kotlin.jvm.functions.Function1;
 
 @SuppressWarnings("unused")
 public class YandexVotBottomSheet {
+    private static final Runnable STATUS_REFRESH_CALLBACK =
+            YandexVotBottomSheet::refreshStatusIfVisible;
+    private static final Runnable STATUS_COUNTDOWN_TICK =
+            YandexVotBottomSheet::refreshStatusIfVisible;
+
 
     private static WeakReference<SheetBottomDialog.SlideDialog> currentDialog;
     private static WeakReference<TextView> currentStatusText;
@@ -89,7 +94,9 @@ public class YandexVotBottomSheet {
             TextView statusText = new TextView(context);
             updateStatusText(statusText);
             currentStatusText = new WeakReference<>(statusText);
-            YandexVoiceOverTranslationPatch.setOnTranslationStateChangeCallback(YandexVotBottomSheet::refreshStatusIfVisible);
+            YandexVoiceOverTranslationPatch.addOnTranslationStateChangeCallback(
+                    STATUS_REFRESH_CALLBACK);
+            refreshStatusIfVisible();
             statusText.setTextColor(fgColor);
             statusText.setTextSize(14);
             statusText.setGravity(Gravity.CENTER);
@@ -143,6 +150,8 @@ public class YandexVotBottomSheet {
             PlayerType.getOnChange().addObserver(playerTypeObserver);
             dialog.setOnDismissListener(d -> {
                 PlayerType.getOnChange().removeObserver(playerTypeObserver);
+                TextView current = currentStatusText != null ? currentStatusText.get() : null;
+                if (current != null) current.removeCallbacks(STATUS_COUNTDOWN_TICK);
                 currentStatusText = null;
                 standardVoiceButton = null;
                 liveVoiceButton = null;
@@ -157,7 +166,11 @@ public class YandexVotBottomSheet {
 
     private static void updateStatusText(TextView statusText) {
         if (YandexVoiceOverTranslationPatch.translationStarting) {
-            statusText.setText(str("dualvot_yandex_stream_waiting"));
+            final int seconds = YandexVoiceOverTranslationPatch.getWaitingTimeSeconds();
+            statusText.setText(seconds >= 0
+                    ? str("dualvot_yandex_stream_waiting",
+                    YandexVoiceOverTranslationPatch.formatRemainingTime(seconds))
+                    : str("dualvot_yandex_stream_waiting_status"));
             statusText.setTextColor(Color.parseColor("#FFC107"));
         } else if (YandexVoiceOverTranslationPatch.isTranslationActive()) {
             statusText.setText(str("dualvot_yandex_stream_ready"));
@@ -171,7 +184,12 @@ public class YandexVotBottomSheet {
     private static void refreshStatusIfVisible() {
         TextView st = currentStatusText != null ? currentStatusText.get() : null;
         if (st != null) {
+            st.removeCallbacks(STATUS_COUNTDOWN_TICK);
             updateStatusText(st);
+            if (YandexVoiceOverTranslationPatch.translationStarting
+                    && YandexVoiceOverTranslationPatch.getWaitingTimeSeconds() >= 0) {
+                st.postDelayed(STATUS_COUNTDOWN_TICK, 1000L);
+            }
         }
         updateVoiceButtonCacheIndicators();
     }

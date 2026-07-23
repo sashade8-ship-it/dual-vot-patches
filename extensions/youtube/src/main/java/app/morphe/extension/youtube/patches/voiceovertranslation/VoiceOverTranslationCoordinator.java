@@ -36,7 +36,7 @@ public final class VoiceOverTranslationCoordinator {
     static {
         VoiceOverTranslationPatch.setOnTranslationStateChangeCallback(
                 VoiceOverTranslationCoordinator::onOfficialStateChanged);
-        YandexVoiceOverTranslationPatch.setOnTranslationStateChangeCallback(
+        YandexVoiceOverTranslationPatch.addOnTranslationStateChangeCallback(
                 VoiceOverTranslationCoordinator::onYandexStateChanged);
     }
 
@@ -47,12 +47,33 @@ public final class VoiceOverTranslationCoordinator {
     }
 
     public static void onVideoIdChanged(String videoId) {
-        currentVideoId = videoId;
+        final String newVideoId = videoId != null ? videoId : "";
+        if (newVideoId.isEmpty()) return;
+
+        final boolean hadVideo = !currentVideoId.isEmpty();
+        final boolean videoChanged = hadVideo && !newVideoId.equals(currentVideoId);
+        if (videoChanged) {
+            // A manually enabled translation belongs only to the video where it
+            // was started. Never carry ducking, speech, or the active button
+            // state into a different video opened from a minimized player/feed.
+            deactivateOfficial();
+            deactivateYandex();
+            activeEngine = Engine.NONE;
+            VotOriginalVolumePatch.clearAudioMultiplier();
+        }
+
+        currentVideoId = newVideoId;
         // The Yandex engine needs the id even while inactive so it can start from
         // the current video immediately after its button is pressed.
-        YandexVoiceOverTranslationPatch.onVideoIdChanged(videoId);
-        if (activeEngine == Engine.OFFICIAL) {
-            VoiceOverTranslationPatch.newVideoLoaded(videoId);
+        YandexVoiceOverTranslationPatch.onVideoIdChanged(newVideoId);
+
+        // Covers the rare case where the player button is pressed before the
+        // first video-id callback arrives.
+        if (!hadVideo && activeEngine == Engine.OFFICIAL) {
+            VoiceOverTranslationPatch.activateTranslation(newVideoId, currentVideoTimeMs);
+        }
+        if (videoChanged) {
+            notifyStateChanged();
         }
     }
 
@@ -79,13 +100,7 @@ public final class VoiceOverTranslationCoordinator {
         } else {
             deactivateYandex();
             activeEngine = Engine.OFFICIAL;
-            if (!VoiceOverTranslationPatch.isSessionEnabled()) {
-                VoiceOverTranslationPatch.toggleTranslation();
-            }
-            if (!currentVideoId.isEmpty()) {
-                VoiceOverTranslationPatch.newVideoLoaded(currentVideoId);
-                VoiceOverTranslationPatch.videoTimeChanged(currentVideoTimeMs);
-            }
+            VoiceOverTranslationPatch.activateTranslation(currentVideoId, currentVideoTimeMs);
         }
         notifyStateChanged();
     }
@@ -146,11 +161,7 @@ public final class VoiceOverTranslationCoordinator {
     }
 
     private static void deactivateOfficial() {
-        if (VoiceOverTranslationPatch.isSessionEnabled()) {
-            VoiceOverTranslationPatch.toggleTranslation();
-        } else {
-            VoiceOverTranslationPatch.interruptSpeech();
-        }
+        VoiceOverTranslationPatch.deactivateTranslation();
         VotOriginalVolumePatch.clearAudioMultiplier();
     }
 

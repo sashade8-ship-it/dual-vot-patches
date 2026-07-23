@@ -1,3 +1,11 @@
+## 1.36.0-dualvot.2 (2026-07-23)
+
+### Bug fixes
+
+* Restore reliable activation of the built-in Google/other translation engine.
+* Show a live Yandex translation countdown in the long-press menu.
+* Stop either translation engine and restore original audio when the video changes.
+
 ## 1.36.0-dualvot.1 (2026-07-23)
 
 ### Dual voice-over translation
