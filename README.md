@@ -10,7 +10,7 @@ voice-over translation and adds Yandex voice-over translation alongside it.
 - Separate settings and volume controls for both engines.
 - Fine adjustment buttons and coarse slider steps in the built-in translation
   controls.
-- Based on Morphe Patches `1.36.0`.
+- Based on Morphe Patches `1.37.0-dev.2`.
 
 This repository is currently private while the integration is being tested.
 For a private Morphe Manager source, use the pull request URL together with a
@@ -62,7 +62,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.36.0](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.36.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;131 patches total
+> **[v1.37.0-dev.2](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;131 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;73 patches</summary>
 <br>
@@ -136,7 +136,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Return YouTube Dislike](#return-youtube-dislike) | Adds an option to show the dislike count of videos with Return YouTube Dislike. |  |
 | [Sanitize sharing links](#sanitize-sharing-links) | Removes the tracking query parameters from shared links. |  |
 | [Save to watch later](#save-to-watch-later) | Adds an option to display save to watch later button in the video player. |  |
-| [Seekbar](#seekbar) | Adds options to disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, enabling seeking in livestreams, and expanding the livestream DVR duration. |  |
+| [Seekbar](#seekbar) | Adds options to show old seekbar thumbnails, disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, enabling seeking in livestreams, and expanding the livestream DVR duration. |  |
 | [Settings menu filter](#settings-menu-filter) | Adds an option to hide items on the standard YouTube settings screen by their visible name. |  |
 | [Shorts autoplay](#shorts-autoplay) | Adds options to automatically play the next Short. |  |
 | [SponsorBlock](#sponsorblock) | Adds options to enable and configure SponsorBlock, which can skip undesired video segments such as sponsored content. |  |

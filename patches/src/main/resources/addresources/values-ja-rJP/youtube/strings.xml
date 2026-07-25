@@ -454,6 +454,9 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">すべてのライブ配信で DVR を有効化</string>
   <string name="morphe_livestream_dvr_summary">本来はシーク機能が制限される場合も含め、すべてのライブ配信でシーク機能が利用可能になります</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
+  <string name="morphe_seekbar_thumbnail_preview_title">シーク中のサムネイルをシークバーの上に表示</string>
+  <string name="morphe_seekbar_thumbnail_preview_summary">シークバーをドラッグしてシークしているときにシーク位置の映像のサムネイルを縮小してシークバーの上に表示します</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"[すべてのライブ配信で DVR を有効化] をオンにしたときに正常に動作しない場合があります
 
@@ -1072,23 +1075,17 @@ Automotive レイアウト
 • HDR 動画では AVC は使用されない
 • 一部のデバイスでは AVC を強制できない"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">この機能を使用するには、[動画ストリームを偽装] で Android VR または Android Studio を選択してください</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">画質の詳細設定メニューを開く</string>
   <string name="morphe_advanced_video_quality_menu_summary">画質メニューをスキップして画質の「詳細設定」メニューを直接開きます</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Premium 画質を非表示</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
-  <string name="morphe_prioritize_video_quality_title">画質を優先</string>
-  <string name="morphe_prioritize_video_quality_summary">コーデックの圧縮効率よりも利用可能な最高画質を優先します</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Android VR で AV1 を許可</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Android VR クライアントを使用するときに AV1 のソフトウェア デコードを許可します</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"この設定を有効にすると、AV1 のソフトウェア デコードが使用される場合があります。
 
 AV1 での動画再生は、カクつくまたはコマ落ちが発生する可能性があります。"</string>
   <string name="morphe_spoof_video_streams_about_title">偽装による副作用</string>
-  <string name="morphe_spoof_video_streams_about_playback_failure">• 動画が 01:00 で停止する可能性がある。また、一部の地域では再生できない可能性がある</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• フライアウト メニューに「音声トラック」が表示されない</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 コーデックが利用できない</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR 動画では没入モードが利用できない</string>

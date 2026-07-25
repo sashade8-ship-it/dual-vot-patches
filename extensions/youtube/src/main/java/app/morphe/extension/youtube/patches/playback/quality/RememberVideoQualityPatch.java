@@ -142,8 +142,8 @@ public class RememberVideoQualityPatch {
      * Injection point.
      */
     public static boolean overridePlatypusVideoQualityFlag(boolean originalValue) {
-        int preferredQuality = getDefaultQualityResolution();
-        if (preferredQuality != VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE && originalValue) {
+        if ((Settings.VIDEO_QUALITY_DEFAULT_WIFI.get() != VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE ||
+                Settings.VIDEO_QUALITY_DEFAULT_MOBILE.get() != VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE) && originalValue) {
             Logger.printDebug(() -> "overridePlatypusVideoQualityFlag new value: " + false);
             return false;
         }

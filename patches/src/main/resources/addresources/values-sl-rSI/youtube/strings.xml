@@ -453,6 +453,7 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Omogoči DVR za pretočni video</string>
   <string name="morphe_livestream_dvr_summary">Omogoča predvajanje v živo tudi za prenose, ki sicer to preprečujejo</string>
+  <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Omogočanje snemanja v živo' morda ni na voljo
 
@@ -1072,23 +1073,17 @@ Omejitve:
 • HDR videoposnetki ne bodo uporabljali AVC
 • Nekatere naprave ne morejo prisiliti AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Za uporabo te funkcije nastavite »Ponarejanje video tokov« na Android VR ali Android Studio</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Odpre napredno možnost nastavitve kakovosti</string>
   <string name="morphe_advanced_video_quality_menu_summary">Preskoči meni za izbiro kakovosti in neposredno odpre napredno kakovost</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Skrij možnosti premium kakovosti</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
-  <string name="morphe_prioritize_video_quality_title">Dajte prednost kakovosti videa</string>
-  <string name="morphe_prioritize_video_quality_summary">Prednostno obravnava najvišje razpoložljive video kakovosti pred učinkovitostjo kodeka</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Omogoči Android VR AV1</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Omogoča dekodiranje videa AV1 pri uporabi odjemalca Android VR</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Ta nastavitev lahko omogoči programsko dekodiranje AV1.
 
 Predvajanje AV1 videa se lahko zamika ali izgublja okvirje."</string>
   <string name="morphe_spoof_video_streams_about_title">Stranski učinki navideznega pretakanja</string>
-  <string name="morphe_spoof_video_streams_about_playback_failure">• Video se lahko ustavi ob 1:00 ali pa morda ni na voljo v nekaterih regijah</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Manjka meni za zvočno progo</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ni kodeka AV1 videa</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR poglobljeni način ni na voljo</string>
