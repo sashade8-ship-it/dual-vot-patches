@@ -2,6 +2,9 @@
 .gradle/
 build/
 
+# Local toolchains used only for development builds.
+.tools/
+
 # Local configuration file (sdk path, etc.)
 local.properties
 

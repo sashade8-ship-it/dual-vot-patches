@@ -18,12 +18,14 @@ import java.lang.ref.WeakReference;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
-import app.morphe.extension.youtube.patches.voiceovertranslation.VoiceOverTranslationPatch;
+import app.morphe.extension.youtube.patches.voiceovertranslation.VoiceOverTranslationCoordinator;
 import app.morphe.extension.youtube.patches.voiceovertranslation.VotBottomSheet;
 import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
 public final class VoiceOverTranslationButton {
+    private static final Runnable STATE_REFRESH_CALLBACK =
+            VoiceOverTranslationButton::refreshActivatedState;
 
     @Nullable
     private static LegacyPlayerControlButton legacy;
@@ -36,14 +38,13 @@ public final class VoiceOverTranslationButton {
         try {
             if (RESTORE_OLD_PLAYER_BUTTONS || !Settings.VOT_ENABLED.get()) return;
 
-            VoiceOverTranslationPatch.setOnTranslationStateChangeCallback(
-                    VoiceOverTranslationButton::refreshActivatedState);
+            VoiceOverTranslationCoordinator.addOnStateChangeCallback(STATE_REFRESH_CALLBACK);
 
             ImageView button = PlayerOverlayButton.addButton(
                     controlsView,
                     "morphe_yt_vot_bold",
                     view -> {
-                        VoiceOverTranslationPatch.toggleTranslation();
+                        VoiceOverTranslationCoordinator.toggleOfficial();
                         refreshActivatedState();
                     },
                     view -> {
@@ -62,8 +63,7 @@ public final class VoiceOverTranslationButton {
         try {
             if (!RESTORE_OLD_PLAYER_BUTTONS) return;
 
-            VoiceOverTranslationPatch.setOnTranslationStateChangeCallback(
-                    VoiceOverTranslationButton::refreshActivatedState);
+            VoiceOverTranslationCoordinator.addOnStateChangeCallback(STATE_REFRESH_CALLBACK);
 
             legacy = new LegacyPlayerControlButton(
                     controlsView,
@@ -72,7 +72,7 @@ public final class VoiceOverTranslationButton {
                     "morphe_yt_vot",
                     Settings.VOT_ENABLED,
                     view -> {
-                        VoiceOverTranslationPatch.toggleTranslation();
+                        VoiceOverTranslationCoordinator.toggleOfficial();
                         refreshActivatedState();
                     },
                     view -> {
@@ -88,7 +88,7 @@ public final class VoiceOverTranslationButton {
     private static void refreshActivatedState() {
         Utils.verifyOnMainThread();
         try {
-            final int alpha = VoiceOverTranslationPatch.isSessionEnabled() ? 255 : 128;
+            final int alpha = VoiceOverTranslationCoordinator.isOfficialActive() ? 255 : 128;
             WeakReference<ImageView> ref = overlayButtonRef;
             ImageView overlay = ref != null ? ref.get() : null;
             if (overlay != null) {

@@ -66,7 +66,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting DISABLE_HDR_VIDEO = new BooleanSetting("morphe_disable_hdr_video", FALSE);
     public static final BooleanSetting FORCE_AVC_CODEC = new BooleanSetting("morphe_force_avc_codec", FALSE, true, "morphe_force_avc_codec_user_dialog_message");
     public static final BooleanSetting HIDE_PREMIUM_VIDEO_QUALITY = new BooleanSetting("morphe_hide_premium_video_quality", TRUE, true);
-    public static final BooleanSetting PRIORITIZE_VIDEO_QUALITY = new BooleanSetting("morphe_prioritize_video_quality", FALSE, true);
+    public static final BooleanSetting VIDEO_QUALITY_PRIORITIZE = new BooleanSetting("morphe_video_quality_prioritize", TRUE, true, "morphe_video_quality_prioritize_dialog");
     public static final IntegerSetting VIDEO_QUALITY_DEFAULT_WIFI = new IntegerSetting("morphe_video_quality_default_wifi", -2);
     public static final IntegerSetting VIDEO_QUALITY_DEFAULT_MOBILE = new IntegerSetting("morphe_video_quality_default_mobile", -2);
     public static final BooleanSetting REMEMBER_VIDEO_QUALITY_LAST_SELECTED = new BooleanSetting("morphe_remember_video_quality_last_selected", FALSE);
@@ -318,6 +318,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_EXPLORE_PODCAST_SECTION = new BooleanSetting("morphe_hide_explore_podcast_section", FALSE, parentNot(HIDE_EXPLORE_SECTION));
     public static final BooleanSetting HIDE_FEATURED_PLACES_SECTION = new BooleanSetting("morphe_hide_featured_places_section", FALSE);
     public static final BooleanSetting HIDE_GAMING_SECTION = new BooleanSetting("morphe_hide_gaming_section", FALSE);
+    public static final BooleanSetting HIDE_HASHTAG_SECTION = new BooleanSetting("morphe_hide_hashtag_section", FALSE);
     public static final BooleanSetting HIDE_HOW_THIS_WAS_MADE_SECTION = new BooleanSetting("morphe_hide_how_this_was_made_section", FALSE);
     public static final BooleanSetting HIDE_HYPE_POINTS = new BooleanSetting("morphe_hide_hype_points", FALSE);
     public static final BooleanSetting HIDE_INFO_CARDS_SECTION = new BooleanSetting("morphe_hide_info_cards_section", FALSE);
@@ -485,6 +486,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting FULLSCREEN_LARGE_SEEKBAR = new BooleanSetting("morphe_fullscreen_large_seekbar", FALSE);
     public static final BooleanSetting HIDE_TIMESTAMP = new BooleanSetting("morphe_hide_timestamp", FALSE);
     public static final BooleanSetting LIVESTREAM_DVR = new BooleanSetting("morphe_livestream_dvr", FALSE);
+    public static final BooleanSetting THUMBNAIL_PREVIEW = new BooleanSetting("morphe_seekbar_thumbnail_preview", TRUE);
     public static final BooleanSetting EXPAND_LIVESTREAM_DVR_DURATION = new BooleanSetting("morphe_expand_livestream_dvr_duration", FALSE);
     public static final BooleanSetting SLIDE_TO_SEEK = new BooleanSetting("morphe_slide_to_seek", FALSE, true);
     public static final BooleanSetting TAP_TO_SEEK = new BooleanSetting("morphe_tap_to_seek", FALSE);
@@ -500,7 +502,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting EXTERNAL_BROWSER = new BooleanSetting("morphe_external_browser", TRUE, true);
     public static final BooleanSetting SPOOF_DEVICE_DIMENSIONS = new BooleanSetting("morphe_spoof_device_dimensions", FALSE, true,
             "morphe_spoof_device_dimensions_user_dialog_message");
-    public static final EnumSetting<ClientType> SPOOF_VIDEO_STREAMS_CLIENT_TYPE = new EnumSetting<>("morphe_spoof_video_streams_client_type", ClientType.TV, true, parent(SPOOF_VIDEO_STREAMS));
+    public static final EnumSetting<ClientType> SPOOF_VIDEO_STREAMS_CLIENT_TYPE = new EnumSetting<>("morphe_spoof_video_streams_client_type", ClientType.VISIONOS_1_02, true, parent(SPOOF_VIDEO_STREAMS));
     public static final BooleanSetting SPOOF_VIDEO_STREAMS_AV1 = new BooleanSetting("morphe_spoof_video_streams_av1", FALSE, true,
             "morphe_spoof_video_streams_av1_user_dialog_message", new SpoofClientAv1Availability());
 
@@ -544,6 +546,18 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting VOT_USE_NATIVE_TTS = new BooleanSetting("morphe_vot_use_native_tts", FALSE, parent(VOT_ENABLED));
     public static final BooleanSetting VOT_SHOW_HTTP_ERROR_DIALOG = new BooleanSetting("morphe_vot_show_http_error_dialog", TRUE);
     public static final BooleanSetting VOT_HIDE_EXPORT_WARNING = new BooleanSetting("morphe_vot_hide_export_warning", FALSE, false, false);
+
+    // Dual VoT - Yandex engine. Keep every key independent from the official
+    // caption-plus-TTS engine so users can enable both buttons safely.
+    public static final BooleanSetting DUAL_VOT_YANDEX_ENABLED = new BooleanSetting("dualvot_yandex_enabled", FALSE);
+    public static final StringSetting DUAL_VOT_YANDEX_SOURCE_LANGUAGE = new StringSetting("dualvot_yandex_source_language", "auto", false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final StringSetting DUAL_VOT_YANDEX_TARGET_LANGUAGE = new StringSetting("dualvot_yandex_target_language", "ru", false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final IntegerSetting DUAL_VOT_YANDEX_TRANSLATION_VOLUME = new IntegerSetting("dualvot_yandex_translation_volume", 100, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final IntegerSetting DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME = new IntegerSetting("dualvot_yandex_original_audio_volume", 30, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final BooleanSetting DUAL_VOT_YANDEX_AUDIO_PROXY_ENABLED = new BooleanSetting("dualvot_yandex_audio_proxy_enabled", TRUE, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final StringSetting DUAL_VOT_YANDEX_PROXY_URL = new StringSetting("dualvot_yandex_proxy_url", "vot-worker.eu.cc", false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final BooleanSetting DUAL_VOT_YANDEX_USE_LIVE_VOICES = new BooleanSetting("dualvot_yandex_use_live_voices", TRUE, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final StringSetting DUAL_VOT_YANDEX_OAUTH_TOKEN = new StringSetting("dualvot_yandex_oauth_token", "", false, parent(DUAL_VOT_YANDEX_ENABLED));
 
     // ReturnYoutubeDislike settings are declared in SharedYouTubeSettings, since they are shared with YouTube Music.
 
@@ -744,8 +758,9 @@ public class Settings extends SharedYouTubeSettings {
             SPOOF_APP_VERSION.resetToDefault();
         }
 
-        // VR 1.74 is not selectable in the settings, and it's selected by spoof stream patch if needed.
-        if (SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get() == ClientType.ANDROID_VR_1_74) {
+        // Android VR 1.74 and visionOS 1.03 are not selectable in the settings and are selected by spoof stream patch if needed.
+        ClientType client = SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get();
+        if (client == ClientType.ANDROID_VR_1_74 || client == ClientType.VISIONOS_1_03) {
             SPOOF_VIDEO_STREAMS_CLIENT_TYPE.resetToDefault();
         }
 
@@ -780,9 +795,13 @@ public class Settings extends SharedYouTubeSettings {
         SeekBarPreference.register(new SeekBarConfig(QUICK_ACTIONS_TOP_MARGIN,
                 0, 32, 1, "dp"));
         SeekBarPreference.register(new SeekBarConfig(VOT_ORIGINAL_AUDIO_VOLUME,
-                0, 100, 10, "%"));
+                0, 100, 5, "%"));
         SeekBarPreference.register(new SeekBarConfig(VOT_TRANSLATION_VOLUME,
-                0, 100, 10, "%"));
+                0, 100, 5, "%"));
+        SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME,
+                0, 100, 1, "%"));
+        SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_TRANSLATION_VOLUME,
+                0, 100, 1, "%"));
         SeekBarPreference.register(new SeekBarConfig(VOT_MAX_SPEECH_RATE,
                 10, 25, 1, "x", 10));
     }
