@@ -10,7 +10,7 @@ voice-over translation and adds Yandex voice-over translation alongside it.
 - Separate settings and volume controls for both engines.
 - Fine adjustment buttons and coarse slider steps in the built-in translation
   controls.
-- Based on Morphe Patches `1.37.0-dev.2`.
+- Based on stable Morphe Patches `1.37.0`.
 
 This repository is currently private while the integration is being tested.
 For a private Morphe Manager source, use the pull request URL together with a
@@ -62,7 +62,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.37.0-dev.2](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;131 patches total
+> **[v1.37.0](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;131 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;73 patches</summary>
 <br>
