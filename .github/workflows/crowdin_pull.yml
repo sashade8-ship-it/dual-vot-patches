@@ -47,7 +47,7 @@ jobs:
           clean: true
 
       - name: Cache Gradle
-        uses: burrunan/gradle-cache-action@v3
+        uses: gradle/actions/setup-gradle@v6
 
       # Step 2: Run string checks on the crowdin branch
       - name: Check strings on crowdin
