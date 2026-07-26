@@ -542,9 +542,66 @@ public class YandexVotApiClient {
         }
     }
 
+    public static boolean sendAudio(
+            String videoUrl,
+            String translationId,
+            String fileId,
+            byte[] audioData
+    ) {
+        try {
+            byte[] body = YandexVotProtobuf.encodeAudioRequest(
+                    translationId, videoUrl, fileId, audioData);
+            return sendAudioRequestBody(body);
+        } catch (Exception e) {
+            Logger.printException(() -> "YandexVotApiClient.sendAudio failed for " + videoUrl, e);
+            return false;
+        }
+    }
+
+    public static boolean sendPartialAudio(
+            String videoUrl,
+            String translationId,
+            String fileId,
+            int audioPartsLength,
+            int version,
+            int chunkId,
+            byte[] audioData
+    ) {
+        try {
+            byte[] body = YandexVotProtobuf.encodePartialAudioRequest(
+                    translationId,
+                    videoUrl,
+                    fileId,
+                    audioPartsLength,
+                    version,
+                    chunkId,
+                    audioData
+            );
+            return sendAudioRequestBody(body);
+        } catch (Exception e) {
+            Logger.printException(
+                    () -> "YandexVotApiClient.sendPartialAudio failed for " + videoUrl,
+                    e
+            );
+            return false;
+        }
+    }
+
+    private static boolean sendAudioRequestBody(byte[] body) throws IOException {
+        if (!ensureSession()) return false;
+        byte[] response = sendApiRequest(
+                "/video-translation/audio",
+                body,
+                "PUT",
+                null
+        );
+        return response != null;
+    }
+
     /**
      * Sends an empty audio protobuf request (PUT) to trigger translation generation
-     * on Yandex servers. Called after sendFailedAudio when STATUS_AUDIO_REQUESTED.
+     * on Yandex servers. Kept only as a fallback if the real YouTube audio stream
+     * cannot be downloaded or uploaded.
      */
     public static void sendEmptyAudio(String videoUrl, String translationId, String oauthToken) {
         try {
@@ -605,4 +662,3 @@ public class YandexVotApiClient {
         return buffer.toByteArray();
     }
 }
-

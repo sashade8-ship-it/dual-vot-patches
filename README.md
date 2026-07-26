@@ -8,6 +8,8 @@ voice-over translation and adds Yandex voice-over translation alongside it.
 - Two independent player buttons: Google/other services and Yandex.
 - Enabling one translation engine stops the other one.
 - Separate settings and volume controls for both engines.
+- New Yandex translation requests upload the real YouTube audio stream in
+  bounded chunks instead of relying on an empty-audio fallback.
 - Fine adjustment buttons and coarse slider steps in the built-in translation
   controls.
 - Based on stable Morphe Patches `1.37.0`.
@@ -21,7 +23,14 @@ The project is derived from
 [MorpheApp/morphe-patches](https://github.com/MorpheApp/morphe-patches) and
 retains its license and attribution requirements. The Yandex integration is
 derived from
-[123jjck/morphe-patches-yavot](https://github.com/123jjck/morphe-patches-yavot).
+[123jjck/morphe-patches-yavot](https://github.com/123jjck/morphe-patches-yavot)
+and the work of
+[Jav1x](https://github.com/Jav1x) and
+[anddea](https://github.com/anddea). Support for requesting previously
+untranslated videos is adapted from
+[anddea/revanced-patches commit 7fe8ff3](https://github.com/anddea/revanced-patches/commit/7fe8ff3585f3e0d3dc91e63b192cdbe4a520d10e),
+with the original notices preserved in the corresponding source files and a
+visible credit in the Yandex settings screen.
 
 ## Upstream patch catalogue
 

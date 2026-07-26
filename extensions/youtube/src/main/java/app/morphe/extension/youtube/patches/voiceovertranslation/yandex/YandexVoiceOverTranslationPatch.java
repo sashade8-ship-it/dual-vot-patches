@@ -139,18 +139,72 @@ public class YandexVoiceOverTranslationPatch {
     /** Remaining seconds while waiting for translation. -1 when not waiting. Updated for BottomSheet countdown. */
     public static volatile int waitingTimeSeconds = -1;
     private static volatile long waitingDeadlineMs = -1;
+    private static volatile int audioUploadPart = -1;
+    private static volatile int audioUploadTotalParts = -1;
+    private static volatile String lastAudioDownloadAttemptKey = "";
+    private static volatile String lastSuccessfulAudioUploadKey = "";
+    private static volatile String lastFailedAudioFallbackUrl = "";
+    private static volatile String lastEmptyAudioFallbackKey = "";
 
     private static void setWaitingTimeSeconds(int seconds) {
         waitingTimeSeconds = seconds;
         waitingDeadlineMs = seconds < 0
                 ? -1
                 : SystemClock.elapsedRealtime() + seconds * 1000L;
+        if (seconds >= 0) {
+            audioUploadPart = -1;
+            audioUploadTotalParts = -1;
+        }
     }
 
     public static int getWaitingTimeSeconds() {
         if (waitingTimeSeconds < 0 || waitingDeadlineMs < 0) return -1;
         final long remainingMs = waitingDeadlineMs - SystemClock.elapsedRealtime();
         return (int) Math.max(1, (remainingMs + 999L) / 1000L);
+    }
+
+    public static String getTranslationRequestStatusText() {
+        if (!translationStarting) return "";
+        if (audioUploadPart == 0) {
+            return str("dualvot_yandex_audio_preparing");
+        }
+        if (audioUploadPart > 0 && audioUploadTotalParts > 0) {
+            return str(
+                    "dualvot_yandex_audio_uploading",
+                    audioUploadPart,
+                    audioUploadTotalParts
+            );
+        }
+        int seconds = getWaitingTimeSeconds();
+        return seconds >= 0
+                ? str("dualvot_yandex_stream_waiting", formatRemainingTime(seconds))
+                : str("dualvot_yandex_stream_waiting_status");
+    }
+
+    public static boolean isWaitingCountdownActive() {
+        return translationStarting && getWaitingTimeSeconds() >= 0;
+    }
+
+    private static void setAudioUploadProgress(long generation, int part, int totalParts) {
+        if (translationGeneration != generation) return;
+        waitingTimeSeconds = -1;
+        waitingDeadlineMs = -1;
+        audioUploadPart = part;
+        audioUploadTotalParts = totalParts;
+        notifyTranslationStateChanged();
+    }
+
+    private static void clearAudioUploadProgress() {
+        audioUploadPart = -1;
+        audioUploadTotalParts = -1;
+    }
+
+    private static void resetAudioUploadRequestState() {
+        clearAudioUploadProgress();
+        lastAudioDownloadAttemptKey = "";
+        lastSuccessfulAudioUploadKey = "";
+        lastFailedAudioFallbackUrl = "";
+        lastEmptyAudioFallbackKey = "";
     }
 
     /** Incremented on every new video or stop, invalidates in-flight async translation chains. */
@@ -188,6 +242,8 @@ public class YandexVoiceOverTranslationPatch {
         String newId = videoId != null ? videoId : "";
         if (!newId.equals(pendingVideoId)) {
             translationStarting = false;
+            setWaitingTimeSeconds(-1);
+            resetAudioUploadRequestState();
         }
         if (!newId.equals(currentTranslatedVideoId.get())) {
             stopAudioPlayback();
@@ -234,6 +290,7 @@ public class YandexVoiceOverTranslationPatch {
         final String videoId = pendingVideoId;
         final String videoTitle = pendingVideoTitle;
         final double durationSeconds = pendingVideoLength / 1000.0;
+        resetAudioUploadRequestState();
         translationStarting = true;
         refreshOriginalAudioVolume();
         Utils.runOnBackgroundThread(() -> requestTranslation(
@@ -251,6 +308,7 @@ public class YandexVoiceOverTranslationPatch {
         translationGeneration++;
         translationStarting = false;
         setWaitingTimeSeconds(-1);
+        resetAudioUploadRequestState();
         stopAudioPlayback();
         isTranslating.set(false);
         VotOriginalVolumePatch.clearAudioMultiplier();
@@ -494,13 +552,20 @@ public class YandexVoiceOverTranslationPatch {
                 });
             } else if (status == YandexVotApiClient.STATUS_AUDIO_REQUESTED) {
                 String translationId = result.translationId();
-                YandexVotApiClient.sendFailedAudio(youtubeUrl);
-                String oauth = useLiveVoices ? Settings.DUAL_VOT_YANDEX_OAUTH_TOKEN.get() : null;
-                YandexVotApiClient.sendEmptyAudio(youtubeUrl, translationId, oauth);
-                int pollWaitTime = result.remainingTime() > 0 ? result.remainingTime() : 63;
+                sendAudioRequestedAudio(
+                        videoId,
+                        youtubeUrl,
+                        translationId,
+                        useLiveVoices,
+                        generation
+                );
+                if (translationGeneration != generation) return;
+                int serverWaitTime = result.remainingTime() > 0
+                        ? result.remainingTime()
+                        : 3;
+                int pollWaitTime = Math.min(serverWaitTime, 3);
                 setWaitingTimeSeconds(pollWaitTime);
                 notifyTranslationStateChanged();
-                runOnUiIfCurrentGen(generation, () -> Utils.showToastLong(str("dualvot_yandex_stream_waiting", formatRemainingTime(pollWaitTime))));
                 pollTranslation(videoId, videoTitle, youtubeUrl, durationSeconds, sourceLang, targetLang,
                         pollWaitTime, useLiveVoices, generation, 0);
             } else {
@@ -615,10 +680,20 @@ public class YandexVoiceOverTranslationPatch {
                 });
                 return;
             } else if (status == YandexVotApiClient.STATUS_AUDIO_REQUESTED) {
-                // Audio was already sent in requestTranslation. Just wait — generation is in progress.
-                int pollWaitTime = result.remainingTime() > 0 ? result.remainingTime() : 63;
-                Logger.printDebug(() -> "VOT audio requested (poll), waiting " + pollWaitTime + "s");
+                sendAudioRequestedAudio(
+                        videoId,
+                        url,
+                        result.translationId(),
+                        useLiveVoices,
+                        generation
+                );
                 if (translationGeneration != generation) return;
+                int serverWaitTime = result.remainingTime() > 0
+                        ? result.remainingTime()
+                        : 3;
+                int pollWaitTime = Math.min(serverWaitTime, 3);
+                Logger.printDebug(() -> "VOT audio requested (poll), retrying in "
+                        + pollWaitTime + "s");
                 setWaitingTimeSeconds(pollWaitTime);
                 notifyTranslationStateChanged();
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang,
@@ -645,6 +720,68 @@ public class YandexVoiceOverTranslationPatch {
                 });
             }
         }
+    }
+
+    private static boolean sendAudioRequestedAudio(
+            String videoId,
+            String url,
+            String translationId,
+            boolean useLiveVoices,
+            long generation
+    ) {
+        if (translationId == null || translationId.isEmpty()) return false;
+
+        String requestKey = url + "#" + translationId;
+        if (requestKey.equals(lastSuccessfulAudioUploadKey)) {
+            return true;
+        }
+
+        if (!requestKey.equals(lastAudioDownloadAttemptKey)) {
+            lastAudioDownloadAttemptKey = requestKey;
+            boolean uploaded = YandexVotAudioDownloader.downloadAndSend(
+                    videoId,
+                    url,
+                    translationId,
+                    new YandexVotAudioDownloader.ProgressListener() {
+                        @Override
+                        public boolean isCancelled() {
+                            return translationGeneration != generation;
+                        }
+
+                        @Override
+                        public void onPreparing() {
+                            setAudioUploadProgress(generation, 0, 0);
+                        }
+
+                        @Override
+                        public void onUploading(int part, int totalParts) {
+                            setAudioUploadProgress(generation, part, totalParts);
+                        }
+                    }
+            );
+            if (translationGeneration == generation) {
+                clearAudioUploadProgress();
+            }
+            if (uploaded) {
+                lastSuccessfulAudioUploadKey = requestKey;
+                Logger.printDebug(() -> "Yandex VOT audio uploaded for " + videoId);
+                return true;
+            }
+        }
+
+        if (translationGeneration != generation) return false;
+        if (!url.equals(lastFailedAudioFallbackUrl)) {
+            YandexVotApiClient.sendFailedAudio(url);
+            lastFailedAudioFallbackUrl = url;
+        }
+        if (!requestKey.equals(lastEmptyAudioFallbackKey)) {
+            String oauth = useLiveVoices
+                    ? Settings.DUAL_VOT_YANDEX_OAUTH_TOKEN.get()
+                    : null;
+            YandexVotApiClient.sendEmptyAudio(url, translationId, oauth);
+            lastEmptyAudioFallbackKey = requestKey;
+        }
+        return false;
     }
 
     private static void startAudioPlayback(String videoId, String audioUrl, String fallbackUrl) {

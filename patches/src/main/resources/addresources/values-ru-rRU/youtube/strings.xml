@@ -1144,6 +1144,8 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_stream_not_ready">Перевод ещё не готов. Используйте кнопку для включения.</string>
     <string name="dualvot_yandex_stream_requesting">Запрос перевода для потока…</string>
     <string name="dualvot_yandex_stream_ready">Перевод готов, воспроизведение</string>
+    <string name="dualvot_yandex_audio_preparing">Подготовка оригинальной аудиодорожки…</string>
+    <string name="dualvot_yandex_audio_uploading">Отправка аудио в Яндекс… %1$d/%2$d</string>
     <string name="dualvot_yandex_time_sec">%d сек</string>
     <string name="dualvot_yandex_time_min">%d мин</string>
     <string name="dualvot_yandex_live_voices_unavailable">Живые голоса недоступны, используются стандартные</string>
@@ -1165,4 +1167,6 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_oauth_invalid_token">Недействительный токен</string>
     <string name="dualvot_yandex_oauth_no_network">Нет подключения к интернету</string>
     <string name="dualvot_yandex_oauth_account_management_title">Яндекс OAuth токен</string>
+    <string name="dualvot_yandex_credits_title">Авторы</string>
+    <string name="dualvot_yandex_credits_summary">Реализация Яндекс VOT: Jav1x и anddea. Исправление отправки аудио: anddea. Адаптация для Dual VoT Patches.</string>
 </resources>

@@ -1272,6 +1272,8 @@ Limitation: Reverts to old style 'More videos' overlay"</string>
     <string name="dualvot_yandex_stream_not_ready">Translation not ready. Use the button to enable when ready.</string>
     <string name="dualvot_yandex_stream_requesting">Requesting translation for stream…</string>
     <string name="dualvot_yandex_stream_ready">Translation ready, playing</string>
+    <string name="dualvot_yandex_audio_preparing">Preparing the original audio…</string>
+    <string name="dualvot_yandex_audio_uploading">Sending audio to Yandex… %1$d/%2$d</string>
     <string name="dualvot_yandex_time_sec">%d sec</string>
     <string name="dualvot_yandex_time_min">%d min</string>
     <string name="dualvot_yandex_live_voices_unavailable">Live voices unavailable, using standard</string>
@@ -1293,4 +1295,6 @@ Limitation: Reverts to old style 'More videos' overlay"</string>
     <string name="dualvot_yandex_oauth_invalid_token">Invalid token</string>
     <string name="dualvot_yandex_oauth_no_network">No network connection</string>
     <string name="dualvot_yandex_oauth_account_management_title">Yandex OAuth token</string>
+    <string name="dualvot_yandex_credits_title">Credits</string>
+    <string name="dualvot_yandex_credits_summary">Yandex VOT implementation by Jav1x and anddea. Audio upload fix by anddea. Adapted for Dual VoT Patches.</string>
 </resources>

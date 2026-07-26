@@ -93,6 +93,7 @@ val yandexVoiceOverTranslationPatch = bytecodePatch(
                         titleKey = "dualvot_yandex_audio_proxy_title",
                     ),
                     TextPreference("dualvot_yandex_proxy_url"),
+                    NonInteractivePreference("dualvot_yandex_credits"),
                 )
             )
         )
