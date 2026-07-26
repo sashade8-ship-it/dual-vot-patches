@@ -1,7 +1,30 @@
 # Dual VoT Patches
 
-Private test build of Morphe Patches that keeps the built-in Google/other
-voice-over translation and adds Yandex voice-over translation alongside it.
+An unofficial patch bundle that keeps the built-in Google/other voice-over
+translation and adds Yandex voice-over translation alongside it.
+
+> [!IMPORTANT]
+> This is an independent community project. It is not developed, endorsed, or
+> supported by the Morphe team, Google, YouTube, or Yandex.
+
+## Add to Morphe Manager
+
+[**Add Dual VoT Patches to Morphe Manager**](https://morphe.software/add-source?github=sashade8-ship-it/dual-vot-patches)
+
+If the button does not open the Manager:
+
+1. Open **Sources** in Morphe Manager and tap **+**.
+2. Select **Remote**.
+3. Paste:
+   `https://github.com/sashade8-ship-it/dual-vot-patches`
+4. Add the source, select **Dual VoT Patches**, and patch YouTube normally.
+
+The source updates automatically through Morphe Manager. Do not combine this
+bundle with another patch source for the same YouTube build: use Dual VoT
+Patches as the source when you need both translation engines.
+
+The currently tested YouTube version is **21.26.360**. Other compatible
+versions are listed in the generated patch catalogue below.
 
 ## What is different
 
@@ -17,10 +40,31 @@ voice-over translation and adds Yandex voice-over translation alongside it.
   controls.
 - Based on stable Morphe Patches `1.37.0`.
 
-This repository is currently private while the integration is being tested.
-For a private Morphe Manager source, use the pull request URL together with a
-GitHub PAT that can read this repository. Never put a PAT into a repository URL
-or commit it to Git.
+## Notes and known limitations
+
+- Generating a Yandex translation for a previously untranslated video happens
+  on Yandex servers. The displayed estimate may restart or take longer than
+  expected.
+- Original audio stays at normal volume while a new translation is being
+  generated. The configured original-audio level is applied only when
+  translated playback is ready.
+- If you switch to another video, the active Google/other or Yandex translation
+  is stopped and the original audio state is restored.
+- You use modified applications and third-party translation services at your
+  own risk. Never publish account cookies, OAuth data, logs containing tokens,
+  or other private data in an issue.
+
+## Downloads and changelog
+
+- [Latest release](https://github.com/sashade8-ship-it/dual-vot-patches/releases/latest)
+- [Full changelog](CHANGELOG.md)
+- [Report a bug](https://github.com/sashade8-ship-it/dual-vot-patches/issues/new?template=bug_report.yml)
+
+When reporting a translation problem, include the YouTube URL, YouTube version,
+patch bundle version, translation engine, exact error text, and reproduction
+steps.
+
+## Credits and license
 
 The project is derived from
 [MorpheApp/morphe-patches](https://github.com/MorpheApp/morphe-patches) and
@@ -38,7 +82,15 @@ audio-stream fallback is adapted from the MIT-licensed
 [ilyhalight/voice-over-translation](https://github.com/ilyhalight/voice-over-translation)
 audio downloader; its license notice is retained in `NOTICE`.
 
-## Upstream patch catalogue
+The project is distributed under GPL-3.0 with the additional requirements
+described in [NOTICE](NOTICE). The Morphe name and logo remain the property of
+their respective owners and are referenced only to identify compatibility and
+upstream origin.
+
+## Included patches
+
+The catalogue below is generated from this bundle. The upstream wordmark and
+links are retained only to identify the Morphe base and its documentation.
 
 <div align="center"> 
 <picture>
@@ -65,21 +117,21 @@ audio downloader; its license notice is retained in `NOTICE`.
 </p>
 &nbsp;
 
-# 🧩 Patches
-Morphe Patches
+### Patch catalogue
+Dual VoT Patches, based on Morphe Patches 1.37.0.
 
-## ❓ About
+#### Upstream origin
 
 Morphe Patches are based off the prior work of [ReVanced](https://github.com/ReVanced).
 All modifications made by Morphe, along with their dates, can be found in the Git history.
 
 &nbsp;
-## 🩹 Patches list
+#### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.37.0](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;131 patches total
+> **[v1.37.0-dualvot.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.37.0-dualvot.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;132 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;73 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;74 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -162,6 +214,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Theme](#theme) | Adds options for theming and applies a custom background theme (dark background theme defaults to pure black). | • Dark theme background color<br>• Light theme background color |
 | [Video quality](#video-quality) | Adds options to set default video qualities and always use the advanced video quality menu. |  |
 | [Voice over translation](#voice-over-translation) | Adds additional voice over languages using text-to-speech synchronized to the video playback. |  |
+| [Yandex voice-over translation](#yandex-voice-over-translation) | Adds a separate Yandex translation button alongside Morphe voice-over translation. |  |
 
 </details>
 

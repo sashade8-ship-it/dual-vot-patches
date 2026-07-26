@@ -1,3 +1,30 @@
+## 1.37.0-dualvot.3 (2026-07-26)
+
+### Yandex translation reliability
+
+* Resolve a dedicated low-bitrate YouTube audio-only stream when the player
+  does not expose a usable cached format.
+* Validate every downloaded byte range before uploading it to Yandex.
+* Wait according to the server estimate after a successful audio upload.
+* Keep original YouTube audio at full volume while a new translation is being
+  generated, then apply the configured level when translated playback starts.
+
+### Public release
+
+* Add a Morphe Manager installation link and public usage instructions.
+* Document the project origin, third-party code, known limitations, and support
+  information.
+
+## 1.37.0-dualvot.2 (2026-07-26)
+
+### New-video translation requests
+
+* Upload the real YouTube audio stream in bounded chunks for videos that Yandex
+  has not translated yet.
+* Poll Yandex after the upload and expose translation progress in the player
+  interface.
+* Preserve the legacy request as a compatibility fallback.
+
 ## 1.37.0-dualvot.1 (2026-07-26)
 
 ### Updated Morphe base

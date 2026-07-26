@@ -27,5 +27,7 @@ jobs:
 
             ## Before merging this PR
 
-            - [ ] Pull & merge translations from Crowdin
+            - [ ] The Android patch bundle builds successfully
+            - [ ] Dual VoT behavior has been tested on a supported YouTube version
+            - [ ] `CHANGELOG.md` and release metadata are up to date
           pr_draft: true
