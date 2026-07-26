@@ -8,8 +8,11 @@ voice-over translation and adds Yandex voice-over translation alongside it.
 - Two independent player buttons: Google/other services and Yandex.
 - Enabling one translation engine stops the other one.
 - Separate settings and volume controls for both engines.
-- New Yandex translation requests upload the real YouTube audio stream in
-  bounded chunks instead of relying on an empty-audio fallback.
+- New Yandex translation requests resolve a dedicated low-bitrate YouTube
+  audio-only stream and upload it in validated bounded chunks instead of
+  relying on an empty-audio fallback.
+- Original video audio is reduced only after translated audio is ready to play,
+  not while Yandex is still generating it.
 - Fine adjustment buttons and coarse slider steps in the built-in translation
   controls.
 - Based on stable Morphe Patches `1.37.0`.
@@ -30,7 +33,10 @@ and the work of
 untranslated videos is adapted from
 [anddea/revanced-patches commit 7fe8ff3](https://github.com/anddea/revanced-patches/commit/7fe8ff3585f3e0d3dc91e63b192cdbe4a520d10e),
 with the original notices preserved in the corresponding source files and a
-visible credit in the Yandex settings screen.
+visible credit in the Yandex settings screen. The independent YouTube
+audio-stream fallback is adapted from the MIT-licensed
+[ilyhalight/voice-over-translation](https://github.com/ilyhalight/voice-over-translation)
+audio downloader; its license notice is retained in `NOTICE`.
 
 ## Upstream patch catalogue
 

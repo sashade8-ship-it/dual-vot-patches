@@ -342,7 +342,7 @@ public class YandexVoiceOverTranslationPatch {
      */
     public static void refreshOriginalAudioVolumeIfActive() {
         if (!Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
-        if (mediaPlayer.get() == null && !translationStarting) return;
+        if (mediaPlayer.get() == null || translationStarting) return;
         refreshOriginalAudioVolume();
     }
 
@@ -354,7 +354,7 @@ public class YandexVoiceOverTranslationPatch {
      */
     public static void refreshOriginalAudioVolumeIfActive(int volumePercent) {
         if (!Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
-        if (mediaPlayer.get() == null && !translationStarting) return;
+        if (mediaPlayer.get() == null || translationStarting) return;
         refreshOriginalAudioVolume(volumePercent);
     }
 
@@ -370,6 +370,13 @@ public class YandexVoiceOverTranslationPatch {
      * @param volumePercent original audio volume in percent (0-100)
      */
     public static void refreshOriginalAudioVolume(int volumePercent) {
+        // A request being active is not the same as translated audio being
+        // playable. Keep the original video at its normal volume until the
+        // translation MediaPlayer has completed prepareAsync().
+        if (translationStarting || mediaPlayer.get() == null) {
+            VotOriginalVolumePatch.clearAudioMultiplier();
+            return;
+        }
         float multiplier = Math.max(0f, Math.min(1f, volumePercent / 100.0f));
         VotOriginalVolumePatch.setAudioMultiplier(multiplier);
     }
@@ -560,10 +567,9 @@ public class YandexVoiceOverTranslationPatch {
                         generation
                 );
                 if (translationGeneration != generation) return;
-                int serverWaitTime = result.remainingTime() > 0
-                        ? result.remainingTime()
-                        : 3;
-                int pollWaitTime = Math.min(serverWaitTime, 3);
+                int pollWaitTime = result.remainingTime() > 0
+                        ? Math.min(result.remainingTime(), 60)
+                        : 10;
                 setWaitingTimeSeconds(pollWaitTime);
                 notifyTranslationStateChanged();
                 pollTranslation(videoId, videoTitle, youtubeUrl, durationSeconds, sourceLang, targetLang,
@@ -688,10 +694,9 @@ public class YandexVoiceOverTranslationPatch {
                         generation
                 );
                 if (translationGeneration != generation) return;
-                int serverWaitTime = result.remainingTime() > 0
-                        ? result.remainingTime()
-                        : 3;
-                int pollWaitTime = Math.min(serverWaitTime, 3);
+                int pollWaitTime = result.remainingTime() > 0
+                        ? Math.min(result.remainingTime(), 60)
+                        : 10;
                 Logger.printDebug(() -> "VOT audio requested (poll), retrying in "
                         + pollWaitTime + "s");
                 setWaitingTimeSeconds(pollWaitTime);
