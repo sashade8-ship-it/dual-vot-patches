@@ -1,17 +1,18 @@
-name: ⭐ Feature request
-description: Create a detailed request for a new feature.
+name: Feature request
+description: Suggest an improvement to Dual VoT Patches.
 title: 'feat: '
 labels: ['feature']
 body:
   - type: markdown
     attributes:
       value: |
-        # Morphe Patches feature request
+        # Dual VoT Patches feature request
 
         Before creating a new feature request, please keep the following in mind:
 
-        - We are currently only accept feature requests for YouTube, YT Music, and Reddit.
-        - **Do not submit a duplicate feature request**: Search for existing feature requests, including closed issues, [here](https://github.com/MorpheApp/morphe-patches/issues?q=is%3Aissue).
+        - Search existing open and closed requests first.
+        - This tracker is for Dual VoT integration. Submit general Morphe
+          feature requests to the upstream project.
   - type: textarea
     attributes:
       label: Feature description
@@ -37,5 +38,5 @@ body:
       options:
         - label: I have checked all open and closed feature requests and this is not a duplicate
           required: true
-        - label: This is a feature request for YouTube, YT Music, or Reddit
+        - label: This request is directly related to Dual VoT integration
           required: true

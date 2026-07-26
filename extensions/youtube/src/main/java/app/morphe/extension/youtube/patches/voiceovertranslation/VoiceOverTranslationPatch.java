@@ -376,20 +376,60 @@ public class VoiceOverTranslationPatch {
         return sessionEnabled;
     }
 
+    /**
+     * Explicitly enables the session and synchronizes it with the video that is
+     * currently visible. This is idempotent, unlike flipping a persisted flag.
+     */
+    public static void activateTranslation(String videoId, long timeMs) {
+        Utils.verifyOnMainThread();
+
+        final boolean stateChanged = !sessionEnabled;
+        sessionEnabled = true;
+        Settings.VOT_SESSION_ENABLED.save(true);
+
+        final String id = videoId != null ? videoId : "";
+        if (!id.isEmpty()) {
+            if (!id.equals(currentVideoId)) {
+                newVideoLoaded(id);
+            } else {
+                lastVideoTimeMs = 0;
+                videoPositionHint = timeMs;
+                lastSpokenIndex = -1;
+                wasExplicitSeek = false;
+            }
+            // Explicit user activation must not be lost if YouTube briefly
+            // reports INLINE_MINIMAL while transitioning into the watch player.
+            if (segments.isEmpty() && !isLoading) {
+                loadTranscript(id);
+            }
+            videoTimeChanged(timeMs);
+        }
+
+        if (stateChanged) notifyStateChanged();
+    }
+
+    /** Explicitly disables the session and immediately restores original audio. */
+    public static void deactivateTranslation() {
+        Utils.verifyOnMainThread();
+
+        final boolean stateChanged = sessionEnabled;
+        sessionEnabled = false;
+        Settings.VOT_SESSION_ENABLED.save(false);
+        TranscriptTranslator.requestAbort();
+        stopTts();
+        lastSpokenIndex = -1;
+        VotOriginalVolumePatch.clearAudioMultiplier();
+
+        if (stateChanged) notifyStateChanged();
+    }
+
     /** Flips the session enabled flag and either stops TTS or kicks off transcript loading. */
     public static void toggleTranslation() {
-        Utils.verifyOnMainThread();
-        sessionEnabled = !sessionEnabled;
-        Settings.VOT_SESSION_ENABLED.save(sessionEnabled);
-        if (!sessionEnabled) {
-            stopTts();
-            lastSpokenIndex = -1;
+        if (sessionEnabled) {
+            deactivateTranslation();
         } else {
-            if (!currentVideoId.isEmpty() && segments.isEmpty() && !isLoading) {
-                loadTranscript(currentVideoId);
-            }
+            activateTranslation(currentVideoId, videoPositionHint);
         }
-        notifyStateChanged();
     }
 
     /** Stops any in-progress TTS without changing session state. */

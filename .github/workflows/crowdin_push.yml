@@ -2,11 +2,6 @@ name: Crowdin push from GitHub
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - dev
-    paths:
-      - patches/src/main/resources/addresources/values/**/strings.xml
 
 jobs:
   push:

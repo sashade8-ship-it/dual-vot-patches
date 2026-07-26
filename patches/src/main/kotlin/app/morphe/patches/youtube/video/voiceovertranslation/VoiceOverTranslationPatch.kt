@@ -24,13 +24,15 @@ import app.morphe.patches.youtube.misc.playertype.playerTypeHookPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.video.information.videoInformationPatch
+import app.morphe.patches.youtube.video.information.onCreateHook
 import app.morphe.patches.youtube.video.information.videoTimeHook
 import app.morphe.patches.youtube.video.videoid.hookVideoId
+import app.morphe.patches.youtube.video.videoid.videoIdPatch
 import app.morphe.util.ResourceGroup
 import app.morphe.util.copyResources
 
 private const val EXTENSION_CLASS =
-    "Lapp/morphe/extension/youtube/patches/voiceovertranslation/VoiceOverTranslationPatch;"
+    "Lapp/morphe/extension/youtube/patches/voiceovertranslation/VoiceOverTranslationCoordinator;"
 
 private const val EXTENSION_BUTTON =
     "Lapp/morphe/extension/youtube/videoplayer/VoiceOverTranslationButton;"
@@ -60,6 +62,7 @@ val voiceOverTranslationPatch = bytecodePatch(
     dependsOn(
         sharedExtensionPatch,
         videoInformationPatch,
+        videoIdPatch,
         playerTypeHookPatch,
         playerOverlayButtonsHookPatch,
         legacyPlayerControlsPatch,
@@ -98,8 +101,9 @@ val voiceOverTranslationPatch = bytecodePatch(
             )
         )
 
-        hookVideoId("$EXTENSION_CLASS->newVideoLoaded(Ljava/lang/String;)V")
-        videoTimeHook(EXTENSION_CLASS, "videoTimeChanged")
+        onCreateHook(EXTENSION_CLASS, "initialize")
+        hookVideoId("$EXTENSION_CLASS->onVideoIdChanged(Ljava/lang/String;)V")
+        videoTimeHook(EXTENSION_CLASS, "onVideoTimeChanged")
 
         addPlayerBottomButton(EXTENSION_BUTTON)
         initializeLegacyBottomControl(EXTENSION_BUTTON)

@@ -164,6 +164,7 @@ Changes include:
     <string name="morphe_hide_featured_playlists_section_title">Hide Featured playlists section</string>
     <string name="morphe_hide_featured_videos_section_title">Hide Featured videos section</string>
     <string name="morphe_hide_gaming_section_title">Hide Gaming section</string>
+    <string name="morphe_hide_hashtag_section_title">Hide Hashtag section</string>
     <string name="morphe_hide_how_this_was_made_section_title">Hide \'How this content was made\' section</string>
     <string name="morphe_hide_hype_points_title">Hide Hype points</string>
     <string name="morphe_hide_info_cards_section_title">Hide Info cards section</string>
@@ -350,9 +351,9 @@ Tap here to open AiSlopList.com and see downloads for other platforms"</string>
     <string name="morphe_external_downloader_action_button_summary">Uses your chosen external downloader instead of YouTube\'s built-in download feature</string>
 
     <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
-    <string name="morphe_vot_screen_title">Voice over translation</string>
-    <string name="morphe_vot_screen_summary">Read video captions aloud using on-device text-to-speech, synchronized with playback</string>
-    <string name="morphe_vot_enabled_title">Voice over translation</string>
+    <string name="morphe_vot_screen_title">Google and other translations</string>
+    <string name="morphe_vot_screen_summary">Translate captions with Google or another service and read them aloud in sync with the video</string>
+    <string name="morphe_vot_enabled_title">Enable Google and other translations</string>
     <string name="morphe_vot_caption_language_title">Language</string>
     <string name="morphe_vot_translation_service_title">Translation provider</string>
     <string name="morphe_vot_original_audio_volume_title">Original audio volume</string>
@@ -501,6 +502,9 @@ Info: May not work on live streams"</string>
     <!-- interaction.seekbar.livestreamDVRPatch -->
     <string name="morphe_livestream_dvr_title">Enable livestream DVR</string>
     <string name="morphe_livestream_dvr_summary">Allows seeking on all livestreams, even those that normally restrict it</string>
+    <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
+    <string name="morphe_seekbar_thumbnail_preview_title">Enable seekbar thumbnails</string>
+    <string name="morphe_seekbar_thumbnail_preview_summary">Shows a video thumbnail while dragging the seekbar</string>
     <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
     <string name="morphe_livestream_dvr_not_available">"\'Enable livestream DVR\' may not be available
 
@@ -1191,7 +1195,7 @@ Limitations:
 • HDR videos will not use AVC
 • Some devices cannot force AVC"</string>
     <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-    <string name="morphe_force_avc_codec_not_available">To use this feature, set \'Spoof video streams\' to Android VR or Android Studio</string>
+    <string name="morphe_force_avc_codec_not_available">To use this feature, set \'Spoof video streams\' to \'Android VR or \'Android Studio\'</string>
 
     <!-- video.quality.advancedVideoQualityMenuPatch -->
     <string name="morphe_advanced_video_quality_menu_title">Open Advanced quality menu</string>
@@ -1201,17 +1205,17 @@ Limitations:
     <string name="morphe_hide_premium_video_quality_title">Hide Premium quality options</string>
 
     <!-- video.quality.prioritizeVideoQualityPatch -->
-    <string name="morphe_prioritize_video_quality_title">Prioritize video quality</string>
-    <string name="morphe_prioritize_video_quality_summary">Prioritizes the highest available video quality over codec efficiency</string>
+    <string name="morphe_video_quality_prioritize_title">Prioritize video quality</string>
+    <string name="morphe_video_quality_prioritize_summary">Prioritizes the highest available video quality over codec efficiency</string>
+    <string name="morphe_video_quality_prioritize_dialog">If this setting is turned off, then older videos can show no video quality options</string>
 
     <!-- misc.spoof.spoofVideoStreamsPatch -->
-    <string name="morphe_spoof_video_streams_av1_title">Allow Android VR AV1</string>
-    <string name="morphe_spoof_video_streams_av1_summary">Permits software AV1 decoding when using the Android VR client</string>
+    <string name="morphe_spoof_video_streams_av1_title">Allow Android VR / visionOS AV1</string>
+    <string name="morphe_spoof_video_streams_av1_summary">Permits software AV1 decoding when using the Android VR / visionOS client</string>
     <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Enabling this setting may use software AV1 decoding.
 
 Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_spoof_video_streams_about_title">Spoofing side effects</string>
-    <string name="morphe_spoof_video_streams_about_playback_failure">• Video may stop at 1:00, or may not be available in some regions</string>
     <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audio track menu is missing</string>
     <string name="morphe_spoof_video_streams_about_no_av1">• No AV1 video codec</string>
     <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR immersive mode is not available</string>
@@ -1229,4 +1233,68 @@ Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_restore_old_video_action_bar_summary">"Fixes dislikes not shown and video action buttons cannot be hidden
 
 Limitation: Reverts to old style 'More videos' overlay"</string>
+    <string name="dualvot_yandex_screen_title">Yandex translation</string>
+    <string name="dualvot_yandex_screen_summary">Configure Yandex translation and its player button</string>
+    <string name="dualvot_yandex_enabled_title">Enable Yandex translation</string>
+    <string name="dualvot_yandex_enabled_summary">Translation by Yandex</string>
+    <string name="dualvot_yandex_enabled_summary_on">Yandex translation is enabled</string>
+    <string name="dualvot_yandex_enabled_summary_off">Yandex translation is disabled</string>
+    <string name="dualvot_yandex_source_language_title">Source language</string>
+    <string name="dualvot_yandex_source_language_summary">Select the language of the video audio</string>
+    <string name="dualvot_yandex_target_language_title">Target language</string>
+    <string name="dualvot_yandex_target_language_summary">Select the language to translate to</string>
+    <string name="dualvot_yandex_translation_volume_title">Translation volume</string>
+    <string name="dualvot_yandex_translation_volume_summary">Volume of the translated audio track (0-100). Default: 100</string>
+    <string name="dualvot_yandex_original_audio_volume_title">Original audio volume</string>
+    <string name="dualvot_yandex_original_audio_volume_summary">Volume of the original video track when translation is playing (0-100). Default: 30</string>
+    <string name="dualvot_yandex_audio_proxy_title">Proxy audio stream</string>
+    <string name="dualvot_yandex_audio_proxy_enabled_summary">Enable only if Yandex servers are unreachable</string>
+    <string name="dualvot_yandex_audio_proxy_summary">Enable only if Yandex servers are unreachable</string>
+    <string name="dualvot_yandex_audio_proxy_summary_on">Audio is routed through a proxy worker</string>
+    <string name="dualvot_yandex_audio_proxy_summary_off">Audio is downloaded directly from Yandex servers</string>
+    <string name="dualvot_yandex_proxy_url_title">Proxy server</string>
+    <string name="dualvot_yandex_proxy_url_summary">VOT worker proxy host. Default: vot-worker.eu.cc</string>
+    <string name="dualvot_yandex_use_live_voices_title">Live voices</string>
+    <string name="dualvot_yandex_use_live_voices_summary">Use natural-sounding voices from Yandex</string>
+    <string name="dualvot_yandex_use_live_voices_summary_on">Natural-sounding voices from Yandex</string>
+    <string name="dualvot_yandex_use_live_voices_summary_off">Standard TTS voices</string>
+    <string name="dualvot_yandex_voice_style_title">Voice-over style</string>
+    <string name="dualvot_yandex_voice_style_standard">Standard</string>
+    <string name="dualvot_yandex_voice_style_live">Live</string>
+    <string name="dualvot_yandex_started">Translation started</string>
+    <string name="dualvot_yandex_stopped">Translation stopped</string>
+    <string name="dualvot_yandex_playback_error">Failed to play translation audio</string>
+    <string name="dualvot_yandex_unavailable_live">Translation is not available for live streams</string>
+    <string name="dualvot_yandex_unavailable_too_long">Video is too long for translation (max 4 hours)</string>
+    <string name="dualvot_yandex_unavailable_same_language">Video audio is already in the target language</string>
+    <string name="dualvot_yandex_stream_waiting">Waiting… ~%s</string>
+    <string name="dualvot_yandex_stream_waiting_status">Translation requested, check back later</string>
+    <string name="dualvot_yandex_stream_not_ready">Translation not ready. Use the button to enable when ready.</string>
+    <string name="dualvot_yandex_stream_requesting">Requesting translation for stream…</string>
+    <string name="dualvot_yandex_stream_ready">Translation ready, playing</string>
+    <string name="dualvot_yandex_audio_preparing">Preparing the original audio…</string>
+    <string name="dualvot_yandex_audio_uploading">Sending audio to Yandex… %1$d/%2$d</string>
+    <string name="dualvot_yandex_time_sec">%d sec</string>
+    <string name="dualvot_yandex_time_min">%d min</string>
+    <string name="dualvot_yandex_live_voices_unavailable">Live voices unavailable, using standard</string>
+    <string name="dualvot_yandex_lang_auto">Auto-detect</string>
+    <string name="dualvot_yandex_oauth_token_title">Yandex OAuth token</string>
+    <string name="dualvot_yandex_oauth_token_summary">Required for live voices.</string>
+    <string name="dualvot_yandex_auth_required">Authorization required. Add Yandex OAuth token in Morphe settings.</string>
+    <string name="dualvot_yandex_oauth_not_signed_in_summary">Not authorized</string>
+    <string name="dualvot_yandex_oauth_signed_in_summary">Signed in as %s</string>
+    <string name="dualvot_yandex_oauth_auth_method_title">Yandex authorization</string>
+    <string name="dualvot_yandex_oauth_auth_method_message">Choose authorization method</string>
+    <string name="dualvot_yandex_oauth_sign_in_button">Sign in with Yandex</string>
+    <string name="dualvot_yandex_oauth_enter_manually_button">Enter token manually</string>
+    <string name="dualvot_yandex_oauth_sign_out_button">Sign out</string>
+    <string name="dualvot_yandex_oauth_switch_token_button">Use another token</string>
+    <string name="dualvot_yandex_oauth_enter_token_title">Enter token manually</string>
+    <string name="dualvot_yandex_oauth_webview_title">Yandex authorization</string>
+    <string name="dualvot_yandex_oauth_auth_declined">Authorization declined</string>
+    <string name="dualvot_yandex_oauth_invalid_token">Invalid token</string>
+    <string name="dualvot_yandex_oauth_no_network">No network connection</string>
+    <string name="dualvot_yandex_oauth_account_management_title">Yandex OAuth token</string>
+    <string name="dualvot_yandex_credits_title">Credits</string>
+    <string name="dualvot_yandex_credits_summary">Yandex VOT implementation by Jav1x and anddea. Audio upload fix by anddea. Adapted for Dual VoT Patches.</string>
 </resources>

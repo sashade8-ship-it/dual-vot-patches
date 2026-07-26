@@ -115,7 +115,7 @@ public final class VotBottomSheet {
         translationRow.setOnClickListener(v -> showTranslationServicePicker(context, mainRef[0]));
         refreshTranslation.run();
 
-        TextView title = makeTitle(context, str("morphe_vot_enabled_title"), fg);
+        TextView title = makeTitle(context, str("morphe_vot_screen_title"), fg);
         ((LinearLayout.LayoutParams) title.getLayoutParams()).setMargins(Dim.dp16, Dim.dp8, Dim.dp16, Dim.dp16);
         root.addView(title);
 
@@ -634,9 +634,14 @@ public final class VotBottomSheet {
         seekRowParams.topMargin = Dim.dp16;
         seekRow.setLayoutParams(seekRowParams);
 
+        final TextView minusButton = makeValueStepButton(context, "−", fgColor);
+        seekRow.addView(minusButton);
+
         SeekBar seekBar = new SeekBar(context);
-        seekBar.setMax((config.max() - config.min()) / config.step());
-        seekBar.setProgress(SeekBarPreference.valueToProgress(config, initialValue));
+        // Keep every integer position available so +/- can display exact values.
+        // User dragging is snapped separately to a coarser, convenient step.
+        seekBar.setMax(config.max() - config.min());
+        seekBar.setProgress(initialValue - config.min());
         seekBar.getProgressDrawable().setColorFilter(new PorterDuffColorFilter(fgColor, PorterDuff.Mode.SRC_IN));
         seekBar.getThumb().setColorFilter(new PorterDuffColorFilter(fgColor, PorterDuff.Mode.SRC_IN));
         seekRow.addView(seekBar, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
@@ -650,22 +655,57 @@ public final class VotBottomSheet {
         seekRow.addView(valueView, new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
+        final TextView plusButton = makeValueStepButton(context, "+", fgColor);
+        seekRow.addView(plusButton);
+
         outer.addView(seekRow);
+
+        final IntConsumer applyValue = requestedValue -> {
+            final int value = Math.max(config.min(), Math.min(config.max(), requestedValue));
+            seekBar.setProgress(value - config.min());
+            valueView.setText(SeekBarPreference.formatLabel(value, config));
+            onChanged.accept(value);
+        };
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar bar, int progress, boolean fromUser) {
                 if (fromUser) {
-                    final int value = SeekBarPreference.progressToValue(config, progress);
-                    valueView.setText(SeekBarPreference.formatLabel(value, config));
-                    onChanged.accept(value);
+                    final int rawValue = config.min() + progress;
+                    final int dragStep = setting == Settings.VOT_MAX_SPEECH_RATE ? 1 : 5;
+                    final int value = config.min() + Math.round(
+                            (rawValue - config.min()) / (float) dragStep) * dragStep;
+                    applyValue.accept(value);
                 }
             }
             @Override public void onStartTrackingTouch(SeekBar bar) { }
             @Override public void onStopTrackingTouch(SeekBar bar) { }
         });
 
+        minusButton.setOnClickListener(v -> applyValue.accept(setting.get() - 1));
+        plusButton.setOnClickListener(v -> applyValue.accept(setting.get() + 1));
+
         return outer;
+    }
+
+    private static TextView makeValueStepButton(Context context, String text, int fgColor) {
+        TextView button = new TextView(context);
+        button.setText(text);
+        button.setTextColor(fgColor);
+        button.setTextSize(22);
+        button.setGravity(Gravity.CENTER);
+        button.setClickable(true);
+        button.setFocusable(true);
+
+        ShapeDrawable background = new ShapeDrawable(new OvalShape());
+        background.getPaint().setColor(Color.argb(36,
+                Color.red(fgColor), Color.green(fgColor), Color.blue(fgColor)));
+        button.setBackground(background);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(Dim.dp36, Dim.dp36);
+        params.setMargins(Dim.dp4, 0, Dim.dp4, 0);
+        button.setLayoutParams(params);
+        return button;
     }
 
     private static int secondaryColor(int fg) {
