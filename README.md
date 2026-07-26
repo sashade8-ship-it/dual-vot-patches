@@ -64,6 +64,19 @@ When reporting a translation problem, include the YouTube URL, YouTube version,
 patch bundle version, translation engine, exact error text, and reproduction
 steps.
 
+## Update channels
+
+- The `main` branch follows stable Morphe Patches releases.
+- The `dev` branch follows Morphe Patches pre-releases.
+- Enable **Pre-release patches** for this source in Morphe Manager to receive
+  the `dev` channel. Leave it disabled for the stable channel.
+
+Both channels are checked automatically every six hours. An update is
+published only after the bundle compiles and the Dual VoT integration passes
+structural checks. Merge conflicts or failed builds stop publication and open
+an issue without replacing the previous working release. See
+[automatic upstream updates](AUTOMATION.md) for details.
+
 ## Credits and license
 
 The project is derived from
