@@ -8,6 +8,7 @@ on:
   pull_request:
     branches:
       - dev
+      - main
 
 jobs:
   release:
@@ -24,7 +25,10 @@ jobs:
           java-version: '21'
 
       - name: Cache Gradle
-        uses: burrunan/gradle-cache-action@v3
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Test upstream automation
+        run: python .github/scripts/test_sync_upstream.py
 
       - name: Build
         env:

@@ -38,3 +38,7 @@ google-services.json
 
 # NPM modules
 node_modules/
+
+# Python tooling
+__pycache__/
+*.pyc
