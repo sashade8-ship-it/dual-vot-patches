@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-07-26T20:45:16+02:00",
+  "created_at": "2026-07-26T19:09:17",
   "description": "## Dual VoT Patches 1.37.0-dualvot.3\n\n### Yandex translation reliability\n\n- Resolves a dedicated low-bitrate YouTube audio stream when no usable cached format is available.\n- Validates downloaded byte ranges before uploading them to Yandex.\n- Keeps original audio at full volume while a new translation is generated, then applies the configured level when translated playback begins.\n\n### Included base\n\n- Based on stable Morphe Patches 1.37.0.\n- Includes both the built-in Google/other translation and Yandex translation with mutually exclusive player controls.",
   "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.3/patches-1.37.0-dualvot.3.mpp",
   "signature_download_url": "",
