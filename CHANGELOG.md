@@ -2,14 +2,14 @@
 
 ### Yandex button halo
 
-* Replace the drawable-sized countdown composition with a dedicated player
-  button view.
-* Draw the ring as a full-size circular halo around the standard player-button
-  area rather than inside the 24 dp translate glyph.
-* Keep the inside timer centered without drawing it over the translate symbol.
-* In the below layout, move a smaller icon and halo upward and reserve a
-  separate lower area for the timer while preserving the original button
-  container size and alignment.
+* Anchor the countdown ring to the actual circular background of the Yandex
+  player button instead of its larger transparent touch target.
+* Keep the ring and icon centered in portrait, landscape, and compact players.
+* Keep the ring radius stable when its thickness or timer placement changes.
+* Allow the estimated time to appear inside the button or over the lower part
+  of the ring without moving the button.
+* Keep five or more optional lower player buttons spaced consistently.
+* Keep the Yandex button active while translated playback is paused.
 
 ### Proxy behavior clarification
 
