@@ -1,3 +1,22 @@
+## 1.37.0-dualvot.4-dev.1 (2026-07-27)
+
+### Configurable Yandex countdown
+
+* Add an animated countdown ring around the Yandex player button.
+* Allow the estimated time to appear inside or below the icon, or remain
+  hidden.
+* Add settings for ring visibility, color, and thickness.
+* Keep the button dimensions aligned with the other player controls when the
+  timer is shown below the icon.
+* Switch to an indeterminate animation when Yandex exceeds its estimate.
+* Show a short red animated signal for request and playback errors.
+
+### Status accuracy
+
+* Replace the misleading "check back later" message with a processing status.
+* Refresh the bottom sheet as soon as translated audio is prepared and starts
+  playing.
+
 ## 1.37.0-dualvot.3 (2026-07-26)
 
 ### Yandex translation reliability

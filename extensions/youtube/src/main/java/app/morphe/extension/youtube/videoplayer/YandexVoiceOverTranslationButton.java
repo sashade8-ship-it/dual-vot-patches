@@ -45,6 +45,17 @@
 
 package app.morphe.extension.youtube.videoplayer;
 
+import static app.morphe.extension.shared.StringRef.str;
+
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
+import android.graphics.RectF;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -54,17 +65,26 @@ import java.lang.ref.WeakReference;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
-import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotBottomSheet;
 import app.morphe.extension.youtube.patches.voiceovertranslation.VoiceOverTranslationCoordinator;
+import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVoiceOverTranslationPatch;
+import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotBottomSheet;
 import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
 public final class YandexVoiceOverTranslationButton {
+    private static final long DETERMINATE_FRAME_DELAY_MS = 250;
+    private static final long INDETERMINATE_FRAME_DELAY_MS = 50;
+    private static final int ERROR_COLOR = 0xFFFF3B30;
+
     private static final Runnable STATE_REFRESH_CALLBACK =
+            YandexVoiceOverTranslationButton::refreshActivatedState;
+    private static final Runnable PROGRESS_TICK =
             YandexVoiceOverTranslationButton::refreshActivatedState;
 
     @Nullable
     private static WeakReference<ImageView> overlayButtonRef;
+    @Nullable
+    private static WeakReference<CountdownDrawable> countdownDrawableRef;
 
     public static void initializeButton(View controlsView) {
         try {
@@ -80,6 +100,14 @@ public final class YandexVoiceOverTranslationButton {
                         return true;
                     });
             overlayButtonRef = button != null ? new WeakReference<>(button) : null;
+            if (button != null) {
+                CountdownDrawable drawable = new CountdownDrawable(button);
+                countdownDrawableRef = new WeakReference<>(drawable);
+                button.setForeground(drawable);
+                button.post(STATE_REFRESH_CALLBACK);
+            } else {
+                countdownDrawableRef = null;
+            }
             refreshActivatedState();
         } catch (Exception ex) {
             Logger.printException(() -> "YandexVoiceOverTranslationButton initializeButton failure", ex);
@@ -95,9 +123,230 @@ public final class YandexVoiceOverTranslationButton {
             ImageView overlay = ref != null ? ref.get() : null;
             if (overlay != null) {
                 overlay.setImageAlpha(alpha);
+                overlay.removeCallbacks(PROGRESS_TICK);
+
+                boolean waiting = YandexVoiceOverTranslationPatch.translationStarting;
+                boolean error = YandexVoiceOverTranslationPatch.isTranslationErrorVisible();
+                int seconds = YandexVoiceOverTranslationPatch.getWaitingTimeSeconds();
+                float progress = YandexVoiceOverTranslationPatch.getWaitingProgressFraction();
+                String timerPosition = Settings.DUAL_VOT_YANDEX_TIMER_POSITION.get();
+                boolean showTimer = waiting && !"hidden".equals(timerPosition);
+
+                updateIconPadding(overlay, waiting && "below".equals(timerPosition));
+
+                WeakReference<CountdownDrawable> drawableRef = countdownDrawableRef;
+                CountdownDrawable drawable = drawableRef != null ? drawableRef.get() : null;
+                if (drawable != null) {
+                    drawable.update(
+                            waiting,
+                            error,
+                            showTimer,
+                            "below".equals(timerPosition),
+                            Settings.DUAL_VOT_YANDEX_PROGRESS_RING_ENABLED.get(),
+                            Settings.DUAL_VOT_YANDEX_PROGRESS_RING_COLOR.get(),
+                            Settings.DUAL_VOT_YANDEX_PROGRESS_RING_THICKNESS.get(),
+                            seconds,
+                            progress
+                    );
+                }
+
+                if (waiting || error) {
+                    boolean indeterminate = error || seconds <= 0 || progress < 0.0f;
+                    overlay.postDelayed(
+                            PROGRESS_TICK,
+                            indeterminate
+                                    ? INDETERMINATE_FRAME_DELAY_MS
+                                    : DETERMINATE_FRAME_DELAY_MS
+                    );
+                }
             }
         } catch (Exception ex) {
             Logger.printException(() -> "refreshActivatedState failure", ex);
+        }
+    }
+
+    private static void updateIconPadding(ImageView button, boolean timerBelow) {
+        int size = Math.min(button.getWidth(), button.getHeight());
+        int side = timerBelow ? Math.round(size * 0.12f) : 0;
+        int top = timerBelow ? Math.round(size * 0.04f) : 0;
+        int bottom = timerBelow ? Math.round(size * 0.25f) : 0;
+        if (button.getPaddingLeft() != side
+                || button.getPaddingTop() != top
+                || button.getPaddingRight() != side
+                || button.getPaddingBottom() != bottom) {
+            button.setPadding(side, top, side, bottom);
+        }
+    }
+
+    private static final class CountdownDrawable extends Drawable {
+        private final Paint ringPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Paint textBackgroundPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final RectF ringBounds = new RectF();
+        private final RectF textBackgroundBounds = new RectF();
+        private final float density;
+
+        private boolean waiting;
+        private boolean error;
+        private boolean showTimer;
+        private boolean timerBelow;
+        private boolean showRing;
+        private int ringColor = 0xFFFFC107;
+        private float ringThicknessPx;
+        private int remainingSeconds = -1;
+        private float progress = -1.0f;
+
+        CountdownDrawable(ImageView owner) {
+            density = owner.getResources().getDisplayMetrics().density;
+            ringPaint.setStyle(Paint.Style.STROKE);
+            ringPaint.setStrokeCap(Paint.Cap.ROUND);
+
+            textPaint.setColor(Color.WHITE);
+            textPaint.setTextAlign(Paint.Align.CENTER);
+            textPaint.setTypeface(Typeface.create("sans-serif-condensed", Typeface.BOLD));
+
+            textBackgroundPaint.setColor(0xB3000000);
+            textBackgroundPaint.setStyle(Paint.Style.FILL);
+        }
+
+        void update(
+                boolean waiting,
+                boolean error,
+                boolean showTimer,
+                boolean timerBelow,
+                boolean showRing,
+                String configuredColor,
+                int configuredThicknessDp,
+                int remainingSeconds,
+                float progress
+        ) {
+            this.waiting = waiting;
+            this.error = error;
+            this.showTimer = showTimer;
+            this.timerBelow = timerBelow;
+            this.showRing = showRing;
+            this.ringColor = parseColor(configuredColor);
+            this.ringThicknessPx = Math.max(1.0f, configuredThicknessDp * density);
+            this.remainingSeconds = remainingSeconds;
+            this.progress = progress;
+            invalidateSelf();
+        }
+
+        @Override
+        public void draw(Canvas canvas) {
+            if (!waiting && !error) return;
+
+            if (showRing || error) {
+                drawRing(canvas);
+            }
+            if (showTimer && waiting) {
+                drawTimer(canvas);
+            }
+        }
+
+        private void drawRing(Canvas canvas) {
+            float inset = ringThicknessPx / 2.0f + density;
+            ringBounds.set(
+                    getBounds().left + inset,
+                    getBounds().top + inset,
+                    getBounds().right - inset,
+                    getBounds().bottom - inset
+            );
+            ringPaint.setStrokeWidth(ringThicknessPx);
+
+            if (error) {
+                float pulse = (float) ((Math.sin(SystemClock.uptimeMillis() / 90.0) + 1.0) / 2.0);
+                ringPaint.setColor(withAlpha(ERROR_COLOR, Math.round(120 + pulse * 135)));
+                float start = (SystemClock.uptimeMillis() / 3.0f) % 360.0f - 90.0f;
+                canvas.drawArc(ringBounds, start, 115.0f, false, ringPaint);
+                return;
+            }
+
+            ringPaint.setColor(withAlpha(ringColor, 48));
+            canvas.drawArc(ringBounds, -90.0f, 360.0f, false, ringPaint);
+
+            ringPaint.setColor(ringColor);
+            if (remainingSeconds > 0 && progress >= 0.0f) {
+                canvas.drawArc(
+                        ringBounds,
+                        -90.0f,
+                        360.0f * Math.max(0.0f, Math.min(1.0f, progress)),
+                        false,
+                        ringPaint
+                );
+            } else {
+                float start = (SystemClock.uptimeMillis() / 3.0f) % 360.0f - 90.0f;
+                canvas.drawArc(ringBounds, start, 100.0f, false, ringPaint);
+            }
+        }
+
+        private void drawTimer(Canvas canvas) {
+            String text = formatTimerText(remainingSeconds);
+            float width = getBounds().width();
+            float height = getBounds().height();
+            float textSize = Math.min(width, height) * (timerBelow ? 0.18f : 0.24f);
+            textPaint.setTextSize(Math.max(8.0f * density, textSize));
+
+            Paint.FontMetrics metrics = textPaint.getFontMetrics();
+            float centerX = getBounds().exactCenterX();
+            float centerY = timerBelow
+                    ? getBounds().bottom - Math.max(6.0f * density, height * 0.13f)
+                    : getBounds().exactCenterY();
+            float baseline = centerY - (metrics.ascent + metrics.descent) / 2.0f;
+            float textWidth = textPaint.measureText(text);
+            float horizontalPadding = 3.0f * density;
+            float verticalPadding = 1.0f * density;
+
+            textBackgroundBounds.set(
+                    centerX - textWidth / 2.0f - horizontalPadding,
+                    baseline + metrics.ascent - verticalPadding,
+                    centerX + textWidth / 2.0f + horizontalPadding,
+                    baseline + metrics.descent + verticalPadding
+            );
+            float radius = 4.0f * density;
+            canvas.drawRoundRect(textBackgroundBounds, radius, radius, textBackgroundPaint);
+            canvas.drawText(text, centerX, baseline, textPaint);
+        }
+
+        private static String formatTimerText(int seconds) {
+            if (seconds <= 0) return "…";
+            if (seconds >= 60) {
+                int minutes = (seconds + 59) / 60;
+                return str("dualvot_yandex_button_time_minutes", minutes);
+            }
+            return str("dualvot_yandex_button_time_seconds", seconds);
+        }
+
+        private static int parseColor(String value) {
+            try {
+                return Color.parseColor(value);
+            } catch (Exception ignored) {
+                return 0xFFFFC107;
+            }
+        }
+
+        private static int withAlpha(int color, int alpha) {
+            return (color & 0x00FFFFFF) | (Math.max(0, Math.min(255, alpha)) << 24);
+        }
+
+        @Override
+        public void setAlpha(int alpha) {
+            ringPaint.setAlpha(alpha);
+            textPaint.setAlpha(alpha);
+            invalidateSelf();
+        }
+
+        @Override
+        public void setColorFilter(@Nullable ColorFilter colorFilter) {
+            ringPaint.setColorFilter(colorFilter);
+            textPaint.setColorFilter(colorFilter);
+            invalidateSelf();
+        }
+
+        @Override
+        @SuppressWarnings("deprecation")
+        public int getOpacity() {
+            return PixelFormat.TRANSLUCENT;
         }
     }
 }

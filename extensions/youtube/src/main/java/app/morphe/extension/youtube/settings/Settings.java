@@ -550,6 +550,10 @@ public class Settings extends SharedYouTubeSettings {
     // Dual VoT - Yandex engine. Keep every key independent from the official
     // caption-plus-TTS engine so users can enable both buttons safely.
     public static final BooleanSetting DUAL_VOT_YANDEX_ENABLED = new BooleanSetting("dualvot_yandex_enabled", FALSE);
+    public static final StringSetting DUAL_VOT_YANDEX_TIMER_POSITION = new StringSetting("dualvot_yandex_timer_position", "inside", false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final BooleanSetting DUAL_VOT_YANDEX_PROGRESS_RING_ENABLED = new BooleanSetting("dualvot_yandex_progress_ring_enabled", TRUE, false, parent(DUAL_VOT_YANDEX_ENABLED));
+    public static final StringSetting DUAL_VOT_YANDEX_PROGRESS_RING_COLOR = new StringSetting("dualvot_yandex_progress_ring_color", "#FFC107", false, parent(DUAL_VOT_YANDEX_PROGRESS_RING_ENABLED));
+    public static final IntegerSetting DUAL_VOT_YANDEX_PROGRESS_RING_THICKNESS = new IntegerSetting("dualvot_yandex_progress_ring_thickness", 2, false, parent(DUAL_VOT_YANDEX_PROGRESS_RING_ENABLED));
     public static final StringSetting DUAL_VOT_YANDEX_SOURCE_LANGUAGE = new StringSetting("dualvot_yandex_source_language", "auto", false, parent(DUAL_VOT_YANDEX_ENABLED));
     public static final StringSetting DUAL_VOT_YANDEX_TARGET_LANGUAGE = new StringSetting("dualvot_yandex_target_language", "ru", false, parent(DUAL_VOT_YANDEX_ENABLED));
     public static final IntegerSetting DUAL_VOT_YANDEX_TRANSLATION_VOLUME = new IntegerSetting("dualvot_yandex_translation_volume", 100, false, parent(DUAL_VOT_YANDEX_ENABLED));
@@ -802,6 +806,8 @@ public class Settings extends SharedYouTubeSettings {
                 0, 100, 1, "%"));
         SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_TRANSLATION_VOLUME,
                 0, 100, 1, "%"));
+        SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_PROGRESS_RING_THICKNESS,
+                1, 6, 1, "dp"));
         SeekBarPreference.register(new SeekBarConfig(VOT_MAX_SPEECH_RATE,
                 10, 25, 1, "x", 10));
     }

@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-26T19:09:17",
-  "description": "## Dual VoT Patches 1.37.0-dualvot.3\n\n### Yandex translation reliability\n\n- Resolves a dedicated low-bitrate YouTube audio stream when no usable cached format is available.\n- Validates downloaded byte ranges before uploading them to Yandex.\n- Keeps original audio at full volume while a new translation is generated, then applies the configured level when translated playback begins.\n\n### Included base\n\n- Based on stable Morphe Patches 1.37.0.\n- Includes both the built-in Google/other translation and Yandex translation with mutually exclusive player controls.",
-  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.3/patches-1.37.0-dualvot.3.mpp",
+  "created_at": "2026-07-27T13:16:09",
+  "description": "## Dual VoT Patches 1.37.0-dualvot.4-dev.1\n\n### Configurable Yandex countdown\n\n- Adds an animated progress ring to the Yandex player button.\n- Shows the estimated remaining time inside or below the icon, or hides the text.\n- Adds settings for ring visibility, color, and thickness.\n- Switches to an indeterminate animation when Yandex exceeds its estimate.\n- Shows a short red animated signal for request or playback errors.\n- Updates the bottom-sheet status immediately when translated audio starts.\n\n### Included base\n\n- Based on stable Morphe Patches 1.37.0.\n- Test pre-release; enable pre-release patches for this source in Morphe Manager.",
+  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.4-dev.1/patches-1.37.0-dualvot.4-dev.1.mpp",
   "signature_download_url": "",
-  "version": "1.37.0-dualvot.3"
+  "version": "1.37.0-dualvot.4-dev.1"
 }
