@@ -693,4 +693,14 @@
         <item>ja</item>
         <item>ko</item>
     </string-array>
+    <string-array name="dualvot_yandex_timer_position_entries">
+        <item>@string/dualvot_yandex_timer_position_entry_inside</item>
+        <item>@string/dualvot_yandex_timer_position_entry_below</item>
+        <item>@string/dualvot_yandex_timer_position_entry_hidden</item>
+    </string-array>
+    <string-array name="dualvot_yandex_timer_position_entry_values">
+        <item>inside</item>
+        <item>below</item>
+        <item>hidden</item>
+    </string-array>
 </resources>
