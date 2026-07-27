@@ -52,6 +52,7 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -101,9 +102,13 @@ public final class YandexVoiceOverTranslationButton {
                     });
             overlayButtonRef = button != null ? new WeakReference<>(button) : null;
             if (button != null) {
-                CountdownDrawable drawable = new CountdownDrawable(button);
+                CountdownDrawable drawable = new CountdownDrawable(button, button.getDrawable());
                 countdownDrawableRef = new WeakReference<>(drawable);
-                button.setForeground(drawable);
+                // Keep the indicator in the same square drawable coordinate space as
+                // the icon. A foreground receives the entire, sometimes rectangular,
+                // touch target and produces an oversized oval in compact players.
+                button.setImageDrawable(drawable);
+                button.setImageAlpha(255);
                 button.post(STATE_REFRESH_CALLBACK);
             } else {
                 countdownDrawableRef = null;
@@ -122,7 +127,6 @@ public final class YandexVoiceOverTranslationButton {
             WeakReference<ImageView> ref = overlayButtonRef;
             ImageView overlay = ref != null ? ref.get() : null;
             if (overlay != null) {
-                overlay.setImageAlpha(alpha);
                 overlay.removeCallbacks(PROGRESS_TICK);
 
                 boolean waiting = YandexVoiceOverTranslationPatch.translationStarting;
@@ -131,8 +135,6 @@ public final class YandexVoiceOverTranslationButton {
                 float progress = YandexVoiceOverTranslationPatch.getWaitingProgressFraction();
                 String timerPosition = Settings.DUAL_VOT_YANDEX_TIMER_POSITION.get();
                 boolean showTimer = waiting && !"hidden".equals(timerPosition);
-
-                updateIconPadding(overlay, waiting && "below".equals(timerPosition));
 
                 WeakReference<CountdownDrawable> drawableRef = countdownDrawableRef;
                 CountdownDrawable drawable = drawableRef != null ? drawableRef.get() : null;
@@ -146,7 +148,8 @@ public final class YandexVoiceOverTranslationButton {
                             Settings.DUAL_VOT_YANDEX_PROGRESS_RING_COLOR.get(),
                             Settings.DUAL_VOT_YANDEX_PROGRESS_RING_THICKNESS.get(),
                             seconds,
-                            progress
+                            progress,
+                            alpha
                     );
                 }
 
@@ -165,25 +168,14 @@ public final class YandexVoiceOverTranslationButton {
         }
     }
 
-    private static void updateIconPadding(ImageView button, boolean timerBelow) {
-        int size = Math.min(button.getWidth(), button.getHeight());
-        int side = timerBelow ? Math.round(size * 0.12f) : 0;
-        int top = timerBelow ? Math.round(size * 0.04f) : 0;
-        int bottom = timerBelow ? Math.round(size * 0.25f) : 0;
-        if (button.getPaddingLeft() != side
-                || button.getPaddingTop() != top
-                || button.getPaddingRight() != side
-                || button.getPaddingBottom() != bottom) {
-            button.setPadding(side, top, side, bottom);
-        }
-    }
-
     private static final class CountdownDrawable extends Drawable {
+        private final Drawable icon;
         private final Paint ringPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final Paint textBackgroundPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final RectF ringBounds = new RectF();
         private final RectF textBackgroundBounds = new RectF();
+        private final Rect iconBounds = new Rect();
         private final float density;
 
         private boolean waiting;
@@ -195,9 +187,14 @@ public final class YandexVoiceOverTranslationButton {
         private float ringThicknessPx;
         private int remainingSeconds = -1;
         private float progress = -1.0f;
+        private int iconAlpha = 128;
 
-        CountdownDrawable(ImageView owner) {
+        CountdownDrawable(ImageView owner, Drawable icon) {
             density = owner.getResources().getDisplayMetrics().density;
+            Drawable.ConstantState iconState = icon.getConstantState();
+            this.icon = iconState != null
+                    ? iconState.newDrawable(owner.getResources()).mutate()
+                    : icon.mutate();
             ringPaint.setStyle(Paint.Style.STROKE);
             ringPaint.setStrokeCap(Paint.Cap.ROUND);
 
@@ -218,7 +215,8 @@ public final class YandexVoiceOverTranslationButton {
                 String configuredColor,
                 int configuredThicknessDp,
                 int remainingSeconds,
-                float progress
+                float progress,
+                int iconAlpha
         ) {
             this.waiting = waiting;
             this.error = error;
@@ -229,14 +227,20 @@ public final class YandexVoiceOverTranslationButton {
             this.ringThicknessPx = Math.max(1.0f, configuredThicknessDp * density);
             this.remainingSeconds = remainingSeconds;
             this.progress = progress;
+            this.iconAlpha = Math.max(0, Math.min(255, iconAlpha));
             invalidateSelf();
         }
 
         @Override
         public void draw(Canvas canvas) {
-            if (!waiting && !error) return;
+            updateGeometry();
 
-            if (showRing || error) {
+            // Replacing the icon while the timer is inside avoids drawing digits
+            // across the translate glyph. All other states retain the icon.
+            if (!(waiting && showTimer && !timerBelow)) {
+                drawIcon(canvas);
+            }
+            if ((showRing && waiting) || error) {
                 drawRing(canvas);
             }
             if (showTimer && waiting) {
@@ -244,14 +248,64 @@ public final class YandexVoiceOverTranslationButton {
             }
         }
 
+        private void updateGeometry() {
+            Rect bounds = getBounds();
+            float size = Math.min(bounds.width(), bounds.height());
+            float centerX = bounds.exactCenterX();
+            float centerY = bounds.exactCenterY();
+            float strokeInset = ringThicknessPx / 2.0f + 0.75f * density;
+
+            if (waiting && showTimer && timerBelow) {
+                float iconAreaSide = Math.max(1.0f, size * 0.68f);
+                float compositionTop = centerY - size / 2.0f;
+                float iconCenterY = compositionTop + size * 0.36f;
+                setCenteredSquare(
+                        ringBounds,
+                        centerX,
+                        iconCenterY,
+                        Math.max(1.0f, iconAreaSide - 2.0f * strokeInset)
+                );
+            } else {
+                setCenteredSquare(
+                        ringBounds,
+                        centerX,
+                        centerY,
+                        Math.max(1.0f, size - 2.0f * strokeInset)
+                );
+            }
+        }
+
+        private static void setCenteredSquare(
+                RectF target,
+                float centerX,
+                float centerY,
+                float side
+        ) {
+            float half = side / 2.0f;
+            target.set(centerX - half, centerY - half, centerX + half, centerY + half);
+        }
+
+        private void drawIcon(Canvas canvas) {
+            boolean ringVisible = (showRing && waiting) || error;
+            if (!ringVisible && !(waiting && showTimer && timerBelow)) {
+                iconBounds.set(getBounds());
+            } else {
+                float inset = ringThicknessPx / 2.0f + 1.25f * density;
+                iconBounds.set(
+                        Math.round(ringBounds.left + inset),
+                        Math.round(ringBounds.top + inset),
+                        Math.round(ringBounds.right - inset),
+                        Math.round(ringBounds.bottom - inset)
+                );
+            }
+            if (iconBounds.width() <= 0 || iconBounds.height() <= 0) return;
+
+            icon.setBounds(iconBounds);
+            icon.setAlpha(iconAlpha);
+            icon.draw(canvas);
+        }
+
         private void drawRing(Canvas canvas) {
-            float inset = ringThicknessPx / 2.0f + density;
-            ringBounds.set(
-                    getBounds().left + inset,
-                    getBounds().top + inset,
-                    getBounds().right - inset,
-                    getBounds().bottom - inset
-            );
             ringPaint.setStrokeWidth(ringThicknessPx);
 
             if (error) {
@@ -282,20 +336,20 @@ public final class YandexVoiceOverTranslationButton {
 
         private void drawTimer(Canvas canvas) {
             String text = formatTimerText(remainingSeconds);
-            float width = getBounds().width();
-            float height = getBounds().height();
-            float textSize = Math.min(width, height) * (timerBelow ? 0.18f : 0.24f);
-            textPaint.setTextSize(Math.max(8.0f * density, textSize));
+            Rect bounds = getBounds();
+            float size = Math.min(bounds.width(), bounds.height());
+            float textSize = size * (timerBelow ? 0.22f : 0.29f);
+            textPaint.setTextSize(Math.max((timerBelow ? 5.5f : 7.0f) * density, textSize));
 
             Paint.FontMetrics metrics = textPaint.getFontMetrics();
-            float centerX = getBounds().exactCenterX();
+            float centerX = bounds.exactCenterX();
             float centerY = timerBelow
-                    ? getBounds().bottom - Math.max(6.0f * density, height * 0.13f)
-                    : getBounds().exactCenterY();
+                    ? bounds.exactCenterY() + size * 0.35f
+                    : bounds.exactCenterY();
             float baseline = centerY - (metrics.ascent + metrics.descent) / 2.0f;
             float textWidth = textPaint.measureText(text);
-            float horizontalPadding = 3.0f * density;
-            float verticalPadding = 1.0f * density;
+            float horizontalPadding = (timerBelow ? 1.5f : 2.25f) * density;
+            float verticalPadding = (timerBelow ? 0.25f : 0.75f) * density;
 
             textBackgroundBounds.set(
                     centerX - textWidth / 2.0f - horizontalPadding,
@@ -303,13 +357,13 @@ public final class YandexVoiceOverTranslationButton {
                     centerX + textWidth / 2.0f + horizontalPadding,
                     baseline + metrics.descent + verticalPadding
             );
-            float radius = 4.0f * density;
+            float radius = textBackgroundBounds.height() / 2.0f;
             canvas.drawRoundRect(textBackgroundBounds, radius, radius, textBackgroundPaint);
             canvas.drawText(text, centerX, baseline, textPaint);
         }
 
         private static String formatTimerText(int seconds) {
-            if (seconds <= 0) return "…";
+            if (seconds <= 0) return "\u2026";
             if (seconds >= 60) {
                 int minutes = (seconds + 59) / 60;
                 return str("dualvot_yandex_button_time_minutes", minutes);
@@ -333,6 +387,7 @@ public final class YandexVoiceOverTranslationButton {
         public void setAlpha(int alpha) {
             ringPaint.setAlpha(alpha);
             textPaint.setAlpha(alpha);
+            icon.setAlpha(alpha);
             invalidateSelf();
         }
 
@@ -340,7 +395,18 @@ public final class YandexVoiceOverTranslationButton {
         public void setColorFilter(@Nullable ColorFilter colorFilter) {
             ringPaint.setColorFilter(colorFilter);
             textPaint.setColorFilter(colorFilter);
+            icon.setColorFilter(colorFilter);
             invalidateSelf();
+        }
+
+        @Override
+        public int getIntrinsicWidth() {
+            return icon.getIntrinsicWidth();
+        }
+
+        @Override
+        public int getIntrinsicHeight() {
+            return icon.getIntrinsicHeight();
         }
 
         @Override

@@ -1133,11 +1133,11 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_translation_volume_summary">Громкость переведённой аудиодорожки (0-100). По умолчанию: 100</string>
     <string name="dualvot_yandex_original_audio_volume_title">Громкость оригинального аудио</string>
     <string name="dualvot_yandex_original_audio_volume_summary">Громкость оригинальной видеодорожки во время перевода (0-100). По умолчанию: 30</string>
-    <string name="dualvot_yandex_audio_proxy_title">Прокси аудиопотока</string>
-    <string name="dualvot_yandex_audio_proxy_enabled_summary">Включать только в случае недоступности серверов Яндекса</string>
-    <string name="dualvot_yandex_audio_proxy_summary">Включать только в случае недоступности серверов Яндекса</string>
-    <string name="dualvot_yandex_audio_proxy_summary_on">Аудиопоток проксируется через worker</string>
-    <string name="dualvot_yandex_audio_proxy_summary_off">Аудиопоток использует прямую ссылку</string>
+    <string name="dualvot_yandex_audio_proxy_title">Прокси Яндекс-перевода</string>
+    <string name="dualvot_yandex_audio_proxy_enabled_summary">Запросы перевода и аудио идут через VOT worker</string>
+    <string name="dualvot_yandex_audio_proxy_summary">Используйте, если сервисы Яндекса недоступны в вашем регионе</string>
+    <string name="dualvot_yandex_audio_proxy_summary_on">Запросы перевода и аудио идут через VOT worker</string>
+    <string name="dualvot_yandex_audio_proxy_summary_off">Запросы перевода и аудио идут напрямую к Яндексу</string>
     <string name="dualvot_yandex_proxy_url_title">Прокси-сервер</string>
     <string name="dualvot_yandex_proxy_url_summary">Хост прокси VOT worker. По умолчанию: vot-worker.eu.cc</string>
     <string name="dualvot_yandex_use_live_voices_title">Живые голоса</string>
