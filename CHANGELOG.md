@@ -1,11 +1,13 @@
-## 1.37.0-dev.1-dualvot.4 (2026-07-27)
+## 1.37.0-dualvot.4-preview (2026-07-27)
 
-### Packaging fix
+### Preview naming and packaging fix
 
 * Move the countdown placement arrays to `arrays.xml` and keep their labels as
   localized string resources so Arsclib can encode the patched APK.
-* Use a Manager-compatible pre-release version order so the `dev` bundle is
-  selected over `1.37.0-dualvot.3` when pre-release patches are enabled.
+* Identify this explicitly as a Dual VoT preview without implying that the
+  underlying Morphe Patches 1.37.0 release is a development build.
+* Keep a Manager-compatible version order so the preview is selected over
+  `1.37.0-dualvot.3` when pre-release patches are enabled.
 
 ## 1.37.0-dualvot.4-dev.1 (2026-07-27)
 
