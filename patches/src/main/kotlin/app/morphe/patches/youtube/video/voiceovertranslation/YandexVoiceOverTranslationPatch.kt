@@ -63,6 +63,22 @@ val yandexVoiceOverTranslationPatch = bytecodePatch(
                 preferences = setOf(
                     SwitchPreference("dualvot_yandex_enabled"),
                     ListPreference(
+                        key = "dualvot_yandex_timer_position",
+                        entriesKey = "dualvot_yandex_timer_position_entries",
+                        entryValuesKey = "dualvot_yandex_timer_position_entry_values",
+                    ),
+                    SwitchPreference("dualvot_yandex_progress_ring_enabled"),
+                    NonInteractivePreference(
+                        key = "dualvot_yandex_progress_ring_color",
+                        tag = "app.morphe.extension.shared.settings.preference.ColorPickerPreference",
+                        selectable = true,
+                    ),
+                    NonInteractivePreference(
+                        key = "dualvot_yandex_progress_ring_thickness",
+                        tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
+                        selectable = true,
+                    ),
+                    ListPreference(
                         key = "dualvot_yandex_source_language",
                         entriesKey = "dualvot_yandex_source_language_entries",
                         entryValuesKey = "dualvot_yandex_source_language_entry_values",

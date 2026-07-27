@@ -1239,6 +1239,26 @@ Limitation: Reverts to old style 'More videos' overlay"</string>
     <string name="dualvot_yandex_enabled_summary">Translation by Yandex</string>
     <string name="dualvot_yandex_enabled_summary_on">Yandex translation is enabled</string>
     <string name="dualvot_yandex_enabled_summary_off">Yandex translation is disabled</string>
+    <string name="dualvot_yandex_timer_position_title">Countdown placement</string>
+    <string name="dualvot_yandex_timer_position_summary">Choose where the estimated remaining time appears on the player button</string>
+    <string-array name="dualvot_yandex_timer_position_entries">
+        <item>Inside the icon</item>
+        <item>Below the icon</item>
+        <item>Hidden</item>
+    </string-array>
+    <string-array name="dualvot_yandex_timer_position_entry_values" translatable="false">
+        <item>inside</item>
+        <item>below</item>
+        <item>hidden</item>
+    </string-array>
+    <string name="dualvot_yandex_progress_ring_enabled_title">Show progress ring</string>
+    <string name="dualvot_yandex_progress_ring_enabled_summary">Display translation progress around the Yandex player button</string>
+    <string name="dualvot_yandex_progress_ring_color_title">Progress ring color</string>
+    <string name="dualvot_yandex_progress_ring_color_summary">Color used while a translation is being prepared</string>
+    <string name="dualvot_yandex_progress_ring_thickness_title">Progress ring thickness</string>
+    <string name="dualvot_yandex_progress_ring_thickness_summary">Thickness of the progress ring around the player button</string>
+    <string name="dualvot_yandex_button_time_minutes">%sm</string>
+    <string name="dualvot_yandex_button_time_seconds">%ss</string>
     <string name="dualvot_yandex_source_language_title">Source language</string>
     <string name="dualvot_yandex_source_language_summary">Select the language of the video audio</string>
     <string name="dualvot_yandex_target_language_title">Target language</string>
@@ -1268,7 +1288,7 @@ Limitation: Reverts to old style 'More videos' overlay"</string>
     <string name="dualvot_yandex_unavailable_too_long">Video is too long for translation (max 4 hours)</string>
     <string name="dualvot_yandex_unavailable_same_language">Video audio is already in the target language</string>
     <string name="dualvot_yandex_stream_waiting">Waiting… ~%s</string>
-    <string name="dualvot_yandex_stream_waiting_status">Translation requested, check back later</string>
+    <string name="dualvot_yandex_stream_waiting_status">Translation is still being processed…</string>
     <string name="dualvot_yandex_stream_not_ready">Translation not ready. Use the button to enable when ready.</string>
     <string name="dualvot_yandex_stream_requesting">Requesting translation for stream…</string>
     <string name="dualvot_yandex_stream_ready">Translation ready, playing</string>

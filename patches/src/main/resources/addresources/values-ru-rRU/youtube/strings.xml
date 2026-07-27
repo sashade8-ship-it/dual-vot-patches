@@ -1112,6 +1112,21 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_enabled_summary">Перевод от Яндекса</string>
     <string name="dualvot_yandex_enabled_summary_on">Яндекс-перевод включён</string>
     <string name="dualvot_yandex_enabled_summary_off">Яндекс-перевод отключён</string>
+    <string name="dualvot_yandex_timer_position_title">Расположение таймера</string>
+    <string name="dualvot_yandex_timer_position_summary">Выберите, где показывать примерное оставшееся время на кнопке плеера</string>
+    <string-array name="dualvot_yandex_timer_position_entries">
+        <item>Внутри иконки</item>
+        <item>Под иконкой</item>
+        <item>Не показывать</item>
+    </string-array>
+    <string name="dualvot_yandex_progress_ring_enabled_title">Показывать кольцо прогресса</string>
+    <string name="dualvot_yandex_progress_ring_enabled_summary">Отображать ход подготовки перевода вокруг кнопки Яндекса</string>
+    <string name="dualvot_yandex_progress_ring_color_title">Цвет кольца прогресса</string>
+    <string name="dualvot_yandex_progress_ring_color_summary">Цвет кольца во время подготовки перевода</string>
+    <string name="dualvot_yandex_progress_ring_thickness_title">Толщина кольца прогресса</string>
+    <string name="dualvot_yandex_progress_ring_thickness_summary">Толщина полосы вокруг кнопки плеера</string>
+    <string name="dualvot_yandex_button_time_minutes">%sм</string>
+    <string name="dualvot_yandex_button_time_seconds">%sс</string>
     <string name="dualvot_yandex_source_language_title">Язык источника</string>
     <string name="dualvot_yandex_source_language_summary">Выберите язык аудио видео</string>
     <string name="dualvot_yandex_target_language_title">Язык перевода</string>
@@ -1140,7 +1155,7 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_unavailable_too_long">Видео слишком длинное для перевода (макс. 4 часа)</string>
     <string name="dualvot_yandex_unavailable_same_language">Аудио видео уже на языке перевода</string>
     <string name="dualvot_yandex_stream_waiting">Ожидание… ~%s</string>
-    <string name="dualvot_yandex_stream_waiting_status">Перевод запрошен, вернитесь позже</string>
+    <string name="dualvot_yandex_stream_waiting_status">Перевод ещё обрабатывается…</string>
     <string name="dualvot_yandex_stream_not_ready">Перевод ещё не готов. Используйте кнопку для включения.</string>
     <string name="dualvot_yandex_stream_requesting">Запрос перевода для потока…</string>
     <string name="dualvot_yandex_stream_ready">Перевод готов, воспроизведение</string>
