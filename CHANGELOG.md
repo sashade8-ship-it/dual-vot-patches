@@ -1,3 +1,25 @@
+## 1.37.0-dualvot.6-preview (2026-07-27)
+
+### Yandex button halo
+
+* Anchor the countdown ring to the actual circular background of the Yandex
+  player button instead of its larger transparent touch target.
+* Keep the ring and icon centered in portrait, landscape, and compact players.
+* Keep the ring radius stable when its thickness or timer placement changes.
+* Allow the estimated time to appear inside the button or over the lower part
+  of the ring without moving the button.
+* Keep five or more optional lower player buttons spaced consistently.
+* Keep the Yandex button active while translated playback is paused.
+
+### Proxy behavior clarification
+
+* Keep proxy routing explicit and predictable: enabled routes all Yandex VOT
+  traffic through the configured worker; disabled uses direct Yandex
+  connections.
+* Document that the upstream anddea implementation does not perform automatic
+  availability-based switching; its switch proxies translated audio and can
+  fall back to the direct audio URL.
+
 ## 1.37.0-dualvot.5-preview (2026-07-27)
 
 ### Player button geometry

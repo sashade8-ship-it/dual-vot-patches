@@ -344,7 +344,9 @@ public class YandexVoiceOverTranslationPatch {
     public static boolean isTranslationActive() {
         MediaPlayer mp = mediaPlayer.get();
         if (mp == null) return translationStarting;
-        if (isPaused) return false;
+        // A paused translated track is still the selected, ready session.
+        // Treating pause as inactive makes the coordinator clear the Yandex
+        // engine and leaves the player button gray after preparation finishes.
         return currentTranslatedVideoId.get() != null && !currentTranslatedVideoId.get().isEmpty();
     }
 
@@ -1099,9 +1101,8 @@ public class YandexVoiceOverTranslationPatch {
             applyPlaybackSpeedToPlayer(mp);
             mp.start();
             isPaused = false;
-            // Re-apply VOT volume multiplier — during pause the original volume
-            // may have been reset to full by the player (isTranslationActive
-            // returns false while paused, so the setVolume hook doesn't duck).
+            // Re-apply VOT volume multiplier because the YouTube player can
+            // replace its AudioTrack while playback is paused.
             refreshOriginalAudioVolume();
         } catch (Exception ignored) { }
     }

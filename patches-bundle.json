@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-27T18:30:00",
-  "description": "## Dual VoT Patches 1.37.0-dualvot.5-preview\n\n### Player button geometry\n\n- Keeps the countdown ring circular and attached to the Yandex icon in portrait, landscape, and compact players.\n- Centers the timer inside the icon or places it below without changing the button footprint.\n- Stops the Yandex glyph from shifting while the player controls are visible.\n\n### Full Yandex proxy\n\n- Routes session creation, translation requests, source-audio uploads, status polling, and translated audio through the configured VOT worker.\n- Keeps direct Yandex access unchanged when the proxy is disabled.\n- Streams large proxy upload envelopes to reduce memory use on older Android devices.\n\n### Version meaning\n\n- Based on stable Morphe Patches 1.37.0.\n- `dualvot.5-preview` is a test build of Dual VoT, not a Morphe dev release.\n- Enable pre-release patches for this source in Morphe Manager.",
-  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.5-preview/patches-1.37.0-dualvot.5-preview.mpp",
+  "created_at": "2026-07-27T15:10:54",
+  "description": "## Dual VoT Patches 1.37.0-dualvot.6-preview\n\n### Yandex countdown\n\n- Anchors the animated countdown ring to the actual circular Yandex player button.\n- Keeps the ring centered and stable when orientation, thickness, or timer placement changes.\n- Supports the timer inside the button or over the lower part of the ring.\n- Keeps layouts with five or more optional player buttons spaced consistently.\n- Keeps the Yandex button active while translated playback is paused.\n\n### Version meaning\n\n- Based on stable Morphe Patches 1.37.0.\n- `dualvot.6-preview` is a preview of Dual VoT features, not a Morphe dev release.\n- Enable pre-release patches for this source in Morphe Manager.",
+  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.6-preview/patches-1.37.0-dualvot.6-preview.mpp",
   "signature_download_url": "",
-  "version": "1.37.0-dualvot.5-preview"
+  "version": "1.37.0-dualvot.6-preview"
 }
