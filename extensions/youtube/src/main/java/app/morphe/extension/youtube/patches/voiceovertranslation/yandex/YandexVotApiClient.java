@@ -59,6 +59,7 @@ import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
@@ -125,16 +126,35 @@ public class YandexVotApiClient {
      * @param originalUrl the original audio URL
      * @return proxied URL, or originalUrl on error
      */
+    private static boolean isProxyEnabled() {
+        return Settings.DUAL_VOT_YANDEX_AUDIO_PROXY_ENABLED.get()
+                && !Settings.DUAL_VOT_YANDEX_PROXY_URL.get().trim().isEmpty();
+    }
+
+    @NonNull
+    private static String getProxyBaseUrl() {
+        String configuredUrl = Settings.DUAL_VOT_YANDEX_PROXY_URL.get().trim();
+        if (!configuredUrl.matches("(?i)^https?://.*")) {
+            configuredUrl = "https://" + configuredUrl;
+        }
+        return configuredUrl.replaceAll("/+$", "");
+    }
+
+    @NonNull
+    private static String getApiUrl(@NonNull String path) {
+        return (isProxyEnabled()
+                ? getProxyBaseUrl()
+                : "https://" + YANDEX_API_HOST) + path;
+    }
+
     @NonNull
     public static String toProxyAudioUrl(@NonNull String originalUrl) {
         if (originalUrl.isEmpty()) {
             return originalUrl;
         }
-        String proxyHost = Settings.DUAL_VOT_YANDEX_PROXY_URL.get();
-        if (proxyHost.isEmpty()) {
+        if (!isProxyEnabled()) {
             return originalUrl;
         }
-        proxyHost = proxyHost.replaceFirst("^https?://", "").replaceAll("/+$", "");
         try {
             URI uri = new URI(originalUrl);
             String path = uri.getRawPath();
@@ -148,7 +168,7 @@ public class YandexVotApiClient {
                 pathTrimmed = pathTrimmed.substring(lastSlash + 1);
             }
             StringBuilder proxyUrl = new StringBuilder();
-            proxyUrl.append("https://").append(proxyHost);
+            proxyUrl.append(getProxyBaseUrl());
             proxyUrl.append("/video-translation/audio-proxy/");
             proxyUrl.append(pathTrimmed);
             if (query != null && !query.isEmpty()) {
@@ -160,6 +180,99 @@ public class YandexVotApiClient {
             Logger.printDebug(() -> "toProxyAudioUrl: invalid URL " + originalUrl);
             return originalUrl;
         }
+    }
+
+    private static void writeBinaryProxyRequest(
+            @NonNull OutputStream output,
+            @NonNull byte[] body,
+            @NonNull Map<String, String> headers
+    ) throws IOException {
+        StringBuilder json = new StringBuilder(16_384);
+        json.append("{\"headers\":");
+        appendJsonHeaders(json, headers);
+        json.append(",\"body\":[");
+        for (int i = 0; i < body.length; i++) {
+            if (i > 0) json.append(',');
+            json.append(body[i] & 0xFF);
+            if (json.length() >= 16_384) {
+                writeUtf8(output, json);
+                json.setLength(0);
+            }
+        }
+        json.append("]}");
+        writeUtf8(output, json);
+    }
+
+    private static void writeUtf8(
+            @NonNull OutputStream output,
+            @NonNull StringBuilder text
+    ) throws IOException {
+        output.write(text.toString().getBytes(StandardCharsets.UTF_8));
+    }
+
+    @NonNull
+    private static byte[] wrapJsonProxyRequest(
+            @NonNull String jsonBody,
+            @NonNull Map<String, String> headers
+    ) {
+        StringBuilder json = new StringBuilder(jsonBody.length() + 256);
+        json.append("{\"headers\":");
+        appendJsonHeaders(json, headers);
+        json.append(",\"body\":").append(jsonBody).append('}');
+        return json.toString().getBytes(StandardCharsets.UTF_8);
+    }
+
+    private static void appendJsonHeaders(
+            @NonNull StringBuilder json,
+            @NonNull Map<String, String> headers
+    ) {
+        json.append('{');
+        boolean first = true;
+        for (Map.Entry<String, String> header : headers.entrySet()) {
+            if (!first) json.append(',');
+            first = false;
+            appendJsonString(json, header.getKey());
+            json.append(':');
+            appendJsonString(json, header.getValue());
+        }
+        json.append('}');
+    }
+
+    private static void appendJsonString(@NonNull StringBuilder json, @NonNull String value) {
+        json.append('"');
+        for (int i = 0; i < value.length(); i++) {
+            char character = value.charAt(i);
+            switch (character) {
+                case '"':
+                    json.append("\\\"");
+                    break;
+                case '\\':
+                    json.append("\\\\");
+                    break;
+                case '\b':
+                    json.append("\\b");
+                    break;
+                case '\f':
+                    json.append("\\f");
+                    break;
+                case '\n':
+                    json.append("\\n");
+                    break;
+                case '\r':
+                    json.append("\\r");
+                    break;
+                case '\t':
+                    json.append("\\t");
+                    break;
+                default:
+                    if (character < 0x20) {
+                        json.append(String.format(Locale.US, "\\u%04x", (int) character));
+                    } else {
+                        json.append(character);
+                    }
+            }
+        }
+        json.append('"');
     }
 
     public static TranslationResult requestTranslation(
@@ -299,9 +412,6 @@ public class YandexVotApiClient {
     }
 
     private static byte[] sendApiRequest(String path, byte[] body, String method, String oauthToken) throws IOException {
-        String workerUrl = "https://" + YANDEX_API_HOST + path;
-        Logger.printDebug(() -> "VOT sendApiRequest: " + method + " " + workerUrl);
-
         String vtransSignature = computeHmacHex(body);
         // Use existing session UUID or generate a new one (will be replaced when session is created)
         String uuid = sessionUuid != null ? sessionUuid : generateUuid();
@@ -309,36 +419,60 @@ public class YandexVotApiClient {
         String tokenSign = computeHmacHex(tokenData.getBytes(StandardCharsets.UTF_8));
         String vtransToken = tokenSign + ":" + tokenData;
 
-        HttpURLConnection connection = (HttpURLConnection) new URL(workerUrl).openConnection();
+        Map<String, String> yandexHeaders = new LinkedHashMap<>();
+        yandexHeaders.put("Accept", "application/x-protobuf");
+        yandexHeaders.put("Accept-Language", "en");
+        yandexHeaders.put("Content-Type", "application/x-protobuf");
+        yandexHeaders.put("User-Agent", USER_AGENT);
+        yandexHeaders.put("Pragma", "no-cache");
+        yandexHeaders.put("Cache-Control", "no-cache");
+        yandexHeaders.put("Vtrans-Signature", vtransSignature);
+        yandexHeaders.put("Sec-Vtrans-Token", vtransToken);
+        if (sessionSecretKey != null && !sessionSecretKey.isEmpty()) {
+            yandexHeaders.put("Sec-Vtrans-Sk", sessionSecretKey);
+        }
+        if (oauthToken != null && !oauthToken.isEmpty()) {
+            yandexHeaders.put("Authorization", "OAuth " + oauthToken);
+        }
+
+        boolean useProxy = isProxyEnabled();
+        String requestUrl = getApiUrl(path);
+        Logger.printDebug(() -> "VOT sendApiRequest: " + method + " " + requestUrl
+                + (useProxy ? " via VOT worker" : ""));
+
+        HttpURLConnection connection = (HttpURLConnection) new URL(requestUrl).openConnection();
         try {
             connection.setRequestMethod(method);
-            connection.setRequestProperty("Accept", "application/x-protobuf");
-            connection.setRequestProperty("Accept-Language", "en");
-            connection.setRequestProperty("Content-Type", "application/x-protobuf");
-            connection.setRequestProperty("User-Agent", USER_AGENT);
-            connection.setRequestProperty("Pragma", "no-cache");
-            connection.setRequestProperty("Cache-Control", "no-cache");
-            connection.setRequestProperty("Vtrans-Signature", vtransSignature);
-            connection.setRequestProperty("Sec-Vtrans-Token", vtransToken);
-            if (sessionSecretKey != null && !sessionSecretKey.isEmpty()) {
-                connection.setRequestProperty("Sec-Vtrans-Sk", sessionSecretKey);
-            }
-            if (oauthToken != null && !oauthToken.isEmpty()) {
-                connection.setRequestProperty("Authorization", "OAuth " + oauthToken);
+            if (useProxy) {
+                connection.setRequestProperty("Accept", "application/x-protobuf");
+                connection.setRequestProperty("Content-Type", "application/json");
+                connection.setRequestProperty("User-Agent", USER_AGENT);
+            } else {
+                for (Map.Entry<String, String> header : yandexHeaders.entrySet()) {
+                    connection.setRequestProperty(header.getKey(), header.getValue());
+                }
             }
             connection.setConnectTimeout(CONNECT_TIMEOUT_MS);
             connection.setReadTimeout(READ_TIMEOUT_MS);
             connection.setDoOutput(true);
 
-            connection.setFixedLengthStreamingMode(body.length);
+            if (useProxy) {
+                connection.setChunkedStreamingMode(32 * 1024);
+            } else {
+                connection.setFixedLengthStreamingMode(body.length);
+            }
 
             try (OutputStream os = connection.getOutputStream()) {
-                os.write(body);
+                if (useProxy) {
+                    writeBinaryProxyRequest(os, body, yandexHeaders);
+                } else {
+                    os.write(body);
+                }
             }
 
             int responseCode = connection.getResponseCode();
             if (responseCode != 200) {
-                Logger.printDebug(() -> "VOT sendApiRequest: " + workerUrl
+                Logger.printDebug(() -> "VOT sendApiRequest: " + requestUrl
                         + " returned " + responseCode);
                 return null;
             }
@@ -393,24 +527,45 @@ public class YandexVotApiClient {
             String tokenSign = computeHmacHex(tokenData.getBytes(StandardCharsets.UTF_8));
             String summaryToken = tokenSign + ":" + tokenData;
 
-            String url = "https://" + YANDEX_API_HOST + path;
-            Logger.printDebug(() -> "VOT createSession: POST " + url);
+            Map<String, String> yandexHeaders = new LinkedHashMap<>();
+            yandexHeaders.put("Accept", "application/x-protobuf");
+            yandexHeaders.put("Content-Type", "application/x-protobuf");
+            yandexHeaders.put("User-Agent", USER_AGENT);
+            yandexHeaders.put("X-Ya-Summary-Token", summaryToken);
+            yandexHeaders.put("X-Ya-Summary-Sk", "");
 
-            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            boolean useProxy = isProxyEnabled();
+            String requestUrl = getApiUrl(path);
+            Logger.printDebug(() -> "VOT createSession: POST " + requestUrl
+                    + (useProxy ? " via VOT worker" : ""));
+
+            HttpURLConnection connection = (HttpURLConnection) new URL(requestUrl).openConnection();
             try {
                 connection.setRequestMethod("POST");
-                connection.setRequestProperty("Accept", "application/x-protobuf");
-                connection.setRequestProperty("Content-Type", "application/x-protobuf");
-                connection.setRequestProperty("User-Agent", USER_AGENT);
-                connection.setRequestProperty("X-Ya-Summary-Token", summaryToken);
-                connection.setRequestProperty("X-Ya-Summary-Sk", "");
+                if (useProxy) {
+                    connection.setRequestProperty("Accept", "application/x-protobuf");
+                    connection.setRequestProperty("Content-Type", "application/json");
+                    connection.setRequestProperty("User-Agent", USER_AGENT);
+                } else {
+                    for (Map.Entry<String, String> header : yandexHeaders.entrySet()) {
+                        connection.setRequestProperty(header.getKey(), header.getValue());
+                    }
+                }
                 connection.setConnectTimeout(CONNECT_TIMEOUT_MS);
                 connection.setReadTimeout(READ_TIMEOUT_MS);
                 connection.setDoOutput(true);
-                connection.setFixedLengthStreamingMode(body.length);
+                if (useProxy) {
+                    connection.setChunkedStreamingMode(32 * 1024);
+                } else {
+                    connection.setFixedLengthStreamingMode(body.length);
+                }
 
                 try (OutputStream os = connection.getOutputStream()) {
-                    os.write(body);
+                    if (useProxy) {
+                        writeBinaryProxyRequest(os, body, yandexHeaders);
+                    } else {
+                        os.write(body);
+                    }
                 }
 
                 int responseCode = connection.getResponseCode();
@@ -443,7 +598,7 @@ public class YandexVotApiClient {
                 connection.disconnect();
             }
         } catch (UnknownHostException e) {
-            Logger.printException(() -> "VOT createSession failed: DNS resolution error for " + YANDEX_API_HOST, e);
+            Logger.printException(() -> "VOT createSession failed: DNS resolution error", e);
             return false;
         } catch (SocketTimeoutException e) {
             Logger.printException(() -> "VOT createSession failed: connection timeout", e);
@@ -477,6 +632,9 @@ public class YandexVotApiClient {
      */
     public static boolean isValidOAuthToken(String token) {
         if (token == null || token.isEmpty()) return false;
+        // The worker forwards the OAuth header to the VOT API. Avoid making a
+        // separate direct login.yandex.ru request when Yandex is region-blocked.
+        if (isProxyEnabled()) return true;
         // Return cached result if we already validated this exact token.
         if (token.equals(lastValidatedToken)) return tokenIsValid;
         try {
@@ -617,23 +775,42 @@ public class YandexVotApiClient {
      * Sends a JSON request to the Yandex VOT API (for fail-audio-js endpoint).
      */
     private static void sendJsonRequest(String path, String jsonBody, String method) throws IOException {
-        String workerUrl = "https://" + YANDEX_API_HOST + path;
+        Map<String, String> yandexHeaders = new LinkedHashMap<>();
+        yandexHeaders.put("Content-Type", "application/json");
+        yandexHeaders.put("Accept", "application/json");
+        yandexHeaders.put("User-Agent", USER_AGENT);
 
-        HttpURLConnection connection = (HttpURLConnection) new URL(workerUrl).openConnection();
+        boolean useProxy = isProxyEnabled();
+        String requestUrl = getApiUrl(path);
+        byte[] payloadBytes = useProxy
+                ? wrapJsonProxyRequest(jsonBody, yandexHeaders)
+                : jsonBody.getBytes(StandardCharsets.UTF_8);
+
+        HttpURLConnection connection = (HttpURLConnection) new URL(requestUrl).openConnection();
         try {
             connection.setRequestMethod(method);
-            connection.setRequestProperty("Content-Type", "application/json");
-            connection.setRequestProperty("Accept", "application/json");
-            connection.setRequestProperty("User-Agent", USER_AGENT);
+            if (useProxy) {
+                connection.setRequestProperty("Content-Type", "application/json");
+                connection.setRequestProperty("Accept", "application/json");
+                connection.setRequestProperty("User-Agent", USER_AGENT);
+            } else {
+                for (Map.Entry<String, String> header : yandexHeaders.entrySet()) {
+                    connection.setRequestProperty(header.getKey(), header.getValue());
+                }
+            }
             connection.setConnectTimeout(CONNECT_TIMEOUT_MS);
             connection.setReadTimeout(READ_TIMEOUT_MS);
             connection.setDoOutput(true);
 
-            byte[] payloadBytes = jsonBody.getBytes(StandardCharsets.UTF_8);
             connection.setFixedLengthStreamingMode(payloadBytes.length);
 
             try (OutputStream os = connection.getOutputStream()) {
                 os.write(payloadBytes);
+            }
+            int responseCode = connection.getResponseCode();
+            if (responseCode < 200 || responseCode >= 300) {
+                Logger.printDebug(() -> "VOT sendJsonRequest: " + requestUrl
+                        + " returned " + responseCode);
             }
         } finally {
             connection.disconnect();

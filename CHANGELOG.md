@@ -1,3 +1,26 @@
+## 1.37.0-dualvot.5-preview (2026-07-27)
+
+### Player button geometry
+
+* Draw the countdown inside the icon's square drawable bounds instead of the
+  player button's rectangular touch target.
+* Keep the ring circular and centered in portrait, landscape, and compact
+  players.
+* Stop changing the ImageView padding during countdown refreshes, preventing
+  the Yandex glyph and timer from shifting.
+* In the inside layout, replace the glyph with the timer instead of drawing
+  both on top of each other.
+
+### Full Yandex proxy
+
+* Route session creation, translation requests, source-audio uploads, status
+  polling, failed-audio recovery, and translated MP3 playback through the
+  configured VOT worker.
+* Preserve direct Yandex connections when the proxy is disabled.
+* Skip the separate direct OAuth validation request in proxy mode.
+* Stream large proxy upload envelopes to reduce peak memory use on older
+  Android devices.
+
 ## 1.37.0-dualvot.4-preview (2026-07-27)
 
 ### Preview naming and packaging fix
