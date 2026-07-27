@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-27T13:16:09",
-  "description": "## Dual VoT Patches 1.37.0-dualvot.4-dev.1\n\n### Configurable Yandex countdown\n\n- Adds an animated progress ring to the Yandex player button.\n- Shows the estimated remaining time inside or below the icon, or hides the text.\n- Adds settings for ring visibility, color, and thickness.\n- Switches to an indeterminate animation when Yandex exceeds its estimate.\n- Shows a short red animated signal for request or playback errors.\n- Updates the bottom-sheet status immediately when translated audio starts.\n\n### Included base\n\n- Based on stable Morphe Patches 1.37.0.\n- Test pre-release; enable pre-release patches for this source in Morphe Manager.",
-  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.4-dev.1/patches-1.37.0-dualvot.4-dev.1.mpp",
+  "created_at": "2026-07-27T13:36:44",
+  "description": "## Dual VoT Patches 1.37.0-dev.1-dualvot.4\n\n### Configurable Yandex countdown\n\n- Adds an animated progress ring to the Yandex player button.\n- Shows the estimated remaining time inside or below the icon, or hides the text.\n- Adds settings for ring visibility, color, and thickness.\n- Switches to an indeterminate animation when Yandex exceeds its estimate.\n- Shows a short red animated signal for request or playback errors.\n- Updates the bottom-sheet status immediately when translated audio starts.\n- Fixes Android resource packaging for the countdown placement list.\n\n### Included base\n\n- Based on stable Morphe Patches 1.37.0.\n- Test pre-release; enable pre-release patches for this source in Morphe Manager.",
+  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dev.1-dualvot.4/patches-1.37.0-dev.1-dualvot.4.mpp",
   "signature_download_url": "",
-  "version": "1.37.0-dualvot.4-dev.1"
+  "version": "1.37.0-dev.1-dualvot.4"
 }

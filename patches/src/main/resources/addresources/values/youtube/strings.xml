@@ -1241,16 +1241,9 @@ Limitation: Reverts to old style 'More videos' overlay"</string>
     <string name="dualvot_yandex_enabled_summary_off">Yandex translation is disabled</string>
     <string name="dualvot_yandex_timer_position_title">Countdown placement</string>
     <string name="dualvot_yandex_timer_position_summary">Choose where the estimated remaining time appears on the player button</string>
-    <string-array name="dualvot_yandex_timer_position_entries">
-        <item>Inside the icon</item>
-        <item>Below the icon</item>
-        <item>Hidden</item>
-    </string-array>
-    <string-array name="dualvot_yandex_timer_position_entry_values" translatable="false">
-        <item>inside</item>
-        <item>below</item>
-        <item>hidden</item>
-    </string-array>
+    <string name="dualvot_yandex_timer_position_entry_inside">Inside the icon</string>
+    <string name="dualvot_yandex_timer_position_entry_below">Below the icon</string>
+    <string name="dualvot_yandex_timer_position_entry_hidden">Hidden</string>
     <string name="dualvot_yandex_progress_ring_enabled_title">Show progress ring</string>
     <string name="dualvot_yandex_progress_ring_enabled_summary">Display translation progress around the Yandex player button</string>
     <string name="dualvot_yandex_progress_ring_color_title">Progress ring color</string>

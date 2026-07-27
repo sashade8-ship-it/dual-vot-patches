@@ -1114,11 +1114,9 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_enabled_summary_off">Яндекс-перевод отключён</string>
     <string name="dualvot_yandex_timer_position_title">Расположение таймера</string>
     <string name="dualvot_yandex_timer_position_summary">Выберите, где показывать примерное оставшееся время на кнопке плеера</string>
-    <string-array name="dualvot_yandex_timer_position_entries">
-        <item>Внутри иконки</item>
-        <item>Под иконкой</item>
-        <item>Не показывать</item>
-    </string-array>
+    <string name="dualvot_yandex_timer_position_entry_inside">Внутри иконки</string>
+    <string name="dualvot_yandex_timer_position_entry_below">Под иконкой</string>
+    <string name="dualvot_yandex_timer_position_entry_hidden">Не показывать</string>
     <string name="dualvot_yandex_progress_ring_enabled_title">Показывать кольцо прогресса</string>
     <string name="dualvot_yandex_progress_ring_enabled_summary">Отображать ход подготовки перевода вокруг кнопки Яндекса</string>
     <string name="dualvot_yandex_progress_ring_color_title">Цвет кольца прогресса</string>
