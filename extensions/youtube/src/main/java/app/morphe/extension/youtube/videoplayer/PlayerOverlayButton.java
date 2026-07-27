@@ -298,10 +298,28 @@ public class PlayerOverlayButton {
                                       String drawableName,
                                       View.OnClickListener onClickListener,
                                       View.OnLongClickListener onLongClickListener) {
+        return addButton(
+                sourceButton,
+                new ImageView(sourceButton.getContext()),
+                drawableName,
+                onClickListener,
+                onLongClickListener
+        );
+    }
+
+    /**
+     * Adds a caller-provided ImageView using the same layout, background, and
+     * positioning behavior as the standard player overlay buttons.
+     */
+    @Nullable
+    public static <T extends ImageView> T addButton(View sourceButton,
+                                                    T button,
+                                                    String drawableName,
+                                                    View.OnClickListener onClickListener,
+                                                    View.OnLongClickListener onLongClickListener) {
         ViewGroup sourceButtonViewGroup = updateRefsFromSourceButton(sourceButton);
         if (sourceButtonViewGroup == null) return null;
 
-        ImageView button = new ImageView(sourceButton.getContext());
         button.setId(View.generateViewId());
         button.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         button.setImageResource(ResourceUtils.getIdentifierOrThrow(

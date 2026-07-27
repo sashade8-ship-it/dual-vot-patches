@@ -1,3 +1,25 @@
+## 1.37.0-dualvot.6-preview (2026-07-27)
+
+### Yandex button halo
+
+* Replace the drawable-sized countdown composition with a dedicated player
+  button view.
+* Draw the ring as a full-size circular halo around the standard player-button
+  area rather than inside the 24 dp translate glyph.
+* Keep the inside timer centered without drawing it over the translate symbol.
+* In the below layout, move a smaller icon and halo upward and reserve a
+  separate lower area for the timer while preserving the original button
+  container size and alignment.
+
+### Proxy behavior clarification
+
+* Keep proxy routing explicit and predictable: enabled routes all Yandex VOT
+  traffic through the configured worker; disabled uses direct Yandex
+  connections.
+* Document that the upstream anddea implementation does not perform automatic
+  availability-based switching; its switch proxies translated audio and can
+  fall back to the direct audio URL.
+
 ## 1.37.0-dualvot.5-preview (2026-07-27)
 
 ### Player button geometry
