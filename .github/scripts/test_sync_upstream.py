@@ -2,6 +2,7 @@ import importlib.util
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 MODULE_PATH = Path(__file__).with_name("sync_upstream.py")
@@ -13,6 +14,16 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_channel_workflow_runs_current_controller_from_main(self):
+        workflow = (
+            MODULE_PATH.parents[1] / "workflows" / "upstream_sync_channel.yml"
+        ).read_text(encoding="utf-8")
+        self.assertEqual(workflow.count("ref: main"), 2)
+        self.assertNotIn(
+            "ref: ${{ inputs.channel == 'stable' && 'main' || 'dev' }}",
+            workflow,
+        )
+
     def test_extracts_official_base_from_dual_version(self):
         self.assertEqual(
             sync_upstream.upstream_base("1.37.0-dualvot.3"),
@@ -22,6 +33,20 @@ class SyncUpstreamTests(unittest.TestCase):
             sync_upstream.upstream_base("1.38.0-dev.2-dualvot.1"),
             "1.38.0-dev.2",
         )
+
+    def test_extracts_dual_revision_independently_of_morphe_base(self):
+        self.assertEqual(
+            sync_upstream.dualvot_revision("1.37.0-dualvot.7"),
+            7,
+        )
+        self.assertEqual(
+            sync_upstream.dualvot_revision("1.37.1-dev.1-dualvot.7-preview"),
+            7,
+        )
+
+    def test_rejects_version_without_dual_revision(self):
+        with self.assertRaises(sync_upstream.SyncError):
+            sync_upstream.dualvot_revision("1.37.1-dev.1")
 
     def test_accepts_stable_and_prerelease_versions(self):
         for version in ("1.38.0", "1.38.0-dev.2", "1.38.0-dev.2-dualvot.1"):
@@ -64,6 +89,33 @@ Older Dual update.
         self.assertEqual(parsed["Name"], "Dual VoT Patches")
         self.assertEqual(parsed["Description"], "Google and Yandex voice-over translation")
         self.assertEqual(parsed["Version"], "1.38.0-dualvot.1")
+
+    def test_publish_configures_git_identity_before_loading_plan(self):
+        events = []
+
+        def configure_identity():
+            events.append("identity")
+
+        def fail_to_load_plan(_):
+            events.append("plan")
+            raise sync_upstream.SyncError("stop after identity check")
+
+        with (
+            mock.patch.object(
+                sync_upstream,
+                "configure_git_identity",
+                side_effect=configure_identity,
+            ),
+            mock.patch.object(
+                sync_upstream,
+                "load_plan",
+                side_effect=fail_to_load_plan,
+            ),
+        ):
+            with self.assertRaises(sync_upstream.SyncError):
+                sync_upstream.publish(Path("unused"), "owner/repository")
+
+        self.assertEqual(events, ["identity", "plan"])
 
 
 if __name__ == "__main__":
