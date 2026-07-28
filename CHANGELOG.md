@@ -1,3 +1,13 @@
+## 1.37.1-dev.1-dualvot.7 (2026-07-28)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.37.1-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.1-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.37.0-dualvot.6-preview (2026-07-27)
 
 ### Yandex button halo
@@ -108,6 +118,44 @@
 * Preserve the built-in Google/other and Yandex translation engines, mutual
   exclusion, volume controls, and automatic reset when the video changes.
 
+## 1.37.0-dev.2-dualvot.1 (2026-07-25)
+
+### Updated Morphe base
+
+* Update the project base to Morphe Patches 1.37.0-dev.2.
+* Preserve the built-in Google/other and Yandex translation engines, mutual
+  exclusion, volume controls, and automatic reset when the video changes.
+
+## 1.36.0-dualvot.2 (2026-07-23)
+
+### Bug fixes
+
+* Restore reliable activation of the built-in Google/other translation engine.
+* Show a live Yandex translation countdown in the long-press menu.
+* Stop either translation engine and restore original audio when the video changes.
+
+## 1.36.0-dualvot.1 (2026-07-23)
+
+### Dual voice-over translation
+
+* Add Yandex voice-over translation alongside the built-in Google and other
+  translation services.
+* Add two independent player buttons with mutual exclusion between engines.
+* Add separate Yandex settings and working original-audio volume control.
+* Add 1% adjustment buttons and 5% slider steps to the built-in volume
+  controls, plus matching speech-rate controls.
+* Base the integration on Morphe Patches 1.36.0.
+
+## [1.37.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.37.0...v1.37.1-dev.1) (2026-07-28)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Swipe controls:** Evaluate swipe zone before recycling MotionEvent ([#2238](https://github.com/MorpheApp/morphe-patches/issues/2238)) ([e398514](https://github.com/MorpheApp/morphe-patches/commit/e39851427ca240c6474df275e553bad18ecda8ac))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.29.54` ([4945ac4](https://github.com/MorpheApp/morphe-patches/commit/4945ac46c87817f9b1fa1cc99adc24bc966308c1))
+
 ## [1.37.0](https://github.com/MorpheApp/morphe-patches/compare/v1.36.0...v1.37.0) (2026-07-26)
 
 ### 🐛 Bug Fixes
@@ -134,14 +182,6 @@
 
 * **YouTube - Seekbar:** Show video chapter title below seekbar thumbnail ([#2214](https://github.com/MorpheApp/morphe-patches/issues/2214)) ([bf3cde6](https://github.com/MorpheApp/morphe-patches/commit/bf3cde65389060bdf18a65525015fe56776e24cb))
 
-## 1.37.0-dev.2-dualvot.1 (2026-07-25)
-
-### Updated Morphe base
-
-* Update the project base to Morphe Patches 1.37.0-dev.2.
-* Preserve the built-in Google/other and Yandex translation engines, mutual
-  exclusion, volume controls, and automatic reset when the video changes.
-
 ## [1.37.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.37.0-dev.1...v1.37.0-dev.2) (2026-07-25)
 
 ### 🐛 Bug Fixes
@@ -163,26 +203,6 @@
 ### ✨ New Features
 
 * **YouTube - Seekbar:** Add "Enable seekbar thumbnails" setting ([#2182](https://github.com/MorpheApp/morphe-patches/issues/2182)) ([32575ea](https://github.com/MorpheApp/morphe-patches/commit/32575ea9bcd6ff7b135a598799c969c15b4bfadd))
-
-## 1.36.0-dualvot.2 (2026-07-23)
-
-### Bug fixes
-
-* Restore reliable activation of the built-in Google/other translation engine.
-* Show a live Yandex translation countdown in the long-press menu.
-* Stop either translation engine and restore original audio when the video changes.
-
-## 1.36.0-dualvot.1 (2026-07-23)
-
-### Dual voice-over translation
-
-* Add Yandex voice-over translation alongside the built-in Google and other
-  translation services.
-* Add two independent player buttons with mutual exclusion between engines.
-* Add separate Yandex settings and working original-audio volume control.
-* Add 1% adjustment buttons and 5% slider steps to the built-in volume
-  controls, plus matching speech-rate controls.
-* Base the integration on Morphe Patches 1.36.0.
 
 ## [1.36.0](https://github.com/MorpheApp/morphe-patches/compare/v1.35.0...v1.36.0) (2026-07-23)
 
