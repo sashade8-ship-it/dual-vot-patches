@@ -24,6 +24,20 @@ class SyncUpstreamTests(unittest.TestCase):
             "1.38.0-dev.2",
         )
 
+    def test_extracts_dual_revision_independently_of_morphe_base(self):
+        self.assertEqual(
+            sync_upstream.dualvot_revision("1.37.0-dualvot.7"),
+            7,
+        )
+        self.assertEqual(
+            sync_upstream.dualvot_revision("1.37.1-dev.1-dualvot.7-preview"),
+            7,
+        )
+
+    def test_rejects_version_without_dual_revision(self):
+        with self.assertRaises(sync_upstream.SyncError):
+            sync_upstream.dualvot_revision("1.37.1-dev.1")
+
     def test_accepts_stable_and_prerelease_versions(self):
         for version in ("1.38.0", "1.38.0-dev.2", "1.38.0-dev.2-dualvot.1"):
             sync_upstream.validate_version(version)
