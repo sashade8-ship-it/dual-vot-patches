@@ -86,6 +86,7 @@ public class YandexVoiceOverTranslationPatch {
 
     private static final long PAUSE_DETECTION_TIMEOUT_MS = 1500;
     private static final long PROXY_PREPARE_TIMEOUT_MS = 15000;
+    private static final long ERROR_INDICATOR_DURATION_MS = 1800;
     private static final String PROXY_USER_AGENT =
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
             "(KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36";
@@ -108,6 +109,9 @@ public class YandexVoiceOverTranslationPatch {
     private static Runnable proxyPrepareTimeoutRunnable = () -> {};
     private static final Set<Runnable> translationStateChangeCallbacks =
             new CopyOnWriteArraySet<>();
+    private static volatile long translationErrorUntilMs = -1;
+    private static final Runnable errorIndicatorExpired =
+            YandexVoiceOverTranslationPatch::notifyTranslationStateChanged;
 
     public static void addOnTranslationStateChangeCallback(Runnable callback) {
         if (callback != null) translationStateChangeCallbacks.add(callback);
@@ -117,6 +121,19 @@ public class YandexVoiceOverTranslationPatch {
         for (Runnable callback : translationStateChangeCallbacks) {
             Utils.runOnMainThread(callback);
         }
+    }
+
+    private static void showTranslationErrorToast(String message) {
+        translationErrorUntilMs =
+                SystemClock.elapsedRealtime() + ERROR_INDICATOR_DURATION_MS;
+        notifyTranslationStateChanged();
+        mainHandler.removeCallbacks(errorIndicatorExpired);
+        mainHandler.postDelayed(errorIndicatorExpired, ERROR_INDICATOR_DURATION_MS);
+        showToastShort(message);
+    }
+
+    public static boolean isTranslationErrorVisible() {
+        return SystemClock.elapsedRealtime() < translationErrorUntilMs;
     }
 
     /** Runs a Runnable on the main thread only if translation generation hasn't changed. */
@@ -160,7 +177,16 @@ public class YandexVoiceOverTranslationPatch {
     public static int getWaitingTimeSeconds() {
         if (waitingTimeSeconds < 0 || waitingDeadlineMs < 0) return -1;
         final long remainingMs = waitingDeadlineMs - SystemClock.elapsedRealtime();
-        return (int) Math.max(1, (remainingMs + 999L) / 1000L);
+        return (int) Math.max(0, (remainingMs + 999L) / 1000L);
+    }
+
+    public static float getWaitingProgressFraction() {
+        if (waitingTimeSeconds <= 0 || waitingDeadlineMs < 0) return -1.0f;
+        final long remainingMs = waitingDeadlineMs - SystemClock.elapsedRealtime();
+        return Math.max(0.0f, Math.min(
+                1.0f,
+                remainingMs / (waitingTimeSeconds * 1000.0f)
+        ));
     }
 
     public static String getTranslationRequestStatusText() {
@@ -176,13 +202,13 @@ public class YandexVoiceOverTranslationPatch {
             );
         }
         int seconds = getWaitingTimeSeconds();
-        return seconds >= 0
+        return seconds > 0
                 ? str("dualvot_yandex_stream_waiting", formatRemainingTime(seconds))
                 : str("dualvot_yandex_stream_waiting_status");
     }
 
     public static boolean isWaitingCountdownActive() {
-        return translationStarting && getWaitingTimeSeconds() >= 0;
+        return translationStarting && getWaitingTimeSeconds() > 0;
     }
 
     private static void setAudioUploadProgress(long generation, int part, int totalParts) {
@@ -272,17 +298,17 @@ public class YandexVoiceOverTranslationPatch {
         }
 
         if (pendingIsLive) {
-            showToastShort(str("dualvot_yandex_unavailable_live"));
+            showTranslationErrorToast(str("dualvot_yandex_unavailable_live"));
             return;
         }
         if (pendingVideoLength > 4 * 60 * 60 * 1000L) {
-            showToastShort(str("dualvot_yandex_unavailable_too_long"));
+            showTranslationErrorToast(str("dualvot_yandex_unavailable_too_long"));
             return;
         }
         String sourceLang = normalizeLanguageCode(Settings.DUAL_VOT_YANDEX_SOURCE_LANGUAGE.get());
         String targetLang = normalizeLanguageCode(Settings.DUAL_VOT_YANDEX_TARGET_LANGUAGE.get());
         if (!sourceLang.isEmpty() && !"auto".equalsIgnoreCase(sourceLang) && sourceLang.equals(targetLang)) {
-            showToastShort(str("dualvot_yandex_unavailable_same_language"));
+            showTranslationErrorToast(str("dualvot_yandex_unavailable_same_language"));
             return;
         }
         if (pendingVideoId == null || pendingVideoId.isEmpty()) return;
@@ -318,7 +344,9 @@ public class YandexVoiceOverTranslationPatch {
     public static boolean isTranslationActive() {
         MediaPlayer mp = mediaPlayer.get();
         if (mp == null) return translationStarting;
-        if (isPaused) return false;
+        // A paused translated track is still the selected, ready session.
+        // Treating pause as inactive makes the coordinator clear the Yandex
+        // engine and leaves the player button gray after preparation finishes.
         return currentTranslatedVideoId.get() != null && !currentTranslatedVideoId.get().isEmpty();
     }
 
@@ -489,7 +517,7 @@ public class YandexVoiceOverTranslationPatch {
                     setWaitingTimeSeconds(-1);
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
                 return;
             }
@@ -508,7 +536,7 @@ public class YandexVoiceOverTranslationPatch {
                         setWaitingTimeSeconds(-1);
                         translationStarting = false;
                         refreshOriginalAudioVolume();
-                        showToastShort(str("dualvot_yandex_playback_error"));
+                        showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                     });
                 }
             } else if (status == YandexVotApiClient.STATUS_FAILED) {
@@ -526,7 +554,7 @@ public class YandexVoiceOverTranslationPatch {
                     setWaitingTimeSeconds(-1);
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
             } else if (status == YandexVotApiClient.STATUS_SESSION_REQUIRED) {
                 if (useLiveVoices) {
@@ -555,7 +583,7 @@ public class YandexVoiceOverTranslationPatch {
                     setWaitingTimeSeconds(-1);
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
             } else if (status == YandexVotApiClient.STATUS_AUDIO_REQUESTED) {
                 String translationId = result.translationId();
@@ -586,7 +614,7 @@ public class YandexVoiceOverTranslationPatch {
             runOnUiIfCurrentGen(generation, () -> {
                 translationStarting = false;
                 refreshOriginalAudioVolume();
-                showToastShort(str("dualvot_yandex_playback_error"));
+                showTranslationErrorToast(str("dualvot_yandex_playback_error"));
             });
         } finally {
             isTranslating.set(false);
@@ -629,7 +657,7 @@ public class YandexVoiceOverTranslationPatch {
                     runOnUiIfCurrentGen(generation, () -> {
                         translationStarting = false;
                         refreshOriginalAudioVolume();
-                        showToastShort(str("dualvot_yandex_playback_error"));
+                        showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                     });
                 }
                 return;
@@ -643,7 +671,7 @@ public class YandexVoiceOverTranslationPatch {
                 runOnUiIfCurrentGen(generation, () -> {
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
                 return;
             } else if (status == YandexVotApiClient.STATUS_FAILED) {
@@ -658,7 +686,7 @@ public class YandexVoiceOverTranslationPatch {
                 runOnUiIfCurrentGen(generation, () -> {
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
                 return;
             } else if (status == YandexVotApiClient.STATUS_SESSION_REQUIRED) {
@@ -682,7 +710,7 @@ public class YandexVoiceOverTranslationPatch {
                 runOnUiIfCurrentGen(generation, () -> {
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
                 return;
             } else if (status == YandexVotApiClient.STATUS_AUDIO_REQUESTED) {
@@ -721,7 +749,7 @@ public class YandexVoiceOverTranslationPatch {
                 runOnUiIfCurrentGen(generation, () -> {
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
             }
         }
@@ -801,7 +829,7 @@ public class YandexVoiceOverTranslationPatch {
                 } else {
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 }
                 return;
             }
@@ -816,7 +844,7 @@ public class YandexVoiceOverTranslationPatch {
                     } else {
                         translationStarting = false;
                         refreshOriginalAudioVolume();
-                        showToastShort(str("dualvot_yandex_playback_error"));
+                        showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                     }
                 });
             });
@@ -903,6 +931,7 @@ public class YandexVoiceOverTranslationPatch {
             mp.setDataSource(filePath);
             mp.setOnPreparedListener(player -> Utils.runOnMainThread(() -> {
                 translationStarting = false;
+                clearAudioUploadProgress();
                 float vol = Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME.get() / 100.0f;
                 player.setVolume(vol, vol);
                 long videoTime = VideoInformation.getVideoTime();
@@ -917,6 +946,7 @@ public class YandexVoiceOverTranslationPatch {
                 // MediaPlayer instances. Re-apply the selected Yandex ducking level
                 // once the translated track is actually ready.
                 refreshOriginalAudioVolume();
+                notifyTranslationStateChanged();
             }));
             mp.setOnErrorListener((p, what, extra) -> {
                 Logger.printDebug(() -> "VOT MediaPlayer error: what=" + what + " extra=" + extra);
@@ -924,7 +954,7 @@ public class YandexVoiceOverTranslationPatch {
                     stopAudioPlayback();
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 });
                 return true;
             });
@@ -938,7 +968,7 @@ public class YandexVoiceOverTranslationPatch {
             deleteTempProxyFile();
             translationStarting = false;
             refreshOriginalAudioVolume();
-            showToastShort(str("dualvot_yandex_playback_error"));
+            showTranslationErrorToast(str("dualvot_yandex_playback_error"));
         }
     }
 
@@ -968,6 +998,7 @@ public class YandexVoiceOverTranslationPatch {
             final String fallback = fallbackUrl;
             mp.setOnPreparedListener(player -> Utils.runOnMainThread(() -> {
                 translationStarting = false;
+                clearAudioUploadProgress();
                 mainHandler.removeCallbacks(proxyPrepareTimeoutRunnable);
                 float vol = Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME.get() / 100.0f;
                 player.setVolume(vol, vol);
@@ -981,6 +1012,7 @@ public class YandexVoiceOverTranslationPatch {
                     isPaused = true;
                 }
                 refreshOriginalAudioVolume();
+                notifyTranslationStateChanged();
             }));
             mp.setOnErrorListener((p, what, extra) -> {
                 Logger.printDebug(() -> "VOT MediaPlayer error: what=" + what + " extra=" + extra + " url=" + audioUrl);
@@ -991,7 +1023,7 @@ public class YandexVoiceOverTranslationPatch {
                     } else {
                         translationStarting = false;
                         refreshOriginalAudioVolume();
-                        showToastShort(str("dualvot_yandex_playback_error"));
+                        showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                     }
                 });
                 return true;
@@ -1021,7 +1053,7 @@ public class YandexVoiceOverTranslationPatch {
                 } else {
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showToastShort(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
                 }
             });
         }
@@ -1069,9 +1101,8 @@ public class YandexVoiceOverTranslationPatch {
             applyPlaybackSpeedToPlayer(mp);
             mp.start();
             isPaused = false;
-            // Re-apply VOT volume multiplier — during pause the original volume
-            // may have been reset to full by the player (isTranslationActive
-            // returns false while paused, so the setVolume hook doesn't duck).
+            // Re-apply VOT volume multiplier because the YouTube player can
+            // replace its AudioTrack while playback is paused.
             refreshOriginalAudioVolume();
         } catch (Exception ignored) { }
     }

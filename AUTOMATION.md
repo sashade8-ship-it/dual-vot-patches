@@ -34,12 +34,17 @@ creates or updates a deduplicated `automation` issue with a link to its logs.
 
 ## Versioning
 
-Automated versions keep the exact Morphe base and add a Dual VoT revision:
+Automated versions keep the exact Morphe base and add the current Dual VoT
+revision. An upstream-only Morphe update does not reset that revision:
 
 ```text
-Morphe 1.38.0       -> 1.38.0-dualvot.1
-Morphe 1.39.0-dev.2 -> 1.39.0-dev.2-dualvot.1
+Morphe stable 1.37.0 -> 1.37.0-dualvot.7
+Morphe dev 1.37.1-dev.1 -> 1.37.1-dev.1-dualvot.7
 ```
+
+The number after `dualvot.` changes only when the Dual VoT integration itself
+changes. This keeps stable and pre-release builds on the same understandable
+Dual VoT generation while their Morphe base versions may differ.
 
 Users receive `main` by default. Morphe Manager checks `dev` as well when
 **Pre-release patches** is enabled for this source.

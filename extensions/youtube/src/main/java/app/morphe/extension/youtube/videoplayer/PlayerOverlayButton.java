@@ -173,10 +173,13 @@ public class PlayerOverlayButton {
                 );
             }
 
+            final float buttonWidthPercentage =
+                    getButtonWidthPercentage(buttonControllers.size());
+
             // Convert from 0 indexing to 1 indexing.
             final int buttonNumber = buttonControllers.indexOf(this) + (HIDE_FULLSCREEN_BUTTON_ENABLED ? 0 : 1);
             final float xOffset = (int) (source.getX()
-                    - (buttonNumber * (getButtonWidthPercentage(buttonControllers.size()) * source.getWidth())));
+                    - (buttonNumber * (buttonWidthPercentage * source.getWidth())));
             if (button.getX() != xOffset) {
                 button.setX(xOffset);
             }
@@ -241,12 +244,12 @@ public class PlayerOverlayButton {
      * so buttons don't overlap the video time bar.
      */
     private static float getButtonWidthPercentage(int totalButtons) {
-        return switch (totalButtons) {
-            case 2 -> 0.90f;
-            case 3 -> 0.80f;
-            case 4 -> 0.70f;
-            default -> 1.0f;
-        };
+        if (totalButtons <= 1) return 1.0f;
+
+        // Preserve the existing spacing for 2-4 buttons, then continue the
+        // same progression instead of jumping back to 100% at 5 buttons.
+        // The lower bound keeps additional experimental buttons tappable.
+        return Math.max(0.55f, 1.10f - totalButtons * 0.10f);
     }
 
     /**
@@ -298,10 +301,28 @@ public class PlayerOverlayButton {
                                       String drawableName,
                                       View.OnClickListener onClickListener,
                                       View.OnLongClickListener onLongClickListener) {
+        return addButton(
+                sourceButton,
+                new ImageView(sourceButton.getContext()),
+                drawableName,
+                onClickListener,
+                onLongClickListener
+        );
+    }
+
+    /**
+     * Adds a caller-provided ImageView using the same layout, background, and
+     * positioning behavior as the standard player overlay buttons.
+     */
+    @Nullable
+    public static <T extends ImageView> T addButton(View sourceButton,
+                                                    T button,
+                                                    String drawableName,
+                                                    View.OnClickListener onClickListener,
+                                                    View.OnLongClickListener onLongClickListener) {
         ViewGroup sourceButtonViewGroup = updateRefsFromSourceButton(sourceButton);
         if (sourceButtonViewGroup == null) return null;
 
-        ImageView button = new ImageView(sourceButton.getContext());
         button.setId(View.generateViewId());
         button.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         button.setImageResource(ResourceUtils.getIdentifierOrThrow(

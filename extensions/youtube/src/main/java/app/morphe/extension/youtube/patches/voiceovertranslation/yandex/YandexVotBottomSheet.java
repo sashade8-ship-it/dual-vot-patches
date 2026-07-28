@@ -29,6 +29,7 @@ import android.graphics.drawable.shapes.RoundRectShape;
 import android.view.Gravity;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -90,6 +91,17 @@ public class YandexVotBottomSheet {
             titleText.setLayoutParams(titleParams);
             mainLayout.addView(titleText);
 
+            // Keep the title and drag handle visible while allowing all controls to remain
+            // reachable on short landscape screens. This mirrors the official VoT sheet.
+            ScrollView scroll = new ScrollView(context);
+            scroll.setFillViewport(true);
+            scroll.setClipToPadding(false);
+
+            LinearLayout contentLayout = new LinearLayout(context);
+            contentLayout.setOrientation(LinearLayout.VERTICAL);
+            contentLayout.setPadding(0, 0, 0, Dim.dp16);
+            scroll.addView(contentLayout);
+
             // --- Status indicator ---
             TextView statusText = new TextView(context);
             updateStatusText(statusText);
@@ -104,30 +116,31 @@ public class YandexVotBottomSheet {
                     LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             statusParams.setMargins(0, 0, 0, Dim.dp12);
             statusText.setLayoutParams(statusParams);
-            mainLayout.addView(statusText);
+            contentLayout.addView(statusText);
 
             // --- Translation Volume ---
-            addVolumeControl(context, mainLayout,
+            addVolumeControl(context, contentLayout,
                     str("dualvot_yandex_translation_volume_title"),
                     Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME,
                     YandexVoiceOverTranslationPatch::applyVolumeToCurrentPlayer);
 
             // --- Original Audio Volume ---
-            addVolumeControl(context, mainLayout,
+            addVolumeControl(context, contentLayout,
                     str("dualvot_yandex_original_audio_volume_title"),
                     Settings.DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME,
                     YandexVoiceOverTranslationPatch::refreshOriginalAudioVolumeIfActive);
 
             // --- Voice style: segmented buttons (Standard | Live) ---
             LinearLayout voiceStyleRow = createVoiceStyleButtons(context);
-            mainLayout.addView(voiceStyleRow);
+            contentLayout.addView(voiceStyleRow);
 
             // --- Audio proxy: proper Switch row ---
             LinearLayout proxyRow = createSwitchRow(context,
                     str("dualvot_yandex_audio_proxy_title"),
                     Settings.DUAL_VOT_YANDEX_AUDIO_PROXY_ENABLED,
                     YandexVoiceOverTranslationPatch::restartTranslationIfActive);
-            mainLayout.addView(proxyRow);
+            contentLayout.addView(proxyRow);
+            mainLayout.addView(scroll);
 
             // Create dialog.
             SheetBottomDialog.SlideDialog dialog = SheetBottomDialog.createSlideDialog(

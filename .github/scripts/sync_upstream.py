@@ -205,6 +205,13 @@ def upstream_base(version: str) -> str:
     return version.split("-dualvot.", 1)[0].removeprefix("v")
 
 
+def dualvot_revision(version: str) -> int:
+    match = re.search(r"-dualvot\.(\d+)(?:-|$)", version, flags=re.IGNORECASE)
+    if match is None:
+        raise SyncError(f"Missing Dual VoT revision in version: {version!r}")
+    return int(match.group(1))
+
+
 def validate_version(version: str) -> None:
     if not re.fullmatch(r"\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?", version):
         raise SyncError(f"Unsafe or unsupported upstream version: {version!r}")
@@ -448,11 +455,13 @@ def prepare(channel: str, output_dir: Path, repository: str) -> None:
 
     local_version = bundle_version_from_git("HEAD")
     local_base = upstream_base(local_version)
+    revision = dualvot_revision(local_version)
     previous_changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     branch_changed = False
 
     if channel == "dev":
         stable_version = bundle_version_from_git("origin/main")
+        revision = max(revision, dualvot_revision(stable_version))
         stable_base = upstream_base(stable_version)
         dev_matches_stable = upstream_version == stable_base
         branch_changed |= merge_ref(
@@ -462,6 +471,7 @@ def prepare(channel: str, output_dir: Path, repository: str) -> None:
         )
         local_version = bundle_version_from_git("HEAD")
         local_base = upstream_base(local_version)
+        revision = max(revision, dualvot_revision(local_version))
 
         if dev_matches_stable:
             if not branch_changed:
@@ -520,7 +530,10 @@ def prepare(channel: str, output_dir: Path, repository: str) -> None:
     upstream_changelog = output_of("git", "show", f"{upstream_tag}:CHANGELOG.md")
     merge_ref(upstream_tag, project_preference="ours", label=f"Morphe {upstream_version}")
 
-    version = f"{upstream_version}-dualvot.1"
+    # The Dual VoT revision identifies our feature set, not the Morphe base.
+    # Preserve it when only upstream Morphe changes, and keep stable/dev on the
+    # same Dual VoT generation whenever they contain the same integration.
+    version = f"{upstream_version}-dualvot.{revision}"
     validate_version(version)
     set_gradle_version(version)
     notes = release_notes(version, upstream_version, channel)
@@ -622,6 +635,9 @@ def cleanup_release(repository: str, tag: str) -> None:
 
 
 def publish(input_dir: Path, repository: str) -> None:
+    # The publish job runs in a fresh checkout. Configure an identity here as
+    # well as in prepare because annotated release tags require a committer.
+    configure_git_identity()
     plan = load_plan(input_dir)
     run("git", "fetch", "--no-tags", "origin", plan.branch)
     candidate_ref = "refs/remotes/automation/candidate"
