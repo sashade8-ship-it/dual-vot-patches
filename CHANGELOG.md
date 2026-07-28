@@ -1,3 +1,78 @@
+## 1.37.0-dualvot.6-preview (2026-07-27)
+
+### Yandex button halo
+
+* Anchor the countdown ring to the actual circular background of the Yandex
+  player button instead of its larger transparent touch target.
+* Keep the ring and icon centered in portrait, landscape, and compact players.
+* Keep the ring radius stable when its thickness or timer placement changes.
+* Allow the estimated time to appear inside the button or over the lower part
+  of the ring without moving the button.
+* Keep five or more optional lower player buttons spaced consistently.
+* Keep the Yandex button active while translated playback is paused.
+
+### Proxy behavior clarification
+
+* Keep proxy routing explicit and predictable: enabled routes all Yandex VOT
+  traffic through the configured worker; disabled uses direct Yandex
+  connections.
+* Document that the upstream anddea implementation does not perform automatic
+  availability-based switching; its switch proxies translated audio and can
+  fall back to the direct audio URL.
+
+## 1.37.0-dualvot.5-preview (2026-07-27)
+
+### Player button geometry
+
+* Draw the countdown inside the icon's square drawable bounds instead of the
+  player button's rectangular touch target.
+* Keep the ring circular and centered in portrait, landscape, and compact
+  players.
+* Stop changing the ImageView padding during countdown refreshes, preventing
+  the Yandex glyph and timer from shifting.
+* In the inside layout, replace the glyph with the timer instead of drawing
+  both on top of each other.
+
+### Full Yandex proxy
+
+* Route session creation, translation requests, source-audio uploads, status
+  polling, failed-audio recovery, and translated MP3 playback through the
+  configured VOT worker.
+* Preserve direct Yandex connections when the proxy is disabled.
+* Skip the separate direct OAuth validation request in proxy mode.
+* Stream large proxy upload envelopes to reduce peak memory use on older
+  Android devices.
+
+## 1.37.0-dualvot.4-preview (2026-07-27)
+
+### Preview naming and packaging fix
+
+* Move the countdown placement arrays to `arrays.xml` and keep their labels as
+  localized string resources so Arsclib can encode the patched APK.
+* Identify this explicitly as a Dual VoT preview without implying that the
+  underlying Morphe Patches 1.37.0 release is a development build.
+* Keep a Manager-compatible version order so the preview is selected over
+  `1.37.0-dualvot.3` when pre-release patches are enabled.
+
+## 1.37.0-dualvot.4-dev.1 (2026-07-27)
+
+### Configurable Yandex countdown
+
+* Add an animated countdown ring around the Yandex player button.
+* Allow the estimated time to appear inside or below the icon, or remain
+  hidden.
+* Add settings for ring visibility, color, and thickness.
+* Keep the button dimensions aligned with the other player controls when the
+  timer is shown below the icon.
+* Switch to an indeterminate animation when Yandex exceeds its estimate.
+* Show a short red animated signal for request and playback errors.
+
+### Status accuracy
+
+* Replace the misleading "check back later" message with a processing status.
+* Refresh the bottom sheet as soon as translated audio is prepared and starts
+  playing.
+
 ## 1.37.0-dualvot.3 (2026-07-26)
 
 ### Yandex translation reliability
