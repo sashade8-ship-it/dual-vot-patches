@@ -56,6 +56,18 @@ class SyncUpstreamTests(unittest.TestCase):
         with self.assertRaises(sync_upstream.SyncError):
             sync_upstream.validate_version("1.38.0;echo-danger")
 
+    def test_accepts_manager_local_datetime_without_timezone(self):
+        sync_upstream.validate_manager_local_datetime("2026-07-28T10:49:38")
+
+    def test_rejects_manager_datetime_with_timezone(self):
+        for timestamp in (
+            "2026-07-28T12:49:38+02:00",
+            "2026-07-28T10:49:38Z",
+        ):
+            with self.subTest(timestamp=timestamp):
+                with self.assertRaises(sync_upstream.SyncError):
+                    sync_upstream.validate_manager_local_datetime(timestamp)
+
     def test_extracts_only_dual_changelog_sections(self):
         changelog = """## 1.38.0-dualvot.1 (2026-07-27)
 

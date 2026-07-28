@@ -217,6 +217,22 @@ def validate_version(version: str) -> None:
         raise SyncError(f"Unsafe or unsupported upstream version: {version!r}")
 
 
+def validate_manager_local_datetime(value: object) -> None:
+    if not isinstance(value, str):
+        raise SyncError("patches-bundle.json created_at must be a string")
+    try:
+        parsed = datetime.fromisoformat(value)
+    except ValueError as error:
+        raise SyncError(
+            f"Invalid patches-bundle.json created_at: {value!r}"
+        ) from error
+    if parsed.tzinfo is not None:
+        raise SyncError(
+            "patches-bundle.json created_at must be a timezone-free "
+            "LocalDateTime for Morphe Manager"
+        )
+
+
 def set_gradle_version(version: str) -> None:
     path = ROOT / "gradle.properties"
     text = path.read_text(encoding="utf-8")
@@ -396,6 +412,7 @@ def validate_candidate(version: str) -> Path:
     metadata = json.loads((ROOT / "patches-bundle.json").read_text(encoding="utf-8"))
     if metadata.get("version") != version:
         raise SyncError("patches-bundle.json version mismatch")
+    validate_manager_local_datetime(metadata.get("created_at"))
 
     return artifact
 
