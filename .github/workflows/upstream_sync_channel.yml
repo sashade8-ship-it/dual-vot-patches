@@ -20,10 +20,12 @@ jobs:
       updated: ${{ steps.prepare.outputs.updated }}
       version: ${{ steps.prepare.outputs.version }}
     steps:
-      - name: Checkout target branch
+      - name: Checkout automation controller
         uses: actions/checkout@v7
         with:
-          ref: ${{ inputs.channel == 'stable' && 'main' || 'dev' }}
+          # Automation must always run from main. The script checks out the
+          # requested target branch after it has loaded the current code.
+          ref: main
           fetch-depth: 0
           persist-credentials: false
 
@@ -68,10 +70,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout target branch
+      - name: Checkout automation controller
         uses: actions/checkout@v7
         with:
-          ref: ${{ inputs.channel == 'stable' && 'main' || 'dev' }}
+          # In particular, do not execute an outdated publisher from dev.
+          ref: main
           fetch-depth: 0
 
       - name: Setup Python

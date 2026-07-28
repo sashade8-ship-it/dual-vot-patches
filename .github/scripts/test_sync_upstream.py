@@ -14,6 +14,16 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_channel_workflow_runs_current_controller_from_main(self):
+        workflow = (
+            MODULE_PATH.parents[1] / "workflows" / "upstream_sync_channel.yml"
+        ).read_text(encoding="utf-8")
+        self.assertEqual(workflow.count("ref: main"), 2)
+        self.assertNotIn(
+            "ref: ${{ inputs.channel == 'stable' && 'main' || 'dev' }}",
+            workflow,
+        )
+
     def test_extracts_official_base_from_dual_version(self):
         self.assertEqual(
             sync_upstream.upstream_base("1.37.0-dualvot.3"),
