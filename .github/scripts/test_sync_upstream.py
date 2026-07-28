@@ -2,6 +2,7 @@ import importlib.util
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 MODULE_PATH = Path(__file__).with_name("sync_upstream.py")
@@ -64,6 +65,33 @@ Older Dual update.
         self.assertEqual(parsed["Name"], "Dual VoT Patches")
         self.assertEqual(parsed["Description"], "Google and Yandex voice-over translation")
         self.assertEqual(parsed["Version"], "1.38.0-dualvot.1")
+
+    def test_publish_configures_git_identity_before_loading_plan(self):
+        events = []
+
+        def configure_identity():
+            events.append("identity")
+
+        def fail_to_load_plan(_):
+            events.append("plan")
+            raise sync_upstream.SyncError("stop after identity check")
+
+        with (
+            mock.patch.object(
+                sync_upstream,
+                "configure_git_identity",
+                side_effect=configure_identity,
+            ),
+            mock.patch.object(
+                sync_upstream,
+                "load_plan",
+                side_effect=fail_to_load_plan,
+            ),
+        ):
+            with self.assertRaises(sync_upstream.SyncError):
+                sync_upstream.publish(Path("unused"), "owner/repository")
+
+        self.assertEqual(events, ["identity", "plan"])
 
 
 if __name__ == "__main__":

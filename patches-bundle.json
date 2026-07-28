@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-07-27T15:10:54",
-  "description": "## Dual VoT Patches 1.37.0-dualvot.6-preview\n\n### Yandex countdown\n\n- Anchors the animated countdown ring to the actual circular Yandex player button.\n- Keeps the ring centered and stable when orientation, thickness, or timer placement changes.\n- Supports the timer inside the button or over the lower part of the ring.\n- Keeps layouts with five or more optional player buttons spaced consistently.\n- Keeps the Yandex button active while translated playback is paused.\n\n### Version meaning\n\n- Based on stable Morphe Patches 1.37.0.\n- `dualvot.6-preview` is a preview of Dual VoT features, not a Morphe dev release.\n- Enable pre-release patches for this source in Morphe Manager.",
-  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.6-preview/patches-1.37.0-dualvot.6-preview.mpp",
+  "created_at": "2026-07-28T12:40:00+02:00",
+  "description": "## Dual VoT Patches 1.37.0-dualvot.7\n\n### Stable Dual VoT release\n\n- Graduates the tested Yandex countdown and player-button improvements from preview.\n- Keeps the countdown halo centered across orientations, timer positions, thicknesses, and layouts with additional player buttons.\n- Keeps the Yandex button state synchronized with translated playback.\n- Makes the Yandex audio controls scrollable so voice style and proxy settings remain reachable on short landscape screens.\n- Includes the improved new-video request flow and complete optional Yandex proxy routing.\n\n### Included base\n\n- Based on stable Morphe Patches 1.37.0.\n- Includes both the built-in Google/other translation and Yandex translation with mutually exclusive player controls.",
+  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.37.0-dualvot.7/patches-1.37.0-dualvot.7.mpp",
   "signature_download_url": "",
-  "version": "1.37.0-dualvot.6-preview"
+  "version": "1.37.0-dualvot.7"
 }

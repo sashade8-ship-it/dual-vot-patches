@@ -622,6 +622,9 @@ def cleanup_release(repository: str, tag: str) -> None:
 
 
 def publish(input_dir: Path, repository: str) -> None:
+    # The publish job runs in a fresh checkout. Configure an identity here as
+    # well as in prepare because annotated release tags require a committer.
+    configure_git_identity()
     plan = load_plan(input_dir)
     run("git", "fetch", "--no-tags", "origin", plan.branch)
     candidate_ref = "refs/remotes/automation/candidate"

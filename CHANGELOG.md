@@ -1,3 +1,15 @@
+## 1.37.0-dualvot.7 (2026-07-28)
+
+### Stable Dual VoT release
+
+* Graduate the tested countdown halo, player-button layout, proxy routing, and
+  new-video translation improvements from preview.
+* Keep the countdown centered across orientations, timer placements, ring
+  thicknesses, and layouts with additional player buttons.
+* Keep the Yandex button state synchronized with translated playback.
+* Make the Yandex audio controls scrollable so the voice-style buttons and
+  proxy switch remain reachable on short landscape screens.
+
 ## 1.37.0-dualvot.6-preview (2026-07-27)
 
 ### Yandex button halo
