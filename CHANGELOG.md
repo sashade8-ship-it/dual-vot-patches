@@ -1,3 +1,13 @@
+## 1.38.0-dev.1-dualvot.7 (2026-07-29)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.38.0-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.37.1-dev.1-dualvot.7 (2026-07-28)
 
 ### Automated Morphe update
@@ -145,6 +155,14 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.38.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.37.1-dev.1...v1.38.0-dev.1) (2026-07-29)
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide explore menu components" setting ([#2159](https://github.com/MorpheApp/morphe-patches/issues/2159)) ([7dc29bc](https://github.com/MorpheApp/morphe-patches/commit/7dc29bcbd7d2927ebcc65145fb23d4f9e46581ec))
+* **YouTube Music - Hide layout components:** Add "Hide Audio / Video toggle", "Hide comment components", "Hide feed components", "Hide Repeat button", and "Hide Shuffle button" settings ([#2228](https://github.com/MorpheApp/morphe-patches/issues/2228)) ([931bb3a](https://github.com/MorpheApp/morphe-patches/commit/931bb3ac6c042b7113bd31e9fdccef9a8972ce87))
+* **YouTube:** Add `Wide search bar` patch ([#2221](https://github.com/MorpheApp/morphe-patches/issues/2221)) ([be8de15](https://github.com/MorpheApp/morphe-patches/commit/be8de1567731623f91a391bc479fab019e7b81a5))
 
 ## [1.37.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.37.0...v1.37.1-dev.1) (2026-07-28)
 
