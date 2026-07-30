@@ -23,7 +23,7 @@ jobs:
       - name: Checkout target branch
         uses: actions/checkout@v7
         with:
-          ref: ${{ inputs.channel == 'stable' && 'main' || 'dev' }}
+          ref: main
           fetch-depth: 0
           persist-credentials: false
 
@@ -71,7 +71,7 @@ jobs:
       - name: Checkout target branch
         uses: actions/checkout@v7
         with:
-          ref: ${{ inputs.channel == 'stable' && 'main' || 'dev' }}
+          ref: main
           fetch-depth: 0
 
       - name: Setup Python
