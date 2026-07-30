@@ -9,6 +9,7 @@ package app.morphe.extension.youtube.videoplayer;
 
 import static app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton.getTotalUpperButtonCount;
 
+import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
@@ -110,7 +111,7 @@ public class PlayerOverlayButton {
             if (container == null) return;
 
             final int reservedWidth = (int) (totalButtons
-                    * getButtonWidthPercentage(totalButtons)
+                    * getButtonWidthPercentage(totalButtons, container)
                     * buttonWidth);
 
             if (lastMarginEnd == reservedWidth) return;
@@ -183,7 +184,7 @@ public class PlayerOverlayButton {
             }
 
             final float buttonWidthPercentage =
-                    getButtonWidthPercentage(buttonControllers.size());
+                    getButtonWidthPercentage(buttonControllers.size(), source);
 
             // Convert from 0 indexing to 1 indexing.
             final int buttonNumber = buttonControllers.indexOf(this) + (HIDE_FULLSCREEN_BUTTON_ENABLED ? 0 : 1);
@@ -252,8 +253,12 @@ public class PlayerOverlayButton {
      * Returns the button width percentage based on the total number of buttons,
      * so buttons don't overlap the video time bar.
      */
-    static float getButtonWidthPercentage(int totalButtons) {
+    static float getButtonWidthPercentage(int totalButtons, View view) {
         if (totalButtons <= 1) return 1.0f;
+
+        boolean landscape = view.getResources().getConfiguration().orientation
+                == Configuration.ORIENTATION_LANDSCAPE;
+        if (totalButtons == 5 && landscape) return 0.80f;
 
         // Preserve the existing spacing for 2-4 buttons, then continue the
         // same progression instead of jumping back to 100% at 5 buttons.
