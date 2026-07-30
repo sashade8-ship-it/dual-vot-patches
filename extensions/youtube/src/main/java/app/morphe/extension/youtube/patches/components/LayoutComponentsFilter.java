@@ -32,6 +32,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.StringTrieSearch;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.components.BufferAsciiStrings;
 import app.morphe.extension.shared.patches.components.ByteArrayFilterGroup;
 import app.morphe.extension.shared.patches.components.ByteArrayFilterGroupList;
@@ -39,8 +41,6 @@ import app.morphe.extension.shared.patches.components.ContextInterface;
 import app.morphe.extension.shared.patches.components.Filter;
 import app.morphe.extension.shared.patches.components.StringFilterGroup;
 import app.morphe.extension.shared.patches.components.StringFilterGroupList;
-import app.morphe.extension.shared.StringTrieSearch;
-import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.ChangeHeaderPatch;
 import app.morphe.extension.youtube.settings.Settings;
 
@@ -568,7 +568,7 @@ public final class LayoutComponentsFilter extends Filter {
         if (chipRecyclerView == null) {
             return;
         }
-        
+
         if (HIDE_FILTER_BAR_IN_RELATED_VIDEOS_ENABLED) {
             chipRecyclerView.setVisibility(RecyclerView.GONE);
         }

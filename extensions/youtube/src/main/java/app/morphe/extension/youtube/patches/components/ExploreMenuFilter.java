@@ -37,19 +37,19 @@ public final class ExploreMenuFilter extends Filter {
 
         exploreMenuGroupList.addAll(
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_SHOPPING_MENU,
-                        "yt_outline_bag",
-                        "yt_outline_experimental_bag"
+                        Settings.HIDE_COURSES_MENU,
+                        "yt_outline_creator_academy",
+                        "yt_outline_experimental_graduation_cap"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_MUSIC_MENU,
-                        "yt_outline_audio",
-                        "yt_outline_experimental_audio"
+                        Settings.HIDE_FASHION_MENU,
+                        "yt_outline_fashion",
+                        "yt_outline_experimental_fashion"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_MOVIES_MENU,
-                        "yt_outline_clapperboard",
-                        "yt_outline_experimental_clapperboard"
+                        Settings.HIDE_GAMING_MENU,
+                        "yt_outline_gaming",
+                        "yt_outline_experimental_gaming"
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_HYPE_MENU,
@@ -62,9 +62,19 @@ public final class ExploreMenuFilter extends Filter {
                         "yt_outline_experimental_live"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_GAMING_MENU,
-                        "yt_outline_gaming",
-                        "yt_outline_experimental_gaming"
+                        Settings.HIDE_MEMBERSHIPS_MENU,
+                        "yt_fill_memberships",
+                        "yt_fill_experimental_star_circle"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_MOVIES_MENU,
+                        "yt_outline_clapperboard",
+                        "yt_outline_experimental_clapperboard"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_MUSIC_MENU,
+                        "yt_outline_audio",
+                        "yt_outline_experimental_audio"
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_NEWS_MENU,
@@ -72,19 +82,9 @@ public final class ExploreMenuFilter extends Filter {
                         "yt_outline_experimental_news"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_SPORTS_MENU,
-                        "yt_outline_trophy",
-                        "yt_outline_experimental_trophy"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_COURSES_MENU,
-                        "yt_outline_creator_academy",
-                        "yt_outline_experimental_graduation_cap"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_FASHION_MENU,
-                        "yt_outline_fashion",
-                        "yt_outline_experimental_fashion"
+                        Settings.HIDE_PLAYABLES_MENU,
+                        "yt_outline_tic_tac_toe",
+                        "yt_outline_experimental_playables"
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_PODCASTS_MENU,
@@ -92,14 +92,26 @@ public final class ExploreMenuFilter extends Filter {
                         "yt_outline_experimental_podcast"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_PLAYABLES_MENU,
-                        "yt_outline_tic_tac_toe",
-                        "yt_outline_experimental_playables"
+                        Settings.HIDE_SHOPPING_MENU,
+                        "yt_outline_bag",
+                        "yt_outline_experimental_bag"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_MEMBERSHIPS_MENU,
-                        "yt_fill_memberships",
-                        "yt_fill_experimental_star_circle"
+                        Settings.HIDE_SPORTS_MENU,
+                        "yt_outline_trophy",
+                        "yt_outline_experimental_trophy"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_YOUTUBE_CREATE_MENU,
+                        "product_logo_youtube_create"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_YOUTUBE_KIDS_MENU,
+                        "product_logo_youtube_kids"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_YOUTUBE_MUSIC_MENU,
+                        "product_logo_youtube_music"
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_YOUTUBE_PREMIUM_MENU,
@@ -108,18 +120,6 @@ public final class ExploreMenuFilter extends Filter {
                 new ByteArrayFilterGroup(
                         Settings.HIDE_YOUTUBE_STUDIO_MENU,
                         "product_logo_youtube_studio"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_YOUTUBE_MUSIC_MENU,
-                        "product_logo_youtube_music"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_YOUTUBE_KIDS_MENU,
-                        "product_logo_youtube_kids"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_YOUTUBE_CREATE_MENU,
-                        "product_logo_youtube_create"
                 )
         );
 

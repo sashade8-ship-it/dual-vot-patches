@@ -72,7 +72,9 @@ public class WideSearchBarPatch {
             if (searchParentView == null) {
                 return;
             }
-            if (activeButton != NavigationButton.HOME && activeButton != NavigationButton.SUBSCRIPTIONS) {
+            if (activeButton != NavigationButton.HOME
+                    && activeButton != NavigationButton.SUBSCRIPTIONS
+                    && activeButton != NavigationButton.NOTIFICATIONS) {
                 return;
             }
             if (NavigationBar.isBackButtonVisible()) {

@@ -44,13 +44,14 @@ public class CommentsFilter extends Filter {
 
     private static final List<String> commentsCarouselFilterStrings = getFilterStrings(Settings.HIDE_COMMENTS_CAROUSEL_FILTER_STRINGS);
 
-    private final StringFilterGroup comments;
     private final StringFilterGroup commentComposer;
     private final StringFilterGroup commentComposerButtons;
     private final ByteArrayFilterGroupList commentComposerButtonsGroupList = new ByteArrayFilterGroupList();
+    private final StringFilterGroup comments;
     private final StringFilterGroup commentsFilterBar;
     private final StringFilterGroup emojiButton;
     private final StringFilterGroup previewCommentDotsSelector;
+
     public CommentsFilter() {
         var channelGuidelines = new StringFilterGroup(
                 Settings.HIDE_COMMENTS_CHANNEL_GUIDELINES,
@@ -60,18 +61,6 @@ public class CommentsFilter extends Filter {
         var chatSummary = new StringFilterGroup(
                 Settings.HIDE_COMMENTS_AI_CHAT_SUMMARY,
                 "live_chat_summary_banner.e"
-        );
-
-        comments = new StringFilterGroup(
-                null,
-                "video_metadata_carousel",
-                "_comments"
-        );
-
-        var commentsByMembers = new StringFilterGroup(
-                Settings.HIDE_COMMENTS_BY_MEMBERS_HEADER,
-                "sponsorships_comments_header.e",
-                "sponsorships_comments_footer.e"
         );
 
         commentComposer = new StringFilterGroup(
@@ -96,9 +85,16 @@ public class CommentsFilter extends Filter {
                 )
         );
 
-        commentsFilterBar = new StringFilterGroup(
-                Settings.HIDE_FILTER_BAR_IN_COMMENTS,
-                CHIP_BAR_PATH_PREFIX
+        comments = new StringFilterGroup(
+                null,
+                "video_metadata_carousel",
+                "_comments"
+        );
+
+        var commentsByMembers = new StringFilterGroup(
+                Settings.HIDE_COMMENTS_BY_MEMBERS_HEADER,
+                "sponsorships_comments_header.e",
+                "sponsorships_comments_footer.e"
         );
 
         var commentsContexts = new StringFilterGroup(
@@ -106,6 +102,11 @@ public class CommentsFilter extends Filter {
                 "comment_filter_context.e",
                 "timed_comments_welcome.e",
                 "timed_comments_end.e"
+        );
+
+        commentsFilterBar = new StringFilterGroup(
+                Settings.HIDE_FILTER_BAR_IN_COMMENTS,
+                CHIP_BAR_PATH_PREFIX
         );
 
         var communityGuidelines = new StringFilterGroup(
@@ -154,10 +155,10 @@ public class CommentsFilter extends Filter {
         addPathCallbacks(
                 channelGuidelines,
                 chatSummary,
-                comments,
-                commentsByMembers,
                 commentComposer,
                 commentComposerButtons,
+                comments,
+                commentsByMembers,
                 commentsContexts,
                 commentsFilterBar,
                 communityGuidelines,
@@ -213,6 +214,38 @@ public class CommentsFilter extends Filter {
     /**
      * Injection point.
      */
+    public static void hideCommentsFilterBarOptions(@NonNull String identifier,
+                                                    @NonNull List<Object> treeNodeResultList) {
+        try {
+            if (Settings.HIDE_COMMENTS_FILTER_BAR_OPTIONS.get()
+                    && identifier.startsWith(CHIP_BAR_PATH_PREFIX)
+                    // Playlist sort button uses same components and must only filter if the player is opened.
+                    && PlayerType.getCurrent().isMaximizedOrFullscreen()
+            ) {
+                int treeNodeResultListSize = treeNodeResultList.size();
+                if (treeNodeResultListSize > 2) {
+                    treeNodeResultList.subList(1, treeNodeResultListSize - 1).clear();
+                }
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "Failed to hide comment filter bar options", ex);
+        }
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideCommentsInfoButton(View view) {
+        if (Settings.HIDE_COMMENTS_INFO_BUTTON.get()) {
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, 0);
+            view.setLayoutParams(lp);
+            view.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     * Injection point.
+     */
     public static void hideInComments(View view) {
         if (view == null || !Settings.HIDE_FILTER_BAR_IN_COMMENTS.get()) {
             return;
@@ -224,6 +257,81 @@ public class CommentsFilter extends Filter {
                 lp.height = 0;
                 view.setLayoutParams(lp);
             }
+            view.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideLiveChatDonatorsBar(View view) {
+        if (view == null || !Settings.HIDE_COMMENTS_LIVE_CHAT_DONATORS_BAR.get()) {
+            return;
+        }
+
+        view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+
+                if (view.getParent() instanceof RecyclerView shelfContainerRecycleView) {
+                    shelfContainerRecycleView.setVisibility(RecyclerView.GONE);
+                }
+            }
+        });
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideLiveChatEmojiButton(View view) {
+        if (Settings.HIDE_COMMENTS_EMOJI_BUTTON.get() && view != null) {
+            ViewGroup.LayoutParams lp = view.getLayoutParams();
+            if (lp != null) {
+                lp.width = 0;
+                view.setLayoutParams(lp);
+            }
+
+            view.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideLiveChatGiftButton(View view) {
+        if (Settings.HIDE_COMMENTS_GIFT_BUTTON.get() && view != null) {
+            ViewGroup.LayoutParams lp = view.getLayoutParams();
+            if (lp != null) {
+                lp.width = 0;
+                lp.height = 0;
+
+                if (lp instanceof ViewGroup.MarginLayoutParams marginLp) {
+                    marginLp.setMargins(0, 0, 0, 0);
+                    marginLp.setMarginStart(0);
+                    marginLp.setMarginEnd(0);
+                }
+
+                view.setLayoutParams(lp);
+            }
+
+            view.setPadding(0, 0, 0, 0);
+            view.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void hideLiveChatThanksButton(View view) {
+        if (Settings.HIDE_COMMENTS_THANKS_BUTTON.get() && view != null) {
+            ViewGroup.LayoutParams lp = view.getLayoutParams();
+            if (lp != null) {
+                lp.width = 0;
+                lp.height = 0;
+                view.setLayoutParams(lp);
+            }
+
             view.setVisibility(View.GONE);
         }
     }
@@ -293,112 +401,5 @@ public class CommentsFilter extends Filter {
         }
 
         return bytes;
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideCommentsInfoButton(View view) {
-        if (Settings.HIDE_COMMENTS_INFO_BUTTON.get()) {
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, 0);
-            view.setLayoutParams(lp);
-            view.setVisibility(View.GONE);
-        }
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideCommentsFilterBarOptions(@NonNull String identifier,
-                                                   @NonNull List<Object> treeNodeResultList) {
-        try {
-            if (Settings.HIDE_COMMENTS_FILTER_BAR_OPTIONS.get()
-                    && identifier.startsWith(CHIP_BAR_PATH_PREFIX)
-                    // Playlist sort button uses same components and must only filter if the player is opened.
-                    && PlayerType.getCurrent().isMaximizedOrFullscreen()
-            ) {
-                int treeNodeResultListSize = treeNodeResultList.size();
-                if (treeNodeResultListSize > 2) {
-                    treeNodeResultList.subList(1, treeNodeResultListSize - 1).clear();
-                }
-            }
-        } catch (Exception ex) {
-            Logger.printException(() -> "Failed to hide comment filter bar options", ex);
-        }
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideLiveChatDonatorsBar(View view) {
-        if (view == null || !Settings.HIDE_COMMENTS_LIVE_CHAT_DONATORS_BAR.get()) {
-            return;
-        }
-
-        view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-
-                if (view.getParent() instanceof RecyclerView shelfContainerRecycleView) {
-                    shelfContainerRecycleView.setVisibility(RecyclerView.GONE);
-                }
-            }
-        });
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideLiveChatEmojiButton(View view) {
-        if (Settings.HIDE_COMMENTS_EMOJI_BUTTON.get() && view != null) {
-            ViewGroup.LayoutParams lp = view.getLayoutParams();
-            if (lp != null) {
-                lp.width = 0;
-                view.setLayoutParams(lp);
-            }
-
-            view.setVisibility(View.INVISIBLE);
-        }
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideLiveChatThanksButton(View view) {
-        if (Settings.HIDE_COMMENTS_THANKS_BUTTON.get() && view != null) {
-            ViewGroup.LayoutParams lp = view.getLayoutParams();
-            if (lp != null) {
-                lp.width = 0;
-                lp.height = 0;
-                view.setLayoutParams(lp);
-            }
-
-            view.setVisibility(View.GONE);
-        }
-    }
-
-    /**
-     * Injection point.
-     */
-    public static void hideLiveChatGiftButton(View view) {
-        if (Settings.HIDE_COMMENTS_GIFT_BUTTON.get() && view != null) {
-            ViewGroup.LayoutParams lp = view.getLayoutParams();
-            if (lp != null) {
-                lp.width = 0;
-                lp.height = 0;
-
-                if (lp instanceof ViewGroup.MarginLayoutParams marginLp) {
-                    marginLp.setMargins(0, 0, 0, 0);
-                    marginLp.setMarginStart(0);
-                    marginLp.setMarginEnd(0);
-                }
-
-                view.setLayoutParams(lp);
-            }
-
-            view.setPadding(0, 0, 0, 0);
-            view.setVisibility(View.GONE);
-        }
     }
 }
