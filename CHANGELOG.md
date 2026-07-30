@@ -1,3 +1,12 @@
+## 1.38.0-dev.3-dualvot.8.2 (2026-07-30)
+
+### Upstream sync compatibility
+
+* Record the conflict-safe official translation button integration as the new
+  Dual VoT revision 8.2.
+* Keep coordinator behavior unchanged and preserve automatic compatibility
+  with future Morphe updates.
+
 ## 1.38.0-dev.3-dualvot.8.1 (2026-07-30)
 
 ### Automated Morphe update
