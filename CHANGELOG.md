@@ -1,3 +1,12 @@
+## 1.37.0-dualvot.8.2 (2026-07-30)
+
+### Upstream sync compatibility
+
+* Prevent a three-way import conflict in the official voice-over translation
+  player button when Morphe changes the legacy-controls access style.
+* Keep all Dual VoT coordinator behavior unchanged while allowing future
+  Morphe updates to merge automatically.
+
 ## 1.37.0-dualvot.8.1 (2026-07-30)
 
 ### Yandex player button
