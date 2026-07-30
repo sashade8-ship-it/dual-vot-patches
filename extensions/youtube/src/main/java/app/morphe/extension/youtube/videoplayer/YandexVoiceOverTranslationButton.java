@@ -257,8 +257,10 @@ public final class YandexVoiceOverTranslationButton {
                     : Math.round(LEGACY_FULLSCREEN_BUTTON_WIDTH_DP * density);
             widthPx = Math.min(
                     defaultWidthPx,
-                    Math.round(sourceWidth
-                            * PlayerOverlayButton.getButtonWidthPercentage(visibleButtonCount))
+                    Math.round(sourceWidth * PlayerOverlayButton.getButtonWidthPercentage(
+                            visibleButtonCount,
+                            controlsView
+                    ))
             );
         }
         for (View button : buttons) {
