@@ -205,11 +205,19 @@ def upstream_base(version: str) -> str:
     return version.split("-dualvot.", 1)[0].removeprefix("v")
 
 
-def dualvot_revision(version: str) -> int:
-    match = re.search(r"-dualvot\.(\d+)(?:-|$)", version, flags=re.IGNORECASE)
+def dualvot_revision(version: str) -> tuple[int, ...]:
+    match = re.search(
+        r"-dualvot\.(\d+(?:\.\d+)*)(?:-|$)",
+        version,
+        flags=re.IGNORECASE,
+    )
     if match is None:
         raise SyncError(f"Missing Dual VoT revision in version: {version!r}")
-    return int(match.group(1))
+    return tuple(int(part) for part in match.group(1).split("."))
+
+
+def format_dualvot_revision(revision: tuple[int, ...]) -> str:
+    return ".".join(str(part) for part in revision)
 
 
 def validate_version(version: str) -> None:
@@ -550,7 +558,10 @@ def prepare(channel: str, output_dir: Path, repository: str) -> None:
     # The Dual VoT revision identifies our feature set, not the Morphe base.
     # Preserve it when only upstream Morphe changes, and keep stable/dev on the
     # same Dual VoT generation whenever they contain the same integration.
-    version = f"{upstream_version}-dualvot.{revision}"
+    version = (
+        f"{upstream_version}-dualvot."
+        f"{format_dualvot_revision(revision)}"
+    )
     validate_version(version)
     set_gradle_version(version)
     notes = release_notes(version, upstream_version, channel)

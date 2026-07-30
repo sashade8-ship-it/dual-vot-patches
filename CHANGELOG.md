@@ -1,3 +1,16 @@
+## 1.37.0-dualvot.8.1 (2026-07-30)
+
+### Yandex player button
+
+* Integrate the Yandex translation button with restored thin player controls.
+* Use separate thin legacy and bold modern icons so each matches its player
+  style.
+* Compact all five optional controls in portrait to prevent overlap on narrow
+  players.
+* Give five-button layouts more balanced spacing in landscape in both the
+  restored and modern player styles.
+* Preserve the existing Yandex countdown behavior.
+
 ## 1.37.0-dualvot.7 (2026-07-28)
 
 ### Stable Dual VoT release
