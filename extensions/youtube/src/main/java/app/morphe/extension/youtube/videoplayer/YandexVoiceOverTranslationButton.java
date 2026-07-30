@@ -46,6 +46,7 @@
 package app.morphe.extension.youtube.videoplayer;
 
 import static app.morphe.extension.shared.StringRef.str;
+import static app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -58,7 +59,9 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.SystemClock;
+import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -77,6 +80,15 @@ public final class YandexVoiceOverTranslationButton {
     private static final long DETERMINATE_FRAME_DELAY_MS = 250;
     private static final long INDETERMINATE_FRAME_DELAY_MS = 50;
     private static final int ERROR_COLOR = 0xFFFF3B30;
+    private static final int LEGACY_BUTTON_WIDTH_DP = 48;
+    private static final int LEGACY_FULLSCREEN_BUTTON_WIDTH_DP = 60;
+    private static final String[] LEGACY_BOTTOM_BUTTON_IDS = {
+            "morphe_playback_speed_dialog_button_container",
+            "morphe_video_quality_dialog_button_container",
+            "morphe_copy_video_link_button",
+            "morphe_vot_button",
+            "dualvot_yandex_vot_button"
+    };
 
     private static final Runnable STATE_REFRESH_CALLBACK =
             YandexVoiceOverTranslationButton::refreshActivatedState;
@@ -86,14 +98,20 @@ public final class YandexVoiceOverTranslationButton {
     @Nullable
     private static WeakReference<YandexCountdownButton> overlayButtonRef;
 
+    @Nullable
+    private static WeakReference<YandexCountdownButton> legacyButtonRef;
+
+    @Nullable
+    private static LegacyPlayerControlButton legacy;
+
     public static void initializeButton(View controlsView) {
         try {
-            if (!Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
+            if (RESTORE_OLD_PLAYER_BUTTONS || !Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
             VoiceOverTranslationCoordinator.addOnStateChangeCallback(STATE_REFRESH_CALLBACK);
             YandexCountdownButton button = PlayerOverlayButton.addButton(
                     controlsView,
                     new YandexCountdownButton(controlsView.getContext()),
-                    "dualvot_yt_yandex_vot",
+                    "dualvot_yt_yandex_vot_bold",
                     view -> {
                         VoiceOverTranslationCoordinator.toggleYandex();
                         refreshActivatedState();
@@ -112,52 +130,148 @@ public final class YandexVoiceOverTranslationButton {
         }
     }
 
+    /** Injection point for the restored thin player controls. */
+    public static void initializeLegacyButton(View controlsView) {
+        try {
+            if (!RESTORE_OLD_PLAYER_BUTTONS) return;
+
+            VoiceOverTranslationCoordinator.addOnStateChangeCallback(STATE_REFRESH_CALLBACK);
+
+            legacy = new LegacyPlayerControlButton(
+                    controlsView,
+                    "dualvot_yandex_vot_button",
+                    null,
+                    "dualvot_yt_yandex_vot",
+                    Settings.DUAL_VOT_YANDEX_ENABLED,
+                    view -> {
+                        VoiceOverTranslationCoordinator.toggleYandex();
+                        refreshActivatedState();
+                    },
+                    view -> {
+                        YandexVotBottomSheet.show(view.getContext());
+                        return true;
+                    });
+
+            View view = Utils.getChildViewByResourceName(
+                    controlsView,
+                    "dualvot_yandex_vot_button"
+            );
+            if (view instanceof YandexCountdownButton button) {
+                legacyButtonRef = new WeakReference<>(button);
+                button.getViewTreeObserver().addOnPreDrawListener(() -> {
+                    updateLegacyButtonWidths(controlsView);
+                    return true;
+                });
+                button.post(STATE_REFRESH_CALLBACK);
+            } else {
+                legacyButtonRef = null;
+                Logger.printException(() -> "Unexpected Yandex legacy button view: " + view);
+            }
+
+            refreshActivatedState();
+        } catch (Exception ex) {
+            Logger.printException(() -> "YandexVoiceOverTranslationButton initializeLegacyButton failure", ex);
+        }
+    }
+
     private static void refreshActivatedState() {
         Utils.verifyOnMainThread();
         try {
             boolean active = VoiceOverTranslationCoordinator.isYandexActive();
             int alpha = active ? 255 : 128;
-            WeakReference<YandexCountdownButton> ref = overlayButtonRef;
-            YandexCountdownButton overlay = ref != null ? ref.get() : null;
-            if (overlay != null) {
-                overlay.removeCallbacks(PROGRESS_TICK);
-
-                boolean waiting = YandexVoiceOverTranslationPatch.translationStarting;
-                boolean error = YandexVoiceOverTranslationPatch.isTranslationErrorVisible();
-                int seconds = YandexVoiceOverTranslationPatch.getWaitingTimeSeconds();
-                float progress = YandexVoiceOverTranslationPatch.getWaitingProgressFraction();
-                String timerPosition = Settings.DUAL_VOT_YANDEX_TIMER_POSITION.get();
-                boolean showTimer = waiting && !"hidden".equals(timerPosition);
-
-                overlay.updateCountdown(
-                        waiting,
-                        error,
-                        showTimer,
-                        "below".equals(timerPosition),
-                        Settings.DUAL_VOT_YANDEX_PROGRESS_RING_ENABLED.get(),
-                        Settings.DUAL_VOT_YANDEX_PROGRESS_RING_COLOR.get(),
-                        Settings.DUAL_VOT_YANDEX_PROGRESS_RING_THICKNESS.get(),
-                        seconds,
-                        progress,
-                        alpha
-                );
-
-                if (waiting || error) {
-                    boolean indeterminate = error || seconds <= 0 || progress < 0.0f;
-                    overlay.postDelayed(
-                            PROGRESS_TICK,
-                            indeterminate
-                                    ? INDETERMINATE_FRAME_DELAY_MS
-                                    : DETERMINATE_FRAME_DELAY_MS
-                    );
-                }
+            updateButton(overlayButtonRef, alpha);
+            updateButton(legacyButtonRef, alpha);
+            LegacyPlayerControlButton leg = legacy;
+            if (leg != null) {
+                leg.setImageAlpha(alpha);
             }
         } catch (Exception ex) {
             Logger.printException(() -> "refreshActivatedState failure", ex);
         }
     }
 
-    private static final class YandexCountdownButton extends ImageView {
+    private static void updateButton(
+            @Nullable WeakReference<YandexCountdownButton> ref,
+            int alpha
+    ) {
+        YandexCountdownButton button = ref != null ? ref.get() : null;
+        if (button == null) return;
+
+        button.removeCallbacks(PROGRESS_TICK);
+
+        boolean waiting = YandexVoiceOverTranslationPatch.translationStarting;
+        boolean error = YandexVoiceOverTranslationPatch.isTranslationErrorVisible();
+        int seconds = YandexVoiceOverTranslationPatch.getWaitingTimeSeconds();
+        float progress = YandexVoiceOverTranslationPatch.getWaitingProgressFraction();
+        String timerPosition = Settings.DUAL_VOT_YANDEX_TIMER_POSITION.get();
+        boolean showTimer = waiting && !"hidden".equals(timerPosition);
+
+        button.updateCountdown(
+                waiting,
+                error,
+                showTimer,
+                "below".equals(timerPosition),
+                Settings.DUAL_VOT_YANDEX_PROGRESS_RING_ENABLED.get(),
+                Settings.DUAL_VOT_YANDEX_PROGRESS_RING_COLOR.get(),
+                Settings.DUAL_VOT_YANDEX_PROGRESS_RING_THICKNESS.get(),
+                seconds,
+                progress,
+                alpha
+        );
+
+        if (waiting || error) {
+            boolean indeterminate = error || seconds <= 0 || progress < 0.0f;
+            button.postDelayed(
+                    PROGRESS_TICK,
+                    indeterminate
+                            ? INDETERMINATE_FRAME_DELAY_MS
+                            : DETERMINATE_FRAME_DELAY_MS
+            );
+        }
+    }
+
+    private static void updateLegacyButtonWidths(View controlsView) {
+        int visibleButtonCount = 0;
+        View[] buttons = new View[LEGACY_BOTTOM_BUTTON_IDS.length];
+        for (int i = 0; i < LEGACY_BOTTOM_BUTTON_IDS.length; i++) {
+            View button = Utils.getChildViewByResourceName(
+                    controlsView,
+                    LEGACY_BOTTOM_BUTTON_IDS[i]
+            );
+            buttons[i] = button;
+            if (button != null && button.getVisibility() == View.VISIBLE) {
+                visibleButtonCount++;
+            }
+        }
+
+        float density = controlsView.getResources().getDisplayMetrics().density;
+        int defaultWidthPx = Math.round(LEGACY_BUTTON_WIDTH_DP * density);
+        int widthPx = defaultWidthPx;
+        if (visibleButtonCount >= LEGACY_BOTTOM_BUTTON_IDS.length) {
+            View fullscreenButton = Utils.getChildViewByResourceName(
+                    controlsView,
+                    "fullscreen_button"
+            );
+            int sourceWidth = fullscreenButton != null && fullscreenButton.getWidth() > 0
+                    ? fullscreenButton.getWidth()
+                    : Math.round(LEGACY_FULLSCREEN_BUTTON_WIDTH_DP * density);
+            widthPx = Math.min(
+                    defaultWidthPx,
+                    Math.round(sourceWidth
+                            * PlayerOverlayButton.getButtonWidthPercentage(visibleButtonCount))
+            );
+        }
+        for (View button : buttons) {
+            if (button == null) continue;
+            ViewGroup.LayoutParams params = button.getLayoutParams();
+            if (params != null && params.width != widthPx) {
+                params.width = widthPx;
+                button.setLayoutParams(params);
+            }
+        }
+    }
+
+    public static final class YandexCountdownButton extends ImageView {
         private final Paint ringPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final Paint textBackgroundPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -179,8 +293,12 @@ public final class YandexVoiceOverTranslationButton {
         private float progress = -1.0f;
         private int iconAlpha = 128;
 
-        YandexCountdownButton(Context context) {
-            super(context);
+        public YandexCountdownButton(Context context) {
+            this(context, null);
+        }
+
+        public YandexCountdownButton(Context context, @Nullable AttributeSet attrs) {
+            super(context, attrs);
             density = getResources().getDisplayMetrics().density;
             ringPaint.setStyle(Paint.Style.STROKE);
             ringPaint.setStrokeCap(Paint.Cap.ROUND);

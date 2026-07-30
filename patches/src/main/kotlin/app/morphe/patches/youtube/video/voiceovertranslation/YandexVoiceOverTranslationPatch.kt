@@ -16,6 +16,9 @@ import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.youtube.layout.player.buttons.addPlayerBottomButton
 import app.morphe.patches.youtube.layout.player.buttons.playerOverlayButtonsHookPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.misc.playercontrols.addLegacyBottomControl
+import app.morphe.patches.youtube.misc.playercontrols.initializeLegacyBottomControl
+import app.morphe.patches.youtube.misc.playercontrols.legacyPlayerControlsPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.util.ResourceGroup
@@ -25,14 +28,19 @@ private const val YANDEX_BUTTON =
     "Lapp/morphe/extension/youtube/videoplayer/YandexVoiceOverTranslationButton;"
 
 private val yandexVoiceOverTranslationResourcePatch = resourcePatch {
+    dependsOn(legacyPlayerControlsPatch)
+
     execute {
         copyResources(
             "yandexvoiceovertranslationbutton",
             ResourceGroup(
                 "drawable",
                 "dualvot_yt_yandex_vot.xml",
+                "dualvot_yt_yandex_vot_bold.xml",
             )
         )
+
+        addLegacyBottomControl("yandexvoiceovertranslationbutton")
     }
 }
 
@@ -50,6 +58,7 @@ val yandexVoiceOverTranslationPatch = bytecodePatch(
         voiceOverTranslationPatch,
         sharedExtensionPatch,
         playerOverlayButtonsHookPatch,
+        legacyPlayerControlsPatch,
         yandexVoiceOverTranslationResourcePatch,
     )
 
@@ -115,5 +124,6 @@ val yandexVoiceOverTranslationPatch = bytecodePatch(
         )
 
         addPlayerBottomButton(YANDEX_BUTTON)
+        initializeLegacyBottomControl(YANDEX_BUTTON)
     }
 }
