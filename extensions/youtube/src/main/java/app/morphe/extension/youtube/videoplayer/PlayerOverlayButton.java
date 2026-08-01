@@ -250,10 +250,15 @@ public class PlayerOverlayButton {
      * so buttons don't overlap the video time bar.
      */
     private static float getButtonWidthPercentage(int totalButtons) {
+        // Five or more buttons keep the spacing of four,
+        // otherwise the spacing resets to full width and the buttons overlap the time bar.
+        if (totalButtons >= 4) {
+            return 0.70f;
+        }
+
         return switch (totalButtons) {
             case 2 -> 0.90f;
             case 3 -> 0.80f;
-            case 4 -> 0.70f;
             default -> 1.0f;
         };
     }
