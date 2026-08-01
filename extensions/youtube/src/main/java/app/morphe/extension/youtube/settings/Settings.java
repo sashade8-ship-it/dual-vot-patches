@@ -13,7 +13,6 @@ import static app.morphe.extension.shared.sponsorblock.objects.CategoryBehaviour
 import static app.morphe.extension.shared.sponsorblock.objects.CategoryBehaviour.SKIP_AUTOMATICALLY_ONCE;
 
 import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.shared.settings.EnumSetting;
 import app.morphe.extension.shared.settings.FloatSetting;
@@ -276,7 +275,7 @@ public class Settings extends SharedYouTubeSettings {
 
     // Miniplayer
     public static final BooleanSetting MINIPLAYER_DISABLE_RESUMING = new BooleanSetting("morphe_miniplayer_disable_resuming", FALSE, true);
-    public static final EnumSetting<MiniplayerType> MINIPLAYER_TYPE = new EnumSetting<>("morphe_miniplayer_type", MiniplayerType.DEFAULT, true);
+    public static final EnumSetting<MiniplayerType> MINIPLAYER_TYPE = new EnumSetting<>("morphe_miniplayer_type", VersionCheckPatch.IS_21_29_OR_GREATER ? MiniplayerType.MODERN_4 : MiniplayerType.DEFAULT, true);
     public static final BooleanSetting MINIPLAYER_DISABLE_DRAG_AND_DROP = new BooleanSetting("morphe_miniplayer_disable_drag_and_drop", FALSE, true, new MiniplayerAnyModernAvailability());
     public static final BooleanSetting MINIPLAYER_DISABLE_HORIZONTAL_DRAG = new BooleanSetting("morphe_miniplayer_disable_horizontal_drag", FALSE, true, new MiniplayerHorizontalDragAvailability());
     public static final BooleanSetting MINIPLAYER_DISABLE_HORIZONTAL_DRAG_PLAYBACK = new BooleanSetting("morphe_miniplayer_disable_horizontal_drag_playback", FALSE, true, new MiniplayerHorizontalDragPlaybackAvailability());
@@ -774,7 +773,6 @@ public class Settings extends SharedYouTubeSettings {
         migrateOldSettingToNew(DEPRECATED_SB_CATEGORY_UNSUBMITTED, SB_CATEGORY_UNSUBMITTED);
         migrateOldSettingToNew(DEPRECATED_SB_CATEGORY_UNSUBMITTED_COLOR, SB_CATEGORY_UNSUBMITTED_COLOR);
 
-
         // 20.37+ YT removed parts of the code for the legacy tablet miniplayer.
         // This check must remain until the Tablet type is eventually removed.
         if (VersionCheckPatch.IS_20_37_OR_GREATER && MINIPLAYER_TYPE.get() == MiniplayerType.TABLET) {
@@ -782,14 +780,9 @@ public class Settings extends SharedYouTubeSettings {
             MINIPLAYER_TYPE.resetToDefault();
         }
 
-        // Old spoof versions that no longer work,
-        // or is spoofing to a version the same or newer than this app.
-        if (!SPOOF_APP_VERSION_TARGET.isSetToDefault() &&
-                (SPOOF_APP_VERSION_TARGET.get().compareTo(SPOOF_APP_VERSION_TARGET.defaultValue) < 0
-                || (Utils.getAppVersionName().compareTo(SPOOF_APP_VERSION_TARGET.get()) <= 0))) {
-            Logger.printInfo(() -> "Resetting spoof app version");
-            SPOOF_APP_VERSION_TARGET.resetToDefault();
-            SPOOF_APP_VERSION.resetToDefault();
+        // 21.29+ YT removed all miniplayer types, except modern_4.
+        if (VersionCheckPatch.IS_21_29_OR_GREATER && !MINIPLAYER_TYPE.isSetToDefault()) {
+            MINIPLAYER_TYPE.resetToDefault();
         }
 
         // Android VR 1.74 and visionOS 1.03 are not selectable in the settings and are selected by spoof stream patch if needed.
