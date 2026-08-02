@@ -142,9 +142,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.38.1-dev.1-dualvot.8.2](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.38.1-dev.1-dualvot.8.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;134 patches total
+> **[v1.39.0-dev.1-dualvot.8.2](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.39.0-dev.1-dualvot.8.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;135 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;75 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;76 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -209,6 +209,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Open videos fullscreen](#open-videos-fullscreen) | Adds options to automatically open videos in fullscreen portrait or landscape mode. |  |
 | [Override YouTube Music buttons](#override-youtube-music-buttons) | Overrides YouTube Music buttons to open Morphe Music or any compatible third-party client. |  |
 | [Play all](#play-all) | Adds an option to play all the videos from a channel and to display play all button in the video player. |  |
+| [Playback in feeds](#playback-in-feeds) | Adds the 'Playback in feeds' setting of YouTube to the Morphe settings, where it is always available even if YouTube hides it. |  |
 | [Playback speed](#playback-speed) | Adds options to customize available playback speeds, set a default playback speed, and show a speed dialog button in the video player. |  |
 | [Reload video](#reload-video) | Adds an option to display reload video button in the video player. |  |
 | [Remove background playback restrictions](#remove-background-playback-restrictions) | Removes restrictions on background playback, including playing kids videos in the background. |  |
@@ -289,7 +290,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;2026.29.0 | 🧪&nbsp;2026.28.0 | 🧪&nbsp;2026.24.0 | 2026.14.0 | 2026.04.0 |
+| 🧪&nbsp;2026.30.0 | 🧪&nbsp;2026.29.0 | 🧪&nbsp;2026.24.0 | 2026.14.0 | 2026.04.0 |
 | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |

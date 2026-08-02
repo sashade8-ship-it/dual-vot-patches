@@ -1,3 +1,13 @@
+## 1.39.0-dev.1-dualvot.8.2 (2026-08-02)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.39.0-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.38.1-dev.1-dualvot.8.2 (2026-08-01)
 
 ### Automated Morphe update
@@ -207,6 +217,24 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.39.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.38.1-dev.1...v1.39.0-dev.1) (2026-08-02)
+
+### 🐛 Bug Fixes
+
+* **Reddit:** Show Morphe in-app settings with Reddit 2026.25.0+ ([#2260](https://github.com/MorpheApp/morphe-patches/issues/2260)) ([ec780c5](https://github.com/MorpheApp/morphe-patches/commit/ec780c5975f9ef3c4e578fff90ad09ba293e9b8e))
+* **YouTube - Seekbar thumbnail:** Hide thumbnail during precise seeking ([9f5848a](https://github.com/MorpheApp/morphe-patches/commit/9f5848a0120e6b472d59442d1a1e94a762b60d50))
+* **YouTube - Seekbar thumbnail:** Show slide-to-seek thumbnail when option is enabled ([174c4e6](https://github.com/MorpheApp/morphe-patches/commit/174c4e62f2c03fa5a673bff095d82b1475f8b82c))
+* **YouTube Music - Hide layout components:** Remove "Hide 'Suggested for you' shelf" setting as it hides playlist content ([c279c40](https://github.com/MorpheApp/morphe-patches/commit/c279c4054ffbb004594bc1066bb234aa0f8624b5))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide Learning menu" and "Hide 'How YouTube works' menu" settings ([997f433](https://github.com/MorpheApp/morphe-patches/commit/997f4337cff8e1ba7c6bd4e36f61589e3db0e97e))
+* **YouTube:** Add `Playback in feeds` patch ([#2261](https://github.com/MorpheApp/morphe-patches/issues/2261)) ([fced431](https://github.com/MorpheApp/morphe-patches/commit/fced4313f612031bfea7d15fe341e80a7c3e4567))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.30.0` ([f8dbf83](https://github.com/MorpheApp/morphe-patches/commit/f8dbf83a99508b3e08beb0e6061af7f1fb6880ca))
 
 ## [1.38.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.38.0...v1.38.1-dev.1) (2026-08-01)
 
