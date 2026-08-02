@@ -48,6 +48,18 @@ final class VoiceOverEngineCoordinator {
     }
 
     boolean register(String engineId, Runnable stopAction) {
+        // "official" is owned by the base extension. External add-ons only reach this general
+        // registration path, so they cannot race the built-in engine during class loading.
+        if (OFFICIAL_ENGINE_ID.equals(engineId)) return false;
+        return registerTrusted(engineId, stopAction);
+    }
+
+    /** Base-only registration path for the one reserved built-in engine id. */
+    boolean registerOfficial(Runnable stopAction) {
+        return registerTrusted(OFFICIAL_ENGINE_ID, stopAction);
+    }
+
+    private boolean registerTrusted(String engineId, Runnable stopAction) {
         if (!isValidEngineId(engineId) || stopAction == null || stopActionByEngineId.containsKey(engineId)) {
             return false;
         }

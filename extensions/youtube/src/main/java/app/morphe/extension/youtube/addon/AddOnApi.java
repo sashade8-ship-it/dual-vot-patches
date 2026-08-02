@@ -97,13 +97,27 @@ public final class AddOnApi {
      * and may not be {@code none} or {@code __none__}. Registration is permanent for the app
      * lifetime, so an id can be registered only once.
      *
-     * @param engineId stable id for the engine, such as {@code official} or {@code yandex}
+     * <p>The built-in {@code official} id is reserved and is rejected by this public entry point.
+     *
+     * @param engineId stable id for an external engine, such as {@code yandex}
      * @param stopAction action that immediately stops this engine and releases its audio state
      * @return {@code true} only when a new valid engine was registered
      */
     public static boolean registerVoiceOverEngine(String engineId, Runnable stopAction) {
         Utils.verifyOnMainThread();
         return voiceOverEngineCoordinator.register(engineId, stopAction);
+    }
+
+    /**
+     * Registers the base extension's reserved voice-over engine.
+     *
+     * <p>This is deliberately package-private: {@link AddOnManager}'s loader action calls it
+     * before it invokes the bytecode-injected {@link AddOnManager#registerAddOns()} body.
+     * Third-party add-ons can only use the public registration method above.
+     */
+    static boolean registerOfficialVoiceOverEngine(Runnable stopAction) {
+        Utils.verifyOnMainThread();
+        return voiceOverEngineCoordinator.registerOfficial(stopAction);
     }
 
     /**

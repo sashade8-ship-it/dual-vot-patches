@@ -11,6 +11,7 @@ import android.os.Looper;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.youtube.patches.voiceovertranslation.VoiceOverTranslationPatch;
 
 /**
  * Loads add-ons that are patched into the app by third party add-on patch bundles.
@@ -43,7 +44,7 @@ public final class AddOnManager {
                     Utils.runOnMainThread(action);
                 }
             },
-            AddOnManager::registerAddOns,
+            AddOnManager::registerBaseVoiceOverEngineThenAddOns,
             failure -> Logger.printException(() -> "Add-on registration failure", failure)
     );
 
@@ -59,6 +60,21 @@ public final class AddOnManager {
      */
     public static void ensureLoaded() {
         loadCoordinator.ensureLoaded();
+    }
+
+    /**
+     * The loader action always reserves the built-in engine before entering registerAddOns().
+     * Add-on patches insert their calls at instruction index zero in registerAddOns(), so putting
+     * this work in its caller (rather than in that injection target) is required for the ordering
+     * guarantee.
+     */
+    private static void registerBaseVoiceOverEngineThenAddOns() {
+        if (!AddOnApi.registerOfficialVoiceOverEngine(
+                VoiceOverTranslationPatch::deactivateTranslation)) {
+            // Do not execute injected registration if the base reservation was not established.
+            throw new IllegalStateException("Failed to reserve the built-in official voice-over engine");
+        }
+        registerAddOns();
     }
 
     /**

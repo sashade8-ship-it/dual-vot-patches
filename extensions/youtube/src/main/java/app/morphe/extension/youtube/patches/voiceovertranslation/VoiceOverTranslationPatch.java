@@ -162,9 +162,6 @@ public class VoiceOverTranslationPatch {
     private static String currentVideoId = "";
     private static boolean isLoading;
     private static boolean sessionEnabled = Settings.VOT_SESSION_ENABLED.get();
-    /** Main-thread-only registration guard for the built-in coordinator participant. */
-    private static boolean voiceOverEngineRegistered;
-    private static boolean voiceOverEngineRegistrationAttempted;
     private static boolean wasExplicitSeek;
     private static volatile boolean httpErrorDialogShownThisVideo;
 
@@ -253,11 +250,6 @@ public class VoiceOverTranslationPatch {
         currentVideoId = videoId;
         segments = new ArrayList<>();
         httpErrorDialogShownThisVideo = false;
-
-        // Register the built-in participant on the first official video lifecycle callback,
-        // even when the feature is currently disabled. This keeps the engine id stable for the
-        // app lifetime and makes later activation a pure ownership transition.
-        ensureVoiceOverEngineRegistered();
 
         if (!Settings.VOT_ENABLED.get() || !resumeOfficialSession) return;
         // A persisted official session may resume after process restart. Claim the coordinator
@@ -454,19 +446,9 @@ public class VoiceOverTranslationPatch {
 
     private static boolean claimVoiceOverEngine() {
         Utils.verifyOnMainThread();
-        return ensureVoiceOverEngineRegistered()
-                && AddOnApi.activateVoiceOverEngine(VOICE_OVER_ENGINE_ID);
-    }
-
-    private static boolean ensureVoiceOverEngineRegistered() {
-        Utils.verifyOnMainThread();
-        if (!voiceOverEngineRegistrationAttempted) {
-            voiceOverEngineRegistrationAttempted = true;
-            voiceOverEngineRegistered = AddOnApi.registerVoiceOverEngine(
-                    VOICE_OVER_ENGINE_ID,
-                    VoiceOverTranslationPatch::deactivateTranslation);
-        }
-        return voiceOverEngineRegistered;
+        // AddOnManager reserves this base-only id synchronously during application initialization,
+        // before bytecode-injected add-on registration is entered.
+        return AddOnApi.activateVoiceOverEngine(VOICE_OVER_ENGINE_ID);
     }
 
     private static void deactivateTranslationInternal() {

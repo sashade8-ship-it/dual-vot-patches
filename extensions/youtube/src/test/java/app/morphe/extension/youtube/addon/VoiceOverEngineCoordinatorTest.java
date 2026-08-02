@@ -34,9 +34,10 @@ public class VoiceOverEngineCoordinatorTest {
         assertFalse(coordinator.register("__none__", () -> {}));
         assertFalse(coordinator.register(repeat('a', 65), () -> {}));
         assertFalse(coordinator.register("official", null));
+        assertFalse(coordinator.register("official", () -> {}));
         assertNull(coordinator.getActiveEngineId());
 
-        assertTrue(coordinator.register("official", () -> {}));
+        assertTrue(coordinator.registerOfficial(() -> {}));
         assertTrue(coordinator.register("yandex", () -> {}));
         assertFalse(coordinator.register("official", () -> {}));
         assertFalse(coordinator.deactivate("not_registered"));
@@ -51,8 +52,10 @@ public class VoiceOverEngineCoordinatorTest {
         List<String> stops = new ArrayList<>();
         List<String> notifications = new ArrayList<>();
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
-        coordinator.register("official", () -> stops.add("official"));
-        coordinator.register("yandex", () -> stops.add("yandex"));
+        assertFalse(coordinator.register("official", () -> stops.add("untrusted-official")));
+        assertTrue(coordinator.registerOfficial(() -> stops.add("official")));
+        assertFalse(coordinator.registerOfficial(() -> stops.add("duplicate-official")));
+        assertTrue(coordinator.register("yandex", () -> stops.add("yandex")));
         coordinator.addListener(notifications::add);
 
         assertTrue(coordinator.activate("official"));
@@ -72,7 +75,7 @@ public class VoiceOverEngineCoordinatorTest {
         AtomicInteger stopCalls = new AtomicInteger();
         List<String> notifications = new ArrayList<>();
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
-        coordinator.register("official", stopCalls::incrementAndGet);
+        coordinator.registerOfficial(stopCalls::incrementAndGet);
         coordinator.addListener(notifications::add);
 
         assertTrue(coordinator.activate("official"));
@@ -86,7 +89,7 @@ public class VoiceOverEngineCoordinatorTest {
     public void reentrantActivationOfTheCurrentEngineIsRejectedDuringNotification() {
         AtomicBoolean nestedActivationResult = new AtomicBoolean(true);
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
-        coordinator.register("official", () -> {});
+        coordinator.registerOfficial(() -> {});
         coordinator.addListener(engineId -> {
             if ("official".equals(engineId)) {
                 nestedActivationResult.set(coordinator.activate("official"));
@@ -105,7 +108,7 @@ public class VoiceOverEngineCoordinatorTest {
         AtomicInteger yandexStops = new AtomicInteger();
         List<String> notifications = new ArrayList<>();
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
-        coordinator.register("official", officialStops::incrementAndGet);
+        coordinator.registerOfficial(officialStops::incrementAndGet);
         coordinator.register("yandex", yandexStops::incrementAndGet);
         coordinator.addListener(notifications::add);
 
@@ -133,7 +136,7 @@ public class VoiceOverEngineCoordinatorTest {
         List<String> notifications = new ArrayList<>();
         AtomicInteger yandexStops = new AtomicInteger();
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
-        coordinator.register("official", () -> {
+        coordinator.registerOfficial(() -> {
             throw new IllegalStateException("expected stop failure");
         });
         coordinator.register("yandex", yandexStops::incrementAndGet);
@@ -151,7 +154,7 @@ public class VoiceOverEngineCoordinatorTest {
     public void failedHandoffCannotBeReplacedByAReentrantInactiveListener() {
         AtomicBoolean listenerActivationResult = new AtomicBoolean(true);
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
-        coordinator.register("official", () -> {
+        coordinator.registerOfficial(() -> {
             throw new IllegalStateException("expected stop failure");
         });
         coordinator.register("yandex", () -> {});
@@ -174,7 +177,7 @@ public class VoiceOverEngineCoordinatorTest {
         AtomicBoolean nestedStopResult = new AtomicBoolean(true);
         AtomicBoolean nestedActivateResult = new AtomicBoolean(true);
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
-        coordinator.register("official", () -> {
+        coordinator.registerOfficial(() -> {
             officialStops.incrementAndGet();
             nestedStopResult.set(coordinator.stopActive());
             nestedActivateResult.set(coordinator.activate("official"));
@@ -196,7 +199,7 @@ public class VoiceOverEngineCoordinatorTest {
         List<String> delivered = new ArrayList<>();
         VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(
                 failure -> reportedFailures.incrementAndGet());
-        coordinator.register("official", () -> {});
+        coordinator.registerOfficial(() -> {});
         coordinator.addListener(engineId -> {
             throw new IllegalStateException("expected listener failure");
         });
@@ -236,6 +239,36 @@ public class VoiceOverEngineCoordinatorTest {
         assertEquals(1, registrations.get());
         assertEquals(1, dispatcher.verifyCalls.get());
         assertEquals(0, reportedFailures.get());
+    }
+
+    @Test
+    public void loadActionReservesOfficialBeforeSimulatedInjectedRegistration() {
+        FakeMainThreadDispatcher dispatcher = new FakeMainThreadDispatcher();
+        dispatcher.onMainThread = true;
+        List<String> registrationOrder = new ArrayList<>();
+        VoiceOverEngineCoordinator coordinator = new VoiceOverEngineCoordinator(failure -> {});
+        AddOnLoadCoordinator loader = new AddOnLoadCoordinator(
+                dispatcher,
+                () -> {
+                    assertTrue(coordinator.registerOfficial(() -> {}));
+                    registrationOrder.add("base-official");
+
+                    // Add-on registration is injected at index zero inside registerAddOns().
+                    assertFalse(coordinator.register("official", () -> {}));
+                    assertTrue(coordinator.register("yandex", () -> {}));
+                    registrationOrder.add("injected-add-on");
+                },
+                failure -> {
+                    throw new AssertionError("unexpected load failure", failure);
+                });
+
+        loader.ensureLoaded();
+
+        assertEquals(AddOnLoadCoordinator.State.LOADED, loader.getStateForTesting());
+        assertEquals(Arrays.asList("base-official", "injected-add-on"), registrationOrder);
+        assertTrue(coordinator.activate("official"));
+        assertTrue(coordinator.activate("yandex"));
+        assertEquals("yandex", coordinator.getActiveEngineId());
     }
 
     @Test
