@@ -24,6 +24,19 @@ class SyncUpstreamTests(unittest.TestCase):
             workflow,
         )
 
+    def test_dispatcher_forwards_secrets_to_channel_workflows(self):
+        workflow = (
+            MODULE_PATH.parents[1] / "workflows" / "upstream_sync.yml"
+        ).read_text(encoding="utf-8")
+        self.assertEqual(workflow.count("secrets: inherit"), 2)
+
+    def test_publisher_uses_workflow_capable_credential(self):
+        workflow = (
+            MODULE_PATH.parents[1] / "workflows" / "upstream_sync_channel.yml"
+        ).read_text(encoding="utf-8")
+        self.assertIn("token: ${{ secrets.UPSTREAM_SYNC_TOKEN }}", workflow)
+        self.assertIn("GH_TOKEN: ${{ secrets.UPSTREAM_SYNC_TOKEN }}", workflow)
+
     def test_extracts_official_base_from_dual_version(self):
         self.assertEqual(
             sync_upstream.upstream_base("1.37.0-dualvot.3"),
