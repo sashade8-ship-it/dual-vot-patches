@@ -76,6 +76,9 @@ jobs:
           # In particular, do not execute an outdated publisher from dev.
           ref: main
           fetch-depth: 0
+          # An upstream candidate can modify workflow files. GitHub's default
+          # Actions token cannot push a ref containing such changes.
+          token: ${{ secrets.UPSTREAM_SYNC_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v7
@@ -90,7 +93,7 @@ jobs:
 
       - name: Publish branch and release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.UPSTREAM_SYNC_TOKEN }}
         run: >-
           python .github/scripts/sync_upstream.py publish
           --input-dir "$RUNNER_TEMP/upstream-candidate"
