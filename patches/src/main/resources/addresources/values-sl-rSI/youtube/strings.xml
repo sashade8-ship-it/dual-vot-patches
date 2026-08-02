@@ -216,7 +216,6 @@ Spremembe vključujejo:
   <string name="morphe_hide_youtube_music_menu_title">Skrij meni YouTube Glasba</string>
   <string name="morphe_hide_youtube_kids_menu_title">Skrij meni YouTube Kids</string>
   <string name="morphe_hide_youtube_create_menu_title">Skrij meni YouTube Create</string>
-  <string name="morphe_hide_privacy_tos_footer_title">Skrij nogač \'Politika zasebnosti • Pogoji storitve\'</string>
   <string name="morphe_comments_screen_title">Komentarji</string>
   <string name="morphe_comments_screen_summary">Izberite, kateri elementi se pojavljajo v oddelku za komentarje</string>
   <string name="morphe_hide_comments_carousel_title">Omogoči filter za vrstico s komentarji</string>
@@ -929,6 +928,7 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_shorts_autoplay_summary">Samodejno napreduje k naslednjemu Shortu namesto, da bi ponavljal trenutnega</string>
   <string name="morphe_shorts_autoplay_background_title">Samodejno predvajanje v ozadju</string>
   <string name="morphe_shorts_autoplay_background_summary">Samodejno napreduje k naslednjemu Shortu med predvajanjem v ozadju</string>
+  <!-- layout.playbackinfeeds.playbackInFeedsPatch -->
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Onemogoči nadaljevanje predvajanja v mini predajalniku</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Onemogoči mini predvajalnik »Nadaljuj z gledanjem«, funkcijo YouTube Premium, ki se prikaže ob zagonu aplikacije</string>

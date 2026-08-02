@@ -214,7 +214,6 @@ Schimbari incluse:
   <string name="morphe_hide_youtube_music_menu_title">Ascunde meniul YouTube Music</string>
   <string name="morphe_hide_youtube_kids_menu_title">Ascunde meniul YouTube Kids</string>
   <string name="morphe_hide_youtube_create_menu_title">Ascunde meniul YouTube Create</string>
-  <string name="morphe_hide_privacy_tos_footer_title">Ascunde subsolul \'Politica de confidențialitate • Termeni de utilizare\'</string>
   <string name="morphe_comments_screen_title">Comentarii</string>
   <string name="morphe_comments_screen_summary">Alegeți ce componente să apară în secțiunea de comentarii</string>
   <string name="morphe_hide_comments_carousel_title">Activează filtru carusel comentarii</string>
@@ -922,6 +921,11 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_shorts_autoplay_summary">Avansază la următorul Shorts automat în loc să repete pe cel curent</string>
   <string name="morphe_shorts_autoplay_background_title">Redare automată în fundal</string>
   <string name="morphe_shorts_autoplay_background_summary">Avansază la următorul Shorts automat în timpul redării în fundal</string>
+  <!-- layout.playbackinfeeds.playbackInFeedsPatch -->
+  <string name="morphe_playback_in_feeds_title">Redare în fluxuri</string>
+  <string name="morphe_playback_in_feeds_entry_always_on">Mereu activat</string>
+  <string name="morphe_playback_in_feeds_entry_wifi_only">Doar Wi-Fi</string>
+  <string name="morphe_playback_in_feeds_entry_off">Oprit</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Dezactivează reluarea miniplayer-ului</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Dezactivează playerul mini „Urmărește mai departe”, o funcție YouTube Premium care apare la pornirea aplicației</string>

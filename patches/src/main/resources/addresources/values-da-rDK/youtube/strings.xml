@@ -202,6 +202,7 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_fashion_menu_title">Skjul \'Mode &amp; Skønhed\' menu</string>
   <string name="morphe_hide_gaming_menu_title">Skjul Gaming menu</string>
   <string name="morphe_hide_hype_menu_title">Skjul Hype menu</string>
+  <string name="morphe_hide_learning_menu_title">Skjul Læringsmenu</string>
   <string name="morphe_hide_live_menu_title">Skjul Live menu</string>
   <string name="morphe_hide_memberships_menu_title">Skjul Medlemskaber menu</string>
   <string name="morphe_hide_movies_menu_title">Skjul Film menu</string>
@@ -216,7 +217,8 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_youtube_music_menu_title">Skjul YouTube Music menu</string>
   <string name="morphe_hide_youtube_kids_menu_title">Skjul YouTube Kids menu</string>
   <string name="morphe_hide_youtube_create_menu_title">Skjul YouTube Create menu</string>
-  <string name="morphe_hide_privacy_tos_footer_title">Skjul \'Privatlivspolitik • Servicevilkår\' sidefod</string>
+  <string name="morphe_hide_youtube_works_menu_title">Skjul menuen \'Sådan fungerer YouTube\'</string>
+  <string name="morphe_hide_privacy_tos_footer_title">Skjul juridiske og privatlivsfodnoter</string>
   <string name="morphe_comments_screen_title">Kommentarer</string>
   <string name="morphe_comments_screen_summary">Vælg hvilke komponenter der vises i kommentar sektionen</string>
   <string name="morphe_hide_comments_carousel_title">Aktiver kommentarkarussel filter</string>
@@ -929,6 +931,11 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_shorts_autoplay_summary">Går automatisk til den næste Short i stedet for at gentage den aktuelle</string>
   <string name="morphe_shorts_autoplay_background_title">Automatisk afspilning i baggrunden</string>
   <string name="morphe_shorts_autoplay_background_summary">Går automatisk til den næste Short under afspilning i baggrunden</string>
+  <!-- layout.playbackinfeeds.playbackInFeedsPatch -->
+  <string name="morphe_playback_in_feeds_title">Afspilning i feeds</string>
+  <string name="morphe_playback_in_feeds_entry_always_on">Altid tændt</string>
+  <string name="morphe_playback_in_feeds_entry_wifi_only">Kun Wi-Fi</string>
+  <string name="morphe_playback_in_feeds_entry_off">Slukket</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Deaktiver fortsættelse af miniplayer</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Deaktiverer \'Fortsæt med at se\'-miniafspilleren, en YouTube Premium-funktion, der vises, når appen startes</string>

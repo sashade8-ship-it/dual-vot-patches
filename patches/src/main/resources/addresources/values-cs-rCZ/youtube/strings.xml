@@ -193,6 +193,9 @@ Změny zahrnují:
   <string name="morphe_hide_store_button_title">Skrýt tlačítko „Nakupování“</string>
   <!-- 'Subscribe' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_subscribe_button_in_channel_page_title">Skrýt tlačítko „Odebírat“</string>
+  <string name="morphe_hide_learning_menu_title">Skrýt nabídku Učení</string>
+  <string name="morphe_hide_youtube_works_menu_title">Skrýt nabídku \'Jak funguje YouTube\'</string>
+  <string name="morphe_hide_privacy_tos_footer_title">Skrýt právní a zásady ochrany osobních údajů v patičce</string>
   <string name="morphe_comments_screen_title">Komentáře</string>
   <string name="morphe_comments_screen_summary">Vyberte, které prvky se mají zobrazovat v sekci komentářů</string>
   <string name="morphe_hide_comments_carousel_title">Povolit filtr karet v komentářích</string>
@@ -904,6 +907,8 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_shorts_autoplay_summary">Automaticky přechází na další Shorts místo opakování aktuálního</string>
   <string name="morphe_shorts_autoplay_background_title">Automatické přehrávání na pozadí</string>
   <string name="morphe_shorts_autoplay_background_summary">Automaticky přechází na další Shorts během přehrávání na pozadí</string>
+  <!-- layout.playbackinfeeds.playbackInFeedsPatch -->
+  <string name="morphe_playback_in_feeds_title">Přehrávání v kanálech</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Zakázat obnovení miniplayeru</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Vypne minipřehrávač \'Pokračovat ve sledování\', funkci YouTube Premium, která se zobrazí při spuštění aplikace</string>

@@ -53,7 +53,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_repeat_button_title">반복 버튼 숨기기</string>
   <string name="morphe_music_hide_shuffle_button_title">셔플 버튼 숨기기</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">빠른 선곡 선반 숨기기</string>
-  <string name="morphe_music_hide_suggested_for_you_shelf_title">추천 선반 숨기기</string>
   <string name="morphe_music_comments_screen_title">댓글</string>
   <string name="morphe_music_comments_screen_summary">댓글 섹션에 표시할 구성 요소를 선택하세요</string>
   <string name="morphe_music_hide_comments_community_guidelines_title">커뮤니티 가이드라인 숨기기</string>
@@ -178,7 +177,7 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <string name="morphe_music_hide_flyout_menu_pin_to_speed_dial_title">\'빠른 선곡에 고정\' 메뉴 숨기기</string>
   <string name="morphe_music_hide_flyout_menu_play_next_title">\'다음에 재생\' 메뉴 숨기기</string>
   <string name="morphe_music_hide_flyout_menu_quality_title">\'품질\' 메뉴 숨기기</string>
-  <string name="morphe_music_hide_flyout_menu_remove_from_library_title">\'보관함에서 삭제\' 메뉴 제거</string>
+  <string name="morphe_music_hide_flyout_menu_remove_from_library_title">\'보관함에서 삭제\' 메뉴 숨기기</string>
   <string name="morphe_music_hide_flyout_menu_remove_from_playlist_title">\'재생목록에서 삭제\' 메뉴 숨기기</string>
   <string name="morphe_music_hide_flyout_menu_report_title">\'신고\' 메뉴 숨기기</string>
   <string name="morphe_music_hide_flyout_menu_save_episode_for_later_save_to_library_title">\'나중에 볼 에피소드 저장\' / \'재생목록에 저장\' 메뉴 숨기기</string>
@@ -248,11 +247,11 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <!-- 'scrobble' must be kept untranslated -->
   <string name="morphe_music_scrobbling_delay_percent_title">스크로블 지연 비율</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_delay_percent_summary">노래를 이 비율이상 재생하면 스크로블됩니다</string>
+  <string name="morphe_music_scrobbling_delay_percent_summary">노래를 이 비율 이상 재생하면 스크로블됩니다</string>
   <!-- 'scrobble' must be kept untranslated -->
   <string name="morphe_music_scrobbling_delay_seconds_title">스크로블 지연 시간 (초)</string>
   <!-- 'scrobble' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_delay_seconds_summary">노래를 이 시간이상 재생하면 스크로블됩니다</string>
+  <string name="morphe_music_scrobbling_delay_seconds_summary">노래를 이 시간 이상 재생하면 스크로블됩니다</string>
   <string name="morphe_music_listenbrainz_token_title">ListenBrainz 계정</string>
   <string name="morphe_music_listenbrainz_token_summary_logged_in">로그인되어 있습니다. 계정을 관리하려면 탭하세요</string>
   <!-- 'scrobbling' must be kept untranslated -->
@@ -300,6 +299,6 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <string name="morphe_music_spoof_app_version_target_entry_6_35_52">6.35.52 - 이전 구성요소 패널로 복원합니다</string>
   <string name="morphe_music_spoof_app_version_target_entry_6_42_55">6.42.55 - 실시간 가사를 비활성화합니다</string>
   <string name="morphe_music_spoof_app_version_target_entry_7_12_52">7.12.52 - 이전 동적 가사로 복원합니다</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - 이전 작업 버튼 바로 복원합니다</string>
+  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - 이전 작업 버튼 바를 복원합니다</string>
   <string name="morphe_music_spoof_app_version_target_entry_7_17_52">7.17.52 - 홈 피드에서 댓글 섹션이 표시되지 않습니다</string>
 </resources>
