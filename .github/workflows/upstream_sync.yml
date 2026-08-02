@@ -31,6 +31,7 @@ jobs:
       packages: read
       issues: write
     uses: ./.github/workflows/upstream_sync_channel.yml
+    secrets: inherit
     with:
       channel: stable
 
@@ -50,5 +51,6 @@ jobs:
       packages: read
       issues: write
     uses: ./.github/workflows/upstream_sync_channel.yml
+    secrets: inherit
     with:
       channel: dev

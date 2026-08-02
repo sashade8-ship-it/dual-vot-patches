@@ -24,6 +24,12 @@ class SyncUpstreamTests(unittest.TestCase):
             workflow,
         )
 
+    def test_dispatcher_forwards_secrets_to_channel_workflows(self):
+        workflow = (
+            MODULE_PATH.parents[1] / "workflows" / "upstream_sync.yml"
+        ).read_text(encoding="utf-8")
+        self.assertEqual(workflow.count("secrets: inherit"), 2)
+
     def test_publisher_uses_workflow_capable_credential(self):
         workflow = (
             MODULE_PATH.parents[1] / "workflows" / "upstream_sync_channel.yml"
