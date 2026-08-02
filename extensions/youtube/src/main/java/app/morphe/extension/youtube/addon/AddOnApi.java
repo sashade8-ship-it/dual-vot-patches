@@ -19,6 +19,7 @@ import java.util.function.Consumer;
 import java.util.function.LongConsumer;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.shared.VideoState;
@@ -50,6 +51,12 @@ import kotlin.Unit;
 public final class AddOnApi {
 
     /**
+     * Version of this binary add-on contract. Add-ons must check this before using APIs added
+     * after the original add-on-support patch.
+     */
+    public static final int API_VERSION = 1;
+
+    /**
      * Legacy player control button slots added to the bottom controls layout
      * by the "Add-on support" patch. Each add-on claims one slot for the lifetime of the app.
      */
@@ -69,6 +76,10 @@ public final class AddOnApi {
     private static final List<LongConsumer> videoTimeListeners = new CopyOnWriteArrayList<>();
     private static final List<Consumer<VideoState>> videoStateListeners = new CopyOnWriteArrayList<>();
 
+    private static final VoiceOverEngineCoordinator voiceOverEngineCoordinator =
+            new VoiceOverEngineCoordinator(failure -> Logger.printException(
+                    () -> "Voice-over engine callback failure", failure));
+
     /**
      * Whether the video state event of the extension is observed.
      * The observer is added with the first listener, so the event is not observed if no add-on uses it.
@@ -78,6 +89,78 @@ public final class AddOnApi {
     //
     // Add-on API.
     //
+
+    /**
+     * Registers a voice-over engine that participates in exclusive voice-over ownership.
+     *
+     * <p>Engine ids use lowercase ASCII {@code [a-z0-9][a-z0-9._-]*}, have 1-64 characters,
+     * and may not be {@code none} or {@code __none__}. Registration is permanent for the app
+     * lifetime, so an id can be registered only once.
+     *
+     * @param engineId stable id for the engine, such as {@code official} or {@code yandex}
+     * @param stopAction action that immediately stops this engine and releases its audio state
+     * @return {@code true} only when a new valid engine was registered
+     */
+    public static boolean registerVoiceOverEngine(String engineId, Runnable stopAction) {
+        Utils.verifyOnMainThread();
+        return voiceOverEngineCoordinator.register(engineId, stopAction);
+    }
+
+    /**
+     * Activates a registered voice-over engine, first stopping any previous owner.
+     *
+     * <p>A successful handoff notifies listeners only of the new id. If the outgoing stop action
+     * fails, the coordinator remains inactive, notifies {@code null}, and this method returns
+     * {@code false}; the requested engine is not activated.
+     */
+    public static boolean activateVoiceOverEngine(String engineId) {
+        Utils.verifyOnMainThread();
+        return voiceOverEngineCoordinator.activate(engineId);
+    }
+
+    /**
+     * Stops the given engine when it is currently active.
+     *
+     * <p>Ownership is cleared before the engine callback runs, and listeners receive one final
+     * {@code null} notification even when the callback fails. Stopping a valid registered engine
+     * that is already inactive succeeds without a callback or notification.
+     */
+    public static boolean deactivateVoiceOverEngine(String engineId) {
+        Utils.verifyOnMainThread();
+        return voiceOverEngineCoordinator.deactivate(engineId);
+    }
+
+    /**
+     * Stops whichever voice-over engine currently owns the channel.
+     *
+     * @return {@code true} when no engine is active or its stop callback succeeds; {@code false}
+     * when a stop callback fails or a transition callback re-enters the coordinator
+     */
+    public static boolean stopActiveVoiceOverEngine() {
+        Utils.verifyOnMainThread();
+        return voiceOverEngineCoordinator.stopActive();
+    }
+
+    /**
+     * Returns the active engine id, or {@code null} when no voice-over engine owns the channel.
+     * This getter is safe to call from any thread.
+     */
+    @Nullable
+    public static String getActiveVoiceOverEngineId() {
+        return voiceOverEngineCoordinator.getActiveEngineId();
+    }
+
+    /** Adds a main-thread listener notified in registration order whenever ownership changes. */
+    public static void addVoiceOverEngineListener(Consumer<String> listener) {
+        Utils.verifyOnMainThread();
+        voiceOverEngineCoordinator.addListener(listener);
+    }
+
+    /** Removes a previously added voice-over ownership listener. */
+    public static void removeVoiceOverEngineListener(Consumer<String> listener) {
+        Utils.verifyOnMainThread();
+        voiceOverEngineCoordinator.removeListener(listener);
+    }
 
     /**
      * Adds a listener that is called when the player overlay buttons are created.
@@ -200,6 +283,7 @@ public final class AddOnApi {
      * Injection point.
      */
     public static void initializeButton(View controlsView) {
+        Utils.verifyOnMainThread();
         AddOnManager.ensureLoaded();
         for (Consumer<View> listener : playerOverlayButtonsListeners) {
             try {
@@ -214,6 +298,7 @@ public final class AddOnApi {
      * Injection point.
      */
     public static void initializeLegacyButton(View controlsView) {
+        Utils.verifyOnMainThread();
         AddOnManager.ensureLoaded();
         for (Consumer<View> listener : legacyPlayerControlsListeners) {
             try {
@@ -228,6 +313,7 @@ public final class AddOnApi {
      * Injection point.
      */
     public static void newVideoStarted(VideoInformation.PlaybackController ignoredPlayerController) {
+        Utils.verifyOnMainThread();
         AddOnManager.ensureLoaded();
         for (Runnable listener : newVideoStartedListeners) {
             try {
@@ -242,6 +328,7 @@ public final class AddOnApi {
      * Injection point.
      */
     public static void videoIdChanged(String videoId) {
+        Utils.verifyOnMainThread();
         AddOnManager.ensureLoaded();
         for (Consumer<String> listener : videoIdListeners) {
             try {
@@ -256,6 +343,7 @@ public final class AddOnApi {
      * Injection point.
      */
     public static void videoTimeChanged(long videoTime) {
+        Utils.verifyOnMainThread();
         AddOnManager.ensureLoaded();
         for (LongConsumer listener : videoTimeListeners) {
             try {

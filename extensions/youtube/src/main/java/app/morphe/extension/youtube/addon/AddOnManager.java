@@ -7,7 +7,10 @@
 
 package app.morphe.extension.youtube.addon;
 
+import android.os.Looper;
+
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.Utils;
 
 /**
  * Loads add-ons that are patched into the app by third party add-on patch bundles.
@@ -22,7 +25,27 @@ import app.morphe.extension.shared.Logger;
  */
 public final class AddOnManager {
 
-    private static boolean loaded;
+    private static final AddOnLoadCoordinator loadCoordinator = new AddOnLoadCoordinator(
+            new AddOnLoadCoordinator.MainThreadDispatcher() {
+                @Override
+                public boolean isOnMainThread() {
+                    Looper mainLooper = Looper.getMainLooper();
+                    return mainLooper != null && Looper.myLooper() == mainLooper;
+                }
+
+                @Override
+                public void verifyOnMainThread() {
+                    Utils.verifyOnMainThread();
+                }
+
+                @Override
+                public void runOnMainThread(Runnable action) {
+                    Utils.runOnMainThread(action);
+                }
+            },
+            AddOnManager::registerAddOns,
+            failure -> Logger.printException(() -> "Add-on registration failure", failure)
+    );
 
     /**
      * Injection point. Called when the app context is available.
@@ -34,17 +57,8 @@ public final class AddOnManager {
     /**
      * Loads all add-ons, if not done already. Safe to call from any thread and any number of times.
      */
-    public static synchronized void ensureLoaded() {
-        if (loaded) return;
-        // Set before registering, so a failing add-on cannot cause an endless loop.
-        loaded = true;
-
-        try {
-            registerAddOns();
-        } catch (Throwable ex) {
-            // Throwable and not Exception, since a missing add-on class throws an Error.
-            Logger.printException(() -> "Add-on registration failure", ex);
-        }
+    public static void ensureLoaded() {
+        loadCoordinator.ensureLoaded();
     }
 
     /**

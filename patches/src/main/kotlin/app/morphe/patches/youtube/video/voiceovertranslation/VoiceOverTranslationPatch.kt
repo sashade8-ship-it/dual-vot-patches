@@ -16,6 +16,7 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.youtube.layout.player.buttons.addPlayerBottomButton
 import app.morphe.patches.youtube.layout.player.buttons.playerOverlayButtonsHookPatch
+import app.morphe.patches.youtube.misc.addon.addOnSupportPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playercontrols.addLegacyBottomControl
 import app.morphe.patches.youtube.misc.playercontrols.initializeLegacyBottomControl
@@ -58,6 +59,8 @@ val voiceOverTranslationPatch = bytecodePatch(
     description = "Adds additional voice over languages using text-to-speech synchronized to the video playback.",
 ) {
     dependsOn(
+        // Official VoT participates in the same runtime coordinator as external add-ons.
+        addOnSupportPatch,
         sharedExtensionPatch,
         videoInformationPatch,
         playerTypeHookPatch,

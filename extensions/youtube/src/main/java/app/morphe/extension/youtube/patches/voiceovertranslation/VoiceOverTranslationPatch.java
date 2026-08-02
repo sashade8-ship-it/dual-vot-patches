@@ -36,6 +36,7 @@ import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.ui.CustomDialog;
+import app.morphe.extension.youtube.addon.AddOnApi;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
@@ -124,6 +125,7 @@ public class VoiceOverTranslationPatch {
     private static final float MIN_SPEECH_RATE = 1.0f;
 
     public static final String TTS_ENGINE_SYSTEM = "system";
+    private static final String VOICE_OVER_ENGINE_ID = "official";
     private static final String VOT_ID_PREFIX = "vot_";
     private static final String VOT_TEST_ID_PREFIX = "vot_test_";
     private static final String TEST_VIDEO_ID = "test";
@@ -160,6 +162,9 @@ public class VoiceOverTranslationPatch {
     private static String currentVideoId = "";
     private static boolean isLoading;
     private static boolean sessionEnabled = Settings.VOT_SESSION_ENABLED.get();
+    /** Main-thread-only registration guard for the built-in coordinator participant. */
+    private static boolean voiceOverEngineRegistered;
+    private static boolean voiceOverEngineRegistrationAttempted;
     private static boolean wasExplicitSeek;
     private static volatile boolean httpErrorDialogShownThisVideo;
 
@@ -182,11 +187,15 @@ public class VoiceOverTranslationPatch {
                     && playerType != PlayerType.WATCH_WHILE_PICTURE_IN_PICTURE
                     && playerType != PlayerType.WATCH_WHILE_SLIDING_MINIMIZED_MAXIMIZED) {
                 Logger.printDebug(() -> "Stopping TTS for player type: " + playerType);
-                stopTts();
                 if (playerType == PlayerType.NONE) {
+                    // Releasing through the public method clears coordinator ownership before
+                    // the idempotent stop callback runs.
+                    deactivateTranslation();
                     currentVideoId = "";
                     segments = new ArrayList<>();
                     TtsPrefetcher.clear();
+                } else {
+                    stopTts();
                 }
             }
             return kotlin.Unit.INSTANCE;
@@ -220,6 +229,10 @@ public class VoiceOverTranslationPatch {
      * Injection point.
      */
     public static void newVideoLoaded(String videoId) {
+        Utils.verifyOnMainThread();
+        final boolean resumeOfficialSession = sessionEnabled;
+        final boolean releaseOfficialOnNewVideo =
+                VOICE_OVER_ENGINE_ID.equals(AddOnApi.getActiveVoiceOverEngineId());
         // Always reset so seek detection fires correctly on the first videoTimeChanged
         // and so the first segment at the new position is spoken even when the same
         // video is reopened at a different timestamp (e.g. chapter links, continue watching).
@@ -229,13 +242,33 @@ public class VoiceOverTranslationPatch {
         if (videoId.equals(currentVideoId)) return;
 
         Logger.printDebug(() -> "preloadTranslations newVideoLoaded");
-        TranscriptTranslator.requestAbort();
-        stopTts();
+        if (releaseOfficialOnNewVideo) {
+            // A new video is a fresh translation session. Release the old coordinator lease
+            // first; its callback owns the abort/stop work, so do not call stopTts again here.
+            AddOnApi.deactivateVoiceOverEngine(VOICE_OVER_ENGINE_ID);
+        } else {
+            TranscriptTranslator.requestAbort();
+            stopTts();
+        }
         currentVideoId = videoId;
         segments = new ArrayList<>();
         httpErrorDialogShownThisVideo = false;
 
-        if (!Settings.VOT_ENABLED.get() || !sessionEnabled) return;
+        // Register the built-in participant on the first official video lifecycle callback,
+        // even when the feature is currently disabled. This keeps the engine id stable for the
+        // app lifetime and makes later activation a pure ownership transition.
+        ensureVoiceOverEngineRegistered();
+
+        if (!Settings.VOT_ENABLED.get() || !resumeOfficialSession) return;
+        // A persisted official session may resume after process restart. Claim the coordinator
+        // before beginning any new translation work, so a separately released add-on is stopped
+        // first and official VoT never starts alongside it.
+        if (!claimVoiceOverEngine()) return;
+        if (!sessionEnabled) {
+            sessionEnabled = true;
+            Settings.VOT_SESSION_ENABLED.save(true);
+            notifyStateChanged();
+        }
         if (PlayerType.getCurrent() == PlayerType.INLINE_MINIMAL) return;
         TtsPrefetcher.updateVideo(videoId, segments);
         loadTranscript(videoId);
@@ -256,7 +289,9 @@ public class VoiceOverTranslationPatch {
      * Injection point.
      */
     public static void videoTimeChanged(long timeMs) {
-        if (!Settings.VOT_ENABLED.get() || !sessionEnabled) {
+        if (!Settings.VOT_ENABLED.get()
+                || !sessionEnabled
+                || !VOICE_OVER_ENGINE_ID.equals(AddOnApi.getActiveVoiceOverEngineId())) {
             VotOriginalVolumePatch.clearAudioMultiplier();
             return; // Feature or session disabled.
         }
@@ -368,7 +403,10 @@ public class VoiceOverTranslationPatch {
     /** @return true when VoT is enabled, the session is on, and a transcript is loaded. */
     public static boolean isTranslationActive() {
         Utils.verifyOnMainThread();
-        return Settings.VOT_ENABLED.get() && sessionEnabled && !segments.isEmpty();
+        return Settings.VOT_ENABLED.get()
+                && sessionEnabled
+                && VOICE_OVER_ENGINE_ID.equals(AddOnApi.getActiveVoiceOverEngineId())
+                && !segments.isEmpty();
     }
 
     /** @return Per-session enabled flag (toggleable via the player button) - not the global setting. */
@@ -376,19 +414,70 @@ public class VoiceOverTranslationPatch {
         return sessionEnabled;
     }
 
-    /** Flips the session enabled flag and either stops TTS or kicks off transcript loading. */
+    /**
+     * Starts or stops the official translation session through the exclusive engine coordinator.
+     */
     public static void toggleTranslation() {
         Utils.verifyOnMainThread();
-        sessionEnabled = !sessionEnabled;
-        Settings.VOT_SESSION_ENABLED.save(sessionEnabled);
-        if (!sessionEnabled) {
-            stopTts();
-            lastSpokenIndex = -1;
-        } else {
-            if (!currentVideoId.isEmpty() && segments.isEmpty() && !isLoading) {
-                loadTranscript(currentVideoId);
-            }
+        if (VOICE_OVER_ENGINE_ID.equals(AddOnApi.getActiveVoiceOverEngineId())) {
+            // The coordinator clears ownership before it calls deactivateTranslation(), so this
+            // path has no callback recursion and invokes stopTts exactly once.
+            AddOnApi.deactivateVoiceOverEngine(VOICE_OVER_ENGINE_ID);
+            return;
         }
+
+        if (!claimVoiceOverEngine()) return;
+
+        sessionEnabled = true;
+        Settings.VOT_SESSION_ENABLED.save(true);
+        if (!currentVideoId.isEmpty() && segments.isEmpty() && !isLoading) {
+            loadTranscript(currentVideoId);
+        }
+        notifyStateChanged();
+    }
+
+    /**
+     * Stops official VoT and releases its coordinator ownership when called manually.
+     *
+     * <p>This same method is registered as the official engine stop callback. During a
+     * coordinator handoff the active id has already been cleared, so it falls through directly
+     * to the idempotent cleanup below instead of recursively asking the coordinator to stop it.
+     */
+    public static void deactivateTranslation() {
+        Utils.verifyOnMainThread();
+        if (VOICE_OVER_ENGINE_ID.equals(AddOnApi.getActiveVoiceOverEngineId())) {
+            AddOnApi.deactivateVoiceOverEngine(VOICE_OVER_ENGINE_ID);
+            return;
+        }
+        deactivateTranslationInternal();
+    }
+
+    private static boolean claimVoiceOverEngine() {
+        Utils.verifyOnMainThread();
+        return ensureVoiceOverEngineRegistered()
+                && AddOnApi.activateVoiceOverEngine(VOICE_OVER_ENGINE_ID);
+    }
+
+    private static boolean ensureVoiceOverEngineRegistered() {
+        Utils.verifyOnMainThread();
+        if (!voiceOverEngineRegistrationAttempted) {
+            voiceOverEngineRegistrationAttempted = true;
+            voiceOverEngineRegistered = AddOnApi.registerVoiceOverEngine(
+                    VOICE_OVER_ENGINE_ID,
+                    VoiceOverTranslationPatch::deactivateTranslation);
+        }
+        return voiceOverEngineRegistered;
+    }
+
+    private static void deactivateTranslationInternal() {
+        Utils.verifyOnMainThread();
+        if (!sessionEnabled) return;
+
+        sessionEnabled = false;
+        Settings.VOT_SESSION_ENABLED.save(false);
+        TranscriptTranslator.requestAbort();
+        stopTts();
+        lastSpokenIndex = -1;
         notifyStateChanged();
     }
 
@@ -504,11 +593,20 @@ public class VoiceOverTranslationPatch {
                 });
             } catch (Exception ex) {
                 logError(() -> "Transcript fetch failed", ex);
+                // A terminal request failure must not leave official VoT holding the exclusive
+                // lease while no translation can run. The video-id guard ignores an expected
+                // cancellation from a later video.
+                Utils.runOnMainThread(() -> {
+                    if (videoId.equals(currentVideoId)) deactivateTranslation();
+                });
             } finally {
                 Utils.runOnMainThread(() -> {
                     isLoading = false;
                     // Restart if the video, language, or translation provider changed while this fetch was in flight.
-                    if (!currentVideoId.isEmpty() && Settings.VOT_ENABLED.get()
+                    if (!currentVideoId.isEmpty()
+                            && Settings.VOT_ENABLED.get()
+                            && sessionEnabled
+                            && VOICE_OVER_ENGINE_ID.equals(AddOnApi.getActiveVoiceOverEngineId())
                             && (!currentVideoId.equals(videoId)
                             || !loadLang.equals(resolveTargetLang())
                             || !loadService.equals(Settings.VOT_TRANSLATION_SERVICE.get()))) {
