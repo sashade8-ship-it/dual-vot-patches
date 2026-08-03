@@ -42,6 +42,7 @@ import java.util.Objects;
 import app.morphe.extension.music.patches.lyrics.Lyrics;
 import app.morphe.extension.music.patches.lyrics.LyricsLine;
 import app.morphe.extension.music.patches.lyrics.LyricsManager;
+import app.morphe.extension.music.patches.lyrics.LyricsPanelInstaller;
 import app.morphe.extension.music.patches.lyrics.LyricsTranslator;
 import app.morphe.extension.music.patches.lyrics.TrackInfo;
 import app.morphe.extension.music.settings.Settings;
@@ -77,9 +78,6 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
     /** How long auto scrolling stays off after the user touches the panel. */
     private static final long MANUAL_SCROLL_PAUSE_MILLISECONDS = 5000;
-
-    /** Ticks between two overlay state checks, roughly one second. */
-    private static final int SYNC_TICK_COUNT = 8;
 
     /** Own string, because the app string {@code lyrics_source} exists in English only. */
     private static final String LYRICS_SOURCE_KEY = "morphe_music_lyrics_source_label";
@@ -132,7 +130,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
     /** Whether this panel should currently cover the built-in content. */
     private boolean overlayVisible;
 
-    private int tickCount;
+    /** Built-in views hidden by this panel, so that only what was hidden is shown again. */
+    private final List<View> hiddenSiblings = new ArrayList<>();
 
     /** Suppresses auto scrolling for a while after the user scrolls manually. */
     private long userScrollUntilUptimeMs;
@@ -143,11 +142,10 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             try {
                 updateHighlight();
 
-                // The app restores its own panel content asynchronously, so the
-                // wanted state is reapplied regularly rather than only on changes.
-                if (++tickCount % SYNC_TICK_COUNT == 0) {
-                    syncOverlay();
-                }
+                // The app restores its own panel content asynchronously, and switching
+                // to another engagement panel gives no lyrics state change to react to,
+                // so the wanted state is reapplied on every tick rather than on changes.
+                syncOverlay();
             } catch (Exception ex) {
                 Logger.printException(() -> "Lyrics tick failure", ex);
             }
@@ -258,6 +256,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         super.onDetachedFromWindow();
         LyricsManager.getInstance().removeListener(this);
         handler.removeCallbacks(ticker);
+        // Nothing would show them again once this panel is gone.
+        restoreHiddenSiblings();
     }
 
     @Override
@@ -307,19 +307,24 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
     /**
      * Reapplies the wanted state, because reopening the panel makes the app restore
-     * its own content without any lyrics state change to react to.
+     * its own content, and opening another engagement panel makes it take the same
+     * container over, neither of which is a lyrics state change to react to.
      */
     public void syncOverlay() {
         applyOverlayVisibility();
     }
 
     private void applyOverlayVisibility() {
+        // All engagement panels are built into the same container, and this view stays
+        // in it when another one takes over, so covering the content is only correct
+        // while the panel on screen is still the lyrics panel.
+        final boolean visible = overlayVisible && LyricsPanelInstaller.isLyricsPanelOpen();
         final boolean wasVisible = getVisibility() == VISIBLE;
-        setVisibility(overlayVisible ? VISIBLE : GONE);
+        setVisibility(visible ? VISIBLE : GONE);
 
         // Appearing is faded in, so that covering the built-in lyrics reads as a
         // transition rather than as the panel being swapped out under the user.
-        if (overlayVisible && !wasVisible) {
+        if (visible && !wasVisible) {
             animate().cancel();
             setAlpha(0f);
             animate().alpha(1f).setDuration(OVERLAY_FADE_DURATION_MILLISECONDS).start();
@@ -329,13 +334,33 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             return;
         }
 
+        if (!visible) {
+            restoreHiddenSiblings();
+            return;
+        }
+
         for (int i = 0; i < parent.getChildCount(); i++) {
             View sibling = parent.getChildAt(i);
-            if (sibling == this) {
+            if (sibling == this
+                    || sibling.getVisibility() != VISIBLE
+                    || hiddenSiblings.contains(sibling)) {
                 continue;
             }
-            sibling.setVisibility(overlayVisible ? GONE : VISIBLE);
+            sibling.setVisibility(GONE);
+            hiddenSiblings.add(sibling);
         }
+    }
+
+    /**
+     * Shows the built-in views this panel hid, and only those, so that views the app
+     * hides on its own and the content of a panel that took the container over are
+     * left the way the app left them.
+     */
+    private void restoreHiddenSiblings() {
+        for (View sibling : hiddenSiblings) {
+            sibling.setVisibility(VISIBLE);
+        }
+        hiddenSiblings.clear();
     }
 
     private void showLoading() {

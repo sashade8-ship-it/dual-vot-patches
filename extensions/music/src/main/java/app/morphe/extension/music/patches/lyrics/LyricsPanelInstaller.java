@@ -95,11 +95,9 @@ public final class LyricsPanelInstaller {
             return;
         }
 
-        String expectedTitle = lyricsTitle();
-        String actualTitle = String.valueOf(title.getText());
-        if (expectedTitle == null || !expectedTitle.equalsIgnoreCase(actualTitle)) {
-            Logger.printDebug(() -> "Open panel is '" + actualTitle
-                    + "', not the lyrics panel '" + expectedTitle + "'");
+        if (!isLyricsTitle(title)) {
+            Logger.printDebug(() -> "Open panel is '" + title.getText()
+                    + "', not the lyrics panel '" + lyricsTitle() + "'");
             return;
         }
 
@@ -130,6 +128,29 @@ public final class LyricsPanelInstaller {
         panelReference = new WeakReference<>(panelView);
 
         Logger.printDebug(() -> "Installed the lyrics panel");
+    }
+
+    /**
+     * All engagement panels are built into the same content container, so the heading
+     * is what tells the lyrics panel from the comments or the live chat one.
+     *
+     * @return Whether the engagement panel currently on screen is the lyrics panel.
+     */
+    public static boolean isLyricsPanelOpen() {
+        Activity activity = Utils.getActivity();
+        if (activity == null) {
+            return false;
+        }
+        return isLyricsTitle(findVisibleTitle(activity.getWindow().getDecorView()));
+    }
+
+    private static boolean isLyricsTitle(@Nullable TextView title) {
+        if (title == null) {
+            return false;
+        }
+        String expectedTitle = lyricsTitle();
+        return expectedTitle != null
+                && expectedTitle.equalsIgnoreCase(String.valueOf(title.getText()));
     }
 
     /**
