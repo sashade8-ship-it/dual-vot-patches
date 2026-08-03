@@ -329,9 +329,6 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_button_summary">Πατήστε για να αντιγράψετε τον σύνδεσμο του βίντεο, πατήστε και κρατήστε πατημένο για να αντιγράψετε με χρονική σήμανση</string>
   <string name="morphe_copy_video_link_with_timestamp_button_title">Αντιγράφει τη χρονική σήμανση από προεπιλογή</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Αντιστρέφει τις ενέργειες πατήματος και πατήματος-κρατήματος του κουμπιού \'Αντιγραφή συνδέσμου βίντεο\'</string>
-  <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
-  <string name="morphe_remove_viewer_discretion_dialog_title">Παράθυρο ηλικιακού περιορισμού</string>
-  <string name="morphe_remove_viewer_discretion_dialog_summary">Αυτό δεν παρακάμπτει τον ηλικιακό περιορισμό. Απλώς τον αποδέχεται αυτόματα</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Απενεργοποίηση αναδυόμενου παραθύρου σύνδεσης στην τηλεόραση</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->

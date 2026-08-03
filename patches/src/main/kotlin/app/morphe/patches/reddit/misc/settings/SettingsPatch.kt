@@ -32,7 +32,9 @@ import app.morphe.patches.shared.misc.checks.experimentalAppNoticePatch
 import app.morphe.util.ResourceGroup
 import app.morphe.util.cloneParameters
 import app.morphe.util.copyResources
+import app.morphe.util.findElementByAttributeValue
 import app.morphe.util.findFreeRegister
+import app.morphe.util.removeFromParent
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -57,6 +59,18 @@ val settingsPatch = bytecodePatch(
         ),
         resourcePatch {
             execute {
+                // Remove localized acknowledgement string.
+                get("res").walk().forEach { file ->
+                    if ("strings.xml" == file.name) {
+                        document(file.absolutePath).use { document ->
+                            document.documentElement.childNodes.findElementByAttributeValue(
+                                "name",
+                                "acknowledgements_title",
+                            )?.removeFromParent()
+                        }
+                    }
+                }
+
                 copyResources(
                     "settings",
                     ResourceGroup("drawable",
@@ -73,11 +87,9 @@ val settingsPatch = bytecodePatch(
     )
 
     execute {
-        setPatchStringsReplaceExisting(true)
         setAddResourceLocale(localesReddit)
         addAppResources("shared")
         addAppResources("reddit")
-
 
         if (is_2026_25_0_or_greater) {
             PreferenceDestinationFingerprint.method.addInstructionsWithLabels(
