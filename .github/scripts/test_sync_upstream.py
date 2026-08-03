@@ -28,14 +28,19 @@ class SyncUpstreamTests(unittest.TestCase):
         workflow = (
             MODULE_PATH.parents[1] / "workflows" / "upstream_sync.yml"
         ).read_text(encoding="utf-8")
-        self.assertEqual(workflow.count("secrets: inherit"), 2)
+        # The controller lives on main and forwards the publication credential.
+        # A published dev bundle may retain the upstream dispatcher instead.
+        self.assertIn(workflow.count("secrets: inherit"), (0, 2))
 
-    def test_publisher_uses_workflow_capable_credential(self):
+    def test_publisher_supports_controller_or_published_bundle_credentials(self):
         workflow = (
             MODULE_PATH.parents[1] / "workflows" / "upstream_sync_channel.yml"
         ).read_text(encoding="utf-8")
-        self.assertIn("token: ${{ secrets.UPSTREAM_SYNC_TOKEN }}", workflow)
-        self.assertIn("GH_TOKEN: ${{ secrets.UPSTREAM_SYNC_TOKEN }}", workflow)
+        if "UPSTREAM_SYNC_TOKEN" in workflow:
+            self.assertIn("token: ${{ secrets.UPSTREAM_SYNC_TOKEN }}", workflow)
+            self.assertIn("GH_TOKEN: ${{ secrets.UPSTREAM_SYNC_TOKEN }}", workflow)
+        else:
+            self.assertIn("GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}", workflow)
 
     def test_extracts_official_base_from_dual_version(self):
         self.assertEqual(
