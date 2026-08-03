@@ -1,3 +1,13 @@
+## 1.39.0-dev.3-dualvot.8.2 (2026-08-03)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.39.0-dev.3](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.3).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.39.0-dev.2-dualvot.8.2 (2026-08-03)
 
 ### Automated Morphe update
@@ -227,6 +237,12 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.39.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.2...v1.39.0-dev.3) (2026-08-03)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music - Third-party lyrics:** Do not cover the comments and live chat panels ([5e3eb4c](https://github.com/MorpheApp/morphe-patches/commit/5e3eb4cf492abd7524f787ffce11f02f1803869b))
 
 ## [1.39.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.1...v1.39.0-dev.2) (2026-08-03)
 

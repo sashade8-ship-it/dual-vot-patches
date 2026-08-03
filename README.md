@@ -142,7 +142,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.39.0-dev.2-dualvot.8.2](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.39.0-dev.2-dualvot.8.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;137 patches total
+> **[v1.39.0-dev.3-dualvot.8.2](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.39.0-dev.3-dualvot.8.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;137 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;76 patches</summary>
 <br>
