@@ -209,16 +209,16 @@ val settingsPatch = bytecodePatch(
         settingsResourcePatch,
         addResourcesPatch,
         versionCheckPatch,
+        // Currently there is no easy way to make patches mandatory,
+        // so for now these are all dependents of this patch.
         fixPlaybackSpeedWhilePlayingPatch,
         fixPreferenceIconPatch,
         fixLikeButtonPatch,
         fixContentProviderPatch,
         fixPipChatBarPatch,
-        removeLinkVerification,
-        // Currently there is no easy way to make a mandatory patch,
-        // so for now this is a dependent of this patch.
-        checkEnvironmentPatch,
         addLicensePatch,
+        removeLinkVerification,
+        checkEnvironmentPatch,
         experimentalAppNoticePatch(
             mainActivityFingerprint = YouTubeActivityOnCreateFingerprint,
             recommendedAppVersion = COMPATIBILITY_YOUTUBE.targets.first { !it.isExperimental }.version!!

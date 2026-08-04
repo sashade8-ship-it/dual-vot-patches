@@ -37,7 +37,6 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import app.morphe.extension.music.patches.lyrics.Lyrics;
 import app.morphe.extension.music.patches.lyrics.LyricsLine;
@@ -173,7 +172,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         buttonRow.setGravity(Gravity.CENTER);
         buttonRow.setVisibility(GONE);
 
-        if (Settings.LYRICS_COPY_BUTTON.get()) {
+        if (Settings.LYRICS_SHOW_COPY_BUTTON.get()) {
             TextView copyView = new TextView(context);
             applyButtonStyle(copyView, COPY_ICON);
             copyView.setText(str("morphe_music_lyrics_copy"));
@@ -183,7 +182,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
                     LinearLayout.LayoutParams.WRAP_CONTENT));
         }
 
-        if (Settings.LYRICS_TRANSLATE_BUTTON.get()) {
+        if (Settings.LYRICS_SHOW_TRANSLATE_BUTTON.get()) {
             translateView = new TextView(context);
             applyButtonStyle(translateView, APP_TRANSLATE_ICON);
             translateView.setOnClickListener(view -> onTranslateClicked());
@@ -448,6 +447,12 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
     private void onTranslateClicked() {
         try {
+            // The saved translation state outlives the button, so a track change can
+            // auto translate when there is no button to drive the translation from.
+            if (translateView == null) {
+                return;
+            }
+
             Lyrics current = lyrics;
             TrackInfo track = LyricsManager.getInstance().getCurrentTrack();
             if (current == null || track == null) {
@@ -462,7 +467,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             }
 
             Settings.LYRICS_TRANSLATE.save(true);
-            Objects.requireNonNull(translateView).setEnabled(false);
+            translateView.setEnabled(false);
             translateView.setText(str("morphe_music_lyrics_translating"));
 
             LyricsTranslator.translate(track, current, lines -> {
