@@ -1,3 +1,13 @@
+## 1.39.0-dev.4-dualvot.8.2 (2026-08-04)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.39.0-dev.4](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.4).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.39.0-dev.3-dualvot.8.2 (2026-08-03)
 
 ### Automated Morphe update
@@ -237,6 +247,16 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.39.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.3...v1.39.0-dev.4) (2026-08-04)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Disable fullscreen gestures:** Disable feature flag to restore zoom functionality ([#2292](https://github.com/MorpheApp/morphe-patches/issues/2292)) ([4413218](https://github.com/MorpheApp/morphe-patches/commit/44132182e2b148486ea72dd5d849e8dadb1520dd))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide 'Invite others to message' card" setting ([#2304](https://github.com/MorpheApp/morphe-patches/issues/2304)) ([b582e75](https://github.com/MorpheApp/morphe-patches/commit/b582e757c5d93a4d7e68f10688a399963d0360bd))
 
 ## [1.39.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.2...v1.39.0-dev.3) (2026-08-03)
 
