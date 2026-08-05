@@ -1,3 +1,13 @@
+## 1.39.0-dev.6-dualvot.8.2 (2026-08-05)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.39.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.39.0-dev.4-dualvot.8.2 (2026-08-04)
 
 ### Automated Morphe update
@@ -247,6 +257,23 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.39.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.5...v1.39.0-dev.6) (2026-08-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Seekbar:** Fix patching older app targets ([0b3c42c](https://github.com/MorpheApp/morphe-patches/commit/0b3c42ce100046b0d5b99b9e110dcbeb6ad26aba))
+
+## [1.39.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.4...v1.39.0-dev.5) (2026-08-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Seekbar:** Show Shorts seekbar thumbnails ([bd648dc](https://github.com/MorpheApp/morphe-patches/commit/bd648dc703685987d493c54c95524795a9faaa25))
+
+### ✨ New Features
+
+* **Spoof video streams:** Default client maintenance ([#2309](https://github.com/MorpheApp/morphe-patches/issues/2309)) ([e86d61f](https://github.com/MorpheApp/morphe-patches/commit/e86d61f5d874d57f72fac9b8c0c534a89f264ca4))
+* **YouTube - Disable sign in to TV popup:** Add "Disable 'Connect your devices' popup" setting ([#2325](https://github.com/MorpheApp/morphe-patches/issues/2325)) ([8b8837e](https://github.com/MorpheApp/morphe-patches/commit/8b8837eb3f0450d5c89eb59912fa1a84dd555dbf))
 
 ## [1.39.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.3...v1.39.0-dev.4) (2026-08-04)
 
