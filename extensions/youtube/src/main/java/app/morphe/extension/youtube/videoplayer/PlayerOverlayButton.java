@@ -90,15 +90,9 @@ public class PlayerOverlayButton {
                 return;
             }
 
-            // Newer version of YT can show this error randomly for some users.
-            // Seems to be caused by an a/b flag but is not confirmed.
-            // TODO: Figure out what is causing this.
-            Logger.LogMessage logMessage = () -> "Debug: Could not find button overlay: " + resourceName;
-            if (BaseSettings.DEBUG.get()) {
-                Logger.printException(logMessage);
-            } else {
-                Logger.printDebug(logMessage);
-            }
+            // Can happen randomly with newer app targets in background playback
+            // and sometimes with miniplayer open.
+            Logger.printDebug(() -> "Debug: Could not find button overlay: " + resourceName);
         }
 
         /**

@@ -74,6 +74,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_hyped_label_title">隱藏熱門標籤</string>
   <string name="morphe_hide_image_shelf_title">隱藏圖庫</string>
   <string name="morphe_hide_image_shelf_summary">隱藏搜尋結果中的圖片專區</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">隱藏「邀請他人傳訊息」卡片</string>
+  <string name="morphe_hide_invite_to_message_card_summary">隱藏在「通知」分頁「訊息」區塊中顯示的邀請卡片</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">隱藏「最新影片」按鈕</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">反轉「複製影片連結」按鈕的輕觸和長按操作</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">停用「登入電視」彈出視窗</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">停用「連接您的裝置」快顯視窗</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">停用按兩下跳過章節功能</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">停用雙指輕點跳過章節的動作，這可能會因為單指操作而意外觸發</string>
@@ -482,15 +487,15 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">啟用跳轉列縮圖預覽</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">在拖動搜尋條時顯示影片縮圖</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"「啟用直播錄製」可能無法使用
+  <string name="morphe_livestream_dvr_not_available">"'勺生疢子颛水好要' 可能不可痟訪
 
-如要修正此問題，請開啟「偽裝影片串流」並將「預設用戶端」變更為「電視」"</string>
+者方神错材或要通过此到此到、努多'Spoof video streams' 和已'Default client' 變放'TV Simply' 或'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">擴展直播 DVR 錄製時長</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">可讓您將即時廣播倒退最多 7 天</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"「擴展直播錄製時長」可能無法使用
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'加锯疢子颛水好要' 可能不可痟訪
 
-如要修正此問題，請開啟「偽裝影片串流」並將「預設用戶端」變更為「電視」"</string>
+者方神错材或要通过此到此到、努多'Spoof video streams' 和已'Default client' 變放'TV Simply' 或'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">啟用滑動預覽</string>
   <string name="morphe_slide_to_seek_summary">按住影片播放器時啟用滑動尋找，而不是以 2 倍速度播放</string>
@@ -1054,6 +1059,12 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">自動</string>
+  <string name="morphe_override_initial_video_quality_title">要訪細初的视颛變數</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"結止者到事情或者的預務视颛變數可能不快按到要訪細的视颛哈如或者到載上
+
+限制：加載要訪細的疢子和或者到於能速常来到不可痟訪"</string>
   <string name="morphe_remember_video_quality_last_selected_title">將您的手動畫質選擇套用至所有未來的影片</string>
   <string name="morphe_remember_video_quality_last_selected_summary">畫質變更通知</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">在變更預設影片畫質時顯示通知</string>

@@ -32,6 +32,16 @@ internal object SignInToTVPopupFingerprint : Fingerprint(
     )
 )
 
+internal object HandoffPromoCommandResolverFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("L", "Ljava/util/Map;"),
+    strings = listOf(
+        "Unsupported RunCase: ",
+        "Unspecified PlaceholderType."
+    )
+)
+
 internal object SignInToTVPopupDismissFingerprint : Fingerprint(
     classFingerprint = SignInToTVPopupFingerprint,
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),

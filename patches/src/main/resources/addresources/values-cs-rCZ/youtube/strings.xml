@@ -74,6 +74,10 @@ Změny zahrnují:
   <string name="morphe_hide_hyped_label_title">Skrýt štítek Hype</string>
   <string name="morphe_hide_image_shelf_title">Skrýt obrázkovou sekci</string>
   <string name="morphe_hide_image_shelf_summary">Skryje sekci s obrázky ve výsledcích vyhledávání</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Skrýt kartu \'Pozvat ostatní do zprávy\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Skryje pozvánku zobrazenou v sekci Zprávy v záložce Oznámení</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Skrýt tlačítko „Nejnovější“</string>
@@ -482,15 +486,9 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Povolit miniatury na posuvníku</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Zobrazuje miniaturu videa při táhnutí posuvníku</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Äčínení zapnutí DSLR vysílání' nemusí bõt dostupné
-
-Chcete-li to opravit, zapníte 'Falsifikovat video streamy' a změňte 'Výchozí klient' na 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Rozšířit dobu záznamu živého vysílání</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Umožní vám přetáčí živé vysílání až do 7 dnů do minulosti</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Rozšířit trvání DSLR vysílání' nemusí bõt dostupné
-
-Chcete-li to opravit, zapníte 'Falsifikovat video streamy' a změňte 'Výchozí klient' na 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Povolit posun pro hledání</string>
   <string name="morphe_slide_to_seek_summary">Povolí posouvání pro vyhledávání namísto přehrávání 2x rychlostí při stisknutí a podržení přehrávače videa</string>
@@ -1054,6 +1052,8 @@ Klepnutím sem se dozvíte více o DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automaticky</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Pamatovat si kvalitu videa</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Aplikuje vaši ruční volbu kvality na všechna budoucí videa</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Upozornění na změnu kvality</string>

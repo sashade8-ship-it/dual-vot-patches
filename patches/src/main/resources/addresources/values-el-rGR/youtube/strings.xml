@@ -74,6 +74,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_hyped_label_title">Απόκρυψη ετικέτας \"Δημοφιλή\"</string>
   <string name="morphe_hide_image_shelf_title">Απόκρυψη ραφιού \"Εικόνες\" στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_image_shelf_summary">Απόκρυψη ραφιών εικόνων στα αποτελέσματα αναζήτησης</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Απόκρυψη της κάρτας \"Πρόσκληση άλλων σε συνομιλία\"</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Απόκρυψη της κάρτας πρόσκλησης που εμφανίζεται στην ενότητα Μηνυμάτων στην καρτέλα Ειδοποιήσεις</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Απόκρυψη κουμπιού \"Τελευταία βίντεο\"</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Αντιστρέφει τις ενέργειες πατήματος και πατήματος-κρατήματος του κουμπιού \'Αντιγραφή συνδέσμου βίντεο\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Απενεργοποίηση αναδυόμενου παραθύρου σύνδεσης στην τηλεόραση</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Απενεργοποίηση αναδυτικού παραθύρου \'Συνδέστε τις συσκευές σας\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Απενεργοποιήστε την παράλειψη κεφαλαίων με διπλό πάτημα</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Απενεργοποιεί τη χειρονομία διπλού αγγίγματος με δύο δάχτυλα που παραλείπει κεφάλαια, η οποία μπορεί να ενεργοποιηθεί κατά λάθος με ένα δάχτυλο</string>
@@ -482,15 +487,11 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Ενεργοποίηση μικρογραφιών γραμμής αναζήτησης</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Εμφανίζει μια μικρογραφία βίντεο κατά τη μετακίνηση της γραμμής αναζήτησης</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Η ενεργοποίηση εγγραφής ζωντανής ροής (DVR) ενδέχεται να μην είναι διαθέσιμη
-
-Για να το διορθώσετε, ενεργοποιήστε την επιλογή 'Παραποίηση ροών βίντεο' και αλλάξτε την 'Προεπιλεγμένη συσκευή' σε 'Τηλεόραση'"</string>
+  <string name="morphe_livestream_dvr_not_available">"Το \"Ενεργοποίηση εγγραφής livestream DVR\" ενδέχεται να μην είναι διαθέσιμο\n\nΓια να το διορθώσετε, ενεργοποιήστε το \"Αντιμετώπιση ροών βίντεο\" και αλλάξτε το \"Προεπιλεγμένος πελάτης\" σε \"TV Simply\" ή \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Επέκταση της διάρκειας του DVR της ζωντανής μετάδοσης</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Σας επιτρέπει να επανατυλίγετε ζωντανές εκπομπές έως και 7 ημέρες στο παρελθόν</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Επέκταση διάρκειας εγγραφής ζωντανής ροής (DVR)' ενδέχεται να μην είναι διαθέσιμη
-
-Για να το διορθώσετε, ενεργοποιήστε την επιλογή 'Παραποίηση ροών βίντεο' και αλλάξτε την 'Προεπιλεγμένη συσκευή' σε 'Τηλεόραση'"</string>
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Το \"Επέκταση διάρκειας εγγραφής livestream DVR\" ενδέχεται να μην είναι διαθέσιμο\n\nΓια να το διορθώσετε, ενεργοποιήστε το \"Αντιμετώπιση ροών βίντεο\" και αλλάξτε το \"Προεπιλεγμένος πελάτης\" σε \"TV Simply\" ή \"visionOS\""</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Χειρονομία συρσίματος για αναζήτηση</string>
   <string name="morphe_slide_to_seek_summary">Ενεργοποιήστε την ολίσθηση για αναζήτηση αντί να παίξετε με ταχύτητα 2x όταν πατάτε και κρατάτε τον πρόγραμμα αναπαραγωγής βίντεο</string>
@@ -1054,6 +1055,10 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Αυτόματη</string>
+  <string name="morphe_override_initial_video_quality_title">Υπερτροπή αρχικής ποιότητας βίντεο</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Διορθώνει ένα πρόβλημα όπου η προεπιλεγμένη ποιότητα βίντεο δεν εφαρμόζεται αμέσως μετά την έναρξη του βίντεο\n\nΠεριορισμός: Η αναπαραγωγή ενδέχεται να μην λειτουργεί σε ορισμένες συσκευές εάν το \"Αντιμετώπιση ροών βίντεο\" έχει ρυθμιστεί σε \"Android VR\" και το \"Εξαναγκασμός κωδικοποιητή AVC (H.264)\" είναι ενεργοποιημένο"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Απομνημονεύει την ποιότητα βίντεο</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Εφαρμόζει την μη αυτόματη επιλογή ποιότητας σε όλα τα μελλοντικά βίντεο</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Ειδοποιήσεις αλλαγής ποιότητας</string>

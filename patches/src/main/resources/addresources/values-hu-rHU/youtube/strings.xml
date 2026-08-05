@@ -74,6 +74,10 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_hyped_label_title">Hájpolt címke elrejtése</string>
   <string name="morphe_hide_image_shelf_title">Képpolc elrejtése</string>
   <string name="morphe_hide_image_shelf_summary">Képpolcok elrejtése a keresési találatok között</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Elrejti az \'Emberek meghívása üzenetküldésre\' kártyát</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Elrejti a Értesítések lap Üzenetek szekciójában megjelenő meghívókártyát</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">„Legújabb videók” gomb elrejtése</string>
@@ -331,6 +335,7 @@ Korlátozások:
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Megfordítja a \"Videolink másolása\" gomb megérintésének és hosszan nyomva tartásának funkcióit</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">TV-bejelentkezési előugró ablak letiltása</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">A \"Csatlakoztassa eszközeit\" felugró ablak letiltása</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Letiltja a pontos keresési mód aktiválását, amikor egy keresési pozíciót lenyomva tart</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Letiltja a dupla koppintást ujjakkal való felemeléssel történő fejezetszkenálást, ami egy ujjal véletlenül aktiválódhat</string>
@@ -482,15 +487,15 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Engedélyezze a keresősáv bélyegképeit</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Videó bélyegképet jelenít meg a keresősáv húzásakor</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"A \"Livestream DVR engedélyezése\" funkció nem áll rendelkezésre.
+  <string name="morphe_livestream_dvr_not_available">"A \"Livestream DVR engedélyezése\" funkció nem állhat rendelkezésre.
 
-Ennek kijavításához kapcsolja be a \"Videóstreamek hamisítása\" lehetőséget, és módosítsa az \"Alapértelmezett kliens\" beállítást \"TV\"-re."</string>
+Ennek kijavításához kapcsolja be a \"Videostreamek hamisítása\" funkciót, és állítsa a \"Alapértelmezett kliens\" értéket \"TV Simply\" vagy \"visionOS\"-re."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Bővítsd a közvetítés DVR idejét</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Lehetővé teszi élő adások visszatekerését a múltba maximum 7 nappal</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"A \"Livestream DVR időtartamának növelése\" funkció nem áll rendelkezésre.
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"A \"Livestream DVR időtartamának megnyújtása\" funkció esetleg nem elérhető
 
-Ennek kijavításához kapcsolja be a \"Videóstreamek hamisítása\" lehetőséget, és módosítsa az \"Alapértelmezett kliens\" beállítást \"TV\"-re."</string>
+Ennek megoldásához kapcsolja be a \"Videostreamek hamisítása\" opciót, és állítsa a \"Alapértelmezett kliens\" értéket \"TV Simply\" vagy \"visionOS\"-re."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Csúsztatás engedélyezése a kereséshez</string>
   <string name="morphe_slide_to_seek_summary">Engedélyezi a videólejátszó megnyomása és tartása közbeni csúsztatást a kétszeres sebességű lejátszás helyett</string>
@@ -1054,6 +1059,12 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatikus</string>
+  <string name="morphe_override_initial_video_quality_title">A kezdeti videóminőség felülbírálása</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Javít egy hibát, amely miatt az alapértelmezett videóminőség nem alkalmazódik azonnal a videó elindítása után
+
+Korlátozás: A lejátszás egyes eszközökön nem működhet, ha a \"Videostreamek hamisítása\" beállítás \"Android VR\" értékre van állítva, és az \"AVC (H.264) kodek erőltetése\" engedélyezve van."</string>
   <string name="morphe_remember_video_quality_last_selected_title">A videóminőség megjegyzése</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Az egyéni minőségválasztás alkalmazása minden jövőbeli videóra</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Frissítési értesítések</string>

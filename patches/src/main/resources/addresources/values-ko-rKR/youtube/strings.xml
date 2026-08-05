@@ -74,6 +74,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_hyped_label_title">하이프 관련 라벨 숨기기</string>
   <string name="morphe_hide_image_shelf_title">이미지 선반 숨기기</string>
   <string name="morphe_hide_image_shelf_summary">검색 결과에서 이미지 선반을 숨깁니다</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">\'메시지 전송을 위해 다른 사용자 초대\' 카드 숨기기</string>
+  <string name="morphe_hide_invite_to_message_card_summary">알림 탭의 메시지 섹션에 표시되는 초대 카드를 숨깁니다</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">최신 동영상 버튼 숨기기</string>
@@ -315,7 +319,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_general_ads_title">일반 레이아웃 광고 숨기기</string>
   <string name="morphe_hide_merchandise_banners_title">매장 쇼핑 배너 숨기기</string>
   <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_paid_promotion_labels_title">유료 프로모션 라벨 숨기기</string>
+  <string name="morphe_hide_paid_promotion_labels_title">유료 프로모션 관련 라벨 숨기기</string>
   <string name="morphe_hide_player_popup_ads_title">플레이어 팝업 광고 숨기기</string>
   <string name="morphe_hide_self_sponsor_ads_title">셀프 스폰서 카드 숨기기</string>
   <string name="morphe_hide_shopping_links_title">쇼핑 링크 숨기기</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">동영상 링크 복사 버튼의 \'탭하기\'와 \'길게 탭하기\' 작업을 서로 변경합니다</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">\'TV에 로그인\' 팝업 비활성화하기</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">\'기기 연결\' 팝업 비활성화하기</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">두 번 탭하여 챕터 건너뛰기 비활성화하기</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">두 손가락으로 두 번 탭하여 챕터를 건너뛰는 제스처를 비활성화하여, 한 손가락으로 실수로 작동되는 것을 방지할 수 있습니다</string>
@@ -486,13 +491,13 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'실시간 스트림 DVR 활성화하기'를 사용할 수 없을 수 있습니다
 
-이 문제를 해결하려면, '동영상 스트림 속이기'를 활성화하고 '기본 클라이언트'를 'TV'로 변경하세요"</string>
+이 문제를 해결하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'TV Simply' 또는 'visionOS'로 변경하세요"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">실시간 스트림 DVR 탐색 구간 확장하기</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">실시간 스트림을 최대 7일 전까지 되감아 볼 수 있습니다</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'실시간 스트림 DVR 탐색 구간 확장하기'를 사용할 수 없을 수 있습니다
 
-이 문제를 해결하려면, '동영상 스트림 속이기'를 활성화하고 '기본 클라이언트'를 'TV'로 변경하세요"</string>
+이 문제를 해결하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'TV Simply' 또는 'visionOS'로 변경하세요"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">슬라이드하여 탐색 활성화하기</string>
   <string name="morphe_slide_to_seek_summary">동영상 플레이어를 길게 탭했을 경우에 \'2배속 재생\' 대신 \'슬라이드하여 탐색\'을 사용하도록 설정합니다</string>
@@ -1056,6 +1061,12 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">자동</string>
+  <string name="morphe_override_initial_video_quality_title">초기 동영상 화질 재정의하기</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"동영상이 시작된 직후 기본 화질이 즉시 적용되지 않는 문제를 수정하였습니다
+
+제한 사항: '동영상 스트림 속이기'에서 '기본 클라이어언트'가 'Android VR'로 설정되어 있고, 'AVC (H.264) 강제로 활성화하기'가 활성화된 경우에는 일부 기기에서 동영상이 정상적으로 재생되지 않을 수 있습니다"</string>
   <string name="morphe_remember_video_quality_last_selected_title">동영상 화질 저장하기</string>
   <string name="morphe_remember_video_quality_last_selected_summary">동영상 화질 값을 변경할 때마다 기본 동영상 화질으로 저장합니다</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">동영상 화질 변경 알림</string>

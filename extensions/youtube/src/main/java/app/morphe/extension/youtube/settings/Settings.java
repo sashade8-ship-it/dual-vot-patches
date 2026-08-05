@@ -415,6 +415,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final EnumSetting<SplashScreenAnimationStyle> SPLASH_SCREEN_ANIMATION_STYLE = new EnumSetting<>("morphe_splash_screen_animation_style", SplashScreenAnimationStyle.FPS_60_ONE_SECOND, true);
     public static final EnumSetting<HeaderLogo> HEADER_LOGO = new EnumSetting<>("morphe_header_logo", HeaderLogo.DEFAULT, true);
     public static final BooleanSetting DISABLE_SIGN_IN_TO_TV_POPUP = new BooleanSetting("morphe_disable_sign_in_to_tv_popup", FALSE);
+    public static final BooleanSetting DISABLE_CONNECT_YOUR_DEVICES_POPUP = new BooleanSetting("morphe_disable_connect_your_devices_popup", FALSE);
     public static final BooleanSetting OPEN_SYSTEM_SHARE_SHEET = new BooleanSetting("morphe_open_system_share_sheet", FALSE);
     public static final BooleanSetting OVERRIDE_YOUTUBE_MUSIC_BUTTONS = new BooleanSetting("morphe_override_youtube_music_buttons", FALSE, true);
     public static final StringSetting MORPHE_MUSIC_PACKAGE_NAME = new StringSetting("morphe_music_package_name", "app.morphe.android.apps.youtube.music", true, parent(OVERRIDE_YOUTUBE_MUSIC_BUTTONS));
@@ -794,9 +795,9 @@ public class Settings extends SharedYouTubeSettings {
             RESTORE_OLD_SETTINGS_MENUS.resetToDefault();
         }
 
-        // Android VR 1.74 and visionOS 1.03 are not selectable in the settings and are selected by spoof stream patch if needed.
+        // Android XR and visionOS 1.03 are not selectable in the settings and are selected by spoof stream patch if needed.
         ClientType client = SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get();
-        if (client == ClientType.ANDROID_VR_1_74 || client == ClientType.VISIONOS_1_03) {
+        if (client == ClientType.ANDROID_XR || client == ClientType.VISIONOS_1_03) {
             SPOOF_VIDEO_STREAMS_CLIENT_TYPE.resetToDefault();
         }
 

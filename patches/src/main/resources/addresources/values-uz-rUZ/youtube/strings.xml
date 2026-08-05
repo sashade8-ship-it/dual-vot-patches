@@ -74,6 +74,10 @@ Oʻzgarishlar:
   <string name="morphe_hide_hyped_label_title">Hype yorligʻini yashirish</string>
   <string name="morphe_hide_image_shelf_title">Tasvir javonini yashirish</string>
   <string name="morphe_hide_image_shelf_summary">Qidiruv natijalaridagi tasvir javonlarini yashiradi</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">\'Xabarlarga boshqalarni taklif qilish\' kartasini yashirish</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Bildiruvlar jadvalidagi Xabarlar bo\'limida ko\'rsatiladigan taklif kartasini yashiradi</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">“Eng yangi videolar” tugmasini yashirish</string>
@@ -328,6 +332,7 @@ Batafsil ma'lumot olish uchun AiSlopList.com ni oching"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">\'Video havolasini nuqul qilish\' tugmasining harakatlarini teskari tartibda o\'zgartiradi</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">“Televizorga kirish”ni o\'chirish</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">\'Connect your devices\' oynatish xabarini o\'chirish</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Boblarni oʻtkazib yuborishni ikki marta bosishni oʻchirish</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Boblarni o\'tkazib yuboradigan ikki barmoqli ikki marta bosish harakatini o\'chirish, bu bir barmoq bilan tasodifan ishga tushirilishi mumkin</string>
@@ -477,15 +482,9 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Seekbar uchun miniatyuralarni yoqish</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Seekbar\'ni sudrab borayotganda video miniatyurasini ko\'rsatadi</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Livestream DVR'ni yoqish mumkin bo'lmasligi mumkin
-
-Buni tuzatish uchun, 'Video oqimlarini qalbakilashtirish'ni yoqing va 'Standart mijoz'ni 'TV'ga o'zgartiring'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Jonli oqim DVR davomiyligini kengaytirish</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Sizga jonli efirlarni 7 kungacha ortga aylantirish imkonini beradi</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Livestream DVR davomiyligini kengaytirish' mavjud bo'lmasligi mumkin
-
-Buni tuzatish uchun, 'Video oqimlarini qalbakilashtirish'ni yoqing va 'Standart mijoz'ni 'TV'ga o'zgartiring'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Sekish harakatini yoqish</string>
   <string name="morphe_slide_to_seek_summary">Video pleerni bosib ushlab turganingizda 2 barobar tezlikda ijro qilish o\'rniga siljishni yoqish</string>
@@ -1049,6 +1048,8 @@ Batafsil ma'lumot olish uchun DeArrow.ajay.app ni oching."</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Harakatdan o\'rinchik</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Video sifatini eslash</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Manua l sifat tanlovingizni kelajakdagi barcha videolarga qo\'llang</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Sifat o\'zgarishi haqidagi bildirishnomalar</string>

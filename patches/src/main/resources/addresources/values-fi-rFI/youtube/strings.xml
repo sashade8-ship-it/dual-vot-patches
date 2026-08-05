@@ -74,6 +74,10 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_hyped_label_title">Piilota Suositut-merkintä</string>
   <string name="morphe_hide_image_shelf_title">Piilota kuvahylly</string>
   <string name="morphe_hide_image_shelf_summary">Piilottaa kuvahyllyt hakutuloksissa</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Piilota \'Kutsu muita viestittelyyn\'-kortti</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Piilottaa ilmoitukset-välilehden viestiosion näkyvän kutsukortin</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Piilota \"Uusimmat videot\" -nappi</string>
@@ -331,6 +335,7 @@ Napauta tästä avataksesi AiSlopList.com ja nähdäksesi lataukset muille alust
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Kääntää \'Kopioi videolinkki\'-painikkeen napautus- ja pitkäpainallustoiminnot</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Poista käytöstä Kirjaudu televisioon -ponnahdusikkuna</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Poista \'Yhdistä laitteesi\' ponnahdusikkuna käytöstä</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Estää kaksinkertaisella napautuksella siirtymisen vahingossa seuraavaan tai edelliseen lukuun</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Poistaa käytöstä kaksoisnapautusliikkeen, joka ohittaa luvut, mikä voi vahingossa laukaistua yhdellä sormella</string>
@@ -482,15 +487,15 @@ Tieto: Ei välttämättä toimi suoratoistoissa"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Ota etenemispalkin pikkukuvien esikatselu käyttöön</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Näyttää videon pikkukuvan vedettäessä hakupalkkia</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Livestream-tallennuksen' tallennus ei ehkä ole käytettävissä
+  <string name="morphe_livestream_dvr_not_available">"'Livestream-tallennuksen tallennus' ei ehkä ole käytettävissä
 
-Korjaa tämä ottamalla käyttöön 'Väärennä videostriimejä' ja muuttamalla 'Oletusasiakas' arvoksi 'TV'"</string>
+Korjaaaksesi tämän, ota 'Väärennä videostriimejä' käyttöön ja vaihda 'Oletusasiakas' 'TV Simply' tai 'visionOS' -asetukseksi."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Laajenna suoran lähetyksen DVR:n kestoa</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Mahdollistaa suorien lähetysten kelaamisen jopa 7 päivää taaksepäin</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'Livestream-tallennuksen keston pidentäminen' ei ehkä ole käytettävissä
 
-Korjaa tämä ottamalla käyttöön 'Väärennä videostriimejä' ja muuttamalla 'Oletusasiakas' arvoksi 'TV'"</string>
+Korjaaaksesi tämän, ota 'Väärennä videostriimejä' käyttöön ja vaihda 'Oletusasiakas' 'TV Simply' tai 'visionOS' -asetukseksi."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Ota kelaus liu\'uttamalla käyttöön</string>
   <string name="morphe_slide_to_seek_summary">Ottaa käyttöön pyyhkäisyn hakua varten sen sijaan, että toisto nopeutuisi 2x nopeudella, kun videotoistinta painetaan ja pidetään painettuna</string>
@@ -1054,6 +1059,12 @@ Napauta tästä saadaksesi lisätietoja DeArrowista"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automaattinen</string>
+  <string name="morphe_override_initial_video_quality_title">Ohita alkuperäinen videon laatu</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Korjaa ongelma, jossa oletusvideon laatua ei käytetä heti videon käynnistyksen jälkeen
+
+Rajoitus: Toisto ei ehkä toimi joissakin laitteissa, jos 'Väärennä videostriimejä' on asetettu 'Android VR' -tilaan ja 'Pakota AVC (H.264) -koodekki' on käytössä."</string>
   <string name="morphe_remember_video_quality_last_selected_title">Muista videon laatu</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Käyttää manuaalista laatuvalintaasi kaikkiin tuleviin videoihin</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Laadun muutosilmoitukset</string>

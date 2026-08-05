@@ -74,6 +74,10 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_hyped_label_title">Folaigh an lipéad \'hype\'</string>
   <string name="morphe_hide_image_shelf_title">Folaigh seilf íomhá</string>
   <string name="morphe_hide_image_shelf_summary">Folaíonn sé seilfeanna íomhánna i dtorthaí cuardaigh</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Folaigh an cárta \'Tabhair cuireadh do dhaoine eile teachtaireacht a sheoladh\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Folaíonn sé an cárta cuireadh a thaispeántar sa chluaisín Fógraí sa chuid Teachtaireachtaí</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Folaigh an cnaipe \'Físeáin is déanaí\'</string>
@@ -217,6 +221,8 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_youtube_music_menu_title">Folaigh roghchlár YouTube Music</string>
   <string name="morphe_hide_youtube_kids_menu_title">Folaigh roghchlár YouTube Kids</string>
   <string name="morphe_hide_youtube_create_menu_title">Folaigh roghchlár Cruthaigh YouTube</string>
+  <string name="morphe_hide_youtube_works_menu_title">Folaigh an roghchlár \'Conas a oibríonn YouTube\'</string>
+  <string name="morphe_hide_privacy_tos_footer_title">Folaigh buntásca dlí agus príobháideachta</string>
   <string name="morphe_comments_screen_title">Tráchtanna</string>
   <string name="morphe_comments_screen_summary">Roghnaigh cé na comhpháirteanna a thaispeánfar sa chuid tuairimí</string>
   <string name="morphe_hide_comments_carousel_title">Cumasaigh scagaire carúséil tráchtanna</string>
@@ -480,15 +486,9 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Cumasaigh mionsamhlacha an bharra cuardaigh</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Taispeánann mionsamhail físe agus an barra cuardaigh á tharraingt</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"B’fhéidir nach bhfuil ‘Cumasaigh DVR sruthú beo’ ar fáil
-
-Chun seo a shocrú, cas ar ‘Sruthanna físe bréige’ agus athraigh an ‘Cliant réamhshocraithe’ go ‘Teilifís’"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Leathnaigh fad an DVR sruthú beo</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Ligeann sé duit craoltaí beo a athchasadh suas le 7 lá san am atá thart</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"B’fhéidir nach mbeidh ‘Fad an DVR sruthú beo a leathnú’ ar fáil.
-
-Chun seo a shocrú, cuir ‘Sruthanna físe bréige’ ar siúl agus athraigh an ‘Cliant réamhshocraithe’ go ‘Teilifís’."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Cumasaigh sleamhnán a lorg</string>
   <string name="morphe_slide_to_seek_summary">Cumasaíonn sé seo an sleamhnán chun cuardach a dhéanamh in ionad é a sheinm ag luas 2x nuair a bhrúnn tú agus a choinníonn tú an seinnteoir físe</string>
@@ -1052,6 +1052,8 @@ Tapáil anseo chun DeArrow.ajay.app a oscailt."</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Uathoibríoch</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Cuimhnigh ar cháilíocht an fhíseáin</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Cuireann sé seo do rogha cáilíochta láimhe i bhfeidhm ar gach físeán amach anseo</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Fógraí athraithe cáilíochta</string>

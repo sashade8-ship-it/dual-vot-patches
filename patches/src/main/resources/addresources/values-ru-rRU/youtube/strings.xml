@@ -74,6 +74,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_hyped_label_title">Скрыть метку \"В тренде\"</string>
   <string name="morphe_hide_image_shelf_title">Скрыть секцию изображений</string>
   <string name="morphe_hide_image_shelf_summary">Скрыть изображения в результатах поиска</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Скрыть карточку \"Пригласить в чат\"</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Скрывает карточку приглашения, отображаемую в разделе \"Сообщения\" на вкладке \"Уведомления\"</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Скрыть кнопку \"Последние видео\"</string>
@@ -484,15 +488,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Включить миниатюры на полосе прокрутки</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Показывает миниатюру видео во время перетаскивания полосы прокрутки</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"«Включить DVR для прямой трансляции» может быть недоступно
-
-Чтобы это исправить, включите «Поддельные видеопотоки» и измените «Клиент по умолчанию» на «TV»"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Расширить длительность прямой трансляции DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Позволяет перематывать прямые трансляции в прошлое до 7 дней</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"«Расширить длительность DVR для прямой трансляции» может быть недоступно
-
-Чтобы это исправить, включите «Поддельные видеопотоки» и измените «Клиент по умолчанию» на «TV»"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Включить перемотку видео слайдом</string>
   <string name="morphe_slide_to_seek_summary">Включает перемотку с помощью свайпа вместо воспроизведения с удвоенной скоростью при нажатии и удержании видеоплеера</string>
@@ -1056,6 +1054,8 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Авто</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Запомнить качество видео</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Применяет выбранное вами качество вручную ко всем будущим видео</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Уведомления об изменении качества</string>

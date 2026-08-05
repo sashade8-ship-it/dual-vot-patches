@@ -74,6 +74,10 @@ Endringer inkluderer:
   <string name="morphe_hide_hyped_label_title">Skjul \'Hypet\'-etikett</string>
   <string name="morphe_hide_image_shelf_title">Skjul bildehylle</string>
   <string name="morphe_hide_image_shelf_summary">Skjuler bildihyller i søkeresultatene</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Skjul kortet \'Inviter andre til å sende melding\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Skjuler invitasjonskortet som vises i Meldinger-delen i Varslingsfanen</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Skjul \'Siste videoer\'-knappen</string>
@@ -331,6 +335,7 @@ Trykk her for å åpne AiSlopList.com og se nedlastinger for andre plattformer"<
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Snur om på trykk- og trykk-og-hold-handlingene for \"Kopier videolenke\"-knappen</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Deaktiver \'Logg på TV\'-pop-up</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Deaktiver popup-vinduet \'Koble til enhetene dine\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Deaktiver dobbelttrykk for å hoppe til neste kapittel</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Deaktiverer kapittelhopping med tofinger-dobbeltrykk, som kan utløses ved et uhell med én finger</string>
@@ -482,15 +487,15 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Aktiver miniatyrbilder for søkeskjermen</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Viser et videominiatyrbilde mens du drar i søkeskjermen</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"Muligheten til å ta opp direktesendinger er kanskje ikke tilgjengelig
+  <string name="morphe_livestream_dvr_not_available">"\"Aktiver DVR for direktesending\" er kanskje ikke tilgjengelig
 
-For å fikse dette, slå på 'Spoof video streams' og endre 'Standard klient' til 'TV'"</string>
+For å fikse dette, slå på \"Spoof video streams\" og endre \"Standard klient\" til \"TV Simply\" eller \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Utvid livestream DVR varighet</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Lar deg spole tilbake direktesendinger opptil 7 dager</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"’Utvid DVR-varigheten til direktesendinger’ er kanskje ikke tilgjengelig
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Muligheten til å utvide DVR-varigheten for direktesendinger er kanskje ikke tilgjengelig
 
-For å fikse dette, slå på ’Spoof video streams’ og endre ’Standard klient’ til ’TV’"</string>
+For å fikse dette, slå på 'Forfalske videostrømmer' og endre 'Standard klient' til 'TV Simply' eller 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktiver glidekontroll for søk</string>
   <string name="morphe_slide_to_seek_summary">Aktiverer sveiping for å søke i stedet for å spille med 2x hastighet når du trykker og holder videospilleren</string>
@@ -1052,6 +1057,12 @@ Hvis aktivert, sendes videourler til API-serveren og ingen andre data sendes. Hv
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Auto</string>
+  <string name="morphe_override_initial_video_quality_title">Overskriv innledende videokvalitet</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Retter en feil der standard videokvalitet ikke brukes umiddelbart etter at videoen starter
+
+Begrensning: Avspilling fungerer kanskje ikke på noen enheter hvis 'Forfalsk videostrømmer' er satt til 'Android VR' og 'Tving AVC (H.264)-kodek' er aktivert"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Husk videokvalitet</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Bruker din manuelle kvalitetsvalg på alle fremtidige videoer</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Kvalitetsendrings-varsler</string>

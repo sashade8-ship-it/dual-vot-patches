@@ -74,6 +74,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_hyped_label_title">हाइप लेबल छुपाएं</string>
   <string name="morphe_hide_image_shelf_title">छिपाएं चित्र शेल्फ</string>
   <string name="morphe_hide_image_shelf_summary">खोज परिणामों में छवि शेल्फ को छुपाता है</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">\'संदेश के लिए अन्य लोगों को आमंत्रित करें\' कार्ड छुपाएं</string>
+  <string name="morphe_hide_invite_to_message_card_summary">सूचनाएं टैब के संदेश अनुभाग में दिखाया गया आमंत्रण कार्ड छुपाता है</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">छुपाएं \'नवीन वीडियो\' बटन</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">\'कॉपी वीडियो लिंक\' बटन की टैप और टैप-एंड-होल्ड क्रियाओं को उलट देता है</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">\'टीवी पर साइन इन करें\' पॉपअप बंद करें</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">\'कनेक्ट आपके डिवाइस\' पॉपअप अक्षम करें</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">अध्याय स्किप को डबल टैप करना अक्षम करें</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">अध्याय को छोड़ने के लिए दो उंगली के डबल-टैप जेस्चर को निष्क्रिय करता है, जो एक उंगली के साथ गलती से ट्रिगर हो सकता है</string>
@@ -482,15 +487,15 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_seekbar_thumbnail_preview_title">सर्कबार थंबनेल सक्षम करें</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">सर्कबार को ड्रैग करते समय एक वीडियो थंबनेल दिखाता है</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'लाइवस्ट्रीम DVR' सक्षम नहीं हो सकता है
+  <string name="morphe_livestream_dvr_not_available">"'लाइवस्ट्रीम डीवीआर सक्षम करें' उपलब्ध नहीं हो सकता है
 
-इसे ठीक करने के लिए, 'वीडियो स्ट्रीम को स्पूफ करें' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'टीवी' में बदलें।"</string>
+इसे ठीक करने के लिए, 'वीडियो स्ट्रीम को स्पूफ करें' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'टीवी सिम्प्ली' या 'visionOS' में बदलें"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">लाइवस्ट्रीम DVR अवधि का विस्तार करें</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">आपको लाइव प्रसारण को 7 दिनों तक पीछे रिवाइंड करने की अनुमति देता है</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'लाइवस्ट्रीम DVR अवधि का विस्तार करें' उपलब्ध नहीं हो सकता है
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'लाइवस्ट्रीम डीवीआर अवधि बढ़ाएं' उपलब्ध नहीं हो सकता है
 
-इसे ठीक करने के लिए, 'वीडियो स्ट्रीम को स्पूफ करें' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'टीवी' में बदलें।"</string>
+इसे ठीक करने के लिए, 'वीडियो स्ट्रीम को स्पूफ करें' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'टीवी सिम्प्ली' या 'visionOS' में बदलें"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">स्लाइड टू सीक सक्षम करें</string>
   <string name="morphe_slide_to_seek_summary">वीडियो प्लेयर को दबाए रखने पर 2x गति पर चलाने के बजाय स्लाइड से सीक सक्षम करता है</string>
@@ -1054,6 +1059,12 @@ DeArrow.ajay.app खोलने के लिए यहां टैप कर�
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">स्वचालित</string>
+  <string name="morphe_override_initial_video_quality_title">आरंभिक वीडियो गुणवत्ता को ओवरराइड करें</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"एक ऐसी समस्या ठीक करता है जहां वीडियो शुरू होने के तुरंत बाद डिफ़ॉल्ट वीडियो गुणवत्ता लागू नहीं होती है
+
+सीमा: यदि 'वीडियो स्ट्रीम को स्पूफ करें' को 'Android VR' पर सेट किया गया है और 'फोर्स एवीसी (एच.264) कोडेक' सक्षम किया गया है, तो कुछ डिवाइस पर प्लेबैक काम नहीं कर सकता है"</string>
   <string name="morphe_remember_video_quality_last_selected_title">वीडियो गुणवत्ता याद रखें</string>
   <string name="morphe_remember_video_quality_last_selected_summary">अपनी मैन्युअल गुणवत्ता चयन को सभी भविष्य के वीडियो पर लागू करता है</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">गुणवत्ता परिवर्तन सूचनाएं</string>

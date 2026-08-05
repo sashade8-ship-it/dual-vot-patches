@@ -422,6 +422,16 @@ public class SeekbarThumbnailPreviewPatch {
 
     /**
      * Injection point.
+     */
+    public static boolean disableShortsSeekbarThumbnails(boolean original) {
+        if (Settings.THUMBNAIL_PREVIEW.get()) {
+            return false;
+        }
+        return original;
+    }
+
+    /**
+     * Injection point.
      * The following method is called once, to initialize the precise seekbar container.
      */
     public static void setPreciseSeekingVisible(RecyclerView recyclerView) {

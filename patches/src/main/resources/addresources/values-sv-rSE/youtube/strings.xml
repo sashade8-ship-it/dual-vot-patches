@@ -60,12 +60,15 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_compact_banner_summary">Döljer kompakta banners och avståndet mellan vissa komponenter</string>
   <string name="morphe_hide_expandable_card_title">Expanderbara kort under videor</string>
   <string name="morphe_hide_expandable_card_entry_1">Visa alla</string>
+  <string name="morphe_hide_expandable_card_entry_3">Dölj alla</string>
   <string name="morphe_hide_floating_microphone_button_title">Dölj flytande mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Döljer den flytande mikrofonknappen nere till höger på skärmen för sökförslag</string>
   <string name="morphe_hide_horizontal_shelves_title">Dölj horisontella hyllor</string>
   <string name="morphe_hide_hyped_label_title">Dölj hajpetikett</string>
   <string name="morphe_hide_image_shelf_title">Dölj bildhylla</string>
   <string name="morphe_hide_image_shelf_summary">Döljer bildhyllor i sökresultat</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Dölj knappen Senaste videorna</string>
@@ -144,6 +147,10 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_transcript_section_title">Dölj avsnittet Manuskript</string>
   <string name="morphe_hide_video_details_section_title">Dölj avsnittet Videoinformation</string>
   <string name="morphe_hide_filter_bar_screen_title">Filterfält</string>
+  <string name="morphe_hide_filter_bar_in_feed_title">Dölj i flöden</string>
+  <string name="morphe_hide_filter_bar_in_related_videos_title">Dölj i liknande videor</string>
+  <string name="morphe_hide_filter_bar_in_search_title">Dölj i sökresultat</string>
+  <string name="morphe_hide_filter_bar_in_history_title">Dölj i visningshistoriken</string>
   <string name="morphe_channel_screen_title">Kanalsida</string>
   <string name="morphe_channel_screen_summary">Välj vilka komponenter som visas på kanalsidan</string>
   <string name="morphe_hide_channel_tab_title">Aktivera kanalfliksfilter</string>
@@ -162,6 +169,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_store_button_title">Dölj knappen Butik</string>
   <!-- 'Subscribe' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_subscribe_button_in_channel_page_title">Dölj knappen Prenumerera</string>
+  <string name="morphe_hide_explore_button_title">Dölj knappen Utforska</string>
   <string name="morphe_comments_screen_title">Kommentarer</string>
   <string name="morphe_comments_screen_summary">Välj vilka komponenter som visas i kommentarsfältet</string>
   <string name="morphe_hide_comments_carousel_title">Aktivera filter för kommentarsfältskarusellen</string>
@@ -195,6 +203,8 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_keyword_toast_invalid_conflicting">Nyckelordet har motstridiga deklarationer: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_length">Nyckelordet är för kort och kräver citattecken: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">Nyckelordet döljer alla videor: %s</string>
+  <string name="morphe_hide_stats_category_title">Statistik</string>
+  <string name="morphe_hide_about_category_title">Om</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">Dölj butikshylla för kreatörer</string>
   <string name="morphe_hide_end_screen_store_banner_title">Dölj butiksbanner på slutskärmen</string>
@@ -739,6 +749,8 @@ Om du vill komma åt inställningarna aktiverar du knappen Inställningar via Al
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatiskt</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Kom ihåg videokvalitet</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Tillämpar den kvalitet som du valt manuellt i alla framtida videor</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Meddelanden om kvalitetsändringar</string>
@@ -787,6 +799,7 @@ Begränsningar:
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Dölj Premium-kvalitetsalternativ</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
+  <string name="morphe_video_quality_prioritize_title">Prioritera videokvalitet</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Aktivering av denna inställning kan använda programvarubaserad AV1-avkodning.
 

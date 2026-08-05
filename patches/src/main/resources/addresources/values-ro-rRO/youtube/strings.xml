@@ -74,6 +74,9 @@ Schimbari incluse:
   <string name="morphe_hide_hyped_label_title">Ascunde eticheta \"În tendințe\"</string>
   <string name="morphe_hide_image_shelf_title">Ascunde raftul de imagini</string>
   <string name="morphe_hide_image_shelf_summary">Ascunde rafturile de imagini în rezultatele căutării</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Ascunde cardul \'Invită alăi îni la mesaj\'</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Ascunde butonul \'Ultimul video\'</string>
@@ -482,15 +485,9 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Activează miniaturile barei de căutare</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Afișează o miniatură video în timpul glisării pe bara de căutare</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Activarea înregistrării DVR pentru fluxuri live' este posibil să nu fie disponibilă
-
-Pentru a remedia această problemă, activați 'Spoof video streams' și schimbați 'Clientul implicit' în 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Extinde durata DVR pentru livestream</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Vă permite să derulați înapoi emisiunile live până la 7 zile în trecut</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Extinderea duratei DVR pentru transmisiuni live' nu este disponibilă
-
-Pentru a rezolva această problemă, activați 'Falsificare fluxuri video' și schimbați 'Clientul implicit' în 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activează diapozitivul pentru a căuta</string>
   <string name="morphe_slide_to_seek_summary">Activează glisarea pentru a căuta în loc să redă cu o viteză de 2x când apeși și menții apăsat playerul video</string>
@@ -1054,6 +1051,8 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automat</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Reține calitatea video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Aplică selecția ta manuală de calitate pentru toate videoclipurile viitoare</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Notificări de schimbare a calității</string>

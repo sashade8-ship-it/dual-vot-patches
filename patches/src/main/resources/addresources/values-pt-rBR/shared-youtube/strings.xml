@@ -82,9 +82,9 @@ Para fazer login, pressione continuar abaixo"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"Código de ativação: %s
 
 1. Toque em 'Abrir site' abaixo para abrir o site 'Conectar um dispositivo'
-2. Cole da área de transferência (ou digite manualmente)
-3. Faça login na sua Conta do Google, se solicitado. Se você tiver várias contas, escolha a conta do YouTube usada neste app
-4. Toque em 'Permitir acesso do YouTube VR'
+2. Cole da área de transferência (ou digite) o código de ativação mostrado acima
+3. Faça login no Google se solicitado. Se você tiver várias contas, escolha a conta do YouTube usada neste app
+4. Toque em 'Permitir o acesso do YouTube VR'
 5. Volte para este app após a mensagem 'Dispositivo conectado' ser exibida"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">Abrir site</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">Falha ao emitir código de ativação</string>
@@ -135,8 +135,8 @@ Para fazer login, pressione continuar abaixo"</string>
           'Android Studio' must be kept untranslated. -->
   <string name="morphe_force_original_audio_not_available">Para usar este recurso, mude \'Falsificar fluxos de vídeo\' para qualquer cliente, exceto o Android Studio\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
-  <string name="morphe_sanitize_sharing_links_title">Higienizar links de compartilhamento</string>
-  <string name="morphe_sanitize_sharing_links_summary">Remove parâmetros de consulta de rastreamento de links compartilhados</string>
+  <string name="morphe_sanitize_sharing_links_title">Limpar links de compartilhamento</string>
+  <string name="morphe_sanitize_sharing_links_summary">Remove parâmetros de rastreamento dos links compartilhados</string>
   <string name="morphe_replace_music_with_youtube_title">Alterar links de compartilhamento para youtube.com</string>
   <string name="morphe_replace_music_with_youtube_summary">Substitui music.youtube.com por youtube.com em links compartilhados</string>
   <string name="morphe_replace_links_with_shortener_title">Alterar links de compartilhamento para youtu.be</string>

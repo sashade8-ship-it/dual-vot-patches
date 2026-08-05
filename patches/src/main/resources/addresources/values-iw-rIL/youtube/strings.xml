@@ -74,6 +74,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_hyped_label_title">הסתר תווית \'ויראלי\'</string>
   <string name="morphe_hide_image_shelf_title">הסתר מדף תמונות</string>
   <string name="morphe_hide_image_shelf_summary">מסתיר מדפי תמונות בתוצאות החיפוש</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">הסתר את הכרטיס \"הזמן אחרים להודעה\"</string>
+  <string name="morphe_hide_invite_to_message_card_summary">מסתיר את הכרטיס המוצג בחלק ההודעות שבכרטיסייה \"התראות\"</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">הסתר את לחצן \'וידאו אחרון\'</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">הופך את פעולות ההקשה וההקשה וההחזקה של כפתור \'העתקת קישור הסרטון\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">השבת חלון קופץ של כניסה לטלוויזיה</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">השבת את ה-popup של \'חבר את המכשירים שלך\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">משבית את מצב הסריקה המדויק שמופעל כשמחזיקים את מיקום החיפוש</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">משבית את מחוות ההקשה הכפולה בשתי אצבעות שמדלגת על פרקים, שעשויה להיות מופעלת בטעות עם אצבע אחת</string>
@@ -482,15 +487,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">אפשר תמונות ממוזערות בסרגל החיפוש</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">מציג תמונה ממוזערת של הסרטון בזמן גרירת סרגל החיפוש</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'הפעלת הקלטת שידור חי' ייתכן ולא תהיה זמינה
-
-כדי לתקן זאת, הפעל את 'זיוף זרמי וידאו' ושנה את 'הלקוח המוגדר כברירת מחדל' ל'טלוויזיה'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">הרחב את משך ה-DVR בשידור חי</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">מאפשר לך להריץ לאחור שידורים חיים עד 7 ימים אחורה</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'הרחבת משך הקלטת שידור חי' ייתכן ולא תהיה זמינה
-
-כדי לתקן זאת, הפעל את 'זיוף זרמי וידאו' ושנה את 'הלקוח המוגדר כברירת מחדל' ל'טלוויזיה'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">הפעל החלק כדי לדלג</string>
   <string name="morphe_slide_to_seek_summary">מאפשר החלקה לחיפוש במקום לנגן במהירות של 2x בעת לחיצה והחזקה על נגן הווידאו</string>
@@ -1054,6 +1053,8 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">אוטומטי</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">זכור איכות וידאו</string>
   <string name="morphe_remember_video_quality_last_selected_summary">מחיל את הבחירה האיכותית הידנית שלך על כל הסרטונים העתידיים</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">התראות על שינוי איכות</string>

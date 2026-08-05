@@ -74,6 +74,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_hyped_label_title">হাইপড লেবেল লুকান</string>
   <string name="morphe_hide_image_shelf_title">ছবি শেল্ফ লুকান</string>
   <string name="morphe_hide_image_shelf_summary">অনুসন্ধান ফলাফলে ছবির শেল্ভগুলি লুকিয়ে রাখে</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">\'মেসেজে অন্যদের আমন্ত্রণ\' কার্ডটি লুকান</string>
+  <string name="morphe_hide_invite_to_message_card_summary">নোটিফিকেশন ট্যাবের মেসেজ বিভাগে দেখানো আমন্ত্রণ কার্ডটি লুকায়</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">লুকান \'সর্বশেষ ভিডিও\' বোতাম</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">\'কপি ভিডিও লিঙ্ক\' বাটনের ট্যাপ এবং ট্যাপ-অ্যান্ড-হোল্ড অ্যাকশনগুলি বিপরীত করে।</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">টিভিতে সাইন ইন পপআপ অক্ষম করুন</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">ডিভাইস সংযোগের পপআপ নিষ্ক্রিয় করুন</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">ডাবল ট্যাপ করে অধ্যায় পরিবর্তন করা বন্ধ করুন</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">দুটি আঙুলের ডাবল-ট্যাপ অঙ্গভঙ্গি অক্ষম করে যা অধ্যায়গুলি এড়িয়ে যায়, যা একটি আঙুল দিয়ে ভুলবশত ট্রিগার হতে পারে।</string>
@@ -482,15 +487,9 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_seekbar_thumbnail_preview_title">সিকবার থাম্বনেইল সক্ষম করুন</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">সীকবಾರ್ টেনে আনার সময় একটি ভিডিও থাম্বনেইল দেখায়</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'লাইভস্ট্রিম ডিভিআর' উপলব্ধ নাও হতে পারে
-
-এটি ঠিক করতে, 'স্পুফ ভিডিও স্ট্রিম' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' 'টিভি'-তে পরিবর্তন করুন"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">লাইভস্ট্রিম ডিভিআর সময়কাল বাড়ান</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">আপনাকে লাইভ সম্প্রচারগুলি অতীতের ৭ দিন পর্যন্ত रिवाइंड করতে দেয়</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'এক্সপান্ড লাইভস্ট্রিম ডিভিআর ডিউরেশন' উপলব্ধ নাও হতে পারে
-
-এটি ঠিক করতে, 'স্পুফ ভিডিও স্ট্রিম' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' 'টিভি'-তে পরিবর্তন করুন"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">ভিডিওর নির্দিষ্ট অংশে যেতে টানুন সক্রিয় করুন</string>
   <string name="morphe_slide_to_seek_summary">ভিডিও প্লেয়ারে প্রেস এবং ধরে রাখলে 2x গতিতে খেলার পরিবর্তে স্লাইড করতে সন্ধান চালু করে।</string>
@@ -1054,6 +1053,8 @@ DeArrow.ajay.app ওপেন করতে এখানে ট্যাপ ক�
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">স্বতস্ফূর্তভাবে</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">ভিডিও গুণমান মনে রাখুন</string>
   <string name="morphe_remember_video_quality_last_selected_summary">আপনার ম্যানুয়াল গুণমান নির্বাচন ভবিষ্যতে সমস্ত ভিডিওতে প্রয়োগ করে</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">গুণমান পরিবর্তন বিজ্ঞপ্তি দেখান</string>

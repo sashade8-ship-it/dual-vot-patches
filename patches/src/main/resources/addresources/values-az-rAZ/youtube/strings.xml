@@ -74,6 +74,10 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_hyped_label_title">Hayp edildi etiketin gizlət</string>
   <string name="morphe_hide_image_shelf_title">Şəkil cərgəsin gizlət</string>
   <string name="morphe_hide_image_shelf_summary">Axtarış nəticələrində şəkil cərgələrin gizlədir</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">\"Başqalarını mesaja dəvət et\" kartını gizlət</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Bildirişlər panelinin Mesajlar bölməsində göstərilən dəvət kartını gizlədir</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">\"Ən son videolar\" düyməsini gizlət</string>
@@ -331,6 +335,7 @@ AiSlopList.com 'u açmaq və digər platformalar üçün yükləmələri görmə
   <string name="morphe_copy_video_link_with_timestamp_button_summary">​\"Video linkini köçür\" düyməsinin toxunma və basıb saxlama fəaliyyətlərini əksinə dəyiş</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">\"TV-yə daxil ol\" ani pəncərəsini qapat</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">\"Cihazlarınızı qoşun\" açılan pəncərəsini qapat</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Cüt toxunuşla fəsil ötürülməsini qapat</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Tək barmaqla bilmədən aktivləşə bilən, fəsilləri ötürən iki barmaqla cüt toxunma jestini qapadır</string>
@@ -484,13 +489,13 @@ Məlumat: Canlı yayımlarda işləməyə bilər"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Canlı yayım DVR-ni aktivləşdir' əlçatan olmaya bilər
 
-Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdırı' aktivləşdir və 'İlkin qəbuledicini' 'TV'-yə dəyişdir"</string>
+Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir və 'İlkin qəbuledicini' 'TV Simply' və ya 'visionOS' olaraq dəyişdir"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Canlı yayım DVR müddətini genişləndir</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Canlı yayımları 7 günə kimi keçmişə geri çevirməyə imkan verir</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'Canlı yayım DVR müddətini genişləndir' əlçatan olmaya bilər
 
-Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdırı' aktivləşdir və 'İlkin qəbuledicini' 'TV'-yə dəyişdir"</string>
+Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir və 'İlkin qəbuledicini' 'TV Simply' və ya 'visionOS' olaraq dəyişdir"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Çevirmək üçün sürüşdürməni aktivləşdir</string>
   <string name="morphe_slide_to_seek_summary">Video oynadıcıya basıb saxladıqda 2x sürətlə oynatmaq əvəzinə, sürüşdürərək çevirməni aktivləşdirir</string>
@@ -1054,6 +1059,12 @@ DeArrow.ajay.app 'i açmaq üçün buraya toxun"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Avtomatik</string>
+  <string name="morphe_override_initial_video_quality_title">İlkin video keyfiyyətini əvəzlə</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Video başladıqdan dərhal sonra ilkin video keyfiyyətinin tətbiq olunmaması problemini düzəldir
+
+Məhdudiyyət: \"Video yayımların saxtalaşdır\" \"Android VR\" olaraq təyin edilərsə və \"AVC (H.264) kodlayıcıya zorla\" işlək olarsa oynatma bəzi cihazlarda işləməyə bilər"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Video keyfiyyətin xatırla</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Əl ilə keyfiyyət seçiminizi bütün gələcək videolara tətbiq edir</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Keyfiyyət dəyişikliyi bildirişləri</string>

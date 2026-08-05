@@ -73,6 +73,10 @@ Perubahan termasuk:
   <string name="morphe_hide_hyped_label_title">Sembunyikan label Hype</string>
   <string name="morphe_hide_image_shelf_title">Sembunyikan rak gambar</string>
   <string name="morphe_hide_image_shelf_summary">Menyembunyikan rak gambar dalam hasil pencarian</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Sembunyikan kartu \'Undang lainnya untuk mengirim pesan\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Menyembunyikan kartu undangan yang ditampilkan di bagian Pesan pada tab Notifikasi</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Sembunyikan tombol \'Video terbaru\'</string>
@@ -330,6 +334,7 @@ Ketuk di sini untuk membuka AiSlopList.com dan melihat unduhan untuk platform la
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Membalikkan tindakan ketuk dan ketuk-dan-tahan untuk tombol \'Salin tautan video\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Nonaktifkan pesan timbul \'Masuk ke TV\'</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Nonaktifkan popup \'Hubungkan perangkat Anda\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Nonaktifkan lewati bab dengan ketuk dua kali</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Menonaktifkan gerakan ketuk dua jari yang melewati bab, yang mungkin terpicu secara tidak sengaja dengan satu jari</string>
@@ -481,15 +486,9 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Akifkan thumbnail pada bilah geser</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Menampilkan thumbnail video saat menggeser bilah geser</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Aktifkan siaran langsung DVR' mungkin tidak tersedia
-
-Untuk memperbaikinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' menjadi 'TV'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Perluas durasi siaran langsung DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Mengizinkan Anda untuk memutar ulang siaran langsung hingga 7 hari ke masa lalu</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Perluas durasi siaran langsung DVR' mungkin tidak tersedia
-
-Untuk memperbaikinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' menjadi 'TV'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktifkan geser untuk mencari</string>
   <string name="morphe_slide_to_seek_summary">Aktifkan geser untuk mencari daripada memutar pada kecepatan 2x saat menekan dan menahan pemutar video</string>
@@ -1053,6 +1052,8 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Otomatis</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Ingat kualitas video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Menerapkan pilihan kualitas manual Anda ke semua video mendatang</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Pemberitahuan perubahan kualitas</string>

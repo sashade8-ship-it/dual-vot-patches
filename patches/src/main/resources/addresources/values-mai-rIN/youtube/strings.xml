@@ -55,6 +55,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_horizontal_shelves_title">क्षैतिज शेल्फ छिपाएं</string>
   <string name="morphe_hide_hyped_label_title">हाइप्ड लेबल लुकाउनुहोस्</string>
   <string name="morphe_hide_image_shelf_title">छवि शेल्फ छिपाएं</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">“नवीनतम भिडियोहरू” बटन लुकाउनुहोस्</string>
@@ -142,6 +144,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_keyword_toast_invalid_conflicting">कीवर्ड में विरोधाभासी घोषणाएँ हैं: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_length">कीवर्ड बहुत छोटा है और उद्धरण की आवश्यकता है: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">कीवर्ड सभी वीडियो छिपा देगा: %s</string>
+  <string name="morphe_hide_stats_category_title">सांख्यिकी</string>
+  <string name="morphe_hide_about_category_title">के बारे में</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">क्रिएटर स्टोर शेल्फ छिपाएं</string>
   <string name="morphe_hide_end_screen_store_banner_title">एंड स्क्रीन स्टोर बैनर छिपाएं</string>
@@ -163,11 +167,14 @@ Second \"item\" text"</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <string name="morphe_vot_do_not_show_again">नबैंक गरिएको / स्व-प्रचार</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">लूप वीडियो सक्षम करी</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
   <string name="morphe_loop_video_button_toast_on">लूप वीडियो चालू अछि</string>
   <string name="morphe_loop_video_button_toast_off">लूप वीडियो बंद अछि</string>
+  <string name="morphe_loop_video_range_label_start">शुरू</string>
+  <string name="morphe_loop_video_range_label_end">अंत</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_type_title">प्लेसूची मोड उत्पन्न गर्नुहोस्</string>
   <string name="morphe_play_all_button_type_entry_0">सबै सामग्री (समय अनुसार क्रमबद्ध गर्नुहोस्, बढ्दो)</string>
@@ -481,6 +488,7 @@ Second \"item\" text"</string>
   <string name="morphe_alt_thumbnail_stills_about_title">स्टिल वीडियो कैप्चर</string>
   <string name="morphe_alt_thumbnail_stills_about_summary">स्टिल कैप्चर प्रत्येक वीडियो क शुरुआत / बीच / अंत स लेल जाइत अछि। एहि इमेजेस YouTube में बनेल अछि आ बाहरी API क उपयोग नहि कएल जाईत अछि।</string>
   <string name="morphe_alt_thumbnail_stills_fast_title">फास्ट स्टिल कैप्चर क उपयोग करी</string>
+  <string name="morphe_alt_thumbnail_stills_time_entry_3">अंत</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_alt_thumbnail_dearrow_error">DeArrow अस्थायी रूप क्षतिग्रस्त अछि (स्टेटस कोड: %s)</string>
   <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow अस्थायी रूप क्षतिग्रस्त अछि</string>
@@ -509,6 +517,8 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">ऑटो</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_video_quality_default_wifi_title">Wi-Fi नेटवर्क पर डिफ़ॉल्ट वीडियो गुणवत्ता</string>
   <string name="morphe_video_quality_default_mobile_title">मोबाइल नेटवर्क पर डिफ़ॉल्ट वीडियो गुणवत्ता</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->

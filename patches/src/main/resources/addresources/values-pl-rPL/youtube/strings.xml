@@ -74,6 +74,10 @@ Zmiany obejmują:
   <string name="morphe_hide_hyped_label_title">Ukryj etykietę podbitych filmów</string>
   <string name="morphe_hide_image_shelf_title">Ukryj sekcję obrazków</string>
   <string name="morphe_hide_image_shelf_summary">Ukrywa sekcję obrazków w wynikach wyszukiwania</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Ukryj kartę \"Zaproś innych do przesyłania wiadomości\"</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Ukrywa kartę zaproszenia wyświetlaną w zakładce Powiadomienia w sekcji Wiadomości</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Ukryj przycisk \"Najnowsze filmy\"</string>
@@ -331,6 +335,7 @@ Dotknij tutaj, aby otworzyć AiSlopList.com i zobaczyć wersje na inne platformy
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Odwraca działanie dotknięcia i przytrzymania dla przycisku \"Kopiuj link do filmu\"</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Wyłącz komunikat o zalogowaniu się do TV</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Wyłącz wyskakujące okienko \"Połącz swoje urządzenia\"</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Wyłącz pominięcie rozdziału podwójnym dotknięciem</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Wyłącza gest podwójnego dotknięcia dwoma palcami do pomijania rozdziałów, który bywa przypadkowo wywoływany jednym palcem</string>
@@ -484,13 +489,13 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"Opcja \"Włącz przewijanie transmisji na żywo\" może być niedostępna
 
-​Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV\""</string>
+​Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV Simply\" lub \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Wydłuż czas przewijania transmisji na żywo</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Umożliwia przewijanie transmisji na żywo nawet do 7 dni wstecz</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"Opcja \"Wydłuż czas przewijania transmisji na żywo\" może być niedostępna
 
-​Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV\""</string>
+​Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV Simply\" lub \"visionOS\""</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Włącz przewijanie przesunięciem palca</string>
   <string name="morphe_slide_to_seek_summary">Włącza przewijanie przesunięciem palca zamiast odtwarzania w prędkości 2x po przytrzymaniu odtwarzacza</string>
@@ -1053,6 +1058,12 @@ Dotknij tutaj, aby otworzyć DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatyczna</string>
+  <string name="morphe_override_initial_video_quality_title">Nadpisz początkową jakość filmu</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Naprawia problem, przez który domyślna jakość filmu nie jest stosowana natychmiast po rozpoczęciu odtwarzania
+
+Ograniczenie: Odtwarzanie może nie działać na niektórych urządzeniach, jeśli opcja \"Fałszowanie strumieni filmów\" jest ustawiona na \"Android VR\", a opcja \"Wymuś kodek AVC (H.264)\" jest włączona"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Zapamiętaj jakość filmu</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Stosuje ręcznie wybraną jakość do wszystkich kolejnych filmów</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Powiadomienia o zmianie jakości</string>

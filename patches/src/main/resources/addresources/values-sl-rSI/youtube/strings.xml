@@ -74,6 +74,10 @@ Spremembe vključujejo:
   <string name="morphe_hide_hyped_label_title">Skrij oznako \'Hype\'</string>
   <string name="morphe_hide_image_shelf_title">Skrij police s slikami</string>
   <string name="morphe_hide_image_shelf_summary">Skrije police s slikami v rezultatih iskanja</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Skrij kartico »Vabite druge k pošiljanju sporočil«</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Skrije kartico s povabili, ki se prikaže v razdelku Sporočila v zavihku Obvestila</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Skrij gumb \'Nedavni videi\'</string>
@@ -331,6 +335,7 @@ Tapnite tukaj, da odprete AiSlopList.com in si oglejte prenose za druge platform
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Obrne delovanje tapnite in tapnite-in-pridržite gumba \'Kopiraj povezavo do videoposnetka\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Onemogoči pojavni gumb \'Prijava na TV\'</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Onemogoči pojavno okno \'Povečite svoje naprave\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Onemogoči preskok poglavja z dvojnim dotikom</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Onemogoči gesto dvojnega tapkanja s prstom, ki preskoči poglavja, ki bi se jo lahko pomotoma sprožila s prstom</string>
@@ -482,15 +487,9 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Vklopi sličice predogleda na vrstici za iskanje</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Prikazuje sličico videoposnetka med vlečenjem drsnika</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Omogočanje snemanja v živo' morda ni na voljo
-
-Če želite to rešiti, vklopite možnost 'Ponarejanje video tokov' in spremenite 'Privzeti odjemalec' na 'TV'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Razširi trajanje DVR za pretočni prenos</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Omogoča vam povratno predvajanje v živo do 7 dni v preteklost</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Podaljšaj trajanje snemanja v živo' morda ni na voljo
-
-Če želite to rešiti, vklopite možnost 'Ponarejanje video tokov' in spremenite 'Privzeti odjemalec' na 'TV'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Omogoči drsenje za iskanje</string>
   <string name="morphe_slide_to_seek_summary">Omogoči drsanje za iskanje namesto predvajanja pri 2-kratni hitrosti, ko pritisnete in držite predvajalnik videa</string>
@@ -1054,6 +1053,8 @@ Tapnite tukaj, da odprete DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Samodejno</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Zapomni si kakovost videa</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Uporabi vašo ročno izbrano kakovost za vse prihodnje videoposnetke</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Obvestila o spremembi kvalitete</string>

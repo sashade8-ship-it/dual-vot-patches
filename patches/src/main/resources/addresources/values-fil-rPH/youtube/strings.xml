@@ -74,6 +74,10 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_hyped_label_title">Itago ang Hyped label</string>
   <string name="morphe_hide_image_shelf_title">Itago ang image shelf</string>
   <string name="morphe_hide_image_shelf_summary">Itinatago ang mga image shelf sa mga resulta ng paghahanap</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Itago ang card na \'Mag-imbita ng iba na mag-message\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Itinatago nito ang card ng imbitasyon na ipinapakita sa seksyon ng Mga Mensahe sa tab na Mga Notification</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Itago ang button na \'Mga pinakabagong video\'</string>
@@ -331,6 +335,7 @@ I-tap dito upang buksan ang AiSlopList.com at tingnan ang mga pag-download para 
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Binabaligtad ang tap at tap-and-hold na pagkilos ng \'Kopyahin ang link ng video\' button</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Patayin ang popup na \'Mag-sign in sa TV\'</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Huwag paganahin ang popup na \'Ikonekta ang iyong mga device\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Patayin ang double tap na paglaktaw sa kabanata</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Hindi pinapagana ang double-tap gesture gamit ang dalawang daliri na lumalaktaw sa mga chapter, na maaaring hindi sinasadyang ma-trigger gamit ang isang daliri</string>
@@ -482,15 +487,11 @@ Impormasyon: Maaaring hindi gumana sa mga live stream"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Paganahin ang mga thumbnail ng seekbar</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Nagpapakita ng thumbnail ng video habang hinihila ang seekbar</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"Maaaring hindi magamit ang 'I-enable ang DVR ng livestream'
-
-Upang ayusin ito, i-on ang 'Gayahin ang mga video stream' at baguhin ang 'Default na kliyente' sa 'TV'"</string>
+  <string name="morphe_livestream_dvr_not_available">"Maaaring hindi magamit ang 'I-enable ang DVR ng livestream'\n\nUpang ayusin ito, i-on ang 'Gayahin ang mga stream ng video' at palitan ang 'Default na client' sa 'TV Simply' o 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Palawakin ang tagal ng livestream DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Pinapayagan kang i-rewind ang mga live broadcast hanggang 7 araw sa nakaraan</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"Maaaring hindi magamit ang 'Palawakin ang tagal ng DVR ng livestream'
-
-Upang ayusin ito, i-on ang 'Gayahin ang mga video stream' at baguhin ang 'Default na kliyente' sa 'TV'"</string>
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Maaaring hindi magamit ang 'Palawakin ang tagal ng DVR ng livestream'\n\nUpang ayusin ito, i-on ang 'Gayahin ang mga stream ng video' at palitan ang 'Default na client' sa 'TV Simply' o 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Paganahin ang slide to seek</string>
   <string name="morphe_slide_to_seek_summary">Pinapagana ang slide to seek sa halip na magpatugtog sa 2x speed kapag pinipindot at hinahawakan ang video player</string>
@@ -1054,6 +1055,10 @@ I-tap dito upang buksan ang DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Auto</string>
+  <string name="morphe_override_initial_video_quality_title">I-override ang unang kalidad ng video</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Inaayos ang isyu kung saan hindi agad naiapply ang default na kalidad ng video pagkatapos magsimula ang video\n\nLimitasyon: Maaaring hindi gumana ang playback sa ilang device kung ang 'Gayahin ang mga stream ng video' ay nakatakda sa 'Android VR' at naka-enable ang 'Pilitin ang AVC (H.264) codec'"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Tandaan ang kalidad ng video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Inilalapat ang iyong manual na pagpili ng kalidad sa lahat ng mga video sa hinaharap</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Mga notification ng pagbabago ng kalidad</string>

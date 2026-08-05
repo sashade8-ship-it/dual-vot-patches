@@ -68,12 +68,16 @@ Second \"item\" text"</string>
   <string name="morphe_hide_expandable_card_entry_3">إخفاء الكل</string>
   <string name="morphe_hide_floating_microphone_button_title">إخفاء زر الميكروفون العائم</string>
   <string name="morphe_hide_floating_microphone_button_summary">يخفي زر الميكروفون العائم في الزاوية اليمنى السفلية من شاشة اقتراحات البحث</string>
-  <string name="morphe_hide_get_premium_button_title">إخفاء زر \'احصَل على Premium\'</string>
+  <string name="morphe_hide_get_premium_button_title">إخفاء زر \'الاشتراك في Premium\'</string>
   <string name="morphe_hide_horizontal_shelves_title">إخفاء الرفوف الأفقية</string>
   <string name="morphe_hide_horizontal_shelves_summary">يخفي الرفوف الأفقية مثل أخبار عاجلة، منشورات المجتمع التي قد تعجبك، متابعة المشاهدة، استكشاف المزيد من القنوات، استكشاف المزيد من المواضيع، من أجلك، أحدث الفيديوهات، الأكثر صلة، منشورات من مجتمع صنّاع المحتوى، التسوّق وشاهدها مرة أخرى</string>
   <string name="morphe_hide_hyped_label_title">إخفاء علامة أكبر تشجيع</string>
   <string name="morphe_hide_image_shelf_title">إخفاء رف الصور</string>
   <string name="morphe_hide_image_shelf_summary">يخفي رفوف الصور في نتائج البحث</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">إخفاء بطاقة \'دعوة الآخرين للمراسلة\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">يُخفي بطاقة الدعوة الظاهرة في قسم الرسائل ضمن تبويب الإشعارات</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">إخفاء زر \'أحدث الفيديوهات\'</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">يعكس إجراءات النقر والضغط المطول لزر \'نسخ رابط الفيديو\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">تعطيل نافذة \'تسجيل الدخول إلى التلفزيون\'</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">تعطيل نافذة \'توصيل أجهزتك\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">تعطيل تخطي الفصل بالنقر المزدوج</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">يعطّل إيماءة النقر المزدوج بإصبعين التي تتخطى الفصول، والتي قد يتم تشغيلها عن طريق الخطأ بإصبع واحد</string>
@@ -488,13 +493,13 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"قد لا يكون 'تمكين التنقل في البث المباشر' متاحًا
 
-لإصلاح ذلك، قم بتشغيل 'Spoof Video Streams' وغير 'العميل الافتراضي' إلى 'TV'"</string>
+لإصلاح ذلك، قم بتشغيل 'Spoof Video Streams' وغيّر 'العميل الافتراضي' إلى 'TV Simply' أو 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">زيادة مدة رجوع البث المباشر</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">يسمح لك بإعادة تشغيل البث المباشر لمدة تصل إلى 7 أيام مضت</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"قد لا يكون 'زيادة مدة رجوع البث المباشر' متاحًا
 
-لإصلاح ذلك، قم بتشغيل 'Spoof Video Streams' وغيّر 'العميل الافتراضي' إلى 'TV'"</string>
+لإصلاح ذلك، قم بتشغيل 'Spoof Video Streams' وغيّر 'العميل الافتراضي' إلى 'TV Simply' أو 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">تمكين التمرير للتقديم أو الترجيع</string>
   <string name="morphe_slide_to_seek_summary">تمكين التمرير للتنقل بدلًا من التشغيل بسرعة 2x عند الضغط مع الاستمرار على مشغل الفيديو</string>
@@ -1059,6 +1064,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">تلقائي</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">تذكر جودة الفيديو</string>
   <string name="morphe_remember_video_quality_last_selected_summary">يطبق تحديد الجودة اليدوي على جميع الفيديوهات المستقبلية</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">إشعارات تغيير الجودة</string>

@@ -74,6 +74,10 @@ Wijzigingen zijn:
   <string name="morphe_hide_hyped_label_title">Verberg Hyped label</string>
   <string name="morphe_hide_image_shelf_title">Afbeeldingenplank verbergen</string>
   <string name="morphe_hide_image_shelf_summary">Verbergt afbeeldingsplanken in zoekresultaten</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Verberg de kaart \'Nodig anderen uit voor berichten\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Verbergt de uitnodigingskaart die wordt weergegeven in het tabblad Meldingen, sectie Berichten</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Verberg \'Laatste video\'s\' knop</string>
@@ -331,6 +335,7 @@ Tik hier om AiSlopList.com te openen en downloads voor andere platforms te bekij
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Keert de tik- en ingedrukte acties van de knop \'Videolink kopiëren\' om</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Pop-up \'Inloggen op tv\' uitschakelen</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Schakel de pop-up \'Verbind je apparaten\' uit</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Schakel dubbeltik hoofdstuk overslaan uit</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Schakelt de dubbele tik met twee vingers uit die hoofdstukken overslaat, wat per ongeluk met één vinger kan worden geactiveerd</string>
@@ -484,13 +489,13 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Livestream DVR inschakelen' is mogelijk niet beschikbaar
 
-Om dit op te lossen, schakel 'Video streams spoofen' in en wijzig de 'Standaardclient' naar 'TV'"</string>
+Om dit op te lossen, schakel 'Video streams spoofen' in en wijzig de 'Standaardclient' naar 'TV Simply' of 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Livestream DVR-duur uitbreiden</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Hiermee kunt u live uitzendingen tot 7 dagen terugspoelen</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Livestream DVR duur uitbreiden' is mogelijk niet beschikbaar
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Duur livestream DVR verlengen' is mogelijk niet beschikbaar
 
-Om dit op te lossen, schakel 'Video streams spoofen' in en wijzig de 'Standaardclient' naar 'TV'"</string>
+Om dit op te lossen, schakel 'Video streams spoofen' in en wijzig de 'Standaardclient' naar 'TV Simply' of 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Schuiven om te zoeken inschakelen</string>
   <string name="morphe_slide_to_seek_summary">Schakelt \'Schuif om te zoeken\' in in plaats van af te spelen op 2x snelheid wanneer je op de videospeler drukt en vasthoudt</string>
@@ -1054,6 +1059,12 @@ Tik hier om meer te weten te komen over DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatisch</string>
+  <string name="morphe_override_initial_video_quality_title">Overschrijf de initiële video kwaliteit</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Lost een probleem op waarbij de standaard videokwaliteit niet direct wordt toegepast nadat de video is gestart
+
+Beperking: Afspelen werkt mogelijk niet op sommige apparaten als 'Video streams spoofen' is ingesteld op 'Android VR' en 'Forceer AVC (H.264) codec' is ingeschakeld"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Onthoud video kwaliteit</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Past je handmatige kwaliteitselectie toe op alle toekomstige video’s</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Kwaliteitsverandering meldingen</string>

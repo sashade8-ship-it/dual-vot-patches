@@ -41,19 +41,19 @@ Second \"item\" text"</string>
 บางแผนที่ด้านเซิร์ฟเวอร์อาจไม่กลับมา
 
 การเปลี่ยนแปลงรวมถึง:
-• ส่วนประกอบในเมนูตัวเลือกของเพลเยอร์ (หรือการตั้งค่าเกี่ยวข้อง) อาจไม่ทำงาน
-• เลขปริ้นท์ไม่ได้รับการเคลื่อนไหว
-• แท็บไลบรารีจะแสดง
+• ส่วนประกอบในเมนูตัวเลือกของตัวเล่น (หรือการตั้งค่าเกี่ยวข้อง) อาจไม่ทำงาน
+• เลขกลิ้งไม่ได้รับการเคลื่อนไหว
+• แท็บคลังจะแสดง
 • ส่วนเพลงของคำอธิบายวิดีโออาจไม่ทำงาน
-• สิ่งที่แสดงในเมนูตัวเลือกของเพลเยอร์ไม่สามารถซ่อนได้
-• ปุ่มสลับบัญชีอาจไม่ปรากฏบนแท็บไลบรารี"</string>
+• สิ่งที่แสดงในเมนูตัวเลือกของตัวเล่นไม่สามารถซ่อนได้
+• ปุ่มสลับบัญชีอาจไม่ปรากฏบนแท็บคลัง"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_hide_feed_flyout_menu_title">เปิดตัวกรองเมนูฟลายเอาท์ฟีด</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">ตัวกรองเมนูฟลายเอาท์ฟีด</string>
-  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">ป้อนชื่อเมนู flyout เพื่อกรอง โดยคั่นด้วยบรรทัดใหม่</string>
-  <string name="morphe_hide_account_menu_title">เปิดใช้งานคลัง / ตัวกรองเมนูด้านล่างของคุณ</string>
-  <string name="morphe_hide_account_menu_filter_strings_title">เปิดใช้งานคลัง / ตัวกรองเมนูด้านล่างของคุณ</string>
-  <string name="morphe_hide_account_menu_filter_strings_summary">ป้อนชื่อเมนูคลัง / คุณด้านล่างที่คุณต้องการกรอง คั่นด้วยบรรทัดใหม่</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">ป้อนชื่อเมนูฟลายเอาท์เพื่อกรอง โดยคั่นด้วยบรรทัดใหม่</string>
+  <string name="morphe_hide_account_menu_title">เปิดใช้งานตัวกรองเมนูด้านล่าง คลัง / คุณ</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">ตัวกรองเมนูด้านล่าง คลัง / คุณ</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">ป้อนชื่อเมนูด้านล่างคลัง / คุณที่คุณต้องการกรอง คั่นด้วยบรรทัดใหม่</string>
   <string name="morphe_hide_album_cards_title">ซ่อนการ์ดอัลบั้ม</string>
   <string name="morphe_hide_album_cards_summary">ซ่อนการ์ดอัลบั้มภายใต้คำอธิบายของศิลปิน</string>
   <string name="morphe_hide_artist_cards_title">ซ่อนการ์ดศิลปิน</string>
@@ -68,22 +68,26 @@ Second \"item\" text"</string>
   <string name="morphe_hide_expandable_card_entry_3">ซ่อนทั้งหมด</string>
   <string name="morphe_hide_floating_microphone_button_title">ซ่อนปุ่มไมโครโฟนแบบลอย</string>
   <string name="morphe_hide_floating_microphone_button_summary">ซ่อนปุ่มไมโครโฟนลอยที่มุมล่างขวาของหน้าจอคำแนะนำการค้นหา</string>
-  <string name="morphe_hide_get_premium_button_title">ซ่อนปุ่ม \'รับสิทธิ์พิเศษ\'</string>
+  <string name="morphe_hide_get_premium_button_title">ซ่อนปุ่ม \'รับ Premium\'</string>
   <string name="morphe_hide_horizontal_shelves_title">ซ่อนชั้นวางแนวนอน</string>
   <string name="morphe_hide_horizontal_shelves_summary">ซ่อนชั้นวางแนวนอน เช่น ข่าวเด่น, โพสต์จากชุมชนที่คุณอาจชอบ, รับชมต่อ, สำรวจช่องเพิ่มเติม, สำรวจหัวข้อเพิ่มเติม, สำหรับคุณ, วิดีโอล่าสุด, ที่เกี่ยวข้องมากที่สุด, โพสต์จากชุมชนของผู้สร้าง, ร้านค้า และ ดูอีกครั้ง</string>
-  <string name="morphe_hide_hyped_label_title">ซ่อนป้ายกำกับ \'กำลังเป็นที่นิยม\'</string>
+  <string name="morphe_hide_hyped_label_title">ซ่อนป้ายกำกับ \'Hyped\'</string>
   <string name="morphe_hide_image_shelf_title">ซ่อนชั้นวางรูปภาพ</string>
   <string name="morphe_hide_image_shelf_summary">ซ่อนชั้นวางรูปภาพในผลการค้นหา</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">ซ่อนการ์ด \'เชิญผู้อื่นให้ส่งข้อความ\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">ซ่อนการ์ดเชิญที่แสดงในส่วนการแจ้งเตือนของแท็บข้อความ</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">ซ่อนปุ่ม \'วิดีโอล่าสุด\'</string>
-  <string name="morphe_hide_latest_videos_button_summary">ซ่อนแบนเนอร์สีน้ำเงิน \'วิดีโอใหม่ล่าสุด\' ที่ปรากฏที่ด้านบนของฟีดหน้าหลัก</string>
+  <string name="morphe_hide_latest_videos_button_summary">ซ่อนแบนเนอร์ \'วิดีโอล่าสุด\' สีน้ำเงินที่ปรากฏที่ด้านบนของฟีดหน้าหลัก</string>
   <string name="morphe_hide_mix_playlists_title">ซ่อนเพลย์ลิสต์มิกซ์</string>
   <string name="morphe_hide_movies_section_title">ซ่อนส่วน \'ภาพยนตร์\'</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Subscriptions feed for future livestreams or unreleased videos. -->
   <string name="morphe_hide_notify_me_button_title">ซ่อนปุ่ม \'แจ้งเตือนฉัน\'</string>
-  <string name="morphe_hide_notify_me_button_summary">ซ่อนปุ่มเตือนสำหรับการถ่ายทอดสดและรอบปฐมทัศน์ที่กำหนดเวลาไว้</string>
+  <string name="morphe_hide_notify_me_button_summary">ซ่อนปุ่มเตือนสำหรับการถ่ายทอดสดและรอบพรีเมียร์ที่กำหนดเวลาไว้</string>
   <string name="morphe_hide_playables_title">ซ่อน Playables</string>
   <string name="morphe_hide_playables_summary">ซ่อนคุณสมบัติที่ช่วยให้คุณเล่นเกมได้</string>
   <string name="morphe_hide_search_term_thumbnails_title">ซ่อนภาพขนาดย่อของคำค้นหา</string>
@@ -331,6 +335,7 @@ Second \"item\" text"</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">สลับการทำงานของการแตะและการแตะค้างไว้สำหรับปุ่ม \'คัดลอกลิงก์วิดีโอ\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">ปิดใช้งานป๊อปอัปเข้าสู่ระบบไปยังทีวี</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">ปิดหน้าต่างแจ้งเตือน \'เชื่อมต่ออุปกรณ์ของคุณ\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">ปิดใช้งานการข้ามส่วนเนื้อหาโดยการแตะสองครั้ง</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">ปิดใช้งานท่าทางแตะสองครั้งด้วยสองนิ้วที่ข้ามส่วนเนื้อหา ซึ่งอาจถูกเรียกใช้งานโดยไม่ได้ตั้งใจด้วยนิ้วเดียว</string>
@@ -482,15 +487,15 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">เปิดใช้งานภาพขนาดย่อของแถบเลื่อน</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">แสดงภาพขนาดย่อของวิดีโอขณะลากแถบเลื่อน</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'เปิดใช้งาน DVR สำหรับถ่ายทอดสด' อาจไม่สามารถใช้งานได้
+  <string name="morphe_livestream_dvr_not_available">"'Enable livestream DVR' อาจไม่สามารถใช้งานได้
 
-หากต้องการแก้ไข โปรดเปิด 'Spoof video streams' และเปลี่ยน 'Default client' เป็น 'TV'"</string>
+หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV Simply' หรือ 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">ขยายระยะเวลาบันทึกวิดีโอไลฟ์สตรีม</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">ช่วยให้คุณสามารถย้อนกลับการออกอากาศสดได้ถึง 7 วันย้อนหลัง</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'ขยายระยะเวลา DVR สำหรับถ่ายทอดสด' อาจไม่สามารถใช้งานได้
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Expand livestream DVR duration' อาจไม่สามารถใช้งานได้
 
-หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV'"</string>
+หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV Simply' หรือ 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">เปิดใช้งานเลื่อนเพื่อค้นหา</string>
   <string name="morphe_slide_to_seek_summary">เปิดใช้งานการปัดเพื่อค้นหาแทนการเล่นด้วยความเร็ว 2 เท่าเมื่อกดค้างที่เครื่องเล่นวิดีโอ</string>
@@ -850,7 +855,7 @@ Second \"item\" text"</string>
   <string name="morphe_player_overlay_opacity_summary">ปรับระดับความโปร่งใส (0 คือโปร่งใส, 100 คือทึบแสง)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">ความทึบของเลเยอร์เล่นวิดีโอต้องอยู่ระหว่าง 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">ทั้งหละเย้ยนตะโรกเลียด</string>
+  <string name="morphe_wide_searchbar_title">เปิดใช้งานแถบค้นหาแบบกว้าง</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">รูปแบบอุปกรณ์</string>
@@ -870,9 +875,9 @@ Second \"item\" text"</string>
 • ฟีดจะถูกจัดระเบียบตามหัวข้อและช่อง
 • จะไม่มีตัวเลือกการเล่นในฟีด
 • จะไม่มีปุ่มรีมิกซ์และปุ่มเสียงใน Shorts
-• Shorts จะเปิดในโปรแกรมเล่นปกติ
+• Shorts จะเปิดในเครื่องเล่นปกติ
 • แถบการทำงานของวิดีโอแบบเดิมที่ไม่ยุบจะแสดงขึ้น"</string>
-  <string name="morphe_tablet_layout_in_player_title">เปิดใช้งานรูปแบบแท็บเล็ตในโปรแกรมเล่น</string>
+  <string name="morphe_tablet_layout_in_player_title">เปิดใช้งานรูปแบบแท็บเล็ตในเครื่องเล่น</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"คืนรูปแบบผู้เล่นแบบเก่า
 
@@ -1054,6 +1059,12 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">อัตโนมัติ</string>
+  <string name="morphe_override_initial_video_quality_title">Override initial video quality</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Fixes an issue where the default video quality is not applied immediately after the video starts
+
+Limitation: Playback may not work on some devices if 'Spoof video streams' is set to 'Android VR' and 'Force AVC (H.264) codec' is enabled"</string>
   <string name="morphe_remember_video_quality_last_selected_title">จำคุณภาพวิดีโอ</string>
   <string name="morphe_remember_video_quality_last_selected_summary">ใช้การตั้งค่าคุณภาพที่คุณเลือกด้วยตนเองกับวิดีโอทั้งหมดในอนาคต</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">การแจ้งเตือนการเปลี่ยนแปลงคุณภาพ</string>

@@ -74,6 +74,10 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_hyped_label_title">Fela „Hyped“ merkið</string>
   <string name="morphe_hide_image_shelf_title">Fela myndaröð</string>
   <string name="morphe_hide_image_shelf_summary">Felur myndaraðir í leitarniðurstöðum</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Fela kortið \'Bjóddu öðrum í skilaboð\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Felur bjóðkortið sem sýnt er í skilaboðaflokki á Notifications flipanum</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Fela hnappinn „Nýjustu myndbönd“</string>
@@ -331,6 +335,7 @@ Bankaðu hér til að opna AiSlopList.com og skoða niðurhal fyrir önnur kerfi
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Snýr við hnappaðgerðunum á \'Bæta við myndbandatengil\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Gerðu ekki birtu „Innskráningu á sjónvarpi“ á popup glugganum</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Gerðu \'Tengdu tækin þín\' kynningarglugga óvirkan</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Gerir virka forskotaskilyrðikvillan sem getur komið í veg fyrir að afritirinn hlaðist</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Gerir óvirkt tví fingurgestina tví breytilegu sem hoppar um kafla, sem gæti verið sýnt með einni fingri</string>
@@ -480,15 +485,15 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_seekbar_thumbnail_preview_title">Gera kleift myndataska myndum á dragslá</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Sýnir myndataska mynd á meðan dragð er á dragslá</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Gerðu líkama DVR streymi' gæti ekki verið tiltækt
+  <string name="morphe_livestream_dvr_not_available">"'Gerðu streymuupptöku' gæti ekki verið í boði
 
-Til að laga þetta, kveiktu á 'Spoof myndflæðum' og breytu 'Sjálfgefnri viðskiptavinur' í 'Sjónvarp'"</string>
+Til að laga þetta skaltu kveikja á 'Herma eftir myndflæðum' og breyta 'Sjálfgefnri klien' í 'TV Simply' eða 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Fjarlægðu lífvídeós DVR tíma</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Leyfir þér að spola áfram beina útsendingu allt að 7 daga til baka</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Stækka líkama DVR streymi' gæti ekki verið tiltækt
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Lengja streymuupptöku' gæti ekki verið í boði
 
-Til að laga þetta, kveiktu á 'Spoof myndflæðum' og breytu 'Sjálfgefnri viðskiptavinur' í 'Sjónvarp'"</string>
+Til að laga þetta skaltu kveikja á 'Herma eftir myndflæðum' og breyta 'Sjálfgefnri klien' í 'TV Simply' eða 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Vírúð renna til leit</string>
   <string name="morphe_slide_to_seek_summary">Virkar að slá til breytilegrar sem þurfa að vera haldar eða halda vídeó leikmanninum</string>
@@ -1050,6 +1055,12 @@ Bankaðu hér til að opna DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Sjálfvirkt</string>
+  <string name="morphe_override_initial_video_quality_title">Yfirskrifa upphafleg gæði myndar</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Leiðréttur vandamál þar sem sjálfgefn gæði myndar eru ekki beitt strax á eftir að myndin hefst
+
+Takmörkun: Spilun gæti ekki virkað á sumum tækjum ef 'Herma eftir myndflæðum' er stillt á 'Android VR' og 'Neysla AVC (H.264) kóðara' er virkjað"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Mundu gæðavideo</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Beittu handvirku gæðum á öll framtíð vídeó</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Tilkynningar um breytingar á gæðum</string>

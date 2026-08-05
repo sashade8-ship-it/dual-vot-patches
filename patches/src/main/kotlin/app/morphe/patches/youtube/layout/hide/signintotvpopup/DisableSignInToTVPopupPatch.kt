@@ -27,7 +27,8 @@ private const val EXTENSION_CLASS =
 
 val disableSignInToTVPopupPatch = bytecodePatch(
     name = "Disable sign in to TV popup",
-    description = "Adds an option to disable the popup asking to sign into a TV on the same local network.",
+    description = "Adds options to disable the popups asking to sign into or connect to a TV " +
+        "on the same local network.",
 ) {
     dependsOn(
         settingsPatch,
@@ -39,7 +40,8 @@ val disableSignInToTVPopupPatch = bytecodePatch(
 
     execute {
         PreferenceScreen.MISC.addPreferences(
-            SwitchPreference("morphe_disable_sign_in_to_tv_popup")
+            SwitchPreference("morphe_disable_sign_in_to_tv_popup"),
+            SwitchPreference("morphe_disable_connect_your_devices_popup")
         )
 
         SignInToTVPopupFingerprint.let {
@@ -67,5 +69,17 @@ val disableSignInToTVPopupPatch = bytecodePatch(
                 )
             }
         }
+
+        HandoffPromoCommandResolverFingerprint.method.addInstructionsWithLabels(
+            0,
+            """
+                invoke-static { }, $EXTENSION_CLASS->disableConnectYourDevicesPopup()Z
+                move-result v0
+                if-eqz v0, :allow_connect_popup
+                return-void
+                :allow_connect_popup
+                nop
+            """
+        )
     }
 }

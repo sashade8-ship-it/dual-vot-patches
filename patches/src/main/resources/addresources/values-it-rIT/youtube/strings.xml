@@ -74,6 +74,10 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_hyped_label_title">Nascondi etichetta Hype</string>
   <string name="morphe_hide_image_shelf_title">Nascondi sezione immagini</string>
   <string name="morphe_hide_image_shelf_summary">Nasconde gli scaffali di immagini nei risultati della ricerca</string>
+  <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
+          for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Nascondi la scheda \"Invita altri a messaggiare\"</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Nasconde la scheda invito mostrata nella sezione Messaggi della scheda Notifiche</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Nascondi il pulsante \'Video recenti\'</string>
@@ -331,6 +335,7 @@ Tocca qui per aprire AiSlopList.com e visualizzare i download per altre piattafo
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Inverte le azioni di tocco e tocco prolungato del pulsante \'Copia link video\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Disabilita il popup \"Accedi alla TV\"</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Disattiva il popup \"Connetti i tuoi dispositivi\"</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Disabilita lo scorrimento rapido del capitolo con un doppio tocco</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Disabilita il gesto di doppio tocco con due dita che consente di saltare i capitoli, che potrebbe essere attivato accidentalmente con un dito</string>
@@ -484,13 +489,13 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Abilita registrazione DVR in diretta' potrebbe non essere disponibile
 
-Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client predefinito' in 'TV'"</string>
+Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client predefinito' in 'TV Simply' o 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Espandi la durata DVR sui video in diretta</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Consente di riavvolgere i video in diretta fino a 7 giorni</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'Espandi durata DVR in diretta' potrebbe non essere disponibile
 
-Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client predefinito' in 'TV'"</string>
+Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client predefinito' in 'TV Simply' o 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Abilita scorri per avanzare</string>
   <string name="morphe_slide_to_seek_summary">Abilita lo scorrimento per la ricerca anziché la riproduzione a velocità 2x quando si preme e si tiene premuto sul lettore video</string>
@@ -1054,6 +1059,12 @@ Tocca qui per saperne di più su DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatico</string>
+  <string name="morphe_override_initial_video_quality_title">Sostituisci qualità video iniziale</string>
+  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Risolve un problema per cui la qualità video predefinita non viene applicata immediatamente all'avvio del video
+
+Limitazione: la riproduzione potrebbe non funzionare su alcuni dispositivi se 'Maschera flussi video' è impostato su 'Android VR' e 'Forza codec AVC (H.264)' è abilitato"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Ricorda la qualità del video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Applica la tua selezione manuale della qualità a tutti i video futuri</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Notifiche di modifica della qualità</string>
