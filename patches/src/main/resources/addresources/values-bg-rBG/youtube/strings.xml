@@ -131,10 +131,14 @@ Second \"item\" text"</string>
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Скриване на бутона \"Присъединете се\"</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Скрий бутона \"Live chat replay\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Скрива бутона за повторно гледане на чата в режим на цял екран</string>
   <string name="morphe_hide_medical_panels_title">Скриване на медицинските панели</string>
+  <string name="morphe_hide_player_gesture_hints_title">Скриване на подсказките за жестове на плейъра</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Скрива подсказките, показани по време на жестовете на плейъра, като например \'Плъзнете нагоре за прецизно търсене\', \'Отпуснете, за да отмените\' и \'2x\'</string>
   <string name="morphe_hide_snackbar_title">Скрий лентата за известия</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Скриване на указанията за абонатори</string>
   <string name="morphe_hide_sync_button_title">Скриване на бутона \"Синхронизиране с видео\"</string>

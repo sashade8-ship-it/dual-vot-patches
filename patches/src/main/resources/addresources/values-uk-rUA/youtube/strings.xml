@@ -131,10 +131,14 @@ Second \"item\" text"</string>
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Приховати кнопку \"Підписатися +\"</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Приховати кнопку \"Переглянути запис чату\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Приховує кнопку повтору чату в повноекранному режимі</string>
   <string name="morphe_hide_medical_panels_title">Приховати медичні панелі</string>
+  <string name="morphe_hide_player_gesture_hints_title">Приховати підказки жестів плеєра</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Приховує підказки, що показуються під час жестів плеєра, наприклад \"Потягніть вгору для точного перемотування\", \"Відпустіть, щоб скасувати\" та \"2x\"</string>
   <string name="morphe_hide_snackbar_title">Приховати спливаюче повідомлення</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Приховати правила спільноти підписок</string>
   <string name="morphe_hide_sync_button_title">Приховати кнопку \"Синхронізувати з відео\"</string>
@@ -487,9 +491,15 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Увімкнути мініатюри на смузі перемотування</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Показує мініатюру відео під час перетягування смуги відтворення</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"\"Увімкнути DVR для прямої трансляції\" може бути недоступним.
+
+Щоб це виправити, увімкніть \"Підміна відеопотоків\" та змініть \"Типовий клієнт\" на \"TV Simply\" або \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Розширити тривалість DVR прямої трансляції</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Дозволяє перемотувати прямі трансляції до 7 днів у минуле</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"\"Розширити тривалість DVR прямої трансляції\" може бути недоступним.
+
+Щоб це виправити, увімкніть \"Підміна відеопотоків\" та змініть \"Типовий клієнт\" на \"TV Simply\" або \"visionOS\""</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Увімкнути перемотування свайпом</string>
   <string name="morphe_slide_to_seek_summary">Вмикає перемотування свайпом замість відтворення зі швидкістю 2x при утриманні відеоплеєра</string>
@@ -1052,8 +1062,12 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Авто</string>
+  <string name="morphe_override_initial_video_quality_title">Замінити початкову якість відео</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Виправляє проблему, коли типова якість відео не застосовується одразу після запуску відео
+
+Обмеження: відтворення може не працювати на деяких пристроях, якщо \"Підміна відеопотоків\" встановлено на \"Android VR\" і увімкнено \"Примусово використовувати кодек AVC (H.264)\""</string>
   <string name="morphe_remember_video_quality_last_selected_title">Запам’ятовувати якість відео</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Застосовує вибраний рівень якості до всіх наступних відео</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Сповіщення про зміну якості</string>

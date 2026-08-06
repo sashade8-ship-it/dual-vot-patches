@@ -131,10 +131,14 @@ Promene uključuju:
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Sakrij dugme „Učlani me”</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Sakrij dugme \"Prikaži ponovni prenos chat-a\"</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Sakriva dugme za reprodukciju ponovnog četa u režimu punog ekrana</string>
   <string name="morphe_hide_medical_panels_title">Sakrij okna sa medicinskim informacijama</string>
+  <string name="morphe_hide_player_gesture_hints_title">Sakrij savete za pokrete u plejeru</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Sakriva nagoveštaje prikazane tokom gestova na plejeru, kao što su \'Povucite nagore za precizno traženje\', \'Pustite da otkažete\' i \'2x\'</string>
   <string name="morphe_hide_snackbar_title">Sakrij notifikaciju</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Sakrij smernice pratilaca</string>
   <string name="morphe_hide_sync_button_title">Sakrij dugme „Sinhronizuj sa videom“</string>
@@ -487,9 +491,11 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Omogući sličice trake za premotavanje</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Prikazuje sliku videa tokom povlačenja trake za premotavanje</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Omogući DVR za uživo' možda nije dostupan\n\nDa biste to popravili, uključite 'Spoof video tokova' i promenite 'Podrazumevani klijent' na 'TV Simply' ili 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Proširivanje trajanja DVR snimaka uživo</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Omogućava vam da se vratite unazad do 7 dana u prošlost tokom direktnih prenosa</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Proširi trajanje DVR-a za uživo' možda nije dostupan\n\nDa biste to popravili, uključite 'Spoof video tokova' i promenite 'Podrazumevani klijent' na 'TV Simply' ili 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Omogući prevlačenje za premotavanje</string>
   <string name="morphe_slide_to_seek_summary">Omogućava klizanje za podešavanje umesto reprodukovanja brzinom od 2x kada pritisnete i zadržite plejer videa</string>
@@ -1053,8 +1059,10 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatski</string>
+  <string name="morphe_override_initial_video_quality_title">Zameni početni kvalitet videa</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Popravlja problem gde se podrazumevani kvalitet videa ne primenjuje odmah nakon što video počne\n\nOgraničenje: reprodukcija možda neće raditi na nekim uređajima ako je 'Spoof video tokova' podešeno na 'Android VR' i 'Forsiraj AVC (H.264) kodek' je omogućen"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Zapamti kvalitet videa</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Primena ručne selekcije kvaliteta na sve buduće video zapise</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Obaveštenja o promeni kvaliteta</string>

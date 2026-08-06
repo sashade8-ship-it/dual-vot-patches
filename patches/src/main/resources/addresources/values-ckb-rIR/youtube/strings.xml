@@ -85,9 +85,11 @@ Second \"item\" text"</string>
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">خاوێن کردنەوەی پشکنەی ئەندامبون</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">دوگم کردن دوگمەی \"دووبارە بینەوەی چاتە زیندییەکە\"</string>
   <string name="morphe_hide_medical_panels_title">خاوێن کردنەوەی دەرکەوتەکانی پزیشکی</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
   <string name="morphe_hide_subscribers_community_guidelines_title">خاوێن کردنەوەی ڕێنمایەکانی ئەندامەکانی</string>
   <string name="morphe_hide_timed_reactions_title">واپاسدان بۆ بەرەبەرەکانی کات‌بڕكراو</string>
   <string name="morphe_hide_video_title_title">سەرنیشانی ڤیدۆ دەبێتە قایم</string>

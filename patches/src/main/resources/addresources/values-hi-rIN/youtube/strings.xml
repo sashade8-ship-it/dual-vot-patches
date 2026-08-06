@@ -131,10 +131,12 @@ Second \"item\" text"</string>
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">छुपाएं \'संलग्न होना\' बटन</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">छुपाएं \'लाइव चैट रिप्ले\' बटन</string>
   <string name="morphe_hide_live_chat_replay_button_summary">फुलस्क्रीन मोड में चैट रीप्ले बटन को छुपाता है</string>
   <string name="morphe_hide_medical_panels_title">इन्फो पैनल्स को छुपाएं</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
   <string name="morphe_hide_snackbar_title">स्नैकबार छिपाएं</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">छुपाएं सदस्यगणितों की निदेशिका</string>
   <string name="morphe_hide_sync_button_title">\"सिंक टू वीडियो\" बटन छिपाएं</string>

@@ -131,10 +131,14 @@ Oʻzgarishlar:
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">“A\'zoga qo\'shilish” tugmasini yashirish</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">“Jonli chatni qayta ko\'rish” tugmasini yashirish</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Jonli chatda takrorlash tugmasini yashiradi</string>
   <string name="morphe_hide_medical_panels_title">Tibbiy panellarni yashirish</string>
+  <string name="morphe_hide_player_gesture_hints_title">Pleyer imo-ishoralari bo\'yicha maslahatlarni yashirish</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Pleyer imo-ishoralari paytida ko\'rsatiladigan maslahatlarni yashiradi, masalan: \'Aniq qidirish uchun yuqoriga torting\', \'Bekor qilish uchun qo\'yib yuboring\' va \'2x\'.</string>
   <string name="morphe_hide_snackbar_title">Saqlash va navbat harakatlarini almashtirish</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Obunachilar hamjamiyatiga oid qoidalarni yashirish</string>
   <string name="morphe_hide_sync_button_title">Izohlarning chat donorlari panelini yashirish</string>
@@ -482,9 +486,15 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Seekbar uchun miniatyuralarni yoqish</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Seekbar\'ni sudrab borayotganda video miniatyurasini ko\'rsatadi</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Jonli efir DVR-ni yoqish' mavjud bo'lmasligi mumkin
+
+Buni tuzatish uchun 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart klient'ni 'TV Simply' yoki 'visionOS'ga o'zgartiring"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Jonli oqim DVR davomiyligini kengaytirish</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Sizga jonli efirlarni 7 kungacha ortga aylantirish imkonini beradi</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Jonli efir DVR davomiyligini kengaytirish' mavjud bo'lmasligi mumkin
+
+Buni tuzatish uchun 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart klient'ni 'TV Simply' yoki 'visionOS'ga o'zgartiring"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Sekish harakatini yoqish</string>
   <string name="morphe_slide_to_seek_summary">Video pleerni bosib ushlab turganingizda 2 barobar tezlikda ijro qilish o\'rniga siljishni yoqish</string>
@@ -1048,8 +1058,12 @@ Batafsil ma'lumot olish uchun DeArrow.ajay.app ni oching."</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Harakatdan o\'rinchik</string>
+  <string name="morphe_override_initial_video_quality_title">Boshlang\'ich video sifatini o\'zgartirish</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Videoning boshlanishidan so'ng standart video sifati darhol qo'llanilmaydigan muammoni tuzatadi
+
+Cheklov: Agar 'Video oqimlarini soxtalashtirish' 'Android VR' ga o'rnatilgan bo'lsa va 'AVC (H.264) kodekini majburlash' yoqilgan bo'lsa, ba'zi qurilmalarda ijro ishlamasligi mumkin"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Video sifatini eslash</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Manua l sifat tanlovingizni kelajakdagi barcha videolarga qo\'llang</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Sifat o\'zgarishi haqidagi bildirishnomalar</string>

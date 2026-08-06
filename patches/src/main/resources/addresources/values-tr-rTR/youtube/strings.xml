@@ -131,10 +131,14 @@ Değişiklikler şunları içerir:
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Katıl düğmesini gizle</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">\'Canlı sohbeti tekrar oynat\' düğmesini gizle</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Tam ekran modunda sohbeti tekrar oynatma düğmesini gizler</string>
   <string name="morphe_hide_medical_panels_title">Tıbbi bilgi panellerini gizle</string>
+  <string name="morphe_hide_player_gesture_hints_title">Oynatıcı jest ipuçlarını gizle</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Oynatıcı hareketleri sırasında gösterilen ipuçlarını gizler, örneğin \'Hassas arama için yukarı çekin\', \'İptal etmek için bırakın\' ve \'2x\'.</string>
   <string name="morphe_hide_snackbar_title">Snackbar\'ı gizle</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Abone kurallarını gizle</string>
   <string name="morphe_hide_sync_button_title">\'Videoyla senkronize et\' düğmesini gizle</string>

@@ -77,6 +77,7 @@ Schimbari incluse:
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
           for the card in the Messages section at the top of the Notifications tab. -->
   <string name="morphe_hide_invite_to_message_card_title">Ascunde cardul \'Invită alăi îni la mesaj\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Ascunde cardul de invitație afișat în secțiunea Mesaje din fila Notificări</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Ascunde butonul \'Ultimul video\'</string>
@@ -130,10 +131,14 @@ Schimbari incluse:
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Ascunde butonul Alătură-te</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Ascunde butonul \'Rejucătează conversație în direct\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Ascunde butonul de redare a chat-ului în modul ecran complet</string>
   <string name="morphe_hide_medical_panels_title">Ascunde panourile medicale</string>
+  <string name="morphe_hide_player_gesture_hints_title">Ascunde sugestiile de gesturi ale playerului</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Ascunde sugestiile afișate în timpul gesturilor playerului, cum ar fi \'Glisați în sus pentru căutare precisă\', \'Eliberați pentru a anula\' și \'2x\'.</string>
   <string name="morphe_hide_snackbar_title">Ascunde bara de gustări</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Ascunde ghidurile comunității abonaților</string>
   <string name="morphe_hide_sync_button_title">Ascunde butonul „Sincronizare cu video”</string>
@@ -334,6 +339,7 @@ Atingeți aici pentru a deschide AiSlopList.com și a vedea descărcările pentr
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Inversează acțiunile de atingere și atingere-menținere ale butonului \"Copiere link video\"</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Dezactivare pop-up Conectare la televizor</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Dezactivează fereastra pop-up \'Conectează-ți dispozitivele\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Dezactivează modul precis de căutare care se activează atunci când țineți apăsat o poziție de căutare</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Dezactivează gestul de dublă atingere cu două degete care sare peste capitole, care poate fi declanșat accidental cu un singur deget</string>
@@ -485,9 +491,15 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Activează miniaturile barei de căutare</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Afișează o miniatură video în timpul glisării pe bara de căutare</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Activează DVR pentru streaming live' poate să nu fie disponibil
+
+Pentru a remedia acest lucru, activează 'Spoof fluxuri video' și schimbă 'Client implicit' în 'TV Simply' sau 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Extinde durata DVR pentru livestream</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Vă permite să derulați înapoi emisiunile live până la 7 zile în trecut</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Extinde durata DVR pentru streaming live' poate să nu fie disponibil
+
+Pentru a remedia acest lucru, activează 'Spoof fluxuri video' și schimbă 'Client implicit' în 'TV Simply' sau 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activează diapozitivul pentru a căuta</string>
   <string name="morphe_slide_to_seek_summary">Activează glisarea pentru a căuta în loc să redă cu o viteză de 2x când apeși și menții apăsat playerul video</string>
@@ -1051,8 +1063,12 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automat</string>
+  <string name="morphe_override_initial_video_quality_title">Suprascrie calitatea video inițială</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Remediază o problemă în care calitatea video implicită nu este aplicată imediat după pornirea videoclipului
+
+Limitare: redarea poate să nu funcționeze pe unele dispozitive dacă 'Spoof fluxuri video' este setat la 'Android VR' și 'Forțează codec AVC (H.264)' este activat"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Reține calitatea video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Aplică selecția ta manuală de calitate pentru toate videoclipurile viitoare</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Notificări de schimbare a calității</string>

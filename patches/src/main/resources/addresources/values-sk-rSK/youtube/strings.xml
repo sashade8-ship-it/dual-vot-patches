@@ -76,6 +76,8 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_image_shelf_summary">Skryje policu obrázkov vo výsledkoch vyhľadávania</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
           for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">Skryť kartu \'Pozvať ostatných na správy\'</string>
+  <string name="morphe_hide_invite_to_message_card_summary">Skryje kartu pozvánky zobrazenú v sekcii Správy na karte Upozornenia</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Skryť tlačidlo \'Najnovšie videá\'</string>
@@ -129,10 +131,14 @@ Zmeny zahŕňajú:
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Skryť tlačidlo \'Pripojiť sa\'</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Skryť tlačidlo \'Zopakovať živý chat\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Skryje tlačidlo na opätovné prehrávanie chatu v režime na celú obrazovku</string>
   <string name="morphe_hide_medical_panels_title">Skryť lekárske panely</string>
+  <string name="morphe_hide_player_gesture_hints_title">Skryť nápovedy gest v prehrávači</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Skrýva tipy zobrazené pri gestách prehrávača, ako napríklad \'Potiahnite nahor pre presné vyhľadávanie\', \'Uvoľnite pre zrušenie\' a \'2x\'.</string>
   <string name="morphe_hide_snackbar_title">Skryť snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Skryť pravidlá pre odberateľov</string>
   <string name="morphe_hide_sync_button_title">Skryť tlačidlo \'Synchronizovať s videom\'</string>
@@ -333,6 +339,7 @@ Obmedzenia:
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Otočí funkcie ťuknutia a ťukania a podržania tlačidla \'Kopírovať odkaz na video\'</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Zakázať vyskakovacie okno \'Prihlásiť sa do TV\'</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">Zakázať kontextové okno \'Pripojte svoje zariadenia\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Zakázať preskočenie kapitoly dvojitým ťuknutím</string>
   <string name="morphe_disable_chapter_skip_double_tap_summary">Zakáže gestá dvojitého ťuknutia dvoma prstami, ktoré preskakujú kapitoly, ktoré sa môžu neúmyselne spustiť jedným prstom</string>
@@ -484,9 +491,15 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Povoliť miniatúry na posúvači</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Zobrazuje miniatúru videa počas ťahania posúvača</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Povoliť DVR živého vysielania' nemusí byť dostupné
+
+Na opravu zapnite 'Falšovať video streamy' a zmeňte 'Predvolený klient' na 'TV Simply' alebo 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Rozšíriť trvanie DVR živého prenosu</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Umožňuje vám prehliadať živé vysielania späť až o 7 dní</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Rozšíriť trvanie DVR živého vysielania' nemusí byť dostupné
+
+Na opravu zapnite 'Falšovať video streamy' a zmeňte 'Predvolený klient' na 'TV Simply' alebo 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Povoliť posúvanie pre vyhľadávanie</string>
   <string name="morphe_slide_to_seek_summary">Zapne posúvanie na vyhľadávanie namiesto prehrávania 2x rýchlosťou pri podržaní prehrávača videa</string>
@@ -1050,8 +1063,12 @@ Ak je povolené, URL adresy videí sa odošlú na server API a neodosielajú sa 
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Auto</string>
+  <string name="morphe_override_initial_video_quality_title">Prepísať počiatočnú kvalitu videa</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Opravuje problém, keď sa predvolená kvalita videa neaplikuje okamžite po spustení videa
+
+Obmedzenie: Prehrávanie nemusí fungovať na niektorých zariadeniach, ak je 'Falšovať video streamy' nastavené na 'Android VR' a je povolený 'Vynútiť AVC (H.264) codec'"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Zapamätať kvalitu videa</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Použije vašu manuálnu voľbu kvality na všetky budúce videá</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Upozornenia na zmenu kvality</string>

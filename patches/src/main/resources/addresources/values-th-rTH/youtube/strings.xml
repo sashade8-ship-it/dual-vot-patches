@@ -131,10 +131,14 @@ Second \"item\" text"</string>
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">ซ่อนปุ่มสมัคร</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">ซ่อนปุ่ม \'เล่นแชทสดซ้ำ\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">ซ่อนปุ่มเล่นแชทซ้ำในโหมดเต็มหน้าจอ</string>
   <string name="morphe_hide_medical_panels_title">ซ่อนแผงทางการแพทย์</string>
+  <string name="morphe_hide_player_gesture_hints_title">ซ่อนคำแนะนำท่าทางของเครื่องเล่น</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">ซ่อนคำแนะนำที่แสดงระหว่างท่าทางการเล่น เช่น \'ดึงขึ้นเพื่อการค้นหาที่แม่นยำ\', \'ปล่อยเพื่อยกเลิก\' และ \'2x\'</string>
   <string name="morphe_hide_snackbar_title">ซ่อนสแน็กบาร์</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">ซ่อนหลักเกณฑ์สำหรับผู้ติดตาม</string>
   <string name="morphe_hide_sync_button_title">ซ่อนปุ่ม \'ซิงค์กับวิดีโอ\'</string>
@@ -481,19 +485,19 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_title">ปิดใช้งานท่าทางการค้นหาแบบแม่นยำ</string>
   <string name="morphe_disable_precise_seeking_gesture_summary">ปิดใช้งานโหมดการค้นหาที่แม่นยำซึ่งเปิดใช้งานเมื่อดึงแถบความคืบหน้า</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
-  <string name="morphe_livestream_dvr_title">เปิดใช้งาน DVR สตรีมมิงสด</string>
+  <string name="morphe_livestream_dvr_title">เปิดใช้งาน DVR ไลฟ์สตรีม</string>
   <string name="morphe_livestream_dvr_summary">ช่วยให้สามารถข้ามไปยังส่วนต่างๆ ของการถ่ายทอดสดได้ทั้งหมด แม้แต่การถ่ายทอดสดที่ปกติแล้วจะจำกัดการทำงานนี้ไว้</string>
   <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <string name="morphe_seekbar_thumbnail_preview_title">เปิดใช้งานภาพขนาดย่อของแถบเลื่อน</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">แสดงภาพขนาดย่อของวิดีโอขณะลากแถบเลื่อน</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Enable livestream DVR' อาจไม่สามารถใช้งานได้
+  <string name="morphe_livestream_dvr_not_available">"'เปิดใช้งาน DVR ไลฟ์สตรีม' อาจไม่สามารถใช้งานได้
 
 หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV Simply' หรือ 'visionOS'"</string>
-  <string name="morphe_expand_livestream_dvr_duration_title">ขยายระยะเวลาบันทึกวิดีโอไลฟ์สตรีม</string>
+  <string name="morphe_expand_livestream_dvr_duration_title">ขยายระยะเวลา DVR ไลฟ์สตรีม</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">ช่วยให้คุณสามารถย้อนกลับการออกอากาศสดได้ถึง 7 วันย้อนหลัง</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Expand livestream DVR duration' อาจไม่สามารถใช้งานได้
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'ขยายระยะเวลา DVR ไลฟ์สตรีม' อาจไม่สามารถใช้งานได้
 
 หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV Simply' หรือ 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
@@ -1059,12 +1063,12 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">อัตโนมัติ</string>
-  <string name="morphe_override_initial_video_quality_title">Override initial video quality</string>
+  <string name="morphe_override_initial_video_quality_title">แทนที่คุณภาพวิดีโอเริ่มต้น</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Fixes an issue where the default video quality is not applied immediately after the video starts
+  <string name="morphe_override_initial_video_quality_summary">"แก้ไขปัญหาคุณภาพวิดีโอเริ่มต้นไม่ถูกนำมาใช้ทันทีหลังจากที่วิดีโอเริ่มเล่น
 
-Limitation: Playback may not work on some devices if 'Spoof video streams' is set to 'Android VR' and 'Force AVC (H.264) codec' is enabled"</string>
+ข้อจำกัด: การเล่นอาจไม่ทำงานบนอุปกรณ์บางชนิดหากตั้งค่า 'ปลอมแปลงสตรีมวิดีโอ' เป็น 'Android VR' และเปิดใช้งาน 'บังคับใช้ตัวแปลงสัญญาณ AVC (H.264)'"</string>
   <string name="morphe_remember_video_quality_last_selected_title">จำคุณภาพวิดีโอ</string>
   <string name="morphe_remember_video_quality_last_selected_summary">ใช้การตั้งค่าคุณภาพที่คุณเลือกด้วยตนเองกับวิดีโอทั้งหมดในอนาคต</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">การแจ้งเตือนการเปลี่ยนแปลงคุณภาพ</string>

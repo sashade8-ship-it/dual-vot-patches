@@ -130,10 +130,14 @@ Perubahan termasuk:
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">Sembunyikan tombol Gabung</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">Sembunyikan tombol \'Putar ulang live chat\'</string>
   <string name="morphe_hide_live_chat_replay_button_summary">Menyembunyikan tombol putar ulang chat dalam mode layar penuh</string>
   <string name="morphe_hide_medical_panels_title">Sembunyikan panel medis</string>
+  <string name="morphe_hide_player_gesture_hints_title">Sembunyikan petunjuk gestur pemutar</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">Menyembunyikan petunjuk yang ditampilkan selama gestur pemutar, seperti \'Geser ke atas untuk presisi pencarian\', \'Lepaskan untuk membatalkan\', dan \'2x\'.</string>
   <string name="morphe_hide_snackbar_title">Sembunyikan snackbar</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Sembunyikan panduan subscriber</string>
   <string name="morphe_hide_sync_button_title">Sembunyikan tombol \'Sinkronkan ke video\'</string>
@@ -486,9 +490,15 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_seekbar_thumbnail_preview_title">Akifkan thumbnail pada bilah geser</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Menampilkan thumbnail video saat menggeser bilah geser</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Aktifkan siaran langsung DVR' mungkin tidak tersedia
+
+Untuk memperbaikinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' menjadi 'TV Simply' atau 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Perluas durasi siaran langsung DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Mengizinkan Anda untuk memutar ulang siaran langsung hingga 7 hari ke masa lalu</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Perluas durasi siaran langsung DVR' mungkin tidak tersedia
+
+Untuk memperbaikinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' menjadi 'TV Simply' atau 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktifkan geser untuk mencari</string>
   <string name="morphe_slide_to_seek_summary">Aktifkan geser untuk mencari daripada memutar pada kecepatan 2x saat menekan dan menahan pemutar video</string>
@@ -1052,8 +1062,12 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Otomatis</string>
+  <string name="morphe_override_initial_video_quality_title">Timpa kualitas video awal</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"Memperbaiki masalah di mana kualitas video bawaan tidak diterapkan segera setelah video dimulai
+
+Keterbatasan: Pemutaran mungkin tidak berfungsi di beberapa perangkat jika 'Palsukan aliran video' diatur ke 'Android VR' dan 'Paksa codec AVC (H.264)' diaktifkan"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Ingat kualitas video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Menerapkan pilihan kualitas manual Anda ke semua video mendatang</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Pemberitahuan perubahan kualitas</string>

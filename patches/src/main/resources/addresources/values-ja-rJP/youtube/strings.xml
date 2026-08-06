@@ -131,10 +131,14 @@ Second \"item\" text"</string>
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">「メンバーになる」ボタンを非表示</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">「チャットのリプレイ」ボタンを非表示</string>
   <string name="morphe_hide_live_chat_replay_button_summary">全画面表示モードでの「チャットのリプレイ」ボタンを非表示にします</string>
   <string name="morphe_hide_medical_panels_title">医療情報パネルを非表示</string>
+  <string name="morphe_hide_player_gesture_hints_title">プレーヤー操作のヒントを非表示</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">「上にスワイプして再生位置を細かく調整」「バーを放すと元の位置に戻ります」「2 倍速」などのプレーヤー操作中に表示されるヒントを非表示にします</string>
   <string name="morphe_hide_snackbar_title">スナックバー通知を非表示</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">チャンネル登録者のガイドラインを非表示</string>
   <string name="morphe_hide_sync_button_title">「動画に同期」ボタンを非表示</string>
@@ -487,9 +491,15 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_seekbar_thumbnail_preview_title">シーク位置の映像を縮小表示</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">シークバーをドラッグしてシークしているときに、シーク位置の映像を縮小した画像をシークバーの上に表示します</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"[すべてのライブ配信で DVR を有効化] をオンにしたときに正常に動作しない場合があります
+
+この問題を解決するには、[動画ストリームを偽装] をオンにして [デフォルトのクライアント] を「TV Simply」または「visionOS」に変更してください"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">ライブ配信の DVR の制限を拡張</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">ライブ配信を最大 7 日前まで巻き戻し可能にします</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"[ライブ配信の DVR の制限を拡張] をオンにしたときに正常に動作しない場合があります
+
+この問題を解決するには、[動画ストリームを偽装] をオンにして [デフォルトのクライアント] を「TV Simply」または「visionOS」に変更してください"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">スライドによるシークを有効化</string>
   <string name="morphe_slide_to_seek_summary">動画プレーヤーの画面を長押ししたときに倍速再生ではなくスライドによるシークが有効になります。</string>
@@ -1052,8 +1062,12 @@ Automotive レイアウト
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">自動</string>
+  <string name="morphe_override_initial_video_quality_title">デフォルトの画質を強制的に適用</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"動画の再生開始直後に [デフォルトの画質] が適用されない問題を修正します
+
+制限事項: [動画ストリームを偽装] のクライアントが「Android VR」で、かつ [AVC (H.264) を強制的に使用] を有効にしている場合、一部のデバイスで動画が再生できない場合があります"</string>
   <string name="morphe_remember_video_quality_last_selected_title">画質を保存</string>
   <string name="morphe_remember_video_quality_last_selected_summary">画質メニューでの画質の変更を、設定の「デフォルトの画質」に反映し、すべての動画に適用します</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">画質変更の通知</string>

@@ -131,10 +131,14 @@ Second \"item\" text"</string>
           This button usually appears in the video player for certain videos. -->
   <string name="morphe_hide_join_membership_button_title">যোগদান বোতাম লুকান</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears when in fullscreen for live streamed videos after opening live chat. -->
+          This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
   <string name="morphe_hide_live_chat_replay_button_title">লুকান \'লাইভ চ্যাট রিপ্লে\' বোতাম</string>
   <string name="morphe_hide_live_chat_replay_button_summary">ফুলস্ক্রিন মোডে চ্যাট রিপ্লে বোতামটি লুকায়</string>
   <string name="morphe_hide_medical_panels_title">মেডিকেল প্যানেল লুকান</string>
+  <string name="morphe_hide_player_gesture_hints_title">প্লেয়ার জেসচার ইঙ্গিত লুকান</string>
+  <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
+          These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">প্লেয়ার জেসচার চলাকালীন দেখানো ইঙ্গিতগুলো লুকিয়ে রাখে, যেমন \'সুনির্দিষ্ট সন্ধানের জন্য উপরে টানুন\', \'বাতিল করতে ছেড়ে দিন\' এবং \'2x\'</string>
   <string name="morphe_hide_snackbar_title">স্ন্যাকবার লুকান</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">সাবস্ক্রাইবার নির্দেশিকা লুকান</string>
   <string name="morphe_hide_sync_button_title">\'ভিডিওর সাথে সিঙ্ক করুন\' বোতামটি লুকিয়ে রাখুন</string>
@@ -487,9 +491,15 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_seekbar_thumbnail_preview_title">সিকবার থাম্বনেইল সক্ষম করুন</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">সীকবಾರ್ টেনে আনার সময় একটি ভিডিও থাম্বনেইল দেখায়</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'লাইভস্ট্রিম ডিভিআর সক্ষম করুন' উপলব্ধ নাও হতে পারে
+
+এটি ঠিক করতে, 'স্পুফ ভিডিও স্ট্রিম' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' 'TV Simply' বা 'visionOS' এ পরিবর্তন করুন"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">লাইভস্ট্রিম ডিভিআর সময়কাল বাড়ান</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">আপনাকে লাইভ সম্প্রচারগুলি অতীতের ৭ দিন পর্যন্ত रिवाइंड করতে দেয়</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'লাইভস্ট্রিম ডিভিআর সময়কাল প্রসারিত করুন' উপলব্ধ নাও হতে পারে
+
+এটি ঠিক করতে, 'স্পুফ ভিডিও স্ট্রিম' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' 'TV Simply' বা 'visionOS' এ পরিবর্তন করুন"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">ভিডিওর নির্দিষ্ট অংশে যেতে টানুন সক্রিয় করুন</string>
   <string name="morphe_slide_to_seek_summary">ভিডিও প্লেয়ারে প্রেস এবং ধরে রাখলে 2x গতিতে খেলার পরিবর্তে স্লাইড করতে সন্ধান চালু করে।</string>
@@ -1053,8 +1063,12 @@ DeArrow.ajay.app ওপেন করতে এখানে ট্যাপ ক�
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">স্বতস্ফূর্তভাবে</string>
+  <string name="morphe_override_initial_video_quality_title">প্রাথমিক ভিডিও মান ওভাররাইড করুন</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_override_initial_video_quality_summary">"ভিডিও শুরু হওয়ার পরে ডিফল্ট ভিডিও মান অবিলম্বে প্রয়োগ না হওয়ার সমস্যা সমাধান করে
+
+সীমাবদ্ধতা: কিছু ডিভাইসে প্লেব্যাক কাজ নাও করতে পারে যদি 'স্পুফ ভিডিও স্ট্রিম' 'Android VR' এ সেট করা থাকে এবং 'ফোর্স AVC (H.264) কোডেক' সক্রিয় থাকে"</string>
   <string name="morphe_remember_video_quality_last_selected_title">ভিডিও গুণমান মনে রাখুন</string>
   <string name="morphe_remember_video_quality_last_selected_summary">আপনার ম্যানুয়াল গুণমান নির্বাচন ভবিষ্যতে সমস্ত ভিডিওতে প্রয়োগ করে</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">গুণমান পরিবর্তন বিজ্ঞপ্তি দেখান</string>
