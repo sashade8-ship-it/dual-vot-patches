@@ -1,3 +1,13 @@
+## 1.39.0-dev.8-dualvot.8.2 (2026-08-06)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.39.0-dev.8](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.8).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.39.0-dev.6-dualvot.8.2 (2026-08-05)
 
 ### Automated Morphe update
@@ -257,6 +267,26 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.39.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.7...v1.39.0-dev.8) (2026-08-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music - Disable DRC audio:** Fix patching experimental app versions ([04aed07](https://github.com/MorpheApp/morphe-patches/commit/04aed073ee4829fbac26c597a62ebbc1a524f588))
+
+## [1.39.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.6...v1.39.0-dev.7) (2026-08-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - DRC audio:** Patch doesn't work on last experimental versions. ([65c5816](https://github.com/MorpheApp/morphe-patches/commit/65c581662a72ccba9f28923a9ada8564f238c310))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide player gesture hints" setting ([#2328](https://github.com/MorpheApp/morphe-patches/issues/2328)) ([588b8c0](https://github.com/MorpheApp/morphe-patches/commit/588b8c0f41bac446d1479d60bf632d88762cb057))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.31.0` ([2f3df14](https://github.com/MorpheApp/morphe-patches/commit/2f3df146415cc407220499fcc7bea60378940b5d))
 
 ## [1.39.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.5...v1.39.0-dev.6) (2026-08-05)
 
