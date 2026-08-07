@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -25,8 +25,8 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">使用第三方下载应用下载音乐视频、播客或歌曲</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">覆盖下载按钮</string>
-  <string name="morphe_external_downloader_action_button_summary">使用您选择的外部下载器，而非 YouTube Music 内置的下载功能</string>
-  <string name="morphe_external_downloader_flyout_menu_title">覆盖下载菜单</string>
+  <string name="morphe_external_downloader_action_button_summary">使用您选择的外部下载器代替系统默认的「下载」操作按钮</string>
+  <string name="morphe_external_downloader_flyout_menu_summary">使用您选择的外部下载器代替系统默认的「下载」弹出菜单</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">关于</string>
@@ -326,9 +326,5 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
 
 如果没有找到第三方歌词，则会显示内置歌词"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_music_spoof_app_version_target_entry_6_35_52">6.35.52 - 恢复旧版浮动面板</string>
-  <string name="morphe_music_spoof_app_version_target_entry_6_42_55">6.42.55 - 禁用实时歌词</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_12_52">7.12.52 - 恢复旧版动态歌词</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - 恢复旧版操作栏</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_17_52">7.17.52 - 主页信息流中未显示评论区</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - 恢复播放器的「接下来播放」「歌词」和「相关」标签页</string>
 </resources>

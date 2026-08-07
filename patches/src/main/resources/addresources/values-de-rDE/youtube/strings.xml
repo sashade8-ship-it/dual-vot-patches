@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -124,6 +124,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_youtube_doodles_user_dialog_message">Das Anzeigen von YouTube-Doodles kann dazu führen, dass benutzerdefinierte Kopfzeilen nicht angezeigt werden.</string>
   <string name="morphe_hide_channel_bar_title">Kanalleiste ausblenden</string>
   <string name="morphe_hide_channel_watermark_title">Kanal-Wasserzeichen ausblenden</string>
+  <string name="morphe_hide_chapters_timeline_button_title">Kapitel und Schaltfläche \'In diesem Video\' ausblenden</string>
   <string name="morphe_hide_crowdfunding_box_title">Crowdfunding-Box ausblenden</string>
   <string name="morphe_hide_emergency_box_title">Notfall-Boxen ausblenden</string>
   <string name="morphe_hide_info_panels_title">Info-Panels ausblenden</string>
@@ -231,9 +232,9 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_comments_screen_title">Kommentare</string>
   <string name="morphe_comments_screen_summary">Wählen Sie aus, welche Komponenten im Kommentarbereich angezeigt werden sollen</string>
   <string name="morphe_hide_comments_carousel_title">Filter für Kommentar-Karussell aktivieren</string>
-  <string name="morphe_hide_comments_carousel_summary">"• Vergewissere dicht, dass du den genauen Namen des Karussellelements eingibst (z. B. Fragen, Dieses Video bewerben, Auf YouTube Music hören usw.).
-• Das Ausblenden von Karussellelementen kann unbeabsichtigte Nebenwirkungen haben.
-• Wenn alle Karussellelemente ausgeblendet sind, wird auch der gesamte Kommentarbereich ausgeblendet."</string>
+  <string name="morphe_hide_comments_carousel_summary">"• Stelle sicher, dass du den genauen Namen des Karussellelements eingibst (z. B. Fragen, Dieses Video bewerben, Auf YouTube Music hören)
+• Das Ausblenden von Karussellelementen kann unbeabsichtigte Nebenwirkungen haben
+• Wenn alle Karussellelemente ausgeblendet sind, wird auch der gesamte Kommentarbereich ausgeblendet"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Kommentar-Karussell-Filter</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Gib die Namen der Kommentar-Karussell-Elemente, nach denen gefiltert werden soll durch neue Zeilen getrennt ein</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">KI-Chat-Zusammenfassung ausblenden</string>
@@ -266,7 +267,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_keyword_content_phrases_title">Zu versteckende Stichwörter</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"Geben Sie Schlüsselwörter und Phrasen ein, die Sie ausblenden möchten, getrennt durch neue Zeilen
+  <string name="morphe_hide_keyword_content_phrases_summary">"Gib Schlüsselwörter und Phrasen ein, die du ausblenden möchtest, getrennt durch neue Zeilen
 
 Schlüsselwörter können beliebige Texte sein, die in Videotiteln oder Kanalnamen angezeigt werden
 
@@ -323,7 +324,6 @@ Tippen Sie hier, um AiSlopList.com zu öffnen und Downloads für andere Plattfor
   <string name="morphe_hide_end_screen_store_banner_title">Shop-Banner im Endscreen ausblenden</string>
   <string name="morphe_hide_general_ads_title">Allgemeine Werbung ausblenden</string>
   <string name="morphe_hide_merchandise_banners_title">Merchandise-Banner ausblenden</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">\"Enthält bezahlte Werbung\"-Hinweise ausblenden</string>
   <string name="morphe_hide_player_popup_ads_title">Popup-Anzeigen im Videoplayer ausblenden</string>
   <string name="morphe_hide_self_sponsor_ads_title">Selbst gesponserte Karten ausblenden</string>
@@ -350,7 +350,6 @@ Tippen Sie hier, um AiSlopList.com zu öffnen und Downloads für andere Plattfor
   <string name="morphe_external_downloader_summary">Zeigt eine Overlay-Schaltfläche im Videoplayer an, die Ihren externen Downloader öffnet</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Download-Aktionsschaltfläche &amp; Menü überschreiben</string>
-  <string name="morphe_external_downloader_action_button_summary">Verwendet Ihren gewählten externen Downloader anstelle der integrierten Downloadfunktion von YouTube</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Sprachausgabe-Übersetzung</string>
   <string name="morphe_vot_screen_summary">Lies die Videountertitel laut mithilfe der Text-to-Speech-Funktion des Geräts, synchronisiert mit der Wiedergabe.</string>
@@ -378,7 +377,7 @@ Tippen Sie hier, um OpenRouter.ai zu öffnen"</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter nicht konfiguriert</string>
   <string name="morphe_vot_openrouter_not_configured_message">Geben Sie Ihren OpenRouter-API-Key in den Einstellungen ein, bevor Sie diesen Anbieter auswählen</string>
   <string name="morphe_vot_cost_free">Kostenlos</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">%s pro 100 Videostunden</string>
   <string name="morphe_vot_tts_voice_type">Sprache</string>
   <string name="morphe_vot_tts_system">System</string>
@@ -450,12 +449,15 @@ Info: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <string name="morphe_save_to_watch_later_success_toast">Video erfolgreich zur Wiedergabeliste \"Später ansehen\" hinzugefügt</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Dieses Video ist bereits zur Wiedergabeliste \"Später ansehen\" hinzugefügt</string>
   <string name="morphe_save_to_watch_later_error_toast">Dieses Video kann nicht zur Wiedergabeliste \"Später ansehen\" hinzugefügt werden</string>
+  <string name="morphe_queue_flyout_title">Zur Morphe-Warteschlange hinzufügen</string>
   <string name="morphe_queue_restore_title">Warteschlange zwischen Sitzungen beibehalten</string>
   <string name="morphe_queue_restore_summary">Warteschlange wird nach Neustart der App beibehalten</string>
   <string name="morphe_swap_save_and_queue_actions_title">Tausche Speichern- und Warteschlangenaktionen</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Tippen für Warteschlangen-Optionen; tippen und halten, um zum späteren Ansehen zu speichern.</string>
   <string name="morphe_queue_override_flyout_menu_title">Überschreiben-Schaltfläche für Feed-Flyout-Warteschlange</string>
   <string name="morphe_queue_override_flyout_menu_summary">Öffnet die Morphe-Warteschlange anstelle der YouTube-Warteschlange</string>
+  <string name="morphe_queue_add_flyout_menu_title">Menüpunkt für Flyout-Warteschlange im Feed hinzufügen</string>
+  <string name="morphe_queue_add_flyout_menu_summary">Fügt einen zusätzlichen Flyout-Eintrag hinzu. Aktivieren Sie diese Option, wenn \"Zur Warteschlange hinzufügen\" nicht angezeigt wird</string>
   <string name="morphe_queue_manager_check_failed_auth">Nicht angemeldet</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Keine Wiedergabelisten-ID</string>
   <string name="morphe_queue_manager_check_failed_queue">Warteschlange ist leer</string>
@@ -518,7 +520,6 @@ Um dies zu beheben, aktivieren Sie 'Videostreams fälschen' und ändern Sie 'Sta
   <string name="morphe_swipe_zone_label_volume">Lautstärke</string>
   <string name="morphe_swipe_zone_label_native">Nativ</string>
   <string name="morphe_swipe_press_to_engage_title">Berührungsschutz für Gesten aktivieren</string>
-  <string name="morphe_swipe_press_to_engage_summary">Erfordert Drücken und Halten, bevor eine Geste erkannt wird</string>
   <string name="morphe_swipe_haptic_feedback_title">Haptisches Feedback aktivieren</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Helligkeit speichern und wiederherstellen</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">Erlaubt, dass die Helligkeit beim Wechsel in den Vollbildmodus gespeichert und beim Verlassen wiederhergestellt wird</string>
@@ -633,9 +634,6 @@ Um dies zu beheben, aktivieren Sie 'Videostreams fälschen' und ändern Sie 'Sta
   <string name="morphe_auto_captions_style_legacy_entry_2">Verberge automatische Untertitel</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Caption-Cookies festlegen</string>
-  <string name="morphe_set_caption_cookies_summary">"Behebt einen Fehler in YouTube, bei dem die automatischen Untertitel aufgrund fehlender Cookies möglicherweise nicht verfügbar sind
-
-„Caption-Cookies“ müssen angegeben werden"</string>
   <string name="morphe_caption_cookies_title">Untertitel-Cookies</string>
   <string name="morphe_caption_cookies_summary">Cookies, die in Timed Text API (Caption Data API)-Anfragen festgelegt werden sollen</string>
   <string name="morphe_get_caption_cookies_title">Untertitel-Cookies abrufen</string>
@@ -702,7 +700,7 @@ Um auf die Einstellungen zuzugreifen, aktiviere den Einstellungen-Button über A
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Einstellungs-Menü</string>
   <string name="morphe_hide_player_flyout_summary">Wähle aus, welche Komponenten im Flyout-Menü angezeigt werden</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Menü „Audiotrack“ ausblenden</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -896,7 +894,6 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_open_system_share_sheet_summary">Öffnet die systemeigene Freigabeansicht anstelle der In-App-Ansicht, wenn Sie Inhalte teilen</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube-Music-Schaltfläche überschreiben</string>
-  <string name="morphe_override_youtube_music_buttons_summary">Öffnet Ihre bevorzugte Musik-App anstelle der offiziellen YouTube Music App</string>
   <string name="morphe_music_package_name_title">Paketname der Musik-App</string>
   <string name="morphe_music_package_name_summary">Paketname Ihrer installierten Musik-App</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1049,7 +1046,6 @@ Tippen Sie hier, um mehr über DeArrow zu erfahren"</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">Benachrichtigung Mediensteuerung</string>
   <string name="morphe_notification_media_screen_summary">Passen Sie die Anzeige der Wiedergabesteuerelemente auf Ihrem Sperrbildschirm und in Ihrem Benachrichtigungsfeld an</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Schaltflächen „Zurück“ &amp; „Weiter“ ausblenden</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Blendet Zurück- und Weiter-Schaltflächen in Medienbenachrichtigung, Sperrbildschirm und Kopfhörersteuerung aus.</string>
   <string name="morphe_disable_notification_media_seekbar_title">Videofortschrittsbalken deaktivieren</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Verhindert das Ziehen der Fortschrittsanzeige auf dem Sperrbildschirm und im Benachrichtigungsfeld</string>
@@ -1122,7 +1118,6 @@ Einschränkungen:
 • HDR-Videos verwenden kein AVC
 • Einige Geräte können AVC nicht erzwingen"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Ändere „Video-Streams spoofen“ auf \'Android VR\' oder \'Android Studio\', um diese Funktion zu nutzen</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Erweiterte Qualitätseinstellungen öffnen</string>
   <string name="morphe_advanced_video_quality_menu_summary">Überspringt das Menü zur Qualitätsauswahl und öffnet direkt die erweiterten Qualitätseinstellungen</string>
@@ -1133,13 +1128,10 @@ Einschränkungen:
   <string name="morphe_video_quality_prioritize_summary">Priorisiert die höchstmögliche Videoqualität gegenüber der Codec-Effizienz</string>
   <string name="morphe_video_quality_prioritize_dialog">Ist diese Einstellung deaktiviert, werden bei älteren Videos möglicherweise keine Optionen zur Videoqualität angezeigt</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Erlaube AV1 bei Android VR / visionOS</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Erlaubt softwareseitige AV1-Dekodierung, wenn Android VR / visionOS als Client ausgewählt ist</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Durch Aktivierung dieser Einstellung kann Software-AV1-Decodierung verwendet werden.
 
 Die Videowiedergabe mit AV1 kann stottern oder Bilder überspringen."</string>
   <string name="morphe_spoof_video_streams_about_title">Nebenwirkungen des Spoofings</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audiotrack-Menü fehlt</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Kein AV1-Videocodec</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR immersiver Modus ist nicht verfügbar</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabile Lautstärke ist nicht verfügbar</string>
@@ -1149,7 +1141,6 @@ Die Videowiedergabe mit AV1 kann stottern oder Bilder überspringen."</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Die Qualität kann auf 720p beschränkt sein</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Player-JavaScript-Variante</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Fälschen in Statistiken für Nerds anzeigen</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">Alte Video-Aktionsleiste wiederherstellen</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Behebt fehlende Dislikes und das Nichtausblenden der Video-Aktionsschaltfläche

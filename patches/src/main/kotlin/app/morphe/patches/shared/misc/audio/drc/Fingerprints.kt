@@ -9,6 +9,7 @@ package app.morphe.patches.shared.misc.audio.drc
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
+import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.opcode
 import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.Opcode
@@ -18,7 +19,7 @@ internal object VolumeNormalizationConfigLegacyFingerprint : Fingerprint (
         opcode(opcode = Opcode.IGET_OBJECT),
         opcode(opcode = Opcode.IGET_OBJECT, location = MatchAfterImmediately()),
         opcode(opcode = Opcode.IGET_OBJECT, location = MatchAfterImmediately()),
-        opcode(opcode = Opcode.IF_NEZ, location = MatchAfterImmediately()),
+        opcode(opcode = Opcode.IF_NEZ, location = MatchAfterWithin(5)),
         opcode(opcode = Opcode.IGET_OBJECT),
         string("rng."),
         string(";trkcfg.")

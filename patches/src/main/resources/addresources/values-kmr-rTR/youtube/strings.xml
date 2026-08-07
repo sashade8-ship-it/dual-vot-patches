@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -124,6 +124,7 @@ Guherînan têne xistine:
   <string name="morphe_hide_youtube_doodles_user_dialog_message">Nîşandina Doodlên YouTube dikare pêşî li serê sernivîsên xwerû bigire ku bên dîsplaykirin.</string>
   <string name="morphe_hide_channel_bar_title">Barê kanalê veşêrin</string>
   <string name="morphe_hide_channel_watermark_title">Avahiya kanalê veşêrin</string>
+  <string name="morphe_hide_chapters_timeline_button_title">Veşartina bişkokên \'Beş\' û \'Di vî vîdyoyê de\'</string>
   <string name="morphe_hide_crowdfunding_box_title">Qutbixaneya crowdsourcing-ê bidin veqêşînin</string>
   <string name="morphe_hide_emergency_box_title">Qutiyên acil veşêrin</string>
   <string name="morphe_hide_info_panels_title">Panelên agahdariyê veşêrin</string>
@@ -230,9 +231,9 @@ Guherînan têne xistine:
   <string name="morphe_comments_screen_title">Şirove</string>
   <string name="morphe_comments_screen_summary">Navê karuselê yên şîroveyan da ku bi wan ve fîltre bikin, bi herî her rêzê de</string>
   <string name="morphe_hide_comments_carousel_title">Filtra karuselê komentaran çalak bike</string>
-  <string name="morphe_hide_comments_carousel_summary">"• Ewle bike ku navê rast ê tiştê carouselê têkevin (mîna Pirs, Bêdengkirina vîdyoyê, Guhdarî li YouTube Music, hwd.)
-• Veşartina tiştên carouselê dikare bandorên nehevseng hebe.
-• Ger hemû tiştên carouselê veşêrin, hemû beşa şîroveyan jî wê veşêrin."</string>
+  <string name="morphe_hide_comments_carousel_summary">"• Ji kerema xwe navê tam yê hêmanê carousel binivîse (bo nimûne, Bipirse, Hype vîdyoyê, Guhdarî li YouTube Music)
+• Veşartina hêmanên carousel dikare bandorên neyên xwestin hebe
+• Ger hemû hêmanên carousel veşartî bin, dê hemû beşa şîroveyan jî veşartî be."</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Filtra karuselê komentaran çalak bike</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Mesajên agahiyên di beşa şîroveyan de veşêrin</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Xelîza xebatî ya AI veşêrin</string>
@@ -265,11 +266,11 @@ Guherînan têne xistine:
   <string name="morphe_hide_keyword_content_phrases_title">Şêwaziyên veşerê</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"Enter keywords and phrases to hide, separated by new lines
+  <string name="morphe_hide_keyword_content_phrases_summary">"Peyvên sereke û hevokan ji bo veşartinê binivîse, bi xetên nû ji hev veqetandî
 
-Keywords can be any text shown in video titles or channel names
+Peyvên sereke dikarin her nivîsinek bin ku di navên vîdyoyan an navên kanalan de tê dîtin
 
-Words with uppercase letters in the middle must match exactly (ie: iPhone, TikTok, LeBlanc)"</string>
+Peyvên ku tîpên mezin di navîn de hene divê tam li hev bikin (bo nimûne, iPhone, TikTok, LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_summary">"Serê malê / Abonayî / Lêgerîn / Şîrovet bi peyvên sereke fêltirêkirin da ku naveroka ku bi hev re tê peyvên sereke veşêre
 
 Sînorkirin:
@@ -322,7 +323,6 @@ Bike li vir da vekirina AiSlopList.com û dîsa dîtina barkirina platformên di
   <string name="morphe_hide_end_screen_store_banner_title">Bannera firoşgeya store\'yê ekranê dabezîne</string>
   <string name="morphe_hide_general_ads_title">Reklamên gelemperî veşêrin</string>
   <string name="morphe_hide_merchandise_banners_title">Bannerên meşandinê veşêrin</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">Nîşanên pêşkeşkirina parastinê veşêre</string>
   <string name="morphe_hide_player_popup_ads_title">Ragihîştina reklamên popup-a lîstikvanê veşêre</string>
   <string name="morphe_hide_self_sponsor_ads_title">Kartên xîzetkaran veşêrin</string>
@@ -349,7 +349,7 @@ Bike li vir da vekirina AiSlopList.com û dîsa dîtina barkirina platformên di
   <string name="morphe_external_downloader_summary">Shows an overlay button in video player that opens your external downloader</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Dagirbêjkirina bişko û menuya Dakêşê &amp;</string>
-  <string name="morphe_external_downloader_action_button_summary">Bêyî karê dakêşkirina veqrasî yê YouTube, dakêşkirina we ya bijartî bikar tîne</string>
+  <string name="morphe_external_downloader_action_button_summary">Li şûna taybetmendiya dakêşana standard, dakêşana derveyî ya ku we hilbijartiye bikar tîne.</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Wergerê dîtinî</string>
   <string name="morphe_vot_screen_summary">Jê wergirê nivîskên vîdyoyê bi teknolojîya veguherandina nivîsê ya cîhazê, bi hevdîtina lîstikê, bi dengî bixîne</string>
@@ -377,7 +377,7 @@ Bike li vir da vekirina OpenRouter.ai"</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter ne hatiye saz kirin</string>
   <string name="morphe_vot_openrouter_not_configured_message">Têkeve anahtara API-ya OpenRouter-ê ya te li ser mîhengên berê ji bo hilbijartina dabînkerê vê</string>
   <string name="morphe_vot_cost_free">Belaş</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">%s her 100 saet vîdeoyê</string>
   <string name="morphe_vot_tts_voice_type">Deng</string>
   <string name="morphe_vot_tts_system">Sîstem</string>
@@ -517,7 +517,6 @@ Ji bo rastkirina vê yekê, 'sextekirina vîdyo streaman' veke û 'Clienta xwer�
   <string name="morphe_swipe_zone_label_volume">Volume</string>
   <string name="morphe_swipe_zone_label_native">Binguhî</string>
   <string name="morphe_swipe_press_to_engage_title">Gestikaya çavkaniyê veşêre</string>
-  <string name="morphe_swipe_press_to_engage_summary">Pêdivî ye ku tevahî pêşî vêguhêrin û paşê destgîr bikin da ku lîkêkirina destgîrkirinê tê bikêr</string>
   <string name="morphe_swipe_haptic_feedback_title">Paşê veşêre</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Tomar bike û zerrekirina mêşê hilîne</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">Berfirehiya ronahiyê dema ku biçîvê hejmara tevahiyê tê xwendin</string>
@@ -632,9 +631,9 @@ Ji bo rastkirina vê yekê, 'sextekirina vîdyo streaman' veke û 'Clienta xwer�
   <string name="morphe_auto_captions_style_legacy_entry_2">Qefalê otomatîk</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Set caption cookies</string>
-  <string name="morphe_set_caption_cookies_summary">"Fixes a stock YouTube's bug where the auto-translate captions may not be available due to missing cookies
+  <string name="morphe_set_caption_cookies_summary">"Pirsgirêka YouTube ya standard rast dike ku jêrnivîsên wergerandina otomatîk dibe ku ji ber kêmasiya kukiyan ne berdest bin
 
-'Caption cookies' must be provided"</string>
+Divê 'kukiyên jêrnivîsan' bên peyda kirin."</string>
   <string name="morphe_caption_cookies_title">Navna kuşkî</string>
   <string name="morphe_caption_cookies_summary">Cookies to be set in Timed Text API (Caption Data API) requests</string>
   <string name="morphe_get_caption_cookies_title">Pاشخۆى وەربگرن</string>
@@ -702,7 +701,7 @@ Ji bo ku derfetên sazkarî pêşero, rêzika 'Settings' zivirînin bi General �
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menûya vexwarinê</string>
   <string name="morphe_hide_player_flyout_summary">Rêbaza desteyê hejmara desteyê kêş dibe</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Butona nivîskê veşêre</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -896,7 +895,7 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <string name="morphe_open_system_share_sheet_summary">Vekirina çarşêfa parvekirina sistemê li şûna ya brêzî dema ku hûn navnîş parve dikin</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Butonên YouTube Music-ê serdike </string>
-  <string name="morphe_override_youtube_music_buttons_summary">Bêyî karê muzîka fermî ya YouTube, serîlêdana muzîka bijartî ya we vedike</string>
+  <string name="morphe_override_youtube_music_buttons_summary">Li şûna serlêdana YouTube Music ya standard, serlêdana muzîkê ya ku hûn tercîh dikin vedike.</string>
   <string name="morphe_music_package_name_title">Navê paketa serîlêdana muzîkê</string>
   <string name="morphe_music_package_name_summary">Navê paketa serîlêdana muzîka ku we saz kiriye</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1049,7 +1048,6 @@ Bike li vir da vekirina DeArrow.ajay.app"</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">Kontrolên medyaya notifîkasyonê</string>
   <string name="morphe_notification_media_screen_summary">Kontrolên lêkirinê yên ku li ser ekrana qefilê û panela agahdarkirinê de xuya dibin, xweser bike</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Butonên Berê &amp; Paşê veşêrin</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Bişêwirîna Guherîna Pêşîn û Paşîn li ser agahdarkirina medyayê, ekrana qefilê, û kontrolên gulî</string>
   <string name="morphe_disable_notification_media_seekbar_title">Barê barkirinê neçalak bike</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Nişana rêjê li ser ekrana qefilê û panela agahdarkirinê rakîr bike</string>
@@ -1122,7 +1120,6 @@ Sînergirên:
 • Video yan HDR dê AVC bikar nebin
 • Hin alav nikarên AVC zor bike"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Daku rê vê taybetê bikar bînin, \'Hêmanên vîdyoyê yên sûnî\' hilbijêrin wek \'Android VR\' an \'Android Studio\'</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Veke ji menuya kalîteya pêşkeftî ve bike</string>
   <string name="morphe_advanced_video_quality_menu_summary">Dibe menuya hilbijartina kalîteyê derbas dike û rasterast menuya kalîteya Pêşkeftî vekirin</string>
@@ -1133,13 +1130,10 @@ Sînergirên:
   <string name="morphe_video_quality_prioritize_summary">Kalîteya herî bilind a vîdyoyê li ser karbidestiya kodekê parêz dike</string>
   <string name="morphe_video_quality_prioritize_dialog">Heke ev rêgezirîn veqetandibe, wêrên vîdyoyên kevnar nizanin ku veguhêzên kalîteya vîdyoyê nîşan bidin</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Destûrê bidin Android VR / visionOS AV1</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Destûr dide bernameyê ku veguhêzkerê AV1 bikar bîne dema ku serîlêdana Android VR / visionOS-ê tê bikar anîn</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Çalak kirina vê sazkare dikare ji dekodkirina AV1 ya nermalê bikar bîne.
 
 Lêxistina video bi AV1 dikare kîzbirin an kêmuçêkî framean bike."</string>
   <string name="morphe_spoof_video_streams_about_title">Efectê spoofingê</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Menuya rêgirên audio kêman e </string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Kodeka vîdyoyê ya AV1 tune</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• Moda berfireh a VRê 360° niye.</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Volumê stabil tune</string>
@@ -1149,7 +1143,6 @@ Lêxistina video bi AV1 dikare kîzbirin an kêmuçêkî framean bike."</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kalîte dibe ku bi 720p tê sînordar kirin.</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Warianta JavaScriptê lîstikvanê</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Şopînkirina li Stats for nerds nîşan bide</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">Çêkirina dîskê ya pelê vîdyoya kevnê</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Pirsgirêka nîşan nedana nahesibînê û nekarina veşartina bişkokên çalakiyê yê vîdeoyê çareser dike

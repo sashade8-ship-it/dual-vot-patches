@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -228,9 +228,6 @@ Second \"item\" text"</string>
   <string name="morphe_comments_screen_title">评论</string>
   <string name="morphe_comments_screen_summary">选择要在评论部分中显示的组件</string>
   <string name="morphe_hide_comments_carousel_title">启用评论轮播过滤</string>
-  <string name="morphe_hide_comments_carousel_summary">"• 确保输入轮播项的确切名称（例如，提问、热播此视频、在 YouTube Music 上收听等）。
-• 隐藏轮播项可能会产生意想不到的副作用。
-• 如果隐藏了所有轮播项，则整个评论区也会被隐藏。"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">评论轮播过滤器</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">输入要过滤的评论轮播图名称，以换行符分隔，每行一个</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">隐藏 AI 聊天摘要</string>
@@ -263,11 +260,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_keyword_content_phrases_title">要隐藏的关键字</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"输入要隐藏的关键词和短语，换行分隔
-
-关键词可以是视频标题或频道名称中的任何文本
-
-中间带有大写字母的单词必须按照字母的大小写输入 (例如: iPhone、TikTok、LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_summary">"首页/订阅/搜索/评论会过滤掉与关键词短语匹配的内容
 
 限制：
@@ -320,7 +312,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_end_screen_store_banner_title">商店横幅已隐藏</string>
   <string name="morphe_hide_general_ads_title">隐藏一般广告</string>
   <string name="morphe_hide_merchandise_banners_title">隐藏商品广告横幅</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">隐藏付费推广标签</string>
   <string name="morphe_hide_player_popup_ads_title">隐藏播放器弹出广告</string>
   <string name="morphe_hide_self_sponsor_ads_title">隐藏自我推广卡片</string>
@@ -347,7 +338,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_summary">在视频播放器中显示一个浮动按钮，用于打开您的外部下载器</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">覆盖「下载」按钮和菜单</string>
-  <string name="morphe_external_downloader_action_button_summary">使用您选择的外部下载器，而非 YouTube 内置的下载功能</string>
+  <string name="morphe_external_downloader_action_button_summary">使用您选择的外部下载器，而不是自带的下载功能。</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">语音旁白翻译</string>
   <string name="morphe_vot_screen_summary">使用设备上的文本转语音功能朗读视频字幕，并与播放同步</string>
@@ -375,7 +366,7 @@ Second \"item\" text"</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter 未配置</string>
   <string name="morphe_vot_openrouter_not_configured_message">在设置中输入您的 OpenRouter API 密钥，然后再选择此提供商</string>
   <string name="morphe_vot_cost_free">免费</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">每 100 小时 %s</string>
   <string name="morphe_vot_tts_voice_type">语音</string>
   <string name="morphe_vot_tts_system">系统</string>
@@ -515,7 +506,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_zone_label_volume">音量</string>
   <string name="morphe_swipe_zone_label_native">原生</string>
   <string name="morphe_swipe_press_to_engage_title">启用按压以滑动的手势</string>
-  <string name="morphe_swipe_press_to_engage_summary">需要按住后再执行滑动手势才能识别</string>
   <string name="morphe_swipe_haptic_feedback_title">使用触感反馈</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">保存并恢复亮度</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">进入/退出全屏模式时记住亮度级别</string>
@@ -630,7 +620,7 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">隐藏自动字幕</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">设置字幕 Cookie</string>
-  <string name="morphe_set_caption_cookies_summary">"修复 YouTube 的一个错误，即由于缺少 Cookie，自动翻译的字幕可能无法使用
+  <string name="morphe_set_caption_cookies_summary">"修复了 YouTube 自带的 bug，该 bug 可能导致自动翻译字幕因缺少 Cookie 而不可用
 
 必须提供“字幕 Cookie”"</string>
   <string name="morphe_caption_cookies_title">字幕cookie</string>
@@ -699,7 +689,7 @@ Second \"item\" text"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">弹出菜单</string>
   <string name="morphe_hide_player_flyout_summary">选择在浮动菜单中显示哪些组件</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">隐藏“音轨”菜单</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -893,7 +883,7 @@ Second \"item\" text"</string>
   <string name="morphe_open_system_share_sheet_summary">在共享内容时打开系统共享表，而不是应用内共享表</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">覆盖 YouTube Music 按钮</string>
-  <string name="morphe_override_youtube_music_buttons_summary">打开您首选的音乐应用，而非官方 YouTube Music 应用</string>
+  <string name="morphe_override_youtube_music_buttons_summary">打开您首选的音乐应用，而不是默认的YouTube Music应用</string>
   <string name="morphe_music_package_name_title">音乐应用包名</string>
   <string name="morphe_music_package_name_summary">您已安装的音乐应用的包名</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1046,7 +1036,6 @@ Second \"item\" text"</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">通知媒体控制</string>
   <string name="morphe_notification_media_screen_summary">自定义显示在锁屏和通知面板中的播放控件</string>
-  <string name="morphe_hide_notification_media_prev_next_title">隐藏上一曲和下一曲按钮</string>
   <string name="morphe_hide_notification_media_prev_next_summary">隐藏通知媒体、锁屏和耳机控件中的上一曲和下一曲按钮</string>
   <string name="morphe_disable_notification_media_seekbar_title">禁用进度条</string>
   <string name="morphe_disable_notification_media_seekbar_summary">防止在锁屏和通知面板上拖动进度条</string>
@@ -1119,7 +1108,6 @@ Second \"item\" text"</string>
 • HDR 视频将不使用 AVC
 • 某些设备无法强制使用 AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">要使用此功能，请将“伪造视频流”设置为“Android VR”或“Android Studio”</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">打开高级画质菜单</string>
   <string name="morphe_advanced_video_quality_menu_summary">跳过画质选择菜单，直接打开高级画质菜单</string>
@@ -1130,13 +1118,10 @@ Second \"item\" text"</string>
   <string name="morphe_video_quality_prioritize_summary">优先考虑最高视频画质而不是编解码器效率</string>
   <string name="morphe_video_quality_prioritize_dialog">如果关闭此设置，旧视频可能不显示视频质量选项</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">允许 Android VR / visionOS AV1</string>
-  <string name="morphe_spoof_video_streams_av1_summary">允许在 Android VR / visionOS 客户端中使用软件 AV1 解码</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"启用此设置可能会使用软件 AV1 解码。
 
 使用 AV1 播放视频可能会卡顿或丢帧。"</string>
   <string name="morphe_spoof_video_streams_about_title">欺骗的副作用</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• 音轨菜单缺失</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• 不支持 AV1 视频编解码器</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360°VR全景模式不可用</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• 稳定音量不可用</string>
@@ -1146,7 +1131,6 @@ Second \"item\" text"</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• 视频质量可能限制为 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">播放器JavaScript变种</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">在“极客统计”中显示欺骗信息</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">恢复旧版视频操作栏</string>
   <string name="morphe_restore_old_video_action_bar_summary">"修复不喜欢数量未显示和视频操作按钮无法隐藏的问题

@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -25,8 +25,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">تنزيل مقاطع الفيديو الموسيقية أو البودكاست أو الأغاني باستخدام تطبيقات تنزيل خارجية</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">استبدال زر التنزيل</string>
-  <string name="morphe_external_downloader_action_button_summary">يستخدم مُنزِّلًا خارجيًا تختاره بدلًا من ميزة التنزيل المدمجة في YouTube Music</string>
-  <string name="morphe_external_downloader_flyout_menu_title">قائمة تجاوز التنزيل</string>
+  <string name="morphe_external_downloader_action_button_summary">يستخدم أداة التنزيل الخارجية التي اخترتها بدلاً من زر التنزيل الافتراضي</string>
+  <string name="morphe_external_downloader_flyout_menu_title">تجاوز قائمة التنزيل</string>
+  <string name="morphe_external_downloader_flyout_menu_summary">يستخدم أداة التنزيل الخارجية التي اخترتها بدلاً من قائمة التنزيل الافتراضية</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">لمحة</string>
@@ -326,9 +327,6 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
 
 عندما لا يتم العثور على كلمات أغاني تابعة لجهة خارجية، يتم عرض كلمات الأغاني المضمنة بدلاً من ذلك"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_music_spoof_app_version_target_entry_6_35_52">6.35.52 - استعادة لوحة النوافذ القديمة</string>
-  <string name="morphe_music_spoof_app_version_target_entry_6_42_55">6.42.55 - تعطيل كلمات الأغاني في الوقت الفعلي</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_12_52">7.12.52 - استعادة كلمات الأغاني الديناميكية القديمة</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - استعادة شريط الإجراءات القديم</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_17_52">7.17.52 - لا يظهر قسم التعليقات في موجز الصفحة الرئيسية</string>
+  <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - تعطيل الأيقونات العريضة</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - استعادة علامات تبويب المشغل: التالي وكلمات الأغاني والمرتبطة</string>
 </resources>

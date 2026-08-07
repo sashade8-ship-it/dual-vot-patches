@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -123,6 +123,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_youtube_doodles_user_dialog_message">YouTube Doodle が表示されていると、カスタマイズしたヘッダーが表示されなくなる場合があります。</string>
   <string name="morphe_hide_channel_bar_title">チャンネルバーを非表示</string>
   <string name="morphe_hide_channel_watermark_title">チャンネルの透かしを非表示</string>
+  <string name="morphe_hide_chapters_timeline_button_title">チャプターと「この動画内」ボタンを非表示</string>
   <string name="morphe_hide_crowdfunding_box_title">クラウドファンディング欄を非表示</string>
   <string name="morphe_hide_emergency_box_title">緊急ボックスを非表示</string>
   <string name="morphe_hide_info_panels_title">情報パネルを非表示</string>
@@ -230,7 +231,7 @@ Second \"item\" text"</string>
   <string name="morphe_comments_screen_title">コメント</string>
   <string name="morphe_comments_screen_summary">コメント セクションに表示するコンポーネントを設定します</string>
   <string name="morphe_hide_comments_carousel_title">横スワイプ欄のフィルタを有効化</string>
-  <string name="morphe_hide_comments_carousel_summary">"• 横スワイプ欄の正確なタイトルを入力してください (例:「質問する」「この動画をハイプする」「YouTube Music で聴く」など)
+  <string name="morphe_hide_comments_carousel_summary">"• 横スワイプ欄の正確な名前を入力してください (例:「質問する」「この動画をハイプする」「YouTube Music で聴く」)
 • 横スワイプ欄を非表示にすると予期せぬ副作用が発生する可能性がある
 • すべての横スワイプ欄を非表示にした場合、コメント セクションごと表示されなくなる"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">横スワイプ欄のフィルタ</string>
@@ -322,7 +323,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_end_screen_store_banner_title">終了画面のストアバナーを非表示</string>
   <string name="morphe_hide_general_ads_title">一般的な広告を非表示</string>
   <string name="morphe_hide_merchandise_banners_title">商品バナーを非表示</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">プロモーションの告知を非表示</string>
   <string name="morphe_hide_player_popup_ads_title">プレーヤーのポップアップ広告を非表示</string>
   <string name="morphe_hide_self_sponsor_ads_title">自己宣伝カードを非表示</string>
@@ -349,7 +349,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_summary">プレーヤー オーバーレイに外部ダウンローダーを呼び出すボタンを表示します</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">オフライン ボタンと「オフラインへの動画の保存」の動作を上書き</string>
-  <string name="morphe_external_downloader_action_button_summary">オフライン ボタンと、フライアウト メニューの「オフラインへの動画の保存」の呼び出し先を、「YouTube 内蔵のダウンロード機能」から「設定した外部ダウンローダー」に変更します</string>
+  <string name="morphe_external_downloader_action_button_summary">オフライン ボタンと、フライアウト メニューの「オフラインへの動画の保存」の呼び出し先を、「純正アプリ内蔵のダウンロード機能」から「設定した外部ダウンローダー」に変更します</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">吹き替え翻訳</string>
   <string name="morphe_vot_screen_summary">動画字幕を翻訳し、デバイス上のテキスト読み上げ機能で字幕の翻訳を字幕に同期しながら読み上げます</string>
@@ -377,7 +377,7 @@ OpenRouter.aiを開くには、ここをタップしてください"</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouterが構成されていません</string>
   <string name="morphe_vot_openrouter_not_configured_message">このプロバイダーを選択する前に、設定でOpenRouter APIキーを入力してください</string>
   <string name="morphe_vot_cost_free">無料</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">100ビデオ時間あたり%s</string>
   <string name="morphe_vot_tts_voice_type">音声</string>
   <string name="morphe_vot_tts_system">システム</string>
@@ -449,12 +449,15 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_save_to_watch_later_success_toast">動画を「後で見る」に保存しました</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">この動画は既に「後で見る」に保存されています</string>
   <string name="morphe_save_to_watch_later_error_toast">この動画は「後で見る」に保存できません</string>
+  <string name="morphe_queue_flyout_title">Morphe キューに追加</string>
   <string name="morphe_queue_restore_title">セッションをまたいでキューを保持</string>
   <string name="morphe_queue_restore_summary">アプリを終了または再起動したときにキューを保持します</string>
   <string name="morphe_swap_save_and_queue_actions_title">「後で見るに保存」ボタンの動作を入れ替える</string>
   <string name="morphe_swap_save_and_queue_actions_summary">タップするとキュー オプションを表示します。長押しすると、動画を「後で見る」に保存します。</string>
-  <string name="morphe_queue_override_flyout_menu_title">フィードのフライアウトキューボタンを上書き</string>
-  <string name="morphe_queue_override_flyout_menu_summary">MorpheのキューをYouTubeのキューの代わりに開きます</string>
+  <string name="morphe_queue_override_flyout_menu_title">フィードのフライアウト メニューのキューの項目の動作を上書き</string>
+  <string name="morphe_queue_override_flyout_menu_summary">YouTube のキューの代わりに Morphe のキューを開きます</string>
+  <string name="morphe_queue_add_flyout_menu_title">フィードのフライアウト メニューにキューの項目を追加</string>
+  <string name="morphe_queue_add_flyout_menu_summary">フィードのフライアウト メニューにキューの項目を追加します。「キューに追加」が表示されない場合に、この機能を有効にしてください</string>
   <string name="morphe_queue_manager_check_failed_auth">ログインしていません</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">プレイリスト ID がありません</string>
   <string name="morphe_queue_manager_check_failed_queue">キューが空です</string>
@@ -468,7 +471,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_queue_manager_fetch_succeeded_create">キューを作成しました</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">キューから削除しました</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">キューを %s に保存しました</string>
-  <string name="morphe_queue_manager_playlist_title">キュー (Morphe)</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe キュー</string>
   <string name="morphe_queue_manager_add_to_queue">キューに追加</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">キューに追加して開く</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">キューに追加して再生</string>
@@ -517,7 +520,6 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_swipe_zone_label_volume">音量</string>
   <string name="morphe_swipe_zone_label_native">通常操作</string>
   <string name="morphe_swipe_press_to_engage_title">長押しスワイプ ジェスチャーを有効化</string>
-  <string name="morphe_swipe_press_to_engage_summary">スワイプ ジェスチャーを、「画面をスワイプ」から「画面を長押ししてからスワイプ」に変更します</string>
   <string name="morphe_swipe_haptic_feedback_title">触覚フィードバックを有効化</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">明るさを保存 &amp; 復元</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">全画面表示を終了 / 開始するときに明るさを保存 / 復元します</string>
@@ -702,7 +704,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">フライアウト メニュー</string>
   <string name="morphe_hide_player_flyout_summary">プレーヤー オーバーレイの歯車アイコンボタンから呼び出されるメニューに表示するコンポーネントを設定します</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">「音声トラック」を非表示</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -1047,7 +1049,6 @@ Automotive レイアウト
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">ロック画面のメディア コントロール</string>
   <string name="morphe_notification_media_screen_summary">通知パネルとロック画面に表示されるプレーヤーのコントロールをカスタマイズします</string>
-  <string name="morphe_hide_notification_media_prev_next_title">前の動画ボタンと次の動画ボタンを非表示</string>
   <string name="morphe_hide_notification_media_prev_next_summary">通知パネルとロック画面に表示されるプレーヤーの前の動画ボタンと次の動画ボタンを非表示にします。ヘッドホンからの操作によって前の動画 / 次の動画へ移動する機能も無効にします</string>
   <string name="morphe_disable_notification_media_seekbar_title">シークバーでのシーク操作を無効化</string>
   <string name="morphe_disable_notification_media_seekbar_summary">通知パネルとロック画面に表示されるプレーヤーのシークバーでのシーク操作を無効にします</string>
@@ -1120,7 +1121,6 @@ Automotive レイアウト
 • HDR 動画では AVC が使用されない
 • 一部のデバイスでは AVC を強制できない"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">この機能を使用するには、[動画ストリームを偽装] のクライアントを「Android VR」または「Android Studio」に設定してください</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">画質の詳細設定メニューを開く</string>
   <string name="morphe_advanced_video_quality_menu_summary">画質メニューをスキップして画質の「詳細設定」メニューを直接開きます</string>
@@ -1131,13 +1131,10 @@ Automotive レイアウト
   <string name="morphe_video_quality_prioritize_summary">コーデックの圧縮効率よりも利用可能な最高画質を優先します</string>
   <string name="morphe_video_quality_prioritize_dialog">この設定をオフにすると、古い動画で画質を手動で選択できなくなる場合があります</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Android VR / visionOS で AV1 を許可</string>
-  <string name="morphe_spoof_video_streams_av1_summary">クライアントが Android VR または visionOS のときに AV1 のソフトウェア デコードを許可します</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"この設定を有効にすると、AV1 のソフトウェア デコードが使用される場合があります。
 
 AV1 での動画再生は、カクつくまたはコマ落ちが発生する可能性があります。"</string>
   <string name="morphe_spoof_video_streams_about_title">偽装による副作用</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• フライアウト メニューに「音声トラック」が表示されない</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 コーデックが利用できない</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR 動画では没入モードが利用できない</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">•「一定音量」が利用できない</string>
@@ -1147,7 +1144,6 @@ AV1 での動画再生は、カクつくまたはコマ落ちが発生する可�
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• 画質が 720p 以下に制限される場合がある</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">JavaScript 版プレーヤー</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">統計情報にクライアントを表示</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">アクションバーを旧式に戻す</string>
   <string name="morphe_restore_old_video_action_bar_summary">"低評価数が表示されない不具合とアクション ボタンを非表示にできない不具合を修正します

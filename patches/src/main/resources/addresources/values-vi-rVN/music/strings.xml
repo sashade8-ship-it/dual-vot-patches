@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -25,7 +25,6 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">Tải xuống video nhạc, podcast hoặc bài hát bằng các ứng dụng tải xuống của bên thứ ba</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Ghi đè nút Tải xuống</string>
-  <string name="morphe_external_downloader_action_button_summary">Sử dụng trình tải xuống bên ngoài mà bạn đã chọn thay cho tính năng tải xuống tích hợp trong YouTube Music</string>
   <string name="morphe_external_downloader_flyout_menu_title">Ghi đè menu Tải xuống</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
@@ -326,9 +325,6 @@ Lời bài hát đồng bộ theo dõi quá trình phát. Nếu chúng bị trô
 
 Khi không tìm thấy lời bài hát từ bên thứ ba, lời bài hát tích hợp sẵn sẽ được hiển thị thay thế"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_music_spoof_app_version_target_entry_6_35_52">6.35.52 - Khôi phục bảng tuỳ chọn cũ</string>
-  <string name="morphe_music_spoof_app_version_target_entry_6_42_55">6.42.55 - Tắt lời nhạc theo thời gian thực</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_12_52">7.12.52 - Khôi phục lời nhạc đồng bộ theo thời gian thực kiểu cũ</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - Khôi phục thanh thao tác cũ</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_17_52">7.17.52 - Phần bình luận không hiển thị trong trang chủ</string>
+  <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - Vô hiệu hóa biểu tượng đậm</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - Khôi phục các tab Trình phát, Tiếp theo, Lời bài hát và Liên quan</string>
 </resources>

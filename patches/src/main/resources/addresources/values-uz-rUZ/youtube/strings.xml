@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -123,6 +123,7 @@ Oʻzgarishlar:
   <string name="morphe_hide_youtube_doodles_user_dialog_message">YouTube chekishlari ko\'rsatilsa, maxsus sarlavhalar ko\'rinmasligi mumkin.</string>
   <string name="morphe_hide_channel_bar_title">Kanal paneli</string>
   <string name="morphe_hide_channel_watermark_title">Kanal suv belgisini yashirish</string>
+  <string name="morphe_hide_chapters_timeline_button_title">Boblar va \'Ushbu videoda\' tugmasini yashirish</string>
   <string name="morphe_hide_crowdfunding_box_title">Moliyaviy yordam qutisini yashirish</string>
   <string name="morphe_hide_emergency_box_title">Favqulodda xabarlar qutisini yashirish</string>
   <string name="morphe_hide_info_panels_title">Ma\'lumot panellarini yashirish</string>
@@ -230,9 +231,9 @@ Oʻzgarishlar:
   <string name="morphe_comments_screen_title">Izohlar</string>
   <string name="morphe_comments_screen_summary">Izohlardagi paydo boʻladigan komponentlarni tanlang</string>
   <string name="morphe_hide_comments_carousel_title">Izohlardagi karusel filtrlashni yoqish</string>
-  <string name="morphe_hide_comments_carousel_summary">"• Karusel elementi nomini aniq kiriting (masalan, So'rang, Ushbu videoni targ'ib qiling, YouTube Musicda tinglang va boshqalar).
-• Karusel elementlarini yashirish kutilmagan ta'sirga ega bo'lishi mumkin.
-• Agar barcha karusel elementlari yashirilsa, butun izohlashlar bo'limi ham yashiriladi"</string>
+  <string name="morphe_hide_comments_carousel_summary">"• Karusel elementining aniq nomini kiritishga ishonch hosil qiling (masalan, Ask, Hype this video, Listen on YouTube Music)
+• Karusel elementlarini yashirish kutilmagan yon ta'sirlarga olib kelishi mumkin
+• Agar barcha karusel elementlari yashirilsa, butun izohlar bo'limi ham yashiriladi"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Izohlar karusel filtri</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Filtlash uchun izohlar karusel nomlarini yangi qatorga kiriting</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">AI chat xulosasini yashirish</string>
@@ -265,11 +266,11 @@ Oʻzgarishlar:
   <string name="morphe_hide_keyword_content_phrases_title">Yashirish uchun kalit so\'zlar</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"Yashirish uchun kalit so'zlar va iboralarni kiriting, yangi qatorlar bilan ajratilgan
+  <string name="morphe_hide_keyword_content_phrases_summary">"Yashirish uchun kalit so'zlar va iboralarni kiriting, yangi qatorlar bilan ajrating
 
-Kalit so'zlar video nomlari yoki kanal nomlarida paydo bo'lgan har qanday matn bo'lishi mumkin
+Kalit so'zlar video sarlavhalarida yoki kanal nomlarida ko'rsatilgan har qanday matn bo'lishi mumkin
 
-So'zning o'rtasida katta harflar bilan yozilgan so'zlar aniq mos kelishi kerak (masalan: iPhone, TikTok, LeBlanc)"</string>
+O'rtasida katta harflar bo'lgan so'zlar aniq mos kelishi kerak (masalan, iPhone, TikTok, LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_summary">"Cheklovlar:
 • Shorts ulash vaqtini ko'rsatishi mumkin
 • Avtomatik tartib ishlamasligi mumkin"</string>
@@ -319,7 +320,6 @@ Batafsil ma'lumot olish uchun AiSlopList.com ni oching"</string>
   <string name="morphe_hide_end_screen_store_banner_title">End ekrandagi do\'kon bannerini yashirish</string>
   <string name="morphe_hide_general_ads_title">Reklamalarni yashirish</string>
   <string name="morphe_hide_merchandise_banners_title">Tovar bannerlarini yashirish</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">Pullik reklama yorliqlarini yashirish</string>
   <string name="morphe_hide_player_popup_ads_title">Pleerda paydo boʻladigan reklamalarni yashirish</string>
   <string name="morphe_hide_self_sponsor_ads_title">O\'z reklamasi kartalarini yashirish</string>
@@ -346,7 +346,7 @@ Batafsil ma'lumot olish uchun AiSlopList.com ni oching"</string>
   <string name="morphe_external_downloader_summary">Video pleerda tashqi yuklab olishni ochadigan ustki qatlam tugmasini ko\'rsatish</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Yuklash tugmasi &amp; menyuni ustidan o\'tkazish</string>
-  <string name="morphe_external_downloader_action_button_summary">YouTube ning o\'rnatilgan yuklash funksiyasidan ko\'ra siz tanlagan tashqi yuklagichdan foydalanadi</string>
+  <string name="morphe_external_downloader_action_button_summary">Tanlagan tashqi yuklab olish ilovangizdan standart yuklab olish funksiyasi o\'rniga foydalanadi</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Ovozli tarjima</string>
   <string name="morphe_vot_screen_summary">O\'ynayotganda matnni ovozga aylantirish orqali video sarlavhalarini o\'qish, o\'ynatish bilan sinxronlashtirilgan</string>
@@ -372,7 +372,7 @@ Batafsil ma'lumot olish uchun MyMemory.translated.net ni oching."</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter konfiguratsiya qilinmagan</string>
   <string name="morphe_vot_openrouter_not_configured_message">Ushbu provayderni tanlashdan oldin sozlamalarda OpenRouter API kalitingizni kiriting</string>
   <string name="morphe_vot_cost_free">Bepul</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">Soatiga 100 ta video uchun %s</string>
   <string name="morphe_vot_tts_voice_type">Ovoz</string>
   <string name="morphe_vot_tts_system">Tizim</string>
@@ -444,6 +444,7 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <string name="morphe_save_to_watch_later_success_toast">Video Watch Later pleyistiga saqlab qoʻyildi</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Ushbu video hali Watch Later pleyistida saqlangan</string>
   <string name="morphe_save_to_watch_later_error_toast">Ushbu videoni Watch Later ga saqlab boʻlmadi</string>
+  <string name="morphe_queue_flyout_title">Morphe navbatiga qo\'sh</string>
   <string name="morphe_queue_restore_title">Ilovaning qayta ishga tushirilgandan so\'ng navbat saqlanadi</string>
   <string name="morphe_queue_restore_summary">Kirish qilinmagan</string>
   <string name="morphe_swap_save_and_queue_actions_title">Saqlash uchun teging, navbatga qo\'shish uchun bosib ushlab turing</string>
@@ -512,7 +513,6 @@ Buni tuzatish uchun 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart kli
   <string name="morphe_swipe_zone_label_volume">Volyum</string>
   <string name="morphe_swipe_zone_label_native">Asliy</string>
   <string name="morphe_swipe_press_to_engage_title">Sirt bilan surish harakatini yoqish uchun bosishni yoqish</string>
-  <string name="morphe_swipe_press_to_engage_summary">Surish harakatini aniqlashdan oldin bosib ushlab turishni talab qiladi</string>
   <string name="morphe_swipe_haptic_feedback_title">Hissiy aloqani yoqish</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Yorqinlikni saqlash va tiklash</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">Toʻliq ekran rejimiga kirganda / chiqqanda yorqinlik darajasini saqlaydi</string>
@@ -627,9 +627,9 @@ Buni tuzatish uchun 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart kli
   <string name="morphe_auto_captions_style_legacy_entry_2">Avtomatik yozuvlarni yashirish</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Sarlavha kuki-larini belgilash</string>
-  <string name="morphe_set_caption_cookies_summary">"YouTube-da avtomatik tarjima sarlavhalari mavjud bo'lmagan holatni tuzatish uchun bu sizga yordam beradi
+  <string name="morphe_set_caption_cookies_summary">"Standart YouTube xatosini tuzatadi, bunda avtomatik tarjima subtitrlari cookie'lar yetishmagani sababli mavjud bo'lmasligi mumkin
 
-'Sarlavha kuki-lari' ko'rsatilishi kerak"</string>
+'Caption cookies' taqdim etilishi kerak"</string>
   <string name="morphe_caption_cookies_title">Yozuv kuki fayllari</string>
   <string name="morphe_caption_cookies_summary">Vaqtli matn API (Sarlavha ma\'lumotlari API) so\'rovlarida belgilanishi kerak bo\'lgan kuki-lar</string>
   <string name="morphe_get_caption_cookies_title">Kuki fayllarini olish</string>
@@ -696,7 +696,7 @@ Sozlamalarga kirish uchun Umumiy → Asboblar → Sozlamalarni koʻrsatish orqal
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Pleyer menyusi</string>
   <string name="morphe_hide_player_flyout_summary">\'Atmosfera rejimi\' menyusini yashirish</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'Barqaror ovoz\' menyusini yashirish</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -890,7 +890,7 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <string name="morphe_open_system_share_sheet_summary">\'Klip tugmasini\' yashirish</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music tugmalarini almashtirish</string>
-  <string name="morphe_override_youtube_music_buttons_summary">Rasmiy YouTube Music ilovasi o\'rniga afzal ko\'rgan musiqa ilovangizni ochadi</string>
+  <string name="morphe_override_youtube_music_buttons_summary">Sizning afzal ko\'rgan musiqa ilovangizni standart YouTube Music ilovasi o\'rniga ochadi</string>
   <string name="morphe_music_package_name_title">Musiqa ilovasi paketi nomi</string>
   <string name="morphe_music_package_name_summary">O\'rnatilgan musiqa ilovangizning paket nomi</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1043,7 +1043,6 @@ Batafsil ma'lumot olish uchun DeArrow.ajay.app ni oching."</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">Bildirishnomalar media boshqaruvlari</string>
   <string name="morphe_notification_media_screen_summary">Bloklangan ekranda va bildirishnoma panelida ko\'rsatiladigan ijro elementlarini sozlash</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Oldingi va keyingi tugmalarni yashirish</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Media bildirishnomasi, bloklangan ekran va garnitura kontrollerida oldingi va keyingi tugmalarni yashirish</string>
   <string name="morphe_disable_notification_media_seekbar_title">Tracklarni oʻzgartirish panelini oʻchirish</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Bloklangan ekranda va bildirishnoma panelida progress barni sudrishning oldini olish</string>
@@ -1118,7 +1117,6 @@ Cheklovlari:
 • HDR videolarda AVC ishlatilmaydi
 • Ba'zi qurilmalar AVCni majburlash imkoniyatiga ega emas"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Ushbu funksiyadan foydalanish uchun, \'Video oqimlarini taqlid qilish\' sozlamasini \'Android VR\' yoki \'Android Studio\' ga o\'rnating</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Kengaytirilgan sifat menyusini ochish</string>
   <string name="morphe_advanced_video_quality_menu_summary">Sifat tanlash menyusini o\'tkib uzatadi va to\'g\'ridan-to\'g\'ri ilg\'or sifat menyusini ochadi</string>
@@ -1129,13 +1127,10 @@ Cheklovlari:
   <string name="morphe_video_quality_prioritize_summary">Kodek samaradorligidan ko\'ra mavjud bo\'lgan eng yuqori video sifatiga ustunlik beradi</string>
   <string name="morphe_video_quality_prioritize_dialog">Agar bu sozlama o\'chirilgan bo\'lsa, eski videolar uchun video sifatini tanlash imkoniyati ko\'rinmasligi mumkin</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Android VR / visionOS AV1 ga ruxsat berish</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Android VR / visionOS mijozidan foydalanganda dasturiy ta\'minot AV1 dekodlashga ruxsat beradi</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Ushbu sozlash dasturiy ta'minot AV1 dekodini ishga tushirishi mumkin.
 
 AV1 bilan video o'ynashda lag yoki to'silishlar yuzaga kelishi mumkin."</string>
   <string name="morphe_spoof_video_streams_about_title">Manipulyatsiya qilish effektlari</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Audio treklar menyusi mavjud emas</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 video kodeki yo\'q</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR ajoyib rejim mavjud emas</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Barqaror ovoz mavjud emas</string>
@@ -1145,7 +1140,6 @@ AV1 bilan video o'ynashda lag yoki to'silishlar yuzaga kelishi mumkin."</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Sifat 720p bilan cheklanishi mumkin</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Pleyer JavaScript varianti</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Buzishni Stats for nerds da ko\'rsatish</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">Eski video harakatlar panelini tiklash</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Yoqtirishlar va video harakatlar tugmalarini yashirish imkoniyatini tiklaydi.

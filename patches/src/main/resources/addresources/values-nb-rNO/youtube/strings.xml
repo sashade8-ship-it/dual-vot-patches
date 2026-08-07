@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -123,6 +123,7 @@ Endringer inkluderer:
   <string name="morphe_hide_youtube_doodles_user_dialog_message">Visning av YouTube Doodles kan hindre at egendefinerte headere vises.</string>
   <string name="morphe_hide_channel_bar_title">Skjul kanalstripe</string>
   <string name="morphe_hide_channel_watermark_title">Skjul kanal-vannmerke</string>
+  <string name="morphe_hide_chapters_timeline_button_title">Skjul kapitler og \'I denne videoen\'-knappen</string>
   <string name="morphe_hide_crowdfunding_box_title">Skjul crowdfunding-boks</string>
   <string name="morphe_hide_emergency_box_title">Skjul varslingsbokser</string>
   <string name="morphe_hide_info_panels_title">Skjul infopaneler</string>
@@ -228,9 +229,9 @@ Endringer inkluderer:
   <string name="morphe_comments_screen_title">Kommentarer</string>
   <string name="morphe_comments_screen_summary">Velg hvilke komponenter som skal vises i kommentarfeltet</string>
   <string name="morphe_hide_comments_carousel_title">Aktiver kommentar-karusellfilter</string>
-  <string name="morphe_hide_comments_carousel_summary">"• Sørg for å angi det eksakte navnet på karusellelementet (f.eks. Spør, Hype denne videoen, Lytt på YouTube Music osv.)
-• Skjuling av karusellelementer kan ha utilsiktede bivirkninger
-• Hvis alle karusellelementer er skjult, vil hele kommentarseksjonen også bli skjult"</string>
+  <string name="morphe_hide_comments_carousel_summary">"• Sørg for å angi det nøyaktige navnet på karusellelementet (f.eks. Ask, Hype this video, Listen on YouTube Music)
+• Å skjule karusellelementer kan ha utilsiktede bivirkninger
+• Hvis alle karusellelementer er skjult, vil også hele kommentarseksjonen bli skjult"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Kommentar-karusellfilter</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Skriv inn navnene på kommentarkarusellen du vil filtrere etter, atskilt med nye linjer</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Skjul AI-chat-sammendrag</string>
@@ -263,9 +264,9 @@ Endringer inkluderer:
   <string name="morphe_hide_keyword_content_phrases_title">Nøkkelord som skal skjules</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"Skriv inn nøkkelord og fraser som skal skjules, adskilt med nye linjer
+  <string name="morphe_hide_keyword_content_phrases_summary">"Skriv inn nøkkelord og fraser du vil skjule, atskilt med nye linjer
 
-Nøkkelord kan være all tekst som vises i videotitler eller kanalnavn
+Nøkkelord kan være hvilken som helst tekst som vises i videotitler eller kanalnavn
 
 Ord med store bokstaver i midten må samsvare nøyaktig (f.eks. iPhone, TikTok, LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_summary">"Hjem / Abonnementer / Søk / Kommentarer er filtrert for å skjule innhold som samsvarer med nøkkelordfraser
@@ -320,7 +321,6 @@ Trykk her for å åpne AiSlopList.com og se nedlastinger for andre plattformer"<
   <string name="morphe_hide_end_screen_store_banner_title">Skjul sluttbanner for butikk</string>
   <string name="morphe_hide_general_ads_title">Skjul generelle annonser</string>
   <string name="morphe_hide_merchandise_banners_title">Skjul merchandise-bannere</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">Skjul betalte reklameetiketter</string>
   <string name="morphe_hide_player_popup_ads_title">Skjul popup-annonser for spilleren</string>
   <string name="morphe_hide_self_sponsor_ads_title">Skjul selv-sponsede kort</string>
@@ -347,7 +347,6 @@ Trykk her for å åpne AiSlopList.com og se nedlastinger for andre plattformer"<
   <string name="morphe_external_downloader_summary">Viser en overleggsknapp i videospilleren som åpner din eksterne nedlaster</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Overstyr nedlastingsknapp og meny</string>
-  <string name="morphe_external_downloader_action_button_summary">Bruker din valgte eksterne nedlaster i stedet for YouTubes innebygde nedlastingsfunksjon</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Taleoversettelse</string>
   <string name="morphe_vot_screen_summary">Les opp tekstingen til videoen ved hjelp av tekst-til-tale på enheten, synkronisert med avspillingen</string>
@@ -375,7 +374,7 @@ Trykk her for å åpne OpenRouter.ai"</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter ikke konfigurert</string>
   <string name="morphe_vot_openrouter_not_configured_message">Angi din OpenRouter API-nøkkel i innstillingene før du velger denne leverandøren</string>
   <string name="morphe_vot_cost_free">Gratis</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">%s per 100 videotimer</string>
   <string name="morphe_vot_tts_voice_type">Stemme</string>
   <string name="morphe_vot_tts_system">System</string>
@@ -515,7 +514,6 @@ For å fikse dette, slå på 'Forfalske videostrømmer' og endre 'Standard klien
   <string name="morphe_swipe_zone_label_volume">Volum</string>
   <string name="morphe_swipe_zone_label_native">Native</string>
   <string name="morphe_swipe_press_to_engage_title">Aktiver trykk for å sveipe gest</string>
-  <string name="morphe_swipe_press_to_engage_summary">Krever at du trykker og holder før en sveipebevegelse registreres</string>
   <string name="morphe_swipe_haptic_feedback_title">Aktiver haptisk tilbakemelding</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Lagre og gjenopprett lysstyrke</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">Husker lysstyrkenivået når du går inn eller ut av fullskjermmodus</string>
@@ -630,9 +628,6 @@ For å fikse dette, slå på 'Forfalske videostrømmer' og endre 'Standard klien
   <string name="morphe_auto_captions_style_legacy_entry_2">Viser automatisk undertekst</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Angi informasjonskapsler for bildetekster</string>
-  <string name="morphe_set_caption_cookies_summary">"Retter en feil i YouTube hvor automatisk oversettelse av bildetekster kanskje ikke er tilgjengelig på grunn av manglende informasjonskapsler
-
-'Informasjonskapsler for bildetekster' må oppgis"</string>
   <string name="morphe_caption_cookies_title">Teksting-cookies</string>
   <string name="morphe_caption_cookies_summary">Informasjonskapsler som skal settes i Timed Text API (Caption Data API)-forespørsler</string>
   <string name="morphe_get_caption_cookies_title">Hent teksting-cookies</string>
@@ -699,7 +694,7 @@ For å få tilgang til Innstillinger, aktiver Innstillingsknappen via General �
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Flytende meny</string>
   <string name="morphe_hide_player_flyout_summary">Skjul \'Lydspor\'-meny</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skjul \"Lydspor\"-menyen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -893,7 +888,6 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_open_system_share_sheet_summary">Åpner systemets delingsark i stedet for det innebygde når du deler innhold</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Overskriv YouTube Music-knapper</string>
-  <string name="morphe_override_youtube_music_buttons_summary">Åpner din foretrukne musikkapp i stedet for den offisielle YouTube Music-appen</string>
   <string name="morphe_music_package_name_title">Pakkenavn for musikkapp</string>
   <string name="morphe_music_package_name_summary">Pakkenavnet til din installerte musikkapp</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1044,7 +1038,6 @@ Hvis aktivert, sendes videourler til API-serveren og ingen andre data sendes. Hv
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">Mediekontroller for varsler</string>
   <string name="morphe_notification_media_screen_summary">Tilpass avspillingskontrollene som vises på låseskjermen og varslingspanelet</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Skjul Forrige &amp; Neste-knapper</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Skjuler Forrige og Neste knapper i medievarsel, låseskjerm og hodetelefonkontroller</string>
   <string name="morphe_disable_notification_media_seekbar_title">Deaktiver søkefelt</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Forhindrer at du drar i søkefeltet på låseskjermen og varslingspanelet</string>
@@ -1117,7 +1110,6 @@ Begrensninger:
 • HDR-videoer vil ikke bruke AVC
 • Noen enheter kan ikke tvinge AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">For å bruke denne funksjonen, sett \'Spoof video streams\' til \'Android VR\' eller \'Android Studio\'</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Åpne avansert kvalitetsmeny</string>
   <string name="morphe_advanced_video_quality_menu_summary">Hoppover kvalitetselementvalgmenyen og åpner avansert kvalitetsmeny direkte</string>
@@ -1128,13 +1120,10 @@ Begrensninger:
   <string name="morphe_video_quality_prioritize_summary">Prioriterer høyest tilgjengelig videokvalitet fremfor kodekeffektivitet</string>
   <string name="morphe_video_quality_prioritize_dialog">Hvis denne innstillingen er slått av, kan eldre videoer vise ingen videokvalitetsalternativer</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Tillat Android VR / visionOS AV1</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Tillater programvare AV1-dekoding når du bruker Android VR / visionOS-klienten</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Å aktivere denne innstillingen kan bruke programvare-AV1-dekoding.
 
 Videospilling med AV1 kan hakke eller miste bilder."</string>
   <string name="morphe_spoof_video_streams_about_title">Bivirkninger av forfalskning</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Lydspor-meny mangler</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ingen AV1-videokodek</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR-oppslukende modus er ikke tilgjengelig</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabil volum er ikke tilgjengelig</string>
@@ -1144,7 +1133,6 @@ Videospilling med AV1 kan hakke eller miste bilder."</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kvaliteten kan være begrenset til 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Spiller JavaScript-variant</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Ekstraher videobilde fra</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">Gjenopprett gammel videomeny</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Fikser at ikke-likte ikke vises og at videoaksjonsknapper ikke kan skjules

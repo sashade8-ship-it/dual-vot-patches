@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -25,8 +25,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">Descarga videos musicales, podcasts o canciones con aplicaciones de descarga de terceros</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Reemplazar botón \"Descargar\"</string>
-  <string name="morphe_external_downloader_action_button_summary">Utiliza tu descargador externo elegido en lugar de la función de descarga integrada de YouTube Music</string>
+  <string name="morphe_external_downloader_action_button_summary">Utiliza el descargador externo seleccionado en lugar del botón de acción de descarga original</string>
   <string name="morphe_external_downloader_flyout_menu_title">Reemplazar menú \"Descargar\"</string>
+  <string name="morphe_external_downloader_flyout_menu_summary">Utiliza el descargador externo seleccionado en lugar del menú desplegable de descarga original</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">Acerca de</string>
@@ -326,9 +327,6 @@ Las letras sincronizadas siguen la reproducción. Si se desvían, ajusta el desf
 
 Cuando no se encuentran letras de terceros, se muestran las letras integradas en su lugar"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_music_spoof_app_version_target_entry_6_35_52">6.35.52 - Restaura el panel desplegable antiguo</string>
-  <string name="morphe_music_spoof_app_version_target_entry_6_42_55">6.42.55 - Desactiva las letras de canciones en tiempo real</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_12_52">7.12.52 - Restaura las letras dinámicas antiguas</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - Restaura la barra de acción antigua</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_17_52">7.17.52 - La sección de comentarios no aparece en el feed de inicio</string>
+  <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - Desactivar iconos en negrita</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">Restaurar pestañas \"A continuación\", \"Letra\" y \"Relacionado\" del reproductor</string>
 </resources>

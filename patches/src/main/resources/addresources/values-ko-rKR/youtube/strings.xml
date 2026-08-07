@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -123,6 +123,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_youtube_doodles_user_dialog_message">YouTube Doodles을 표시하면 사용자 정의 헤더가 표시되지 않을 수 있습니다</string>
   <string name="morphe_hide_channel_bar_title">채널바 숨기기</string>
   <string name="morphe_hide_channel_watermark_title">채널 워터마크 숨기기</string>
+  <string name="morphe_hide_chapters_timeline_button_title">챕터 및 \'동영상 정보\' 버튼 숨기기</string>
   <string name="morphe_hide_crowdfunding_box_title">모금 행사 패널 숨기기</string>
   <string name="morphe_hide_emergency_box_title">긴급 정보 패널 숨기기</string>
   <string name="morphe_hide_info_panels_title">정보 패널 숨기기</string>
@@ -230,7 +231,7 @@ Second \"item\" text"</string>
   <string name="morphe_comments_screen_title">댓글</string>
   <string name="morphe_comments_screen_summary">댓글 섹션에 표시할 구성 요소를 설정할 수 있습니다</string>
   <string name="morphe_hide_comments_carousel_title">댓글 좌우 슬라이드 필터 활성화하기</string>
-  <string name="morphe_hide_comments_carousel_summary">"• 좌우 슬라이드 항목의 정확한 이름을 입력하세요 (예: 질문하기, 이 동영상 하이프하기, YouTube Music에서 감상하기, etc.)
+  <string name="morphe_hide_comments_carousel_summary">"• 좌우 슬라이드 항목의 정확한 이름을 입력하세요 (예: 질문하기, 이 동영상 하이프하기, YouTube Music에서 감상하기)
 • 좌우 슬라이드 항목을 숨기면 예상되지 않은 부작용이 발생할 수 있습니다
 • 좌우 슬라이드 항목이 모두 숨겨지면 전체 댓글 섹션도 숨겨집니다"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">댓글 좌우 슬라이드 필터</string>
@@ -322,7 +323,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_end_screen_store_banner_title">최종 화면 스토어 배너 숨기기</string>
   <string name="morphe_hide_general_ads_title">일반 레이아웃 광고 숨기기</string>
   <string name="morphe_hide_merchandise_banners_title">매장 쇼핑 배너 숨기기</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">유료 프로모션 관련 라벨 숨기기</string>
   <string name="morphe_hide_player_popup_ads_title">플레이어 팝업 광고 숨기기</string>
   <string name="morphe_hide_self_sponsor_ads_title">셀프 스폰서 카드 숨기기</string>
@@ -349,7 +349,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_summary">외부 다운로드 앱을 실행할 수 있는 오버레이 버튼을 동영상 플레이어에 표시합니다</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">오프라인 저장 버튼 및 메뉴 재정의하기</string>
-  <string name="morphe_external_downloader_action_button_summary">YouTube의 기본 다운로드 기능 대신 선택한 외부 다운로더를 사용합니다</string>
+  <string name="morphe_external_downloader_action_button_summary">기본 오프라인 저장 기능 대신 사용자가 선택한 외부 다운로더를 사용합니다</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">음성 번역</string>
   <string name="morphe_vot_screen_summary">기기의 텍스트 음성 변환(TTS)을 사용하여 재생에 맞춰 동기화된 동영상 자막을 읽어줍니다</string>
@@ -377,7 +377,7 @@ Second \"item\" text"</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter가 설정되지 않았습니다</string>
   <string name="morphe_vot_openrouter_not_configured_message">이 제공자를 선택하기 전에 설정에서 OpenRouter API 키를 입력하세요</string>
   <string name="morphe_vot_cost_free">무료</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">동영상 100 시간당 %s</string>
   <string name="morphe_vot_tts_voice_type">음성</string>
   <string name="morphe_vot_tts_system">시스템</string>
@@ -451,12 +451,15 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_save_to_watch_later_success_toast">동영상을 \'나중에 볼 동영상\' 재생목록에 성공적으로 저장하였습니다</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">이 동영상은 이미 \'나중에 볼 동영상\' 재생목록에 저장되어 있습니다</string>
   <string name="morphe_save_to_watch_later_error_toast">이 동영상을 \'나중에 볼 동영상\' 재생목록에 저장할 수 없습니다</string>
+  <string name="morphe_queue_flyout_title">Morphe 현재 재생목록에 추가</string>
   <string name="morphe_queue_restore_title">세션 간에 현재 재생목록 유지하기</string>
   <string name="morphe_queue_restore_summary">앱을 다시 시작한 후에도 현재 재생목록이 유지됩니다</string>
   <string name="morphe_swap_save_and_queue_actions_title">저장과 현재 재생목록 작업 교환하기</string>
   <string name="morphe_swap_save_and_queue_actions_summary">버튼을 탭하여 현재 재생목록 옵션을 실행할 수 있고, 길게 탭하면 나중에 볼 동영상에 저장됩니다</string>
-  <string name="morphe_queue_override_flyout_menu_title">피드 메뉴 현재 재생목록 버튼 재정의하기</string>
+  <string name="morphe_queue_override_flyout_menu_title">피드 \'현재 재생목록\' 메뉴 재정의하기</string>
   <string name="morphe_queue_override_flyout_menu_summary">\'현재 재생목록에서 다음 순서로 재생\' 메뉴를 탭하면 YouTube 현재 재생목록 대신 Morphe 현재 재생목록이 실행됩니다</string>
+  <string name="morphe_queue_add_flyout_menu_title">피드 \'현재 재생목록\' 메뉴 항목 추가하기</string>
+  <string name="morphe_queue_add_flyout_menu_summary">추가적인 메뉴 구성요소 항목을 추가합니다. \'현재 재생목록에서 다음 순서로 재생\' 메뉴가 표시되지 않는 경우에 이 옵션을 활성화하세요</string>
   <string name="morphe_queue_manager_check_failed_auth">로그인하지 않았습니다</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">재생목록 ID가 없습니다</string>
   <string name="morphe_queue_manager_check_failed_queue">현재 재생목록이 비어 있습니다</string>
@@ -519,7 +522,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_swipe_zone_label_volume">볼륨</string>
   <string name="morphe_swipe_zone_label_native">기본</string>
   <string name="morphe_swipe_press_to_engage_title">길게 탭하여 스와이프 제스처 사용하기</string>
-  <string name="morphe_swipe_press_to_engage_summary">스와이프 제스처를 사용하려면 화면을 길게 탭해야 합니다</string>
+  <string name="morphe_swipe_press_to_engage_summary">스와이프 제스처가 인식되려면 화면을 길게 해야 합니다</string>
   <string name="morphe_swipe_haptic_feedback_title">진동 피드백 활성화하기</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">화면 밝기 저장 및 복원하기</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">전체 화면 모드로 들어가거나 나갈 때마다 화면 밝기 값을 저장합니다</string>
@@ -634,9 +637,9 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_auto_captions_style_legacy_entry_2">자동 자막을 표시 안함</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">자막 쿠키 설정</string>
-  <string name="morphe_set_caption_cookies_summary">"쿠키 누락으로 인해 자동 번역 자막을 사용할 수 없는 기본 YouTube의 버그를 수정할 수 있습니다
+  <string name="morphe_set_caption_cookies_summary">"쿠키가 누락되어 자동 번역 자막을 사용할 수 없는 YouTube 공식 버그를 수정합니다
 
-이 기능을 사용하려면, '자막 쿠키'를 설정해야 합니다"</string>
+'자막 쿠키'를 반드시 설정해야 합니다"</string>
   <string name="morphe_caption_cookies_title">자막 쿠키</string>
   <string name="morphe_caption_cookies_summary">Timed Text API (자막 데이터 API) 요청에 설정될 쿠키입니다</string>
   <string name="morphe_get_caption_cookies_title">자막 쿠키 가져오기</string>
@@ -703,7 +706,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">메뉴 구성요소</string>
   <string name="morphe_hide_player_flyout_summary">메뉴 구성요소에 표시할 구성 요소를 설정할 수 있습니다</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">오디오 트랙 메뉴 숨기기</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -897,7 +900,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_open_system_share_sheet_summary">콘텐츠를 공유할 경우에 앱 기본 공유 시트 대신 시스템 공유 시트를 실행합니다</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music 버튼 재정의하기</string>
-  <string name="morphe_override_youtube_music_buttons_summary">Music 버튼을 탭했을 경우에 공식 YouTube Music 앱 대신 사용자가 사용하고 싶은 Music 앱을 열 수 있도록 설정할 수 있습니다</string>
+  <string name="morphe_override_youtube_music_buttons_summary">기본 YouTube Music 앱 대신 사용자가 사용하고 싶은 Music 앱을 열 수 있도록 설정합니다</string>
   <string name="morphe_music_package_name_title">Music 앱 패키지명</string>
   <string name="morphe_music_package_name_summary">사용자가 사용하고 싶은 Music 앱 패키지명을 설정하세요</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1068,7 +1071,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_override_initial_video_quality_title">초기 동영상 화질 재정의하기</string>
   <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"동영상이 시작된 직후 기본 화질이 즉시 적용되지 않는 문제를 수정하였습니다
+  <string name="morphe_override_initial_video_quality_summary">"동영상이 시작된 직후 기본 화질이 즉시 적용되지 않는 문제를 수정합니다
 
 제한 사항: '동영상 스트림 속이기'에서 '기본 클라이어언트'가 'Android VR'로 설정되어 있고, 'AVC (H.264) 강제로 활성화하기'가 활성화된 경우에는 일부 기기에서 동영상이 정상적으로 재생되지 않을 수 있습니다"</string>
   <string name="morphe_remember_video_quality_last_selected_title">동영상 화질 저장하기</string>
@@ -1134,13 +1137,13 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_video_quality_prioritize_summary">코덱 효율성보다 사용 가능한 최고 동영상 화질을 우선합니다</string>
   <string name="morphe_video_quality_prioritize_dialog">이 설정을 비활성화하면, 일부 오래된 동영상에서 화질 옵션이 표시되지 않을 수 있습니다</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Android VR / visionOS AV1 허용하기</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Android VR / visionOS 클라이언트를 사용할 경우에 소프트웨어 AV1 디코딩을 허용합니다</string>
+  <string name="morphe_spoof_video_streams_av1_title">\'Android VR\' / visionOS AV1 허용하기</string>
+  <string name="morphe_spoof_video_streams_av1_summary">\'Android VR\' / visionOS 클라이언트를 사용할 경우에 소프트웨어 AV1 디코딩을 허용합니다</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"이 설정을 활성화하면, 소프트웨어 AV1 디코딩이 사용될 수 있습니다.
 
 AV1이 사용된 동영상 재생이 끊기거나 프레임이 손실될 수 있습니다."</string>
   <string name="morphe_spoof_video_streams_about_title">속이기에 따른 부작용</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• 오디오 트랙 메뉴가 표시되지 않습니다</string>
+  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• \'오디오 트랙\' 메뉴가 표시되지 않습니다</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 코덱이 지원되지 않습니다</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR 몰입 모드를 사용할 수 없습니다</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• 안정적인 볼륨을 사용할 수 없습니다</string>

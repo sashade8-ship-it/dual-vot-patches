@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -153,7 +153,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_end_screen_store_banner_title">एंड स्क्रीन स्टोर बैनर छिपाएं</string>
   <string name="morphe_hide_general_ads_title">सामान्य विज्ञापन छिपाएं</string>
   <string name="morphe_hide_merchandise_banners_title">मर्चेंडाइज बैनर छिपाएं</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_player_popup_ads_title">प्लेयर पपअप विज्ञापनहरू लुकाउनुहोस्</string>
   <string name="morphe_hide_self_sponsor_ads_title">स्व-प्रायोजित कार्ड छिपाएं</string>
   <string name="morphe_hide_shopping_links_title">शॉपिंग लिंक छिपाएं</string>
@@ -168,7 +167,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_title">बाहरी डाउनलोड बटन दिखाएं</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_do_not_show_again">नबैंक गरिएको / स्व-प्रचार</string>
   <!-- interaction.loop.loopVideoPatch -->
   <string name="morphe_loop_video_title">लूप वीडियो सक्षम करी</string>
@@ -304,7 +303,7 @@ Second \"item\" text"</string>
   <string name="morphe_show_toolbar_settings_button_type_title">सेटिङ बटन कार्य</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">फ्लाईआउट मेनु</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -509,7 +508,6 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">ज़ूम हैप्टिक्स अक्षम करी</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">अधिसूचना मिडिया नियन्त्रणहरू</string>
-  <string name="morphe_hide_notification_media_prev_next_title">&amp;amp; Prev र Next बटनहरू लुकाउनुहोस्</string>
   <string name="morphe_disable_notification_media_seekbar_title">सर्कबार अक्षम गर्नुहोस्</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">यदि तपाईंले हालै आफ्नो खाताको लगइन विवरणहरू परिवर्तन गर्नुभएको छ भने, कृपया MicroG स्थापना रद्द गर्नुहोस् र पुन: स्थापना गर्नुहोस्।</string>
@@ -556,7 +554,6 @@ Second \"item\" text"</string>
 
 AV1 को साथ भिडियो प्लेब्याक स्टटर हुन सक्छ वा फ्रेमहरू छाड्न सक्छ।"</string>
   <string name="morphe_spoof_video_streams_about_title">स्पूफिंग साइड इफेक्ट</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• ऑडियो ट्रैक मेनू गुम अछि।</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• AV1 वीडियो कोडेक नहि अछि।</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• ३६०° VR इमर्सिभ मोड उपलब्ध छैन</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• स्थिर वॉल्यूम उपलब्ध नहि अछि।</string>

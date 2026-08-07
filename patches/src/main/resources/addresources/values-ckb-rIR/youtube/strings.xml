@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -148,7 +148,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_end_screen_store_banner_title">شاردنەوەی بانەری فرۆشگای شاشەی کۆتایی</string>
   <string name="morphe_hide_general_ads_title">شاردنەوەی ڕێکلامە گشتیەکان</string>
   <string name="morphe_hide_merchandise_banners_title">شاردنەوەی بانەری کاڵاکان</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_self_sponsor_ads_title">کارتی خۆ سپۆنسەرکراو بشارەوە</string>
   <string name="morphe_hide_shopping_links_title">بەستەرەکانی بازاڕکردن بشارەوە</string>
   <string name="morphe_hide_video_ads_title">شاردنەوەی ڕێکلامی ڤیدیۆکان</string>
@@ -160,7 +159,7 @@ Second \"item\" text"</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_openrouter_model_custom">باو</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_tts_system">سیستەم</string>
   <string name="morphe_vot_do_not_show_again">نیشانی مەدەوە دووبارە</string>
   <!-- interaction.loop.loopVideoPatch -->
@@ -288,7 +287,7 @@ Second \"item\" text"</string>
   <string name="morphe_show_toolbar_settings_button_type_title">کرداری دوگمەی ڕێکخستنەکان</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">خەڵەتە ڕیزكارییەكە</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -530,7 +529,6 @@ Second \"item\" text"</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"چالاکی کردنی ئەم ڕێکخستنە دەکرێت بەکارهێنانێک لە دەربڕەخستنی نەرمەکاری AV1."</string>
   <string name="morphe_spoof_video_streams_about_title">لائەكانی دروستكردن</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• خوله‌یا قوڵفه‌ی دەربونه‌ت</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• ناکۆكی كۆدێكی ڤیدیۆ ڤێ (AV1) نییه</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• دەربارەی پێشبڕکێی دەنگی پاوەستادار، ئەو پێشبڕکێی پێشبڕکێ دەست نەکەوێت</string>
   <string name="morphe_spoof_video_streams_about_js">• ئەگەر لەشێربوونه‌وه ناکه‌وێت، نمایشکردن دەکرێتە خاڵی خه‌ڵوه‌ت</string>

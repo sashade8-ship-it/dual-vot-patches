@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -123,6 +123,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_youtube_doodles_user_dialog_message">YouTube Doodles दिखाने से कस्टम हेडर प्रदर्शित होने से रुक सकते हैं।</string>
   <string name="morphe_hide_channel_bar_title">चैनल बार को छुपाएं</string>
   <string name="morphe_hide_channel_watermark_title">चैनल वॉटरमार्क को छुपाएं</string>
+  <string name="morphe_hide_chapters_timeline_button_title">अध्याय और \'इस वीडियो में\' बटन छिपाएं</string>
   <string name="morphe_hide_crowdfunding_box_title">crowdfunding बॉक्स को छुपाएं</string>
   <string name="morphe_hide_emergency_box_title">छुपाएं आपात बॉक्स</string>
   <string name="morphe_hide_info_panels_title">इन्फो पैनल्स को छुपाएं</string>
@@ -228,9 +229,9 @@ Second \"item\" text"</string>
   <string name="morphe_comments_screen_title">टिप्पणियाँ</string>
   <string name="morphe_comments_screen_summary">टिप्पणी अनुभाग में प्रदर्शित होने वाले घटकों को चुनें</string>
   <string name="morphe_hide_comments_carousel_title">टिप्पणी कैरोसेल फ़िल्टर</string>
-  <string name="morphe_hide_comments_carousel_summary">"• सुनिश्चित करें कि आप कैरोसेल आइटम का सटीक नाम दर्ज करें (जैसे, पूछें, इस वीडियो को हाइलाइट करें, YouTube Music पर सुनें, आदि)।
-• कैरोसेल आइटम को छिपाने के अप्रत्याशित दुष्प्रभाव हो सकते हैं।
-• यदि सभी कैरोसेल आइटम छिपे हुए हैं, तो पूरी कमेंट सेक्शन भी छिपी रहेगी।"</string>
+  <string name="morphe_hide_comments_carousel_summary">"• सुनिश्चित करें कि आप कैरोसेल आइटम का सटीक नाम दर्ज करें (जैसे, पूछें, इस वीडियो को हाइलाइट करें, YouTube Music पर सुनें)
+• कैरोसेल आइटम को छिपाने के अप्रत्याशित दुष्प्रभाव हो सकते हैं
+• यदि सभी कैरोसेल आइटम छिपे हुए हैं, तो पूरी कमेंट सेक्शन भी छिपी रहेगी"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">टिप्पणी कैरोसेल फ़िल्टर</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">फ़िल्टर करने के लिए टिप्पणी कैरोसेल नाम दर्ज करें, नई लाइनों से अलग किए गए</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">छुपाएं एआई चैट सारांश</string>
@@ -263,11 +264,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_keyword_content_phrases_title">कीवर्ड छुपाने के लिए</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"छुपाने के लिए कीवर्ड और वाक्यांश दर्ज करें, नई लाइनों से अलग किए गए
+  <string name="morphe_hide_keyword_content_phrases_summary">"कीवर्ड और वाक्यांश दर्ज करें जिन्हें छिपाना है, नई पंक्तियों से अलग किए गए
 
-कीवर्ड चैनल के नाम या वीडियो शीर्षक में दिखाई देने वाला कोई भी टेक्स्ट हो सकता है
+कीवर्ड चैनल नाम या वीडियो शीर्षकों में दिखाई देने वाला कोई भी टेक्स्ट हो सकता है
 
-मध्य में बड़े अक्षरों वाले शब्दों को उसी केसिंग में दर्ज किया जाना चाहिए (जैसे: iPhone, TikTok, LeBlanc)"</string>
+मध्य में बड़े अक्षरों वाले शब्दों का मिलान सटीक होना चाहिए (उदाहरण के लिए, iPhone, TikTok, LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_summary">"होम / सदस्यताएँ / खोज / टिप्पणियाँ कीवर्ड वाक्यांशों से मेल खाने वाली सामग्री को छिपाने के लिए फ़िल्टर की जाती हैं
 
 सीमाएँ:
@@ -320,7 +321,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_end_screen_store_banner_title">छुपाएं अंत पर्दे स्टोर बैनर</string>
   <string name="morphe_hide_general_ads_title">सामान्य विज्ञापन छुपाएं</string>
   <string name="morphe_hide_merchandise_banners_title">छुपाएं मर्चेंडाइज़ बैनर</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">भुगतान किए गए प्रचार लेबल छिपाएं</string>
   <string name="morphe_hide_player_popup_ads_title">प्लेयर पॉपअप विज्ञापन छिपाएं</string>
   <string name="morphe_hide_self_sponsor_ads_title">छुपाएं स्वयं प्रायोजित कार्ड</string>
@@ -347,7 +347,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_summary">आपके बाहरी डाउनलोडर को खोलने वाला वीडियो प्लेयर में एक ओवरले बटन दिखाता है</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">डाउनलोड बटन और मेनू को ओवरराइड करें</string>
-  <string name="morphe_external_downloader_action_button_summary">यह YouTube के अंतर्निहित डाउनलोड सुविधा के बजाय आपके द्वारा चुने गए बाहरी डाउनलोडर का उपयोग करता है</string>
+  <string name="morphe_external_downloader_action_button_summary">आपके द्वारा चुने गए बाहरी डाउनलोडर का उपयोग करता है, डिफ़ॉल्ट डाउनलोड सुविधा के बजाय</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">वॉइस ओवर अनुवाद</string>
   <string name="morphe_vot_screen_summary">डिवाइस पर टेक्स्ट-टू-स्पीच का उपयोग करके वीडियो कैप्शन को ज़ोर से पढ़ें, जो प्लेबैक के साथ सिंक्रनाइज़ किया गया है।</string>
@@ -375,7 +375,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter कॉन्फ़िगर नहीं किया गया</string>
   <string name="morphe_vot_openrouter_not_configured_message">इस प्रदाता का चयन करने से पहले सेटिंग्स में अपनी OpenRouter API कुंजी दर्ज करें</string>
   <string name="morphe_vot_cost_free">मुफ्त</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">प्रति 100 वीडियो घंटे %s</string>
   <string name="morphe_vot_tts_voice_type">आवाज</string>
   <string name="morphe_vot_tts_system">सिस्टम</string>
@@ -447,12 +447,15 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_save_to_watch_later_success_toast">वीडियो को बाद में देखने की प्लेलिस्ट में सफलतापूर्वक सहेजा गया</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">यह वीडियो पहले से ही बाद में देखने की प्लेलिस्ट में सहेजा गया है</string>
   <string name="morphe_save_to_watch_later_error_toast">इस वीडियो को बाद में देखने की प्लेलिस्ट में सहेजा नहीं जा सकता</string>
+  <string name="morphe_queue_flyout_title">Morphe कतार में जोड़ें</string>
   <string name="morphe_queue_restore_title">सत्रों के बीच कतार बनाए रखें</string>
   <string name="morphe_queue_restore_summary">ऐप को पुनरारंभ करने के बाद कतार बनी रहती है</string>
   <string name="morphe_swap_save_and_queue_actions_title">स्वैप सेव और क्यू क्रियाएँ</string>
   <string name="morphe_swap_save_and_queue_actions_summary">क्यू विकल्पों के लिए टैप करें, बाद में देखने के लिए सेव करने के लिए टैप करके दबाएँ</string>
   <string name="morphe_queue_override_flyout_menu_title">फ़ीड फ्लाईआउट कतार बटन को ओवरराइड करें</string>
   <string name="morphe_queue_override_flyout_menu_summary">Morphe कतार को YouTube कतार के बजाय खोलता है</string>
+  <string name="morphe_queue_add_flyout_menu_title">फ़ीड फ़्लाईआउट कतार मेनू आइटम जोड़ें</string>
+  <string name="morphe_queue_add_flyout_menu_summary">एक अतिरिक्त फ़्लाईआउट आइटम जोड़ता है। यदि \"कतार में जोड़ें\" नहीं दिखाया गया है तो इसे सक्षम करें।</string>
   <string name="morphe_queue_manager_check_failed_auth">लॉग इन नहीं किया गया</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">प्लेलिस्ट आईडी नहीं</string>
   <string name="morphe_queue_manager_check_failed_queue">क्यू खाली है</string>
@@ -515,7 +518,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_swipe_zone_label_volume">वॉल्यूम</string>
   <string name="morphe_swipe_zone_label_native">मूल</string>
   <string name="morphe_swipe_press_to_engage_title">प्रेस को स्वाइप गेस्टर को एनब्ल करें</string>
-  <string name="morphe_swipe_press_to_engage_summary">स्वाइप जेस्चर को पहचानने से पहले प्रेस और होल्ड करने की आवश्यकता होती है</string>
   <string name="morphe_swipe_haptic_feedback_title">हैप्टिक फीडबैक सक्षम करें</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">ब्राइटनेस को बचाएं और पुनर्स्थापित करें</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">फुलस्क्रीन मोड में प्रवेश करते/से बाहर निकलते समय चमक स्तर को याद रखता है</string>
@@ -630,7 +632,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_auto_captions_style_legacy_entry_2">ऑटो कैप्शंस छुपाएं</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">कैप्शन कुकी सेट करें</string>
-  <string name="morphe_set_caption_cookies_summary">"यह ठीक करता है YouTube की एक बग जहां गायब कुकीज़ के कारण ऑटो-ट्रांसलेट कैप्शन उपलब्ध नहीं हो सकते हैं
+  <string name="morphe_set_caption_cookies_summary">"एक स्टॉक YouTube बग को ठीक करता है जहां ऑटो-ट्रांसलेट कैप्शन कुकीज़ की कमी के कारण उपलब्ध नहीं हो सकते हैं
 
 'कैप्शन कुकीज़' प्रदान की जानी चाहिए"</string>
   <string name="morphe_caption_cookies_title">कैप्शन कुकीज़</string>
@@ -699,7 +701,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">फ्लायआउट मेनू</string>
   <string name="morphe_hide_player_flyout_summary">फ़्लाईआउट मेनू में कौन से घटक दिखाई दें, चुनें</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'ऑडियो ट्रैक\' मेनू छिपाएं</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -893,7 +895,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_open_system_share_sheet_summary">सामग्री साझा करते समय इन-ऐप एक के बजाय सिस्टम शेयर शीट खोलता है</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music बटन ओवरराइड करें</string>
-  <string name="morphe_override_youtube_music_buttons_summary">यह आधिकारिक YouTube Music ऐप के बजाय आपके पसंदीदा म्यूजिक ऐप को खोलता है</string>
+  <string name="morphe_override_youtube_music_buttons_summary">आपके पसंदीदा संगीत ऐप को खोलता है, डिफ़ॉल्ट YouTube Music ऐप के बजाय</string>
   <string name="morphe_music_package_name_title">म्यूजिक ऐप पैकेज नाम</string>
   <string name="morphe_music_package_name_summary">आपके इंस्टॉल किए गए म्यूजिक ऐप का पैकेज नाम</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1046,7 +1048,6 @@ DeArrow.ajay.app खोलने के लिए यहां टैप कर�
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">सूचना मीडिया नियंत्रण</string>
   <string name="morphe_notification_media_screen_summary">अपने लॉक स्क्रीन और अधिसूचना पैनल पर प्रदर्शित होने वाले प्लेबैक नियंत्रणों को अनुकूलित करें</string>
-  <string name="morphe_hide_notification_media_prev_next_title">छिपाएँ पिछला और अगला बटन</string>
   <string name="morphe_hide_notification_media_prev_next_summary">मीडिया अधिसूचना, लॉक स्क्रीन और हेडफ़ोन नियंत्रण में पिछला और अगला बटन छुपाता है</string>
   <string name="morphe_disable_notification_media_seekbar_title">सीकबार अक्षम करें</string>
   <string name="morphe_disable_notification_media_seekbar_summary">लॉक स्क्रीन और अधिसूचना पैनल पर सीकबार को खींचने से रोकता है</string>
@@ -1119,7 +1120,6 @@ DeArrow.ajay.app खोलने के लिए यहां टैप कर�
 • HDR वीडियो AVC का उपयोग नहीं करेंगे
 • कुछ डिवाइस AVC को बल नहीं लगा सकते"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">इस सुविधा का उपयोग करने के लिए, \'स्पूफ वीडियो स्ट्रीम\' को \'Android VR\' या \'Android Studio\' पर सेट करें।</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">उन्नत गुणवत्ता मेनू खोलें</string>
   <string name="morphe_advanced_video_quality_menu_summary">गुणवत्ता चयन मेनू को छोड़ता है और सीधे \'उन्नत\' गुणवत्ता मेनू खोलता है</string>
@@ -1130,13 +1130,10 @@ DeArrow.ajay.app खोलने के लिए यहां टैप कर�
   <string name="morphe_video_quality_prioritize_summary">कोडेक दक्षता पर सबसे अच्छी उपलब्ध वीडियो गुणवत्ता को प्राथमिकता देता है।</string>
   <string name="morphe_video_quality_prioritize_dialog">यदि यह सेटिंग बंद है, तो पुराने वीडियो में कोई वीडियो गुणवत्ता विकल्प नहीं दिख सकता है।</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Android VR / visionOS AV1 की अनुमति दें</string>
-  <string name="morphe_spoof_video_streams_av1_summary">एंड्रॉइड वीआर / visionOS क्लाइंट का उपयोग करते समय सॉफ्टवेयर AV1 डिकोडिंग की अनुमति देता है</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"इस सेटिंग को सक्षम करने पर सॉफ्टवेयर AV1 डिकोडिंग का उपयोग किया जा सकता है।
 
 AV1 के साथ वीडियो प्लेबैक स्टटर या फ़्रेम छोड़ सकता है।"</string>
   <string name="morphe_spoof_video_streams_about_title">Spoofing साइड इफेक्ट</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• ऑडियो ट्रैक मेनू गायब है</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• कोई AV1 वीडियो कोडेक नहीं</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR इमर्सिव मोड उपलब्ध नहीं है।</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• स्थिर वॉल्यूम उपलब्ध नहीं है</string>
@@ -1146,7 +1143,6 @@ AV1 के साथ वीडियो प्लेबैक स्टटर �
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• गुणवत्ता 720p तक सीमित हो सकती है</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">प्लेयर जावास्क्रिप्ट वैरिएंट</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">\'nerds के लिए आँकड़े\' में स्पूफिंग दिखाएं</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">पुराने वीडियो एक्शन बार को पुनर्स्थापित करें</string>
   <string name="morphe_restore_old_video_action_bar_summary">"डिस्लाइक्स को नहीं दिखाए जाने और वीडियो एक्शन बटन को छिपाए नहीं जा सकने की समस्या ठीक करता है

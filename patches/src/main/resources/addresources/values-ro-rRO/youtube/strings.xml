@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -123,6 +123,7 @@ Schimbari incluse:
   <string name="morphe_hide_youtube_doodles_user_dialog_message">Afișarea Doodle-urilor YouTube poate împiedica afișarea antetelor personalizate.</string>
   <string name="morphe_hide_channel_bar_title">Ascunde bara de canal</string>
   <string name="morphe_hide_channel_watermark_title">Ascunde watermark canal</string>
+  <string name="morphe_hide_chapters_timeline_button_title">Ascunde capitolele și butonul \'În acest videoclip\'</string>
   <string name="morphe_hide_crowdfunding_box_title">Ascunderea casetei de tip crowdfunding</string>
   <string name="morphe_hide_emergency_box_title">Ascunde casetele de urgenţă</string>
   <string name="morphe_hide_info_panels_title">Ascunde panourile de informaţii</string>
@@ -230,9 +231,9 @@ Schimbari incluse:
   <string name="morphe_comments_screen_title">Comentarii</string>
   <string name="morphe_comments_screen_summary">Alegeți ce componente să apară în secțiunea de comentarii</string>
   <string name="morphe_hide_comments_carousel_title">Activează filtru carusel comentarii</string>
-  <string name="morphe_hide_comments_carousel_summary">"• Asigurați-vă că introduceți exact numele elementului carousel (de exemplu, Întrebare, Promovează acest videoclip, Ascultă pe YouTube Music, etc.)
-• Ascunderea elementelor carousel poate avea efecte secundare neintenționate.
-• Dacă toate elementele carousel sunt ascunse, întreaga secțiune de comentarii va fi, de asemenea, ascunsă."</string>
+  <string name="morphe_hide_comments_carousel_summary">"• Asigurați-vă că introduceți exact numele elementului carousel (de exemplu, Ask, Hype acest videoclip, Ascultă pe YouTube Music)
+• Ascunderea elementelor carousel poate avea efecte secundare neintenționate
+• Dacă toate elementele carousel sunt ascunse, întreaga secțiune de comentarii va fi, de asemenea, ascunsă"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">Filtru carousel comentarii</string>
   <string name="morphe_hide_comments_carousel_filter_strings_summary">Introduceți numele caruselurilor de comentarii pentru a filtra, separate prin linii noi</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">Ascunde rezumatul chatului AI</string>
@@ -265,11 +266,11 @@ Schimbari incluse:
   <string name="morphe_hide_keyword_content_phrases_title">Cuvinte cheie de ascuns</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
-  <string name="morphe_hide_keyword_content_phrases_summary">"Introdu cuvinte cheie și expresii de ascuns, separate prin linii noi
+  <string name="morphe_hide_keyword_content_phrases_summary">"Introduceți cuvinte cheie și expresii de ascuns, separate prin linii noi
 
-Cuvintele cheie pot fi orice text afișat în titlurile videoclipurilor sau în numele canalelor
+Cuvintele cheie pot fi orice text afișat în titlurile videoclipurilor sau numele canalelor
 
-Cuvintele cu litere mari în mijloc trebuie să corespundă exact (de exemplu: iPhone, TikTok, LeBlanc)"</string>
+Cuvintele cu litere mari în mijloc trebuie să se potrivească exact (de exemplu, iPhone, TikTok, LeBlanc)"</string>
   <string name="morphe_hide_keyword_content_about_summary">"Pagina de pornire / Abonamente / Căutare / Comentarii sunt filtrate pentru a ascunde conținutul care se potrivește cu expresiile de cuvinte cheie
 
 Limitări:
@@ -322,7 +323,6 @@ Atingeți aici pentru a deschide AiSlopList.com și a vedea descărcările pentr
   <string name="morphe_hide_end_screen_store_banner_title">Ascunde bannerul magazinului de la finalul ecranului</string>
   <string name="morphe_hide_general_ads_title">Ascunde reclamele generale</string>
   <string name="morphe_hide_merchandise_banners_title">Ascunde bannere de produse</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_paid_promotion_labels_title">Ascunde etichetele de promovare plătită</string>
   <string name="morphe_hide_player_popup_ads_title">Ascunde anunțurile pop-up ale jucătorului</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ascunde cardurile auto-sponsorizate</string>
@@ -349,7 +349,7 @@ Atingeți aici pentru a deschide AiSlopList.com și a vedea descărcările pentr
   <string name="morphe_external_downloader_summary">Afișează un buton de suprapunere în playerul video care deschide aplicația ta de descărcare externă</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Suprascrie butonul de descărcare și meniul</string>
-  <string name="morphe_external_downloader_action_button_summary">Utilizează aplicația ta de descărcare externă preferată în loc de funcția de descărcare încorporată a YouTube</string>
+  <string name="morphe_external_downloader_action_button_summary">Folosește descărcătorul extern ales în locul funcției standard de descărcare</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Traducere cu voce peste</string>
   <string name="morphe_vot_screen_summary">Citește cu voce tare subtitrările video folosind text-to-speech pe dispozitiv, sincronizat cu redarea</string>
@@ -377,7 +377,7 @@ Atingeți aici pentru a deschide OpenRouter.ai"</string>
   <string name="morphe_vot_openrouter_not_configured_title">OpenRouter nu este configurat</string>
   <string name="morphe_vot_openrouter_not_configured_message">Introduceți cheia API OpenRouter în setări înainte de a selecta acest furnizor</string>
   <string name="morphe_vot_cost_free">Gratuit</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_cost_per_hour">%s per 100 de ore de video</string>
   <string name="morphe_vot_tts_voice_type">Voce</string>
   <string name="morphe_vot_tts_system">Sistem</string>
@@ -449,12 +449,15 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_save_to_watch_later_success_toast">Video salvat cu succes în lista de vizionare ulterioară</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Acest video este deja salvat în lista de vizionare ulterioară</string>
   <string name="morphe_save_to_watch_later_error_toast">Nu se poate salva acest video în lista de vizionare ulterioară</string>
+  <string name="morphe_queue_flyout_title">Adaugă în coada Morphe</string>
   <string name="morphe_queue_restore_title">Menține coada între sesiuni</string>
   <string name="morphe_queue_restore_summary">Coada este păstrată după repornirea aplicației</string>
   <string name="morphe_swap_save_and_queue_actions_title">Schimbă acțiunile Salvare și Coadă</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Atingeți pentru opțiunile cozii, atingeți și mențineți apăsat pentru a salva pentru a urmări mai târziu</string>
   <string name="morphe_queue_override_flyout_menu_title">Înlocuire coadă flyout feed buton</string>
   <string name="morphe_queue_override_flyout_menu_summary">Deschide coada Morphe în loc de coada YouTube</string>
+  <string name="morphe_queue_add_flyout_menu_title">Adaugă element de meniu pentru coada flyout de feed</string>
+  <string name="morphe_queue_add_flyout_menu_summary">Adaugă un element suplimentar de flyout. Activează această opțiune dacă \"Adaugă în coadă\" nu este afișat.</string>
   <string name="morphe_queue_manager_check_failed_auth">Nu ești autentificat</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ID playlistă inexistent</string>
   <string name="morphe_queue_manager_check_failed_queue">Coada este goală</string>
@@ -517,7 +520,6 @@ Pentru a remedia acest lucru, activează 'Spoof fluxuri video' și schimbă 'Cli
   <string name="morphe_swipe_zone_label_volume">Volum</string>
   <string name="morphe_swipe_zone_label_native">Nativ</string>
   <string name="morphe_swipe_press_to_engage_title">Activează gestul de apăsare pentru a trage</string>
-  <string name="morphe_swipe_press_to_engage_summary">Împiedică butoanele Like și Subscribe să strălucească atunci când un creator le menționează</string>
   <string name="morphe_swipe_haptic_feedback_title">Activează feedback haptic</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Salvează și restaurează luminozitatea</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">Ascunde butonul Like și Dislike</string>
@@ -632,9 +634,9 @@ Pentru a remedia acest lucru, activează 'Spoof fluxuri video' și schimbă 'Cli
   <string name="morphe_auto_captions_style_legacy_entry_2">Ascunde subtitrări automate</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Setează cookie-urile pentru subtitrări</string>
-  <string name="morphe_set_caption_cookies_summary">"Corectează un bug al YouTube-ului standard, în care subtitrările cu traducere automată s-ar putea să nu fie disponibile din cauza cookie-urilor lipsă
+  <string name="morphe_set_caption_cookies_summary">"Corectează o eroare standard YouTube în care subtitrările cu traducere automată ar putea să nu fie disponibile din cauza lipsei cookie-urilor
 
-„Cookie-urile pentru subtitrări” trebuie furnizate"</string>
+Trebuie furnizate „Cookie-uri pentru subtitrări”"</string>
   <string name="morphe_caption_cookies_title">Cookie-uri de captions</string>
   <string name="morphe_caption_cookies_summary">Cookie-uri care trebuie setate în cererile API Text Timed (Caption Data API)</string>
   <string name="morphe_get_caption_cookies_title">Obtine cookie-uri de captions</string>
@@ -701,7 +703,7 @@ Pentru a accesa Setări, activați butonul Setări prin General → Bara de inst
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Meniu flyout</string>
   <string name="morphe_hide_player_flyout_summary">Alege ce componente apar în meniul flyout</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Ascunde meniul \'Piesă audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -895,7 +897,7 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_open_system_share_sheet_summary">Deschide foaia de partajare a sistemului în loc de cea din aplicație când partajezi conținut</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Suprascrie butoanele YouTube Music</string>
-  <string name="morphe_override_youtube_music_buttons_summary">Deschide aplicația ta preferată de muzică în loc de aplicația oficială YouTube Music</string>
+  <string name="morphe_override_youtube_music_buttons_summary">Deschide aplicația ta preferată de muzică în locul aplicației standard YouTube Music</string>
   <string name="morphe_music_package_name_title">Numele pachetului aplicației de muzică</string>
   <string name="morphe_music_package_name_summary">Numele pachetului aplicației tale de muzică instalată</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1048,7 +1050,6 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">Comenzi media pentru notificări</string>
   <string name="morphe_notification_media_screen_summary">Personalizează comenzile de redare afișate pe ecranul de blocare și panoul de notificări</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Ascunde butoanele Anterior &amp; Următorul</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Ascunde butoanele anterioare și următoare din notificarea media, pe ecranul de blocare și pe comenzile pentru căști</string>
   <string name="morphe_disable_notification_media_seekbar_title">Dezactivează bara de căutare</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Împiedică tragerea barei de căutare pe ecranul de blocare și panoul de notificări</string>
@@ -1121,7 +1122,6 @@ Limitări:
 • Videoclipurile HDR nu vor utiliza AVC
 • Unele dispozitive nu pot forța AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Pentru a utiliza această funcție, setați \'Falsificare fluxuri video\' pe \'Android VR\' sau \'Android Studio\'</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Deschide meniul calității avansate</string>
   <string name="morphe_advanced_video_quality_menu_summary">Sare peste meniul de selecție a calității și deschide direct meniul de calitate avansat.</string>
@@ -1132,13 +1132,10 @@ Limitări:
   <string name="morphe_video_quality_prioritize_summary">Prioritizează cea mai înaltă calitate video disponibilă în detrimentul eficienței codec-ului</string>
   <string name="morphe_video_quality_prioritize_dialog">Dacă această setare este dezactivată, videoclipurile mai vechi pot să nu afișeze opțiuni de calitate video</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
-  <string name="morphe_spoof_video_streams_av1_title">Permite Android VR / visionOS AV1</string>
-  <string name="morphe_spoof_video_streams_av1_summary">Permite decodarea software AV1 atunci când se utilizează clientul Android VR / visionOS</string>
   <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Activarea acestei setări poate folosi decodarea software AV1.
 
 Redarea video cu AV1 poate sacada sau pierde cadre."</string>
   <string name="morphe_spoof_video_streams_about_title">Efecte secundare ale simulării</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Meniul pistei audio lipsește</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Fara codec video AV1</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• Mod 360° VR immersiv nu este disponibil</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Volumul stabil nu este disponibil</string>
@@ -1148,7 +1145,6 @@ Redarea video cu AV1 poate sacada sau pierde cadre."</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Calitatea poate fi limitată la 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Varianta JavaScript a playerului</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Extinde durata DVR pentru transmisiuni live până la 7 zile în trecut</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">Restaurare bara de acțiune video veche</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Remediază problema dezactivării afișării numărului de dislike-uri și imposibilitatea ascunderii butoanelor de acțiune video

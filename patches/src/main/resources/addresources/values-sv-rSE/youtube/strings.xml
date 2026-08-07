@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -212,7 +212,6 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_end_screen_store_banner_title">Dölj butiksbanner på slutskärmen</string>
   <string name="morphe_hide_general_ads_title">Dölj allmänna annonser</string>
   <string name="morphe_hide_merchandise_banners_title">Dölj banners för varor</string>
-  <!-- 'Includes paid promotion' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_player_popup_ads_title">Dölj popup-annonser i spelaren</string>
   <string name="morphe_hide_self_sponsor_ads_title">Dölj självsponsrade kort</string>
   <string name="morphe_hide_shopping_links_title">Dölj butikslänkar</string>
@@ -229,7 +228,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_openrouter_model_custom">Anpassad</string>
-  <!-- %s is dollar cost, e.g. $0.10 per 100 hours -->
+  <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <string name="morphe_vot_tts_system">System</string>
   <string name="morphe_vot_do_not_show_again">Visa inte igen</string>
   <!-- interaction.loop.loopVideoPatch -->
@@ -287,7 +286,6 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_swipe_volume_summary">Svep vertikalt till höger i helskärmsläget för att justera volymen</string>
   <string name="morphe_swipe_zone_label_native">Inbyggd</string>
   <string name="morphe_swipe_press_to_engage_title">Aktivera gesten Tryck för att svepa</string>
-  <string name="morphe_swipe_press_to_engage_summary">Kräver att du trycker länge innan svepgesten känns igen</string>
   <string name="morphe_swipe_haptic_feedback_title">Aktivera haptisk återkoppling</string>
   <string name="morphe_swipe_save_and_restore_brightness_title">Spara och återställ ljusstyrka</string>
   <string name="morphe_swipe_save_and_restore_brightness_summary">Kommer ihåg ljusstyrkan när du startar och avslutar helskärmsläget </string>
@@ -446,7 +444,7 @@ Om du vill komma åt inställningarna aktiverar du knappen Inställningar via Al
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Flyout-meny</string>
   <string name="morphe_hide_player_flyout_summary">Välj vilka komponenter som visas i flyout-menyn</string>
-  <!-- 'Audio track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Dölj menyn Ljudspår</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' must be kept untranslated. -->
@@ -739,7 +737,6 @@ Om du vill komma åt inställningarna aktiverar du knappen Inställningar via Al
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
   <string name="morphe_notification_media_screen_title">Mediestyrning i aviseringar</string>
   <string name="morphe_notification_media_screen_summary">Anpassa de uppspelningskontroller som visas på låsskärmen och i aviseringspanelen</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Dölj knapparna Föregående och Nästa</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Döljer knapparna Föregående och Nästa i medieaviseringen, på låsskärmen och för hörlursstyrning</string>
   <string name="morphe_disable_notification_media_seekbar_title">Inaktivera sökreglaget</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Förhindrar att sökreglaget kan dras på låsskärmen och i aviseringspanelen</string>
@@ -807,7 +804,6 @@ Begränsningar:
 
 Videouppspelning med AV1 kan hacka eller tappa bildrutor."</string>
   <string name="morphe_spoof_video_streams_about_title">Bieffekter av förfalskning</string>
-  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Menyn Ljudspår saknas</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ingen AV1-videokodek</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR-integrerat läge is not available</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stabil volym är inte tillgängligt</string>
@@ -816,6 +812,5 @@ Videouppspelning med AV1 kan hacka eller tappa bildrutor."</string>
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Tvinga ursprungligt ljud är inte tillgängligt</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_player_js_variant_title">JavaScript-variant av spelaren</string>
-  <string name="morphe_spoof_video_streams_stats_for_nerds_title">Visa förfalskningen i Statistik för nördar</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
 </resources>

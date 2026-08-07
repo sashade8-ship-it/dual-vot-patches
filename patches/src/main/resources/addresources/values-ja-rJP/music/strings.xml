@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -25,8 +25,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">サードパーティ製のダウンロード アプリで、ミュージック ビデオ、ポッドキャスト、楽曲をダウンロードします</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">「オフラインに一時保存」ボタンの動作を上書き</string>
-  <string name="morphe_external_downloader_action_button_summary">「オフラインに一時保存」ボタンの呼び出し先を、「YouTube Music 内蔵のダウンロード機能」から「設定した外部ダウンローダー」に変更します</string>
-  <string name="morphe_external_downloader_flyout_menu_title">フライアウト メニューの「オフラインに一時保存」の動作を上書き</string>
+  <string name="morphe_external_downloader_action_button_summary">「オフラインに一時保存」ボタンの呼び出し先を、「純正アプリ内蔵のダウンロード機能」から「設定した外部ダウンローダー」に変更します</string>
+  <string name="morphe_external_downloader_flyout_menu_title">「オフラインに一時保存」の動作を上書き</string>
+  <string name="morphe_external_downloader_flyout_menu_summary">フライアウト メニューの「オフラインに一時保存」の呼び出し先を、「純正アプリ内蔵のダウンロード機能」から「設定した外部ダウンローダー」に変更します</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">Morphe について</string>
@@ -326,9 +327,6 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
 
 外部サービスで歌詞が見つからない場合は、アプリの歌詞を表示します"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_music_spoof_app_version_target_entry_6_35_52">6.35.52 - 古いフライアウト パネルを復元</string>
-  <string name="morphe_music_spoof_app_version_target_entry_6_42_55">6.42.55 - リアルタイム歌詞を無効にする</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_12_52">7.12.52 - 古いダイナミック歌詞を復元</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - 古いアクションバーを復元</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_17_52">7.17.52 - ホームフィードにコメントセクションが表示されない</string>
+  <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - アイコンの太字表示を無効化</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - プレーヤーの「次のコンテンツ」「歌詞」「関連コンテンツ」タブを復元</string>
 </resources>

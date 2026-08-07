@@ -2,7 +2,7 @@
 <!--
 
     Strings with new lines must be raw strings where they're wrapped in quotes and new lines are not encoded.
-    Raw strings still requires escaping embedded double quotes but escaping embedded single quotes is optional.
+    Raw strings still require escaping embedded double quotes but escaping embedded single quotes is optional.
 
     Raw strings are required because Crowdin AI translations regularly gets confused and
     replace \n with an encoded new line character.
@@ -25,8 +25,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">Prenesite videe, podkaste ali pesmi z aplikacijami za prenašanje tretje osebe</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Prepiši gumb za prenos</string>
-  <string name="morphe_external_downloader_action_button_summary">Uporablja izbrano zunanjo orodje za prenos namesto vgrajene funkcije za prenos v YouTube Music</string>
-  <string name="morphe_external_downloader_flyout_menu_title">Prepiši meni za prenos</string>
+  <string name="morphe_external_downloader_action_button_summary">Uporabi izbrani zunanji prenašalnik namesto privzetega gumba za dejanje Prenos</string>
+  <string name="morphe_external_downloader_flyout_menu_title">Prepiši meni Prenos</string>
+  <string name="morphe_external_downloader_flyout_menu_summary">Uporabi izbrani zunanji prenašalnik namesto privzetega pojavnega menija Prenos</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">O nas</string>
@@ -326,9 +327,6 @@ Sinhronizirana besedila sledijo predvajanju. Če se odmaknejo, prilagodite časo
 
 Če ni najdeno besedil tretje strani, se prikažejo vgrajena besedila."</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_music_spoof_app_version_target_entry_6_35_52">6.35.52 - Obnovi stari pojavni panel</string>
-  <string name="morphe_music_spoof_app_version_target_entry_6_42_55">6.42.55 - Onemogoči besedila v realnem času</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_12_52">7.12.52 - Obnovi stari dinamični prikaz besedil</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_16_53">7.16.53 - Obnovi staro akcijsko vrstico</string>
-  <string name="morphe_music_spoof_app_version_target_entry_7_17_52">7.17.52 - Odsek s komentarji se ne prikazuje v domačem kanalu</string>
+  <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - Onemogoči krepke ikone</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - Obnovi zavihke predvajalnika: Naslednje, Besedila in Povezano</string>
 </resources>
