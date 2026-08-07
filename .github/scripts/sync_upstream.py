@@ -65,6 +65,18 @@ REQUIRED_PATCH_NAMES = (
     "Yandex voice-over translation",
 )
 
+DUAL_YANDEX_STRINGS_PATH = re.compile(
+    r"^patches/src/main/resources/addresources/values(?:-[^/]+)?/youtube/strings\.xml$"
+)
+STRING_RESOURCE_LINE = re.compile(
+    r'^\s*<string\s+name="([^"]+)"(?:\s[^>]*)?>.*</string>\s*$'
+)
+DUAL_OWNED_MORPHE_STRING_NAMES = {
+    "morphe_vot_screen_title",
+    "morphe_vot_screen_summary",
+    "morphe_vot_enabled_title",
+}
+
 
 class SyncError(RuntimeError):
     """An expected safety stop that should be reported as an automation issue."""
@@ -141,6 +153,110 @@ def unresolved_paths() -> list[str]:
     return [line for line in result.splitlines() if line]
 
 
+def merge_dual_yandex_strings(base: str, ours: str, theirs: str) -> str:
+    """Keep upstream XML plus fork-owned Dual Yandex string entries.
+
+    The resolver is intentionally narrow: the local side may differ from the
+    merge base only by single-line ``dualvot_yandex_*`` strings and the three
+    labels that distinguish the built-in translator. Any other local edit
+    remains a manual source conflict.
+    """
+
+    entries: dict[str, str] = {}
+    ours_without_dual: list[str] = []
+    for line in ours.splitlines(keepends=True):
+        match = STRING_RESOURCE_LINE.fullmatch(line.rstrip("\r\n"))
+        name = match.group(1) if match is not None else ""
+        if not (
+            name.startswith("dualvot_yandex_")
+            or name in DUAL_OWNED_MORPHE_STRING_NAMES
+        ):
+            ours_without_dual.append(line)
+            continue
+        if name in entries:
+            raise SyncError(f"Duplicate local Dual-owned string: {name}")
+        entries[name] = line
+
+    dual_names = {name for name in entries if name.startswith("dualvot_yandex_")}
+    if not dual_names:
+        raise SyncError("No local Dual Yandex strings found in resource conflict")
+
+    def without_owned_and_blank_lines(value: str) -> list[str]:
+        remaining: list[str] = []
+        for line in value.splitlines():
+            match = STRING_RESOURCE_LINE.fullmatch(line)
+            name = match.group(1) if match is not None else ""
+            if name.startswith("dualvot_yandex_") or name in DUAL_OWNED_MORPHE_STRING_NAMES:
+                continue
+            if line.strip():
+                remaining.append(line.strip())
+        return remaining
+
+    if without_owned_and_blank_lines("".join(ours_without_dual)) != without_owned_and_blank_lines(base):
+        raise SyncError(
+            "Local resource conflict contains changes outside approved Dual-owned strings"
+        )
+
+    upstream_names = {
+        match.group(1)
+        for line in theirs.splitlines()
+        if (match := STRING_RESOURCE_LINE.fullmatch(line)) is not None
+    }
+    duplicates = sorted(dual_names & upstream_names)
+    if duplicates:
+        raise SyncError(
+            "Upstream already defines Dual Yandex strings: " + ", ".join(duplicates)
+        )
+
+    newline = "\r\n" if "\r\n" in theirs else "\n"
+    replaced_names: set[str] = set()
+    upstream_lines: list[str] = []
+    for line in theirs.splitlines(keepends=True):
+        match = STRING_RESOURCE_LINE.fullmatch(line.rstrip("\r\n"))
+        name = match.group(1) if match is not None else ""
+        if name in DUAL_OWNED_MORPHE_STRING_NAMES:
+            replacement = entries.get(name)
+            if replacement is None:
+                raise SyncError(f"Missing local Dual-owned string: {name}")
+            if replacement.endswith(("\n", "\r")):
+                replacement = replacement.rstrip("\r\n") + newline
+            upstream_lines.append(replacement)
+            replaced_names.add(name)
+        else:
+            upstream_lines.append(line)
+    missing_replacements = DUAL_OWNED_MORPHE_STRING_NAMES - replaced_names
+    if missing_replacements:
+        raise SyncError(
+            "Upstream removed Dual-owned Morphe strings: "
+            + ", ".join(sorted(missing_replacements))
+        )
+    merged_upstream = "".join(upstream_lines)
+    closing = re.search(r"(?m)^\s*</resources>\s*$", merged_upstream)
+    if closing is None:
+        raise SyncError("Upstream strings resource has no closing resources element")
+
+    block = "".join(entries[name] for name in entries if name in dual_names)
+    if block and not block.endswith(("\n", "\r")):
+        block += newline
+    prefix = merged_upstream[: closing.start()]
+    if prefix and not prefix.endswith(("\n", "\r")):
+        prefix += newline
+    return prefix + block + merged_upstream[closing.start() :]
+
+
+def resolve_dual_yandex_string_conflicts() -> None:
+    for path in unresolved_paths():
+        if DUAL_YANDEX_STRINGS_PATH.fullmatch(path) is None:
+            continue
+        base = run("git", "show", f":1:{path}", capture=True).stdout
+        ours = run("git", "show", f":2:{path}", capture=True).stdout
+        theirs = run("git", "show", f":3:{path}", capture=True).stdout
+        merged = merge_dual_yandex_strings(base, ours, theirs)
+        destination = ROOT / path
+        destination.write_text(merged, encoding="utf-8", newline="")
+        run("git", "add", "--", path)
+
+
 def merge_ref(ref: str, project_preference: str, label: str) -> bool:
     """Merge ref without committing and resolve only explicitly owned files.
 
@@ -166,6 +282,8 @@ def merge_ref(ref: str, project_preference: str, label: str) -> bool:
 
     for path in UPSTREAM_FILES_REMOVED_FROM_DERIVATIVE:
         run("git", "rm", "-rf", "--ignore-unmatch", "--", path)
+
+    resolve_dual_yandex_string_conflicts()
 
     remaining = unresolved_paths()
     if remaining:
