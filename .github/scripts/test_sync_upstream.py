@@ -14,6 +14,80 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_dispatcher_runs_every_two_hours(self):
+        workflow = (
+            MODULE_PATH.parents[1] / "workflows" / "upstream_sync.yml"
+        ).read_text(encoding="utf-8")
+        self.assertIn("cron: '23 */2 * * *'", workflow)
+        self.assertNotIn("cron: '23 */6 * * *'", workflow)
+
+    def test_merges_only_dual_yandex_strings_into_upstream_resource(self):
+        base = (
+            '<resources>\n'
+            '    <string name="morphe_vot_screen_title">Voice over translation</string>\n'
+            '    <string name="morphe_vot_screen_summary">Old summary</string>\n'
+            '    <string name="morphe_vot_enabled_title">Voice over translation</string>\n'
+            '    <string name="upstream">old</string>\n'
+            '</resources>\n'
+        )
+        ours = (
+            '<resources>\n'
+            '    <string name="morphe_vot_screen_title">Google and other translations</string>\n'
+            '    <string name="morphe_vot_screen_summary">Dual summary</string>\n'
+            '    <string name="morphe_vot_enabled_title">Enable Google and other translations</string>\n'
+            '    <string name="upstream">old</string>\n\n'
+            '    <string name="dualvot_yandex_enabled">Enabled</string>\n'
+            '</resources>\n'
+        )
+        theirs = base.replace('name="upstream">old', 'name="upstream">new')
+
+        self.assertEqual(
+            sync_upstream.merge_dual_yandex_strings(base, ours, theirs),
+            '<resources>\n'
+            '    <string name="morphe_vot_screen_title">Google and other translations</string>\n'
+            '    <string name="morphe_vot_screen_summary">Dual summary</string>\n'
+            '    <string name="morphe_vot_enabled_title">Enable Google and other translations</string>\n'
+            '    <string name="upstream">new</string>\n'
+            '    <string name="dualvot_yandex_enabled">Enabled</string>\n'
+            '</resources>\n',
+        )
+
+    def test_rejects_non_dual_local_resource_change(self):
+        base = (
+            '<resources>\n'
+            '    <string name="morphe_vot_screen_title">Voice over translation</string>\n'
+            '    <string name="morphe_vot_screen_summary">Old summary</string>\n'
+            '    <string name="morphe_vot_enabled_title">Voice over translation</string>\n'
+            '    <string name="upstream">old</string>\n'
+            '</resources>\n'
+        )
+        ours = (
+            base.replace('name="upstream">old', 'name="upstream">local edit').replace(
+                '</resources>',
+                '    <string name="dualvot_yandex_enabled">Enabled</string>\n</resources>',
+            )
+        )
+
+        with self.assertRaises(sync_upstream.SyncError):
+            sync_upstream.merge_dual_yandex_strings(base, ours, base)
+
+    def test_rejects_dual_yandex_string_already_defined_upstream(self):
+        base = (
+            '<resources>\n'
+            '    <string name="morphe_vot_screen_title">Voice over translation</string>\n'
+            '    <string name="morphe_vot_screen_summary">Old summary</string>\n'
+            '    <string name="morphe_vot_enabled_title">Voice over translation</string>\n'
+            '</resources>\n'
+        )
+        ours = base.replace(
+            '</resources>',
+            '    <string name="dualvot_yandex_enabled">Enabled</string>\n'
+            '</resources>',
+        )
+
+        with self.assertRaises(sync_upstream.SyncError):
+            sync_upstream.merge_dual_yandex_strings(base, ours, ours)
+
     def test_channel_workflow_runs_current_controller_from_main(self):
         workflow = (
             MODULE_PATH.parents[1] / "workflows" / "upstream_sync_channel.yml"

@@ -73,6 +73,7 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.voiceovertranslation.VoiceOverTranslationCoordinator;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVoiceOverTranslationPatch;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotBottomSheet;
+import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotTiming;
 import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
@@ -514,7 +515,7 @@ public final class YandexVoiceOverTranslationButton {
         private static String formatTimerText(int seconds) {
             if (seconds <= 0) return "\u2026";
             if (seconds >= 60) {
-                int minutes = (seconds + 59) / 60;
+                int minutes = YandexVotTiming.roundedDisplayMinutes(seconds);
                 return str("dualvot_yandex_button_time_minutes", minutes);
             }
             return str("dualvot_yandex_button_time_seconds", seconds);
