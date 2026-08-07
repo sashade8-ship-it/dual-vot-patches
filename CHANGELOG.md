@@ -1,3 +1,16 @@
+## 1.38.0-dualvot.8.3 (2026-08-07)
+
+### Yandex timing and updater reliability
+
+* Check Yandex translation readiness independently from the displayed ETA,
+  with readiness polling capped at 15 seconds.
+* Prevent an expired countdown and progress ring from restarting when Yandex
+  returns another short estimate.
+* Use the same whole-minute rounding on the player button and long-press
+  status sheet, and marshal upload progress updates onto the UI thread.
+* Resolve narrowly scoped Dual VoT string conflicts during upstream sync and
+  check official Morphe releases every two hours instead of every six hours.
+
 ## 1.38.0-dualvot.8.2 (2026-08-01)
 
 ### Automated Morphe update
