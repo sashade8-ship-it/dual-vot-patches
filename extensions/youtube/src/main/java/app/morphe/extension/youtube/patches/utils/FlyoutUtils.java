@@ -22,6 +22,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -138,9 +139,26 @@ public final class FlyoutUtils {
         flyoutDialog = dialog;
         runFlyoutPanelVisibilityHandler(dialog);
 
-        dialog.setOnShowListener(dialogInterface -> {
-            addFlyoutElements(dialog);
-        });
+        final Window window = dialog.getWindow();
+        if (window != null) {
+            window.getDecorView().getViewTreeObserver().addOnGlobalLayoutListener(
+                new ViewTreeObserver.OnGlobalLayoutListener() {
+                    private boolean alreadyInjectedButton = false;
+
+                    @Override
+                    public void onGlobalLayout() {
+                        if (dialog.isShowing()) {
+                            if (!alreadyInjectedButton) {
+                                addFlyoutElements(dialog);
+                                alreadyInjectedButton = true;
+                            }
+                        } else {
+                            alreadyInjectedButton = false;
+                        }
+                    }
+                }
+            );
+        }
     }
 
     public static void dismissBottomSheetFlyout() {
