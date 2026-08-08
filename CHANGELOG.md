@@ -1,3 +1,13 @@
+## 1.39.0-dev.11-dualvot.8.3 (2026-08-08)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.39.0-dev.11](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.39.0-dev.11).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.39.0-dev.10-dualvot.8.3 (2026-08-07)
 
 ### Automated Morphe update
@@ -287,6 +297,19 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.39.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.10...v1.39.0-dev.11) (2026-08-08)
+
+### 🐛 Bug Fixes
+
+* Rename `Change package name` to `Clone app` ([#2347](https://github.com/MorpheApp/morphe-patches/issues/2347)) ([efd4d01](https://github.com/MorpheApp/morphe-patches/commit/efd4d01fe822b6b7f8d58147f6363e09bc89d335))
+* **Spoof video streams:** Restore missing YT method ([#2362](https://github.com/MorpheApp/morphe-patches/issues/2362)) ([23c1d7c](https://github.com/MorpheApp/morphe-patches/commit/23c1d7c2bc3672dec481aca835aa5c6d4127fc88))
+* **YouTube - Add to queue:** Improved "Add feed flyout queue menu item" UI ([69701d7](https://github.com/MorpheApp/morphe-patches/commit/69701d7e3c7652ad483448f95380d2e101192400))
+
+### ✨ New Features
+
+* **Spoof video streams:** Add 'TVHTML5 DASH' as a temporary workaround for 'TVHTML5 SABR' (playback issues in livestreams) ([173a925](https://github.com/MorpheApp/morphe-patches/commit/173a9253cf3e93d5234682ddb6031092b91b2853))
+* **YouTube - Hide Shorts components:** Add "Hide Save button" setting ([#2363](https://github.com/MorpheApp/morphe-patches/issues/2363)) ([12846cb](https://github.com/MorpheApp/morphe-patches/commit/12846cb75497d52562bed0d4feb163f1c35bbcc0))
 
 ## [1.39.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0-dev.9...v1.39.0-dev.10) (2026-08-07)
 
