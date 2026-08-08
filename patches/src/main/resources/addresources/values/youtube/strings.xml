@@ -44,12 +44,12 @@ Second \"item\" text"</string>
 Some server-side layouts may not revert.
 
 Changes include:
-• Components in player flyout menu (or related settings) may not work.
-• Rolling numbers are not animated.
-• Library tab is shown.
-• Music section of video description may not work.
-• Player flyout menu items cannot be hidden.
-• Account switch button may not appear on the Library tab."</string>
+вЂў Components in player flyout menu (or related settings) may not work.
+вЂў Rolling numbers are not animated.
+вЂў Library tab is shown.
+вЂў Music section of video description may not work.
+вЂў Player flyout menu items cannot be hidden.
+вЂў Account switch button may not appear on the Library tab."</string>
 
     <!-- layout.hide.general.hideLayoutComponentsPatch -->
     <string name="morphe_hide_feed_flyout_menu_title">Enable feed flyout menu filter</string>
@@ -107,8 +107,8 @@ Changes include:
     <string name="morphe_hide_upload_time_title">Hide upload time</string>
     <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
     <string name="morphe_hide_upload_time_summary">"Limitations:
-• Shorts shelves, channel pages, and search results may still show upload times
-• Does not work with automotive layout"</string>
+вЂў Shorts shelves, channel pages, and search results may still show upload times
+вЂў Does not work with automotive layout"</string>
     <string name="morphe_hide_video_thumbnail_title">Hide video thumbnail</string>
     <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
     <string name="morphe_hide_video_recommendation_labels_title">Hide video recommendation labels</string>
@@ -116,8 +116,8 @@ Changes include:
     <string name="morphe_hide_view_count_title">Hide view count</string>
     <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
     <string name="morphe_hide_view_count_summary">"Limitations:
-• Shorts shelves, channel pages, and search results may still show view counts
-• Does not work with automotive layout"</string>
+вЂў Shorts shelves, channel pages, and search results may still show view counts
+вЂў Does not work with automotive layout"</string>
     <string name="morphe_hide_web_search_results_title">Hide web search results</string>
     <string name="morphe_hide_web_search_results_summary">Hides \'Result from the web\' section from search results</string>
     <string name="morphe_hide_you_may_like_section_title">Hide \'You may like\' section</string>
@@ -241,9 +241,9 @@ Changes include:
     <string name="morphe_comments_screen_title">Comments</string>
     <string name="morphe_comments_screen_summary">Choose which components appear in the comments section</string>
     <string name="morphe_hide_comments_carousel_title">Enable comments carousel filter</string>
-    <string name="morphe_hide_comments_carousel_summary">"• Be sure to enter the exact name of the carousel item (e.g., Ask, Hype this video, Listen on YouTube Music)
-• Hiding carousel items may have unintended side effects
-• If all carousel items are hidden, the entire comments section will also be hidden"</string>
+    <string name="morphe_hide_comments_carousel_summary">"вЂў Be sure to enter the exact name of the carousel item (e.g., Ask, Hype this video, Listen on YouTube Music)
+вЂў Hiding carousel items may have unintended side effects
+вЂў If all carousel items are hidden, the entire comments section will also be hidden"</string>
     <string name="morphe_hide_comments_carousel_filter_strings_title">Comments carousel filter</string>
     <string name="morphe_hide_comments_carousel_filter_strings_summary">Enter the comments carousel names to filter by, separated by new lines</string>
     <string name="morphe_hide_comments_ai_chat_summary_title">Hide AI chat summary</string>
@@ -285,9 +285,9 @@ Words with uppercase letters in the middle must match exactly (e.g., iPhone, Tik
     <string name="morphe_hide_keyword_content_about_summary">"Home / Subscriptions / Search / Comments are filtered to hide content that matches keyword phrases
 
 Limitations:
-• Shorts cannot be hidden by channel name
-• Some UI components may not be hidden
-• Searching for a keyword may show no results"</string>
+вЂў Shorts cannot be hidden by channel name
+вЂў Some UI components may not be hidden
+вЂў Searching for a keyword may show no results"</string>
     <string name="morphe_hide_keyword_content_about_whole_words_title">Match whole words</string>
     <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
     <string name="morphe_hide_keyword_content_about_whole_words_summary">Surrounding a keyword/phrase with double-quotes will prevent partial matches of video titles and channel names&lt;br>&lt;br>For example,&lt;br>&lt;b>\"ai\"&lt;/b> will hide the video: &lt;b>How does AI work?&lt;/b>&lt;br>but will not hide: &lt;b>What does fair use mean?&lt;/b></string>
@@ -297,11 +297,11 @@ Limitations:
     <string name="morphe_hide_keyword_toast_invalid_conflicting">Keyword has conflicting declarations: %s</string>
     <string name="morphe_hide_keyword_toast_invalid_length">Keyword is too short and requires quotes: %s</string>
     <string name="morphe_hide_keyword_toast_invalid_broad">Keyword will hide all videos: %s</string>
-    <string name="morphe_hide_keyword_content_stats_hidden_breakdown">"• Home: %s
-• Subscriptions: %s
-• Search: %s
-• Comments: %s
-• Total: %s"</string>
+    <string name="morphe_hide_keyword_content_stats_hidden_breakdown">"вЂў Home: %s
+вЂў Subscriptions: %s
+вЂў Search: %s
+вЂў Comments: %s
+вЂў Total: %s"</string>
 
     <string name="morphe_hide_stats_category_title">Stats</string>
     <string name="morphe_hide_stats_hidden_24h_title">Videos hidden, last 24 hours</string>
@@ -316,18 +316,18 @@ Limitations:
     <string name="morphe_hide_aislist_warnlist_category_title">Warnlist: Moderate confidence</string>
     <string name="morphe_hide_aislist_hide_home_title">Hide videos in Home</string>
     <string name="morphe_hide_aislist_hide_search_title">Hide videos in search</string>
-    <string name="morphe_hide_aislist_stats_hidden_breakdown">"• Home: %s
-• Search: %s
-• Total: %s"</string>
+    <string name="morphe_hide_aislist_stats_hidden_breakdown">"вЂў Home: %s
+вЂў Search: %s
+вЂў Total: %s"</string>
     <string name="morphe_hide_aislist_stats_blocklist_channels_title">Blocklist channels</string>
     <string name="morphe_hide_aislist_stats_warnlist_channels_title">Warnlist channels</string>
     <string name="morphe_hide_aislist_stats_channels_disabled_summary">Enable a filter to load channels</string>
-    <string name="morphe_hide_aislist_stats_channels_loading_summary">Loading channels…</string>
+    <string name="morphe_hide_aislist_stats_channels_loading_summary">Loading channelsвЂ¦</string>
     <string name="morphe_hide_aislist_about_summary">"Home and search results are filtered to hide videos from channels flagged by AiSList
 
 Limitations:
-• Filtered AI Shorts may show as an empty space
-• Some AI videos may still show"</string>
+вЂў Filtered AI Shorts may show as an empty space
+вЂў Some AI videos may still show"</string>
     <string name="morphe_hide_aislist_attribution_title" translatable="false">AiSList</string>
     <string name="morphe_hide_aislist_attribution_summary">"Data is provided by AiSList
 
@@ -730,7 +730,7 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_hide_navigation_bar_title">Hide navigation bar</string>
     <string name="morphe_hide_navigation_bar_user_dialog_message">"This completely hides the navigation bar, including the \'You\' tab.
 
-To access Settings, enable the Settings button via General → Toolbar → Show Settings."</string>
+To access Settings, enable the Settings button via General в†’ Toolbar в†’ Show Settings."</string>
     <string name="morphe_narrow_navigation_buttons_title">Enable narrow navigation buttons</string>
     <string name="morphe_narrow_navigation_buttons_summary">Reduces the horizontal spacing between buttons</string>
     <string name="morphe_navigation_bar_animations_title">Enable navigation bar animations</string>
@@ -740,8 +740,8 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <string name="morphe_disable_translucent_status_bar_title">Disable translucent status bar</string>
     <string name="morphe_disable_translucent_status_bar_summary">Makes the status bar fully opaque</string>
     <string name="morphe_disable_translucent_status_bar_user_dialog_message">"Limitations:
-• A black bar may appear at the top of the video player.
-• The system navigation bar can change to transparent, and it\'s not possible to comment on videos."</string>
+вЂў A black bar may appear at the top of the video player.
+вЂў The system navigation bar can change to transparent, and it\'s not possible to comment on videos."</string>
     <string name="morphe_disable_translucent_navigation_bar_light_title">Disable light translucent bar</string>
     <string name="morphe_disable_translucent_navigation_bar_light_summary">Makes the navigation bar fully opaque in light mode</string>
     <string name="morphe_disable_translucent_navigation_bar_dark_title">Disable dark translucent bar</string>
@@ -899,7 +899,7 @@ To show the \'Audio Track\' menu, change \'Spoof video streams\' to any client e
     <string name="morphe_hide_end_screen_suggested_video_summary">"Hides the suggested video overlay that appears after the video ends
 
 This setting only works if autoplay is turned off. You can change it in YouTube:
-Settings → Playback (or Autoplay) → Autoplay next video"</string>
+Settings в†’ Playback (or Autoplay) в†’ Autoplay next video"</string>
 
     <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
     <string name="morphe_hide_player_related_videos_title">Hide related videos</string>
@@ -954,17 +954,17 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
     <string name="morphe_change_form_factor_user_dialog_message">"Changes include:
 
 Tablet layout
-• Community posts are hidden
-• Playback in feeds setting is not available
-• Remix button and Sound button are not available in Shorts
-• Non collapsed old video action bar is shown
+вЂў Community posts are hidden
+вЂў Playback in feeds setting is not available
+вЂў Remix button and Sound button are not available in Shorts
+вЂў Non collapsed old video action bar is shown
 
 Automotive layout
-• Feed is organized by topics and channels
-• Playback in feeds setting is not available
-• Remix button and Sound button are not available in Shorts
-• Shorts open in the regular player
-• Non collapsed old video action bar is shown"</string>
+вЂў Feed is organized by topics and channels
+вЂў Playback in feeds setting is not available
+вЂў Remix button and Sound button are not available in Shorts
+вЂў Shorts open in the regular player
+вЂў Non collapsed old video action bar is shown"</string>
     <string name="morphe_tablet_layout_in_player_title">Enable tablet layout in player</string>
     <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
     <string name="morphe_tablet_layout_in_player_summary">"Restores the old player layout
@@ -1234,14 +1234,14 @@ Limitation: Playback may not work on some devices if \'Spoof video streams\' is 
     <string name="morphe_disable_hdr_video_title">Disable HDR video</string>
     <string name="morphe_force_avc_codec_title">Force AVC (H.264) codec</string>
     <string name="morphe_force_avc_codec_user_dialog_message">"Benefits:
-• Can improve battery life
-• Can restore missing video resolutions on older device
+вЂў Can improve battery life
+вЂў Can restore missing video resolutions on older device
 
 Limitations:
-• Maximum resolution is 1080p
-• Video playback will use more internet data than VP9 or AV1
-• HDR videos will not use AVC
-• Some devices cannot force AVC"</string>
+вЂў Maximum resolution is 1080p
+вЂў Video playback will use more internet data than VP9 or AV1
+вЂў HDR videos will not use AVC
+вЂў Some devices cannot force AVC"</string>
     <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
     <string name="morphe_force_avc_codec_not_available">To use this feature, set \'Spoof video streams\' to \'Android VR\' or \'Android Studio\'</string>
 
@@ -1264,15 +1264,15 @@ Limitations:
 
 Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_spoof_video_streams_about_title">Spoofing side effects</string>
-    <string name="morphe_spoof_video_streams_about_no_audio_tracks">• \'Audio Track\' menu is missing</string>
-    <string name="morphe_spoof_video_streams_about_no_av1">• No AV1 video codec</string>
-    <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR immersive mode is not available</string>
-    <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stable volume is not available</string>
-    <string name="morphe_spoof_video_streams_about_js">• If deobfuscation fails, playback may fail</string>
+    <string name="morphe_spoof_video_streams_about_no_audio_tracks">вЂў \'Audio Track\' menu is missing</string>
+    <string name="morphe_spoof_video_streams_about_no_av1">вЂў No AV1 video codec</string>
+    <string name="morphe_spoof_video_streams_about_no_immersive_mode">вЂў 360В° VR immersive mode is not available</string>
+    <string name="morphe_spoof_video_streams_about_no_stable_volume">вЂў Stable volume is not available</string>
+    <string name="morphe_spoof_video_streams_about_js">вЂў If deobfuscation fails, playback may fail</string>
     <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
-    <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Force original audio is not available</string>
+    <string name="morphe_spoof_video_streams_about_no_force_original_audio">вЂў Force original audio is not available</string>
     <!-- Quality refers to video quality -->
-    <string name="morphe_spoof_video_streams_about_720p_max">• Quality may be limited to 720p</string>
+    <string name="morphe_spoof_video_streams_about_720p_max">вЂў Quality may be limited to 720p</string>
     <string name="morphe_spoof_video_streams_player_js_variant_title">Player JavaScript variant</string>
     <string name="morphe_spoof_video_streams_stats_for_nerds_title">Show spoofing in \'Stats for nerds\'</string>
 
@@ -1328,13 +1328,13 @@ Limitation: Reverts to old style \'More videos\' overlay"</string>
     <string name="dualvot_yandex_unavailable_live">Translation is not available for live streams</string>
     <string name="dualvot_yandex_unavailable_too_long">Video is too long for translation (max 4 hours)</string>
     <string name="dualvot_yandex_unavailable_same_language">Video audio is already in the target language</string>
-    <string name="dualvot_yandex_stream_waiting">Waiting… ~%s</string>
-    <string name="dualvot_yandex_stream_waiting_status">Translation is still being processed…</string>
+    <string name="dualvot_yandex_stream_waiting">WaitingвЂ¦ ~%s</string>
+    <string name="dualvot_yandex_stream_waiting_status">Translation is still being processedвЂ¦</string>
     <string name="dualvot_yandex_stream_not_ready">Translation not ready. Use the button to enable when ready.</string>
-    <string name="dualvot_yandex_stream_requesting">Requesting translation for stream…</string>
+    <string name="dualvot_yandex_stream_requesting">Requesting translation for streamвЂ¦</string>
     <string name="dualvot_yandex_stream_ready">Translation ready, playing</string>
-    <string name="dualvot_yandex_audio_preparing">Preparing the original audio…</string>
-    <string name="dualvot_yandex_audio_uploading">Sending audio to Yandex… %1$d/%2$d</string>
+    <string name="dualvot_yandex_audio_preparing">Preparing the original audioвЂ¦</string>
+    <string name="dualvot_yandex_audio_uploading">Sending audio to YandexвЂ¦ %1$d/%2$d</string>
     <string name="dualvot_yandex_time_sec">%d sec</string>
     <string name="dualvot_yandex_time_min">%d min</string>
     <string name="dualvot_yandex_live_voices_unavailable">Live voices unavailable, using standard</string>
