@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-07T16:22:24",
-  "description": "## Dual VoT Patches 1.38.0-dualvot.8.3\n\nStable update based on Morphe Patches 1.38.0.\n\n### Yandex timing fixes\n\n- Checks translation readiness at most every 15 seconds without replacing the displayed server ETA.\n- Keeps an expired countdown expired instead of restarting it at three or five seconds.\n- Prevents the progress ring from refilling when Yandex returns a later estimate.\n- Synchronizes whole-minute rounding on the player button and long-press status sheet.\n- Delivers audio upload progress updates on the Android UI thread.\n\n### Validation\n\n- Yandex timing unit tests passed.\n- Android patch bundle compiled successfully.\n- Both translation patches and required Dual VoT integration sources were verified.\n\nRuntime behavior should still be confirmed on a device; regressions that cannot be detected by compilation should be reported in this repository.",
-  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.38.0-dualvot.8.3/patches-1.38.0-dualvot.8.3.mpp",
+  "created_at": "2026-08-08T13:55:36",
+  "description": "## Dual VoT Patches 1.39.0-dualvot.8.3\n\nStable automated update based on Morphe Patches 1.39.0.\n\n### Included\n\n- Google/other and Yandex voice-over translation in one patch bundle.\n- Separate player controls with mutual exclusion.\n- Dual VoT volume controls and automatic reset when the video changes.\n- Requests for previously untranslated Yandex videos.\n\n### Validation\n\n- Android patch bundle compiled successfully.\n- Both translation patches are present in generated metadata.\n- Required Dual VoT integration sources and bundle manifest were verified.\n\nThis release was produced automatically. Runtime regressions that cannot be\ndetected by compilation should be reported in this repository.",
+  "download_url": "https://github.com/sashade8-ship-it/dual-vot-patches/releases/download/v1.39.0-dualvot.8.3/patches-1.39.0-dualvot.8.3.mpp",
   "signature_download_url": "",
-  "version": "1.38.0-dualvot.8.3"
+  "version": "1.39.0-dualvot.8.3"
 }
