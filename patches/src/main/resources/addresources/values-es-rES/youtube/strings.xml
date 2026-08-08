@@ -214,8 +214,8 @@ Los cambios incluyen:
   <string name="morphe_hide_learning_menu_title">Ocultar menú \"Aprendizaje\"</string>
   <string name="morphe_hide_live_menu_title">Ocultar menú \"En vivo\"</string>
   <string name="morphe_hide_memberships_menu_title">Ocultar menú \"Miembros del canal\" </string>
-  <string name="morphe_hide_movies_menu_title">Ocultar menú \"Películas\"</string>
-  <string name="morphe_hide_music_menu_title">Ocultar menú \"Música y TV\"</string>
+  <string name="morphe_hide_movies_menu_title">Ocultar menú \"Películas y TV\"</string>
+  <string name="morphe_hide_music_menu_title">Ocultar menú \"Música\"</string>
   <string name="morphe_hide_news_menu_title">Ocultar menú \"Noticias\"</string>
   <string name="morphe_hide_playables_menu_title">Ocultar menú \"Jugables\"</string>
   <string name="morphe_hide_podcasts_menu_title">Ocultar menú \"Podcasts\"</string>
@@ -773,7 +773,7 @@ Para mostrar el menú \"Pista de audio\", cambia \"Falsificar transmisiones de v
   <!-- layout.hide.seekbar.hideSeekbarPatch -->
   <string name="morphe_hide_seekbar_title">Ocultar barra de progreso del reproductor de vídeo</string>
   <string name="morphe_hide_seekbar_thumbnail_title">Ocultar barra de progreso de miniaturas de vídeo</string>
-  <string name="morphe_hide_seekbar_thumbnail_summary">Oculta la barra de progreso de la visualización que se muestra en las miniaturas de los vídeos que ya has visto</string>
+  <string name="morphe_hide_seekbar_thumbnail_summary">Oculta la barra de progreso que se muestra en las miniaturas de los vídeos que ya has visto</string>
   <string name="morphe_fullscreen_large_seekbar_title">Activar barra de progreso grande en pantalla completa</string>
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
   <string name="morphe_shorts_player_screen_title">Reproductor de Shorts</string>
