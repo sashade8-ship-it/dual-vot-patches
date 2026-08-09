@@ -29,6 +29,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.function.Consumer;
 
 import app.morphe.extension.shared.Logger;
@@ -163,7 +165,7 @@ public class VoiceOverTranslationPatch {
     private static boolean wasExplicitSeek;
     private static volatile boolean httpErrorDialogShownThisVideo;
 
-    private static Runnable onStateChangeCallback;
+    private static final Set<Runnable> stateChangeCallbacks = new CopyOnWriteArraySet<>();
 
     private static TextToSpeech tts;
     private static boolean ttsReady;
@@ -481,16 +483,23 @@ public class VoiceOverTranslationPatch {
         }
     }
 
-    /** Registers a callback fired whenever toggle/load state changes (used by the player button UI). */
-    public static void setOnTranslationStateChangeCallback(Runnable callback) {
+    /**
+     * Registers a callback fired whenever translation state changes.
+     *
+     * <p>Callbacks accumulate so the built-in button, Dual VoT coordinator, and external add-ons
+     * can observe the same session without replacing each other.
+     */
+    public static void addOnTranslationStateChangeCallback(@Nullable Runnable callback) {
         Utils.verifyOnMainThread();
-        onStateChangeCallback = callback;
+        if (callback != null) stateChangeCallbacks.add(callback);
     }
 
     private static void notifyStateChanged() {
         Logger.printDebug(() -> "notifyStateChanged");
         Utils.verifyOnMainThread();
-        if (onStateChangeCallback != null) onStateChangeCallback.run();
+        for (Runnable callback : stateChangeCallbacks) {
+            callback.run();
+        }
     }
 
     private static void loadTranscript(String videoId) {

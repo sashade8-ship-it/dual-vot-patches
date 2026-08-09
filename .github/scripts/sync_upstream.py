@@ -40,6 +40,7 @@ PROJECT_OWNED_PATHS = (
     ".github/ISSUE_TEMPLATE/feature_request.yml",
     ".github/workflows/crowdin_pull.yml",
     ".github/workflows/crowdin_push.yml",
+    ".github/workflows/build_pull_request.yml",
     ".github/workflows/release.yml",
     ".github/workflows/upstream_sync.yml",
     ".github/workflows/upstream_sync_channel.yml",
