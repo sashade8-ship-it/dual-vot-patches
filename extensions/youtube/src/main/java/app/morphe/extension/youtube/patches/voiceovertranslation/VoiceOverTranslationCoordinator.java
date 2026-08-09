@@ -34,7 +34,7 @@ public final class VoiceOverTranslationCoordinator {
     private static final Set<Runnable> stateChangeCallbacks = new CopyOnWriteArraySet<>();
 
     static {
-        VoiceOverTranslationPatch.setOnTranslationStateChangeCallback(
+        VoiceOverTranslationPatch.addOnTranslationStateChangeCallback(
                 VoiceOverTranslationCoordinator::onOfficialStateChanged);
         YandexVoiceOverTranslationPatch.addOnTranslationStateChangeCallback(
                 VoiceOverTranslationCoordinator::onYandexStateChanged);

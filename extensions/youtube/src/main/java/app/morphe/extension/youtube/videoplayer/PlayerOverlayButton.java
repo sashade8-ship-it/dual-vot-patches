@@ -258,14 +258,12 @@ public class PlayerOverlayButton {
     static float getButtonWidthPercentage(int totalButtons, View view) {
         if (totalButtons <= 1) return 1.0f;
 
+        // Keep the Dual VoT five-button layout unchanged while reserving enough space for
+        // arbitrary Add-on buttons added by the upstream host API.
         boolean landscape = view.getResources().getConfiguration().orientation
                 == Configuration.ORIENTATION_LANDSCAPE;
-        if (totalButtons == 5 && landscape) return 0.80f;
-
-        // Preserve the existing spacing for 2-4 buttons, then continue the
-        // same progression instead of jumping back to 100% at 5 buttons.
-        // The lower bound keeps additional experimental buttons tappable.
-        return Math.max(0.55f, 1.10f - totalButtons * 0.10f);
+        float minPercentage = landscape ? 0.80f : 0.60f;
+        return Math.max(minPercentage, 1.10f - totalButtons * 0.10f);
     }
 
     /**
