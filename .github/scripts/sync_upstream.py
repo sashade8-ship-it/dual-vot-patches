@@ -66,6 +66,28 @@ REQUIRED_PATCH_NAMES = (
     "Yandex voice-over translation",
 )
 
+# These files overlap when Morphe's Add-on support is first merged into a Dual VoT
+# branch.  They may be kept from the Dual side only after both sides prove that the
+# public Add-on contract is already present.  Any later upstream redesign remains a
+# manual source merge instead of silently discarding code.
+ADDON_COMPATIBILITY_CONFLICTS = {
+    "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+    "voiceovertranslation/VoiceOverTranslationPatch.java": (
+        ("addOnTranslationStateChangeCallback", "CopyOnWriteArraySet", "deactivateTranslation", "isSessionEnabled"),
+        ("addOnTranslationStateChangeCallback", "CopyOnWriteArraySet", "deactivateTranslation", "isSessionEnabled"),
+    ),
+    "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/"
+    "PlayerOverlayButton.java": (
+        ("public static <T extends ImageView> T addButton", "minPercentage = landscape ? 0.80f : 0.60f"),
+        ("public static <T extends ImageView> T addButton", "minPercentage = landscape ? 0.80f : 0.60f"),
+    ),
+    "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/"
+    "VoiceOverTranslationButton.java": (
+        ("VoiceOverTranslationCoordinator.toggleOfficial", "VoiceOverTranslationCoordinator.isOfficialActive"),
+        ("addOnTranslationStateChangeCallback", "VoiceOverTranslationPatch.toggleTranslation"),
+    ),
+}
+
 DUAL_YANDEX_STRINGS_PATH = re.compile(
     r"^patches/src/main/resources/addresources/values(?:-[^/]+)?/youtube/strings\.xml$"
 )
@@ -258,6 +280,24 @@ def resolve_dual_yandex_string_conflicts() -> None:
         run("git", "add", "--", path)
 
 
+def resolve_addon_compatibility_conflicts() -> None:
+    """Resolve only the known initial Add-on API overlap after contract checks."""
+    for path in unresolved_paths():
+        contract = ADDON_COMPATIBILITY_CONFLICTS.get(path)
+        if contract is None:
+            continue
+
+        ours_markers, theirs_markers = contract
+        ours = run("git", "show", f":2:{path}", capture=True).stdout
+        theirs = run("git", "show", f":3:{path}", capture=True).stdout
+        if not all(marker in ours for marker in ours_markers):
+            continue
+        if not all(marker in theirs for marker in theirs_markers):
+            continue
+
+        restore_path_from("HEAD", path)
+
+
 def merge_ref(ref: str, project_preference: str, label: str) -> bool:
     """Merge ref without committing and resolve only explicitly owned files.
 
@@ -285,6 +325,7 @@ def merge_ref(ref: str, project_preference: str, label: str) -> bool:
         run("git", "rm", "-rf", "--ignore-unmatch", "--", path)
 
     resolve_dual_yandex_string_conflicts()
+    resolve_addon_compatibility_conflicts()
 
     remaining = unresolved_paths()
     if remaining:
