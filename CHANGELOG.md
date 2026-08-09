@@ -1,3 +1,13 @@
+## 1.40.0-dev.1-dualvot.8.3 (2026-08-09)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.39.1-dualvot.8.3 (2026-08-08)
 
 ### Automated Morphe update
@@ -212,6 +222,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.39.1...v1.40.0-dev.1) (2026-08-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Buttons was shown in wrong panels ([#2396](https://github.com/MorpheApp/morphe-patches/issues/2396)) ([630f31e](https://github.com/MorpheApp/morphe-patches/commit/630f31e319d5e86e1322273d59bf2dcbdf20a7e5))
+* **YouTube - Add to queue:** Fixed some injected buttons related UI issues ([#2387](https://github.com/MorpheApp/morphe-patches/issues/2387)) ([eccae81](https://github.com/MorpheApp/morphe-patches/commit/eccae814937228bda12d46e20005de8533a729bd))
+* **YouTube - Miniplayer:** Remove "Default size" setting that YouTube removed in 21.32+ ([30daf1b](https://github.com/MorpheApp/morphe-patches/commit/30daf1bdb9b9e68b7dc59d06a667bd7be0bc7b25))
+
+### ✨ New Features
+
+* **YouTube:** Add "Add-on support" patch for third party patch bundles ([#2295](https://github.com/MorpheApp/morphe-patches/issues/2295)) ([ab81287](https://github.com/MorpheApp/morphe-patches/commit/ab81287f7b1cdb7af13036beba28886e4016c78a))
 
 ## [1.39.1](https://github.com/MorpheApp/morphe-patches/compare/v1.39.0...v1.39.1) (2026-08-08)
 
