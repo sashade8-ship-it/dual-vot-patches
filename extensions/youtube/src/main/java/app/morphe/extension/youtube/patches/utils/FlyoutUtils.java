@@ -85,6 +85,8 @@ public final class FlyoutUtils {
             getAsciiBytes("compact_playlist.e"),
             getAsciiBytes("compact_video.e"),
             getAsciiBytes("grid_video.e"),
+            getAsciiBytes("shorts_pivot_item.e"),
+            getAsciiBytes("shorts_video_cell.e"),
             getAsciiBytes("video_lockup_with_attachment.e")
     );
     private static final List<byte[]> SHELFS_BYTES = List.of(
