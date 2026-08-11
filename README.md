@@ -142,7 +142,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.40.0-dev.2-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.40.0-dev.2-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;137 patches total
+> **[v1.40.0-dev.3-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.40.0-dev.3-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;137 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;76 patches</summary>
 <br>
@@ -292,7 +292,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;2026.31.1 | 🧪&nbsp;2026.30.0 | 🧪&nbsp;2026.24.0 | 2026.14.0 | 2026.04.0 |
+| 🧪&nbsp;2026.32.0 | 🧪&nbsp;2026.31.1 | 🧪&nbsp;2026.24.0 | 2026.14.0 | 2026.04.0 |
 | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
