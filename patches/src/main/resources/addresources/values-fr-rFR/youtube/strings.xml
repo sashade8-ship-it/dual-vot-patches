@@ -493,6 +493,7 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <string name="morphe_seekbar_thumbnail_preview_title">Activer les miniatures sur la barre de progression</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Affiche une miniature de la vidéo lors du déplacement sur la barre de progression</string>
+  <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Le plus revisionné</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Activer le DVR des diffusions en direct' peut ne pas être disponible
 
@@ -769,7 +770,7 @@ Pour afficher le menu 'Piste audio', changer 'Falsifier les flux vidéo' pour n'
   <string name="morphe_hide_info_cards_title">Masquer les fiches info</string>
   <!-- layout.hide.rollingnumber.disableRollingNumberAnimationPatch -->
   <string name="morphe_disable_rolling_number_animations_title">Désactiver l\'animation en temps réel des nombres</string>
-  <string name="morphe_disable_rolling_number_animations_summary">Arrête l\'animation de défilement des nombres pour les mentions j’aime et les vues</string>
+  <string name="morphe_disable_rolling_number_animations_summary">Arrête l\'animation de défilement des nombres pour les mentions j\'aime et les vues</string>
   <!-- layout.hide.seekbar.hideSeekbarPatch -->
   <string name="morphe_hide_seekbar_title">Masquer la barre de progression du lecteur vidéo</string>
   <string name="morphe_hide_seekbar_thumbnail_title">Masquer la barre de progression sur les miniatures</string>
