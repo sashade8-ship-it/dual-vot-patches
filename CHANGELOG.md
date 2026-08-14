@@ -1,3 +1,13 @@
+## 1.40.0-dev.6-dualvot.8.3 (2026-08-14)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dev.5-dualvot.8.3 (2026-08-13)
 
 ### Automated Morphe update
@@ -262,6 +272,21 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.5...v1.40.0-dev.6) (2026-08-14)
+
+### 🐛 Bug Fixes
+
+* **Reddit:** If Google sign-in is attempted then show a popup to instead use email/password to login ([9f0d9f0](https://github.com/MorpheApp/morphe-patches/commit/9f0d9f0e9f4c77accec598db2ed6b405def23f2c))
+* **YouTube - Hide layout components:** Hide video recommendation labels only in search results ([a5d7677](https://github.com/MorpheApp/morphe-patches/commit/a5d76773e8d15c7f813380e87e9af8ef8d52be64))
+* **YouTube - Hide layout components:** Library filter bar being hidden ([8dd791c](https://github.com/MorpheApp/morphe-patches/commit/8dd791c387f1fa30ce169aa91a08b6aa7a632cda))
+* **YouTube - Hide Shorts components:** Shorts filter not working in search results ([2178eb5](https://github.com/MorpheApp/morphe-patches/commit/2178eb5b615996997903c1ba0743d2d03d102f45))
+* **YouTube:** Shorts are AV1 regardless of HW support ([98e7842](https://github.com/MorpheApp/morphe-patches/commit/98e7842771e2f763f6c38d1b0404142fe6cae334))
+
+### ✨ New Features
+
+* **YouTube - Background playback:** Prevent paused videos from auto-resuming after returning to app ([b2799ae](https://github.com/MorpheApp/morphe-patches/commit/b2799ae73d4bba329e87e9db39029ad8b87ca129))
+* **YouTube - Playback speed:** Add "Default playback audio pitch" setting ([#2282](https://github.com/MorpheApp/morphe-patches/issues/2282)) ([2f5efc1](https://github.com/MorpheApp/morphe-patches/commit/2f5efc1ae48894fc609b7ea2bdc87074a8e85ba3))
 
 ## [1.40.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.4...v1.40.0-dev.5) (2026-08-13)
 
