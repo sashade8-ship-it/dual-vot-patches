@@ -18,6 +18,7 @@ Second \"item\" text"</string>
 <resources>
   <!-- Overrides built in setting menu with Morphe settings. -->
   <string name="reddit_privacy_policy">Redditプライバシーポリシー</string>
+  <string name="morphe_google_signin_not_available_toast">Google ログインが利用できません。メールアドレスでログインしてください</string>
   <string name="morphe_screen_ads_title">広告</string>
   <string name="morphe_hide_post_ads_title">フィード広告を非表示</string>
   <string name="morphe_hide_comment_ads_title">コメント広告を非表示</string>
@@ -35,7 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_resources_shelf_title">リソース欄を非表示</string>
   <string name="morphe_screen_layout_title">レイアウト</string>
   <string name="morphe_custom_font_title">カスタムフォント</string>
-  <string name="morphe_custom_font_summary">設定した TTF フォントファイルまたは OTF フォントファイルを読み込みます。この設定を有効にすると、[システムフォント] が自動的に無効になります</string>
+  <string name="morphe_custom_font_summary">設定した TTF フォントファイルまたは OTF フォントファイルを読み込みます。この設定を有効にすると、[システムフォントを使用] が自動的に無効になります</string>
   <string name="morphe_custom_font_file_path_title">カスタム フォント ファイル</string>
   <string name="morphe_custom_font_file_path_summary">タップして TTF フォントファイルまたは OTF フォントファイルを選択します</string>
   <string name="morphe_custom_font_selected_font">選択したフォント - %s</string>

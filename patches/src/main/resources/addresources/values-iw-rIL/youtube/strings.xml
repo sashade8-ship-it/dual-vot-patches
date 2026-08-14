@@ -1114,6 +1114,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_toast">מהירות ההשמעה המוגדרת כברירת מחדל שונתה ל: %s</string>
   <string name="morphe_disable_playback_speed_music_title">השתמש במהירות רגילה למוזיקה</string>
   <string name="morphe_disable_playback_speed_music_summary">נגן תמיד סרטוני מוזיקה במהירות 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">הפעל בקרות גובה צליל (Pitch) של האודיו</string>
+  <string name="morphe_playback_audio_pitch_default_title">גובה צליל (Pitch) ברירת מחדל של ההפעלה</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">גובה הצליל (Pitch) ברירת המחדל שונה ל: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">מתיחת זמן אודיו (Audio time stretching)</string>
+  <string name="morphe_playback_audio_time_stretching_summary">מאפשר להגדיר מהירות וגובה צליל באופן עצמאי, עשוי לגרום לעיוותים באודיו</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">השבת סרטון HDR</string>
   <string name="morphe_force_avc_codec_title">כופה קידוד AVC (H.264)</string>
@@ -1128,6 +1133,7 @@ Second \"item\" text"</string>
 • התקנים מסוימים אינם יכולים לאכוף AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">כדי להשתמש בתכונה זו, הגדר \'זיוף זרמי וידאו\' ל\'Android VR\' או \'Android Studio\'</string>
+  <string name="morphe_force_av1_in_shorts_title">כפה AV1 ב-Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">פתח תפריט איכות מתקדם</string>
   <string name="morphe_advanced_video_quality_menu_summary">מדלג על תפריט בחירת האיכות ופותח ישירות את תפריט האיכות המתקדם</string>

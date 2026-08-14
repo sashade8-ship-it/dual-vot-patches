@@ -1113,6 +1113,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_toast">Типову швидкість відтворення змінено на %s</string>
   <string name="morphe_disable_playback_speed_music_title">Використовувати звичайну швидкість для музики</string>
   <string name="morphe_disable_playback_speed_music_summary">Завжди відтворювати музичні відео зі швидкістю 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Увімкнути керування висотою звуку</string>
+  <string name="morphe_playback_audio_pitch_default_title">Типова висота звуку відтворення</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Змінено типову висоту звуку на: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Часове розтягування аудіо</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Дозволяє незалежно налаштовувати швидкість і висоту звуку, що може призвести до появи аудіоартефактів</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Вимкнути HDR відео</string>
   <string name="morphe_force_avc_codec_title">Примусово використовувати кодек AVC (H.264)</string>
@@ -1127,6 +1132,7 @@ Second \"item\" text"</string>
 • Деякі пристрої не можуть примусово використовувати AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Щоб використовувати цю функцію, встановіть \"Підміна відеопотоків\" на \"Android VR\" або \"Android Studio\"</string>
+  <string name="morphe_force_av1_in_shorts_title">Примусово використовувати AV1 у Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Відкривати меню якості \"Розширені налаштування\"</string>
   <string name="morphe_advanced_video_quality_menu_summary">Пропускає меню вибору якості та відкриває меню \"Розширенні налаштування\" безпосередньо</string>

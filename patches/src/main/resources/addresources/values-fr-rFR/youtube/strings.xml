@@ -1115,6 +1115,11 @@ Limitation : La lecture peut ne pas fonctionner sur certains appareils si 'Falsi
   <string name="morphe_remember_playback_speed_toast">Vitesse de lecture par défaut définie sur : %s</string>
   <string name="morphe_disable_playback_speed_music_title">Utiliser la vitesse normale pour la musique</string>
   <string name="morphe_disable_playback_speed_music_summary">Toujours lire les clips musicaux à une vitesse de 1,0×</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Activer les contrôles de hauteur tonale audio</string>
+  <string name="morphe_playback_audio_pitch_default_title">Hauteur tonale audio de lecture par défaut</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Hauteur tonale audio par défaut définie sur : %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Étirement temporel audio</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Permet de régler indépendamment la vitesse et la hauteur tonale, peut provoquer des artefacts audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Désactiver les vidéos HDR</string>
   <string name="morphe_force_avc_codec_title">Forcer le codec AVC (H.264)</string>
@@ -1129,6 +1134,7 @@ Limitations :
 • Certains appareils ne permettent pas de forcer AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Pour utiliser cette fonctionnalité, définissez \'Falsifier les flux vidéo\' sur \'Android VR\' ou \'Android Studio\'</string>
+  <string name="morphe_force_av1_in_shorts_title">Forcer l\'AV1 dans les Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Ouvrir le menu qualité \'Avancée\'</string>
   <string name="morphe_advanced_video_quality_menu_summary">Ignore le menu de sélection de qualité et ouvre directement le menu qualité \'Avancée\'</string>

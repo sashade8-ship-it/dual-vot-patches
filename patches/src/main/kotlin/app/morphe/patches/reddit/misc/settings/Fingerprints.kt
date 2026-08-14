@@ -16,6 +16,8 @@ import app.morphe.patcher.methodCall
 import app.morphe.patcher.newInstance
 import app.morphe.patcher.opcode
 import app.morphe.patcher.string
+import app.morphe.patches.all.misc.resources.ResourceType
+import app.morphe.patches.all.misc.resources.resourceLiteral
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
@@ -25,6 +27,33 @@ internal object RedditActivityFingerprint : Fingerprint(
     filters = listOf(
         string("android:support:lifecycle")
     )
+)
+
+internal object GoogleSignInFunctionFingerprint : Fingerprint(
+    filters = listOf(
+        resourceLiteral(ResourceType.STRING, "continue_with_google"),
+        methodCall(
+            opcode = Opcode.INVOKE_STATIC_RANGE,
+            returnType = "V",
+            parameters = listOf(
+                "I",
+                "L",
+                "Ljava/lang/String;",
+                "Lkotlin/jvm/functions/Function0;",
+                "L",
+                "Z",
+                "Ljava/lang/String;",
+                "Z",
+                "L",
+                "I",
+                "I"
+            ),
+            location = MatchAfterWithin(20)
+        )
+    ),
+    custom = { method, _ ->
+        AccessFlags.STATIC.isSet(method.accessFlags)
+    }
 )
 
 // 2026.25.0+

@@ -1074,7 +1074,7 @@ Pulsa aquí para saber más sobre DeArrow"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_override_initial_video_quality_summary">"Corrige un problema por el que la calidad de vídeo predeterminada no se aplica inmediatamente después de que el vídeo comience
 
-Limitación: La reproducción puede no funcionar en algunos dispositivos si \"Falsificar transmisiones de vídeo\" está configurado como \"Android VR\" y \"Forzar el códec AVC (H.264)\" está activado"</string>
+Limitación: La reproducción puede no funcionar en algunos dispositivos si \"Falsificar transmisiones de vídeo\" está configurado como \"Android VR\" y \"Forzar códec AVC (H.264)\" está activado"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Recordar la calidad del vídeo</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Aplica tu selección de calidad manual a todos los vídeos futuros</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Notificaciones de cambio de calidad</string>
@@ -1114,6 +1114,11 @@ Limitación: La reproducción puede no funcionar en algunos dispositivos si \"Fa
   <string name="morphe_remember_playback_speed_toast">Se ha cambiado la velocidad de reproducción predeterminada a: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Usar velocidad normal para la música</string>
   <string name="morphe_disable_playback_speed_music_summary">Reproduce siempre los videos musicales a una velocidad de 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Activar controles de tono de audio</string>
+  <string name="morphe_playback_audio_pitch_default_title">Tono de audio de reproducción predeterminado</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Se ha cambiado el tono de audio predeterminado a: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Estiramiento de tiempo de audio</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Permite ajustar la velocidad y el tono de forma independiente, puede causar artefactos de audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Desactivar vídeo HDR</string>
   <string name="morphe_force_avc_codec_title">Forzar códec AVC (H.264)</string>
@@ -1128,6 +1133,7 @@ Limitaciones:
 • Algunos dispositivos no pueden forzar AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Para usar esta función, configura \"Falsificar transmisiones de vídeo\" como \"Android VR\" o \"Android Studio\"</string>
+  <string name="morphe_force_av1_in_shorts_title">Forzar AV1 en Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Abrir menú de calidad avanzada</string>
   <string name="morphe_advanced_video_quality_menu_summary">Omite el menú de selección de calidad y abre el menú de calidad Avanzada directamente</string>

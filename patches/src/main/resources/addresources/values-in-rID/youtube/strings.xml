@@ -1113,6 +1113,11 @@ Keterbatasan: Pemutaran mungkin tidak berfungsi di beberapa perangkat jika 'Pals
   <string name="morphe_remember_playback_speed_toast">Mengubah kecepatan bawaan menjadi: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Gunakan kecepatan normal untuk musik</string>
   <string name="morphe_disable_playback_speed_music_summary">Selalu putar video musik dengan kecepatan 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Aktifkan kontrol nada audio</string>
+  <string name="morphe_playback_audio_pitch_default_title">Nada audio pemutaran bawaan</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Nada audio bawaan telah diubah menjadi: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Perpanjangan waktu audio</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Mengizinkan pengaturan kecepatan dan nada secara terpisah, namun dapat menyebabkan gangguan audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Nonaktifkan video HDR</string>
   <string name="morphe_force_avc_codec_title">Paksa codec AVC (H.264)</string>
@@ -1127,6 +1132,7 @@ Batasan:
 • Beberapa perangkat tidak dapat memaksakan AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Untuk menggunakan fitur ini, atur \'Palsukan aliran video\' ke \'Android VR\' atau \'Android Studio\'</string>
+  <string name="morphe_force_av1_in_shorts_title">Paksakan AV1 di Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Buka menu kualitas Lanjutan</string>
   <string name="morphe_advanced_video_quality_menu_summary">Melewati menu pemilihan kualitas dan langsung membuka menu kualitas Lanjutan</string>

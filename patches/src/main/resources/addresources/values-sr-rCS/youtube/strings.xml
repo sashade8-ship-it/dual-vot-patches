@@ -1112,6 +1112,11 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_remember_playback_speed_toast">Podrazumevana brzina reprodukcije je promenjena u: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Koristite normalnu brzinu za muziku</string>
   <string name="morphe_disable_playback_speed_music_summary">Uvek puštajte muzičke spotove brzinom 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Omogući kontrole visine audio tona</string>
+  <string name="morphe_playback_audio_pitch_default_title">Podrazumevana visina audio tona reprodukcije</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Podrazumevana visina audio tona promenjena na: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Rastegljivanje audio vremena</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Omogućava nezavisno podešavanje brzine i visine tona, što može izazvati audio artefakte</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Onemogući HDR video</string>
   <string name="morphe_force_avc_codec_title">Prisiljava AVC (H.264) kodek</string>
@@ -1126,6 +1131,7 @@ Ograničenja:
 • Neki uređaji ne mogu prisiliti AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Da biste koristili ovu funkciju, podesite opciju „Lažirani video strimovi” na „Android VR” ili „Android Studio”</string>
+  <string name="morphe_force_av1_in_shorts_title">Forsiraj AV1 u Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Otvorite napredni meni kvaliteta</string>
   <string name="morphe_advanced_video_quality_menu_summary">Preskače meni za izbor kvaliteta i direktno otvara meni kvaliteta \"Napredno\"</string>

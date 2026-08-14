@@ -493,7 +493,7 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <string name="morphe_seekbar_thumbnail_preview_title">Cumasaigh mionsamhlacha an bharra cuardaigh</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Taispeánann mionsamhail físe agus an barra cuardaigh á tharraingt</string>
-  <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Is minic a athsheintear</string>
+  <string name="morphe_seekbar_thumbnail_heatmap_peak_point">An chuid is mó d’athsheinm</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"B’fhéidir nach bhfuil ‘Cumasaigh DVR sruth beo’ ar fáil
 
@@ -1128,6 +1128,7 @@ Teorainneacha:
 • Ní féidir le roinnt gléasanna AVC a bhrú"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Chun an ghné seo a úsáid, socraigh \'Sruthanna físe bréige\' go \'Android VR\' nó \'Android Studio\'</string>
+  <string name="morphe_force_av1_in_shorts_title">Fórtú AV1 i Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Oscail an roghchlár Ardchaighdeáin</string>
   <string name="morphe_advanced_video_quality_menu_summary">Léimeann sé an roghchlár um roghnú cáilíochta agus osclaíonn sé an roghchlár Ardchaighdeán go díreach</string>

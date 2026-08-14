@@ -1112,6 +1112,11 @@ Beperking: Afspelen werkt mogelijk niet op sommige apparaten als 'Video streams 
   <string name="morphe_remember_playback_speed_toast">Standaard afspeelsnelheid gewijzigd naar: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Gebruik normale snelheid voor muziek</string>
   <string name="morphe_disable_playback_speed_music_summary">Speel muziekvideo\'s altijd af op 1.0x snelheid</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Audio-toonhoogtebediening inschakelen</string>
+  <string name="morphe_playback_audio_pitch_default_title">Standaard toonhoogte audioafspeling</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Standaard toonhoogte audio gewijzigd naar: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Audio tijdstretching</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Maakt het mogelijk om snelheid en toonhoogte onafhankelijk van elkaar in te stellen, wat audio-artefacten kan veroorzaken</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR-video uitschakelen</string>
   <string name="morphe_force_avc_codec_title">Forceer AVC (H.264) codec</string>

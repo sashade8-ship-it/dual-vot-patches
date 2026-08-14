@@ -1112,6 +1112,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_toast">Променена подразбираема скорост на възпроизвеждане на: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Използвайте нормална скорост за музика</string>
   <string name="morphe_disable_playback_speed_music_summary">Винаги пускайте музикални видеа на скорост 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Активирай контроли за височина на звука</string>
+  <string name="morphe_playback_audio_pitch_default_title">Височина на звука при възпроизвеждане по подразбиране</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Височината на звука по подразбиране беше променена на: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Времево разтягане на аудиото</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Позволява независимо задаване на скоростта и височината, което може да причини аудио артефакти</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Бутоните за ускоро и назад са скрити</string>
   <string name="morphe_force_avc_codec_title">Наложи кодек AVC (H.264)</string>

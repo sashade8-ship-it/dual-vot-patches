@@ -65,6 +65,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting ADVANCED_VIDEO_QUALITY_MENU = new BooleanSetting("morphe_advanced_video_quality_menu", TRUE);
     public static final BooleanSetting DISABLE_HDR_VIDEO = new BooleanSetting("morphe_disable_hdr_video", FALSE);
     public static final BooleanSetting FORCE_AVC_CODEC = new BooleanSetting("morphe_force_avc_codec", FALSE, true, "morphe_force_avc_codec_user_dialog_message");
+    public static final BooleanSetting FORCE_AV1_IN_SHORTS = new BooleanSetting("morphe_force_av1_in_shorts", FALSE, true, "morphe_spoof_video_streams_av1_user_dialog_message");
     public static final BooleanSetting HIDE_PREMIUM_VIDEO_QUALITY = new BooleanSetting("morphe_hide_premium_video_quality", TRUE, true);
     public static final BooleanSetting VIDEO_QUALITY_PRIORITIZE = new BooleanSetting("morphe_video_quality_prioritize", TRUE, true, "morphe_video_quality_prioritize_dialog");
     public static final IntegerSetting VIDEO_QUALITY_DEFAULT_WIFI = new IntegerSetting("morphe_video_quality_default_wifi", -2);
@@ -80,8 +81,11 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting REMEMBER_PLAYBACK_SPEED_LAST_SELECTED = new BooleanSetting("morphe_remember_playback_speed_last_selected", FALSE);
     public static final BooleanSetting REMEMBER_PLAYBACK_SPEED_LAST_SELECTED_TOAST = new BooleanSetting("morphe_remember_playback_speed_last_selected_toast", TRUE, false, parent(REMEMBER_PLAYBACK_SPEED_LAST_SELECTED));
     public static final FloatSetting PLAYBACK_SPEED_DEFAULT = new FloatSetting("morphe_playback_speed_default", -2.0f);
+    public static final FloatSetting PLAYBACK_AUDIO_PITCH_DEFAULT = new FloatSetting("morphe_playback_audio_pitch_default", -2.0f);
     public static final BooleanSetting CUSTOM_SPEED_MENU = new BooleanSetting("morphe_custom_speed_menu", TRUE);
     public static final BooleanSetting DISABLE_PLAYBACK_SPEED_MUSIC = new BooleanSetting("morphe_disable_playback_speed_music", FALSE, true);
+    public static final BooleanSetting ENABLE_PLAYBACK_AUDIO_PITCH = new BooleanSetting("morphe_enable_playback_audio_pitch_controls", FALSE, parent(CUSTOM_SPEED_MENU));
+    public static final BooleanSetting PLAYBACK_AUDIO_TIME_STRETCHING = new BooleanSetting("morphe_playback_audio_time_stretching", FALSE, parentsAll(CUSTOM_SPEED_MENU, ENABLE_PLAYBACK_AUDIO_PITCH));
     public static final BooleanSetting RESTORE_OLD_SPEED_MENU = new BooleanSetting("morphe_restore_old_speed_menu", FALSE, parent(CUSTOM_SPEED_MENU));
     public static final StringSetting CUSTOM_PLAYBACK_SPEEDS = new StringSetting("morphe_custom_playback_speeds", "0.25\n0.5\n0.75\n1.0\n1.25\n1.5\n1.75\n2.0\n2.5\n3.0\n4.0\n5.0\n6.0\n7.0\n8.0", true);
 

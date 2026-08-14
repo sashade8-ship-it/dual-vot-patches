@@ -18,11 +18,13 @@ import app.morphe.patches.all.misc.fix.openurllinks.removeLinkVerification
 import app.morphe.patches.all.misc.resources.addAppResources
 import app.morphe.patches.all.misc.resources.addResourcesPatch
 import app.morphe.patches.all.misc.resources.localesReddit
+import app.morphe.patches.all.misc.resources.resourceMappingPatch
 import app.morphe.patches.all.misc.resources.setAddResourceLocale
 import app.morphe.patches.all.misc.updates.disablePlayStoreUpdatesPatch
 import app.morphe.patches.reddit.misc.extension.hooks.redditActivityOnCreateHook
 import app.morphe.patches.reddit.misc.extension.sharedExtensionPatch
 import app.morphe.patches.reddit.misc.fix.signature.spoofSignaturePatch
+import app.morphe.patches.reddit.misc.version.is_2026_14_0_or_greater
 import app.morphe.patches.reddit.misc.version.is_2026_25_0_or_greater
 import app.morphe.patches.reddit.misc.version.is_2026_30_0_or_greater
 import app.morphe.patches.reddit.misc.version.versionCheckPatch
@@ -34,6 +36,7 @@ import app.morphe.util.copyResources
 import app.morphe.util.findElementByAttributeValue
 import app.morphe.util.findFreeRegister
 import app.morphe.util.p0Register
+import app.morphe.util.registersUsed
 import app.morphe.util.removeFromParent
 import app.morphe.util.returnEarly
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -52,6 +55,7 @@ val settingsPatch = bytecodePatch(
         disablePlayStoreUpdatesPatch,
         spoofSignaturePatch,
         removeLinkVerification,
+        resourceMappingPatch,
         addResourcesPatch,
         versionCheckPatch,
         experimentalAppNoticePatch(
@@ -66,7 +70,7 @@ val settingsPatch = bytecodePatch(
                         document(file.absolutePath).use { document ->
                             document.documentElement.childNodes.findElementByAttributeValue(
                                 "name",
-                                "label_privacy_policy",
+                                "label_privacy_policy"
                             )?.removeFromParent()
                         }
                     }
@@ -91,6 +95,24 @@ val settingsPatch = bytecodePatch(
         setAddResourceLocale(localesReddit)
         addAppResources("shared")
         addAppResources("reddit")
+
+        // Show toast informing that Google sign-in does not work.
+        if (is_2026_14_0_or_greater) {
+            // After clicking a login type, the second Google sign-in button still shows
+            // the Google login dialog. Unclear where this additional UI layout is handled,
+            // but it may be provided server side.
+            GoogleSignInFunctionFingerprint.matchAll(2 .. 2).forEach {
+                val index = it.instructionMatches[1].index
+                val register = it.method.getInstruction(index).registersUsed[3]
+                it.method.addInstructions(
+                    index,
+                    """
+                        invoke-static { }, $EXTENSION_CLASS->getGoogleSignInFunction()Lkotlin/jvm/functions/Function0;
+                        move-result-object v$register
+                    """
+                )
+            }
+        }
 
         if (is_2026_25_0_or_greater) {
             StartUrlActivityFingerprint.let {

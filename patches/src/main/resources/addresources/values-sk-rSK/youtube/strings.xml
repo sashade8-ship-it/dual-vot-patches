@@ -1114,6 +1114,11 @@ Obmedzenie: Prehrávanie nemusí fungovať na niektorých zariadeniach, ak je 'F
   <string name="morphe_remember_playback_speed_toast">Predvolená rýchlosť prehrávania bola zmenená na: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Použite normálnu rýchlosť pre hudbu</string>
   <string name="morphe_disable_playback_speed_music_summary">Hudobné videá vždy prehrajte rýchlosťou 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Povoliť ovládanie výšky zvuku</string>
+  <string name="morphe_playback_audio_pitch_default_title">Predvolená výška zvuku pri prehrávaní</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Predvolená výška zvuku bola zmenená na: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Časové pretiahanie zvuku</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Umožňuje nezávisle nastavovať rýchlosť a výšku zvuku, čo môže spôsobiť artefakty zvuku</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Zakázať HDR video</string>
   <string name="morphe_force_avc_codec_title">Vynútiť codec AVC (H.264)</string>
@@ -1128,6 +1133,7 @@ Obmedzenia:
 • Niektoré zariadenia nemôžu vynútiť AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Na používanie tejto funkcie nastavte \'Falšovanie toku videa\' na \'Android VR\' alebo \'Android Studio\'.</string>
+  <string name="morphe_force_av1_in_shorts_title">Vynutiť AV1 v Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Otvoriť menu pokročilých nastavení kvality</string>
   <string name="morphe_advanced_video_quality_menu_summary">Preskočí menu výberu kvality a otvorí priamo menu kvality \'Pokročilé\'</string>

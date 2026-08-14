@@ -1114,6 +1114,11 @@ Korlátozás: A lejátszás egyes eszközökön nem működhet, ha a \"Videostre
   <string name="morphe_remember_playback_speed_toast">A lejátszási sebesség alapértelmezett értékre módosítva: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Használj normál sebességet a zenéhez</string>
   <string name="morphe_disable_playback_speed_music_summary">A zenei videók mindig 1,0-s sebességgel legyenek lejátszva</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Hangmagasság-vezérlés engedélyezése</string>
+  <string name="morphe_playback_audio_pitch_default_title">Alapértelmezett lejátszási hangmagasság</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Alapértelmezett hangmagasság módosítva: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Audió időnyújtás</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Lehetővé teszi a sebesség és a hangmagasság független beállítását, ami audio artefaktumokat okozhat</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Az HDR videó letiltása</string>
   <string name="morphe_force_avc_codec_title">A funkció használatához állítsa be a \'Videóstreamek hamisítását\' Android VR-re vagy Android Studióra</string>
@@ -1128,6 +1133,7 @@ Korlátozások:
 • Néhány eszköz nem tudja kikényszeríteni az AVC-t"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">A funkció használatához állítsa a „Videóstreamek hamisítása” beállítást „Android VR” vagy „Android Studio” értékre.</string>
+  <string name="morphe_force_av1_in_shorts_title">AV1 kényszerítése a Shorts-onál</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Nyissa meg a fejlett minőség menüt</string>
   <string name="morphe_advanced_video_quality_menu_summary">A minőségi beállítások menüt kihagyva közvetlenül megnyitja a Speciális minőségi menüt</string>

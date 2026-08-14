@@ -1112,6 +1112,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_toast">Η προεπιλεγμένη ταχύτητα αναπαραγωγής άλλαξε σε: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Χρήση κανονικής ταχύτητας για μουσική</string>
   <string name="morphe_disable_playback_speed_music_summary">Αναπαραγωγή μουσικών βίντεο πάντα σε ταχύτητα 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Ενεργοποίηση ελέγχων τόνου ήχου</string>
+  <string name="morphe_playback_audio_pitch_default_title">Προεπιλεγμένος τόνος ήχου αναπαραγωγής</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Ο προεπιλεγμένος τόνος ήχου άλλαξε σε: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Διάταση χρόνου ήχου</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Επιτρέπει τη ρύθμιση της ταχύτητας και του τόνου ανεξάρτητα, κάτι που μπορεί να προκαλέσει παραμορφώσεις στον ήχο</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Απενεργοποίηση βίντεο HDR</string>
   <string name="morphe_force_avc_codec_title">Εξαναγκάζει τον κωδικοποιητή AVC (H.264)</string>

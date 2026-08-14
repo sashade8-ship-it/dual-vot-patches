@@ -1112,6 +1112,11 @@ Omezení: Přehrávání nemusí fungovat na některých zařízeních, pokud je
   <string name="morphe_remember_playback_speed_toast">Výchozí rychlost přehrávání byla změněna na: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Použijte normální rychlost pro hudbu</string>
   <string name="morphe_disable_playback_speed_music_summary">Přehrávejte hudební videa vždy rychlostí 1,0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Kovovat ovládání výšky zvuku</string>
+  <string name="morphe_playback_audio_pitch_default_title">Výchozí výška zvuku při přehrávání</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Výchozí výška zvuku byla změněna na: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Časová dilatace zvuku</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Umožňuje nezávisle nastavovat rychlost a výšku zvuku, což může způsobit zvukové artefakty</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Vypnout HDR video</string>
   <string name="morphe_force_avc_codec_title">Vynutí AVC (H.264) kodek</string>

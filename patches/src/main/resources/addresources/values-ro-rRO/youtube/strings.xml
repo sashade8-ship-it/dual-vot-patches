@@ -1114,6 +1114,11 @@ Limitare: redarea poate să nu funcționeze pe unele dispozitive dacă 'Spoof fl
   <string name="morphe_remember_playback_speed_toast">Viteza de redare implicită a fost modificată la: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Utilizaţi viteza normală pentru muzică</string>
   <string name="morphe_disable_playback_speed_music_summary">Reda înviteza videoclipurile muzicale în mod constant la 1.0x</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">Activați controalele pentru tonalitatea audio</string>
+  <string name="morphe_playback_audio_pitch_default_title">Tonalitate audio de redare implicită</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">Tonalitatea implicită a fost modificată la: %s</string>
+  <string name="morphe_playback_audio_time_stretching_title">Extinderea temporală a audio</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Permite setarea vitezei și a tonalității independent, ceea ce poate cauza artefacte audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Dezactivați videoclipurile HDR</string>
   <string name="morphe_force_avc_codec_title">Forțează codec-ul AVC (H.264)</string>
@@ -1128,6 +1133,7 @@ Limitări:
 • Unele dispozitive nu pot forța AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Pentru a utiliza această funcție, setați \'Falsificare fluxuri video\' la \'Android VR\' sau \'Android Studio\'.</string>
+  <string name="morphe_force_av1_in_shorts_title">Forțează AV1 în Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Deschide meniul calității avansate</string>
   <string name="morphe_advanced_video_quality_menu_summary">Sare peste meniul de selecție a calității și deschide direct meniul de calitate avansat.</string>

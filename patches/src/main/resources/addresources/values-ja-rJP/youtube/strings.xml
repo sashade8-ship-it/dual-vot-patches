@@ -275,7 +275,7 @@ Second \"item\" text"</string>
 
 制限事項:
 • ショート動画はチャンネル名の合致では除外できない
-• 一部の UI コンポーネントが残ってしまう場合がある
+• 一部の UI コンポーネントが残る場合がある
 • キーワードで検索したとき、結果が表示されない場合がある"</string>
   <string name="morphe_hide_keyword_content_about_whole_words_title">単語全体で合致</string>
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
@@ -1073,7 +1073,7 @@ Automotive レイアウト
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_override_initial_video_quality_summary">"動画の再生開始直後に [デフォルトの画質] が適用されない問題を修正します
 
-制限事項: [動画ストリームを偽装] のクライアントが「Android VR」で、かつ [AVC (H.264) を強制的に使用] を有効にしている場合、一部のデバイスで動画が再生できない場合があります"</string>
+制限事項: [動画ストリームを偽装] のクライアントが「Android VR」で、かつ [AVC (H.264) を優先して使用] を有効にしている場合、一部のデバイスで動画が再生できない場合があります"</string>
   <string name="morphe_remember_video_quality_last_selected_title">画質を保存</string>
   <string name="morphe_remember_video_quality_last_selected_summary">画質メニューでの画質の変更を、設定の「デフォルトの画質」に反映し、すべての動画に適用します</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">画質変更の通知</string>
@@ -1115,7 +1115,7 @@ Automotive レイアウト
   <string name="morphe_disable_playback_speed_music_summary">音楽動画を常に 1.0 倍速で再生します</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR 動画を無効化</string>
-  <string name="morphe_force_avc_codec_title">AVC (H.264) を強制的に使用</string>
+  <string name="morphe_force_avc_codec_title">AVC (H.264) を優先して使用</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"利点:
 • バッテリー持ちが良くなる可能性がある
 • 古いデバイスで失われた動画解像度を復元できる場合がある
@@ -1127,6 +1127,7 @@ Automotive レイアウト
 • 一部のデバイスでは AVC を強制できない"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">この機能を使用するには、[動画ストリームを偽装] のクライアントを「Android VR」または「Android Studio」に設定してください</string>
+  <string name="morphe_force_av1_in_shorts_title">ショートで AV1 を優先して使用</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">画質の詳細設定メニューを開く</string>
   <string name="morphe_advanced_video_quality_menu_summary">画質メニューをスキップして画質の「詳細設定」メニューを直接開きます</string>
@@ -1149,7 +1150,7 @@ AV1 での動画再生は、カクつくまたはコマ落ちが発生する可�
   <string name="morphe_spoof_video_streams_about_no_stable_volume">•「一定音量」が利用できない</string>
   <string name="morphe_spoof_video_streams_about_js">• 難読化の解除に失敗した場合、再生に失敗する可能性がある</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
-  <string name="morphe_spoof_video_streams_about_no_force_original_audio">•「オリジナルの音声を強制的に使用」が利用できない</string>
+  <string name="morphe_spoof_video_streams_about_no_force_original_audio">• [オリジナルの音声を常に使用] が利用できない</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• 画質が 720p 以下に制限される場合がある</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">JavaScript 版プレーヤー</string>
