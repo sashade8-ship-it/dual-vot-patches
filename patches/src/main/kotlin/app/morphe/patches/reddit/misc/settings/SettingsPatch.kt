@@ -37,7 +37,6 @@ import app.morphe.util.findElementByAttributeValue
 import app.morphe.util.findFreeRegister
 import app.morphe.util.p0Register
 import app.morphe.util.registersUsed
-import app.morphe.util.removeFromParent
 import app.morphe.util.returnEarly
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -64,14 +63,16 @@ val settingsPatch = bytecodePatch(
         ),
         resourcePatch {
             execute {
-                // Remove localized acknowledgement string.
-                get("res").walk().forEach { file ->
-                    if ("strings.xml" == file.name) {
-                        document(file.absolutePath).use { document ->
-                            document.documentElement.childNodes.findElementByAttributeValue(
-                                "name",
-                                "label_privacy_policy"
-                            )?.removeFromParent()
+                if (is_2026_25_0_or_greater) {
+                    // Change menu item title to Morphe.
+                    get("res").walk().forEach { file ->
+                        if ("strings.xml" == file.name) {
+                            document(file.absolutePath).use { document ->
+                                document.documentElement.childNodes.findElementByAttributeValue(
+                                    "name",
+                                    "label_privacy_policy"
+                                )?.textContent = "Morphe"
+                            }
                         }
                     }
                 }
@@ -96,12 +97,18 @@ val settingsPatch = bytecodePatch(
         addAppResources("shared")
         addAppResources("reddit")
 
+        // Turn off Google Play in app update prompt.
+        GooglePlayUpdateCheckFingerprint.method.returnEarly(null);
+
+        // Force Play Store Verification checks to pass.
+        PlayStoreVerificationFingerprint.method.returnEarly(false)
+
         // Show toast informing that Google sign-in does not work.
         if (is_2026_14_0_or_greater) {
             // After clicking a login type, the second Google sign-in button still shows
             // the Google login dialog. Unclear where this additional UI layout is handled,
             // but it may be provided server side.
-            GoogleSignInFunctionFingerprint.matchAll(2 .. 2).forEach {
+            GoogleSignInFunctionFingerprint.matchAll(2 .. 3).forEach {
                 val index = it.instructionMatches[1].index
                 val register = it.method.getInstruction(index).registersUsed[3]
                 it.method.addInstructions(
@@ -138,6 +145,8 @@ val settingsPatch = bytecodePatch(
         if (is_2026_30_0_or_greater) {
             return@execute
         }
+
+        CheckIntegrityPlayStoreFingerprint.method.returnEarly(0)
 
         /**
          * Replace settings label and icon
@@ -229,8 +238,5 @@ val settingsPatch = bytecodePatch(
                 )
             }
         }
-
-        // Turn off Google Play in app update prompt.
-        GooglePlayUpdateCheckFingerprint.method.returnEarly(null);
     }
 }

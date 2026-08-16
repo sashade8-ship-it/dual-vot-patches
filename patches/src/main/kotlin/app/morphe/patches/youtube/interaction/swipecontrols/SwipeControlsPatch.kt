@@ -1,3 +1,13 @@
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches
+ *
+ * Original hard forked code:
+ * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
+ *
+ * See the included NOTICE file for GPLv3 Section 7 terms that apply to Morphe contributions.
+ */
+
 package app.morphe.patches.youtube.interaction.swipecontrols
 
 import app.morphe.patcher.patch.bytecodePatch
@@ -44,9 +54,21 @@ private val swipeControlsResourcePatch = resourcePatch {
         }
 
         PreferenceScreen.SWIPE_CONTROLS.addPreferences(
-            SwitchPreference("morphe_swipe_brightness", summary = true),
-            SwitchPreference("morphe_swipe_volume", summary = true),
-            SwitchPreference("morphe_swipe_speed", summary = true),
+            ListPreference(
+                "morphe_swipe_left_zone",
+                entriesKey = "morphe_swipe_zone_action_entries",
+                entryValuesKey = "morphe_swipe_zone_action_entry_values"
+            ),
+            ListPreference(
+                "morphe_swipe_right_zone",
+                entriesKey = "morphe_swipe_zone_action_entries",
+                entryValuesKey = "morphe_swipe_zone_action_entry_values"
+            ),
+            ListPreference(
+                "morphe_swipe_top_zone",
+                entriesKey = "morphe_swipe_zone_action_entries",
+                entryValuesKey = "morphe_swipe_zone_action_entry_values"
+            ),
             NonInteractivePreference(
                 key = "morphe_swipe_zone_width",
                 tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference"
