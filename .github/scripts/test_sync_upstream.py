@@ -71,6 +71,38 @@ class SyncUpstreamTests(unittest.TestCase):
         with self.assertRaises(sync_upstream.SyncError):
             sync_upstream.merge_dual_yandex_strings(base, ours, base)
 
+    def test_repairs_known_legacy_resource_encoding_corruption(self):
+        base = (
+            '<resources>\n'
+            '    <string name="morphe_vot_screen_title">Voice over translation</string>\n'
+            '    <string name="morphe_vot_screen_summary">Old summary</string>\n'
+            '    <string name="morphe_vot_enabled_title">Voice over translation</string>\n'
+            '    <string name="bullet">• Item at 360°</string>\n'
+            '    <string name="quoted">Hide \\\'More videos\\\' button → Loading…</string>\n'
+            '</resources>\n'
+        )
+        ours = (
+            base.replace('• Item at 360°', 'вЂў Item at 360В°')
+            .replace(r"\'More videos\'", "'More videos'")
+            .replace('→', 'в†’')
+            .replace('…', 'вЂ¦')
+            .replace(
+                '</resources>',
+                '    <string name="dualvot_yandex_enabled">WaitingвЂ¦</string>\n</resources>',
+            )
+        )
+        theirs = base.replace('Loading…', 'Updated upstream text')
+
+        merged = sync_upstream.merge_dual_yandex_strings(base, ours, theirs)
+
+        self.assertIn('>• Item at 360°<', merged)
+        self.assertIn(r"Hide \'More videos\' button → Updated upstream text", merged)
+        self.assertIn('name="dualvot_yandex_enabled">Waiting…', merged)
+        self.assertNotIn('вЂў', merged)
+        self.assertNotIn('В°', merged)
+        self.assertNotIn('вЂ¦', merged)
+        self.assertNotIn('в†’', merged)
+
     def test_rejects_dual_yandex_string_already_defined_upstream(self):
         base = (
             '<resources>\n'

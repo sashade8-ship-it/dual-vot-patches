@@ -99,6 +99,16 @@ DUAL_OWNED_MORPHE_STRING_NAMES = {
     "morphe_vot_screen_summary",
     "morphe_vot_enabled_title",
 }
+LEGACY_RESOURCE_NORMALIZATIONS = (
+    ("вЂў", "•"),
+    ("вЂ¦", "…"),
+    ("в†’", "→"),
+    ("В°", "°"),
+    ("Hide 'More videos' button", r"Hide \'More videos\' button"),
+    ("Hide 'More videos' overlay", r"Hide \'More videos\' overlay"),
+    ("Hides 'More videos' overlay", r"Hides \'More videos\' overlay"),
+    ("off, 'More videos' overlay", r"off, \'More videos\' overlay"),
+)
 
 
 class SyncError(RuntimeError):
@@ -134,6 +144,8 @@ def run(
         env=env,
         check=False,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         stdout=subprocess.PIPE if capture else None,
         stderr=subprocess.PIPE if capture else None,
     )
@@ -198,7 +210,10 @@ def merge_dual_yandex_strings(base: str, ours: str, theirs: str) -> str:
             continue
         if name in entries:
             raise SyncError(f"Duplicate local Dual-owned string: {name}")
-        entries[name] = line
+        normalized_line = line
+        for legacy, canonical in LEGACY_RESOURCE_NORMALIZATIONS:
+            normalized_line = normalized_line.replace(legacy, canonical)
+        entries[name] = normalized_line
 
     dual_names = {name for name in entries if name.startswith("dualvot_yandex_")}
     if not dual_names:
@@ -215,7 +230,11 @@ def merge_dual_yandex_strings(base: str, ours: str, theirs: str) -> str:
                 remaining.append(line.strip())
         return remaining
 
-    if without_owned_and_blank_lines("".join(ours_without_dual)) != without_owned_and_blank_lines(base):
+    local_without_dual = "".join(ours_without_dual)
+    for legacy, canonical in LEGACY_RESOURCE_NORMALIZATIONS:
+        local_without_dual = local_without_dual.replace(legacy, canonical)
+
+    if without_owned_and_blank_lines(local_without_dual) != without_owned_and_blank_lines(base):
         raise SyncError(
             "Local resource conflict contains changes outside approved Dual-owned strings"
         )
