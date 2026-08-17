@@ -88,6 +88,9 @@ Changes include:
     <string name="morphe_hide_latest_videos_button_summary">Hides the blue \'Latest videos\' banner that appears at the top of the Home feed</string>
     <string name="morphe_hide_mix_playlists_title">Hide mix playlists</string>
     <string name="morphe_hide_movies_section_title">Hide movies section</string>
+    <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
+    <string name="morphe_hide_notifications_menu_header_title">Hide Notifications menu header</string>
+    <string name="morphe_hide_notifications_menu_header_summary">Hides the Notifications menu header when clicking the bell button</string>
     <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Subscriptions feed for future livestreams or unreleased videos. -->
     <string name="morphe_hide_notify_me_button_title">Hide \'Notify me\' button</string>
@@ -261,6 +264,8 @@ Changes include:
     <string name="morphe_hide_comments_gift_button_title">Hide Gift button</string>
     <string name="morphe_hide_comments_info_button_title">Hide Info button</string>
     <string name="morphe_hide_comments_live_chat_donators_bar_title">Hide live chat donators bar</string>
+    <string name="morphe_hide_comments_live_chat_tooltips_title">Hide live chat tooltips</string>
+    <string name="morphe_hide_comments_live_chat_tooltips_summary">Hides tooltip popups shown near the chat input bar, such as the subscriber-only chat notice</string>
     <string name="morphe_hide_comments_preview_comment_title">Hide preview comment</string>
     <string name="morphe_hide_comments_preview_comment_summary">Hides the comment preview under video before opening the full comments section</string>
     <string name="morphe_hide_comments_thanks_button_title">Hide Thanks button</string>
@@ -570,6 +575,9 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swipe_zone_label_volume">Volume</string>
     <string name="morphe_swipe_zone_label_native">Native</string>
     <string name="morphe_swipe_zone_label_off">Off</string>
+    <string name="morphe_swipe_ignore_when_locked_title">Ignore swipes when locked</string>
+    <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the player menu item. -->
+    <string name="morphe_swipe_ignore_when_locked_summary">Swipe gestures are ignored while the player is locked with \'Lock screen\'</string>
     <string name="morphe_swipe_press_to_engage_title">Enable press to swipe gesture</string>
     <string name="morphe_swipe_press_to_engage_summary">Requires pressing and holding before a swipe gesture is recognized</string>
     <string name="morphe_swipe_haptic_feedback_title">Enable haptic feedback</string>

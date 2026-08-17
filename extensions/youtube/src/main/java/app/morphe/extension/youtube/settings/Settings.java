@@ -131,6 +131,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_LATEST_VIDEOS_BUTTON = new BooleanSetting("morphe_hide_latest_videos_button", FALSE);
     public static final BooleanSetting HIDE_MIX_PLAYLISTS = new BooleanSetting("morphe_hide_mix_playlists", FALSE);
     public static final BooleanSetting HIDE_MOVIES_SECTION = new BooleanSetting("morphe_hide_movies_section", TRUE);
+    public static final BooleanSetting HIDE_NOTIFICATIONS_MENU_HEADER = new BooleanSetting("morphe_hide_notifications_menu_header", FALSE);
     public static final BooleanSetting HIDE_NOTIFY_ME_BUTTON = new BooleanSetting("morphe_hide_notify_me_button", TRUE);
     public static final BooleanSetting HIDE_PLAYABLES = new BooleanSetting("morphe_hide_playables", TRUE);
     public static final BooleanSetting HIDE_SEARCH_TERM_THUMBNAILS = new BooleanSetting("morphe_hide_search_term_thumbnails", FALSE, true);
@@ -315,6 +316,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_COMMENTS_GIFT_BUTTON = new BooleanSetting("morphe_hide_comments_gift_button", TRUE, true);
     public static final BooleanSetting HIDE_COMMENTS_INFO_BUTTON = new BooleanSetting("morphe_hide_comments_info_button", FALSE, true);
     public static final BooleanSetting HIDE_COMMENTS_LIVE_CHAT_DONATORS_BAR = new BooleanSetting("morphe_hide_comments_live_chat_donators_bar", FALSE, true);
+    public static final BooleanSetting HIDE_COMMENTS_LIVE_CHAT_TOOLTIPS = new BooleanSetting("morphe_hide_comments_live_chat_tooltips", FALSE, true);
     public static final BooleanSetting HIDE_COMMENTS_PREVIEW_COMMENT = new BooleanSetting("morphe_hide_comments_preview_comment", FALSE);
     public static final BooleanSetting HIDE_COMMENTS_SECTION = new BooleanSetting("morphe_hide_comments_section", FALSE);
     public static final BooleanSetting HIDE_COMMENTS_SECTION_IN_HOME_FEED = new BooleanSetting("morphe_hide_comments_section_in_home_feed", FALSE, parentNot(HIDE_COMMENTS_SECTION));
@@ -550,6 +552,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final EnumSetting<SwipeZoneAction> SWIPE_LEFT_ZONE = new EnumSetting<>("morphe_swipe_left_zone", SwipeZoneAction.OFF, true);
     public static final EnumSetting<SwipeZoneAction> SWIPE_RIGHT_ZONE = new EnumSetting<>("morphe_swipe_right_zone", SwipeZoneAction.OFF, true);
     public static final EnumSetting<SwipeZoneAction> SWIPE_TOP_ZONE = new EnumSetting<>("morphe_swipe_top_zone", SwipeZoneAction.OFF, true);
+    public static final BooleanSetting SWIPE_IGNORE_WHEN_LOCKED = new BooleanSetting("morphe_swipe_ignore_when_locked", FALSE, new AnySwipeZoneAvailability());
     public static final BooleanSetting SWIPE_PRESS_TO_ENGAGE = new BooleanSetting("morphe_swipe_press_to_engage", FALSE, true, new AnySwipeZoneAvailability());
     public static final BooleanSetting SWIPE_HAPTIC_FEEDBACK = new BooleanSetting("morphe_swipe_haptic_feedback", TRUE, true, new AnySwipeZoneAvailability());
     public static final IntegerSetting SWIPE_MAGNITUDE_THRESHOLD = new IntegerSetting("morphe_swipe_threshold", 30, true, new AnySwipeZoneAvailability());

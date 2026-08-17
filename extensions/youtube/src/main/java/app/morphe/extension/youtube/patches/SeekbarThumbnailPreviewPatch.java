@@ -50,10 +50,36 @@ public class SeekbarThumbnailPreviewPatch {
             TextView chapterPreview,
             PopupWindow thumbnailPreviewPopup
     ) {}
+    private static ViewOutlineProvider createRoundRectOutlineProvider(final int topOffset) {
+        return new ViewOutlineProvider() {
+            @Override
+            public void getOutline(View view, Outline outline) {
+                outline.setRoundRect(
+                        0,
+                        topOffset,
+                        view.getWidth(),
+                        view.getHeight(),
+                        THUMBNAIL_PREVIEW_INNER_RADIUS_DP
+                );
+            }
+        };
+    }
+    private static GradientDrawable labelBackground() {
+        GradientDrawable shape = new GradientDrawable();
+        shape.setColor(Color.argb(153, 0, 0, 0));
+        shape.setCornerRadius(Dim.dp(100));
+        return shape;
+    }
 
     private static final int DIP15 = Dim.dp(15);
+    private static final int DIP8 = Dim.dp8;
     private static final int THUMBNAIL_PREVIEW_LONG_SIDE = Dim.dp(160);
     private static final int THUMBNAIL_PREVIEW_DEFAULT_SHORT_SIDE = Dim.dp(160 * 9.0f / 16);
+    private static final LinearLayout.LayoutParams THUMBNAIL_PREVIEW_DEFAULT_PARAMS =
+            new LinearLayout.LayoutParams(
+                THUMBNAIL_PREVIEW_LONG_SIDE,
+                THUMBNAIL_PREVIEW_DEFAULT_SHORT_SIDE
+            );
     private static final int THUMBNAIL_PREVIEW_DISTANCE_FULLSCREEN_DP = DIP15;
     private static final int THUMBNAIL_PREVIEW_DISTANCE_PORTRAIT_DP = -1 * Dim.dp20;
     private static final int THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP = Dim.dp(30);
@@ -67,12 +93,10 @@ public class SeekbarThumbnailPreviewPatch {
     );
     private static final String heatMapPeakPointDescription =
             ResourceUtils.getString("morphe_seekbar_thumbnail_heatmap_peak_point");
-    private static GradientDrawable labelBackground() {
-        final GradientDrawable shape = new GradientDrawable();
-        shape.setColor(Color.argb(153, 0, 0, 0));
-        shape.setCornerRadius(Dim.dp(100));
-        return shape;
-    }
+    private static final ViewOutlineProvider heatMapPeakPointFullOutline =
+            createRoundRectOutlineProvider(0);
+    private static final ViewOutlineProvider heatMapPeakPointHalfOutline =
+            createRoundRectOutlineProvider(-THUMBNAIL_PREVIEW_INNER_RADIUS_DP);
     private static final int semitransparentWhiteBackgroundColor =
             Color.argb(180, 255, 255, 255);
     private static final ColorDrawable transparentBackgroundDrawable =
@@ -80,11 +104,10 @@ public class SeekbarThumbnailPreviewPatch {
     private static final int semitransparentBlackBackgroundColor =
             Color.argb(180, 0, 0, 0);
     private static boolean preciseSeekingVisible = false;
-
     @SuppressLint("StaticFieldLeak")
     private static SeekbarViews seekbarViews;
     private static Bitmap fineScrubbingPreviewBitmap;
-    private static boolean scalePreviewFrame;
+    private static boolean scalePreviewFrame = true;
     private static boolean isFineScrubbingStarted;
     private static Rect seekbarRectangle;
     private static int previewWidthPx = -1;
@@ -128,7 +151,7 @@ public class SeekbarThumbnailPreviewPatch {
     }
 
     private static SeekbarViews setThumbnailPreviewRef(View trackBall) {
-        final Context context = trackBall.getRootView().getContext();
+        Context context = trackBall.getRootView().getContext();
 
         if (seekbarViews != null &&
                 seekbarViews.previewFrame().getContext() == context) {
@@ -137,35 +160,31 @@ public class SeekbarThumbnailPreviewPatch {
 
         seekbarViews = null;
 
-        final LinearLayout containerLayout = new LinearLayout(context);
-
+        LinearLayout containerLayout = new LinearLayout(context);
         containerLayout.setOrientation(LinearLayout.VERTICAL);
         containerLayout.setGravity(Gravity.CENTER_HORIZONTAL);
 
-        final FrameLayout previewFrame = createPreviewFrame(context);
-        final ImageView thumbnailPreview = createThumbnailImageView(context);
+        FrameLayout previewFrame = createPreviewFrame(context);
 
-        previewFrame.setLayoutParams(
-            new LinearLayout.LayoutParams(
-                THUMBNAIL_PREVIEW_LONG_SIDE,
-                THUMBNAIL_PREVIEW_DEFAULT_SHORT_SIDE
-            )
-        );
+        ImageView thumbnailPreview = createThumbnailImageView(context);
         previewFrame.addView(thumbnailPreview);
         containerLayout.addView(previewFrame);
 
-        final TextView timestampPreview = createTimestampPreview(context);
+        TextView timestampPreview = createTimestampPreview(context);
         containerLayout.addView(timestampPreview);
 
-        final TextView heatMapPeakPoint = createHeatMapPeakPointPreview(context);
+        TextView heatMapPeakPoint = createHeatMapPeakPointPreview(context);
         previewFrame.addView(heatMapPeakPoint);
 
-        final TextView chapterPreview = createChapterPreview(context);
+        TextView chapterPreview = createChapterPreview(context);
         containerLayout.addView(chapterPreview);
 
-        final PopupWindow thumbnailPreviewPopup = new PopupWindow(containerLayout,
+        PopupWindow thumbnailPreviewPopup = new PopupWindow(
+                containerLayout,
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT, false);
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                false
+        );
         thumbnailPreviewPopup.setTouchable(false);
         thumbnailPreviewPopup.setBackgroundDrawable(transparentBackgroundDrawable);
 
@@ -182,11 +201,11 @@ public class SeekbarThumbnailPreviewPatch {
     // Border is a filled rounded rect + padding (not a stroke) to keep outer/inner corners concentric.
     @SuppressWarnings({"SameParameterValue", "SuspiciousNameCombination"})
     private static FrameLayout createPreviewFrame(Context context) {
-        final GradientDrawable frameBackground = new GradientDrawable();
+        GradientDrawable frameBackground = new GradientDrawable();
         frameBackground.setColor(semitransparentWhiteBackgroundColor);
         frameBackground.setCornerRadius(THUMBNAIL_PREVIEW_CORNER_RADIUS_DP);
 
-        final FrameLayout previewFrame = new FrameLayout(context);
+        FrameLayout previewFrame = new FrameLayout(context);
         previewFrame.setBackground(frameBackground);
         previewFrame.setPadding(
                 THUMBNAIL_PREVIEW_BORDER_WIDTH_DP,
@@ -200,7 +219,7 @@ public class SeekbarThumbnailPreviewPatch {
 
     @SuppressWarnings("SameParameterValue")
     private static ImageView createThumbnailImageView(Context context) {
-        final ImageView thumbnailPreview = new ImageView(context);
+        ImageView thumbnailPreview = new ImageView(context);
         thumbnailPreview.setScaleType(ImageView.ScaleType.CENTER_CROP);
         thumbnailPreview.setOutlineProvider(new ViewOutlineProvider() {
             @Override
@@ -226,36 +245,22 @@ public class SeekbarThumbnailPreviewPatch {
     }
 
     private static TextView createHeatMapPeakPointPreview(Context context) {
-        final FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT
         );
         params.gravity = Gravity.BOTTOM;
 
-        final TextView heatMapPeakPoint = new TextView(context);
+        TextView heatMapPeakPoint = new TextView(context);
         heatMapPeakPoint.setText(heatMapPeakPointDescription);
         heatMapPeakPoint.setTextColor(Color.WHITE);
-        heatMapPeakPoint.setTextSize(12);
+        heatMapPeakPoint.setTextSize(10);
         heatMapPeakPoint.setGravity(Gravity.CENTER);
         heatMapPeakPoint.setBackgroundColor(semitransparentBlackBackgroundColor);
         heatMapPeakPoint.setSingleLine(true);
         heatMapPeakPoint.setEllipsize(TextUtils.TruncateAt.END);
         heatMapPeakPoint.setHorizontallyScrolling(false);
         heatMapPeakPoint.setPadding(0, Dim.dp4, 0, Dim.dp4);
-        heatMapPeakPoint.setOutlineProvider(
-            new ViewOutlineProvider() {
-                @Override
-                public void getOutline(View view, Outline outline) {
-                outline.setRoundRect(
-                    0,
-                    -THUMBNAIL_PREVIEW_INNER_RADIUS_DP,
-                    view.getWidth(),
-                    view.getHeight(),
-                    THUMBNAIL_PREVIEW_INNER_RADIUS_DP
-                );
-                }
-            }
-        );
         heatMapPeakPoint.setClipToOutline(true);
         heatMapPeakPoint.setLayoutParams(params);
 
@@ -263,12 +268,12 @@ public class SeekbarThumbnailPreviewPatch {
     }
 
     private static TextView createTimestampPreview(Context context) {
-        final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
         params.topMargin = Dim.dp4;
 
-        final TextView timestampPreview = new TextView(context);
+        TextView timestampPreview = new TextView(context);
         timestampPreview.setTextColor(Color.WHITE);
         timestampPreview.setTextSize(12);
         timestampPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
@@ -280,12 +285,12 @@ public class SeekbarThumbnailPreviewPatch {
     }
 
     private static TextView createChapterPreview(Context context) {
-        final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
         params.topMargin = Dim.dp4;
 
-        final TextView chapterPreview = new TextView(context);
+        TextView chapterPreview = new TextView(context);
         chapterPreview.setTextColor(Color.WHITE);
         chapterPreview.setTextSize(12);
         chapterPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
@@ -319,12 +324,11 @@ public class SeekbarThumbnailPreviewPatch {
             newWidth = THUMBNAIL_PREVIEW_LONG_SIDE * bitmapWidth / bitmapHeight;
         }
 
-        final ViewGroup.LayoutParams frameParams = previewFrame.getLayoutParams();
-        if (frameParams.width != newWidth || frameParams.height != newHeight) {
-            frameParams.width = newWidth;
-            frameParams.height = newHeight;
-            previewFrame.setLayoutParams(frameParams);
-        }
+        previewFrame.setLayoutParams(
+            new LinearLayout.LayoutParams(
+                newWidth, newHeight
+            )
+        );
     }
 
     private static String formatSeekTime(int totalSeconds) {
@@ -432,20 +436,24 @@ public class SeekbarThumbnailPreviewPatch {
                 }
                 lastX = trackballPosX;
 
-                final Bitmap currentScrubbedPreviewBitmap = fineScrubbingPreviewBitmap;
-                if (currentScrubbedPreviewBitmap != null && currentScrubbedPreviewBitmap != lastAppliedBitmap) {
-                    views.thumbnailPreview.setImageBitmap(currentScrubbedPreviewBitmap);
-                    lastAppliedBitmap = currentScrubbedPreviewBitmap;
+                if (fineScrubbingPreviewBitmap != null) {
+                    if (fineScrubbingPreviewBitmap != lastAppliedBitmap) {
+                        views.thumbnailPreview.setImageBitmap(fineScrubbingPreviewBitmap);
+                        lastAppliedBitmap = fineScrubbingPreviewBitmap;
+                    }
 
                     if (scalePreviewFrame) {
-                        applyBitmapAspectRatio(views.previewFrame, currentScrubbedPreviewBitmap);
+                        applyBitmapAspectRatio(views.previewFrame, fineScrubbingPreviewBitmap);
+                        previewWidthPx = -1;
+                        previewHeightPx = -1;
                         scalePreviewFrame = false;
                     }
+                } else {
+                    views.previewFrame.setLayoutParams(THUMBNAIL_PREVIEW_DEFAULT_PARAMS);
                 }
 
                 final int seekbarWidth = seekbarRectangle.width();
                 final long totalVideoMillis = VideoInformation.getVideoLength();
-
                 if (totalVideoMillis > 0 && seekbarWidth > 0) {
                     final int relativeTrackballPosX = trackballPosX - seekbarRectangle.left;
                     final long currentMillis = (((long) relativeTrackballPosX) * totalVideoMillis) / seekbarWidth;
@@ -461,11 +469,20 @@ public class SeekbarThumbnailPreviewPatch {
                             !preciseSeekingVisible ? View.VISIBLE : View.GONE
                     );
 
+                    int previewFrameHeight = views.previewFrame.getHeight();
+                    int heatMapPeakPointHeight = views.heatMapPeakPointPreview.getHeight();
+                    views.heatMapPeakPointPreview.setOutlineProvider(
+                            (previewFrameHeight > 0 && heatMapPeakPointHeight > 0 &&
+                                    (previewFrameHeight - heatMapPeakPointHeight > DIP8))
+                                            ? heatMapPeakPointHalfOutline
+                                            : heatMapPeakPointFullOutline
+                    );
+
                     views.heatMapPeakPointPreview.setVisibility(
                             ChaptersHookPatch.getHeatMapPeakPoint() ? View.VISIBLE : View.GONE
                     );
 
-                    final CharSequence chapterTitle = ChaptersHookPatch.getChapterTitleAtTime(currentMillis);
+                    CharSequence chapterTitle = ChaptersHookPatch.getChapterTitleAtTime(currentMillis);
                     if (chapterTitle != null && !preciseSeekingVisible) {
                         views.chapterPreview.setText(chapterTitle);
                         views.chapterPreview.setVisibility(View.VISIBLE);
@@ -489,16 +506,14 @@ public class SeekbarThumbnailPreviewPatch {
                                 : View.INVISIBLE
                 );
 
-                final ViewGroup.LayoutParams previewParams = views.previewFrame.getLayoutParams();
+                ViewGroup.LayoutParams previewParams = views.previewFrame.getLayoutParams();
                 if (previewWidthPx < 0) {
                     previewWidthPx = previewParams.width;
-                }
-                if (previewHeightPx < 0) {
                     previewHeightPx = previewParams.height;
                 }
 
-                final PopupWindow thumbnailPreviewPopup = views.thumbnailPreviewPopup;
-                final View rootView = trackBall.getRootView();
+                PopupWindow thumbnailPreviewPopup = views.thumbnailPreviewPopup;
+                View rootView = trackBall.getRootView();
                 final int targetX = trackballPosX - (previewWidthPx / 2);
                 final int targetY =
                         trackballPosY -
