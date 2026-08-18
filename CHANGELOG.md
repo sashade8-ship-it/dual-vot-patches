@@ -1,3 +1,13 @@
+## 1.40.0-dev.10-dualvot.8.3 (2026-08-18)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.10](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.10).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dev.9-dualvot.8.3 (2026-08-18)
 
 ### Automated Morphe update
@@ -302,6 +312,17 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.9...v1.40.0-dev.10) (2026-08-18)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Add to queue:** Error toast is shown when using YouTube `20.21.37` ([a1c5aef](https://github.com/MorpheApp/morphe-patches/commit/a1c5aef3bf9f1320f797c74a6caf1e49872a10a4))
+* **YouTube - Override YouTube Music buttons:** Resolve intent routing failure ([#2487](https://github.com/MorpheApp/morphe-patches/issues/2487)) ([a8761c2](https://github.com/MorpheApp/morphe-patches/commit/a8761c2efeedb16ecb41dc925f144352c0b5b350))
+
+### ✨ New Features
+
+* **YouTube:** Add "Back button exits the feed" setting ([#2488](https://github.com/MorpheApp/morphe-patches/issues/2488)) ([fe8e03c](https://github.com/MorpheApp/morphe-patches/commit/fe8e03cc67266e022a46c281e3962eaf7a253b14))
 
 ## [1.40.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.8...v1.40.0-dev.9) (2026-08-18)
 
