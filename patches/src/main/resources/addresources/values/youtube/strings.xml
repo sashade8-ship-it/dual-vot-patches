@@ -982,8 +982,8 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
     <string name="morphe_override_youtube_music_buttons_title">Override YouTube Music buttons</string>
     <string name="morphe_override_youtube_music_buttons_summary">Opens your preferred music app instead of the stock YouTube Music app</string>
-    <string name="morphe_music_package_name_title">Music app package name</string>
-    <string name="morphe_music_package_name_summary">Package name of your installed music app</string>
+    <string name="morphe_custom_music_package_name_title">Music app package name</string>
+    <string name="morphe_custom_music_package_name_summary">Package name of your installed music app</string>
 
     <!-- layout.startpage.changeStartPagePatch -->
     <string name="morphe_change_start_page_title">Start page</string>
@@ -1065,6 +1065,10 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_miniplayer_opacity_title">Overlay opacity</string>
     <string name="morphe_miniplayer_opacity_summary">Adjust the transparency level (0 is transparent, 100 is opaque)</string>
     <string name="morphe_miniplayer_opacity_invalid_toast">Miniplayer overlay opacity must be between 0-100</string>
+
+    <!-- misc.fix.fixBackToExitGesturePatch -->
+    <string name="morphe_back_button_always_exits_feed_title">Back button exits the feed</string>
+    <string name="morphe_back_button_always_exits_feed_summary">Pressing back always exits the app instead of scrolling to the top of the feed</string>
 
     <!-- layout.theme.themePatch -->
     <string name="morphe_gradient_loading_screen_title">Enable gradient loading screen</string>

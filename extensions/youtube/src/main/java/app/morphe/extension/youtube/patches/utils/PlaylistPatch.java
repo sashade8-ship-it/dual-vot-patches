@@ -413,7 +413,7 @@ public class PlaylistPatch {
         Utils.showToastShort(reason);
     }
 
-    private enum QueueManager {
+    public enum QueueManager {
         ADD_TO_QUEUE(
                 "morphe_queue_manager_add_to_queue",
                 "yt_outline_list_add_black_24",
