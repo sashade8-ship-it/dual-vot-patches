@@ -1,3 +1,13 @@
+## 1.40.0-dev.12-dualvot.8.3 (2026-08-19)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.12](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.12).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dev.11-dualvot.8.3 (2026-08-19)
 
 ### Automated Morphe update
@@ -322,6 +332,16 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.11...v1.40.0-dev.12) (2026-08-19)
+
+### 🐛 Bug Fixes
+
+* **Reddit - Hide Trending shelves:** Resolve fingerprint failure ([ea9c443](https://github.com/MorpheApp/morphe-patches/commit/ea9c443b0fd9f34d2a2f0c118564b8042901b9fe))
+
+### ✨ New Features
+
+* **Spoof video streams:** Default client maintenance ([#2479](https://github.com/MorpheApp/morphe-patches/issues/2479)) ([62c6a35](https://github.com/MorpheApp/morphe-patches/commit/62c6a351b5313ba9068c62306129ec0dfef29e5e))
 
 ## [1.40.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.10...v1.40.0-dev.11) (2026-08-19)
 
