@@ -361,7 +361,7 @@ public final class VideoInformation {
     /**
      * Records a new playback speed, updates the formatted string, and fires {@link #onPlaybackSpeedChange}.
      *
-     * @return true if the speed actually changed and changePlaybackSpeed() called.
+     * @return true if the speed actually changed.
      */
     private static boolean updatePlaybackSpeedValue(float speed) {
         if (playbackSpeed == speed) {
@@ -371,8 +371,7 @@ public final class VideoInformation {
         playbackSpeed = speed;
         Logger.printDebug(() -> "Video speed updated: " + playbackSpeed);
         playbackSpeedFormattedString = formatSpeedStringX(speed);
-        onPlaybackSpeedChange.invoke(speed);
-        RememberPlaybackSpeedPatch.userSelectedPlaybackSpeed(speed);
+        Utils.runOnMainThreadNowOrLater(() -> onPlaybackSpeedChange.invoke(speed));
         if (!Settings.PLAYBACK_AUDIO_TIME_STRETCHING.get()) {
             updatePlaybackAudioPitchValue(speed);
         }
@@ -383,7 +382,7 @@ public final class VideoInformation {
     /**
      * Records a new playback audio pitch, updates the formatted string, and fires {@link #onPlaybackAudioPitchChange}.
      *
-     * @return true if the pitch actually changed and changePlaybackSpeed() called.
+     * @return true if the pitch actually changed.
      */
     private static boolean updatePlaybackAudioPitchValue(float pitch) {
         if (!Settings.ENABLE_PLAYBACK_AUDIO_PITCH.get()) {
@@ -396,12 +395,11 @@ public final class VideoInformation {
         playbackAudioPitch = pitch;
         Logger.printDebug(() -> "Audio pitch updated: " + playbackAudioPitch);
         playbackAudioPitchFormattedString = formatSpeedStringX(pitch);
-        onPlaybackAudioPitchChange.invoke(pitch);
-        RememberPlaybackSpeedPatch.userSelectedPlaybackAudioPitch(pitch);
+        final float updatedPitch = pitch;
+        Utils.runOnMainThreadNowOrLater(() -> onPlaybackAudioPitchChange.invoke(updatedPitch));
         if (!Settings.PLAYBACK_AUDIO_TIME_STRETCHING.get()) {
             updatePlaybackSpeedValue(pitch);
         }
-        setPlaybackParameters(playbackSpeed, playbackAudioPitch);
         return true;
     }
 
@@ -421,7 +419,17 @@ public final class VideoInformation {
      */
     public static void setAudioPitch(float currentAudioPitch) {
         Logger.printDebug(() -> "Audio pitch set to: " + currentAudioPitch);
-        updatePlaybackAudioPitchValue(currentAudioPitch);
+        final float previousPlaybackSpeed = playbackSpeed;
+        if (!updatePlaybackAudioPitchValue(currentAudioPitch)) {
+            return;
+        }
+
+        RememberPlaybackSpeedPatch.userSelectedPlaybackAudioPitch(playbackAudioPitch);
+        if (!Settings.PLAYBACK_AUDIO_TIME_STRETCHING.get() && previousPlaybackSpeed != playbackSpeed) {
+            RememberPlaybackSpeedPatch.userSelectedPlaybackSpeed(playbackSpeed);
+            changePlaybackSpeed(playbackSpeed);
+        }
+        setPlaybackParameters(playbackSpeed, playbackAudioPitch);
     }
 
     /**
@@ -869,7 +877,16 @@ public final class VideoInformation {
      * @param newlyLoadedPlaybackSpeed The current playback speed.
      */
     public static void setPlaybackSpeed(float newlyLoadedPlaybackSpeed) {
-        updatePlaybackSpeedValue(newlyLoadedPlaybackSpeed);
+        if (!updatePlaybackSpeedValue(newlyLoadedPlaybackSpeed)) {
+            return;
+        }
+
+        RememberPlaybackSpeedPatch.userSelectedPlaybackSpeed(playbackSpeed);
+        if (!Settings.PLAYBACK_AUDIO_TIME_STRETCHING.get()) {
+            RememberPlaybackSpeedPatch.userSelectedPlaybackAudioPitch(playbackAudioPitch);
+            setPlaybackParameters(playbackSpeed, playbackAudioPitch);
+        }
+        changePlaybackSpeed(playbackSpeed);
     }
 
     /**
