@@ -704,10 +704,7 @@ For at få adgang til Indstillinger skal du aktivere knappen Indstillinger via G
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skjul \'Lydspor\'-menuen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Lydspor'-menuen er skjult
-
-For at vise 'Lydspor'-menuen skal du ændre 'Forfalsk videostreams' til enhver klient undtagen 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skjul \'Lydspor\'-menuens sidefod</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skjul Undertekster-menuen</string>
@@ -898,8 +895,8 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Omgå YouTube Music-knapper</string>
   <string name="morphe_override_youtube_music_buttons_summary">Åbner din foretrukne musik-app i stedet for den indbyggede YouTube Music-app</string>
-  <string name="morphe_music_package_name_title">Musikappens pakkenavn</string>
-  <string name="morphe_music_package_name_summary">Pakkenavn på din installerede musikapp</string>
+  <string name="morphe_custom_music_package_name_title">Pakkenavn for musikappen</string>
+  <string name="morphe_custom_music_package_name_summary">Pakkenavn på din installerede musikapp</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Startside</string>
   <string name="morphe_change_start_page_entry_default">Standard</string>
@@ -975,6 +972,9 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_miniplayer_opacity_title">Overlay uigennemsigtighed</string>
   <string name="morphe_miniplayer_opacity_summary">Juster gennemsigtighedsniveauet (0 er gennemsigtigt, 100 er uigennemsigtigt)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Miniplayer overlay gennemsigtighed skal være mellem 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Tilbageknappen forlader feedet</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Tryk på tilbage afslutter altid appen i stedet for at rulle til toppen af feedet</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Aktiver gradient indlæsning af skærmen</string>
   <string name="morphe_gradient_loading_screen_summary">Viser en gradientbaggrund på indlæsningsskærmen i stedet for en ensfarvet farve</string>
@@ -1065,12 +1065,6 @@ Tryk her for at lære mere om DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatisk</string>
-  <string name="morphe_override_initial_video_quality_title">Tilsidesæt startvideokvalitet</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Retter et problem, hvor standardvideokvaliteten ikke anvendes umiddelbart efter videoen starter
-
-Begrænsning: Afspilning fungerer muligvis ikke på nogle enheder, hvis 'Spoofe videostrømme' er indstillet til 'Android VR' og 'Tving AVC (H.264) codec' er aktiveret"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Husk videokvalitet</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Anvender din manuelle kvalitetsvalg på alle fremtidige videoer</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Kvalitetsændringsmeddelelser</string>
@@ -1129,7 +1123,6 @@ Begrænsninger:
 • Nogle enheder kan ikke tvinge AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">For at bruge denne funktion skal du indstille \'Forfalsk videostreams\' til \'Android VR\' eller \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Tving AV1 i Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Åbn Avanceret kvalitetsmenu</string>
   <string name="morphe_advanced_video_quality_menu_summary">Springer kvalitetsvalgsmenuen over og åbner menuen \'Avanceret\' kvalitet direkte</string>

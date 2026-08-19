@@ -692,10 +692,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'ऑडियो ट्रैक\' मेनू छिपाएं</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'ऑडियो ट्रैक' मेनू छिपा हुआ है
-
-'ऑडियो ट्रैक' मेनू दिखाने के लिए, 'स्पूफ वीडियो स्ट्रीम' को 'Android Studio' को छोड़कर किसी भी क्लाइंट में बदलें।"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'ऑडियो ट्रैक\' मेनू फुटर छिपाएं</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">कैप्शन मेनू छिपाएं</string>
@@ -886,8 +883,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music बटन ओवरराइड करें</string>
   <string name="morphe_override_youtube_music_buttons_summary">आपके पसंदीदा संगीत ऐप को खोलता है, डिफ़ॉल्ट YouTube Music ऐप के बजाय</string>
-  <string name="morphe_music_package_name_title">म्यूजिक ऐप पैकेज नाम</string>
-  <string name="morphe_music_package_name_summary">आपके इंस्टॉल किए गए म्यूजिक ऐप का पैकेज नाम</string>
+  <string name="morphe_custom_music_package_name_title">म्यूज़िक ऐप पैकेज नाम</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">स्टार्ट पेज</string>
   <string name="morphe_change_start_page_entry_default">डिफ़ॉल्ट</string>
@@ -963,6 +959,9 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_miniplayer_opacity_title">ओवरले अस्पष्टता</string>
   <string name="morphe_miniplayer_opacity_summary">ओवरले पारदर्शिता स्तर समायोजित करें (0 पारदर्शी है, 100 अपारदर्शी है)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">मिनीप्लेयर ओवरले अस्पष्टता 0-100 के बीच होनी चाहिए</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">बैक बटन फ़ीड से बाहर निकलता है</string>
+  <string name="morphe_back_button_always_exits_feed_summary">बैक दबाने से हमेशा ऐप से बाहर निकलता है, फ़ीड के शीर्ष पर स्क्रॉल करने के बजाय</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">ग्रेडिएंट लोडिंग स्क्रीन सक्षम करें</string>
   <string name="morphe_gradient_loading_screen_summary">लोडिंग स्क्रीन पर एक ठोस रंग के बजाय एक ग्रेडिएंट पृष्ठभूमि दिखाता है</string>
@@ -1053,12 +1052,6 @@ DeArrow.ajay.app खोलने के लिए यहां टैप कर�
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">स्वचालित</string>
-  <string name="morphe_override_initial_video_quality_title">आरंभिक वीडियो गुणवत्ता को ओवरराइड करें</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"एक ऐसी समस्या ठीक करता है जहां वीडियो शुरू होने के तुरंत बाद डिफ़ॉल्ट वीडियो गुणवत्ता लागू नहीं होती है
-
-सीमा: यदि 'वीडियो स्ट्रीम को स्पूफ करें' को 'Android VR' पर सेट किया गया है और 'फोर्स एवीसी (एच.264) कोडेक' सक्षम किया गया है, तो कुछ डिवाइस पर प्लेबैक काम नहीं कर सकता है"</string>
   <string name="morphe_remember_video_quality_last_selected_title">वीडियो गुणवत्ता याद रखें</string>
   <string name="morphe_remember_video_quality_last_selected_summary">अपनी मैन्युअल गुणवत्ता चयन को सभी भविष्य के वीडियो पर लागू करता है</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">गुणवत्ता परिवर्तन सूचनाएं</string>

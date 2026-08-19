@@ -708,10 +708,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">오디오 트랙 메뉴 숨기기</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'오디오 트랙' 메뉴가 숨겨져 있습니다
-
-'오디오 트랙' 메뉴를 표시하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'Android Studio'를 제외한 다른 클라이언트로 변경하세요"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">오디오 트랙 설정 메뉴 하단 설명 숨기기</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">자막 메뉴 숨기기</string>
@@ -902,8 +899,8 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music 버튼 재정의하기</string>
   <string name="morphe_override_youtube_music_buttons_summary">기본 YouTube Music 앱 대신 사용자가 사용하고 싶은 Music 앱을 열 수 있도록 설정합니다</string>
-  <string name="morphe_music_package_name_title">Music 앱 패키지명</string>
-  <string name="morphe_music_package_name_summary">사용자가 사용하고 싶은 Music 앱 패키지명을 설정하세요</string>
+  <string name="morphe_custom_music_package_name_title">Music 앱 패키지명</string>
+  <string name="morphe_custom_music_package_name_summary">사용자가 사용하려는 설치된 Music 앱 패키지명을 설정하세요</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">시작 페이지</string>
   <string name="morphe_change_start_page_entry_default">기본값</string>
@@ -979,6 +976,9 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_miniplayer_opacity_title">미니 플레이어 오버레이 불투명도</string>
   <string name="morphe_miniplayer_opacity_summary">투명도를 설정할 수 있습니다 (0: 투명, 100: 불투명)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">미니 플레이어 오버레이 불투명도는 0-100 사이여야 합니다</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">뒤로가기 버튼으로 피드 나가기</string>
+  <string name="morphe_back_button_always_exits_feed_summary">뒤로가기 버튼을 탭하면 피드 상단으로 이동하지 않고 항상 앱이 종료됩니다</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">그라데이션 색상 로딩 화면 활성화하기</string>
   <string name="morphe_gradient_loading_screen_summary">로딩 화면에 단색 대신 그라데이션 배경을 표시합니다</string>
@@ -1069,12 +1069,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">자동</string>
-  <string name="morphe_override_initial_video_quality_title">초기 동영상 화질 재정의하기</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"동영상이 시작된 직후 기본 화질이 즉시 적용되지 않는 문제를 수정합니다
-
-제한 사항: '동영상 스트림 속이기'에서 '기본 클라이어언트'가 'Android VR'로 설정되어 있고, 'AVC (H.264) 강제로 활성화하기'가 활성화된 경우에는 일부 기기에서 동영상이 정상적으로 재생되지 않을 수 있습니다"</string>
   <string name="morphe_remember_video_quality_last_selected_title">동영상 화질 저장하기</string>
   <string name="morphe_remember_video_quality_last_selected_summary">동영상 화질 값을 변경할 때마다 기본 동영상 화질으로 저장합니다</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">동영상 화질 변경 알림</string>
@@ -1133,7 +1127,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
 • 일부 기기에서는 AVC를 강제로 활성화할 수 없습니다"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">이 기능을 사용하려면, \'동영상 스트림 속이기\'에서 \'기본 클라이언트\'를 \'Android VR\' 또는 \'Android Studio\'로 변경하세요</string>
-  <string name="morphe_force_av1_in_shorts_title">Shorts에서 AV1 강제로 활성화하기</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">고급 화질 메뉴 열기</string>
   <string name="morphe_advanced_video_quality_menu_summary">화질 선택 메뉴를 건너뛰고 고급 화질 메뉴를 바로 엽니다</string>

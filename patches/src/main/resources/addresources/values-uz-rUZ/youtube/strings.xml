@@ -701,10 +701,7 @@ Sozlamalarga kirish uchun Umumiy → Asboblar → Sozlamalarni koʻrsatish orqal
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'Barqaror ovoz\' menyusini yashirish</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track' menyusi yashirilgan
-
-'Audio Track' menyusini ko'rsatish uchun, 'Video oqimlarini qalbakilashtirish'ni 'Android Studio'dan tashqari istalgan mijozga o'zgartiring'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'Oʻqish tezligi\' menyusini yashirish</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">\'Qulf ekran\' menyusini yashirish</string>
@@ -895,8 +892,8 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music tugmalarini almashtirish</string>
   <string name="morphe_override_youtube_music_buttons_summary">Sizning afzal ko\'rgan musiqa ilovangizni standart YouTube Music ilovasi o\'rniga ochadi</string>
-  <string name="morphe_music_package_name_title">Musiqa ilovasi paketi nomi</string>
-  <string name="morphe_music_package_name_summary">O\'rnatilgan musiqa ilovangizning paket nomi</string>
+  <string name="morphe_custom_music_package_name_title">Musiqa ilovasining paket nomi</string>
+  <string name="morphe_custom_music_package_name_summary">O\'rnatilgan musiqa ilovangizning paket nomi</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">\'Saqlash\' tugmasini yashirish</string>
   <string name="morphe_change_start_page_entry_default">Standart</string>
@@ -972,6 +969,8 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <string name="morphe_miniplayer_opacity_title">Qoplama shaffofligi</string>
   <string name="morphe_miniplayer_opacity_summary">Shaffoflik darajasini sozlang (0 shaffof, 100 to\'liq qorong\'i)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Mini pleyer qoplamasining shaffofligi 0-100 orasida bo\'lishi kerak</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Orqaga tugmasi lentadan chiqadi</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Rangli gradientni yoqish</string>
   <string name="morphe_gradient_loading_screen_summary">Yüklenme ekranda to\'liq rang o\'rniga gradient fonini ko\'rsatish</string>
@@ -1062,12 +1061,6 @@ Batafsil ma'lumot olish uchun DeArrow.ajay.app ni oching."</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Harakatdan o\'rinchik</string>
-  <string name="morphe_override_initial_video_quality_title">Boshlang\'ich video sifatini o\'zgartirish</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Videoning boshlanishidan so'ng standart video sifati darhol qo'llanilmaydigan muammoni tuzatadi
-
-Cheklov: Agar 'Video oqimlarini soxtalashtirish' 'Android VR' ga o'rnatilgan bo'lsa va 'AVC (H.264) kodekini majburlash' yoqilgan bo'lsa, ba'zi qurilmalarda ijro ishlamasligi mumkin"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Video sifatini eslash</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Manua l sifat tanlovingizni kelajakdagi barcha videolarga qo\'llang</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Sifat o\'zgarishi haqidagi bildirishnomalar</string>
@@ -1128,7 +1121,6 @@ Cheklovlari:
 • Ba'zi qurilmalar AVCni majburlash imkoniyatiga ega emas"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Bu xususiyatdan foydalanish uchun \'Video oqimlarini soxtalashtirish\' ni \'Android VR\' yoki \'Android Studio\' ga o\'rnating</string>
-  <string name="morphe_force_av1_in_shorts_title">Shorts-da AV1-ni majbur qilish</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Kengaytirilgan sifat menyusini ochish</string>
   <string name="morphe_advanced_video_quality_menu_summary">Sifat tanlash menyusini o\'tkib uzatadi va to\'g\'ridan-to\'g\'ri ilg\'or sifat menyusini ochadi</string>

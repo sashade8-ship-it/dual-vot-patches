@@ -706,10 +706,7 @@ For å få tilgang til Innstillinger, aktiver Innstillingsknappen via General �
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skjul \"Lydspor\"-menyen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"’Lydspor’-menyen er skjult
-
-For å vise ’Lydspor’-menyen, endre ’Spoof video streams’ til en hvilken som helst klient unntatt ’Android Studio’"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skjul Undertekster-meny</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skjul Undertekster-menyen fotnote</string>
@@ -900,8 +897,7 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Overskriv YouTube Music-knapper</string>
   <string name="morphe_override_youtube_music_buttons_summary">Åpner din foretrukne musikkapp i stedet for standard YouTube Music-appen</string>
-  <string name="morphe_music_package_name_title">Pakkenavn for musikkapp</string>
-  <string name="morphe_music_package_name_summary">Pakkenavnet til din installerte musikkapp</string>
+  <string name="morphe_custom_music_package_name_title">Pakkenavn for musikkapp</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Startside</string>
   <string name="morphe_change_start_page_entry_default">Standard</string>
@@ -977,6 +973,7 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_miniplayer_opacity_title">Overlays opasitet</string>
   <string name="morphe_miniplayer_opacity_summary">Juster gjennomsiktighetsnivået (0 er gjennomsiktig, 100 er ugjennomsiktig)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Minispillerens overleggsopasitet må være mellom 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Aktiver gradientlasteskjerm</string>
   <string name="morphe_gradient_loading_screen_summary">Viser en gradientbakgrunn på lasteskjermen i stedet for en solid farge</string>
@@ -1065,12 +1062,6 @@ Hvis aktivert, sendes videourler til API-serveren og ingen andre data sendes. Hv
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Auto</string>
-  <string name="morphe_override_initial_video_quality_title">Overskriv innledende videokvalitet</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Retter en feil der standard videokvalitet ikke brukes umiddelbart etter at videoen starter
-
-Begrensning: Avspilling fungerer kanskje ikke på noen enheter hvis 'Forfalsk videostrømmer' er satt til 'Android VR' og 'Tving AVC (H.264)-kodek' er aktivert"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Husk videokvalitet</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Bruker din manuelle kvalitetsvalg på alle fremtidige videoer</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Kvalitetsendrings-varsler</string>
@@ -1129,7 +1120,6 @@ Begrensninger:
 • Noen enheter kan ikke tvinge AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">For å bruke denne funksjonen, sett «Forfalsk videostrømmer» til «Android VR» eller «Android Studio»</string>
-  <string name="morphe_force_av1_in_shorts_title">Force AV1 in Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Åpne avansert kvalitetsmeny</string>
   <string name="morphe_advanced_video_quality_menu_summary">Hoppover kvalitetselementvalgmenyen og åpner avansert kvalitetsmeny direkte</string>

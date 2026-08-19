@@ -707,10 +707,7 @@ Ji bo ku derfetên sazkarî pêşero, rêzika 'Settings' zivirînin bi General �
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Butona nivîskê veşêre</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Menuya Şêwazê Deng' veşartin e
-
-Bo nîşandina 'Menuya Şêwazê Deng', guherîna 'Perçêkirina herikên vîdyoyê' bo her kîşerekê ji bilî 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Butona paşveveşêrî veşêre</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Butona rêjeya deng veşêre</string>
@@ -901,8 +898,8 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Butonên YouTube Music-ê serdike </string>
   <string name="morphe_override_youtube_music_buttons_summary">Li şûna serlêdana YouTube Music ya standard, serlêdana muzîkê ya ku hûn tercîh dikin vedike.</string>
-  <string name="morphe_music_package_name_title">Navê paketa serîlêdana muzîkê</string>
-  <string name="morphe_music_package_name_summary">Navê paketa serîlêdana muzîka ku we saz kiriye</string>
+  <string name="morphe_custom_music_package_name_title">Navê pakêta sepanê muzîkê</string>
+  <string name="morphe_custom_music_package_name_summary">Navê pakêta sepanê muzîkê ya ku te saz kiriye</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Rûpela Destpêkirinê</string>
   <string name="morphe_change_start_page_entry_default">Bixwe</string>
@@ -978,6 +975,7 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <string name="morphe_miniplayer_opacity_title">Astê dorpelê</string>
   <string name="morphe_miniplayer_opacity_summary">Rengê têkildar ê Sebarê</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Astê dorpelê yê dorpelê divê di navbera 0-100 de be</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Çalak bike ekranê barkerdina gradyantê</string>
   <string name="morphe_gradient_loading_screen_summary">Destbîne ranga duyem a barkê pêşkeftina vîdeoyê</string>
@@ -1068,12 +1066,6 @@ Bike li vir da vekirina DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Otomatîk</string>
-  <string name="morphe_override_initial_video_quality_title">Zorlêkirina qalîteya vîdyoyê ya destpêkê</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Pirsgirêkek çareser dike ku qalîteya vîdyoyê ya xwerû yekser piştî destpêkirina vîdyoyê nayê sepandin
-
-Sînor: Lîstin dibe ku li ser hin cîhazan nexebite heke 'sextekirina vîdyo streaman' li 'Android VR' were danîn û 'Zorlêkirina codec-ya AVC (H.264)' were çalakkirin."</string>
   <string name="morphe_remember_video_quality_last_selected_title">Kalîteya vîdyoyê bibîrxe</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Hilbijarkên kalîteya we yên destan li ser hemû vîdyoyên paşîn pêk bîne</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Agahdarkirina Guherîna Kalîteyê</string>
@@ -1132,7 +1124,6 @@ Sînergirên:
 • Hin alav nikarên AVC zor bike"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Ji bo bikaranîna vê taybetmendiyê, \'Sexandina streamên vîdyoyê\' li ser \'Android VR\' an \'Android Studio\' saz bikin.</string>
-  <string name="morphe_force_av1_in_shorts_title">Di Shorts de AV1-ê bi zorê bikar bîne</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Veke ji menuya kalîteya pêşkeftî ve bike</string>
   <string name="morphe_advanced_video_quality_menu_summary">Dibe menuya hilbijartina kalîteyê derbas dike û rasterast menuya kalîteya Pêşkeftî vekirin</string>

@@ -706,10 +706,10 @@ Om Instellings te open, aktiveer die Instellings-knoppie via Algemeen → Toolba
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Hide \'Stable volume\' menu</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track' menu is versteek
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track'-kieslys is versteek
 
-Om die 'Audio Track' menu te vertoon, verander 'Spoof video streams' na enige klient behalwe 'Android Studio'"</string>
+Om die 'Audio Track'-kieslys te wys, verander 'Vervals videostrome' na enige kliënt behalwe 'Android Studio' en 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Hide \'Playback speed\' menu</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Hide \'Lock screen\' menu</string>
@@ -900,8 +900,6 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Oorheers YouTube Music knoppies</string>
   <string name="morphe_override_youtube_music_buttons_summary">Open jou voorkeur-musiektoepassing in plaas van die standaard YouTube Music-toepassing</string>
-  <string name="morphe_music_package_name_title">Musiektoepassing pakketnaam</string>
-  <string name="morphe_music_package_name_summary">Pakketnaam van jou geïnstalleerde musiektoepassing</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Beginblad</string>
   <string name="morphe_change_start_page_entry_default">Verstek</string>
@@ -977,6 +975,9 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_miniplayer_opacity_title">Oordekking</string>
   <string name="morphe_miniplayer_opacity_summary">Pas die deursigtigheidsvlak aan (0 is deursigtig, 100 is ondeursigtig)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Oor</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Terugknoppie verlaat die voer</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Wanneer jy terug druk, verlaat jy altyd die toepassing in plaas daarvan om na die bokant van die voer te blaai</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Gebruik \'n gradiënt laaiskerm</string>
   <string name="morphe_gradient_loading_screen_summary">Wys \'n gradiënt agtergrond op die laaiskerm in plaas van \'n soliede kleur</string>
@@ -1067,12 +1068,6 @@ Tik hier om DeArrow.ajay.app oop te maak"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Onthou video kwaliteit veranderings</string>
-  <string name="morphe_override_initial_video_quality_title">Oorskryf aanvanklike videokwaliteit</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Los 'n probleem op waar die verstek videokwaliteit nie onmiddellik toegepas word nadat die video begin het nie
-
-Beperking: Weergawe werk moontlik nie op sommige toestelle as 'Vals video-stromings' op 'Android VR' gestel is en 'Dwing AVC (H.264)-kodek' geaktiveer is"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Onthou videokwaliteit</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Pas jou handmatige kwaliteitseleksie toe op alle toekomstige video\'s</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Kwaliteitveranderingskennisgewings</string>
@@ -1131,7 +1126,6 @@ Beperkings:
 • Sommige toestelle kan nie AVC forceer nie"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Om hierdie funksie te gebruik, stel \'Verfraai videostrome\' in op \'Android VR\' of \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Dwing AV1 in Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Maak Gevorderde kwaliteit spyskaart oop</string>
   <string name="morphe_advanced_video_quality_menu_summary">Slaan die kwaliteitkeusemenu oor en open die Gevorderde kwaliteitmenu direk</string>
@@ -1155,6 +1149,7 @@ Videoweergawe met AV1 kan hakkel of rame laat val."</string>
   <string name="morphe_spoof_video_streams_about_js">• Indien ontmeng misluk, kan speel misluk</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forceer oorspronklike klank is nie beskikbaar nie</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Teken by Android VR aan word vereis</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kwaliteit kan beperk wees tot 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Speler JavaScript variant</string>

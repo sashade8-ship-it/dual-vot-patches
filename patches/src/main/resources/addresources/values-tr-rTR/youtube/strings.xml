@@ -706,10 +706,7 @@ Ayarlara erişmek için, Genel → Araç Çubuğu → Ayarları Göster yoluyla 
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'Ses Parçası\' menüsünü gizle</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Ses Parçası' menüsü gizli
-
-'Ses Parçası' menüsünü göstermek için 'Video akışlarını taklit et' özelliğini 'Android Studio' hariç herhangi bir istemciye değiştirin."</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'Ses Parçası\' menüsü alt bilgisini gizle</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Altyazılar menüsünü gizle</string>
@@ -900,8 +897,6 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music düğmelerini değiştir</string>
   <string name="morphe_override_youtube_music_buttons_summary">Tercih ettiğiniz müzik uygulamasını, yerleşik YouTube Music uygulaması yerine açar</string>
-  <string name="morphe_music_package_name_title">Müzik uygulaması paket adı</string>
-  <string name="morphe_music_package_name_summary">Yüklü müzik uygulamanızın paket adı</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Başlangıç sayfası</string>
   <string name="morphe_change_start_page_entry_default">Varsayılan</string>
@@ -977,6 +972,9 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_miniplayer_opacity_title">Katman opaklığı</string>
   <string name="morphe_miniplayer_opacity_summary">Oynatma katmanının şeffaflık düzeyini ayarlayın (0 şeffaf, 100 opak)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Mini oynatıcı katman opaklığı 0-100 arasında olmalıdır</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Geri düğmesi akıştan çıkar</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Geri tuşuna basmak, akışın en üstüne kaydırmak yerine her zaman uygulamadan çıkar.  This is a placeholder to ensure validity.</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Gradyan yükleme ekranını etkinleştir</string>
   <string name="morphe_gradient_loading_screen_summary">Yükleme ekranında düz bir renk yerine degrade arka plan gösterir</string>
@@ -1067,12 +1065,6 @@ DeArrow hakkında daha fazla bilgi edinmek için buraya dokunun"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Oto</string>
-  <string name="morphe_override_initial_video_quality_title">İlk video kalitesini geçersiz kıl</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Video başladığında varsayılan video kalitesinin hemen uygulanmaması sorununu giderir
-
-Sınırlama: 'Video akışlarını taklit et' 'Android VR' olarak ayarlanmışsa ve 'AVC (H.264) kodekini zorla' etkinleştirilmişse bazı cihazlarda oynatma çalışmayabilir."</string>
   <string name="morphe_remember_video_quality_last_selected_title">Video kalitesini hatırla</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Manuel kalite seçiminizi gelecekteki tüm videolara uygular</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Kalite değişikliği bildirimleri</string>
@@ -1131,7 +1123,6 @@ Sınırlamalar:
 • Bazı cihazlar AVC'yi zorlayamaz"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Bu özelliği kullanmak için \'Video akışlarını taklit et\'i Android VR veya Android Studio olarak ayarlayın</string>
-  <string name="morphe_force_av1_in_shorts_title">Shorts\'ta AV1\'i zorla</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Gelişmiş kalite menüsünü aç</string>
   <string name="morphe_advanced_video_quality_menu_summary">Kalite seçim menüsünü atlar ve doğrudan Gelişmiş kalite menüsünü açar</string>

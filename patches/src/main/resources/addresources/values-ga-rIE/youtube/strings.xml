@@ -706,10 +706,7 @@ Chun rochtain a fháil ar Socruithe, cumasaigh an cnaipe Socruithe trí Ghinear�
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Folaigh an roghchlár \'Rian Fuaime\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Tá an roghchlár 'Rian Fuaime' i bhfolach
-
-Chun an roghchlár 'Rian Fuaime' a thaispeáint, athraigh 'Sruthanna físe bréige' go haon chliant seachas 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Folaigh buntásc an roghchláir \'Rian Fuaime\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Folaigh roghchlár Fotheidil</string>
@@ -900,8 +897,8 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Sáraigh cnaipí YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Osclaíonn sé d’aip cheoil is fearr leat in ionad aip YouTube Music stoic</string>
-  <string name="morphe_music_package_name_title">Ainm pacáiste aip ceoil</string>
-  <string name="morphe_music_package_name_summary">Ainm pacáiste d\'aip cheoil suiteáilte</string>
+  <string name="morphe_custom_music_package_name_title">Ainm pacáiste app ceoil</string>
+  <string name="morphe_custom_music_package_name_summary">Ainm pacáiste d\'aip cheoil suiteáilte</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Leathanach tosaigh</string>
   <string name="morphe_change_start_page_entry_default">Réamhshocrú</string>
@@ -977,6 +974,9 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_miniplayer_opacity_title">Trédhearcacht forleagan</string>
   <string name="morphe_miniplayer_opacity_summary">Coigeartaigh an leibhéal trédhearcachta (is é 0 trédhearcach, is é 100 teimhneach)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Caithfidh teimhneacht forleagan mion-imreoir a bheith idir 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Fágann an cnaipe cúil as an bhfotha</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Má bhrúnn tú ar ais, fágtar an aip i gcónaí seachas scrollaigh go barr an fhotha</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Cumasaigh scáileán luchtaithe</string>
   <string name="morphe_gradient_loading_screen_summary">Taispeánann sé cúlra grádáin ar an scáileán lódála in ionad dath soladach</string>
@@ -1067,12 +1067,6 @@ Tapáil anseo chun DeArrow.ajay.app a oscailt."</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Uathoibríoch</string>
-  <string name="morphe_override_initial_video_quality_title">Sáraigh cáilíocht físe tosaigh</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Deisítear fadhb inar cuireadh an caighdeán físe réamhshocraithe i bhfeidhm díreach tar éis don fhíseán tosú
-
-Teorainn: Seans nach n-oibreoidh athsheinm ar roinnt gléasanna má tá 'Sruthanna físe bréige' socraithe go 'Android VR' agus 'Force AVC (H.264) codec' cumasaithe"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Cuimhnigh ar cháilíocht an fhíseáin</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Cuireann sé seo do rogha cáilíochta láimhe i bhfeidhm ar gach físeán amach anseo</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Fógraí athraithe cáilíochta</string>
@@ -1131,7 +1125,6 @@ Teorainneacha:
 • Ní féidir le roinnt gléasanna AVC a bhrú"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Chun an ghné seo a úsáid, socraigh \'Sruthanna físe bréige\' go \'Android VR\' nó \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Fórsa AV1 i Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Oscail an roghchlár Ardchaighdeáin</string>
   <string name="morphe_advanced_video_quality_menu_summary">Léimeann sé an roghchlár um roghnú cáilíochta agus osclaíonn sé an roghchlár Ardchaighdeán go díreach</string>

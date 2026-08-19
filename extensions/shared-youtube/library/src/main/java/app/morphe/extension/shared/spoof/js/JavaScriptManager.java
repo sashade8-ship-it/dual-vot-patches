@@ -304,7 +304,7 @@ public final class JavaScriptManager {
 
             final String content;
             if (responseCode == HttpURLConnection.HTTP_OK) {
-                content = Requester.parseStringAndDisconnect(connection);
+                content = Requester.parseString(connection);
             } else {
                 Logger.printDebug(() -> "Ignoring response code: " + responseCode);
                 content = null;

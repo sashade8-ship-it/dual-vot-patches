@@ -54,7 +54,7 @@ import app.morphe.extension.shared.spoof.js.JavaScriptManager;
  */
 public class StreamingDataRequest {
 
-    public record StreamData(byte[] streamingData, @Nullable byte[] playerConfig) {
+    public record StreamData(byte[] streamingData, @Nullable byte[] playerConfig, boolean hasAndroidMedia) {
     }
 
     private static volatile ClientType[] clientOrderToUse = ClientType.values();
@@ -199,16 +199,23 @@ public class StreamingDataRequest {
             }
             // If oauth2 login is supported and the user is logged in via oauth2 flow, the header is set:
             // ANDROID_VR (ANDROID_XR).
-            else if (clientType.supportsOAuth2 && authHeadersIncludes) {
+            else if (clientType.supportsOAuth2 && clientType.requireLogin) {
                 String oauth2Authorization = OAuth2Requester.getAndUpdateAccessTokenIfNeeded();
                 if (Utils.isNotEmpty(oauth2Authorization)) {
                     authHeadersOverrides = true;
                     connection.setRequestProperty(AUTHORIZATION_HEADER, oauth2Authorization);
                     Logger.printDebug(() -> "Set oauth2 auth header: " + clientType + ", videoId: " + videoId);
                 }
+                // Oauth2 login is required, but the user is not logged in.
+                // ANDROID_VR (ANDROID_XR).
+                else {
+                    Logger.printDebug(() -> "Skipping client since user is not signed in to " + clientType
+                            + ", videoId: " + videoId);
+                    return null;
+                }
             }
             // These clients can play videos without the auth header:
-            // ANDROID_VR (ANDROID_XR), TV_SABR, VISIONOS_1_02 (VISIONOS_1_03).
+            // TV_SABR, VISIONOS_1_02 (VISIONOS_1_03).
             else {
                 Logger.printDebug(() -> "Do not set auth header: " + clientType + ", videoId: " + videoId);
             }
@@ -333,11 +340,27 @@ public class StreamingDataRequest {
             }
 
             byte[] streamingDataBuffer = responseBuilder.build().toByteArray();
-            byte[] playerConfigBuffer = clientType.requireSABR && playerResponse.hasPlayerConfig()
-                    ? playerResponse.getPlayerConfig().toByteArray()
-                    : null;
+            byte[] playerConfigBuffer = null;
+            boolean hasAndroidMedia = false;
 
-            return new StreamData(streamingDataBuffer, playerConfigBuffer);
+            if (clientType.requireSABR && playerResponse.hasPlayerConfig()) {
+                PlayerConfig.Builder playerConfigBuilder = playerResponse.getPlayerConfig().toBuilder();
+
+                // In some clients, 'playerGestureConfig' is missing from the response.
+                // Add 'playerGestureConfig' using proto builder.
+                PlayerGestureConfig.Builder playerGestureConfigBuilder = playerConfigBuilder.getPlayerGestureConfig().toBuilder();
+                playerGestureConfigBuilder.setDownAndOutPortraitAllowed(true);
+                playerGestureConfigBuilder.setDownAndOutLandscapeAllowed(true);
+                playerConfigBuilder.setPlayerGestureConfig(playerGestureConfigBuilder);
+
+                playerConfigBuffer = playerConfigBuilder.build().toByteArray();
+
+                // If 'androidMedialibConfig' exists in the response, all playerConfigs are compatible.
+                // Override all playerConfigs.
+                hasAndroidMedia = playerConfigBuilder.hasAndroidMedialibConfig();
+            }
+
+            return new StreamData(streamingDataBuffer, playerConfigBuffer, hasAndroidMedia);
         } catch (IOException ex) {
             Logger.printException(() -> "Failed to write player response for video stream", ex);
             return null;

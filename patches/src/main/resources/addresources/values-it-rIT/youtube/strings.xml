@@ -706,10 +706,7 @@ Per accedere alle Impostazioni, attiva il pulsante Impostazioni tramite Generale
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Nascondi il menù \'Traccia audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Il menu 'Traccia audio' è nascosto
-
-Per visualizzare il menù 'Traccia audio', seleziona il client 'Android Reel' o 'TV' per la falsificazione dei flussi videi."</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Nascondi il piè di pagina del menu \'Traccia audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Nascondi il menù Sottotitoli</string>
@@ -900,8 +897,8 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Sovrascrivi i pulsanti di YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Apre l\'app musicale preferita anziché l\'app ufficiale di YouTube Music</string>
-  <string name="morphe_music_package_name_title">Nome pacchetto dell\'app musicale</string>
-  <string name="morphe_music_package_name_summary">Nome del pacchetto dell\'app musicale installata</string>
+  <string name="morphe_custom_music_package_name_title">Nome pacchetto dell\'app musicale</string>
+  <string name="morphe_custom_music_package_name_summary">Nome del pacchetto dell\'app musicale installata</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Pagina iniziale</string>
   <string name="morphe_change_start_page_entry_default">Predefinito</string>
@@ -977,6 +974,7 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_miniplayer_opacity_title">Opacità sovrapposizione</string>
   <string name="morphe_miniplayer_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">L\'opacità della sovrapposizione del lettore minimizzato deve essere compresa tra 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Abilita schermata di caricamento litho con gradiente</string>
   <string name="morphe_gradient_loading_screen_summary">Mostra uno sfondo sfumato sulla schermata di caricamento anziché un colore solido</string>
@@ -1067,12 +1065,6 @@ Tocca qui per saperne di più su DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatico</string>
-  <string name="morphe_override_initial_video_quality_title">Sostituisci qualità video iniziale</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Risolve un problema per cui la qualità video predefinita non viene applicata immediatamente all'avvio del video
-
-Limitazione: la riproduzione potrebbe non funzionare su alcuni dispositivi se 'Maschera flussi video' è impostato su 'Android VR' e 'Forza codec AVC (H.264)' è abilitato"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Ricorda la qualità del video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Applica la tua selezione manuale della qualità a tutti i video futuri</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Notifiche di modifica della qualità</string>
@@ -1131,7 +1123,6 @@ Limitazioni:
 • Alcuni dispositivi non possono forzare l'uso di AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Per utilizzare questa funzionalità, imposta \'Falsificazione dei flussi video\' su \'Android VR\' o \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Forza AV1 in Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Apri il menu qualità avanzata</string>
   <string name="morphe_advanced_video_quality_menu_summary">Salta il menu di selezione della qualità e apri direttamente il menu qualità avanzate</string>

@@ -133,8 +133,7 @@ Second \"item\" text"</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">छुपाएं फुलस्क्रीन विज्ञापन</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_force_original_audio_not_available">इस सुविधा का उपयोग करने के लिए, \'Spoof video streams\' को \'Android Studio\' के अलावा किसी भी क्लाइंट में बदलें।</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">शेयरिंग लिंक्स को साफ़ करें</string>
   <string name="morphe_sanitize_sharing_links_summary">साझा लिंक से ट्रैकिंग क्वेरी पैरामीटर हटाता है</string>

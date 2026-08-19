@@ -707,10 +707,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">「音声トラック」を非表示</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"「音声トラック」は表示されません
-
-「音声トラック」を表示するには、[動画ストリームを偽装] を「Android Studio」以外のクライアントに変更してください"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">音声トラック メニューの脚注を非表示</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">「字幕」を非表示</string>
@@ -901,8 +898,8 @@ Automotive レイアウト
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music ボタンの動作を上書き</string>
   <string name="morphe_override_youtube_music_buttons_summary">YouTube Music ボタンの呼び出し先を、「純正 YouTube Music アプリ」から「設定した音楽アプリ」に変更します</string>
-  <string name="morphe_music_package_name_title">音楽アプリのパッケージ名</string>
-  <string name="morphe_music_package_name_summary">YouTube Music の代わりに呼び出すインストール済みの音楽アプリのパッケージ名</string>
+  <string name="morphe_custom_music_package_name_title">音楽アプリのパッケージ名</string>
+  <string name="morphe_custom_music_package_name_summary">YouTube Music の代わりに呼び出すインストール済みの音楽アプリのパッケージ名</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">スタート画面</string>
   <string name="morphe_change_start_page_entry_default">デフォルト</string>
@@ -978,6 +975,9 @@ Automotive レイアウト
   <string name="morphe_miniplayer_opacity_title">オーバーレイの透明度</string>
   <string name="morphe_miniplayer_opacity_summary">ミニプレーヤー オーバーレイの透明度を設定します (0-100: 0 が透明)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">ミニプレーヤーの透明度の範囲: 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">「戻る」ボタンでアプリを終了</string>
+  <string name="morphe_back_button_always_exits_feed_summary">ホームタブで「戻る」ボタンをタップしたときに、ホームフィードの最上部にスクロールせずに常にアプリを終了します</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">グラデーションの読み込み画面を有効化</string>
   <string name="morphe_gradient_loading_screen_summary">読み込み画面の背景を、「単色の背景」から「グラデーションの背景」に変更します</string>
@@ -1066,12 +1066,6 @@ Automotive レイアウト
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">自動</string>
-  <string name="morphe_override_initial_video_quality_title">デフォルトの画質を強制的に適用</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"動画の再生開始直後に [デフォルトの画質] が適用されない問題を修正します
-
-制限事項: [動画ストリームを偽装] のクライアントが「Android VR」で、かつ [AVC (H.264) を優先して使用] を有効にしている場合、一部のデバイスで動画が再生できない場合があります"</string>
   <string name="morphe_remember_video_quality_last_selected_title">画質を保存</string>
   <string name="morphe_remember_video_quality_last_selected_summary">画質メニューでの画質の変更を、設定の「デフォルトの画質」に反映し、すべての動画に適用します</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">画質変更の通知</string>
@@ -1130,7 +1124,6 @@ Automotive レイアウト
 • 一部のデバイスでは AVC を強制できない"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">この機能を使用するには、[動画ストリームを偽装] のクライアントを「Android VR」または「Android Studio」に設定してください</string>
-  <string name="morphe_force_av1_in_shorts_title">ショートで AV1 を優先して使用</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">画質の詳細設定メニューを開く</string>
   <string name="morphe_advanced_video_quality_menu_summary">画質メニューをスキップして画質の「詳細設定」メニューを直接開きます</string>

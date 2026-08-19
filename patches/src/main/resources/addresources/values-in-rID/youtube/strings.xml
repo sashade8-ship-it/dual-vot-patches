@@ -253,8 +253,8 @@ Perubahan termasuk:
   <string name="morphe_hide_comments_gift_button_title">Sembunyikan tombol Hadiah</string>
   <string name="morphe_hide_comments_info_button_title">Sembunyikan tombol Info</string>
   <string name="morphe_hide_comments_live_chat_donators_bar_title">Sembunyikan bilah donatur live chat</string>
-  <string name="morphe_hide_comments_live_chat_tooltips_title">Sembunyikan petunjuk live chat</string>
-  <string name="morphe_hide_comments_live_chat_tooltips_summary">Menyembunyikan petunjuk di dekat kolom chat, seperti info chat khusus subscriber</string>
+  <string name="morphe_hide_comments_live_chat_tooltips_title">Sembunyikan tooltip live chat</string>
+  <string name="morphe_hide_comments_live_chat_tooltips_summary">Menyembunyikan pop-up tooltip yang muncul di dekat bilah input chat, seperti pemberitahuan chat khusus subscriber</string>
   <string name="morphe_hide_comments_preview_comment_title">Sembunyikan pratinjau komentar</string>
   <string name="morphe_hide_comments_preview_comment_summary">Menyembunyikan pratinjau komentar di bawah video sebelum membuka bagian komentar penuh</string>
   <string name="morphe_hide_comments_thanks_button_title">Sembunyikan tombol Terima Kasih</string>
@@ -705,10 +705,7 @@ Untuk mengakses Pengaturan, aktifkan tombol Pengaturan melalui Umum → Bilah Al
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Sembunyikan menu \'Trek Audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu 'Trek Audio' disembunyikan
-
-Untuk menampilkan menu 'Trek Audio', ubah 'Palsukan aliran video' ke klien apa pun selain 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Sembunyikan footer menu \'Trek Audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Sembunyikan menu Teks</string>
@@ -899,8 +896,8 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Ganti tombol YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Membuka aplikasi musik pilihan Anda daripada aplikasi bawaan YouTube Music</string>
-  <string name="morphe_music_package_name_title">Nama paket aplikasi musik</string>
-  <string name="morphe_music_package_name_summary">Nama paket aplikasi musik yang terinstal</string>
+  <string name="morphe_custom_music_package_name_title">Nama paket aplikasi musik</string>
+  <string name="morphe_custom_music_package_name_summary">Nama paket aplikasi musik yang terinstal</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Halaman mulai</string>
   <string name="morphe_change_start_page_entry_default">Bawaan</string>
@@ -976,6 +973,9 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_miniplayer_opacity_title">Opasitas hamparan</string>
   <string name="morphe_miniplayer_opacity_summary">Sesuaikan tingkat transparansi (0 adalah transparan, 100 adalah buram)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Opasitas hamparan pemutar mini antara 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Tombol kembali keluar dari feed</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali selalu keluar dari aplikasi alih-alih menggulir ke atas feed</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Aktifkan layar pemuatan gradien</string>
   <string name="morphe_gradient_loading_screen_summary">Menampilkan latar belakang gradien pada layar pemuatan daripada warna solid</string>
@@ -1066,12 +1066,6 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Otomatis</string>
-  <string name="morphe_override_initial_video_quality_title">Timpa kualitas video awal</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Memperbaiki masalah di mana kualitas video bawaan tidak diterapkan segera setelah video dimulai
-
-Keterbatasan: Pemutaran mungkin tidak berfungsi di beberapa perangkat jika 'Palsukan aliran video' diatur ke 'Android VR' dan 'Paksa codec AVC (H.264)' diaktifkan"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Ingat kualitas video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Menerapkan pilihan kualitas manual Anda ke semua video mendatang</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Pemberitahuan perubahan kualitas</string>
@@ -1130,7 +1124,6 @@ Batasan:
 • Beberapa perangkat tidak dapat memaksakan AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Untuk menggunakan fitur ini, atur \'Palsukan aliran video\' ke \'Android VR\' atau \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Paksakan AV1 di Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Buka menu kualitas Lanjutan</string>
   <string name="morphe_advanced_video_quality_menu_summary">Melewati menu pemilihan kualitas dan langsung membuka menu kualitas Lanjutan</string>

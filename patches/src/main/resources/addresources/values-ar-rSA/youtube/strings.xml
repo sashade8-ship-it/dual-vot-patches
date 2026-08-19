@@ -711,10 +711,7 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">إخفاء قائمة \'المقطع الصوتي\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"تم إخفاء قائمة 'المقطع الصوتي'
-
-لعرض قائمة 'المقطع الصوتي'، غيّر 'Spoof Video Streams' إلى أي عميل باستثناء 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">إخفاء نص قائمة \'المقطع الصوتي\' السفلي</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">إخفاء قائمة الترجمة</string>
@@ -905,8 +902,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">تغيير وظيفة أزرار YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">يفتح تطبيق الموسيقى المفضل لديك بدلًا من تطبيق YouTube Music الافتراضي</string>
-  <string name="morphe_music_package_name_title">اسم حزمة تطبيق الموسيقى</string>
-  <string name="morphe_music_package_name_summary">اسم حزمة تطبيق الموسيقى المثبت لديك</string>
+  <string name="morphe_custom_music_package_name_title">اسم حزمة تطبيق الموسيقى</string>
+  <string name="morphe_custom_music_package_name_summary">اسم حزمة تطبيق الموسيقى المثبت لديك</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">صفحة البدء</string>
   <string name="morphe_change_start_page_entry_default">الافتراضي</string>
@@ -982,6 +979,9 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_miniplayer_opacity_title">شفافية الواجهة</string>
   <string name="morphe_miniplayer_opacity_summary">ضبط مستوى الشفافية (0 شفاف، 100 معتم)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">شفافية واجهة المشغل المصغر يجب أن تكون بين 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">زر الرجوع يخرج من الخلاصة</string>
+  <string name="morphe_back_button_always_exits_feed_summary">الضغط على زر الرجوع يؤدي دائمًا إلى الخروج من التطبيق بدلًا من التمرير إلى أعلى الخلاصة</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">تمكين شاشة التحميل المتدرجة</string>
   <string name="morphe_gradient_loading_screen_summary">يعرض خلفية متدرجة على شاشة التحميل بدلًا من لون ثابت</string>
@@ -1072,12 +1072,6 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">تلقائي</string>
-  <string name="morphe_override_initial_video_quality_title">تطبيق جودة الفيديو تلقائيًا عند التشغيل</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"يُصلح مشكلة عدم تطبيق جودة الفيديو الافتراضية فور بدء تشغيل الفيديو
-
-ملاحظة: قد لا يعمل التشغيل على بعض الأجهزة إذا تم ضبط 'Spoof Video Streams' على 'Android VR' مع تمكين 'فرض برنامج ترميز AVC (H264)'"</string>
   <string name="morphe_remember_video_quality_last_selected_title">تذكر جودة الفيديو</string>
   <string name="morphe_remember_video_quality_last_selected_summary">يطبق تحديد الجودة اليدوي على جميع الفيديوهات المستقبلية</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">إشعارات تغيير الجودة</string>
@@ -1136,7 +1130,6 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
 • لا يمكن لبعض الأجهزة فرض AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">لاستخدام هذه الميزة، قم بضبط \'Spoof Video Streams\' على \'Android VR\' أو \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">فرض ترميز AV1 في فيديوهات Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">فتح قائمة \'الجودة المتقدمة\'</string>
   <string name="morphe_advanced_video_quality_menu_summary">يتخطى قائمة تحديد الجودة ويفتح قائمة الجودة المتقدمة مباشرة</string>

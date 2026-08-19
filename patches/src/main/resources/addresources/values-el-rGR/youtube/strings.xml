@@ -706,10 +706,7 @@ Second \"item\" text"</string>
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Κρύψτε το μενού \'Ήχος\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Μενού ρυθμίσεων ήχου' είναι κρυφό
-
-Για να εμφανίσετε το 'Μενού ρυθμίσεων ήχου', αλλάξτε την επιλογή 'Παραποίηση ροών βίντεο' σε οποιαδήποτε συσκευή εκτός από το 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Κρύψτε την υποσημείωση του μενού \'Ήχος\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Κρύψτε το μενού \'Υπότιτλοι\'</string>
@@ -900,8 +897,6 @@ Second \"item\" text"</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Υπέρβαση των κουμπιών YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Ανοίγει την προτιμώμενη εφαρμογή μουσικής αντί για την προεπιλεγμένη εφαρμογή YouTube Music</string>
-  <string name="morphe_music_package_name_title">Όνομα πακέτου εφαρμογής μουσικής</string>
-  <string name="morphe_music_package_name_summary">Όνομα πακέτου της εγκατεστημένης εφαρμογής μουσικής σας</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Αρχική σελίδα</string>
   <string name="morphe_change_start_page_entry_default">Προεπιλογή</string>
@@ -977,6 +972,9 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_opacity_title">Αδιαφάνεια φόντου παρασκηνίου</string>
   <string name="morphe_miniplayer_opacity_summary">Ρυθμίστε το επίπεδο διαφάνειας (0 είναι διαφανές, 100 είναι αδιαφανές)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Η αδιαφάνεια φόντου οθόνης αναπαραγωγής πρέπει να είναι μεταξύ 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Το κουμπί πίσω βγαίνει από τη ροή</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Πατώντας πίσω βγαίνετε πάντα από την εφαρμογή αντί να μεταφέρεστε στην κορυφή της ροής.</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Διαβάθμιση οθόνης φόρτωσης</string>
   <string name="morphe_gradient_loading_screen_summary">Εμφανίζει ένα διαβαθμισμένο φόντο στην οθόνη φόρτωσης αντί για ένα συμπαγές χρώμα</string>
@@ -1067,10 +1065,6 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Αυτόματη</string>
-  <string name="morphe_override_initial_video_quality_title">Υπερτροπή αρχικής ποιότητας βίντεο</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Διορθώνει ένα πρόβλημα όπου η προεπιλεγμένη ποιότητα βίντεο δεν εφαρμόζεται αμέσως μετά την έναρξη του βίντεο\n\nΠεριορισμός: Η αναπαραγωγή ενδέχεται να μην λειτουργεί σε ορισμένες συσκευές εάν το \"Αντιμετώπιση ροών βίντεο\" έχει ρυθμιστεί σε \"Android VR\" και το \"Εξαναγκασμός κωδικοποιητή AVC (H.264)\" είναι ενεργοποιημένο"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Απομνημονεύει την ποιότητα βίντεο</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Εφαρμόζει την μη αυτόματη επιλογή ποιότητας σε όλα τα μελλοντικά βίντεο</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Ειδοποιήσεις αλλαγής ποιότητας</string>
@@ -1129,7 +1123,6 @@ Second \"item\" text"</string>
 • Ορισμένες συσκευές δεν μπορούν να επιβάλλουν τον κωδικοποιητή AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Για να χρησιμοποιήσετε αυτήν τη λειτουργία, ορίστε τη \'Παραποίηση ροών βίντεο\' σε \'Android VR\' ή \'Android Studio\'.</string>
-  <string name="morphe_force_av1_in_shorts_title">Επιβολή AV1 στα Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Άνοιγμα μενού προηγμένης ποιότητας</string>
   <string name="morphe_advanced_video_quality_menu_summary">Παρακάμπτει το μενού επιλογής ποιότητας και ανοίγει απευθείας το μενού ποιότητας \'Προχωρημένων\'</string>

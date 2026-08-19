@@ -706,10 +706,7 @@ Pentru a accesa Setări, activați butonul Setări prin General → Bara de inst
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Ascunde meniul \'Piesă audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniul 'Pistă audio' este ascuns
-
-Pentru a afișa meniul 'Pistă audio', schimbați 'Spoof video streams' la orice client, cu excepția 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ascunde subsolul meniului \'Piesă audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ascunde meniul Subtitrări</string>
@@ -900,8 +897,8 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Suprascrie butoanele YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Deschide aplicația ta preferată de muzică în locul aplicației standard YouTube Music</string>
-  <string name="morphe_music_package_name_title">Numele pachetului aplicației de muzică</string>
-  <string name="morphe_music_package_name_summary">Numele pachetului aplicației tale de muzică instalată</string>
+  <string name="morphe_custom_music_package_name_title">Numele pachetului aplicației de muzică</string>
+  <string name="morphe_custom_music_package_name_summary">Numele pachetului aplicației de muzică instalate</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Pagină de pornire</string>
   <string name="morphe_change_start_page_entry_default">Implicit</string>
@@ -977,6 +974,9 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_miniplayer_opacity_title">Opacitatea suprapunerii</string>
   <string name="morphe_miniplayer_opacity_summary">Ajustează nivelul de transparență (0 este transparent, 100 este opac)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Opacitatea miniplayer suprapusă trebuie să fie între 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Butonul Înapoi iese din feed</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Apăsarea butonului Înapoi închide întotdeauna aplicația, în loc să deruleze la începutul feedului</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Activează ecranul de încărcare gradient</string>
   <string name="morphe_gradient_loading_screen_summary">Afișează un fundal gradat pe ecranul de încărcare în loc de o culoare solidă</string>
@@ -1067,12 +1067,6 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automat</string>
-  <string name="morphe_override_initial_video_quality_title">Suprascrie calitatea video inițială</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Remediază o problemă în care calitatea video implicită nu este aplicată imediat după pornirea videoclipului
-
-Limitare: redarea poate să nu funcționeze pe unele dispozitive dacă 'Spoof fluxuri video' este setat la 'Android VR' și 'Forțează codec AVC (H.264)' este activat"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Reține calitatea video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Aplică selecția ta manuală de calitate pentru toate videoclipurile viitoare</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Notificări de schimbare a calității</string>
@@ -1131,7 +1125,6 @@ Limitări:
 • Unele dispozitive nu pot forța AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Pentru a utiliza această funcție, setați \'Falsificare fluxuri video\' la \'Android VR\' sau \'Android Studio\'.</string>
-  <string name="morphe_force_av1_in_shorts_title">Forțează AV1 în Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Deschide meniul calității avansate</string>
   <string name="morphe_advanced_video_quality_menu_summary">Sare peste meniul de selecție a calității și deschide direct meniul de calitate avansat.</string>

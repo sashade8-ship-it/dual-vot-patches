@@ -706,10 +706,7 @@ Pour accéder aux paramètres, activez le bouton 'Paramètres' via Général →
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Masquer le menu \'Piste audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Le menu 'Piste audio' est masqué
-
-Pour afficher le menu 'Piste audio', changer 'Falsifier les flux vidéo' pour n'importe quel client sauf 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Masquer le pied de page du menu \'Piste audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Masquer le menu \'Sous-titres\'</string>
@@ -901,8 +898,8 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Remplacer les boutons \'YouTube Music\'</string>
   <string name="morphe_override_youtube_music_buttons_summary">Ouvre votre application musicale préférée au lieu de l\'application YouTube Music par défaut</string>
-  <string name="morphe_music_package_name_title">Nom du paquet de l\'application musicale</string>
-  <string name="morphe_music_package_name_summary">Nom du paquet de votre application musicale installée</string>
+  <string name="morphe_custom_music_package_name_title">Nom du paquet de l\'application musicale</string>
+  <string name="morphe_custom_music_package_name_summary">Nom du paquet de votre application musicale installée</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Page de démarrage</string>
   <string name="morphe_change_start_page_entry_default">Par défaut</string>
@@ -978,6 +975,9 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_miniplayer_opacity_title">Opacité de l\'overlay</string>
   <string name="morphe_miniplayer_opacity_summary">Ajuster le niveau de transparence (0 est transparent, 100 est opaque)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">L\'opacité de l\'overlay du mini-lecteur doit être compris entre 0-100.</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Le bouton \'Retour\' quitte le flux</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Appuyer sur retour quitte toujours l\'application au lieu de faire défiler le flux jusqu\'en haut</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Activer le dégradé sur l\'écran de chargement</string>
   <string name="morphe_gradient_loading_screen_summary">Affiche un arrière-plan dégradé sur l\'écran de chargement au lieu d\'une couleur unie</string>
@@ -1068,12 +1068,6 @@ Appuyez ici pour ouvrir DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Auto</string>
-  <string name="morphe_override_initial_video_quality_title">Remplacer la qualité vidéo initiale</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Corrige un problème où la qualité vidéo par défaut n'est pas appliquée immédiatement après le démarrage de la vidéo
-
-Limitation : La lecture peut ne pas fonctionner sur certains appareils si 'Falsifier les flux vidéo' est défini sur 'Android VR' et que 'Forcer le codec AVC (H.264)' est activé"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Mémoriser la qualité vidéo</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Applique votre sélection de qualité manuelle à toutes les vidéos futures</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Notifications de changement de qualité</string>
@@ -1132,7 +1126,6 @@ Limitations :
 • Certains appareils ne permettent pas de forcer AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Pour utiliser cette fonctionnalité, définissez \'Falsifier les flux vidéo\' sur \'Android VR\' ou \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Forcer l\'AV1 dans les Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Ouvrir le menu qualité \'Avancée\'</string>
   <string name="morphe_advanced_video_quality_menu_summary">Ignore le menu de sélection de qualité et ouvre directement le menu qualité \'Avancée\'</string>

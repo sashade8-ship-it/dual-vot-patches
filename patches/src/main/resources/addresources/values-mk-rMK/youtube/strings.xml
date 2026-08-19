@@ -467,7 +467,7 @@ Second \"item\" text"</string>
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Прикријте го менито Audio Track</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Прикријте го подножјето на менито Audio Track</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Прикријте го менито Captions</string>
@@ -692,6 +692,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_opacity_title">Непровидност на наслагата</string>
   <string name="morphe_miniplayer_opacity_summary">Прилагодете ја транспарентноста (0 е транспарентно, 100 е непровидно)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Непровидноста на наслагата на мини-плеер мора да биде помеѓу 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Вклучи анимиран екран за вчитување</string>
   <string name="morphe_gradient_loading_screen_summary">Прикажува градиентна позадина на екранот за вчитување наместо еднобојна</string>
@@ -774,8 +775,6 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Авто</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_remember_video_quality_last_selected_title">Запамти квалитет на видео</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Ги применува вашите мануелни избори за квалитет до сите идни видеа</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Известувања за промена на квалитет</string>

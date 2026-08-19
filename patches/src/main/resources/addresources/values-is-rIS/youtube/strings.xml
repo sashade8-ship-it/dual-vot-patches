@@ -704,10 +704,7 @@ Til þess að fá access til stillingarinnar skaltu koma á stillinguna í gegnu
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Felur \'Hljóðrás\' valmynd</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Hljóðrás' valmyndin er falin
-
-Til að sýna 'Hljóðrás' valmyndina, breytu 'Spoof myndflæðum' í hvaða þjónustuaðila sem er nema 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Felur \'Hljóðrás\' valmyndar fætur</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Felur Undirrita valmynd</string>
@@ -898,8 +895,8 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Vírúð YouTube tónlistarnir</string>
   <string name="morphe_override_youtube_music_buttons_summary">Opnar þitt valið tónlistarapp í staðinn fyrir venjulega YouTube Music appið</string>
-  <string name="morphe_music_package_name_title">Pakkanafn tónlistarforrits</string>
-  <string name="morphe_music_package_name_summary">Pakkanafn uppsetts tónlistarforrits þíns</string>
+  <string name="morphe_custom_music_package_name_title">Pakkanafn tónlistarforrits</string>
+  <string name="morphe_custom_music_package_name_summary">Pakkanafn uppsetts tónlistarforrits</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Forsíðarsíða</string>
   <string name="morphe_change_start_page_entry_default">Sjálfgefið</string>
@@ -975,6 +972,7 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_miniplayer_opacity_title">Yfirborðs opacité</string>
   <string name="morphe_miniplayer_opacity_summary">Stilltu gegnsæisstig (0 er gagnsætt, 100 er ógegnsær)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Opacité miniplayer yfirborðsins verður að vera á milli 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Vírúð álitunni á ræsingarskjáinn</string>
   <string name="morphe_gradient_loading_screen_summary">Sýnir gradient bakgrunn á hleðslaskjánum í stað eins lit</string>
@@ -1065,12 +1063,6 @@ Bankaðu hér til að opna DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Sjálfvirkt</string>
-  <string name="morphe_override_initial_video_quality_title">Yfirskrifa upphafleg gæði myndar</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Leiðréttur vandamál þar sem sjálfgefn gæði myndar eru ekki beitt strax á eftir að myndin hefst
-
-Takmörkun: Spilun gæti ekki virkað á sumum tækjum ef 'Herma eftir myndflæðum' er stillt á 'Android VR' og 'Neysla AVC (H.264) kóðara' er virkjað"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Mundu gæðavideo</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Beittu handvirku gæðum á öll framtíð vídeó</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Tilkynningar um breytingar á gæðum</string>
@@ -1129,7 +1121,6 @@ Takmörk:
 • Sum tæki geta ekki neyðt AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Til að nota þennan eiginleika skaltu stilla \'Spoofa myndbandsstrauma\' á \'Android VR\' eða \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Þvinga AV1 í Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Opnaðu Advanced gæðavalmynd</string>
   <string name="morphe_advanced_video_quality_menu_summary">Sleppur yfir valið á gæðum og opnar \'Advanced\' gæðavalmyndina beint</string>

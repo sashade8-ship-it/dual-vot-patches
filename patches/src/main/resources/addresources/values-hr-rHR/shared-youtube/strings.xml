@@ -133,8 +133,7 @@ Za prijavu, pritisnite nastavak ispod"</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Sakrij pune zaslonske oglase</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_force_original_audio_not_available">Da biste koristili ovu značajku, promijenite \'Spoof video streamova\' u bilo koji klijent osim \'Android Studio\'</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Očisti poveznice za dijeljenje</string>
   <string name="morphe_sanitize_sharing_links_summary">Uklanja parametre upita za praćenje iz zajedničkih poveznica</string>
@@ -204,9 +203,12 @@ Dodirnite ovdje za otvaranje ReturnYouTubeDislike.com"</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">Dislikeovi su privremeno nedostupni - na snazi je limit klijentkog API-ja</string>
   <string name="morphe_ryd_statistics_getFetchCallCount_title">Preuzimanje glasova s API-ja, broj poziva</string>
   <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">Nema izvršenih mrežnih poziva</string>
+  <string name="morphe_ryd_statistics_getFetchCallCount_non_zero_summary">%d mrežnih poziva obavljeno</string>
   <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_title">Preuzimanje glasova s API-ja, broj timeout-a</string>
   <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">Nema mrežnih poziva koji su istekli</string>
+  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">%d mrežnih poziva je isteklo vrijeme</string>
   <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">Limiti klijentkog API-ja</string>
   <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">Nisu naiđeni limiti klijentskog API-ja</string>
   <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">Limit klijentkog API-ja naišao %d puta</string>
+  <string name="morphe_ryd_statistics_millisecond_text">%d  milisek.</string>
 </resources>

@@ -706,10 +706,7 @@ Second \"item\" text"</string>
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">隐藏“音轨”菜单</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'音频轨道'菜单已隐藏
-
-要显示“音频轨道”菜单，请将“模拟视频流”更改为任何客户端，但不包括“Android Studio”"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">隐藏“音轨”菜单页脚</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">隐藏字幕菜单</string>
@@ -900,8 +897,6 @@ Second \"item\" text"</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">覆盖 YouTube Music 按钮</string>
   <string name="morphe_override_youtube_music_buttons_summary">打开您首选的音乐应用，而不是默认的YouTube Music应用</string>
-  <string name="morphe_music_package_name_title">音乐应用包名</string>
-  <string name="morphe_music_package_name_summary">您已安装的音乐应用的包名</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">开始页面</string>
   <string name="morphe_change_start_page_entry_default">默认</string>
@@ -977,6 +972,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_opacity_title">覆盖层不透明度</string>
   <string name="morphe_miniplayer_opacity_summary">调整透明度 (0 为透明，100 为不透明)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">小型播放器叠加层的透明度必须介于 0-100 之间</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">启用渐变的加载屏幕</string>
   <string name="morphe_gradient_loading_screen_summary">在加载屏幕上显示渐变背景，而不是纯色</string>
@@ -1067,12 +1063,6 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">自动</string>
-  <string name="morphe_override_initial_video_quality_title">覆盖初始视频画质</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"修复了视频开始后默认视频画质未立即应用的问题
-
-限制：如果\"伪装视频流\"设置为\"Android VR\"且\"强制AVC (H.264)编解码器\"已启用，则某些设备上可能无法播放"</string>
   <string name="morphe_remember_video_quality_last_selected_title">记住视频画质</string>
   <string name="morphe_remember_video_quality_last_selected_summary">将您的手动画质选择应用于所有未来的视频</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">画质更改通知</string>
@@ -1131,7 +1121,6 @@ Second \"item\" text"</string>
 • 某些设备无法强制使用 AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">要使用此功能，请将“伪造视频流”设置为“Android VR”或“Android Studio”</string>
-  <string name="morphe_force_av1_in_shorts_title">在 Shorts 中强制使用 AV1</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">打开高级画质菜单</string>
   <string name="morphe_advanced_video_quality_menu_summary">跳过画质选择菜单，直接打开高级画质菜单</string>

@@ -706,10 +706,7 @@ Za dostop do Nastavitev omogočite gumb Nastavitve prek Splošno → Vrstica →
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skrij meni \'Zvočna pot\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meni 'Zvočna pot' je skrit
-
-Za prikaz menija 'Zvočna pot' spremenite 'Ponarejanje video tokov' na katerega koli odjemalca, razen 'Android Studio'."</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skrij noga menija \'Zvočna pot\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skrij meni \'Napisi\'</string>
@@ -900,8 +897,8 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Prekrivanje gumbov za YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Odpre vašo želeno glasbeno aplikacijo namesto običajne aplikacije YouTube Music</string>
-  <string name="morphe_music_package_name_title">Ime paketa glasbene aplikacije</string>
-  <string name="morphe_music_package_name_summary">Ime paketa nameščene glasbene aplikacije</string>
+  <string name="morphe_custom_music_package_name_title">Ime paketa glasbene aplikacije</string>
+  <string name="morphe_custom_music_package_name_summary">Ime paketa vaše nameščene glasbene aplikacije</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Začetna stran</string>
   <string name="morphe_change_start_page_entry_default">Privzeto</string>
@@ -977,6 +974,9 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_miniplayer_opacity_title">Opaznost</string>
   <string name="morphe_miniplayer_opacity_summary">Prilagodite raven preglednosti (0 je pregleden, 100 je neprozoren)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Opaznost prekrivnega okna predvajalnika mora biti med 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Gumb za nazaj zapre vir</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Pritisk na gumb za nazaj vedno zapre aplikacijo namesto, da bi se pomaknila na vrh vira</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Omogočite privzetno zaslonsko ozadje z gradientom</string>
   <string name="morphe_gradient_loading_screen_summary">Prikaže gradientno ozadje na zaslonu za nalaganje namesto polne barve</string>
@@ -1067,12 +1067,6 @@ Tapnite tukaj, da odprete DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Samodejno</string>
-  <string name="morphe_override_initial_video_quality_title">Prepiši začetno kakovost videa</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Odpravlja težavo, kjer se privzeta kakovost videa ne uporabi takoj po zagonu videa
-
-Omejitev: Predvajanje morda ne bo delovalo na nekaterih napravah, če je 'Ponaredi video tokove' nastavljeno na 'Android VR' in je omogočeno 'Prisili kodek AVC (H.264)'"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Zapomni si kakovost videa</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Uporabi vašo ročno izbrano kakovost za vse prihodnje videoposnetke</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Obvestila o spremembi kvalitete</string>
@@ -1131,7 +1125,6 @@ Omejitve:
 • Nekatere naprave ne morejo prisiliti AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Za uporabo te funkcije nastavite \'Spoofing video tokov\' na \'Android VR\' ali \'Android Studio\'.</string>
-  <string name="morphe_force_av1_in_shorts_title">Prisilni AV1 v Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Odpre napredno možnost nastavitve kakovosti</string>
   <string name="morphe_advanced_video_quality_menu_summary">Preskoči meni za izbiro kakovosti in neposredno odpre napredno kakovost</string>

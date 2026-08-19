@@ -692,10 +692,7 @@ Cần cung cấp \"Cookie phụ đề\""</string>
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Ẩn menu \"Bản âm thanh\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu 'Bản âm thanh' đã bị ẩn
-
-Để hiển thị menu 'Bản âm thanh', hãy chuyển 'Giả mạo luồng phát video' thành bất kỳ máy khách nào ngoại trừ 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ẩn chân menu \"Bản âm thanh\"</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ẩn menu Phụ đề</string>
@@ -886,8 +883,7 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Ghi đè chức năng nút YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Mở ứng dụng phát nhạc mà bạn thích thay cho ứng dụng YouTube Music mặc định</string>
-  <string name="morphe_music_package_name_title">Tên gói ứng dụng âm nhạc</string>
-  <string name="morphe_music_package_name_summary">Tên gói của ứng dụng nhạc đã cài đặt của bạn</string>
+  <string name="morphe_custom_music_package_name_title">Tên gói ứng dụng âm nhạc</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Trang bắt đầu</string>
   <string name="morphe_change_start_page_entry_default">Mặc định</string>
@@ -963,6 +959,7 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_miniplayer_opacity_title">Độ mờ lớp phủ</string>
   <string name="morphe_miniplayer_opacity_summary">Điều chỉnh độ trong suốt (0 là trong suốt, 100 là mờ)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Độ mờ lớp phủ phải nằm trong khoảng từ 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Bật màn hình tải màu gradient</string>
   <string name="morphe_gradient_loading_screen_summary">Hiển thị nền gradient trên màn hình tải thay vì một màu sắc đồng nhất</string>
@@ -1053,12 +1050,6 @@ Nhấn vào đây để truy cập DeArrow.ajay.app"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Tự động</string>
-  <string name="morphe_override_initial_video_quality_title">Ghi đè chất lượng video ban đầu</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Khắc phục sự cố trong đó chất lượng video mặc định không được áp dụng ngay sau khi video bắt đầu
-
-Hạn chế: Phát lại có thể không hoạt động trên một số thiết bị nếu 'Giả lập luồng video' được đặt thành 'Android VR' và 'Buộc codec AVC (H.264)' được bật"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Nhớ chất lượng video</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Áp dụng chất lượng video mà bạn đã chọn cho tất cả các video trong tương lai</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Thông báo thay đổi chất lượng</string>

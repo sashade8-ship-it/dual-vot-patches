@@ -685,10 +685,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">\'ऑडिओ ट्रॅक\' मेनू लपवा</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'ऑडिओ ट्रॅक' मेनू लपलेला आहे
-
-'ऑडिओ ट्रॅक' मेनू दाखवण्यासाठी, 'स्पूफ व्हिडिओ स्ट्रीम्स' ला 'Android Studio' वगळता कोणत्याही क्लायंटमध्ये बदला."</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'ऑडिओ ट्रॅक\' मेनू फुटर लपवा</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">\'कॅप्शन\' मेनू लपवा</string>
@@ -878,8 +875,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">YouTube Music बटणांना ओव्हरराइड करा</string>
   <string name="morphe_override_youtube_music_buttons_summary">तुमच्या पसंतीचे म्युझिक ॲप उघडते, स्टॉक YouTube Music ॲपऐवजी</string>
-  <string name="morphe_music_package_name_title">संगीत ॲप पॅकेज नाव</string>
-  <string name="morphe_music_package_name_summary">तुमच्या इन्स्टॉल केलेल्या संगीत ॲपचे पॅकेज नाव</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">सुरुवात पृष्ठ</string>
   <string name="morphe_change_start_page_entry_default">डीफॉल्ट</string>
@@ -955,6 +950,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_miniplayer_opacity_title">ओव्हरले अपारदर्शकता</string>
   <string name="morphe_miniplayer_opacity_summary">ओव्हरले (Overlay) पातळी समायोजित (Adjust) करा (0 म्हणजे पारदर्शक, 100 म्हणजे अपारदर्शक)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">मिनीप्लेअर ओव्हरले अपारदर्शकता 0-100 दरम्यान असणे आवश्यक आहे</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">ग्रेडियंट लोडिंग स्क्रीन सक्षम करा</string>
   <string name="morphe_gradient_loading_screen_summary">लोडिंग (Loading) स्क्रीनवर सॉलिड (Solid) रंगाऐवजी ग्रेडियंट (Gradient) पार्श्वभूमी दर्शवते</string>
@@ -1045,12 +1041,6 @@ DeArrow.ajay.app उघडण्यासाठी येथे टॅप कर
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">स्वयंचलित</string>
-  <string name="morphe_override_initial_video_quality_title">प्रारंभिक व्हिडिओ गुणवत्ता बदला</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"व्हिडिओ सुरू झाल्यानंतर लगेच डिफॉल्ट व्हिडिओ गुणवत्ता लागू न होण्याची समस्या याचे निराकरण करते
-
-मर्यादा: 'व्हिडिओ स्ट्रीम्स स्पूफ करा' 'Android VR' वर सेट केले असल्यास आणि 'फोर्स एव्हीसी (H.264) कोडेक' सक्षम असल्यास काही उपकरणांवर प्लेबॅक कार्य करू शकत नाही."</string>
   <string name="morphe_remember_video_quality_last_selected_title">व्हिडिओ गुणवत्ता लक्षात ठेवा</string>
   <string name="morphe_remember_video_quality_last_selected_summary">तुमची मॅन्युअल (Manual) गुणवत्ता निवड भविष्यातील सर्व व्हिडिओंवर लागू (Apply) करते</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">गुणवत्ता बदल सूचना दर्शवा</string>

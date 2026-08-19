@@ -706,10 +706,7 @@ Saadaksesi asetukset, ota Asetukset-painike käyttöön kohdasta Yleiset → Ty�
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Piilota \"Ääniraita\"-valikko</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Ääniraitavalikko' on piilotettu
-
-Näyttääksesi 'Ääniraitavalikon', vaihda 'Väärennä videostriimejä' -asetukseksi mikä tahansa muu kuin 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Piilota \'Ääniraita\'-valikon alatunniste</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Piilota Tekstitykset-valikko</string>
@@ -900,8 +897,8 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Ohita YouTube Musicin painikkeet</string>
   <string name="morphe_override_youtube_music_buttons_summary">Avaa haluamasi musiikkisovelluksen oletus-YouTube-Musiikki-sovelluksen sijaan.</string>
-  <string name="morphe_music_package_name_title">Musiikkisovelluksen paketin nimi</string>
-  <string name="morphe_music_package_name_summary">Asennetun musiikkisovelluksesi paketin nimi</string>
+  <string name="morphe_custom_music_package_name_title">Musiikkisovelluksen paketin nimi</string>
+  <string name="morphe_custom_music_package_name_summary">Asentamasi musiikkisovelluksen paketin nimi</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Aloitussivu</string>
   <string name="morphe_change_start_page_entry_default">Oletus</string>
@@ -977,6 +974,9 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_miniplayer_opacity_title">Peittokuvan läpinäkymättömyys</string>
   <string name="morphe_miniplayer_opacity_summary">Säädä läpinäkyvyys (0 on täysin läpinäkyvä, 100 on peittävä)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Minisoittimen peittokuvan läpinäkymättömyyden tulee olla 0–100 välillä</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Takaisin-painike sulkee syötteen</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Takaisin-painikkeen painaminen sulkee aina sovelluksen sen sijaan, että se vierittäisi syötteen alkuun</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Ota liukuvärillinen latausruutu käyttöön</string>
   <string name="morphe_gradient_loading_screen_summary">Näyttää gradienttitaustan latausnäytössä yksivärisen sijaan</string>
@@ -1067,12 +1067,6 @@ Napauta tästä saadaksesi lisätietoja DeArrowista"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automaattinen</string>
-  <string name="morphe_override_initial_video_quality_title">Ohita alkuperäinen videon laatu</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Korjaa ongelma, jossa oletusvideon laatua ei käytetä heti videon käynnistyksen jälkeen
-
-Rajoitus: Toisto ei ehkä toimi joissakin laitteissa, jos 'Väärennä videostriimejä' on asetettu 'Android VR' -tilaan ja 'Pakota AVC (H.264) -koodekki' on käytössä."</string>
   <string name="morphe_remember_video_quality_last_selected_title">Muista videon laatu</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Käyttää manuaalista laatuvalintaasi kaikkiin tuleviin videoihin</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Laadun muutosilmoitukset</string>
@@ -1131,7 +1125,6 @@ Rajoitukset:
 • Jotkin laitteet eivät voi pakottaa AVC:tä"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Käyttääksesi tätä ominaisuutta, aseta \'Naamioi videovirrat\' arvoksi \'Android VR\' tai \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Pakota AV1 Shortseissa</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Avaa parannetun laadun valikko</string>
   <string name="morphe_advanced_video_quality_menu_summary">Ohittaa laadunvalintavalikon ja avaa Laatu-valikon lisääsetukset suoraan</string>

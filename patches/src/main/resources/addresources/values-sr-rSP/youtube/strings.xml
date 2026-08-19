@@ -704,10 +704,7 @@ Promene uključuju:
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Сакриј мени „Аудио снимак“</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Мени Аудио трака' је сакривен
-
-Да бисте приказали 'Мени Аудио трака', промените 'Лажирање видео стримова' на било који клијент осим 'Android Studio'"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Сакриј подножје менија „Аудио снимак“</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Сакриј мени „Титл“</string>
@@ -898,8 +895,8 @@ Promene uključuju:
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Препоредите дугмице YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Отвара вашу омиљену музичку апликацију уместо стандардне YouTube Music апликације</string>
-  <string name="morphe_music_package_name_title">Назив пакета музичке апликације</string>
-  <string name="morphe_music_package_name_summary">Назив пакета твоје инсталиране музичке апликације</string>
+  <string name="morphe_custom_music_package_name_title">Назив пакета музичке апликације</string>
+  <string name="morphe_custom_music_package_name_summary">Назив пакета ваше инсталиране музичке апликације</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Почетна страница</string>
   <string name="morphe_change_start_page_entry_default">Подразумевана</string>
@@ -975,6 +972,9 @@ Promene uključuju:
   <string name="morphe_miniplayer_opacity_title">Непрозирност преклопа</string>
   <string name="morphe_miniplayer_opacity_summary">Прилагодите ниво провидности (0 је провидно, 100 је непровидно)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Непрозирност преклопа мини-плејера мора бити између 0 и 100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Дугме назад излази из фида</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Притискање назад увек излази из апликације уместо да се помера на врх фида</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Омогући градијентну позадину екрана учитавања</string>
   <string name="morphe_gradient_loading_screen_summary">Приказује градијентну позадину на екрану учитавања уместо пуне боје</string>
@@ -1065,12 +1065,6 @@ Promene uključuju:
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Аутоматски</string>
-  <string name="morphe_override_initial_video_quality_title">Замени почетни квалитет видеа</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Исправља проблем где се подразумевани квалитет видеа не примењује одмах након што видео почне
-
-Ограничење: Репродукција можда неће радити на неким уређајима ако је \"Лажирање видео стримова\" подешено на \"Android VR\" и \"Присили AVC (H.264) кодек\" омогућен"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Запамти квалитет видеа</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Примењује вашу ручну селекцију квалитета на све будуће видео снимке</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Обавештења о промени квалитета</string>
@@ -1129,7 +1123,6 @@ Promene uključuju:
 • Неки уређаји не могу присилити AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Да бисте користили ову функцију, поставите „Лажирани видео стримови” на „Android VR” или „Android Studio”.</string>
-  <string name="morphe_force_av1_in_shorts_title">Присили AV1 у Shorts-има</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Отвори мени за побољшани квалитет</string>
   <string name="morphe_advanced_video_quality_menu_summary">Прескаче мени за избор квалитета и директно отвара Напредне опције квалитета</string>

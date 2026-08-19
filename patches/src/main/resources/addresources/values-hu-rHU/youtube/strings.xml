@@ -705,10 +705,7 @@ A Beállítások eléréséhez engedje a Beállítások gombot a Általános →
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Hangszám menü elrejtése</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Az \"Audiósáv\" menü el van rejtve.
-
-Az \"Audiósáv\" menü megjelenítéséhez módosítsa a \"Videóstreamek hamisítása\" beállítást bármely kliensre, kivéve az \"Android Studio\"-t."</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Hangszám menü lábléc elrejtése</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Feliratok menü elrejtése</string>
@@ -899,8 +896,6 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">A YouTube Music gombok felülbírálása</string>
   <string name="morphe_override_youtube_music_buttons_summary">A kívánt zenealkalmazást nyitja meg az alapértelmezett YouTube Music alkalmazás helyett</string>
-  <string name="morphe_music_package_name_title">A zenelejátszó csomag neve</string>
-  <string name="morphe_music_package_name_summary">A telepített zenelejátszó csomag neve</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Kezdőlap</string>
   <string name="morphe_change_start_page_entry_default">Alapértelmezett</string>
@@ -976,6 +971,7 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_miniplayer_opacity_title">Átfedés átlátszósága</string>
   <string name="morphe_miniplayer_opacity_summary">Állítsa be az átlátszó szintet (0 átlátszó, 100 opák)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">A minilejátszó fedvény átlátszatlanságának 0 és 100 között kell lennie</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Színátmenetes betöltési képernyő engedélyezése</string>
   <string name="morphe_gradient_loading_screen_summary">Árnyékoló háttér megjelenítése a betöltési képernyőn a tömör szín helyett</string>
@@ -1066,12 +1062,6 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatikus</string>
-  <string name="morphe_override_initial_video_quality_title">A kezdeti videóminőség felülbírálása</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Javít egy hibát, amely miatt az alapértelmezett videóminőség nem alkalmazódik azonnal a videó elindítása után
-
-Korlátozás: A lejátszás egyes eszközökön nem működhet, ha a \"Videostreamek hamisítása\" beállítás \"Android VR\" értékre van állítva, és az \"AVC (H.264) kodek erőltetése\" engedélyezve van."</string>
   <string name="morphe_remember_video_quality_last_selected_title">A videóminőség megjegyzése</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Az egyéni minőségválasztás alkalmazása minden jövőbeli videóra</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Frissítési értesítések</string>
@@ -1130,7 +1120,6 @@ Korlátozások:
 • Néhány eszköz nem tudja kikényszeríteni az AVC-t"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">A funkció használatához állítsa a „Videóstreamek hamisítása” beállítást „Android VR” vagy „Android Studio” értékre.</string>
-  <string name="morphe_force_av1_in_shorts_title">AV1 kényszerítése a Shorts-onál</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Nyissa meg a fejlett minőség menüt</string>
   <string name="morphe_advanced_video_quality_menu_summary">A minőségi beállítások menüt kihagyva közvetlenül megnyitja a Speciális minőségi menüt</string>

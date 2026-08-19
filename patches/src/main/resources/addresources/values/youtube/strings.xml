@@ -765,10 +765,10 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_audio_track_title">Hide \'Audio Track\' menu</string>
     <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
     <string name="morphe_hide_player_flyout_audio_track_not_available">"\'Audio Track\' menu is hidden
 
-To show the \'Audio Track\' menu, change \'Spoof video streams\' to any client except \'Android Studio\'"</string>
+To show the \'Audio Track\' menu, change \'Spoof video streams\' to any client except \'Android Studio\' and \'Android VR Downgraded\'"</string>
     <string name="morphe_hide_player_flyout_audio_track_footer_title">Hide \'Audio Track\' menu footer</string>
     <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
     <string name="morphe_hide_player_flyout_captions_title">Hide Captions menu</string>
@@ -1183,12 +1183,6 @@ Tap here to open DeArrow.ajay.app"</string>
     <!-- video.quality.rememberVideoQualityPatch -->
     <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
     <string name="morphe_video_quality_default_entry_1">Auto</string>
-    <string name="morphe_override_initial_video_quality_title">Override initial video quality</string>
-    <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-    <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-    <string name="morphe_override_initial_video_quality_summary">"Fixes an issue where the default video quality is not applied immediately after the video starts
-
-Limitation: Playback may not work on some devices if \'Spoof video streams\' is set to \'Android VR\' and \'Force AVC (H.264) codec\' is enabled"</string>
     <string name="morphe_remember_video_quality_last_selected_title">Remember video quality</string>
     <string name="morphe_remember_video_quality_last_selected_summary">Applies your manual quality selection to all future videos</string>
     <string name="morphe_remember_video_quality_last_selected_toast_title">Quality change notifications</string>
@@ -1279,6 +1273,7 @@ Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_spoof_video_streams_about_js">• If deobfuscation fails, playback may fail</string>
     <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
     <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Force original audio is not available</string>
+    <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Sign in to Android VR is required</string>
     <!-- Quality refers to video quality -->
     <string name="morphe_spoof_video_streams_about_720p_max">• Quality may be limited to 720p</string>
     <string name="morphe_spoof_video_streams_player_js_variant_title">Player JavaScript variant</string>

@@ -22,8 +22,8 @@ import java.util.Locale;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.requests.Requester;
 import app.morphe.extension.shared.requests.Route;
-import app.morphe.extension.shared.settings.AppLanguage;
 import app.morphe.extension.shared.spoof.ClientType;
+import app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch;
 import app.morphe.extension.shared.spoof.js.JavaScriptManager;
 
 public final class PlayerRoutes {
@@ -31,14 +31,14 @@ public final class PlayerRoutes {
     private static final Route.CompiledRoute GET_PLAYER_STREAMING_DATA = new Route(
             Route.Method.POST,
             "player" +
-                    "?fields=responseContext.visitorData,playabilityStatus,streamingData,playerConfig.mediaCommonConfig" +
+                    "?fields=responseContext.visitorData,playabilityStatus,streamingData,playerConfig" +
                     "&alt=proto"
     ).compile();
 
     private static final Route.CompiledRoute GET_REEL_STREAMING_DATA = new Route(
             Route.Method.POST,
             "reel/reel_item_watch" +
-                    "?fields=responseContext.visitorData,playerResponse.playabilityStatus,playerResponse.streamingData,playerResponse.playerConfig.mediaCommonConfig" +
+                    "?fields=responseContext.visitorData,playerResponse.playabilityStatus,playerResponse.streamingData,playerResponse.playerConfig" +
                     "&alt=proto"
     ).compile();
 
@@ -74,9 +74,9 @@ public final class PlayerRoutes {
                 client.put("platform", platform);
             }
 
-            Locale locale = AppLanguage.DEFAULT.getLocale();
-            client.put("hl", locale.getLanguage());
-            client.put("gl", locale.getCountry());
+            Locale streamLocale = SpoofVideoStreamsPatch.getLocaleOverride();
+            client.put("hl", streamLocale.getLanguage());
+            client.put("gl", streamLocale.getCountry());
             context.put("client", client);
 
             if (clientType.usePlayerEndpoint) {

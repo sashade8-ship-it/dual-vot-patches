@@ -45,7 +45,7 @@ Vérifiez que le nom de paquet est correct et que l'application est bien install
   <!-- Translation should match morphe_custom_branding_notification_icon_entry_3 -->
   <string name="morphe_custom_branding_icon_entry_6">Morphe play noir</string>
   <!-- Translations of this should be identical to morphe_custom_branding_name_entry_5 -->
-  <string name="morphe_custom_branding_icon_entry_7">Personnalisé</string>
+  <string name="morphe_custom_branding_icon_entry_7">Personnalisée</string>
   <string name="morphe_custom_branding_notification_icon_title">Icône de notification</string>
   <string name="morphe_custom_branding_notification_icon_entry_1">Faire correspondre l\'icône de l\'application</string>
   <string name="morphe_custom_branding_notification_icon_entry_3">Morphe play</string>
@@ -133,8 +133,7 @@ Pour vous connecter, appuyez sur 'Continuer' ci-dessous."</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Masquer les publicités en plein écran</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_force_original_audio_not_available">Pour utiliser cette fonctionnalité, définissez \'Falsifier les flux vidéo\' sur un client autre que \'Android Studio\'</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Nettoyer les liens partagés</string>
   <string name="morphe_sanitize_sharing_links_summary">Supprime les paramètres de suivi des liens partagés</string>

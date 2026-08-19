@@ -708,10 +708,7 @@ Second \"item\" text"</string>
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Скрыть меню \"Аудиотреки\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню «Аудиотракт» скрыто
-
-Чтобы отобразить меню «Аудиотракт», измените «Поддельные видеопотоки» на любой клиент, кроме «Android Studio»"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Скрыть нижний колонтитул меню «Аудиотреки»</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Скрыть меню \"Субтитры\"</string>
@@ -902,8 +899,8 @@ Second \"item\" text"</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Переопределить кнопки YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Открывает предпочитаемое вами музыкальное приложение вместо стандартного приложения YouTube Music</string>
-  <string name="morphe_music_package_name_title">Имя пакета музыкального приложения</string>
-  <string name="morphe_music_package_name_summary">Имя пакета вашего установленного музыкального приложения</string>
+  <string name="morphe_custom_music_package_name_title">Имя пакета музыкального приложения</string>
+  <string name="morphe_custom_music_package_name_summary">Имя пакета вашего установленного музыкального приложения</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Начальная страница</string>
   <string name="morphe_change_start_page_entry_default">По умолчанию</string>
@@ -979,6 +976,9 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_opacity_title">Затемнение миниплеера при нажатии</string>
   <string name="morphe_miniplayer_opacity_summary">Настройте уровень прозрачности (0 — прозрачный, 100 — непрозрачный)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Значение затемнения миниплеера должно быть от 0 до 100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Кнопка «Назад» выходит из ленты</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Нажатие кнопки «Назад» всегда выходит из приложения вместо прокрутки к началу ленты</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Включить градиентный фон экрана загрузки</string>
   <string name="morphe_gradient_loading_screen_summary">Показывает градиентный фон на экране загрузки вместо сплошного цвета</string>
@@ -1069,10 +1069,6 @@ Second \"item\" text"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Авто</string>
-  <string name="morphe_override_initial_video_quality_title">Переопределить начальное качество видео</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Исправляет проблему, из-за которой качество видео по умолчанию не применяется сразу после начала видео\n\nОграничение: воспроизведение может не работать на некоторых устройствах, если для «Подмены видеопотоков» установлено значение «Android VR» и включен «Принудительный кодек AVC (H.264)»"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Запомнить качество видео</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Применяет выбранное вами качество вручную ко всем будущим видео</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Уведомления об изменении качества</string>
@@ -1131,7 +1127,6 @@ Second \"item\" text"</string>
 • Некоторые устройства не могут принудительно использовать AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Чтобы использовать эту функцию, измените \"Подмена видео потоков\" на \"Android VR\" или \"Android Studio\"</string>
-  <string name="morphe_force_av1_in_shorts_title">Принудительно использовать AV1 в Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Открыть меню расширенных настроек качества</string>
   <string name="morphe_advanced_video_quality_menu_summary">Пропускает меню выбора качества и сразу открывает меню расширенных настроек качества</string>

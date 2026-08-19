@@ -704,10 +704,7 @@ Pro přístup k Nastavení povolte tlačítko Nastavení přes Obecné → Nást
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_audio_track_title">Skrýt menu Kvalita</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' must be kept untranslated. -->
-  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Menu zvukový stopy' je skryto
-
-Chcete-li zobrazit 'Menu zvukový stopy', změňte 'Falsifikovat video streamy' na libovolného klienta kromě Android Studia"</string>
+          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skrýt hlavičku menu Kvalita</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skrývá náhled nadcházejícího videa v režimu na celou obrazovku před začátkem automatického přehrávání</string>
@@ -898,8 +895,8 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Přepsání tlačítek YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Otevře vaši preferovanou hudební aplikaci místo výchozí aplikace YouTube Music</string>
-  <string name="morphe_music_package_name_title">Název balíčku hudební aplikace</string>
-  <string name="morphe_music_package_name_summary">Název balíčku vaší nainstalované hudební aplikace</string>
+  <string name="morphe_custom_music_package_name_title">Název balíčku hudební aplikace</string>
+  <string name="morphe_custom_music_package_name_summary">Název balíčku vaší nainstalované hudební aplikace</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Úvodní stránka</string>
   <string name="morphe_change_start_page_entry_default">Výchozí</string>
@@ -975,6 +972,9 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_miniplayer_opacity_title">Neprůhlednost překrytí</string>
   <string name="morphe_miniplayer_opacity_summary">Upravte úroveň průhlednosti (0 je průhledná, 100 je neprůhledná)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Průhlednost překrytí minihráče musí být v rozmezí 0-100</string>
+  <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Tlačítko Zpět ukončí kanál</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Stisknutí tlačítka Zpět vždy ukončí aplikaci místo posunutí na začátek kanálu.</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Povolit přechodovou obrazovku načítání</string>
   <string name="morphe_gradient_loading_screen_summary">Zobrazí gradientní pozadí na úvodní obrazovce místo jednobarevného</string>
@@ -1065,12 +1065,6 @@ Klepnutím sem se dozvíte více o DeArrow"</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automaticky</string>
-  <string name="morphe_override_initial_video_quality_title">Přepsat počáteční kvalitu videa</string>
-  <!-- 'Force AVC (H.264) codec' should be the same translation used for 'morphe_force_avc_codec_title'. -->
-  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_override_initial_video_quality_summary">"Opravuje problém, kdy se výchozí kvalita videa neprojeví okamžitě po spuštění videa
-
-Omezení: Přehrávání nemusí fungovat na některých zařízeních, pokud je 'Spoofovat video streamy' nastaveno na 'Android VR' a je povoleno 'Vynutit kodek AVC (H.264)'"</string>
   <string name="morphe_remember_video_quality_last_selected_title">Pamatovat si kvalitu videa</string>
   <string name="morphe_remember_video_quality_last_selected_summary">Aplikuje vaši ruční volbu kvality na všechna budoucí videa</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">Upozornění na změnu kvality</string>
@@ -1129,7 +1123,6 @@ Omezení:
 • Některá zařízení nemohou vynutit AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Chcete-li použít tuto funkci, nastavte \'Zfalšovat video streamy\' na \'Android VR\' nebo \'Android Studio\'</string>
-  <string name="morphe_force_av1_in_shorts_title">Vynutit AV1 v Shorts</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Otevřít nabídku pokročilého nastavení kvality</string>
   <string name="morphe_advanced_video_quality_menu_summary">Přeskočí menu pro výběr kvality a přímo otevře menu čpokročilých nastavení</string>
