@@ -61,8 +61,8 @@ abstract class BaseGestureController(
             return false
         }
 
-        // Ignore if status bar is visible.
-        if (controller.statusBarVisible) {
+        // Ignore if status bar is visible (unless in multi-window mode).
+        if (controller.statusBarVisible && !controller.isInMultiWindowMode) {
             return false
         }
 

@@ -82,7 +82,7 @@ public class SeekbarThumbnailPreviewPatch {
             );
     private static final int THUMBNAIL_PREVIEW_DISTANCE_FULLSCREEN_DP = DIP15;
     private static final int THUMBNAIL_PREVIEW_DISTANCE_PORTRAIT_DP = -1 * Dim.dp20;
-    private static final int THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP = Dim.dp(30);
+    private static final int THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP = Dim.dp24;
     private static final int THUMBNAIL_PREVIEW_TEXT_WITH_CHAPTER_HEIGHT_DP =
             THUMBNAIL_PREVIEW_TEXT_ONLY_HEIGHT_DP * 2;
     private static final int THUMBNAIL_PREVIEW_CORNER_RADIUS_DP = Dim.dp8;
@@ -275,9 +275,8 @@ public class SeekbarThumbnailPreviewPatch {
 
         TextView timestampPreview = new TextView(context);
         timestampPreview.setTextColor(Color.WHITE);
-        timestampPreview.setTextSize(12);
+        timestampPreview.setTextSize(10);
         timestampPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
-        timestampPreview.setShadowLayer(0.1f, 1.5f, 1.5f, Color.BLACK);
         timestampPreview.setBackground(labelBackground());
         timestampPreview.setLayoutParams(params);
 
@@ -292,10 +291,9 @@ public class SeekbarThumbnailPreviewPatch {
 
         TextView chapterPreview = new TextView(context);
         chapterPreview.setTextColor(Color.WHITE);
-        chapterPreview.setTextSize(12);
+        chapterPreview.setTextSize(10);
         chapterPreview.setPadding(Dim.dp6, Dim.dp2, Dim.dp6, Dim.dp2);
         chapterPreview.setMaxWidth(THUMBNAIL_PREVIEW_LONG_SIDE);
-        chapterPreview.setShadowLayer(0.1f, 1.5f, 1.5f, Color.BLACK);
         chapterPreview.setSingleLine(true);
         chapterPreview.setEllipsize(android.text.TextUtils.TruncateAt.END);
         chapterPreview.setGravity(Gravity.CENTER_HORIZONTAL);

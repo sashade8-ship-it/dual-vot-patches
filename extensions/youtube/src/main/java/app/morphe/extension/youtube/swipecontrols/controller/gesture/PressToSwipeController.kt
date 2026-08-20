@@ -61,8 +61,8 @@ class PressToSwipeController(
         distanceX: Double,
         distanceY: Double,
     ): Boolean {
-        // cancel if not fullscreen
-        if (!controller.config.isFullscreenVideo) return false
+        // cancel if not fullscreen or multi-window
+        if (!controller.config.isFullscreenOrMultiWindowVideo) return false
         // cancel if not in swipe session
         if (swipeSessionOrigin == null) return false
 
