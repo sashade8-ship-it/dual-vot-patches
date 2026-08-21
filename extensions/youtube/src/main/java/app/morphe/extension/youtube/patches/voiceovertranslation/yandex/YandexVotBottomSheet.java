@@ -62,6 +62,26 @@ public class YandexVotBottomSheet {
     private static WeakReference<Button> standardVoiceButton;
     private static WeakReference<Button> liveVoiceButton;
 
+    /**
+     * Morphe moved its theme color helper from {@code Utils} to {@code ThemeUtils}
+     * after the stable 1.39 base. Resolve either public helper so this fork stays
+     * compatible with both channels without bringing an unreleased base into main.
+     */
+    private static int getAppForegroundColor() {
+        try {
+            return (int) Class.forName("app.morphe.extension.shared.theme.ThemeUtils")
+                    .getMethod("getAppForegroundColor")
+                    .invoke(null);
+        } catch (ReflectiveOperationException ignored) {
+            try {
+                return (int) Utils.class.getMethod("getAppForegroundColor").invoke(null);
+            } catch (ReflectiveOperationException exception) {
+                Logger.printException(() -> "Could not resolve app foreground color", exception);
+                return Color.WHITE;
+            }
+        }
+    }
+
     @SuppressLint("SetTextI18n")
     public static void show(Context context) {
         try {
@@ -72,7 +92,7 @@ public class YandexVotBottomSheet {
             }
 
             final int bgColor = getDialogBackgroundColor();
-            final int fgColor = Utils.getAppForegroundColor();
+            final int fgColor = getAppForegroundColor();
 
             // Create main layout.
             SheetBottomDialog.DraggableLinearLayout mainLayout =
@@ -187,7 +207,7 @@ public class YandexVotBottomSheet {
             statusText.setTextColor(Color.parseColor("#4CAF50"));
         } else {
             statusText.setText(str("dualvot_yandex_stopped"));
-            statusText.setTextColor(Utils.getAppForegroundColor());
+            statusText.setTextColor(getAppForegroundColor());
         }
     }
 
@@ -229,7 +249,7 @@ public class YandexVotBottomSheet {
                                          String label,
                                          IntegerSetting setting,
                                          java.util.function.Consumer<Integer> onChanged) {
-        final int fgColor = Utils.getAppForegroundColor();
+        final int fgColor = getAppForegroundColor();
         final int initialValue = setting.get();
         final SeekBarConfig config = SeekBarPreference.configFor(setting);
         if (config == null) {
@@ -325,7 +345,7 @@ public class YandexVotBottomSheet {
     private static Button createMinusPlusButton(Context context, boolean isPlus) {
         Button button = new Button(context, null, 0);
         button.setText(isPlus ? "+" : "−");
-        button.setTextColor(Utils.getAppForegroundColor());
+        button.setTextColor(getAppForegroundColor());
         button.setTextSize(18);
         button.setAllCaps(false);
         button.setGravity(Gravity.CENTER);
@@ -351,7 +371,7 @@ public class YandexVotBottomSheet {
         // Label
         TextView labelText = new TextView(context);
         labelText.setText(str("dualvot_yandex_voice_style_title"));
-        labelText.setTextColor(Utils.getAppForegroundColor());
+        labelText.setTextColor(getAppForegroundColor());
         labelText.setTextSize(14);
         labelText.setTypeface(Typeface.DEFAULT_BOLD);
         labelText.setGravity(Gravity.START);
@@ -418,7 +438,7 @@ public class YandexVotBottomSheet {
     private static Button createSegmentedButton(Context context, String text) {
         Button button = new Button(context, null, 0);
         button.setText(text);
-        button.setTextColor(Utils.getAppForegroundColor());
+        button.setTextColor(getAppForegroundColor());
         button.setTextSize(13);
         button.setAllCaps(false);
         button.setGravity(Gravity.CENTER);
@@ -455,7 +475,7 @@ public class YandexVotBottomSheet {
         TextView titleView = new TextView(context);
         titleView.setText(title);
         titleView.setTextSize(14);
-        titleView.setTextColor(Utils.getAppForegroundColor());
+        titleView.setTextColor(getAppForegroundColor());
         LinearLayout.LayoutParams titleParams = new LinearLayout.LayoutParams(
                 0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
         row.addView(titleView, titleParams);
@@ -463,9 +483,9 @@ public class YandexVotBottomSheet {
         Switch switchView = new Switch(context);
         switchView.setChecked(setting.get());
         switchView.getThumbDrawable().setColorFilter(
-                Utils.getAppForegroundColor(), PorterDuff.Mode.SRC_ATOP);
+                getAppForegroundColor(), PorterDuff.Mode.SRC_ATOP);
         switchView.getTrackDrawable().setColorFilter(
-                Utils.getAppForegroundColor(), PorterDuff.Mode.SRC_ATOP);
+                getAppForegroundColor(), PorterDuff.Mode.SRC_ATOP);
         switchView.setOnCheckedChangeListener((v, isChecked) -> {
             setting.save(isChecked);
             if (onChanged != null) onChanged.run();
