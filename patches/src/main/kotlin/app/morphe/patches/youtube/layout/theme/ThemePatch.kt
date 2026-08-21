@@ -74,8 +74,6 @@ private val youTubeColorNamesLight = {
 val themePatch = baseThemePatch(
     extensionClassDescriptor = EXTENSION_CLASS,
     includeLightBackground = true,
-    colorNamesDark = youTubeColorNamesDark,
-    colorNamesLight = youTubeColorNamesLight,
     useModernLithoColorHook = {
         is_21_30_or_greater
     },

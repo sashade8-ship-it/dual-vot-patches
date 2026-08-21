@@ -133,7 +133,7 @@ class SwipeControlsConfigurationProvider {
      * Checks if the video player is currently in split screen / multi-window mode.
      */
     val isMultiWindowVideo: Boolean
-        get() = (SwipeControlsHostActivity.currentHost.get()?.isInMultiWindowMode == true) &&
+        get() = (SwipeControlsHostActivity.currentHost.get()?.isInSplitScreenMode == true) &&
                 (PlayerType.current == PlayerType.WATCH_WHILE_FULLSCREEN || PlayerType.current == PlayerType.WATCH_WHILE_MAXIMIZED)
 
     /**

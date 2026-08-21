@@ -43,7 +43,6 @@ private val musicColorNamesDark = {
 @Suppress("unused")
 val themePatch = baseThemePatch(
     extensionClassDescriptor = EXTENSION_CLASS,
-    colorNamesDark = musicColorNamesDark,
     useModernLithoColorHook = {
         is_9_30_or_greater
     },

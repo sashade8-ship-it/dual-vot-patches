@@ -132,6 +132,21 @@ internal const val DEFAULT_THEME_COLOR_LIGHT = "@android:color/white"
 private const val APP_COLOR_NAME_DARK = "yt_sys_color_baseline_mobile_dark_default_base_background"
 private const val APP_COLOR_NAME_LIGHT = "yt_sys_color_baseline_mobile_light_default_base_background"
 
+/**
+ * The app renamed the color of its background, so the names are listed newest first and the one
+ * this app version declares is used.
+ */
+private val APP_COLOR_NAMES_DARK = listOf(APP_COLOR_NAME_DARK, "yt_black3")
+private val APP_COLOR_NAMES_LIGHT = listOf(APP_COLOR_NAME_LIGHT, "yt_white1")
+
+/**
+ * The color resources of each theme that this app version has, with the background of the app
+ * first. Filled in by the resource patch, which the patch that hands them to the extension
+ * depends on.
+ */
+private var darkColorNames = emptyList<String>()
+private var lightColorNames = emptyList<String>()
+
 internal val THEME_DEFAULT_COLOR_NAMES_DARK = setOf(
     "yt_black0", "yt_black1", "yt_black2", "yt_black3", "yt_black4",
     "yt_black1_opacity95", "yt_black1_opacity98",
@@ -177,8 +192,6 @@ private val themeColorContextHookPatch = bytecodePatch {
 internal fun baseThemePatch(
     extensionClassDescriptor: String,
     includeLightBackground: Boolean = false,
-    colorNamesDark: (() -> Set<String>) = { THEME_DEFAULT_COLOR_NAMES_DARK },
-    colorNamesLight: (() -> Set<String>) = { THEME_DEFAULT_COLOR_NAMES_LIGHT },
     useModernLithoColorHook: BytecodePatchBuilder.() -> Boolean,
     block: BytecodePatchBuilder.() -> Unit,
     executeBlock: BytecodePatchContext.() -> Unit = {}
@@ -197,19 +210,16 @@ internal fun baseThemePatch(
         // Morphe dialogs and settings use the background color of the app, and the color
         // resources resolve to the background that is selected in the app settings.
         overrideThemeColors(
-            if (includeLightBackground) APP_COLOR_NAME_LIGHT else null,
-            APP_COLOR_NAME_DARK
+            lightColorNames.firstOrNull(),
+            darkColorNames.firstOrNull()
+                ?: throw PatchException("The resource patch of the theme did not run first")
         )
 
         // A custom background color has no resource variant to select,
         // so the extension replaces the same colors with an overlay of the app.
-        DarkColorResourceNamesFingerprint.method.returnEarly(
-            colorResourceNames(APP_COLOR_NAME_DARK, colorNamesDark())
-        )
+        DarkColorResourceNamesFingerprint.method.returnEarly(darkColorNames.joinToString(","))
         if (includeLightBackground) {
-            LightColorResourceNamesFingerprint.method.returnEarly(
-                colorResourceNames(APP_COLOR_NAME_LIGHT, colorNamesLight())
-            )
+            LightColorResourceNamesFingerprint.method.returnEarly(lightColorNames.joinToString(","))
         }
 
         executeBlock()
@@ -219,11 +229,40 @@ internal fun baseThemePatch(
 }
 
 /**
- * The extension shows the color of a background in the app settings using the first name,
- * so the color the app uses for the background itself must be first.
+ * The color resources of a theme that this app version has, with the background of the app first.
+ *
+ * A name the app does not declare would be added to the resources as a color of its own, which
+ * then exists in the generated variants and nowhere else. The extension shows the color of a
+ * background using the first name, and for the background of the app itself there is no variant
+ * to read it from, so such a color cannot be resolved at all.
+ *
+ * @param appColorNames The name the app uses for its own background, newest version first.
  */
-private fun colorResourceNames(appBackgroundColorName: String, colorNames: Set<String>) =
-    (listOf(appBackgroundColorName) + colorNames).distinct().joinToString(",")
+private fun themeColorNames(
+    appColorNames: List<String>,
+    colorNames: Set<String>,
+    declaredColors: Set<String>
+): List<String> {
+    val appColorName = appColorNames.firstOrNull { it in declaredColors }
+        ?: throw PatchException("Could not find the background color of the app: $appColorNames")
+
+    return (listOf(appColorName) + colorNames).distinct().filter { it in declaredColors }
+}
+
+/**
+ * The names of every color the app declares.
+ */
+private fun ResourcePatchContext.declaredColorNames(): Set<String> {
+    val declaredColors = mutableSetOf<String>()
+
+    document("res/values/colors.xml").use { document ->
+        document.getNode("resources").forEachChildElement {
+            declaredColors += it.getAttribute("name")
+        }
+    }
+
+    return declaredColors
+}
 
 /**
  * Adds a color variant of the app background for every value that can be selected in the app
@@ -236,17 +275,23 @@ internal fun baseThemeResourcePatch(
     includeLightBackground: Boolean = false
 ) = resourcePatch {
     execute {
-        addBackgroundColorVariants(THEME_INDEX_OFFSET_DARK, THEME_COLORS_DARK, colorNamesDark())
-        add9BitColorVariants(THEME_INDEX_OFFSET_DARK, PALETTE_LEVELS_DARK, colorNamesDark())
-
-        if (includeLightBackground) {
-            addBackgroundColorVariants(THEME_INDEX_OFFSET_LIGHT, THEME_COLORS_LIGHT, colorNamesLight())
-            add9BitColorVariants(THEME_INDEX_OFFSET_LIGHT, PALETTE_LEVELS_LIGHT, colorNamesLight())
+        val declaredColors = declaredColorNames()
+        darkColorNames = themeColorNames(APP_COLOR_NAMES_DARK, colorNamesDark(), declaredColors)
+        lightColorNames = if (includeLightBackground) {
+            themeColorNames(APP_COLOR_NAMES_LIGHT, colorNamesLight(), declaredColors)
+        } else {
+            emptyList()
         }
 
-        declareOverlayableColors(
-            if (includeLightBackground) colorNamesDark() + colorNamesLight() else colorNamesDark()
-        )
+        addBackgroundColorVariants(THEME_INDEX_OFFSET_DARK, THEME_COLORS_DARK, darkColorNames)
+        add9BitColorVariants(THEME_INDEX_OFFSET_DARK, PALETTE_LEVELS_DARK, darkColorNames)
+
+        if (includeLightBackground) {
+            addBackgroundColorVariants(THEME_INDEX_OFFSET_LIGHT, THEME_COLORS_LIGHT, lightColorNames)
+            add9BitColorVariants(THEME_INDEX_OFFSET_LIGHT, PALETTE_LEVELS_LIGHT, lightColorNames)
+        }
+
+        declareOverlayableColors(darkColorNames + lightColorNames)
     }
 }
 
@@ -254,25 +299,16 @@ internal fun baseThemeResourcePatch(
  * Declares the background colors as overlayable, which an overlay the app registers for itself
  * requires. Without this the system rejects the overlay of a custom background color.
  */
-private fun ResourcePatchContext.declareOverlayableColors(colorNames: Set<String>) {
-    // A policy item is resolved while encoding, so a color that this app version
-    // does not have must not be declared.
-    val declaredColors = mutableSetOf<String>()
-    document("res/values/colors.xml").use { document ->
-        document.getNode("resources").forEachChildElement {
-            declaredColors += it.getAttribute("name")
-        }
-    }
-
-    val overlayableColors = colorNames.filter { it in declaredColors }
-    if (overlayableColors.isEmpty()) {
+private fun ResourcePatchContext.declareOverlayableColors(colorNames: List<String>) {
+    // A policy item is resolved while encoding, and every name is one the app declares.
+    if (colorNames.isEmpty()) {
         throw PatchException("Could not find any background color to declare as overlayable")
     }
 
     val overlayable = buildString {
         appendLine("    <overlayable name=\"$THEME_BACKGROUND_OVERLAYABLE_NAME\">")
         appendLine("        <policy type=\"public\">")
-        overlayableColors.forEach { name ->
+        colorNames.forEach { name ->
             appendLine("            <item type=\"color\" name=\"$name\" />")
         }
         appendLine("        </policy>")
@@ -300,7 +336,7 @@ private fun ResourcePatchContext.declareOverlayableColors(colorNames: Set<String
 private fun ResourcePatchContext.addBackgroundColorVariants(
     indexOffset: Int,
     backgrounds: List<String?>,
-    colorNames: Set<String>
+    colorNames: List<String>
 ) {
     if (colorNames.isEmpty()) {
         throw PatchException("No color to replace for the app background")
@@ -319,7 +355,7 @@ private fun ResourcePatchContext.addBackgroundColorVariants(
 private fun ResourcePatchContext.add9BitColorVariants(
     indexOffset: Int,
     levels: IntArray,
-    colorNames: Set<String>
+    colorNames: List<String>
 ) {
     for (index in 0 until 512) {
         val r = levels[(index shr 6) and 0x7]
@@ -334,7 +370,7 @@ private fun ResourcePatchContext.add9BitColorVariants(
 private fun ResourcePatchContext.writeBackgroundColorVariant(
     index: Int,
     color: String,
-    colorNames: Set<String>
+    colorNames: List<String>
 ) {
     // The mobile country code of a variant is never one a device can have, so the resource
     // system uses a variant only when the app asks for it. The extension uses the same encoding.

@@ -61,8 +61,8 @@ abstract class BaseGestureController(
             return false
         }
 
-        // Ignore if status bar is visible (unless in multi-window mode).
-        if (controller.statusBarVisible && !controller.isInMultiWindowMode) {
+        // Ignore if status bar is visible (unless the screen is shared with another app).
+        if (controller.statusBarVisible && !controller.isInSplitScreenMode) {
             return false
         }
 

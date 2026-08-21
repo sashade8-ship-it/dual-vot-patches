@@ -14,6 +14,8 @@ import android.graphics.drawable.Drawable;
 
 import androidx.annotation.Nullable;
 
+import java.util.List;
+
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.utils.FlyoutUtils;
@@ -23,7 +25,10 @@ import app.morphe.extension.youtube.settings.Settings;
 @SuppressWarnings("unused")
 public final class AddToQueuePatch {
 
-    public static final String queueButtonName = "QUEUE_PLAY_NEXT";
+    public static final List<String> queueButtonNames = List.of(
+            "QUEUE_PLAY_NEXT",
+            "QUEUE_PLAY_LAST"
+    );
     public static final Drawable queueButtonDrawable = Utils.getContext()
             .getDrawable(OPEN_QUEUE.drawableId);
 
@@ -96,12 +101,12 @@ public final class AddToQueuePatch {
     }
 
     public static boolean flyoutButtonClickLogic(String buttonName) {
-        if (buttonName.equals(queueButtonName)) {
+        if (queueButtonNames.contains(buttonName)) {
             Logger.printDebug(() -> "Opening custom queue flyout with videoId: " + FlyoutUtils.getFlyoutVideoId());
 
             Activity activity = Utils.getActivity();
             if (activity != null && !activity.isFinishing() && !activity.isDestroyed()) {
-                PlaylistPatch.prepareDialogBuilder(Utils.getActivity(), FlyoutUtils.getFlyoutVideoId());
+                PlaylistPatch.prepareDialogBuilder(activity, FlyoutUtils.getFlyoutVideoId());
             }
 
             FlyoutUtils.dismissBottomSheetFlyout(); // Must dismiss after showing dialog.

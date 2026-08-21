@@ -192,6 +192,16 @@ class SwipeControlsHostActivity : Activity() {
         contentRoot.addView(overlay)
     }
 
+    /**
+     * If the app shares the screen with another app, which the player of a fold device is used
+     * with the same way it is used in fullscreen.
+     *
+     * Picture in picture is a multi window mode as well and is not one of these. The window of
+     * the app is pinned then, and the player it returns to is the maximized one.
+     */
+    val isInSplitScreenMode: Boolean
+        get() = isInMultiWindowMode && !isInPictureInPictureMode
+
     // Flag that indicates whether the brightness has been saved and restored default brightness
     private var isBrightnessSaved = false
 
@@ -204,7 +214,8 @@ class SwipeControlsHostActivity : Activity() {
         when {
             // If saving and restoring brightness is enabled, and the player type is fullscreen or multi-window,
             // and brightness has already been saved, then restore the screen brightness
-            config.shouldSaveAndRestoreBrightness && (type == PlayerType.WATCH_WHILE_FULLSCREEN || (isInMultiWindowMode && type == PlayerType.WATCH_WHILE_MAXIMIZED)) && isBrightnessSaved -> {
+            config.shouldSaveAndRestoreBrightness && (type == PlayerType.WATCH_WHILE_FULLSCREEN ||
+                    (isInSplitScreenMode && type == PlayerType.WATCH_WHILE_MAXIMIZED)) && isBrightnessSaved -> {
                 screen?.restore()
                 isBrightnessSaved = false
             }
