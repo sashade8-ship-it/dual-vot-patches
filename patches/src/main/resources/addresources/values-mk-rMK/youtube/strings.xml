@@ -694,6 +694,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Непровидноста на наслагата на мини-плеер мора да биде помеѓу 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">По нарачка</string>
   <string name="morphe_gradient_loading_screen_title">Вклучи анимиран екран за вчитување</string>
   <string name="morphe_gradient_loading_screen_summary">Прикажува градиентна позадина на екранот за вчитување наместо еднобојна</string>
   <string name="morphe_splash_screen_animation_style_title">Стил на почетен екран</string>
@@ -711,7 +712,7 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_title">Лого на насловната страница</string>
   <string name="morphe_header_logo_entry_1">Поставено како стандардно</string>
   <string name="morphe_header_logo_entry_2">Редовно</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Прилагодено</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Поминете ги ограничувањата на регионот на сликата</string>

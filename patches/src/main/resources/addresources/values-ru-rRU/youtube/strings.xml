@@ -502,15 +502,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Показывает миниатюру видео во время перетаскивания полосы прокрутки</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Чаще всего пересматривают</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Включить DVR прямой трансляции' может быть недоступно
-
-Чтобы исправить это, включите 'Подмена видео потоков' и измените 'Клиент по умолчанию' на 'TV' или 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Расширить длительность прямой трансляции DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Позволяет перематывать прямые трансляции в прошлое до 7 дней</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Расширить продолжительность DVR прямой трансляции' может быть недоступно
-
-Чтобы исправить это, включите 'Подмена видео потоков' и измените 'Клиент по умолчанию' на 'TV' или 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Включить перемотку видео слайдом</string>
   <string name="morphe_slide_to_seek_summary">Включает перемотку с помощью свайпа вместо воспроизведения с удвоенной скоростью при нажатии и удержании видеоплеера</string>
@@ -953,7 +947,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Отключает мини-плеер \"Продолжить просмотр\", функцию YouTube Premium, которая появляется при запуске приложения</string>
   <string name="morphe_miniplayer_screen_title">Миниплеер</string>
   <string name="morphe_miniplayer_screen_summary">Настройка внешнего вида и поведения мини-плеера</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube удалил все дополнительные миниплееры. Чтобы изменить тип миниплеера, используйте патч YouTube версии 21.28.207 или старше</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube удалил все дополнительные мини-плееры. Чтобы изменить тип мини-плеера, пропатчите YouTube 21.28.208 или более раннюю версию.</string>
   <string name="morphe_miniplayer_type_title">Тип миниплеера</string>
   <string name="morphe_miniplayer_type_entry_0">Отключено</string>
   <string name="morphe_miniplayer_type_entry_1">Стандартный</string>
@@ -983,6 +977,7 @@ Second \"item\" text"</string>
   <string name="morphe_back_button_always_exits_feed_title">Кнопка «Назад» выходит из ленты</string>
   <string name="morphe_back_button_always_exits_feed_summary">Нажатие кнопки «Назад» всегда выходит из приложения вместо прокрутки к началу ленты</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Пользовательское</string>
   <string name="morphe_gradient_loading_screen_title">Включить градиентный фон экрана загрузки</string>
   <string name="morphe_gradient_loading_screen_summary">Показывает градиентный фон на экране загрузки вместо сплошного цвета</string>
   <string name="morphe_splash_screen_animation_style_title">Стиль экрана заставки</string>
@@ -1000,7 +995,7 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_title">Логотип заголовка</string>
   <string name="morphe_header_logo_entry_1">По умолчанию</string>
   <string name="morphe_header_logo_entry_2">Обычный</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Пользовательский</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Обход региональных ограничений изображений</string>

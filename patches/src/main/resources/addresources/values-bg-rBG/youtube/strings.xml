@@ -500,15 +500,15 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Показва миниатюра на видеото, докато плъзгате лентата за търсене</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Най-преигравано</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Включване на DVR за живо предаване' може да не е налично
+  <string name="morphe_livestream_dvr_not_available">"'Активиране на DVR за предавания на живо' може да не е налично
 
-За да коригирате това, включете 'Подправяне на видео потоци' и променете 'Клиент по подразбиране' на 'TV' или 'visionOS'"</string>
+За да отстраните това, включете 'Спуфинг на видео потоци' и сменете 'Клиент по подразбиране' на 'TV Simply' или 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Разширете продължителността на livestream DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Позволява ви да превъртате предавания на живо до 7 дни назад</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Разширяване на продължителността на DVR записа на живо' може да не е налично
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Увеличаване на продължителността на DVR за предавания на живо' може да не е налично
 
-За да поправите това, включете 'Спуфинг на видео потоци' и променете 'Стандартен клиент' на 'TV' или 'visionOS'"</string>
+За да отстраните това, сменете 'Спandri' и сменете 'Клиент по подразбиране' на 'TV Simply' или 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Зареждаването ще има твърд фон</string>
   <string name="morphe_slide_to_seek_summary">Активира плъзгане за търсене вместо възпроизвеждане със скорост 2x при натискане и задържане на видео плейъра</string>
@@ -951,7 +951,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Деактивира мини плейъра „Продължи да гледаш“, функция на YouTube Premium, която се появява при стартиране на приложението</string>
   <string name="morphe_miniplayer_screen_title">Миниплеер</string>
   <string name="morphe_miniplayer_screen_summary">Персонализирайте външния вид и поведението на минимизирания видео плейър</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube премахна всички допълнителни миниплеери. За да промените типа на миниплеера, трябва да коригирате YouTube 21.28.207 или по-стара версия.</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube премахна всички допълнителни миниплейъри. За да промените типа на миниплейъра, патнете YouTube 21.28.208 или по-стар.</string>
   <string name="morphe_miniplayer_type_title">Тип на миниплеера</string>
   <string name="morphe_miniplayer_type_entry_0">Изключен</string>
   <string name="morphe_miniplayer_type_entry_1">По подразбиране</string>
@@ -981,6 +981,23 @@ Second \"item\" text"</string>
   <string name="morphe_back_button_always_exits_feed_title">Бутонът назад излиза от лентата</string>
   <string name="morphe_back_button_always_exits_feed_summary">Натискането на бутона назад винаги излиза от приложението, вместо да превърта до началото на лентата</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Фон на светлата тема</string>
+  <string name="morphe_theme_background_light_entry_1">По подразбиране на приложението</string>
+  <string name="morphe_theme_background_light_entry_2">Бяло</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Неутрален)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Основен)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Вторичен)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Третичен)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Светло розово</string>
+  <string name="morphe_theme_background_light_entry_9">Светло синьо</string>
+  <string name="morphe_theme_background_light_entry_10">Светло зелено</string>
+  <string name="morphe_theme_background_light_entry_11">Светло жълто</string>
+  <string name="morphe_theme_background_light_entry_12">Светло оранжево</string>
+  <string name="morphe_theme_background_light_entry_13">Светло червено</string>
+  <string name="morphe_theme_background_light_entry_14">По избор</string>
+  <string name="morphe_theme_background_light_custom_color_title">Персонализиран светъл фон</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Задайте цвета на фона на светлата тема</string>
   <string name="morphe_gradient_loading_screen_title">Стил на екрана</string>
   <string name="morphe_gradient_loading_screen_summary">Показва градиентен фон на екрана за зареждане вместо плътен цвят</string>
   <string name="morphe_splash_screen_animation_style_title">Включете personnalized seekbar color</string>
@@ -998,7 +1015,7 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_title">Табло за Home</string>
   <string name="morphe_header_logo_entry_1">Табло за Abonations</string>
   <string name="morphe_header_logo_entry_2">Табло за You</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">По избор</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Прескочване на ограничения в областта на изображенията</string>

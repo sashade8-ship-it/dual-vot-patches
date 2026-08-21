@@ -500,15 +500,9 @@ Promene uključuju:
   <string name="morphe_seekbar_thumbnail_preview_summary">Приказује минијатуру видеа док се премотава трака за премотавање</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Највише репродуковано</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Омогући ДВР за лајв стрим' можда неће бити доступно
-
-Да бисте ово поправили, укључите 'Споофовање видео стримова' и промените 'Подразумевани клијент' на 'ТВ' или 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Proširi trajanje DVR-a za striming</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Омогућава вам да премотавате директне преносе уназад до 7 дана</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Продужи трајање ДВР-а за лајв стрим' можда неће бити доступно
-
-Да бисте ово поправили, укључите 'Споофовање видео стримова' и промените 'Подразумевани клијент' на 'ТВ' или 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Омогући превлачење за премотавање</string>
   <string name="morphe_slide_to_seek_summary">Омогућава померање за тражење уместо репродукције брзином од 2x када притиснете и задржите плејер видео снимка</string>
@@ -949,7 +943,7 @@ Promene uključuju:
   <string name="morphe_miniplayer_disable_resuming_summary">Онемогућава мини-плејер „Настави гледање“, функцију YouTube Premium која се појављује при покретању апликације</string>
   <string name="morphe_miniplayer_screen_title">Мини-плејер</string>
   <string name="morphe_miniplayer_screen_summary">Прилагодите изглед и понашање мини-плејера</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube је уклонио све додатне мини-плејере. Да бисте променили тип мини-плејера, примените закрпу за YouTube 21.28.207 или старију верзију</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube је уклонио све додатне мини-плејере. Да бисте променили тип мини-плејера, закрпите YouTube 21.28.208 или старију</string>
   <string name="morphe_miniplayer_type_title">Тип мини-плејера</string>
   <string name="morphe_miniplayer_type_entry_0">Онемогућен</string>
   <string name="morphe_miniplayer_type_entry_1">Подразумеван</string>
@@ -996,7 +990,7 @@ Promene uključuju:
   <string name="morphe_header_logo_title">Логотип у заглављу</string>
   <string name="morphe_header_logo_entry_1">Подразумевани</string>
   <string name="morphe_header_logo_entry_2">Обични</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Prilagođeno</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Заобиђи ограничења региона слике</string>

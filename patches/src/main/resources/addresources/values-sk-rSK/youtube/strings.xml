@@ -500,15 +500,9 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Zobrazuje miniatúru videa počas ťahania posúvača</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Najprehrávanejšie</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Zapnúť DVR pre livestream' nemusí byť dostupné
-
-Ak to chcete opraviť, zapnite 'Spoofovanie video streamov' a zmeňte 'Predvolený klient' na 'TV' alebo 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Rozšíriť trvanie DVR živého prenosu</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Umožňuje vám prehliadať živé vysielania späť až o 7 dní</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Rozšíriť dĺžku DVR pre livestream' nemusí byť dostupné
-
-Ak to chcete opraviť, zapnite 'Spoofovanie video streamov' a zmeňte 'Predvolený klient' na 'TV' alebo 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Povoliť posúvanie pre vyhľadávanie</string>
   <string name="morphe_slide_to_seek_summary">Zapne posúvanie na vyhľadávanie namiesto prehrávania 2x rýchlosťou pri podržaní prehrávača videa</string>
@@ -951,7 +945,7 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_miniplayer_disable_resuming_summary">Zakáže miniplayer s pokračovaním sledovania, funkciu YouTube Premium, ktorá sa zobrazuje pri spustení aplikácie</string>
   <string name="morphe_miniplayer_screen_title">Miniprehrávač</string>
   <string name="morphe_miniplayer_screen_summary">Prispôsobte vzhľad a správanie zmenšeného prehrávača videa</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube odstránil všetky dodatočné mini prehrávače. Ak chcete zmeniť typ mini prehrávača, použite patch YouTube 21.28.207 alebo starší</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube odstránil všetky dodatočné miniprehrávače. Ak chcete zmeniť typ miniprehrávača, patchujte verziu YouTube 21.28.208 alebo staršiu.</string>
   <string name="morphe_miniplayer_type_title">Typ miniprehrávača</string>
   <string name="morphe_miniplayer_type_entry_0">Vypnutý</string>
   <string name="morphe_miniplayer_type_entry_1">Predvolený</string>
@@ -981,6 +975,7 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_back_button_always_exits_feed_title">Tlačidlo späť ukončí informačný kanál</string>
   <string name="morphe_back_button_always_exits_feed_summary">Stlačením tlačidla späť sa vždy ukončí aplikácia namiesto posúvania na začiatok informačného kanála</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Vlastná</string>
   <string name="morphe_gradient_loading_screen_title">Povoliť prechodnú obrazovku načítania</string>
   <string name="morphe_gradient_loading_screen_summary">Zobrazuje gradientné pozadie na obrazovke načítania namiesto jednoduchej farby</string>
   <string name="morphe_splash_screen_animation_style_title">Štýl úvodnej obrazovky</string>
@@ -998,7 +993,7 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_header_logo_title">Logo hlavičky</string>
   <string name="morphe_header_logo_entry_1">Predvolené</string>
   <string name="morphe_header_logo_entry_2">Klasické</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Vlastné</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Obejsť obmedzenia oblasti obrázka</string>

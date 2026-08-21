@@ -500,15 +500,9 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Visar en videominiatyr när du drar i sökfältet</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Mest repriserade</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Aktivera DVR för livestream' kanske inte är tillgängligt
-
-För att åtgärda detta, aktivera 'Förfalska videostreamar' och ändra 'Standardklient' till 'TV' eller 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Förläng varaktighet för DVR för livestreamar</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Gör det möjligt att spola tillbaka livesändningar upp till 7 dagar bakåt i tiden</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Utöka DVR-tiden för livestream' kanske inte är tillgängligt
-
-För att åtgärda detta, aktivera 'Förfalska videostreamar' och ändra 'Standardklient' till 'TV' eller 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktivera Dra för att söka</string>
   <string name="morphe_slide_to_seek_summary">Aktiverar svep för att söka istället för att spela upp i 2x hastighet när du trycker och håller på videospelaren</string>
@@ -951,7 +945,6 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_miniplayer_disable_resuming_summary">Inaktiverar minispelaren \'Fortsätt titta\', en YouTube Premium-funktion som visas vid appstart</string>
   <string name="morphe_miniplayer_screen_title">Minispelare</string>
   <string name="morphe_miniplayer_screen_summary">Anpassa den minimerade videospelarens utseende och beteende</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube tog bort alla ytterligare minispelare. För att ändra minispelartypen, patch YouTube 21.28.207 eller äldre</string>
   <string name="morphe_miniplayer_type_title">Minispelartyp</string>
   <string name="morphe_miniplayer_type_entry_0">Inaktiverad</string>
   <string name="morphe_miniplayer_type_entry_1">Standard</string>
@@ -981,6 +974,7 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_back_button_always_exits_feed_title">Tillbaka-knappen avslutar flödet</string>
   <string name="morphe_back_button_always_exits_feed_summary">Att trycka på Tillbaka avslutar alltid appen istället för att rulla till toppen av flödet</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Eget</string>
   <string name="morphe_gradient_loading_screen_title">Aktivera tonad inläsningsskärm</string>
   <string name="morphe_gradient_loading_screen_summary">Visar en tonad bakgrund på inläsningsskärmen istället för en enfärgad</string>
   <string name="morphe_splash_screen_animation_style_title">Välkomstskärmens stil</string>
@@ -998,7 +992,7 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_header_logo_title">Logotyp i sidhuvudet</string>
   <string name="morphe_header_logo_entry_1">Standard</string>
   <string name="morphe_header_logo_entry_2">Vanlig</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Anpassad</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Kringgå regionsbegränsningar för bilder</string>

@@ -504,13 +504,13 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'실시간 스트림 DVR 활성화하기'를 사용할 수 없을 수 있습니다
 
-이 문제를 해결하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'TV' 또는 'visionOS'로 변경하세요"</string>
+이 문제를 해결하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'TV Simply' 또는 'visionOS'로 변경하세요"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">실시간 스트림 DVR 탐색 구간 확장하기</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">실시간 스트림을 최대 7일 전까지 되감아 볼 수 있습니다</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'실시간 스트림 DVR 탐색 구간 확장하기'를 사용할 수 없을 수 있습니다
 
-이 문제를 해결하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'TV' 또는 'visionOS'로 변경하세요"</string>
+이 문제를 해결하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'TV Simply' 또는 'visionOS'로 변경하세요"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">슬라이드하여 탐색 활성화하기</string>
   <string name="morphe_slide_to_seek_summary">동영상 플레이어를 길게 탭했을 경우에 \'2배속 재생\' 대신 \'슬라이드하여 탐색\'을 사용하도록 설정합니다</string>
@@ -953,7 +953,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_miniplayer_disable_resuming_summary">앱 시작 시 \'이어서 시청하기\' 미니플레이어가 나타나지 않도록 합니다. 이 기능은 YouTube Premium 기능입니다</string>
   <string name="morphe_miniplayer_screen_title">미니 플레이어</string>
   <string name="morphe_miniplayer_screen_summary">최소화된 동영상 플레이어의 레이아웃 및 동작을 설정할 수 있습니다</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube에서 모든 추가 미니플레이어가 제거되었습니다. 미니플레이어 유형을 변경하려면 YouTube 21.28.207 이하 버전을 패치해야 합니다</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube에서 모든 추가 미니플레이어가 제거되었습니다. 미니플레이어 유형을 변경하려면 YouTube 21.28.208 이하 버전을 패치해야 합니다</string>
   <string name="morphe_miniplayer_type_title">미니 플레이어 유형</string>
   <string name="morphe_miniplayer_type_entry_0">사용 안함</string>
   <string name="morphe_miniplayer_type_entry_1">기본값</string>
@@ -983,6 +983,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_back_button_always_exits_feed_title">뒤로가기 버튼으로 피드 나가기</string>
   <string name="morphe_back_button_always_exits_feed_summary">뒤로가기 버튼을 탭하면 피드 상단으로 이동하지 않고 항상 앱이 종료됩니다</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">사용자 정의</string>
   <string name="morphe_gradient_loading_screen_title">그라데이션 색상 로딩 화면 활성화하기</string>
   <string name="morphe_gradient_loading_screen_summary">로딩 화면에 단색 대신 그라데이션 배경을 표시합니다</string>
   <string name="morphe_splash_screen_animation_style_title">스플래시 애니메이션 스타일</string>
@@ -1000,7 +1001,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_header_logo_title">헤더 로고</string>
   <string name="morphe_header_logo_entry_1">기본값</string>
   <string name="morphe_header_logo_entry_2">일반</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">사용자 정의</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">이미지 표시 제한 지역 우회하기</string>

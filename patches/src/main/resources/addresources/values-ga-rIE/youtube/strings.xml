@@ -500,15 +500,9 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Taispeánann mionsamhail físe agus an barra cuardaigh á tharraingt</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">An chuid is mó d’athsheinm</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"B’fhéidir nach bhfuil ‘Cumasaigh DVR sruth beo’ ar fáil
-
-Chun seo a shocrú, cas ar ‘Sruthanna físe bréige’ agus athraigh an ‘Cliant réamhshocraithe’ go ‘Teilifís’ nó ‘visionOS’"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Leathnaigh fad an DVR sruthú beo</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Ligeann sé duit craoltaí beo a athchasadh suas le 7 lá san am atá thart</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"B’fhéidir nach mbeidh ‘Fad an DVR sruthú beo a leathnú’ ar fáil
-
-Chun seo a shocrú, cas ar ‘Sruthanna físe bréige’ agus athraigh an ‘Cliant réamhshocraithe’ go ‘Teilifís’ nó ‘visionOS’"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Cumasaigh sleamhnán a lorg</string>
   <string name="morphe_slide_to_seek_summary">Cumasaíonn sé seo an sleamhnán chun cuardach a dhéanamh in ionad é a sheinm ag luas 2x nuair a bhrúnn tú agus a choinníonn tú an seinnteoir físe</string>
@@ -951,7 +945,7 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_miniplayer_disable_resuming_summary">Díchumasaíonn sé an miniplayer \'Lean ar aghaidh ag breathnú\', gné de chuid YouTube Premium a thaispeántar nuair a thosaítear an aip</string>
   <string name="morphe_miniplayer_screen_title">Mion seinnteoir</string>
   <string name="morphe_miniplayer_screen_summary">Saincheap cuma agus iompar an seinnteora físe íoslaghdaithe</string>
-  <string name="morphe_miniplayer_not_available_summary">Bhain YouTube na miniimreoirí breise go léir. Chun an cineál miniimreoir a athrú, paisteáil YouTube 21.28.207 nó níos sine.</string>
+  <string name="morphe_miniplayer_not_available_summary">Bhain YouTube na miniimreoirí breise go léir. Chun an cineál miniimreoir a athrú, paisteáil YouTube 21.28.208 nó níos sine.</string>
   <string name="morphe_miniplayer_type_title">Cineál Mion seinnteoir</string>
   <string name="morphe_miniplayer_type_entry_0">Díchumasaithe</string>
   <string name="morphe_miniplayer_type_entry_1">Réamhshocrú</string>
@@ -981,6 +975,7 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_back_button_always_exits_feed_title">Fágann an cnaipe cúil as an bhfotha</string>
   <string name="morphe_back_button_always_exits_feed_summary">Má bhrúnn tú ar ais, fágtar an aip i gcónaí seachas scrollaigh go barr an fhotha</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Saincheaptha</string>
   <string name="morphe_gradient_loading_screen_title">Cumasaigh scáileán luchtaithe</string>
   <string name="morphe_gradient_loading_screen_summary">Taispeánann sé cúlra grádáin ar an scáileán lódála in ionad dath soladach</string>
   <string name="morphe_splash_screen_animation_style_title">Stíl splancscáileáin</string>
@@ -998,7 +993,7 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_header_logo_title">Lógó ceanntásca</string>
   <string name="morphe_header_logo_entry_1">Réamhshocrú</string>
   <string name="morphe_header_logo_entry_2">Rialta</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Custamach</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Seachbhóthar srianta réigiún íomhá</string>

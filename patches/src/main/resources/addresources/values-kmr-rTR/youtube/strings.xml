@@ -501,15 +501,9 @@ Info: May not work on live streams"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Nîşana vîdyoyê dema ku şopa dîtinê diherikînê da dîmenê</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Herî zêde vekirî</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'DVR-ê livestream çalak bike' dibe ku neyê dîtin
-
-Ji bo çareserkirinê, 'Spoof-ê streamingên vîdyoyê' veke û 'Klîyentê default' biguherîne 'TV' an 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Dîmendera destûra rêzê ya DVR-ê zêde bike</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Têde bi tehiye dike da ku hûn pê veşêrin înîsiyatora livestreaman heta 7 rojan paşê veguherînin</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Dirêjiya DVR-ê livestream berfireh bike' dibe ku neyê dîtin
-
-Ji bo çareserkirinê, 'Spoof-ê streamingên vîdyoyê' veke û 'Klîyentê default' biguherîne 'TV' an 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Slide to seek çalak bike</string>
   <string name="morphe_slide_to_seek_summary">Enables slide to seek instead of playing at 2x speed when pressing and holding the video player</string>
@@ -952,7 +946,7 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <string name="morphe_miniplayer_disable_resuming_summary">Mînîlîstê \'Devamkirina dîkirinê\' asteng dike, fektorek premîum a YouTube ku di destpêka sepanê de xuya dibe</string>
   <string name="morphe_miniplayer_screen_title">Minileýner</string>
   <string name="morphe_miniplayer_screen_summary">Sazkirina şeffafiyê (0 şeffaf e, 100 neşeffaf e)</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTubeê hemû lîstikvanên biçûk ên din derxist. Ji bo guheztina cureyê lîstikvanê biçûk, YouTube 21.28.207 an jê pirr kêhn pêşniyar dikin.</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube hemû miniplayerên zêde ji holê rakir. Ji bo guhertina cureya miniplayer, hingê YouTube 21.28.208 an jî kevntir patch bikin.</string>
   <string name="morphe_miniplayer_type_title">Minileýner</string>
   <string name="morphe_miniplayer_type_entry_0">Vemirandî</string>
   <string name="morphe_miniplayer_type_entry_1">Bixweber</string>
@@ -997,7 +991,7 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <string name="morphe_header_logo_title">Lokay logo</string>
   <string name="morphe_header_logo_entry_1">Bixwe</string>
   <string name="morphe_header_logo_entry_2">Asayî</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Xwerêg</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Sîstema ajotinê ji serbûna sêwirana wêne qey bûne</string>

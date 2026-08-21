@@ -502,13 +502,13 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"Opcja \"Włącz przewijanie transmisji na żywo\" może być niedostępna
 
-Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV\" lub \"visionOS\""</string>
+​Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV Simply\" lub \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Wydłuż czas przewijania transmisji na żywo</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Umożliwia przewijanie transmisji na żywo nawet do 7 dni wstecz</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"Opcja \"Wydłuż czas przewijania transmisji na żywo\" może być niedostępna
 
-Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV\" lub \"visionOS\""</string>
+​Aby to naprawić, włącz \"Fałszowanie strumieni filmów\" i zmień \"Domyślny klient\" na \"TV Simply\" lub \"visionOS\""</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Włącz przewijanie przesunięciem palca</string>
   <string name="morphe_slide_to_seek_summary">Włącza przewijanie przesunięciem palca zamiast odtwarzania w prędkości 2x po przytrzymaniu odtwarzacza</string>
@@ -950,7 +950,7 @@ Ograniczenia: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_miniplayer_disable_resuming_summary">Wyłącza miniodtwarzacz \"Kontynuuj oglądanie\", funkcję YouTube Premium wyświetlaną przy starcie aplikacji</string>
   <string name="morphe_miniplayer_screen_title">Miniodtwarzacz</string>
   <string name="morphe_miniplayer_screen_summary">Dostosuj wygląd i zachowanie miniodtwarzacza</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube usunął wszystkie dodatkowe miniodtwarzacze. Aby zmienić typ miniodtwarzacza, zmodyfikuj aplikację YouTube w wersji 21.28.207 lub starszej</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube usunął wszystkie dodatkowe miniodtwarzacze. Aby zmienić typ miniodtwarzacza, zmodyfikuj aplikację YouTube w wersji 21.28.208 lub starszej</string>
   <string name="morphe_miniplayer_type_title">Typ miniodtwarzacza</string>
   <string name="morphe_miniplayer_type_entry_0">Wyłączony</string>
   <string name="morphe_miniplayer_type_entry_1">Domyślny</string>
@@ -980,6 +980,7 @@ Ograniczenia: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_back_button_always_exits_feed_title">Przycisk wstecz zamyka kanał</string>
   <string name="morphe_back_button_always_exits_feed_summary">Naciśnięcie wstecz zawsze zamyka aplikację, zamiast przewijać na górę kanału</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Własny</string>
   <string name="morphe_gradient_loading_screen_title">Włącz gradientowy ekran ładowania</string>
   <string name="morphe_gradient_loading_screen_summary">Wyświetla gradientowe tło na ekranie ładowania zamiast jednolitego koloru</string>
   <string name="morphe_splash_screen_animation_style_title">Styl ekranu powitalnego</string>
@@ -997,7 +998,7 @@ Ograniczenia: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_header_logo_title">Logo w nagłówku</string>
   <string name="morphe_header_logo_entry_1">Domyślne</string>
   <string name="morphe_header_logo_entry_2">Standardowe</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Własne</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Omiń regionalne ograniczenia obrazów</string>

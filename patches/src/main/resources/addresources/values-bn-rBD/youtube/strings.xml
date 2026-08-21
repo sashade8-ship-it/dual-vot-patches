@@ -500,15 +500,15 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_seekbar_thumbnail_preview_summary">সীকবಾರ್ টেনে আনার সময় একটি ভিডিও থাম্বনেইল দেখায়</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">সবচেয়ে বেশি রিপ্লে করা</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'লাইভস্ট্রিম ডিভিআর সক্ষম করুন' উপলব্ধ নাও হতে পারে
+  <string name="morphe_livestream_dvr_not_available">"'লাইভ স্ট্রিম ডিভিআর সক্রিয় করুন' উপলব্ধ নাও হতে পারে
 
-এটি ঠিক করতে, 'ভিডিও স্ট্রিম স্পুফ' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' 'টিভি' বা 'ভিশনওএস'-এ পরিবর্তন করুন।"</string>
+এটি ঠিক করতে, 'ভিডিও স্ট্রিম স্পুফ করুন' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' পরিবর্তন করে 'TV Simply' বা 'visionOS' করুন"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">লাইভস্ট্রিম ডিভিআর সময়কাল বাড়ান</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">আপনাকে লাইভ সম্প্রচারগুলি অতীতের ৭ দিন পর্যন্ত रिवाइंड করতে দেয়</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'লাইভস্ট্রিম ডিভিআর সময়কাল বাড়ান' উপলব্ধ নাও হতে পারে
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'লাইভ স্ট্রিম ডিভিআর সময়কাল বাড়ান' উপলব্ধ নাও হতে পারে
 
-এটি ঠিক করতে, 'স্পুফ ভিডিও স্ট্রিম' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' কে 'টিভি' বা 'visionOS' এ পরিবর্তন করুন"</string>
+এটি ঠিক করতে, 'ভিডিও স্ট্রিম স্পুফ করুন' চালু করুন এবং 'ডিফল্ট ক্লায়েন্ট' পরিবর্তন করে 'TV Simply' বা 'visionOS' করুন"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">ভিডিওর নির্দিষ্ট অংশে যেতে টানুন সক্রিয় করুন</string>
   <string name="morphe_slide_to_seek_summary">ভিডিও প্লেয়ারে প্রেস এবং ধরে রাখলে 2x গতিতে খেলার পরিবর্তে স্লাইড করতে সন্ধান চালু করে।</string>
@@ -951,7 +951,7 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_miniplayer_disable_resuming_summary">\'কন্টিনিউ ওয়াচিং\' মিনিপ্লেয়ারকে নিষ্ক্রিয় করে, যা একটি ইউটিউব প্রিমিয়াম বৈশিষ্ট্য যা অ্যাপ চালু করার সময় প্রদর্শিত হয়</string>
   <string name="morphe_miniplayer_screen_title">মিনিপ্লেয়ার</string>
   <string name="morphe_miniplayer_screen_summary">সংক্ষেপিত ভিডিও প্লেয়ারের চেহারা এবং আচরণ কাস্টমাইজ করুন</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube-এ অতিরিক্ত ছোট প্লেয়ারগুলো সরিয়ে দেওয়া হয়েছে। মিনিপ্লেয়ারের ধরন পরিবর্তন করতে, YouTube 21.28.207 বা তার আগের সংস্করণ প্যাচ করুন</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube সমস্ত অতিরিক্ত মিনিপ্লেয়ার সরিয়ে ফেলেছে। মিনিপ্লেয়ারের ধরন পরিবর্তন করতে YouTube 21.28.208 বা তার পুরনো সংস্করণ প্যাচ করুন।</string>
   <string name="morphe_miniplayer_type_title">মিনিপ্লেয়ার ধরণ</string>
   <string name="morphe_miniplayer_type_entry_0">নিষ্ক্রিয় হয়েছে</string>
   <string name="morphe_miniplayer_type_entry_1">পূর্ব-নির্ধারিত</string>
@@ -981,6 +981,23 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_back_button_always_exits_feed_title">ব্যাক বাটন ফিড থেকে বেরিয়ে যায়</string>
   <string name="morphe_back_button_always_exits_feed_summary">ব্যাক চাপলে সর্বদা অ্যাপ থেকে বেরিয়ে যায়, ফিডের উপরের দিকে স্ক্রল করার পরিবর্তে</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">হালকা থিমের পটভূমি</string>
+  <string name="morphe_theme_background_light_entry_1">অ্যাপ ডিফল্ট</string>
+  <string name="morphe_theme_background_light_entry_2">সাদা</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (নিরপেক্ষ)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (প্রাইমারি)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (সেকেন্ডারি)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (টারশিয়ারি)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">হালকা গোলাপি</string>
+  <string name="morphe_theme_background_light_entry_9">হালকা নীল</string>
+  <string name="morphe_theme_background_light_entry_10">হালকা সবুজ</string>
+  <string name="morphe_theme_background_light_entry_11">হালকা হলুদ</string>
+  <string name="morphe_theme_background_light_entry_12">হালকা কমলা</string>
+  <string name="morphe_theme_background_light_entry_13">হালকা লাল</string>
+  <string name="morphe_theme_background_light_entry_14">কাস্টম</string>
+  <string name="morphe_theme_background_light_custom_color_title">কাস্টম হালকা পটভূমি</string>
+  <string name="morphe_theme_background_light_custom_color_summary">হালকা থিমের পটভূমির রঙ সেট করুন</string>
   <string name="morphe_gradient_loading_screen_title">গ্রেডিয়েন্ট লোডিং স্ক্রিণ সক্রিয় করুন</string>
   <string name="morphe_gradient_loading_screen_summary">লোডিং স্ক্রিনে সলিড রঙের পরিবর্তে গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড দেখায়</string>
   <string name="morphe_splash_screen_animation_style_title">স্প্ল্যাশ স্ক্রিন শৈলী</string>
@@ -998,7 +1015,7 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_header_logo_title">হেডার লোগো</string>
   <string name="morphe_header_logo_entry_1">ডিফল্ট</string>
   <string name="morphe_header_logo_entry_2">সাধারণ</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">কাস্টম</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">ছবি অঞ্চল সীমাবদ্ধতা বাইপাস করুন</string>

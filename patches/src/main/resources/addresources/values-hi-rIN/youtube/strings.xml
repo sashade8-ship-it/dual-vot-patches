@@ -500,15 +500,15 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_seekbar_thumbnail_preview_summary">सर्कबार को ड्रैग करते समय एक वीडियो थंबनेल दिखाता है</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">सबसे अधिक दोहराया गया</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'लाइव स्ट्रीम डीवीआर सक्षम करें' उपलब्ध नहीं हो सकता है
+  <string name="morphe_livestream_dvr_not_available">"'लाइवस्ट्रीम डीवीआर सक्षम करें' उपलब्ध नहीं हो सकता
 
-इसे ठीक करने के लिए, 'वीडियो स्ट्रीम स्पूफ़' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'TV' या 'visionOS' में बदलें"</string>
+इसे ठीक करने के लिए, 'वीडियो स्ट्रीम स्पूफ़ करें' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'TV Simply' या 'visionOS' में बदलें"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">लाइवस्ट्रीम DVR अवधि का विस्तार करें</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">आपको लाइव प्रसारण को 7 दिनों तक पीछे रिवाइंड करने की अनुमति देता है</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'लाइवस्ट्रीम DVR अवधि बढ़ाएँ' उपलब्ध नहीं हो सकता है
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'लाइवस्ट्रीम DVR अवधि विस्तारित करें' उपलब्ध नहीं हो सकता है
 
-इसे ठीक करने के लिए, 'स्पूफ वीडियो स्ट्रीम' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'TV' या 'visionOS' में बदलें"</string>
+इसे ठीक करने के लिए, 'वीडियो स्ट्रीम स्पूफ़ करें' चालू करें और 'डिफ़ॉल्ट क्लाइंट' को 'TV Simply' या 'visionOS' में बदलें"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">स्लाइड टू सीक सक्षम करें</string>
   <string name="morphe_slide_to_seek_summary">वीडियो प्लेयर को दबाए रखने पर 2x गति पर चलाने के बजाय स्लाइड से सीक सक्षम करता है</string>
@@ -951,7 +951,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_miniplayer_disable_resuming_summary">\'जारी रखें देखें\' मिनीप्लेयर को अक्षम करता है, एक YouTube प्रीमियम सुविधा जो ऐप शुरू होने पर दिखाई देती है।</string>
   <string name="morphe_miniplayer_screen_title">मिनीप्लेयर</string>
   <string name="morphe_miniplayer_screen_summary">मिनीकृत प्लेयर को कस्टमाइज़ करें</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube ने सभी अतिरिक्त मिनीप्लेयर हटा दिए हैं। मिनीप्लेयर प्रकार बदलने के लिए, YouTube 21.28.207 या पुराने संस्करण को पैच करें।</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube ने सभी अतिरिक्त मिनीप्लेयर हटा दिए हैं। मिनीप्लेयर प्रकार बदलने के लिए, YouTube 21.28.208 या उससे पुराने को पैच करें</string>
   <string name="morphe_miniplayer_type_title">मिनीप्लेयर प्रकार</string>
   <string name="morphe_miniplayer_type_entry_0">अक्षम</string>
   <string name="morphe_miniplayer_type_entry_1">डिफ़ॉल्ट</string>
@@ -981,6 +981,23 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_back_button_always_exits_feed_title">बैक बटन फ़ीड से बाहर निकलता है</string>
   <string name="morphe_back_button_always_exits_feed_summary">बैक दबाने से हमेशा ऐप से बाहर निकलता है, फ़ीड के शीर्ष पर स्क्रॉल करने के बजाय</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">लाइट थीम की पृष्ठभूमि</string>
+  <string name="morphe_theme_background_light_entry_1">ऐप डिफ़ॉल्ट</string>
+  <string name="morphe_theme_background_light_entry_2">सफेद</string>
+  <string name="morphe_theme_background_light_entry_3">मटेरियल यू (न्यूट्रल)</string>
+  <string name="morphe_theme_background_light_entry_4">मटेरियल यू (प्राथमिक)</string>
+  <string name="morphe_theme_background_light_entry_5">मटेरियल यू (द्वितीयक)</string>
+  <string name="morphe_theme_background_light_entry_6">मटेरियल यू (तृतीयक)</string>
+  <string name="morphe_theme_background_light_entry_7">कैटपुचिन (लट्टे)</string>
+  <string name="morphe_theme_background_light_entry_8">हल्का गुलाबी</string>
+  <string name="morphe_theme_background_light_entry_9">हल्का नीला</string>
+  <string name="morphe_theme_background_light_entry_10">हल्का हरा</string>
+  <string name="morphe_theme_background_light_entry_11">हल्का पीला</string>
+  <string name="morphe_theme_background_light_entry_12">हल्का नारंगी</string>
+  <string name="morphe_theme_background_light_entry_13">हल्का लाल</string>
+  <string name="morphe_theme_background_light_entry_14">कस्टम</string>
+  <string name="morphe_theme_background_light_custom_color_title">कस्टम हल्की पृष्ठभूमि</string>
+  <string name="morphe_theme_background_light_custom_color_summary">लाइट थीम की पृष्ठभूमि का रंग सेट करें</string>
   <string name="morphe_gradient_loading_screen_title">ग्रेडिएंट लोडिंग स्क्रीन सक्षम करें</string>
   <string name="morphe_gradient_loading_screen_summary">लोडिंग स्क्रीन पर एक ठोस रंग के बजाय एक ग्रेडिएंट पृष्ठभूमि दिखाता है</string>
   <string name="morphe_splash_screen_animation_style_title">स्प्लैश स्क्रीन शैली</string>
@@ -998,7 +1015,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_header_logo_title">हेडर लोगो</string>
   <string name="morphe_header_logo_entry_1">डिफ़ॉल्ट</string>
   <string name="morphe_header_logo_entry_2">नियमित</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">कस्टम</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">छवि क्षेत्र प्रतिबंधों को बाईपास करें</string>

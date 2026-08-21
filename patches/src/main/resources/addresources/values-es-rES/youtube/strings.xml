@@ -500,15 +500,15 @@ Información: Puede que no funcione en transmisiones en directo"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Muestra una miniatura del vídeo mientras se arrastra la barra de progreso</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Más reproducido</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"Es posible que 'Activar DVR para transmisiones en directo' no esté disponible
+  <string name="morphe_livestream_dvr_not_available">"Es posible que \"Activar DVR para transmisiones en directo\" no esté disponible
 
-Para solucionar esto, activa 'Falsificar transmisiones de vídeo' y cambia 'Cliente predeterminado' por 'TV' o 'visionOS'"</string>
+Para solucionar esto, activa \"Falsificar transmisiones de vídeo\" y cambia \"Cliente predeterminado\" por \"TV Simply\" o \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Expandir duración del DVR de transmisión en directo</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Te permite rebobinar las transmisiones en directo hasta 7 días atrás</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"Es posible que 'Expandir duración del DVR de transmisión en directo' no esté disponible
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Es posible que \"Expandir duración del DVR de transmisión en directo\" no esté disponible
 
-Para solucionar esto, activa 'Falsificar transmisiones de vídeo' y cambia 'Cliente predeterminado' por 'TV' o 'visionOS'"</string>
+Para solucionar esto, activa \"Falsificar transmisiones de vídeo\" y cambia \"Cliente predeterminado\" por \"TV Simply\" o \"visionOS\""</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activar deslizar para buscar</string>
   <string name="morphe_slide_to_seek_summary">Habilita el deslizamiento para buscar en lugar de reproducir a 2x velocidad al tocar y mantener pulsado el reproductor de vídeo</string>
@@ -949,7 +949,7 @@ Limitación: si la opción 'Restaurar antigua barra de acciones de vídeo' está
   <string name="morphe_miniplayer_disable_resuming_summary">Desactiva el reproductor en miniatura de \'Seguir viendo\', una función de YouTube Premium que aparece al iniciar la aplicación.</string>
   <string name="morphe_miniplayer_screen_title">Reproductor en miniatura</string>
   <string name="morphe_miniplayer_screen_summary">Personaliza la apariencia y el comportamiento del reproductor de vídeo minimizado</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube eliminó todos los reproductores en miniatura adicionales. Para cambiar el tipo de reproductor en miniatura, parchea YouTube a la versión 21.28.207 o anterior</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube eliminó todos los reproductores en miniatura adicionales. Para cambiar el tipo de reproductor en miniatura, parchea YouTube a la versión 21.28.208 o anterior</string>
   <string name="morphe_miniplayer_type_title">Tipo de reproductor en miniatura</string>
   <string name="morphe_miniplayer_type_entry_0">Desactivado</string>
   <string name="morphe_miniplayer_type_entry_1">Predeterminado</string>
@@ -979,6 +979,7 @@ Limitación: si la opción 'Restaurar antigua barra de acciones de vídeo' está
   <string name="morphe_back_button_always_exits_feed_title">El botón Atrás cierra el feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Al pulsar Atrás, la aplicación siempre se cierra en lugar de desplazarse al principio del feed</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Personalizado</string>
   <string name="morphe_gradient_loading_screen_title">Activar pantalla de carga de degradado</string>
   <string name="morphe_gradient_loading_screen_summary">Muestra un degradado de fondo en la pantalla de carga en lugar de un color sólido</string>
   <string name="morphe_splash_screen_animation_style_title">Estilo de pantalla de bienvenida</string>
@@ -996,7 +997,7 @@ Limitación: si la opción 'Restaurar antigua barra de acciones de vídeo' está
   <string name="morphe_header_logo_title">Logo del encabezado</string>
   <string name="morphe_header_logo_entry_1">Predeterminado</string>
   <string name="morphe_header_logo_entry_2">Normal</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Personalizado</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Omitir restricciones de región de imágenes</string>

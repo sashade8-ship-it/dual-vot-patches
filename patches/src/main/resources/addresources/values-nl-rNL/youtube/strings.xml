@@ -500,15 +500,15 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Toont een video miniatuur terwijl je de zoekbalk versleept</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Meest bekeken</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Enable livestream DVR' is mogelijk niet beschikbaar
+  <string name="morphe_livestream_dvr_not_available">"'Livestream-DVR inschakelen' is mogelijk niet beschikbaar
 
-Om dit op te lossen, schakel 'Spoof videostreams' in en wijzig de 'Standaardclient' naar 'TV' of 'visionOS'"</string>
+Om dit op te lossen, schakel je 'Videostreams spoofen' in en wijzig je de 'Standaardclient' naar 'TV Simply' of 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Livestream DVR-duur uitbreiden</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Hiermee kunt u live uitzendingen tot 7 dagen terugspoelen</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Expand livestream DVR duration' is mogelijk niet beschikbaar
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Livestream-DVR-duur uitbreiden' is mogelijk niet beschikbaar
 
-Om dit op te lossen, schakel 'Spoof videostreams' in en wijzig de 'Standaardclient' naar 'TV' of 'visionOS'"</string>
+Om dit op te lossen, schakel je 'Video streams spoofen' in en wijzig je de 'Standaardclient' naar 'TV Simply' of 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Schuiven om te zoeken inschakelen</string>
   <string name="morphe_slide_to_seek_summary">Schakelt \'Schuif om te zoeken\' in in plaats van af te spelen op 2x snelheid wanneer je op de videospeler drukt en vasthoudt</string>
@@ -949,7 +949,7 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_miniplayer_disable_resuming_summary">Schakelt de \'Doorgaan met kijken\'-minispeler uit, een functie van YouTube Premium die verschijnt bij het opstarten van de app</string>
   <string name="morphe_miniplayer_screen_title">Minispeler</string>
   <string name="morphe_miniplayer_screen_summary">Pas het uiterlijk en het gedrag van de geminimaliseerde videospeler aan</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube heeft alle extra mini-spelers verwijderd. Om het type mini-speler te wijzigen, patch dan YouTube 21.28.207 of ouder</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube heeft alle extra miniplayers verwijderd. Om het type miniplayer te wijzigen, patch YouTube 21.28.208 of ouder.</string>
   <string name="morphe_miniplayer_type_title">\"miniplayer\"-type</string>
   <string name="morphe_miniplayer_type_entry_0">Uitgeschakeld</string>
   <string name="morphe_miniplayer_type_entry_1">Standaard</string>
@@ -979,6 +979,23 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_back_button_always_exits_feed_title">De terugknop verlaat de feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">De terugknop sluit altijd de app af in plaats van naar de bovenkant van de feed te scrollen</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Achtergrond van het lichtthema</string>
+  <string name="morphe_theme_background_light_entry_1">App-standaard</string>
+  <string name="morphe_theme_background_light_entry_2">Wit</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutraal)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primair)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Secundair)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Tertiair)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Lichtroze</string>
+  <string name="morphe_theme_background_light_entry_9">Lichtblauw</string>
+  <string name="morphe_theme_background_light_entry_10">Lichtgroen</string>
+  <string name="morphe_theme_background_light_entry_11">Lichtgeel</string>
+  <string name="morphe_theme_background_light_entry_12">Lichtoranje</string>
+  <string name="morphe_theme_background_light_entry_13">Lichtrood</string>
+  <string name="morphe_theme_background_light_entry_14">Aangepast</string>
+  <string name="morphe_theme_background_light_custom_color_title">Aangepaste lichte achtergrond</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Stel de achtergrondkleur van het lichtthema in</string>
   <string name="morphe_gradient_loading_screen_title">Schakel het laden van het verloopscherm in</string>
   <string name="morphe_gradient_loading_screen_summary">Toont een verloop achtergrond op het laadscherm in plaats van een effen kleur</string>
   <string name="morphe_splash_screen_animation_style_title">Stijl van opstartscherm</string>
@@ -996,7 +1013,7 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_header_logo_title">Headerlogo</string>
   <string name="morphe_header_logo_entry_1">Standaard</string>
   <string name="morphe_header_logo_entry_2">Normaal</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Aangepast</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Omzeil beperkingen voor het weergeven van afbeeldingen in bepaalde regio\'s</string>

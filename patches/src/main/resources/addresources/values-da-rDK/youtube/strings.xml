@@ -502,13 +502,13 @@ Info: Virker muligvis ikke på live streams"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Aktivér livestream DVR' er muligvis ikke tilgængelig
 
-For at løse dette skal du slå 'Spoof videostreams' til og ændre 'Standardklient' til 'TV' eller 'visionOS'"</string>
+For at rette dette skal du slå 'Spoof video streams' til og skifte 'Standardklient' til 'TV Simply' eller 'visionOS'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Udvid livestream DVR-varighed</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Giver dig mulighed for at spole direkte udsendelser op til 7 dage tilbage i tiden</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Udvid varigheden for livestream DVR' er muligvis ikke tilgængelig
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Udvid livestream DVR-varighed' er muligvis ikke tilgængelig
 
-For at løse dette skal du slå 'Spoof videostreams' til og ændre 'Standardklient' til 'TV' eller 'visionOS'"</string>
+For at rette dette skal du slå 'Spoof video streams' til og skifte 'Standardklient' til 'TV Simply' eller 'visionOS'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktivér dias for at søge</string>
   <string name="morphe_slide_to_seek_summary">Aktiverer strygning for at søge i stedet for at afspille med 2x hastighed, når du trykker og holder på videoplayeren</string>
@@ -949,7 +949,7 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_miniplayer_disable_resuming_summary">Deaktiverer \'Fortsæt med at se\'-miniafspilleren, en YouTube Premium-funktion, der vises, når appen startes</string>
   <string name="morphe_miniplayer_screen_title">Mini-afspiller</string>
   <string name="morphe_miniplayer_screen_summary">Tilpas udseendet og adfærden af den minimerede videoplayer</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube har fjernet alle yderligere miniafspillere. For at ændre typen af miniafspiller, skal du patche YouTube 21.28.207 eller en ældre version</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube fjernede alle ekstra miniplayers. For at ændre miniplayer-typen, skal du patche YouTube 21.28.208 eller ældre.</string>
   <string name="morphe_miniplayer_type_title">Type af miniplayer</string>
   <string name="morphe_miniplayer_type_entry_0">Deaktiveret</string>
   <string name="morphe_miniplayer_type_entry_1">Standard</string>
@@ -979,6 +979,23 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_back_button_always_exits_feed_title">Tilbageknappen forlader feedet</string>
   <string name="morphe_back_button_always_exits_feed_summary">Tryk på tilbage afslutter altid appen i stedet for at rulle til toppen af feedet</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Lyst tema baggrund</string>
+  <string name="morphe_theme_background_light_entry_1">App standard</string>
+  <string name="morphe_theme_background_light_entry_2">Hvid</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutral)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primær)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Sekundær)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Tertiær)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Lyserød</string>
+  <string name="morphe_theme_background_light_entry_9">Lyseblå</string>
+  <string name="morphe_theme_background_light_entry_10">Lysegrøn</string>
+  <string name="morphe_theme_background_light_entry_11">Lysegul</string>
+  <string name="morphe_theme_background_light_entry_12">Lys orange</string>
+  <string name="morphe_theme_background_light_entry_13">Lys rød</string>
+  <string name="morphe_theme_background_light_entry_14">Brugerdefineret</string>
+  <string name="morphe_theme_background_light_custom_color_title">Brugerdefineret lys baggrund</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Indstil baggrundsfarven for det lyse tema</string>
   <string name="morphe_gradient_loading_screen_title">Aktiver gradient indlæsning af skærmen</string>
   <string name="morphe_gradient_loading_screen_summary">Viser en gradientbaggrund på indlæsningsskærmen i stedet for en ensfarvet farve</string>
   <string name="morphe_splash_screen_animation_style_title">Splash screen udseende</string>
@@ -996,7 +1013,7 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_header_logo_title">Sidehovedlogo</string>
   <string name="morphe_header_logo_entry_1">Standard</string>
   <string name="morphe_header_logo_entry_2">Normal</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Tilpasset</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Omgå billede regionsrestriktioner</string>

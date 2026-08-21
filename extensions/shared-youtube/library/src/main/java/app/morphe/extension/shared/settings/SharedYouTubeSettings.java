@@ -6,11 +6,16 @@ import static app.morphe.extension.shared.settings.Setting.migrateOldSettingToNe
 import static app.morphe.extension.shared.settings.Setting.parent;
 import static app.morphe.extension.shared.settings.Setting.parentsAny;
 
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.CustomBrandingPatch;
 import app.morphe.extension.shared.patches.CustomBrandingPatch.BrandingTheme;
 import app.morphe.extension.shared.patches.CustomBrandingPatch.NotificationIconTheme;
 import app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch.JavaScriptClientAvailability;
 import app.morphe.extension.shared.spoof.js.JavaScriptVariant;
+import app.morphe.extension.shared.theme.ThemeColorPatch.CustomDarkBackgroundAvailability;
+import app.morphe.extension.shared.theme.ThemeColorPatch.CustomLightBackgroundAvailability;
+import app.morphe.extension.shared.theme.ThemeColorPatch.ThemeColorDark;
+import app.morphe.extension.shared.theme.ThemeColorPatch.ThemeColorLight;
 
 /**
  * Settings shared by YouTube and YouTube Music.
@@ -35,6 +40,12 @@ public class SharedYouTubeSettings extends BaseSettings {
 
     public static final BooleanSetting CHECK_WATCH_HISTORY_DOMAIN_NAME = new BooleanSetting("morphe_check_watch_history_domain_name", TRUE, false, false);
 
+    public static final EnumSetting<ThemeColorDark> THEME_BACKGROUND_DARK = new EnumSetting<>("morphe_theme_background_dark", ThemeColorDark.PURE_BLACK, true);
+    public static final EnumSetting<ThemeColorLight> THEME_BACKGROUND_LIGHT = new EnumSetting<>("morphe_theme_background_light", ThemeColorLight.WHITE, true);
+    public static final StringSetting THEME_BACKGROUND_DARK_CUSTOM_COLOR = new StringSetting("morphe_theme_background_dark_custom_color", "#0F0F0F", true, new CustomDarkBackgroundAvailability());
+    public static final StringSetting THEME_BACKGROUND_LIGHT_CUSTOM_COLOR = new StringSetting("morphe_theme_background_light_custom_color", "#FFFFFF", true, new CustomLightBackgroundAvailability());
+
+    public static final BooleanSetting THEME_LAST_USED_DARK_MODE = new BooleanSetting("morphe_theme_last_used_dark_mode", Utils.isDarkModeEnabled(), false, false);
     public static final EnumSetting<BrandingTheme> CUSTOM_BRANDING_ICON = new EnumSetting<>("morphe_custom_branding_icon", CustomBrandingPatch.getDefaultIconStyle(), true);
     public static final EnumSetting<NotificationIconTheme> CUSTOM_BRANDING_NOTIFICATION_ICON = new EnumSetting<>("morphe_custom_branding_notification_icon", NotificationIconTheme.FOLLOW, true);
     public static final IntegerSetting CUSTOM_BRANDING_NAME = new IntegerSetting("morphe_custom_branding_name", CustomBrandingPatch.getDefaultAppNameIndex(), true);

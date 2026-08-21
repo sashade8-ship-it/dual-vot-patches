@@ -500,15 +500,15 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Wys \'n videominiatuur terwyl die seekbar gesleep word</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Meeste herspeel</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Aktiveer regstreekse stroom DVR' mag dalk nie beskikbaar wees nie
+  <string name="morphe_livestream_dvr_not_available">"'Aktiveer regstreekse stroom-DVR' mag dalk nie beskikbaar wees nie
 
-Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Standaardkliënt' na 'TV' of 'visionOS'"</string>
+Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkliënt' na 'TV Simply' of 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Brei livestream DVR duur uit</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Laat jou toe om regstreekse uitsendings tot 7 dae terug te spoel</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Lewendige stroom DVR-duur uitbrei' mag nie beskikbaar wees nie
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Vergroot regstreekse stroom-DVR-duur' mag dalk nie beskikbaar wees nie
 
-Om dit reg te stel, skakel 'Spoof video-strome' aan en verander die 'Standaardkliënt' na 'TV' of 'visionOS'"</string>
+Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkliënt' na 'TV Simply' of 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktiveer gly om te soek</string>
   <string name="morphe_slide_to_seek_summary">Aktiveer gly om te soek in plaas daarvan om teen 2x snelheid te speel wanneer jy op die videospeler druk en hou</string>
@@ -951,7 +951,7 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_miniplayer_disable_resuming_summary">Deaktiveer die \'Gaan voort om te kyk\' minispeler, \'n YouTube Premium-funksie wat op app-opstart verskyn</string>
   <string name="morphe_miniplayer_screen_title">Mini-speler</string>
   <string name="morphe_miniplayer_screen_summary">Pas die voorkoms en gedrag van die verkleinde videospeler aan</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube het alle bykomende kleinspeler verwyder. Om die tipe kleinspeler te verander, moet jy YouTube 21.28.207 of ouer wysig.</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube het alle bykomende mini-speelers verwyder. Om die tipe mini-speler te verander, moet jy YouTube 21.28.208 of ouer herstel.</string>
   <string name="morphe_miniplayer_type_title">Mini-speler tipe</string>
   <string name="morphe_miniplayer_type_entry_0">Gedeaktiveer</string>
   <string name="morphe_miniplayer_type_entry_1">Verstek</string>
@@ -981,6 +981,23 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_back_button_always_exits_feed_title">Terugknoppie verlaat die voer</string>
   <string name="morphe_back_button_always_exits_feed_summary">Wanneer jy terug druk, verlaat jy altyd die toepassing in plaas daarvan om na die bokant van die voer te blaai</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Ligte tema-agtergrond</string>
+  <string name="morphe_theme_background_light_entry_1">Toepassingverstek</string>
+  <string name="morphe_theme_background_light_entry_2">Wit</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutraal)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primêre)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Sekondêre)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Tersiêre)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Ligpienk</string>
+  <string name="morphe_theme_background_light_entry_9">Ligblou</string>
+  <string name="morphe_theme_background_light_entry_10">Liggroen</string>
+  <string name="morphe_theme_background_light_entry_11">Liggeel</string>
+  <string name="morphe_theme_background_light_entry_12">Ligoranje</string>
+  <string name="morphe_theme_background_light_entry_13">Ligrooi</string>
+  <string name="morphe_theme_background_light_entry_14">Pasgemaak</string>
+  <string name="morphe_theme_background_light_custom_color_title">Eie ligte agtergrond</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Stel die agtergrondkleur van die ligte tema in</string>
   <string name="morphe_gradient_loading_screen_title">Gebruik \'n gradiënt laaiskerm</string>
   <string name="morphe_gradient_loading_screen_summary">Wys \'n gradiënt agtergrond op die laaiskerm in plaas van \'n soliede kleur</string>
   <string name="morphe_splash_screen_animation_style_title">Splash skerm styl</string>
@@ -998,7 +1015,7 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_header_logo_title">Header logo</string>
   <string name="morphe_header_logo_entry_1">Verstek</string>
   <string name="morphe_header_logo_entry_2">Regulêr</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Pasgemaak</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Omseil beeldregio beperkings</string>

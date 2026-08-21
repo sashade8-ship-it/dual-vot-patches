@@ -503,13 +503,13 @@ Info: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Livestream-DVR aktivieren' ist möglicherweise nicht verfügbar
 
-Um das zu beheben, aktiviere 'Video-Streams spoofen' und ändere den 'Standard-Client' auf 'TV' oder 'visionOS'"</string>
+Um das zu beheben, aktiviere 'Video-Streams vortäuschen' und stelle den 'Standard-Client' auf 'TV Simply' oder 'visionOS' um"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Livestream DVR-Dauer erweitern</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Ermöglicht das Zurückspulen von Live-Sendungen um bis zu 7 Tage in der Vergangenheit</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'Livestream-DVR-Dauer erweitern' ist möglicherweise nicht verfügbar
 
-Um das zu beheben, aktiviere 'Video-Streams spoofen' und ändere den 'Standard-Client' auf 'TV' oder 'visionOS'"</string>
+Um das zu beheben, aktiviere 'Video-Streams vortäuschen' und stelle den 'Standard-Client' auf 'TV Simply' oder 'visionOS' um"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Ziehen zum Suchen aktivieren</string>
   <string name="morphe_slide_to_seek_summary">Aktiviert das Wischen zum Suchen anstelle des Abspielens mit 2x Geschwindigkeit, wenn Sie die Videoplayer-Taste gedrückt halten</string>
@@ -952,7 +952,7 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_miniplayer_disable_resuming_summary">Deaktiviert den Miniplayer „Weiter ansehen“, ein YouTube Premium-Feature, das beim Starten der App angezeigt wird.</string>
   <string name="morphe_miniplayer_screen_title">Minispieler</string>
   <string name="morphe_miniplayer_screen_summary">Passen Sie das Erscheinungsbild und das Verhalten des minimierten Videoplayers an</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube hat alle zusätzlichen Miniplayer entfernt. Um den Miniplayer-Typ zu ändern, patchen Sie YouTube 21.28.207 oder eine ältere Version.</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube hat alle zusätzlichen Miniplayer entfernt. Um den Miniplayer-Typ zu ändern, patche YouTube 21.28.208 oder älter.</string>
   <string name="morphe_miniplayer_type_title">Minispielertyp</string>
   <string name="morphe_miniplayer_type_entry_0">Deaktiviert</string>
   <string name="morphe_miniplayer_type_entry_1">Standard</string>
@@ -982,6 +982,23 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_back_button_always_exits_feed_title">Zurück-Taste verlässt den Feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Durch Drücken der Zurück-Taste wird die App immer beendet, anstatt zum Anfang des Feeds zu scrollen.</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Hintergrund des hellen Designs</string>
+  <string name="morphe_theme_background_light_entry_1">App-Standard</string>
+  <string name="morphe_theme_background_light_entry_2">Weiß</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutral)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primär)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Sekundär)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Tertiär)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Hellrosa</string>
+  <string name="morphe_theme_background_light_entry_9">Hellblau</string>
+  <string name="morphe_theme_background_light_entry_10">Hellgrün</string>
+  <string name="morphe_theme_background_light_entry_11">Hellgelb</string>
+  <string name="morphe_theme_background_light_entry_12">Hellorange</string>
+  <string name="morphe_theme_background_light_entry_13">Hellrot</string>
+  <string name="morphe_theme_background_light_entry_14">Benutzerdefiniert</string>
+  <string name="morphe_theme_background_light_custom_color_title">Benutzerdefinierter heller Hintergrund</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Legt die Hintergrundfarbe des hellen Designs fest</string>
   <string name="morphe_gradient_loading_screen_title">Gradientenladebildschirm aktivieren</string>
   <string name="morphe_gradient_loading_screen_summary">Zeigt einen Farbverlauf im Hintergrund des Ladebildschirms anstelle einer einheitlichen Farbe an</string>
   <string name="morphe_splash_screen_animation_style_title">Art des Begrüßungsbildschirms</string>
@@ -999,7 +1016,7 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_header_logo_title">Header-Logo</string>
   <string name="morphe_header_logo_entry_1">Standard</string>
   <string name="morphe_header_logo_entry_2">Regulär</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Benutzerdefiniert</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Bildgebietsbeschränkungen umgehen</string>

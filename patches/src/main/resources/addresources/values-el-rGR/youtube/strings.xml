@@ -502,13 +502,13 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Ενεργοποίηση DVR ζωντανής μετάδοσης' μπορεί να μην είναι διαθέσιμη
 
-Για να το διορθώσετε, ενεργοποιήστε την 'Πλαστογράφηση ροών βίντεο' και αλλάξτε τον 'Προεπιλεγμένο πελάτη' σε 'TV' ή 'visionOS'"</string>
+Για να το διορθώσετε, ενεργοποιήστε το 'Πλαστογράφηση ροών βίντεο' και αλλάξτε το 'Προεπілегμένο πρόγραμμα-πελάτη' σε 'TV Simply' ή 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Επέκταση της διάρκειας του DVR της ζωντανής μετάδοσης</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Σας επιτρέπει να επανατυλίγετε ζωντανές εκπομπές έως και 7 ημέρες στο παρελθόν</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Επέκταση διάρκειας DVR ζωντανής ροής' μπορεί να μην είναι διαθέσιμη
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Επέκταση διάρκειας DVR ζωντανής μετάδοσης' μπορεί να μην είναι διαθέσιμη
 
-Για να το διορθώσετε, ενεργοποιήστε την 'Πλαστογράφηση ροών βίντεο' και αλλάξτε τον 'Προεπιλεγμένο πελάτη' σε 'TV' ή 'visionOS'"</string>
+Για να το διορθώσετε, ενεργοποιήστε το 'Πλαστογράφηση του βίντεο' και αλλάξτε το 'Προεπιλεγμένο πρόγραμμα-πελάτη' σε 'TV Simply' ή 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Χειρονομία συρσίματος για αναζήτηση</string>
   <string name="morphe_slide_to_seek_summary">Ενεργοποιήστε την ολίσθηση για αναζήτηση αντί να παίξετε με ταχύτητα 2x όταν πατάτε και κρατάτε τον πρόγραμμα αναπαραγωγής βίντεο</string>
@@ -951,7 +951,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Απενεργοποιεί το μίνι player \"Συνέχιση παρακολούθησης\", μια λειτουργία YouTube Premium που εμφανίζεται κατά την εκκίνηση της εφαρμογής</string>
   <string name="morphe_miniplayer_screen_title">Ελαχιστοποιημένη οθόνη αναπαραγωγής</string>
   <string name="morphe_miniplayer_screen_summary">Προσαρμόστε την εμφάνιση και τη συμπεριφορά του μικρογραφικού αναπαραγωγέα βίντεο</string>
-  <string name="morphe_miniplayer_not_available_summary">Το YouTube αφαίρεσε όλους τους επιπλέον μίνι παίκτες. Για να αλλάξετε τον τύπο του μίνι παίκτη, κάντε patch στο YouTube 21.28.207 ή παλαιότερη έκδοση</string>
+  <string name="morphe_miniplayer_not_available_summary">Το YouTube αφαίρεσε όλα τα επιπλέον miniplayers. Για να αλλάξετε τον τύπο miniplayer, κάντε patch στο YouTube 21.28.208 ή παλαιότερο.</string>
   <string name="morphe_miniplayer_type_title">Τύπος ελαχιστοποιημένης οθόνης αναπαραγωγής</string>
   <string name="morphe_miniplayer_type_entry_0">Απενεργοποιημένη</string>
   <string name="morphe_miniplayer_type_entry_1">Προεπιλογή</string>
@@ -981,6 +981,23 @@ Second \"item\" text"</string>
   <string name="morphe_back_button_always_exits_feed_title">Το κουμπί πίσω βγαίνει από τη ροή</string>
   <string name="morphe_back_button_always_exits_feed_summary">Πατώντας πίσω βγαίνετε πάντα από την εφαρμογή αντί να μεταφέρεστε στην κορυφή της ροής.</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Φόντο φωτεινού θέματος</string>
+  <string name="morphe_theme_background_light_entry_1">Προεπιλογή εφαρμογής</string>
+  <string name="morphe_theme_background_light_entry_2">Λευκό</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Ουδέτερο)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Κύριο)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Δευτερεύον)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Τριτεύον)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Ανοιχτό ροζ</string>
+  <string name="morphe_theme_background_light_entry_9">Ανοιχτό μπλε</string>
+  <string name="morphe_theme_background_light_entry_10">Ανοιχτό πράσινο</string>
+  <string name="morphe_theme_background_light_entry_11">Ανοιχτό κίτρινο</string>
+  <string name="morphe_theme_background_light_entry_12">Ανοιχτό πορτοκαλί</string>
+  <string name="morphe_theme_background_light_entry_13">Ανοιχτό κόκκινο</string>
+  <string name="morphe_theme_background_light_entry_14">Προσαρμοσμένο</string>
+  <string name="morphe_theme_background_light_custom_color_title">Προσαρμοσμένο φόντο φωτεινού θέματος</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Ορίστε το χρώμα φόντου του φωτεινού θέματος</string>
   <string name="morphe_gradient_loading_screen_title">Διαβάθμιση οθόνης φόρτωσης</string>
   <string name="morphe_gradient_loading_screen_summary">Εμφανίζει ένα διαβαθμισμένο φόντο στην οθόνη φόρτωσης αντί για ένα συμπαγές χρώμα</string>
   <string name="morphe_splash_screen_animation_style_title">Στυλ οθόνης εκκίνησης</string>
@@ -998,7 +1015,7 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_title">Λογότυπο επικεφαλίδας</string>
   <string name="morphe_header_logo_entry_1">Προεπιλογή</string>
   <string name="morphe_header_logo_entry_2">Κανονικό</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Προσαρμοσμένο</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Παράκαμψη μπλοκαρίσματος φόρτωσης εικόνων</string>

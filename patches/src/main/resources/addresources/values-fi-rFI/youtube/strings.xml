@@ -500,15 +500,15 @@ Tieto: Ei välttämättä toimi suoratoistoissa"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Näyttää videon pikkukuvan vedettäessä hakupalkkia</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Eniten toistettu</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Ota käyttöön livestream-DVR' ei välttämättä ole käytettävissä
+  <string name="morphe_livestream_dvr_not_available">"'Ota suoratoiston DVR käyttöön' ei ehkä ole käytettävissä
 
-Voit korjata tämän ottamalla käyttöön 'Huijaa videovirtoja' ja vaihtamalla 'Oletusasiakas' -kohdan arvoksi 'TV' tai 'visionOS'"</string>
+Tämän korjaamiseksi, ota 'Väärennä videostriimeja' käyttöön ja vaihda 'Oletusasiakas' arvoksi 'TV Simply' tai 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Laajenna suoran lähetyksen DVR:n kestoa</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Mahdollistaa suorien lähetysten kelaamisen jopa 7 päivää taaksepäin</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Laajenna livestream-DVR:n kestoa' ei välttämättä ole käytettävissä
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Laajenna suoratoiston DVR-kestoa' ei ehkä ole käytettävissä
 
-Voit korjata tämän ottamalla käyttöön 'Huijaa videovirtoja' ja vaihtamalla 'Oletusasiakas' -kohdan arvoksi 'TV' tai 'visionOS'"</string>
+Tämän korjaamiseksi, ota 'Väärennä videostriimeja' käyttöön ja vaihtaa 'Oletusasiakas' arvoksi 'TV Simply' tai 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Ota kelaus liu\'uttamalla käyttöön</string>
   <string name="morphe_slide_to_seek_summary">Ottaa käyttöön pyyhkäisyn hakua varten sen sijaan, että toisto nopeutuisi 2x nopeudella, kun videotoistinta painetaan ja pidetään painettuna</string>
@@ -951,7 +951,7 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_miniplayer_disable_resuming_summary">Poistaa käytöstä ’Jatka katselua’ -minisoittimen, YouTube Premium -ominaisuuden, joka ilmestyy sovelluksen käynnistyessä</string>
   <string name="morphe_miniplayer_screen_title">Minisoitin</string>
   <string name="morphe_miniplayer_screen_summary">Muokkaa pienennetyn videotoistimen ulkoasua ja toimintaa</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube poisti kaikki lisäminisoittimet. Muuttaaksesi minisoittimen tyyppiä, paikkaa YouTube 21.28.207 tai vanhempi versio</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube poisti kaikki ylimääräiset miniplayerit. Vaihtaaksesi miniplayerin tyypin, paikkaa YouTube 21.28.208 tai vanhempi</string>
   <string name="morphe_miniplayer_type_title">Minisoittimen tyyppi</string>
   <string name="morphe_miniplayer_type_entry_0">Pois käytöstä</string>
   <string name="morphe_miniplayer_type_entry_1">Oletus</string>
@@ -981,6 +981,23 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_back_button_always_exits_feed_title">Takaisin-painike sulkee syötteen</string>
   <string name="morphe_back_button_always_exits_feed_summary">Takaisin-painikkeen painaminen sulkee aina sovelluksen sen sijaan, että se vierittäisi syötteen alkuun</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Vaalean teeman tausta</string>
+  <string name="morphe_theme_background_light_entry_1">Sovelluksen oletus</string>
+  <string name="morphe_theme_background_light_entry_2">Valkoinen</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutraali)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Ensisijainen)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Toissijainen)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Tertiäärinen)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Vaalea pinkki</string>
+  <string name="morphe_theme_background_light_entry_9">Vaalea sininen</string>
+  <string name="morphe_theme_background_light_entry_10">Vaalea vihreä</string>
+  <string name="morphe_theme_background_light_entry_11">Vaalea keltainen</string>
+  <string name="morphe_theme_background_light_entry_12">Vaalea oranssi</string>
+  <string name="morphe_theme_background_light_entry_13">Vaalea punainen</string>
+  <string name="morphe_theme_background_light_entry_14">Mukautettu</string>
+  <string name="morphe_theme_background_light_custom_color_title">Mukautettu vaalean teeman tausta</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Aseta vaalean teeman taustaväri</string>
   <string name="morphe_gradient_loading_screen_title">Ota liukuvärillinen latausruutu käyttöön</string>
   <string name="morphe_gradient_loading_screen_summary">Näyttää gradienttitaustan latausnäytössä yksivärisen sijaan</string>
   <string name="morphe_splash_screen_animation_style_title">Aloitussivun tyyli</string>
@@ -998,7 +1015,7 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_header_logo_title">Ylätunnisteen logo</string>
   <string name="morphe_header_logo_entry_1">Oletus</string>
   <string name="morphe_header_logo_entry_2">Tavallinen</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Mukautettu</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Ohita kuvien alueelliset rajoitukset</string>

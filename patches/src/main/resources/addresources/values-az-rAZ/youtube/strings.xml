@@ -502,13 +502,13 @@ Məlumat: Canlı yayımlarda işləməyə bilər"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Canlı yayım DVR-ni aktivləşdir' əlçatan olmaya bilər
 
-Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir və 'İlkin qəbuledicini' 'TV' və ya 'visionOS' olaraq dəyişdir"</string>
+Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir və 'İlkin qəbuledicini' 'TV Simply' və ya 'visionOS' olaraq dəyişdir"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Canlı yayım DVR müddətini genişləndir</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Canlı yayımları 7 günə kimi keçmişə geri çevirməyə imkan verir</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'Canlı yayım DVR müddətini genişləndir' əlçatan olmaya bilər
 
-Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir və 'İlkin qəbuledicini' 'TV' və ya 'visionOS' olaraq dəyişdir"</string>
+Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir və 'İlkin qəbuledicini' 'TV Simply' və ya 'visionOS' olaraq dəyişdir"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Çevirmək üçün sürüşdürməni aktivləşdir</string>
   <string name="morphe_slide_to_seek_summary">Video oynadıcıya basıb saxladıqda 2x sürətlə oynatmaq əvəzinə, sürüşdürərək çevirməni aktivləşdirir</string>
@@ -951,7 +951,7 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_miniplayer_disable_resuming_summary">Tətbiqin açılışında görünən, YouTube Premium xüsusiyyəti olan \"İzləməyə davam et\" kiçik oynadıcısını qapadır</string>
   <string name="morphe_miniplayer_screen_title">Kiçik oynadıcı</string>
   <string name="morphe_miniplayer_screen_summary">Kiçildilmiş video oynadıcı görünüşünü və davranışını fərdiləşdir</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube bütün əlavə kiçik oynadıcıları sildi. Kiçik oynadıcı növünü dəyişdirmək üçün YouTube 21.28.207 versiyasını və ya daha köhnəni yamaqla</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube bütün əlavə kiçik oynadıcıları sildi. Kiçik oynadıcı növünü dəyişdirmək üçün YouTube 21.28.208 versiyasını və ya daha köhnəni yamaqla</string>
   <string name="morphe_miniplayer_type_title">Kiçik oynadıcı növü</string>
   <string name="morphe_miniplayer_type_entry_0">Qapalıdı</string>
   <string name="morphe_miniplayer_type_entry_1">İlkin</string>
@@ -981,6 +981,7 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_back_button_always_exits_feed_title">Geri düyməsi axından çıxarır</string>
   <string name="morphe_back_button_always_exits_feed_summary">Geriyə basmaq, axının yuxarısına sürüşdürmək əvəzinə, həmişə tətbiqdən çıxır</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Fərdi</string>
   <string name="morphe_gradient_loading_screen_title">Axarlı yükləmə ekranını aktivləşdir</string>
   <string name="morphe_gradient_loading_screen_summary">Yüklənilmə ekranında bütöv rəng əvəzinə axarlı fonu göstərir</string>
   <string name="morphe_splash_screen_animation_style_title">Sıçrama ekranı üslubu</string>
@@ -998,7 +999,7 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_header_logo_title">Sərlövhə simvolu</string>
   <string name="morphe_header_logo_entry_1">İlkin</string>
   <string name="morphe_header_logo_entry_2">Müntəzəm</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Fərdi</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Təsvir bölgə məhdudiyyətlərini yan keç</string>

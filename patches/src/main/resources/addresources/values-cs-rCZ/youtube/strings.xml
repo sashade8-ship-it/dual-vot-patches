@@ -500,15 +500,15 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Zobrazuje miniaturu videa při táhnutí posuvníku</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Nejvíce přehrávané</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Povolit livestream DVR' nemusí být k dispozici
+  <string name="morphe_livestream_dvr_not_available">"'Povolit DVR pro živé vysílání' nemusí být k dispozici
 
-Chcete-li to opravit, zapněte 'Podvrhnout video streamy' a změňte 'výchozí klient' na 'TV' nebo 'visionOS'."</string>
+Chcete-li to opravit, zapněte 'Podvrhnout video streamy' a změňte 'Výchozí klient' na 'TV Simply' nebo 'visionOS'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Rozšířit dobu záznamu živého vysílání</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Umožní vám přetáčí živé vysílání až do 7 dnů do minulosti</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Rozšířit dobu trvání livestream DVR' nemusí být k dispozici
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Rozšířit délku DVR pro živé vysílání' nemusí být k dispozici
 
-Chcete-li to opravit, zapněte 'Podvrhnout video streamy' a změňte 'výchozí klient' na 'TV' nebo 'visionOS'."</string>
+Chcete-li to opravit, zapněte 'Podvrhnout video streamy' a změňte 'Výchozí klient' na 'TV Simply' nebo 'visionOS'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Povolit posun pro hledání</string>
   <string name="morphe_slide_to_seek_summary">Povolí posouvání pro vyhledávání namísto přehrávání 2x rychlostí při stisknutí a podržení přehrávače videa</string>
@@ -949,7 +949,7 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_miniplayer_disable_resuming_summary">Vypne minipřehrávač \'Pokračovat ve sledování\', funkci YouTube Premium, která se zobrazí při spuštění aplikace</string>
   <string name="morphe_miniplayer_screen_title">Mini přehrávač</string>
   <string name="morphe_miniplayer_screen_summary">Přizpůsobte vzhled a chování minimalizovaného přehrávače videa</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube odstranil všechny další miničteče. Chcete-li změnit typ miničteče, patchujte YouTube 21.28.207 nebo starší</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube odstranil všechny další miniplayery. Pro změnu typu miniplayeru patchujte YouTube 21.28.208 nebo starší.</string>
   <string name="morphe_miniplayer_type_title">Typ mini přehrávače</string>
   <string name="morphe_miniplayer_type_entry_0">Vypnuto</string>
   <string name="morphe_miniplayer_type_entry_1">Výchozí</string>
@@ -979,6 +979,23 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_back_button_always_exits_feed_title">Tlačítko Zpět ukončí kanál</string>
   <string name="morphe_back_button_always_exits_feed_summary">Stisknutí tlačítka Zpět vždy ukončí aplikaci místo posunutí na začátek kanálu.</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Pozadí světlého motivu</string>
+  <string name="morphe_theme_background_light_entry_1">Výchozí aplikace</string>
+  <string name="morphe_theme_background_light_entry_2">Bílá</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutrální)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primární)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Sekundární)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Terciární)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Světle růžová</string>
+  <string name="morphe_theme_background_light_entry_9">Světle modrá</string>
+  <string name="morphe_theme_background_light_entry_10">Světle zelená</string>
+  <string name="morphe_theme_background_light_entry_11">Světle žlutá</string>
+  <string name="morphe_theme_background_light_entry_12">Světle oranžová</string>
+  <string name="morphe_theme_background_light_entry_13">Světle červená</string>
+  <string name="morphe_theme_background_light_entry_14">Vlastní</string>
+  <string name="morphe_theme_background_light_custom_color_title">Vlastní pozadí světlého motivu</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Nastavit barvu pozadí světlého motivu</string>
   <string name="morphe_gradient_loading_screen_title">Povolit přechodovou obrazovku načítání</string>
   <string name="morphe_gradient_loading_screen_summary">Zobrazí gradientní pozadí na úvodní obrazovce místo jednobarevného</string>
   <string name="morphe_splash_screen_animation_style_title">Styl úvodní obrazovky</string>
@@ -996,7 +1013,7 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_header_logo_title">Logo záhlaví</string>
   <string name="morphe_header_logo_entry_1">Výchozí</string>
   <string name="morphe_header_logo_entry_2">Běžné</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Vlastní</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Obcházet omezení oblasti obrázků</string>

@@ -495,15 +495,9 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Seekbar\'ni sudrab borayotganda video miniatyurasini ko\'rsatadi</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Eng ko\'p qayta ko\'rilgan</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Jonli efir DVR-ni yoqish' mavjud bo'lmasligi mumkin
-
-Buni tuzatish uchun 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart mijoz'ni 'TV' yoki 'visionOS' ga o'zgartiring."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Jonli oqim DVR davomiyligini kengaytirish</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Sizga jonli efirlarni 7 kungacha ortga aylantirish imkonini beradi</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Jonli efir DVR davomiyligini kengaytirish' mavjud bo'lmasligi mumkin
-
-Buni tuzatish uchun 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart mijoz'ni 'TV' yoki 'visionOS' ga o'zgartiring."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Sekish harakatini yoqish</string>
   <string name="morphe_slide_to_seek_summary">Video pleerni bosib ushlab turganingizda 2 barobar tezlikda ijro qilish o\'rniga siljishni yoqish</string>
@@ -943,7 +937,7 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <string name="morphe_miniplayer_disable_resuming_summary">YouTube Premium xususiyati bo\'lgan mini-pleyerning qayta tiklanishini o\'chirish</string>
   <string name="morphe_miniplayer_screen_title">Mini pleyer</string>
   <string name="morphe_miniplayer_screen_summary">Kichraytirilgan video pleerni ko\'rinishi va xulq-atvorini sozlash</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube barcha qo\'shimcha mini-pleyerlarni olib tashladi. Mini-pleyer turini o\'zgartirish uchun YouTube 21.28.207 yoki undan oldingi versiyasini qo\'llang</string>
+  <string name="morphe_miniplayer_not_available_summary">O\'y qo\'shimcha miniplayerlarni olib tashladi. Miniplayer turini o\'zgartirish uchun YouTube 21.28.208 yoki undan eski versiyasiga patch qo\'llang.</string>
   <string name="morphe_miniplayer_type_title">Mini pleyer turi</string>
   <string name="morphe_miniplayer_type_entry_0">O\'chirilgan</string>
   <string name="morphe_miniplayer_type_entry_1">Standart</string>
@@ -972,6 +966,7 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Orqaga tugmasi lentadan chiqadi</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Maxsus</string>
   <string name="morphe_gradient_loading_screen_title">Rangli gradientni yoqish</string>
   <string name="morphe_gradient_loading_screen_summary">Yüklenme ekranda to\'liq rang o\'rniga gradient fonini ko\'rsatish</string>
   <string name="morphe_splash_screen_animation_style_title">Ekran animatsiyasi uslubi</string>
@@ -989,7 +984,7 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <string name="morphe_header_logo_title">Bosh logotip</string>
   <string name="morphe_header_logo_entry_1">Standart</string>
   <string name="morphe_header_logo_entry_2">Oddiy</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Maxsus</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Tasvir chegarasiga cheklovni ko\'tarish</string>

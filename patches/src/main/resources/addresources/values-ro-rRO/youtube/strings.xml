@@ -500,15 +500,9 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Afișează o miniatură video în timpul glisării pe bara de căutare</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Cele mai redate</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Activare DVR live' ar putea să nu fie disponibil
-
-Pentru a remedia această problemă, activați 'Falsificare fluxuri video' și schimbați 'Client implicit' în 'TV' sau 'visionOS'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Extinde durata DVR pentru livestream</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Vă permite să derulați înapoi emisiunile live până la 7 zile în trecut</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Extinderea duratei DVR live' ar putea să nu fie disponibil
-
-Pentru a remedia această problemă, activați 'Falsificare fluxuri video' și schimbați 'Client implicit' în 'TV' sau 'visionOS'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activează diapozitivul pentru a căuta</string>
   <string name="morphe_slide_to_seek_summary">Activează glisarea pentru a căuta în loc să redă cu o viteză de 2x când apeși și menții apăsat playerul video</string>
@@ -951,7 +945,7 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_miniplayer_disable_resuming_summary">Dezactivează playerul mini „Urmărește mai departe”, o funcție YouTube Premium care apare la pornirea aplicației</string>
   <string name="morphe_miniplayer_screen_title">Minijucător</string>
   <string name="morphe_miniplayer_screen_summary">Personalizează aspectul și comportamentul miniplayerului mic</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube a eliminat toate mini-playerul-urile suplimentare. Pentru a schimba tipul mini-playerului, aplicați patch la YouTube 21.28.207 sau versiuni mai vechi</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube a eliminat toate miniplayerele suplimentare. Pentru a schimba tipul miniplayerului, aplicați patch-ul YouTube 21.28.208 sau o versiune mai veche.</string>
   <string name="morphe_miniplayer_type_title">Tip minijucător</string>
   <string name="morphe_miniplayer_type_entry_0">Dezactivat</string>
   <string name="morphe_miniplayer_type_entry_1">Implicit</string>
@@ -998,7 +992,7 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_header_logo_title">Siglă antet</string>
   <string name="morphe_header_logo_entry_1">Implicit</string>
   <string name="morphe_header_logo_entry_2">Normal</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Personalizat</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Ignoră restricțiile regiunii imaginii</string>

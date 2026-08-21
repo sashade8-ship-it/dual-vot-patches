@@ -500,15 +500,9 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Mostra uma miniatura do vídeo enquanto arrasta a barra de pesquisa</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Mais reproduzido</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Ativar DVR de transmissão ao vivo' pode não estar disponível
-
-Para corrigir isso, ative 'Spoof video streams' e altere o 'Cliente padrão' para 'TV' ou 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Expandir a duração do DVR de livestream</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Permite voltar transmissões ao vivo até 7 dias no passado</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Expandir a duração do DVR de transmissão ao vivo' pode não estar disponível
-
-Para corrigir isso, ative 'Spoof video streams' e altere o 'Cliente padrão' para 'TV' ou 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Habilitar o slide para procurar</string>
   <string name="morphe_slide_to_seek_summary">Habilita o deslize para buscar em vez de reproduzir em velocidade 2x ao pressionar e segurar o reprodutor de vídeo</string>
@@ -951,7 +945,7 @@ Limitação: Se 'Restaurar a barra de ação de vídeo antiga' estiver desativad
   <string name="morphe_miniplayer_disable_resuming_summary">Desativa o miniplayer \"Continuar assistindo\", um recurso do YouTube Premium que aparece na inicialização do aplicativo</string>
   <string name="morphe_miniplayer_screen_title">Minijogador</string>
   <string name="morphe_miniplayer_screen_summary">Personalize a aparência e o comportamento do miniplayer minimizado</string>
-  <string name="morphe_miniplayer_not_available_summary">O YouTube removeu todos os miniplayers adicionais. Para alterar o tipo de miniplayer, faça o patch do YouTube 21.28.207 ou versão anterior.</string>
+  <string name="morphe_miniplayer_not_available_summary">O YouTube removeu todos os miniplayers adicionais. Para alterar o tipo de miniplayer, aplique o patch no YouTube 21.28.208 ou anterior.</string>
   <string name="morphe_miniplayer_type_title">Tipo de minijogador</string>
   <string name="morphe_miniplayer_type_entry_0">Desativado</string>
   <string name="morphe_miniplayer_type_entry_1">Padrão</string>
@@ -998,7 +992,7 @@ Limitação: Se 'Restaurar a barra de ação de vídeo antiga' estiver desativad
   <string name="morphe_header_logo_title">Logotipo do cabeçalho</string>
   <string name="morphe_header_logo_entry_1">Padrão</string>
   <string name="morphe_header_logo_entry_2">Normal</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Personalizado</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Ignorar restrições de região de imagem</string>

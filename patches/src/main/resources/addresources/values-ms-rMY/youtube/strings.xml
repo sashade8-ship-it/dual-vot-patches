@@ -141,6 +141,9 @@ Perubahan termasuk:
   <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Expand livestream DVR duration' may not be available
+
+To fix this, turn on 'Spoof video streams' and change the 'Default client' to 'TV Simply' or 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <!-- interaction.seekbar.enableTapToSeekPatch -->
   <!-- interaction.swipecontrols.swipeControlsPatch -->
@@ -288,18 +291,24 @@ Tataletak automotif
   <!-- layout.playbackinfeeds.playbackInFeedsPatch -->
   <string name="morphe_playback_in_feeds_entry_off">Mati</string>
   <!-- layout.miniplayer.miniplayerPatch -->
+  <string name="morphe_miniplayer_not_available_summary">YouTube removed all additional miniplayers. To change the miniplayer type then patch YouTube 21.28.208 or older</string>
   <string name="morphe_miniplayer_type_entry_0">Dilumpuhkan</string>
   <string name="morphe_miniplayer_type_entry_1">Lalai</string>
   <string name="morphe_miniplayer_opacity_summary">Melaraskan tahap kelutsinaran (0 ialah lut sinar, 100 ialah legap)</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Light theme background</string>
+  <string name="morphe_theme_background_light_entry_1">App default</string>
+  <string name="morphe_theme_background_light_entry_2">White</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primary)</string>
+  <string name="morphe_theme_background_light_entry_14">Tersuai</string>
   <string name="morphe_splash_screen_animation_style_entry_1">Tidak dibenarkan</string>
   <string name="morphe_splash_screen_animation_style_entry_3">Monokrom</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo pengepala</string>
   <string name="morphe_header_logo_entry_1">Lalai</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Tersuai</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <!-- layout.thumbnails.alternativeThumbnailsPatch -->

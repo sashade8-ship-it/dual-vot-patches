@@ -500,15 +500,15 @@ Impormasyon: Maaaring hindi gumana sa mga live stream"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Nagpapakita ng thumbnail ng video habang hinihila ang seekbar</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Pinakamaraming nireplay</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'I-enable ang livestream DVR' ay maaaring hindi available
+  <string name="morphe_livestream_dvr_not_available">"Maaaring hindi magagamit ang 'Paganahin ang livestream DVR'
 
-Para ayusin ito, i-on ang 'I-spoof ang video streams' at baguhin ang 'Default client' sa 'TV' o 'visionOS'"</string>
+Para maayos ito, i-on ang 'Pag-spoof ng mga video stream' at palitan ang 'Default client' sa 'TV Simply' o 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Palawakin ang tagal ng livestream DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Pinapayagan kang i-rewind ang mga live broadcast hanggang 7 araw sa nakaraan</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'I-expand ang tagal ng livestream DVR' ay maaaring hindi available
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Maaaring hindi magagamit ang 'Palawigin ang tagal ng livestream DVR'
 
-Para ayusin ito, i-on ang 'I-spoof ang video streams' at baguhin ang 'Default client' sa 'TV' o 'visionOS'"</string>
+Para maayos ito, i-on ang 'Pag-spoof ng mga video stream' at palitan ang 'Default client' sa 'TV Simply' o 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Paganahin ang slide to seek</string>
   <string name="morphe_slide_to_seek_summary">Pinapagana ang slide to seek sa halip na magpatugtog sa 2x speed kapag pinipindot at hinahawakan ang video player</string>
@@ -949,7 +949,7 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <string name="morphe_miniplayer_disable_resuming_summary">Hindi pinapagana ang \'Continue watching\' miniplayer, isang tampok ng YouTube Premium na lumalabas sa paglunsad ng app.</string>
   <string name="morphe_miniplayer_screen_title">Miniplayer</string>
   <string name="morphe_miniplayer_screen_summary">I-customize ang hitsura at pag-uugali ng minimize video player</string>
-  <string name="morphe_miniplayer_not_available_summary">Inalis ng YouTube ang lahat ng karagdagang miniplayer. Para baguhin ang uri ng miniplayer, i-patch ang YouTube 21.28.207 o mas maaga.</string>
+  <string name="morphe_miniplayer_not_available_summary">Inalis ng YouTube ang lahat ng karagdagang miniplayer. Upang baguhin ang uri ng miniplayer, i-patch ang YouTube 21.28.208 o mas luma.</string>
   <string name="morphe_miniplayer_type_title">Uri ng miniplayer</string>
   <string name="morphe_miniplayer_type_entry_0">Na-disable</string>
   <string name="morphe_miniplayer_type_entry_1">Default</string>
@@ -979,6 +979,23 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <string name="morphe_back_button_always_exits_feed_title">Back button exits the feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pressing back always exits the app instead of scrolling to the top of the feed</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Likuran ng maliwanag na tema</string>
+  <string name="morphe_theme_background_light_entry_1">Default ng app</string>
+  <string name="morphe_theme_background_light_entry_2">Puti</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutral)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Pangunahin)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Pangalawa)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Pangatlo)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Mapusyaw na rosas</string>
+  <string name="morphe_theme_background_light_entry_9">Mapusyaw na asul</string>
+  <string name="morphe_theme_background_light_entry_10">Mapusyaw na berde</string>
+  <string name="morphe_theme_background_light_entry_11">Mapusyaw na dilaw</string>
+  <string name="morphe_theme_background_light_entry_12">Mapusyaw na kahel</string>
+  <string name="morphe_theme_background_light_entry_13">Mapusyaw na pula</string>
+  <string name="morphe_theme_background_light_entry_14">Pasadya</string>
+  <string name="morphe_theme_background_light_custom_color_title">Custom na likuran ng maliwanag na tema</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Itakda ang kulay ng likuran ng maliwanag na tema</string>
   <string name="morphe_gradient_loading_screen_title">I-enable ang gradient loading screen</string>
   <string name="morphe_gradient_loading_screen_summary">Ipinapakita ang gradient background sa loading screen sa halip na solid color</string>
   <string name="morphe_splash_screen_animation_style_title">Estilo ng splash screen</string>
@@ -996,7 +1013,7 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <string name="morphe_header_logo_title">Header logo</string>
   <string name="morphe_header_logo_entry_1">Panimula</string>
   <string name="morphe_header_logo_entry_2">Regular</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Pasadya</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Bypass image region restrictions</string>

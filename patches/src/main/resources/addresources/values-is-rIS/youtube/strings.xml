@@ -498,15 +498,9 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_seekbar_thumbnail_preview_summary">Sýnir myndataska mynd á meðan dragð er á dragslá</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Mest endurspilað</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Virkja DVR fyrir beint streymi' gæti ekki verið tiltækt
-
-Til að laga þetta, kveiktu á 'Þykjast um myndstrauma' og breyttu 'Sjálfgefinn biðlari' í 'TV' eða 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Fjarlægðu lífvídeós DVR tíma</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Leyfir þér að spola áfram beina útsendingu allt að 7 daga til baka</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Stækka lengd DVR fyrir beint streymi' gæti ekki verið tiltækt
-
-Til að laga þetta, kveiktu á 'Þykjast um myndstrauma' og breyttu 'Sjálfgefinn biðlari' í 'TV' eða 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Vírúð renna til leit</string>
   <string name="morphe_slide_to_seek_summary">Virkar að slá til breytilegrar sem þurfa að vera haldar eða halda vídeó leikmanninum</string>
@@ -947,7 +941,7 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_miniplayer_disable_resuming_summary">Gerir óvirkt \'Halda áfram að horfa\' litla spilara, YouTube Premium eiginleika sem birtist þegar appið ræsir</string>
   <string name="morphe_miniplayer_screen_title">Mini spilari</string>
   <string name="morphe_miniplayer_screen_summary">Sérsnið útlit og hegðun minnkaðs myndavörpunar</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube hefur fjarlægt allar aðal smáspilara. Til að breyta gerð smáspilarans skaltu patcha YouTube 21.28.207 eða eldra</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube fjarlægði alla auka smáspilara. Til að breyta gerð smáspilarans skaltu plástra YouTube 21.28.208 eða eldri.</string>
   <string name="morphe_miniplayer_type_title">Gerð Mini spilara</string>
   <string name="morphe_miniplayer_type_entry_0">Gerðu óvirkt</string>
   <string name="morphe_miniplayer_type_entry_1">Lágmark</string>
@@ -994,7 +988,7 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_header_logo_title">Logo haus</string>
   <string name="morphe_header_logo_entry_1">Sjálfgefið</string>
   <string name="morphe_header_logo_entry_2">Venjulegt</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Sérstakt</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Umfarð myndaðsvernd</string>

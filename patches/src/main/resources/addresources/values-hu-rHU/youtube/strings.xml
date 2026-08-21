@@ -500,15 +500,15 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Videó bélyegképet jelenít meg a keresősáv húzásakor</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Legtöbbször újrajátszott</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Élő közvetítés DVR engedélyezése' lehet, hogy nem áll rendelkezésre
+  <string name="morphe_livestream_dvr_not_available">"Előfordulhat, hogy az 'Élő közvetítés DVR engedélyezése' nem érhető el.
 
-Ennek javításához kapcsold be a 'Videostreamek meghamisítását' és módosítsd az 'Alapértelmezett kliens' értékét 'TV'-re vagy 'visionOS'-re"</string>
+A javításhoz kapcsold be a 'Videóstreamek meghamisítása' opciót, és módosítsd az 'Alapértelmezett kliens' értékét a következőre: 'TV Simply' vagy 'visionOS'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Bővítsd a közvetítés DVR idejét</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Lehetővé teszi élő adások visszatekerését a múltba maximum 7 nappal</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Élő közvetítés DVR időtartamának kiterjesztése' nem biztos, hogy elérhető
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"Előfordulhat, hogy az 'Élő közvetítés DVR-időtartamának bővítése' nem érhető el.
 
-A javításhoz kapcsolja be a 'Videóstreamek meghamisítása' opciót, és módosítsa az 'Alapértelmezett kliens' beállítást 'TV'-re vagy 'visionOS'-re"</string>
+A javításhoz kapcsold be a 'Videóstreamek meghamisítása' opciót, és módosítsd az 'Alapértelmezett kliens' értékét a következőre: 'TV Simply' vagy 'visionOS'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Csúsztatás engedélyezése a kereséshez</string>
   <string name="morphe_slide_to_seek_summary">Engedélyezi a videólejátszó megnyomása és tartása közbeni csúsztatást a kétszeres sebességű lejátszás helyett</string>
@@ -951,7 +951,7 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_miniplayer_disable_resuming_summary">Letiltja a „Folytatás” minilejátszót, a YouTube Premium funkciót, amely az alkalmazás indításakor jelenik meg.</string>
   <string name="morphe_miniplayer_screen_title">Minilejátszó</string>
   <string name="morphe_miniplayer_screen_summary">A minimalizált videólejátszó megjelenésének és viselkedésének testreszabása</string>
-  <string name="morphe_miniplayer_not_available_summary">A YouTube eltávolították az összes kiegyszítő miniablakot. A miniablak típusa változtatásához a YouTube 21.28.207-es vagy annál ösibb verziójavítását kell alkalmazni.</string>
+  <string name="morphe_miniplayer_not_available_summary">A YouTube eltávolította az összes további miniplayert. A miniplayer típusának megváltoztatásához patcheld a YouTube 21.28.208 vagy régebbi verzióját.</string>
   <string name="morphe_miniplayer_type_title">Minilejátszó típus</string>
   <string name="morphe_miniplayer_type_entry_0">Kikapcsolva</string>
   <string name="morphe_miniplayer_type_entry_1">Alapértelmezett</string>
@@ -981,6 +981,23 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_back_button_always_exits_feed_title">Kilépés a kezdőoldalról a vissza gombbal</string>
   <string name="morphe_back_button_always_exits_feed_summary">A vissza gomb megnyomása esetén kilép az alkalmazásból a kezdőoldal tetejére görgetés helyett</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Világos téma háttér</string>
+  <string name="morphe_theme_background_light_entry_1">Alkalmazás alapértelmezése</string>
+  <string name="morphe_theme_background_light_entry_2">Fehér</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (semleges)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (elsődleges)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (másodlagos)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (harmadlagos)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Világos rózsaszín</string>
+  <string name="morphe_theme_background_light_entry_9">Világos kék</string>
+  <string name="morphe_theme_background_light_entry_10">Világos zöld</string>
+  <string name="morphe_theme_background_light_entry_11">Világos sárga</string>
+  <string name="morphe_theme_background_light_entry_12">Világos narancssárga</string>
+  <string name="morphe_theme_background_light_entry_13">Világos piros</string>
+  <string name="morphe_theme_background_light_entry_14">Egyedi</string>
+  <string name="morphe_theme_background_light_custom_color_title">Egyedi világos háttér</string>
+  <string name="morphe_theme_background_light_custom_color_summary">A világos téma háttérszínének beállítása</string>
   <string name="morphe_gradient_loading_screen_title">Színátmenetes betöltési képernyő engedélyezése</string>
   <string name="morphe_gradient_loading_screen_summary">Árnyékoló háttér megjelenítése a betöltési képernyőn a tömör szín helyett</string>
   <string name="morphe_splash_screen_animation_style_title">Üdvözlőképernyő stílusa</string>
@@ -998,7 +1015,7 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_header_logo_title">Fejléclogó</string>
   <string name="morphe_header_logo_entry_1">Alapértelmezett</string>
   <string name="morphe_header_logo_entry_2">Normál</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Vonalazás</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Területi kép-korlátozások megkerülése</string>

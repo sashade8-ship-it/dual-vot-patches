@@ -500,15 +500,9 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Arama çubuğunu sürüklerken video küçük resmini gösterir</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">En çok tekrar oynatılan</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Canlı yayın DVR'ını etkinleştir' seçeneği kullanılamayabilir
-
-Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini açın ve 'Varsayılan istemci'yi 'TV' veya 'visionOS' olarak değiştirin"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Canlı yayın DVR süresini uzat</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Canlı yayınları 7 güne kadar geriye sarmanıza olanak tanır</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Canlı yayın DVR süresini genişlet' seçeneği kullanılamayabilir
-
-Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini açın ve 'Varsayılan istemci'yi 'TV' veya 'visionOS' olarak değiştirin"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Kaydırarak sardırmayı etkinleştir</string>
   <string name="morphe_slide_to_seek_summary">Video oynatıcıya basılı tutulduğunda 2x hızda oynatmak yerine kaydırarak sardırmayı etkinleştirir</string>
@@ -951,7 +945,7 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_miniplayer_disable_resuming_summary">Uygulama başlangıcında görünen YouTube Premium özelliği \'İzlemeye devam edin\' mini oynatıcısını devre dışı bırakır</string>
   <string name="morphe_miniplayer_screen_title">Mini oynatıcı</string>
   <string name="morphe_miniplayer_screen_summary">Küçültülmüş video oynatıcısının görünümünü ve davranışını özelleştirin</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube, ek mini oyuncuları kaldırdı. Mini oyuncu türünü değiştirmek için YouTube 21.28.207 veya daha eski bir sürümünü yamalayın.</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube tüm ek mini oynatıcıları kaldırdı. Mini oynatıcı türünü değiştirmek için YouTube 21.28.208 veya daha eski bir sürümü yamalayın.</string>
   <string name="morphe_miniplayer_type_title">Mini oynatıcı tipi</string>
   <string name="morphe_miniplayer_type_entry_0">Devre dışı</string>
   <string name="morphe_miniplayer_type_entry_1">Varsayılan</string>
@@ -998,7 +992,7 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_header_logo_title">Başlık logosu</string>
   <string name="morphe_header_logo_entry_1">Varsayılan</string>
   <string name="morphe_header_logo_entry_2">Normal</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Özel</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Resim bölge kısıtlamalarını atla</string>

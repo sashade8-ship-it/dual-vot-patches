@@ -502,15 +502,9 @@ Info: Možda neće raditi na prijenosima uživo"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Prikazuje sličicu videozapisa pri povlačenju trake za traženje</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Najviše reproducirano</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Omogući livestream DVR' možda nije dostupan
-
-Za popravak ovoga, uključite 'Parodija video streamova' i promijenite 'Zadani klijent' u 'TV' ili 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Proširi trajanje livestream DVR-a</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Omogućuje vam vraćanje live prijenosa do 7 dana unatrag</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Proširi trajanje livestream DVR-a' možda nije dostupan
-
-Za popravak ovoga, uključite 'Parodija video streamova' i promijenite 'Zadani klijent' u 'TV' ili 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Omogu slide to seek</string>
   <string name="morphe_slide_to_seek_summary">Omogućuje povlačenje za traženje umjesto reprodukcije brzinom 2x pri prtiskivanju i držanju video playera</string>
@@ -953,7 +947,6 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_miniplayer_disable_resuming_summary">Onemogućuje miniplayer \'Nastavi gledati\', značajku YouTube Premiuma koja se pojavljuje pri pokretanju aplikacije</string>
   <string name="morphe_miniplayer_screen_title">Mini pregleđ</string>
   <string name="morphe_miniplayer_screen_summary">Prilagodite izgled i ponašanje minimiziranog video playera</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube je uklonio sve dodatne minipleyere. Za promjenu vrste minipleyera, patchajte YouTube 21.28.207 ili stariju verziju</string>
   <string name="morphe_miniplayer_type_title">Mini pregleđ</string>
   <string name="morphe_miniplayer_type_entry_0">Onemogućeno</string>
   <string name="morphe_miniplayer_type_entry_1">Zadano</string>
@@ -983,6 +976,7 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_back_button_always_exits_feed_title">Gumb natrag izlazi iz feeda</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pritiskanje gumba natrag uvijek izlazi iz aplikacije umjesto pomicanja na vrh feeda</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Prilagođeno</string>
   <string name="morphe_gradient_loading_screen_title">Prozirnost nadlaga</string>
   <string name="morphe_gradient_loading_screen_summary">Prikazuje gradijentnu pozadinu na zaslonu za učitavanje umjesto jednobojne boje</string>
   <string name="morphe_splash_screen_animation_style_title">Omogu gradientno zaslonsko pozadina</string>
@@ -1000,7 +994,7 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_header_logo_title">Zastavica</string>
   <string name="morphe_header_logo_entry_1">Zadano</string>
   <string name="morphe_header_logo_entry_2">Obična</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Prilagođeno</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Bypassiraj ograničenja slike</string>

@@ -502,13 +502,13 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"\"Увімкнути DVR для прямої трансляції\" може бути недоступним.
 
-Щоб це виправити, увімкніть \"Підміна відеопотоків\" та змініть \"Типовий клієнт\" на \"TV\" або \"visionOS\""</string>
+Щоб це виправити, увімкніть \"Підміна відеопотоків\" та змініть \"Типовий клієнт\" на \"TV Simply\" або \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Розширити тривалість DVR прямої трансляції</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Дозволяє перемотувати прямі трансляції до 7 днів у минуле</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"\"Розширити тривалість DVR прямої трансляції\" може бути недоступним.
 
-Щоб це виправити, увімкніть \"Підміна відеопотоків\" та змініть \"Типовий клієнт\" на \"TV\" або \"visionOS\""</string>
+Щоб це виправити, увімкніть \"Підміна відеопотоків\" та змініть \"Типовий клієнт\" на \"TV Simply\" або \"visionOS\""</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Увімкнути перемотування свайпом</string>
   <string name="morphe_slide_to_seek_summary">Вмикає перемотування свайпом замість відтворення зі швидкістю 2x при утриманні відеоплеєра</string>
@@ -950,7 +950,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Вимикає мініплеєр \"Продовжити перегляд\", функцію YouTube Premium, що з\'являється при запуску застосунку</string>
   <string name="morphe_miniplayer_screen_title">Мініплеєр</string>
   <string name="morphe_miniplayer_screen_summary">Налаштування вигляду та поведінки мінімізованого відеоплеєра</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube видалив усі додаткові типи мініплеєра. Щоб змінити тип мініплеєра, пропатчіть YouTube версії 21.28.207 або старішої</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube видалив усі додаткові типи мініплеєра. Щоб змінити тип мініплеєра, пропатчіть YouTube версії 21.28.208 або старішої</string>
   <string name="morphe_miniplayer_type_title">Тип мініплеєра</string>
   <string name="morphe_miniplayer_type_entry_0">Вимкнено</string>
   <string name="morphe_miniplayer_type_entry_1">Стандартний</string>
@@ -980,6 +980,7 @@ Second \"item\" text"</string>
   <string name="morphe_back_button_always_exits_feed_title">Кнопка \"Назад\" виходить зі стрічки</string>
   <string name="morphe_back_button_always_exits_feed_summary">Натискання кнопки \"Назад\" завжди закриває застосунок замість прокручування до початку стрічки</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Власна</string>
   <string name="morphe_gradient_loading_screen_title">Увімкнути градієнт завантаження</string>
   <string name="morphe_gradient_loading_screen_summary">Показує градієнтний фон на екрані завантаження замість суцільного кольору</string>
   <string name="morphe_splash_screen_animation_style_title">Стиль заставки</string>
@@ -997,7 +998,7 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_title">Логотип заголовка</string>
   <string name="morphe_header_logo_entry_1">Стандартний</string>
   <string name="morphe_header_logo_entry_2">Звичайний</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Власний</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Змінити хост зображень</string>

@@ -500,15 +500,15 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">在拖動搜尋條時顯示影片縮圖</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">最多重播</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'啟用直播 DVR'可能不可用
+  <string name="morphe_livestream_dvr_not_available">"「啟用直播 DVR」可能無法使用
 
-若要修正此問題，請開啟'偽造影片串流'並將'預設用戶端'變更為'TV'或'visionOS'"</string>
+要修正此問題，請開啟「偽造影片串流」，並將「預設用戶端」變更為「TV Simply」或「visionOS」"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">擴展直播 DVR 錄製時長</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">可讓您將即時廣播倒退最多 7 天</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'擴充直播 DVR 持續時間'可能不可用
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"「延長直播 DVR 時長」可能無法使用
 
-若要修正此問題，請開啟'偽造影片串流'並將'預設用戶端'變更為'TV'或'visionOS'"</string>
+要修正此問題，請開啟「偽造影片串流」，並將「預設用戶端」變更為「TV Simply」或「visionOS」"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">啟用滑動預覽</string>
   <string name="morphe_slide_to_seek_summary">按住影片播放器時啟用滑動尋找，而不是以 2 倍速度播放</string>
@@ -951,7 +951,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_resuming_summary">停用「繼續觀看」迷你播放器，這是 YouTube Premium 的功能，會在應用程式啟動時顯示</string>
   <string name="morphe_miniplayer_screen_title">迷你播放器</string>
   <string name="morphe_miniplayer_screen_summary">自訂迷你影片播放器的外觀和行為</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube 已移除所有額外的迷你播放器。若要變更迷你播放器類型，請修補 YouTube 21.28.207 或更舊版本</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube 移除了所有額外的迷你播放器。若要變更迷你播放器類型，請修補 YouTube 21.28.208 或更舊版本。</string>
   <string name="morphe_miniplayer_type_title">迷你播放器類型</string>
   <string name="morphe_miniplayer_type_entry_0">停用</string>
   <string name="morphe_miniplayer_type_entry_1">預設</string>
@@ -981,6 +981,23 @@ Second \"item\" text"</string>
   <string name="morphe_back_button_always_exits_feed_title">返回按鈕會結束動態消息</string>
   <string name="morphe_back_button_always_exits_feed_summary">按返回鍵一律結束應用程式，而不是捲動到動態消息頂端</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">淺色主題背景</string>
+  <string name="morphe_theme_background_light_entry_1">應用程式預設</string>
+  <string name="morphe_theme_background_light_entry_2">白色</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (中性色)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (主要色)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (次要色)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (第三色)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">淺粉紅色</string>
+  <string name="morphe_theme_background_light_entry_9">淺藍色</string>
+  <string name="morphe_theme_background_light_entry_10">淺綠色</string>
+  <string name="morphe_theme_background_light_entry_11">淺黃色</string>
+  <string name="morphe_theme_background_light_entry_12">淺橘色</string>
+  <string name="morphe_theme_background_light_entry_13">淺紅色</string>
+  <string name="morphe_theme_background_light_entry_14">自訂</string>
+  <string name="morphe_theme_background_light_custom_color_title">自訂淺色背景</string>
+  <string name="morphe_theme_background_light_custom_color_summary">設定淺色主題的背景顏色</string>
   <string name="morphe_gradient_loading_screen_title">啟用漸層載入畫面</string>
   <string name="morphe_gradient_loading_screen_summary">在載入畫面顯示漸層背景，而不是純色</string>
   <string name="morphe_splash_screen_animation_style_title">啟動畫面樣式</string>
@@ -998,7 +1015,7 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_title">標題標誌</string>
   <string name="morphe_header_logo_entry_1">預設</string>
   <string name="morphe_header_logo_entry_2">一般</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">自訂</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">繞過圖片區域限制</string>

@@ -500,15 +500,9 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Mostra un\'anteprima in miniatura del video durante il trascinamento della barra di ricerca</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Più riprodotti</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_livestream_dvr_not_available">"'Abilita registrazione DVR in diretta' potrebbe non essere disponibile
-
-Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client predefinito' in 'TV' o 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Espandi la durata DVR sui video in diretta</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Consente di riavvolgere i video in diretta fino a 7 giorni</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Espandi durata DVR in diretta' potrebbe non essere disponibile
-
-Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client predefinito' in 'TV' o 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Abilita scorri per avanzare</string>
   <string name="morphe_slide_to_seek_summary">Abilita lo scorrimento per la ricerca anziché la riproduzione a velocità 2x quando si preme e si tiene premuto sul lettore video</string>
@@ -951,7 +945,7 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_miniplayer_disable_resuming_summary">Impedisce al lettore minimizzato \'Continua a guardare\' di essere mostrato all\'avvio dell\'app</string>
   <string name="morphe_miniplayer_screen_title">Lettore minimizzato</string>
   <string name="morphe_miniplayer_screen_summary">Personalizza l\'aspetto e il comportamento del lettore minimizzato</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube ha rimosso tutti i miniplayer aggiuntivi. Per cambiare il tipo di miniplayer, applica una patch a YouTube 21.28.207 o a una versione precedente</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube ha rimosso tutti i miniplayer aggiuntivi. Per cambiare il tipo di miniplayer, applica la patch a YouTube 21.28.208 o versioni precedenti.</string>
   <string name="morphe_miniplayer_type_title">Tipo di Lettore minimizzato</string>
   <string name="morphe_miniplayer_type_entry_0">Disattivato</string>
   <string name="morphe_miniplayer_type_entry_1">Predefinito</string>
@@ -981,6 +975,7 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_back_button_always_exits_feed_title">Il pulsante Indietro esce dal feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Premendo il pulsante Indietro si esce sempre dall\'app invece di scorrere fino all\'inizio del feed</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">Personalizzato</string>
   <string name="morphe_gradient_loading_screen_title">Abilita schermata di caricamento litho con gradiente</string>
   <string name="morphe_gradient_loading_screen_summary">Mostra uno sfondo sfumato sulla schermata di caricamento anziché un colore solido</string>
   <string name="morphe_splash_screen_animation_style_title">Stile della schermata iniziale</string>
@@ -998,7 +993,7 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_header_logo_title">Logo dell\'intestazione</string>
   <string name="morphe_header_logo_entry_1">Predefinito</string>
   <string name="morphe_header_logo_entry_2">Regolare</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Personalizzato</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Aggira le restrizioni regionali delle immagini</string>

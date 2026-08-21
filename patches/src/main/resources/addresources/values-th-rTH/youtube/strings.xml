@@ -502,13 +502,13 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'เปิดใช้งาน DVR ไลฟ์สตรีม' อาจไม่สามารถใช้งานได้
 
-หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV' หรือ 'visionOS'"</string>
+หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV Simply' หรือ 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">ขยายระยะเวลา DVR ไลฟ์สตรีม</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">ช่วยให้คุณสามารถย้อนกลับการออกอากาศสดได้ถึง 7 วันย้อนหลัง</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'ขยายระยะเวลา DVR ไลฟ์สตรีม' อาจไม่สามารถใช้งานได้
 
-หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV' หรือ 'visionOS'"</string>
+หากต้องการแก้ไข โปรดเปิด 'ปลอมแปลงสตรีมวิดีโอ' และเปลี่ยน 'ไคลเอ็นต์เริ่มต้น' เป็น 'TV Simply' หรือ 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">เปิดใช้งานเลื่อนเพื่อค้นหา</string>
   <string name="morphe_slide_to_seek_summary">เปิดใช้งานการปัดเพื่อค้นหาแทนการเล่นด้วยความเร็ว 2 เท่าเมื่อกดค้างที่เครื่องเล่นวิดีโอ</string>
@@ -951,7 +951,7 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_disable_resuming_summary">ปิดใช้งานเครื่องเล่นขนาดเล็ก \'ดูต่อ\' ซึ่งเป็นคุณสมบัติพิเศษสำหรับ YouTube Premium ที่ปรากฏขึ้นเมื่อเริ่มต้นแอป</string>
   <string name="morphe_miniplayer_screen_title">มินิเพลเยอร์</string>
   <string name="morphe_miniplayer_screen_summary">ปรับแต่งรูปลักษณ์และพฤติกรรมของเครื่องเล่นวิดีโอขนาดเล็ก</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube ได้ลบมินิเพลเยอร์เพิ่มเติมทั้งหมดออกแล้ว หากต้องการเปลี่ยนประเภทมินิเพลเยอร์ โปรดอัปเดตแพตช์ YouTube เป็นเวอร์ชัน 21.28.207 หรือเก่ากว่า</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube ได้ลบมินิเพลเยอร์เพิ่มเติมทั้งหมดออกแล้ว หากต้องการเปลี่ยนประเภทมินิเพลเยอร์ โปรดอัปเดตแพตช์ YouTube เป็นเวอร์ชัน 21.28.208 หรือเก่ากว่า</string>
   <string name="morphe_miniplayer_type_title">ประเภทของเครื่องเล่นย่อขนาด</string>
   <string name="morphe_miniplayer_type_entry_0">ปิดการใช้งานอยู่</string>
   <string name="morphe_miniplayer_type_entry_1">ค่าเริ่มต้น</string>
@@ -981,6 +981,7 @@ Second \"item\" text"</string>
   <string name="morphe_back_button_always_exits_feed_title">ปุ่มกลับออกจากฟีด</string>
   <string name="morphe_back_button_always_exits_feed_summary">การกดปุ่มกลับจะออกจากแอปเสมอ แทนที่จะเลื่อนไปที่ด้านบนของฟีด</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_entry_14">กำหนดเอง</string>
   <string name="morphe_gradient_loading_screen_title">เปิดใช้งานหน้าจอโหลดแบบไล่ระดับสี</string>
   <string name="morphe_gradient_loading_screen_summary">แสดงพื้นหลังไล่ระดับสีบนหน้าจอการโหลดแทนที่จะเป็นสีทึบ</string>
   <string name="morphe_splash_screen_animation_style_title">รูปแบบหน้าจอ Splash</string>
@@ -998,7 +999,7 @@ Second \"item\" text"</string>
   <string name="morphe_header_logo_title">โลโก้ส่วนหัว</string>
   <string name="morphe_header_logo_entry_1">ค่าเริ่มต้น</string>
   <string name="morphe_header_logo_entry_2">ปกติ</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">กำหนดเอง</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">เลี่ยงข้อจำกัดด้านภูมิภาคของรูปภาพ</string>

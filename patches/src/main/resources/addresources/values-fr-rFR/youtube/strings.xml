@@ -502,13 +502,13 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"'Activer le DVR des diffusions en direct' peut ne pas être disponible
 
-Pour corriger cela, activez 'Falsifier les flux vidéo' et définissez 'Client par défaut' en 'TV' ou 'visionOS'"</string>
+Pour corriger cela, activez 'Falsifier les flux vidéo' et définissez 'Client par défaut' en 'TV Simply' ou 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Étendre la durée du DVR des diffusions en direct</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Permet de revenir en arrière dans les diffusions en direct jusqu\'à 7 jours dans le passé</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_expand_livestream_dvr_duration_not_available">"'Étendre la durée du DVR des diffusions en direct' peut ne pas être disponible
 
-Pour corriger cela, activez 'Falsifier les flux vidéo' et définissez 'Client par défaut' en 'TV' ou 'visionOS'"</string>
+Pour corriger cela, activez 'Falsifier les flux vidéo' et définissez 'Client par défaut' en 'TV Simply' ou 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activer \'Faites glisser pour rechercher\'</string>
   <string name="morphe_slide_to_seek_summary">Active le glissement pour rechercher au lieu de la lecture en 2× lors d\'un appui long sur le lecteur vidéo</string>
@@ -952,7 +952,7 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_miniplayer_disable_resuming_summary">Désactive le mini-lecteur \'Continuer à regarder\', une fonctionnalité de YouTube Premium qui s\'affiche au démarrage de l\'application</string>
   <string name="morphe_miniplayer_screen_title">Mini-lecteur</string>
   <string name="morphe_miniplayer_screen_summary">Personnalisez l\'apparence et le comportement du mini-lecteur vidéo</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube a supprimé tous les mini-lecteurs supplémentaires. Pour changer le type de mini-lecteur, appliquez le patch à YouTube version 21.28.207 ou une version antérieure</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube a supprimé tous les mini-lecteurs supplémentaires. Pour changer le type de mini-lecteur, appliquez un patch à YouTube version 21.28.208 ou antérieure</string>
   <string name="morphe_miniplayer_type_title">Type de mini-lecteur</string>
   <string name="morphe_miniplayer_type_entry_0">Désactivé</string>
   <string name="morphe_miniplayer_type_entry_1">Par défaut</string>
@@ -982,6 +982,23 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_back_button_always_exits_feed_title">Le bouton \'Retour\' quitte le flux</string>
   <string name="morphe_back_button_always_exits_feed_summary">Appuyer sur retour quitte toujours l\'application au lieu de faire défiler le flux jusqu\'en haut</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Arrière-plan du thème clair</string>
+  <string name="morphe_theme_background_light_entry_1">Par défaut de l\'application</string>
+  <string name="morphe_theme_background_light_entry_2">Blanc</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutre)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Principal)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Secondaire)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Tertiaire)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Rose clair</string>
+  <string name="morphe_theme_background_light_entry_9">Bleu clair</string>
+  <string name="morphe_theme_background_light_entry_10">Vert clair</string>
+  <string name="morphe_theme_background_light_entry_11">Jaune clair</string>
+  <string name="morphe_theme_background_light_entry_12">Orange clair</string>
+  <string name="morphe_theme_background_light_entry_13">Rouge clair</string>
+  <string name="morphe_theme_background_light_entry_14">Personnalisée</string>
+  <string name="morphe_theme_background_light_custom_color_title">Arrière-plan clair personnalisé</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Définir la couleur d\'arrière-plan du thème clair</string>
   <string name="morphe_gradient_loading_screen_title">Activer le dégradé sur l\'écran de chargement</string>
   <string name="morphe_gradient_loading_screen_summary">Affiche un arrière-plan dégradé sur l\'écran de chargement au lieu d\'une couleur unie</string>
   <string name="morphe_splash_screen_animation_style_title">Style de l\'écran de lancement</string>
@@ -999,7 +1016,7 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_header_logo_title">Logo d\'en-tête</string>
   <string name="morphe_header_logo_entry_1">Par défaut</string>
   <string name="morphe_header_logo_entry_2">Normal</string>
-  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_3'. -->
+  <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <string name="morphe_header_logo_entry_5">Personnalisé</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Contourner les restrictions des images selon les régions</string>
