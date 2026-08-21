@@ -346,7 +346,7 @@ Toque aqui para abrir AiSlopList.com e ver downloads para outras plataformas"</s
   <string name="morphe_disable_connect_your_devices_popup_title">Desativar pop-up \'Conecte seus dispositivos\'</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <string name="morphe_disable_chapter_skip_double_tap_title">Desativar toque duplo para pular capítulos</string>
-  <string name="morphe_disable_chapter_skip_double_tap_summary">Desativar toque duplo com dois dedos para pular capítulos</string>
+  <string name="morphe_disable_chapter_skip_double_tap_summary">Desativa o toque duplo com dois dedos para pular capítulos</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Faça o download de vídeos, podcasts ou músicas com apps de terceiros</string>
   <string name="morphe_external_downloader_title">Mostrar botão de download externo</string>
@@ -706,6 +706,9 @@ Para acessar as Configurações, ative o botão Configurações via Geral → Ba
   <string name="morphe_hide_player_flyout_audio_track_title">Ocultar menu \'Faixa de áudio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"O menu 'Faixa de áudio' está oculto
+
+Para mostrar o menu 'Faixa de áudio', altere 'Simular streams de vídeo' para qualquer cliente exceto 'Android Studio' e 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ocultar rodapé do menu \'Faixa de áudio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ocultar menu Legendas</string>
@@ -1147,6 +1150,7 @@ A reprodução de vídeos com AV1 pode apresentar travamentos ou perda de frames
   <string name="morphe_spoof_video_streams_about_js">• Se a desobfuscação falhar, a reprodução pode falhar</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forçar áudio original não está disponível</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• É necessário fazer login no Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• A qualidade pode ser limitada a 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Variante de JavaScript do player</string>

@@ -134,6 +134,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_fullscreen_ads_title">隐藏全屏广告</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">要使用此功能，请将“伪造视频流”更改为除“Android Studio”和“Android VR 降级”之外的任何客户端</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">净化分享链接</string>
   <string name="morphe_sanitize_sharing_links_summary">从共享链接中删除跟踪查询参数</string>

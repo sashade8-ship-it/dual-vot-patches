@@ -134,6 +134,7 @@ YouTube Premiumのユーザーの場合、この設定は必要ない場合が�
   <string name="morphe_hide_fullscreen_ads_title">全画面広告を非表示</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">この機能を使用するには、[動画ストリームを偽装] のクライアントを「Android Studio」および「Android VR Downgraded」を除く任意のクライアントに設定してください</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">共有リンクを無害化</string>
   <string name="morphe_sanitize_sharing_links_summary">共有リンクから追跡パラメータを削除します</string>

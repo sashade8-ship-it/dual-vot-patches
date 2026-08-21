@@ -707,6 +707,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">隐藏“音轨”菜单</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"“音频轨道”菜单已隐藏
+
+要显示“音频轨道”菜单，请将“伪装视频流”更改为除“Android Studio”和“Android VR 降级”以外的任何客户端"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">隐藏“音轨”菜单页脚</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">隐藏字幕菜单</string>
@@ -897,6 +900,8 @@ Second \"item\" text"</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">覆盖 YouTube Music 按钮</string>
   <string name="morphe_override_youtube_music_buttons_summary">打开您首选的音乐应用，而不是默认的YouTube Music应用</string>
+  <string name="morphe_custom_music_package_name_title">音乐应用包名</string>
+  <string name="morphe_custom_music_package_name_summary">你安装的音乐应用的包名</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">开始页面</string>
   <string name="morphe_change_start_page_entry_default">默认</string>
@@ -973,6 +978,8 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_opacity_summary">调整透明度 (0 为透明，100 为不透明)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">小型播放器叠加层的透明度必须介于 0-100 之间</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">返回按钮退出信息流</string>
+  <string name="morphe_back_button_always_exits_feed_summary">按返回键总是退出应用，而不是滚动到信息流顶部</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">启用渐变的加载屏幕</string>
   <string name="morphe_gradient_loading_screen_summary">在加载屏幕上显示渐变背景，而不是纯色</string>
@@ -1144,6 +1151,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_js">• 如果去混淆失败，播放可能会失败</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• 强制原始音频不可用</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• 需要登录 Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• 视频质量可能限制为 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">播放器JavaScript变种</string>

@@ -705,6 +705,9 @@ For at få adgang til Indstillinger skal du aktivere knappen Indstillinger via G
   <string name="morphe_hide_player_flyout_audio_track_title">Skjul \'Lydspor\'-menuen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Lydspor'-menuen er skjult
+
+For at vise 'Lydspor'-menuen skal du ændre 'Forfalsk videostreams' til enhver klient undtagen 'Android Studio' og 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skjul \'Lydspor\'-menuens sidefod</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skjul Undertekster-menuen</string>
@@ -1146,6 +1149,7 @@ Videoafspilning med AV1 kan hakke eller tabe billeder."</string>
   <string name="morphe_spoof_video_streams_about_js">• Hvis deobfuskering mislykkes, kan afspilning mislykkes</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Tving original lyd er ikke tilgængelig</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Log ind på Android er påkrævet</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kvaliteten kan være begrænset til 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Afspiller JavaScript-variant</string>

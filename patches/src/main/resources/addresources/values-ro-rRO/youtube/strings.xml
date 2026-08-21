@@ -707,6 +707,9 @@ Pentru a accesa Setări, activați butonul Setări prin General → Bara de inst
   <string name="morphe_hide_player_flyout_audio_track_title">Ascunde meniul \'Piesă audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniu 'Audio Track' este ascuns
+
+Pentru a afișa meniul 'Audio Track', schimbă 'Spoof video streams' în orice client, cu excepția 'Android Studio' și 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ascunde subsolul meniului \'Piesă audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ascunde meniul Subtitrări</string>
@@ -1148,6 +1151,7 @@ Redarea video cu AV1 poate sacada sau pierde cadre."</string>
   <string name="morphe_spoof_video_streams_about_js">• Dacă deobfuscarea eșuează, reproducerea poate eșua</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forțarea sunetului original nu este disponibilă</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Este necesară conectarea la Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Calitatea poate fi limitată la 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Varianta JavaScript a playerului</string>

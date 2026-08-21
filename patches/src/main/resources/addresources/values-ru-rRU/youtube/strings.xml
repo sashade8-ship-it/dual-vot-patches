@@ -709,6 +709,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">Скрыть меню \"Аудиотреки\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню аудио дорожек скрыто
+
+Чтобы отобразить меню аудио дорожек, измените «Поддельные видео потоки» на любой клиент, кроме «Android Studio» и «Android VR Downgraded»"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Скрыть нижний колонтитул меню «Аудиотреки»</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Скрыть меню \"Субтитры\"</string>
@@ -1150,6 +1153,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_js">• Если деобфускация провалится, воспроизведение может провалиться</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Принудительная оригинальная звуковая дорожка недоступна</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Требуется вход в Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Качество может быть ограничено 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Вариант JavaScript плеера</string>

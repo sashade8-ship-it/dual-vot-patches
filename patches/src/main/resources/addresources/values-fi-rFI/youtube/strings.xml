@@ -707,6 +707,9 @@ Saadaksesi asetukset, ota Asetukset-painike käyttöön kohdasta Yleiset → Ty�
   <string name="morphe_hide_player_flyout_audio_track_title">Piilota \"Ääniraita\"-valikko</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Ääniraitavalikko on piilotettu
+
+Jos haluat näyttää ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetukseksi mihin tahansa asiakassovellukseen paitsi \"Android Studio\" ja \"Android VR Downgraded\"."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Piilota \'Ääniraita\'-valikon alatunniste</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Piilota Tekstitykset-valikko</string>
@@ -1148,6 +1151,7 @@ AV1-videon toisto saattaa pätkiä."</string>
   <string name="morphe_spoof_video_streams_about_js">• Jos deobfuskointi epäonnistuu, toistaminen saattaa epäonnistua</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Pakota alkuperäinen ääni ei ole käytettävissä</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Kirjautuminen Android VR -tilaan on pakollista</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Laatu saattaa rajoittua 720p:hen</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Pelaajan JavaScript-versio</string>

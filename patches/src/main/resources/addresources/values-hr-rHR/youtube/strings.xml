@@ -709,6 +709,9 @@ Za pristup Postavkama, omogućite gumb Postavke putem Općenito $\rightarrow$ Tr
   <string name="morphe_hide_player_flyout_audio_track_title">Sakrij izbornik \'Audio zapis\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Izbornik audio zapisa je skriven
+
+Da biste prikazali izbornik audio zapisa, promijenite 'Parodija video streamova' u bilo koji klijent osim 'Android Studio' i 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Sakrij podnožje izbornika \'Audio zapis\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Sakrij izbornik Titlovi</string>
@@ -899,6 +902,8 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Nadjačaj tipke YouTube Musica</string>
   <string name="morphe_override_youtube_music_buttons_summary">Otvara vašu omiljenu glazbenu aplikaciju umjesto standardne aplikacije YouTube Music</string>
+  <string name="morphe_custom_music_package_name_title">Naziv paketa glazbene aplikacije</string>
+  <string name="morphe_custom_music_package_name_summary">Naziv paketa vaše instalirane glazbene aplikacije</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Početna stranica</string>
   <string name="morphe_change_start_page_entry_default">Zadano</string>
@@ -975,6 +980,8 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_miniplayer_opacity_summary">Prilagodite razinu prozirnosti (0 je prozirno, 100 je neprozirno)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Veličina miniplayera mora biti između %1$s i %2$s</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Gumb natrag izlazi iz feeda</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Pritiskanje gumba natrag uvijek izlazi iz aplikacije umjesto pomicanja na vrh feeda</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Prozirnost nadlaga</string>
   <string name="morphe_gradient_loading_screen_summary">Prikazuje gradijentnu pozadinu na zaslonu za učitavanje umjesto jednobojne boje</string>
@@ -1146,6 +1153,7 @@ Video playback s AV1 može stutterati ili padati frame-ove."</string>
   <string name="morphe_spoof_video_streams_about_js">• Ako neuspije deobfuskacija, reproducija može neuspjeti</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Nema force original audio</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Potrebna je prijava na Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kvaliteta može biti ograničena na 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Varijanta JavaScript igrača</string>

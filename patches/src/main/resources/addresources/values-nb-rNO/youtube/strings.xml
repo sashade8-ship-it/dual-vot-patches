@@ -707,6 +707,9 @@ For å få tilgang til Innstillinger, aktiver Innstillingsknappen via General �
   <string name="morphe_hide_player_flyout_audio_track_title">Skjul \"Lydspor\"-menyen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track'-menyen er skjult
+
+For å vise 'Audio Track'-menyen, endre 'Forfalsk videostrømmer' til en hvilken som helst klient unntatt 'Android Studio' og 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skjul Undertekster-meny</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skjul Undertekster-menyen fotnote</string>
@@ -898,6 +901,7 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_override_youtube_music_buttons_title">Overskriv YouTube Music-knapper</string>
   <string name="morphe_override_youtube_music_buttons_summary">Åpner din foretrukne musikkapp i stedet for standard YouTube Music-appen</string>
   <string name="morphe_custom_music_package_name_title">Pakkenavn for musikkapp</string>
+  <string name="morphe_custom_music_package_name_summary">Pakkenavnet til den installerte musikkappen</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Startside</string>
   <string name="morphe_change_start_page_entry_default">Standard</string>
@@ -974,6 +978,8 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_miniplayer_opacity_summary">Juster gjennomsiktighetsnivået (0 er gjennomsiktig, 100 er ugjennomsiktig)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Minispillerens overleggsopasitet må være mellom 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Tilbake-knappen avslutter feeden</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Å trykke tilbake avslutter alltid appen i stedet for å rulle til toppen av feeden</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Aktiver gradientlasteskjerm</string>
   <string name="morphe_gradient_loading_screen_summary">Viser en gradientbakgrunn på lasteskjermen i stedet for en solid farge</string>
@@ -1143,6 +1149,7 @@ Videospilling med AV1 kan hakke eller miste bilder."</string>
   <string name="morphe_spoof_video_streams_about_js">• Hvis obfuscering mislykkes, kan avspillingen mislykkes</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Original lyd kan ikke tvinges</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Pålogging til Android VR er nødvendig</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kvaliteten kan være begrenset til 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Spiller JavaScript-variant</string>

@@ -707,6 +707,9 @@ Per accedere alle Impostazioni, attiva il pulsante Impostazioni tramite Generale
   <string name="morphe_hide_player_flyout_audio_track_title">Nascondi il menù \'Traccia audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Il menu 'Audio Track' è nascosto
+
+Per mostrare il menu 'Audio Track', cambia 'Falsificazione dei flussi video' in qualsiasi client tranne 'Android Studio' e 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Nascondi il piè di pagina del menu \'Traccia audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Nascondi il menù Sottotitoli</string>
@@ -975,6 +978,8 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_miniplayer_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">L\'opacità della sovrapposizione del lettore minimizzato deve essere compresa tra 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Il pulsante Indietro esce dal feed</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Premendo il pulsante Indietro si esce sempre dall\'app invece di scorrere fino all\'inizio del feed</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Abilita schermata di caricamento litho con gradiente</string>
   <string name="morphe_gradient_loading_screen_summary">Mostra uno sfondo sfumato sulla schermata di caricamento anziché un colore solido</string>
@@ -1146,6 +1151,7 @@ La riproduzione video con AV1 potrebbe rallentare o perdere fotogrammi."</string
   <string name="morphe_spoof_video_streams_about_js">• In caso di fallimento della deobfuscazione, la riproduzione potrebbe fallire</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• L\'audio originale forzato non è disponibile</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• È richiesto l\'accesso con Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• La qualità potrebbe essere limitata a 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Variante JavaScript del lettore</string>

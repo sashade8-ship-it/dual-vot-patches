@@ -708,6 +708,9 @@ Um auf die Einstellungen zuzugreifen, aktiviere den Einstellungen-Button über A
   <string name="morphe_hide_player_flyout_audio_track_title">Menü „Audiotrack“ ausblenden</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Das Menü \"Audio-Track\" ist ausgeblendet
+
+Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in einen beliebigen Client außer \"Android Studio\" und \"Android VR Downgraded\""</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Audio Track im unteren Menübereich ausblenden</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Untertitel-Menü ausblenden</string>
@@ -1149,6 +1152,7 @@ Die Videowiedergabe mit AV1 kann stottern oder Bilder überspringen."</string>
   <string name="morphe_spoof_video_streams_about_js">• Wenn die Deobfuskation fehlschlägt, kann die Wiedergabe fehlschlagen</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Originalton erzwingen ist nicht verfügbar</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Die Anmeldung bei Android VR ist erforderlich</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Die Qualität kann auf 720p beschränkt sein</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Player-JavaScript-Variante</string>

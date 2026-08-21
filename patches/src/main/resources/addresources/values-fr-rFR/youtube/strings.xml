@@ -707,6 +707,9 @@ Pour accéder aux paramètres, activez le bouton 'Paramètres' via Général →
   <string name="morphe_hide_player_flyout_audio_track_title">Masquer le menu \'Piste audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Le menu 'Piste audio' est masqué
+
+Pour afficher le menu 'Piste audio', changez 'Falsifier les flux vidéo' et sélectionnez n'importe quel client sauf 'Android Studio' ou 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Masquer le pied de page du menu \'Piste audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Masquer le menu \'Sous-titres\'</string>
@@ -1149,6 +1152,7 @@ La lecture de vidéos en AV1 peut présenter des saccades ou des pertes d'images
   <string name="morphe_spoof_video_streams_about_js">• Si la désobfuscation échoue, la lecture peut échouer</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forcer la langue audio d\'origine n\'est pas disponible</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• La connexion à Android VR est nécessaire</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• La qualité peut être limitée à 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Variante JavaScript du lecteur</string>

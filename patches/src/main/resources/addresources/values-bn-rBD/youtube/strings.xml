@@ -707,6 +707,9 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_hide_player_flyout_audio_track_title">\'অডিও ট্র্যাক\' মেনু লুকান</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'অডিও ট্র্যাক' মেনু লুকানো আছে
+
+'অডিও ট্র্যাক' মেনু দেখাতে, 'স্পুফ ভিডিও স্ট্রিম' যেকোনো ক্লায়েন্টে পরিবর্তন করুন 'Android Studio' এবং 'Android VR Downgraded' ছাড়া"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'অডিও ট্র্যাক\' মেনুর ফুটার লুকান</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">ক্যাপশন মেনু লুকান</string>
@@ -1148,6 +1151,7 @@ AV1 সহ ভিডিও প্লেব্যাক আটকে যেতে
   <string name="morphe_spoof_video_streams_about_js">• যদি ডিকোডিং ব্যর্থ হয়, তাহলে প্লেব্যাকও ব্যর্থ হতে পারে</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• মূল অডিও জোরপূর্বক উপলব্ধ নেই</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Android VR-এ সাইন ইন প্রয়োজন</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• গুণমান 720p পর্যন্ত সীমিত হতে পারে</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">প্লেয়ার জাভাস্ক্রিপ্ট ভেরিয়েন্ট</string>

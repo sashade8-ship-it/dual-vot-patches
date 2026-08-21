@@ -707,6 +707,9 @@ Na prístup k nastaveniam povoľte tlačidlo Nastavenia v časti Všeobecné →
   <string name="morphe_hide_player_flyout_audio_track_title">Skryť ponuku \'Zvuková stopa\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track' menu je skryté
+
+Ak chcete zobraziť menu 'Audio Track', zmeňte 'Spoofovanie video streamov' na ľubovoľného klienta okrem 'Android Studio' a 'Android VR Downgraded'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skryť pätičku ponuky \'Zvuková stopa\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skryť ponuku \'Titulky\'</string>
@@ -1148,6 +1151,7 @@ Pri prehrávaní pomocou AV1 sa video môže zasekávať alebo vynechávať sní
   <string name="morphe_spoof_video_streams_about_js">• Ak deobfuskácia zlyhá, prehrávanie nemusí fungovať</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Vynútenie pôvodného zvuku nie je k dispozícii</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Vyžaduje sa prihlásenie do Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kvalita môže byť obmedzená na 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Variant JavaScriptu prehrávača</string>

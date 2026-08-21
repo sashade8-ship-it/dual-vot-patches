@@ -667,11 +667,11 @@ Se deben proporcionar 'cookies de subtítulos'"</string>
   <string name="morphe_hide_subscriptions_button_title">Ocultar botón Suscripciones</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_notifications_button_title">Ocultar botón Notificaciones</string>
-  <string name="morphe_show_search_button_title">Mostrar botón de búsqueda</string>
-  <string name="morphe_show_search_button_index_title">Posición del botón de búsqueda</string>
-  <string name="morphe_show_settings_button_title">Mostrar botón de ajustes</string>
-  <string name="morphe_show_settings_button_index_title">Posición del botón de ajustes</string>
-  <string name="morphe_show_settings_button_type_title">Acción del botón de ajustes</string>
+  <string name="morphe_show_search_button_title">Mostrar botón de Búsqueda</string>
+  <string name="morphe_show_search_button_index_title">Posición del botón de Búsqueda</string>
+  <string name="morphe_show_settings_button_title">Mostrar botón de Ajustes</string>
+  <string name="morphe_show_settings_button_index_title">Posición del botón de Ajustes</string>
+  <string name="morphe_show_settings_button_type_title">Acción del botón de Ajustes</string>
   <string name="morphe_show_settings_button_type_summary">Abre los ajustes de Morphe cuando está activado o los de YouTube cuando está desactivado</string>
   <string name="morphe_swap_create_with_notifications_button_title">Cambiar botón Crear por Notificaciones</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Si cambiar este ajuste no tiene efecto, intenta cambiar al modo incógnito</string>
@@ -679,7 +679,7 @@ Se deben proporcionar 'cookies de subtítulos'"</string>
   <string name="morphe_hide_navigation_bar_title">Ocultar barra de navegación</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Esto oculta por completo la barra de navegación, incluida la pestaña 'Tú'.
 
-Para acceder a los ajustes, activa el botón de ajustes a través de General → Barra de herramientas → Mostrar ajustes."</string>
+Para acceder a los ajustes, activa el botón de ajustes a través de General → Barra de herramientas → Mostrar Ajustes."</string>
   <string name="morphe_narrow_navigation_buttons_title">Activar botones de navegación estrechos</string>
   <string name="morphe_narrow_navigation_buttons_summary">Reduce el espacio horizontal entre los botones</string>
   <string name="morphe_navigation_bar_animations_title">Activar animaciones de barra de navegación</string>
@@ -696,9 +696,9 @@ Para acceder a los ajustes, activa el botón de ajustes a través de General →
   <string name="morphe_hide_toolbar_microphone_button_title">Ocultar botón Micrófono</string>
   <string name="morphe_hide_toolbar_notification_button_title">Ocultar botón Notificaciones</string>
   <string name="morphe_hide_toolbar_search_button_title">Ocultar botón Buscar</string>
-  <string name="morphe_show_toolbar_settings_button_title">Mostrar botón de ajustes</string>
-  <string name="morphe_show_toolbar_settings_button_index_title">Posición del botón de ajustes</string>
-  <string name="morphe_show_toolbar_settings_button_type_title">Acción del botón de ajustes</string>
+  <string name="morphe_show_toolbar_settings_button_title">Mostrar botón de Ajustes</string>
+  <string name="morphe_show_toolbar_settings_button_index_title">Posición del botón de Ajustes</string>
+  <string name="morphe_show_toolbar_settings_button_type_title">Acción del botón de Ajustes</string>
   <string name="morphe_show_toolbar_settings_button_type_summary">Cuando está activado, pulsar abre los ajustes de Morphe y mantener pulsado abre la configuración de YouTube; desactivar para invertir el comportamiento</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menú desplegable</string>
@@ -707,6 +707,7 @@ Para acceder a los ajustes, activa el botón de ajustes a través de General →
   <string name="morphe_hide_player_flyout_audio_track_title">Ocultar menú \'Pista de audio\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"El menú 'Pista de audio' está oculto\n\nPara mostrar el menú 'Pista de audio', cambia 'Falsificar transmisiones de vídeo' a cualquier cliente excepto 'Android Studio' y 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ocultar pie del menú \'Pista de audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ocultar menú Subtítulos</string>
@@ -719,7 +720,7 @@ Para acceder a los ajustes, activa el botón de ajustes a través de General →
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Ocultar menú \'Reproducción en bucle\'</string>
   <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Ocultar menú \'Modo Ambiente\'</string>
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Ocultar menú Modo Ambiente</string>
   <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_stable_volume_title">Ocultar menú \'Volumen estable\'</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -751,16 +752,16 @@ Para acceder a los ajustes, activa el botón de ajustes a través de General →
   <string name="morphe_hide_player_control_buttons_background_title">Ocultar fondo de controles del reproductor</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Oculta el sombreado oscuro que rodea los controles del reproductor de vídeo</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Ocultar botones Anterior y Siguiente</string>
-  <string name="morphe_hide_settings_button_title">Ocultar botón de ajustes</string>
+  <string name="morphe_hide_settings_button_title">Ocultar botón de Ajustes</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
   <string name="morphe_hide_end_screen_cards_title">Ocultar tarjetas de pantalla final</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
   <string name="morphe_ambient_mode_screen_title">Modo Ambiente</string>
-  <string name="morphe_ambient_mode_screen_summary">Administra la visibilidad del \'Modo Ambiente\' y las restricciones de energía</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_title">Omitir restricciones del \'Modo Ambiente\'</string>
-  <string name="morphe_bypass_ambient_mode_restrictions_summary">Permite que el \'Modo Ambiente\' permanezca activo en modo de ahorro de batería</string>
-  <string name="morphe_disable_ambient_mode_title">Desactivar \'Modo Ambiente\'</string>
-  <string name="morphe_disable_fullscreen_ambient_mode_title">Desactivar \'Modo Ambiente\' en pantalla completa</string>
+  <string name="morphe_ambient_mode_screen_summary">Administra la visibilidad del Modo Ambiente y las restricciones de energía</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Omitir restricciones del Modo Ambiente</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary">Permite que el Modo Ambiente permanezca activo en modo de ahorro de batería</string>
+  <string name="morphe_disable_ambient_mode_title">Desactivar Modo Ambiente</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_title">Desactivar Modo Ambiente en pantalla completa</string>
   <!-- layout.hide.infocards.hideInfocardsPatch -->
   <string name="morphe_hide_info_cards_title">Ocultar tarjetas de información</string>
   <!-- layout.hide.rollingnumber.disableRollingNumberAnimationPatch -->
@@ -1148,6 +1149,7 @@ La reproducción de vídeo con AV1 se puede atascar o perder fotogramas."</strin
   <string name="morphe_spoof_video_streams_about_js">• Si el descifrado falla, la reproducción puede fallar</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Forzar audio original no está disponible</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Es necesario iniciar sesión en Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• La calidad puede estar limitada a 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Variante de JavaScript del reproductor</string>

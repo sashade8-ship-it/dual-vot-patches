@@ -705,6 +705,7 @@ Til þess að fá access til stillingarinnar skaltu koma á stillinguna í gegnu
   <string name="morphe_hide_player_flyout_audio_track_title">Felur \'Hljóðrás\' valmynd</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Hljóðrás' valmyndin er falin\n\nTil að sýna 'Hljóðrás' valmyndina, breyttu 'Falsa myndstrauma' í hvaða biðlara sem er nema 'Android Studio' og 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Felur \'Hljóðrás\' valmyndar fætur</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Felur Undirrita valmynd</string>
@@ -973,6 +974,8 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_miniplayer_opacity_summary">Stilltu gegnsæisstig (0 er gagnsætt, 100 er ógegnsær)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Opacité miniplayer yfirborðsins verður að vera á milli 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Til baka-hnappur fer út úr straumnum</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Að ýta á til baka fer alltaf út úr appinu í stað þess að skrilla upp efst í strauminn</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Vírúð álitunni á ræsingarskjáinn</string>
   <string name="morphe_gradient_loading_screen_summary">Sýnir gradient bakgrunn á hleðslaskjánum í stað eins lit</string>
@@ -1144,6 +1147,7 @@ Myndbandsspilun með AV1 getur hakka eða orðið með rammalegsfall."</string>
   <string name="morphe_spoof_video_streams_about_js">• Ef endurkóðun misstakast getur spilunin misst</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Ekki er hægt til þess að neyða upprunalegt hljóð</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Innskráning í Android VR er nauðsynleg</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Gæði gætu takmarkast við 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">JavaScript breyturinnar</string>

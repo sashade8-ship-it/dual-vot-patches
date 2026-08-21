@@ -707,6 +707,9 @@ Chun rochtain a fháil ar Socruithe, cumasaigh an cnaipe Socruithe trí Ghinear�
   <string name="morphe_hide_player_flyout_audio_track_title">Folaigh an roghchlár \'Rian Fuaime\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Tá an roghchlár 'Audio Track' i bhfolach
+
+Chun an roghchlár ‘Audio Track’ a thaispeáint, athraigh ‘Spoof video streams’ chuig cliant ar bith seachas ‘Android Studio’ agus ‘Android VR Downgraded’"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Folaigh buntásc an roghchláir \'Rian Fuaime\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Folaigh roghchlár Fotheidil</string>
@@ -1148,6 +1151,7 @@ D’fhéadfadh sé go mbeadh stad nó go gcaillfí frámaí ag athsheinm físe l
   <string name="morphe_spoof_video_streams_about_js">• Má theipeann ar an dí-dhorchadas, d\'fhéadfadh teip a bheith ar an athsheinm</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Níl an fuaim bhunaidh iallach ar fáil</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Tá síniú isteach ar Android VR ag teastáil</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• D’fhéadfadh an caighdeán a bheith teoranta do 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Leagan JavaScript an imreora</string>

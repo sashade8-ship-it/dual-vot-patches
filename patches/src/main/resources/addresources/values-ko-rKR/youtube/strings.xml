@@ -709,6 +709,9 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_hide_player_flyout_audio_track_title">오디오 트랙 메뉴 숨기기</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'오디오 트랙' 메뉴가 숨겨져 있습니다
+
+'오디오 트랙' 메뉴를 표시하려면, '동영상 스트림 속이기'에서 '기본 클라이언트'를 'Android Studio'와 'Android VR Downgraded'를 제외한 다른 클라이언트로 변경하세요"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">오디오 트랙 설정 메뉴 하단 설명 숨기기</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">자막 메뉴 숨기기</string>
@@ -1150,6 +1153,7 @@ AV1이 사용된 동영상 재생이 끊기거나 프레임이 손실될 수 있
   <string name="morphe_spoof_video_streams_about_js">• 복호화에 실패하면 재생이 실패할 수 있습니다</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• 원본 오디오를 강제로 활성화할 수 없습니다</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Android VR에 로그인해야 합니다</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• 일부 동영상의 최대 화질이 720p로 제한될 수 있습니다</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">플레이어 자바스크립트 변형</string>

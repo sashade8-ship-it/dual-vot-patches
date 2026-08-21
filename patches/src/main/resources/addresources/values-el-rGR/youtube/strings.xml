@@ -707,6 +707,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">Κρύψτε το μενού \'Ήχος\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Το μενού 'Audio Track' είναι κρυφό
+
+Για να εμφανίσετε το μενού 'Audio Track', αλλάξτε την επιλογή 'Πλαστογράφηση ροών βίντεο' σε οποιονδήποτε πελάτη εκτός από 'Android Studio' και 'Android VR Downgraded'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Κρύψτε την υποσημείωση του μενού \'Ήχος\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Κρύψτε το μενού \'Υπότιτλοι\'</string>
@@ -897,6 +900,8 @@ Second \"item\" text"</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Υπέρβαση των κουμπιών YouTube Music</string>
   <string name="morphe_override_youtube_music_buttons_summary">Ανοίγει την προτιμώμενη εφαρμογή μουσικής αντί για την προεπιλεγμένη εφαρμογή YouTube Music</string>
+  <string name="morphe_custom_music_package_name_title">Όνομα πακέτου εφαρμογής μουσικής</string>
+  <string name="morphe_custom_music_package_name_summary">Όνομα πακέτου της εγκατεστημένης εφαρμογής μουσικής σας</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Αρχική σελίδα</string>
   <string name="morphe_change_start_page_entry_default">Προεπιλογή</string>
@@ -1146,6 +1151,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_js">• Εάν η αποπερικοπή αποτύχει, η αναπαραγωγή μπορεί να αποτύχει</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Ο εξαναγκασμός αρχικής γλώσσας ήχου δεν είναι διαθέσιμος</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Απαιτείται είσοδος στο Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Η ποιότητα ενδέχεται να περιορίζεται στα 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Παραλλαγή πρόγραμμα αναπαραγωγής JavaScript</string>

@@ -527,6 +527,7 @@ A javításhoz kapcsolja be a 'Videóstreamek meghamisítása' opciót, és mód
   <string name="morphe_swipe_zone_label_off">Ki</string>
   <string name="morphe_swipe_ignore_when_locked_title">Kezelés figyelmen kívül hagyása zároláskor</string>
   <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the player menu item. -->
+  <string name="morphe_swipe_ignore_when_locked_summary">A csúsztatási gesztusok nem működnek, ha a lejátszó zárolva van a „Képernyő lezárása” funkcióval</string>
   <string name="morphe_swipe_press_to_engage_title">Csúsztatáshoz nyomva tartás engedélyezése</string>
   <string name="morphe_swipe_press_to_engage_summary">A csúsztatási gesztus felismerése előtt meg kell nyomni és nyomva tartani.</string>
   <string name="morphe_swipe_haptic_feedback_title">Haptikus visszajelzés engedélyezése</string>
@@ -706,6 +707,9 @@ A Beállítások eléréséhez engedje a Beállítások gombot a Általános →
   <string name="morphe_hide_player_flyout_audio_track_title">Hangszám menü elrejtése</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track' menü el van rejtve
+
+Az 'Audio Track' menü megjelenítéséhez állítsa a 'Videóstream-ek megtévesztése' beállítást bármely olyan kliensre, amely nem az 'Android Studio' és nem az 'Android VR Downgraded'."</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Hangszám menü lábléc elrejtése</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Feliratok menü elrejtése</string>
@@ -896,6 +900,8 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">A YouTube Music gombok felülbírálása</string>
   <string name="morphe_override_youtube_music_buttons_summary">A kívánt zenealkalmazást nyitja meg az alapértelmezett YouTube Music alkalmazás helyett</string>
+  <string name="morphe_custom_music_package_name_title">Zenealkalmazás csomagneve</string>
+  <string name="morphe_custom_music_package_name_summary">A telepített zenealkalmazás csomagneve</string>
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Kezdőlap</string>
   <string name="morphe_change_start_page_entry_default">Alapértelmezett</string>
@@ -972,6 +978,8 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_miniplayer_opacity_summary">Állítsa be az átlátszó szintet (0 átlátszó, 100 opák)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">A minilejátszó fedvény átlátszatlanságának 0 és 100 között kell lennie</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Kilépés a kezdőoldalról a vissza gombbal</string>
+  <string name="morphe_back_button_always_exits_feed_summary">A vissza gomb megnyomása esetén kilép az alkalmazásból a kezdőoldal tetejére görgetés helyett</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Színátmenetes betöltési képernyő engedélyezése</string>
   <string name="morphe_gradient_loading_screen_summary">Árnyékoló háttér megjelenítése a betöltési képernyőn a tömör szín helyett</string>
@@ -1143,6 +1151,7 @@ Az AV1-es videólejátszás akadozhat vagy képkockákat ejthet."</string>
   <string name="morphe_spoof_video_streams_about_js">• Ha a deobfuszkálás sikertelen, a lejátszás is megbomolhat</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Eredeti hang kényszerítése nem érhető el</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Az Android VR-be való bejelentkezés szükséges.</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• A minőség legfeljebb 720p lehet</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Lejátszó JavaScript változata</string>

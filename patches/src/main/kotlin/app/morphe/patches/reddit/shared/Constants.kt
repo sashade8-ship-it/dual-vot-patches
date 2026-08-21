@@ -15,12 +15,13 @@ internal object Constants {
         ),
         targets = listOf(
             AppTarget(
-                version = "2026.32.0",
+                version = "2026.34.0",
                 minSdk = 28,
                 isExperimental = true
             ),
+            // 2026.33.0 has issues where replying can show an empty comment box.
             AppTarget(
-                version = "2026.31.1",
+                version = "2026.32.0",
                 minSdk = 28,
                 isExperimental = true
             ),

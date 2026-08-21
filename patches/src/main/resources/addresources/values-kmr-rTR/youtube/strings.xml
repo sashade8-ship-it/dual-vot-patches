@@ -708,6 +708,9 @@ Ji bo ku derfetên sazkarî pêşero, rêzika 'Settings' zivirînin bi General �
   <string name="morphe_hide_player_flyout_audio_track_title">Butona nivîskê veşêre</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Menûya 'Audio Track' veşartî ye
+
+Ji bo nîşandana menûya 'Audio Track', 'Spoof video streams' biguherîne her clientekî ji bilî 'Android Studio' û 'Android VR Downgraded'"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Butona paşveveşêrî veşêre</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Butona rêjeya deng veşêre</string>
@@ -1147,6 +1150,7 @@ Lêxistina video bi AV1 dikare kîzbirin an kêmuçêkî framean bike."</string>
   <string name="morphe_spoof_video_streams_about_js">• Ger deobfuscation jê birçîbû, playback dikare jê birçîbû.</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Hişandinê orîjinal audio tune</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Têketina Android VR pêdivî ye</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Kalîte dibe ku bi 720p tê sînordar kirin.</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Warianta JavaScriptê lîstikvanê</string>

@@ -134,6 +134,7 @@ Para iniciar sesión, pulsa en Continuar"</string>
   <string name="morphe_hide_fullscreen_ads_title">Ocultar anuncios a pantalla completa</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">Para usar esta función, cambia \'Falsificar transmisiones de vídeo\' a cualquier cliente excepto \'Android Studio\' y \'Android VR Downgraded\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Limpiar enlaces compartidos</string>
   <string name="morphe_sanitize_sharing_links_summary">Elimina los parámetros de consulta de seguimiento de los enlaces compartidos</string>

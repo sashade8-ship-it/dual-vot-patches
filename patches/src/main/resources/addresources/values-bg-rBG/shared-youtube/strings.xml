@@ -134,6 +134,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_fullscreen_ads_title">Скриване на целите реклами</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">За да използвате тази функция, променете \'Spoof video streams\' на всеки клиент освен \'Android Studio\' и \'Android VR Downgraded\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
   <string name="morphe_sanitize_sharing_links_title">Почистване на споделените връзки</string>
   <string name="morphe_sanitize_sharing_links_summary">Премахва параметрите за проследяване на заявките от споделени връзки</string>

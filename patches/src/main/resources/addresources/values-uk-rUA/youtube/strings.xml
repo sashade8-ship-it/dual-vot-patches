@@ -707,6 +707,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_title">Приховати меню \"Звукова доріжка\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"Пункт меню \"Звукова доріжка\" приховано
+
+Для того, щоб пункт меню \"Звукова доріжка\" показувався, змініть клієнт \"Підміни відеопотоків\" на будь-який, окрім \"Android Studio\" або \"Android VR Downgraded\""</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Приховати нижній колонтитул меню \"Звукова доріжка\"</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Приховати меню \"Субтитри\"</string>
@@ -1147,6 +1150,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_about_js">• Якщо деобфускація не вдається, відтворення може завершитися невдачею</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Примусово оригінальна мова звукової доріжки\" недоступна</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Потрібен вхід в Android VR</string>
   <!-- Quality refers to video quality -->
   <string name="morphe_spoof_video_streams_about_720p_max">• Якість може бути обмежена до 720p</string>
   <string name="morphe_spoof_video_streams_player_js_variant_title">Варіант JavaScript плеєра</string>
