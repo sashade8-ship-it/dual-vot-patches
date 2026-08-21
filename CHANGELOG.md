@@ -1,3 +1,13 @@
+## 1.40.0-dev.16-dualvot.8.3 (2026-08-21)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.16](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.16).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dev.14-dualvot.8.3 (2026-08-21)
 
 ### Automated Morphe update
@@ -352,6 +362,22 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.16](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.15...v1.40.0-dev.16) (2026-08-21)
+
+### 🐛 Bug Fixes
+
+* **Theme:** Use only the color resources that the app version declares ([d1e1514](https://github.com/MorpheApp/morphe-patches/commit/d1e1514360649cd56776afb2ab7455d69826a9fd))
+* **YouTube - Add to queue:** "Overridde 'Play next in queue' button" not working  ([#2539](https://github.com/MorpheApp/morphe-patches/issues/2539)) ([235d3c6](https://github.com/MorpheApp/morphe-patches/commit/235d3c651fc9b01b80b26269c652b6344b073e8c))
+* **YouTube - Swipe controls:** Do not restore the brightness when the player returns from picture in picture ([2deb2a7](https://github.com/MorpheApp/morphe-patches/commit/2deb2a76fdcaa71da1622b7fa18f1f27d78b9a6b))
+* **YouTube - Wide search bar:** Use the background color selected in the settings ([abb7441](https://github.com/MorpheApp/morphe-patches/commit/abb7441fcabebc607b98a7fe0116abdc6fdce2b0))
+
+## [1.40.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.14...v1.40.0-dev.15) (2026-08-21)
+
+### ✨ New Features
+
+* **Spoof video streams:** Makes `TV Simply` available in signed-out or incognito mode by generating a PoToken ([#2533](https://github.com/MorpheApp/morphe-patches/issues/2533)) ([c9a1622](https://github.com/MorpheApp/morphe-patches/commit/c9a1622f047ea33b7cf18544bb88975d4bf0a796))
+* **Theme:** Change the app background color from the app settings ([#2524](https://github.com/MorpheApp/morphe-patches/issues/2524)) ([4d89ab2](https://github.com/MorpheApp/morphe-patches/commit/4d89ab2f7b456f05b79ec79c006da51535a35168))
 
 ## [1.40.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.13...v1.40.0-dev.14) (2026-08-21)
 
