@@ -500,9 +500,15 @@ Promene uključuju:
   <string name="morphe_seekbar_thumbnail_preview_summary">Приказује минијатуру видеа док се премотава трака за премотавање</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Највише репродуковано</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Омогући DVR за уживо стримовање' можда неће бити доступан
+
+Да бисте ово поправили, омогућите „Лажирај видео стримове“ и промените „Подразумевани клијент“ у „TV Simply“ или „visionOS“"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Proširi trajanje DVR-a za striming</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Омогућава вам да премотавате директне преносе уназад до 7 дана</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Прошири трајање DVR-а за уживо стримовање' можда неће бити доступно
+
+Да бисте ово поправили, омогућите „Лажирај видео стримове“ и промените „Подразумевани клијент“ у „TV Simply“ или „visionOS“"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Омогући превлачење за премотавање</string>
   <string name="morphe_slide_to_seek_summary">Омогућава померање за тражење уместо репродукције брзином од 2x када притиснете и задржите плејер видео снимка</string>
@@ -973,6 +979,23 @@ Promene uključuju:
   <string name="morphe_back_button_always_exits_feed_title">Дугме назад излази из фида</string>
   <string name="morphe_back_button_always_exits_feed_summary">Притискање назад увек излази из апликације уместо да се помера на врх фида</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Позадина светле теме</string>
+  <string name="morphe_theme_background_light_entry_1">Подразумевано у апликацији</string>
+  <string name="morphe_theme_background_light_entry_2">Бела</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Неутрално)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Примарна)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Секундарна)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Терцијарна)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Светло розе</string>
+  <string name="morphe_theme_background_light_entry_9">Светло плава</string>
+  <string name="morphe_theme_background_light_entry_10">Светло зелена</string>
+  <string name="morphe_theme_background_light_entry_11">Светло жута</string>
+  <string name="morphe_theme_background_light_entry_12">Светло наранџаста</string>
+  <string name="morphe_theme_background_light_entry_13">Светло црвена</string>
+  <string name="morphe_theme_background_light_entry_14">Прилагођено</string>
+  <string name="morphe_theme_background_light_custom_color_title">Прилагођена светла позадина</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Подесите боју позадине светле теме</string>
   <string name="morphe_gradient_loading_screen_title">Омогући градијентну позадину екрана учитавања</string>
   <string name="morphe_gradient_loading_screen_summary">Приказује градијентну позадину на екрану учитавања уместо пуне боје</string>
   <string name="morphe_splash_screen_animation_style_title">Стил екрана покретања</string>

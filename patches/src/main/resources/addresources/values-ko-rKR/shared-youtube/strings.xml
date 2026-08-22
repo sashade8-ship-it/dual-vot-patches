@@ -22,8 +22,24 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">앱 이름</string>
   <!-- layout.theme.baseThemePatch -->
-  <string name="morphe_theme_background_dark_entry_2">순수 검정</string>
+  <string name="morphe_theme_background_dark_title">어두운 테마 배경 색상</string>
+  <string name="morphe_theme_background_dark_entry_1">앱 기본값</string>
+  <string name="morphe_theme_background_dark_entry_2">순수 검정색</string>
+  <string name="morphe_theme_background_dark_entry_3">Material You (중립)</string>
+  <string name="morphe_theme_background_dark_entry_4">Material You (기본)</string>
+  <string name="morphe_theme_background_dark_entry_5">Material You (보조)</string>
+  <string name="morphe_theme_background_dark_entry_6">Material You (3차)</string>
+  <string name="morphe_theme_background_dark_entry_7">클래식 YouTube</string>
+  <string name="morphe_theme_background_dark_entry_8">카푸치노 (모카)</string>
+  <string name="morphe_theme_background_dark_entry_9">어두운 분홍색</string>
+  <string name="morphe_theme_background_dark_entry_10">어두운 파란색</string>
+  <string name="morphe_theme_background_dark_entry_11">어두운 초록색</string>
+  <string name="morphe_theme_background_dark_entry_12">어두운 분홍색</string>
+  <string name="morphe_theme_background_dark_entry_13">어두운 주황색</string>
+  <string name="morphe_theme_background_dark_entry_14">어두운 빨간색</string>
   <string name="morphe_theme_background_dark_entry_15">사용자 정의</string>
+  <string name="morphe_theme_background_dark_custom_color_title">사용자 정의 어두운 배경 색상</string>
+  <string name="morphe_theme_background_dark_custom_color_summary">어두운 테마의 배경 색상을 설정할 수 있습니다</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">외부 다운로드</string>
   <string name="morphe_external_downloader_name_title">다운로더 앱 패키지명</string>

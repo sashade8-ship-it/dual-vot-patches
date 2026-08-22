@@ -502,9 +502,15 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Показывает миниатюру видео во время перетаскивания полосы прокрутки</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Чаще всего пересматривают</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"«Включить DVR для прямых трансляций» может быть недоступно
+
+Чтобы исправить это, включите «Подмена видеопотоков» и измените «Клиент по умолчанию» на «TV Simply» или «visionOS»."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Расширить длительность прямой трансляции DVR</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Позволяет перематывать прямые трансляции в прошлое до 7 дней</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"«Расширить длительность DVR прямых трансляций» может быть недоступно
+
+Чтобы исправить это, включите «Подмена видеопотоков» и измените «Клиент по умолчанию» на «TV Simply» или «visionOS»."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Включить перемотку видео слайдом</string>
   <string name="morphe_slide_to_seek_summary">Включает перемотку с помощью свайпа вместо воспроизведения с удвоенной скоростью при нажатии и удержании видеоплеера</string>
@@ -977,7 +983,23 @@ Second \"item\" text"</string>
   <string name="morphe_back_button_always_exits_feed_title">Кнопка «Назад» выходит из ленты</string>
   <string name="morphe_back_button_always_exits_feed_summary">Нажатие кнопки «Назад» всегда выходит из приложения вместо прокрутки к началу ленты</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Фон светлой темы</string>
+  <string name="morphe_theme_background_light_entry_1">По умолчанию</string>
+  <string name="morphe_theme_background_light_entry_2">Белый</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (нейтральный)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (основной)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (вторичный)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (третичный)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Светло-розовый</string>
+  <string name="morphe_theme_background_light_entry_9">Светло-голубой</string>
+  <string name="morphe_theme_background_light_entry_10">Светло-зелёный</string>
+  <string name="morphe_theme_background_light_entry_11">Светло-жёлтый</string>
+  <string name="morphe_theme_background_light_entry_12">Светло-оранжевый</string>
+  <string name="morphe_theme_background_light_entry_13">Светло-красный</string>
   <string name="morphe_theme_background_light_entry_14">Пользовательское</string>
+  <string name="morphe_theme_background_light_custom_color_title">Настраиваемый фон светлой темы</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Установить цвет фона светлой темы</string>
   <string name="morphe_gradient_loading_screen_title">Включить градиентный фон экрана загрузки</string>
   <string name="morphe_gradient_loading_screen_summary">Показывает градиентный фон на экране загрузки вместо сплошного цвета</string>
   <string name="morphe_splash_screen_animation_style_title">Стиль экрана заставки</string>

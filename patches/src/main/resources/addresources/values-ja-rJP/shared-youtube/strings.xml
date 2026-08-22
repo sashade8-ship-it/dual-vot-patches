@@ -22,8 +22,24 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">アプリ名</string>
   <!-- layout.theme.baseThemePatch -->
+  <string name="morphe_theme_background_dark_title">ダークテーマの背景</string>
+  <string name="morphe_theme_background_dark_entry_1">アプリのデフォルト</string>
   <string name="morphe_theme_background_dark_entry_2">ピュアブラック</string>
+  <string name="morphe_theme_background_dark_entry_3">Material You（ニュートラル）</string>
+  <string name="morphe_theme_background_dark_entry_4">Material You（プライマリ）</string>
+  <string name="morphe_theme_background_dark_entry_5">Material You（セカンダリ）</string>
+  <string name="morphe_theme_background_dark_entry_6">Material You（ターシャリ）</string>
+  <string name="morphe_theme_background_dark_entry_7">クラシックYouTube</string>
+  <string name="morphe_theme_background_dark_entry_8">Catppuccin（モカ）</string>
+  <string name="morphe_theme_background_dark_entry_9">ダークピンク</string>
+  <string name="morphe_theme_background_dark_entry_10">ダークブルー</string>
+  <string name="morphe_theme_background_dark_entry_11">ダークグリーン</string>
+  <string name="morphe_theme_background_dark_entry_12">ダークイエロー</string>
+  <string name="morphe_theme_background_dark_entry_13">ダークオレンジ</string>
+  <string name="morphe_theme_background_dark_entry_14">ダークレッド</string>
   <string name="morphe_theme_background_dark_entry_15">カスタム</string>
+  <string name="morphe_theme_background_dark_custom_color_title">カスタムダークテーマの背景</string>
+  <string name="morphe_theme_background_dark_custom_color_summary">ダークテーマの背景色を設定します</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">外部ダウンロード</string>
   <string name="morphe_external_downloader_name_title">外部ダウンローダーのパッケージ名</string>

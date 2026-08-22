@@ -499,9 +499,15 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_seekbar_thumbnail_preview_summary">Shows a video thumbnail while dragging the seekbar</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Được phát lại nhiều nhất</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"Việc bật 'DVR phát trực tiếp' có thể không khả dụng
+
+Để khắc phục, hãy bật 'Giả mạo luồng video' và thay đổi 'Máy khách mặc định' thành 'TV Simply' hoặc 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Tăng thời lượng DVR phát trực tiếp</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Cho phép tua lại các buổi phát trực tiếp tối đa 7 ngày trước</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Mở rộng thời lượng DVR phát trực tiếp' có thể không khả dụng
+
+Để khắc phục, hãy bật 'Giả mạo luồng video' và thay đổi 'Máy khách mặc định' thành 'TV Simply' hoặc 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Bật vuốt để tua</string>
   <string name="morphe_slide_to_seek_summary">Bật vuốt để tua thay vì phát video 2x khi bấm giữ trong trình phát</string>
@@ -974,7 +980,23 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_back_button_always_exits_feed_title">Nút quay lại thoát khỏi bảng tin</string>
   <string name="morphe_back_button_always_exits_feed_summary">Nhấn nút quay lại luôn thoát khỏi ứng dụng thay vì cuộn lên đầu bảng tin</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Nền chủ đề sáng</string>
+  <string name="morphe_theme_background_light_entry_1">Mặc định ứng dụng</string>
+  <string name="morphe_theme_background_light_entry_2">Trắng</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Trung tính)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Chính)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Phụ)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Cấp ba)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Hồng nhạt</string>
+  <string name="morphe_theme_background_light_entry_9">Xanh dương nhạt</string>
+  <string name="morphe_theme_background_light_entry_10">Xanh lá nhạt</string>
+  <string name="morphe_theme_background_light_entry_11">Vàng nhạt</string>
+  <string name="morphe_theme_background_light_entry_12">Cam nhạt</string>
+  <string name="morphe_theme_background_light_entry_13">Đỏ nhạt</string>
   <string name="morphe_theme_background_light_entry_14">Tùy chỉnh</string>
+  <string name="morphe_theme_background_light_custom_color_title">Nền sáng tùy chỉnh</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Đặt màu nền của chủ đề sáng</string>
   <string name="morphe_gradient_loading_screen_title">Bật màn hình tải màu gradient</string>
   <string name="morphe_gradient_loading_screen_summary">Hiển thị nền gradient trên màn hình tải thay vì một màu sắc đồng nhất</string>
   <string name="morphe_splash_screen_animation_style_title">Kiểu màn hình chờ</string>

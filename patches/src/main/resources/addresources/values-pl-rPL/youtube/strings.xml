@@ -950,7 +950,7 @@ Ograniczenia: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_miniplayer_disable_resuming_summary">Wyłącza miniodtwarzacz \"Kontynuuj oglądanie\", funkcję YouTube Premium wyświetlaną przy starcie aplikacji</string>
   <string name="morphe_miniplayer_screen_title">Miniodtwarzacz</string>
   <string name="morphe_miniplayer_screen_summary">Dostosuj wygląd i zachowanie miniodtwarzacza</string>
-  <string name="morphe_miniplayer_not_available_summary">YouTube usunął wszystkie dodatkowe miniodtwarzacze. Aby zmienić typ miniodtwarzacza, zmodyfikuj aplikację YouTube w wersji 21.28.208 lub starszej</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube usunął wszystkie dodatkowe miniodtwarzacze. Aby zmienić typ miniodtwarzacza, zmodyfikuj YouTube w wersji 21.28.208 lub starszej</string>
   <string name="morphe_miniplayer_type_title">Typ miniodtwarzacza</string>
   <string name="morphe_miniplayer_type_entry_0">Wyłączony</string>
   <string name="morphe_miniplayer_type_entry_1">Domyślny</string>
@@ -980,7 +980,23 @@ Ograniczenia: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_back_button_always_exits_feed_title">Przycisk wstecz zamyka kanał</string>
   <string name="morphe_back_button_always_exits_feed_summary">Naciśnięcie wstecz zawsze zamyka aplikację, zamiast przewijać na górę kanału</string>
   <!-- layout.theme.themePatch -->
-  <string name="morphe_theme_background_light_entry_14">Własny</string>
+  <string name="morphe_theme_background_light_title">Tło jasnego motywu</string>
+  <string name="morphe_theme_background_light_entry_1">Domyślne aplikacji</string>
+  <string name="morphe_theme_background_light_entry_2">Białe</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutralne)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Podstawowe)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Drugorzędne)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Trzeciorzędne)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Jasnoróżowe</string>
+  <string name="morphe_theme_background_light_entry_9">Jasnoniebieskie</string>
+  <string name="morphe_theme_background_light_entry_10">Jasnozielone</string>
+  <string name="morphe_theme_background_light_entry_11">Jasnożółte</string>
+  <string name="morphe_theme_background_light_entry_12">Jasnopomarańczowe</string>
+  <string name="morphe_theme_background_light_entry_13">Jasnoczerwone</string>
+  <string name="morphe_theme_background_light_entry_14">Własne</string>
+  <string name="morphe_theme_background_light_custom_color_title">Własne tło jasnego motywu</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Ustaw kolor tła dla jasnego motywu</string>
   <string name="morphe_gradient_loading_screen_title">Włącz gradientowy ekran ładowania</string>
   <string name="morphe_gradient_loading_screen_summary">Wyświetla gradientowe tło na ekranie ładowania zamiast jednolitego koloru</string>
   <string name="morphe_splash_screen_animation_style_title">Styl ekranu powitalnego</string>

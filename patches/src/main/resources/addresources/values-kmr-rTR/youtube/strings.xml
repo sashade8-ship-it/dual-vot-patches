@@ -501,9 +501,15 @@ Info: May not work on live streams"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Nîşana vîdyoyê dema ku şopa dîtinê diherikînê da dîmenê</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Herî zêde vekirî</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'DVR-a weşana zindî çalak bike' dibe ku ne berdest be
+
+Ji bo çareserkirina vê, 'Sextekirina streamên vîdyoyê' çalak bike û 'clientê xwerû' biguherîne 'TV Simply' yan jî 'visionOS'."</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Dîmendera destûra rêzê ya DVR-ê zêde bike</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Têde bi tehiye dike da ku hûn pê veşêrin înîsiyatora livestreaman heta 7 rojan paşê veguherînin</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Dirêjkirina dema DVR-a weşana zindî' dibe ku ne berdest be
+
+Ji bo çareserkirina vê, 'Sextekirina streamên vîdyoyê' çalak bike û 'clientê xwerû' biguherîne 'TV Simply' yan jî 'visionOS'."</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Slide to seek çalak bike</string>
   <string name="morphe_slide_to_seek_summary">Enables slide to seek instead of playing at 2x speed when pressing and holding the video player</string>
@@ -974,6 +980,23 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <string name="morphe_miniplayer_opacity_invalid_toast">Astê dorpelê yê dorpelê divê di navbera 0-100 de be</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Paşxaneya temaya ronî</string>
+  <string name="morphe_theme_background_light_entry_1">Xwerûya sepanê</string>
+  <string name="morphe_theme_background_light_entry_2">Spî</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Bêalî)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Seretayî)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Duyemîn)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Sêyemîn)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Pembeyê vekirî</string>
+  <string name="morphe_theme_background_light_entry_9">Şînê vekirî</string>
+  <string name="morphe_theme_background_light_entry_10">Keskê vekirî</string>
+  <string name="morphe_theme_background_light_entry_11">Zerê vekirî</string>
+  <string name="morphe_theme_background_light_entry_12">Pirteqalî vekirî</string>
+  <string name="morphe_theme_background_light_entry_13">Sorê vekirî</string>
+  <string name="morphe_theme_background_light_entry_14">Xweser</string>
+  <string name="morphe_theme_background_light_custom_color_title">Paşxaneya ronî ya xweser</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Rengê paşxaneya temaya ronî hilbijêre</string>
   <string name="morphe_gradient_loading_screen_title">Çalak bike ekranê barkerdina gradyantê</string>
   <string name="morphe_gradient_loading_screen_summary">Destbîne ranga duyem a barkê pêşkeftina vîdeoyê</string>
   <string name="morphe_splash_screen_animation_style_title">Şeklê ekranê dabînîkirî</string>

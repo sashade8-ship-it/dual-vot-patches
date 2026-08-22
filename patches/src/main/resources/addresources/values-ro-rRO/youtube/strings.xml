@@ -500,9 +500,15 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Afișează o miniatură video în timpul glisării pe bara de căutare</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Cele mai redate</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Activarea DVR-ului pentru fluxuri live' poate să nu fie disponibilă
+
+Pentru a remedia această problemă, activează 'Falsificarea fluxurilor video' și schimbă 'Clientul implicit' în 'TV Simply' sau 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Extinde durata DVR pentru livestream</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Vă permite să derulați înapoi emisiunile live până la 7 zile în trecut</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Extinderea duratei DVR-ului pentru fluxuri live' poate să nu fie disponibilă
+
+Pentru a remedia această problemă, activează 'Falsificarea fluxurilor video' și schimbă 'Clientul implicit' în 'TV Simply' sau 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activează diapozitivul pentru a căuta</string>
   <string name="morphe_slide_to_seek_summary">Activează glisarea pentru a căuta în loc să redă cu o viteză de 2x când apeși și menții apăsat playerul video</string>
@@ -975,6 +981,23 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_back_button_always_exits_feed_title">Butonul Înapoi iese din feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Apăsarea butonului Înapoi închide întotdeauna aplicația, în loc să deruleze la începutul feedului</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Fundalul temei luminoase</string>
+  <string name="morphe_theme_background_light_entry_1">Implicit aplicație</string>
+  <string name="morphe_theme_background_light_entry_2">Alb</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutru)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primar)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Secundar)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Terțiar)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Roz deschis</string>
+  <string name="morphe_theme_background_light_entry_9">Albastru deschis</string>
+  <string name="morphe_theme_background_light_entry_10">Verde deschis</string>
+  <string name="morphe_theme_background_light_entry_11">Galben deschis</string>
+  <string name="morphe_theme_background_light_entry_12">Portocaliu deschis</string>
+  <string name="morphe_theme_background_light_entry_13">Roșu deschis</string>
+  <string name="morphe_theme_background_light_entry_14">Personalizat</string>
+  <string name="morphe_theme_background_light_custom_color_title">Fundal deschis personalizat</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Setează culoarea de fundal a temei luminoase</string>
   <string name="morphe_gradient_loading_screen_title">Activează ecranul de încărcare gradient</string>
   <string name="morphe_gradient_loading_screen_summary">Afișează un fundal gradat pe ecranul de încărcare în loc de o culoare solidă</string>
   <string name="morphe_splash_screen_animation_style_title">Stil ecran de pornire</string>

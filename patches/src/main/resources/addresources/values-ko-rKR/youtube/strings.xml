@@ -983,7 +983,23 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_back_button_always_exits_feed_title">뒤로가기 버튼으로 피드 나가기</string>
   <string name="morphe_back_button_always_exits_feed_summary">뒤로가기 버튼을 탭하면 피드 상단으로 이동하지 않고 항상 앱이 종료됩니다</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">밝은 테마 배경 색상</string>
+  <string name="morphe_theme_background_light_entry_1">앱 기본값</string>
+  <string name="morphe_theme_background_light_entry_2">하얀색</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (중립)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (기본)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (보조)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (3차)</string>
+  <string name="morphe_theme_background_light_entry_7">카푸치노 (라떼)</string>
+  <string name="morphe_theme_background_light_entry_8">밝은 분홍색</string>
+  <string name="morphe_theme_background_light_entry_9">밝은 파란색</string>
+  <string name="morphe_theme_background_light_entry_10">밝은 초록색</string>
+  <string name="morphe_theme_background_light_entry_11">밝은 노란색</string>
+  <string name="morphe_theme_background_light_entry_12">밝은 주황색</string>
+  <string name="morphe_theme_background_light_entry_13">밝은 빨간색</string>
   <string name="morphe_theme_background_light_entry_14">사용자 정의</string>
+  <string name="morphe_theme_background_light_custom_color_title">사용자 정의 밝은 배경 색상</string>
+  <string name="morphe_theme_background_light_custom_color_summary">밝은 테마의 배경 색상을 설정할 수 있습니다</string>
   <string name="morphe_gradient_loading_screen_title">그라데이션 색상 로딩 화면 활성화하기</string>
   <string name="morphe_gradient_loading_screen_summary">로딩 화면에 단색 대신 그라데이션 배경을 표시합니다</string>
   <string name="morphe_splash_screen_animation_style_title">스플래시 애니메이션 스타일</string>

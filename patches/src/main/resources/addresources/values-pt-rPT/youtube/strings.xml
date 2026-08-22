@@ -500,9 +500,15 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Mostra uma miniatura do vídeo enquanto arrasta a barra de pesquisa</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Mais reproduzido</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"'Ativar DVR de transmissão ao vivo' pode não estar disponível
+
+Para corrigir isso, ative 'Simular streams de vídeo' e altere o 'Cliente padrão' para 'TV Simply' ou 'visionOS'"</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Expandir a duração do DVR de livestream</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Permite voltar transmissões ao vivo até 7 dias no passado</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"'Ampliar a duração do DVR de transmissão ao vivo' pode não estar disponível
+
+Para corrigir isso, ative 'Simular streams de vídeo' e altere o 'Cliente padrão' para 'TV Simply' ou 'visionOS'"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Habilitar o slide para procurar</string>
   <string name="morphe_slide_to_seek_summary">Habilita o deslize para buscar em vez de reproduzir em velocidade 2x ao pressionar e segurar o reprodutor de vídeo</string>
@@ -975,6 +981,23 @@ Limitação: Se 'Restaurar a barra de ação de vídeo antiga' estiver desativad
   <string name="morphe_back_button_always_exits_feed_title">O botão Voltar sai do feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pressionar o botão Voltar sempre sai do aplicativo em vez de rolar até o topo do feed</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_theme_background_light_title">Cor de fundo do tema claro</string>
+  <string name="morphe_theme_background_light_entry_1">Padrão do app</string>
+  <string name="morphe_theme_background_light_entry_2">Branco</string>
+  <string name="morphe_theme_background_light_entry_3">Material You (Neutro)</string>
+  <string name="morphe_theme_background_light_entry_4">Material You (Primário)</string>
+  <string name="morphe_theme_background_light_entry_5">Material You (Secundário)</string>
+  <string name="morphe_theme_background_light_entry_6">Material You (Terciário)</string>
+  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
+  <string name="morphe_theme_background_light_entry_8">Rosa claro</string>
+  <string name="morphe_theme_background_light_entry_9">Azul claro</string>
+  <string name="morphe_theme_background_light_entry_10">Verde claro</string>
+  <string name="morphe_theme_background_light_entry_11">Amarelo claro</string>
+  <string name="morphe_theme_background_light_entry_12">Laranja claro</string>
+  <string name="morphe_theme_background_light_entry_13">Vermelho claro</string>
+  <string name="morphe_theme_background_light_entry_14">Personalizado</string>
+  <string name="morphe_theme_background_light_custom_color_title">Cor de fundo personalizada do tema claro</string>
+  <string name="morphe_theme_background_light_custom_color_summary">Defina a cor de fundo do tema claro</string>
   <string name="morphe_gradient_loading_screen_title">Ativar ecrã de carregamento do gradiente</string>
   <string name="morphe_gradient_loading_screen_summary">Mostra um fundo gradiente na tela de carregamento em vez de uma cor sólida</string>
   <string name="morphe_splash_screen_animation_style_title">Estilo da tela inicial</string>
