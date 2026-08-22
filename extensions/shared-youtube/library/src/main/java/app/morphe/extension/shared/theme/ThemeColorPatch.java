@@ -15,6 +15,7 @@ import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_L
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -22,10 +23,12 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.view.View;
 import android.view.ViewStub;
+import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import androidx.annotation.ChecksSdkIntAtLeast;
 import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
@@ -642,26 +645,62 @@ public class ThemeColorPatch {
     /**
      * Injection point.
      * <p>
-     * Called with the view stub of a new content indicator of the pivot bar, which is the dot
-     * of a tab and the count next to it, before either is shown.
+     * Called with the view stub of a new content indicator before it is shown.
      */
     public static void onNewContentIndicator(ViewStub stub) {
         try {
-            stub.setOnInflateListener((inflatedStub, view) -> {
-                Integer color = getIndicatorColor(view.getContext());
-                if (color == null) {
-                    return;
-                }
-
-                setIndicatorColor(view, color);
-
-                // The pivot bar can set the background of an indicator after it is inflated,
-                // and the color is applied again after the app is done with the view.
-                view.post(() -> setIndicatorColor(view, color));
-            });
+            stub.setOnInflateListener((inflatedStub, view) -> keepIndicatorColor(view));
         } catch (Exception ex) {
             Logger.printException(() -> "onNewContentIndicator failure", ex);
         }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called with a new content indicator that the layout declares as a view of its own
+     * and not as a stub.
+     */
+    public static void onNewContentIndicator(View indicator) {
+        try {
+            keepIndicatorColor(indicator);
+        } catch (Exception ex) {
+            Logger.printException(() -> "onNewContentIndicator failure", ex);
+        }
+    }
+
+    private static void keepIndicatorColor(View view) {
+        Integer color = getIndicatorColor(view.getContext());
+        if (color == null) {
+            return;
+        }
+
+        setIndicatorColor(view, color);
+
+        // The app gives an indicator a background of its own after it is shown, which drops the
+        // color set above. Setting it again from a posted runnable is one frame too late, so the
+        // color is applied before every draw and no frame can be drawn with the app color.
+        ViewTreeObserver.OnPreDrawListener listener = () -> {
+            setIndicatorColor(view, color);
+            return true;
+        };
+
+        view.getViewTreeObserver().addOnPreDrawListener(listener);
+
+        // The observer belongs to the window and not to the view, so a listener left behind
+        // keeps a discarded indicator alive for as long as the window lives.
+        view.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+            @Override
+            public void onViewAttachedToWindow(@NonNull View attached) {
+            }
+
+            @Override
+            public void onViewDetachedFromWindow(@NonNull View detached) {
+                // Asked for again because the observer a view has before it is attached
+                // is replaced by the one of the window.
+                detached.getViewTreeObserver().removeOnPreDrawListener(listener);
+            }
+        });
     }
 
     private static void setIndicatorColor(View view, int color) {
@@ -670,14 +709,22 @@ public class ThemeColorPatch {
         // Both indicators are a shape with a stroke of the app background color, and only the
         // fill of the shape is replaced. Mutate is needed, otherwise every user of the
         // drawable is changed as well.
-        if (background instanceof GradientDrawable) {
-            ((GradientDrawable) background.mutate()).setColor(color);
+        if (background instanceof GradientDrawable shape) {
+            // Setting the fill invalidates the drawable and asks for another draw, and this runs
+            // before every draw, so an unchanged color must not be set again.
+            ColorStateList fill = shape.getColor();
+            if (fill == null || fill.getDefaultColor() != color) {
+                ((GradientDrawable) shape.mutate()).setColor(color);
+            }
         }
 
         // The count is a text view, and its text must stay readable on the new color.
-        if (view instanceof TextView) {
-            ((TextView) view).setTextColor(
-                    getIndicatorTextColor(view.getContext()));
+        if (view instanceof TextView count) {
+            final int textColor = getIndicatorTextColor(view.getContext());
+
+            if (count.getCurrentTextColor() != textColor) {
+                count.setTextColor(textColor);
+            }
         }
     }
 

@@ -14,8 +14,6 @@ import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Base64;
 import android.util.Pair;
 import android.view.Gravity;
@@ -105,7 +103,7 @@ public final class FlyoutUtils {
     private static final Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
     private static final Pattern COMMENT_ID_CLEANUP_PATTERN = Pattern.compile("[^A-Za-z0-9_.-]");
 
-    private static int FLYOUT_BACKGROUND_COLOR = 0;
+    private static int FLYOUT_BACKGROUND_COLOR;
     private static final int GREY_COLOR = ResourceUtils.getColor("yt_grey1");
 
     private static final List<Pair<String, Integer>> visibleFlyoutButtons = new ArrayList<>();
@@ -145,37 +143,59 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void setBottomSheetFlyout(Dialog dialog) {
-        if (dialog == null) {
-            return;
-        }
-        flyoutDialog = dialog;
-        runFlyoutPanelVisibilityHandler(dialog);
+        try {
+            if (dialog == null) {
+                return;
+            }
+            flyoutDialog = dialog;
+            runFlyoutPanelVisibilityHandler(dialog);
 
-        final Window window = dialog.getWindow();
-        if (window != null) {
-            window.getDecorView().getViewTreeObserver().addOnGlobalLayoutListener(
-                new ViewTreeObserver.OnGlobalLayoutListener() {
-                    private boolean alreadyInjectedButton = false;
+            Window window = dialog.getWindow();
+            if (window == null) {
+                Logger.printDebug(() -> "Cannot set flyout, window is null: " + dialog);
+                return;
+            }
 
-                    @Override
-                    public void onGlobalLayout() {
-                        if (dialog.isShowing()) {
-                            if (!alreadyInjectedButton) {
-                                addFlyoutElements(dialog);
-                                alreadyInjectedButton = true;
+            WeakReference<Dialog> dialogRef = new WeakReference<>(dialog);
+
+            ViewTreeObserver viewTreeObserver = window.getDecorView().getViewTreeObserver();
+            viewTreeObserver.addOnGlobalLayoutListener(
+                    new ViewTreeObserver.OnGlobalLayoutListener() {
+                        private boolean alreadyInjectedButton;
+
+                        @Override
+                        public void onGlobalLayout() {
+                            try {
+                                Dialog dialog = dialogRef.get();
+                                if (dialog == null) {
+                                    Logger.printDebug(() -> "Removing flyout listener");
+                                    viewTreeObserver.removeOnGlobalLayoutListener(this);
+                                    return;
+                                }
+
+                                if (dialog.isShowing()) {
+                                    if (!alreadyInjectedButton) {
+                                        addFlyoutElements(dialog);
+                                        alreadyInjectedButton = true;
+                                    }
+                                } else {
+                                    alreadyInjectedButton = false;
+                                }
+                            } catch (Exception ex) {
+                                Logger.printException(() -> "setBottomSheetFlyout onGlobalLayout failure", ex);
                             }
-                        } else {
-                            alreadyInjectedButton = false;
                         }
                     }
-                }
             );
+        } catch (Exception ex) {
+            Logger.printException(() -> "setBottomSheetFlyout failure", ex);
         }
     }
 
     public static void dismissBottomSheetFlyout() {
         if (flyoutDialog != null) {
             flyoutDialog.dismiss();
+            flyoutDialog = null;
         }
     }
 
@@ -183,18 +203,23 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void setPopupWindowFlyout(PopupWindow popupWindow) {
-        if (popupWindow == null) {
-            return;
-        }
-        flyoutPopupWindow = popupWindow;
-        runFlyoutPanelVisibilityHandler(popupWindow);
+        try {
+            if (popupWindow == null) {
+                return;
+            }
+            flyoutPopupWindow = popupWindow;
+            runFlyoutPanelVisibilityHandler(popupWindow);
 
-        addFlyoutElements(popupWindow);
+            addFlyoutElements(popupWindow);
+        } catch (Exception ex) {
+            Logger.printException(() -> "setPopupWindowFlyout failure", ex);
+        }
     }
 
     public static void dismissPopupWindowFlyout() {
         if (flyoutPopupWindow != null) {
             flyoutPopupWindow.dismiss();
+            flyoutPopupWindow = null;
         }
     }
 
@@ -324,33 +349,25 @@ public final class FlyoutUtils {
             return;
         }
 
-        final Handler visibilityHandler = new Handler(Looper.getMainLooper());
-        visibilityHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                final boolean isShowing;
+        final boolean isShowing;
+        if (flyoutObject instanceof Dialog flyoutDialogHandler) {
+            isShowing = flyoutDialogHandler.isShowing();
+        } else if (flyoutObject instanceof PopupWindow flyoutPopupWindowHandler) {
+            isShowing = flyoutPopupWindowHandler.isShowing();
+        } else {
+            isShowing = false;
+        }
 
-                if (flyoutObject instanceof Dialog flyoutDialogHandler) {
-                    isShowing = flyoutDialogHandler.isShowing();
-                } else if (flyoutObject instanceof PopupWindow flyoutPopupWindowHandler) {
-                    isShowing = flyoutPopupWindowHandler.isShowing();
-                } else {
-                    isShowing = false;
-                }
-
-                if (isShowing) {
-                    visibilityHandler.postDelayed(this, 100);
-                } else {
-                    Utils.runOnMainThreadDelayed(
-                            () -> {
-                                flyoutVideoId = "";
-                                flyoutPlaylistId = "";
-                            },
-                            500
-                    );
-                }
-            }
-        });
+        if (isShowing) {
+            Utils.runOnMainThreadDelayed(() -> runFlyoutPanelVisibilityHandler(flyoutObject), 100);
+        } else {
+            Utils.runOnMainThreadDelayed(() -> {
+                        flyoutVideoId = "";
+                        flyoutPlaylistId = "";
+                        Logger.printDebug(() -> "Cleared flyout video and playlist id");
+                    }, 500
+            );
+        }
     }
 
     @Nullable
@@ -405,13 +422,13 @@ public final class FlyoutUtils {
             String text,
             View.OnClickListener clickListener
     ) {
-        final LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT
         );
         buttonParams.setMargins(Dim.dp16, Dim.dp12, Dim.dp16, Dim.dp12);
 
-        final LinearLayout customButton = new LinearLayout(context);
+        LinearLayout customButton = new LinearLayout(context);
         customButton.setLayoutParams(buttonParams);
         customButton.setOrientation(LinearLayout.HORIZONTAL);
         customButton.setGravity(Gravity.START);
@@ -419,24 +436,24 @@ public final class FlyoutUtils {
         customButton.setBackgroundColor(FLYOUT_BACKGROUND_COLOR);
 
         if (icon != null) {
-            final Drawable mutableIcon = icon.mutate();
+            Drawable mutableIcon = icon.mutate();
             mutableIcon.setTint(ThemeUtils.getAppForegroundColor());
             mutableIcon.setTintMode(PorterDuff.Mode.SRC_IN);
 
-            final LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     Dim.dp24,
                     Dim.dp24
             );
             layoutParams.rightMargin = Dim.dp12;
 
-            final ImageView iconView = new ImageView(context);
+            ImageView iconView = new ImageView(context);
             iconView.setLayoutParams(layoutParams);
             iconView.setImageDrawable(mutableIcon);
 
             customButton.addView(iconView);
         }
 
-        final TextView textView = new TextView(context);
+        TextView textView = new TextView(context);
         textView.setSingleLine(true);
         textView.setText(text);
         textView.setTextSize(16);
@@ -450,13 +467,13 @@ public final class FlyoutUtils {
     }
 
     public static View createFlyoutDivider(Context context) {
-        final LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 Dim.dp1
         );
         dividerParams.setMargins(Dim.dp16, Dim.dp4, Dim.dp16, Dim.dp4);
 
-        final LinearLayout divider = new LinearLayout(context);
+        LinearLayout divider = new LinearLayout(context);
         divider.setLayoutParams(dividerParams);
         divider.setBackgroundColor(GREY_COLOR);
 
@@ -467,9 +484,13 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void extractFlyoutIdFromLithoButton(Map<?, ?> map) {
-        if ((PlayerType.getCurrent().isMaximizedOrFullscreen() || ShortsPlayerState.isOpen()) &&
-                EngagementPanel.checkIdsInQueue(commentsPanelNames)) {
-            extractFlyoutIdFromMap(map);
+        try {
+            if ((PlayerType.getCurrent().isMaximizedOrFullscreen() || ShortsPlayerState.isOpen()) &&
+                    EngagementPanel.checkIdsInQueue(commentsPanelNames)) {
+                extractFlyoutIdFromMap(map);
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "extractFlyoutIdFromLithoButton failure", ex);
         }
     }
 
@@ -477,80 +498,75 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void extractFlyoutIdFromMap(Map<?, ?> map) {
-        senderViewRef = new WeakReference<>(
-                (View) map.get("com.google.android.libraries.youtube.rendering.elements.sender_view")
-        );
-        extractFlyoutIdFromObject(map.get("com.google.android.libraries.youtube.innertube.endpoint.tag"));
+        try {
+            senderViewRef = new WeakReference<>(
+                    (View) map.get("com.google.android.libraries.youtube.rendering.elements.sender_view"));
+            extractFlyoutIdFromObject(map.get("com.google.android.libraries.youtube.innertube.endpoint.tag"));
+        } catch (Exception ex) {
+            Logger.printException(() -> "extractFlyoutIdFromMap failure", ex);
+        }
     }
 
     /**
      * Injection point.
      */
     public static void extractFlyoutIdFromObject(@Nullable Object bufferObject) {
-        try {
-            Logger.printDebug(() ->
-                    "FlyoutBuffer class: " +
-                    ((bufferObject == null)
-                            ? null
-                            : bufferObject.getClass())
-            );
+        Logger.printDebug(() -> "FlyoutBuffer class: " + ((bufferObject == null)
+                                ? null : bufferObject.getClass()));
 
-            if (bufferObject instanceof FlyoutMenuVideoIdInterface videoIdInterface) {
-                final String videoId = videoIdInterface.patch_getVideoId();
-                if (videoId != null) {
-                    flyoutVideoId = videoId;
-                }
-                return;
+        if (bufferObject instanceof FlyoutMenuVideoIdInterface videoIdInterface) {
+            String videoId = videoIdInterface.patch_getVideoId();
+            if (videoId != null) {
+                flyoutVideoId = videoId;
             }
+            return;
+        }
 
-            if (!(bufferObject instanceof ProtocolBufferFieldInterface bufferInterface)) {
-                return;
+        if (!(bufferObject instanceof ProtocolBufferFieldInterface bufferInterface)) {
+            return;
+        }
+
+        byte[] flyoutBuffer = bufferInterface.patch_getBuffer();
+        if (flyoutBuffer == null) {
+            return;
+        }
+
+        if (Settings.DEBUG_PROTOBUFFER.get()) {
+            Logger.printDebug(() -> "Flyout buffer: " + new BufferAsciiStrings(flyoutBuffer).getStrings());
+        }
+
+        // Check whether the buffer contains the specified IDs, within a certain initial
+        // range of the buffer, to avoid matching with false positives.
+        List<Integer> listItemShareBytesIndexes = byteIndexesOf(flyoutBuffer, LIST_ITEM_SHARE_BYTES);
+        if (!listItemShareBytesIndexes.isEmpty() && listItemShareBytesIndexes.size() == LIST_ITEM_SHARE_BYTES.size()) {
+            if (byteIndexInStartRange(listItemShareBytesIndexes.get(0))) {
+                setFlyoutCommentId(flyoutBuffer);
             }
+            return;
+        }
 
-            final byte[] flyoutBuffer = bufferInterface.patch_getBuffer();
-            if (flyoutBuffer == null) {
-                return;
-            }
-
-            if (Settings.DEBUG_PROTOBUFFER.get()) {
-                Logger.printDebug(() -> "Flyout buffer: " + new BufferAsciiStrings(flyoutBuffer).getStrings());
-            }
-
-            // Check whether the buffer contains the specified IDs, within a certain initial
-            // range of the buffer, to avoid matching with false positives.
-            final List<Integer> listItemShareBytesIndexes = byteIndexesOf(flyoutBuffer, LIST_ITEM_SHARE_BYTES);
-            if (!listItemShareBytesIndexes.isEmpty() && listItemShareBytesIndexes.size() == LIST_ITEM_SHARE_BYTES.size()) {
-                if (byteIndexInStartRange(listItemShareBytesIndexes.get(0))) {
-                    setFlyoutCommentId(flyoutBuffer);
-                }
-                return;
-            }
-
-            if (!byteIndexesOf(flyoutBuffer, SHELFS_BYTES).isEmpty()) {
-                final View senderView = senderViewRef.get();
-                if (senderView != null) {
-                    ViewParent parent = senderView.getParent();
-                    while (parent != null) {
-                        if (parent instanceof ComponentHost componentHost) {
-                            final CharSequence description = componentHost.getContentDescription();
-                            if (description != null) {
-                                setShelfFlyoutVideoId(flyoutBuffer, description.toString());
-                            }
+        if (!byteIndexesOf(flyoutBuffer, SHELFS_BYTES).isEmpty()) {
+            View senderView = senderViewRef.get();
+            if (senderView != null) {
+                ViewParent parent = senderView.getParent();
+                while (parent != null) {
+                    if (parent instanceof ComponentHost componentHost) {
+                        CharSequence description = componentHost.getContentDescription();
+                        if (description != null) {
+                            setShelfFlyoutVideoId(flyoutBuffer, description.toString());
                         }
-                        parent = parent.getParent();
                     }
+                    parent = parent.getParent();
                 }
-                return;
             }
+            return;
+        }
 
-            final List<Integer> listVideoElementsBytesIndexes = byteIndexesOf(flyoutBuffer, VIDEO_ELEMENTS_BYTES);
-            if (!listVideoElementsBytesIndexes.isEmpty() && byteIndexInStartRange(listVideoElementsBytesIndexes.get(0))) {
-                setFlyoutPlaylistId(flyoutBuffer);
+        List<Integer> listVideoElementsBytesIndexes = byteIndexesOf(flyoutBuffer, VIDEO_ELEMENTS_BYTES);
+        if (!listVideoElementsBytesIndexes.isEmpty() && byteIndexInStartRange(listVideoElementsBytesIndexes.get(0))) {
+            setFlyoutPlaylistId(flyoutBuffer);
 
-                setFlyoutVideoId(flyoutBuffer);
-            }
-        } catch (Exception ex) {
-            Logger.printException(() -> "extractFlyoutId failure", ex);
+            setFlyoutVideoId(flyoutBuffer);
         }
     }
 
@@ -574,12 +590,12 @@ public final class FlyoutUtils {
         }
 
         final int separatorIndex = description.indexOf(" - ");
-        final String titlePart = separatorIndex == -1 ? description : description.substring(0, separatorIndex);
+        String titlePart = separatorIndex == -1 ? description : description.substring(0, separatorIndex);
         if (titlePart.isEmpty()) {
             return;
         }
-        final String title = TITLE_CLEANUP_PATTERN.matcher(titlePart.toLowerCase(Locale.ROOT)).replaceAll("");
-        final List<byte[]> words = new ArrayList<>();
+        String title = TITLE_CLEANUP_PATTERN.matcher(titlePart.toLowerCase(Locale.ROOT)).replaceAll("");
+        List<byte[]> words = new ArrayList<>();
         for (String word : WHITESPACE_PATTERN.split(title)) {
             if (word.length() > 2) {
                 words.add(word.getBytes(StandardCharsets.UTF_8));
@@ -704,7 +720,7 @@ public final class FlyoutUtils {
             }
 
             // Get the Comment ID from the fetched base64 decoded buffer.
-            final byte[] byteBase64 = Base64.decode(Arrays.copyOfRange(buffer, bestStart, bestEnd), Base64.URL_SAFE);
+            byte[] byteBase64 = Base64.decode(Arrays.copyOfRange(buffer, bestStart, bestEnd), Base64.URL_SAFE);
             final int base64VideoIdIndex = byteIndexOf(
                     byteBase64,
                     VideoInformation.getVideoId().getBytes(StandardCharsets.UTF_8)
@@ -714,7 +730,7 @@ public final class FlyoutUtils {
                 return;
             }
 
-            final byte[] rawCommentId = Arrays.copyOfRange(byteBase64, 0, base64VideoIdIndex);
+            byte[] rawCommentId = Arrays.copyOfRange(byteBase64, 0, base64VideoIdIndex);
             String cleanedCommentId = COMMENT_ID_CLEANUP_PATTERN.matcher(
                             new String(rawCommentId, StandardCharsets.UTF_8)
                     ).replaceAll(" ")
@@ -737,7 +753,7 @@ public final class FlyoutUtils {
 
     public static int byteIndexOf(byte[] haystack, byte[] needle, int startIndex) {
         if (needle == null) return -1;
-        final List<Integer> indices = byteIndexesOf(haystack, List.of(needle), startIndex);
+        List<Integer> indices = byteIndexesOf(haystack, List.of(needle), startIndex);
         return indices.isEmpty() ? -1 : indices.get(0);
     }
 
@@ -746,7 +762,7 @@ public final class FlyoutUtils {
     }
 
     public static List<Integer> byteIndexesOf(byte[] haystack, List<byte[]> needles, int startIndex) {
-        final List<Integer> indices = new ArrayList<>();
+        List<Integer> indices = new ArrayList<>();
         if (haystack == null || needles == null) {
             return indices;
         }
@@ -756,7 +772,7 @@ public final class FlyoutUtils {
         final boolean[] found = new boolean[needles.size()];
         for (int i = startIndex; i < haystackLen; i++) {
             for (int k = 0; k < needles.size(); k++) {
-                final byte[] needle = needles.get(k);
+                byte[] needle = needles.get(k);
                 if (found[k] || needle == null) {
                     continue;
                 }

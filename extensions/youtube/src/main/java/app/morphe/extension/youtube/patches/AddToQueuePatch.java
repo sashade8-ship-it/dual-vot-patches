@@ -53,25 +53,25 @@ public final class AddToQueuePatch {
      * 21.04 and older.
      */
     public static boolean replaceOnItemClick(Object object) {
-        if (!Settings.QUEUE_OVERRIDE_FLYOUT_MENU.get()) {
-            return false;
-        }
-
-        if (FlyoutUtils.getFlyoutVideoId().isEmpty()) {
-            Logger.printDebug(() -> "Cannot replace on item click, flyoutVideoId is empty");
-            return false;
-        }
-
-        int buttonIndex = -1;
-        String buttonName = "";
-
-        if (object instanceof Integer index) {
-            buttonIndex = index;
-        } else if (object instanceof String name) {
-            buttonName = name;
-        }
-
         try {
+            if (!Settings.QUEUE_OVERRIDE_FLYOUT_MENU.get()) {
+                return false;
+            }
+
+            if (FlyoutUtils.getFlyoutVideoId().isEmpty()) {
+                Logger.printDebug(() -> "Cannot replace on item click, flyoutVideoId is empty");
+                return false;
+            }
+
+            int buttonIndex = -1;
+            String buttonName = "";
+
+            if (object instanceof Integer index) {
+                buttonIndex = index;
+            } else if (object instanceof String name) {
+                buttonName = name;
+            }
+
             if (!FlyoutUtils.getVisibleFlyoutButtons().isEmpty()) {
                 if (buttonIndex >= 0) {
                     return flyoutButtonClickLogic(FlyoutUtils.getVisibleFlyoutButtons().get(buttonIndex).first);
@@ -87,13 +87,16 @@ public final class AddToQueuePatch {
 
     private static Runnable getNewRunnable(@Nullable Runnable original, String buttonName) {
         return () -> {
-            // Reset index logic goes here if needed between UI clicks
-            FlyoutUtils.resetCurrentButtonIndex();
+            try {
+                // Reset index logic goes here if needed between UI clicks
+                FlyoutUtils.resetCurrentButtonIndex();
 
-            if (flyoutButtonClickLogic(buttonName)) {
-                return;
+                if (flyoutButtonClickLogic(buttonName)) {
+                    return;
+                }
+            } catch (Exception ex) {
+                Logger.printException(() -> "Add to queue getNewRunnable failure", ex);
             }
-
             if (original != null) {
                 original.run();
             }
@@ -101,17 +104,24 @@ public final class AddToQueuePatch {
     }
 
     public static boolean flyoutButtonClickLogic(String buttonName) {
-        if (queueButtonNames.contains(buttonName)) {
-            Logger.printDebug(() -> "Opening custom queue flyout with videoId: " + FlyoutUtils.getFlyoutVideoId());
+        try {
+            if (queueButtonNames.contains(buttonName)) {
+                String flyoutVideoId = FlyoutUtils.getFlyoutVideoId();
+                Logger.printDebug(() -> "Opening custom queue flyout with videoId: " + flyoutVideoId);
 
-            Activity activity = Utils.getActivity();
-            if (activity != null && !activity.isFinishing() && !activity.isDestroyed()) {
-                PlaylistPatch.prepareDialogBuilder(activity, FlyoutUtils.getFlyoutVideoId());
+                Activity activity = Utils.getActivity();
+                if (activity != null && !activity.isFinishing() && !activity.isDestroyed()) {
+                    PlaylistPatch.prepareDialogBuilder(activity, flyoutVideoId);
+                } else {
+                    Logger.printException(() -> "Could not open queue flyout, activity is not available");
+                }
+
+                FlyoutUtils.dismissBottomSheetFlyout(); // Must dismiss after showing dialog.
+                FlyoutUtils.dismissPopupWindowFlyout();
+                return true;
             }
-
-            FlyoutUtils.dismissBottomSheetFlyout(); // Must dismiss after showing dialog.
-            FlyoutUtils.dismissPopupWindowFlyout();
-            return true;
+        } catch (Exception ex) {
+            Logger.printException(() -> "flyoutButtonClickLogic failure: " + buttonName, ex);
         }
 
         return false;
