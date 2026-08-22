@@ -1,3 +1,13 @@
+## 1.40.0-dev.19-dualvot.8.3 (2026-08-22)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.19](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.19).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dev.18-dualvot.8.3 (2026-08-22)
 
 ### Automated Morphe update
@@ -382,6 +392,13 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.18...v1.40.0-dev.19) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* Context is sometimes not set ([e54b364](https://github.com/MorpheApp/morphe-patches/commit/e54b364b8ca1122c77b5d8dc44a04c40d99d1598))
+* **Theme:** Change the color of the new content indicator of the top bar ([#2550](https://github.com/MorpheApp/morphe-patches/issues/2550)) ([4f0210b](https://github.com/MorpheApp/morphe-patches/commit/4f0210b0793e37c546ec5a52b59a52f7e98564a9))
 
 ## [1.40.0-dev.18](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.17...v1.40.0-dev.18) (2026-08-22)
 
