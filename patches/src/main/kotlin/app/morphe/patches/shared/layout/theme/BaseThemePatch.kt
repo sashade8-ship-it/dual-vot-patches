@@ -69,6 +69,12 @@ private const val THEME_INDEX_OFFSET_LIGHT = 700
 private const val THEME_BACKGROUND_OVERLAYABLE_NAME = "MorpheThemeColor"
 
 /**
+ * Name of the theme that draws the splash screen of a background, which the extension asks for
+ * with the same numbering.
+ */
+private const val SPLASH_THEME_NAME = "morphe_splash_theme_"
+
+/**
  * Background colors that can be selected in the app settings.
  *
  * The index of a color is the ordinal of the matching value of the extension enum
@@ -272,7 +278,8 @@ private fun ResourcePatchContext.declaredColorNames(): Set<String> {
 internal fun baseThemeResourcePatch(
     colorNamesDark: (() -> Set<String>) = { THEME_DEFAULT_COLOR_NAMES_DARK },
     colorNamesLight: (() -> Set<String>) = { THEME_DEFAULT_COLOR_NAMES_LIGHT },
-    includeLightBackground: Boolean = false
+    includeLightBackground: Boolean = false,
+    splashScreenThemeParent: String? = null
 ) = resourcePatch {
     execute {
         val declaredColors = declaredColorNames()
@@ -292,6 +299,85 @@ internal fun baseThemeResourcePatch(
         }
 
         declareOverlayableColors(darkColorNames + lightColorNames)
+
+        // An app without a launcher theme keeps the splash screen it draws itself.
+        if (splashScreenThemeParent != null) {
+            addSplashScreenThemes(splashScreenThemeParent, includeLightBackground)
+        }
+    }
+}
+
+/**
+ * Adds a theme for every background, which the system can draw the splash screen of the app with.
+ *
+ * The splash screen is drawn before the app runs and with the configuration of the device, so the
+ * resource variant of the selected background is never used for it. The extension hands one of
+ * these themes to the system instead, and the system draws the splash screen with it from then on.
+ *
+ * @param parentStyle The theme of the launcher activity, so that only the color of it differs.
+ */
+private fun ResourcePatchContext.addSplashScreenThemes(
+    parentStyle: String,
+    includeLightBackground: Boolean
+) {
+    document("res/values/styles.xml").use { document ->
+        val resources = document.getNode("resources")
+
+        fun addTheme(index: Int, color: String) {
+            val style = document.createElement("style")
+            style.setAttribute("name", SPLASH_THEME_NAME + index)
+            style.setAttribute("parent", parentStyle)
+
+            // The first is used since Android 12, and the second by everything the app draws
+            // until the splash screen is gone.
+            arrayOf(
+                "android:windowSplashScreenBackground",
+                "android:windowBackground"
+            ).forEach { name ->
+                style.appendChild(
+                    document.createElement("item").apply {
+                        setAttribute("name", name)
+                        textContent = color
+                    }
+                )
+            }
+
+            resources.appendChild(style)
+        }
+
+        fun addThemes(
+            indexOffset: Int,
+            backgrounds: List<String?>,
+            levels: IntArray,
+            colorNames: List<String>
+        ) {
+            backgrounds.forEachIndexed { index, color ->
+                if (color != null) {
+                    addTheme(indexOffset + index + 1, color)
+                } else if (index == 0) {
+                    // The background of the app itself, which keeps the color the app declares.
+                    // The system resolves the theme with the configuration of the device, where
+                    // no variant of a background applies, so this is the unpatched color.
+                    addTheme(indexOffset + index + 1, "@color/" + colorNames.first())
+                }
+                // A color the user picks is not known while patching, and the palette below is
+                // used for it instead.
+            }
+
+            for (index in 0 until 512) {
+                addTheme(
+                    indexOffset + PALETTE_INDEX_OFFSET + index,
+                    paletteColor(levels, index)
+                )
+            }
+        }
+
+        addThemes(THEME_INDEX_OFFSET_DARK, THEME_COLORS_DARK, PALETTE_LEVELS_DARK, darkColorNames)
+        if (includeLightBackground) {
+            addThemes(
+                THEME_INDEX_OFFSET_LIGHT, THEME_COLORS_LIGHT, PALETTE_LEVELS_LIGHT, lightColorNames
+            )
+        }
     }
 }
 
@@ -358,14 +444,20 @@ private fun ResourcePatchContext.add9BitColorVariants(
     colorNames: List<String>
 ) {
     for (index in 0 until 512) {
-        val r = levels[(index shr 6) and 0x7]
-        val g = levels[(index shr 3) and 0x7]
-        val b = levels[index and 0x7]
-
-        val color = "#%02X%02X%02X".format(r, g, b)
-        writeBackgroundColorVariant(indexOffset + PALETTE_INDEX_OFFSET + index, color, colorNames)
+        writeBackgroundColorVariant(
+            indexOffset + PALETTE_INDEX_OFFSET + index, paletteColor(levels, index), colorNames
+        )
     }
 }
+
+/**
+ * The color of a value of the 9 bit palette, which the extension picks the index of.
+ */
+private fun paletteColor(levels: IntArray, index: Int) = "#%02X%02X%02X".format(
+    levels[(index shr 6) and 0x7],
+    levels[(index shr 3) and 0x7],
+    levels[index and 0x7]
+)
 
 private fun ResourcePatchContext.writeBackgroundColorVariant(
     index: Int,
