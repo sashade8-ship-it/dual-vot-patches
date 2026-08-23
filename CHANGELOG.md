@@ -1,3 +1,13 @@
+## 1.40.0-dev.20-dualvot.8.3 (2026-08-23)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.20](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.20).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dev.19-dualvot.8.3 (2026-08-22)
 
 ### Automated Morphe update
@@ -392,6 +402,13 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.19...v1.40.0-dev.20) (2026-08-23)
+
+### 🐛 Bug Fixes
+
+* **YouTube - FlyoutUtils:** Unified extraction videoId logic and added new litho video element ([a103d4a](https://github.com/MorpheApp/morphe-patches/commit/a103d4af319db5d2eb47f3bb1492154d3afeb495))
+* **YouTube - Seekbar thumbnail:** Reduced heatmap peak point font pad… ([#2564](https://github.com/MorpheApp/morphe-patches/issues/2564)) ([1209b95](https://github.com/MorpheApp/morphe-patches/commit/1209b9544914a84ce621e026aa366de2a6d1dd0b))
 
 ## [1.40.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.18...v1.40.0-dev.19) (2026-08-22)
 
