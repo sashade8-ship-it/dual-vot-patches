@@ -14,6 +14,8 @@ import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Base64;
 import android.util.Pair;
 import android.view.Gravity;
@@ -84,15 +86,14 @@ public final class FlyoutUtils {
             getAsciiBytes("compact_playlist.e"),
             getAsciiBytes("compact_video.e"),
             getAsciiBytes("grid_video.e"),
-            getAsciiBytes("shorts_pivot_item.e"),
-            getAsciiBytes("shorts_video_cell.e"),
-            getAsciiBytes("video_lockup_with_attachment.e")
-    );
-    private static final List<byte[]> SHELFS_BYTES = List.of(
-            getAsciiBytes("horizontal_shelf.e"),
-            getAsciiBytes("shorts_shelf.e"),
             getAsciiBytes("grid_video_wrapper.e"),
-            getAsciiBytes("rich_grid_row.e")
+            getAsciiBytes("horizontal_shelf.e"),
+            getAsciiBytes("rich_grid_row.e"),
+            getAsciiBytes("shorts_pivot_item.e"),
+            getAsciiBytes("shorts_shelf.e"),
+            getAsciiBytes("shorts_video_cell.e"),
+            getAsciiBytes("swipeable_row.e"),
+            getAsciiBytes("video_lockup_with_attachment.e")
     );
     private static final List<byte[]> LIST_ITEM_SHARE_BYTES = List.of(
             getAsciiBytes("list_item.e"),
@@ -349,25 +350,33 @@ public final class FlyoutUtils {
             return;
         }
 
-        final boolean isShowing;
-        if (flyoutObject instanceof Dialog flyoutDialogHandler) {
-            isShowing = flyoutDialogHandler.isShowing();
-        } else if (flyoutObject instanceof PopupWindow flyoutPopupWindowHandler) {
-            isShowing = flyoutPopupWindowHandler.isShowing();
-        } else {
-            isShowing = false;
-        }
+        final Handler visibilityHandler = new Handler(Looper.getMainLooper());
+        visibilityHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                final boolean isShowing;
 
-        if (isShowing) {
-            Utils.runOnMainThreadDelayed(() -> runFlyoutPanelVisibilityHandler(flyoutObject), 100);
-        } else {
-            Utils.runOnMainThreadDelayed(() -> {
-                        flyoutVideoId = "";
-                        flyoutPlaylistId = "";
-                        Logger.printDebug(() -> "Cleared flyout video and playlist id");
-                    }, 500
-            );
-        }
+                if (flyoutObject instanceof Dialog flyoutDialogHandler) {
+                    isShowing = flyoutDialogHandler.isShowing();
+                } else if (flyoutObject instanceof PopupWindow flyoutPopupWindowHandler) {
+                    isShowing = flyoutPopupWindowHandler.isShowing();
+                } else {
+                    isShowing = false;
+                }
+
+                if (isShowing) {
+                    visibilityHandler.postDelayed(this, 100);
+                } else {
+                    Utils.runOnMainThreadDelayed(
+                            () -> {
+                                flyoutVideoId = "";
+                                flyoutPlaylistId = "";
+                            },
+                            500
+                    );
+                }
+            }
+        });
     }
 
     @Nullable
@@ -545,7 +554,7 @@ public final class FlyoutUtils {
             return;
         }
 
-        if (!byteIndexesOf(flyoutBuffer, SHELFS_BYTES).isEmpty()) {
+        if (!byteIndexesOf(flyoutBuffer, VIDEO_ELEMENTS_BYTES).isEmpty()) {
             View senderView = senderViewRef.get();
             if (senderView != null) {
                 ViewParent parent = senderView.getParent();
@@ -553,38 +562,18 @@ public final class FlyoutUtils {
                     if (parent instanceof ComponentHost componentHost) {
                         CharSequence description = componentHost.getContentDescription();
                         if (description != null) {
-                            setShelfFlyoutVideoId(flyoutBuffer, description.toString());
+                            setFlyoutPlaylistId(flyoutBuffer);
+
+                            setFlyoutVideoId(flyoutBuffer, description.toString());
                         }
                     }
                     parent = parent.getParent();
                 }
             }
-            return;
-        }
-
-        List<Integer> listVideoElementsBytesIndexes = byteIndexesOf(flyoutBuffer, VIDEO_ELEMENTS_BYTES);
-        if (!listVideoElementsBytesIndexes.isEmpty() && byteIndexInStartRange(listVideoElementsBytesIndexes.get(0))) {
-            setFlyoutPlaylistId(flyoutBuffer);
-
-            setFlyoutVideoId(flyoutBuffer);
         }
     }
 
-    private static void setFlyoutVideoId(byte[] flyoutBuffer) {
-        for (byte[] VIDEO_ID_PREFIX_BYTES : VIDEO_ID_PREFIXES_BYTES) {
-            final int index = byteIndexOf(flyoutBuffer, VIDEO_ID_PREFIX_BYTES);
-            if (index >= 0) {
-                final int videoIdStart = index + VIDEO_ID_PREFIX_BYTES.length;
-                final int videoIdEnd = videoIdStart + 11;
-                if (videoIdEnd <= flyoutBuffer.length) {
-                    flyoutVideoId = new String(flyoutBuffer, videoIdStart, 11, StandardCharsets.US_ASCII);
-                    return;
-                }
-            }
-        }
-    }
-
-    private static void setShelfFlyoutVideoId(byte[] buffer, String description) {
+    private static void setFlyoutVideoId(byte[] buffer, String description) {
         if (description == null || buffer == null || description.isEmpty()) {
             return;
         }
@@ -641,8 +630,19 @@ public final class FlyoutUtils {
         }
 
         final int requiredScore = Math.max(1, (int) Math.ceil(words.size() * 0.4));
+        final byte[] fixedBuffer = Arrays.copyOfRange(buffer, bestIdx, len);
         if (bestIdx != -1 && maxScore >= requiredScore) {
-            setFlyoutVideoId(Arrays.copyOfRange(buffer, bestIdx, len));
+            for (byte[] VIDEO_ID_PREFIX_BYTES : VIDEO_ID_PREFIXES_BYTES) {
+                final int index = byteIndexOf(fixedBuffer, VIDEO_ID_PREFIX_BYTES);
+                if (index >= 0) {
+                    final int videoIdStart = index + VIDEO_ID_PREFIX_BYTES.length;
+                    final int videoIdEnd = videoIdStart + 11;
+                    if (videoIdEnd <= fixedBuffer.length) {
+                        flyoutVideoId = new String(fixedBuffer, videoIdStart, 11, StandardCharsets.US_ASCII);
+                        return;
+                    }
+                }
+            }
         }
     }
 
