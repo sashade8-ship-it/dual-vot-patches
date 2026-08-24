@@ -125,7 +125,7 @@ Perubahan termasuk:
   <string name="morphe_hide_youtube_doodles_user_dialog_message">Menampilkan YouTube Doodles dapat mencegah header khusus untuk ditampilkan.</string>
   <string name="morphe_hide_channel_bar_title">Sembunyikan bilah saluran</string>
   <string name="morphe_hide_channel_watermark_title">Sembunyikan tanda air saluran</string>
-  <string name="morphe_hide_chapters_timeline_button_title">Sembunyikan tombol Bab dan \'Di video ini\'</string>
+  <string name="morphe_hide_chapters_timeline_button_title">Sembunyikan tombol Bab dan \'Pada video ini\'</string>
   <string name="morphe_hide_crowdfunding_box_title">Sembunyikan kotak penggalangan dana</string>
   <string name="morphe_hide_emergency_box_title">Sembunyikan kotak darurat</string>
   <string name="morphe_hide_info_panels_title">Sembunyikan panel info</string>
@@ -634,8 +634,8 @@ Untuk memperbaikinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' m
   <string name="morphe_auto_captions_style_title">Ketentuan teks otomatis</string>
   <string name="morphe_auto_captions_style_entry_1">Selalu tampilkan</string>
   <string name="morphe_auto_captions_style_entry_2">Jangan pernah tampilkan</string>
-  <string name="morphe_auto_captions_style_entry_3">Tampilkan saat dibisukan</string>
-  <string name="morphe_auto_captions_style_entry_4">Tampilkan saat dibisukan</string>
+  <string name="morphe_auto_captions_style_entry_3">Tampilkan saat audio tidak dibisukan</string>
+  <string name="morphe_auto_captions_style_entry_4">Tampilkan saat audio dibisukan</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Tampilkan teks otomatis</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Sembunyikan teks otomatis</string>
   <!-- layout.captions.captionCookiesPatch -->
@@ -980,23 +980,19 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_back_button_always_exits_feed_title">Tombol kembali keluar dari feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali selalu keluar dari aplikasi alih-alih menggulir ke atas feed</string>
   <!-- layout.theme.themePatch -->
-  <string name="morphe_theme_background_light_title">Latar belakang tema terang</string>
-  <string name="morphe_theme_background_light_entry_1">Bawaan aplikasi</string>
-  <string name="morphe_theme_background_light_entry_2">Putih</string>
-  <string name="morphe_theme_background_light_entry_3">Material You (Netral)</string>
-  <string name="morphe_theme_background_light_entry_4">Material You (Primer)</string>
-  <string name="morphe_theme_background_light_entry_5">Material You (Sekunder)</string>
-  <string name="morphe_theme_background_light_entry_6">Material You (Tersier)</string>
-  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
-  <string name="morphe_theme_background_light_entry_8">Pink muda</string>
-  <string name="morphe_theme_background_light_entry_9">Biru muda</string>
-  <string name="morphe_theme_background_light_entry_10">Hijau muda</string>
-  <string name="morphe_theme_background_light_entry_11">Kuning muda</string>
-  <string name="morphe_theme_background_light_entry_12">Oranye muda</string>
-  <string name="morphe_theme_background_light_entry_13">Merah muda</string>
-  <string name="morphe_theme_background_light_entry_14">Khusus</string>
-  <string name="morphe_theme_background_light_custom_color_title">Latar belakang terang kustom</string>
-  <string name="morphe_theme_background_light_custom_color_summary">Atur warna latar belakang tema terang</string>
+  <string name="morphe_theme_color_light_title">Latar belakang tema terang</string>
+  <string name="morphe_theme_color_light_entry_2">Putih</string>
+  <string name="morphe_theme_color_light_entry_3">Material You (Putih)@string/morphe_theme_color_light_entry_3</string>
+  <string name="morphe_theme_color_light_entry_9">Light pink</string>
+  <string name="morphe_theme_color_light_entry_10">Light blue</string>
+  <string name="morphe_theme_color_light_entry_11">Light green</string>
+  <string name="morphe_theme_color_light_entry_12">Light yellow</string>
+  <string name="morphe_theme_color_light_entry_13">Light orange</string>
+  <string name="morphe_theme_color_light_entry_14">Merah muda</string>
+  <string name="morphe_theme_color_custom_entry">Khusus</string>
+  <string name="morphe_theme_color_custom_light_title">Latar belakang terang kustom</string>
+  <string name="morphe_theme_color_custom_light_summary">Set the background color of the light theme</string>
+  <string name="morphe_theme_color_change_foreground_title">Change foreground color</string>
   <string name="morphe_gradient_loading_screen_title">Aktifkan layar pemuatan gradien</string>
   <string name="morphe_gradient_loading_screen_summary">Menampilkan latar belakang gradien pada layar pemuatan daripada warna solid</string>
   <string name="morphe_splash_screen_animation_style_title">Gaya layar pembuka</string>

@@ -500,9 +500,15 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Visar en videominiatyr när du drar i sökfältet</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Mest repriserade</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_not_available">"\"Aktivera livestream-DVR\" kanske inte är tillgängligt
+
+För att åtgärda detta, aktivera \"Falska videoströmmar\" och ändra \"Standardklient\" till \"TV Simply\" eller \"visionOS\""</string>
   <string name="morphe_expand_livestream_dvr_duration_title">Förläng varaktighet för DVR för livestreamar</string>
   <string name="morphe_expand_livestream_dvr_duration_summary">Gör det möjligt att spola tillbaka livesändningar upp till 7 dagar bakåt i tiden</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_not_available">"\"Utöka varaktighet för livestream-DVR\" kanske inte är tillgängligt
+
+För att åtgärda detta, aktivera \"Falska videoströmmar\" och ändra \"Standardklient\" till \"TV Simply\" eller \"visionOS\""</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Aktivera Dra för att söka</string>
   <string name="morphe_slide_to_seek_summary">Aktiverar svep för att söka istället för att spela upp i 2x hastighet när du trycker och håller på videospelaren</string>
@@ -945,6 +951,7 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_miniplayer_disable_resuming_summary">Inaktiverar minispelaren \'Fortsätt titta\', en YouTube Premium-funktion som visas vid appstart</string>
   <string name="morphe_miniplayer_screen_title">Minispelare</string>
   <string name="morphe_miniplayer_screen_summary">Anpassa den minimerade videospelarens utseende och beteende</string>
+  <string name="morphe_miniplayer_not_available_summary">YouTube tog bort alla ytterligare minispelare. För att ändra typ av minispelare, patcha YouTube 21.28.208 eller äldre</string>
   <string name="morphe_miniplayer_type_title">Minispelartyp</string>
   <string name="morphe_miniplayer_type_entry_0">Inaktiverad</string>
   <string name="morphe_miniplayer_type_entry_1">Standard</string>
@@ -974,7 +981,19 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_back_button_always_exits_feed_title">Tillbaka-knappen avslutar flödet</string>
   <string name="morphe_back_button_always_exits_feed_summary">Att trycka på Tillbaka avslutar alltid appen istället för att rulla till toppen av flödet</string>
   <!-- layout.theme.themePatch -->
-  <string name="morphe_theme_background_light_entry_14">Eget</string>
+  <string name="morphe_theme_color_light_title">Bakgrundsfärg för ljust tema</string>
+  <string name="morphe_theme_color_light_entry_2">Vit</string>
+  <string name="morphe_theme_color_light_entry_3">Material You (Vit)</string>
+  <string name="morphe_theme_color_light_entry_9">Ljusrosa</string>
+  <string name="morphe_theme_color_light_entry_10">Ljusblå</string>
+  <string name="morphe_theme_color_light_entry_11">Ljusgrön</string>
+  <string name="morphe_theme_color_light_entry_12">Ljusgul</string>
+  <string name="morphe_theme_color_light_entry_13">Ljusorange</string>
+  <string name="morphe_theme_color_light_entry_14">Ljusröd</string>
+  <string name="morphe_theme_color_custom_entry">Eget</string>
+  <string name="morphe_theme_color_custom_light_title">Anpassad ljus bakgrund</string>
+  <string name="morphe_theme_color_custom_light_summary">Ställ in bakgrundsfärgen för det ljusa temat</string>
+  <string name="morphe_theme_color_change_foreground_title">Ändra förgrundsfärg</string>
   <string name="morphe_gradient_loading_screen_title">Aktivera tonad inläsningsskärm</string>
   <string name="morphe_gradient_loading_screen_summary">Visar en tonad bakgrund på inläsningsskärmen istället för en enfärgad</string>
   <string name="morphe_splash_screen_animation_style_title">Välkomstskärmens stil</string>

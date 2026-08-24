@@ -22,24 +22,11 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">应用名称</string>
   <!-- layout.theme.baseThemePatch -->
-  <string name="morphe_theme_background_dark_title">深色主题背景</string>
-  <string name="morphe_theme_background_dark_entry_1">应用默认</string>
-  <string name="morphe_theme_background_dark_entry_2">纯黑</string>
-  <string name="morphe_theme_background_dark_entry_3">Material You（中性）</string>
-  <string name="morphe_theme_background_dark_entry_4">Material You（主要）</string>
-  <string name="morphe_theme_background_dark_entry_5">Material You（次要）</string>
-  <string name="morphe_theme_background_dark_entry_6">Material You（第三）</string>
-  <string name="morphe_theme_background_dark_entry_7">经典 YouTube</string>
-  <string name="morphe_theme_background_dark_entry_8">Catppuccin（摩卡）</string>
-  <string name="morphe_theme_background_dark_entry_9">深粉色</string>
-  <string name="morphe_theme_background_dark_entry_10">深蓝色</string>
-  <string name="morphe_theme_background_dark_entry_11">深绿色</string>
-  <string name="morphe_theme_background_dark_entry_12">深黄色</string>
-  <string name="morphe_theme_background_dark_entry_13">深橙色</string>
-  <string name="morphe_theme_background_dark_entry_14">深红色</string>
-  <string name="morphe_theme_background_dark_entry_15">自定义</string>
-  <string name="morphe_theme_background_dark_custom_color_title">自定义深色背景</string>
-  <string name="morphe_theme_background_dark_custom_color_summary">设置深色主题的背景颜色</string>
+  <string name="morphe_theme_color_dark_title">深色主题背景</string>
+  <string name="morphe_theme_color_dark_entry_2">纯黑</string>
+  <string name="morphe_theme_color_custom_dark_title">自定义深色背景</string>
+  <string name="morphe_theme_color_custom_dark_summary">设置深色主题的背景颜色</string>
+  <string name="morphe_theme_color_entry_1">应用默认</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">外部下载</string>
   <string name="morphe_external_downloader_name_title">下载器的应用包名</string>

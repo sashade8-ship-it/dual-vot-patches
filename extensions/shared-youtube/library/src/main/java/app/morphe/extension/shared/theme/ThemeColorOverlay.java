@@ -129,31 +129,36 @@ final class ThemeColorOverlay {
      * Loads the overlay of a theme into the resources of {@code context}. Without this the overlay
      * is registered but nothing of the app uses it.
      *
-     * @param dark If the app shows its dark theme. The overlay of the other theme is never loaded,
-     *             its colors are the text and the icons of this one.
+     * @param dark             If the app shows its dark theme.
+     * @param changeForeground If the overlay of the other theme is also loaded.
      */
-    static void applyTo(Context context, boolean dark) {
+    static void applyTo(Context context, boolean dark, boolean changeForeground) {
         try {
-            ResourcesLoader loader = resourcesLoader(dark);
-            if (loader == null) {
-                OverlayInfo overlayInfo = findOverlay(context, dark);
-                if (overlayInfo == null) {
-                    Logger.printException(() -> "Overlay " + overlayName(dark)
-                            + " of the app is not registered");
-                    return;
-                }
-
-                loader = new ResourcesLoader();
-                loader.addProvider(ResourcesProvider.loadOverlay(overlayInfo));
-                setResourcesLoader(dark, loader);
+            applyTo(context, dark);
+            if (changeForeground) {
+                applyTo(context, !dark);
             }
-
-            // Adding the same loader again is ignored, and every context of the app needs it
-            // because the loaders of a context are not inherited.
-            context.getResources().addLoaders(loader);
         } catch (Exception ex) {
             Logger.printException(() -> "Could not apply the overlay of the app", ex);
         }
+    }
+
+    private static void applyTo(Context context, boolean dark) throws Exception {
+        ResourcesLoader loader = resourcesLoader(dark);
+        if (loader == null) {
+            OverlayInfo overlayInfo = findOverlay(context, dark);
+            if (overlayInfo == null) {
+                return;
+            }
+
+            loader = new ResourcesLoader();
+            loader.addProvider(ResourcesProvider.loadOverlay(overlayInfo));
+            setResourcesLoader(dark, loader);
+        }
+
+        // Adding the same loader again is ignored, and every context of the app needs it
+        // because the loaders of a context are not inherited.
+        context.getResources().addLoaders(loader);
     }
 
     /**

@@ -7,10 +7,11 @@
 
 package app.morphe.extension.shared.theme;
 
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_BACKGROUND_DARK;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_BACKGROUND_DARK_CUSTOM_COLOR;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_BACKGROUND_LIGHT;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_BACKGROUND_LIGHT_CUSTOM_COLOR;
+import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_CHANGE_FOREGROUND;
+import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_DARK;
+import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_CUSTOM_DARK;
+import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_LIGHT;
+import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_CUSTOM_LIGHT;
 import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_LAST_USED_DARK_MODE;
 
 import android.app.Activity;
@@ -40,92 +41,115 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.settings.EnumSetting;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.StringSetting;
 
 /**
- * Changes the app background color while the app runs.
+ * Changes the app theme color while the app runs.
  * <p>
- * The background of the app is not painted by app code, it is resolved by the resource system from
- * XML: the window background is {@code ?ytBaseBackground}, which resolves to a color resource.
+ * The color of the app is not painted by app code, it is resolved by the resource system from
+ * XML: the window color is {@code ?ytBaseBackground}, which resolves to a color resource.
  * Nothing in the app can be hooked to change that, but the resource system picks a resource
  * variant using the {@link Configuration} of the context it is resolved with.
  * <p>
- * The patch writes one {@code values-mccNNN/colors.xml} for every dark background and one
- * {@code values-mncNNN/colors.xml} for every light background, and this class selects one of them
+ * The patch writes one {@code values-mccNNNN/colors.xml} for every dark color and one
+ * {@code values-mncNNNN/colors.xml} for every light color, and this class selects one of them
  * by overriding {@link Configuration#mcc} and {@link Configuration#mnc} of every context the app
  * attaches. Both qualifiers are ignored by the app itself and affect no other resource.
  * <p>
- * The config value of a background is its ordinal plus one, and {@link #APP_DEFAULT_CONFIG_VALUE}
+ * The config value of a color is its ordinal plus one, and {@link #APP_DEFAULT_CONFIG_VALUE}
  * is used for the unpatched colors of the app. The patch relies on the same numbering.
  * <p>
- * Only a color that was compiled in can be selected this way, so the {@code CUSTOM} background
+ * Only a color that was compiled in can be selected this way, so the {@code CUSTOM} color
  * uses {@link ThemeColorOverlay} instead to give the same color resources a value of its
  * own. That needs Android 14 or later.
+ * <p>
+ * All of this is skipped for a theme color that was set with a patch option, see
+ * {@link #isPatchedTheme()}.
  */
 @SuppressWarnings("unused")
 public class ThemeColorPatch {
 
-    public interface Background {
-        /**
-         * If the color of this background is a Material You system color,
-         * which only exists on Android 12 and later.
-         */
-        boolean isMaterialYou();
+    public interface ThemeColor {
+        enum Kind {
+            /** A color that every Android version has. */
+            PLAIN,
+            /** A Material You system color, which only Android 12 and later has. */
+            MATERIAL_YOU,
+            /**
+             * Not a Material You color, but the accents follow the palette anyway,
+             * which is what an AMOLED display needs.
+             */
+            MATERIAL_YOU_ACCENT,
+            /** A color the user picks, which is applied with an overlay. */
+            CUSTOM
+        }
+
+        Kind kind();
 
         /**
-         * If the color of this background is picked by the user and applied with an overlay.
+         * If the color only exists on Android 12 and later.
          */
-        boolean isCustom();
+        default boolean isMaterialYou() {
+            return kind() == Kind.MATERIAL_YOU;
+        }
+
+        /**
+         * If what the app draws with a color of its own, such as the new
+         * content indicator, follows the Material You palette.
+         */
+        default boolean usesMaterialYouAccent() {
+            return kind() == Kind.MATERIAL_YOU || kind() == Kind.MATERIAL_YOU_ACCENT;
+        }
+
+        default boolean isCustom() {
+            return kind() == Kind.CUSTOM;
+        }
     }
 
-    public enum ThemeColorDark implements Background {
+    public enum ThemeColorDark implements ThemeColor {
         APP_DEFAULT,
         PURE_BLACK,
-        MATERIAL_YOU_NEUTRAL(true, false),
-        MATERIAL_YOU_PRIMARY(true, false),
-        MATERIAL_YOU_SECONDARY(true, false),
-        MATERIAL_YOU_TERTIARY(true, false),
-        CLASSIC_YOUTUBE,
+        MATERIAL_YOU_PURE_BLACK(Kind.MATERIAL_YOU_ACCENT),
+        MATERIAL_YOU_NEUTRAL(Kind.MATERIAL_YOU),
+        MATERIAL_YOU_PRIMARY(Kind.MATERIAL_YOU),
+        MATERIAL_YOU_SECONDARY(Kind.MATERIAL_YOU),
+        MATERIAL_YOU_TERTIARY(Kind.MATERIAL_YOU),
         CATPPUCCIN_MOCHA,
+        CLASSIC_YOUTUBE,
         DARK_PINK,
         DARK_BLUE,
         DARK_GREEN,
         DARK_YELLOW,
         DARK_ORANGE,
         DARK_RED,
-        CUSTOM(false, true);
+        CUSTOM(Kind.CUSTOM);
 
-        private final boolean materialYou;
-        private final boolean custom;
+        private final Kind kind;
 
         ThemeColorDark() {
-            this(false, false);
+            this(Kind.PLAIN);
         }
 
-        ThemeColorDark(boolean materialYou, boolean custom) {
-            this.materialYou = materialYou;
-            this.custom = custom;
-        }
-
-        @Override
-        public boolean isMaterialYou() {
-            return materialYou;
+        ThemeColorDark(Kind kind) {
+            this.kind = kind;
         }
 
         @Override
-        public boolean isCustom() {
-            return custom;
+        public Kind kind() {
+            return kind;
         }
     }
 
-    public enum ThemeColorLight implements Background {
+    public enum ThemeColorLight implements ThemeColor {
         APP_DEFAULT,
         WHITE,
-        MATERIAL_YOU_NEUTRAL(true, false),
-        MATERIAL_YOU_PRIMARY(true, false),
-        MATERIAL_YOU_SECONDARY(true, false),
-        MATERIAL_YOU_TERTIARY(true, false),
+        MATERIAL_YOU_WHITE(Kind.MATERIAL_YOU_ACCENT),
+        MATERIAL_YOU_NEUTRAL(Kind.MATERIAL_YOU),
+        MATERIAL_YOU_PRIMARY(Kind.MATERIAL_YOU),
+        MATERIAL_YOU_SECONDARY(Kind.MATERIAL_YOU),
+        MATERIAL_YOU_TERTIARY(Kind.MATERIAL_YOU),
         CATPPUCCIN_LATTE,
         LIGHT_PINK,
         LIGHT_BLUE,
@@ -133,60 +157,57 @@ public class ThemeColorPatch {
         LIGHT_YELLOW,
         LIGHT_ORANGE,
         LIGHT_RED,
-        CUSTOM(false, true);
+        CUSTOM(Kind.CUSTOM);
 
-        private final boolean materialYou;
-        private final boolean custom;
+        private final Kind kind;
 
         ThemeColorLight() {
-            this(false, false);
+            this(Kind.PLAIN);
         }
 
-        ThemeColorLight(boolean materialYou, boolean custom) {
-            this.materialYou = materialYou;
-            this.custom = custom;
-        }
-
-        @Override
-        public boolean isMaterialYou() {
-            return materialYou;
+        ThemeColorLight(Kind kind) {
+            this.kind = kind;
         }
 
         @Override
-        public boolean isCustom() {
-            return custom;
+        public Kind kind() {
+            return kind;
         }
     }
 
     /**
-     * Availability of the custom dark background color.
+     * Availability of the color of a custom color.
      */
-    public static final class CustomDarkBackgroundAvailability implements Setting.Availability {
+    public static class ThemeColorCustomAvailability implements Setting.Availability {
+        private final EnumSetting<? extends ThemeColor> setting;
+
+        public ThemeColorCustomAvailability(EnumSetting<? extends ThemeColor> setting) {
+            this.setting = setting;
+        }
+
         @Override
         public boolean isAvailable() {
-            return THEME_BACKGROUND_DARK.get().isCustom();
+            return setting.get().isCustom();
         }
 
         @Override
         public List<Setting<?>> getParentSettings() {
-            return List.of(THEME_BACKGROUND_DARK);
+            return List.of(setting);
         }
     }
 
-    /**
-     * Availability of the custom light background color.
-     */
-    public static final class CustomLightBackgroundAvailability implements Setting.Availability {
+    public static class ThemeColorChangeForegroundAvailability implements Setting.Availability {
         @Override
         public boolean isAvailable() {
-            return THEME_BACKGROUND_LIGHT.get().isCustom();
+            return !THEME_COLOR_LIGHT.isSetToDefault() || !THEME_COLOR_DARK.isSetToDefault();
         }
 
         @Override
         public List<Setting<?>> getParentSettings() {
-            return List.of(THEME_BACKGROUND_LIGHT);
+            return List.of(THEME_COLOR_LIGHT, THEME_COLOR_DARK);
         }
     }
+
 
     /**
      * Config value of {@code APP_DEFAULT}. No resource variant uses it, so the app colors are used.
@@ -194,12 +215,17 @@ public class ThemeColorPatch {
     private static final int APP_DEFAULT_CONFIG_VALUE = 1;
 
     /**
-     * Mobile country codes of 100 to 199 are not assigned to any country, so a device never
-     * reports one. Every variant of the patch uses a code of that range, otherwise the system
-     * uses a variant on its own while it draws the splash screen of the app, because that is
-     * resolved with the configuration of the device.
+     * Resource reference every Material You color of a patch option starts with.
      */
-    private static final int UNUSED_MOBILE_COUNTRY_CODE = 100;
+    private static final String MATERIAL_YOU_COLOR_PREFIX = "@android:color/system_";
+
+    /**
+     * A mobile country code and a mobile network code are three digits, so a device never reports
+     * one above 999. Every variant of the patch uses a code above it, otherwise the system uses a
+     * variant on its own while it draws the splash screen of the app, because that is resolved
+     * with the configuration of the device.
+     */
+    private static final int UNREACHABLE_MOBILE_CODE = 1000;
 
     /**
      * Index of the first color of the 9 bit palette, and the index ranges of the two themes.
@@ -211,8 +237,8 @@ public class ThemeColorPatch {
      * The value a color channel can have in the 9 bit palette, of the dark and of the light theme.
      * The patch generates the variants with the same values, and both must stay identical.
      * <p>
-     * A background sits at one end of the range, so the eight values of a channel are placed where
-     * the backgrounds of that theme are instead of being spread evenly. A dark background of
+     * A color sits at one end of the range, so the eight values of a channel are placed where
+     * the color of that theme are instead of being spread evenly. A dark color of
      * #0F0F0F would otherwise be shown as pure black, because the nearest even value is 36 away.
      */
     private static final int[] PALETTE_LEVELS_DARK = {0, 3, 15, 38, 74, 126, 187, 255};
@@ -224,37 +250,37 @@ public class ThemeColorPatch {
     private static int lightConfigValue = -1;
 
     /**
-     * If the background of a theme is one the user picked, and the overlay of that theme must be
+     * If the color of a theme is one the user picked, and the overlay of that theme must be
      * loaded into every context that shows it.
      */
     private static boolean useDarkOverlay;
     private static boolean useLightOverlay;
 
     /**
-     * The color of the background that is selected for each theme, or zero for a theme the app
-     * does not have. Resolved once, with the resource variant of the theme it belongs to.
+     * The color selected for each theme, or zero for a theme the app does not have.
+     * Resolved once, with the resource variant of the theme it belongs to.
      */
     @ColorInt
-    private static int darkBackgroundColor;
+    private static int darkThemeColor;
     @ColorInt
-    private static int lightBackgroundColor;
+    private static int lightThemeColor;
 
-    private static boolean backgroundColorsResolved;
+    private static boolean themeColorsResolved;
 
     /**
-     * Name of the theme that draws the splash screen of a background. The patch generates one for
-     * every background it has a color of, and uses the same numbering.
+     * Name of the theme that draws the splash screen of a theme. The patch generates one for
+     * every theme it has a color of, and uses the same numbering.
      */
     private static final String SPLASH_THEME_NAME = "morphe_splash_theme_";
 
     private static boolean splashScreenThemeApplied;
 
     /**
-     * If a background color of the user can be applied. An overlay that an app registers for
+     * If a theme color of the user can be applied. An overlay that an app registers for
      * itself exists since Android 14, and no color can be added to the app on older versions.
      */
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
-    public static boolean isCustomBackgroundSupported() {
+    public static boolean isCustomColorSupported() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE;
     }
 
@@ -265,7 +291,7 @@ public class ThemeColorPatch {
      */
     public static Context wrapContext(Context base) {
         try {
-            if (base == null) {
+            if (base == null || !isPatchIncluded()) {
                 return null;
             }
 
@@ -274,11 +300,15 @@ public class ThemeColorPatch {
                 Utils.setContext(base);
             }
 
+            if (isPatchedTheme()) {
+                return base;
+            }
+
             resolveConfigValues(base);
 
             Configuration configuration = base.getResources().getConfiguration();
 
-            // A variant belongs to one theme only, so the background of the theme the app shows
+            // A variant belongs to one theme only, so the color of the theme the app shows
             // is the one to ask for. A theme change recreates the activity, and the index of the
             // other theme is used from then on.
             final boolean dark = isDarkTheme();
@@ -288,25 +318,31 @@ public class ThemeColorPatch {
                 THEME_LAST_USED_DARK_MODE.save(dark);
             }
 
-            final int index = dark ? darkConfigValue : lightConfigValue;
+            final boolean changeForeground = THEME_COLOR_CHANGE_FOREGROUND.get();
+            final int darkIndex = dark || changeForeground
+                    ? darkConfigValue
+                    : DARK_INDEX_OFFSET + APP_DEFAULT_CONFIG_VALUE;
+            final int lightIndex = !dark || changeForeground
+                    ? lightConfigValue
+                    : LIGHT_INDEX_OFFSET + APP_DEFAULT_CONFIG_VALUE;
 
             Context context;
-            if (configuration.mcc == mobileCountryCode(index)
-                    && configuration.mnc == mobileNetworkCode(index)) {
+            if (configuration.mcc == mobileCountryCode(darkIndex)
+                    && configuration.mnc == mobileNetworkCode(lightIndex)) {
                 // Context is created from a context that is already wrapped.
                 context = base;
             } else {
                 Configuration override = new Configuration(configuration);
-                setVariantOf(override, index);
+                setVariantOf(override, darkIndex, lightIndex);
 
                 context = base.createConfigurationContext(override);
             }
 
-            if (isCustomBackgroundSupported() && useOverlay(dark)) {
-                ThemeColorOverlay.applyTo(context, dark);
+            if (isCustomColorSupported()) {
+                ThemeColorOverlay.applyTo(context, dark, changeForeground);
             }
 
-            resolveBackgroundColors(context);
+            resolveThemeColors(context);
 
             return context;
         } catch (Exception ex) {
@@ -316,7 +352,7 @@ public class ThemeColorPatch {
     }
 
     /**
-     * The selected backgrounds require an app restart to change,
+     * The selected colors require an app restart to change,
      * so the preferences are read only once.
      */
     private static void resolveConfigValues(Context context) {
@@ -324,8 +360,8 @@ public class ThemeColorPatch {
             return;
         }
 
-        Background dark = THEME_BACKGROUND_DARK.get();
-        Background light = THEME_BACKGROUND_LIGHT.get();
+        ThemeColor dark = THEME_COLOR_DARK.get();
+        ThemeColor light = THEME_COLOR_LIGHT.get();
 
         darkConfigValue = configValue(dark, true);
         lightConfigValue = configValue(light, false);
@@ -335,42 +371,37 @@ public class ThemeColorPatch {
     }
 
     /**
-     * Resolves the color of both selected backgrounds, and hands them to Morphe, which uses the
-     * background of the app for its own dialogs and settings.
+     * Resolves the color of both selected colors, and hands them to Morphe, which uses the
+     * color of the app for its own dialogs and settings.
      * <p>
-     * A context of the app carries the resource variant of the theme the app shows, so the color
-     * of the other theme cannot be read from it: it would be the unpatched color of the app. Each
-     * color is resolved here with a configuration of the theme it belongs to, and everything that
-     * follows the background of the app uses {@link #backgroundColor(boolean)} instead of a color
-     * of whichever context is current.
+     * A context carries the resource variant of one theme only, so each color is resolved with
+     * a configuration of the theme it belongs to and read back with
+     * {@link #themeColor(boolean)}.
      */
-    private static void resolveBackgroundColors(Context context) {
-        if (backgroundColorsResolved || !Utils.isContextSet()) {
+    private static void resolveThemeColors(Context context) {
+        if (themeColorsResolved || !Utils.isContextSet()) {
             return;
         }
-        backgroundColorsResolved = true;
+        themeColorsResolved = true;
+
+        // Morphe draws its own text and icons, and follows what the app uses for its foreground.
+        ThemeUtils.setChangeForegroundColor(THEME_COLOR_CHANGE_FOREGROUND.get());
 
         // An app without a light theme has no light colors to replace.
-        if (!darkColorResourceNames().isEmpty()) {
-            darkBackgroundColor = selectedBackgroundColor(context, true);
-            ThemeUtils.setThemeDarkColor(darkBackgroundColor);
+        if (colorResourceNames(true).length > 0) {
+            darkThemeColor = selectedThemeColor(context, true);
+            ThemeUtils.setThemeDarkColor(darkThemeColor);
         }
-        if (!lightColorResourceNames().isEmpty()) {
-            lightBackgroundColor = selectedBackgroundColor(context, false);
-            ThemeUtils.setThemeLightColor(lightBackgroundColor);
+        if (colorResourceNames(false).length > 0) {
+            lightThemeColor = selectedThemeColor(context, false);
+            ThemeUtils.setThemeLightColor(lightThemeColor);
         }
     }
 
     /**
      * Injection point.
-     * <p>
-     * Gives the system the theme it draws the splash screen of the app with, which it uses for
-     * every launch that follows.
-     * <p>
-     * The splash screen is drawn before the app runs, with the configuration of the device, so the
-     * resource variant of the selected background is never used for it. A background of the app
-     * itself and a color the user picked have no theme, and the system is given none, which brings
-     * the splash screen of the app back.
+     *
+     * @see SplashScreenTheme
      */
     public static void setSplashScreenTheme(Activity activity) {
         try {
@@ -392,50 +423,59 @@ public class ThemeColorPatch {
     }
 
     /**
-     * The index of the theme that draws the splash screen of the selected background.
+     * The index of the theme that draws the splash screen of the selected color.
      * <p>
      * A color the user picked is not known while patching and has no theme of its own, so the
      * palette is used for it, which has one for every value it can be quantized to.
      */
     private static int splashScreenThemeIndex(boolean dark) {
-        Background background = dark
-                ? THEME_BACKGROUND_DARK.get()
-                : THEME_BACKGROUND_LIGHT.get();
+        ThemeColor color = dark
+                ? THEME_COLOR_DARK.get()
+                : THEME_COLOR_LIGHT.get();
 
-        if (!background.isCustom()) {
+        if (!color.isCustom()) {
             return dark ? darkConfigValue : lightConfigValue;
         }
 
         StringSetting setting = dark
-                ? THEME_BACKGROUND_DARK_CUSTOM_COLOR
-                : THEME_BACKGROUND_LIGHT_CUSTOM_COLOR;
+                ? THEME_COLOR_CUSTOM_DARK
+                : THEME_COLOR_CUSTOM_LIGHT;
 
         return (dark ? DARK_INDEX_OFFSET : LIGHT_INDEX_OFFSET)
                 + PALETTE_INDEX_OFFSET + get9BitColorIndex(setting, dark);
     }
 
     /**
-     * The color of the background that is selected for a theme.
+     * The color selected for a theme.
      *
-     * @param dark If the background of the dark theme is wanted.
+     * @param dark If the color of the dark theme is wanted.
      * @return The color, or zero for a theme the app does not have.
      */
     @ColorInt
-    static int backgroundColor(boolean dark) {
-        return dark ? darkBackgroundColor : lightBackgroundColor;
+    static int themeColor(boolean dark) {
+        if (isPatchedTheme()) {
+            return dark ? ThemeUtils.getThemeDarkColor() : ThemeUtils.getThemeLightColor();
+        }
+
+        return dark ? darkThemeColor : lightThemeColor;
     }
 
     /**
-     * If the theme the app shows uses the background of the app itself.
+     * If the theme the app shows uses the color of the app itself.
      * <p>
      * No color of the app is replaced then, and patch code that recolors app components to match
-     * a selected background must leave them untouched, otherwise the app looks different from
+     * a selected color must leave them untouched, otherwise the app looks different from
      * the unpatched app.
      */
-    public static boolean isAppDefaultBackground() {
+    public static boolean isAppDefaultColor() {
+        // A patched color replaces the app colors, and nothing is left untouched.
+        if (isPatchedTheme()) {
+            return false;
+        }
+
         final boolean dark = isDarkTheme();
 
-        // The config value is used instead of the setting because a Material-You background
+        // The config value is used instead of the setting because a Material-You color
         // falls back to the app default on Android 11 and earlier.
         if (dark) {
             return darkConfigValue == (DARK_INDEX_OFFSET + APP_DEFAULT_CONFIG_VALUE);
@@ -453,6 +493,11 @@ public class ThemeColorPatch {
      * @see Utils#isDarkModeEnabled()
      */
     static boolean isDarkTheme() {
+        if (isPatchedTheme()) {
+            // An app without a light theme has no light color that was patched in.
+            return patchedThemeColorLight().isEmpty() || Utils.isDarkModeEnabled();
+        }
+
         // An app without a light theme shows the dark one, whatever the device or the app report.
         if (lightColorResourceNames().isEmpty()) {
             return true;
@@ -463,52 +508,50 @@ public class ThemeColorPatch {
                 : THEME_LAST_USED_DARK_MODE.get();
     }
 
-    private static int selectedBackgroundColor(Context context, boolean dark) {
-        Background background = dark
-                ? THEME_BACKGROUND_DARK.get()
-                : THEME_BACKGROUND_LIGHT.get();
+    private static int selectedThemeColor(Context context, boolean dark) {
+        ThemeColor color = dark
+                ? THEME_COLOR_DARK.get()
+                : THEME_COLOR_LIGHT.get();
 
-        return getBackgroundColor(context, dark, ((Enum<?>) background).ordinal());
+        return getThemeColor(context, dark, ((Enum<?>) color).ordinal());
     }
 
     /**
-     * Asks for the variant of a background, using a configuration a device never has.
-     *
-     * @param index Index of the background, which the patch uses with the same encoding.
+     * Asks for the variant of a theme, using a configuration a device never has.
      */
-    private static void setVariantOf(Configuration configuration, int index) {
-        configuration.mcc = mobileCountryCode(index);
-        configuration.mnc = mobileNetworkCode(index);
+    private static void setVariantOf(Configuration configuration, int darkIndex, int lightIndex) {
+        configuration.mcc = mobileCountryCode(darkIndex);
+        configuration.mnc = mobileNetworkCode(lightIndex);
     }
 
     private static int mobileCountryCode(int index) {
-        return UNUSED_MOBILE_COUNTRY_CODE + (index >> 5);
+        return UNREACHABLE_MOBILE_CODE + (index - DARK_INDEX_OFFSET);
     }
 
     private static int mobileNetworkCode(int index) {
-        return 1 + (index & 31);
+        return UNREACHABLE_MOBILE_CODE + (index - LIGHT_INDEX_OFFSET);
     }
 
-    private static int configValue(Background background, boolean dark) {
+    private static int configValue(ThemeColor color, boolean dark) {
         // The two themes use indices that never overlap, so that a variant of one of them
         // is never used by the other.
         final int offset = dark ? DARK_INDEX_OFFSET : LIGHT_INDEX_OFFSET;
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S && background.isMaterialYou()) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S && color.isMaterialYou()) {
             // Material-You colors do not exist and resolving them crashes the app.
             return offset + APP_DEFAULT_CONFIG_VALUE;
         }
 
-        if (background.isCustom() && !isCustomBackgroundSupported()) {
+        if (color.isCustom() && !isCustomColorSupported()) {
             StringSetting setting = dark
-                    ? THEME_BACKGROUND_DARK_CUSTOM_COLOR
-                    : THEME_BACKGROUND_LIGHT_CUSTOM_COLOR;
+                    ? THEME_COLOR_CUSTOM_DARK
+                    : THEME_COLOR_CUSTOM_LIGHT;
             return offset + PALETTE_INDEX_OFFSET + get9BitColorIndex(setting, dark);
         }
 
-        // A custom background has no resource variant of its own,
+        // A custom color has no resource variant of its own,
         // the color resources are replaced by the overlay instead.
-        return offset + ((Enum<?>) background).ordinal() + 1;
+        return offset + ((Enum<?>) color).ordinal() + 1;
     }
 
     private static int get9BitColorIndex(StringSetting colorSetting, boolean dark) {
@@ -547,17 +590,20 @@ public class ThemeColorPatch {
     /**
      * Registers, updates or removes the overlay of both themes.
      */
-    private static void updateOverlay(Context context, Background dark, Background light) {
-        if (!isCustomBackgroundSupported()) {
+    private static void updateOverlay(Context context, ThemeColor dark, ThemeColor light) {
+        if (!isCustomColorSupported()) {
             return;
         }
 
-        // A theme the app does not have declares no color resource, and has nothing to overlay.
-        useDarkOverlay = dark.isCustom() && !darkColorResourceNames().isEmpty();
-        useLightOverlay = light.isCustom() && !lightColorResourceNames().isEmpty();
+        final String[] darkNames = colorResourceNames(true);
+        final String[] lightNames = colorResourceNames(false);
 
-        updateOverlay(context, true, darkColorResourceNames(), THEME_BACKGROUND_DARK_CUSTOM_COLOR);
-        updateOverlay(context, false, lightColorResourceNames(), THEME_BACKGROUND_LIGHT_CUSTOM_COLOR);
+        // A theme the app does not have declares no color resource, and has nothing to overlay.
+        useDarkOverlay = dark.isCustom() && darkNames.length > 0;
+        useLightOverlay = light.isCustom() && lightNames.length > 0;
+
+        updateOverlay(context, true, darkNames, THEME_COLOR_CUSTOM_DARK);
+        updateOverlay(context, false, lightNames, THEME_COLOR_CUSTOM_LIGHT);
     }
 
     /**
@@ -565,7 +611,7 @@ public class ThemeColorPatch {
      * color the user picked.
      */
     @RequiresApi(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
-    private static void updateOverlay(Context context, boolean dark, String resourceNames,
+    private static void updateOverlay(Context context, boolean dark, String[] resourceNames,
                                       StringSetting customColorSetting) {
         try {
             if (!useOverlay(dark)) {
@@ -586,43 +632,64 @@ public class ThemeColorPatch {
     /**
      * The color the user picked, mapped to every color resource of a theme.
      */
-    private static Map<String, Integer> overlayColors(String resourceNames,
+    private static Map<String, Integer> overlayColors(String[] resourceNames,
                                                       StringSetting customColorSetting) {
         final int color = customColor(customColorSetting);
         Map<String, Integer> colors = new LinkedHashMap<>();
 
-        for (String resourceName : resourceNames.split(",")) {
-            if (!resourceName.isEmpty()) {
-                colors.put(resourceName, color);
+        for (String resourceName : resourceNames) {
+            if (resourceName.isEmpty()) {
+                continue;
             }
+
+            int finalColor = color;
+            int opacityIndex = resourceName.indexOf("_opacity_");
+            if (opacityIndex != -1) {
+                String alphaHex = resourceName.substring(opacityIndex + 9);
+                final int alpha = Integer.parseInt(alphaHex, 16);
+                finalColor = (color & 0x00FFFFFF) | (alpha << 24);
+            }
+
+            colors.put(resourceName, finalColor);
         }
 
         return colors;
     }
 
     /**
-     * The color of a background, used to show it next to the name in the app settings.
+     * The color of a theme, used to show it next to the name in the app settings.
      *
-     * @param dark  If the background is of the dark theme.
-     * @param index Index of the background, which is the ordinal of its enum value.
+     * @param dark  If the color is of the dark theme.
+     * @param index Index of the theme, which is the ordinal of its enum value.
      */
     @ColorInt
-    public static int getBackgroundColor(Context context, boolean dark, int index) {
+    public static int getThemeColor(Context context, boolean dark, int index) {
         try {
-            Background background = (dark
+            resolveConfigValues(context);
+
+            ThemeColor color = (dark
                     ? ThemeColorDark.values()
                     : ThemeColorLight.values())[index];
 
-            if (background.isCustom()) {
+            if (color.isCustom()) {
                 return customColor(dark);
             }
 
-            // The color of a background is the value its resource variant declares, and the
-            // variant is selected the same way the app selects the background it uses.
+            // The color of a color is the value its resource variant declares, and the
+            // variant is selected the same way the app selects the color it uses.
             Configuration configuration = new Configuration(context.getResources().getConfiguration());
-            setVariantOf(configuration, configValue(background, dark));
+            final int configValue = configValue(color, dark);
+            final boolean changeForeground = THEME_COLOR_CHANGE_FOREGROUND.get();
 
-            final String resourceName = backgroundColorResourceName(dark);
+            setVariantOf(configuration,
+                    dark || changeForeground
+                            ? (dark ? configValue : darkConfigValue)
+                            : DARK_INDEX_OFFSET + APP_DEFAULT_CONFIG_VALUE,
+                    !dark || changeForeground
+                            ? (!dark ? configValue : lightConfigValue)
+                            : LIGHT_INDEX_OFFSET + APP_DEFAULT_CONFIG_VALUE);
+
+            String resourceName = themeColorResourceName(dark);
             if (resourceName.isEmpty()) {
                 // The app has no theme of this kind, and no color of it to show.
                 return ThemeUtils.getAppBackgroundColor();
@@ -631,13 +698,13 @@ public class ThemeColorPatch {
             final int identifier = ResourceUtils.getIdentifier(ResourceType.COLOR, resourceName);
 
             Context variant = context.createConfigurationContext(configuration);
-            if (isCustomBackgroundSupported()) {
+            if (isCustomColorSupported()) {
                 ThemeColorOverlay.removeFrom(variant);
             }
 
             return variant.getColor(identifier);
         } catch (Exception ex) {
-            Logger.printException(() -> "getBackgroundColor failure", ex);
+            Logger.printException(() -> "getThemeColor failure", ex);
             return ThemeUtils.getAppBackgroundColor();
         }
     }
@@ -677,7 +744,7 @@ public class ThemeColorPatch {
 
         setIndicatorColor(view, color);
 
-        // The app gives an indicator a background of its own after it is shown, which drops the
+        // The app gives an indicator a color of its own after it is shown, which drops the
         // color set above. Setting it again from a posted runnable is one frame too late, so the
         // color is applied before every draw and no frame can be drawn with the app color.
         ViewTreeObserver.OnPreDrawListener listener = () -> {
@@ -731,8 +798,8 @@ public class ThemeColorPatch {
     /**
      * The color of the new content indicator, or null to keep the color of the app.
      * <p>
-     * A Material You background does not go with the red of the app, which is why the indicator
-     * follows the same palette. Every other background keeps the app color.
+     * A Material You color does not go with the red of the app, which is why the indicator
+     * follows the same palette. Every other color keeps the app color.
      */
     @Nullable
     public static Integer getIndicatorColor(Context context) {
@@ -742,11 +809,8 @@ public class ThemeColorPatch {
             }
 
             final boolean dark = Utils.isDarkModeEnabled();
-            Background background = dark
-                    ? THEME_BACKGROUND_DARK.get()
-                    : THEME_BACKGROUND_LIGHT.get();
 
-            if (!background.isMaterialYou()) {
+            if (!usesMaterialYouAccent(dark)) {
                 return null;
             }
 
@@ -760,6 +824,21 @@ public class ThemeColorPatch {
     }
 
     /**
+     * @see ThemeColor#usesMaterialYouAccent()
+     */
+    private static boolean usesMaterialYouAccent(boolean dark) {
+        if (isPatchedTheme()) {
+            // A patch option holds a color and nothing else, so only a Material You
+            // color can be told apart.
+            return (dark ? patchedThemeColorDark() : patchedThemeColorLight())
+                    .startsWith(MATERIAL_YOU_COLOR_PREFIX);
+        }
+
+        return (dark ? THEME_COLOR_DARK.get() : THEME_COLOR_LIGHT.get())
+                .usesMaterialYouAccent();
+    }
+
+    /**
      * The color of the text of the new content count, which must be readable
      * on {@link #getIndicatorColor(Context)}.
      */
@@ -768,21 +847,21 @@ public class ThemeColorPatch {
             return context.getColor(android.R.color.system_neutral1_900);
         }
 
-        // Never reached, an indicator color exists only with a Material You background.
+        // Never reached, an indicator color exists only with a Material You color.
         return Color.BLACK;
     }
 
     private static int customColor(boolean dark) {
         return customColor(dark
-                ? THEME_BACKGROUND_DARK_CUSTOM_COLOR
-                : THEME_BACKGROUND_LIGHT_CUSTOM_COLOR);
+                ? THEME_COLOR_CUSTOM_DARK
+                : THEME_COLOR_CUSTOM_LIGHT);
     }
 
     /**
-     * The color a custom background setting holds, or the color of its default value if the
+     * The color a custom theme setting holds, or the color of its default value if the
      * user saved something that is not a color.
      * <p>
-     * A background must be opaque, otherwise the app draws over itself.
+     * A theme must be opaque, otherwise the app draws over itself.
      */
     @ColorInt
     private static int customColor(StringSetting setting) {
@@ -797,18 +876,30 @@ public class ThemeColorPatch {
     }
 
     /**
-     * The first name is the color the app uses for the background itself.
+     * The first name is the color the app uses for the color itself.
      */
-    private static String backgroundColorResourceName(boolean dark) {
-        String resourceNames = dark ? darkColorResourceNames() : lightColorResourceNames();
-        return resourceNames.split(",")[0];
+    private static String themeColorResourceName(boolean dark) {
+        final String[] resourceNames = colorResourceNames(dark);
+        return resourceNames.length > 0 ? resourceNames[0] : "";
+    }
+
+    private static String[] colorResourceNames(boolean dark) {
+        final String resourceNames = dark ? darkColorResourceNames() : lightColorResourceNames();
+        return resourceNames.isEmpty() ? new String[0] : resourceNames.split(",");
+    }
+
+    /**
+     * @return If this patch was included during patching.
+     */
+    public static boolean isPatchIncluded() {
+        return false;  // Modified during patching.
     }
 
     /**
      * Injection point.
      * <p>
-     * Names of the dark background color resources, separated by a comma.
-     * The first name is the color the app uses for the background itself.
+     * Names of the dark theme color resources, separated by a comma.
+     * The first name is the color the app uses for the theme itself.
      */
     private static String darkColorResourceNames() {
         return ""; // Modified during patching.
@@ -817,10 +908,39 @@ public class ThemeColorPatch {
     /**
      * Injection point.
      * <p>
-     * Names of the light background color resources, separated by a comma.
-     * The first name is the color the app uses for the background itself.
+     * Names of the light theme color resources, separated by a comma.
+     * The first name is the color the app uses for the theme itself.
      */
     private static String lightColorResourceNames() {
+        return ""; // Modified during patching.
+    }
+
+    /**
+     * If the theme color was set with a patch option, which replaces the color resources of
+     * the app for good. Nothing of this class changes a color of the app then.
+     */
+    private static boolean isPatchedTheme() {
+        return !patchedThemeColorDark().isEmpty();
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * The dark theme color of the patch options, or an empty string if the theme is
+     * selected in the app settings instead.
+     */
+    private static String patchedThemeColorDark() {
+        return ""; // Modified during patching.
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Empty for an app without a light theme.
+     *
+     * @see #patchedThemeColorDark()
+     */
+    private static String patchedThemeColorLight() {
         return ""; // Modified during patching.
     }
 }

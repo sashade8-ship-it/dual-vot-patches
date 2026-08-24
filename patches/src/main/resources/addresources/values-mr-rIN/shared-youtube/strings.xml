@@ -22,24 +22,24 @@ Second \"item\" text"</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
   <string name="morphe_custom_branding_name_title">ॲपचे नाव</string>
   <!-- layout.theme.baseThemePatch -->
-  <string name="morphe_theme_background_dark_title">गडद थीमची पार्श्वभूमी</string>
-  <string name="morphe_theme_background_dark_entry_1">अॅप डीफॉल्ट</string>
-  <string name="morphe_theme_background_dark_entry_2">शुद्ध काळा</string>
-  <string name="morphe_theme_background_dark_entry_3">मटेरियल यू (तटस्थ)</string>
-  <string name="morphe_theme_background_dark_entry_4">मटेरियल यू (प्राथमिक)</string>
-  <string name="morphe_theme_background_dark_entry_5">मटेरियल यू (दुय्यम)</string>
-  <string name="morphe_theme_background_dark_entry_6">मटेरियल यू (तृतीयक)</string>
-  <string name="morphe_theme_background_dark_entry_7">क्लासिक YouTube</string>
-  <string name="morphe_theme_background_dark_entry_8">कॅटपुचिन (मोचा)</string>
-  <string name="morphe_theme_background_dark_entry_9">गडद गुलाबी</string>
-  <string name="morphe_theme_background_dark_entry_10">गडद निळा</string>
-  <string name="morphe_theme_background_dark_entry_11">गडद हिरवा</string>
-  <string name="morphe_theme_background_dark_entry_12">गडद पिवळा</string>
-  <string name="morphe_theme_background_dark_entry_13">गडद नारिंगी</string>
-  <string name="morphe_theme_background_dark_entry_14">गडद लाल</string>
-  <string name="morphe_theme_background_dark_entry_15">सानुकूल</string>
-  <string name="morphe_theme_background_dark_custom_color_title">सानुकूल गडद पार्श्वभूमी</string>
-  <string name="morphe_theme_background_dark_custom_color_summary">गडद थीमच्या पार्श्वभूमीचा रंग सेट करा</string>
+  <string name="morphe_theme_color_dark_title">गडद थीमची पार्श्वभूमी</string>
+  <string name="morphe_theme_color_dark_entry_2">शुद्ध काळा</string>
+  <string name="morphe_theme_color_dark_entry_3">Material You (शुद्ध काळा) ,\"key\":\"morphe_theme_color_dark_entry_3\",\"context\":\"morphe_theme_color_dark_entry_3\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30530,\"plurals\":\"\" ,\"text\":\"Material You (तटस्थ)\",\"key\":\"morphe_theme_color_entry_4\",\"context\":\"morphe_theme_color_entry_4\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30532,\"text\":\"Material You (प्राथमिक)\",\"key\":\"morphe_theme_color_entry_5\",\"context\":\"morphe_theme_color_entry_5\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30534,\"text\":\"Material You (दुय्यम)\",\"key\":\"morphe_theme_color_entry_6\",\"context\":\"morphe_theme_color_entry_6\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30536,\"text\":\"Material You (तृतीय)\",\"key\":\"morphe_theme_color_entry_7\",\"context\":\"morphe_theme_color_entry_7\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30538,\"text\":\"क्लासिक YouTube\",\"key\":\"morphe_theme_color_dark_entry_9\",\"context\":\"morphe_theme_color_dark_entry_9\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[{\"source\":\"YouTube\",\"translatable\":false,\"translation\":\"YouTube\",\"partOfSpeech\":\"PROPN\"}]},{\"id\":30542,\"text\":\"गडद गुलाबी\",\"key\":\"morphe_theme_color_dark_entry_10\",\"context\":\"morphe_theme_color_dark_entry_10\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30544,\"text\":\"गडद निळा\",\"key\":\"morphe_theme_color_dark_entry_11\",\"context\":\"morphe_theme_color_dark_entry_11\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30546,\"text\":\"गडद हिरवा\",\"key\":\"morphe_theme_color_dark_entry_12\",\"context\":\"morphe_theme_color_dark_entry_12\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30548,\"text\":\"गडद पिवळा\",\"key\":\"morphe_theme_color_dark_entry_13\",\"context\":\"morphe_theme_color_dark_entry_13\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30550,\"text\":\"गडद नारिंगी\",\"key\":\"morphe_theme_color_dark_entry_14\",\"context\":\"morphe_theme_color_dark_entry_14\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30552,\"text\":\"गडद लाल\",\"key\":\"morphe_theme_color_dark_entry_15\",\"context\":\"morphe_theme_color_dark_entry_15\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]},{\"id\":30558,\"text\":\"सानुकूल\",\"key\":\"morphe_theme_color_dark_entry_16\",\"context\":\"morphe_theme_color_dark_entry_16\",\"maxLength\":null,\"tmSuggestions\":[],\"terms\":[]}]}```Here is the translated JSON array: ```json [{</string>
+  <string name="morphe_theme_color_dark_entry_9">क्लासिक YouTube</string>
+  <string name="morphe_theme_color_dark_entry_10">गडद गुलाबी</string>
+  <string name="morphe_theme_color_dark_entry_11">गडद निळा</string>
+  <string name="morphe_theme_color_dark_entry_12">गडद हिरवा</string>
+  <string name="morphe_theme_color_dark_entry_13">गडद पिवळा</string>
+  <string name="morphe_theme_color_dark_entry_14">गडद नारिंगी</string>
+  <string name="morphe_theme_color_dark_entry_15">गडद लाल</string>
+  <string name="morphe_theme_color_dark_entry_16">सानुकूल</string>
+  <string name="morphe_theme_color_custom_dark_title">सानुकूल गडद पार्श्वभूमी</string>
+  <string name="morphe_theme_color_custom_dark_summary">गडद थीमच्या पार्श्वभूमीचा रंग सेट करा</string>
+  <string name="morphe_theme_color_entry_1">अॅप डीफॉल्ट</string>
+  <string name="morphe_theme_color_entry_4">मटेरियल यू (तटस्थ)</string>
+  <string name="morphe_theme_color_entry_5">मटेरियल यू (प्राथमिक)</string>
+  <string name="morphe_theme_color_entry_6">मटेरियल यू (दुय्यम)</string>
+  <string name="morphe_theme_color_entry_7">मटेरियल यू (तृतीयक)</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">बाह्य डाउनलोड्स</string>
   <string name="morphe_external_downloader_name_title">डाउनलोडर ॲपचे पॅकेज नाव</string>

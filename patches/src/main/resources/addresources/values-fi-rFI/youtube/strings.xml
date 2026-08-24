@@ -981,23 +981,10 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_back_button_always_exits_feed_title">Takaisin-painike sulkee syötteen</string>
   <string name="morphe_back_button_always_exits_feed_summary">Takaisin-painikkeen painaminen sulkee aina sovelluksen sen sijaan, että se vierittäisi syötteen alkuun</string>
   <!-- layout.theme.themePatch -->
-  <string name="morphe_theme_background_light_title">Vaalean teeman tausta</string>
-  <string name="morphe_theme_background_light_entry_1">Sovelluksen oletus</string>
-  <string name="morphe_theme_background_light_entry_2">Valkoinen</string>
-  <string name="morphe_theme_background_light_entry_3">Material You (Neutraali)</string>
-  <string name="morphe_theme_background_light_entry_4">Material You (Ensisijainen)</string>
-  <string name="morphe_theme_background_light_entry_5">Material You (Toissijainen)</string>
-  <string name="morphe_theme_background_light_entry_6">Material You (Tertiäärinen)</string>
-  <string name="morphe_theme_background_light_entry_7">Catppuccin (Latte)</string>
-  <string name="morphe_theme_background_light_entry_8">Vaalea pinkki</string>
-  <string name="morphe_theme_background_light_entry_9">Vaalea sininen</string>
-  <string name="morphe_theme_background_light_entry_10">Vaalea vihreä</string>
-  <string name="morphe_theme_background_light_entry_11">Vaalea keltainen</string>
-  <string name="morphe_theme_background_light_entry_12">Vaalea oranssi</string>
-  <string name="morphe_theme_background_light_entry_13">Vaalea punainen</string>
-  <string name="morphe_theme_background_light_entry_14">Mukautettu</string>
-  <string name="morphe_theme_background_light_custom_color_title">Mukautettu vaalean teeman tausta</string>
-  <string name="morphe_theme_background_light_custom_color_summary">Aseta vaalean teeman taustaväri</string>
+  <string name="morphe_theme_color_light_title">Vaalean teeman tausta</string>
+  <string name="morphe_theme_color_light_entry_2">Valkoinen</string>
+  <string name="morphe_theme_color_light_entry_3">Material You (Valkoinen)()</string>
+  <string name="morphe_theme_color_custom_light_title">Mukautettu vaalean teeman tausta</string>
   <string name="morphe_gradient_loading_screen_title">Ota liukuvärillinen latausruutu käyttöön</string>
   <string name="morphe_gradient_loading_screen_summary">Näyttää gradienttitaustan latausnäytössä yksivärisen sijaan</string>
   <string name="morphe_splash_screen_animation_style_title">Aloitussivun tyyli</string>
