@@ -65,6 +65,7 @@ public class ThemePatch extends BaseThemePatch {
             0xFF181818, // Music related results panel background.
             0xFF0F0F0F, // Comments chip background (new layout).
             0xFA212121, // Video chapters list background.
+            0xFF222225, // Flyout sub-menu background.
     };
 
     /**

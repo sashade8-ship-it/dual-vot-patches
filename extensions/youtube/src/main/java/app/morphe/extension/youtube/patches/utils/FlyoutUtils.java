@@ -101,7 +101,7 @@ public final class FlyoutUtils {
             getAsciiBytes("yt_outline_experimental_share")
     );
 
-    private static final Pattern TITLE_CLEANUP_PATTERN = Pattern.compile("[^a-zA-Z0-9\\s]");
+    private static final Pattern TITLE_CLEANUP_PATTERN = Pattern.compile("[^\\p{L}\\p{N}\\s_&.'+-]");
     private static final Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
     private static final Pattern COMMENT_ID_CLEANUP_PATTERN = Pattern.compile("[^A-Za-z0-9_.-]");
 
@@ -622,7 +622,7 @@ public final class FlyoutUtils {
      * Injection point.
      */
     public static void extractFlyoutIdFromObject(@Nullable Object bufferObject) {
-        Logger.printDebug(() -> "FlyoutBuffer class: " + ((bufferObject == null)
+        Logger.printDebug(() -> "Flyout buffer class: " + ((bufferObject == null)
                                 ? null : bufferObject.getClass()));
 
         if (bufferObject instanceof FlyoutMenuVideoIdInterface videoIdInterface) {
@@ -732,15 +732,16 @@ public final class FlyoutUtils {
         }
 
         final int requiredScore = Math.max(1, (int) Math.ceil(words.size() * 0.4));
-        final byte[] fixedBuffer = Arrays.copyOfRange(buffer, bestIdx, len);
-        if (bestIdx != -1 && maxScore >= requiredScore) {
+        if (bestIdx >= 0 && maxScore >= requiredScore) {
             for (byte[] VIDEO_ID_PREFIX_BYTES : VIDEO_ID_PREFIXES_BYTES) {
-                final int index = byteIndexOf(fixedBuffer, VIDEO_ID_PREFIX_BYTES);
+                // Search for the video ID prefix after the best title match.
+                int index = byteIndexOf(buffer, VIDEO_ID_PREFIX_BYTES, bestIdx);
+
                 if (index >= 0) {
                     final int videoIdStart = index + VIDEO_ID_PREFIX_BYTES.length;
                     final int videoIdEnd = videoIdStart + 11;
-                    if (videoIdEnd <= fixedBuffer.length) {
-                        flyoutVideoId = new String(fixedBuffer, videoIdStart, 11, StandardCharsets.US_ASCII);
+                    if (videoIdEnd <= buffer.length) {
+                        flyoutVideoId = new String(buffer, videoIdStart, 11, StandardCharsets.US_ASCII);
                         return;
                     }
                 }

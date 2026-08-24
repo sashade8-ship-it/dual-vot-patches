@@ -7,13 +7,6 @@
 
 package app.morphe.extension.shared.theme;
 
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_CHANGE_FOREGROUND;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_DARK;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_CUSTOM_DARK;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_LIGHT;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_COLOR_CUSTOM_LIGHT;
-import static app.morphe.extension.shared.settings.SharedYouTubeSettings.THEME_LAST_USED_DARK_MODE;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -43,6 +36,7 @@ import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.EnumSetting;
 import app.morphe.extension.shared.settings.Setting;
+import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.settings.StringSetting;
 
 /**
@@ -199,12 +193,15 @@ public class ThemeColorPatch {
     public static class ThemeColorChangeForegroundAvailability implements Setting.Availability {
         @Override
         public boolean isAvailable() {
-            return !THEME_COLOR_LIGHT.isSetToDefault() || !THEME_COLOR_DARK.isSetToDefault();
+            return !SharedYouTubeSettings.THEME_COLOR_DARK.isSetToDefault() ||
+                    !SharedYouTubeSettings.THEME_COLOR_LIGHT.isSetToDefault();
+
         }
 
         @Override
         public List<Setting<?>> getParentSettings() {
-            return List.of(THEME_COLOR_LIGHT, THEME_COLOR_DARK);
+            return List.of(SharedYouTubeSettings.THEME_COLOR_DARK,
+                    SharedYouTubeSettings.THEME_COLOR_LIGHT);
         }
     }
 
@@ -312,13 +309,13 @@ public class ThemeColorPatch {
             // is the one to ask for. A theme change recreates the activity, and the index of the
             // other theme is used from then on.
             final boolean dark = isDarkTheme();
-            if (THEME_LAST_USED_DARK_MODE.get() != dark) {
+            if (SharedYouTubeSettings.THEME_LAST_USED_DARK_MODE.get() != dark) {
                 // Contexts that attach before the app resolves its theme can then select the
                 // variant of the theme the app is about to show.
-                THEME_LAST_USED_DARK_MODE.save(dark);
+                SharedYouTubeSettings.THEME_LAST_USED_DARK_MODE.save(dark);
             }
 
-            final boolean changeForeground = THEME_COLOR_CHANGE_FOREGROUND.get();
+            final boolean changeForeground = SharedYouTubeSettings.THEME_COLOR_CHANGE_FOREGROUND.get();
             final int darkIndex = dark || changeForeground
                     ? darkConfigValue
                     : DARK_INDEX_OFFSET + APP_DEFAULT_CONFIG_VALUE;
@@ -360,8 +357,8 @@ public class ThemeColorPatch {
             return;
         }
 
-        ThemeColor dark = THEME_COLOR_DARK.get();
-        ThemeColor light = THEME_COLOR_LIGHT.get();
+        ThemeColor dark = SharedYouTubeSettings.THEME_COLOR_DARK.get();
+        ThemeColor light = SharedYouTubeSettings.THEME_COLOR_LIGHT.get();
 
         darkConfigValue = configValue(dark, true);
         lightConfigValue = configValue(light, false);
@@ -385,7 +382,7 @@ public class ThemeColorPatch {
         themeColorsResolved = true;
 
         // Morphe draws its own text and icons, and follows what the app uses for its foreground.
-        ThemeUtils.setChangeForegroundColor(THEME_COLOR_CHANGE_FOREGROUND.get());
+        ThemeUtils.setChangeForegroundColor(SharedYouTubeSettings.THEME_COLOR_CHANGE_FOREGROUND.get());
 
         // An app without a light theme has no light colors to replace.
         if (colorResourceNames(true).length > 0) {
@@ -430,16 +427,16 @@ public class ThemeColorPatch {
      */
     private static int splashScreenThemeIndex(boolean dark) {
         ThemeColor color = dark
-                ? THEME_COLOR_DARK.get()
-                : THEME_COLOR_LIGHT.get();
+                ? SharedYouTubeSettings.THEME_COLOR_DARK.get()
+                : SharedYouTubeSettings.THEME_COLOR_LIGHT.get();
 
         if (!color.isCustom()) {
             return dark ? darkConfigValue : lightConfigValue;
         }
 
         StringSetting setting = dark
-                ? THEME_COLOR_CUSTOM_DARK
-                : THEME_COLOR_CUSTOM_LIGHT;
+                ? SharedYouTubeSettings.THEME_COLOR_DARK_CUSTOM
+                : SharedYouTubeSettings.THEME_COLOR_LIGHT_CUSTOM;
 
         return (dark ? DARK_INDEX_OFFSET : LIGHT_INDEX_OFFSET)
                 + PALETTE_INDEX_OFFSET + get9BitColorIndex(setting, dark);
@@ -505,13 +502,13 @@ public class ThemeColorPatch {
 
         return Utils.isDarkModeStatusKnown()
                 ? Utils.isDarkModeEnabled()
-                : THEME_LAST_USED_DARK_MODE.get();
+                : SharedYouTubeSettings.THEME_LAST_USED_DARK_MODE.get();
     }
 
     private static int selectedThemeColor(Context context, boolean dark) {
         ThemeColor color = dark
-                ? THEME_COLOR_DARK.get()
-                : THEME_COLOR_LIGHT.get();
+                ? SharedYouTubeSettings.THEME_COLOR_DARK.get()
+                : SharedYouTubeSettings.THEME_COLOR_LIGHT.get();
 
         return getThemeColor(context, dark, ((Enum<?>) color).ordinal());
     }
@@ -544,8 +541,8 @@ public class ThemeColorPatch {
 
         if (color.isCustom() && !isCustomColorSupported()) {
             StringSetting setting = dark
-                    ? THEME_COLOR_CUSTOM_DARK
-                    : THEME_COLOR_CUSTOM_LIGHT;
+                    ? SharedYouTubeSettings.THEME_COLOR_DARK_CUSTOM
+                    : SharedYouTubeSettings.THEME_COLOR_LIGHT_CUSTOM;
             return offset + PALETTE_INDEX_OFFSET + get9BitColorIndex(setting, dark);
         }
 
@@ -602,8 +599,8 @@ public class ThemeColorPatch {
         useDarkOverlay = dark.isCustom() && darkNames.length > 0;
         useLightOverlay = light.isCustom() && lightNames.length > 0;
 
-        updateOverlay(context, true, darkNames, THEME_COLOR_CUSTOM_DARK);
-        updateOverlay(context, false, lightNames, THEME_COLOR_CUSTOM_LIGHT);
+        updateOverlay(context, true, darkNames, SharedYouTubeSettings.THEME_COLOR_DARK_CUSTOM);
+        updateOverlay(context, false, lightNames, SharedYouTubeSettings.THEME_COLOR_LIGHT_CUSTOM);
     }
 
     /**
@@ -679,7 +676,7 @@ public class ThemeColorPatch {
             // variant is selected the same way the app selects the color it uses.
             Configuration configuration = new Configuration(context.getResources().getConfiguration());
             final int configValue = configValue(color, dark);
-            final boolean changeForeground = THEME_COLOR_CHANGE_FOREGROUND.get();
+            final boolean changeForeground = SharedYouTubeSettings.THEME_COLOR_CHANGE_FOREGROUND.get();
 
             setVariantOf(configuration,
                     dark || changeForeground
@@ -834,8 +831,10 @@ public class ThemeColorPatch {
                     .startsWith(MATERIAL_YOU_COLOR_PREFIX);
         }
 
-        return (dark ? THEME_COLOR_DARK.get() : THEME_COLOR_LIGHT.get())
-                .usesMaterialYouAccent();
+        return (dark
+                ? SharedYouTubeSettings.THEME_COLOR_DARK.get()
+                : SharedYouTubeSettings.THEME_COLOR_LIGHT.get()
+        ).usesMaterialYouAccent();
     }
 
     /**
@@ -853,8 +852,8 @@ public class ThemeColorPatch {
 
     private static int customColor(boolean dark) {
         return customColor(dark
-                ? THEME_COLOR_CUSTOM_DARK
-                : THEME_COLOR_CUSTOM_LIGHT);
+                ? SharedYouTubeSettings.THEME_COLOR_DARK_CUSTOM
+                : SharedYouTubeSettings.THEME_COLOR_LIGHT_CUSTOM);
     }
 
     /**
