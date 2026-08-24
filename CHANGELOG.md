@@ -1,3 +1,13 @@
+## 1.40.0-dev.22-dualvot.8.3 (2026-08-24)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.40.0-dev.22](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.40.0-dev.22).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dev.21-dualvot.8.3 (2026-08-23)
 
 ### Automated Morphe update
@@ -412,6 +422,16 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.40.0-dev.22](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.21...v1.40.0-dev.22) (2026-08-24)
+
+### 🐛 Bug Fixes
+
+* **Theme:** Apply theme color to foreground text ([#2567](https://github.com/MorpheApp/morphe-patches/issues/2567)) ([64bc593](https://github.com/MorpheApp/morphe-patches/commit/64bc593c5c9659dc2bfb54768a27a7210ef6b30c))
+
+### ✨ New Features
+
+* **Theme:** Add a patch option to permanently set the app background color ([#2568](https://github.com/MorpheApp/morphe-patches/issues/2568)) ([7166721](https://github.com/MorpheApp/morphe-patches/commit/71667215acf495be2cfebf1cb11afda6a6a892e9))
 
 ## [1.40.0-dev.21](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0-dev.20...v1.40.0-dev.21) (2026-08-23)
 
