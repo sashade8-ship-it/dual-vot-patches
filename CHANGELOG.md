@@ -1,3 +1,13 @@
+## 1.41.0-dev.1-dualvot.8.3 (2026-08-26)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.41.0-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.40.0-dualvot.8.3 (2026-08-24)
 
 ### Automated Morphe update
@@ -222,6 +232,28 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.41.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0...v1.41.0-dev.1) (2026-08-26)
+
+### 🐛 Bug Fixes
+
+* **Settings:** Resolve OOM crashes and prevent duplicate dialogs ([047121d](https://github.com/MorpheApp/morphe-patches/commit/047121d9d9001ba56439ce20ac7596e48a415a90))
+* **Theme:** "App default" color is drawn pure black instead of the colors of the app ([07c6d35](https://github.com/MorpheApp/morphe-patches/commit/07c6d356de44614842038680639777fc0b010d4e))
+* **Theme:** Add new color tokens and Litho hooks ([a7d7520](https://github.com/MorpheApp/morphe-patches/commit/a7d7520f824013816d579a716e67ef6a76102936))
+* **Theme:** Morphe dialogs and settings are pure black with the "App default" color ([f5ce706](https://github.com/MorpheApp/morphe-patches/commit/f5ce7061d24097312a06fb0227393a59c730c8f0))
+* **Theme:** Splash screen is pure black with the "App default" color ([4a226c7](https://github.com/MorpheApp/morphe-patches/commit/4a226c7d11760c56e10b9ba6ebdf60fdf97c860c))
+* **Theme:** Use more compact custom theme palette ([73eab93](https://github.com/MorpheApp/morphe-patches/commit/73eab930902d56ca78ce5b6b40377997fa906140))
+* **YouTube - Add to queue:** Flyout menu is too wide and loses the item changes on rotation ([72dbc80](https://github.com/MorpheApp/morphe-patches/commit/72dbc80f74853e491f377dbb11b111b351880362))
+* **YouTube - Change form factor:** Prevent tablet layout causing app to crash ([#2600](https://github.com/MorpheApp/morphe-patches/issues/2600)) ([f54d9cd](https://github.com/MorpheApp/morphe-patches/commit/f54d9cd0c86ec3fa960d2505201f323f4766ebd5))
+* **YouTube - Hide layout components:** Prevent Library shelves from being hidden ([#2597](https://github.com/MorpheApp/morphe-patches/issues/2597)) ([2d1e542](https://github.com/MorpheApp/morphe-patches/commit/2d1e5428f23a76b8f3ba6d8c84e1148b459ed112))
+* **YouTube - Reload video:** Keep pitch/speed after reload ([#2595](https://github.com/MorpheApp/morphe-patches/issues/2595)) ([959597c](https://github.com/MorpheApp/morphe-patches/commit/959597cef9b5ac7ed5342bf64ff3b31da7f7a842))
+* **YouTube - Seekbar:** Force newer splash screen animation ([91f937a](https://github.com/MorpheApp/morphe-patches/commit/91f937a83346df0e1361fa11f7e5db422c8ff3d2))
+* **YouTube - Theme:** Apply custom theme to drop-down menus ([#2589](https://github.com/MorpheApp/morphe-patches/issues/2589)) ([66765bd](https://github.com/MorpheApp/morphe-patches/commit/66765bde7b0410c41b1dcfb9b052adbb1cec1f27))
+
+### ✨ New Features
+
+* **YouTube - Save to Watch later:** Support for related kids videos ([#2572](https://github.com/MorpheApp/morphe-patches/issues/2572)) ([b0ec540](https://github.com/MorpheApp/morphe-patches/commit/b0ec540b8829864e3fdcda5910edff1fddf1a72a))
+* **YouTube:** Add `Disable scrolling speed limit` patch ([#2582](https://github.com/MorpheApp/morphe-patches/issues/2582)) ([162e690](https://github.com/MorpheApp/morphe-patches/commit/162e690df1d4fdf3f0acc2f720586d256c259e22))
 
 ## [1.40.0](https://github.com/MorpheApp/morphe-patches/compare/v1.39.1...v1.40.0) (2026-08-24)
 

@@ -142,9 +142,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.40.0-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.40.0-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;137 patches total
+> **[v1.41.0-dev.1-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.41.0-dev.1-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;138 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;76 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;77 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -176,6 +176,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Disable layout updates](#disable-layout-updates) | Adds an option to disable server side layout updates and use an older UI. |  |
 | [Disable player popup panels](#disable-player-popup-panels) | Adds an option to disable panels (such as live chat) from opening automatically. |  |
 | [Disable rolling number animations](#disable-rolling-number-animations) | Adds an option to disable rolling number animations of video view count, user likes, and upload time. |  |
+| [Disable scrolling speed limit](#disable-scrolling-speed-limit) | Adds an option to remove limits of how fast the home and subscription feed can be scrolled. |  |
 | [Disable sign in to TV popup](#disable-sign-in-to-tv-popup) | Adds options to disable the popups asking to sign into or connect to a TV on the same local network. |  |
 | [Disable video codecs](#disable-video-codecs) | Adds options to disable HDR and VP9 codecs. |  |
 | [Double tap to seek](#double-tap-to-seek) | Adds additional double-tap to seek values to the YouTube settings menu. |  |
@@ -216,7 +217,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Remove viewer discretion dialog](#remove-viewer-discretion-dialog) | Adds an option to remove the dialog that appears when opening a video that has been age-restricted by accepting it automatically. This does not bypass the age restriction. |  |
 | [Return YouTube Dislike](#return-youtube-dislike) | Adds an option to show the dislike count of videos with Return YouTube Dislike. |  |
 | [Sanitize sharing links](#sanitize-sharing-links) | Removes the tracking query parameters from shared links. |  |
-| [Save to watch later](#save-to-watch-later) | Adds an option to display save to watch later button in the video player. |  |
+| [Save to Watch later](#save-to-watch-later) | Adds an option to display save to Watch later button in the video player. |  |
 | [Seekbar](#seekbar) | Adds options to show old seekbar thumbnails, disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, enabling seeking in livestreams, and expanding the livestream DVR duration. |  |
 | [Settings menu filter](#settings-menu-filter) | Adds an option to hide items on the standard YouTube settings screen by their visible name. |  |
 | [Shorts autoplay](#shorts-autoplay) | Adds options to automatically play the next Short. |  |
