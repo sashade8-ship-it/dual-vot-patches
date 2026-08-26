@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Зняти обмеження фонового відтворення</string>
   <string name="morphe_shorts_disable_background_playback_title">Вимкнути фонове відтворення</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Вимкнути обмеження швидкості прокручування</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Вимкнути оновлення макета</string>
   <string name="morphe_disable_layout_updates_summary">Запобігає оновленню макета застосунку сервером</string>
@@ -167,16 +169,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_podcast_section_title">Приховати секцію \"Послухайте подкаст\"</string>
   <string name="morphe_hide_featured_channels_section_title">Приховати секцію \"Рекомендовані канали\"</string>
   <string name="morphe_hide_featured_links_section_title">Приховати секцію \"Рекомендований контент\"</string>
-  <string name="morphe_hide_featured_places_section_title">Приховати секцію \"Рекомендовані місця\"</string>
   <string name="morphe_hide_featured_playlists_section_title">Приховати розділ \"Рекомендовані списки відтворення\"</string>
   <string name="morphe_hide_featured_videos_section_title">Приховати секцію \"Рекомендовані відео\"</string>
-  <string name="morphe_hide_gaming_section_title">Приховати секцію \"Ігри\"</string>
   <string name="morphe_hide_hashtag_section_title">Приховати секцію хештегів</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Приховати секцію \"Як створювався цей контент\"</string>
   <string name="morphe_hide_hype_points_title">Приховати очки голосів</string>
   <string name="morphe_hide_info_cards_section_title">Приховати секцію \"Інфокарти\"</string>
   <string name="morphe_hide_key_concepts_section_title">Приховати секцію \"Основні поняття\"</string>
-  <string name="morphe_hide_music_section_title">Приховати секцію \"Музика\"</string>
   <string name="morphe_hide_quizzes_section_title">Приховати секцію \"Вікторини\"</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Приховати секцію \"Пошук у цьому відео\"</string>
   <string name="morphe_hide_subscribe_button_title">Приховати кнопку \"Підписатися\"</string>
@@ -454,11 +452,14 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_success_toast">Відео збережено у списку відтворення \"Подивитися пізніше\"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Це відео вже збережено у списку відтворення \"Подивитися пізніше\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Не вдалося зберегти це відео у списку відтворення \"Подивитися пізніше\"</string>
+  <string name="morphe_save_to_watch_later_flyout_title">\"Зберегти для перегляду пізніше\"</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Показувати кнопку \"Зберегти для перегляду пізніше\" у дитячих відео</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Дозволяє зберігати відео для дітей у спливному меню \"Переглянути пізніше\"</string>
   <string name="morphe_queue_flyout_title">Додати до черги Morphe</string>
   <string name="morphe_queue_restore_title">Зберігати чергу між сесіями</string>
   <string name="morphe_queue_restore_summary">Черга зберігається після перезапуску застосунку</string>
   <string name="morphe_swap_save_and_queue_actions_title">Поміняти місцями кнопки \"Зберегти\" та \"Додати в чергу\"</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Натисніть для опцій черги, натисніть і утримуйте, щоб зберегти для перегляду пізніше</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Натисніть для параметрів черги, утримуйте, щоб зберегти до \"Переглянути пізніше\"</string>
   <string name="morphe_queue_override_flyout_menu_title">Замінити кнопку черги у висувному меню стрічки</string>
   <string name="morphe_queue_override_flyout_menu_summary">Відкриває чергу Morphe замість черги YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Додати пункт меню черги у висувне меню стрічки</string>

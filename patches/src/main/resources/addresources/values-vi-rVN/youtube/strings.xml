@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Bỏ hạn chế phát nền</string>
   <string name="morphe_shorts_disable_background_playback_title">Tắt phát nền</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Tắt giới hạn tốc độ cuộn</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Tắt cập nhật giao diện</string>
   <string name="morphe_disable_layout_updates_summary">Chặn cập nhật bố cục từ máy chủ</string>
@@ -166,16 +168,12 @@ Ví dụ:
   <string name="morphe_hide_explore_podcast_section_title">Ẩn phần \"Khám phá podcast\"</string>
   <string name="morphe_hide_featured_channels_section_title">Ẩn phần kênh nổi bật</string>
   <string name="morphe_hide_featured_links_section_title">Ẩn phần Liên kết nổi bật</string>
-  <string name="morphe_hide_featured_places_section_title">Ẩn phần \"Địa điểm nổi bật\"</string>
   <string name="morphe_hide_featured_playlists_section_title">Ẩn phần danh sách phát nổi bật</string>
   <string name="morphe_hide_featured_videos_section_title">Ẩn phần Video nổi bật</string>
-  <string name="morphe_hide_gaming_section_title">Ẩn phần Trò chơi</string>
   <string name="morphe_hide_hashtag_section_title">Ẩn phần Hashtag</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Ẩn phần \"Cách nội dung này được tạo ra\"</string>
   <string name="morphe_hide_hype_points_title">Ẩn Điểm khuấy động</string>
   <string name="morphe_hide_info_cards_section_title">Ẩn phần Thẻ thông tin</string>
   <string name="morphe_hide_key_concepts_section_title">Ẩn phần \"Khái niệm chính\"</string>
-  <string name="morphe_hide_music_section_title">Ẩn phần Âm nhạc</string>
   <string name="morphe_hide_quizzes_section_title">Ẩn phần Câu hỏi</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Ẩn phần \'Tìm kiếm trong video này\'</string>
   <string name="morphe_hide_subscribe_button_title">Ẩn nút Đăng ký</string>
@@ -448,16 +446,15 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_reload_video_button_title">Hiện nút Tải lại video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID video không khả dụng. Vui lòng tự mở lại video</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Hiện nút Lưu vào xem sau</string>
-  <string name="morphe_save_to_watch_later_button_summary">Bấm để lưu vào xem sau, bấm giữ để xem tùy chọn hàng chờ</string>
   <string name="morphe_save_to_watch_later_success_toast">Video đã được lưu thành công vào danh sách xem sau</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Video này đã được lưu trong danh sách xem sau</string>
   <string name="morphe_save_to_watch_later_error_toast">Không thể lưu video này vào danh sách xem sau</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Cho phép lưu các video liên quan đến trẻ em trong menu flyout \'Watch later\'</string>
   <string name="morphe_queue_flyout_title">Thêm vào hàng chờ Morphe</string>
   <string name="morphe_queue_restore_title">Lưu hàng chờ giữa các phiên</string>
   <string name="morphe_queue_restore_summary">Hàng chờ vẫn được lưu sau khi tắt đi bật lại ứng dụng</string>
   <string name="morphe_swap_save_and_queue_actions_title">Đổi chỗ Lưu và tùy chọn Hàng chờ</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Bấm để xem các tùy chọn hàng đợi, bấm giữ để lưu vào xem sau</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Chạm để xem các tùy chọn hàng đợi, chạm và giữ để lưu vào Watch later</string>
   <string name="morphe_queue_override_flyout_menu_title">Ghi đè nút hàng chờ trong trang video</string>
   <string name="morphe_queue_override_flyout_menu_summary">Mở hàng chờ Morphe thay vì hàng chờ YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Thêm mục menu hàng chờ flyout nguồn cấp dữ liệu</string>

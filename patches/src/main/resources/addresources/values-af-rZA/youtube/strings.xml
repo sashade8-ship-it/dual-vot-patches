@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Verwyder agtergrond speel beperkings</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiveer agtergrondweergawe</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Deaktiveer uitleg-opdaterings</string>
   <string name="morphe_disable_layout_updates_summary">Verhoed dat die bediener die uitleg van die app opdateer</string>
@@ -167,16 +168,12 @@ Veranderings sluit in:
   <string name="morphe_hide_explore_podcast_section_title">Verberg \'Explore the podcast\' afdeling</string>
   <string name="morphe_hide_featured_channels_section_title">Verberg afdeling met uitgeligte kanale</string>
   <string name="morphe_hide_featured_links_section_title">Verberg Featured links afdeling</string>
-  <string name="morphe_hide_featured_places_section_title">Verberg \'Featured places\' afdeling</string>
   <string name="morphe_hide_featured_playlists_section_title">Verberg Afgelaaide sn lys afdeling</string>
   <string name="morphe_hide_featured_videos_section_title">Verberg Featured videos afdeling</string>
-  <string name="morphe_hide_gaming_section_title">Verberg Gaming afdeling</string>
   <string name="morphe_hide_hashtag_section_title">Verberg Afdeling-herhalingsymbool</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Verberg \'How this content was made\' afdeling</string>
   <string name="morphe_hide_hype_points_title">Verberg Hype punte</string>
   <string name="morphe_hide_info_cards_section_title">Verberg Info cards afdeling</string>
   <string name="morphe_hide_key_concepts_section_title">Verberg \'Key concepts\' afdeling</string>
-  <string name="morphe_hide_music_section_title">Verberg Music afdeling</string>
   <string name="morphe_hide_quizzes_section_title">Verberg Quizzes afdeling</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Versteek \'Soek in hierdie video\' afdeling</string>
   <string name="morphe_hide_subscribe_button_title">Verberg Inteken knoppie</string>
@@ -449,16 +446,18 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <string name="morphe_reload_video_button_title">Wys Save to watch later knoppie</string>
   <string name="morphe_dismiss_player_not_available_toast">Video ID is nie beskikbaar nie. Laai asseblief die video handmatig herlaai</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Live avatar tik aksie</string>
-  <string name="morphe_save_to_watch_later_button_summary">Tik om later te wys, tik en hou in vir tou opsies</string>
+  <string name="morphe_save_to_watch_later_button_title">Wys Stoor na Kyk later-knoppie</string>
+  <string name="morphe_save_to_watch_later_button_summary">Tik om na Kyk later te stoor, tik en hou vir waglys-opsies</string>
   <string name="morphe_save_to_watch_later_success_toast">Video is suksesvol in spaar om later te kyk snitlys gestoor</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Hierdie video is reeds in spaar om later te kyk snitlys gestoor</string>
   <string name="morphe_save_to_watch_later_error_toast">Kan hierdie video nie in spaar om later te kyk snitlys stoor nie</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Stoor na Kyk later</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Wys Stoor na Kyk later-knoppie in kindervideo\'s</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Laat toe om kinder-verwante video\'s in die \'Watch\'-keuselys te stoor</string>
   <string name="morphe_queue_flyout_title">Voeg by Morphe-tou</string>
   <string name="morphe_queue_restore_title">Behou tou tussen sessies</string>
   <string name="morphe_queue_restore_summary">Tou word behou na die herbegin van die app</string>
   <string name="morphe_swap_save_and_queue_actions_title">Ruil die Spaar en Waglys-aksies</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Tik vir waglys-opsies, tik en hou vas om later te kyk</string>
   <string name="morphe_queue_override_flyout_menu_title">Vervang voedingsvloei-wyser-knoppie</string>
   <string name="morphe_queue_override_flyout_menu_summary">Oop die Morphe-ry vir die YouTube-ry</string>
   <string name="morphe_queue_add_flyout_menu_title">Voeg voer flyout-tou-menu-item by</string>

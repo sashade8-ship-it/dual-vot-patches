@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Hapus pembatasan pemutaran latar belakang</string>
   <string name="morphe_shorts_disable_background_playback_title">Nonaktifkan pemutaran di latar belakang</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Nonaktifkan batas kecepatan menggulir</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Nonaktifkan pembaruan tata letak</string>
   <string name="morphe_disable_layout_updates_summary">Mencegah server memperbarui tata letak aplikasi</string>
@@ -166,16 +168,13 @@ Perubahan termasuk:
   <string name="morphe_hide_explore_podcast_section_title">Sembunyikan bagian \'Jelajahi podcast\'</string>
   <string name="morphe_hide_featured_channels_section_title">Sembunyikan bagian saluran Unggulan</string>
   <string name="morphe_hide_featured_links_section_title">Sembunyikan bagian tautan Unggulan</string>
-  <string name="morphe_hide_featured_places_section_title">Sembunyikan bagian \'Tempat unggulan\'</string>
   <string name="morphe_hide_featured_playlists_section_title">Sembunyikan bagian Daftar putar unggulan</string>
   <string name="morphe_hide_featured_videos_section_title">Sembunyikan bagian video Unggulan</string>
-  <string name="morphe_hide_gaming_section_title">Sembunyikan bagian Game</string>
   <string name="morphe_hide_hashtag_section_title">Sembunyikan bagian Hashtag</string>
   <string name="morphe_hide_how_this_was_made_section_title">Sembunyikan bagian \'Cara konten ini dibuat\'</string>
   <string name="morphe_hide_hype_points_title">Sembunyikan Poin Hype</string>
   <string name="morphe_hide_info_cards_section_title">Sembunyikan bagian kartu info</string>
   <string name="morphe_hide_key_concepts_section_title">Sembunyikan bagian \'Konsep utama\'</string>
-  <string name="morphe_hide_music_section_title">Sembunyikan bagian Musik</string>
   <string name="morphe_hide_quizzes_section_title">Sembunyikan bagian Kuis</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Sembunyikan bagian \'Cari di dalam video ini\'</string>
   <string name="morphe_hide_subscribe_button_title">Sembunyikan tombol Subscribe</string>
@@ -448,16 +447,19 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_reload_video_button_title">Tampilkan tombol Muat ulang video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID video tidak tersedia. Silakan muat ulang video secara manual</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Tampilkan tombol Simpan untuk ditonton nanti</string>
-  <string name="morphe_save_to_watch_later_button_summary">Ketuk untuk menyimpan untuk ditonton nanti, ketuk dan tahan untuk pilihan antrean</string>
+  <string name="morphe_save_to_watch_later_button_title">Tampilkan tombol Simpan ke Tonton Nanti</string>
+  <string name="morphe_save_to_watch_later_button_summary">Ketuk untuk menyimpan ke Tonton Nanti, ketuk dan tahan untuk pilihan antrean</string>
   <string name="morphe_save_to_watch_later_success_toast">Video berhasil disimpan di daftar tonton nanti</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Video ini sudah disimpan di daftar tonton nanti</string>
   <string name="morphe_save_to_watch_later_error_toast">Tidak dapat menyimpan video ini di daftar tonton nanti</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Simpan ke Tonton Nanti</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Tampilkan tombol Simpan ke Tonton Nanti di video anak-anak</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Memungkinkan penyimpanan video terkait anak-anak di menu melayang \'Tonton Nanti\'</string>
   <string name="morphe_queue_flyout_title">Tambahkan ke antrean Morphe</string>
   <string name="morphe_queue_restore_title">Simpan antrean antar sesi</string>
   <string name="morphe_queue_restore_summary">Antrean disimpan setelah memulai ulang aplikasi</string>
   <string name="morphe_swap_save_and_queue_actions_title">Tukar Tindakan Simpan dan Antrean</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Ketuk untuk pilihan antrean, ketuk dan tahan untuk menyimpan untuk ditonton nanti</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Ketuk untuk pilihan antrean, ketuk dan tahan untuk menyimpan ke Tonton Nanti</string>
   <string name="morphe_queue_override_flyout_menu_title">Mengganti tombol feed hamparan antrean </string>
   <string name="morphe_queue_override_flyout_menu_summary">Membuka antrean Morphe daripada antrean YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Tambahkan item menu antrean feed melayang</string>
@@ -977,21 +979,22 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_miniplayer_opacity_summary">Sesuaikan tingkat transparansi (0 adalah transparan, 100 adalah buram)</string>
   <string name="morphe_miniplayer_opacity_invalid_toast">Opasitas hamparan pemutar mini antara 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
-  <string name="morphe_back_button_always_exits_feed_title">Tombol kembali keluar dari feed</string>
-  <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali selalu keluar dari aplikasi alih-alih menggulir ke atas feed</string>
+  <string name="morphe_back_button_always_exits_feed_title">Tombol kembali menutup feed</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali akan selalu menutup aplikasi bukan menggulir feed ke atas</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Latar belakang tema terang</string>
   <string name="morphe_theme_color_light_entry_2">Putih</string>
-  <string name="morphe_theme_color_light_entry_3">Material You (Putih)@string/morphe_theme_color_light_entry_3</string>
-  <string name="morphe_theme_color_light_entry_9">Light pink</string>
-  <string name="morphe_theme_color_light_entry_10">Light blue</string>
-  <string name="morphe_theme_color_light_entry_11">Light green</string>
-  <string name="morphe_theme_color_light_entry_12">Light yellow</string>
-  <string name="morphe_theme_color_light_entry_13">Light orange</string>
+  <string name="morphe_theme_color_light_entry_3">Material You (Putih)</string>
+  <string name="morphe_theme_color_light_entry_9">Pink muda</string>
+  <string name="morphe_theme_color_light_entry_10">Biru muda</string>
+  <string name="morphe_theme_color_light_entry_11">Hijau muda</string>
+  <string name="morphe_theme_color_light_entry_12">Kuning muda</string>
+  <string name="morphe_theme_color_light_entry_13">Oranye muda</string>
   <string name="morphe_theme_color_light_entry_14">Merah muda</string>
   <string name="morphe_theme_color_light_custom_title">Latar belakang terang kustom</string>
   <string name="morphe_theme_color_light_custom_summary">Atur warna latar belakang tema terang</string>
-  <string name="morphe_theme_color_change_foreground_title">Change foreground color</string>
+  <string name="morphe_theme_color_change_foreground_title">Ubah warna latar depan</string>
+  <string name="morphe_theme_color_change_foreground_summary">Gunakan warna tema untuk teks dan ikon</string>
   <string name="morphe_gradient_loading_screen_title">Aktifkan layar pemuatan gradien</string>
   <string name="morphe_gradient_loading_screen_summary">Menampilkan latar belakang gradien pada layar pemuatan daripada warna solid</string>
   <string name="morphe_splash_screen_animation_style_title">Gaya layar pembuka</string>

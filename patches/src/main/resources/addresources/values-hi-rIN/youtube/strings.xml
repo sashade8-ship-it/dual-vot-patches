@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">पृष्ठभूमि प्लेबैक प्रतिबंध हटाएं</string>
   <string name="morphe_shorts_disable_background_playback_title">बैकग्राउंड प्ले को अक्षम करें</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">अपडेट लेआउट को अक्षम करना</string>
   <string name="morphe_disable_layout_updates_summary">सर्वर को ऐप लेआउट अपडेट करने से रोकता है</string>
@@ -167,16 +168,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_podcast_section_title">\'पॉडकास्ट का अन्वेषण करें\' अनुभाग छुपाएं</string>
   <string name="morphe_hide_featured_channels_section_title">फीचर्ड चैनलों वाले अनुभाग को छिपाएं</string>
   <string name="morphe_hide_featured_links_section_title">फीचर्ड लिंक अनुभाग छुपाएं</string>
-  <string name="morphe_hide_featured_places_section_title">\'फीचर्ड स्थान\' अनुभाग छुपाएं</string>
   <string name="morphe_hide_featured_playlists_section_title">फीचर्ड प्लेलिस्ट अनुभाग छिपाएं</string>
   <string name="morphe_hide_featured_videos_section_title">फीचर्ड वीडियो अनुभाग छुपाएं</string>
-  <string name="morphe_hide_gaming_section_title">गेमिंग अनुभाग छुपाएं</string>
   <string name="morphe_hide_hashtag_section_title">हैशटैग अनुभाग छुपाएं</string>
-  <string name="morphe_hide_how_this_was_made_section_title">\'यह सामग्री कैसे बनाई गई थी\' अनुभाग छुपाएं</string>
   <string name="morphe_hide_hype_points_title">छिपाएं हाइप पॉइंट्स</string>
   <string name="morphe_hide_info_cards_section_title">जानकारी कार्ड अनुभाग छुपाएं</string>
   <string name="morphe_hide_key_concepts_section_title">\'मुख्य अवधारणाएं\' अनुभाग छुपाएं</string>
-  <string name="morphe_hide_music_section_title">संगीत अनुभाग छुपाएं</string>
   <string name="morphe_hide_quizzes_section_title">प्रश्नोत्तरी अनुभाग छुपाएं</string>
   <string name="morphe_hide_search_inside_this_video_section_title">\"Search inside this video\" अनुभाग छिपाएँ</string>
   <string name="morphe_hide_subscribe_button_title">सबस्क्राइब बटन छुपाएं</string>
@@ -449,8 +446,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_reload_video_button_title">रीलोड वीडियो बटन दिखाएं</string>
   <string name="morphe_dismiss_player_not_available_toast">वीडियो आईडी अनुपलब्ध है। कृपया वीडियो को मैन्युअल रूप से रीलोड करें</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">बाद में देखने के लिए सहेजें बटन दिखाएं</string>
-  <string name="morphe_save_to_watch_later_button_summary">बाद में देखने के लिए टैप करें, विकल्प देखने के लिए टैप करके दबाए रखें</string>
   <string name="morphe_save_to_watch_later_success_toast">वीडियो को बाद में देखने की प्लेलिस्ट में सफलतापूर्वक सहेजा गया</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">यह वीडियो पहले से ही बाद में देखने की प्लेलिस्ट में सहेजा गया है</string>
   <string name="morphe_save_to_watch_later_error_toast">इस वीडियो को बाद में देखने की प्लेलिस्ट में सहेजा नहीं जा सकता</string>
@@ -458,7 +453,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_queue_restore_title">सत्रों के बीच कतार बनाए रखें</string>
   <string name="morphe_queue_restore_summary">ऐप को पुनरारंभ करने के बाद कतार बनी रहती है</string>
   <string name="morphe_swap_save_and_queue_actions_title">स्वैप सेव और क्यू क्रियाएँ</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">क्यू विकल्पों के लिए टैप करें, बाद में देखने के लिए सेव करने के लिए टैप करके दबाएँ</string>
   <string name="morphe_queue_override_flyout_menu_title">फ़ीड फ्लाईआउट कतार बटन को ओवरराइड करें</string>
   <string name="morphe_queue_override_flyout_menu_summary">Morphe कतार को YouTube कतार के बजाय खोलता है</string>
   <string name="morphe_queue_add_flyout_menu_title">फ़ीड फ़्लाईआउट कतार मेनू आइटम जोड़ें</string>

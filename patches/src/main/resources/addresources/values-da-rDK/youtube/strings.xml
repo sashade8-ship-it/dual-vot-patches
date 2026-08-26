@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fjern restriktioner for afspilning i baggrunden</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiver baggrundsafspilning</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Deaktiver opdateringer af layout</string>
   <string name="morphe_disable_layout_updates_summary">Forhindrer serveren i at opdatere applayoutet</string>
@@ -167,16 +168,12 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_explore_podcast_section_title">Skjul sektionen \'Udforsk podcasten\'</string>
   <string name="morphe_hide_featured_channels_section_title">Skjul fremhævede kanaler</string>
   <string name="morphe_hide_featured_links_section_title">Skjul Fremhævede links sektionen</string>
-  <string name="morphe_hide_featured_places_section_title">Skjul sektionen \'Fremhævede steder\'</string>
   <string name="morphe_hide_featured_playlists_section_title">Skjul sektionen \'Fremhævede afspilningslister\'</string>
   <string name="morphe_hide_featured_videos_section_title">Skjul Fremhævede videoer sektionen</string>
-  <string name="morphe_hide_gaming_section_title">Skjul Gaming sektionen</string>
   <string name="morphe_hide_hashtag_section_title">Skjul Hashtag sektionen</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Skjul sektionen \'Sådan er dette indhold blevet lavet\'</string>
   <string name="morphe_hide_hype_points_title">Skjul Hype-point</string>
   <string name="morphe_hide_info_cards_section_title">Skjul Info cards sektionen</string>
   <string name="morphe_hide_key_concepts_section_title">Skjul \'Nøglebegreber\' sektionen</string>
-  <string name="morphe_hide_music_section_title">Skjul Musik sektionen</string>
   <string name="morphe_hide_quizzes_section_title">Skjul Quizzes sektionen</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Skjul afsnittet \'Søg i denne video\'</string>
   <string name="morphe_hide_subscribe_button_title">Skjul knappen Abonnér</string>
@@ -449,8 +446,6 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_reload_video_button_title">Strygning af lysstyrken til den laveste værdi aktiverer systemets automatisk lysstyrke</string>
   <string name="morphe_dismiss_player_not_available_toast">Video-ID er ikke tilgængeligt. Genindlæs venligst videoen manuelt</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Juster gennemsigtighedsniveauet (0 er gennemsigtigt, 100 er uigennemsigtigt)</string>
-  <string name="morphe_save_to_watch_later_button_summary">Tryk for at gemme til senere, tryk og hold for køindstillinger</string>
   <string name="morphe_save_to_watch_later_success_toast">Video gemt i afspilningsliste til senere</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Denne video er allerede gemt i afspilningslisten til senere</string>
   <string name="morphe_save_to_watch_later_error_toast">Kunne ikke gemme denne video i afspilningslisten til senere</string>
@@ -458,7 +453,6 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_queue_restore_title">Behold køen mellem sessioner</string>
   <string name="morphe_queue_restore_summary">Køen bevares efter genstart af appen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Byt rundt på Gem og Kø-handlinger</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Tryk for køindstillinger, tryk og hold for at gemme til senere</string>
   <string name="morphe_queue_override_flyout_menu_title">Erstat feed flyout kø-knap</string>
   <string name="morphe_queue_override_flyout_menu_summary">Åbner Morphe-køen i stedet for YouTube-køen</string>
   <string name="morphe_queue_add_flyout_menu_title">Tilføj feed-flyout-kø-menupunkt</string>

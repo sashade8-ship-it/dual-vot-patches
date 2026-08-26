@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Bain srianta súgartha cúlra</string>
   <string name="morphe_shorts_disable_background_playback_title">Díchumasaigh súgradh sa chúlra</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Díchumasaigh teorainn luas scrollaithe</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Díchumasaigh nuashonruithe leagan amach</string>
   <string name="morphe_disable_layout_updates_summary">Coscann sé seo an freastalaí ó leagan amach an aip a nuashonrú</string>
@@ -167,16 +169,12 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_explore_podcast_section_title">Folaigh an chuid \'Iniúchadh a dhéanamh ar an bpodchraoladh\'</string>
   <string name="morphe_hide_featured_channels_section_title">Folaigh rannán cainéil Réadmhaoine</string>
   <string name="morphe_hide_featured_links_section_title">Folaigh an chuid Naisc Réadmhaoine</string>
-  <string name="morphe_hide_featured_places_section_title">Folaigh an chuid \'Áiteanna Réadmhaoine\'</string>
   <string name="morphe_hide_featured_playlists_section_title">Folaigh an rannóg seinmliostaí Réadmhaoine</string>
   <string name="morphe_hide_featured_videos_section_title">Folaigh an rannóg Físeáin Réadmhaoine</string>
-  <string name="morphe_hide_gaming_section_title">Folaigh an rannóg Cearrbhachais</string>
   <string name="morphe_hide_hashtag_section_title">Folaigh an chuid haischlib</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Folaigh an chuid \'Conas a cruthaíodh an t-ábhar seo\'</string>
   <string name="morphe_hide_hype_points_title">Folaigh pointí Hype</string>
   <string name="morphe_hide_info_cards_section_title">Folaigh an chuid Cártaí Faisnéise</string>
   <string name="morphe_hide_key_concepts_section_title">Folaigh an chuid \'Príomhchoincheapa\'</string>
-  <string name="morphe_hide_music_section_title">Folaigh an rannóg Ceoil</string>
   <string name="morphe_hide_quizzes_section_title">Folaigh an rannán Tráth na gCeist</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Folaigh an chuid \'Cuardaigh taobh istigh den fhíseán seo\'</string>
   <string name="morphe_hide_subscribe_button_title">Folaigh an cnaipe Liostála</string>
@@ -449,16 +447,19 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_reload_video_button_title">Taispeáin an cnaipe Athlódáil físe</string>
   <string name="morphe_dismiss_player_not_available_toast">Níl aitheantas físe ar fáil. Athlódáil an físeán de láimh le do thoil.</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Taispeáin an cnaipe Sábháil le féachaint níos déanaí</string>
-  <string name="morphe_save_to_watch_later_button_summary">Tapáil chun sábháil le féachaint air níos déanaí, tapáil agus coinnigh síos le haghaidh roghanna scuaine</string>
+  <string name="morphe_save_to_watch_later_button_title">Taispeáin an cnaipe Sábháil go Féach ar ball</string>
+  <string name="morphe_save_to_watch_later_button_summary">Cnag chun sábháil go Féach ar ball, cnag agus coinnigh le haghaidh roghanna scuaine</string>
   <string name="morphe_save_to_watch_later_success_toast">Sábháilte go rathúil an físeán i seinmliosta Féach Níos Déanaí</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Tá an físeán seo sábháilte cheana féin sa seinmliosta féach níos déanaí</string>
   <string name="morphe_save_to_watch_later_error_toast">Ní féidir an físeán seo a shábháil sa seinmliosta féach níos déanaí</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Sábháil go Féach ar ball</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Taispeáin an cnaipe Sábháil go Féach ar ball i bhfíseáin do pháistí</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Ligeann sé físeáin a bhaineann le leanaí a shábháil i roghchlár aníos \'Féachaint ar ball\'</string>
   <string name="morphe_queue_flyout_title">Cuir leis an scuaine Morphe</string>
   <string name="morphe_queue_restore_title">Coinnigh scuaine idir seisiúin</string>
   <string name="morphe_queue_restore_summary">Coinnítear an scuaine tar éis an aip a atosú</string>
   <string name="morphe_swap_save_and_queue_actions_title">Malartaigh gníomhartha Sábháil agus Ciú</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Tapáil le haghaidh roghanna scuaine, tapáil agus coinnigh síos chun sábháil le féachaint air níos déanaí</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tapáil le haghaidh roghanna scuaine, tapáil agus coinnigh chun sábháil chuig \'Féachaint ar ball\'</string>
   <string name="morphe_queue_override_flyout_menu_title">Sáraigh an cnaipe scuaine fothaithe</string>
   <string name="morphe_queue_override_flyout_menu_summary">Osclaíonn sé an scuaine Morphe in ionad scuaine YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Cuir mír roghchláir scuaine amach beatha leis</string>

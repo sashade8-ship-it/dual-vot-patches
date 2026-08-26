@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">পটভূমির প্লেব্যাক সীমাবদ্ধতা সরান</string>
   <string name="morphe_shorts_disable_background_playback_title">ব্যাকগ্রাউন্ড প্লে অক্ষম করুন</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">স্ক্রলিং গতির সীমা অক্ষম করুন</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">লেআউট আপডেট বন্ধ করুন</string>
   <string name="morphe_disable_layout_updates_summary">সার্ভারকে অ্যাপ লেআউট আপডেট করা থেকে বিরত করে</string>
@@ -167,16 +169,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_podcast_section_title">\'Explore the podcast\' বিভাগটি লুকান</string>
   <string name="morphe_hide_featured_channels_section_title">বিশেষ বৈশিষ্ট্যযুক্ত চ্যানেলগুলি লুকান</string>
   <string name="morphe_hide_featured_links_section_title">Featured links বিভাগটি লুকান</string>
-  <string name="morphe_hide_featured_places_section_title">\'Featured places\' বিভাগটি লুকান</string>
   <string name="morphe_hide_featured_playlists_section_title">বৈশিষ্ট্যযুক্ত প্লেলিস্ট বিভাগটি লুকান</string>
   <string name="morphe_hide_featured_videos_section_title">Featured videos বিভাগটি লুকান</string>
-  <string name="morphe_hide_gaming_section_title">Gaming বিভাগটি লুকান</string>
   <string name="morphe_hide_hashtag_section_title">হ্যাশট্যাগ বিভাগটি লুকান</string>
-  <string name="morphe_hide_how_this_was_made_section_title">\'How this content was made\' বিভাগটি লুকান</string>
   <string name="morphe_hide_hype_points_title">হাইপ পয়েন্ট লুকান</string>
   <string name="morphe_hide_info_cards_section_title">Info cards বিভাগটি লুকান</string>
   <string name="morphe_hide_key_concepts_section_title">\'Key concepts\' বিভাগটি লুকান</string>
-  <string name="morphe_hide_music_section_title">Music বিভাগটি লুকান</string>
   <string name="morphe_hide_quizzes_section_title">Quizzes বিভাগটি লুকান</string>
   <string name="morphe_hide_search_inside_this_video_section_title">\'এই ভিডিওর মধ্যে অনুসন্ধান\' বিভাগটি লুকান\'</string>
   <string name="morphe_hide_subscribe_button_title">সাবস্ক্রাইব  বোতামটি লুকান</string>
@@ -449,16 +447,19 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_reload_video_button_title">রিলোড ভিডিও বোতাম দেখান</string>
   <string name="morphe_dismiss_player_not_available_toast">ভিডিও আইডি পাওয়া যাচ্ছে না। অনুগ্রহ করে ম্যানুয়ালি ভিডিওটি রিলোড করুন</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">পরে দেখার জন্য সেভ বোতাম দেখান</string>
-  <string name="morphe_save_to_watch_later_button_summary">পরবর্তী দর্শনের জন্য সংরক্ষণ করতে ট্যাপ করুন, সারি বিকল্পের জন্য ট্যাপ করে ধরে রাখুন</string>
+  <string name="morphe_save_to_watch_later_button_title">পরে দেখুন-এ সেভ বাটন দেখান</string>
+  <string name="morphe_save_to_watch_later_button_summary">পরে দেখুন-এ সেভ করতে ট্যাপ করুন, কিউ অপশনের জন্য ট্যাপ করে ধরে রাখুন</string>
   <string name="morphe_save_to_watch_later_success_toast">ভিডিওটি সফলভাবে পরে দেখার প্লেলিস্টে সেভ করা হয়েছে</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">এই ভিডিওটি ইতিমধ্যেই পরে দেখার প্লেলিস্টে সেভ করা আছে</string>
   <string name="morphe_save_to_watch_later_error_toast">এই ভিডিওটি পরে দেখার প্লেলিস্টে সেভ করা যায়নি</string>
+  <string name="morphe_save_to_watch_later_flyout_title">পরে দেখুন-এ সেভ</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">কিডস ভিডিওতে পরে দেখুন-এ সেভ বাটন দেখান</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">ওয়াচ লেটার ফ্লাইআউট মেনুতে শিশু-সম্পর্কিত ভিডিও সংরক্ষণের অনুমতি দেয়</string>
   <string name="morphe_queue_flyout_title">Morphe ভিডিও তালিকায় যুক্ত করুন</string>
   <string name="morphe_queue_restore_title">সেশনগুলির মধ্যে সারি রাখুন</string>
   <string name="morphe_queue_restore_summary">অ্যাপ পুনরায় চালু করার পরেও সারিটি রাখা হবে</string>
   <string name="morphe_swap_save_and_queue_actions_title">সেভ এবং কিউ অ্যাকশনগুলির স্থান পরিবর্তন করুন</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">কিউ বিকল্পের জন্য আলতো চাপুন, পরে দেখার জন্য সেভ করতে আলতো চেপে ধরে রাখুন</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">কিউ অপশনের জন্য ট্যাপ করুন, ওয়াচ লেটারে সংরক্ষণ করতে ট্যাপ করে ধরে রাখুন</string>
   <string name="morphe_queue_override_flyout_menu_title">ফিড ফ্লাইআউট সারিবদ্ধকরণ বোতামটি প্রতিস্থাপন করুন</string>
   <string name="morphe_queue_override_flyout_menu_summary">YouTube সারির পরিবর্তে Morphe সারি খোলে</string>
   <string name="morphe_queue_add_flyout_menu_title">ফিড ফ্লাইআউট কিউ মেনু আইটেম যুক্ত করুন</string>

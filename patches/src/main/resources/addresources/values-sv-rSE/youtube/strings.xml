@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Ta bort begränsningar för uppspelning i bakgrunden</string>
   <string name="morphe_shorts_disable_background_playback_title">Inaktivera uppspelning i bakgrunden</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Inaktivera layoutuppdateringar</string>
   <string name="morphe_disable_layout_updates_summary">Förhindrar att servern uppdaterar appens layout</string>
@@ -167,16 +168,12 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_explore_podcast_section_title">Dölj avsnittet Utforska podden</string>
   <string name="morphe_hide_featured_channels_section_title">Dölj avsnittet med utvalda kanaler</string>
   <string name="morphe_hide_featured_links_section_title">Dölj avsnittet med utvalda länkar</string>
-  <string name="morphe_hide_featured_places_section_title">Dölj avsnittet Platser som visas</string>
   <string name="morphe_hide_featured_playlists_section_title">Dölj avsnittet med utvalda spellistor</string>
   <string name="morphe_hide_featured_videos_section_title">Dölj avsnittet med utvalda videor</string>
-  <string name="morphe_hide_gaming_section_title">Dölj Gaming-avsnittet</string>
   <string name="morphe_hide_hashtag_section_title">Dölj avsnittet Hashtag</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Dölj avsnittet Så skapades det här</string>
   <string name="morphe_hide_hype_points_title">Dölj hajppoäng</string>
   <string name="morphe_hide_info_cards_section_title">Dölj avsnittet för informationskort</string>
   <string name="morphe_hide_key_concepts_section_title">Dölj avsnittet Huvudkoncept</string>
-  <string name="morphe_hide_music_section_title">Dölj avsnittet Musik</string>
   <string name="morphe_hide_quizzes_section_title">Dölj avsnittet Quiz</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Dölj avsnittet \'Sök i den här videon\'</string>
   <string name="morphe_hide_subscribe_button_title">Dölj knappen Prenumerera</string>
@@ -449,8 +446,6 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_reload_video_button_title">Visa knappen Läs in videon igen</string>
   <string name="morphe_dismiss_player_not_available_toast">Video-id:t är inte tillgängligt. Läs in videon igen manuellt</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Visa knappen Spara i Titta senare</string>
-  <string name="morphe_save_to_watch_later_button_summary">Tryck för att spara till Titta senare, tryck länge för köalternativ</string>
   <string name="morphe_save_to_watch_later_success_toast">Videon har sparats i spellistan Titta senare</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Den här videon har redan sparats i spellistan Titta senare</string>
   <string name="morphe_save_to_watch_later_error_toast">Det går inte att spara den här videon i spellistan Titta senare</string>
@@ -458,7 +453,6 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_queue_restore_title">Behåll kön mellan sessioner</string>
   <string name="morphe_queue_restore_summary">Kön behålls efter omstart av appen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Byt plats på åtgärderna Spara och Kö</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Tryck för köalternativ, tryck länge för att spara till Titta senare</string>
   <string name="morphe_queue_override_flyout_menu_title">Åsidosätt flyout-knappen för kö i flödet</string>
   <string name="morphe_queue_override_flyout_menu_summary">Öppnar Morphe-kön istället för YouTube-kön</string>
   <string name="morphe_queue_add_flyout_menu_title">Lägg till menyalternativ för kö i flödernas flyout-meny</string>

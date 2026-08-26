@@ -114,7 +114,7 @@ val hideAdsPatch = bytecodePatch(
 
         // Hide YouTube Premium promotions
 
-        hookElement("$EXTENSION_CLASS->hideStatementBanner([B)[B")
+        hookElement("$EXTENSION_CLASS->hideStatementBanner")
 
         // Hide end screen store banner
 

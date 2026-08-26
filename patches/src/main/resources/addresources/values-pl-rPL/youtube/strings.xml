@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Usuń ograniczenia odtwarzania w tle</string>
   <string name="morphe_shorts_disable_background_playback_title">Wyłącz odtwarzanie w tle</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Wyłącz limit prędkości przewijania</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Wyłącz aktualizacje układu</string>
   <string name="morphe_disable_layout_updates_summary">Zapobiega zmianom układu aplikacji narzucanym przez serwer</string>
@@ -167,16 +169,13 @@ Zmiany obejmują:
   <string name="morphe_hide_explore_podcast_section_title">Ukryj sekcję \"Poznaj podcast\"</string>
   <string name="morphe_hide_featured_channels_section_title">Ukryj sekcję Polecane kanały</string>
   <string name="morphe_hide_featured_links_section_title">Ukryj sekcję Polecane linki</string>
-  <string name="morphe_hide_featured_places_section_title">Ukryj sekcję \"Wspomniane miejsca\"</string>
   <string name="morphe_hide_featured_playlists_section_title">Ukryj sekcję \"Polecane playlisty\"</string>
   <string name="morphe_hide_featured_videos_section_title">Ukryj sekcję Polecane filmy</string>
-  <string name="morphe_hide_gaming_section_title">Ukryj sekcję Gry</string>
   <string name="morphe_hide_hashtag_section_title">Ukryj sekcję Hashtag</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Ukryj sekcję \"Jak to powstało\"</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Ukryj sekcję \"Jak to powstało\"</string>
   <string name="morphe_hide_hype_points_title">Ukryj punkty podbijania</string>
   <string name="morphe_hide_info_cards_section_title">Ukryj sekcję Karty informacyjne</string>
   <string name="morphe_hide_key_concepts_section_title">Ukryj sekcję \"Kluczowe pojęcia\"</string>
-  <string name="morphe_hide_music_section_title">Ukryj sekcję Muzyka</string>
   <string name="morphe_hide_quizzes_section_title">Ukryj sekcję Quizy</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Ukryj sekcję \"Szukaj w tym filmie\"</string>
   <string name="morphe_hide_subscribe_button_title">Ukryj przycisk Subskrybuj</string>
@@ -449,16 +448,19 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_reload_video_button_title">Pokaż przycisk Odśwież film</string>
   <string name="morphe_dismiss_player_not_available_toast">Film jest niedostępny. Otwórz film ponownie ręcznie</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Pokaż przycisk Do obejrzenia</string>
+  <string name="morphe_save_to_watch_later_button_title">Pokaż przycisk Zapisz do obejrzenia</string>
   <string name="morphe_save_to_watch_later_button_summary">Dotknij, aby zapisać do obejrzenia. Przytrzymaj, aby otworzyć opcje kolejki</string>
   <string name="morphe_save_to_watch_later_success_toast">Zapisano na playliście \"Do obejrzenia\"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Film jest już na playliście \"Do obejrzenia\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Nie udało się zapisać na playliście \"Do obejrzenia\"</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Zapisz do obejrzenia</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Pokaż przycisk Zapisz do obejrzenia w filmach dla dzieci</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Pozwala zapisywać filmy dla dzieci w wysuwanym menu \"Do obejrzenia\"</string>
   <string name="morphe_queue_flyout_title">Dodaj do kolejki Morphe</string>
   <string name="morphe_queue_restore_title">Zachowaj kolejkę po wyjściu</string>
   <string name="morphe_queue_restore_summary">Kolejka nie zniknie po ponownym uruchomieniu aplikacji</string>
   <string name="morphe_swap_save_and_queue_actions_title">Zamień akcje Zapisz i Kolejka</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Dotknij, aby wyświetlić opcje kolejki. Przytrzymaj, aby zapisać do obejrzenia później</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Dotknij, aby wyświetlić opcje kolejki. Przytrzymaj, aby zapisać do obejrzenia</string>
   <string name="morphe_queue_override_flyout_menu_title">Zastąp przycisk kolejki w menu strony głównej</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otwiera kolejkę Morphe zamiast kolejki YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj opcję dodawania do kolejki w wysuwanym menu</string>

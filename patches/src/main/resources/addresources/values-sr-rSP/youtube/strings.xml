@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Уклоните ограничења за репродукцију у позадини</string>
   <string name="morphe_shorts_disable_background_playback_title">Онемогући пуштање Shorts видеа у позадини</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Онемогући ограничавање брзине скроловања</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Онемогу ажурирање излазног погледа</string>
   <string name="morphe_disable_layout_updates_summary">Спречава сервер да ажурира изглед апликације</string>
@@ -167,16 +169,12 @@ Promene uključuju:
   <string name="morphe_hide_explore_podcast_section_title">Саскриј одељак „Истражите подкаст”</string>
   <string name="morphe_hide_featured_channels_section_title">Сакриј истакнуте канале</string>
   <string name="morphe_hide_featured_links_section_title">Саскриј одељак „Истакнути линкови”</string>
-  <string name="morphe_hide_featured_places_section_title">Саскриј одељак „Истакнута места”</string>
   <string name="morphe_hide_featured_playlists_section_title">Прикажи одељак са истакнутим плејлистама</string>
   <string name="morphe_hide_featured_videos_section_title">Саскриј одељак „Истакнути видео снимци”</string>
-  <string name="morphe_hide_gaming_section_title">Саскриј одељак „Игре”</string>
   <string name="morphe_hide_hashtag_section_title">Сакриј одељак са хеш-ознакама</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Саскриј одељак „Како је направљен овај садржај”</string>
   <string name="morphe_hide_hype_points_title">Сакриј хајп поене</string>
   <string name="morphe_hide_info_cards_section_title">Саскриј одељак „Инфо картице”</string>
   <string name="morphe_hide_key_concepts_section_title">Саскриј одељак „Кључни концепти”</string>
-  <string name="morphe_hide_music_section_title">Саскриј одељак „Музика”</string>
   <string name="morphe_hide_quizzes_section_title">Саскриј одељак „Квизови”</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Сакриј одељак \"Претражи у овом видеу\"</string>
   <string name="morphe_hide_subscribe_button_title">Сакриј дугме „Запрати”</string>
@@ -449,16 +447,19 @@ Promene uključuju:
   <string name="morphe_reload_video_button_title">Прикажи дугме „Поново учитај видео”</string>
   <string name="morphe_dismiss_player_not_available_toast">ИД видеа није доступан. Молимо ручно поново учитајте видео</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Прикажи дугме „Сачувај за касније гледање”</string>
-  <string name="morphe_save_to_watch_later_button_summary">Додирните да сачувате за гледање касније, додирните и задржите за опције реда чекања</string>
+  <string name="morphe_save_to_watch_later_button_title">Прикажи дугме Сачувај за касније</string>
+  <string name="morphe_save_to_watch_later_button_summary">Додирни да сачуваш за касније, додирни и држи за опције реда чекања</string>
   <string name="morphe_save_to_watch_later_success_toast">Видео успешно сачуван у листу за гледање касније</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Овај видео је већ сачуван у листу за гледање касније</string>
   <string name="morphe_save_to_watch_later_error_toast">Не може да сачува овај видео у листу за гледање касније</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Сачувај за касније</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Прикажи дугме Сачувај за касније у дечијим видео снимцима</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Омогућава чување видео записа за децу у искачућем менију \'Погледај касније\'</string>
   <string name="morphe_queue_flyout_title">Додај у Morphe ред</string>
   <string name="morphe_queue_restore_title">Задржите ред чекања између сесија</string>
   <string name="morphe_queue_restore_summary">Ред чекања се чува након поновног покретања апликације</string>
   <string name="morphe_swap_save_and_queue_actions_title">Замените акције Чување и Додај у ред</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Додирните за опције реда, додирните и задржите да сачувате за гледање касније</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Додирните за опције реда, додирните и задржите да бисте сачували у \'Погледај касније\'</string>
   <string name="morphe_queue_override_flyout_menu_title">Прекид прелаза преко реда прилива</string>
   <string name="morphe_queue_override_flyout_menu_summary">Отвара се редица са Морфе уместо YouTube редице</string>
   <string name="morphe_queue_add_flyout_menu_title">Додај ставку менија за искачући ред фида</string>

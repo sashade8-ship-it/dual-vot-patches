@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fondan oʻynash cheklovlarini olib tashlash</string>
   <string name="morphe_shorts_disable_background_playback_title">Shorts\'da fonda oʻynashni oʻchirish</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Aylantirish tezligi cheklovini o\'chirish</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Tartib sozlamalarini oʻzgartirishni oʻchirish</string>
   <string name="morphe_disable_layout_updates_summary">Ilovaning tartibini yangilash oldini oladi</string>
@@ -167,16 +169,12 @@ Oʻzgarishlar:
   <string name="morphe_hide_explore_podcast_section_title">\'Podcastni kashf etish\' boʻlimini yashiring</string>
   <string name="morphe_hide_featured_channels_section_title">Tanlab olingan kanallar bo\'limini yashiring</string>
   <string name="morphe_hide_featured_links_section_title">Tanlangan havolalarni yashiring</string>
-  <string name="morphe_hide_featured_places_section_title">\'Tanlangan joylar\' boʻlimini yashiring</string>
   <string name="morphe_hide_featured_playlists_section_title">Featured pleylistlar bo\'limini yashirish</string>
   <string name="morphe_hide_featured_videos_section_title">\'Tanlangan videolar\' boʻlimini yashiring</string>
-  <string name="morphe_hide_gaming_section_title">\'Oʻyinlar\' boʻlimini yashiring</string>
   <string name="morphe_hide_hashtag_section_title">Hashteglar bo\'limini yashirish</string>
-  <string name="morphe_hide_how_this_was_made_section_title">\'Bu kontent qanday yaratilgan\' boʻlimini yashiring</string>
   <string name="morphe_hide_hype_points_title">Hype ballarini yashirish</string>
   <string name="morphe_hide_info_cards_section_title">Maʼlumot kartalari boʻlimini yashiring</string>
   <string name="morphe_hide_key_concepts_section_title">\'Asosiy tushunchalar\' boʻlimini yashiring</string>
-  <string name="morphe_hide_music_section_title">\'Musiqa\' boʻlimini yashiring</string>
   <string name="morphe_hide_quizzes_section_title">\'Savollar\' boʻlimini yashiring</string>
   <string name="morphe_hide_search_inside_this_video_section_title">\'Ushbu videodagi qidiruv\' bo\'limini yashirish</string>
   <string name="morphe_hide_subscribe_button_title">Obuna tugmasini yashirish</string>
@@ -444,16 +442,19 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <string name="morphe_reload_video_button_title">Saqlash tugmasini koʻrsatish</string>
   <string name="morphe_dismiss_player_not_available_toast">Video ID mavjud emas. Videoni qoʻlda yangilashni xohlaysizmi?</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Bildirishnomalar menyusida saqlash tugmasini koʻrsatish</string>
-  <string name="morphe_save_to_watch_later_button_summary">Keyingi tomoshabinlar ro\'yxatiga saqlash uchun teging, navbatga qo\'shish uchun bosib ushlab turing</string>
+  <string name="morphe_save_to_watch_later_button_title">Keyinroq ko\'rish uchun saqlash tugmasini ko\'rsatish</string>
+  <string name="morphe_save_to_watch_later_button_summary">Keyinroq ko\'rish uchun saqlash uchun bosing, navbat variantlari uchun bosib turing</string>
   <string name="morphe_save_to_watch_later_success_toast">Video Watch Later pleyistiga saqlab qoʻyildi</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Ushbu video hali Watch Later pleyistida saqlangan</string>
   <string name="morphe_save_to_watch_later_error_toast">Ushbu videoni Watch Later ga saqlab boʻlmadi</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Keyinroq ko\'rish uchun saqlash</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Bolalar videolarida keyinroq ko\'rish uchun saqlash tugmasini ko\'rsatish</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Bolalar videolarini \'Keyinroq ko\'rish\' ochiladigan menyusida saqlash imkonini beradi</string>
   <string name="morphe_queue_flyout_title">Morphe navbatiga qo\'sh</string>
   <string name="morphe_queue_restore_title">Ilovaning qayta ishga tushirilgandan so\'ng navbat saqlanadi</string>
   <string name="morphe_queue_restore_summary">Kirish qilinmagan</string>
   <string name="morphe_swap_save_and_queue_actions_title">Saqlash uchun teging, navbatga qo\'shish uchun bosib ushlab turing</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Kutubxonadagi vazifalarni ko\'rish uchun bosing, keyinroq tomosha qilish uchun bosib ushlab turing</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Navbat opsiyalari uchun bosing, \'Keyinroq ko\'rish\'ga saqlash uchun bosib turing</string>
   <string name="morphe_queue_override_flyout_menu_title">Oqim menyusi navbat tugmasini bekor qilish</string>
   <string name="morphe_queue_override_flyout_menu_summary">YouTube navbati o\'rniga Morphe navbatini ochadi</string>
   <string name="morphe_queue_add_flyout_menu_title">Lenta ochiladigan menyusiga navbat bandini qo\'shish</string>

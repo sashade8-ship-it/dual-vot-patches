@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Hilbijartina parastina ji bo lîstikê di binê de tunekirin</string>
   <string name="morphe_shorts_disable_background_playback_title">Lêkirina lîstikê paşnavê veqetîne</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Nûvekirinên qeydarê qûldar bike.</string>
   <string name="morphe_disable_layout_updates_summary">Server ji nûkirina sêwirana appê re pêşî digire</string>
@@ -168,16 +169,12 @@ Guherînan têne xistine:
   <string name="morphe_hide_explore_podcast_section_title">Bêjeya Girêdaniyên Taybet veşêrin</string>
   <string name="morphe_hide_featured_channels_section_title">Bêdengkirina beşê kanalên taybet</string>
   <string name="morphe_hide_featured_links_section_title">Bêjeya \'Cihên taybet\' veşêrin</string>
-  <string name="morphe_hide_featured_places_section_title">Bêjeya Vîdyoyên Taybet veşêrin</string>
   <string name="morphe_hide_featured_playlists_section_title">Li ser şûşeyê veşêre jinavkirina stranlisteyên taybet</string>
   <string name="morphe_hide_featured_videos_section_title">Bêjeya Lîstik veşêrin</string>
-  <string name="morphe_hide_gaming_section_title">Bêjeya \'Çawa ev hat çêkirin\' veşêrin</string>
   <string name="morphe_hide_hashtag_section_title">Bêjê rêja hashtagê veşêre</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Bêjeya Kartên Agahî veşêrin</string>
   <string name="morphe_hide_hype_points_title">Zorîyên Heyecan ve nebînîne.</string>
   <string name="morphe_hide_info_cards_section_title">Bêjeya \'Dîtinên sereke\' veşêrin</string>
   <string name="morphe_hide_key_concepts_section_title">Bêjeya Muzîk veşêrin</string>
-  <string name="morphe_hide_music_section_title">Bêjeya Pêşbaziyên veşêrin</string>
   <string name="morphe_hide_quizzes_section_title">Bêjeya Transkrîpsiyon veşêrin</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Vê beşa \'Li vê vîdyoyê têkeve\' veşêrin</string>
   <string name="morphe_hide_subscribe_button_title">Bişîniya butona \'Subscribe\' veşêrin</string>
@@ -450,16 +447,17 @@ Info: May not work on live streams"</string>
   <string name="morphe_reload_video_button_title">Butona vîdyoyê dubarekirinê nîşan bide</string>
   <string name="morphe_dismiss_player_not_available_toast">ÎD-ya vîdyoyê peyda nabe. Ji kerema xwe vîdyoyê bi destan nûvekirin</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Butona dîsa ji nûve dubarekirina vîdyoyê nîşan bide</string>
-  <string name="morphe_save_to_watch_later_button_summary">Bikîne da ku paşê temaşe bike, bikîne û bidîse bo vebijarkên lîsteyê</string>
+  <string name="morphe_save_to_watch_later_button_title">Bişkoka \'Paşê temaşekirinê tomar bike\' nîşan bide</string>
+  <string name="morphe_save_to_watch_later_button_summary">Ji bo \'Paşê temaşekirinê tomar bike\' bikirtînin; ji bo vebijarkên rêzê, bikirtînin û bisekînin</string>
   <string name="morphe_save_to_watch_later_success_toast">Vîdyo bi serfirazî di lîsteya tomar kirina ji bo paşê dîtinê de hat tomarkirin</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Vîdyo jixwe di lîsteya tomar kirina ji bo paşê dîtinê de hatî tomarkirin</string>
   <string name="morphe_save_to_watch_later_error_toast">Nikare vî vîdyoyê di lîsteya tomar kirina ji bo paşê dîtinê de tomar bike</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Paşê temaşekirinê tomar bike</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Bişkoka \'Paşê temaşekirinê tomar bike\' di vîdyoyên zarokan de nîşan bide</string>
   <string name="morphe_queue_flyout_title">Zêde bikeye rêza Morphe</string>
   <string name="morphe_queue_restore_title">Lîsteyê di nav beşan de bidomîne</string>
   <string name="morphe_queue_restore_summary">Lîste piştî destkirina serî lêve tê parastin</string>
   <string name="morphe_swap_save_and_queue_actions_title">Veguherîneya kirina tomarkirinê û kirina rêzê</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Bikîne bo vebijarkên rêzê, bikîne û bidin girtin da ku paşê li serê şîret bike</string>
   <string name="morphe_queue_override_flyout_menu_title">Bi serkirîkirina pêşniyarên rêzika peydakirinê</string>
   <string name="morphe_queue_override_flyout_menu_summary">Lihevîneya Morphe li şûna hejmara YouTube\'yê vekirin</string>
   <string name="morphe_queue_add_flyout_menu_title">Bendeleya rêza flyout-a feed-ê zêde bike</string>

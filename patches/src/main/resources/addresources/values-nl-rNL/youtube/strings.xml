@@ -33,6 +33,8 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Achtergrond afspeelbeperkingen verwijderen</string>
   <string name="morphe_shorts_disable_background_playback_title">Schakel afspelen in achtergrond uit</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Scrolsnelheidslimiet uitschakelen</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Layout-updates uitschakelen</string>
   <string name="morphe_disable_layout_updates_summary">Voorkomt dat de server de app-lay-out bijwerkt</string>
@@ -167,16 +169,12 @@ Wijzigingen zijn:
   <string name="morphe_hide_explore_podcast_section_title">Verberg \'Explore the podcast\'-sectie</string>
   <string name="morphe_hide_featured_channels_section_title">Verberg Uitgelichte kanalen sectie</string>
   <string name="morphe_hide_featured_links_section_title">Verberg Uitgelichte links sectie</string>
-  <string name="morphe_hide_featured_places_section_title">Verberg \'Uitgelichte plaatsen\' sectie</string>
   <string name="morphe_hide_featured_playlists_section_title">Verberg Featured afspeellijsten sectie</string>
   <string name="morphe_hide_featured_videos_section_title">Verberg Uitgelichte video\'s sectie</string>
-  <string name="morphe_hide_gaming_section_title">Verberg Gaming sectie</string>
   <string name="morphe_hide_hashtag_section_title">Verberg de \"Hashtag\" sectie</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Verberg \'Hoe deze content is gemaakt\' sectie</string>
   <string name="morphe_hide_hype_points_title">Verberg Hype-punten</string>
   <string name="morphe_hide_info_cards_section_title">Verberg Info kaarten sectie</string>
   <string name="morphe_hide_key_concepts_section_title">Verberg \'Belangrijkste begrippen\' sectie</string>
-  <string name="morphe_hide_music_section_title">Verberg Muziek sectie</string>
   <string name="morphe_hide_quizzes_section_title">Verberg Quizzen sectie</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Verberg de sectie \'Zoeken in deze video\'</string>
   <string name="morphe_hide_subscribe_button_title">Verberg de knop \"Abonneren\"</string>
@@ -449,16 +447,19 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_reload_video_button_title">Toon Video opnieuw laden-knop</string>
   <string name="morphe_dismiss_player_not_available_toast">Video-ID is niet beschikbaar. Laad de video handmatig opnieuw</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Toon Opslaan om later te bekijken-knop</string>
-  <string name="morphe_save_to_watch_later_button_summary">Tik om later te bewaren, tik en vasthouden voor wachtrijopties</string>
+  <string name="morphe_save_to_watch_later_button_title">Toon knop Opslaan in Watch later</string>
+  <string name="morphe_save_to_watch_later_button_summary">Tik om op te slaan in Watch later, tik en houd vast voor wachtrijopties</string>
   <string name="morphe_save_to_watch_later_success_toast">Video succesvol opgeslagen in afspeellijst \'Bekijk later\'</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Deze video is al opgeslagen in de afspeellijst \'Bekijk later\'</string>
   <string name="morphe_save_to_watch_later_error_toast">Kan deze video niet opslaan in de afspeellijst \'Bekijk later\'</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Opslaan in Watch later</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Toon knop Opslaan in Watch later bij kindervideo\'s</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Maakt het mogelijk om kindervideo\'s op te slaan in het menu \'Later bekijken\'</string>
   <string name="morphe_queue_flyout_title">Toevoegen aan Morphe-wachtrij</string>
   <string name="morphe_queue_restore_title">Wachtrij behouden tussen sessies</string>
   <string name="morphe_queue_restore_summary">Wachtrij blijft behouden na het opnieuw starten van de app</string>
   <string name="morphe_swap_save_and_queue_actions_title">Verwissel de acties Opslaan en Wachtrij</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Tik voor wachtrijopties, tik en houd ingedrukt om later te bekijken</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tik voor wachtrijopties, tik en houd vast om op te slaan in Later bekijken</string>
   <string name="morphe_queue_override_flyout_menu_title">Vervang wachtrij flyout-knop</string>
   <string name="morphe_queue_override_flyout_menu_summary">Opent de Morphe-wachtrij in plaats van de YouTube-wachtrij</string>
   <string name="morphe_queue_add_flyout_menu_title">Feed-flyoutmenu-item toevoegen</string>

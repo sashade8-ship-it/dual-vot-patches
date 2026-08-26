@@ -20,8 +20,10 @@ import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMuta
 import app.morphe.patches.shared.misc.litho.filter.addLithoFilter
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
+import app.morphe.patches.youtube.layout.captions.StartVideoInformerFingerprint
 import app.morphe.patches.youtube.layout.hide.general.ContextualMenuItemBuilderFingerprint
 import app.morphe.patches.youtube.layout.hide.general.ContextualMenuItemBuilderOnClickFingerprint
+import app.morphe.patches.youtube.layout.hide.general.hideLayoutComponentsPatch
 import app.morphe.patches.youtube.misc.auth.authHookPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
@@ -73,6 +75,7 @@ val addToQueuePatch = bytecodePatch(
         sharedExtensionPatch,
         settingsPatch,
         lithoFilterPatch,
+        hideLayoutComponentsPatch,
         versionCheckPatch,
         videoInformationPatch,
         authHookPatch
@@ -336,5 +339,9 @@ val addToQueuePatch = bytecodePatch(
         }
 
         addLithoFilter(EXTENSION_FILTER)
+        StartVideoInformerFingerprint.method.addInstruction(
+            0,
+            "invoke-static { }, $EXTENSION_UTILS_CLASS->setVideoMarkedAsForKids()V"
+        )
     }
 }

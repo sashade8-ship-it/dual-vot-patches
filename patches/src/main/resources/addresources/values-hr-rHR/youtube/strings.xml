@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Ukloni ograničenja reprodukcije u pozadini</string>
   <string name="morphe_shorts_disable_background_playback_title">Onemogući reprodukciju u pozadini</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Onemogući ažuriranja izgleda</string>
   <string name="morphe_disable_layout_updates_summary">Sprječava da poslužitelj ažurira izgled aplikacije</string>
@@ -169,16 +170,12 @@ Promjene uključuju:
   <string name="morphe_hide_explore_podcast_section_title">Sakrij odjeljak \'Istraži ovaj tečaj\'</string>
   <string name="morphe_hide_featured_channels_section_title">Sakrij odjeljak Istaknuti kanali</string>
   <string name="morphe_hide_featured_links_section_title">Sakrij odjeljak Istaknute veze</string>
-  <string name="morphe_hide_featured_places_section_title">Sakrij odjeljak \'Istaknuta mjesta\'</string>
   <string name="morphe_hide_featured_playlists_section_title">Sakrij odjeljak Istaknute playliste</string>
   <string name="morphe_hide_featured_videos_section_title">Sakrij odjeljak Istaknuti videozapisi</string>
-  <string name="morphe_hide_gaming_section_title">Sakrij odjeljak Igre</string>
   <string name="morphe_hide_hashtag_section_title">Sakrij odjeljak Hashtag</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Sakrij odjeljak \'Kako je ovaj sadržaj nastao\'</string>
   <string name="morphe_hide_hype_points_title">Sakrij \'Hype toke\'</string>
   <string name="morphe_hide_info_cards_section_title">Sakrij odjeljak kartica s informacijama</string>
   <string name="morphe_hide_key_concepts_section_title">Sakrij odjeljak \'Ključni koncepti\'</string>
-  <string name="morphe_hide_music_section_title">Sakrij odjeljak Glazba</string>
   <string name="morphe_hide_quizzes_section_title">Sakrij odjeljak kvizova</string>
   <string name="morphe_hide_search_inside_this_video_section_title">Sakrij odjeljak \'Pretraži unutar ovog videozapisa\'</string>
   <string name="morphe_hide_subscribe_button_title">Sakrij tipku \'Pretplati se\'</string>
@@ -451,8 +448,6 @@ Info: Možda neće raditi na prijenosima uživo"</string>
   <string name="morphe_reload_video_button_title">Prikaži tipku za ponovno pokretanje videa</string>
   <string name="morphe_dismiss_player_not_available_toast">ID videozapisa nije dostupan. Ručno ponovno otvorite videozapis</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">Prikaži tipku Spremi za kasnije gledanje</string>
-  <string name="morphe_save_to_watch_later_button_summary">Dodirnite za spremanje za kasniju gledanost, dodirnite i držite za opcije reda</string>
   <string name="morphe_save_to_watch_later_success_toast">Video je uspješno spremljen u popisu za kasnije gledanje</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Ovaj je videozapis već spremljen na popis za kasnije gledanje</string>
   <string name="morphe_save_to_watch_later_error_toast">Nije moguće spremiti ovaj video na popis za kasnije gledanje</string>
@@ -460,7 +455,6 @@ Info: Možda neće raditi na prijenosima uživo"</string>
   <string name="morphe_queue_restore_title">Čuvati red čekanja između sesija</string>
   <string name="morphe_queue_restore_summary">Red čekanja se zadržava nakon ponovnog pokretanja aplikacije</string>
   <string name="morphe_swap_save_and_queue_actions_title">Zamijeni radnje Spremi i dodaj u red</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Dodirnite za opcije reda, dodirnite i zadržite da biste spremili za kasniju gledanju</string>
   <string name="morphe_queue_override_flyout_menu_title">Nadjačaj gumb reda čekanja u feed izletniku</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otvara Morphe red čekanja umjesto YouTube reda čekanja</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj stavku izbornika reda čekanja u feed izletnik</string>

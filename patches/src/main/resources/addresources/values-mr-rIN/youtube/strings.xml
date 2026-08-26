@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">पार्श्वभूमीतील प्ले निर्बंध काढून टाका</string>
   <string name="morphe_shorts_disable_background_playback_title">पार्श्वभूमीतील प्लेबॅक बंद करा</string>
+  <!-- layout.disableScrollSpeedLimitPatch -->
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">लेआउट अपडेट अक्षम करा</string>
   <string name="morphe_disable_layout_updates_summary">सर्व्हरला ॲप लेआउट अपडेट करण्यापासून प्रतिबंधित करते</string>
@@ -165,16 +166,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_explore_podcast_section_title">\'पॉडकास्ट एक्सप्लोर करा\' विभाग लपवा</string>
   <string name="morphe_hide_featured_channels_section_title">ठळक चॅनेल विभाग लपवा</string>
   <string name="morphe_hide_featured_links_section_title">\'ठरलेल्या लिंक्स\' विभाग लपवा</string>
-  <string name="morphe_hide_featured_places_section_title">\'ठरलेल्या ठिकाणांचा\' विभाग लपवा</string>
   <string name="morphe_hide_featured_playlists_section_title">ठळक प्लेलिस्ट विभाग लपवा</string>
   <string name="morphe_hide_featured_videos_section_title">\'ठरलेल्या व्हिडिओंचा\' विभाग लपवा</string>
-  <string name="morphe_hide_gaming_section_title">\'गेमिंग\' विभाग लपवा</string>
   <string name="morphe_hide_hashtag_section_title">हाश्शाष हाश्शाष वाबाल</string>
-  <string name="morphe_hide_how_this_was_made_section_title">\'हे कसे तयार केले गेले\' विभाग लपवा</string>
   <string name="morphe_hide_hype_points_title">\'उत्साह बिंदू\' लपवा</string>
   <string name="morphe_hide_info_cards_section_title">\'माहिती कार्ड्स\' विभाग लपवा</string>
   <string name="morphe_hide_key_concepts_section_title">\'मुख्य संकल्पना\' विभाग लपवा</string>
-  <string name="morphe_hide_music_section_title">\'संगीत\' विभाग लपवा</string>
   <string name="morphe_hide_quizzes_section_title">\'क्विझ\' विभाग लपवा</string>
   <string name="morphe_hide_search_inside_this_video_section_title">\"Search inside this video\" विभाग लपवा</string>
   <string name="morphe_hide_subscribe_button_title">\'सदस्यता बटण\' लपवा</string>
@@ -438,16 +435,17 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_reload_video_button_title">\'व्हिडिओ रीलोड\' बटण दर्शवा</string>
   <string name="morphe_dismiss_player_not_available_toast">व्हिडिओ आयडी उपलब्ध नाही. कृपया व्हिडिओ व्यक्तिचलितपणे रीलोड करा</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
-  <string name="morphe_save_to_watch_later_button_title">\'नंतर पाहण्यासाठी सेव्ह करा\' बटण दर्शवा</string>
-  <string name="morphe_save_to_watch_later_button_summary">टॅप करून नंतर पाहण्यासाठी सेव्ह करा, रांगेच्या पर्यायांसाठी टॅप आणि होल्ड करा</string>
+  <string name="morphe_save_to_watch_later_button_title">नंतर पाहण्यासाठी सेव्ह करा बटण दाखवा</string>
+  <string name="morphe_save_to_watch_later_button_summary">नंतर पाहण्यासाठी सेव्ह करण्यासाठी टॅप करा, रांगेच्या पर्यायांसाठी टॅप करून धरा</string>
   <string name="morphe_save_to_watch_later_success_toast">व्हिडिओ यशस्वीरित्या ‘नंतर पहा’ प्लेलिस्टमध्ये जतन केला गेला</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">हा व्हिडिओ ‘नंतर पहा’ प्लेलिस्टमध्ये आधीच जतन केला आहे</string>
   <string name="morphe_save_to_watch_later_error_toast">हा व्हिडिओ ‘नंतर पहा’ प्लेलिस्टमध्ये जतन करू शकत नाही</string>
+  <string name="morphe_save_to_watch_later_flyout_title">नंतर पाहण्यासाठी सेव्ह करा</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">मुलांच्या व्हिडिओंमध्ये नंतर पाहण्यासाठी सेव्ह करा बटण दाखवा</string>
   <string name="morphe_queue_flyout_title">Morphe कतारमध्ये जोडा</string>
   <string name="morphe_queue_restore_title">सत्रांमध्ये रांग ठेवा</string>
   <string name="morphe_queue_restore_summary">ॲप रीस्टार्ट केल्यानंतर रांग ठेवल्या जाईल</string>
   <string name="morphe_swap_save_and_queue_actions_title">स्वॅप सेव्ह आणि क्यू ॲक्शन</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">क्यू पर्यायांसाठी टॅप करा, नंतर पाहण्यासाठी सेव्ह करण्यासाठी टॅप आणि होल्ड करा</string>
   <string name="morphe_queue_override_flyout_menu_title">ओव्हरराइड फीड फ्लायआउट क्यू बटण</string>
   <string name="morphe_queue_override_flyout_menu_summary">Morphe रांग YouTube रांग ऐवजी उघडते</string>
   <string name="morphe_queue_add_flyout_menu_title">फीड फ्लायआउट रांग मेनू आयटम जोडा</string>
