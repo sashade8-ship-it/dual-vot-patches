@@ -1,3 +1,13 @@
+## 1.41.0-dev.2-dualvot.8.3 (2026-08-27)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.41.0-dev.2](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.2).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.41.0-dev.1-dualvot.8.3 (2026-08-26)
 
 ### Automated Morphe update
@@ -232,6 +242,22 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.41.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.1...v1.41.0-dev.2) (2026-08-27)
+
+### 🐛 Bug Fixes
+
+* **Theme:** Prevent an endless activity relaunch loop ([212fc09](https://github.com/MorpheApp/morphe-patches/commit/212fc09a1e8b9048e736a57a9ca3e5c1511896bd))
+* **YouTube - Theme:** Some elements keeps the stock color after leaving picture in picture ([#2591](https://github.com/MorpheApp/morphe-patches/issues/2591)) ([a897f41](https://github.com/MorpheApp/morphe-patches/commit/a897f416f708fee55ca394b67fcb8db0160aac9c))
+
+### ✨ New Features
+
+* **YouTube - Wide search bar:** Replace the toggle with Disabled, Wide and Extra wide options ([#2608](https://github.com/MorpheApp/morphe-patches/issues/2608)) ([ce18f82](https://github.com/MorpheApp/morphe-patches/commit/ce18f821225e7c82da6832828e405d56394026fe))
+* **YouTube:** Add `Fullscreen video scale` patch ([#2616](https://github.com/MorpheApp/morphe-patches/issues/2616)) ([53815a9](https://github.com/MorpheApp/morphe-patches/commit/53815a9ab88c4595e9e070ce56605584cd7a34e7))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.34.52` ([fea25c2](https://github.com/MorpheApp/morphe-patches/commit/fea25c2c2fb7c20122ad5b9ac893a2733047a804))
 
 ## [1.41.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.40.0...v1.41.0-dev.1) (2026-08-26)
 
