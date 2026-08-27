@@ -172,6 +172,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_featured_playlists_section_title">Nascondi la sezione Playlist in evidenza</string>
   <string name="morphe_hide_featured_videos_section_title">Nascondi la sezione Video in evidenza</string>
   <string name="morphe_hide_hashtag_section_title">Nascondi la sezione hashtag</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Nascondi la sezione \"come è stato realizzato\"</string>
   <string name="morphe_hide_hype_points_title">Nascondi i punti Hype</string>
   <string name="morphe_hide_info_cards_section_title">Nascondi la sezione Schede informative</string>
   <string name="morphe_hide_key_concepts_section_title">Nascondi la sezione \'Concetti chiave\'</string>
@@ -859,12 +860,17 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_open_videos_fullscreen_entry_1">Disattivato</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Verticale</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Orizzontale</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Predefinita</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacità sovrapposizione del lettore</string>
   <string name="morphe_player_overlay_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">L\'opacità della sovrapposizione del lettore deve essere compresa tra 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Attiva la barra di ricerca estesa</string>
+  <string name="morphe_searchbar_type_title">Barra di ricerca</string>
+  <string name="morphe_searchbar_type_entry_disabled">Disattivato</string>
+  <string name="morphe_searchbar_type_entry_wide">Largo</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Molto larga</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Layout del dispositivo</string>

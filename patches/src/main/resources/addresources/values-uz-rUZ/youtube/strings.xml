@@ -854,12 +854,13 @@ Sozlamalar → Oynatish (yoki Avtoijro) → Keyingi videoni avtomatik ravishda i
   <string name="morphe_open_videos_fullscreen_entry_1">O\'chirilgan</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Manzarali</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Standart</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Pleyer qoplamasining shaffofligi</string>
   <string name="morphe_player_overlay_opacity_summary">Pleyerdagi qoplama shaffofligini sozlash (0 shaffof, 100 toʻliq qorongʻi)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Pleyer qoplamasining shaffofligi 0–100 oraligʻida boʻlishi kerak.</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Kengaytirilgan qidiruv paneli</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Qurilma tuzilishi</string>

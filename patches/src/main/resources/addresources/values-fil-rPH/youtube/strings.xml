@@ -172,6 +172,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_featured_playlists_section_title">Itago ang seksyon ng mga piniling playlist</string>
   <string name="morphe_hide_featured_videos_section_title">Itago ang seksyon ng Featured videos</string>
   <string name="morphe_hide_hashtag_section_title">Itago ang seksyon ng Hashtag</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Itago ang seksyong \'Paano ito ginawa\' section</string>
   <string name="morphe_hide_hype_points_title">Itago ang mga puntos ng Hype</string>
   <string name="morphe_hide_info_cards_section_title">Itago ang seksyon ng Info cards</string>
   <string name="morphe_hide_key_concepts_section_title">Itago ang seksyon na \'Pangunahing konsepto\'</string>
@@ -857,12 +858,14 @@ Mga Setting → Playback (o Autoplay) → Autoplay ng susunod na video."</string
   <string name="morphe_open_videos_fullscreen_entry_1">Nakapatay</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Patayo</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Pahiga</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Panimula</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacity ng overlay ng player</string>
   <string name="morphe_player_overlay_opacity_summary">Ayusin ang antas ng transparency (0 ay transparent, 100 ay opaque)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Dapat nasa pagitan ng 0-100 ang opacity ng overlay ng player</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Paganahin ang malawak na search bar</string>
+  <string name="morphe_searchbar_type_entry_disabled">Nakapatay</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Layout ng device</string>

@@ -172,6 +172,7 @@ Endringer inkluderer:
   <string name="morphe_hide_featured_playlists_section_title">Skjul seksjonen med utvalgte spillelister</string>
   <string name="morphe_hide_featured_videos_section_title">Skjul Utvalgte videoer-seksjon</string>
   <string name="morphe_hide_hashtag_section_title">Skjul Hashtag-seksjonen</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Skjul \'Hvordan dette ble laget\'-delen</string>
   <string name="morphe_hide_hype_points_title">Skjul Hype-poeng</string>
   <string name="morphe_hide_info_cards_section_title">Skjul Info-kort-seksjon</string>
   <string name="morphe_hide_key_concepts_section_title">Skjul «Nøkkelbegreper»-seksjon</string>
@@ -859,12 +860,16 @@ Innstillinger → Avspilling (eller Autoplay) → Spill av neste video automatis
   <string name="morphe_open_videos_fullscreen_entry_1">Deaktivert</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portrett</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landskap</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spilleroverleggs opasitet</string>
   <string name="morphe_player_overlay_opacity_summary">Juster gjennomsiktighetsnivået (0 er gjennomsiktig, 100 er ugjennomsiktig)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Spilleroverleggs opasitet må være mellom 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Aktiver bred søkefelt</string>
+  <string name="morphe_searchbar_type_title">Søkefelt</string>
+  <string name="morphe_searchbar_type_entry_disabled">Deaktivert</string>
+  <string name="morphe_searchbar_type_entry_wide">Bred</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Ekstra bred</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Enhetslayout</string>

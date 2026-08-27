@@ -34,6 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_remove_background_playback_restrictions_title">Ukloni ograničenja reprodukcije u pozadini</string>
   <string name="morphe_shorts_disable_background_playback_title">Onemogući reprodukciju u pozadini</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Onemogući ograničenje brzine pomicanja</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Onemogući ažuriranja izgleda</string>
   <string name="morphe_disable_layout_updates_summary">Sprječava da poslužitelj ažurira izgled aplikacije</string>
@@ -173,6 +174,7 @@ Promjene uključuju:
   <string name="morphe_hide_featured_playlists_section_title">Sakrij odjeljak Istaknute playliste</string>
   <string name="morphe_hide_featured_videos_section_title">Sakrij odjeljak Istaknuti videozapisi</string>
   <string name="morphe_hide_hashtag_section_title">Sakrij odjeljak Hashtag</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Sakrij odjeljak \'Kako je ovo napravljeno\'</string>
   <string name="morphe_hide_hype_points_title">Sakrij \'Hype toke\'</string>
   <string name="morphe_hide_info_cards_section_title">Sakrij odjeljak kartica s informacijama</string>
   <string name="morphe_hide_key_concepts_section_title">Sakrij odjeljak \'Ključni koncepti\'</string>
@@ -448,13 +450,19 @@ Info: Možda neće raditi na prijenosima uživo"</string>
   <string name="morphe_reload_video_button_title">Prikaži tipku za ponovno pokretanje videa</string>
   <string name="morphe_dismiss_player_not_available_toast">ID videozapisa nije dostupan. Ručno ponovno otvorite videozapis</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">Prikaži tipku Spremi za kasnije gledanje</string>
+  <string name="morphe_save_to_watch_later_button_summary">Dodirnite za spremanje na Gledaj kasnije, dodirnite i zadržite za opcije reda čekanja</string>
   <string name="morphe_save_to_watch_later_success_toast">Video je uspješno spremljen u popisu za kasnije gledanje</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Ovaj je videozapis već spremljen na popis za kasnije gledanje</string>
   <string name="morphe_save_to_watch_later_error_toast">Nije moguće spremiti ovaj video na popis za kasnije gledanje</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Spremi za kasnije gledanje</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Prikaži tipku Spremi za kasnije gledanje u dječjim videozapisima</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Omogućuje spremanje videozapisa za djecu u skočnom izborniku \"Gledaj kasnije\"</string>
   <string name="morphe_queue_flyout_title">Dodaj u Morphe red čekanja</string>
   <string name="morphe_queue_restore_title">Čuvati red čekanja između sesija</string>
   <string name="morphe_queue_restore_summary">Red čekanja se zadržava nakon ponovnog pokretanja aplikacije</string>
   <string name="morphe_swap_save_and_queue_actions_title">Zamijeni radnje Spremi i dodaj u red</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Dodirnite za opcije reda čekanja, dodirnite i držite za spremanje na Gledaj kasnije</string>
   <string name="morphe_queue_override_flyout_menu_title">Nadjačaj gumb reda čekanja u feed izletniku</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otvara Morphe red čekanja umjesto YouTube reda čekanja</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj stavku izbornika reda čekanja u feed izletnik</string>
@@ -854,12 +862,17 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_open_videos_fullscreen_entry_1">Onemogućeno</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portratno</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Pejzažno</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Zadano</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Prikaži dugmice za zvuk</string>
   <string name="morphe_player_overlay_opacity_summary">Prilagodite razinu prozirnosti (0 je prozirno, 100 je neprozirno)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Vrijednost opacnosti mora biti između 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Omoguši široku traku pretrage</string>
+  <string name="morphe_searchbar_type_title">Traka za pretraživanje</string>
+  <string name="morphe_searchbar_type_entry_disabled">Onemogućeno</string>
+  <string name="morphe_searchbar_type_entry_wide">Široka</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Jako široka</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Izgled uređaja</string>

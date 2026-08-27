@@ -865,12 +865,22 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_open_videos_fullscreen_entry_1">معطّل</string>
   <string name="morphe_open_videos_fullscreen_entry_2">بالطول</string>
   <string name="morphe_open_videos_fullscreen_entry_3">بالعرض</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">مقياس الفيديو بملء الشاشة</string>
+  <string name="morphe_fullscreen_video_scale_entry_default">الوضع الافتراضي</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">تمديد (ملء الشاشة)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">تكبير (قص لملء الفراغ)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">عرض زر مقياس الفيديو</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">انقر للتنقل بين الوضع الافتراضي، التمديد، والتكبير</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">شفافية واجهة المشغل</string>
   <string name="morphe_player_overlay_opacity_summary">ضبط مستوى الشفافية (0 شفاف، 100 معتم)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">شفافية واجهة المشغل يجب أن تكون بين 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">تمكين شريط البحث العريض</string>
+  <string name="morphe_searchbar_type_title">شريط البحث</string>
+  <string name="morphe_searchbar_type_entry_disabled">معطّل</string>
+  <string name="morphe_searchbar_type_entry_wide">عريض</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">عريض جدا</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">تخطيط الجهاز</string>

@@ -172,6 +172,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_featured_playlists_section_title">Fela valda spilunarlista hluta</string>
   <string name="morphe_hide_featured_videos_section_title">Felur Sérstaka vídeó hluta</string>
   <string name="morphe_hide_hashtag_section_title">Fela Hashtag hluta</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Fela hlutann „Hvernig þetta var gert“</string>
   <string name="morphe_hide_hype_points_title">Fela Hype stig</string>
   <string name="morphe_hide_info_cards_section_title">Felur Upplýsingakort hluta</string>
   <string name="morphe_hide_key_concepts_section_title">Felur \'Helstu hugtök\' hluta</string>
@@ -851,12 +852,16 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_open_videos_fullscreen_entry_1">Gerilt</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portrett</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landsláttur</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spilar murargyga </string>
   <string name="morphe_player_overlay_opacity_summary">Stilltu gegnsærastefnu (0 er gagnsætt, 100 er ógegnsætt)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Muragygð skal vera á bilinu 0-100 </string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Virkja breið leit</string>
+  <string name="morphe_searchbar_type_title">Leitastika</string>
+  <string name="morphe_searchbar_type_entry_disabled">Óvirk</string>
+  <string name="morphe_searchbar_type_entry_wide">Breitt</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Mjög breitt</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Tækis stíll</string>

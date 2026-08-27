@@ -844,7 +844,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_hide_timestamp_title">동영상 타임스탬프 숨기기</string>
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">플레이어 팝업 패널 비활성화하기</string>
-  <string name="morphe_disable_player_popup_panels_summary">재생목록 및 실시간 채팅 패널이 자동으로 열리지 않도록 비활성화합니다</string>
+  <string name="morphe_disable_player_popup_panels_summary">재생목록,실시간 채팅 및 뉴스 스토리 패널이 자동으로 열리지 않도록 비활성화합니다</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">동영상 종료 시 전체 화면 모드 나가기</string>
   <string name="morphe_exit_fullscreen_entry_1">사용 안함</string>
@@ -862,12 +862,22 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_open_videos_fullscreen_entry_1">사용 안함</string>
   <string name="morphe_open_videos_fullscreen_entry_2">세로 모드</string>
   <string name="morphe_open_videos_fullscreen_entry_3">가로 모드</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">전체 화면 동영상 크기 조절</string>
+  <string name="morphe_fullscreen_video_scale_entry_default">기본값</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">늘리기 (화면 채우기)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">확대 (잘라서 채우기)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">동영상 크기 조절 버튼 표시하기</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">버튼을 탭하여 기본값, 화면 늘리기, 화면 확대 순으로 순환하여 변경할 수 있습니다</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">플레이어 오버레이 불투명도</string>
   <string name="morphe_player_overlay_opacity_summary">투명도를 설정할 수 있습니다 (0: 투명, 100: 불투명)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">플레이어 오버레이 불투명도는 0-100 사이여야 합니다</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">넓은 검색창 활성화하기</string>
+  <string name="morphe_searchbar_type_title">검색창</string>
+  <string name="morphe_searchbar_type_entry_disabled">비활성화됨</string>
+  <string name="morphe_searchbar_type_entry_wide">넓음</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">매우 넓음</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">기기 레이아웃</string>

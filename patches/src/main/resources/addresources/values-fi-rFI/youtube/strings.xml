@@ -172,6 +172,7 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_featured_playlists_section_title">Piilota suositellut soittolistat -osio</string>
   <string name="morphe_hide_featured_videos_section_title">Piilota Esitellyt videot -osio</string>
   <string name="morphe_hide_hashtag_section_title">Piilota Hashtag-osio</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Piilota \'Tämän tekeminen\' -osio</string>
   <string name="morphe_hide_hype_points_title">Piilota Hype-pisteet</string>
   <string name="morphe_hide_info_cards_section_title">Piilota Info-kortit -osio</string>
   <string name="morphe_hide_key_concepts_section_title">Piilota \"Keskeiset käsitteet\" -osio</string>
@@ -859,12 +860,17 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <string name="morphe_open_videos_fullscreen_entry_1">Pois käytöstä</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Pysty</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Vaaka</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Oletus</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Soittimen peittokuvan läpinäkymättömyys</string>
   <string name="morphe_player_overlay_opacity_summary">Säädä läpinäkyvyys (0 on täysin läpinäkyvä, 100 on peittävä)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Soittimen peittokuvan läpinäkymättömyyden tulee olla 0–100 välillä</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Ota leveä hakupalkki käyttöön</string>
+  <string name="morphe_searchbar_type_title">Hakupalkki</string>
+  <string name="morphe_searchbar_type_entry_disabled">Pois käytöstä</string>
+  <string name="morphe_searchbar_type_entry_wide">Leveä</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Erittäin leveä</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Laitteen asettelu</string>

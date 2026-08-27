@@ -859,12 +859,14 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_open_videos_fullscreen_entry_1">Dezactivat</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Peisaj</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Implicit</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacitate suprapusă jucătorului</string>
   <string name="morphe_player_overlay_opacity_summary">Ajustați nivelul de transparență (0 este transparent, 100 este opac)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Opacitatea suportată de jucător trebuie să fie între 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Activează bara de căutare largă</string>
+  <string name="morphe_searchbar_type_entry_disabled">Dezactivat</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Aspect dispozitiv</string>

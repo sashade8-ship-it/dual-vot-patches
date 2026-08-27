@@ -173,6 +173,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_featured_playlists_section_title">Bereich mit empfohlenen Playlists ausblenden</string>
   <string name="morphe_hide_featured_videos_section_title">Empfohlene Videos-Bereich ausblenden</string>
   <string name="morphe_hide_hashtag_section_title">Hashtag-Bereich ausblenden</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Abschnitt \'Wie das gemacht wurde\' ausblenden</string>
   <string name="morphe_hide_hype_points_title">Hype-Punkte ausblenden</string>
   <string name="morphe_hide_info_cards_section_title">Infokarten-Bereich ausblenden</string>
   <string name="morphe_hide_key_concepts_section_title">Abschnitt „Schlüsselkonzepte“ ausblenden</string>
@@ -856,12 +857,17 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <string name="morphe_open_videos_fullscreen_entry_1">Deaktiviert</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Hochformat</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Querformat</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Standard</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spieler-Überlagerung Deckkraft</string>
   <string name="morphe_player_overlay_opacity_summary">Passen Sie die Transparenz an (0 ist transparent, 100 ist opak)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Die Overlay-Deckkraft muss zwischen 0-100 liegen</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">breite Suchleiste aktivieren</string>
+  <string name="morphe_searchbar_type_title">Suche</string>
+  <string name="morphe_searchbar_type_entry_disabled">Deaktiviert</string>
+  <string name="morphe_searchbar_type_entry_wide">Breit</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra breit</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Geräte-Layout</string>

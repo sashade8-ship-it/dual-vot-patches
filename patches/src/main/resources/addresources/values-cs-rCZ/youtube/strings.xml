@@ -172,6 +172,7 @@ Změny zahrnují:
   <string name="morphe_hide_featured_playlists_section_title">Skrýt sekci \"Doporučené playlisty\"</string>
   <string name="morphe_hide_featured_videos_section_title">Skrýt sekci „Doporučená videa“</string>
   <string name="morphe_hide_hashtag_section_title">Skrýt sekci hashtagů</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Skrýt sekci \'Jak to bylo vytvořeno\'</string>
   <string name="morphe_hide_hype_points_title">Skrýt Hype body</string>
   <string name="morphe_hide_info_cards_section_title">Skrýt sekci „Informační karty“</string>
   <string name="morphe_hide_key_concepts_section_title">Skrýt sekci „Klíčové koncepty“</string>
@@ -853,12 +854,17 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <string name="morphe_open_videos_fullscreen_entry_1">Vypnuto</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Na výšku</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Na šířku</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Výchozí</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Průhlednost překrytí přehrávače</string>
   <string name="morphe_player_overlay_opacity_summary">Upravte úroveň průhlednosti (0 je průhledná, 100 je neprůhledná)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Průhlednost překrytí přehrávače musí být mezi 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Povolit široký vyhledávací panel</string>
+  <string name="morphe_searchbar_type_title">Vyhledávací lišta</string>
+  <string name="morphe_searchbar_type_entry_disabled">Zakázáno</string>
+  <string name="morphe_searchbar_type_entry_wide">Široká</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra široká</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Rozložení zařízení</string>

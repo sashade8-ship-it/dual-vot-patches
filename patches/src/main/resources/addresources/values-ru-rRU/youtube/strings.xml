@@ -172,6 +172,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_playlists_section_title">Скрыть раздел \"Рекомендуемые плейлисты\"</string>
   <string name="morphe_hide_featured_videos_section_title">Скрыть секцию \"Рекомендуемые видео\"</string>
   <string name="morphe_hide_hashtag_section_title">Скрыть раздел хэштегов</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Скрыть раздел «Как это было сделано»</string>
   <string name="morphe_hide_hype_points_title">Скрыть очки голосов</string>
   <string name="morphe_hide_info_cards_section_title">Скрыть секцию \"Информационные карточки\"</string>
   <string name="morphe_hide_key_concepts_section_title">Скрыть секцию \"Ключевые понятия\"</string>
@@ -861,12 +862,22 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Выключено</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Портрет</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Ландшафт</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Масштаб полноэкранного видео</string>
+  <string name="morphe_fullscreen_video_scale_entry_default">По умолчанию</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Растянуть (заполнить экран)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Масштаб (обрезка для заполнения)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Показать кнопку масштабирования видео</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Нажмите для переключения между режимами «По умолчанию», «Растянуть» и «Масштаб»</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Затемнение плеера при нажатии</string>
   <string name="morphe_player_overlay_opacity_summary">Настройте уровень прозрачности (0 — прозрачный, 100 — непрозрачный)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Значение затемнения плеера должно быть от 0 до 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Включить широкую панель поиска</string>
+  <string name="morphe_searchbar_type_title">Строка поиска</string>
+  <string name="morphe_searchbar_type_entry_disabled">Выключено</string>
+  <string name="morphe_searchbar_type_entry_wide">Широкий</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Очень широкое</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Макет устройства</string>

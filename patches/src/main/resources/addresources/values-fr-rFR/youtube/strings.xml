@@ -861,12 +861,17 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de la v
   <string name="morphe_open_videos_fullscreen_entry_1">Désactivé</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portrait</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Paysage</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Par défaut</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacité de l\'overlay du lecteur</string>
   <string name="morphe_player_overlay_opacity_summary">Ajuster le niveau de transparence (0 est transparent, 100 est opaque)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">L\'opacité de l\'overlay du lecteur doit être entre 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Activer la barre de recherche large</string>
+  <string name="morphe_searchbar_type_title">Barre de recherche</string>
+  <string name="morphe_searchbar_type_entry_disabled">Désactivée</string>
+  <string name="morphe_searchbar_type_entry_wide">Large</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra-large</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Disposition de l\'appareil</string>

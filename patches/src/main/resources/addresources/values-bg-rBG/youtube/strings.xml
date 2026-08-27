@@ -172,6 +172,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_playlists_section_title">Скрий секцията с избрани плейлисти</string>
   <string name="morphe_hide_featured_videos_section_title">Скрий секцията „Представени видеа“</string>
   <string name="morphe_hide_hashtag_section_title">Скриване на раздела с хаштагове</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Скрий раздела \'Как е направено\'</string>
   <string name="morphe_hide_hype_points_title">Скрийте \'Хайп точки\'</string>
   <string name="morphe_hide_info_cards_section_title">Скрий секцията „Информационни карти“</string>
   <string name="morphe_hide_key_concepts_section_title">Скрий секцията „Основни понятия“</string>
@@ -859,12 +860,16 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Забранено</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Портрет</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Пейзаж</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Скрий дублиране на видеа</string>
   <string name="morphe_player_overlay_opacity_summary">Регулирайте нивото на прозрачност (0 е прозрачно, 100 е непрозрачно)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Дублирането на видеа се показва</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Скрий дублиране на видеа</string>
+  <string name="morphe_searchbar_type_title">Лента за търсене</string>
+  <string name="morphe_searchbar_type_entry_disabled">Деактивирано</string>
+  <string name="morphe_searchbar_type_entry_wide">Широк</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Изключително широк</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Оформление на устройството</string>

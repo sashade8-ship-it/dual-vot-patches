@@ -172,6 +172,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_playlists_section_title">הסתר את סעיף פלייליסטים מומלצים</string>
   <string name="morphe_hide_featured_videos_section_title">הסתר סעיף \'סרטונים מומלצים\'</string>
   <string name="morphe_hide_hashtag_section_title">הסתר סעיף Hashtag</string>
+  <string name="morphe_hide_how_this_was_made_section_title">הסתר את הקטע \'איך זה נוצר\'</string>
   <string name="morphe_hide_hype_points_title">הסתר נקודות הייפ</string>
   <string name="morphe_hide_info_cards_section_title">הסתר סעיף \'כרטיסי מידע\'</string>
   <string name="morphe_hide_key_concepts_section_title">הסתר את סעיף \'מושגי מפתח\'</string>
@@ -859,12 +860,14 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_1">מושבת</string>
   <string name="morphe_open_videos_fullscreen_entry_2">לאורך</string>
   <string name="morphe_open_videos_fullscreen_entry_3">לרוחב</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">ברירת מחדל</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">אטימות שכבת-על של נגן</string>
   <string name="morphe_player_overlay_opacity_summary">התאם את רמת השקיפות (0 הוא שקוף, 100 הוא אטום)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">אטימות שכבת-על של נגן חייבת להיות בין 0 ל-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">הפעל סרגל חיפוש רחב</string>
+  <string name="morphe_searchbar_type_entry_disabled">מושבת</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">פריסת מכשיר</string>

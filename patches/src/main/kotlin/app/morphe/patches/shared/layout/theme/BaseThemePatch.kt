@@ -12,6 +12,8 @@ package app.morphe.patches.shared.layout.theme
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
+import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
+import app.morphe.patcher.methodCall
 import app.morphe.patcher.patch.BytecodePatchBuilder
 import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.PatchException
@@ -24,9 +26,11 @@ import app.morphe.util.childElementsSequence
 import app.morphe.util.forEachChildElement
 import app.morphe.util.getNode
 import app.morphe.util.inputStreamFromBundledResource
+import app.morphe.util.matchAllMethodIndicesForEach
 import app.morphe.util.returnEarly
 import app.morphe.util.setExtensionIsPatchIncluded
 import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import java.util.Locale
 import kotlin.math.PI
 import kotlin.math.cos
@@ -343,6 +347,22 @@ private val themeColorContextHookPatch = bytecodePatch {
                 """
                     invoke-static { p1 }, $THEME_COLOR_EXTENSION_CLASS->wrapContext(Landroid/content/Context;)Landroid/content/Context;
                     move-result-object p1
+                """
+            )
+        }
+
+        // Without this the app resolves the colors it ships with after it leaves
+        // picture in picture, because the configuration it hands over is one of the device.
+        methodCall(
+            "Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V"
+        ).matchAllMethodIndicesForEach { index ->
+            val configurationRegister = getInstruction<FiveRegisterInstruction>(index).registerD
+
+            addInstructions(
+                index,
+                """
+                    invoke-static { v$configurationRegister }, $THEME_COLOR_EXTENSION_CLASS->keepThemeVariant(Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
+                    move-result-object v$configurationRegister
                 """
             )
         }

@@ -172,6 +172,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_featured_playlists_section_title">Verberg Featured afspeellijsten sectie</string>
   <string name="morphe_hide_featured_videos_section_title">Verberg Uitgelichte video\'s sectie</string>
   <string name="morphe_hide_hashtag_section_title">Verberg de \"Hashtag\" sectie</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Verberg sectie \'Hoe dit is gemaakt\'</string>
   <string name="morphe_hide_hype_points_title">Verberg Hype-punten</string>
   <string name="morphe_hide_info_cards_section_title">Verberg Info kaarten sectie</string>
   <string name="morphe_hide_key_concepts_section_title">Verberg \'Belangrijkste begrippen\' sectie</string>
@@ -857,12 +858,17 @@ Instellingen → Weergave (of automatisch afspelen) → Volgende video automatis
   <string name="morphe_open_videos_fullscreen_entry_1">Uitgeschakeld</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landschap</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Standaard</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Speler-overlaytransparantie</string>
   <string name="morphe_player_overlay_opacity_summary">Pas het transparantieniveau aan (0 is transparant, 100 is ondoorzichtig)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">De transparantie van de speler-overlay moet tussen 0-100 liggen</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Schakel de brede zoekbalk in</string>
+  <string name="morphe_searchbar_type_title">Zoekbalk</string>
+  <string name="morphe_searchbar_type_entry_disabled">Uitgeschakeld</string>
+  <string name="morphe_searchbar_type_entry_wide">Breed</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra breed</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Apparaatindeling</string>

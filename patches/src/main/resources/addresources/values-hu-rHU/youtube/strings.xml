@@ -171,6 +171,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_featured_playlists_section_title">Kiemelt lejálisták szakasz elrejtése</string>
   <string name="morphe_hide_featured_videos_section_title">Kiemelt videók szekció elrejtése</string>
   <string name="morphe_hide_hashtag_section_title">Hashtag szekció elrejtése</string>
+  <string name="morphe_hide_how_this_was_made_section_title">A \'Hogyan készült\' szakasz elrejtése</string>
   <string name="morphe_hide_hype_points_title">Hájp pontok elrejtése</string>
   <string name="morphe_hide_info_cards_section_title">Információs kártyák szekció elrejtése</string>
   <string name="morphe_hide_key_concepts_section_title">Kulcsfogalmak szekció elrejtése</string>
@@ -856,12 +857,14 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <string name="morphe_open_videos_fullscreen_entry_1">Kikapcsolva</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portré</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Tájkép</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Alapértelmezett</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Lejátszó fedőrétegének átlátszatlansága</string>
   <string name="morphe_player_overlay_opacity_summary">Állítsa be az átlátszó szintet (0 átlátszó, 100 opák)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">A lejátszó fedvény átlátszatlanságának 0 és 100 között kell lennie</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Széles keresősáv bekapcsolása</string>
+  <string name="morphe_searchbar_type_entry_disabled">Letiltva</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Eszköz elrendezés</string>

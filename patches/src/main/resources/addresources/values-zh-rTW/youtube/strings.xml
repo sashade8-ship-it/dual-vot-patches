@@ -171,6 +171,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_playlists_section_title">隱藏精選歌單區段</string>
   <string name="morphe_hide_featured_videos_section_title">隱藏精選影片區段</string>
   <string name="morphe_hide_hashtag_section_title">隱藏主題標籤區段</string>
+  <string name="morphe_hide_how_this_was_made_section_title">隱藏「此部分的製作方式」區段</string>
   <string name="morphe_hide_hype_points_title">隱藏Hype點數</string>
   <string name="morphe_hide_info_cards_section_title">隱藏資訊卡片區段</string>
   <string name="morphe_hide_key_concepts_section_title">隱藏「重點概念」區段</string>
@@ -852,12 +853,17 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_1">已停用</string>
   <string name="morphe_open_videos_fullscreen_entry_2">直立</string>
   <string name="morphe_open_videos_fullscreen_entry_3">橫向</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">預設</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">播放器覆蓋透明度</string>
   <string name="morphe_player_overlay_opacity_summary">調整疊加層的透明度（0 為透明，100 為不透明）</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">播放器覆蓋的不透明度必須在 0 到 100 之間</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">啟用寬搜尋列</string>
+  <string name="morphe_searchbar_type_title">搜尋列</string>
+  <string name="morphe_searchbar_type_entry_disabled">已停用</string>
+  <string name="morphe_searchbar_type_entry_wide">寬</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">超寬</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">裝置版面配置</string>

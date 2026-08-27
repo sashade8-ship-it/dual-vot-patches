@@ -859,12 +859,17 @@ To ustawienie działa tylko wtedy, gdy autoodtwarzanie jest wyłączone. Możesz
   <string name="morphe_open_videos_fullscreen_entry_1">Wyłączone</string>
   <string name="morphe_open_videos_fullscreen_entry_2">W orientacji pionowej</string>
   <string name="morphe_open_videos_fullscreen_entry_3">W orientacji poziomej</string>
+  <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_entry_default">Domyślne</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Przezroczystość nakładki odtwarzacza</string>
   <string name="morphe_player_overlay_opacity_summary">Dostosuj poziom przezroczystości (0 to pełna przezroczystość, 100 to brak przezroczystości)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Przezroczystość nakładki musi wynosić 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_wide_searchbar_title">Włącz szeroki pasek wyszukiwania</string>
+  <string name="morphe_searchbar_type_title">Pasek wyszukiwania</string>
+  <string name="morphe_searchbar_type_entry_disabled">Wyłączony</string>
+  <string name="morphe_searchbar_type_entry_wide">Szeroki</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Bardzo szeroki</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Układ urządzenia</string>
