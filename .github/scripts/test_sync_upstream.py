@@ -22,6 +22,34 @@ class SyncUpstreamTests(unittest.TestCase):
         self.assertIn("cron: '53 */2 * * *'", workflow)
         self.assertNotIn("cron: '23 */6 * * *'", workflow)
 
+    def test_dev_merge_keeps_metadata_but_refreshes_controller_from_main(self):
+        calls = []
+
+        def fake_run(*args, **_kwargs):
+            returncode = 1 if args[1:3] == ("merge-base", "--is-ancestor") else 0
+            return mock.Mock(returncode=returncode)
+
+        with (
+            mock.patch.object(sync_upstream, "output_of", side_effect=("before", "after")),
+            mock.patch.object(sync_upstream, "run", side_effect=fake_run),
+            mock.patch.object(sync_upstream, "restore_path_from", side_effect=lambda ref, path: calls.append((ref, path))),
+            mock.patch.object(sync_upstream, "unresolved_paths", return_value=[]),
+            mock.patch.object(sync_upstream, "resolve_dual_yandex_string_conflicts"),
+            mock.patch.object(sync_upstream, "resolve_addon_compatibility_conflicts"),
+        ):
+            self.assertTrue(
+                sync_upstream.merge_ref(
+                    "origin/main",
+                    project_preference="ours",
+                    label="stable branch",
+                    controller_preference="theirs",
+                )
+            )
+
+        self.assertIn(("HEAD", "README.md"), calls)
+        for path in sync_upstream.CONTROLLER_PATHS:
+            self.assertIn(("MERGE_HEAD", path), calls)
+
     def test_dev3_volume_hook_keeps_dual_coordinator(self):
         root = MODULE_PATH.parents[2]
         patch = (
