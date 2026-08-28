@@ -7,8 +7,11 @@ Dual VoT Patches tracks both Morphe release channels:
 | `main` | `main` | Stable | GitHub stable release |
 | `dev` | `dev` | Pre-release patches enabled | GitHub pre-release |
 
-The scheduled workflow checks both channels every two hours. It synchronizes
-exact Morphe release tags, not arbitrary unreleased branch commits.
+The scheduled workflow has two staggered, independent deliveries: each checks
+both channels every two hours, at minute `23` and minute `53` (UTC). This keeps
+the normal update cadence within two hours and limits a single missed GitHub
+schedule event to the next staggered delivery. It synchronizes exact Morphe
+release tags, not arbitrary unreleased branch commits.
 
 ## Safety model
 
