@@ -2,7 +2,10 @@ name: Sync Morphe upstream
 
 on:
   schedule:
+    # Keep two independent deliveries. GitHub may occasionally skip a scheduled
+    # event; the staggered fallback limits a single missed event to 90 minutes.
     - cron: '23 */2 * * *'
+    - cron: '53 */2 * * *'
   workflow_dispatch:
     inputs:
       channel:
