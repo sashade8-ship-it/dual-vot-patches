@@ -1,3 +1,13 @@
+## 1.41.0-dev.3-dualvot.8.3 (2026-08-28)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.41.0-dev.3](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.3).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.41.0-dev.2-dualvot.8.3 (2026-08-27)
 
 ### Automated Morphe update
@@ -242,6 +252,23 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.41.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.2...v1.41.0-dev.3) (2026-08-28)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music - Theme:** Fade the page header into the background color ([#2636](https://github.com/MorpheApp/morphe-patches/issues/2636)) ([5f5a478](https://github.com/MorpheApp/morphe-patches/commit/5f5a478f7c8670958255b06eeabbfff2e9be4ff0))
+
+### ✨ New Features
+
+* Add `PoToken provider` patch ([#2618](https://github.com/MorpheApp/morphe-patches/issues/2618)) ([fb25ff1](https://github.com/MorpheApp/morphe-patches/commit/fb25ff1fe8270a8a8d003361e17c130c5d422237))
+* **YouTube - Disable fullscreen gestures:** Add option to disable pinch-to-zoom ([#2633](https://github.com/MorpheApp/morphe-patches/issues/2633)) ([7b05d2d](https://github.com/MorpheApp/morphe-patches/commit/7b05d2db985232b5dc3bd3a3bcde13e9b4875dbc))
+* **YouTube - Hide layout components:** Add "Hide filter bar in channel page" and "Hide 'Members only' chip" settings ([#2622](https://github.com/MorpheApp/morphe-patches/issues/2622)) ([5db5a77](https://github.com/MorpheApp/morphe-patches/commit/5db5a7799d3617b4d93d39ecc42c3d0af58308e8))
+* **YouTube:** Add `Mute button` patch ([#2624](https://github.com/MorpheApp/morphe-patches/issues/2624)) ([4c2b3c0](https://github.com/MorpheApp/morphe-patches/commit/4c2b3c040a404bd8661decc31398ca0a343a6768))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.35.0` ([71f8a7f](https://github.com/MorpheApp/morphe-patches/commit/71f8a7fca74e3f008a9879a924f45aae7e5e4052))
 
 ## [1.41.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.1...v1.41.0-dev.2) (2026-08-27)
 
