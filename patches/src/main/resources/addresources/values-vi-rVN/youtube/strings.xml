@@ -182,6 +182,7 @@ Ví dụ:
   <string name="morphe_hide_video_details_section_title">Ẩn phần \"Chi tiết video\"</string>
   <string name="morphe_hide_filter_bar_screen_title">Thanh bộ lọc</string>
   <string name="morphe_hide_filter_bar_screen_summary">Chọn chỗ ẩn thanh bộ lộc kiểu cuộn</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Ẩn trong trang kênh</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Ẩn trong bình luận</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Ẩn trong các trang video</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Ẩn trong video liên quan</string>
@@ -198,6 +199,8 @@ Ví dụ:
   <string name="morphe_hide_join_button_title">Ẩn nút Tham gia</string>
   <string name="morphe_hide_links_preview_title">Ẩn xem trước liên kết</string>
   <string name="morphe_hide_links_preview_summary">Ẩn các liên kết có thể bấm được ở tiêu đề kênh</string>
+  <string name="morphe_hide_members_only_chip_title">Ẩn huy hiệu \'Chỉ dành cho thành viên\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Ẩn huy hiệu \'Chỉ dành cho thành viên\' trong thanh lọc kênh</string>
   <string name="morphe_hide_members_shelf_title">Ẩn kệ thành viên</string>
   <string name="morphe_hide_members_shelf_summary">Ẩn danh sách các thành viên kênh</string>
   <string name="morphe_hide_posts_shelf_title">Ẩn kệ bài đăng</string>
@@ -262,10 +265,10 @@ Ví dụ:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Loại bỏ chữ xanh, chỉ giữ lại văn bản gốc</string>
   <string name="morphe_hide_keyword_content_screen_title">Bộ lọc từ khóa</string>
   <string name="morphe_hide_keyword_content_screen_summary">Chọn từ hoặc cụm từ cụ thể để ẩn video trong trang video và tìm kiếm</string>
+  <string name="morphe_hide_keyword_content_comments_title">Ẩn bình luận theo từ khóa</string>
   <string name="morphe_hide_keyword_content_home_title">Ẩn video Trang chủ theo từ khóa</string>
   <string name="morphe_hide_keyword_content_search_title">Ẩn kết quả tìm kiếm bằng từ khóa</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Ẩn video kênh đăng ký bằng từ khóa</string>
-  <string name="morphe_hide_keyword_content_comments_title">Ẩn bình luận theo từ khóa</string>
   <string name="morphe_hide_keyword_content_phrases_title">Từ khóa để ẩn</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -447,9 +450,13 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_reload_video_button_title">Hiện nút Tải lại video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID video không khả dụng. Vui lòng tự mở lại video</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">Hiển thị nút Lưu vào Xem sau</string>
+  <string name="morphe_save_to_watch_later_button_summary">Chạm để lưu vào Xem sau, chạm và giữ để xem các tùy chọn hàng đợi</string>
   <string name="morphe_save_to_watch_later_success_toast">Video đã được lưu thành công vào danh sách xem sau</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Video này đã được lưu trong danh sách xem sau</string>
   <string name="morphe_save_to_watch_later_error_toast">Không thể lưu video này vào danh sách xem sau</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Lưu vào Xem sau</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Hiển thị nút Lưu vào Xem sau trong video dành cho trẻ em</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Cho phép lưu các video liên quan đến trẻ em trong menu flyout \'Watch later\'</string>
   <string name="morphe_queue_flyout_title">Thêm vào hàng chờ Morphe</string>
   <string name="morphe_queue_restore_title">Lưu hàng chờ giữa các phiên</string>
@@ -846,7 +853,6 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_exit_fullscreen_entry_4">Chế độ dọc và ngang</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Cử chỉ toàn màn hình</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Vuốt để vào hoặc thoát khỏi chế độ toàn màn hình của trình phát</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Tắt cử chỉ vuốt từ dưới lên ở chế độ màn hình dọc</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Tắt cử chỉ vuốt từ trên xuống ở chế độ màn hình dọc</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Tắt cử chỉ vuốt từ trên xuống ở chế độ màn hình ngang</string>
@@ -856,13 +862,22 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_open_videos_fullscreen_entry_2">Chế độ dọc</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Chế độ ngang</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Tỷ lệ video toàn màn hình</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Mặc định</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Kéo giãn (lấp đầy màn hình)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Thu phóng (cắt để lấp đầy)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Hiển thị nút tỷ lệ video</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Chạm để chuyển đổi giữa Mặc định, Kéo giãn và Thu phóng</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Độ mờ của lớp phủ trình phát</string>
   <string name="morphe_player_overlay_opacity_summary">Điều chỉnh độ trong suốt (0 là trong suốt, 100 là mờ)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Độ phủ mờ trình phát phải nằm giữa 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Thanh tìm kiếm</string>
   <string name="morphe_searchbar_type_entry_disabled">Đang tắt</string>
+  <string name="morphe_searchbar_type_entry_wide">Rộng</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Rộng hơn</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Bố cục thiết bị</string>

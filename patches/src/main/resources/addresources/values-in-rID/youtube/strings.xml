@@ -182,6 +182,7 @@ Perubahan termasuk:
   <string name="morphe_hide_video_details_section_title">Sembunyikan bagian \'Detail video\'</string>
   <string name="morphe_hide_filter_bar_screen_title">Bilah saring</string>
   <string name="morphe_hide_filter_bar_screen_summary">Pilih di mana bilah penyaring gulir akan disembunyikan</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Sembunyikan di halaman saluran</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Sembunyikan di komentar</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Sembunyikan di feed</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Sembunyikan di video terkait</string>
@@ -198,6 +199,8 @@ Perubahan termasuk:
   <string name="morphe_hide_join_button_title">Sembunyikan tombol Gabung</string>
   <string name="morphe_hide_links_preview_title">Sembunyikan pratinjau tautan</string>
   <string name="morphe_hide_links_preview_summary">Menyembunyikan tautan web yang dapat diklik di header saluran</string>
+  <string name="morphe_hide_members_only_chip_title">Sembunyikan chip \'Khusus pelanggan\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Menyembunyikan chip \'Khusus pelanggan\' di bilah filter saluran</string>
   <string name="morphe_hide_members_shelf_title">Sembunyikan rak pelanggan</string>
   <string name="morphe_hide_members_shelf_summary">Menyembunyikan daftar pelanggan saluran</string>
   <string name="morphe_hide_posts_shelf_title">Sembunyikan rak postingan</string>
@@ -262,10 +265,10 @@ Perubahan termasuk:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Membersihkan tautan pencarian yang disorot, sehingga hanya menyisakan teks biasa aslinya</string>
   <string name="morphe_hide_keyword_content_screen_title">Penyaring kata kunci</string>
   <string name="morphe_hide_keyword_content_screen_summary">Pilih kata atau frasa tertentu untuk menyembunyikan video di feed dan pencarian</string>
+  <string name="morphe_hide_keyword_content_comments_title">Sembunyikan komentar berdasarkan kata kunci</string>
   <string name="morphe_hide_keyword_content_home_title">Sembunyikan video beranda dengan kata kunci</string>
   <string name="morphe_hide_keyword_content_search_title">Sembunyikan hasil pencarian berdasarkan kata kunci</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Sembunyikan video subscription dengan kata kunci</string>
-  <string name="morphe_hide_keyword_content_comments_title">Sembunyikan komentar berdasarkan kata kunci</string>
   <string name="morphe_hide_keyword_content_phrases_title">Kata kunci yang ingin disembunyikan</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -497,7 +500,7 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_livestream_dvr_title">Aktifkan siaran langsung DVR</string>
   <string name="morphe_livestream_dvr_summary">Mengizinkan pencarian di semua siaran langsung, bahkan yang biasanya membatasi fitur tersebut</string>
   <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
-  <string name="morphe_seekbar_thumbnail_preview_title">Akifkan thumbnail pada bilah geser</string>
+  <string name="morphe_seekbar_thumbnail_preview_title">Aktifkan thumbnail pada bilah geser</string>
   <string name="morphe_seekbar_thumbnail_preview_summary">Menampilkan thumbnail video saat menggeser bilah geser</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Paling sering diputar ulang</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
@@ -850,17 +853,25 @@ Pengaturan → Pemutaran (atau Pemutaran Otomatis) → Putar video berikutnya se
   <string name="morphe_exit_fullscreen_entry_4">Potret dan lanskap</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gerakan layar penuh</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gerakan pemutar untuk masuk atau keluar dari mode layar penuh</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gerakan pemutar dalam mode layar penuh</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Nonaktifkan gerakan geser ke atas dalam mode potret</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Nonaktifkan gerakan geser ke bawah saat mode potret</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Nonaktifkan gerakan geser ke bawah saat mode lanskap</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Nonaktifkan gerakan cubit-untuk-memperbesar</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Buka video dalam mode layar penuh</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Dinonaktifkan</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Potret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Lanskap</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Skala video layar penuh</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Bawaan</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Regangkan (isi layar)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Perbesar (potong untuk mengisi)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Tampilkan tombol skala video</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Ketuk untuk mengganti Bawaan, Regangkan, dan Perbesar</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Tampilkan tombol Bisu</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opasitas hamparan pemutar</string>
   <string name="morphe_player_overlay_opacity_summary">Sesuaikan tingkat transparansi (0 adalah transparan, 100 adalah buram)</string>
@@ -990,12 +1001,12 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_theme_color_light_title">Latar belakang tema terang</string>
   <string name="morphe_theme_color_light_entry_2">Putih</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Putih)</string>
-  <string name="morphe_theme_color_light_entry_9">Pink muda</string>
-  <string name="morphe_theme_color_light_entry_10">Biru muda</string>
-  <string name="morphe_theme_color_light_entry_11">Hijau muda</string>
-  <string name="morphe_theme_color_light_entry_12">Kuning muda</string>
-  <string name="morphe_theme_color_light_entry_13">Oranye muda</string>
-  <string name="morphe_theme_color_light_entry_14">Merah muda</string>
+  <string name="morphe_theme_color_light_entry_9">Pink cerah</string>
+  <string name="morphe_theme_color_light_entry_10">Biru cerah</string>
+  <string name="morphe_theme_color_light_entry_11">Hijau cerah</string>
+  <string name="morphe_theme_color_light_entry_12">Kuning cerah</string>
+  <string name="morphe_theme_color_light_entry_13">Oranye cerah</string>
+  <string name="morphe_theme_color_light_entry_14">Merah cerah</string>
   <string name="morphe_theme_color_light_custom_title">Latar belakang terang kustom</string>
   <string name="morphe_theme_color_light_custom_summary">Atur warna latar belakang tema terang</string>
   <string name="morphe_theme_color_change_foreground_title">Ubah warna latar depan</string>

@@ -34,6 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_remove_background_playback_restrictions_title">Ta bort begränsningar för uppspelning i bakgrunden</string>
   <string name="morphe_shorts_disable_background_playback_title">Inaktivera uppspelning i bakgrunden</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Inaktivera rullningshastighetsgräns</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Inaktivera layoutuppdateringar</string>
   <string name="morphe_disable_layout_updates_summary">Förhindrar att servern uppdaterar appens layout</string>
@@ -171,6 +172,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_featured_playlists_section_title">Dölj avsnittet med utvalda spellistor</string>
   <string name="morphe_hide_featured_videos_section_title">Dölj avsnittet med utvalda videor</string>
   <string name="morphe_hide_hashtag_section_title">Dölj avsnittet Hashtag</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Dölj avsnittet \'Hur detta gjordes\'</string>
   <string name="morphe_hide_hype_points_title">Dölj hajppoäng</string>
   <string name="morphe_hide_info_cards_section_title">Dölj avsnittet för informationskort</string>
   <string name="morphe_hide_key_concepts_section_title">Dölj avsnittet Huvudkoncept</string>
@@ -181,6 +183,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_video_details_section_title">Dölj avsnittet Videoinformation</string>
   <string name="morphe_hide_filter_bar_screen_title">Filterfält</string>
   <string name="morphe_hide_filter_bar_screen_summary">Välj var det rullbara filterfältet ska döljas</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Dölj på kanalsidan</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Dölj i kommentarer</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Dölj i flöden</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Dölj i liknande videor</string>
@@ -197,6 +200,8 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_join_button_title">Dölj knappen Bli medlem</string>
   <string name="morphe_hide_links_preview_title">Dölj förhandsgranskning av länkar</string>
   <string name="morphe_hide_links_preview_summary">Döljer de klickbara webblänkarna i kanalens sidhuvud</string>
+  <string name="morphe_hide_members_only_chip_title">Dölj chippet \'Endast medlemmar\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Döljer chippet \'Endast medlemmar\' i kanalfilterfältet</string>
   <string name="morphe_hide_members_shelf_title">Dölj medlemshylla</string>
   <string name="morphe_hide_members_shelf_summary">Döljer listan med kanalmedlemmar</string>
   <string name="morphe_hide_posts_shelf_title">Dölj inläggshylla</string>
@@ -261,10 +266,10 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Rensar markerade söklänkar och lämnar bara den ursprungliga vanliga texten</string>
   <string name="morphe_hide_keyword_content_screen_title">Nyckelordsfilter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Välj specifika ord eller fraser som döljer videor i flöden och sökningar</string>
+  <string name="morphe_hide_keyword_content_comments_title">Dölj kommentarer med nyckelord</string>
   <string name="morphe_hide_keyword_content_home_title">Dölj videor i Hem med nyckelord</string>
   <string name="morphe_hide_keyword_content_search_title">Dölj sökresultat med nyckelord</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Dölj videor i Prenumerationer med nyckelord</string>
-  <string name="morphe_hide_keyword_content_comments_title">Dölj kommentarer med nyckelord</string>
   <string name="morphe_hide_keyword_content_phrases_title">Nyckelord som ska döljas</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -446,13 +451,19 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_reload_video_button_title">Visa knappen Läs in videon igen</string>
   <string name="morphe_dismiss_player_not_available_toast">Video-id:t är inte tillgängligt. Läs in videon igen manuellt</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">Visa knappen Spara till Titta senare</string>
+  <string name="morphe_save_to_watch_later_button_summary">Tryck för att spara till Titta senare, tryck och håll för köalternativ</string>
   <string name="morphe_save_to_watch_later_success_toast">Videon har sparats i spellistan Titta senare</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Den här videon har redan sparats i spellistan Titta senare</string>
   <string name="morphe_save_to_watch_later_error_toast">Det går inte att spara den här videon i spellistan Titta senare</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Spara till Titta senare</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Visa knappen Spara till Titta senare i barnvideor</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Tillåter att spara barnrelaterade videor i menyn \'Titta senare\'</string>
   <string name="morphe_queue_flyout_title">Lägg till i Morphe-kön</string>
   <string name="morphe_queue_restore_title">Behåll kön mellan sessioner</string>
   <string name="morphe_queue_restore_summary">Kön behålls efter omstart av appen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Byt plats på åtgärderna Spara och Kö</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tryck för köalternativ, tryck och håll för att spara till Titta senare</string>
   <string name="morphe_queue_override_flyout_menu_title">Åsidosätt flyout-knappen för kö i flödet</string>
   <string name="morphe_queue_override_flyout_menu_summary">Öppnar Morphe-kön istället för YouTube-kön</string>
   <string name="morphe_queue_add_flyout_menu_title">Lägg till menyalternativ för kö i flödernas flyout-meny</string>
@@ -843,7 +854,6 @@ Inställningar → Uppspelning (eller Autouppspelning) → Autouppspela nästa v
   <string name="morphe_exit_fullscreen_entry_4">Stående och liggande</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Helskärmsgester</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Spelargester för att gå in i eller avsluta helskärmsläget</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Inaktivera uppåtsvep i porträttläge</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Inaktivera nedåtsvep i porträttläge</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Inaktivera nedåtsvep i landskapsläge</string>
@@ -853,13 +863,22 @@ Inställningar → Uppspelning (eller Autouppspelning) → Autouppspela nästa v
   <string name="morphe_open_videos_fullscreen_entry_2">Stående</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Liggande</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Fullskärmsvideoskala</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Standard</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Töj (fyll skärmen)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zooma (beskär för att fylla)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Visa videons skalningsknapp</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Tryck för att växla mellan Standard, Töj och Zooma</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spelaröverläggets opacitet</string>
   <string name="morphe_player_overlay_opacity_summary">Justera genomskinlighetsnivån (0 är genomskinligt, 100 är ogenomskinligt)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Spelaröverläggets opacitet måste vara mellan 0 och 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Sökfält</string>
   <string name="morphe_searchbar_type_entry_disabled">Inaktiverad</string>
+  <string name="morphe_searchbar_type_entry_wide">Bred</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra bred</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Enhetslayout</string>

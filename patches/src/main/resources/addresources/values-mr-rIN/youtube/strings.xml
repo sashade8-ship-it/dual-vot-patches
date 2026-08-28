@@ -257,10 +257,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">हायलाइट केलेले शोध दुवे शुद्ध करते, फक्त मूळ साधा मजकूर ठेवून</string>
   <string name="morphe_hide_keyword_content_screen_title">कीवर्ड फिल्टर</string>
   <string name="morphe_hide_keyword_content_screen_summary">स्ट्रीम आणि शोधात व्हिडिओ लपवण्यासाठी विशिष्ट शब्द किंवा वाक्यांश निवडा</string>
+  <string name="morphe_hide_keyword_content_comments_title">कीवर्डनुसार टिप्पण्या लपवा</string>
   <string name="morphe_hide_keyword_content_home_title">कीवर्डद्वारे होम व्हिडिओ लपवा</string>
   <string name="morphe_hide_keyword_content_search_title">कीवर्डद्वारे शोध परिणाम लपवा</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">कीवर्डद्वारे सबस्क्रिप्शन व्हिडिओ लपवा</string>
-  <string name="morphe_hide_keyword_content_comments_title">कीवर्डनुसार टिप्पण्या लपवा</string>
   <string name="morphe_hide_keyword_content_phrases_title">लपवण्यासाठी कीवर्ड</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -822,7 +822,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_exit_fullscreen_entry_4">पोर्ट्रेट (Portrait) आणि लँडस्केप (Landscape)</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">पूर्ण स्क्रीन हावभाव</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">प्लेअर हावभाव पूर्ण स्क्रीन मोडमध्ये प्रवेश करण्यासाठी किंवा बाहेर पडण्यासाठी</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">पोर्ट्रेट स्वाइप-अप हावभाव अक्षम करा</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">पोर्ट्रेट स्वाइप-डाउन हावभाव अक्षम करा</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">लँडस्केप स्वाइप-डाउन हावभाव अक्षम करा</string>
@@ -832,6 +831,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_open_videos_fullscreen_entry_2">पोर्ट्रेट</string>
   <string name="morphe_open_videos_fullscreen_entry_3">लँडस्केप</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">प्लेअर ओव्हरले अपारदर्शकता</string>
   <string name="morphe_player_overlay_opacity_summary">ओव्हरले (Overlay) पातळी समायोजित करा (0 म्हणजे पारदर्शक, 100 म्हणजे अपारदर्शक)</string>

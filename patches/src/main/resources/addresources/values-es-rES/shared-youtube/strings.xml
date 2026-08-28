@@ -184,6 +184,18 @@ Sin embargo, si activas esto, también se registrarán algunos datos del usuario
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Eliminar diálogo de discreción del espectador</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Esto no omite la restricción de edad. Simplemente la acepta automáticamente</string>
+  <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_potoken_provider_screen_title">Proveedor de PoToken</string>
+  <string name="morphe_potoken_provider_screen_summary">Configura el proveedor de PoToken para evitar problemas de reproducción</string>
+  <string name="morphe_external_potoken_provider_title">Proveedor externo de PoToken</string>
+  <string name="morphe_external_potoken_provider_summary">"Soluciona problemas de reproducción usando un generador externo de PoToken (Experimental)
+
+Si eres usuario de YouTube Premium, es posible que este ajuste no sea necesario"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">Si no funciona, prueba a forzar el cierre de MicroG</string>
+  <string name="morphe_external_potoken_provider_settings_summary">Abrir ajustes de PotHelper</string>
+  <string name="morphe_external_potoken_provider_about_summary">"Esta función está actualmente en desarrollo y es posible que no funcione
+
+Pulsa aquí para descargar PotHelper"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falsificar versión de la app</string>
   <string name="morphe_spoof_app_version_summary">Engaña al servidor para que crea que estás usando una versión anterior de la aplicación, restaurando así funciones de la interfaz antigua</string>

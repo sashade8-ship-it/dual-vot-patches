@@ -182,6 +182,7 @@ As mudanças incluem:
   <string name="morphe_hide_video_details_section_title">Ocultar seção \'Detalhes do vídeo\'</string>
   <string name="morphe_hide_filter_bar_screen_title">Barra de filtros</string>
   <string name="morphe_hide_filter_bar_screen_summary">Escolha onde ocultar a barra de filtros</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Ocultar na página do canal</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Ocultar nos comentários</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Ocultar nos feeds</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Ocultar nos vídeos recomendados</string>
@@ -198,6 +199,8 @@ As mudanças incluem:
   <string name="morphe_hide_join_button_title">Ocultar botão Seja membro</string>
   <string name="morphe_hide_links_preview_title">Ocultar prévia de links</string>
   <string name="morphe_hide_links_preview_summary">Oculta os links da web clicáveis no cabeçalho do canal</string>
+  <string name="morphe_hide_members_only_chip_title">Ocultar chip \"Apenas para membros\"</string>
+  <string name="morphe_hide_members_only_chip_summary">Oculta o chip \"Apenas para membros\" na barra de filtros do canal</string>
   <string name="morphe_hide_members_shelf_title">Ocultar prateleira de membros</string>
   <string name="morphe_hide_members_shelf_summary">Oculta a lista de membros do canal</string>
   <string name="morphe_hide_posts_shelf_title">Ocultar prateleira de posts</string>
@@ -262,10 +265,10 @@ As mudanças incluem:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Sanitiza links de pesquisa destacados, deixando apenas o texto original</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro de palavras-chave</string>
   <string name="morphe_hide_keyword_content_screen_summary">Escolha palavras ou frases específicas para ocultar vídeos em feeds e na pesquisa</string>
+  <string name="morphe_hide_keyword_content_comments_title">Ocultar comentários por palavras-chave</string>
   <string name="morphe_hide_keyword_content_home_title">Ocultar vídeos na tela inicial com palavras-chave</string>
   <string name="morphe_hide_keyword_content_search_title">Ocultar resultados de busca com palavras-chave</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Ocultar vídeos de inscrições com palavras-chave</string>
-  <string name="morphe_hide_keyword_content_comments_title">Ocultar comentários por palavras-chave</string>
   <string name="morphe_hide_keyword_content_phrases_title">Palavras-chave para ocultar</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -438,10 +441,10 @@ Informação: pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_play_all_button_type_entry_6">Shorts apenas (Ordenar por popularidade)</string>
   <string name="morphe_play_all_button_type_entry_7">Vídeos transmitidos apenas (Ordenar por tempo)</string>
   <string name="morphe_play_all_button_type_entry_8">Vídeos transmitidos apenas (Ordenar por popularidade)</string>
-  <string name="morphe_play_all_button_type_entry_9">Conteúdos apenas de todos os membros</string>
-  <string name="morphe_play_all_button_type_entry_10">Vídeos apenas de membros</string>
-  <string name="morphe_play_all_button_type_entry_11">Shorts apenas de membros</string>
-  <string name="morphe_play_all_button_type_entry_12">Transmissões ao vivo apenas de membros</string>
+  <string name="morphe_play_all_button_type_entry_9">Todo o conteúdo apenas para membros</string>
+  <string name="morphe_play_all_button_type_entry_10">Vídeos apenas para membros</string>
+  <string name="morphe_play_all_button_type_entry_11">Shorts apenas para membros</string>
+  <string name="morphe_play_all_button_type_entry_12">Transmissões ao vivo apenas para membros</string>
   <string name="morphe_play_all_button_not_available_toast">Não foi possível gerar a lista de reprodução devido a uma incompatibilidade de ID de canal</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_button_title">Mostrar botão Recarregar vídeo</string>
@@ -850,7 +853,6 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_exit_fullscreen_entry_4">Retrato e paisagem</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestos de tela cheia</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gestos do player para entrar ou sair do modo de tela cheia</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Desativar gesto de deslizar para cima na vertical</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Desativar gesto de deslizar para baixo na vertical</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Desativar gesto de deslizar para baixo na horizontal</string>
@@ -860,7 +862,13 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_open_videos_fullscreen_entry_2">Retrato</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Paisagem</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Escala de vídeo em tela cheia</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Padrão</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Esticar (preencher a tela)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (cortar para preencher)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Mostrar botão de escala de vídeo</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Toque para alternar entre Padrão, Esticar e Zoom</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacidade do player</string>
   <string name="morphe_player_overlay_opacity_summary">Ajuste o nível de transparência (0 é transparente, 100 é opaco)</string>

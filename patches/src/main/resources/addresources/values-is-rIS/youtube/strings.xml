@@ -183,6 +183,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_video_details_section_title">Felur \'Vídeó upplýsingar\' hluta</string>
   <string name="morphe_hide_filter_bar_screen_title">Síu bar</string>
   <string name="morphe_hide_filter_bar_screen_summary">Veldu hvar á að fela scrollandi síubalkann</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Fela á rásasíðu</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Fela í athugasemdum</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Fela í straumum</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Fela í tengdir myndböndum</string>
@@ -199,6 +200,8 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_join_button_title">Fela Vertu meðlimur hnapp</string>
   <string name="morphe_hide_links_preview_title">Fela hlekkilauk</string>
   <string name="morphe_hide_links_preview_summary">Felur smellanlega veftengi í rásarhausnum</string>
+  <string name="morphe_hide_members_only_chip_title">Fela merkið „Aðeins fyrir meðlimi“</string>
+  <string name="morphe_hide_members_only_chip_summary">Felur merkið „Aðeins fyrir meðlimi“ í síustiku rásarinnar</string>
   <string name="morphe_hide_members_shelf_title">Fela meðlimaskjá</string>
   <string name="morphe_hide_members_shelf_summary">Felur listann yfir rásarmeðlimi</string>
   <string name="morphe_hide_posts_shelf_title">Fela valmynd</string>
@@ -263,10 +266,10 @@ Breytingarnar fela í sér:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Hreinsar lýsta leittengla og skilur eftir aðeins upprunalega textann</string>
   <string name="morphe_hide_keyword_content_screen_title">Hraðvæðir</string>
   <string name="morphe_hide_keyword_content_screen_summary">Veldu sérstaka orð eða setningar til að fela vídeó í feed og leitinni</string>
+  <string name="morphe_hide_keyword_content_comments_title">Fela kommenta með leitarorð</string>
   <string name="morphe_hide_keyword_content_home_title">Fela heimavídeó eftir leitarorð</string>
   <string name="morphe_hide_keyword_content_search_title">Fela leitar niðurstöður eftir leitarorð</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Fela áskriftarvídeó eftir leitarorð</string>
-  <string name="morphe_hide_keyword_content_comments_title">Fela kommenta með leitarorð</string>
   <string name="morphe_hide_keyword_content_phrases_title">Leitarorð til að fela</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -446,9 +449,13 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_reload_video_button_title">Sýnir Endurhlaða vídeó hnappinn</string>
   <string name="morphe_dismiss_player_not_available_toast">Vídeó er ekki fundin. Vinsamlega endurhalaðu</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">Sýna hnappinn „Vista í Horfa síðar“</string>
+  <string name="morphe_save_to_watch_later_button_summary">Bankaðu til að vista í Horfa síðar, bankaðu og haltu fyrir biðraðarvalkosti</string>
   <string name="morphe_save_to_watch_later_success_toast">Vídeó var vel dulið á vaktur lista</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Þetta vídeó var dulís á vaktur lista</string>
   <string name="morphe_save_to_watch_later_error_toast">Ekki dulís þitta vídeó á vaktur lista</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Vista í Horfa síðar</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Sýna hnappinn „Vista í Horfa síðar“ í barnamyndböndum</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Leyfir vistun barnatengdra myndbanda í \'Horfa síðar\' sprettivalmyndinni.ævi.ævi.ævi</string>
   <string name="morphe_queue_flyout_title">Bæta í Morphe biðröð</string>
   <string name="morphe_queue_restore_title">Geymdu biðrað á milli lotna</string>
@@ -843,7 +850,6 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_exit_fullscreen_entry_4">Portrait og landscape</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Fullskjárshreyfingar</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Hreyfingar á meðlesanda til að fara inn eða út úr fullskjásstillingu</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Gerja óvirkt hreyfingu til að draga upp úr fullskjá</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Gerðu portrettsniður snertihreyfinguna óvirkja</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Gerðu landslagsniður snertihreyfinguna óvirkja</string>
@@ -853,6 +859,13 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_open_videos_fullscreen_entry_2">Portrett</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landsláttur</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Skali myndbands í fullskjá</string>
+  <string name="morphe_fullscreen_video_scale_entry_default">Sjálfgefið</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Teysja (fylla skjáinn)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Stækka (klippa til að fylla)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Sýna hnappinn fyrir myndbandsskala</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Bankaðu til að skipta á milli Sjálfgefið, Teysja og Stækka</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spilar murargyga </string>
   <string name="morphe_player_overlay_opacity_summary">Stilltu gegnsærastefnu (0 er gagnsætt, 100 er ógegnsætt)</string>

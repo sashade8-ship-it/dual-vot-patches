@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">\'Video details\' বিভাগটি লুকান</string>
   <string name="morphe_hide_filter_bar_screen_title">ফিল্টার বার</string>
   <string name="morphe_hide_filter_bar_screen_summary">স্ক্রলিং ফিল্টার বার লুকানোর স্থান নির্বাচন করুন</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">চ্যানেল পৃষ্ঠায় লুকান</string>
   <string name="morphe_hide_filter_bar_in_comments_title">মন্তব্যে লুকান</string>
   <string name="morphe_hide_filter_bar_in_feed_title">ফিডে লুকান</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">সম্পর্কিত ভিডিওতে লুকান</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">সামিল হও বোতামটি লুকান</string>
   <string name="morphe_hide_links_preview_title">লিঙ্ক পূর্বরূপ লুকান</string>
   <string name="morphe_hide_links_preview_summary">চ্যানেলের হেডার-এ ক্লিকযোগ্য ওয়েব লিঙ্কগুলি লুকায়</string>
+  <string name="morphe_hide_members_only_chip_title">\'শুধুমাত্র সদস্য\' চিপ লুকান</string>
+  <string name="morphe_hide_members_only_chip_summary">চ্যানেল ফিল্টার বারে \'শুধুমাত্র সদস্য\' চিপ লুকায়</string>
   <string name="morphe_hide_members_shelf_title">সদস্য শেল্ফ লুকান</string>
   <string name="morphe_hide_members_shelf_summary">চ্যানেলের সদস্যের তালিকা লুকায়</string>
   <string name="morphe_hide_posts_shelf_title">পোস্ট শেলপ লুকান</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">হাইলাইট করা অনুসন্ধান লিঙ্কগুলি স্যানিটাইজ করে, শুধুমাত্র আসল প্লেইন টেক্সট রেখে দেয়</string>
   <string name="morphe_hide_keyword_content_screen_title">কিওয়ার্ড ফিল্টার</string>
   <string name="morphe_hide_keyword_content_screen_summary">ফিড এবং অনুসন্ধানে ভিডিও লুকানোর জন্য নির্দিষ্ট শব্দ বা বাক্যাংশ নির্বাচন করুন</string>
+  <string name="morphe_hide_keyword_content_comments_title">নির্দিষ্ট শব্দ দিয়ে মন্তব্যগুলো হাইড করুন</string>
   <string name="morphe_hide_keyword_content_home_title">কীওয়ার্ড ব্যবহার করে প্রধান পাতার ভিডিও লুকান</string>
   <string name="morphe_hide_keyword_content_search_title">কীওয়ার্ড ব্যবহার করে অনুসন্ধান ফলাফল লুকান</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">কীওয়ার্ড ব্যবহার করে সাবস্ক্রিপশন ভিডিও লুকান</string>
-  <string name="morphe_hide_keyword_content_comments_title">নির্দিষ্ট শব্দ দিয়ে মন্তব্যগুলো হাইড করুন</string>
   <string name="morphe_hide_keyword_content_phrases_title">লুকানোর জন্য কীওয়ার্ড</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -851,7 +854,6 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_exit_fullscreen_entry_4">আনুভূমিক এবং ল্যান্ডস্কেপ</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">পুরো স্ক্রিন জুড়ে জেসচার ব্যবহার করুন</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">ভিডিও প্লেয়ারে পুরো স্ক্রিন চালু বা বন্ধ করতে জেসচার ব্যবহার করুন</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">পোর্ট্রেট মোডে ওপরের দিকে সোয়াইপ জেসচার বন্ধ করুন</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">পোর্ট্রেট মোডে নিচের দিকে সোয়াইপ জেসচার বন্ধ করুন</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">ল্যান্ডস্কেপ মোডে নিচের দিকে সোয়াইপ জেসচার বন্ধ করুন</string>
@@ -861,7 +863,13 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_open_videos_fullscreen_entry_2">লম্বালম্বি রাখুন</string>
   <string name="morphe_open_videos_fullscreen_entry_3">আড়াআড়ি রাখুন</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">ফুলস্ক্রিন ভিডিও স্কেল</string>
   <string name="morphe_fullscreen_video_scale_entry_default">ডিফল্ট</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">স্ট্রেচ (স্ক্রিন পূর্ণ করুন)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">জুম (ক্রপ করে পূর্ণ করুন)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">ভিডিও স্কেল বাটন দেখান</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">ডিফল্ট, স্ট্রেচ এবং জুম পরিবর্তন করতে ট্যাপ করুন</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">প্লেয়ার ওভারলে অস্বচ্ছতা</string>
   <string name="morphe_player_overlay_opacity_summary">ওভারলে স্বচ্ছতার স্তর সামঞ্জস্য করুন (0 স্বচ্ছ, 100 অস্বচ্ছ)</string>

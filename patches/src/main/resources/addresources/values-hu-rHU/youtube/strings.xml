@@ -34,6 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_remove_background_playback_restrictions_title">Háttérben lejátszás korlátozásainak feloldása</string>
   <string name="morphe_shorts_disable_background_playback_title">Háttérben történő lejátszás kikapcsolása</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Görgetési sebességkorlát letiltása. ,\"key\":\"morphe_disable_scrolling_speed_limit_title\",\"context\":\"morphe_disable_scrolling_speed_limit_title\nlayout.disableScrollSpeedLimitPatch\",\"maxLength\":null,\"terms\":[]}</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Megjelenés frissítések letiltása</string>
   <string name="morphe_disable_layout_updates_summary">Megakadályozza, hogy a szerver frissítse az alkalmazás megjelenését</string>
@@ -182,6 +183,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_video_details_section_title">Videó részletei szekció elrejtése</string>
   <string name="morphe_hide_filter_bar_screen_title">Szűrősáv</string>
   <string name="morphe_hide_filter_bar_screen_summary">Válaszd ki, hol szeretnéd elrejteni a görgethető szűrősávot</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Elrejtés a csatornaoldalon. ,\"key\":\"morphe_hide_filter_bar_in_channel_page_title\",\"context\":\"morphe_hide_filter_bar_in_channel_page_title\",\"maxLength\":null,\"terms\":[]}</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Elrejtés a hozzászólásokban</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Elrejtés a feedekben</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Elrejtés a kapcsolódó videókban</string>
@@ -198,6 +200,8 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_join_button_title">Csatlakozás gomb elrejtése</string>
   <string name="morphe_hide_links_preview_title">Hivatkozások előnézetének elrejtése</string>
   <string name="morphe_hide_links_preview_summary">Elrejti a csatornafejlécben található, kattintható webes linkeket</string>
+  <string name="morphe_hide_members_only_chip_title">A \'Csak tagoknak\' felirat elrejtése. ,\"key\":\"morphe_hide_members_only_chip_title\",\"context\":\"morphe_hide_members_only_chip_title\",\"maxLength\":null,\"terms\":[]}</string>
+  <string name="morphe_hide_members_only_chip_summary">Elrejti a \'Csak tagoknak\' feliratot a csatorna szűrősávjában. ,\"key\":\"morphe_hide_members_only_chip_summary\",\"context\":\"morphe_hide_members_only_chip_summary\",\"maxLength\":null,\"terms\":[]}</string>
   <string name="morphe_hide_members_shelf_title">Csatornatagok polcának elrejtése</string>
   <string name="morphe_hide_members_shelf_summary">Csatornatagok listájának elrejtése</string>
   <string name="morphe_hide_posts_shelf_title">Bejegyzéspolc elrejtése</string>
@@ -262,10 +266,10 @@ A változások a következőket tartalmazzák:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">A kiemelt keresési hivatkozások higiénikusabbá tétele, csak az eredeti szöveget hagyva</string>
   <string name="morphe_hide_keyword_content_screen_title">Kulcsszószűrő</string>
   <string name="morphe_hide_keyword_content_screen_summary">Videók elrejtése a hírfolyamokban és a keresésben megadott szavak vagy kifejezések alapján</string>
+  <string name="morphe_hide_keyword_content_comments_title">Kulcsszavak szerinti megjegyzések elrejtése</string>
   <string name="morphe_hide_keyword_content_home_title">Főoldali videók elrejtése kulcsszavak alapján</string>
   <string name="morphe_hide_keyword_content_search_title">Keresési találatok elrejtése kulcsszavak alapján</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Feliratkozások videóinak elrejtése kulcsszavak alapján</string>
-  <string name="morphe_hide_keyword_content_comments_title">Kulcsszavak szerinti megjegyzések elrejtése</string>
   <string name="morphe_hide_keyword_content_phrases_title">Elrejtendő kulcsszavak</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -454,10 +458,12 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_save_to_watch_later_error_toast">A videó nem menthető a „Később megnézem” lejátszási listára</string>
   <string name="morphe_save_to_watch_later_flyout_title">Mentés későbbre</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Mentés későbbre gomb megjelenítése a gyerekvideókban</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Lehetővé teszi a gyerekeknek szóló videók mentését a \'Megnézem később\' előugró menüben. ,\"key\":\"morphe_save_to_watch_later_kids_flyout_menu_button_summary\",\"context\":\"morphe_save_to_watch_later_kids_flyout_menu_button_summary\",\"maxLength\":null,\"terms\":[]}</string>
   <string name="morphe_queue_flyout_title">Hozzáadás a Morphe sorhoz</string>
   <string name="morphe_queue_restore_title">Tartsa fenn a sorát a munkamenetek között</string>
   <string name="morphe_queue_restore_summary">A sor az alkalmazás újraindítása után is megőrizhető</string>
   <string name="morphe_swap_save_and_queue_actions_title">Csere a Mentés és a Sorba rendezés műveletekhez</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Koppintson a sor beállításaihoz, tartsa lenyomva a \'Megnézem később\' listára mentéshez. ,\"key\":\"morphe_swap_save_and_queue_actions_summary\",\"context\":\"morphe_swap_save_and_queue_actions_summary\",\"maxLength\":null,\"terms\":[]}</string>
   <string name="morphe_queue_override_flyout_menu_title">A Morphe sor felülbírálása a lejálistában</string>
   <string name="morphe_queue_override_flyout_menu_summary">A Morphe sorbanálítást nyit meg a YouTube sor helyett.</string>
   <string name="morphe_queue_add_flyout_menu_title">Sor menüelem hozzáadása a hírfolyam felugró menühöz</string>
@@ -848,7 +854,6 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <string name="morphe_exit_fullscreen_entry_4">Portré és tájkép</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Teljes képernyős gesztusok</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Lejátszói gesztusok a teljes képernyős módba való belépéshez vagy kilépéshez</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">A teljes képernyős felhúzásos gesztus letiltása</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Portré gesztus letiltása – lefelé húzás</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Tájkép gesztus letiltása – lefelé húzás</string>
@@ -858,13 +863,22 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <string name="morphe_open_videos_fullscreen_entry_2">Portré</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Tájkép</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Teljes képernyős videó mérete. ,\"key\":\"morphe_fullscreen_video_scale_title\",\"context\":\"morphe_fullscreen_video_scale_title\nlayout.player.fullscreen.stretchPatchVideo\",\"maxLength\":null,\"terms\":[]}</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Alapértelmezett</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Nyújtás (képernyő kitöltése). ,\"key\":\"morphe_fullscreen_video_scale_entry_stretch\",\"context\":\"morphe_fullscreen_video_scale_entry_stretch\",\"maxLength\":null,\"terms\":[]}</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Nagyítás (vágás a kitöltéshez). ,\"key\":\"morphe_fullscreen_video_scale_entry_zoom\",\"context\":\"morphe_fullscreen_video_scale_entry_zoom\",\"maxLength\":null,\"terms\":[]}</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Videó méret gombjának megjelenítése. ,\"key\":\"morphe_fullscreen_video_scale_button_title\",\"context\":\"morphe_fullscreen_video_scale_button_title\",\"maxLength\":null,\"terms\":[]}</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Koppintson az Alapértelmezett, Nyújtás és Nagyítás közötti váltáshoz. ,\"key\":\"morphe_fullscreen_video_scale_button_summary\",\"context\":\"morphe_fullscreen_video_scale_button_summary\",\"maxLength\":null,\"terms\":[]}</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Lejátszó fedőrétegének átlátszatlansága</string>
   <string name="morphe_player_overlay_opacity_summary">Állítsa be az átlátszó szintet (0 átlátszó, 100 opák)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">A lejátszó fedvény átlátszatlanságának 0 és 100 között kell lennie</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Keresőmező. ,\"key\":\"morphe_searchbar_type_title\",\"context\":\"morphe_searchbar_type_title\nlayout.searchbar.wideSearchbarPatch\",\"maxLength\":null,\"terms\":[]}</string>
   <string name="morphe_searchbar_type_entry_disabled">Letiltva</string>
+  <string name="morphe_searchbar_type_entry_wide">Széles. ,\"key\":\"morphe_searchbar_type_entry_wide\",\"context\":\"morphe_searchbar_type_entry_wide\",\"maxLength\":null,\"terms\":[]}</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra széles. ,\"key\":\"morphe_searchbar_type_entry_extra_wide\",\"context\":\"morphe_searchbar_type_entry_extra_wide\",\"maxLength\":null,\"terms\":[]}</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Eszköz elrendezés</string>
@@ -994,6 +1008,7 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_theme_color_light_custom_title">Egyedi világos háttér</string>
   <string name="morphe_theme_color_light_custom_summary">Állítsd be a világos téma háttérszínét</string>
   <string name="morphe_theme_color_change_foreground_title">Előtérszín megváltoztatása</string>
+  <string name="morphe_theme_color_change_foreground_summary">Használja a téma színét a szöveghez és az ikonokhoz</string>
   <string name="morphe_gradient_loading_screen_title">Színátmenetes betöltési képernyő engedélyezése</string>
   <string name="morphe_gradient_loading_screen_summary">Árnyékoló háttér megjelenítése a betöltési képernyőn a tömör szín helyett</string>
   <string name="morphe_splash_screen_animation_style_title">Üdvözlőképernyő stílusa</string>

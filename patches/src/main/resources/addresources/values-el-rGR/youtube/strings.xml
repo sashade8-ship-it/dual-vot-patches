@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">Απόκρυψη τμήματος \"Λεπτομέρειες βίντεο\"</string>
   <string name="morphe_hide_filter_bar_screen_title">Γραμμή φίλτρων</string>
   <string name="morphe_hide_filter_bar_screen_summary">Επιλέξτε πού να αποκρύψετε την μπάρα φιλτραρίσματος κύλισης</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Απόκρυψη στη σελίδα καναλιού</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Απόκρυψη στα σχόλια</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Κρύψτε στις ροές</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Κρύψτε στα σχετικά βίντεο</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">Κουμπί «Συμμετοχή»</string>
   <string name="morphe_hide_links_preview_title">Προεπισκόπηση συνδέσμων</string>
   <string name="morphe_hide_links_preview_summary">Απόκρυψη της λίστας με τα μέλη του καναλιού</string>
+  <string name="morphe_hide_members_only_chip_title">Απόκρυψη ετικέτας \'Μόνο για μέλη\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Απόκρυψη της ετικέτας \'Μόνο για μέλη\' στη γραμμή φίλτρων καναλιού</string>
   <string name="morphe_hide_members_shelf_title">Ενότητα μελών</string>
   <string name="morphe_hide_members_shelf_summary">Επιλέξτε ποια στοιχεία εμφανίζονται στην ενότητα σχολίων</string>
   <string name="morphe_hide_posts_shelf_title">Απόκρυψη ραφιού δημοσιεύσεων</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Απολυμαίνει τις διασυνδεδεμένες αναζητήσεις, αφήνοντας μόνο το αρχικό απλό κείμενο</string>
   <string name="morphe_hide_keyword_content_screen_title">Φίλτρο λέξεων-κλειδιών</string>
   <string name="morphe_hide_keyword_content_screen_summary">Επιλέξτε συγκεκριμένες λέξεις ή φράσεις για να αποκρύψετε βίντεο στις ροές και στην αναζήτηση</string>
+  <string name="morphe_hide_keyword_content_comments_title">Απόκρυψη σχολίων με λέξεις-κλειδιά</string>
   <string name="morphe_hide_keyword_content_home_title">Φιλτράρισμα αρχικής ροής</string>
   <string name="morphe_hide_keyword_content_search_title">Φιλτράρισμα αποτελεσμάτων αναζήτησης</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Φιλτράρισμα σελίδας εγγραφών</string>
-  <string name="morphe_hide_keyword_content_comments_title">Απόκρυψη σχολίων με λέξεις-κλειδιά</string>
   <string name="morphe_hide_keyword_content_phrases_title">Λέξεις-κλειδιά για απόκρυψη</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -448,9 +451,13 @@ Second \"item\" text"</string>
   <string name="morphe_reload_video_button_title">Η σάρωση της φωτεινότητας στην χαμηλότερη τιμή ενεργοποιεί την αυτόματη φωτεινότητα του συστήματος</string>
   <string name="morphe_dismiss_player_not_available_toast">Το ID του βίντεο δεν είναι διαθέσιμο. Παρακαλώ ανανεώστε το βίντεο χειροκίνητα</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">Εμφάνιση κουμπιού \'Αποθήκευση για αργότερα\'</string>
+  <string name="morphe_save_to_watch_later_button_summary">Πατήστε για αποθήκευση στην Παρακολούθηση αργότερα, πατήστε και κρατήστε για επιλογές ουράς</string>
   <string name="morphe_save_to_watch_later_success_toast">Το βίντεο αποθηκεύτηκε επιτυχώς στη λίστα παρακολούθησης αργότερα</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Αυτό το βίντεο είναι ήδη αποθηκευμένο στη λίστα παρακολούθησης αργότερα</string>
   <string name="morphe_save_to_watch_later_error_toast">Δεν είναι δυνατή η αποθήκευση αυτού του βίντεο στη λίστα παρακολούθησης αργότερα</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Αποθήκευση στην Παρακολούθηση αργότερα</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Εμφάνιση κουμπιού \'Αποθήκευση για αργότερα\' σε παιδικά βίντεο</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Επιτρέπει την αποθήκευση βίντεο που σχετίζονται με παιδιά στο αναδυόμενο μενού \'Παρακολούθηση αργότερα\'</string>
   <string name="morphe_queue_flyout_title">Προσθήκη στην ουρά Morphe</string>
   <string name="morphe_queue_restore_title">Διατήρηση ουράς μεταξύ των περιόδων σύνδεσης</string>
@@ -847,7 +854,6 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_4">Κατακόρυφη και οριζόντια</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Ζητήματα πλήρους οθόνης</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Ζητήματα χειρισμών του προγράμματος αναπαραγωγής για είσοδο ή έξοδο από λειτουργία πλήρους οθόνης</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Απενεργοποίηση χειρονομίας σάρωσης προς τα πάνω σε κατακόρυφο προσανατολισμό</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Απενεργοποίηση χειρονομίας σάρωσης προς τα κάτω σε κατακόρυφη προβολή</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Απενεργοποίηση χειρονομίας σάρωσης προς τα κάτω σε οριζόντια προβολή</string>
@@ -857,13 +863,22 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Κατακόρυφη</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Οριζόντια</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Κλίμακα βίντεο πλήρους οθόνης</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Προεπιλογή</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Τάνυση (γέμισμα οθόνης)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Μεγέθυνση (περικοπή για γέμισμα)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Εμφάνιση κουμπιού κλίμακας βίντεο</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Πατήστε για εναλλαγή Προεπιλεγμένο, Τάνυση, και Μεγέθυνση</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Αδιαφάνεια φόντου οθόνης αναπαραγωγής</string>
   <string name="morphe_player_overlay_opacity_summary">Ρυθμίστε το επίπεδο διαφάνειας (0 είναι διαφανές, 100 είναι αδιαφανές)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Η αδιαφάνεια φόντου οθόνης αναπαραγωγής πρέπει να είναι μεταξύ 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Γραμμή αναζήτησης</string>
   <string name="morphe_searchbar_type_entry_disabled">Απενεργοποιημένο</string>
+  <string name="morphe_searchbar_type_entry_wide">Ευρεία</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Επιπλέον ευρεία</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Διάταξη συσκευής</string>

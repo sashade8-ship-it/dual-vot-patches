@@ -172,6 +172,7 @@ Oʻzgarishlar:
   <string name="morphe_hide_featured_playlists_section_title">Featured pleylistlar bo\'limini yashirish</string>
   <string name="morphe_hide_featured_videos_section_title">\'Tanlangan videolar\' boʻlimini yashiring</string>
   <string name="morphe_hide_hashtag_section_title">Hashteglar bo\'limini yashirish</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Bu qanday yaratilgan bo\'limini yashirish</string>
   <string name="morphe_hide_hype_points_title">Hype ballarini yashirish</string>
   <string name="morphe_hide_info_cards_section_title">Maʼlumot kartalari boʻlimini yashiring</string>
   <string name="morphe_hide_key_concepts_section_title">\'Asosiy tushunchalar\' boʻlimini yashiring</string>
@@ -182,6 +183,7 @@ Oʻzgarishlar:
   <string name="morphe_hide_video_details_section_title">\'Video haqida maʼlumot\' boʻlimini yashiring</string>
   <string name="morphe_hide_filter_bar_screen_title">Filtrlar paneli</string>
   <string name="morphe_hide_filter_bar_screen_summary">Filtruvar panellini yashirish joyini tanlang</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Kanal sahifasida yashirish</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Izohlar ichida yashiring</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Oziqlanish ichida yashiring</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Tavsiya qilinadigan videolarda yashiring</string>
@@ -198,6 +200,8 @@ Oʻzgarishlar:
   <string name="morphe_hide_join_button_title">Do\'kon tugmasini yashirish</string>
   <string name="morphe_hide_links_preview_title">Havolalarni ko\'rsatish</string>
   <string name="morphe_hide_links_preview_summary">Kanal varagʻidagi koʻrsatiladigan veb havolarni yashiradi</string>
+  <string name="morphe_hide_members_only_chip_title">\'Faqat a\'zolar\' belgisini yashirish</string>
+  <string name="morphe_hide_members_only_chip_summary">Kanal filtr satridagi \'Faqat a\'zolar\' belgisini yashiradi</string>
   <string name="morphe_hide_members_shelf_title">A\'zo javonini yashirish</string>
   <string name="morphe_hide_members_shelf_summary">Kanal aʼzolarining roʻyxatini yashiradi</string>
   <string name="morphe_hide_posts_shelf_title">Postlar javonini yashirish</string>
@@ -262,10 +266,10 @@ Oʻzgarishlar:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Faqat asl matnni qoldirib, sanatlangan ajratilgan havola</string>
   <string name="morphe_hide_keyword_content_screen_title">Kalit soʻz filtri</string>
   <string name="morphe_hide_keyword_content_screen_summary">Oziqlantirish va qidiruvdagi videolarni yashirish uchun kalit soʻzlar va iboralarni tanlang</string>
+  <string name="morphe_hide_keyword_content_comments_title">Izohlardagi kalit so\'zlar bo\'yicha izollarni yashirish</string>
   <string name="morphe_hide_keyword_content_home_title">Uy sahifasidagi videolarni kalit so\'zlar bo\'yicha yashirish</string>
   <string name="morphe_hide_keyword_content_search_title">Qidiruv natijalarini kalit so\'zlar bo\'yicha yashirish</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Obunachilar sahifasidagi videolarni kalit so\'zlar bo\'yicha yashirish</string>
-  <string name="morphe_hide_keyword_content_comments_title">Izohlardagi kalit so\'zlar bo\'yicha izollarni yashirish</string>
   <string name="morphe_hide_keyword_content_phrases_title">Yashirish uchun kalit so\'zlar</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -845,7 +849,6 @@ Sozlamalar → Oynatish (yoki Avtoijro) → Keyingi videoni avtomatik ravishda i
   <string name="morphe_exit_fullscreen_entry_4">Portret va landshaft</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">To\'liq ekran gestlari</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">O\'yinchi gestlari to\'liq ekran rejimiga kirish yoki chiqish uchun</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Portret uchun yuqoriga surish gestini o\'chirish</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Portret uchun pastga surish gestini o\'chirish</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Manzarali uchun pastga surish gestini o\'chirish</string>
@@ -855,12 +858,22 @@ Sozlamalar → Oynatish (yoki Avtoijro) → Keyingi videoni avtomatik ravishda i
   <string name="morphe_open_videos_fullscreen_entry_2">Portret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Manzarali</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">To‘liq ekran video o‘lchami</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Standart</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Cho‘zish (ekranni to‘ldirish)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Kattalashtirish (kesib to‘ldirish)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Video o‘lchami tugmasini ko‘rsatish</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Bosilganda Default, Stretch va Zoom o‘rtasida almashadi</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Pleyer qoplamasining shaffofligi</string>
   <string name="morphe_player_overlay_opacity_summary">Pleyerdagi qoplama shaffofligini sozlash (0 shaffof, 100 toʻliq qorongʻi)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Pleyer qoplamasining shaffofligi 0–100 oraligʻida boʻlishi kerak.</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Qidiruv paneli</string>
+  <string name="morphe_searchbar_type_entry_disabled">O\'chirilgan</string>
+  <string name="morphe_searchbar_type_entry_wide">Keng</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">O\'ta keng</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Qurilma tuzilishi</string>

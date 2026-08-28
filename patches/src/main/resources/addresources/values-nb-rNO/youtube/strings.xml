@@ -66,7 +66,7 @@ Endringer inkluderer:
   <string name="morphe_hide_compact_banner_summary">Skjuler kompakte bannere og mellomrom mellom noen komponenter</string>
   <string name="morphe_hide_expandable_card_title">Utvidbare kort under videoer</string>
   <string name="morphe_hide_expandable_card_entry_1">Vis alle</string>
-  <string name="morphe_hide_expandable_card_entry_2">Skjul sammendragskortet</string>
+  <string name="morphe_hide_expandable_card_entry_2">Skjul kun sammendragskort</string>
   <string name="morphe_hide_expandable_card_entry_3">Skjul alle</string>
   <string name="morphe_hide_floating_microphone_button_title">Skjul flytende mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skjuler flytende mikrofonknapp i nedre høyre hjørne av søkeforslags-skjermen</string>
@@ -172,7 +172,7 @@ Endringer inkluderer:
   <string name="morphe_hide_featured_playlists_section_title">Skjul seksjonen med utvalgte spillelister</string>
   <string name="morphe_hide_featured_videos_section_title">Skjul Utvalgte videoer-seksjon</string>
   <string name="morphe_hide_hashtag_section_title">Skjul Hashtag-seksjonen</string>
-  <string name="morphe_hide_how_this_was_made_section_title">Skjul \'Hvordan dette ble laget\'-delen</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Skjul \"Hvordan dette ble laget\"-delen</string>
   <string name="morphe_hide_hype_points_title">Skjul Hype-poeng</string>
   <string name="morphe_hide_info_cards_section_title">Skjul Info-kort-seksjon</string>
   <string name="morphe_hide_key_concepts_section_title">Skjul «Nøkkelbegreper»-seksjon</string>
@@ -183,6 +183,7 @@ Endringer inkluderer:
   <string name="morphe_hide_video_details_section_title">Skjul «Videodetaler»-seksjon</string>
   <string name="morphe_hide_filter_bar_screen_title">Filterlinje</string>
   <string name="morphe_hide_filter_bar_screen_summary">Velg hvor du vil skjule filterlinjen som ruller</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Skjul på kanalsiden</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Skjul i kommentarer</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Skjul i feeden</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Skjul i relaterte videoer</string>
@@ -199,6 +200,8 @@ Endringer inkluderer:
   <string name="morphe_hide_join_button_title">Skjul \'Bli med\'-knappen</string>
   <string name="morphe_hide_links_preview_title">Skjul koblingsforhåndsvisning</string>
   <string name="morphe_hide_links_preview_summary">Skjuler de klikkbare nettlenkene i kanalens topptekst</string>
+  <string name="morphe_hide_members_only_chip_title">Skjul \'Kun medlemmer\'-merket</string>
+  <string name="morphe_hide_members_only_chip_summary">Skjuler \'Kun medlemmer\'-merket i filterlinjen på kanalen</string>
   <string name="morphe_hide_members_shelf_title">Skjul medlemskapshylla</string>
   <string name="morphe_hide_members_shelf_summary">Skjuler listen over kanallmedlemmer</string>
   <string name="morphe_hide_posts_shelf_title">Videotittel i fullskjerm er skjult</string>
@@ -263,10 +266,10 @@ Endringer inkluderer:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Desinfiserer fremhevede søkelenker, og viser kun den originale, rene teksten</string>
   <string name="morphe_hide_keyword_content_screen_title">Nøkkelordfilter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Velg spesifikke ord eller fraser for å skjule videoer i feed og søk</string>
+  <string name="morphe_hide_keyword_content_comments_title">Skjul kommentarer etter nøkkelord</string>
   <string name="morphe_hide_keyword_content_home_title">Skjul Hjem-videoer etter nøkkelord</string>
   <string name="morphe_hide_keyword_content_search_title">Skjul søkeresultater etter nøkkelord</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Skjul videoer fra abonnementer etter nøkkelord</string>
-  <string name="morphe_hide_keyword_content_comments_title">Skjul kommentarer etter nøkkelord</string>
   <string name="morphe_hide_keyword_content_phrases_title">Nøkkelord som skal skjules</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -418,8 +421,8 @@ API-nøkkelen din bør aldri deles. Alle med tilgang til den kan bruke OpenRoute
   <string name="morphe_loop_video_range_dialog_title">Repetisjonsområde</string>
   <string name="morphe_loop_video_range_label_start">Start</string>
   <string name="morphe_loop_video_range_label_end">Slutt</string>
-  <string name="morphe_loop_video_range_hint_start">[tt:]mm:ss</string>
-  <string name="morphe_loop_video_range_hint_end">[tt:]mm:ss (tom = videoslutt)</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (tom = videoslutt)</string>
   <string name="morphe_loop_video_range_set">Sett</string>
   <string name="morphe_loop_video_range_clear">Tøm</string>
   <string name="morphe_loop_video_range_toast_on">Looper %1$s – %2$s</string>
@@ -455,15 +458,15 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_save_to_watch_later_error_toast">Kunne ikke lagre denne videoen i Se senere-listen</string>
   <string name="morphe_save_to_watch_later_flyout_title">Lagre til Se senere</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Vis Lagre til Se senere-knappen i barnevideoer</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Tillater lagring av barnerelaterte videoer i \"Se senere\"-menyen</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Tillater lagring av barnerelaterte videoer i \'Se senere\'-undermenyen</string>
   <string name="morphe_queue_flyout_title">Legg til i Morphe-kø</string>
   <string name="morphe_queue_restore_title">Behold køen mellom øktene</string>
   <string name="morphe_queue_restore_summary">Køen beholdes etter omstart av appen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Bytt om «Lagre» og «Kø»-handlinger</string>
-  <string name="morphe_swap_save_and_queue_actions_summary">Trykk for køalternativer, trykk og hold for å lagre til Se senere</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Trykk for køalternativer, trykk og hold for å lagre i Se senere</string>
   <string name="morphe_queue_override_flyout_menu_title">Overskriv kø-flyout-knappen for avspillingsliste</string>
   <string name="morphe_queue_override_flyout_menu_summary">Åpner Morphe-køen i stedet for YouTube-køen</string>
-  <string name="morphe_queue_add_flyout_menu_title">Legg til kømenyelement i feed-flyout</string>
+  <string name="morphe_queue_add_flyout_menu_title">Legg til menyelement for kø i feed-undermeny</string>
   <string name="morphe_queue_add_flyout_menu_summary">Legger til et ekstra flyout-element. Aktiver dette hvis «Legg til i kø» ikke vises</string>
   <string name="morphe_queue_manager_check_failed_auth">Ikke logget inn</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Ingen spillelist-ID</string>
@@ -478,7 +481,7 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_queue_manager_fetch_succeeded_create">Køen er opprettet</string>
   <string name="morphe_queue_manager_fetch_succeeded_remove">Fjernet fra køen</string>
   <string name="morphe_queue_manager_fetch_succeeded_save">Køen er lagret til %s</string>
-  <string name="morphe_queue_manager_playlist_title">Morphe-k%C3%B8</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe-kø</string>
   <string name="morphe_queue_manager_add_to_queue">Legg til i køen</string>
   <string name="morphe_queue_manager_add_to_queue_and_open_queue">Legg til i køen og åpne</string>
   <string name="morphe_queue_manager_add_to_queue_and_play_video">Legg til i køen og spill</string>
@@ -851,7 +854,6 @@ Innstillinger → Avspilling (eller Autoplay) → Spill av neste video automatis
   <string name="morphe_exit_fullscreen_entry_4">Stående og liggende</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Fullskjermbevegelser</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Spillerbevegelser for å gå inn eller ut av fullskjermmodus</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Deaktiver sveip opp-bevegelse i stående modus</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Deaktiver sveip-ned-gesten i stående modus</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Deaktiver sveip-ned-gesten i liggende modus</string>
@@ -861,6 +863,13 @@ Innstillinger → Avspilling (eller Autoplay) → Spill av neste video automatis
   <string name="morphe_open_videos_fullscreen_entry_2">Portrett</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landskap</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Fullskjerm videoskala</string>
+  <string name="morphe_fullscreen_video_scale_entry_default">Standard</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Strekk (fyll skjermen)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (beskjær for å fylle)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Vis videoskala-knapp</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Trykk for å veksle mellom Standard, Strekk og Zoom</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spilleroverleggs opasitet</string>
   <string name="morphe_player_overlay_opacity_summary">Juster gjennomsiktighetsnivået (0 er gjennomsiktig, 100 er ugjennomsiktig)</string>

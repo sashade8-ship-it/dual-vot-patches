@@ -185,6 +185,7 @@ Promjene uključuju:
   <string name="morphe_hide_video_details_section_title">Sakrij odjeljak \'Video detalji\'</string>
   <string name="morphe_hide_filter_bar_screen_title">Sakrij ili prikaži filter bar u feedovima, videoz, pretraživanjima i povratku</string>
   <string name="morphe_hide_filter_bar_screen_summary">Odaberite gdje sakriti kliznu traku filtra</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Sakrij na stranici kanala</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Sakrij u komentarima</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Sakrij u feedovima</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Sakrij u povezanim videozapisima</string>
@@ -201,6 +202,8 @@ Promjene uključuju:
   <string name="morphe_hide_join_button_title">Sakrij tipku \'Pridruži\'</string>
   <string name="morphe_hide_links_preview_title">Sakrij \'Prikaži\' odjel</string>
   <string name="morphe_hide_links_preview_summary">Skriva web-poveznice na koje se može kliknuti u zaglavlju kanala</string>
+  <string name="morphe_hide_members_only_chip_title">Sakrij oznaku \'Samo za članove\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Sakriva oznaku \'Samo za članove\' u traci filtera kanala</string>
   <string name="morphe_hide_members_shelf_title">Sakrij \'Prikaži\' odjel</string>
   <string name="morphe_hide_members_shelf_summary">Skriva popis članova kanala</string>
   <string name="morphe_hide_posts_shelf_title">Sakrij policu Objava</string>
@@ -265,10 +268,10 @@ Promjene uključuju:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Čisti istaknute poveznice za pretraživanje, ostavljajući samo originalni obični tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter po ključnim riječima</string>
   <string name="morphe_hide_keyword_content_screen_summary">Odaberite specifične riječi ili fraze kako biste sakrili videozapise u feedovima i pretrazi</string>
+  <string name="morphe_hide_keyword_content_comments_title">Sakrij komentare po ključnim riječima</string>
   <string name="morphe_hide_keyword_content_home_title">Sakrij videozapise na tablici Početna pomoću ključnim riječima</string>
   <string name="morphe_hide_keyword_content_search_title">Sakrij pretrage pomoću ključnim riječima</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Sakrij videozapise na tablici Pretplatezene pomoću ključnim riječima</string>
-  <string name="morphe_hide_keyword_content_comments_title">Sakrij komentare po ključnim riječima</string>
   <string name="morphe_hide_keyword_content_phrases_title">Ključne riječi za skrivenje</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -853,7 +856,6 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_exit_fullscreen_entry_4">Portratno i pejzažno</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Geste u punom zaslonu</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Geste playera za ulazak u način pune veličine ili izlazak iz njega</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Onemogući gestu povlačenja prema gore u portratnom načinu</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Onemogući gestu povlačenja prema dolje u portratnom načinu</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Onemogući gestu povlačenja prema dolje u pejzažnom načinu</string>
@@ -863,7 +865,13 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_open_videos_fullscreen_entry_2">Portratno</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Pejzažno</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Skaliranje videa u punom zaslonu</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Zadano</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Rastegni (ispuni zaslon)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Povećaj (obreži da ispuni)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Prikaži gumb za skaliranje videa</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Dodirnite za cikliranje: Zadano, Rastegni, Povećaj</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Prikaži dugmice za zvuk</string>
   <string name="morphe_player_overlay_opacity_summary">Prilagodite razinu prozirnosti (0 je prozirno, 100 je neprozirno)</string>

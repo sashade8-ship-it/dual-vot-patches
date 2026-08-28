@@ -172,6 +172,7 @@ Promene uključuju:
   <string name="morphe_hide_featured_playlists_section_title">Sakrij sekciju \"Istaknute liste za reprodukciju\"</string>
   <string name="morphe_hide_featured_videos_section_title">Sakrij odeljak „Istaknuti video zapisi”</string>
   <string name="morphe_hide_hashtag_section_title">Sakrij sekciju heš-oznaka</string>
+  <string name="morphe_hide_how_this_was_made_section_title">Sakrij odeljak \'Kako je ovo napravljeno\'</string>
   <string name="morphe_hide_hype_points_title">Sakrij hajp poene</string>
   <string name="morphe_hide_info_cards_section_title">Sakrij odeljak „Info kartice”</string>
   <string name="morphe_hide_key_concepts_section_title">Sakrij odeljak „Ključni koncepti”</string>
@@ -182,6 +183,7 @@ Promene uključuju:
   <string name="morphe_hide_video_details_section_title">Sakrij odeljak „Detalji videa”</string>
   <string name="morphe_hide_filter_bar_screen_title">Traka filtera</string>
   <string name="morphe_hide_filter_bar_screen_summary">Izaberite gde da sakrijete traku za filtriranje</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Sakrij na stranici kanala</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Sakrij u komentarima</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Sakrij u izvorima</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Sakrij u srodnim video zapisima</string>
@@ -198,6 +200,8 @@ Promene uključuju:
   <string name="morphe_hide_join_button_title">Sakrij dugme „Učlani me”</string>
   <string name="morphe_hide_links_preview_title">Sakrij pregled linkova</string>
   <string name="morphe_hide_links_preview_summary">Sakriva klikable web linkove u zaglavlju kanala</string>
+  <string name="morphe_hide_members_only_chip_title">Sakrij oznaku \'Samo za članove\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Sakriva oznaku \'Samo za članove\' u traci filtera kanala</string>
   <string name="morphe_hide_members_shelf_title">Sakrij policu članova</string>
   <string name="morphe_hide_members_shelf_summary">Sakriva listu članova kanala</string>
   <string name="morphe_hide_posts_shelf_title">Sakrij policu obaveštenja</string>
@@ -262,10 +266,10 @@ Promene uključuju:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Dezinfikuje naglašene linkove za pretragu, ostavljajući samo originalni tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtriranje po ključnim rečima</string>
   <string name="morphe_hide_keyword_content_screen_summary">Izaberite određene reči ili fraze da sakrijete video zapise u feedovima i pretrazi</string>
+  <string name="morphe_hide_keyword_content_comments_title">Sakrij komentare prema ključnim rečima</string>
   <string name="morphe_hide_keyword_content_home_title">Sakrij videe na kartici „Početna” prema ključnim rečima</string>
   <string name="morphe_hide_keyword_content_search_title">Sakrij rezultate pretrage prema ključnim rečima</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Sakrij videe na kartici „Praćenja” prema ključnim rečima</string>
-  <string name="morphe_hide_keyword_content_comments_title">Sakrij komentare prema ključnim rečima</string>
   <string name="morphe_hide_keyword_content_phrases_title">Ključne reči za sakrivanje</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -850,7 +854,6 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_exit_fullscreen_entry_4">Uspravno i vodoravno</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestovi punog ekrana</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gestovi plejera za ulazak ili izlazak iz režima punog ekrana</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Onemogući gest povlačenja nagore u portretnom režimu</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Isključi gest povlačenja prema dole u portretnom režimu</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Isključi gest povlačenja prema dole u pejzažnom režimu</string>
@@ -860,13 +863,22 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_open_videos_fullscreen_entry_2">Uspravno</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Vodoravno</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Skala videa na celom ekranu</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Podrazumevana</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Rastegni (ispuni ekran)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zumiraj (iseci da ispuni)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Prikaži dugme za skaliranje videa</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Dodirni da ciklično menjaš Podrazumevano, Rastegnuto i Zumirano</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Neprozirnost preklopa plejera</string>
   <string name="morphe_player_overlay_opacity_summary">Podesi nivo prozirnosti (0 je providno, 100 je neprovidno)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Neprozirnost preklopa plejera mora biti između 0 i 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Traka za pretragu</string>
   <string name="morphe_searchbar_type_entry_disabled">Onemogućen</string>
+  <string name="morphe_searchbar_type_entry_wide">Široka</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Ekstra široka</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Raspored uređaja</string>

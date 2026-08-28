@@ -184,6 +184,18 @@ Mar sin féin, má chumasaíonn tú é seo, logálfar roinnt sonraí úsáideora
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Bain an dialóg rogha lucht féachana</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Ní théann sé seo thar an srian aoise. Glacann sé leis go huathoibríoch.</string>
+  <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_potoken_provider_screen_title">Soláthraí PoToken</string>
+  <string name="morphe_potoken_provider_screen_summary">Cumraigh soláthraí PoToken chun fadhbanna athsheinm a chosc</string>
+  <string name="morphe_external_potoken_provider_title">Soláthraí seachtrach PoToken</string>
+  <string name="morphe_external_potoken_provider_summary">"Deisíonn sé fadhbanna athsheinm ag baint úsáide as minteoir seachtrach PoToken (Turgnamhach)
+
+Mura bhfuil tú i d’úsáideoir YouTube Premium, b’fhéidir nach mbeidh an socrú seo ag teastáil"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">Mura n-oibríonn sé, déan iarracht MicroG a dhúnadh le fórsa</string>
+  <string name="morphe_external_potoken_provider_settings_summary">Oscail socruithe PotHelper</string>
+  <string name="morphe_external_potoken_provider_about_summary">"Tá an ghné seo á forbairt faoi láthair agus b'fhéidir nach n-oibreoidh sí
+
+Tapáil anseo chun PotHelper a íoslódáil"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Leagan aip bréige</string>
   <string name="morphe_spoof_app_version_summary">Meallann sé an freastalaí le go gceapfá go bhfuil tú ag úsáid seanleagan den aip chun gnéithe oidhreachta den chomhéadan úsáideora a athbhunú.</string>

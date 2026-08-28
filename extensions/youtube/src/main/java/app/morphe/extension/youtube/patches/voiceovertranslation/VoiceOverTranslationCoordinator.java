@@ -12,6 +12,7 @@ import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.youtube.patches.PlayerVolumePatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVoiceOverTranslationPatch;
 import app.morphe.extension.youtube.settings.Settings;
@@ -59,7 +60,7 @@ public final class VoiceOverTranslationCoordinator {
             deactivateOfficial();
             deactivateYandex();
             activeEngine = Engine.NONE;
-            VotOriginalVolumePatch.clearAudioMultiplier();
+            PlayerVolumePatch.clearDuckMultiplier();
         }
 
         currentVideoId = newVideoId;
@@ -86,7 +87,7 @@ public final class VoiceOverTranslationCoordinator {
         if (activeEngine == Engine.OFFICIAL) {
             VoiceOverTranslationPatch.videoTimeChanged(timeMs);
         } else if (activeEngine == Engine.NONE) {
-            VotOriginalVolumePatch.clearAudioMultiplier();
+            PlayerVolumePatch.clearDuckMultiplier();
         }
     }
 
@@ -133,7 +134,7 @@ public final class VoiceOverTranslationCoordinator {
         deactivateOfficial();
         deactivateYandex();
         activeEngine = Engine.NONE;
-        VotOriginalVolumePatch.clearAudioMultiplier();
+        PlayerVolumePatch.clearDuckMultiplier();
         notifyStateChanged();
     }
 
@@ -162,12 +163,12 @@ public final class VoiceOverTranslationCoordinator {
 
     private static void deactivateOfficial() {
         VoiceOverTranslationPatch.deactivateTranslation();
-        VotOriginalVolumePatch.clearAudioMultiplier();
+        PlayerVolumePatch.clearDuckMultiplier();
     }
 
     private static void deactivateYandex() {
         YandexVoiceOverTranslationPatch.cancelTranslation();
-        VotOriginalVolumePatch.clearAudioMultiplier();
+        PlayerVolumePatch.clearDuckMultiplier();
     }
 
     private static void onOfficialStateChanged() {

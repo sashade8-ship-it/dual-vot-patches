@@ -34,6 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_remove_background_playback_restrictions_title">Fjern restriktioner for afspilning i baggrunden</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiver baggrundsafspilning</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Deaktiver begrænsning af rullehastighed</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Deaktiver opdateringer af layout</string>
   <string name="morphe_disable_layout_updates_summary">Forhindrer serveren i at opdatere applayoutet</string>
@@ -182,6 +183,7 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_video_details_section_title">Skjul sektionen \'Videodetajler\'</string>
   <string name="morphe_hide_filter_bar_screen_title">Filterbjælke</string>
   <string name="morphe_hide_filter_bar_screen_summary">Vælg, hvor du vil skjule filtrets rullelinje</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Skjul på kanalsiden</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Skjul i kommentarer</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Skjul i feeds</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Skjul i relaterede videoer</string>
@@ -198,6 +200,8 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_join_button_title">Skjul knappen Deltag</string>
   <string name="morphe_hide_links_preview_title">Skjul forhåndsvisning af links</string>
   <string name="morphe_hide_links_preview_summary">Skjuler de klikbare web links i kanalens header</string>
+  <string name="morphe_hide_members_only_chip_title">Skjul \'Kun medlemmer\'-chip</string>
+  <string name="morphe_hide_members_only_chip_summary">Skjuler \'Kun medlemmer\'-chip i kanalens filterlinje</string>
   <string name="morphe_hide_members_shelf_title">Skjul medlemshylden</string>
   <string name="morphe_hide_members_shelf_summary">Skjuler listen over kanalmedlemmer</string>
   <string name="morphe_hide_posts_shelf_title">Skjul opslags hylde</string>
@@ -262,10 +266,10 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Renser fremhævede søgelinks og efterlader kun den originale tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Nøgleordsfilter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Vælg specifikke ord eller sætninger for at skjule videoer i feeds og søgninger</string>
+  <string name="morphe_hide_keyword_content_comments_title">Skjul kommentarer efter nøgleord</string>
   <string name="morphe_hide_keyword_content_home_title">Skjul Start videoer med søgeord</string>
   <string name="morphe_hide_keyword_content_search_title">Skjul søgeresultater via søgeord</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Skjul abonnementsvideoer via søgeord</string>
-  <string name="morphe_hide_keyword_content_comments_title">Skjul kommentarer efter nøgleord</string>
   <string name="morphe_hide_keyword_content_phrases_title">Nøgleord at skjule</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -447,13 +451,19 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_reload_video_button_title">Strygning af lysstyrken til den laveste værdi aktiverer systemets automatisk lysstyrke</string>
   <string name="morphe_dismiss_player_not_available_toast">Video-ID er ikke tilgængeligt. Genindlæs venligst videoen manuelt</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">Vis knappen Gem til Se senere</string>
+  <string name="morphe_save_to_watch_later_button_summary">Tryk for at gemme til Se senere, tryk og hold for kø-indstillinger</string>
   <string name="morphe_save_to_watch_later_success_toast">Video gemt i afspilningsliste til senere</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Denne video er allerede gemt i afspilningslisten til senere</string>
   <string name="morphe_save_to_watch_later_error_toast">Kunne ikke gemme denne video i afspilningslisten til senere</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Gem til Se senere</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Vis knappen Gem til Se senere i børnevideoer</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Giver mulighed for at gemme børnerelaterede videoer i menuen \'Se senere\'</string>
   <string name="morphe_queue_flyout_title">Tilføj til Morphe-kø</string>
   <string name="morphe_queue_restore_title">Behold køen mellem sessioner</string>
   <string name="morphe_queue_restore_summary">Køen bevares efter genstart af appen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Byt rundt på Gem og Kø-handlinger</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tryk for kø-indstillinger, tryk og hold for at gemme til Se senere</string>
   <string name="morphe_queue_override_flyout_menu_title">Erstat feed flyout kø-knap</string>
   <string name="morphe_queue_override_flyout_menu_summary">Åbner Morphe-køen i stedet for YouTube-køen</string>
   <string name="morphe_queue_add_flyout_menu_title">Tilføj feed-flyout-kø-menupunkt</string>
@@ -842,7 +852,6 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_exit_fullscreen_entry_4">Portræt og landskab</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestusser til fuld skærm</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Afspillergestusser til at indgå eller forlade fuldskærmstilstand</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Deaktiver swipe-op-gestus i portrættilstand</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Deaktiver gestus med nedadstræk i portrættilstand</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Deaktiver gestus med nedadstræk i landskabsttilstand</string>
@@ -852,13 +861,22 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_open_videos_fullscreen_entry_2">Portræt</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landskab</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Skala for fuldskærmsvideo</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Standard</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Stræk (fyld skærmen)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (beskær for at fylde)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Vis knappen for videoskala</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Tryk for at skifte mellem Standard, Stræk og Zoom</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spiller overlay gennemsigtighed</string>
   <string name="morphe_player_overlay_opacity_summary">Juster gennemsigtighedsniveauet (0 er gennemsigtigt, 100 er uigennemsigtigt)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Spiller overlay gennemsigtighed skal være mellem 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Søgefelt</string>
   <string name="morphe_searchbar_type_entry_disabled">Deaktiveret</string>
+  <string name="morphe_searchbar_type_entry_wide">Bred</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Ekstra bred</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Enhedslayout</string>

@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">隐藏“视频详情”部分</string>
   <string name="morphe_hide_filter_bar_screen_title">筛选栏</string>
   <string name="morphe_hide_filter_bar_screen_summary">选择隐藏滚动筛选栏的位置</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">在频道页面隐藏</string>
   <string name="morphe_hide_filter_bar_in_comments_title">在评论中隐藏</string>
   <string name="morphe_hide_filter_bar_in_feed_title">在动态中隐藏</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">在相关视频中隐藏</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">隐藏“加入”按钮</string>
   <string name="morphe_hide_links_preview_title">隐藏链接预览</string>
   <string name="morphe_hide_links_preview_summary">隐藏频道标题中的可点击网络链接</string>
+  <string name="morphe_hide_members_only_chip_title">隐藏“仅限会员”标签</string>
+  <string name="morphe_hide_members_only_chip_summary">在频道筛选栏中隐藏“仅限会员”标签</string>
   <string name="morphe_hide_members_shelf_title">隐藏会员专区</string>
   <string name="morphe_hide_members_shelf_summary">隐藏频道成员列表</string>
   <string name="morphe_hide_posts_shelf_title">隐藏帖子层级</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">清理高亮显示的搜索链接，仅保留原始纯文本</string>
   <string name="morphe_hide_keyword_content_screen_title">关键词过滤</string>
   <string name="morphe_hide_keyword_content_screen_summary">选择隐藏信息流和搜索中的视频的特定词语或短语</string>
+  <string name="morphe_hide_keyword_content_comments_title">隐藏关键词评论</string>
   <string name="morphe_hide_keyword_content_home_title">过滤首页视频</string>
   <string name="morphe_hide_keyword_content_search_title">过滤搜索结果</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">过滤订阅视频</string>
-  <string name="morphe_hide_keyword_content_comments_title">隐藏关键词评论</string>
   <string name="morphe_hide_keyword_content_phrases_title">要隐藏的关键字</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -851,7 +854,6 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_4">纵向和横向显示</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">全屏手势</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">使用手势进入或退出全屏模式</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">禁用向上滑动返回手势</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">禁用竖屏下滑手势</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">禁用横屏下滑手势</string>
@@ -861,13 +863,22 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_2">纵向显示</string>
   <string name="morphe_open_videos_fullscreen_entry_3">横向显示</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">全屏视频缩放</string>
   <string name="morphe_fullscreen_video_scale_entry_default">默认</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">拉伸（填充屏幕）</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">缩放（裁剪填充）</string>
+  <string name="morphe_fullscreen_video_scale_button_title">显示视频缩放按钮</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">点击循环切换默认、拉伸和缩放</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">播放器叠加层不透明度</string>
   <string name="morphe_player_overlay_opacity_summary">调整透明度 (0 为透明，100 为不透明)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">播放器叠加层不透明度必须介于 0-100 之间</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">搜索栏</string>
   <string name="morphe_searchbar_type_entry_disabled">已禁用</string>
+  <string name="morphe_searchbar_type_entry_wide">宽</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">超宽</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">设备布局</string>

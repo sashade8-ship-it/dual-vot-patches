@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">Скрыть секцию \"Подробности видео\"</string>
   <string name="morphe_hide_filter_bar_screen_title">Панель фильтров</string>
   <string name="morphe_hide_filter_bar_screen_summary">Выберите, где скрыть панель фильтров прокрутки</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Скрыть на странице канала</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Скрыть в комментариях</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Скрыть панель фильтров в ленте</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Скрыть панель фильтров в похожих видео</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">Скрыть кнопку \"Присоединиться\"</string>
   <string name="morphe_hide_links_preview_title">Скрыть предпросмотр ссылок</string>
   <string name="morphe_hide_links_preview_summary">Скрывает кликабельные веб-ссылки в заголовке канала</string>
+  <string name="morphe_hide_members_only_chip_title">Скрыть чип «Только для участников»</string>
+  <string name="morphe_hide_members_only_chip_summary">Скрывает чип «Только для участников» в панели фильтров канала</string>
   <string name="morphe_hide_members_shelf_title">Скрыть секцию участников</string>
   <string name="morphe_hide_members_shelf_summary">Скрывает список участников канала</string>
   <string name="morphe_hide_posts_shelf_title">Скрыть полку с публикациями</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Очищает выделенные ссылки поиска, оставляя только исходный простой текст</string>
   <string name="morphe_hide_keyword_content_screen_title">Фильтр по ключевым словам</string>
   <string name="morphe_hide_keyword_content_screen_summary">Выберите определенные слова или фразы для скрытия видео в лентах и результатах поиска</string>
+  <string name="morphe_hide_keyword_content_comments_title">Скрыть комментарии по ключевым словам</string>
   <string name="morphe_hide_keyword_content_home_title">Скрыть видео на \"Главной\" по ключевым словам</string>
   <string name="morphe_hide_keyword_content_search_title">Скрыть результаты поиска по ключевым словам</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Скрыть видео в \"Подписках\" по ключевым словам</string>
-  <string name="morphe_hide_keyword_content_comments_title">Скрыть комментарии по ключевым словам</string>
   <string name="morphe_hide_keyword_content_phrases_title">Ключевые слова для скрытия</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -853,10 +856,11 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_4">Портрет и ландшафт</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Жесты полноэкранного режима</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Жесты проигрывателя для входа или выхода из полноэкранного режима</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Жесты плеера в полноэкранном режиме</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Отключить жест свайпа вверх в портретном режиме</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Отключить жест смахивания вниз в портретной ориентации</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Отключить жест смахивания вниз в альбомной ориентации</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Отключить жест сжатия для масштабирования</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Открыть видео в полноэкранном режиме</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Выключено</string>
@@ -869,6 +873,8 @@ Second \"item\" text"</string>
   <string name="morphe_fullscreen_video_scale_entry_zoom">Масштаб (обрезка для заполнения)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Показать кнопку масштабирования видео</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Нажмите для переключения между режимами «По умолчанию», «Растянуть» и «Масштаб»</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Показать кнопку отключения звука</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Затемнение плеера при нажатии</string>
   <string name="morphe_player_overlay_opacity_summary">Настройте уровень прозрачности (0 — прозрачный, 100 — непрозрачный)</string>

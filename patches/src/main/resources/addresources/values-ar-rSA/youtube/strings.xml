@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">إخفاء قسم \'تفاصيل الفيديو\'</string>
   <string name="morphe_hide_filter_bar_screen_title">شريط الفئة</string>
   <string name="morphe_hide_filter_bar_screen_summary">اختر مكان إخفاء شريط التصفية المتحرك</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">إخفاء في صفحة القناة</string>
   <string name="morphe_hide_filter_bar_in_comments_title">إخفاء في التعليقات</string>
   <string name="morphe_hide_filter_bar_in_feed_title">إخفاء في الخلاصات</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">إخفاء في الفيديوهات ذات الصلة</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">إخفاء زر الانضمام</string>
   <string name="morphe_hide_links_preview_title">إخفاء عرض الروابط</string>
   <string name="morphe_hide_links_preview_summary">يخفي روابط الويب القابلة للنقر في اعلى صفحة القناة</string>
+  <string name="morphe_hide_members_only_chip_title">إخفاء عنصر \'الأعضاء فقط\'</string>
+  <string name="morphe_hide_members_only_chip_summary">يُخفي عنصر \'الأعضاء فقط\' في شريط تصفية القناة</string>
   <string name="morphe_hide_members_shelf_title">إخفاء رف الأعضاء</string>
   <string name="morphe_hide_members_shelf_summary">يخفي قائمة أعضاء القناة</string>
   <string name="morphe_hide_posts_shelf_title">إخفاء رف المنشورات</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">ينظف روابط البحث المميزة، ويترك فقط النص الأصلي العادي</string>
   <string name="morphe_hide_keyword_content_screen_title">تصفية الكلمات المفتاحية</string>
   <string name="morphe_hide_keyword_content_screen_summary">اختر كلمات أو عبارات محددة لإخفاء الفيديوهات في الخلاصات ونتائج البحث</string>
+  <string name="morphe_hide_keyword_content_comments_title">إخفاء التعليقات بواسطة الكلمات المفتاحية</string>
   <string name="morphe_hide_keyword_content_home_title">إخفاء فيديوهات الصفحة الرئيسية بواسطة الكلمات المفتاحية</string>
   <string name="morphe_hide_keyword_content_search_title">إخفاء نتائج البحث عن طريق الكلمات المفتاحية</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">إخفاء الفيديوهات الخاصة بالاشتراكات عن طريق الكلمات المفتاحية</string>
-  <string name="morphe_hide_keyword_content_comments_title">إخفاء التعليقات بواسطة الكلمات المفتاحية</string>
   <string name="morphe_hide_keyword_content_phrases_title">الكلمات المفتاحية المراد إخفاؤها</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -856,10 +859,11 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_exit_fullscreen_entry_4">بالطول والعرض</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">إيماءات ملء الشاشة</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">إيماءات المشغل للدخول أو الخروج من وضع ملء الشاشة</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">إيماءات المشغل في وضع ملء الشاشة</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">تعطيل إيماءة التمرير لأعلى في الوضع الرأسي</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">تعطيل إيماءة التمرير لأسفل في الوضع الرأسي</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">تعطيل إيماءة التمرير لأسفل في الوضع الأفقي</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">تعطيل إيماءة التكبير بالإصبع</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">فتح الفيديوهات بوضع ملء الشاشة</string>
   <string name="morphe_open_videos_fullscreen_entry_1">معطّل</string>
@@ -872,6 +876,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_fullscreen_video_scale_entry_zoom">تكبير (قص لملء الفراغ)</string>
   <string name="morphe_fullscreen_video_scale_button_title">عرض زر مقياس الفيديو</string>
   <string name="morphe_fullscreen_video_scale_button_summary">انقر للتنقل بين الوضع الافتراضي، التمديد، والتكبير</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">عرض زر كتم الصوت</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">شفافية واجهة المشغل</string>
   <string name="morphe_player_overlay_opacity_summary">ضبط مستوى الشفافية (0 شفاف، 100 معتم)</string>

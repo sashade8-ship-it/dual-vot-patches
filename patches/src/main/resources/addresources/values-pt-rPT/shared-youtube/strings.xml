@@ -184,6 +184,7 @@ No entanto, ativar isto também irá registar alguns dados do utilizador, como o
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Remover diálogo de aviso de conteúdo</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Isso não ignora a restrição de idade. Apenas a aceita automaticamente</string>
+  <!-- misc.potoken.poTokenProviderPatch -->
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Versão do Spoof app</string>
   <string name="morphe_spoof_app_version_summary">Engana o servidor, fazendo com que ele pense que você está usando uma versão mais antiga do aplicativo, para restaurar recursos de interface de usuário legados.</string>

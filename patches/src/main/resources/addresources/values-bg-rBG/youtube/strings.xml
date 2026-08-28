@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">Скрий секцията „Подробности за видеото“</string>
   <string name="morphe_hide_filter_bar_screen_title">Филтрите филтрите и търсенето в домакинството</string>
   <string name="morphe_hide_filter_bar_screen_summary">Изберете къде да скриете лентата с филтри</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Скриване в страницата на канала</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Скриване в коментарите</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Скриване в емисиите</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Скриване в свързани видеоклипове</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">Скриване на бутона \'Присъедини се\'</string>
   <string name="morphe_hide_links_preview_title">Скрийте преглед на връзки</string>
   <string name="morphe_hide_links_preview_summary">Скрива кликабилните уеб връзки в горната част на канала</string>
+  <string name="morphe_hide_members_only_chip_title">Скриване на значката „Само за членове“</string>
+  <string name="morphe_hide_members_only_chip_summary">Скрива значката „Само за членове“ в лентата за филтър на канала</string>
   <string name="morphe_hide_members_shelf_title">Скрийте членове рафт</string>
   <string name="morphe_hide_members_shelf_summary">Скрива списъка с членове на канала</string>
   <string name="morphe_hide_posts_shelf_title">Скриване на рафта с публикации</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Пречиства връзките от търсенето, оставяйки само оригиналния обикновен текст</string>
   <string name="morphe_hide_keyword_content_screen_title">Филтър по ключова дума</string>
   <string name="morphe_hide_keyword_content_screen_summary">Изберете конкретни думи или фрази за скриване на видеа в емисиите и търсенето</string>
+  <string name="morphe_hide_keyword_content_comments_title">Скриване на коментари по ключови думи</string>
   <string name="morphe_hide_keyword_content_home_title">Скрийте видеоклипове в домакинството по ключови</string>
   <string name="morphe_hide_keyword_content_search_title">Скрийте видеоклипове в търсене по ключови</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Скрийте видеоклипове в абонаменти по ключови</string>
-  <string name="morphe_hide_keyword_content_comments_title">Скриване на коментари по ключови думи</string>
   <string name="morphe_hide_keyword_content_phrases_title">Ключови за скриване</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -851,7 +854,6 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_4">Портрет и пейзаж</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Гъвкави жестове за цял екран</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Жестове на плейъра за влизане или излизане от режим на цял екран</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Деактивиране на жестовото движение на плъзгане нагоре в портретен режим</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Деактивиране на жестовото плъзгане надолу в портретен режим</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Деактивиране на жестовото плъзгане надолу в хоризонтален режим</string>
@@ -861,6 +863,13 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Портрет</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Пейзаж</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Мащаб на видеото на цял екран</string>
+  <string name="morphe_fullscreen_video_scale_entry_default">По подразбиране</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Разтягане (запълване на екрана)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Увеличение (изрязване, за да запълни)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Показване на бутона за мащаб на видеото</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Докоснете, за да превключвате между По подразбиране, Разтягане и Увеличение</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Скрий дублиране на видеа</string>
   <string name="morphe_player_overlay_opacity_summary">Регулирайте нивото на прозрачност (0 е прозрачно, 100 е непрозрачно)</string>
