@@ -34,6 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_remove_background_playback_restrictions_title">Verwyder agtergrond speel beperkings</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiveer agtergrondweergawe</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">Deaktiveer blaai-spoedlimiet</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Deaktiveer uitleg-opdaterings</string>
   <string name="morphe_disable_layout_updates_summary">Verhoed dat die bediener die uitleg van die app opdateer</string>
@@ -182,6 +183,7 @@ Veranderings sluit in:
   <string name="morphe_hide_video_details_section_title">Verberg \'Video details\' afdeling</string>
   <string name="morphe_hide_filter_bar_screen_title">Filterbalk</string>
   <string name="morphe_hide_filter_bar_screen_summary">Kies waar om die rolbalkfilterbalk te verberg</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Verberg op kanaalbladsy</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Verberg in kommentaar</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Versteek in feeds</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Versteek in verwante video\'s</string>
@@ -198,6 +200,8 @@ Veranderings sluit in:
   <string name="morphe_hide_join_button_title">Verberg Aansluit knoppie</string>
   <string name="morphe_hide_links_preview_title">Verberg skakelvoorskou</string>
   <string name="morphe_hide_links_preview_summary">Verberg die klikbare web skakels in die kanaal header</string>
+  <string name="morphe_hide_members_only_chip_title">Verberg \'Slegs lede\'-skyfie</string>
+  <string name="morphe_hide_members_only_chip_summary">Verberg die \'Slegs lede\'-skyfie in die kanaalfilterbalk</string>
   <string name="morphe_hide_members_shelf_title">Verberg ledemaatrak</string>
   <string name="morphe_hide_members_shelf_summary">Verberg die lys van kanaallede</string>
   <string name="morphe_hide_posts_shelf_title">Verberg poste-plank</string>
@@ -262,10 +266,10 @@ Veranderings sluit in:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Saniteer uitgeligte soekskakels en laat slegs die oorspronklike platte teks oor</string>
   <string name="morphe_hide_keyword_content_screen_title">Sleutelwoord filter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Kies spesifieke woorde of frases om video\'s in feeds en soek te verberg</string>
+  <string name="morphe_hide_keyword_content_comments_title">Verberg kommentare volgens sleutelwoorde</string>
   <string name="morphe_hide_keyword_content_home_title">Verberg Tuisfideo\'s met sleutelwoorde</string>
   <string name="morphe_hide_keyword_content_search_title">Verberg soekresultate met sleutelwoorde</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Verberg Subscriptions video\'s volgens sleutelwoorde</string>
-  <string name="morphe_hide_keyword_content_comments_title">Verberg kommentare volgens sleutelwoorde</string>
   <string name="morphe_hide_keyword_content_phrases_title">Sleutelwoorde om te verberg</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -459,6 +463,7 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <string name="morphe_queue_restore_title">Behou tou tussen sessies</string>
   <string name="morphe_queue_restore_summary">Tou word behou na die herbegin van die app</string>
   <string name="morphe_swap_save_and_queue_actions_title">Ruil die Spaar en Waglys-aksies</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">Tik vir tou-opsies, tik en hou om na Kyk later te stoor</string>
   <string name="morphe_queue_override_flyout_menu_title">Vervang voedingsvloei-wyser-knoppie</string>
   <string name="morphe_queue_override_flyout_menu_summary">Oop die Morphe-ry vir die YouTube-ry</string>
   <string name="morphe_queue_add_flyout_menu_title">Voeg voer flyout-tou-menu-item by</string>
@@ -849,7 +854,6 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_exit_fullscreen_entry_4">Portret en landskap</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Volskerm gebare</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Speler gebare om in of uit volskerm modus te gaan</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Deaktiveer portret opwaartse swipe gebaar</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Deaktiveer portret-afglingsgebare</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Deaktiveer landskap-afglingsgebare</string>
@@ -859,13 +863,22 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_open_videos_fullscreen_entry_2">Portret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landskap</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Volskerm-videoskaal</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Verstek</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Rek (vul skerm)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zoem (sny om te vul)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Wys videoskaalknoppie</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Tik om deur Standaard, Rek en Zoem te wissel</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Speler oorlegslaag deursigtigheid</string>
   <string name="morphe_player_overlay_opacity_summary">Pas die deursigtigheidsvlak aan (0 is deursigtig, 100 is ondeursigtig)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Speler oorlegslaag deursigtigheid moet tussen 0-100 wees</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Soekbalk</string>
   <string name="morphe_searchbar_type_entry_disabled">Deaktiveer</string>
+  <string name="morphe_searchbar_type_entry_wide">Breed</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Ekstra breed</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Toestel uitleg</string>

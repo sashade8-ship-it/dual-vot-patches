@@ -183,6 +183,7 @@ Změny zahrnují:
   <string name="morphe_hide_video_details_section_title">Skrýt sekci „Podrobnosti o videu“</string>
   <string name="morphe_hide_filter_bar_screen_title">Lišta filtrů</string>
   <string name="morphe_hide_filter_bar_screen_summary">Vyberte, kde se má skrýt posuvná lišta filtrů</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Skrýt na stránce kanálu</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Skrýt v komentářích</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Skrýt na Domovské obrazovce</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Skrýt v souvisejících videích</string>
@@ -199,6 +200,8 @@ Změny zahrnují:
   <string name="morphe_hide_join_button_title">Skrýt tlačítko „Připojit se“</string>
   <string name="morphe_hide_links_preview_title">Skrýt náhled odkazů</string>
   <string name="morphe_hide_links_preview_summary">Skryje webové odkazy v záhlaví kanálu</string>
+  <string name="morphe_hide_members_only_chip_title">Skrýt štítek ‚Pouze pro členy‘</string>
+  <string name="morphe_hide_members_only_chip_summary">Skrývá štítek ‚Pouze pro členy‘ v liště filtrů kanálu</string>
   <string name="morphe_hide_members_shelf_title">Skrýt sekci pro členy</string>
   <string name="morphe_hide_members_shelf_summary">Skryje seznam členů kanálu</string>
   <string name="morphe_hide_posts_shelf_title">Skrýt sekci s příspěvky</string>
@@ -263,10 +266,10 @@ Změny zahrnují:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Vyčistí zvýrazněné odkazy ve vyhledávání a ponechá pouze původní čistý text</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtr klíčových slov</string>
   <string name="morphe_hide_keyword_content_screen_summary">Vyberte konkrétní slova nebo fráze, pomocí kterých chcete skrýt videa v kanálech a ve vyhledávání</string>
+  <string name="morphe_hide_keyword_content_comments_title">Skrýt komentáře podle klíčových slov</string>
   <string name="morphe_hide_keyword_content_home_title">Skrýt domovská videa podle klíčových slov</string>
   <string name="morphe_hide_keyword_content_search_title">Skrýt výsledky vyhledávání podle klíčových slov</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Skrýt videa z odběrů podle klíčových slov</string>
-  <string name="morphe_hide_keyword_content_comments_title">Skrýt komentáře podle klíčových slov</string>
   <string name="morphe_hide_keyword_content_phrases_title">Klíčová slova ke skrytí</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -448,9 +451,13 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_reload_video_button_title">Zobrazit tlačítko Obnovit video</string>
   <string name="morphe_dismiss_player_not_available_toast">ID videa není k dispozici. Prosím, video ručně obnovte</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">Zobrazit tlačítko Uložit do seznamu Později</string>
+  <string name="morphe_save_to_watch_later_button_summary">Klepnutím uložíte do seznamu Později, podržením zobrazíte možnosti fronty</string>
   <string name="morphe_save_to_watch_later_success_toast">Video bylo úspěšně uloženo do seznamu pro pozdější zhlédnutí</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Toto video je již uloženo do seznamu pro pozdější zhlédnutí</string>
   <string name="morphe_save_to_watch_later_error_toast">Nelze uložit toto video do seznamu pro pozdější zhlédnutí</string>
+  <string name="morphe_save_to_watch_later_flyout_title">Uložit do seznamu Později</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">Zobrazit tlačítko Uložit do seznamu Později u videí pro děti</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Umožňuje ukládat videa pro děti do rozbalovací nabídky \'Přehrát později\'.</string>
   <string name="morphe_queue_flyout_title">Přidat do Morphe fronty</string>
   <string name="morphe_queue_restore_title">Udržet frontu mezi relacemi</string>
@@ -845,7 +852,6 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <string name="morphe_exit_fullscreen_entry_4">Na výšku i na šířku</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesta pro celou obrazovku</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gesta přehrávače pro vstup nebo výstup z režimu celé obrazovky</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Zakázat gesta při přejetí prstem nahoru v portrétním režimu</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Zakázat gesto přejetím dolů na výšku</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Zakázat gesto přejetím dolů na šířku</string>
@@ -855,7 +861,13 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <string name="morphe_open_videos_fullscreen_entry_2">Na výšku</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Na šířku</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Měřítko videa na celou obrazovku</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Výchozí</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Roztáhnout (vyplnit obrazovku)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Přiblížit (vyplnit obrazovku)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Zobrazit tlačítko měřítka videa</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Klepnutím přepínáte mezi Výchozí, Roztáhnout a Přiblížit</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Průhlednost překrytí přehrávače</string>
   <string name="morphe_player_overlay_opacity_summary">Upravte úroveň průhlednosti (0 je průhledná, 100 je neprůhledná)</string>

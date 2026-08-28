@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">Приховати секцію \"Інформація про відео\"</string>
   <string name="morphe_hide_filter_bar_screen_title">Панель фільтрів</string>
   <string name="morphe_hide_filter_bar_screen_summary">Виберіть, де приховати панель фільтрів із прокруткою</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Приховати на сторінці каналу</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Приховати в коментарях</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Приховати у стрічках</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Приховати у пов\'язаних відео</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">Приховати кнопку \"Підписатися +\"</string>
   <string name="morphe_hide_links_preview_title">Приховати попередній перегляд посилань</string>
   <string name="morphe_hide_links_preview_summary">Приховує клікабельні вебпосилання у шапці каналу</string>
+  <string name="morphe_hide_members_only_chip_title">Сховати кнопку \"Лише для спонсорів\"</string>
+  <string name="morphe_hide_members_only_chip_summary">Приховує кнопку \"Лише для спонсорів\" на панелі фільтрів каналу</string>
   <string name="morphe_hide_members_shelf_title">Приховати панель учасників</string>
   <string name="morphe_hide_members_shelf_summary">Приховує список учасників каналу</string>
   <string name="morphe_hide_posts_shelf_title">Приховати панель з дописами</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Очищує виділені пошукові посилання, залишаючи лише оригінальний звичайний текст</string>
   <string name="morphe_hide_keyword_content_screen_title">Фільтр ключових слів</string>
   <string name="morphe_hide_keyword_content_screen_summary">Виберіть слова або фрази для приховування відео у стрічках і пошуку</string>
+  <string name="morphe_hide_keyword_content_comments_title">Приховати коментарі за ключовими словами</string>
   <string name="morphe_hide_keyword_content_home_title">Приховати відео на головній</string>
   <string name="morphe_hide_keyword_content_search_title">Приховати відео в пошуку</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Приховати відео в підписках</string>
-  <string name="morphe_hide_keyword_content_comments_title">Приховати коментарі за ключовими словами</string>
   <string name="morphe_hide_keyword_content_phrases_title">Ключові слова, які потрібно приховати</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -850,7 +853,6 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_4">Портретний і альбомний</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Повноекранні жести</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Жести плеєра для входу та виходу з повноекранного режиму</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Вимкнути жест свайпу вгору у портретному режимі</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Вимкнути жест свайпу вниз у портретному режимі</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Вимкнути жест свайпу вниз у ландшафтному режимі</string>
@@ -866,6 +868,8 @@ Second \"item\" text"</string>
   <string name="morphe_fullscreen_video_scale_entry_zoom">Масштабований (обрізати для заповнення)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Показувати кнопку масштабу відео</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Натисніть, щоб перемикати між \"Типовим\", \"Розтягнутим\" та \"Масштабованим\"</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Показувати кнопку \"Вимкнути звук\"</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Затемнення плеєра при натисканні</string>
   <string name="morphe_player_overlay_opacity_summary">Налаштовує рівень прозорості (0 це прозоро, 100 це непрозоро)</string>

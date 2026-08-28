@@ -183,6 +183,7 @@ Zmiany obejmują:
   <string name="morphe_hide_video_details_section_title">Ukryj sekcję \"Szczegóły filmu\"</string>
   <string name="morphe_hide_filter_bar_screen_title">Pasek filtrów</string>
   <string name="morphe_hide_filter_bar_screen_summary">Zdecyduj, gdzie ukryć przewijany pasek filtrów</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Ukryj na stronie kanału</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Ukryj w komentarzach</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Ukryj na stronie głównej</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Ukryj w powiązanych filmach</string>
@@ -199,6 +200,8 @@ Zmiany obejmują:
   <string name="morphe_hide_join_button_title">Ukryj przycisk Wesprzyj</string>
   <string name="morphe_hide_links_preview_title">Ukryj podgląd linków</string>
   <string name="morphe_hide_links_preview_summary">Ukrywa klikalne linki do stron internetowych w nagłówku kanału</string>
+  <string name="morphe_hide_members_only_chip_title">Ukryj etykietę \"Tylko wspierający\"</string>
+  <string name="morphe_hide_members_only_chip_summary">Ukrywa etykietę \"Tylko wspierający\" na pasku filtrów kanału</string>
   <string name="morphe_hide_members_shelf_title">Ukryj sekcję wspierających</string>
   <string name="morphe_hide_members_shelf_summary">Ukrywa listę wspierających kanał</string>
   <string name="morphe_hide_posts_shelf_title">Ukryj sekcję postów</string>
@@ -263,10 +266,10 @@ Zmiany obejmują:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Oczyszcza linkowanie z wyróżnionych fraz wyszukiwania, zostawiając tylko oryginalny, zwykły tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtry słów</string>
   <string name="morphe_hide_keyword_content_screen_summary">Wybierz konkretne słowa lub frazy, aby ukryć filmy na stronie głównej i w wynikach wyszukiwania</string>
+  <string name="morphe_hide_keyword_content_comments_title">Ukryj komentarze</string>
   <string name="morphe_hide_keyword_content_home_title">Ukryj filmy na stronie głównej</string>
   <string name="morphe_hide_keyword_content_search_title">Ukryj wyniki wyszukiwania</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Ukryj filmy na stronie subskrypcji</string>
-  <string name="morphe_hide_keyword_content_comments_title">Ukryj komentarze</string>
   <string name="morphe_hide_keyword_content_phrases_title">Słowa do ukrycia</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -850,17 +853,25 @@ To ustawienie działa tylko wtedy, gdy autoodtwarzanie jest wyłączone. Możesz
   <string name="morphe_exit_fullscreen_entry_4">W orientacji pionowej i poziomej</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesty trybu pełnoekranowego</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gesty odtwarzacza do wchodzenia lub wychodzenia z trybu pełnoekranowego</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gesty odtwarzacza w trybie pełnoekranowym</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Wyłącz gest przeciągnięcia w górę w orientacji pionowej</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Wyłącz gest przeciągnięcia w dół w orientacji pionowej</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Wyłącz gest przeciągnięcia w dół w orientacji poziomej</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Wyłącz gest powiększania palcami</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Otwieraj filmy w trybie pełnoekranowym</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Wyłączone</string>
   <string name="morphe_open_videos_fullscreen_entry_2">W orientacji pionowej</string>
   <string name="morphe_open_videos_fullscreen_entry_3">W orientacji poziomej</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Skalowanie filmu na pełnym ekranie</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Domyślne</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Rozciągnij (wypełnij ekran)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Powiększ (przytnij, aby wypełnić)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Pokaż przycisk skalowania filmu</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Dotknij, aby przełączać między trybami: Domyślne, Rozciągnij i Powiększ</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Pokaż przycisk Wycisz</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Przezroczystość nakładki odtwarzacza</string>
   <string name="morphe_player_overlay_opacity_summary">Dostosuj poziom przezroczystości (0 to pełna przezroczystość, 100 to brak przezroczystości)</string>

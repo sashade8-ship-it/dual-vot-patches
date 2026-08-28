@@ -183,6 +183,7 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_video_details_section_title">\"Video detalları\" bölməsini gizlət</string>
   <string name="morphe_hide_filter_bar_screen_title">Filtr zolağı</string>
   <string name="morphe_hide_filter_bar_screen_summary">Sürüşdürmə filtri cərgəsin harada gizlədəcəyinizi seçin</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Kanal səhifəsində gizlət</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Şərhlərdə gizlət</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Axınlarda gizlət</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Əlaqəli videolarda gizlət</string>
@@ -199,6 +200,8 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_join_button_title">Qoşulun düyməsin gizlət</string>
   <string name="morphe_hide_links_preview_title">Link önizləməsini gizlət</string>
   <string name="morphe_hide_links_preview_summary">Kanal sərlövhəsində kliklənilən veb linkləri gizlədir</string>
+  <string name="morphe_hide_members_only_chip_title">\"Yalnız üzvlər\" elementini gizlət</string>
+  <string name="morphe_hide_members_only_chip_summary">Kanal filtr cərgəsində \"Yalnız üzvlər\" elementini gizlədir</string>
   <string name="morphe_hide_members_shelf_title">Üzvlər cərgəsini gizlət</string>
   <string name="morphe_hide_members_shelf_summary">Kanal üzvlərinin siyahısını gizlədir</string>
   <string name="morphe_hide_posts_shelf_title">Postlar cərgəsin gizlət</string>
@@ -263,10 +266,10 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Yalnız orijinal adi mətni saxlayaraq vurğulanmış axtarış linklərini təmizləyir</string>
   <string name="morphe_hide_keyword_content_screen_title">Açar söz çeşidləyici</string>
   <string name="morphe_hide_keyword_content_screen_summary">Videoları axınlarda və axtarışda gizlətmək üçün xüsusi sözlər və ya ifadələr seç</string>
+  <string name="morphe_hide_keyword_content_comments_title">Şərhləri açar sözlərə görə gizlət</string>
   <string name="morphe_hide_keyword_content_home_title">Ev videolarını açar sözlərə görə gizlət</string>
   <string name="morphe_hide_keyword_content_search_title">Axtarış nəticələrini açar sözlərə görə gizlət</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Abunəlik videolarını açar sözlərə görə gizlət</string>
-  <string name="morphe_hide_keyword_content_comments_title">Şərhləri açar sözlərə görə gizlət</string>
   <string name="morphe_hide_keyword_content_phrases_title">Gizlədiləcək açar sözlər</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -851,7 +854,6 @@ Ayarlar→ Oxunuş (və ya Avtomatik oxunuş) → Növbəti videonu avtomatik ox
   <string name="morphe_exit_fullscreen_entry_4">Portret və landşaft</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Tam ekran jestləri</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Tam ekran rejiminə keçmək və ya çıxmaq üçün oynadıcı jestləri</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Portret yuxarı sürüşdürmə jestini qapat</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Portret aşağı sürüşdürmə jestini qapat</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Landşaft aşağı sürüşdürmə jestini qapat</string>
@@ -861,13 +863,22 @@ Ayarlar→ Oxunuş (və ya Avtomatik oxunuş) → Növbəti videonu avtomatik ox
   <string name="morphe_open_videos_fullscreen_entry_2">Portret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landşaft</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Tam ekran video miqyası</string>
   <string name="morphe_fullscreen_video_scale_entry_default">İlkin</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Uzat (ekranı doldur)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Yaxınlaşdır (doldurmaq üçün kəs)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Video miqyası düyməsini göstər</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">İlkin, Uzatma və Yaxınlaşdırma rejiminə keçmək üçün toxun</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Oynadıcı örtüyünün qeyri-şəffaflığı</string>
   <string name="morphe_player_overlay_opacity_summary">Şəffaflıq səviyyəsini tənzimlə (0 şəffafdır, 100 qeyri-şəffafdır)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Oynadıcı örtüyü qeyri-şəffaflığı 0-100 arası olmalıdır</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Axtarış cizgisi</string>
   <string name="morphe_searchbar_type_entry_disabled">Qapalıdı</string>
+  <string name="morphe_searchbar_type_entry_wide">Geniş</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Daha da geniş</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Cihaz tərtibatı</string>

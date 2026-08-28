@@ -184,6 +184,18 @@ YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">시청 경고 대화 상자 제거하기</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">이 설정은 대화 상자를 자동으로 허용하기만 하며 연령 제한(성인인증 절차)을 우회할 수 없습니다</string>
+  <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_potoken_provider_screen_title">PoToken 제공자</string>
+  <string name="morphe_potoken_provider_screen_summary">PoToken 제공자를 구성하여 재생 문제를 해결할 수 있습니다</string>
+  <string name="morphe_external_potoken_provider_title">외부 PoToken 제공자</string>
+  <string name="morphe_external_potoken_provider_summary">"외부 PoToken 생성기를 사용하여 재생 문제를 수정합니다 (실험 기능)
+
+YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">이 기능이 작동하지 않는다면, MicroG를 강제로 종료하세요</string>
+  <string name="morphe_external_potoken_provider_settings_summary">PotHelper 설정 열기</string>
+  <string name="morphe_external_potoken_provider_about_summary">"이 기능은 현재 개발 중이며 작동하지 않을 수 있습니다
+
+PotHelper를 다운로드하려면 여기를 탭하세요"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">앱 버전 속이기</string>
   <string name="morphe_spoof_app_version_summary">서버가 사용 중인 앱 버전을 더 오래된 버전으로 인식하도록 속여, 이전 레이아웃 기능을 다시 복원합니다</string>

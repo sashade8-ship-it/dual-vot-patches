@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">הסתר את סעיף \'פרטי הסרטון\'</string>
   <string name="morphe_hide_filter_bar_screen_title">סרגל סינון</string>
   <string name="morphe_hide_filter_bar_screen_summary">בחר היכן להסתיר את סרגל המסננים הנגלל</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">הסתר בדף הערוץ</string>
   <string name="morphe_hide_filter_bar_in_comments_title">הסתר בתגובות</string>
   <string name="morphe_hide_filter_bar_in_feed_title">הסתר בפידים</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">הסתר בסרטונים קשורים</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">הסתר לחצן להצטרפות</string>
   <string name="morphe_hide_links_preview_title">הסתר תצוגה מקדימה של קישורים</string>
   <string name="morphe_hide_links_preview_summary">מסתיר את קישורי האינטרנט הניתנים ללחיצה בכותרת הערוץ</string>
+  <string name="morphe_hide_members_only_chip_title">הסתר את התווית \'לחברים בלבד\'</string>
+  <string name="morphe_hide_members_only_chip_summary">מסתיר את התווית \'לחברים בלבד\' בסרגל הסינון של הערוץ</string>
   <string name="morphe_hide_members_shelf_title">הסתר מדף חברים</string>
   <string name="morphe_hide_members_shelf_summary">מסתיר את רשימת חברי הערוץ</string>
   <string name="morphe_hide_posts_shelf_title">הסתר מדף פוסטים</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">מנקה קישורים בחיפוש מודגשים, ומשאיר רק את הטקסט המקורי</string>
   <string name="morphe_hide_keyword_content_screen_title">מסנן מילות מפתח</string>
   <string name="morphe_hide_keyword_content_screen_summary">בחר מילות מפתח או ביטויים ספציפיים להסתרת סרטונים בפידים ובחיפוש</string>
+  <string name="morphe_hide_keyword_content_comments_title">הסתר תגובות לפי מילות מפתח</string>
   <string name="morphe_hide_keyword_content_home_title">הסתר סרטוני בית לפי מילות מפתח</string>
   <string name="morphe_hide_keyword_content_search_title">הסתר תוצאות חיפוש לפי מילות מפתח</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">הסתר סרטוני מינוי לפי מילות מפתח</string>
-  <string name="morphe_hide_keyword_content_comments_title">הסתר תגובות לפי מילות מפתח</string>
   <string name="morphe_hide_keyword_content_phrases_title">מילות מפתח להסתרה</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -851,7 +854,6 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_4">לאורך ולרוחב</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">מחוות מסך מלא</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">מחוות נגן לכניסה או יציאה ממצב מסך מלא</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">השבת מחוות החלקה כלפי מעלה במצב פורטרט</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">השבת מחוות החלקה כלפי מטה במצב פורטרט</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">השבת מחוות החלקה כלפי מטה במצב לנדסקייפ</string>
@@ -861,13 +863,22 @@ Second \"item\" text"</string>
   <string name="morphe_open_videos_fullscreen_entry_2">לאורך</string>
   <string name="morphe_open_videos_fullscreen_entry_3">לרוחב</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">קנה מידה של וידאו במסך מלא</string>
   <string name="morphe_fullscreen_video_scale_entry_default">ברירת מחדל</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">מתיחה (מילוי מסך)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">זום (חיתוך למילוי)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">הצג כפתור קנה מידה של וידאו</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">הקש כדי לעבור בין ברירת מחדל, מתיחה וזום</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">אטימות שכבת-על של נגן</string>
   <string name="morphe_player_overlay_opacity_summary">התאם את רמת השקיפות (0 הוא שקוף, 100 הוא אטום)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">אטימות שכבת-על של נגן חייבת להיות בין 0 ל-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">סרגל חיפוש</string>
   <string name="morphe_searchbar_type_entry_disabled">מושבת</string>
+  <string name="morphe_searchbar_type_entry_wide">רחב</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">רחב במיוחד</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">פריסת מכשיר</string>

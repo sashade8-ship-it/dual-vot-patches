@@ -26,6 +26,7 @@ Second \"item\" text"</string>
   <string name="morphe_theme_color_dark_entry_2">Hreint svart</string>
   <string name="morphe_theme_color_dark_entry_3">Material You (Hrein svartur)</string>
   <string name="morphe_theme_color_dark_entry_9">Klassískt YouTube</string>
+  <string name="morphe_theme_color_dark_entry_10">Dökkbleikur</string>
   <string name="morphe_theme_color_dark_entry_11">Dökkblátt</string>
   <string name="morphe_theme_color_dark_entry_12">Dökkgrænn</string>
   <string name="morphe_theme_color_dark_entry_13">Dökkgulur</string>
@@ -35,6 +36,9 @@ Second \"item\" text"</string>
   <string name="morphe_theme_color_dark_custom_summary">Stilltu bakgrunnslit á dimmu þema</string>
   <string name="morphe_theme_color_entry_1">Sjálfgefið</string>
   <string name="morphe_theme_color_entry_4">Material You (Hlutlaus)</string>
+  <string name="morphe_theme_color_entry_5">Material You (Aðal)</string>
+  <string name="morphe_theme_color_entry_6">Material You (Annað)</string>
+  <string name="morphe_theme_color_entry_7">Material You (Þriðja)</string>
   <string name="morphe_theme_color_custom_entry">Sérsniðið</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_title">Niðurhaldið</string>
@@ -180,6 +184,7 @@ Athugaðu að einnig kunna að vera skráð ákveðin notendagögn, svo sem IP-t
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Fjarlægja spurningatexta um sjónarhátt</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Þetta hjálpar ekki að umfara aldurstakmarkanirnar. Það samþykkir þær bara sjálfkrafa</string>
+  <!-- misc.potoken.poTokenProviderPatch -->
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Gerðu app útgáfuna að breytast</string>
   <string name="morphe_spoof_app_version_summary">Blekkur netþjóninn til að láta það virðast eins og þú ert að nota eldri app útgáfu til að endurheimta eldri UI eiginleika</string>

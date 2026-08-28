@@ -183,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">「動画の詳細」セクションを非表示</string>
   <string name="morphe_hide_filter_bar_screen_title">フィルタバー</string>
   <string name="morphe_hide_filter_bar_screen_summary">横スクロールする横一列の、フィルタボタンまたはカテゴリボタンのリストを非表示にする場所を設定します</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">チャンネル ページで非表示</string>
   <string name="morphe_hide_filter_bar_in_comments_title">コメント欄で非表示</string>
   <string name="morphe_hide_filter_bar_in_feed_title">フィードで非表示</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">関連動画で非表示</string>
@@ -199,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">「メンバーになる」ボタンを非表示</string>
   <string name="morphe_hide_links_preview_title">リンクのプレビューを非表示</string>
   <string name="morphe_hide_links_preview_summary">チャンネルの説明文の末尾の「…さらに表示」ボタンの下に表示される、リンクの一覧を呼び出すボタンを非表示にします</string>
+  <string name="morphe_hide_members_only_chip_title">「メンバー限定」チップを非表示</string>
+  <string name="morphe_hide_members_only_chip_summary">チャンネルフィルターバーから「メンバー限定」チップを非表示にします</string>
   <string name="morphe_hide_members_shelf_title">メンバー欄を非表示</string>
   <string name="morphe_hide_members_shelf_summary">横一列のチャンネル メンバーのリストを非表示にします</string>
   <string name="morphe_hide_posts_shelf_title">「投稿」欄を非表示</string>
@@ -263,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">テキスト内の単語やフレーズに埋め込まれた虫眼鏡アイコン付きの検索リンクを取り除き、通常のテキストに戻します</string>
   <string name="morphe_hide_keyword_content_screen_title">キーワード フィルタ</string>
   <string name="morphe_hide_keyword_content_screen_summary">フィードや検索結果から合致する動画を除外する単語やフレーズを設定します</string>
+  <string name="morphe_hide_keyword_content_comments_title">コメントをキーワードで除外</string>
   <string name="morphe_hide_keyword_content_home_title">ホームの動画をキーワードで除外</string>
   <string name="morphe_hide_keyword_content_search_title">検索結果の動画をキーワードで除外</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">登録チャンネルの動画をキーワードで除外</string>
-  <string name="morphe_hide_keyword_content_comments_title">コメントをキーワードで除外</string>
   <string name="morphe_hide_keyword_content_phrases_title">キーワード</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -852,7 +855,6 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_exit_fullscreen_entry_4">縦画面 &amp; 横画面</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">全画面表示ジェスチャー</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">プレーヤーの全画面表示モードを開始 / 終了するスワイプ ジェスチャー</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">縦画面での上へのスワイプ ジェスチャーを無効化</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">縦画面での下へのスワイプ ジェスチャーを無効化</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">横画面での下へのスワイプ ジェスチャーを無効化</string>
@@ -862,7 +864,13 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_open_videos_fullscreen_entry_2">縦画面</string>
   <string name="morphe_open_videos_fullscreen_entry_3">横画面</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">全画面ビデオのスケール</string>
   <string name="morphe_fullscreen_video_scale_entry_default">デフォルト</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">ストレッチ（画面いっぱい）</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">ズーム（切り抜いて画面いっぱい）</string>
+  <string name="morphe_fullscreen_video_scale_button_title">ビデオスケールボタンを表示</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">タップすると、デフォルト → 引き伸ばす → ズーム → デフォルトの順に切り替わります</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">プレーヤー オーバーレイの透明度</string>
   <string name="morphe_player_overlay_opacity_summary">プレーヤー オーバーレイの透明度を設定します (0-100: 0 が透明)</string>

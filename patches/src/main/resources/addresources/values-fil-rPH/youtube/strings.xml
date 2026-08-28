@@ -183,6 +183,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_video_details_section_title">Itago ang seksyon na \'Mga detalye ng video\'</string>
   <string name="morphe_hide_filter_bar_screen_title">Filter bar</string>
   <string name="morphe_hide_filter_bar_screen_summary">Pumili kung saan itatago ang scrolling filter bar</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Itago sa pahina ng channel</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Itago sa mga komento</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Itago sa mga feed</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Itago sa mga kaugnay na video</string>
@@ -199,6 +200,8 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_join_button_title">Itago ang button na Sumali</string>
   <string name="morphe_hide_links_preview_title">Itago ang pasilip sa mga link</string>
   <string name="morphe_hide_links_preview_summary">Itinatago ang mga clickable web link sa header ng channel</string>
+  <string name="morphe_hide_members_only_chip_title">Itago ang chip na \'Members only\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Itinatago ang \'Members only\' na chip sa filter bar ng channel</string>
   <string name="morphe_hide_members_shelf_title">Itago ang mga miyembro shelf</string>
   <string name="morphe_hide_members_shelf_summary">Itinatago ang listahan ng mga miyembro ng channel</string>
   <string name="morphe_hide_posts_shelf_title">Itago ang posts shelf</string>
@@ -263,10 +266,10 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Nililinis ang mga naka-highlight na link sa paghahanap, at iniiwan lamang ang orihinal na simpleng teksto</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter ng keyword</string>
   <string name="morphe_hide_keyword_content_screen_summary">Pumili ng mga partikular na salita o parirala upang itago ang mga video sa feed at paghahanap</string>
+  <string name="morphe_hide_keyword_content_comments_title">Itago ang mga komento ayon sa mga keyword</string>
   <string name="morphe_hide_keyword_content_home_title">Itago ang mga video ng bahay sa pamamagitan ng mga keyword</string>
   <string name="morphe_hide_keyword_content_search_title">Itago ang mga resulta ng paghahanap sa pamamagitan ng mga keyword</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Itago ang mga video sa Mga Subscription sa pamamagitan ng mga keyword</string>
-  <string name="morphe_hide_keyword_content_comments_title">Itago ang mga komento ayon sa mga keyword</string>
   <string name="morphe_hide_keyword_content_phrases_title">Mga Keyword na itatago</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -849,7 +852,6 @@ Mga Setting → Playback (o Autoplay) → Autoplay ng susunod na video."</string
   <string name="morphe_exit_fullscreen_entry_4">Portrait at landscape</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Mga galaw para sa buong screen</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Mga galaw ng player para pumasok o lumabas sa fullscreen mode</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Huwag paganahin ang portrait swipe-up gesture</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Huwag paganahin ang kilos ng pag-swipe pababa sa portrait mode</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Huwag paganahin ang kilos ng pag-swipe pababa sa landscape mode</string>
@@ -859,13 +861,22 @@ Mga Setting → Playback (o Autoplay) → Autoplay ng susunod na video."</string
   <string name="morphe_open_videos_fullscreen_entry_2">Patayo</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Pahiga</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Sukat ng video sa fullscreen</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Panimula</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Iunat (punan ang screen)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Mag-zoom (i-crop upang punan)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Ipakita ang buton ng sukat ng video</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">I-tap upang magpalit sa Default, Stretch, at Zoom</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacity ng overlay ng player</string>
   <string name="morphe_player_overlay_opacity_summary">Ayusin ang antas ng transparency (0 ay transparent, 100 ay opaque)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Dapat nasa pagitan ng 0-100 ang opacity ng overlay ng player</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Bar ng paghahanap</string>
   <string name="morphe_searchbar_type_entry_disabled">Nakapatay</string>
+  <string name="morphe_searchbar_type_entry_wide">Malawak</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Napakalawak</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Layout ng device</string>

@@ -183,6 +183,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_video_details_section_title">Verberg \'Videodetails\' sectie</string>
   <string name="morphe_hide_filter_bar_screen_title">Filterbaren</string>
   <string name="morphe_hide_filter_bar_screen_summary">Kies waar u de scrollende filterbalk wilt verbergen</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Verbergen op kanaalpagina</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Verbergen in reacties</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Verbergen in feeds</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Verbergen in gerelateerde video\'s</string>
@@ -199,6 +200,8 @@ Wijzigingen zijn:
   <string name="morphe_hide_join_button_title">Verberg de knop \"Word lid\"</string>
   <string name="morphe_hide_links_preview_title">Linksvoorbeeld verbergen</string>
   <string name="morphe_hide_links_preview_summary">Verbergt de klikbare weblinks in de kanaalkoptekst</string>
+  <string name="morphe_hide_members_only_chip_title">Verberg chip \'Alleen leden\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Verbergt de chip \'Alleen leden\' in de kanaalfilterbalk</string>
   <string name="morphe_hide_members_shelf_title">Ledenplank verbergen</string>
   <string name="morphe_hide_members_shelf_summary">Verbergt de lijst met kanaalleden</string>
   <string name="morphe_hide_posts_shelf_title">Berichtenplank verbergen</string>
@@ -263,10 +266,10 @@ Wijzigingen zijn:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Schoont gehighlighte search URL\'s op, zodat alleen de originele tekst overblijft</string>
   <string name="morphe_hide_keyword_content_screen_title">Trefwoordfilter</string>
   <string name="morphe_hide_keyword_content_screen_summary">Kies specifieke woorden of zinsdelen om video\'s in feeds en zoekopdrachten te verbergen</string>
+  <string name="morphe_hide_keyword_content_comments_title">Verberg reacties op trefwoorden</string>
   <string name="morphe_hide_keyword_content_home_title">Home-video\'s verbergen door keywords</string>
   <string name="morphe_hide_keyword_content_search_title">Zoekresultaten verbergen door keywords</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Abonnementsvideo\'s verbergen door keywords</string>
-  <string name="morphe_hide_keyword_content_comments_title">Verberg reacties op trefwoorden</string>
   <string name="morphe_hide_keyword_content_phrases_title">Keywords om te verbergen</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -849,7 +852,6 @@ Instellingen → Weergave (of automatisch afspelen) → Volgende video automatis
   <string name="morphe_exit_fullscreen_entry_4">Portret en landschap</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Volledig scherm gebaren</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Spelergebaren om de volledige schermmodus te openen of te verlaten</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Schakel swipe-up gebaar in portretmodus uit</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Schakel gebaar vegen omlaag in portretmodus uit</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Schakel gebaar vegen omlaag in landschapmodus uit</string>
@@ -859,7 +861,13 @@ Instellingen → Weergave (of automatisch afspelen) → Volgende video automatis
   <string name="morphe_open_videos_fullscreen_entry_2">Portret</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landschap</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Videoschaal op volledig scherm</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Standaard</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Uitrekken (vul scherm)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (bijsnijden om te vullen)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Toon videoschaalknop</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Tik om te wisselen tussen Standaard, Uitrekken en Zoom</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Speler-overlaytransparantie</string>
   <string name="morphe_player_overlay_opacity_summary">Pas het transparantieniveau aan (0 is transparant, 100 is ondoorzichtig)</string>

@@ -21,6 +21,32 @@ class SyncUpstreamTests(unittest.TestCase):
         self.assertIn("cron: '23 */2 * * *'", workflow)
         self.assertNotIn("cron: '23 */6 * * *'", workflow)
 
+    def test_dev3_volume_hook_keeps_dual_coordinator(self):
+        root = MODULE_PATH.parents[2]
+        patch = (
+            root
+            / "patches/src/main/kotlin/app/morphe/patches/youtube/video/voiceovertranslation"
+            / "VoiceOverTranslationPatch.kt"
+        ).read_text(encoding="utf-8")
+        self.assertIn("VoiceOverTranslationCoordinator;", patch)
+        self.assertIn("playerVolumeHookPatch", patch)
+        self.assertNotIn("votOriginalVolumeBytecodePatch", patch)
+        self.assertIn('onCreateHook(EXTENSION_CLASS, "initialize")', patch)
+        self.assertIn('"$EXTENSION_CLASS->onVideoIdChanged(Ljava/lang/String;)V"', patch)
+        self.assertIn('videoTimeHook(EXTENSION_CLASS, "onVideoTimeChanged")', patch)
+
+        for relative_path in (
+            "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+            "voiceovertranslation/VoiceOverTranslationPatch.java",
+            "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+            "voiceovertranslation/VoiceOverTranslationCoordinator.java",
+            "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+            "voiceovertranslation/yandex/YandexVoiceOverTranslationPatch.java",
+        ):
+            source = (root / relative_path).read_text(encoding="utf-8")
+            self.assertIn("PlayerVolumePatch", source)
+            self.assertNotIn("VotOriginalVolumePatch", source)
+
     def test_merges_only_dual_yandex_strings_into_upstream_resource(self):
         base = (
             '<resources>\n'

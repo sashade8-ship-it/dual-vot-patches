@@ -191,6 +191,7 @@ Changes include:
 
     <string name="morphe_hide_filter_bar_screen_title">Filter bar</string>
     <string name="morphe_hide_filter_bar_screen_summary">Choose where to hide the scrolling filter bar</string>
+    <string name="morphe_hide_filter_bar_in_channel_page_title">Hide in channel page</string>
     <string name="morphe_hide_filter_bar_in_comments_title">Hide in comments</string>
     <string name="morphe_hide_filter_bar_in_feed_title">Hide in feeds</string>
     <string name="morphe_hide_filter_bar_in_related_videos_title">Hide in related videos</string>
@@ -208,6 +209,8 @@ Changes include:
     <string name="morphe_hide_join_button_title">Hide Join button</string>
     <string name="morphe_hide_links_preview_title">Hide links preview</string>
     <string name="morphe_hide_links_preview_summary">Hides the clickable web links in the channel header</string>
+    <string name="morphe_hide_members_only_chip_title">Hide \'Members only\' chip</string>
+    <string name="morphe_hide_members_only_chip_summary">Hides the \'Members only\' chip in the channel filter bar</string>
     <string name="morphe_hide_members_shelf_title">Hide members shelf</string>
     <string name="morphe_hide_members_shelf_summary">Hides the list of channel members</string>
     <string name="morphe_hide_posts_shelf_title">Hide posts shelf</string>
@@ -275,10 +278,10 @@ Changes include:
 
     <string name="morphe_hide_keyword_content_screen_title">Keyword filter</string>
     <string name="morphe_hide_keyword_content_screen_summary">Choose specific words or phrases to hide videos in feeds and search</string>
+    <string name="morphe_hide_keyword_content_comments_title">Hide comments by keywords</string>
     <string name="morphe_hide_keyword_content_home_title">Hide Home videos by keywords</string>
     <string name="morphe_hide_keyword_content_search_title">Hide search results by keywords</string>
     <string name="morphe_hide_keyword_content_subscriptions_title">Hide Subscriptions videos by keywords</string>
-    <string name="morphe_hide_keyword_content_comments_title">Hide comments by keywords</string>
     <string name="morphe_hide_keyword_content_phrases_title">Keywords to hide</string>
     <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -926,10 +929,11 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
 
     <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
     <string name="morphe_disable_fullscreen_gestures_title">Fullscreen gestures</string>
-    <string name="morphe_disable_fullscreen_gestures_summary">Player gestures to enter or exit from fullscreen mode</string>
+    <string name="morphe_disable_fullscreen_gestures_summary">Player gestures in fullscreen mode</string>
     <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Disable portrait swipe-up gesture</string>
     <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Disable portrait swipe-down gesture</string>
     <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Disable landscape swipe-down gesture</string>
+    <string name="morphe_disable_fullscreen_zoom_gesture_title">Disable pinch-to-zoom gesture</string>
 
     <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
     <string name="morphe_open_videos_fullscreen_title">Open videos in fullscreen mode</string>
@@ -944,6 +948,9 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
     <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (crop to fill)</string>
     <string name="morphe_fullscreen_video_scale_button_title">Show video scale button</string>
     <string name="morphe_fullscreen_video_scale_button_summary">Tap to cycle Default, Stretch, and Zoom</string>
+
+    <!-- layout.player.buttons.muteVideoButtonPatch -->
+    <string name="morphe_mute_video_button_title">Show Mute button</string>
 
     <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
     <string name="morphe_player_overlay_opacity_title">Player overlay opacity</string>

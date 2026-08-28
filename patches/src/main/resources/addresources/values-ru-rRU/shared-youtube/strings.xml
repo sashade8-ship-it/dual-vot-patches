@@ -184,6 +184,18 @@ Second \"item\" text"</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Удалить диалог о предупреждении для зрителей</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Это не обходит возрастное ограничение. Оно просто автоматически его принимает</string>
+  <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_potoken_provider_screen_title">Поставщик PoToken</string>
+  <string name="morphe_potoken_provider_screen_summary">Настройте провайдера PoToken для предотвращения проблем с воспроизведением</string>
+  <string name="morphe_external_potoken_provider_title">Внешний провайдер PoToken</string>
+  <string name="morphe_external_potoken_provider_summary">"Исправляет проблемы воспроизведения с помощью внешнего минтера PoToken (экспериментально)
+
+Если вы пользователь YouTube Premium, эта настройка может не потребоваться"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">Если не работает, попробуйте принудительно закрыть MicroG</string>
+  <string name="morphe_external_potoken_provider_settings_summary">Открыть настройки PotHelper</string>
+  <string name="morphe_external_potoken_provider_about_summary">"Эта функция в настоящее время находится в разработке и может не работать
+
+Нажмите здесь, чтобы скачать Pothere"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Подменить версию приложения</string>
   <string name="morphe_spoof_app_version_summary">Обманывает сервер, заставляя его думать, что вы используете более старую версию приложения, чтобы восстановить функции устаревшего интерфейса</string>

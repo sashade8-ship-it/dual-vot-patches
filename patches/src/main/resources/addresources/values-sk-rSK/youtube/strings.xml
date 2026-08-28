@@ -183,6 +183,7 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_video_details_section_title">Skryť sekciu \'Podrobnosti o videu\'</string>
   <string name="morphe_hide_filter_bar_screen_title">Pás filtra</string>
   <string name="morphe_hide_filter_bar_screen_summary">Vyberte, kde skryť posúvací filter</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Skryť na stránke kanála</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Skryť v komentároch</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Skryť v kanáloch</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Skryť v súvisiacich videách</string>
@@ -199,6 +200,8 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_join_button_title">Skryť tlačidlo \'Pripojiť sa\'</string>
   <string name="morphe_hide_links_preview_title">Skryť náhľad odkazov</string>
   <string name="morphe_hide_links_preview_summary">Skryje klikateľné webové odkazy v hlavičke kanála</string>
+  <string name="morphe_hide_members_only_chip_title">Skryť štítok \'Len pre členov\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Skryje štítok \'Len pre členov\' v lište filtra kanála</string>
   <string name="morphe_hide_members_shelf_title">Skryť policu členov</string>
   <string name="morphe_hide_members_shelf_summary">Skryje zoznam členov kanála</string>
   <string name="morphe_hide_posts_shelf_title">Skryť poličku príspevkov</string>
@@ -263,10 +266,10 @@ Zmeny zahŕňajú:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Vyčistí zvýraznené odkazy vo vyhľadávaní, ponechajúc iba pôvodný jednoduchý text</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter kľúčových slov</string>
   <string name="morphe_hide_keyword_content_screen_summary">Vyberte konkrétne slová alebo frázy na skrytie videí v zdrojoch a pri vyhľadávaní</string>
+  <string name="morphe_hide_keyword_content_comments_title">Skryť komentáre podľa kľúčových slov</string>
   <string name="morphe_hide_keyword_content_home_title">Skryť videá na domovskej stránke pomocou kľúčových slov</string>
   <string name="morphe_hide_keyword_content_search_title">Skryť výsledky vyhľadávania pomocou kľúčových slov</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Skryť videá sekcie Odberov pomocou kľúčových slov</string>
-  <string name="morphe_hide_keyword_content_comments_title">Skryť komentáre podľa kľúčových slov</string>
   <string name="morphe_hide_keyword_content_phrases_title">Kľúčové slová na skrytie</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -851,7 +854,6 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
   <string name="morphe_exit_fullscreen_entry_4">Na výšku aj na šírku</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesty na celú obrazovku</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gesty prehrávača na vstup do alebo opustenie režimu celej obrazovky</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Zakázať gestá posunutím nahor na portréte</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Zakázať gestá zatiahnutím smerom nadol v portrétnej orientácii</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Zakázať gestá zatiahnutím smerom nadol v krajinnej orientácii</string>
@@ -861,13 +863,22 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
   <string name="morphe_open_videos_fullscreen_entry_2">Na výšku</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Na šírku</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Mierka videa na celú obrazovku</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Predvolený</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Natiahnuť (vyplniť obrazovku)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Priblížiť (orezať na vyplnenie)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Zobraziť tlačidlo mierky videa</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Klepnutím prepínate medzi Predvolené, Natiahnuť a Priblížiť</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Priehľadnosť prekrytia prehrávača</string>
   <string name="morphe_player_overlay_opacity_summary">Upravte úroveň priehľadnosti (0 je priehľadná, 100 je nepriehľadná)</string>
   <string name="morphe_player_overlay_opacity_invalid_toast">Hodnota priehľadnosti musí byť medzi 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">Vyhľadávací panel</string>
   <string name="morphe_searchbar_type_entry_disabled">Vypnutý</string>
+  <string name="morphe_searchbar_type_entry_wide">Široký</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra široký</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Rozloženie zariadenia</string>

@@ -24,14 +24,14 @@ Second \"item\" text"</string>
   <!-- layout.theme.baseThemePatch -->
   <string name="morphe_theme_color_dark_title">Latar belakang tema gelap</string>
   <string name="morphe_theme_color_dark_entry_2">Hitam pekat</string>
-  <string name="morphe_theme_color_dark_entry_3">Material You (Hitam murni)</string>
-  <string name="morphe_theme_color_dark_entry_9">Klasik YouTube</string>
-  <string name="morphe_theme_color_dark_entry_10">Pink tua</string>
-  <string name="morphe_theme_color_dark_entry_11">Biru tua</string>
-  <string name="morphe_theme_color_dark_entry_12">Hijau tua</string>
-  <string name="morphe_theme_color_dark_entry_13">Kuning tua</string>
-  <string name="morphe_theme_color_dark_entry_14">Oranye tua</string>
-  <string name="morphe_theme_color_dark_entry_15">Merah tua</string>
+  <string name="morphe_theme_color_dark_entry_3">Material You (Hitam pekat)</string>
+  <string name="morphe_theme_color_dark_entry_9">YouTube Klasik</string>
+  <string name="morphe_theme_color_dark_entry_10">Pink gelap</string>
+  <string name="morphe_theme_color_dark_entry_11">Biru gelap</string>
+  <string name="morphe_theme_color_dark_entry_12">Hijau gelap</string>
+  <string name="morphe_theme_color_dark_entry_13">Kuning gelap</string>
+  <string name="morphe_theme_color_dark_entry_14">Oranye gelap</string>
+  <string name="morphe_theme_color_dark_entry_15">Merah gelap</string>
   <string name="morphe_theme_color_dark_custom_title">Latar belakang gelap kustom</string>
   <string name="morphe_theme_color_dark_custom_summary">Atur warna latar belakang tema gelap</string>
   <string name="morphe_theme_color_entry_1">Bawaan aplikasi</string>
@@ -184,6 +184,18 @@ Namun, mengaktifkan ini juga akan mencatat beberapa data pengguna seperti alamat
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
   <string name="morphe_remove_viewer_discretion_dialog_title">Hapus dialog pembatasan penonton</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Ini tidak mengabaikan batasan usia. Hanya otomatis menerimanya</string>
+  <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_potoken_provider_screen_title">Penyedia PoToken</string>
+  <string name="morphe_potoken_provider_screen_summary">Konfigurasikan penyedia PoToken untuk mencegah masalah pemutaran</string>
+  <string name="morphe_external_potoken_provider_title">Penyedia PoToken Eksternal</string>
+  <string name="morphe_external_potoken_provider_summary">"Memperbaiki masalah pemutaran saat menggunakan PoToken minter eksternal (Eksperimental)
+
+Jika Anda adalah pengguna YouTube Premium, pengaturan ini mungkin tidak diperlukan"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">Jika tidak berhasil, coba hentikan paksa MicroG</string>
+  <string name="morphe_external_potoken_provider_settings_summary">Buka pengaturan PotHelper</string>
+  <string name="morphe_external_potoken_provider_about_summary">"Fitur ini saat ini masih dalam tahap pengembangan dan mungkin tidak berfungsi
+
+Ketuk di sini untuk mengunduh PotHelper"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Palsukan versi aplikasi</string>
   <string name="morphe_spoof_app_version_summary">Mengelabui server agar mengira Anda menggunakan versi aplikasi yang lebih lama untuk mengembalikan fitur UI lama</string>

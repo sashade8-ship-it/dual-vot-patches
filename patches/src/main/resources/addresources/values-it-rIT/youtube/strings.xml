@@ -183,6 +183,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_video_details_section_title">Nascondi la sezione \'Dettagli video\'</string>
   <string name="morphe_hide_filter_bar_screen_title">Barra dei filtri</string>
   <string name="morphe_hide_filter_bar_screen_summary">Scegli dove nascondere gli elementi delle categorie a scorrimento</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Nascondi nella pagina del canale</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Nascondi commenti</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Nascondi nei feed</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Nascondi nei video correlati</string>
@@ -199,6 +200,8 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_join_button_title">Nascondi il pulsante Abbonati</string>
   <string name="morphe_hide_links_preview_title">Nascondi anteprima link</string>
   <string name="morphe_hide_links_preview_summary">Nasconde i link web cliccabili nell\'intestazione del canale</string>
+  <string name="morphe_hide_members_only_chip_title">Nascondi chip \'Solo membri\'</string>
+  <string name="morphe_hide_members_only_chip_summary">Nasconde il chip \'Solo membri\' nella barra del filtro dei canali</string>
   <string name="morphe_hide_members_shelf_title">Nascondi sezione membri</string>
   <string name="morphe_hide_members_shelf_summary">Nasconde l\'elenco dei membri del canale</string>
   <string name="morphe_hide_posts_shelf_title">Nascondi la sezione dei post</string>
@@ -263,10 +266,10 @@ I cambiamenti riguarderanno:
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Disattiva l\'evidenziazione dei link di ricerca, lasciando solo il testo originale</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro parole chiave</string>
   <string name="morphe_hide_keyword_content_screen_summary">Scegli parole o frasi specifiche per nascondere i video nei feed e nella ricerca</string>
+  <string name="morphe_hide_keyword_content_comments_title">Nascondi commenti per parole chiave</string>
   <string name="morphe_hide_keyword_content_home_title">Nascondi i video della Home in base alle parole chiave</string>
   <string name="morphe_hide_keyword_content_search_title">Nascondi i risultati della ricerca per parole chiave</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">Nascondi i video della scheda Iscrizioni in base alle parole chiave</string>
-  <string name="morphe_hide_keyword_content_comments_title">Nascondi commenti per parole chiave</string>
   <string name="morphe_hide_keyword_content_phrases_title">Parole chiave da nascondere</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -851,7 +854,6 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_exit_fullscreen_entry_4">Verticale e orizzontale</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesti a schermo intero</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gesti del lettore per entrare o uscire dalla modalità a schermo intero</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Disabilita il gesto di scorrimento verso l\'alto in verticale</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Disabilita gesto di scorrimento verso il basso in verticale</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Disabilita gesto di scorrimento verso il basso in orizzontale</string>
@@ -861,7 +863,13 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_open_videos_fullscreen_entry_2">Verticale</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Orizzontale</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Scala video a schermo intero</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Predefinita</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Adatta (riempi schermo)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (ritaglia per riempire)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Mostra pulsante scala video</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Tocca per passare da Predefinito, Adatta e Zoom</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacità sovrapposizione del lettore</string>
   <string name="morphe_player_overlay_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>

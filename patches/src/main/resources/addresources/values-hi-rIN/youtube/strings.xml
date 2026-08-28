@@ -34,6 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_remove_background_playback_restrictions_title">पृष्ठभूमि प्लेबैक प्रतिबंध हटाएं</string>
   <string name="morphe_shorts_disable_background_playback_title">बैकग्राउंड प्ले को अक्षम करें</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">स्क्रॉलिंग गति सीमा अक्षम करें</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">अपडेट लेआउट को अक्षम करना</string>
   <string name="morphe_disable_layout_updates_summary">सर्वर को ऐप लेआउट अपडेट करने से रोकता है</string>
@@ -182,6 +183,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_details_section_title">\'वीडियो विवरण\' अनुभाग छुपाएं</string>
   <string name="morphe_hide_filter_bar_screen_title">फ़िल्टर बार</string>
   <string name="morphe_hide_filter_bar_screen_summary">स्क्रॉलिंग फ़िल्टर बार को छिपाने के लिए स्थान चुनें</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">चैनल पेज में छिपाएं</string>
   <string name="morphe_hide_filter_bar_in_comments_title">टिप्पणियों में छिपाएं</string>
   <string name="morphe_hide_filter_bar_in_feed_title">फ़ीड में छुपाएं</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">संबंधित वीडियो में छुपाएं</string>
@@ -198,6 +200,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_join_button_title">जॉइन बटन छुपाएं</string>
   <string name="morphe_hide_links_preview_title">लिंक्स का पूर्वावलोकन छुपाएं</string>
   <string name="morphe_hide_links_preview_summary">चैनल हेडर में क्लिक करने योग्य वेब लिंक को छुपाता है</string>
+  <string name="morphe_hide_members_only_chip_title">\'केवल सदस्य\' चिप छिपाएं</string>
+  <string name="morphe_hide_members_only_chip_summary">चैनल फ़िल्टर बार में \'केवल सदस्य\' चिप छिपाता है</string>
   <string name="morphe_hide_members_shelf_title">छुपाएं सदस्य शेल्फ</string>
   <string name="morphe_hide_members_shelf_summary">चैनल सदस्यों की सूची को छुपाता है</string>
   <string name="morphe_hide_posts_shelf_title">पोस्ट शेल्फ छिपाएं</string>
@@ -262,10 +266,10 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">हाइलाइट किए गए खोज लिंक सैनिटाइज़ करता है, केवल मूल सादे पाठ को छोड़ देता है</string>
   <string name="morphe_hide_keyword_content_screen_title">कीवर्ड फ़िल्टर</string>
   <string name="morphe_hide_keyword_content_screen_summary">फ़ीड और खोज में वीडियो को छिपाने के लिए विशिष्ट शब्द या वाक्यांश चुनें</string>
+  <string name="morphe_hide_keyword_content_comments_title">कीवर्ड द्वारा टिप्पणियाँ छिपाएँ</string>
   <string name="morphe_hide_keyword_content_home_title">गृह वीडियो को शब्दों से छुपाएं</string>
   <string name="morphe_hide_keyword_content_search_title">गूगल से खोज परिणाम छुपाएं</string>
   <string name="morphe_hide_keyword_content_subscriptions_title">छुपाएं शब्दों से सदस्यता वीडियो</string>
-  <string name="morphe_hide_keyword_content_comments_title">कीवर्ड द्वारा टिप्पणियाँ छिपाएँ</string>
   <string name="morphe_hide_keyword_content_phrases_title">कीवर्ड छुपाने के लिए</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
@@ -447,13 +451,19 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_reload_video_button_title">रीलोड वीडियो बटन दिखाएं</string>
   <string name="morphe_dismiss_player_not_available_toast">वीडियो आईडी अनुपलब्ध है। कृपया वीडियो को मैन्युअल रूप से रीलोड करें</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">बाद में देखने के लिए सहेजें बटन दिखाएं</string>
+  <string name="morphe_save_to_watch_later_button_summary">बाद में देखने के लिए सहेजने हेतु टैप करें, कतार विकल्पों के लिए टैप और होल्ड करें</string>
   <string name="morphe_save_to_watch_later_success_toast">वीडियो को बाद में देखने की प्लेलिस्ट में सफलतापूर्वक सहेजा गया</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">यह वीडियो पहले से ही बाद में देखने की प्लेलिस्ट में सहेजा गया है</string>
   <string name="morphe_save_to_watch_later_error_toast">इस वीडियो को बाद में देखने की प्लेलिस्ट में सहेजा नहीं जा सकता</string>
+  <string name="morphe_save_to_watch_later_flyout_title">बाद में देखने के लिए सहेजें</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">बच्चों के वीडियो में \'बाद में देखने के लिए सहेजें\' बटन दिखाएं</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">किड से संबंधित वीडियो को \'बाद में देखें\' फ्लाईआउट मेनू में सहेजने की अनुमति देता है</string>
   <string name="morphe_queue_flyout_title">Morphe कतार में जोड़ें</string>
   <string name="morphe_queue_restore_title">सत्रों के बीच कतार बनाए रखें</string>
   <string name="morphe_queue_restore_summary">ऐप को पुनरारंभ करने के बाद कतार बनी रहती है</string>
   <string name="morphe_swap_save_and_queue_actions_title">स्वैप सेव और क्यू क्रियाएँ</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">कतार विकल्पों के लिए टैप करें, बाद में देखने के लिए सहेजने हेतु टैप और होल्ड करें</string>
   <string name="morphe_queue_override_flyout_menu_title">फ़ीड फ्लाईआउट कतार बटन को ओवरराइड करें</string>
   <string name="morphe_queue_override_flyout_menu_summary">Morphe कतार को YouTube कतार के बजाय खोलता है</string>
   <string name="morphe_queue_add_flyout_menu_title">फ़ीड फ़्लाईआउट कतार मेनू आइटम जोड़ें</string>
@@ -844,7 +854,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_exit_fullscreen_entry_4">पोर्ट्रेट और लैंडस्केप</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">फ़ुलस्क्रीन जेस्चर</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">फ़ुलस्क्रीन मोड में प्रवेश करने या बाहर निकलने के लिए प्लेयर जेस्चर</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">पोर्ट्रेट स्वाइप-अप जेस्चर को अक्षम करें</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">पोर्ट्रेट स्वाइप-डाउन इशारा अक्षम करें</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">लैंडस्केप स्वाइप-डाउन इशारा अक्षम करें</string>
@@ -854,7 +863,13 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_open_videos_fullscreen_entry_2">पोर्ट्रेट</string>
   <string name="morphe_open_videos_fullscreen_entry_3">लैंडस्केप</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">फुलस्क्रीन वीडियो स्केल</string>
   <string name="morphe_fullscreen_video_scale_entry_default">डिफ़ॉल्ट</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">स्ट्रेच (स्क्रीन भरें)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">ज़ूम (भरने के लिए क्रॉप करें)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">वीडियो स्केल बटन दिखाएं</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">डिफ़ॉल्ट, स्ट्रेच और ज़ूम के बीच बदलने के लिए टैप करें</string>
+  <!-- layout.player.buttons.muteVideoButtonPatch -->
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">प्लेयर ओवरले अस्पष्टता</string>
   <string name="morphe_player_overlay_opacity_summary">ओवरले पारदर्शिता स्तर समायोजित करें (0 पारदर्शी है, 100 अपारदर्शी है)</string>
@@ -987,9 +1002,13 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_theme_color_light_entry_9">हल्का गुलाबी</string>
   <string name="morphe_theme_color_light_entry_10">हल्का नीला</string>
   <string name="morphe_theme_color_light_entry_11">हल्का हरा</string>
+  <string name="morphe_theme_color_light_entry_12">हल्का पीला</string>
+  <string name="morphe_theme_color_light_entry_13">हल्का नारंगी</string>
   <string name="morphe_theme_color_light_entry_14">हल्का लाल</string>
   <string name="morphe_theme_color_light_custom_title">कस्टम हल्की पृष्ठभूमि</string>
+  <string name="morphe_theme_color_light_custom_summary">लाइट थीम की पृष्ठभूमि का रंग सेट करें</string>
   <string name="morphe_theme_color_change_foreground_title">अग्रभूमि रंग बदलें</string>
+  <string name="morphe_theme_color_change_foreground_summary">टेक्स्ट और आइकन के लिए थीम रंग का उपयोग करें</string>
   <string name="morphe_gradient_loading_screen_title">ग्रेडिएंट लोडिंग स्क्रीन सक्षम करें</string>
   <string name="morphe_gradient_loading_screen_summary">लोडिंग स्क्रीन पर एक ठोस रंग के बजाय एक ग्रेडिएंट पृष्ठभूमि दिखाता है</string>
   <string name="morphe_splash_screen_animation_style_title">स्प्लैश स्क्रीन शैली</string>
