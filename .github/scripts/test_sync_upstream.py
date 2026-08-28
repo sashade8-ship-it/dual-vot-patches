@@ -14,11 +14,12 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
-    def test_dispatcher_runs_every_two_hours(self):
+    def test_dispatcher_has_staggered_two_hour_schedules(self):
         workflow = (
             MODULE_PATH.parents[1] / "workflows" / "upstream_sync.yml"
         ).read_text(encoding="utf-8")
         self.assertIn("cron: '23 */2 * * *'", workflow)
+        self.assertIn("cron: '53 */2 * * *'", workflow)
         self.assertNotIn("cron: '23 */6 * * *'", workflow)
 
     def test_merges_only_dual_yandex_strings_into_upstream_resource(self):

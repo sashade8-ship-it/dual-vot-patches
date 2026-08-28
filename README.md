@@ -71,10 +71,11 @@ steps.
 - Enable **Pre-release patches** for this source in Morphe Manager to receive
   the `dev` channel. Leave it disabled for the stable channel.
 
-Both channels are checked automatically every six hours. An update is
-published only after the bundle compiles and the Dual VoT integration passes
-structural checks. Merge conflicts or failed builds stop publication and open
-an issue without replacing the previous working release. See
+Both channels are checked automatically at least every two hours through two
+staggered GitHub schedules. An update is published only after the bundle
+compiles and the Dual VoT integration passes structural checks. Merge conflicts
+or failed builds stop publication and open an issue without replacing the
+previous working release. See
 [automatic upstream updates](AUTOMATION.md) for details.
 
 ## Credits and license
