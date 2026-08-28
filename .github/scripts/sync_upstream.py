@@ -47,6 +47,21 @@ PROJECT_OWNED_PATHS = (
     ".github/scripts/sync_upstream.py",
 )
 
+# The updater itself always runs from main. When it first joins a newer stable
+# branch into dev, retain that controller instead of the historical copy in dev;
+# otherwise a controller test or workflow change can leave the published dev
+# branch red even though the candidate build succeeded.
+CONTROLLER_PATHS = (
+    ".github/workflows/crowdin_pull.yml",
+    ".github/workflows/crowdin_push.yml",
+    ".github/workflows/build_pull_request.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/upstream_sync.yml",
+    ".github/workflows/upstream_sync_channel.yml",
+    ".github/scripts/sync_upstream.py",
+    ".github/scripts/test_sync_upstream.py",
+)
+
 UPSTREAM_FILES_REMOVED_FROM_DERIVATIVE = (
     ".github/workflows/open_pull_request.yml",
     "patches-bundle.png",
@@ -317,7 +332,12 @@ def resolve_addon_compatibility_conflicts() -> None:
         restore_path_from("HEAD", path)
 
 
-def merge_ref(ref: str, project_preference: str, label: str) -> bool:
+def merge_ref(
+    ref: str,
+    project_preference: str,
+    label: str,
+    controller_preference: str | None = None,
+) -> bool:
     """Merge ref without committing and resolve only explicitly owned files.
 
     Unknown source conflicts stop the automation. This is the central guard
@@ -335,6 +355,11 @@ def merge_ref(ref: str, project_preference: str, label: str) -> bool:
     preferred_ref = "HEAD" if project_preference == "ours" else "MERGE_HEAD"
     for path in PROJECT_OWNED_PATHS:
         restore_path_from(preferred_ref, path)
+
+    if controller_preference is not None:
+        controller_ref = "HEAD" if controller_preference == "ours" else "MERGE_HEAD"
+        for path in CONTROLLER_PATHS:
+            restore_path_from(controller_ref, path)
 
     # The upstream version is authoritative; the Dual suffix is added later.
     if "gradle.properties" in unresolved_paths():
@@ -672,6 +697,7 @@ def prepare(channel: str, output_dir: Path, repository: str) -> None:
             "origin/main",
             project_preference="theirs" if dev_matches_stable else "ours",
             label="the latest Dual VoT stable branch",
+            controller_preference="theirs",
         )
         local_version = bundle_version_from_git("HEAD")
         local_base = upstream_base(local_version)
