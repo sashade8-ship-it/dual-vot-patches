@@ -81,7 +81,7 @@ Second \"item\" text"</string>
 YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">클라이언트 스트림을 가져올 수 없습니다</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">이 설정을 비활성화하면 재생 문제가 발생할 수 있습니다.</string>
-  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
   <string name="morphe_spoof_video_streams_no_clients_suggest_vr_toast">다음을 활성화해 보세요: 동영상 스트림 속이기 &gt; Android VR에 로그인하기</string>
   <string name="morphe_spoof_video_streams_client_type_title">기본 클라이언트</string>
@@ -151,7 +151,7 @@ YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"
   <string name="morphe_proxy_allow_direct_fallback_summary">프록시 연결에 실패하면 직접 연결합니다</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">전체 화면 광고 숨기기</string>
-  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_force_original_audio_not_available">이 기능을 사용하려면, \'동영상 스트림 속이기\'에서 \'기본 클라이언트\'를 \'Android Studio\'와 \'Android VR Downgraded\'를 제외한 다른 클라이언트로 변경하세요</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
@@ -191,6 +191,11 @@ YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"
   <string name="morphe_external_potoken_provider_summary">"외부 PoToken 생성기를 사용하여 재생 문제를 수정합니다 (실험 기능)
 
 YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"</string>
+  <!-- "Fixes playback issues using an external PoToken minter (Experimental)" should use the same wording as morphe_external_potoken_provider_summary
+         'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_unavailable_summary">"외부 PoToken 생성기를 사용하여 재생 문제를 수정합니다 (실험 기능)
+
+이 기능을 사용하려면, '동영상 스트림 속이기'를 비활성화하세요"</string>
   <string name="morphe_external_potoken_provider_user_dialog_message">이 기능이 작동하지 않는다면, MicroG를 강제로 종료하세요</string>
   <string name="morphe_external_potoken_provider_settings_summary">PotHelper 설정 열기</string>
   <string name="morphe_external_potoken_provider_about_summary">"이 기능은 현재 개발 중이며 작동하지 않을 수 있습니다

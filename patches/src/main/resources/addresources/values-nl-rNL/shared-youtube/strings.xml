@@ -81,7 +81,7 @@ Controleer of de pakketnaam correct is en of de app is geïnstalleerd"</string>
 Als u een YouTube Premium-gebruiker bent, is deze instelling mogelijk niet vereist."</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Kon geen client-streams opvragen</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Het uitschakelen van deze instelling kan afspeelproblemen veroorzaken.</string>
-  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
   <string name="morphe_spoof_video_streams_no_clients_suggest_vr_toast">Probeer het volgende inschakelen: Spoof video streams > Inloggen in Android VR</string>
   <string name="morphe_spoof_video_streams_client_type_title">Standaard client</string>
@@ -145,7 +145,7 @@ Om in te loggen, druk je op 'doorgaan' onderaan"</string>
   <string name="morphe_proxy_allow_direct_fallback_summary">Maak rechtstreeks verbinding als de proxy faalt</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Volledig scherm advertenties verbergen</string>
-  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_force_original_audio_not_available">Om deze functie te gebruiken, wijzig \'Videostreams spoofen\' naar elke client behalve \'Android Studio\' en \'Android VR Downgraded\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
@@ -179,6 +179,22 @@ Als u dit inschakelt, worden echter ook bepaalde gebruikersgegevens, zoals uw IP
   <string name="morphe_remove_viewer_discretion_dialog_title">Verwijder dialoog voor kijkersdiscretie</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Dit omzeilt de leeftijdsbeperking niet. Het accepteert deze alleen automatisch</string>
   <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_potoken_provider_screen_title">PoToken provider</string>
+  <string name="morphe_potoken_provider_screen_summary">Configureer PoToken provider om afspeelproblemen te voorkomen</string>
+  <string name="morphe_external_potoken_provider_title">Externe PoToken provider</string>
+  <string name="morphe_external_potoken_provider_summary">"Lost afspeelproblemen op met behulp van een externe PoToken-minter (Experimenteel)
+
+Als je een YouTube Premium-gebruiker bent, is deze instelling mogelijk niet nodig"</string>
+  <!-- "Fixes playback issues using an external PoToken minter (Experimental)" should use the same wording as morphe_external_potoken_provider_summary
+         'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_unavailable_summary">"Verhelpt afspeelproblemen met behulp van een externe PoToken-minter (Experimenteel)
+
+Om deze functie te gebruiken, zet 'Spoof videostreams' uit. ','maxLength':null,"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">Als het niet werkt, forceer dan het sluiten van MicroG</string>
+  <string name="morphe_external_potoken_provider_settings_summary">Open de PoToken-instellingen</string>
+  <string name="morphe_external_potoken_provider_about_summary">"Deze functie is momenteel in ontwikkeling en werkt mogelijk niet
+
+Tik hier om PoToken te downloaden"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Vervalst de app-versie</string>
   <string name="morphe_spoof_app_version_summary">Misleidt de server om te denken dat je een oudere app-versie gebruikt om oude UI-functies te herstellen</string>

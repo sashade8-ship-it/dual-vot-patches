@@ -846,6 +846,7 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Onemogući oglasne popupe u plejeru</string>
   <string name="morphe_disable_player_popup_panels_summary">Onemogućava automatsko otvaranje panela za listu reprodukcije i ćaskanje uživo</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Izlazak iz režima punog ekrana na kraju videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Onemogućeno</string>
@@ -854,9 +855,11 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_exit_fullscreen_entry_4">Uspravno i vodoravno</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestovi punog ekrana</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Pokreti plejera u režimu preko celog ekrana</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Onemogući gest povlačenja nagore u portretnom režimu</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Isključi gest povlačenja prema dole u portretnom režimu</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Isključi gest povlačenja prema dole u pejzažnom režimu</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Onemogući gest štipanja za zumiranje</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Otvorite video zapise u režimu punog ekrana</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Onemogućen</string>
@@ -870,6 +873,7 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_fullscreen_video_scale_button_title">Prikaži dugme za skaliranje videa</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Dodirni da ciklično menjaš Podrazumevano, Rastegnuto i Zumirano</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Prikaži dugme za isključivanje zvuka</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Neprozirnost preklopa plejera</string>
   <string name="morphe_player_overlay_opacity_summary">Podesi nivo prozirnosti (0 je providno, 100 je neprovidno)</string>

@@ -814,6 +814,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">प्लेअर पॉपअप पॅनेल अक्षम करा</string>
   <string name="morphe_disable_player_popup_panels_summary">स्वयंचलितपणे उघडणाऱ्या प्लेलिस्ट आणि लाइव्ह चॅट पॅनेल अक्षम करते</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">व्हिडिओ समाप्त झाल्यावर फुलस्क्रीन मोडमधून बाहेर पडा</string>
   <string name="morphe_exit_fullscreen_entry_1">अक्षम</string>
@@ -822,9 +823,11 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_exit_fullscreen_entry_4">पोर्ट्रेट (Portrait) आणि लँडस्केप (Landscape)</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">पूर्ण स्क्रीन हावभाव</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">फुलस्क्रीन मोडमधील प्लेयर जेश्चर</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">पोर्ट्रेट स्वाइप-अप हावभाव अक्षम करा</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">पोर्ट्रेट स्वाइप-डाउन हावभाव अक्षम करा</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">लँडस्केप स्वाइप-डाउन हावभाव अक्षम करा</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">पिंच-टू-झूम जेश्चर अक्षम करा</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">व्हिडिओ फुलस्क्रीन मोडमध्ये उघडा</string>
   <string name="morphe_open_videos_fullscreen_entry_1">अक्षम</string>
@@ -832,6 +835,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_open_videos_fullscreen_entry_3">लँडस्केप</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">म्यूट बटण दाखवा</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">प्लेअर ओव्हरले अपारदर्शकता</string>
   <string name="morphe_player_overlay_opacity_summary">ओव्हरले (Overlay) पातळी समायोजित करा (0 म्हणजे पारदर्शक, 100 म्हणजे अपारदर्शक)</string>

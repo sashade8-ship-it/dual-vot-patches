@@ -132,8 +132,8 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
   <string name="morphe_music_remember_shuffle_state_title">Nhớ trạng thái trộn bài</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
-  <string name="morphe_music_disable_dislike_redirection_title">Tắt tính năng chuyển hướng dislike</string>
-  <string name="morphe_music_disable_dislike_redirection_summary">Ngăn việc chuyển đến bản nhạc tiếp theo khi nhấn nút dislike</string>
+  <string name="morphe_music_disable_dislike_redirection_title">Tắt chuyển bài khi bấm không thích</string>
+  <string name="morphe_music_disable_dislike_redirection_summary">Không chuyển sang bài tiếp theo khi bạn bấm nút Không thích</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Ẩn nút Truyền</string>
   <string name="morphe_music_hide_history_button_title">Ẩn nút Lịch sử</string>

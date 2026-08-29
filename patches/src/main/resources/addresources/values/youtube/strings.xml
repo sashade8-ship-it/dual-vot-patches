@@ -920,6 +920,10 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
     <string name="morphe_disable_player_popup_panels_title">Disable player popup panels</string>
     <string name="morphe_disable_player_popup_panels_summary">Disables playlist and live chat panels from opening automatically</string>
 
+    <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+    <string name="morphe_disable_playlist_autoplay_title">Disable playlist autoplay</string>
+    <string name="morphe_disable_playlist_autoplay_summary">Prevents playlists from automatically advancing to the next video</string>
+
     <!-- layout.player.fullscreen.exitFullscreenPatch -->
     <string name="morphe_exit_fullscreen_title">Exit fullscreen mode on video end</string>
     <string name="morphe_exit_fullscreen_entry_1">Disabled</string>
@@ -1269,6 +1273,14 @@ Tap here to open DeArrow.ajay.app"</string>
 
     <!-- video.codecs.disableVideoCodecsPatch -->
     <string name="morphe_disable_hdr_video_title">Disable HDR video</string>
+    <string name="morphe_force_hdr_video_title">Force HDR video</string>
+    <string name="morphe_force_hdr_video_summary">Forces app to recognize this device as HDR‑capable</string>
+    <string name="morphe_force_hdr_video_user_dialog_message">"Use this if HDR decoding works but YouTube does not offer HDR, such as some HyperOS devices that hide HLG.
+
+Limitations:
+• Colors may look wrong if the display cannot actually show HDR
+• Playback may fail if the decoder cannot handle HDR
+• HDR still depends on the spoof video streams client"</string>
     <string name="morphe_force_avc_codec_title">Force AVC (H.264) codec</string>
     <string name="morphe_force_avc_codec_user_dialog_message">"Benefits:
 • Can improve battery life

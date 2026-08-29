@@ -846,6 +846,7 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title"> Dezactivați panourile pop-up ale jucătorului</string>
   <string name="morphe_disable_player_popup_panels_summary">Dezactivează deschiderea automată a panelurilor de listă de redare și chat live</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Ieșire din modul ecran complet la sfârșitul videoclipului</string>
   <string name="morphe_exit_fullscreen_entry_1">Dezactivat</string>
@@ -854,9 +855,11 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_exit_fullscreen_entry_4">Portret și peisaj</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesturi ecran complet</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gesturi pentru player în modul ecran complet</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Dezactivează gestul de glisare în sus în modul portret</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Dezactivează gestul de glisare în jos în modul portret</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Dezactivează gestul de glisare în jos în modul peisaj</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Dezactivează gestul de zoom prin ciupire</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Deschide videoclipurile în modul ecran complet</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Dezactivat</string>
@@ -870,6 +873,7 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_fullscreen_video_scale_button_title">Afișează butonul de scală video</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Atingeți pentru a comuta între Implicit, Întindere și Zoom</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Afișează butonul de mutare</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacitate suprapusă jucătorului</string>
   <string name="morphe_player_overlay_opacity_summary">Ajustați nivelul de transparență (0 este transparent, 100 este opac)</string>

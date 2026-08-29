@@ -460,15 +460,15 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_save_to_watch_later_error_toast">이 동영상을 \'나중에 볼 동영상\' 재생목록에 저장할 수 없습니다</string>
   <string name="morphe_save_to_watch_later_flyout_title">나중에 볼 동영상에 저장</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Kids 동영상에 \'나중에 볼 동영상에 저장\' 메뉴 표시하기</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">피드 \'나중에 볼 동영상에 저장\' 메뉴로 Kids 관련 동영상을 저장할 수 있습니다</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">\'나중에 볼 동영상에 저장\' 피드 메뉴로 관련 동영상에 있는 Kids 동영상을 저장할 수 있습니다</string>
   <string name="morphe_queue_flyout_title">Morphe 현재 재생목록에 추가</string>
   <string name="morphe_queue_restore_title">세션 간에 현재 재생목록 유지하기</string>
   <string name="morphe_queue_restore_summary">앱을 다시 시작한 후에도 현재 재생목록이 유지됩니다</string>
   <string name="morphe_swap_save_and_queue_actions_title">저장과 현재 재생목록 작업 교환하기</string>
   <string name="morphe_swap_save_and_queue_actions_summary">버튼을 탭하여 현재 재생목록 옵션을 실행할 수 있고, 길게 탭하면 \'나중에 볼 동영상\'에 저장됩니다</string>
-  <string name="morphe_queue_override_flyout_menu_title">피드 \'현재 재생목록\' 메뉴 재정의하기</string>
+  <string name="morphe_queue_override_flyout_menu_title">\'현재 재생목록\' 피드 메뉴 재정의하기</string>
   <string name="morphe_queue_override_flyout_menu_summary">\'현재 재생목록에서 다음 순서로 재생\' 메뉴를 탭하면 YouTube 현재 재생목록 대신 Morphe 현재 재생목록이 실행됩니다</string>
-  <string name="morphe_queue_add_flyout_menu_title">피드 \'현재 재생목록\' 메뉴 항목 추가하기</string>
+  <string name="morphe_queue_add_flyout_menu_title">\'현재 재생목록\' 피드 메뉴 항목 추가하기</string>
   <string name="morphe_queue_add_flyout_menu_summary">추가적인 메뉴 구성요소 항목을 추가합니다. \'현재 재생목록에서 다음 순서로 재생\' 메뉴가 표시되지 않는 경우에 이 옵션을 활성화하세요</string>
   <string name="morphe_queue_manager_check_failed_auth">로그인하지 않았습니다</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">재생목록 ID가 없습니다</string>
@@ -848,6 +848,9 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">플레이어 팝업 패널 비활성화하기</string>
   <string name="morphe_disable_player_popup_panels_summary">재생목록, 실시간 채팅 및 뉴스 스토리 패널이 자동으로 열리지 않도록 비활성화합니다</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">재생목록 자동재생 비활성화하기</string>
+  <string name="morphe_disable_playlist_autoplay_summary">재생목록이 다음 동영상으로 자동으로 넘어가는 것을 방지합니다</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">동영상 종료 시 전체 화면 모드 나가기</string>
   <string name="morphe_exit_fullscreen_entry_1">사용 안함</string>
@@ -1149,6 +1152,14 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_playback_audio_time_stretching_summary">속도와 피치를 서로 독립적으로 설정할 수 있습니다. 오디오에 잡음이나 음질 저하 등의 왜곡이 발생할 수 있습니다</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR 동영상 비활성화하기</string>
+  <string name="morphe_force_hdr_video_title">HDR 동영상 강제로 활성화하기</string>
+  <string name="morphe_force_hdr_video_summary">앱이 이 기기를 HDR 지원 기기로 인식하도록 강제합니다</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"일부 HyperOS 기기에서 HLG를 숨기는 경우처럼, HDR 디코딩은 작동하지만 YouTube에서 HDR을 제공하지 않을 경우 사용하세요
+
+제한 사항: 
+• 디스플레이가 실제로 HDR을 지원하지 않는 경우 색상이 올바르게 표시되지 않을 수 있습니다
+• 디코더가 HDR을 처리하지 못하는 경우 재생에 실패할 수 있습니다
+• HDR 지원 여부는 여전히 동영상 스트림 속이기에 사용된 클라이언트에 따라 달라집니다"</string>
   <string name="morphe_force_avc_codec_title">AVC (H.264) 강제로 활성화하기</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"장점:
 • 배터리 수명을 향상시킬 수 있습니다

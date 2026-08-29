@@ -7,6 +7,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
+import app.morphe.extension.shared.Utils;
+
 /**
  * Empty preference category with no title, used to organize and group related preferences together.
  */
@@ -53,6 +55,15 @@ public class NoTitlePreferenceCategory extends PreferenceCategory {
         }
 
         return super.getTitleRes();
+    }
+
+    @Override
+    public String getKey() {
+        String key = super.getKey();
+        if (key == null && getPreferenceCount() > 0) {
+            return getPreference(0).getKey();
+        }
+        return key;
     }
 }
 

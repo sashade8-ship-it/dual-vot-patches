@@ -1165,7 +1165,11 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
                     sortValue = Utils.removePunctuationToLowercase(preference.getTitle());
                     break;
                 case BY_KEY:
-                    sortValue = preference.getKey();
+                    String key = preference.getKey();
+                    if (key == null) throw new IllegalStateException(
+                            "Group is sort by key but preference has null key: " + preference
+                    );
+                    sortValue = key;
                     break;
                 case UNSORTED:
                     continue; // Keep original sorting.

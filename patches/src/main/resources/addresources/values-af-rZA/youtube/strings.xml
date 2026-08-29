@@ -846,6 +846,7 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Deaktiveer speler pop-up panele</string>
   <string name="morphe_disable_player_popup_panels_summary">Deaktiveer lysie- en lewendige kletspannele van outomatiese opening</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Verlaat volskermmodus aan die einde van die video</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiveer</string>
@@ -854,9 +855,11 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_exit_fullscreen_entry_4">Portret en landskap</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Volskerm gebare</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Spelergebare in volskermmodus</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Deaktiveer portret opwaartse swipe gebaar</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Deaktiveer portret-afglingsgebare</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Deaktiveer landskap-afglingsgebare</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Deaktiveer knyp-zoem-gebaar</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Maak video\'s in volledig skermmodus oop</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Deaktiveer</string>
@@ -870,6 +873,7 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_fullscreen_video_scale_button_title">Wys videoskaalknoppie</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Tik om deur Standaard, Rek en Zoem te wissel</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Wys demp-knoppie</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Speler oorlegslaag deursigtigheid</string>
   <string name="morphe_player_overlay_opacity_summary">Pas die deursigtigheidsvlak aan (0 is deursigtig, 100 is ondeursigtig)</string>

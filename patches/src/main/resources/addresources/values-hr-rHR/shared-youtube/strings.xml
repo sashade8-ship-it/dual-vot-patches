@@ -81,7 +81,7 @@ Provjerite je li naziv paketa ispravan i je li aplikacija instalirana"</string>
 Ako ste korisnik YouTube Premiuma, ova postavka možda nije potrebna"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Nije moguće dohvatiti niti jedan klijentski tok</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Isključivanje ove postavke može uzrokovati probleme pri reprodukciji.</string>
-  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
   <string name="morphe_spoof_video_streams_no_clients_suggest_vr_toast">Pokušajte omogućiti: Falsificiraj video toke > Prijava u Android VR</string>
   <string name="morphe_spoof_video_streams_client_type_title">Standardni klijent</string>
@@ -151,7 +151,7 @@ Za prijavu, pritisnite nastavak ispod"</string>
   <string name="morphe_proxy_allow_direct_fallback_summary">Poveži se izravno ako proxy ne uspije</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">Sakrij pune zaslonske oglase</string>
-  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_force_original_audio_not_available">Da biste koristili ovu značajku, promijenite \'Lažiranje video streamova\' u bilo koji klijent osim \'Android Studio\' i \'Android VR Downgraded\'</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
@@ -185,6 +185,8 @@ Međutim, omogućavanjem ove postavke zabilježit će se i neki korisnički poda
   <string name="morphe_remove_viewer_discretion_dialog_title">Ukloni dijalog upozorenja za gledatelje</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">Ovo ne zaobilazi ograničenje dobi. Jednostavno ga automatski prihvaća.</string>
   <!-- misc.potoken.poTokenProviderPatch -->
+  <!-- "Fixes playback issues using an external PoToken minter (Experimental)" should use the same wording as morphe_external_potoken_provider_summary
+         'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Lažiraj verziju aplikacije</string>
   <string name="morphe_spoof_app_version_summary">Obmanjuje poslužitelj kako bi pomislio da koristite stariju verziju aplikacije radi vraćanja zastarjelih značajki sučelja</string>

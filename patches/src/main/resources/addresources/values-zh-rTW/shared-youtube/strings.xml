@@ -81,7 +81,7 @@ Second \"item\" text"</string>
 如果您是 YouTube Premium 使用者，則可能不需要此設定"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">未能擷取任何用戶端串流</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">關閉此設定可能會導致播放問題。</string>
-  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_title.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
   <string name="morphe_spoof_video_streams_no_clients_suggest_vr_toast">試試啟用：偽裝視訊串流 &gt; Android VR 登入</string>
   <string name="morphe_spoof_video_streams_client_type_title">預設用戶端</string>
@@ -151,7 +151,7 @@ Second \"item\" text"</string>
   <string name="morphe_proxy_allow_direct_fallback_summary">如果代理伺服器失敗，則直接連線</string>
   <!-- ad.hideFullscreenAdsPatch -->
   <string name="morphe_hide_fullscreen_ads_title">隱藏全螢幕廣告</string>
-  <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_force_original_audio_not_available">若要使用此功能，請將「偽造視訊串流」變更為 Android Studio 和 Android VR Downgraded 以外的任何用戶端。</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
@@ -185,6 +185,19 @@ Second \"item\" text"</string>
   <string name="morphe_remove_viewer_discretion_dialog_title">移除觀看分級對話方塊</string>
   <string name="morphe_remove_viewer_discretion_dialog_summary">這並不會繞過年齡限制，只是自動接受它</string>
   <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_external_potoken_provider_summary">"使用外部 PoToken minter 修復播放問題（實驗性）
+
+如果您是 YouTube Premium 用戶，可能不需要此設定"</string>
+  <!-- "Fixes playback issues using an external PoToken minter (Experimental)" should use the same wording as morphe_external_potoken_provider_summary
+         'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_unavailable_summary">"使用外部 PoToken 铸造器修復播放問題（實驗性）
+
+要使用此功能，請關閉「欺騙影片串流」"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">如果無法運作，請嘗試強制關閉 MicroG</string>
+  <string name="morphe_external_potoken_provider_settings_summary">開啟 PotHelper 設定</string>
+  <string name="morphe_external_potoken_provider_about_summary">"此功能目前正在開發中，可能無法運作
+
+點擊此處下載 PotHelper"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">偽裝應用程式版本</string>
   <string name="morphe_spoof_app_version_summary">欺騙伺服器，使其認為您正在使用較舊的應用程式版本，以恢復舊版使用者介面功能</string>

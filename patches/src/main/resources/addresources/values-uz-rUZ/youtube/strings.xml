@@ -841,6 +841,7 @@ Sozlamalar → Oynatish (yoki Avtoijro) → Keyingi videoni avtomatik ravishda i
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Pleer panelini oʻchirish</string>
   <string name="morphe_disable_player_popup_panels_summary">Pleer panellarini avtomatik ochilishini oʻchirish</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Sharhni yashirish</string>
   <string name="morphe_exit_fullscreen_entry_1">O\'chirilgan</string>
@@ -849,9 +850,11 @@ Sozlamalar → Oynatish (yoki Avtoijro) → Keyingi videoni avtomatik ravishda i
   <string name="morphe_exit_fullscreen_entry_4">Portret va landshaft</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">To\'liq ekran gestlari</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">To\'liq ekran rejimidagi pleyer imo-ishoralari</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Portret uchun yuqoriga surish gestini o\'chirish</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Portret uchun pastga surish gestini o\'chirish</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Manzarali uchun pastga surish gestini o\'chirish</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Siqish orqali kattalashtirish imo-ishorasini o\'chirish</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Videolarni to\'liq ekran rejimida ochish</string>
   <string name="morphe_open_videos_fullscreen_entry_1">O\'chirilgan</string>
@@ -865,6 +868,7 @@ Sozlamalar → Oynatish (yoki Avtoijro) → Keyingi videoni avtomatik ravishda i
   <string name="morphe_fullscreen_video_scale_button_title">Video o‘lchami tugmasini ko‘rsatish</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Bosilganda Default, Stretch va Zoom o‘rtasida almashadi</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Ovozsiz tugmani ko\'rsat</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Pleyer qoplamasining shaffofligi</string>
   <string name="morphe_player_overlay_opacity_summary">Pleyerdagi qoplama shaffofligini sozlash (0 shaffof, 100 toʻliq qorongʻi)</string>

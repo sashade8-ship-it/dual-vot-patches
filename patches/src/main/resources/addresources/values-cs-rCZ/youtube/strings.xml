@@ -844,6 +844,7 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Zakázat vyskakovací panely hráče</string>
   <string name="morphe_disable_player_popup_panels_summary">Zakáže automatické otevírání panelů seznamu skladeb a živého chatu</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Opustit režim celé obrazovky na konci videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Vypnuto</string>
@@ -852,9 +853,11 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <string name="morphe_exit_fullscreen_entry_4">Na výšku i na šířku</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesta pro celou obrazovku</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gesta přehrávače v režimu celé obrazovky</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Zakázat gesta při přejetí prstem nahoru v portrétním režimu</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Zakázat gesto přejetím dolů na výšku</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Zakázat gesto přejetím dolů na šířku</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Zakázat gesto přiblížení prsty</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Otevřít videa v režimu na celou obrazovku</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Vypnuto</string>
@@ -868,6 +871,7 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <string name="morphe_fullscreen_video_scale_button_title">Zobrazit tlačítko měřítka videa</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Klepnutím přepínáte mezi Výchozí, Roztáhnout a Přiblížit</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Zobrazit tlačítko ztlumení</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Průhlednost překrytí přehrávače</string>
   <string name="morphe_player_overlay_opacity_summary">Upravte úroveň průhlednosti (0 je průhledná, 100 je neprůhledná)</string>

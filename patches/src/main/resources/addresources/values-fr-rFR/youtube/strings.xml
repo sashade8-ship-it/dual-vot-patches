@@ -369,7 +369,7 @@ Appuyez ici pour ouvrir AiSlopList.com et voir les téléchargements disponibles
   <string name="morphe_vot_translation_volume_summary">Volume de la voix doublée de la traduction</string>
   <string name="morphe_vot_max_speech_rate_title">Vitesse d\'élocution maximale</string>
   <string name="morphe_vot_max_speech_rate_summary">Multiplicateur maximal de vitesse pour adapter la parole à la durée du sous-titre</string>
-  <string name="morphe_vot_mymemory_info_summary">"API de traduction gratuite, aucune clé API requise. Jusqu'à 5,000 caractères par jour avec l'offre gratuite, ou jusqu'à 50,000 caractères par jour avec une adresse e-mail.
+  <string name="morphe_vot_mymemory_info_summary">"API de traduction gratuite, aucune clé API nécessaire. Jusqu'à 5,000 caractères par jour avec l'offre gratuite, ou jusqu'à 50,000 caractères par jour avec une adresse e-mail.
 
 Appuyez ici pour ouvrir MyMemory.translated.net"</string>
   <string name="morphe_vot_mymemory_email_title">E-mail MyMemory</string>
@@ -847,6 +847,7 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de la v
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Désactiver les panneaux pop-up du lecteur</string>
   <string name="morphe_disable_player_popup_panels_summary">Empêche l\'ouverture automatique des panneaux de playlist et de chat en direct</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Quitter le mode plein écran à la fin de la vidéo</string>
   <string name="morphe_exit_fullscreen_entry_1">Désactivé</string>
@@ -855,9 +856,11 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de la v
   <string name="morphe_exit_fullscreen_entry_4">Portrait et paysage</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestes en mode plein écran</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gestes du lecteur en mode plein écran</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Désactiver le geste de balayage vers le haut en mode portrait</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Désactiver le geste de balayage vers le bas en mode portrait</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Désactiver le geste de balayage vers le bas en mode paysage</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Désactiver le geste de pincement pour zoomer</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Ouvrir les vidéos en mode plein écran</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Désactivé</string>
@@ -871,6 +874,7 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de la v
   <string name="morphe_fullscreen_video_scale_button_title">Afficher un bouton de mise à l’échelle de la vidéo</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Appuyez pour passer entre Par défaut, Étirer et Zoom</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Afficher un bouton \'Muet\'</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacité de l\'overlay du lecteur</string>
   <string name="morphe_player_overlay_opacity_summary">Ajuster le niveau de transparence (0 est transparent, 100 est opaque)</string>

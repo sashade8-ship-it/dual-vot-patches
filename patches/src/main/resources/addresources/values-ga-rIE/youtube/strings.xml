@@ -846,6 +846,7 @@ Socruithe → Athsheinm (nó Uathsheinm) → Uathsheinm an chéad fhíseán eile
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Díchumasaigh painéil aníos an imreora</string>
   <string name="morphe_disable_player_popup_panels_summary">Díchumasaíonn sé painéil seinmliosta agus comhrá beo ó oscailt go huathoibríoch</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Scoir an mód lánscáileáin ag deireadh an fhíseáin</string>
   <string name="morphe_exit_fullscreen_entry_1">Díchumasaithe</string>
@@ -854,9 +855,11 @@ Socruithe → Athsheinm (nó Uathsheinm) → Uathsheinm an chéad fhíseán eile
   <string name="morphe_exit_fullscreen_entry_4">Portráid agus tírdhreach</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gothaí lánscáileáin</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gothaí seinnteora i mód lánscáileáin</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Díchumasaigh gotha ​​svaidhpeála suas portráide</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Díchumasaigh gotha ​​svaidhpeála síos portráide</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Díchumasaigh gotha ​​svaidhpeála tírdhreacha</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Díchumasaigh gotha pinch chun súmáil</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Oscail físeáin i mód lánscáileáin</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Díchumasaithe</string>

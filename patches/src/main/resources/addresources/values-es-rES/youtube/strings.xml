@@ -844,6 +844,9 @@ Configuración → Reproducción (o Reproducción automática) → Reproducción
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Desactivar paneles emergentes del reproductor</string>
   <string name="morphe_disable_player_popup_panels_summary">Desactiva la apertura automática de los paneles de la lista de reproducción y del chat en directo</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Desactivar reproducción automática de listas de reproducción</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Evita que las listas de reproducción pasen automáticamente al siguiente vídeo</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Salir del modo de pantalla completa al finalizar el vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desactivado</string>
@@ -1145,6 +1148,14 @@ Pulsa aquí para saber más sobre DeArrow"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Permite ajustar la velocidad y el tono de forma independiente, puede causar artefactos de audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Desactivar vídeo HDR</string>
+  <string name="morphe_force_hdr_video_title">Forzar vídeo HDR</string>
+  <string name="morphe_force_hdr_video_summary">Fuerza a la aplicación a reconocer este dispositivo como compatible con HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Usa esto si la decodificación HDR funciona pero YouTube no ofrece HDR, como en algunos dispositivos HyperOS que ocultan HLG.
+
+Limitaciones:
+• Los colores pueden verse incorrectos si la pantalla no puede mostrar realmente HDR
+• La reproducción puede fallar si el decodificador no puede manejar HDR
+• El HDR sigue dependiendo del cliente de 'Falsificar transmisiones de vídeo'"</string>
   <string name="morphe_force_avc_codec_title">Forzar códec AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Ventajas:
 • Puede mejorar la duración de la batería

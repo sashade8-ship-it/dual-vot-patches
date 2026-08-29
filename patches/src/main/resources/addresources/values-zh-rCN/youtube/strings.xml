@@ -846,6 +846,7 @@ Second \"item\" text"</string>
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">禁用播放器弹出面板</string>
   <string name="morphe_disable_player_popup_panels_summary">禁用播放列表和直播聊天面板的自动打开</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">在视频结束时退出全屏模式</string>
   <string name="morphe_exit_fullscreen_entry_1">已禁用</string>
@@ -854,9 +855,11 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_4">纵向和横向显示</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">全屏手势</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">全屏模式下的播放器手势</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">禁用向上滑动返回手势</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">禁用竖屏下滑手势</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">禁用横屏下滑手势</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">禁用捏合缩放手势</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">以全屏模式打开视频</string>
   <string name="morphe_open_videos_fullscreen_entry_1">已禁用</string>
@@ -870,6 +873,7 @@ Second \"item\" text"</string>
   <string name="morphe_fullscreen_video_scale_button_title">显示视频缩放按钮</string>
   <string name="morphe_fullscreen_video_scale_button_summary">点击循环切换默认、拉伸和缩放</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">显示静音按钮</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">播放器叠加层不透明度</string>
   <string name="morphe_player_overlay_opacity_summary">调整透明度 (0 为透明，100 为不透明)</string>

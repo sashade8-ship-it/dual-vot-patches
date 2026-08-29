@@ -844,6 +844,7 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Slå afspiller pop-up paneler fra</string>
   <string name="morphe_disable_player_popup_panels_summary">Deaktiverer automatisk åbning af playliste- og livechat-paneler</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Afslut fuldskærmstilstand ved videoens afslutning</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiveret</string>
@@ -852,9 +853,11 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_exit_fullscreen_entry_4">Portræt og landskab</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestusser til fuld skærm</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Bevægelser i fuldskærmstilstand</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Deaktiver swipe-op-gestus i portrættilstand</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Deaktiver gestus med nedadstræk i portrættilstand</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Deaktiver gestus med nedadstræk i landskabsttilstand</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Deaktiver knib-og-zoom-bevægelse</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Åbn videoer i fuldskærmstilstand</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Deaktiveret</string>
@@ -868,6 +871,7 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_fullscreen_video_scale_button_title">Vis knappen for videoskala</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Tryk for at skifte mellem Standard, Stræk og Zoom</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Vis mute-knap</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spiller overlay gennemsigtighed</string>
   <string name="morphe_player_overlay_opacity_summary">Juster gennemsigtighedsniveauet (0 er gennemsigtigt, 100 er uigennemsigtigt)</string>

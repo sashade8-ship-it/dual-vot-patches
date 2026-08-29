@@ -845,6 +845,9 @@ To ustawienie działa tylko wtedy, gdy autoodtwarzanie jest wyłączone. Możesz
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Wyłącz wyskakujące panele w odtwarzaczu</string>
   <string name="morphe_disable_player_popup_panels_summary">Wyłącza automatyczne otwieranie paneli playlisty i czatu na żywo</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Wyłącz autoodtwarzanie playlist</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Zapobiega automatycznemu przechodzeniu playlist do następnego filmu</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Wyjście z trybu pełnoekranowego po zakończeniu filmu</string>
   <string name="morphe_exit_fullscreen_entry_1">Wyłączone</string>
@@ -1146,6 +1149,14 @@ Dotknij tutaj, aby otworzyć DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Umożliwia niezależne ustawianie prędkości i tonacji, może powodować zniekształcenia dźwięku</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Wyłącz filmy z HDR</string>
+  <string name="morphe_force_hdr_video_title">Wymuś filmy w HDR</string>
+  <string name="morphe_force_hdr_video_summary">Wymusza na aplikacji rozpoznanie urządzenia jako obsługującego HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Użyj tego, jeśli dekodowanie HDR działa, ale YouTube nie oferuje HDR, jak w przypadku niektórych urządzeń z HyperOS, które ukrywają HLG.
+
+Ograniczenia:
+• Kolory mogą wyglądać nieprawidłowo, jeśli ekran w rzeczywistości nie potrafi wyświetlić HDR
+• Odtwarzanie może zakończyć się niepowodzeniem, jeśli dekoder nie obsługuje HDR
+• HDR nadal zależy od klienta fałszowania strumieni filmów"</string>
   <string name="morphe_force_avc_codec_title">Wymuś kodek AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Korzyści:
 • Może wydłużyć czas pracy na baterii

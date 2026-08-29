@@ -183,6 +183,7 @@ Guherînan têne xistine:
   <string name="morphe_hide_video_details_section_title">Hilbijêrin ku çi di çîpên kategoriyê de veşêrin</string>
   <string name="morphe_hide_filter_bar_screen_title">Barê Fîltirê.</string>
   <string name="morphe_hide_filter_bar_screen_summary">Hilbijêre ku li ku derê barê fîlterkirina bilindkirinê veşêrin</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">Hilşandina li ser rûpela kanalê</string>
   <string name="morphe_hide_filter_bar_in_comments_title">Li şîrovetan veşêre</string>
   <string name="morphe_hide_filter_bar_in_feed_title">Li ser navnîşanê veşêre</string>
   <string name="morphe_hide_filter_bar_in_related_videos_title">Li ser vîdeoyên têkildar veşêre</string>
@@ -199,6 +200,8 @@ Guherînan têne xistine:
   <string name="morphe_hide_join_button_title">Bişîniya butona \'Join\' veşêrin</string>
   <string name="morphe_hide_links_preview_title">Pêşbîna lingan veşêrin</string>
   <string name="morphe_hide_links_preview_summary">Lîsteya endamên kanalê veşêrin</string>
+  <string name="morphe_hide_members_only_chip_title">Hilşandina tîpa \'Members\' li ser rûpela kanalê</string>
+  <string name="morphe_hide_members_only_chip_summary">Hilşandina tîpa \'Members\' di barika fîlterê de</string>
   <string name="morphe_hide_members_shelf_title">Şerfa endam veşêrin</string>
   <string name="morphe_hide_members_shelf_summary">Hilbijêrin ku pêkhateyên di beşa şîroveyan de veşêrin</string>
   <string name="morphe_hide_posts_shelf_title">Şelfa posta veşêre</string>
@@ -841,6 +844,7 @@ Settings → Playback (an Autoplay) → Autoplay next video"</string>
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Panelên popup-a lîstikvanê quteyî bike</string>
   <string name="morphe_disable_player_popup_panels_summary">Panelên lîstikên navnîşanê û sohbeta zindî nekarin bi xweber vekirin</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Moda tam ekran li benda dawiya vîdeoyê derbeve</string>
   <string name="morphe_exit_fullscreen_entry_1">Birçîbûn.</string>
@@ -849,17 +853,25 @@ Settings → Playback (an Autoplay) → Autoplay next video"</string>
   <string name="morphe_exit_fullscreen_entry_4">Portrait and landscape</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Têkelên tevna tîkê</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Tevgerên player di moda ekrana tijî de</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Devêrê têkelê neşrîyê parçebûyî</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Portret mod da xêrkirina destûrê sekinîn</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Portreta horizontal da xêrkirina destûrê sekinîn</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Tevgera zoomê ya bi çikandinê neçalak bike</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Vîdyoyên bi modê tîrêjê vekin</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Vemirandî</string>
   <string name="morphe_open_videos_fullscreen_entry_2">Portre</string>
   <string name="morphe_open_videos_fullscreen_entry_3">Landin</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Pîvana vîdyoyê ya ekrana tevahî</string>
   <string name="morphe_fullscreen_video_scale_entry_default">Bixweber</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">Dirêjkirin (dagirtina ekranê)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">Zûmkirin (ji bo dagirtinê)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">Nîşandana bişkoka pîvana vîdyoyê</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">Bikirtînin ji bo guhertina Default, Dirêjkirin û Zûmkirin</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Bişkojka bêdengiyê nîşan bide</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Şewitîya zeviyayê pêşandanê.</string>
   <string name="morphe_player_overlay_opacity_summary">Astê şeffafiyê bistîne (0 şeffaf e, 100 neşeffaf e)</string>

@@ -846,6 +846,7 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">Disabilita i pannelli popup del lettore</string>
   <string name="morphe_disable_player_popup_panels_summary">Disabilita l\'apertura automatica dei pannelli playlist e chat live</string>
+  <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Esci dalla modalità a schermo intero alla fine del video</string>
   <string name="morphe_exit_fullscreen_entry_1">Disabilitato</string>
@@ -854,9 +855,11 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_exit_fullscreen_entry_4">Verticale e orizzontale</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesti a schermo intero</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gesti del lettore in modalità schermo intero</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Disabilita il gesto di scorrimento verso l\'alto in verticale</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Disabilita gesto di scorrimento verso il basso in verticale</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Disabilita gesto di scorrimento verso il basso in orizzontale</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Disattiva il gesto di pizzica per zoomare</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Apri i video a schermo intero</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Disattivato</string>
@@ -870,6 +873,7 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_fullscreen_video_scale_button_title">Mostra pulsante scala video</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Tocca per passare da Predefinito, Adatta e Zoom</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Mostra pulsante muto</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacità sovrapposizione del lettore</string>
   <string name="morphe_player_overlay_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
