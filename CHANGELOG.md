@@ -1,3 +1,13 @@
+## 1.41.0-dev.6-dualvot.8.3 (2026-08-30)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.41.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.41.0-dev.5-dualvot.8.3 (2026-08-29)
 
 ### Automated Morphe update
@@ -272,6 +282,21 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.41.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.5...v1.41.0-dev.6) (2026-08-30)
+
+### 🐛 Bug Fixes
+
+* **Enable debugging - Feature flags manager:** Only use active flags as binary search candidates ([c6f0e1d](https://github.com/MorpheApp/morphe-patches/commit/c6f0e1d15247c38753853e389e0a6a63ea8b4bf4))
+* **YouTube - Advanced quality menu:** The menu is not show in some circumstances ([a867890](https://github.com/MorpheApp/morphe-patches/commit/a8678901703c6b903f4002ab950355ccebcc1d15))
+* **YouTube - Hide player overlay buttons:** Hide new type of cast button ([bb36691](https://github.com/MorpheApp/morphe-patches/commit/bb3669139536e0c632fb4991b7e4bcd4ee3cc84e))
+* **YouTube - Theme:** Apply custom colors to the menu and dialog backgrounds ([2cca3d9](https://github.com/MorpheApp/morphe-patches/commit/2cca3d9e3d806e87000f900959079bd9e25d81e5))
+* **YouTube - Theme:** Custom colors are not applied to experimental flyout menus ([6e30492](https://github.com/MorpheApp/morphe-patches/commit/6e304926f7ad112e5566bed4a727851fc0198f5b))
+
+### ✨ New Features
+
+* **Enable debugging - Feature flags manager:** Redesign and add flag forcing, import and export, and binary search ([#2638](https://github.com/MorpheApp/morphe-patches/issues/2638)) ([f0fdebe](https://github.com/MorpheApp/morphe-patches/commit/f0fdebeb02e40360c150e093180530a606709660))
+* **Enable debugging - Feature flags manager:** Tell apart a behavior with no flag from one caused by more than one flag ([249c6bf](https://github.com/MorpheApp/morphe-patches/commit/249c6bf10571669fb8399e47fbf9a99d96d6e9f0))
 
 ## [1.41.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.4...v1.41.0-dev.5) (2026-08-29)
 
