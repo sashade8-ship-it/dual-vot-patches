@@ -119,6 +119,12 @@ internal object VideoQualityItemOnClickFingerprint : Fingerprint(
     )
 )
 
+internal object FlowVideoQualityMenuFeatureFlagFingerprint : Fingerprint(
+    filters = listOf(
+        literal(45769508L)
+    )
+)
+
 internal object VideoQualityMenuOptionsFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.STATIC),
     returnType = "[L",

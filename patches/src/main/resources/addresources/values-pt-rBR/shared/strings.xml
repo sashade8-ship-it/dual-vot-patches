@@ -107,13 +107,37 @@ Você não será notificado sobre nenhum evento inesperado."</string>
   <string name="morphe_debug_logs_clear_toast">Registros de depuração limpos</string>
   <string name="morphe_debug_feature_flags_manager_title">Gerenciador de sinalizadores de recursos</string>
   <string name="morphe_debug_feature_flags_manager_summary">Gerenciar sinalizadores de recursos booleanos</string>
-  <string name="morphe_debug_feature_flags_manager_active_header">Flags de recurso ativas (%d)</string>
-  <string name="morphe_debug_feature_flags_manager_blocked_header">Flags de recurso bloqueadas (%d)</string>
   <string name="morphe_debug_feature_flags_manager_search_hint">Pesquisar flags de recursos…</string>
+  <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_inactive">Inativo (%s)</string>
+  <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_active">Ativo (%s)</string>
+  <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_blocked">Bloqueado (%s)</string>
+  <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_forced">Forçado (%s)</string>
+  <!-- Keep short, shown as a badge and as a button. -->
+  <string name="morphe_debug_feature_flags_manager_state_auto">Automático</string>
+  <!-- Keep short, shown as a badge and as a button. -->
+  <string name="morphe_debug_feature_flags_manager_state_blocked">Desativado</string>
+  <!-- Keep short, shown as a badge and as a button. -->
+  <string name="morphe_debug_feature_flags_manager_state_forced">Ativado</string>
+  <string name="morphe_debug_feature_flags_manager_action_force_on">Forçar ativação</string>
+  <string name="morphe_debug_feature_flags_manager_action_force_off">Bloquear</string>
+  <string name="morphe_debug_feature_flags_manager_action_remove">Remover</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Flags de recurso salvas</string>
   <string name="morphe_debug_feature_flags_manager_toast_reset">Flags de recurso redefinidas</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Flags de recurso copiadas para a área de transferência</string>
   <string name="morphe_debug_feature_flags_manager_toast_no_flags">Reinicie o aplicativo para usar esta configuração</string>
+  <string name="morphe_debug_feature_flags_manager_import_export_title">Exportar e importar</string>
+  <string name="morphe_debug_feature_flags_manager_import_success">%s sinalizadores de recursos importados</string>
+  <string name="morphe_debug_feature_flags_manager_import_failed">Nenhum sinalizador de recurso encontrado</string>
+  <string name="morphe_debug_feature_flags_manager_export_file_success">Sinalizadores de recursos exportados com sucesso</string>
+  <string name="morphe_debug_feature_flags_manager_export_file_failed">Falha ao exportar os sinalizadores de recursos</string>
+  <string name="morphe_debug_feature_flags_manager_import_file_success">Sinalizadores de recursos carregados, toque em Salvar para aplicar</string>
+  <string name="morphe_debug_feature_flags_manager_import_file_failed">Falha ao ler o arquivo</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_title">Busca binária</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_start_button">Começo</string>
   <!-- Could be its own resource file, but for simplicity it's shared among all apps. -->
   <!-- misc.gms.gmsCoreSupportResourcePatch -->
   <string name="microg_settings_summary">Abrir as configurações do MicroG</string>

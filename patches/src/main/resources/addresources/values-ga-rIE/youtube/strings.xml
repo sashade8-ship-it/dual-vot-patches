@@ -847,6 +847,8 @@ Socruithe → Athsheinm (nó Uathsheinm) → Uathsheinm an chéad fhíseán eile
   <string name="morphe_disable_player_popup_panels_title">Díchumasaigh painéil aníos an imreora</string>
   <string name="morphe_disable_player_popup_panels_summary">Díchumasaíonn sé painéil seinmliosta agus comhrá beo ó oscailt go huathoibríoch</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Díchumasaigh uathsheinm seinmliosta</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Coscann sé seinmliostaí ó dhul ar aghaidh go huathoibríoch go dtí an chéad fhíseán eile</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Scoir an mód lánscáileáin ag deireadh an fhíseáin</string>
   <string name="morphe_exit_fullscreen_entry_1">Díchumasaithe</string>
@@ -855,11 +857,11 @@ Socruithe → Athsheinm (nó Uathsheinm) → Uathsheinm an chéad fhíseán eile
   <string name="morphe_exit_fullscreen_entry_4">Portráid agus tírdhreach</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gothaí lánscáileáin</string>
-  <string name="morphe_disable_fullscreen_gestures_summary">Gothaí seinnteora i mód lánscáileáin</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Gothaí imreora i mód lánscáileáin</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Díchumasaigh gotha ​​svaidhpeála suas portráide</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Díchumasaigh gotha ​​svaidhpeála síos portráide</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Díchumasaigh gotha ​​svaidhpeála tírdhreacha</string>
-  <string name="morphe_disable_fullscreen_zoom_gesture_title">Díchumasaigh gotha pinch chun súmáil</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Díchumasaigh gotha ​​pinch-to-súmáil</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Oscail físeáin i mód lánscáileáin</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Díchumasaithe</string>
@@ -1148,6 +1150,14 @@ Tapáil anseo chun DeArrow.ajay.app a oscailt."</string>
   <string name="morphe_playback_audio_time_stretching_summary">Ceadaíonn sé luas agus páirc a shocrú go neamhspleách, d\'fhéadfadh sé airteagail fuaime a chruthú</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Díchumasaigh físeán HDR</string>
+  <string name="morphe_force_hdr_video_title">Fórsáil físeán HDR</string>
+  <string name="morphe_force_hdr_video_summary">Cuireann sé iallach ar an aip an gléas seo a aithint mar fhear atá in ann HDR a úsáid</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Úsáid é seo má oibríonn díchódú HDR ach mura dtairgeann YouTube HDR, amhail roinnt gléasanna HyperOS a cheiltíonn HLG.
+
+Teorainneacha:
+• D’fhéadfadh cuma mhícheart a bheith ar na dathanna mura féidir leis an taispeántas HDR a thaispeáint i ndáiríre
+• D’fhéadfadh teip a bheith ar an athsheinm mura féidir leis an díchódóir HDR a láimhseáil
+• Braitheann HDR fós ar an gcliant sruthanna físe bréige"</string>
   <string name="morphe_force_avc_codec_title">Códc AVC (H.264) a fhorchur</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Sochair:
 • Féadfaidh sé saolré na ceallraí a fheabhsú

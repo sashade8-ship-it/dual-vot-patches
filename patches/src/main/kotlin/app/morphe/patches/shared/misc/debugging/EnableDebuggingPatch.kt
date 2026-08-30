@@ -1,6 +1,6 @@
 /*
  * Copyright 2026 Morphe.
- * https://github.com/MorpheApp/morphe-patches
+ * https://github.com/MorpheApp/morphe-patches/pull/2638
  *
  * Original hard forked code:
  * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
@@ -58,15 +58,12 @@ internal fun enableDebuggingPatch(
                 copyResources(
                     "settings",
                     ResourceGroup("drawable",
-                        // Action buttons.
+                        // Feature flags manager buttons.
+                        "morphe_settings_bisect.xml",
                         "morphe_settings_copy_all.xml",
                         "morphe_settings_deselect_all.xml",
-                        "morphe_settings_select_all.xml",
-                        // Move buttons.
-                        "morphe_settings_arrow_left_double.xml",
-                        "morphe_settings_arrow_left_one.xml",
-                        "morphe_settings_arrow_right_double.xml",
-                        "morphe_settings_arrow_right_one.xml"
+                        "morphe_settings_import_export.xml",
+                        "morphe_settings_select_all.xml"
                     )
                 )
             }

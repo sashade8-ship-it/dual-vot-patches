@@ -69,7 +69,7 @@ Ví dụ:
   <string name="morphe_hide_expandable_card_entry_3">Ẩn tất cả</string>
   <string name="morphe_hide_floating_microphone_button_title">Ẩn nút micrô</string>
   <string name="morphe_hide_floating_microphone_button_summary">Ẩn nút micro nổi ở góc dưới bên phải của màn hình gợi ý tìm kiếm</string>
-  <string name="morphe_hide_get_premium_button_title">Ẩn nút \"Nhận Premium\"</string>
+  <string name="morphe_hide_get_premium_button_title">Ẩn nút \"Mua Premium\"</string>
   <string name="morphe_hide_horizontal_shelves_title">Ẩn kệ cá nhân hoá</string>
   <string name="morphe_hide_horizontal_shelves_summary">Ẩn các kệ ngang như Tin nổi bật, Bài đăng bạn có thể thích, Tiếp tục xem, Khám phá các kênh khác, Khám phá các chủ đề khác, Dành cho bạn, Mới nhất, Phù hợp nhất, Bài đăng từ cộng đồng của nhà sáng tạo, Mua sắm, và Xem lại</string>
   <string name="morphe_hide_hyped_label_title">Ẩn nhãn nổi bật</string>
@@ -168,7 +168,7 @@ Ví dụ:
   <string name="morphe_hide_explore_podcast_section_title">Ẩn phần \"Khám phá podcast\"</string>
   <string name="morphe_hide_featured_channels_section_title">Ẩn phần kênh nổi bật</string>
   <string name="morphe_hide_featured_links_section_title">Ẩn phần Liên kết nổi bật</string>
-  <string name="morphe_hide_featured_playlists_section_title">Ẩn phần danh sách phát nổi bật</string>
+  <string name="morphe_hide_featured_playlists_section_title">Ẩn phần Danh sách phát nổi bật</string>
   <string name="morphe_hide_featured_videos_section_title">Ẩn phần Video nổi bật</string>
   <string name="morphe_hide_hashtag_section_title">Ẩn phần Hashtag</string>
   <string name="morphe_hide_how_this_was_made_section_title">Ẩn phần \'Cách mà điều này được tạo ra\'</string>
@@ -208,20 +208,20 @@ Ví dụ:
   <string name="morphe_hide_store_button_title">Ẩn nút Cửa hàng</string>
   <!-- 'Subscribe' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_subscribe_button_in_channel_page_title">Ẩn nút Đăng ký</string>
-  <string name="morphe_explore_menu_screen_title">Khám phá menu</string>
-  <string name="morphe_explore_menu_screen_summary">Chọn những thành phần sẽ xuất hiện trong menu khám phá</string>
+  <string name="morphe_explore_menu_screen_title">Menu khám phá</string>
+  <string name="morphe_explore_menu_screen_summary">Chọn các thành phần sẽ hiển thị trong menu Khám phá</string>
   <string name="morphe_hide_courses_menu_title">Ẩn menu Khóa học</string>
   <string name="morphe_hide_explore_button_title">Ẩn nút Khám phá</string>
   <string name="morphe_hide_fashion_menu_title">Ẩn menu \'Thời trang &amp; Làm đẹp\'</string>
-  <string name="morphe_hide_gaming_menu_title">Ẩn menu Game</string>
-  <string name="morphe_hide_hype_menu_title">Ẩn menu Hype</string>
+  <string name="morphe_hide_gaming_menu_title">Ẩn menu Chơi game</string>
+  <string name="morphe_hide_hype_menu_title">Ẩn menu Khuấy động</string>
   <string name="morphe_hide_learning_menu_title">Ẩn menu Học tập</string>
   <string name="morphe_hide_live_menu_title">Ẩn menu Trực tiếp</string>
-  <string name="morphe_hide_memberships_menu_title">Ẩn menu Thành viên</string>
+  <string name="morphe_hide_memberships_menu_title">Ẩn menu Hội viên</string>
   <string name="morphe_hide_movies_menu_title">Ẩn menu \'Movies &amp; TV\'</string>
   <string name="morphe_hide_music_menu_title">Ẩn menu Music</string>
   <string name="morphe_hide_news_menu_title">Ẩn menu Tin tức</string>
-  <string name="morphe_hide_playables_menu_title">Ẩn menu Playables</string>
+  <string name="morphe_hide_playables_menu_title">Ẩn menu Chơi game</string>
   <string name="morphe_hide_podcasts_menu_title">Ẩn menu Podcast</string>
   <string name="morphe_hide_shopping_menu_title">Ẩn menu Mua sắm</string>
   <string name="morphe_hide_sports_menu_title">Ẩn menu Thể thao</string>
@@ -329,12 +329,12 @@ Bấm vào đây để mở AiSlopList.com và xem các phiên bản cho các n�
   <string name="morphe_hide_end_screen_store_banner_title">Ẩn biểu ngữ cửa hàng trên màn hình kết thúc</string>
   <string name="morphe_hide_general_ads_title">Ẩn quảng cáo chung</string>
   <string name="morphe_hide_merchandise_banners_title">Ẩn biểu ngữ sản phẩm</string>
-  <string name="morphe_hide_paid_promotion_labels_title">Ẩn nhãn quảng cáo trả phí</string>
+  <string name="morphe_hide_paid_promotion_labels_title">Ẩn nhãn nội dung được trả tiền để quảng cáo</string>
   <string name="morphe_hide_player_popup_ads_title">Ẩn quảng cáo bật lên trên trình phát</string>
   <string name="morphe_hide_self_sponsor_ads_title">Ẩn thẻ tự tài trợ</string>
   <string name="morphe_hide_shopping_links_title">Ẩn liên kết mua sắm</string>
   <string name="morphe_hide_video_ads_title">Ẩn video quảng cáo</string>
-  <string name="morphe_hide_youtube_premium_promotions_title">Ẩn quảng cáo YouTube Premium</string>
+  <string name="morphe_hide_youtube_premium_promotions_title">Ẩn quảng cáo khuyến mãi YouTube Premium</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Đã sao chép liên kết vào bảng nhớ tạm</string>
@@ -498,10 +498,10 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_disable_precise_seeking_gesture_summary">Tắt chế độ tua chính xác được bật khi vuốt thanh tiến trình lên</string>
   <!-- interaction.seekbar.livestreamDVRPatch -->
   <string name="morphe_livestream_dvr_title">Bật DVR phát trực tiếp</string>
-  <string name="morphe_livestream_dvr_summary">Cho phép tua trên mọi các buổi phát trực tiếp, kể cả khi bình thường không được phép</string>
+  <string name="morphe_livestream_dvr_summary">Cho phép tua trên mọi buổi phát trực tiếp, kể cả khi bình thường không được phép</string>
   <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
-  <string name="morphe_seekbar_thumbnail_preview_title">Bật hình thu nhỏ trên thanh tìm kiếm</string>
-  <string name="morphe_seekbar_thumbnail_preview_summary">Shows a video thumbnail while dragging the seekbar</string>
+  <string name="morphe_seekbar_thumbnail_preview_title">Bật hình thu nhỏ trên thanh tiến trình</string>
+  <string name="morphe_seekbar_thumbnail_preview_summary">Hiển thị hình thu nhỏ trong khi vuốt để tua trên thanh tiến trình</string>
   <string name="morphe_seekbar_thumbnail_heatmap_peak_point">Được phát lại nhiều nhất</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_livestream_dvr_not_available">"Việc bật 'DVR phát trực tiếp' có thể không khả dụng
@@ -957,7 +957,7 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_shorts_autoplay_background_title">Tự động phát trong nền</string>
   <string name="morphe_shorts_autoplay_background_summary">Tự động lướt tiếp Short kể cả khi phát nền</string>
   <!-- layout.playbackinfeeds.playbackInFeedsPatch -->
-  <string name="morphe_playback_in_feeds_title">Phát lại trong nguồn cấp dữ liệu</string>
+  <string name="morphe_playback_in_feeds_title">Phát trong trang video</string>
   <string name="morphe_playback_in_feeds_entry_always_on">Luôn bật</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Chỉ Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Tắt</string>

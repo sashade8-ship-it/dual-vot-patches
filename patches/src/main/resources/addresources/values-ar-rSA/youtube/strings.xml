@@ -262,6 +262,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_summary">يخفي تعليق المعاينة أسفل الفيديو قبل فتح قسم التعليقات الكامل</string>
   <string name="morphe_hide_comments_thanks_button_title">إخفاء زر شكرًا</string>
   <string name="morphe_hide_comments_timestamp_button_title">إخفاء زر الطابع الزمني</string>
+  <string name="morphe_hide_comments_top_fans_button_title">إخفاء زر \'أهم المعجبين\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">تنظيف روابط البحث المميزة</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">ينظف روابط البحث المميزة، ويترك فقط النص الأصلي العادي</string>
   <string name="morphe_hide_keyword_content_screen_title">تصفية الكلمات المفتاحية</string>
@@ -852,6 +853,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_disable_player_popup_panels_title">تعطيل لوحات المشغل المنبثقة</string>
   <string name="morphe_disable_player_popup_panels_summary">يعطل فتح اللوحات الخاصة بقائمة التشغيل والمحادثة المباشرة تلقائيًا</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">تعطيل تشغيل قوائم التشغيل تلقائيًا</string>
+  <string name="morphe_disable_playlist_autoplay_summary">يمنع قوائم التشغيل من الانتقال التلقائي إلى الفيديو التالي</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">الخروج من وضع ملء الشاشة عند انتهاء الفيديو</string>
   <string name="morphe_exit_fullscreen_entry_1">معطل</string>
@@ -1153,6 +1156,14 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_playback_audio_time_stretching_summary">يتيح ضبط السرعة وطبقة الصوت بشكل مستقل، وقد يسبب تشوهات في الصوت</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">تعطيل فيديو HDR</string>
+  <string name="morphe_force_hdr_video_title">فرض فيديو HDR</string>
+  <string name="morphe_force_hdr_video_summary">إجبار التطبيق على التعرف على هذا الجهاز بأنه يدعم تقنية HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"استخدم هذا الخيار إذا كان فك ترميز HDR يعمل، لكن تطبيق YouTube لا يتيح خيار HDR، كما في بعض أجهزة HyperOS التي تُخفي دعم HLG.
+
+القيود:
+• قد تظهر الألوان غير دقيقة إذا كانت الشاشة لا تدعم عرض محتوى HDR فعليًا
+• قد يفشل التشغيل إذا تعذّر على وحدة فك الترميز معالجة محتوى HDR
+• يظل تشغيل HDR معتمدًا على عميل Spoof Video Streams"</string>
   <string name="morphe_force_avc_codec_title">فرض برنامج ترميز AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"الفوائد:
 • يمكن أن يحسن عمر البطارية

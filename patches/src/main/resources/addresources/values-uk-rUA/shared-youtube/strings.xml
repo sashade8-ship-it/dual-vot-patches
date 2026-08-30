@@ -193,9 +193,9 @@ Second \"item\" text"</string>
 Якщо ви є користувачем YouTube Premium, це налаштування може не знадобитися"</string>
   <!-- "Fixes playback issues using an external PoToken minter (Experimental)" should use the same wording as morphe_external_potoken_provider_summary
          'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
-  <string name="morphe_external_potoken_provider_unavailable_summary">"Виправляє проблеми відтворення за допомогою зовнішнього генератора PoToken (експериментально)
+  <string name="morphe_external_potoken_provider_unavailable_summary">"Виправляє проблеми з відтворенням за допомогою зовнішнього генератора PoToken (Експериментально)
 
-Щоб скористатися цією функцією, вимкніть «Підробка відеопотоків»"</string>
+Щоб використовувати цю функцію, вимкніть \"Підробляти відеопотоки\""</string>
   <string name="morphe_external_potoken_provider_user_dialog_message">Якщо це не працює, спробуйте примусово закрити MicroG</string>
   <string name="morphe_external_potoken_provider_settings_summary">Відкрити налаштування PotHelper</string>
   <string name="morphe_external_potoken_provider_about_summary">"Ця функція наразі в розробці та може не працювати

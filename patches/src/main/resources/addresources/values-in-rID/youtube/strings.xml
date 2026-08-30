@@ -115,7 +115,7 @@ Perubahan termasuk:
   <string name="morphe_hide_video_recommendation_labels_summary">Menyembunyikan label \'Orang lain juga menonton\' dan \'Anda mungkin juga menyukai\' di hasil pencarian</string>
   <string name="morphe_hide_view_count_title">Sembunyikan jumlah penayangan</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
-  <string name="morphe_hide_view_count_summary">"Keterbatasan:
+  <string name="morphe_hide_view_count_summary">"Batasan:
 • Rak Shorts, halaman saluran, dan hasil pencarian mungkin masih menampilkan jumlah penayangan
 • Tidak berfungsi dengan tata letak otomotif"</string>
   <string name="morphe_hide_web_search_results_title">Sembunyikan hasil pencarian web</string>
@@ -261,6 +261,7 @@ Perubahan termasuk:
   <string name="morphe_hide_comments_preview_comment_summary">Menyembunyikan pratinjau komentar di bawah video sebelum membuka bagian komentar penuh</string>
   <string name="morphe_hide_comments_thanks_button_title">Sembunyikan tombol Terima Kasih</string>
   <string name="morphe_hide_comments_timestamp_button_title">Sembunyikan tombol Stempel Waktu</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Sembunyikan tombol \'Penggemar teratas\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Bersihkan tautan pencarian yang disorot</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Membersihkan tautan pencarian yang disorot, sehingga hanya menyisakan teks biasa aslinya</string>
   <string name="morphe_hide_keyword_content_screen_title">Penyaring kata kunci</string>
@@ -846,6 +847,8 @@ Pengaturan → Pemutaran (atau Pemutaran Otomatis) → Putar video berikutnya se
   <string name="morphe_disable_player_popup_panels_title">Nonaktifkan panel pesan timbul pemutar</string>
   <string name="morphe_disable_player_popup_panels_summary">Menonaktifkan panel daftar putar dan live chat agar tidak terbuka secara otomatis</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Nonaktifkan pemutaran otomatis daftar putar</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Mencegah daftar putar beralih secara otomatis ke video berikutnya</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Keluar dari mode layar penuh di akhir video</string>
   <string name="morphe_exit_fullscreen_entry_1">Dinonaktifkan</string>
@@ -997,7 +1000,7 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_miniplayer_opacity_invalid_toast">Opasitas hamparan pemutar mini antara 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tombol kembali menutup feed</string>
-  <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali akan selalu menutup aplikasi bukan menggulir feed ke atas</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali akan selalu menutup aplikasi bukannya menggulir feed ke atas</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Latar belakang tema terang</string>
   <string name="morphe_theme_color_light_entry_2">Putih</string>
@@ -1147,6 +1150,14 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Mengizinkan pengaturan kecepatan dan nada secara terpisah, namun dapat menyebabkan gangguan audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Nonaktifkan video HDR</string>
+  <string name="morphe_force_hdr_video_title">Paksa video HDR</string>
+  <string name="morphe_force_hdr_video_summary">Memaksa aplikasi untuk mengenali perangkat ini sebagai perangkat yang mendukung HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Gunakan ini jika dekode HDR berfungsi tetapi YouTube tidak menyediakan pilihan HDR, seperti pada beberapa perangkat HyperOS yang menyembunyikan HLG.
+
+Batasan:
+• Warna mungkin terlihat keliru jika layar sebenarnya tidak dapat menampilkan HDR
+• Pemutaran mungkin gagal jika dekoder tidak dapat menangani HDR
+• HDR tetap bergantung pada klien palsukan aliran video"</string>
   <string name="morphe_force_avc_codec_title">Paksa codec AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Manfaat:
 • Dapat meningkatkan daya tahan baterai
@@ -1191,5 +1202,5 @@ Pemutaran video dengan AV1 mungkin tersendat atau kehilangan bingkai."</string>
   <string name="morphe_restore_old_video_action_bar_title">Kembalikan bilah tindakan video lama</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Memperbaiki masalah Tidak Suka tidak ditampilkan dan tombol tindakan video yang tidak dapat disembunyikan
 
-Keterbatasan: Mengembalikan tampilan hamparan 'Video lainnya' ke gaya lama"</string>
+Batasan: Mengembalikan tampilan hamparan 'Video lainnya' ke gaya lama"</string>
 </resources>

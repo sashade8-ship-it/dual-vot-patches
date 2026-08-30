@@ -262,6 +262,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_summary">コメント欄を開く前に動画の下に表示される、コメントのプレビューを非表示にします</string>
   <string name="morphe_hide_comments_thanks_button_title">Thanks ボタンを非表示</string>
   <string name="morphe_hide_comments_timestamp_button_title">タイムスタンプ ボタンを非表示</string>
+  <string name="morphe_hide_comments_top_fans_button_title">「トップファン」ボタンを非表示</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">テキスト内の検索リンクを除去</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">テキスト内の単語やフレーズに埋め込まれた虫眼鏡アイコン付きの検索リンクを取り除き、通常のテキストに戻します</string>
   <string name="morphe_hide_keyword_content_screen_title">キーワード フィルタ</string>
@@ -848,6 +849,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_disable_player_popup_panels_title">プレーヤー ポップアップ パネルを無効化</string>
   <string name="morphe_disable_player_popup_panels_summary">プレイリストやライブ配信のチャット欄の自動表示を無効にします</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">プレイリストの自動再生を無効化</string>
+  <string name="morphe_disable_playlist_autoplay_summary">プレイリストの次の動画を自動的に再生する機能を無効にします</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">再生終了時に全画面表示を解除</string>
   <string name="morphe_exit_fullscreen_entry_1">無効</string>
@@ -1147,7 +1150,15 @@ Automotive レイアウト
   <string name="morphe_playback_audio_time_stretching_summary">再生速度と音声ピッチを個別に設定できますが、音声にノイズなどの副作用が生じる場合があります</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR 動画を無効化</string>
-  <string name="morphe_force_avc_codec_title">AVC (H.264) を優先して使用</string>
+  <string name="morphe_force_hdr_video_title">HDR 動画を強制的に使用</string>
+  <string name="morphe_force_hdr_video_summary">アプリにこのデバイスが HDR に対応していると強制的に認識させます</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"HDR を正常にデコードできるにもかかわらず YouTube から HDR が提供されない場合に、この機能を使用してください。例えば、HDR の一種である HLG 方式に対応していることがアプリ側に認識されない、一部の HyperOS 搭載デバイスが該当します。
+
+制限事項:
+• ディスプレイが実際には HDR に対応していない場合、色合いが正常に表示されない場合がある
+• デコーダーが HDR に対応していない場合、動画の再生に失敗する場合がある
+• HDR は、依然として [動画ストリームを偽装] のクライアントに依存する"</string>
+  <string name="morphe_force_avc_codec_title">AVC (H.264) を強制的に使用</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"利点:
 • バッテリー持ちが良くなる可能性がある
 • 古いデバイスで失われた動画解像度を復元できる場合がある

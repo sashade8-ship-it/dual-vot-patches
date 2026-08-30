@@ -95,4 +95,12 @@ public final class AdvancedVideoQualityMenuPatch {
     public static boolean forceAdvancedVideoQualityMenuCreation(boolean original) {
         return Settings.ADVANCED_VIDEO_QUALITY_MENU.get() || original;
     }
+
+    public static boolean useFlowVideoQualityMenu(boolean original) {
+        if (original) {
+            Logger.printDebug(() -> "useFlowVideoQualityMenu is set on");
+        }
+
+        return false;
+    }
 }

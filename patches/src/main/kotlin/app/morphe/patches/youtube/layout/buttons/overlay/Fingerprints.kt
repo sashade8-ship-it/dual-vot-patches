@@ -11,6 +11,7 @@
 package app.morphe.patches.youtube.layout.buttons.overlay
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.anyInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.literal
@@ -21,7 +22,17 @@ import app.morphe.patches.all.misc.resources.resourceLiteral
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
-internal object PlayerButtonFingerprint : Fingerprint(
+internal object OverlayCastButtonVisibilityFingerprint : Fingerprint(
+    classFingerprint = OverlayCastButtonVisibilityLegacyFingerprint,
+    returnType = "V",
+    parameters = listOf("Landroid/view/View;", "Z"),
+    filters = listOf(
+        methodCall(smali = "Landroid/view/View;->setVisibility(I)V"),
+        methodCall(smali = "Landroid/view/View;->setEnabled(Z)V")
+    )
+)
+
+internal object OverlayCastButtonVisibilityLegacyFingerprint : Fingerprint(
     returnType = "V",
     parameters = listOf(),
     filters = listOf(

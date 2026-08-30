@@ -11,8 +11,9 @@
  * https://gitlab.com/ReVanced/revanced-patches/-/commit/584b00fd87f83504b8886e4f3f674f8c3943cd91
  * https://gitlab.com/ReVanced/revanced-patches/-/commit/14a8f4fb96f5e2a4bc264a54115e0870b1a1ffa8
  * https://github.com/MorpheApp/morphe-patches/commit/f5371ca998c019609c2b5558b3408ab1fec065c8
+ * https://github.com/MorpheApp/morphe-patches/pull/2638
  *
- * See the included NOTICE file for §7(c) terms that apply to Morphe contributions.
+ * See the included NOTICE file for GPLv3 Section 7 terms that apply to Morphe contributions.
  */
 
 package app.morphe.extension.shared.ui;
@@ -343,6 +344,36 @@ public class CustomDialog {
         });
 
         return button;
+    }
+
+    /**
+     * Creates a row of two equally sized buttons, to add to a dialog layout
+     * in addition to the dialog buttons.
+     *
+     * @param context Context used to create the row.
+     * @param first   Button shown on the left.
+     * @param second  Button shown on the right.
+     * @return The created row.
+     */
+    public static LinearLayout createButtonRow(Context context, Button first, Button second) {
+        LinearLayout.LayoutParams firstParams = new LinearLayout.LayoutParams(0, Dim.dp36, 1.0f);
+        firstParams.setMargins(0, 0, Dim.dp4, 0);
+        first.setLayoutParams(firstParams);
+
+        LinearLayout.LayoutParams secondParams = new LinearLayout.LayoutParams(0, Dim.dp36, 1.0f);
+        secondParams.setMargins(Dim.dp4, 0, 0, 0);
+        second.setLayoutParams(secondParams);
+
+        LinearLayout row = new LinearLayout(context);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        LinearLayout.LayoutParams rowParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        rowParams.setMargins(0, Dim.dp16, 0, 0);
+        row.setLayoutParams(rowParams);
+        row.addView(first);
+        row.addView(second);
+
+        return row;
     }
 
     /**

@@ -264,6 +264,7 @@ Promjene uključuju:
   <string name="morphe_hide_comments_preview_comment_summary">Sakriva pregled komentara ispod videa prije otvaranja cijelog odjeljka s komentarima</string>
   <string name="morphe_hide_comments_thanks_button_title">Sakrij dugme za pretraživanje</string>
   <string name="morphe_hide_comments_timestamp_button_title">Sakrij gumb Vremenske oznake</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Sakrij tipku \'Najveći obožavatelji\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Očisti istaknute poveznice za pretraživanje</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Čisti istaknute poveznice za pretraživanje, ostavljajući samo originalni obični tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter po ključnim riječima</string>
@@ -849,6 +850,8 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_disable_player_popup_panels_title">Onemogući skočne panele playera</string>
   <string name="morphe_disable_player_popup_panels_summary">Onemogućuje automatsko otvaranje panela playlista i live chata</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Onemogući automatsku reprodukciju popisa za reprodukciju</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Sprječava automatsko prebacivanje na sljedeći videozapis u popisima za reprodukciju</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Izađi iz načina pune veličine po završetku videozapisa</string>
   <string name="morphe_exit_fullscreen_entry_1">Onemogućeno</string>
@@ -857,9 +860,11 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_exit_fullscreen_entry_4">Portratno i pejzažno</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Geste u punom zaslonu</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Geste igrača u načinu rada preko cijelog zaslona</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Onemogući gestu povlačenja prema gore u portratnom načinu</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Onemogući gestu povlačenja prema dolje u portratnom načinu</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Onemogući gestu povlačenja prema dolje u pejzažnom načinu</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Onemogući gestu zumiranja štipanjem prstima</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Otvori videozapise u načinu pune veličine</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Onemogućeno</string>
@@ -873,6 +878,7 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_fullscreen_video_scale_button_title">Prikaži gumb za skaliranje videa</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Dodirnite za cikliranje: Zadano, Rastegni, Povećaj</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Pokaži tipku za isključivanje zvuka</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Prikaži dugmice za zvuk</string>
   <string name="morphe_player_overlay_opacity_summary">Prilagodite razinu prozirnosti (0 je prozirno, 100 je neprozirno)</string>
@@ -1147,6 +1153,14 @@ Dodirnite ovdje za otvaranje DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Omogućuje neovisno postavljanje brzine i visine tona, može uzrokovati audio artefakte</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Onemogu HDR video</string>
+  <string name="morphe_force_hdr_video_title">Nametni HDR video</string>
+  <string name="morphe_force_hdr_video_summary">Prisiljava aplikaciju da prepozna ovaj uređaj kao HDR-kompatibilan</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Koristite ovo ako HDR dekodiranje radi, ali YouTube ne nudi HDR, kao što su neki HyperOS uređaji koji skrivaju HLG.
+
+Ograničenja:
+• Boje mogu izgledati pogrešno ako zaslon zapravo ne može prikazati HDR
+• Reprodukcija može propasti ako dekoder ne može obraditi HDR
+• HDR i dalje ovisi o klijentu za lažne video streamove"</string>
   <string name="morphe_force_avc_codec_title">Forsiraj AVC (H.264) kodek</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Benefiti:
 • Može poboljati bateriju život

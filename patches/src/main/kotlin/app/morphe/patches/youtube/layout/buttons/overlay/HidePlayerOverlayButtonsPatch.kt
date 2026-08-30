@@ -23,6 +23,7 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_28_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_35_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
@@ -103,19 +104,40 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
 
         // region Hide cast button.
 
-        PlayerButtonFingerprint.let {
-            it.method.apply {
-                val index = it.instructionMatches.first().index
-                val visibilityRegister = getInstruction<FiveRegisterInstruction>(index).registerD
-                val visibilityMethodType = it.instructionMatches.first().getMethodCalled().parameterTypes.last()
+        if (is_21_35_or_greater) {
+            OverlayCastButtonVisibilityFingerprint.let {
+                it.method.apply {
+                    var instructionIndex = it.instructionMatches.first().index
+                    var instructionRegister = getInstruction<FiveRegisterInstruction>(
+                        instructionIndex
+                    ).registerD
 
-                addInstructionsAtControlFlowLabel(
-                    index,
-                    """
-                        invoke-static { v$visibilityRegister }, $EXTENSION_CLASS->hideCastButton($visibilityMethodType)$visibilityMethodType
-                        move-result v$visibilityRegister
-                    """
-                )
+                    addInstructions(
+                        instructionIndex,
+                        """
+                            invoke-static { v$instructionRegister }, $EXTENSION_CLASS->hideCastButton(I)I
+                            move-result v$instructionRegister
+                        """
+                    )
+                }
+            }
+        } else {
+            OverlayCastButtonVisibilityLegacyFingerprint.let {
+                it.method.apply {
+                    val index = it.instructionMatches.first().index
+                    val visibilityRegister =
+                        getInstruction<FiveRegisterInstruction>(index).registerD
+                    val visibilityMethodType =
+                        it.instructionMatches.first().getMethodCalled().parameterTypes.last()
+
+                    addInstructionsAtControlFlowLabel(
+                        index,
+                        """
+                            invoke-static { v$visibilityRegister }, $EXTENSION_CLASS->hideCastButton($visibilityMethodType)$visibilityMethodType
+                            move-result v$visibilityRegister
+                        """
+                    )
+                }
             }
         }
 

@@ -847,6 +847,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_player_popup_panels_summary">Вимикає автоматичне відкриття панелей списку відтворення та чату у прямому ефірі</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Вимкнути автовідтворення списку відтворення</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Запобігає автоматичному переходу списку відтворення до наступного відео</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Вийти з повноекранного режиму в кінці відео</string>
   <string name="morphe_exit_fullscreen_entry_1">Вимкнено</string>
@@ -859,7 +860,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Вимкнути жест свайпу вгору у портретному режимі</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Вимкнути жест свайпу вниз у портретному режимі</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Вимкнути жест свайпу вниз у ландшафтному режимі</string>
-  <string name="morphe_disable_fullscreen_zoom_gesture_title">Вимкнути жест зведення пальців для масштабування</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Вимкнути жест масштабування щипком</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Відкривати відео у повноекранному режимі</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Вимкнено</string>
@@ -1148,14 +1149,14 @@ Second \"item\" text"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Дозволяє налаштовувати швидкість і висоту тону незалежно, може спричиняти звукові артефакти</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Вимкнути HDR відео</string>
-  <string name="morphe_force_hdr_video_title">Примусове HDR відео</string>
-  <string name="morphe_force_hdr_video_summary">Змушує додаток розпізнавати цей пристрій як HDR-сумісний</string>
-  <string name="morphe_force_hdr_video_user_dialog_message">"Використовуйте це, якщо декодування HDR працює, але YouTube не пропонує HDR, наприклад, деякі пристрої HyperOS, які приховують HLG.
+  <string name="morphe_force_hdr_video_title">Примусово вмикати HDR-відео</string>
+  <string name="morphe_force_hdr_video_summary">Примусово змушує застосунок розпізнавати цей пристрій як такий, що підтримує HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Використовуйте це, якщо декодування HDR працює, але YouTube не пропонує HDR, наприклад на деяких пристроях HyperOS, які приховують HLG.
 
 Обмеження:
-• Кольори можуть виглядати неправильно, якщо дисплей не може насправді показувати HDR
-• Відтворення може не працювати, якщо декодер не підтримує HDR
-• HDR все ще залежить від клієнта, який підробляє відеопотоки"</string>
+• Кольори можуть виглядати неправильно, якщо дисплей насправді не підтримує HDR
+• Відтворення може не вдатися, якщо декодер не може обробити HDR
+• HDR все ще залежить від клієнта підробки відеопотоків"</string>
   <string name="morphe_force_avc_codec_title">Примусово використовувати кодек AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Переваги:
 • Може покращити час роботи від батареї

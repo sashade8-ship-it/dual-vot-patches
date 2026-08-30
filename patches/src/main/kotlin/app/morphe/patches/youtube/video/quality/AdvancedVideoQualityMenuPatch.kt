@@ -20,9 +20,11 @@ import app.morphe.patches.shared.misc.litho.filter.addLithoFilter
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
+import app.morphe.patches.youtube.misc.playservice.is_21_14_or_greater
 import app.morphe.patches.youtube.misc.recyclerviewtree.addRecyclerViewTreeHook
 import app.morphe.patches.youtube.misc.recyclerviewtree.recyclerViewTreeHookPatch
 import app.morphe.patches.youtube.misc.settings.settingsPatch
+import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 private const val EXTENSION_CLASS =
@@ -80,6 +82,15 @@ internal val advancedVideoQualityMenuPatch = bytecodePatch {
                         invoke-static { v$register }, $EXTENSION_CLASS->forceAdvancedVideoQualityMenuCreation(Z)Z
                         move-result v$register
                     """
+                )
+            }
+        }
+
+        if (is_21_14_or_greater) {
+            FlowVideoQualityMenuFeatureFlagFingerprint.let {
+                it.method.insertLiteralOverride(
+                    it.instructionMatches.first().index,
+                    "$EXTENSION_CLASS->useFlowVideoQualityMenu(Z)Z"
                 )
             }
         }
