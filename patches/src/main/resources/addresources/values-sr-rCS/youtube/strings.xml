@@ -262,6 +262,7 @@ Promene uključuju:
   <string name="morphe_hide_comments_preview_comment_summary">Sakriva pregled komentara ispod videa pre otvaranja celog odeljka za komentare</string>
   <string name="morphe_hide_comments_thanks_button_title">Sakrij dugme „Hvala”</string>
   <string name="morphe_hide_comments_timestamp_button_title">Sakrij dugme za vremensku oznaku</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Sakrij dugme \'Top fanovi\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Dezinfikuje naglašene linkove za pretragu</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Dezinfikuje naglašene linkove za pretragu, ostavljajući samo originalni tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtriranje po ključnim rečima</string>
@@ -847,6 +848,8 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_disable_player_popup_panels_title">Onemogući oglasne popupe u plejeru</string>
   <string name="morphe_disable_player_popup_panels_summary">Onemogućava automatsko otvaranje panela za listu reprodukcije i ćaskanje uživo</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Sprečava automatsko prelaženje na sledeći video u plejlisti</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Sprečava da se liste reprodukcije automatski prebacuju na sledeći video. Proverite podešavanja automatike u opisu plejliste? Hmm, that might be too long. Actually the original is </string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Izlazak iz režima punog ekrana na kraju videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Onemogućeno</string>
@@ -1148,6 +1151,14 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_playback_audio_time_stretching_summary">Omogućava nezavisno podešavanje brzine i visine tona, što može izazvati audio artefakte</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Onemogući HDR video</string>
+  <string name="morphe_force_hdr_video_title">Forsiraj HDR video</string>
+  <string name="morphe_force_hdr_video_summary">Prisiljava aplikaciju da prepozna ovaj uređaj kao HDR‑kompatibilan</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Koristite ovo ako HDR dekodiranje radi, ali YouTube ne nudi HDR, kao što su neki HyperOS uređaji koji skrivaju HLG.
+
+Ograničenja:
+• Boje mogu izgledati pogrešno ako ekran zapravo ne može prikazati HDR
+• Reprodukcija može da ne uspe ako dekoder ne može da obradi HDR
+• HDR i dalje zavisi od klijenta za lažiranje video tokova"</string>
   <string name="morphe_force_avc_codec_title">Prisiljava AVC (H.264) kodek</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Prednosti:
 • Može poboljšati trajanje baterije

@@ -263,6 +263,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_comments_preview_comment_summary">Verbirgt die Kommentarvorschau unter dem Video, bevor der vollständige Kommentarbereich geöffnet wird</string>
   <string name="morphe_hide_comments_thanks_button_title">Schaltfläche \'Dankeschön\' ausblenden</string>
   <string name="morphe_hide_comments_timestamp_button_title">Zeitstempel-Schaltfläche ausblenden</string>
+  <string name="morphe_hide_comments_top_fans_button_title">„Top-Fans“-Button ausblenden</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Hervorgehobene Suchlinks bereinigen</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Bereinigt hervorgehobene Suchlinks und belässt nur den ursprünglichen Klartext</string>
   <string name="morphe_hide_keyword_content_screen_title">Stichwortfilter</string>
@@ -848,6 +849,8 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <string name="morphe_disable_player_popup_panels_title">Spieler-Popup-Panels deaktivieren</string>
   <string name="morphe_disable_player_popup_panels_summary">Deaktiviert das automatische Öffnen von Wiedergabelisten und Live-Chat-Panels</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Playlist-Autoplay deaktivieren</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Verhindert, dass Wiedergabelisten automatisch zum nächsten Video wechseln</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Vollbildmodus am Videoende beenden</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiviert</string>
@@ -856,9 +859,11 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <string name="morphe_exit_fullscreen_entry_4">Hoch- und Querformat</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesten für Vollbildansicht</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Player-Gesten im Vollbildmodus</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Wischgeste nach oben im Hochformat deaktivieren</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Wischgeste nach unten im Hochformat deaktivieren</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Wischgeste nach unten im Querformat deaktivieren</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Pinch-to-Zoom-Geste deaktivieren</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Videos im Vollbildmodus öffnen</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Deaktiviert</string>
@@ -872,6 +877,7 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <string name="morphe_fullscreen_video_scale_button_title">Schaltfläche für Video-Skalierung anzeigen</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Tippen, um zwischen Standard, Strecken und Zoomen zu wechseln</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Stummschalten-Button anzeigen</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spieler-Überlagerung Deckkraft</string>
   <string name="morphe_player_overlay_opacity_summary">Passen Sie die Transparenz an (0 ist transparent, 100 ist opak)</string>
@@ -1146,6 +1152,14 @@ Tippen Sie hier, um mehr über DeArrow zu erfahren"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Ermöglicht die unabhängige Einstellung von Geschwindigkeit und Tonhöhe, kann jedoch zu Audioartefakten führen</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Deaktiviere HDR-Video</string>
+  <string name="morphe_force_hdr_video_title">HDR-Video erzwingen</string>
+  <string name="morphe_force_hdr_video_summary">Zwingt die App, dieses Gerät als HDR-fähig zu erkennen</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Verwenden Sie dies, wenn HDR-Dekodierung funktioniert, YouTube jedoch kein HDR anbietet, wie z. B. einige HyperOS-Geräte, die HLG verbergen.
+
+Einschränkungen:
+• Farben können falsch aussehen, wenn das Display tatsächlich kein HDR anzeigen kann
+• Die Wiedergabe kann fehlschlagen, wenn der Decoder HDR nicht verarbeiten kann
+• HDR hängt weiterhin vom Client für das Spoofing von Video-Streams ab"</string>
   <string name="morphe_force_avc_codec_title">AVC (H.264)-Codec erzwingen</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Vorteile:
 • Kann die Akkulaufzeit verbessern

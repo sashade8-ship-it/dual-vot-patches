@@ -196,6 +196,8 @@ To će promijeniti izgled i značajke aplikacije, ali mogu se pojaviti nepoznati
 
 Ako se kasnije isključi, preporučuje se obrisati podatke aplikacije kako bi se spriječile pogreške u sučelju."</string>
   <string name="morphe_spoof_app_version_target_title">Cilj lažirane verzije aplikacije</string>
+  <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_default">Zadano</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">Dislikeovi su privremeno nedostupni (API je istekao)</string>

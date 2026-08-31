@@ -262,6 +262,7 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_comments_preview_comment_summary">Tam yorumlar bölümünü açmadan önce videonun altındaki yorum ön izlemesini gizler</string>
   <string name="morphe_hide_comments_thanks_button_title">Teşekkürler düğmesini gizle</string>
   <string name="morphe_hide_comments_timestamp_button_title">Zaman damgası düğmesini gizle</string>
+  <string name="morphe_hide_comments_top_fans_button_title">\'En iyi hayranlar\' düğmesini gizle</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Öne çıkan arama bağlantılarını temizle</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Öne çıkan arama bağlantılarını temizler, yalnızca orijinal düz metni bırakır</string>
   <string name="morphe_hide_keyword_content_screen_title">Anahtar kelime filtresi</string>
@@ -847,6 +848,7 @@ Ayarlar → Oynatma (veya Otomatik Oynatma) → Sonraki videoyu otomatik oynat"<
   <string name="morphe_disable_player_popup_panels_title">Oynatıcı açılır panellerini devre dışı bırak</string>
   <string name="morphe_disable_player_popup_panels_summary">Oynatma listesi ve canlı sohbet panellerinin otomatik olarak açılmasını devre dışı bırakır</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Çalma listelerinin otomatik olarak sonraki videoya geçmesini engeller</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video bittiğinde tam ekran modundan çıkar</string>
   <string name="morphe_exit_fullscreen_entry_1">Devre dışı</string>
@@ -1148,6 +1150,14 @@ DeArrow hakkında daha fazla bilgi edinmek için buraya dokunun"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Hızın ve perdenin birbirinden bağımsız olarak ayarlanmasına izin verir, ses bozulmalarına neden olabilir</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR videoyu devre dışı bırak</string>
+  <string name="morphe_force_hdr_video_title">HDR videoyu zorla</string>
+  <string name="morphe_force_hdr_video_summary">Uygulamayı bu cihazı HDR destekli olarak tanımaya zorlar</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Bunu, HDR kod çözme çalışıyorsa ancak YouTube HDR sunmuyorsa kullanın, örneğin HLG'yi gizleyen bazı HyperOS cihazları gibi.
+
+Sınırlamalar:
+• Ekran gerçekten HDR gösteremiyorsa renkler yanlış görünebilir
+• Kod çözücü HDR'yi işleyemezse oynatma başarısız olabilir
+• HDR hala spoof video akışı istemcisine bağlıdır"</string>
   <string name="morphe_force_avc_codec_title">AVC (H.264) kodeğini zorla</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Faydaları:
 • Pil ömrünü iyileştirebilir

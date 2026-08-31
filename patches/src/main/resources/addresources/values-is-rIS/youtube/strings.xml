@@ -262,6 +262,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_comments_preview_comment_summary">Felur athugasmd forskoðunina undir vídeó áður en full athugasmdakassinn opnast</string>
   <string name="morphe_hide_comments_thanks_button_title">Fela þakknsemishnappinn</string>
   <string name="morphe_hide_comments_timestamp_button_title">Fela Tímalínu hnapp</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Fela \'Topp aðdáendur\' hnappinn</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Hreinsa lýst tengla í leit</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Hreinsar lýsta leittengla og skilur eftir aðeins upprunalega textann</string>
   <string name="morphe_hide_keyword_content_screen_title">Hraðvæðir</string>
@@ -843,6 +844,8 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_disable_player_popup_panels_title">Lokað spilandi spilandi spilari flipa</string>
   <string name="morphe_disable_player_popup_panels_summary">Slær af sjálfvirkan spilara opnunarhluta</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Óvirkja sjálfvirka spilun á spilunarlista</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Kemur í veg fyrir að spilunarlistar fari sjálfkrafa á næsta myndband</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Hættir fullskjástillingu á lok vídeós</string>
   <string name="morphe_exit_fullscreen_entry_1">Gerðu óvirkt </string>
@@ -851,9 +854,11 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_exit_fullscreen_entry_4">Portrait og landscape</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Fullskjárshreyfingar</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Bendingar spilara í fullskjásstillingu</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Gerja óvirkt hreyfingu til að draga upp úr fullskjá</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Gerðu portrettsniður snertihreyfinguna óvirkja</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Gerðu landslagsniður snertihreyfinguna óvirkja</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Óvirkja klíp-stækkunarbending</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Opna myndband í fullskjáhamri</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Gerilt</string>
@@ -867,6 +872,7 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_fullscreen_video_scale_button_title">Sýna hnappinn fyrir myndbandsskala</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Bankaðu til að skipta á milli Sjálfgefið, Teysja og Stækka</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Sýna slökkvunarhnapp</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spilar murargyga </string>
   <string name="morphe_player_overlay_opacity_summary">Stilltu gegnsærastefnu (0 er gagnsætt, 100 er ógegnsætt)</string>
@@ -1141,6 +1147,14 @@ Bankaðu hér til að opna DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Leyfir að stilla hraða og tóna sjálfstætt, getur valdið hljóðgáttum</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Lokað HDR myndböndum</string>
+  <string name="morphe_force_hdr_video_title">Þvinga HDR-vídeó</string>
+  <string name="morphe_force_hdr_video_summary">Þvingar forritið til að þekkja þetta tæki sem HDR-hæft</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Notaðu þetta ef HDR-afkóðun virkar en YouTube býður ekki upp á HDR, eins og sum HyperOS tæki sem fela HLG.
+
+Takmarkanir:
+• Litir geta litið rangt út ef skjárinn getur ekki raunverulega sýnt HDR
+• Spilun getur mistekist ef afkóðarinn ræður ekki við HDR
+• HDR er enn háð spoof-biðlara fyrir vídeóstrauma"</string>
   <string name="morphe_force_avc_codec_title">Þvinga AVC (H.264) kóðann</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Ávinningur:
 • Getur bætt rafhlöðuáfköfum

@@ -262,6 +262,7 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_comments_preview_comment_summary">Skjuler kommentar preview under videoen inden åbning af hele kommentarsektionen</string>
   <string name="morphe_hide_comments_thanks_button_title">Skjul \"Tak\"-knap</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skjul Tidsstempel-knap</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Skjul \'Top fans\'-knappen</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Renser fremhævede søgelinks</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Renser fremhævede søgelinks og efterlader kun den originale tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Nøgleordsfilter</string>
@@ -845,6 +846,8 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_disable_player_popup_panels_title">Slå afspiller pop-up paneler fra</string>
   <string name="morphe_disable_player_popup_panels_summary">Deaktiverer automatisk åbning af playliste- og livechat-paneler</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Deaktiver automatisk afspilning af playlister</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Forhindrer playlister i automatisk at gå videre til næste video</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Afslut fuldskærmstilstand ved videoens afslutning</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiveret</string>
@@ -1146,6 +1149,14 @@ Tryk her for at lære mere om DeArrow"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Gør det muligt at indstille hastighed og tonehøjde uafhængigt, hvilket kan forårsage lydartefakter</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Deaktiver HDR-video</string>
+  <string name="morphe_force_hdr_video_title">Tving HDR-video</string>
+  <string name="morphe_force_hdr_video_summary">Tvinger appen til at genkende denne enhed som HDR-kompatibel</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Brug dette, hvis HDR-afkodning fungerer, men YouTube ikke tilbyder HDR, f.eks. nogle HyperOS-enheder, der skjuler HLG.
+
+Begrænsninger:
+• Farver kan se forkerte ud, hvis skærmen faktisk ikke kan vise HDR
+• Afspilning kan mislykkes, hvis afkoderen ikke kan håndtere HDR
+• HDR afhænger stadig af spoof-videostreams-klienten"</string>
   <string name="morphe_force_avc_codec_title">Gennemtving AVC (H.264) codec</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Fordele:
 • Kan forbedre batterilevetiden

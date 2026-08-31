@@ -262,6 +262,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_summary">מסתיר את תצוגת המקדימה של תגובות מתחת לסרטון לפני פתיחת סעיף התגובות המלא</string>
   <string name="morphe_hide_comments_thanks_button_title">הסתר לחצן תודה</string>
   <string name="morphe_hide_comments_timestamp_button_title">הסתר לחצן חותמת זמן</string>
+  <string name="morphe_hide_comments_top_fans_button_title">הסתר כפתור \'המעריצים המובילים\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">ניקוי קישורים בחיפוש מודגשים</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">מנקה קישורים בחיפוש מודגשים, ומשאיר רק את הטקסט המקורי</string>
   <string name="morphe_hide_keyword_content_screen_title">מסנן מילות מפתח</string>
@@ -847,6 +848,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_player_popup_panels_title">השבתה לוחות פופאפ של שחקן</string>
   <string name="morphe_disable_player_popup_panels_summary">משבית את הפאנלים של פלייליסט וצ\'אט חי מלהיפתח באופן אוטומטי</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">השבת הפעלה אוטומטית של רשימת השמעה</string>
+  <string name="morphe_disable_playlist_autoplay_summary">מונע מרשימות השמעה להתקדם אוטומטית לווידאו הבא</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">יציאה ממצב מסך מלא בסיום הסרטון</string>
   <string name="morphe_exit_fullscreen_entry_1">מושבת</string>
@@ -1148,6 +1151,14 @@ Second \"item\" text"</string>
   <string name="morphe_playback_audio_time_stretching_summary">מאפשר להגדיר מהירות וגובה צליל באופן עצמאי, עשוי לגרום לעיוותים באודיו</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">השבת סרטון HDR</string>
+  <string name="morphe_force_hdr_video_title">אלץ וידאו HDR</string>
+  <string name="morphe_force_hdr_video_summary">מאלץ את האפליקציה לזהות מכשיר זה כתומך HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"השתמש בזה אם פענוח HDR עובד אך YouTube אינו מציע HDR, כמו חלק ממכשירי HyperOS שמסתירים HLG.
+
+מגבלות:
+• צבעים עשויים להיראות לא נכונים אם התצוגה אינה יכולה להציג HDR בפועל
+• הפעלה עלולה להיכשל אם המפענח אינו יכול להתמודד עם HDR
+• HDR עדיין תלוי בלקוח שמזייף זרמי וידאו"</string>
   <string name="morphe_force_avc_codec_title">כופה קידוד AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"יתרונות:
 • יכול לשפר את חיי הסוללה

@@ -262,6 +262,7 @@ Veranderings sluit in:
   <string name="morphe_hide_comments_preview_comment_summary">Verberg die kommentaar voorbeskouing onder video voordat die volledige kommentaar afdeling oopmaak</string>
   <string name="morphe_hide_comments_thanks_button_title">Verberg Dankie knoppie</string>
   <string name="morphe_hide_comments_timestamp_button_title">Verberg Tydstempel-knoppie</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Versteek die \'Top fans\'-knoppie</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Saniteer uitgeligte soekskakels</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Saniteer uitgeligte soekskakels en laat slegs die oorspronklike platte teks oor</string>
   <string name="morphe_hide_keyword_content_screen_title">Sleutelwoord filter</string>
@@ -847,6 +848,8 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_disable_player_popup_panels_title">Deaktiveer speler pop-up panele</string>
   <string name="morphe_disable_player_popup_panels_summary">Deaktiveer lysie- en lewendige kletspannele van outomatiese opening</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Deaktiveer speellys-outoafspeel</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Voorkom dat speellyste outomaties na die volgende video oorgaan</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Verlaat volskermmodus aan die einde van die video</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiveer</string>
@@ -1148,6 +1151,14 @@ Tik hier om DeArrow.ajay.app oop te maak"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Laat toe om spoed en toonhoogte onafhanklik te stel, kan klankartefakte veroorsaak</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Deaktiveer HDR-video</string>
+  <string name="morphe_force_hdr_video_title">Dwing HDR-video</string>
+  <string name="morphe_force_hdr_video_summary">Dwing die app om hierdie toestel as HDR-geskik te herken</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Gebruik dit as HDR-dekodering werk maar YouTube bied nie HDR nie, soos sommige HyperOS-toestelle wat HLG verberg.
+
+Beperkings:
+• Kleure kan verkeerd lyk as die skerm nie werklik HDR kan vertoon nie
+• Terugspeeling kan misluk as die dekodeerder nie HDR kan hanteer nie
+• HDR hang steeds af van die spoof-videostrome-kliënt"</string>
   <string name="morphe_force_avc_codec_title">Forseer AVC (H.264) codec</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Voordele:
 • Kan battery lewe verbeter

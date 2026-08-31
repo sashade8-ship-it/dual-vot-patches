@@ -202,6 +202,8 @@ Dette ændrer appens udseende og funktioner, men ukendte bivirkninger kan foreko
 
 Hvis det senere slås fra, anbefales det at rydde app-data for at forhindre UI-fejl."</string>
   <string name="morphe_spoof_app_version_target_title">Spoof app version mål</string>
+  <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_default">Standard</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">Disliker er midlertidigt ikke tilgængelig (API-timeout ud)</string>

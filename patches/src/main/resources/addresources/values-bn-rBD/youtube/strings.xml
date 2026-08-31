@@ -262,6 +262,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_summary">পুরো মন্তব্য বিভাগ খোলার আগে ভিডিওর নিচে মন্তব্য প্রিভিউ লুকায়</string>
   <string name="morphe_hide_comments_thanks_button_title">ধন্যবাদ বাটন লুকান</string>
   <string name="morphe_hide_comments_timestamp_button_title">সময়স্ট্যাম্প বোতাম লুকান</string>
+  <string name="morphe_hide_comments_top_fans_button_title">\'টপ ফ্যান\' বোতামটি লুকান</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">হাইলাইট করা অনুসন্ধান লিঙ্কগুলি স্যানিটাইজ করুন</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">হাইলাইট করা অনুসন্ধান লিঙ্কগুলি স্যানিটাইজ করে, শুধুমাত্র আসল প্লেইন টেক্সট রেখে দেয়</string>
   <string name="morphe_hide_keyword_content_screen_title">কিওয়ার্ড ফিল্টার</string>
@@ -847,6 +848,8 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_disable_player_popup_panels_title">প্লেয়ার পপআপ প্যানেলগুলো লুকান</string>
   <string name="morphe_disable_player_popup_panels_summary">প্লেলিস্ট এবং লাইভ চ্যাট প্যানেল স্বয়ংক্রিয়ভাবে খোলা থেকে বন্ধ করুন</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">প্লেলিস্ট অটোপ্লে নিষ্ক্রিয় করুন</string>
+  <string name="morphe_disable_playlist_autoplay_summary">প্লেলিস্টগুলিকে স্বয়ংক্রিয়ভাবে পরবর্তী ভিডিওতে অগ্রসর হতে বাধা দেয়</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">ভিডিও শেষ হওয়ার পরে ফুলস্ক্রিন মোড থেকে বের হন</string>
   <string name="morphe_exit_fullscreen_entry_1">নিষ্ক্রিয়</string>
@@ -1148,6 +1151,14 @@ DeArrow.ajay.app ওপেন করতে এখানে ট্যাপ ক�
   <string name="morphe_playback_audio_time_stretching_summary">Allows setting speed and pitch independently, may cause audio artifacts</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR ভিডিও নিষ্ক্রিয় করুন</string>
+  <string name="morphe_force_hdr_video_title">HDR ভিডিও জোর করুন</string>
+  <string name="morphe_force_hdr_video_summary">অ্যাপকে এই ডিভাইসটিকে HDR-সক্ষম হিসাবে চিনতে বাধ্য করে</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"যদি HDR ডিকোডিং কাজ করে কিন্তু YouTube HDR অফার করে না, যেমন কিছু HyperOS ডিভাইস যা HLG লুকিয়ে রাখে, তাহলে এটি ব্যবহার করুন।
+
+সীমাবদ্ধতা:
+• রঙ ভুল দেখাতে পারে যদি ডিসপ্লে আসলে HDR দেখাতে না পারে
+• ডিকোডার HDR পরিচালনা করতে না পারলে প্লেব্যাক ব্যর্থ হতে পারে
+• HDR এখনও ভিডিও স্ট্রিম স্পুফ ক্লায়েন্টের উপর নির্ভর করে"</string>
   <string name="morphe_force_avc_codec_title">AVC (H.264) কোডেক জোর করুন</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"সুবিধা:
 • ব্যাটারির আয়ু উন্নত করতে পারে

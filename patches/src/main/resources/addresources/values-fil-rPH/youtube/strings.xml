@@ -262,6 +262,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_comments_preview_comment_summary">Itinatago ang preview ng komento sa ilalim ng video bago buksan ang buong seksyon ng mga komento</string>
   <string name="morphe_hide_comments_thanks_button_title">Itago ang button na Salamat</string>
   <string name="morphe_hide_comments_timestamp_button_title">Itago ang Timestamp button</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Itago ang button na \'Top fans\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Linisin ang mga naka-highlight na link sa paghahanap</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Nililinis ang mga naka-highlight na link sa paghahanap, at iniiwan lamang ang orihinal na simpleng teksto</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter ng keyword</string>
@@ -845,6 +846,8 @@ Mga Setting → Playback (o Autoplay) → Autoplay ng susunod na video."</string
   <string name="morphe_disable_player_popup_panels_title">I-disable ang mga panel ng popup ng player</string>
   <string name="morphe_disable_player_popup_panels_summary">Hindi pinapayagan ang mga playlist at live chat panel na awtomatikong magbukas</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">I-disable ang autoplay ng playlist</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Pinipigilan ang mga playlist na awtomatikong sumulong sa susunod na video</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Lumabas sa fullscreen mode sa pagtatapos ng video</string>
   <string name="morphe_exit_fullscreen_entry_1">Nakapatay</string>
@@ -1146,6 +1149,14 @@ I-tap dito upang buksan ang DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Pinapayagan ang pagtatakda ng bilis at pitch nang hiwalay, maaaring magdulot ng mga artifact sa audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Patayin ang HDR video</string>
+  <string name="morphe_force_hdr_video_title">Pilitin ang HDR video</string>
+  <string name="morphe_force_hdr_video_summary">Pinipilit ang app na kilalanin ang device na ito bilang may kakayahang HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Gamitin ito kung gumagana ang HDR decoding ngunit hindi nag-aalok ng HDR ang YouTube, tulad ng ilang HyperOS device na nagtatago ng HLG.
+
+Mga Limitasyon:
+• Maaaring mali ang mga kulay kung hindi kayang ipakita ng display ang HDR
+• Maaaring mabigo ang playback kung hindi kayang hawakan ng decoder ang HDR
+• Nakadepende pa rin ang HDR sa client na nagpapanggap ng video streams"</string>
   <string name="morphe_force_avc_codec_title">Puwersahin ang AVC (H.264) codec</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Mga benepisyo:
 • Maaaring mapabuti ang buhay ng baterya

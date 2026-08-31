@@ -137,8 +137,8 @@ As mudanças incluem:
   <string name="morphe_hide_join_membership_button_title">Ocultar botão Seja membro</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
-  <string name="morphe_hide_live_chat_replay_button_title">Ocultar botão \'Replay do chat ao vivo\'</string>
-  <string name="morphe_hide_live_chat_replay_button_summary">Oculta o botão de repetição do chat no modo de tela cheia</string>
+  <string name="morphe_hide_live_chat_replay_button_title">Ocultar botão \"Replay do chat ao vivo\"</string>
+  <string name="morphe_hide_live_chat_replay_button_summary">Oculta o botão de replay do chat no modo tela cheia</string>
   <string name="morphe_hide_medical_panels_title">Ocultar painel médico</string>
   <string name="morphe_hide_player_gesture_hints_title">Ocultar dicas de gestos do player</string>
   <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
@@ -261,6 +261,7 @@ As mudanças incluem:
   <string name="morphe_hide_comments_preview_comment_summary">Oculta a pré-visualização do comentário abaixo do vídeo antes de abrir a seção completa de comentários</string>
   <string name="morphe_hide_comments_thanks_button_title">Ocultar botão Valeu</string>
   <string name="morphe_hide_comments_timestamp_button_title">Ocultar botão Minutagem</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Ocultar o botão \'Top fãs\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Sanitiza links de pesquisa destacados</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Sanitiza links de pesquisa destacados, deixando apenas o texto original</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro de palavras-chave</string>
@@ -846,6 +847,8 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_disable_player_popup_panels_title">Desativar painéis pop-up no player</string>
   <string name="morphe_disable_player_popup_panels_summary">Desativa a abertura automática dos painéis de playlist e chat ao vivo</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Desativar reprodução automática de playlists</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Impede que as playlists avancem automaticamente para o próximo vídeo</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Sair do modo de tela cheia ao final do vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desativado</string>
@@ -1147,6 +1150,14 @@ Toque aqui para abrir DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Permite ajustar velocidade e tom de forma independente, pode causar ruídos no áudio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Desativar vídeo HDR</string>
+  <string name="morphe_force_hdr_video_title">Forçar vídeo em HDR</string>
+  <string name="morphe_force_hdr_video_summary">Força o aplicativo a reconhecer este dispositivo como compatível com HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Use isto se a decodificação de HDR funcionar, mas o YouTube não disponibilizar HDR, como em alguns dispositivos com HyperOS que ocultam o HLG.
+
+Limitações:
+• As cores podem parecer incorretas se a tela não for capaz de exibir HDR
+• A reprodução pode falhar se o decodificador não suportar HDR
+• O HDR ainda depende do cliente selecionado em \"Simular streams de vídeo\""</string>
   <string name="morphe_force_avc_codec_title">Forçar codec AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Benefícios:
 • Pode melhorar a duração da bateria

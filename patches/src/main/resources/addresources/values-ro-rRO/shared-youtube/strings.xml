@@ -210,6 +210,8 @@ Acest lucru va schimba aspectul și caracteristicile aplicației, dar pot apăre
 
 Dacă este dezactivat ulterior, se recomandă să ștergeți datele aplicației pentru a preveni erorile UI."</string>
   <string name="morphe_spoof_app_version_target_title">Țintă versiune falsificată a aplicației</string>
+  <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_default">Implicit</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">Dislike-uri temporar indisponibile (API a expirat)</string>

@@ -262,6 +262,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_summary">隱藏在開啟完整的評論區之前，影片下方的評論預覽</string>
   <string name="morphe_hide_comments_thanks_button_title">隱藏「感謝」按鈕</string>
   <string name="morphe_hide_comments_timestamp_button_title">隱藏時間戳按鈕</string>
+  <string name="morphe_hide_comments_top_fans_button_title">隱藏「Top fans」按鈕</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">修飾醒目搜尋連結</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">修飾醒目搜尋連結，僅保留原始純文字</string>
   <string name="morphe_hide_keyword_content_screen_title">關鍵字篩選</string>
@@ -847,6 +848,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_player_popup_panels_title">停用播放器彈出面板</string>
   <string name="morphe_disable_player_popup_panels_summary">停用彈出式播放清單和直播聊天面板的自動開啟</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">停用播放清單自動播放</string>
+  <string name="morphe_disable_playlist_autoplay_summary">防止播放清單自動跳到下一個影片</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">影片結束時退出全螢幕模式</string>
   <string name="morphe_exit_fullscreen_entry_1">停用</string>
@@ -1148,6 +1151,13 @@ Second \"item\" text"</string>
   <string name="morphe_playback_audio_time_stretching_summary">允許獨立設定速度和音調，可能會造成音訊失真</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">停用 HDR 影片</string>
+  <string name="morphe_force_hdr_video_title">強制 HDR 影片</string>
+  <string name="morphe_force_hdr_video_summary">強制應用程式將此裝置識別為支援 HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"如果 HDR 解碼正常運作，但 YouTube 不提供 HDR，例如某些隱藏 HLG 的 HyperOS 裝置，請使用此選項。
+限制：
+• 如果顯示器實際上無法顯示 HDR，顏色可能會看起來不正確。
+• 如果解碼器無法處理 HDR，播放可能會失敗。
+• HDR 仍然取決於 spoof 影片串流用戶端。"</string>
   <string name="morphe_force_avc_codec_title">若要使用此功能，請將「偽造視訊串流」設定為 Android VR 或 Android Studio</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"優點：
 • 可改善電池續航力

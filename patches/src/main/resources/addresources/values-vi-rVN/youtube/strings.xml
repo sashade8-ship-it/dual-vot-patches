@@ -261,6 +261,7 @@ Ví dụ:
   <string name="morphe_hide_comments_preview_comment_summary">Ẩn phần xem trước nhận xét dưới video trước khi mở toàn bộ phần bình luận</string>
   <string name="morphe_hide_comments_thanks_button_title">Ẩn nút Cảm ơn</string>
   <string name="morphe_hide_comments_timestamp_button_title">Ẩn nút Dấu thời gian</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Ẩn nút \'Người hâm mộ hàng đầu\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Loại bỏ chữ xanh</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Loại bỏ chữ xanh, chỉ giữ lại văn bản gốc</string>
   <string name="morphe_hide_keyword_content_screen_title">Bộ lọc từ khóa</string>
@@ -846,6 +847,8 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_disable_player_popup_panels_title">Tắt bảng bật lên trên trình phát</string>
   <string name="morphe_disable_player_popup_panels_summary">Tắt tự động mở bảng danh sách phát và trò chuyện trực tiếp</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Tắt tự động phát danh sách phát</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Ngăn danh sách phát tự động chuyển sang video tiếp theo</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Thoát chế độ toàn màn hình khi hết video</string>
   <string name="morphe_exit_fullscreen_entry_1">Tắt</string>
@@ -854,9 +857,11 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_exit_fullscreen_entry_4">Chế độ dọc và ngang</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Cử chỉ toàn màn hình</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Cử chỉ của trình phát ở chế độ toàn màn hình</string>
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Tắt cử chỉ vuốt từ dưới lên ở chế độ màn hình dọc</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Tắt cử chỉ vuốt từ trên xuống ở chế độ màn hình dọc</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Tắt cử chỉ vuốt từ trên xuống ở chế độ màn hình ngang</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Tắt cử chỉ phóng to bằng hai ngón tay</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Mở video ở chế độ toàn màn hình</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Tắt</string>
@@ -870,6 +875,7 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_fullscreen_video_scale_button_title">Hiển thị nút tỷ lệ video</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Chạm để chuyển đổi giữa Mặc định, Kéo giãn và Thu phóng</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">Hiển thị nút Tắt tiếng</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Độ mờ của lớp phủ trình phát</string>
   <string name="morphe_player_overlay_opacity_summary">Điều chỉnh độ trong suốt (0 là trong suốt, 100 là mờ)</string>
@@ -1144,6 +1150,14 @@ Nhấn vào đây để truy cập DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Cho phép thiết lập tốc độ và cao độ một cách độc lập, có thể gây ra nhiễu âm thanh</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Vô hiệu hóa video HDR</string>
+  <string name="morphe_force_hdr_video_title">Ép phát video HDR</string>
+  <string name="morphe_force_hdr_video_summary">Buộc ứng dụng nhận diện thiết bị hỗ trợ HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Dùng tính năng này nếu giải mã HDR hoạt động nhưng YouTube không cung cấp HDR, chẳng hạn như một số thiết bị HyperOS ẩn HLG.
+
+Hạn chế:
+• Màu sắc có thể hiển thị sai nếu màn hình không thực sự hỗ trợ HDR
+• Phát lại có thể thất bại nếu bộ giải mã không xử lý được HDR
+• HDR vẫn phụ thuộc vào ứng dụng khách giả lập luồng video"</string>
   <string name="morphe_force_avc_codec_title">Buộc codec AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Lợi ích:
 • Có thể cải thiện thời lượng pin

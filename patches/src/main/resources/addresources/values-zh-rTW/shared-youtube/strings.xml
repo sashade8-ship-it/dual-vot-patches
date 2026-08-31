@@ -207,6 +207,8 @@ Second \"item\" text"</string>
 
 如果之後關閉此設定，建議清除應用程式資料以避免 UI 錯誤。"</string>
   <string name="morphe_spoof_app_version_target_title">應用程式偽裝目標版本</string>
+  <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_default">預設</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">暫時無法顯示不喜歡人數（API 逾時）</string>

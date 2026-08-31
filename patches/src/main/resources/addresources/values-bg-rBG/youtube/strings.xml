@@ -262,6 +262,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_summary">Скрива предварителния преглед на коментара под видеото, преди да се отвори пълната секция с коментари</string>
   <string name="morphe_hide_comments_thanks_button_title">Скрийте бутона \'Благодаряне\'</string>
   <string name="morphe_hide_comments_timestamp_button_title">Скриване на бутона за времето</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Скриване на бутона „Топ фенове“</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Пречистване на подчертаните връзки от търсенето</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Пречиства връзките от търсенето, оставяйки само оригиналния обикновен текст</string>
   <string name="morphe_hide_keyword_content_screen_title">Филтър по ключова дума</string>
@@ -847,6 +848,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_player_popup_panels_title">Изключване на поп-ап панели за играч</string>
   <string name="morphe_disable_player_popup_panels_summary">Деактивира автоматичното отваряне на панели за плейлисти и чат на живо</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Изключване на автоматичното пускане на плейлиста</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Предотвратява плейлистите да преминават автоматично към следващото видео</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Излиза от режим на цял екран в края на видеото</string>
   <string name="morphe_exit_fullscreen_entry_1">Дублирането на видеа се показва</string>
@@ -1148,6 +1151,14 @@ Second \"item\" text"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Позволява независимо задаване на скоростта и височината, което може да причини аудио артефакти</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Бутоните за ускоро и назад са скрити</string>
+  <string name="morphe_force_hdr_video_title">Принудително HDR видео</string>
+  <string name="morphe_force_hdr_video_summary">Принуждава приложението да разпознава това устройство като HDR‑съвместимо</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Използвайте това, ако HDR декодирането работи, но YouTube не предлага HDR, като например някои устройства с HyperOS, които скриват HLG.
+
+Ограничения:
+• Цветовете може да изглеждат грешно, ако дисплеят не може реално да показва HDR
+• Възпроизвеждането може да се провали, ако декодерът не може да обработва HDR
+• HDR все още зависи от клиента за подправяне на видео потоци"</string>
   <string name="morphe_force_avc_codec_title">Наложи кодек AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Преимущества:
 • Може да подобри трафик от батерията

@@ -262,6 +262,7 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_comments_preview_comment_summary">Piilottaa kommenttien esikatselun videon alapuolella ennen koko kommenttiosion avaamista</string>
   <string name="morphe_hide_comments_thanks_button_title">Piilota Kiitos-painike</string>
   <string name="morphe_hide_comments_timestamp_button_title">Piilota aikaleima-painike</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Piilota \'Top-fanit\' -painike</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Puhdistaa korostettujen hakulinkkien koodin</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Puhdistaa korostettujen hakulinkkien koodin jättäen jäljelle vain alkuperäisen tekstin</string>
   <string name="morphe_hide_keyword_content_screen_title">Avainsanasuodatin</string>
@@ -847,6 +848,8 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <string name="morphe_disable_player_popup_panels_title">Poista soittimen ponnahdusikkunat mainokset</string>
   <string name="morphe_disable_player_popup_panels_summary">Poistaa automaattisesti avautuvien soittolistan ja live-chatin paneelien käytön</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Poista soittolistan automaattinen toisto käytöstä</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Estää soittolistoja siirtymästä automaattisesti seuraavaan videoon</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Poistuu koko näytön tilasta videon lopussa</string>
   <string name="morphe_exit_fullscreen_entry_1">Pois käytöstä</string>
@@ -1148,6 +1151,14 @@ Napauta tästä saadaksesi lisätietoja DeArrowista"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Mahdollistaa nopeuden ja äänenkorkeuden säätämisen toisistaan riippumatta, saattaa aiheuttaa äänihäiriöitä</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Poista HDR-video käytöstä</string>
+  <string name="morphe_force_hdr_video_title">Pakota HDR-video</string>
+  <string name="morphe_force_hdr_video_summary">Pakottaa sovelluksen tunnistamaan tämän laitteen HDR-yhteensopivaksi</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Käytä tätä, jos HDR-dekoodaus toimii, mutta YouTube ei tarjoa HDR:ää, kuten jotkin HyperOS-laitteet, jotka piilottavat HLG:n.
+
+Rajoitukset:
+• Värit voivat näyttää vääriltä, jos näyttö ei oikeasti pysty näyttämään HDR:ää
+• Toisto voi epäonnistua, jos dekooderi ei pysty käsittelemään HDR:ää
+• HDR riippuu edelleen videovirtoja huijaavasta asiakasohjelmasta"</string>
   <string name="morphe_force_avc_codec_title">Pakota AVC (H.264) -koodekki</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Hyödyt:
 • Voi parantaa akunkestoa

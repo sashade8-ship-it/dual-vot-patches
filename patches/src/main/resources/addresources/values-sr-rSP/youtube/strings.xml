@@ -262,6 +262,7 @@ Promene uključuju:
   <string name="morphe_hide_comments_preview_comment_summary">Саскрива преглед коментара испод видеа пре отварања пуног одељка за коментаре</string>
   <string name="morphe_hide_comments_thanks_button_title">Сакриј дугме „Хвала”</string>
   <string name="morphe_hide_comments_timestamp_button_title">Сакриј дугме за временску ознаку</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Сакриј дугме „Топ фанови“</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Дезинфикуј истакнуте линкове претраге</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Дезинфикује истакнуте линкове претраге, остављајући само оригинални чисти текст</string>
   <string name="morphe_hide_keyword_content_screen_title">Филтер кључних речи</string>
@@ -845,6 +846,8 @@ Promene uključuju:
   <string name="morphe_disable_player_popup_panels_title">Онемогући рекламе у плејеру</string>
   <string name="morphe_disable_player_popup_panels_summary">Онемогућава панеле за отварање плејлиста и ћаскања</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Онемогући аутоматску репродукцију плејлисте</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Спречава да плејлисте аутоматски прелазе на следећи видео</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Излази из режима целог екрана на крају видеа</string>
   <string name="morphe_exit_fullscreen_entry_1">Онемогућено</string>
@@ -1146,6 +1149,14 @@ Promene uključuju:
   <string name="morphe_playback_audio_time_stretching_summary">Омогућава независно подешавање брзине и висине тона, што може проузроковати аудио артефакте</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Онемогући HDR видео</string>
+  <string name="morphe_force_hdr_video_title">Форсирај HDR видео</string>
+  <string name="morphe_force_hdr_video_summary">Форсира апликацију да препозна овај уређај као HDR‑способан</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Користи ово ако HDR декодирање ради, али YouTube не нуди HDR, као што су неки HyperOS уређаји који скривају HLG.
+
+Ограничења:
+• Боје могу изгледати погрешно ако екран заправо не може приказати HDR
+• Репродукција може пропасти ако декодер не може да обради HDR
+• HDR и даље зависи од spoof клијента видео стримова"</string>
   <string name="morphe_force_avc_codec_title">Присили AVC (H.264) кодек</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Предности:
 • Може побољшати трајање батерије

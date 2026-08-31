@@ -262,6 +262,7 @@ Schimbari incluse:
   <string name="morphe_hide_comments_preview_comment_summary">Ascunde previzualizarea comentariului de sub videoclip înainte de a deschide secțiunea completă de comentarii</string>
   <string name="morphe_hide_comments_thanks_button_title">Ascunde butonul „Mulțumesc”</string>
   <string name="morphe_hide_comments_timestamp_button_title">Ascunde butonul Timestamp</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Ascunde butonul \'Top fani\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Dezactivează legăturile de căutare evidențiate</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Dezactivează legăturile de căutare evidențiate, afișând doar textul original simplu</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtru de cuvinte cheie</string>
@@ -847,6 +848,8 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_disable_player_popup_panels_title"> Dezactivați panourile pop-up ale jucătorului</string>
   <string name="morphe_disable_player_popup_panels_summary">Dezactivează deschiderea automată a panelurilor de listă de redare și chat live</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Dezactivează redarea automată a playlistului</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Previne avansarea automată a playlistelor la următorul videoclip</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Ieșire din modul ecran complet la sfârșitul videoclipului</string>
   <string name="morphe_exit_fullscreen_entry_1">Dezactivat</string>
@@ -1148,6 +1151,14 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Permite setarea vitezei și a tonalității independent, ceea ce poate cauza artefacte audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Dezactivați videoclipurile HDR</string>
+  <string name="morphe_force_hdr_video_title">Forțează video HDR</string>
+  <string name="morphe_force_hdr_video_summary">Forțează aplicația să recunoască acest dispozitiv ca fiind compatibil HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Folosiți aceasta dacă decodarea HDR funcționează, dar YouTube nu oferă HDR, cum ar fi unele dispozitive HyperOS care ascund HLG.
+
+Limitări:
+• Culorile pot părea greșite dacă afișajul nu poate afișa efectiv HDR
+• Redarea poate eșua dacă decodorul nu poate gestiona HDR
+• HDR depinde în continuare de clientul de fluxuri video spoof"</string>
   <string name="morphe_force_avc_codec_title">Forțează codec-ul AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Beneficii:
 • Poate îmbunătăți durata de viață a bateriei

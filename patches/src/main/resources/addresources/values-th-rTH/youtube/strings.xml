@@ -262,6 +262,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_summary">ซ่อนตัวอย่างความคิดเห็นใต้คลิปวิดีโอ ก่อนที่จะเปิดส่วนความคิดเห็นทั้งหมด</string>
   <string name="morphe_hide_comments_thanks_button_title">ซ่อนปุ่มขอบคุณ</string>
   <string name="morphe_hide_comments_timestamp_button_title">ซ่อนปุ่มตราประทับเวลา</string>
+  <string name="morphe_hide_comments_top_fans_button_title">ซ่อนปุ่ม \'Top fans\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">ทำให้ลิงก์การค้นหาที่ไฮไลต์เป็นรูปแบบปกติ</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">เปลี่ยนลิงก์การค้นหาที่ไฮไลต์เป็นข้อความธรรมดา</string>
   <string name="morphe_hide_keyword_content_screen_title">ตัวกรองคำหลัก</string>
@@ -847,6 +848,8 @@ Second \"item\" text"</string>
   <string name="morphe_disable_player_popup_panels_title">ปิดใช้งานป๊อปอัพของผู้เล่น</string>
   <string name="morphe_disable_player_popup_panels_summary">ปิดใช้งานแผงเพลย์ลิสต์และแชทสดไม่ให้เปิดโดยอัตโนมัติ</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">ปิดการเล่นอัตโนมัติของเพลย์ลิสต์</string>
+  <string name="morphe_disable_playlist_autoplay_summary">ป้องกันไม่ให้เพลย์ลิสต์เลื่อนไปที่วิดีโอถัดไปโดยอัตโนมัติ</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">ออกจากโหมดเต็มหน้าจอเมื่อวิดีโอจบ</string>
   <string name="morphe_exit_fullscreen_entry_1">ปิดใช้งาน</string>
@@ -1148,6 +1151,14 @@ Second \"item\" text"</string>
   <string name="morphe_playback_audio_time_stretching_summary">อนุญาตให้ตั้งค่าความเร็วและระดับเสียงโดยอิสระ อาจทำให้เกิดข้อผิดพลาดด้านเสียง</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">ปิดใช้งานวิดีโอ HDR</string>
+  <string name="morphe_force_hdr_video_title">บังคับวิดีโอ HDR</string>
+  <string name="morphe_force_hdr_video_summary">บังคับให้แอปรับรู้ว่าอุปกรณ์นี้รองรับ HDR‑capable</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"ใช้หากการถอดรหัส HDR ทำงานได้ แต่ YouTube ไม่นำเสนอ HDR เช่น อุปกรณ์ HyperOS บางรุ่นที่ซ่อน HLG.
+
+ข้อจำกัด:
+• สีอาจดูผิดเพี้ยนไป หากหน้าจอมิสามารถแสดง HDR ได้จริง
+• การเล่นอาจล้มเหลวหากตัวถอดรหัสไม่สามารถจัดการ HDR ได้
+• HDR ยังคงขึ้นอยู่กับสตรีมวิดีโอ \"spoof\""</string>
   <string name="morphe_force_avc_codec_title">บังคับใช้ตัวแปลงสัญญาณ AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"ประโยชน์:
 • ช่วยยืดอายุการใช้งานแบตเตอรี่

@@ -262,6 +262,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_comments_preview_comment_summary">Megjegyzések előnézetének elrejtése a teljes megjegyzések szekció megnyitása előtt</string>
   <string name="morphe_hide_comments_thanks_button_title">Köszönet gomb elrejtése</string>
   <string name="morphe_hide_comments_timestamp_button_title">Időbélyeg gomb elrejtése</string>
+  <string name="morphe_hide_comments_top_fans_button_title">A \'Top fans\' gomb elrejtése</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">A kiemelt keresési hivatkozások higiénikusabbá tétele</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">A kiemelt keresési hivatkozások higiénikusabbá tétele, csak az eredeti szöveget hagyva</string>
   <string name="morphe_hide_keyword_content_screen_title">Kulcsszószűrő</string>
@@ -847,6 +848,8 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <string name="morphe_disable_player_popup_panels_title">Lejátszó előugró panelek letiltása</string>
   <string name="morphe_disable_player_popup_panels_summary">Letiltja a felugró panelek automatikus megnyílását (lejátszási lista, élő csevegőpanel)</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Lejátszási lista automatikus lejátszásának kikapcsolása</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Megakadályozza, hogy a lejátszási listák automatikusan továbblépjenek a következő videóra</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Kilép a teljes képernyős módból a videó befejezésekor</string>
   <string name="morphe_exit_fullscreen_entry_1">Letiltva</string>
@@ -1148,6 +1151,14 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <string name="morphe_playback_audio_time_stretching_summary">Lehetővé teszi a sebesség és a hangmagasság független beállítását, ami audio artefaktumokat okozhat</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Az HDR videó letiltása</string>
+  <string name="morphe_force_hdr_video_title">HDR videó kényszerítése</string>
+  <string name="morphe_force_hdr_video_summary">Arra kényszeríti az alkalmazást, hogy HDR-képes eszközként ismerje fel ezt az eszközt</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Használd ezt, ha a HDR dekódolás működik, de a YouTube nem kínál HDR-t, például egyes HyperOS eszközökön, amelyek elrejtik a HLG-t.
+
+Korlátozások:
+• A színek hibásnak tűnhetnek, ha a kijelző nem tudja valóban megjeleníteni a HDR-t
+• A lejátszás meghiúsulhat, ha a dekódoló nem tudja kezelni a HDR-t
+• A HDR továbbra is a spoof video streams klienstől függ"</string>
   <string name="morphe_force_avc_codec_title">A funkció használatához állítsa be a \'Videóstreamek hamisítását\' Android VR-re vagy Android Studióra</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Előnyök:
 • Javíthatja az akkumulátor élettartamát

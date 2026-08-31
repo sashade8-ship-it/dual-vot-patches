@@ -262,6 +262,7 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_comments_preview_comment_summary">Skryje ukážku komentára pod videami pred otvorením celej sekcie komentárov</string>
   <string name="morphe_hide_comments_thanks_button_title">Skryť tlačidlo Vďaka</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skryť tlačidlo Časové značky</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Skryť tlačidlo \'Top fans\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Vyčistí zvýraznené odkazy vo vyhľadávaní</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Vyčistí zvýraznené odkazy vo vyhľadávaní, ponechajúc iba pôvodný jednoduchý text</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter kľúčových slov</string>
@@ -847,6 +848,8 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
   <string name="morphe_disable_player_popup_panels_title">Zakázať vyskakovacie panely prehrávača</string>
   <string name="morphe_disable_player_popup_panels_summary">Zakáže automatické otváranie panelov zoznamu skladieb a živého chatu</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Vypnúť automatické prehrávanie zoznamu skladieb</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Zabraňuje automatickému prechodu na ďalšie video v zoznamoch skladieb</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Ukončí režim na celú obrazovku na konci videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Zakázané</string>
@@ -1148,6 +1151,14 @@ Ak je povolené, URL adresy videí sa odošlú na server API a neodosielajú sa 
   <string name="morphe_playback_audio_time_stretching_summary">Umožňuje nezávisle nastavovať rýchlosť a výšku zvuku, čo môže spôsobiť artefakty zvuku</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Zakázať HDR video</string>
+  <string name="morphe_force_hdr_video_title">Vynútiť HDR video</string>
+  <string name="morphe_force_hdr_video_summary">Vynúti aplikáciu, aby toto zariadenie rozpoznala ako HDR‑spôsobilé</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Použite to, ak HDR dekódovanie funguje, ale YouTube neponúka HDR, napríklad na niektorých zariadeniach HyperOS, ktoré skrývajú HLG.
+
+Obmedzenia:
+• Farby môžu vyzerať nesprávne, ak displej v skutočnosti nedokáže zobraziť HDR
+• Prehrávanie môže zlyhať, ak dekodér nedokáže spracovať HDR
+• HDR stále závisí od klienta na spoofovanie video streamov"</string>
   <string name="morphe_force_avc_codec_title">Vynútiť codec AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Výhody:
 • Môže zlepšiť výdrž batérie
