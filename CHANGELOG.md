@@ -1,3 +1,13 @@
+## 1.41.0-dev.8-dualvot.8.3 (2026-08-31)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.41.0-dev.8](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.8).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.41.0-dev.7-dualvot.8.3 (2026-08-30)
 
 ### Automated Morphe update
@@ -292,6 +302,17 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.41.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.7...v1.41.0-dev.8) (2026-08-31)
+
+### ✨ New Features
+
+* Add `App refresh rate` patch ([#2695](https://github.com/MorpheApp/morphe-patches/issues/2695)) ([e11c5e9](https://github.com/MorpheApp/morphe-patches/commit/e11c5e97cfb63f413cb3e1f695f50610e11016d5))
+* **Settings:** Add an option to change the name of the Morphe settings entry ([#2691](https://github.com/MorpheApp/morphe-patches/issues/2691)) ([942d6fb](https://github.com/MorpheApp/morphe-patches/commit/942d6fb59121fbf5629adbcbcb735db7818cac9e))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add support for `21.07.247` ([0c61372](https://github.com/MorpheApp/morphe-patches/commit/0c61372bdca637a2bdb6d144627e181348cb372c))
 
 ## [1.41.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.6...v1.41.0-dev.7) (2026-08-30)
 

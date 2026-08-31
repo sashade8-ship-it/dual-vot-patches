@@ -142,21 +142,22 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.41.0-dev.7-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.41.0-dev.7-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;144 patches total
+> **[v1.41.0-dev.8-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.41.0-dev.8-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;146 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;81 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;82 patches</summary>
 <br>
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;21.35.442 | 🧪&nbsp;21.34.243 | 🧪&nbsp;21.28.208 | 21.04.223 | 20.51.39 | 20.31.42 | 20.21.37 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 🧪&nbsp;21.35.442 | 🧪&nbsp;21.34.243 | 🧪&nbsp;21.28.208 | 21.07.247 | 21.04.223 | 20.51.39 | 20.31.42 | 20.21.37 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
 | [Add to queue](#add-to-queue) | Overrides the feed flyout 'Play next in queue' with the Morphe video queue. |  |
 | [Alternative thumbnails](#alternative-thumbnails) | Adds options to replace video thumbnails using the DeArrow API or image captures from the video. |  |
 | [Ambient mode](#ambient-mode) | Adds options to bypass power saving restrictions for Ambient mode and disable it entirely or in fullscreen. |  |
+| [App refresh rate](#app-refresh-rate) | Adds an option to change the app refresh rate. |  |
 | [Bypass image region restrictions](#bypass-image-region-restrictions) | Adds an option to use a different host for user avatar and channel images and can fix missing images that are blocked in some countries. |  |
 | [Bypass link redirects](#bypass-link-redirects) | Adds an option to bypass redirects and open the original link directly. |  |
 | [Captions](#captions) | Adds an option to disable captions from being automatically enabled or to set caption cookies. |  |
@@ -239,7 +240,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 </details>
 
 <details>
-<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;41 patches</summary>
+<summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;42 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -249,6 +250,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
+| [App refresh rate](#app-refresh-rate) | Adds an option to change the app refresh rate. |  |
 | [Bypass certificate checks](#bypass-certificate-checks) | Bypasses certificate checks which prevent YouTube Music from working on Android Auto. |  |
 | [Change header](#change-header) | Adds an option to change the header logo in the top left corner of the app. | • Custom header logo |
 | [Change miniplayer color](#change-miniplayer-color) | Adds an option to change the miniplayer background color to match the fullscreen player. |  |
