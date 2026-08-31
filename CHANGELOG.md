@@ -1,3 +1,13 @@
+## 1.41.0-dev.10-dualvot.8.3 (2026-08-31)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.41.0-dev.10](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.10).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.41.0-dev.9-dualvot.8.3 (2026-08-31)
 
 ### Automated Morphe update
@@ -312,6 +322,12 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.41.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.9...v1.41.0-dev.10) (2026-08-31)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Save to watch later for kids button:** Button was hidden in flyout for some videos ([109f9dc](https://github.com/MorpheApp/morphe-patches/commit/109f9dc64ffffdbde70c51395cfd9fa8a08b999f))
 
 ## [1.41.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.8...v1.41.0-dev.9) (2026-08-31)
 
