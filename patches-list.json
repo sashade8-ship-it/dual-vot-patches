@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.41.0-dev.8-dualvot.8.3",
+  "version": "1.41.0-dev.9-dualvot.8.3",
   "patches": [
     {
       "name": "Add to queue",
@@ -691,6 +691,7 @@
       "description": "Adds an option to change the UI appearance to a phone, tablet, or automotive device.",
       "default": true,
       "dependencies": [
+        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch",
@@ -8718,6 +8719,7 @@
       "description": "Adds options to add played tracks to Last.fm and ListenBrainz.",
       "default": true,
       "dependencies": [
+        "BytecodePatch",
         "BytecodePatch",
         "BytecodePatch"
       ],

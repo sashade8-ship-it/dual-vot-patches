@@ -1,3 +1,13 @@
+## 1.41.0-dev.9-dualvot.8.3 (2026-08-31)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.41.0-dev.9](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.41.0-dev.9).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.41.0-dev.8-dualvot.8.3 (2026-08-31)
 
 ### Automated Morphe update
@@ -302,6 +312,21 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.41.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.8...v1.41.0-dev.9) (2026-08-31)
+
+### 🐛 Bug Fixes
+
+* **Translations:** Report the HTTP status of a failed translation instead of a file not found error ([b524f57](https://github.com/MorpheApp/morphe-patches/commit/b524f578ef2e4f31a5a80ebd7eaf0380fa3d335f))
+* **YouTube Music - Play albums songs:** Restore music videos outside of albums and use the SponsorBlock segments of the song ([55cd280](https://github.com/MorpheApp/morphe-patches/commit/55cd28030ca12efd686735a08885dcf42bd58f77))
+* **YouTube Music - Play albums songs:** Use the length of the song instead of the length of the music video ([e38ec78](https://github.com/MorpheApp/morphe-patches/commit/e38ec78c780cc698f227fed577e96ef15114c140))
+* **YouTube Music - Scrobbling:** Scrobble the song version of album tracks instead of the music video ([9ceace2](https://github.com/MorpheApp/morphe-patches/commit/9ceace24b220ea711d91fa750665a46d85bce444))
+* **YouTube Music - Third-party lyrics:** Show the lyrics of the song version of album tracks ([e29d3e9](https://github.com/MorpheApp/morphe-patches/commit/e29d3e939dad95fab0981517be47a55529dc30b1))
+* **YouTube Music:** Various issues of the `Play albums songs` patch ([#2698](https://github.com/MorpheApp/morphe-patches/issues/2698)) ([b18ca17](https://github.com/MorpheApp/morphe-patches/commit/b18ca17bb50c255fc1328ec291b77298cf687ff2))
+
+### 🔧 Improvements
+
+* **YouTube:** Fix some issues and improve code ([#2699](https://github.com/MorpheApp/morphe-patches/issues/2699)) ([31beebf](https://github.com/MorpheApp/morphe-patches/commit/31beebfe81eaf08ea008ab321255057393e83482))
 
 ## [1.41.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0-dev.7...v1.41.0-dev.8) (2026-08-31)
 
