@@ -27,7 +27,7 @@ import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.patches.youtube.video.information.onCreateHook
 import app.morphe.patches.youtube.video.information.videoTimeHook
 import app.morphe.patches.youtube.video.videoid.hookVideoId
-import app.morphe.patches.youtube.video.videoid.videoIdPatch
+import app.morphe.patches.youtube.video.volume.playerVolumeHookPatch
 import app.morphe.util.ResourceGroup
 import app.morphe.util.copyResources
 
@@ -62,12 +62,11 @@ val voiceOverTranslationPatch = bytecodePatch(
     dependsOn(
         sharedExtensionPatch,
         videoInformationPatch,
-        videoIdPatch,
         playerTypeHookPatch,
         playerOverlayButtonsHookPatch,
         legacyPlayerControlsPatch,
         voiceOverTranslationResourcePatch,
-        votOriginalVolumeBytecodePatch
+        playerVolumeHookPatch,
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
