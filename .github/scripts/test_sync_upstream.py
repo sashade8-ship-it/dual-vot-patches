@@ -14,6 +14,53 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_player_overlay_conflicts_fail_closed(self):
+        player_overlay_path = (
+            "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/"
+            "PlayerOverlayButton.java"
+        )
+        self.assertNotIn(player_overlay_path, sync_upstream.ADDON_COMPATIBILITY_CONFLICTS)
+
+    def test_player_overlay_keeps_dual_api_and_upstream_spacing_fix(self):
+        root = MODULE_PATH.parents[2]
+        source = (
+            root
+            / "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer"
+            / "PlayerOverlayButton.java"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("public static <T extends ImageView> T addButton", source)
+        self.assertIn("static float getButtonWidthPercentage", source)
+        self.assertIn("final int effectiveCustomButtons = Math.max(0, buttonControllers.size()", source)
+        self.assertIn("chapterTitleContainer.updateMargin(source.getWidth(), effectiveCustomButtons, spacingPercentage)", source)
+        self.assertIn("setTextSize(TypedValue.COMPLEX_UNIT_PX, Dim.dp(14))", source)
+
+    def test_dev3_volume_hook_keeps_dual_coordinator(self):
+        root = MODULE_PATH.parents[2]
+        patch = (
+            root
+            / "patches/src/main/kotlin/app/morphe/patches/youtube/video/voiceovertranslation"
+            / "VoiceOverTranslationPatch.kt"
+        ).read_text(encoding="utf-8")
+        self.assertIn("VoiceOverTranslationCoordinator;", patch)
+        self.assertIn("playerVolumeHookPatch", patch)
+        self.assertNotIn("votOriginalVolumeBytecodePatch", patch)
+        self.assertIn('onCreateHook(EXTENSION_CLASS, "initialize")', patch)
+        self.assertIn('"$EXTENSION_CLASS->onVideoIdChanged(Ljava/lang/String;)V"', patch)
+        self.assertIn('videoTimeHook(EXTENSION_CLASS, "onVideoTimeChanged")', patch)
+
+        for relative_path in (
+            "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+            "voiceovertranslation/VoiceOverTranslationPatch.java",
+            "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+            "voiceovertranslation/VoiceOverTranslationCoordinator.java",
+            "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+            "voiceovertranslation/yandex/YandexVoiceOverTranslationPatch.java",
+        ):
+            source = (root / relative_path).read_text(encoding="utf-8")
+            self.assertIn("PlayerVolumePatch", source)
+            self.assertNotIn("VotOriginalVolumePatch", source)
+
     def test_dispatcher_has_staggered_two_hour_schedules(self):
         workflow = (
             MODULE_PATH.parents[1] / "workflows" / "upstream_sync.yml"

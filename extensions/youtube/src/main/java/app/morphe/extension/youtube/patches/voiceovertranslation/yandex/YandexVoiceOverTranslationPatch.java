@@ -46,7 +46,7 @@
 
 package app.morphe.extension.youtube.patches.voiceovertranslation.yandex;
 
-import app.morphe.extension.youtube.patches.voiceovertranslation.VotOriginalVolumePatch;
+import app.morphe.extension.youtube.patches.PlayerVolumePatch;
 
 import android.content.Context;
 import android.media.AudioAttributes;
@@ -368,7 +368,7 @@ public class YandexVoiceOverTranslationPatch {
         resetAudioUploadRequestState();
         stopAudioPlayback();
         isTranslating.set(false);
-        VotOriginalVolumePatch.clearAudioMultiplier();
+        PlayerVolumePatch.clearDuckMultiplier();
         notifyTranslationStateChanged();
     }
 
@@ -433,11 +433,11 @@ public class YandexVoiceOverTranslationPatch {
         // playable. Keep the original video at its normal volume until the
         // translation MediaPlayer has completed prepareAsync().
         if (translationStarting || mediaPlayer.get() == null) {
-            VotOriginalVolumePatch.clearAudioMultiplier();
+            PlayerVolumePatch.clearDuckMultiplier();
             return;
         }
         float multiplier = Math.max(0f, Math.min(1f, volumePercent / 100.0f));
-        VotOriginalVolumePatch.setAudioMultiplier(multiplier);
+        PlayerVolumePatch.setDuckMultiplier(multiplier);
     }
 
     /**
@@ -1114,7 +1114,7 @@ public class YandexVoiceOverTranslationPatch {
             } catch (Exception ignored) { }
         }
         currentTranslatedVideoId.set("");
-        VotOriginalVolumePatch.clearAudioMultiplier();
+        PlayerVolumePatch.clearDuckMultiplier();
         notifyTranslationStateChanged();
         isPaused = false;
         lastVideoTimeMs = -1;

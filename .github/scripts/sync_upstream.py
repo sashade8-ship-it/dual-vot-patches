@@ -92,11 +92,6 @@ ADDON_COMPATIBILITY_CONFLICTS = {
         ("addOnTranslationStateChangeCallback", "CopyOnWriteArraySet", "deactivateTranslation", "isSessionEnabled"),
     ),
     "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/"
-    "PlayerOverlayButton.java": (
-        ("public static <T extends ImageView> T addButton", "minPercentage = landscape ? 0.80f : 0.60f"),
-        ("public static <T extends ImageView> T addButton", "minPercentage = landscape ? 0.80f : 0.60f"),
-    ),
-    "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/"
     "VoiceOverTranslationButton.java": (
         ("VoiceOverTranslationCoordinator.toggleOfficial", "VoiceOverTranslationCoordinator.isOfficialActive"),
         ("addOnTranslationStateChangeCallback", "VoiceOverTranslationPatch.toggleTranslation"),
