@@ -730,6 +730,7 @@ Til þess að fá access til stillingarinnar skaltu koma á stillinguna í gegnu
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Felur \'Hringrás vídeó\' valmynd</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Fela valmyndina \'Á ferðinni\'</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Felur Gæði valmynd</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Felur Gæði valmyndar fætur</string>
@@ -890,6 +891,21 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_change_form_factor_entry_2">Sími</string>
   <string name="morphe_change_form_factor_entry_3">Tafla</string>
   <string name="morphe_change_form_factor_entry_4">Bíll</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Breytingar fela í sér:
+
+Spjaldtölvuútlit
+• Samfélagsfærslur eru falnar
+• Stillingin Spilun í straumum er ekki tiltæk
+• Remix-hnappur og hljóðhnappur eru ekki tiltækir í Shorts
+• Yfirlagið „More videos“ gæti ekki verið tiltækt
+• Gömul myndbandsaðgerðarstika sem er ekki samanfallin er sýnd
+
+Bílaútlit
+• Straumurinn er skipulagður eftir efnum og rásum
+• Stillingin Spilun í straumum er ekki tiltæk
+• Remix-hnappur og hljóðhnappur eru ekki tiltækir í Shorts
+• Shorts opnast í venjulega spilaranum
+• Gömul myndbandsaðgerðarstika sem er ekki samanfallin er sýnd"</string>
   <string name="morphe_tablet_layout_in_player_title">Virkja taflalýsing í spilara</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Endurskipar gamla útlit spilarans

@@ -734,6 +734,7 @@ Ak chcete zobraziť menu 'Audio Track', zmeňte 'Spoofovanie video streamov' na 
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Skryť ponuku \'Opakovať video\'</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Skryť ponuku „Na cestách“</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Skryť tlačidlo Kvalita</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Skryť pätačku ponuky Kvality</string>
@@ -894,6 +895,21 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
   <string name="morphe_change_form_factor_entry_2">Telefón</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automobil</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Zmeny zahŕňajú:
+
+Rozloženie pre tablet
+• Príspevky komunity sú skryté
+• Nastavenie prehrávania vo feedoch nie je k dispozícii
+• Tlačidlo Remix a tlačidlo Zvuk nie sú v službe Shorts k dispozícii
+• Prekrytie „Ďalšie videá“ nemusí byť k dispozícii
+• Zobrazuje sa rozbalený starý panel akcií videa
+
+Rozloženie pre automobil
+• Feed je usporiadaný podľa tém a kanálov
+• Nastavenie prehrávania vo feedoch nie je k dispozícii
+• Tlačidlo Remix a tlačidlo Zvuk nie sú v službe Shorts k dispozícii
+• Shorts sa otvárajú v bežnom prehrávači
+• Zobrazuje sa rozbalený starý panel akcií videa"</string>
   <string name="morphe_tablet_layout_in_player_title">Povoliť rozloženie tabletu v prehrávači</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Obnoví staré rozloženie prehrávača

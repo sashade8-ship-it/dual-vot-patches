@@ -211,7 +211,14 @@ Ez megváltoztatja az alkalmazás megjelenését és funkcióit, de előfordulha
 Ha később kikapcsolja, akkor ajánlott az alkalmazás adatait törölni, hogy megakadályozza a felhasználói felület hibáit."</string>
   <string name="morphe_spoof_app_version_target_title">Hamisított alkalmazásverzió célja</string>
   <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_title">Alkalmazás frissítési gyakorisága</string>
   <string name="morphe_app_refresh_rate_default">Alapértelmezett</string>
+  <string name="morphe_app_refresh_rate_fps">%s képkocka/mp</string>
+  <string name="morphe_app_refresh_rate_type_title">Frissítési gyakoriság felülbírálása</string>
+  <string name="morphe_app_refresh_rate_type_entry_1">Mindig</string>
+  <string name="morphe_app_refresh_rate_type_entry_2">Álló lejátszás</string>
+  <string name="morphe_app_refresh_rate_type_entry_3">Teljes képernyős lejátszás</string>
+  <string name="morphe_app_refresh_rate_type_entry_4">Álló és teljes képernyős lejátszás</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">A nem tetszések jelenleg nem elérhetők (az API időtúllépése miatt)</string>

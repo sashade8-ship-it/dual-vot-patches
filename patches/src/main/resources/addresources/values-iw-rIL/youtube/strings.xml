@@ -734,6 +734,7 @@ Second \"item\" text"</string>
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">הסתר תפריט \'חזור על הסרטון\'</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">הסתר את התפריט \'בדרכים\'</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">הסתר תפריט איכות</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">הסתר כותרת תחתונה של תפריט איכות</string>
@@ -894,6 +895,22 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">טלפון</string>
   <string name="morphe_change_form_factor_entry_3">טאבלט</string>
   <string name="morphe_change_form_factor_entry_4">רכב</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"השינויים כוללים:
+
+פריסת טאבלט
+• פוסטים קהילתיים מוסתרים
+• הגדרת השמעה בפידים אינה זמינה
+• כפתור רמיקס וכפתור סאונד אינם זמינים ב-Shorts
+• שכבת 'עוד סרטונים' עשויה לא להיות זמינה
+• סרגל פעולות וידאו ישן שאינו מקופל מוצג
+
+פריסה לרכב
+• הפיד מאורגן לפי נושאים וערוצים
+• הגדרת השמעה בפידים אינה זמינה
+• כפתור רמיקס וכפתור סאונד אינם זמינים ב-Shorts
+• שכבת 'עוד סרטונים' עשויה לא להיות זמינה
+• Shorts נפתחים בנגן הרגיל
+• סרגל פעולות וידאו ישן שאינו מקופל מוצג"</string>
   <string name="morphe_tablet_layout_in_player_title">הפעל פריסת טאבלט בנגן</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"משחזר את פריסת הנגן הישנה

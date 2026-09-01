@@ -734,6 +734,7 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">\'Loop video\' মেনু লুকান</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">\'চলার পথে\' মেনু লুকান</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">ভিডিও গুণমান মেনু লুকান</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">ভিডিও গুণমান মেনুর ফুটার লুকান</string>
@@ -894,6 +895,7 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_change_form_factor_entry_2">ফোন</string>
   <string name="morphe_change_form_factor_entry_3">ট্যাবলেট</string>
   <string name="morphe_change_form_factor_entry_4">অটোমোটিভ</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"'On-the-go' মেনু লুকান"</string>
   <string name="morphe_tablet_layout_in_player_title">প্লেয়ারে ট্যাবলেট লেআউট চালু করুন</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"পুরানো প্লেয়ার লেআউট ফিরিয়ে আনুন

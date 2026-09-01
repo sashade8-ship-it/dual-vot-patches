@@ -734,6 +734,7 @@ Second \"item\" text"</string>
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">隱藏「循環播放影片」選單</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">隱藏「外出」選單</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">隱藏「影片畫質」選單</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">隱藏「影片畫質」選單頁尾</string>
@@ -894,6 +895,22 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">手機</string>
   <string name="morphe_change_form_factor_entry_3">平板電腦</string>
   <string name="morphe_change_form_factor_entry_4">汽車</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"變更包括：
+
+平板電腦版面配置
+• 社群貼文會隱藏
+• 動態消息播放設定無法使用
+• Shorts 中無法使用 Remix 按鈕和聲音按鈕
+• 可能無法使用「更多影片」重疊畫面
+• 會顯示未收合的舊版影片動作列
+
+汽車版面配置
+• 動態消息會依主題和頻道整理
+• 動態消息播放設定無法使用
+• Shorts 中無法使用 Remix 按鈕和聲音按鈕
+• 可能無法使用「更多影片」重疊畫面
+• Shorts 會在一般播放器中開啟
+• 會顯示未收合的舊版影片動作列"</string>
   <string name="morphe_tablet_layout_in_player_title">在播放器中啟用平板版面配置</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"還原舊版播放器版面

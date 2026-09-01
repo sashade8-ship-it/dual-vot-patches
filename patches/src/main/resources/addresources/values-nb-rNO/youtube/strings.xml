@@ -734,6 +734,7 @@ For å vise 'Audio Track'-menyen, endre 'Forfalsk videostrømmer' til en hvilken
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Skjul \'Loop video\'-menyen</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Skjul \'På farten\'-menyen</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Skjul Kvalitetsmenyen</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Skjul Kvalitetsmenyen bunntekst</string>
@@ -894,6 +895,22 @@ Innstillinger → Avspilling (eller Autoplay) → Spill av neste video automatis
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Nettbrett</string>
   <string name="morphe_change_form_factor_entry_4">Bil</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Endringene inkluderer:
+
+Nettbrett-layout
+• Fellesskapsinnlegg er skjult
+• Innstillingen for avspilling i feed er ikke tilgjengelig
+• Remix-knappen og lydknappen er ikke tilgjengelige i Shorts
+• 'Flere videoer'-overlegget er kanskje ikke tilgjengelig
+• Den gamle videohandlingslinjen vises uten å være kollapset
+
+Bil-layout
+• Feed er organisert etter emner og kanaler
+• Innstillingen for avspilling i feed er ikke tilgjengelig
+• Remix-knappen og lydknappen er ikke tilgjengelige i Shorts
+• 'Flere videoer'-overlegget er kanskje ikke tilgjengelig
+• Shorts åpnes i den vanlige spilleren
+• Den gamle videohandlingslinjen vises uten å være kollapset"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktiver nettbrettlayout i spilleren</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Gjenoppretter det gamle spillerlayoutet

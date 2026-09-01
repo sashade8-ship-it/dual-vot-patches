@@ -734,6 +734,7 @@ Pentru a afișa meniul 'Audio Track', schimbă 'Spoof video streams' în orice c
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Ascunde meniul \'Repetare video\'</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Ascunde meniul \'Pe drum\'</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Ascunde meniul Calitate</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Ascunde subsolul meniului Calitate</string>
@@ -894,6 +895,22 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tabletă</string>
   <string name="morphe_change_form_factor_entry_4">Automatizări</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Modificările includ:
+
+Aspect tablet
+• Postările comunității sunt ascunse
+• Setarea de redare în fluxuri nu este disponibilă
+• Butonul Remix și butonul Sunet nu sunt disponibile în Shorts
+• Suprapunerea 'Mai multe videoclipuri' poate să nu fie disponibilă
+• Bara de acțiuni veche a videoclipului este afișată necontractată
+
+Aspect auto
+• Fluxul este organizat pe subiecte și canale
+• Setarea de redare în fluxuri nu este disponibilă
+• Butonul Remix și butonul Sunet nu sunt disponibile în Shorts
+• Suprapunerea 'Mai multe videoclipuri' poate să nu fie disponibilă
+• Shorts se deschid în playerul obișnuit
+• Bara de acțiuni veche a videoclipului este afișată necontractată"</string>
   <string name="morphe_tablet_layout_in_player_title">Activează aspectul tabletă în player</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Restabilește aspectul vechi al playerului

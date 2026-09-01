@@ -735,6 +735,7 @@ Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in einen belieb
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Auf der Kanalseite ausblenden</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Menü \'Unterwegs\' ausblenden</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">„Qualität“ Ausblenden</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">„Qualität“-Fußzeile Ausblenden</string>
@@ -895,6 +896,22 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablets</string>
   <string name="morphe_change_form_factor_entry_4">Automobil</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Die Änderungen umfassen:
+
+Tablet-Layout
+• Community-Beiträge sind ausgeblendet
+• Die Einstellung 'Wiedergabe in Feeds' ist nicht verfügbar
+• Remix-Button und Sound-Button sind in Shorts nicht verfügbar
+• 'Weitere Videos'-Overlay ist möglicherweise nicht verfügbar
+• Die alte, nicht eingeklappte Video-Aktionsleiste wird angezeigt
+
+Automotive-Layout
+• Der Feed ist nach Themen und Kanälen organisiert
+• Die Einstellung 'Wiedergabe in Feeds' ist nicht verfügbar
+• Remix-Button und Sound-Button sind in Shorts nicht verfügbar
+• 'Weitere Videos'-Overlay ist möglicherweise nicht verfügbar
+• Shorts werden im normalen Player geöffnet
+• Die alte, nicht eingeklappte Video-Aktionsleiste wird angezeigt"</string>
   <string name="morphe_tablet_layout_in_player_title">Tablet-Layout im Player aktivieren</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Stellt das alte Player-Layout wieder her

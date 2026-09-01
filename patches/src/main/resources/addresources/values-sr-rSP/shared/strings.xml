@@ -48,8 +48,14 @@ Second \"item\" text"</string>
   <string name="morphe_settings_search_empty_history_title">Историја претраге је празна</string>
   <string name="morphe_settings_search_empty_history_summary">Да бисте сачували историју претраге, унесите упит за претрагу и притисните Enter</string>
   <string name="morphe_settings_search_history_title">Прикажи историју претраге подешавања</string>
+  <string name="morphe_settings_name_title">Назив Morphe подешавања</string>
   <string name="morphe_settings_name_default_item">Подразумеван</string>
+  <string name="morphe_settings_name_entry_2">Додатно</string>
+  <string name="morphe_settings_name_entry_3">Побољшања</string>
+  <string name="morphe_settings_name_entry_4">Време морфинга</string>
   <string name="morphe_settings_name_custom_item">Обичај</string>
+  <string name="morphe_settings_name_custom_item_hint">Унесите име</string>
+  <string name="morphe_settings_name_empty_warning">Име не може бити празно</string>
   <string name="morphe_show_menu_icons_title">Прикажи иконице подешавања Morphe-а</string>
   <string name="morphe_settings_menu_copy_path">Копирано: %s</string>
   <string name="morphe_language_title">Језик Morphe-a</string>
@@ -132,16 +138,27 @@ Second \"item\" text"</string>
   <string name="morphe_debug_feature_flags_manager_toast_copied">Ознаке функција копиране у оставу</string>
   <string name="morphe_debug_feature_flags_manager_toast_no_flags">Поново покрени апликацију да бисте користили ову поставку</string>
   <string name="morphe_debug_feature_flags_manager_import_export_title">Извоз и увоз</string>
+  <string name="morphe_debug_feature_flags_manager_import_success">Увезено %s функцијских заставица</string>
   <string name="morphe_debug_feature_flags_manager_import_failed">Нису пронађене заставице функција</string>
   <string name="morphe_debug_feature_flags_manager_export_file_success">Успешно извезене заставице функција</string>
   <string name="morphe_debug_feature_flags_manager_export_file_failed">Грешка при извозу заставица функција</string>
   <string name="morphe_debug_feature_flags_manager_import_file_success">Учитане заставице функција. Додирните Сачувај за примену.</string>
   <string name="morphe_debug_feature_flags_manager_import_file_failed">Грешка при читању датотеке</string>
   <string name="morphe_debug_feature_flags_manager_bisect_title">Бинарна претрага</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_start_message">"Проналази који feature flag изазива понашање апликације.
+
+Половина од %s заставица је блокирана, а након сваког поновног покретања кажете да ли је понашање још увек присутно.
+
+Репродукујте понашање једном пре почетка, у супротном заставице које апликација још није затражила недостају у претрази"</string>
   <string name="morphe_debug_feature_flags_manager_bisect_start_button">Početak</string>
   <string name="morphe_debug_feature_flags_manager_bisect_no_candidates">"Нема заставица функција за претрагу.
 
 Само заставице које је апликација користила и нису тренутно принудно укључене могу се користити у бинарној претрази."</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_status">"Корак %1$s
+
+Преостале заставице: %2$s, од којих је блокирано %3$s за овај корак.
+
+Поново покрените апликацију, проверите да ли је понашање присутно, а затим одговорите испод"</string>
   <string name="morphe_debug_feature_flags_manager_bisect_in_progress">Претрага заставица функција у току</string>
   <string name="morphe_debug_feature_flags_manager_bisect_present">Понашање је присутно</string>
   <string name="morphe_debug_feature_flags_manager_bisect_absent">Понашање није присутно</string>

@@ -736,6 +736,7 @@ Da biste prikazali izbornik audio zapisa, promijenite 'Parodija video streamova'
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Sakrij izbornik \'Ponavljaj video\'</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Sakrij izbornik „U pokretu“</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Sakrij izbornik Kvaliteta</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Sakrij podnožje izbornika Kvaliteta</string>
@@ -896,6 +897,22 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automobil</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Promjene uključuju:
+
+Izgled za tablet
+• Objave zajednice su skrivene
+• Postavka za reprodukciju u feedovima nije dostupna
+• Gumb za remiks i gumb za zvuk nisu dostupni u Shortsu
+• Prekrivač „Više videozapisa“ možda neće biti dostupan
+• Prikazuje se stara traka radnji videozapisa koja nije sažeta
+
+Izgled za automobil
+• Feed je organiziran po temama i kanalima
+• Postavka za reprodukciju u feedovima nije dostupna
+• Gumb za remiks i gumb za zvuk nisu dostupni u Shortsu
+• Prekrivač „Više videozapisa“ možda neće biti dostupan
+• Shorts se otvaraju u standardnom playeru
+• Prikazuje se stara traka radnji videozapisa koja nije sažeta"</string>
   <string name="morphe_tablet_layout_in_player_title">Omogući tablet izgled u playeru</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Vraća stari izgled playera

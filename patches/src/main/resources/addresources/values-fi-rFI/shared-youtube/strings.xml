@@ -211,7 +211,14 @@ Tämä muuttaa sovelluksen ulkoasua ja ominaisuuksia, mutta tuntemattomia sivuva
 Jos tämä poistetaan myöhemmin käytöstä, on suositeltavaa tyhjentää sovelluksen tiedot käyttöliittymävirheiden välttämiseksi."</string>
   <string name="morphe_spoof_app_version_target_title">Naamioitava kohdeversio</string>
   <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_title">Sovelluksen virkistystaajuus</string>
   <string name="morphe_app_refresh_rate_default">Oletus</string>
+  <string name="morphe_app_refresh_rate_fps">%s fps</string>
+  <string name="morphe_app_refresh_rate_type_title">Ohita virkistystaajuus</string>
+  <string name="morphe_app_refresh_rate_type_entry_1">Aina</string>
+  <string name="morphe_app_refresh_rate_type_entry_2">Toisto pystyasennossa</string>
+  <string name="morphe_app_refresh_rate_type_entry_3">Toisto koko näytössä</string>
+  <string name="morphe_app_refresh_rate_type_entry_4">Toisto pystyasennossa ja koko näytössä</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">Ei-tykkäykset eivät ole tilapäisesti käytettävissä (API-aikakatkaisu)</string>
