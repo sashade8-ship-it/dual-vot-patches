@@ -709,42 +709,43 @@ Second \"item\" text"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Бутонът за коментари се показва</string>
   <string name="morphe_hide_player_flyout_summary">Изберете кои компоненти да се показват в падащото меню</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Скриване на менюто \'Аудио писта\'</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Скриване на менюто \'Допълнителни настройки\' / Повече</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Скриване на менюто \'Ambient режим\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Менюто 'Audio Track' е скрито
 
 За да покажете менюто 'Audio Track', променете 'Spoof video streams' на всеки клиент освен 'Android Studio' и 'Android VR Downgraded'"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Скриване на менюто \'Аудио писта\'</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Скриване на футера на менюто \'Аудио писта\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Скриване на менюто \'Субтитри\'</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Скриване на футера на менюто \'Субтитри\'</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Скриване на заглавката на менюто \'Субтитри\'</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Скриване на менюто \'Допълнителни настройки\' / Повече</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Скриване на менюто \'Таймер за заспиване\'</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Скриване на менюто \'Повторение на видеото\'</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Скриване на менюто \'Ambient режим\'</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Скриване на менюто \'Стабилен звук\'</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Скриване на менюто \'Помощ и обратна връзка\'</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Скриване на менюто \'Скорост на възпроизвеждане\'</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Скриване на менюто \'Заключване на екрана\'</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Скрий менюто „Слушай с YouTube Music“</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Скрий менюто „Гледай във VR“</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Скриване на менюто \'Заключване на екрана\'</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Скриване на менюто \'Повторение на видеото\'</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Скрий менюто „Качество“</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Скрий долния текст на менюто „Качество“</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Скрий горния текст на менюто „Качество“</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Скриване на менюто \'Таймер за заспиване\'</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Скриване на менюто \'Скорост на възпроизвеждане\'</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Скриване на менюто \'Стабилен звук\'</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Скрий менюто „Гледай във VR“</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Скриване на прегледът за автозапускване</string>
   <string name="morphe_hide_autoplay_preview_summary">Скрива предварителния преглед на следващото видео в режим на цял екран преди началото на автоматичното възпроизвеждане</string>
@@ -893,20 +894,6 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">Телефон</string>
   <string name="morphe_change_form_factor_entry_3">Таблет</string>
   <string name="morphe_change_form_factor_entry_4">Автомобилна</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Промените включват:
-
-Оформление за таблет
-• Публикациите в общността са скрити
-• Настройката за възпроизвеждане в потоци не е достъпна
-• Бутонът „Remix“ и бутонът „Звук“ не са достъпни в Shorts
-• Показва се старата лента с действия за видео, която не е сгъната
-
-Оформление за автомобили
-• Потокът е организиран по теми и канали
-• Настройката за възпроизвеждане в потоци не е достъпна
-• Бутонът „Remix“ и бутонът „Звук“ не са достъпни в Shorts
-• Shorts се отварят в стандартния плейър
-• Показва се старата лента с действия за видео, която не е сгъната"</string>
   <string name="morphe_tablet_layout_in_player_title">Активиране на оформление за таблет в плейъра</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Възстановява стария вид на плейъра

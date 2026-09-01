@@ -707,42 +707,43 @@ For at få adgang til Indstillinger skal du aktivere knappen Indstillinger via G
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Udfyldningsmenu</string>
   <string name="morphe_hide_player_flyout_summary">Vælg, hvilke komponenter der vises i flyout-menuen</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Skjul \'Lydspor\'-menuen</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Skjul \'Yderligere indstillinger\' / Mere-menuen</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Skjul \'Ambient mode\'-menuen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"'Lydspor'-menuen er skjult
 
 For at vise 'Lydspor'-menuen skal du ændre 'Forfalsk videostreams' til enhver klient undtagen 'Android Studio' og 'Android VR Downgraded'"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Skjul \'Lydspor\'-menuen</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skjul \'Lydspor\'-menuens sidefod</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skjul Undertekster-menuen</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Skjul Undertekster-menuens sidefod</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Skjul Undertekster-menuens overskrift</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Skjul \'Yderligere indstillinger\' / Mere-menuen</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Skjul \'Sleep timer\'-menuen</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Skjul \'Loop video\'-menuen</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Skjul \'Ambient mode\'-menuen</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Skjul \'Stabil lydstyrke\'-menuen</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Skjul \'Hjælp &amp; feedback\'-menuen</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Skjul \'Afspilningshastighed\'-menuen</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Skjul \'Låseskærm\'-menuen</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Skjul \'Lyt med YouTube Music\'-menuen</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Skjul \'Se i VR\'-menuen</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Skjul \'Låseskærm\'-menuen</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Skjul \'Loop video\'-menuen</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Skjul Kvalitetsmenuen</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Skjul Kvalitetsmenuens sidefod</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Skjul Kvalitetsmenuens overskrift</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Skjul \'Sleep timer\'-menuen</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Skjul \'Afspilningshastighed\'-menuen</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Skjul \'Stabil lydstyrke\'-menuen</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Skjul \'Se i VR\'-menuen</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Skjul forhåndsvisning af autoplay</string>
   <string name="morphe_hide_autoplay_preview_summary">Skjuler det kommende videoforvisning i fuldskærm, før automatisk afspilning starter</string>
@@ -891,20 +892,6 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Bil</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Ændringer inkluderer:
-
-Tabletlayout
-• Opslag fra community er skjult
-• Afspilning i feeds-indstillingen er ikke tilgængelig
-• Remix-knappen og Lyd-knappen er ikke tilgængelige i Shorts
-• Ikke-sammenklappet gammel video-handlingslinje vises
-
-Layout til bil
-• Feed er organiseret efter emner og kanaler
-• Afspilning i feeds-indstillingen er ikke tilgængelig
-• Remix-knappen og Lyd-knappen er ikke tilgængelige i Shorts
-• Shorts åbnes i den normale afspiller
-• Ikke-sammenklappet gammel video-handlingslinje vises"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktivér tabletlayout i afspilleren</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Gendanner det gamle layout for afspilleren

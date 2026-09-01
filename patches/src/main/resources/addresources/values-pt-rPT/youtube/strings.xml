@@ -709,42 +709,43 @@ Para acessar as configurações, habilite o botão Configurações via Geral →
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu suspenso</string>
   <string name="morphe_hide_player_flyout_summary">Escolha quais componentes aparecem no menu flyout</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Ocultar menu \'Faixa de áudio\'</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Ocultar menu \"Configurações adicionais\" / Mais</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Ocultar menu \"Modo ambiente\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"O menu 'Faixa de áudio' está oculto
 
 Para mostrar o menu 'Faixa de áudio', altera 'Falsificar fluxos de vídeo' para qualquer cliente exceto 'Android Studio' e 'Android VR Downgraded'."</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Ocultar menu \'Faixa de áudio\'</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ocultar rodapé do menu \'Faixa de áudio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ocultar menu \'Legendas\'</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Ocultar rodapé do menu \'Legendas\'</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Ocultar cabeçalho do menu Legendas</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Ocultar menu \"Configurações adicionais\" / Mais</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Ocultar menu \"Temporizador de suspensão\"</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Ocultar menu \"Repetir vídeo\"</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Ocultar menu \"Modo ambiente\"</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Ocultar menu \"Volume estável\"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Ocultar menu \"Ajuda e feedback\"</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Ocultar menu \"Velocidade de reprodução\"</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Ocultar menu \"Bloquear tela\"</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Ocultar menu \"Ouvir com o YouTube Music\"</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Ocultar menu \"Assistir no VR\"</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Ocultar menu \"Bloquear tela\"</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Ocultar menu \"Repetir vídeo\"</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Ocultar menu Qualidade</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Ocultar rodapé do menu Qualidade</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Ocultar cabeçalho do menu Qualidade</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Ocultar menu \"Temporizador de suspensão\"</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Ocultar menu \"Velocidade de reprodução\"</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Ocultar menu \"Volume estável\"</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Ocultar menu \"Assistir no VR\"</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Ocultar prévia de reprodução automática</string>
   <string name="morphe_hide_autoplay_preview_summary">Oculta a pré-visualização do próximo vídeo em tela cheia antes do início da reprodução automática</string>
@@ -893,20 +894,6 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_change_form_factor_entry_2">Telemóvel</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automotivo</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"As alterações incluem:
-
-Layout de tablet
-• As postagens da comunidade estão ocultas
-• A configuração de reprodução nos feeds não está disponível
-• O botão Remix e o botão Som não estão disponíveis nos Shorts
-• A barra de ações do vídeo antiga não recolhida é exibida
-
-Layout automotivo
-• O feed é organizado por tópicos e canais
-• A configuração de reprodução nos feeds não está disponível
-• O botão Remix e o botão Som não estão disponíveis nos Shorts
-• Os Shorts são abertos no reprodutor normal
-• A barra de ações do vídeo antiga não recolhida é exibida"</string>
   <string name="morphe_tablet_layout_in_player_title">Habilitar layout de tablet no player</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Restaura o layout antigo do player

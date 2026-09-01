@@ -710,42 +710,44 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">フライアウト メニュー</string>
   <string name="morphe_hide_player_flyout_summary">プレーヤー オーバーレイの歯車アイコンボタンから呼び出されるメニューに表示するコンポーネントを設定します</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">「音声トラック」を非表示</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">「その他の設定」/「その他」を非表示</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">「アンビエント モード」を非表示</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"「音声トラック」は表示されません
 
 「音声トラック」を表示するには、[動画ストリームを偽装] のクライアントを「Android Studio」および「Android VR Downgraded」を除く任意のクライアントに変更してください"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">「音声トラック」を非表示</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">音声トラック メニューの脚注を非表示</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">「字幕」を非表示</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">字幕メニューの脚注を非表示</string>
   <string name="morphe_hide_player_flyout_captions_header_title">字幕メニューのヘッダーを非表示</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">「その他の設定」/「その他」を非表示</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">「スリープ タイマー」を非表示</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">「動画のループ再生」を非表示</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">「アンビエント モード」を非表示</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">「一定音量」を非表示</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">「ヘルプとフィードバック」を非表示</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">「再生速度」を非表示</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">「画面のロック」を非表示</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">「YouTube Music で聴く」を非表示</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">「VR で見る」を非表示</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">「画面のロック」を非表示</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">「動画のループ再生」を非表示</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">「オーディオ」を非表示</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">「画質」を非表示</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">画質メニューの脚注を非表示</string>
   <string name="morphe_hide_player_flyout_quality_header_title">画質メニューのヘッダーを非表示</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">「スリープ タイマー」を非表示</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">「再生速度」を非表示</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">「一定音量」を非表示</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">「VR で見る」を非表示</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">自動再生のプレビューを非表示</string>
   <string name="morphe_hide_autoplay_preview_summary">全画面表示モードで終了画面に表示される、「次の動画」のプレビューを非表示にします</string>
@@ -894,20 +896,6 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_change_form_factor_entry_2">スマートフォン</string>
   <string name="morphe_change_form_factor_entry_3">タブレット</string>
   <string name="morphe_change_form_factor_entry_4">Automotive</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"以下の変更を伴います:
-
-タブレット レイアウト
-• コミュニティ投稿が表示されない
-• YouTube の設定に「フィードで再生」が表示されない
-• ショート動画のリミックス ボタンとサウンドボタンが利用できない
-• 動画プレーヤーのアクション ボタンにボタン名が表示される
-
-Automotive レイアウト
-• フィードがトピックやチャンネルごとに分類された形で表示される
-• YouTube の設定に「フィードで再生」が表示されない
-• ショート動画のリミックス ボタンとサウンドボタンが利用できない
-• ショート動画が通常のプレーヤーで再生される
-• 動画プレーヤーのアクション ボタンにボタン名が表示される"</string>
   <string name="morphe_tablet_layout_in_player_title">プレーヤーにのみタブレット レイアウトを適用</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"動画プレーヤーのレイアウトを旧スタイルに戻します

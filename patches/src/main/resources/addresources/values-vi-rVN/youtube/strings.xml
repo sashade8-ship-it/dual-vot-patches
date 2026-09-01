@@ -708,42 +708,43 @@ Cần cung cấp \"Cookie phụ đề\""</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu tuỳ chọn</string>
   <string name="morphe_hide_player_flyout_summary">Chọn những thành phần sẽ xuất hiện trong menu tùy chọn</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Ẩn menu \"Bản âm thanh\"</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Ẩn menu \"Tùy chọn khác\"</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Ẩn menu \"Chế độ môi trường xung quanh\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu 'Bản âm thanh' đã bị ẩn
 
 Để hiển thị menu 'Bản âm thanh', hãy thay đổi 'Giả mạo luồng phát video' sang bất kỳ máy khách nào trừ 'Android Studio' và 'Android VR Downgraded'"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Ẩn menu \"Bản âm thanh\"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ẩn chân menu \"Bản âm thanh\"</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ẩn menu Phụ đề</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Ẩn chân menu Phụ đề</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Ẩn tiêu đề menu Phụ đề</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Ẩn menu \"Tùy chọn khác\"</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Ẩn menu \"Hẹn giờ ngủ\"</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Ẩn menu \"Cho video lặp lại\"</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Ẩn menu \"Chế độ môi trường xung quanh\"</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Ẩn menu \"Âm lượng ổn định\"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Ẩn menu \"Trợ giúp và phản hồi\'</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Ẩn menu \"Tốc độ phát\"</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Ẩn menu \"Khóa màn hình\"</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Ẩn menu \"Nghe nhạc trên YouTube Music\"</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Ẩn menu \"Xem ở chế độ thực tế ảo\"</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Ẩn menu \"Khóa màn hình\"</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Ẩn menu \"Cho video lặp lại\"</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Ẩn menu Chất lượng</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Ẩn chân menu Chất lượng</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Ẩn tiêu đề menu Chất lượng</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Ẩn menu \"Hẹn giờ ngủ\"</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Ẩn menu \"Tốc độ phát\"</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Ẩn menu \"Âm lượng ổn định\"</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Ẩn menu \"Xem ở chế độ thực tế ảo\"</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Ẩn phần xem trước tự động phát</string>
   <string name="morphe_hide_autoplay_preview_summary">Ẩn phần xem trước video tiếp theo ở chế độ toàn màn hình trước khi tự động phát bắt đầu</string>
@@ -892,20 +893,6 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_change_form_factor_entry_2">Điện thoại</string>
   <string name="morphe_change_form_factor_entry_3">Máy tính bảng</string>
   <string name="morphe_change_form_factor_entry_4">Màn hình ô tô</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Các thay đổi bao gồm:
-
-Giao diện máy tính bảng
-• Bài đăng của cộng đồng bị ẩn
-• Không có tùy chọn phát trong các trang video
-• Không có nút Phối lại và nút Âm thanh trong Shorts
-• Thanh thao tác video không thu gọn được
-
-Giao diện màn hình ô tô
-• Các trang video được sắp xếp theo chủ đề và kênh
-• Không có tùy chọn phát trong các trang video
-• Không có nút Phối lại và nút Âm thanh trong Shorts
-• Mở Shorts bằng trình phát thường
-• Thanh thao tác video không thu gọn được"</string>
   <string name="morphe_tablet_layout_in_player_title">Bật bố cục máy tính bảng trong trình phát</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Khôi phục bố cục trình phát cũ

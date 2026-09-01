@@ -709,42 +709,43 @@ Second \"item\" text"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">介面選單</string>
   <string name="morphe_hide_player_flyout_summary">選擇哪些元件出現在彈出式選單中</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">隱藏「音訊軌道」選單</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">隱藏「其他設定」/「更多」選單</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">隱藏「微光效果」選單</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"「音訊軌道」選單已隱藏
 
 若要顯示「音訊軌道」選單，請將「欺騙影片串流」變更為「Android Studio」和「Android VR Downgraded」以外的任何用戶端"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">隱藏「音訊軌道」選單</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">隱藏「音訊軌道」選單頁尾</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">隱藏「字幕」選單</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">隱藏「字幕」選單頁尾</string>
   <string name="morphe_hide_player_flyout_captions_header_title">隱藏「字幕」選單標題</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">隱藏「其他設定」/「更多」選單</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">隱藏「睡眠計時器」選單</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">隱藏「循環播放影片」選單</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">隱藏「微光效果」選單</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">隱藏「平衡音量」選單</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">隱藏「說明和意見回饋」選單</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">隱藏「播放速度」選單</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">隱藏「鎖定畫面」選單</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">隱藏「透過 YouTube Music 收聽」選單</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">隱藏「以 VR 模式觀看」選單</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">隱藏「鎖定畫面」選單</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">隱藏「循環播放影片」選單</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">隱藏「影片畫質」選單</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">隱藏「影片畫質」選單頁尾</string>
   <string name="morphe_hide_player_flyout_quality_header_title">隱藏「影片畫質」選單頁首</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">隱藏「睡眠計時器」選單</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">隱藏「播放速度」選單</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">隱藏「平衡音量」選單</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">隱藏「以 VR 模式觀看」選單</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">隱藏自動播放預覽</string>
   <string name="morphe_hide_autoplay_preview_summary">隱藏自動播放預覽</string>
@@ -893,20 +894,6 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">手機</string>
   <string name="morphe_change_form_factor_entry_3">平板電腦</string>
   <string name="morphe_change_form_factor_entry_4">汽車</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"變更包括：
-
-平板電腦版面配置
-• 社群貼文已隱藏
-• 播放設定中無法使用「在資訊流中播放」選項
-• Shorts 中無法使用「混音」按鈕和「音效」按鈕
-• 影片動作欄未摺疊
-
-汽車版面配置
-• 資訊流依主題和頻道分類
-• 播放設定中無法使用「在資訊流中播放」選項
-• Shorts 中無法使用「混音」按鈕和「音效」按鈕
-• Shorts 在常規播放器中開啟
-• 影片動作欄未摺疊"</string>
   <string name="morphe_tablet_layout_in_player_title">在播放器中啟用平板版面配置</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"還原舊版播放器版面

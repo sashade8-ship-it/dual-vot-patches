@@ -709,42 +709,43 @@ Om Instellings te open, aktiveer die Instellings-knoppie via Algemeen → Toolba
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Vluglysmenu</string>
   <string name="morphe_hide_player_flyout_summary">Hide \'Ambient mode\' menu</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Hide \'Stable volume\' menu</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Hide Quality menu</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Verberg \'Omgewingsmodus\'-menu</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track'-kieslys is versteek
 
 Om die 'Audio Track'-kieslys te wys, verander 'Vervals videostrome' na enige kliënt behalwe 'Android Studio' en 'Android VR Downgraded'"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Hide \'Stable volume\' menu</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Hide \'Playback speed\' menu</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Hide \'Lock screen\' menu</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Hide \'Listen with YouTube Music\' menu</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Hide \'Watch in VR\' menu</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Hide Quality menu</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Verberg \'Slaaptimer\'-menu</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Verberg \'Herhaal video\'-menu</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Verberg \'Omgewingsmodus\'-menu</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Verberg \'Stabiele volume\'-menu</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Verberg \'Hulp &amp; terugvoer\'-menu</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Verberg \'Afspelingspoed\'-menu</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Verberg \'Sluit skerm\'-menu</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Verberg \'Luister met YouTube Music\'-menu</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Verberg \'Kyk in VR\'-menu</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Verberg \'Sluit skerm\'-menu</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Verberg \'Herhaal video\'-menu</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Verberg Kwaliteitsmenu</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Verberg kwaliteit menu voetskrif</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Verberg kwaliteit menu kop</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Verberg \'Slaaptimer\'-menu</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Verberg \'Afspelingspoed\'-menu</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Verberg \'Stabiele volume\'-menu</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Verberg \'Kyk in VR\'-menu</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Verberg outo-speel voorskou</string>
   <string name="morphe_hide_autoplay_preview_summary">Verberg die komende videovoorskou in volskerm voordat outoplay begin</string>
@@ -893,20 +894,6 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_change_form_factor_entry_2">Foon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Outomaties</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Veranderings sluit in:
-
-Tablet-uitleg
-• Gemeenskap-plasings is weggesteek
-• Afspeel in feeds instelling is nie beskikbaar nie
-• Remix-knoppie en Klank-knoppie is nie beskikbaar in Shorts nie
-• Nie-gekolapseerde ou video aksiebalk word vertoon
-
-Motor-uitleg
-• Feed is georganiseer volgens onderwerpe en kanale
-• Afspeel in feeds instelling is nie beskikbaar nie
-• Remix-knoppie en Klank-knoppie is nie beskikbaar in Shorts nie
-• Shorts oop in die gewone speler
-• Nie-gekolapseerde ou video aksiebalk word vertoon"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktiveer tablet-uitleg in die speler</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Herstel die ou speleruitleg

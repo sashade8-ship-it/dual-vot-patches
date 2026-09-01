@@ -709,42 +709,43 @@ Saadaksesi asetukset, ota Asetukset-painike käyttöön kohdasta Yleiset → Ty�
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Ponnahdusvalikko</string>
   <string name="morphe_hide_player_flyout_summary">Valitse, mitkä komponentit näkyvät avattavassa valikossa</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Piilota \"Ääniraita\"-valikko</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Piilota \"Lisäasetukset / Lisää\"-valikko</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Piilota \"Elokuvatila\"-valikko</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Ääniraitavalikko on piilotettu
 
 Jos haluat näyttää ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetukseksi mihin tahansa asiakassovellukseen paitsi \"Android Studio\" ja \"Android VR Downgraded\"."</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Piilota \"Ääniraita\"-valikko</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Piilota \'Ääniraita\'-valikon alatunniste</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Piilota Tekstitykset-valikko</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Piilota Tekstitykset-valikon alatunniste</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Piilota Tekstitykset-valikon yläotsikko</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Piilota \"Lisäasetukset / Lisää\"-valikko</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Piilota \"Uniajastin\"-valikko</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Piilota \"Toista videota jatkuvasti\"-valikko</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Piilota \"Elokuvatila\"-valikko</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Piilota \"Tasainen äänenvoimakkuus\"-valikko</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Piilota \"Ohjeet ja palaute\"-valikko</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Piilota \"Toistonopeus\"-valikko</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Piilota \"Näytön lukitus\"-valikko</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Piilota \"Kuuntele YouTube Musicissa\"-valikko</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Piilota \"Katso VR-tilassa\"-valikko</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Piilota \"Näytön lukitus\"-valikko</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Piilota \"Toista videota jatkuvasti\"-valikko</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Piilota Laatu-valikko</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Piilota Laatu-valikon alatunniste</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Piilota Laatu-valikon yläosa</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Piilota \"Uniajastin\"-valikko</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Piilota \"Toistonopeus\"-valikko</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Piilota \"Tasainen äänenvoimakkuus\"-valikko</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Piilota \"Katso VR-tilassa\"-valikko</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Piilota automaattinen esikatselu</string>
   <string name="morphe_hide_autoplay_preview_summary">Piilottaa seuraavan videon esikatselun koko näytössä automaattisen toiston alkaessa</string>
@@ -893,20 +894,6 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <string name="morphe_change_form_factor_entry_2">Puhelin</string>
   <string name="morphe_change_form_factor_entry_3">Tabletti</string>
   <string name="morphe_change_form_factor_entry_4">Ajoneuvo</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Muutokset sisältävät:
-
-Tablettinäkymä
-• Yhteisöjulkaisut on piilotettu
-• Toiston syötteissä -asetus ei ole käytettävissä
-• Remix-painike ja Ääni-painike eivät ole käytettävissä Shortseissa
-• Vanha videotoimintopalkki ei ole kokoonpainettu
-
-Autonäyttö
-• Syöte on järjestetty aiheiden ja kanavien mukaan
-• Toiston syötteissä -asetus ei ole käytettävissä
-• Remix-painike ja Ääni-painike eivät ole käytettävissä Shortseissa
-• Shorts-videot avautuvat tavallisessa soittimessa
-• Vanha videotoimintopalkki ei ole kokoonpainettu"</string>
   <string name="morphe_tablet_layout_in_player_title">Ota tablettiasettelun käyttöön soittimessa</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Palauttaa vanhan soittimen asettelun

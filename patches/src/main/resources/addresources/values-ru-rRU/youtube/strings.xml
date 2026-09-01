@@ -711,42 +711,43 @@ Second \"item\" text"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Выдвижное меню плеера</string>
   <string name="morphe_hide_player_flyout_summary">Выберите, какие компоненты отображаются в выпадающем меню плеера</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Скрыть меню \"Аудиотреки\"</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Скрыть пункт \"Дополнительные настройки\"</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Скрыть пункт \"Фоновая подсветка\"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Меню аудио дорожек скрыто
 
 Чтобы отобразить меню аудио дорожек, измените «Поддельные видео потоки» на любой клиент, кроме «Android Studio» и «Android VR Downgraded»"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Скрыть меню \"Аудиотреки\"</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Скрыть нижний колонтитул меню «Аудиотреки»</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Скрыть меню \"Субтитры\"</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Скрыть нижний колонтитул меню «Субтитры»</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Скрыть Подписи заголовков</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Скрыть пункт \"Дополнительные настройки\"</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Скрыть пункт \"Таймер сна\"</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Скрыть пункт \"Повтор воспроизведения\"</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Скрыть пункт \"Фоновая подсветка\"</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Скрыть пункт \"Постоянный уровень громкости\"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Скрыть пункт \"Справка и отзывы\"</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Скрыть пункт \"Скорость воспроизведения\"</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Скрыть пункт \"Блокировка экрана\"</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Скрыть пункт \"Слушать в YouTube Music\"</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Скрыть пункт \"Смотреть в VR-режиме\"</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Скрыть пункт \"Блокировка экрана\"</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Скрыть пункт \"Повтор воспроизведения\"</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Скрыть заголовок Качество</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Скрыть колонтитул Качества</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Скрыть заголовок Качество</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Скрыть пункт \"Таймер сна\"</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Скрыть пункт \"Скорость воспроизведения\"</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Скрыть пункт \"Постоянный уровень громкости\"</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Скрыть пункт \"Смотреть в VR-режиме\"</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Скрыть предварительный просмотр автовоспроизведения</string>
   <string name="morphe_hide_autoplay_preview_summary">Ваша конфигурация JSON SponsorBlock может быть импортирована или экспортирована в Morphe и другие платформы SponsorBlock. Она включает в себя Ваш личный идентификатор пользователя. Подумайте дважды перед тем, как делиться ею с кем-либо</string>
@@ -895,20 +896,6 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">Телефонный</string>
   <string name="morphe_change_form_factor_entry_3">Планшетный</string>
   <string name="morphe_change_form_factor_entry_4">Автомобильный</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Изменения включают:
-
-Планшетный макет
-• Публикации сообщества скрыты
-• Настройка воспроизведения в лентах недоступна
-• Кнопки \"Ремикс\" и \"Звук\" недоступны в Short
-• Панель действий видео не свернута
-
-Автомобильный макет
-• Лента организована по темам и каналам
-• Настройка воспроизведения в лентах недоступна
-• Кнопки \"Ремикс\" и \"Звук\" недоступны в Short
-• Short открываются в обычном плеере
-• Панель действий видео не свернута"</string>
   <string name="morphe_tablet_layout_in_player_title">Включить макет для планшетов в плеере</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Восстанавливает старый макет плеера

@@ -709,42 +709,43 @@ Pentru a accesa Setări, activați butonul Setări prin General → Bara de inst
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Meniu flyout</string>
   <string name="morphe_hide_player_flyout_summary">Alege ce componente apar în meniul flyout</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Ascunde meniul \'Piesă audio\'</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Ascunde meniul \'Setări suplimentare\' / Mai multe</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Ascunde meniul \'Mod Ambient\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniu 'Audio Track' este ascuns
 
 Pentru a afișa meniul 'Audio Track', schimbă 'Spoof video streams' în orice client, cu excepția 'Android Studio' și 'Android VR Downgraded'"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Ascunde meniul \'Piesă audio\'</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Ascunde subsolul meniului \'Piesă audio\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ascunde meniul Subtitrări</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Ascunde subsolul meniului Subtitrări</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Ascunde antetul meniului Subtitrări</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Ascunde meniul \'Setări suplimentare\' / Mai multe</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Ascunde meniul \'Temporizator de somn\'</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Ascunde meniul \'Repetare video\'</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Ascunde meniul \'Mod Ambient\'</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Ascunde meniul \'Volum stabil\'</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Ascunde meniul \'Ajutor și feedback\'</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Ascunde meniul \'Viteză de redare\'</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Ascunde meniul \'Ecran de blocare\'</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Ascunde meniul \'Ascultă cu YouTube Music\'</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Ascunde meniul \'Vizualizare în VR\'</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Ascunde meniul \'Ecran de blocare\'</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Ascunde meniul \'Repetare video\'</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Ascunde meniul Calitate</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Ascunde subsolul meniului Calitate</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Ascunde antetul meniului Calitate</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Ascunde meniul \'Temporizator de somn\'</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Ascunde meniul \'Viteză de redare\'</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Ascunde meniul \'Volum stabil\'</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Ascunde meniul \'Vizualizare în VR\'</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Ascunde previzualizarea autoplay</string>
   <string name="morphe_hide_autoplay_preview_summary">Ascunde previzualizarea videoului următor în modul ecran complet înainte de începerea redării automate</string>
@@ -893,20 +894,6 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tabletă</string>
   <string name="morphe_change_form_factor_entry_4">Automatizări</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Modificările includ:
-
-Aspect tabletă
-• Postările din Comunitate sunt ascunse
-• Setarea de redare în fluxuri nu este disponibilă
-• Butoanele Remix și Sunet nu sunt disponibile în Shorts
-• Bara de acțiuni video veche, neprăbușită, este afișată
-
-Aspect auto
-• Fluxul este organizat pe subiecte și canale
-• Setarea de redare în fluxuri nu este disponibilă
-• Butoanele Remix și Sunet nu sunt disponibile în Shorts
-• Shorts se deschid în playerul obișnuit
-• Bara de acțiuni video veche, neprăbușită, este afișată"</string>
   <string name="morphe_tablet_layout_in_player_title">Activează aspectul tabletă în player</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Restabilește aspectul vechi al playerului

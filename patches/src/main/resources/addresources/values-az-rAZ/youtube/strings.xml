@@ -709,42 +709,43 @@ Tənzimləmələrə daxil olmaq üçün Ümumi → Alət Cərgəsi→ Tənzimlə
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Açılan pəncərə menyusu</string>
   <string name="morphe_hide_player_flyout_summary">Açılan menyuda hansı elementlər görünür seç</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">\'Audio Trek\' seçimin gizlət</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">\'Əlavə ayarlar\'-ı / Ardı seçimin gizlət</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">\'Ambient rejim\' seçimin gizlət</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Trek' menyusu gizlidir
 
 'Audio Trek' menyusunu göstərmək üçün 'Video yayımların saxtalaşdırı' 'Android Studio' və 'Android VR Downgraded' istisna olmaqla istənilən qəbulediciyə dəyişdir"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">\'Audio Trek\' seçimin gizlət</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">\'Audio Trek\' seçimi alt yazısın gizlət</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Subtitrlər seçimini gizlət</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Subtitrlər seçimi alt yazısın gizlət</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Subtitrlər seçimi sərlövhəsin gizlət</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">\'Əlavə ayarlar\'-ı / Ardı seçimin gizlət</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">\"Yuxu taymeri\" seçimin gizlət</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">\"Videonu təkrar oxudun\" seçimin gizlət</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">\'Ambient rejim\' seçimin gizlət</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">\"Sabit səs səviyyəsi\" seçimin gizlət</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">\'Yardım və geri əlaqə\' seçimin gizlət</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">\"Oxutma sürəti\" seçimin gizlət</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">\'Ekran kilidi\' seçimin gizlət</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">\'YouTube Music ilə dinləyin\' seçimin gizlət</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">\"VR-da izləyin\" seçimin gizlət</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">\'Ekran kilidi\' seçimin gizlət</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">\"Videonu təkrar oxudun\" seçimin gizlət</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Keyfiyyət seçimin gizlət</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Keyfiyyət seçimi alt yazısın gizlət</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Keyfiyyət seçimi sərlövhəsin gizlət</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">\"Yuxu taymeri\" seçimin gizlət</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">\"Oxutma sürəti\" seçimin gizlət</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">\"Sabit səs səviyyəsi\" seçimin gizlət</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">\"VR-da izləyin\" seçimin gizlət</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Avtomatik oynatma önizləməsini gizlət</string>
   <string name="morphe_hide_autoplay_preview_summary">Avtomatik oynatma başlamazdan öncə tam ekranda gözlənilən video önizləməsini gizlədir</string>
@@ -899,12 +900,14 @@ Planşet tərtibatı
 • İcma postları gizlədilir
 • Axınlarda oynatma seçimi mövcud deyil
 • Shorts-da Remiks düyməsi və Səs düyməsi mövcud deyil
+• \"Daha çox video\" örtüyü mövcud olmaya bilər
 • Yığılmamış köhnə video fəaliyyət cizgisi göstərilir
 
 Avtomobil tərtibatı
 • Axın mövzular və kanallara görə qruplaşdırılır
 • Axınlarda oynatma seçimi mövcud deyil
 • Shorts-da Remiks düyməsi və Səs düyməsi mövcud deyil
+• \"Daha çox video\" örtüyü mövcud olmaya bilər
 • Shorts müntəzəm oynadıcıda açılır
 • Yığılmamış köhnə video fəaliyyət cizgisi göstərilir"</string>
   <string name="morphe_tablet_layout_in_player_title">Oynadıcıda planşet tərtibatın aktivləşdir</string>

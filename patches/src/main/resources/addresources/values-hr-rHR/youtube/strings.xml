@@ -711,42 +711,43 @@ Za pristup Postavkama, omogućite gumb Postavke putem Općenito $\rightarrow$ Tr
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Flyout meni</string>
   <string name="morphe_hide_player_flyout_summary">Odaberite koje komponente se pojavljuju u izletnom izborniku</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Sakrij izbornik \'Audio zapis\'</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Sakrij izbornik \'Dodatne postavke\' / Više</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Sakrij izbornik \'Ambijentalni način\'</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Izbornik audio zapisa je skriven
 
 Da biste prikazali izbornik audio zapisa, promijenite 'Parodija video streamova' u bilo koji klijent osim 'Android Studio' i 'Android VR Downgraded'"</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Sakrij izbornik \'Audio zapis\'</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Sakrij podnožje izbornika \'Audio zapis\'</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Sakrij izbornik Titlovi</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Sakrij podnožje izbornika Titlovi</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Sakrij zaglavlje izbornika Titlovi</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Sakrij izbornik \'Dodatne postavke\' / Više</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Sakrij izbornik \'Tajmer za spavanje\'</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Sakrij izbornik \'Ponavljaj video\'</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Sakrij izbornik \'Ambijentalni način\'</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Sakrij izbornik \'Stabilna glasnoća\'</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Sakrij izbornik \'Pomoć &amp; povratne informacije\'</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Sakrij izbornik \'Brzina reprodukcije\'</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Sakrij izbornik \'Zaključaj zaslon\'</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Sakrij izbornik \'Slušaj uz YouTube Music\'</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Sakrij izbornik \'Gledaj u VR-u\'</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Sakrij izbornik \'Zaključaj zaslon\'</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Sakrij izbornik \'Ponavljaj video\'</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Sakrij izbornik Kvaliteta</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Sakrij podnožje izbornika Kvaliteta</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Sakrij zaglavlje izbornika Kvaliteta</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Sakrij izbornik \'Tajmer za spavanje\'</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Sakrij izbornik \'Brzina reprodukcije\'</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Sakrij izbornik \'Stabilna glasnoća\'</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Sakrij izbornik \'Gledaj u VR-u\'</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Sakrij pregladu automatskog puštanja</string>
   <string name="morphe_hide_autoplay_preview_summary">Skriva pretizgled sljedećeg videozapisa u punom zaslonu prije početka automatskog reproduciranja</string>
@@ -895,20 +896,6 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automobil</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Promjene uključuju:
-
-Izgled tableta
-• Objave u zajednici su skrivene
-• Postavka reprodukcije u feedovima nije dostupna
-• Tipke Remix i Zvuk nisu dostupni u Shorts videozapisima
-• Traka s radnjama za videozapise nije sažeta
-
-Automobilski izgled
-• Feed je organiziran po temama i kanalima
-• Postavka reprodukcije u feedovima nije dostupna
-• Tipke Remix i Zvuk nisu dostupni u Shorts videozapisima
-• Shorts videozapisi se otvaraju u uobičajenom playeru
-• Traka s radnjama za videozapise nije sažeta"</string>
   <string name="morphe_tablet_layout_in_player_title">Omogući tablet izgled u playeru</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Vraća stari izgled playera

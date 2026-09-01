@@ -707,42 +707,43 @@ Pro přístup k Nastavení povolte tlačítko Nastavení přes Obecné → Nást
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Vyskakovací menu</string>
   <string name="morphe_hide_player_flyout_summary">Skrýt menu Sledovat ve VR</string>
-  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_audio_track_title">Skrýt menu Kvalita</string>
+  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">Skrýt \"Další nastavení\" / Více menu</string>
+  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">Skrýt \"Režim Ambient\" menu</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
-          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+         'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Nabídka „Audio Track“ je skrytá
 
 Chcete-li zobrazit nabídku „Audio Track“, změňte možnost „Spoof video streams“ na libovolného klienta kromě „Android Studio“ a „Android VR Downgraded“."</string>
+  <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">Skrýt menu Kvalita</string>
   <string name="morphe_hide_player_flyout_audio_track_footer_title">Skrýt hlavičku menu Kvalita</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skrývá náhled nadcházejícího videa v režimu na celou obrazovku před začátkem automatického přehrávání</string>
   <string name="morphe_hide_player_flyout_captions_footer_title">Skrýt Titulky menu footer</string>
   <string name="morphe_hide_player_flyout_captions_header_title">Skrýt Titulky menu header</string>
-  <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_additional_settings_title">Skrýt \"Další nastavení\" / Více menu</string>
-  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_sleep_timer_title">Skrýt \"Časovač vypnutí\" menu</string>
-  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_loop_video_title">Skrýt \"Opakování videa\" menu</string>
-  <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_ambient_mode_title">Skrýt \"Režim Ambient\" menu</string>
-  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_stable_volume_title">Skrýt \"Stabilní hlasitost\" menu</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_help_title">Skrýt \"Nápověda &amp; zpětná vazba\" menu</string>
-  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_speed_title">Skrýt \"Rychlost přehrávání\" menu</string>
-  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_lock_screen_title">Skrýt \"Zamknout obrazovku\" menu</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">Skrýt \"Poslouchat v YouTube Music\" menu</string>
-  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_watch_in_vr_title">Skrýt \"Sledovat ve VR\" menu</string>
+  <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">Skrýt \"Zamknout obrazovku\" menu</string>
+  <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">Skrýt \"Opakování videa\" menu</string>
+  <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Skrýt nabídku Kvality</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Skrýt zápatí nabídky Kvality</string>
   <string name="morphe_hide_player_flyout_quality_header_title">Skrýt záhlaví nabídky Kvality</string>
+  <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">Skrýt \"Časovač vypnutí\" menu</string>
+  <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">Skrýt \"Rychlost přehrávání\" menu</string>
+  <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">Skrýt \"Stabilní hlasitost\" menu</string>
+  <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">Skrýt \"Sledovat ve VR\" menu</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Skrýt náhled automatického přehrávání</string>
   <string name="morphe_hide_autoplay_preview_summary">Skryje náhled nadcházejícího videa v režimu celé obrazovky před zahájením automatického přehrávání</string>
@@ -892,19 +893,20 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automobilový</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Změny zahrnují:
-
-Rozložení pro tablety
+• Rozhraní pro tablety
 • Příspěvky komunity jsou skryté
-• Nastavení přehrávání v kanálech není k dispozici
-• Tlačítko Remix a tlačítko Zvuk nejsou k dispozici v Shortech
-• Zobrazena je stará akční lišta videa, která není zmenšená
+• Nastavení „Přehrávání ve feedech“ není k dispozici
+• U videí Shorts nejsou dostupná tlačítka „Remixovat“ a „Zvuk“
+• Překryvná vrstva „Další videa“ nemusí být k dispozici
+• Zobrazuje se nesbalený starý panel akcí videa
 
-Rozložení pro automobily
-• Kanál je organizován podle témat a kanálů
-• Nastavení přehrávání v kanálech není k dispozici
-• Tlačítko Remix a tlačítko Zvuk nejsou k dispozici v Shortech
-• Shorts se otevírají v běžném přehrávači
-• Zobrazena je stará akční lišta videa, která není zmenšená"</string>
+Rozhraní pro automobily
+• Feed je uspořádán podle témat a kanálů
+• Nastavení „Přehrávání ve feedech“ není k dispozici
+• U videí Shorts nejsou dostupná tlačítka „Remixovat“ a „Zvuk“
+• Překryvná vrstva „Další videa“ nemusí být k dispozici
+• Videa Shorts se otevírají v běžném přehrávači
+• Zobrazuje se nesbalený starý panel akcí videa"</string>
   <string name="morphe_tablet_layout_in_player_title">Povolit rozložení tabletu v přehrávači</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Obnoví staré rozložení přehrávače

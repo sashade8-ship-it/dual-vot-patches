@@ -48,8 +48,14 @@ Second \"item\" text"</string>
   <string name="morphe_settings_search_empty_history_title">Tá stair chuardaigh folamh</string>
   <string name="morphe_settings_search_empty_history_summary">Chun stair an chuardaigh a shábháil, clóscríobh iarratas cuardaigh agus brúigh Iontráil</string>
   <string name="morphe_settings_search_history_title">Taispeáin stair cuardaigh na socruithe</string>
+  <string name="morphe_settings_name_title">Ainm socruithe Morphe</string>
   <string name="morphe_settings_name_default_item">Réamhshocrú</string>
+  <string name="morphe_settings_name_entry_2">Breiseáin</string>
+  <string name="morphe_settings_name_entry_3">Coigeartuithe</string>
+  <string name="morphe_settings_name_entry_4">Am morphing</string>
   <string name="morphe_settings_name_custom_item">Saincheaptha</string>
+  <string name="morphe_settings_name_custom_item_hint">Cuir isteach ainm</string>
+  <string name="morphe_settings_name_empty_warning">Ní féidir an t-ainm a fhágáil folamh</string>
   <string name="morphe_show_menu_icons_title">Taispeáin deilbhíní socruithe Morphe</string>
   <string name="morphe_settings_menu_copy_path">Cóipeáilte: %s</string>
   <string name="morphe_language_title">Teanga Morphe</string>
@@ -124,7 +130,7 @@ Ní chuirfear ar an eolas thú faoi aon imeachtaí gan choinne."</string>
   <string name="morphe_debug_feature_flags_manager_state_blocked">As</string>
   <!-- Keep short, shown as a badge and as a button. -->
   <string name="morphe_debug_feature_flags_manager_state_forced">Ar</string>
-  <string name="morphe_debug_feature_flags_manager_action_force_on">Éigean air</string>
+  <string name="morphe_debug_feature_flags_manager_action_force_on">Fórsa ar</string>
   <string name="morphe_debug_feature_flags_manager_action_force_off">Bloc</string>
   <string name="morphe_debug_feature_flags_manager_action_remove">Bain</string>
   <string name="morphe_debug_feature_flags_manager_toast_saved">Bratacha gné sábháilte</string>
@@ -153,20 +159,20 @@ Ní féidir ach brataí a bhfuil an aip tar éis teacht orthu agus nach bhfuil �
 %2$s brataí fágtha, agus %3$s díobh blocáilte don chéim seo.
 
 Atosaigh an aip, seiceáil an bhfuil an t-iompar i láthair, ansin freagair thíos."</string>
-  <string name="morphe_debug_feature_flags_manager_bisect_in_progress">Cuardach brataí gné ar siúl</string>
-  <string name="morphe_debug_feature_flags_manager_bisect_present">Tá an t-iompar i láthair</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_in_progress">Cuardach bratach gné ar siúl</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_present">Tá iompar i láthair</string>
   <string name="morphe_debug_feature_flags_manager_bisect_absent">Níl an t-iompar i láthair</string>
   <string name="morphe_debug_feature_flags_manager_bisect_cancel">Cealaigh cuardach dénártha</string>
   <string name="morphe_debug_feature_flags_manager_bisect_canceled">Cuardach dénártha cealaithe</string>
   <string name="morphe_debug_feature_flags_manager_bisect_found">"Is é brat gné %s is cúis leis an iompar.
 
 Tá sé blocáilte anois."</string>
-  <string name="morphe_debug_feature_flags_manager_bisect_exhausted">"Níorbh fhéidir brat gné a aimsiú.
+  <string name="morphe_debug_feature_flags_manager_bisect_exhausted">"Níorbh fhéidir bratach gné a aimsiú.
 
-Ní cosúil go bhfuil iompar an aip á rialú ag brat gné."</string>
-  <string name="morphe_debug_feature_flags_manager_bisect_exhausted_multiple">"Níorbh fhéidir aon bhrat gné amháin a aimsiú.
+Ní cosúil go bhfuil iompar an aip á rialú ag bratach gné."</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_exhausted_multiple">"Níor aimsíodh bratach gné amháin.
 
-D'imigh an t-iompar as ar dtús sa chuardach, mar sin d'fhéadfadh níos mó ná brat amháin a bheith i gceist nó bhí ceann de na freagraí mícheart."</string>
+D’imigh an t-iompar níos luaithe sa chuardach, mar sin d’fhéadfadh níos mó ná bratach amháin a bheith i gceist nó go raibh ceann de na freagraí mícheart."</string>
   <!-- Could be its own resource file, but for simplicity it's shared among all apps. -->
   <!-- misc.gms.gmsCoreSupportResourcePatch -->
   <string name="microg_settings_summary">Oscail na socruithe MicroG</string>

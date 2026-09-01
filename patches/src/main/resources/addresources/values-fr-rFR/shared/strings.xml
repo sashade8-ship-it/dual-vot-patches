@@ -48,8 +48,14 @@ Second \"item\" text"</string>
   <string name="morphe_settings_search_empty_history_title">L\'historique de recherche est vide</string>
   <string name="morphe_settings_search_empty_history_summary">Pour enregistrer l\'historique de recherche, saisissez une recherche et appuyez sur Entrée.</string>
   <string name="morphe_settings_search_history_title">Afficher l\'historique de recherche dans les paramètres</string>
+  <string name="morphe_settings_name_title">Nom des paramètres de Morphe</string>
   <string name="morphe_settings_name_default_item">Par défaut</string>
-  <string name="morphe_settings_name_custom_item">Personnalisée</string>
+  <string name="morphe_settings_name_entry_2">Suppléments</string>
+  <string name="morphe_settings_name_entry_3">Ajustements</string>
+  <string name="morphe_settings_name_entry_4">L\'heure de la métamorphose</string>
+  <string name="morphe_settings_name_custom_item">Personnalisé</string>
+  <string name="morphe_settings_name_custom_item_hint">Entrez un nom</string>
+  <string name="morphe_settings_name_empty_warning">Le nom ne peut pas être vide</string>
   <string name="morphe_show_menu_icons_title">Afficher les icônes des paramètres de Morphe</string>
   <string name="morphe_settings_menu_copy_path">Copié : %s</string>
   <string name="morphe_language_title">Langue de Morphe</string>
