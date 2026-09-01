@@ -71,10 +71,11 @@ steps.
 - Enable **Pre-release patches** for this source in Morphe Manager to receive
   the `dev` channel. Leave it disabled for the stable channel.
 
-Both channels are checked automatically every six hours. An update is
-published only after the bundle compiles and the Dual VoT integration passes
-structural checks. Merge conflicts or failed builds stop publication and open
-an issue without replacing the previous working release. See
+Both channels are checked automatically at least every two hours through two
+staggered GitHub schedules. An update is published only after the bundle
+compiles and the Dual VoT integration passes structural checks. Merge conflicts
+or failed builds stop publication and open an issue without replacing the
+previous working release. See
 [automatic upstream updates](AUTOMATION.md) for details.
 
 ## Credits and license
@@ -142,7 +143,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.41.0-dev.12-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.41.0-dev.12-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;146 patches total
+> **[v1.41.0-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.41.0-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;146 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;82 patches</summary>
 <br>

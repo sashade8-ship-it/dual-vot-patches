@@ -734,6 +734,7 @@ Second \"item\" text"</string>
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Скриване на менюто \'Повторение на видеото\'</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Скриване на менюто „На път“</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Скрий менюто „Качество“</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Скрий долния текст на менюто „Качество“</string>
@@ -894,6 +895,22 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">Телефон</string>
   <string name="morphe_change_form_factor_entry_3">Таблет</string>
   <string name="morphe_change_form_factor_entry_4">Автомобилна</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Промените включват:
+
+Оформление за таблет
+• Публикациите в общността са скрити
+• Настройката за възпроизвеждане в feed не е налична
+• Бутонът Remix и бутонът Sound не са налични в Shorts
+• Наслагването „Още видеа“ може да не е налично
+• Показва се некомпактната стара лента за действия на видеото
+
+Оформление за автомобил
+• Feed е организиран по теми и канали
+• Настройката за възпроизвеждане в feed не е налична
+• Бутонът Remix и бутонът Sound не са налични в Shorts
+• Наслагването „Още видеа“ може да не е налично
+• Shorts се отварят в стандартния плейър
+• Показва се некомпактната стара лента за действия на видеото"</string>
   <string name="morphe_tablet_layout_in_player_title">Активиране на оформление за таблет в плейъра</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Възстановява стария вид на плейъра

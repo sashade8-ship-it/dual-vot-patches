@@ -732,6 +732,7 @@ Upang ma-access ang Settings, i-enable ang Settings button sa pamamagitan ng Gen
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Itago ang \'Loop video\' menu</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Itago ang menu na \'On-the-go\'</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Itago ang Quality menu</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Itago ang Quality menu footer</string>
@@ -892,6 +893,22 @@ Mga Setting → Playback (o Autoplay) → Autoplay ng susunod na video."</string
   <string name="morphe_change_form_factor_entry_2">Telepono</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automotive</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Kasama sa mga pagbabago ang sumusunod:
+
+Layout ng tablet
+• Nakatago ang mga post sa komunidad
+• Hindi available ang setting na Playback sa mga feed
+• Hindi available ang Remix button at Sound button sa Shorts
+• Maaaring hindi available ang overlay na 'Higit pang mga video'
+• Ipinapakita ang hindi naka-collapse na lumang video action bar
+
+Layout ng automotive
+• Nakaayos ang feed ayon sa mga paksa at mga channel
+• Hindi available ang setting na Playback sa mga feed
+• Hindi available ang Remix button at Sound button sa Shorts
+• Maaaring hindi available ang overlay na 'Higit pang mga video'
+• Nagbubukas ang Shorts sa regular na player
+• Ipinapakita ang hindi naka-collapse na lumang video action bar"</string>
   <string name="morphe_tablet_layout_in_player_title">Paganahin ang layout ng tablet sa player</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Ibinabalik ang lumang layout ng player

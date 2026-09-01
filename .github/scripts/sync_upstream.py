@@ -47,7 +47,7 @@ PROJECT_OWNED_PATHS = (
     ".github/scripts/sync_upstream.py",
 )
 
-# The updater itself always runs from main.  When it first joins a newer stable
+# The updater itself always runs from main. When it first joins a newer stable
 # branch into dev, retain that controller instead of the historical copy in dev;
 # otherwise a controller test or workflow change can leave the published dev
 # branch red even though the candidate build succeeded.
@@ -90,11 +90,6 @@ ADDON_COMPATIBILITY_CONFLICTS = {
     "voiceovertranslation/VoiceOverTranslationPatch.java": (
         ("addOnTranslationStateChangeCallback", "CopyOnWriteArraySet", "deactivateTranslation", "isSessionEnabled"),
         ("addOnTranslationStateChangeCallback", "CopyOnWriteArraySet", "deactivateTranslation", "isSessionEnabled"),
-    ),
-    "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/"
-    "PlayerOverlayButton.java": (
-        ("public static <T extends ImageView> T addButton", "minPercentage = landscape ? 0.80f : 0.60f"),
-        ("public static <T extends ImageView> T addButton", "minPercentage = landscape ? 0.80f : 0.60f"),
     ),
     "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/"
     "VoiceOverTranslationButton.java": (

@@ -733,6 +733,7 @@ Cần cung cấp \"Cookie phụ đề\""</string>
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Ẩn menu \"Cho video lặp lại\"</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Ẩn menu \'Đang di chuyển\'</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Ẩn menu Chất lượng</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Ẩn chân menu Chất lượng</string>
@@ -893,6 +894,22 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_change_form_factor_entry_2">Điện thoại</string>
   <string name="morphe_change_form_factor_entry_3">Máy tính bảng</string>
   <string name="morphe_change_form_factor_entry_4">Màn hình ô tô</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Các thay đổi bao gồm:
+
+Bố cục máy tính bảng
+• Bài đăng cộng đồng bị ẩn
+• Cài đặt phát lại trong nguồn cấp dữ liệu không khả dụng
+• Nút Remix và nút Âm thanh không khả dụng trong Shorts
+• Lớp phủ 'Nhiều video hơn' có thể không khả dụng
+• Thanh hành động video cũ không thu gọn được hiển thị
+
+Bố cục ô tô
+• Nguồn cấp dữ liệu được tổ chức theo chủ đề và kênh
+• Cài đặt phát lại trong nguồn cấp dữ liệu không khả dụng
+• Nút Remix và nút Âm thanh không khả dụng trong Shorts
+• Lớp phủ 'Nhiều video hơn' có thể không khả dụng
+• Shorts mở trong trình phát thông thường
+• Thanh hành động video cũ không thu gọn được hiển thị"</string>
   <string name="morphe_tablet_layout_in_player_title">Bật bố cục máy tính bảng trong trình phát</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Khôi phục bố cục trình phát cũ

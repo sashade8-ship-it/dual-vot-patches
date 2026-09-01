@@ -733,6 +733,7 @@ Untuk menampilkan menu 'Trek Audio', ubah 'Palsukan aliran video' ke klien apa p
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Sembunyikan menu \'Putar ulang video\'</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Sembunyikan menu \'Mode perjalanan\'</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Sembunyikan menu Kualitas</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Sembunyikan menu footer Kualitas</string>
@@ -893,6 +894,22 @@ Pengaturan → Pemutaran (atau Pemutaran Otomatis) → Putar video berikutnya se
   <string name="morphe_change_form_factor_entry_2">Ponsel</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Otomotif</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Perubahan meliputi:
+
+Tata letak Tablet
+• Postingan komunitas disembunyikan
+• Pengaturan pemutaran di feed tidak tersedia
+• Tombol Remix dan tombol Suara tidak tersedia di Shorts
+• Hamparan 'Video lainnya' mungkin tidak tersedia
+• Bilah tindakan video lama yang tidak diciutkan ditampilkan
+
+Tata letak Otomotif
+• Feed diatur berdasarkan topik dan saluran
+• Pengaturan pemutaran di feed tidak tersedia
+• Tombol Remix dan tombol Suara tidak tersedia di Shorts
+• Hamparan 'Video lainnya' mungkin tidak tersedia
+• Shorts terbuka di pemutar reguler
+• Bilah tindakan video lama yang tidak diciutkan ditampilkan"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktifkan tata letak tablet di pemutar</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Mengembalikan tata letak pemutar lama
@@ -942,8 +959,8 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
   <string name="morphe_shorts_player_type_title">Buka Shorts dengan</string>
   <string name="morphe_shorts_player_type_shorts">Pemutar Shorts</string>
-  <string name="morphe_shorts_player_type_regular_player">Pemutar biasa</string>
-  <string name="morphe_shorts_player_type_regular_player_fullscreen">Pemutar biasa layar penuh</string>
+  <string name="morphe_shorts_player_type_regular_player">Pemutar reguler</string>
+  <string name="morphe_shorts_player_type_regular_player_fullscreen">Pemutar reguler layar penuh</string>
   <!-- layout.shortsautoplay.shortsAutoplayPatch -->
   <string name="morphe_shorts_autoplay_title">Putar otomatis Shorts</string>
   <string name="morphe_shorts_autoplay_summary">Maju ke Short berikutnya secara otomatis daripada mengulang yang saat ini</string>

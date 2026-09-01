@@ -734,6 +734,7 @@ Jos haluat näyttää ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetuk
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Piilota \"Toista videota jatkuvasti\"-valikko</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Piilota \'Matkalla\'-valikko</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Piilota Laatu-valikko</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Piilota Laatu-valikon alatunniste</string>
@@ -894,6 +895,22 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <string name="morphe_change_form_factor_entry_2">Puhelin</string>
   <string name="morphe_change_form_factor_entry_3">Tabletti</string>
   <string name="morphe_change_form_factor_entry_4">Ajoneuvo</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Muutokset sisältävät:
+
+Tabletin asettelu
+• Yhteisön julkaisut ovat piilotettuja
+• Toisto syötteissä -asetus ei ole käytettävissä
+• Remix-painike ja äänipainike eivät ole käytettävissä Shortseissa
+• 'Lisää videoita' -peittokuva ei ehkä ole käytettävissä
+• Vanha, tiivistämätön video-toimintapalkki on näkyvissä
+
+Auton asettelu
+• Syöte on järjestetty aiheiden ja kanavien mukaan
+• Toisto syötteissä -asetus ei ole käytettävissä
+• Remix-painike ja äänipainike eivät ole käytettävissä Shortseissa
+• 'Lisää videoita' -peittokuva ei ehkä ole käytettävissä
+• Shorts avautuvat tavallisessa soittimessa
+• Vanha, tiivistämätön video-toimintapalkki on näkyvissä"</string>
   <string name="morphe_tablet_layout_in_player_title">Ota tablettiasettelun käyttöön soittimessa</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Palauttaa vanhan soittimen asettelun

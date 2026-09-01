@@ -734,6 +734,7 @@ Om die 'Audio Track'-kieslys te wys, verander 'Vervals videostrome' na enige kli
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Verberg \'Herhaal video\'-menu</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Versteek \'Op pad\'-kieslys</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Verberg Kwaliteitsmenu</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Verberg kwaliteit menu voetskrif</string>
@@ -894,6 +895,22 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_change_form_factor_entry_2">Foon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Outomaties</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Veranderinge sluit in:
+
+Tabletuitleg
+• Gemeenskapsplasings is versteek
+• Die instelling 'Terugspeel in feeds' is nie beskikbaar nie
+• Remix-knoppie en klankknoppie is nie in Shorts beskikbaar nie
+• Die 'Meer video's'-oorleg mag dalk nie beskikbaar wees nie
+• Die nie-ingeklapte ou video-aksiebalk word gewys
+
+Motoruitleg
+• Die feed word volgens onderwerpe en kanale georganiseer
+• Die instelling 'Terugspeel in feeds' is nie beskikbaar nie
+• Remix-knoppie en klankknoppie is nie in Shorts beskikbaar nie
+• Die 'Meer video's'-oorleg mag dalk nie beskikbaar wees nie
+• Shorts word in die gewone speler geopen
+• Die nie-ingeklapte ou video-aksiebalk word gewys"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktiveer tablet-uitleg in die speler</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Herstel die ou speleruitleg

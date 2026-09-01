@@ -262,6 +262,7 @@ Spremembe vključujejo:
   <string name="morphe_hide_comments_preview_comment_summary">Skrije predogled komentarja pod videoposnetkom, preden se odpre celoten oddelek za komentarje</string>
   <string name="morphe_hide_comments_thanks_button_title">Skrij gumb \'Hvala\'</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skrij gumb Časovni žig</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Skrij gumb »Najboljši oboževalci«</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Počisti poudarjene povezave iskanja</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Počisti poudarjene povezave iskanja in pusti samo prvotno besedilo</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtr ključnih besed</string>
@@ -733,6 +734,7 @@ Za prikaz menija 'Audio Track' spremenite 'Spoofanje video tokov' v katerega kol
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Skrij meni »Zanka videa«</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Skrij meni »Na poti«</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Skrij meni »Kakovost«</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Skrij noga menija »Kakovost«</string>
@@ -848,6 +850,8 @@ Nastavitve → Predvajanje (ali Samodejno predvajanje) → Samodejno predvajanje
   <string name="morphe_disable_player_popup_panels_title">Onemogoči pojavne okenske plošče predvajalnika</string>
   <string name="morphe_disable_player_popup_panels_summary">Onemogoči samodejno odpiranje ploščic s seznamom predvajanja in klepetom v živo</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Onemogoči samodejno predvajanje v predvajalnih seznamih</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Preprečuje samodejno napredovanje na naslednji video v predvajalnih seznamih</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Zapusti celozaslonski način ob koncu videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Onemogočeno</string>
@@ -891,6 +895,22 @@ Nastavitve → Predvajanje (ali Samodejno predvajanje) → Samodejno predvajanje
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablica</string>
   <string name="morphe_change_form_factor_entry_4">Avto</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Spremembe vključujejo:
+
+Postavitev za tablice
+• Objave skupnosti so skrite
+• Nastavitev predvajanja v virih ni na voljo
+• Gumba Remix in Zvok v Shorts nista na voljo
+• Prekrivni element »Več videoposnetkov« morda ni na voljo
+• Prikazana je stara vrstica z dejanji videa v razširjenem stanju
+
+Postavitev za avtomobile
+• Vir je organiziran po temah in kanalih
+• Nastavitev predvajanja v virih ni na voljo
+• Gumba Remix in Zvok v Shorts nista na voljo
+• Prekrivni element »Več videoposnetkov« morda ni na voljo
+• Shorts se odprejo v običajnem predvajalniku
+• Prikazana je stara vrstica z dejanji videa v razširjenem stanju"</string>
   <string name="morphe_tablet_layout_in_player_title">Omogoči postavitev za tablične računalnike v predvajalniku</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Ponastavi prejšnjo postavitev predvajalnika
@@ -1135,6 +1155,14 @@ Tapnite tukaj, da odprete DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Omogoča neodvisno nastavitev hitrosti in višine tona, kar lahko povzroči artefakte zvoka</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Onemogoči HDR video</string>
+  <string name="morphe_force_hdr_video_title">Vsili HDR video</string>
+  <string name="morphe_force_hdr_video_summary">Sili aplikacijo, da to napravo prepozna kot HDR-sposobno</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Uporabite to, če HDR-dekodiranje deluje, vendar YouTube ne ponuja HDR, na primer pri nekaterih napravah HyperOS, ki skrivajo HLG.
+
+Omejitve:
+• Barve so lahko videti napačne, če zaslon dejansko ne more prikazati HDR
+• Predvajanje lahko ne uspe, če dekoder ne obvlada HDR
+• HDR je še vedno odvisen od odjemalca za ponarejanje video tokov"</string>
   <string name="morphe_force_avc_codec_title">Prisilna uporaba kodeka AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Prednosti:
 • Izboljša lahko življenjsko dobo baterije

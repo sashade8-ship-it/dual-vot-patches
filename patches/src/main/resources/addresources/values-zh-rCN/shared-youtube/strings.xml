@@ -211,7 +211,14 @@ Second \"item\" text"</string>
 如果稍后关闭，建议清除应用程序数据以防止 UI 错误。"</string>
   <string name="morphe_spoof_app_version_target_title">伪装应用程序版本为</string>
   <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_title">应用刷新率</string>
   <string name="morphe_app_refresh_rate_default">默认</string>
+  <string name="morphe_app_refresh_rate_fps">%s 帧/秒</string>
+  <string name="morphe_app_refresh_rate_type_title">覆盖刷新率</string>
+  <string name="morphe_app_refresh_rate_type_entry_1">始终</string>
+  <string name="morphe_app_refresh_rate_type_entry_2">竖屏播放</string>
+  <string name="morphe_app_refresh_rate_type_entry_3">全屏播放</string>
+  <string name="morphe_app_refresh_rate_type_entry_4">竖屏和全屏播放</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">点踩数暂时不可用 (API 连接超时)</string>

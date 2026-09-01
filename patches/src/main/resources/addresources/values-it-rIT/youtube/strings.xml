@@ -262,6 +262,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_comments_preview_comment_summary">Nasconde l\'anteprima del commento sotto il video prima di aprire la sezione commenti completa</string>
   <string name="morphe_hide_comments_thanks_button_title">Nascondi il pulsante Grazie</string>
   <string name="morphe_hide_comments_timestamp_button_title">Nascondi il pulsante Data</string>
+  <string name="morphe_hide_comments_top_fans_button_title">Nascondi il pulsante \'Migliori fan\'</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Disattiva l\'evidenziazione dei link di ricerca, lasciando solo il testo originale</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Disattiva l\'evidenziazione dei link di ricerca, lasciando solo il testo originale</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro parole chiave</string>
@@ -733,6 +734,7 @@ Per mostrare il menu 'Audio Track', cambia 'Falsificazione dei flussi video' in 
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">Nascondi il menù \'Ripeti video\'</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Nascondi il menu \'In movimento\'</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Nascondi il menù Qualità</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Nascondi il piè pagina del menù Qualità</string>
@@ -848,6 +850,8 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_disable_player_popup_panels_title">Disabilita i pannelli popup del lettore</string>
   <string name="morphe_disable_player_popup_panels_summary">Disabilita l\'apertura automatica dei pannelli playlist e chat live</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Disattiva la riproduzione automatica delle playlist</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Impedisce alle playlist di avanzare automaticamente al video successivo</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Esci dalla modalità a schermo intero alla fine del video</string>
   <string name="morphe_exit_fullscreen_entry_1">Disabilitato</string>
@@ -891,6 +895,22 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_change_form_factor_entry_2">Telefono</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Veicoli</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Le modifiche includono:
+
+Layout tablet
+• I post della community sono nascosti
+• L'impostazione 'Riproduzione nei feed' non è disponibile
+• Il pulsante Remix e il pulsante Audio non sono disponibili negli Short
+• L'overlay 'Altri video' potrebbe non essere disponibile
+• Viene mostrata la vecchia barra delle azioni del video non compattata
+
+Layout automotive
+• Il feed è organizzato per argomenti e canali
+• L'impostazione 'Riproduzione nei feed' non è disponibile
+• Il pulsante Remix e il pulsante Audio non sono disponibili negli Short
+• L'overlay 'Altri video' potrebbe non essere disponibile
+• Gli Short si aprono nel lettore normale
+• Viene mostrata la vecchia barra delle azioni del video non compattata"</string>
   <string name="morphe_tablet_layout_in_player_title">Abilita layout per tablet nel lettore</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Ripristina il layout precedente del player
@@ -1135,6 +1155,14 @@ Tocca qui per saperne di più su DeArrow"</string>
   <string name="morphe_playback_audio_time_stretching_summary">Consente di impostare velocità e pitch indipendentemente, potrebbe causare artefatti audio</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Disattiva video in HDR</string>
+  <string name="morphe_force_hdr_video_title">Forza video HDR</string>
+  <string name="morphe_force_hdr_video_summary">Forza l\'app a riconoscere questo dispositivo come compatibile con HDR</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"Usa questa opzione se la decodifica HDR funziona ma YouTube non offre l'HDR, come su alcuni dispositivi HyperOS che nascondono HLG.
+
+Limitazioni:
+• I colori potrebbero apparire errati se il display non puo effettivamente mostrare l'HDR
+• La riproduzione potrebbe fallire se il decoder non è in grado di gestire l'HDR
+• L'HDR dipende ancora dal client spoofato dei flussi video"</string>
   <string name="morphe_force_avc_codec_title">Forza il codec AVC (H.264)</string>
   <string name="morphe_force_avc_codec_user_dialog_message">"Vantaggi:
 • Può migliorare la durata della batteria

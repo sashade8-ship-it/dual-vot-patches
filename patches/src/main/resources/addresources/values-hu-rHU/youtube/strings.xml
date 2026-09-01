@@ -734,6 +734,7 @@ Az 'Audio Track' menü megjelenítéséhez állítsa a 'Videóstream-ek megtéve
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_loop_video_title">„Hurok videó” menü elrejtése</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">Az „Útközben” menü elrejtése</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_quality_title">Minőség menü elrejtése</string>
   <string name="morphe_hide_player_flyout_quality_footer_title">Minőség menü lábléc elrejtése</string>
@@ -894,6 +895,22 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Táblagép</string>
   <string name="morphe_change_form_factor_entry_4">Autóipari</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Változások:
+
+Táblagép-elrendezés
+• A közösségi bejegyzések el vannak rejtve
+• A lejátszás beállítása a feedekben nem érhető el
+• A Remix gomb és a Hang gomb nem érhetők el a Shorts-ban
+• A „További videók” átfedés nem feltétlenül érhető el
+• A nem összecsukott régi videó műveletsáv megjelenik
+
+Autós elrendezés
+• A feed témák és csatornák szerint van rendezve
+• A lejátszás beállítása a feedekben nem érhető el
+• A Remix gomb és a Hang gomb nem érhetők el a Shorts-ban
+• A „További videók” átfedés nem feltétlenül érhető el
+• A Shorts a normál lejátszóban nyílik meg
+• A nem összecsukott régi videó műveletsáv megjelenik"</string>
   <string name="morphe_tablet_layout_in_player_title">Tablet elrendezés engedélyezése a lejátszóban</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"A régi lejátszó elrendezés visszaállítása
