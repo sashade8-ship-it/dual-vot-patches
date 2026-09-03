@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Убрать ограничения на фоновое воспроизведение</string>
   <string name="morphe_shorts_disable_background_playback_title">Отключить воспроизведение Shorts в фоновом режиме</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Автоматическая пауза при блокировке устройства</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Выключено</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Всегда ставить на паузу при блокировке экрана</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Ставить на паузу, если не подключено беспроводное аудио</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Отключить ограничение скорости прокрутки</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -153,13 +157,14 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">Скрыть название видео</string>
   <string name="morphe_hide_video_title_summary">Скрывает название видео в полноэкранном режиме</string>
   <string name="morphe_sanitize_video_subtitle_title">Очистить субтитры видео</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Удаляет фразы, такие как «#», «Сбор средств», «Магазин» и «товары» из субтитров видео</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Удаляет фразы, такие как \'#\', \'Сбор средств\', \'Магазин\' и «товары» из субтитров видео</string>
   <string name="morphe_hide_description_components_screen_title">Описание видео</string>
   <string name="morphe_hide_description_components_screen_summary">Выберите, какие компоненты отображаются в описании видео</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Скрыть секцию AI-резюме видео</string>
   <string name="morphe_hide_ask_section_title">Скрыть секцию \"Задать вопрос\"</string>
   <string name="morphe_hide_attributes_section_title">Скрыть секцию \"Атрибуты\"</string>
   <string name="morphe_hide_attributes_section_summary">Скрывает разделы \"Упомянутые места\", \"Игры\", \"Музыка\" и \"Люди\"</string>
+  <string name="morphe_hide_channel_links_section_title">Скрыть раздел \"Ссылки на каналы\"</string>
   <string name="morphe_hide_chapters_section_title">Скрыть секцию \"Главы\"</string>
   <string name="morphe_hide_corrections_section_title">Скрыть секцию \"Исправления\"</string>
   <string name="morphe_hide_course_progress_section_title">Скрыть секцию \"Прогресс курса\"</string>

@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">移除后台播放限制</string>
   <string name="morphe_shorts_disable_background_playback_title">禁用 Shorts 后台播放</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">设备锁定时自动暂停</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">关闭</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">锁定时始终暂停</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">除非连接无线音频，否则暂停</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">禁用滚动速度限制</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">隐藏“提问”部分</string>
   <string name="morphe_hide_attributes_section_title">隐藏“属性”部分</string>
   <string name="morphe_hide_attributes_section_summary">隐藏“精选地点”、“游戏”、“音乐”和“提及的人物”部分</string>
+  <string name="morphe_hide_channel_links_section_title">隐藏频道链接部分</string>
   <string name="morphe_hide_chapters_section_title">隐藏“章节”部分</string>
   <string name="morphe_hide_corrections_section_title">隐藏“更正”部分</string>
   <string name="morphe_hide_course_progress_section_title">隐藏“课程进度”部分</string>

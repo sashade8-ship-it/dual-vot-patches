@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fjern restriktioner for afspilning i baggrunden</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiver baggrundsafspilning</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Auto-pause, når enheden er låst</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Fra</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Pause altid, når enheden er låst</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pause, medmindre trådløs lyd er tilsluttet</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Deaktiver begrænsning af rullehastighed</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_ask_section_title">Skjul Ask sektionen</string>
   <string name="morphe_hide_attributes_section_title">Skjul Attributes sektionen</string>
   <string name="morphe_hide_attributes_section_summary">Skjuler Fremhævede steder, Spil, Musik og Personer, der nævnes, sektioner</string>
+  <string name="morphe_hide_channel_links_section_title">Skjul sektionen med kanallinks</string>
   <string name="morphe_hide_chapters_section_title">Skjul Chapters sektionen</string>
   <string name="morphe_hide_corrections_section_title">Skjul Corrections sektionen</string>
   <string name="morphe_hide_course_progress_section_title">Skjul sektionen \'Kursusforløb\'</string>

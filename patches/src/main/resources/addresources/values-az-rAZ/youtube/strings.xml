@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fon oynatma məhdudiyyətlərini təmizlə</string>
   <string name="morphe_shorts_disable_background_playback_title">Arxa plan oynatmanı qapat</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Cihaz kilidləndikdə avtomatik fasilə</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Qapalı</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Kilidli olduqda həmişə fasilə ver</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Simsiz səs qoşulmadıqca fasilə ver</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Sürüşdürmə sürət həddini qapat</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_ask_section_title">Soruş bölməsini gizlət</string>
   <string name="morphe_hide_attributes_section_title">Atributlar bölməsin gizlət</string>
   <string name="morphe_hide_attributes_section_summary">Seçilən yerlər, Oyunlar, Musiqi və Qeyd edilən insanlar gizlədilir</string>
+  <string name="morphe_hide_channel_links_section_title">Kanal linkləri bölməsini gizlət</string>
   <string name="morphe_hide_chapters_section_title">Fəsillər bölməsini gizlət</string>
   <string name="morphe_hide_corrections_section_title">Düzəlişlər bölməsini gizlət</string>
   <string name="morphe_hide_course_progress_section_title">\"Kurs irəliləyişi\" bölməsin gizlət</string>

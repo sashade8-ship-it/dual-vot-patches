@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Alisin ang mga paghihigpit sa pagtugtog sa likuran</string>
   <string name="morphe_shorts_disable_background_playback_title">Patayin ang pag-play ng Shorts sa likuran</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Awtomatikong i-pause kapag naka-lock ang device</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Naka-off</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Palaging i-pause kapag naka-lock</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">I-pause maliban kung nakakonekta ang wireless audio</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">I-disable ang limitasyon sa bilis ng pag-scroll</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_ask_section_title">Itago ang seksyon ng Ask</string>
   <string name="morphe_hide_attributes_section_title">Itago ang seksyon ng Attributes</string>
   <string name="morphe_hide_attributes_section_summary">Itinatago ang Mga Itinatampok na Lugar, Mga Laro, Mga Musika, at ang mga taong binanggit na mga seksyon</string>
+  <string name="morphe_hide_channel_links_section_title">Itago ang seksyon ng mga link ng channel</string>
   <string name="morphe_hide_chapters_section_title">Itago ang seksyon ng Chapters</string>
   <string name="morphe_hide_corrections_section_title">Itago ang seksyon ng Corrections</string>
   <string name="morphe_hide_course_progress_section_title">Itago ang seksyon ng \'Course progress\'</string>

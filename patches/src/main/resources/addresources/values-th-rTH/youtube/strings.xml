@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">ลบข้อจำกัดการเล่นในพื้นหลัง</string>
   <string name="morphe_shorts_disable_background_playback_title">ปิดการเล่นพื้นหลัง</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">หยุดอัตโนมัติเมื่อล็อกอุปกรณ์</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">ปิด</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">หยุดเสมอเมื่อล็อกอุปกรณ์</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">หยุดเว้นแต่เชื่อมต่อเสียงไร้สาย</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">ปิดใช้งานการจำกัดความเร็วในการเลื่อน</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">ซ่อนส่วน \'ถาม\'</string>
   <string name="morphe_hide_attributes_section_title">ซ่อนส่วน Attributes</string>
   <string name="morphe_hide_attributes_section_summary">ซ่อนส่วนสถานที่แนะนำ เกม เพลง และบุคคลที่กล่าวถึง</string>
+  <string name="morphe_hide_channel_links_section_title">ซ่อนส่วนลิงก์ของช่อง</string>
   <string name="morphe_hide_chapters_section_title">ซ่อนส่วน \'ส่วนเนื้อหา\'</string>
   <string name="morphe_hide_corrections_section_title">ซ่อนส่วน Corrections</string>
   <string name="morphe_hide_course_progress_section_title">ซ่อนส่วน \'ความคืบหน้าของหลักสูตร\'</string>
@@ -213,7 +218,7 @@ Second \"item\" text"</string>
   <string name="morphe_explore_menu_screen_summary">เลือกส่วนประกอบที่จะปรากฏในเมนูสำรวจ</string>
   <string name="morphe_hide_courses_menu_title">ซ่อนเมนูหลักสูตร</string>
   <string name="morphe_hide_explore_button_title">ซ่อนปุ่ม \'สำรวจ\'</string>
-  <string name="morphe_hide_fashion_menu_title">ซ่อนป</string>
+  <string name="morphe_hide_fashion_menu_title">ซ่อนเมนู \'แฟชั่น &amp; ความงาม\'</string>
   <string name="morphe_hide_gaming_menu_title">ซ่อนเมนูเกม</string>
   <string name="morphe_hide_hype_menu_title">ซ่อนเมนู Hype</string>
   <string name="morphe_hide_learning_menu_title">ซ่อนเมนูการเรียนรู้</string>
@@ -341,7 +346,7 @@ Second \"item\" text"</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">คัดลอกลิงก์ไปยังคลิปบอร์ด</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">คัดลอกลิงก์ที่มีช่วงเวลาไปยังคลิปบอร์ด</string>
-  <string name="morphe_copy_video_link_button_title">แสดงปุ่มคัดลอก URL วิดีโอ</string>
+  <string name="morphe_copy_video_link_button_title">แสดงปุ่มคัดลอกลิงก์วิดีโอ</string>
   <string name="morphe_copy_video_link_button_summary">แตะเพื่อคัดลอกลิงก์วิดีโอ แตะค้างไว้เพื่อคัดลอกพร้อมตราประทับเวลา</string>
   <string name="morphe_copy_video_link_with_timestamp_button_title">คัดลอกตราประทับเวลาโดยค่าเริ่มต้น</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">สลับการทำงานของการแตะและการแตะค้างไว้สำหรับปุ่ม \'คัดลอกลิงก์วิดีโอ\'</string>
@@ -1049,7 +1054,7 @@ Second \"item\" text"</string>
   <string name="morphe_alt_thumbnail_subscription_title">สำหรับแท็บการติดตาม</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_alt_thumbnail_library_title">สำหรับแท็บคุณ</string>
-  <string name="morphe_alt_thumbnail_player_title">สำหรับเพลย์ลิสต์และคำแนะนำของเครื่องเล่น</string>
+  <string name="morphe_alt_thumbnail_player_title">สำหรับเพลย์ลิสต์ &amp; คำแนะนำของเครื่องเล่น</string>
   <string name="morphe_alt_thumbnail_search_title">สำหรับผลการค้นหา</string>
   <string name="morphe_alt_thumbnail_options_entry_1">รูปขนาดย่อดั้งเดิม</string>
   <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; รูปขนาดย่อดั้งเดิม</string>

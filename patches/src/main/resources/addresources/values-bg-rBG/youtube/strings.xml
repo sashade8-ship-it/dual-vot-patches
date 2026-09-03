@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Премахване на ограниченията за възпроизвеждане във фонов режим</string>
   <string name="morphe_shorts_disable_background_playback_title">Забраняване на възпроизвеждането във фонов режим</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Автоматична пауза при заключено устройство</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Изключено</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Винаги поставяне на пауза при заключено устройство</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Поставяне на пауза, освен ако не е свързано безжично аудио устройство</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Изключване на ограничението за скорост на превъртане</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">Скрий секцията „Въпроси“</string>
   <string name="morphe_hide_attributes_section_title">Скрий секцията „Характеристики“</string>
   <string name="morphe_hide_attributes_section_summary">Скрива секциите „Представени места“, „Игри“, „Музика“ и „Споменати хора“</string>
+  <string name="morphe_hide_channel_links_section_title">Скриване на секцията с връзки на канала</string>
   <string name="morphe_hide_chapters_section_title">Скрий секцията „Глави“</string>
   <string name="morphe_hide_corrections_section_title">Скрий секцията „Корекции“</string>
   <string name="morphe_hide_course_progress_section_title">Скрий секцията „Напредък на курса“</string>

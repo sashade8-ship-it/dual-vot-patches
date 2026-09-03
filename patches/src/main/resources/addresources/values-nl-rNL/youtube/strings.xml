@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Achtergrond afspeelbeperkingen verwijderen</string>
   <string name="morphe_shorts_disable_background_playback_title">Schakel afspelen in achtergrond uit</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Pauzeer automatisch wanneer het apparaat is vergrendeld</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Uit</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Pauzeer altijd wanneer vergrendeld</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pauzeer tenzij draadloze audio is verbonden</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Scrolsnelheidslimiet uitschakelen</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_ask_section_title">Verberg Sectie Vragen</string>
   <string name="morphe_hide_attributes_section_title">Verberg Attributen sectie</string>
   <string name="morphe_hide_attributes_section_summary">Verbergt Uitgelichte plaatsen, Games, Muziek en Mensen genoemde secties</string>
+  <string name="morphe_hide_channel_links_section_title">Verberg kanaallinks-sectie</string>
   <string name="morphe_hide_chapters_section_title">Verberg Hoofdstukken sectie</string>
   <string name="morphe_hide_corrections_section_title">Verberg Correcties sectie</string>
   <string name="morphe_hide_course_progress_section_title">Verberg \'Cursusvoortgang\' sectie</string>

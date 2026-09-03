@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Bỏ hạn chế phát nền</string>
   <string name="morphe_shorts_disable_background_playback_title">Tắt phát nền</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Tạm dừng khi khóa thiết bị</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Tắt</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Luôn tạm dừng khi khóa</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Tạm dừng trừ khi có thiết bị âm thanh không dây được kết nối</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Tắt giới hạn tốc độ cuộn</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -159,6 +163,7 @@ Ví dụ:
   <string name="morphe_hide_ask_section_title">Ẩn phần Đặt câu hỏi</string>
   <string name="morphe_hide_attributes_section_title">Ẩn phần Thuộc tính</string>
   <string name="morphe_hide_attributes_section_summary">Ẩn các phần Địa điểm nổi bật, Trò chơi, Âm nhạc và Người được đề cập</string>
+  <string name="morphe_hide_channel_links_section_title">Ẩn phần liên kết kênh</string>
   <string name="morphe_hide_chapters_section_title">Ẩn phần Chương</string>
   <string name="morphe_hide_corrections_section_title">Ẩn phần Sửa lỗi</string>
   <string name="morphe_hide_course_progress_section_title">Ẩn phần \"Tiến độ học tập\"</string>

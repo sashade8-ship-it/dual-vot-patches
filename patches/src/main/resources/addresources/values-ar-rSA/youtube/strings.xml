@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">إزالة قيود التشغيل في الخلفية</string>
   <string name="morphe_shorts_disable_background_playback_title">تعطيل التشغيل في الخلفية</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">إيقاف التشغيل تلقائيًا عند قفل الجهاز</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">إيقاف</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">إيقاف التشغيل دائمًا عند القفل</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">إيقاف التشغيل إلا إذا كان الصوت اللاسلكي متصلًا</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">تعطيل تحديد سرعة التمرير</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">إخفاء قسم طرح سؤال</string>
   <string name="morphe_hide_attributes_section_title">إخفاء قسم السمات</string>
   <string name="morphe_hide_attributes_section_summary">يخفي أقسام الأماكن المميزة، الألعاب، الموسيقى، والأشخاص المذكورين</string>
+  <string name="morphe_hide_channel_links_section_title">إخفاء قسم روابط القناة</string>
   <string name="morphe_hide_chapters_section_title">إخفاء قسم الفصول</string>
   <string name="morphe_hide_corrections_section_title">إخفاء قسم التصحيحات</string>
   <string name="morphe_hide_course_progress_section_title">إخفاء قسم تقدّم الدورة التدريبية</string>

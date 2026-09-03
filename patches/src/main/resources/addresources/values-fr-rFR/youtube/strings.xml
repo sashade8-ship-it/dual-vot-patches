@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Supprimer les restrictions de lecture en arrière-plan</string>
   <string name="morphe_shorts_disable_background_playback_title">Désactiver la lecture en arrière-plan</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Mettre en pause automatiquement lorsque l\'appareil est verrouillé</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Désactivé</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Toujours mettre en pause lorsque l\'appareil est verrouillé</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Mettre en pause sauf si un appareil audio sans fil est connecté</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Désactiver la limite de vitesse de défilement</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Les changements incluent :
   <string name="morphe_hide_ask_section_title">Masquer la section \'Posez une question\'</string>
   <string name="morphe_hide_attributes_section_title">Masquer la section \'Mentions\'</string>
   <string name="morphe_hide_attributes_section_summary">Masque les sections \'Lieux Populaires\', \'Jeux\' et \'Musique\' et \'Personnes mentionnées\'</string>
+  <string name="morphe_hide_channel_links_section_title">Masquer la section des liens de chaîne</string>
   <string name="morphe_hide_chapters_section_title">Masquer la section \'Chapitres\'</string>
   <string name="morphe_hide_corrections_section_title">Masquer la section \'Corrections\'</string>
   <string name="morphe_hide_course_progress_section_title">Masquer la section \'Progression dans le cours\'</string>

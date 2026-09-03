@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Einschränkungen für Hintergrundwiedergabe entfernen</string>
   <string name="morphe_shorts_disable_background_playback_title">Hintergrundwiedergabe von Shorts deaktivieren</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Auto-Pause bei gesperrtem Gerät</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Aus</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Immer pausieren, wenn gesperrt</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pausieren, außer wenn drahtloses Audio verbunden ist</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Scrollgeschwindigkeitslimit deaktivieren.</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -161,6 +165,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_ask_section_title">Ask-Bereich ausblenden</string>
   <string name="morphe_hide_attributes_section_title">Attributes-Bereich ausblenden</string>
   <string name="morphe_hide_attributes_section_summary">Verbirgt empfohlene Orte, Spiele, Musik und erwähnte Personen</string>
+  <string name="morphe_hide_channel_links_section_title">Kanal-Links-Bereich ausblenden</string>
   <string name="morphe_hide_chapters_section_title">Chapters-Bereich ausblenden</string>
   <string name="morphe_hide_corrections_section_title">Corrections-Bereich ausblenden</string>
   <string name="morphe_hide_course_progress_section_title">Kursfortschritt-Bereich ausblenden</string>

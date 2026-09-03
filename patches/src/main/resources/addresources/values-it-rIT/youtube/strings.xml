@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Rimuovi le restrizioni alla riproduzione in secondo piano</string>
   <string name="morphe_shorts_disable_background_playback_title">Disattiva la riproduzione degli Shorts in secondo piano</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Pausa automatica quando il dispositivo è bloccato</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Disattivato</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Pausa sempre quando il dispositivo è bloccato</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pausa a meno che non sia connesso un audio wireless</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Disabilita la velocità di scorrimento</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_ask_section_title">Nascondi la sezione Chiedi</string>
   <string name="morphe_hide_attributes_section_title">Nascondi la sezione Attributi</string>
   <string name="morphe_hide_attributes_section_summary">Nasconde Luoghi in evidenza, Giochi, Musica e Persone menzionate</string>
+  <string name="morphe_hide_channel_links_section_title">Nascondi la sezione dei link del canale</string>
   <string name="morphe_hide_chapters_section_title">Nascondi la sezione Capitoli</string>
   <string name="morphe_hide_corrections_section_title">Nascondi la sezione Correzioni</string>
   <string name="morphe_hide_course_progress_section_title">Nascondi la sezione \'Progresso del corso\'</string>

@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">पृष्ठभूमि प्लेबैक प्रतिबंध हटाएं</string>
   <string name="morphe_shorts_disable_background_playback_title">बैकग्राउंड प्ले को अक्षम करें</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">डिवाइस लॉक होने पर ऑटो पॉज़ करें</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">बंद</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">लॉक होने पर हमेशा पॉज़ करें</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">वायरलेस ऑडियो कनेक्ट होने के अलावा पॉज़ करें</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">स्क्रॉलिंग गति सीमा अक्षम करें</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">पूछें अनुभाग छुपाएं</string>
   <string name="morphe_hide_attributes_section_title">विशेषताएँ अनुभाग छुपाएं</string>
   <string name="morphe_hide_attributes_section_summary">फीचर्ड स्थान, गेम, संगीत और उल्लिखित लोगों के अनुभाग को छुपाता है</string>
+  <string name="morphe_hide_channel_links_section_title">चैनल लिंक अनुभाग छिपाएँ</string>
   <string name="morphe_hide_chapters_section_title">अध्याय अनुभाग छुपाएं</string>
   <string name="morphe_hide_corrections_section_title">सुधार अनुभाग छुपाएं</string>
   <string name="morphe_hide_course_progress_section_title">\'कोर्स की प्रगति\' अनुभाग छुपाएं</string>

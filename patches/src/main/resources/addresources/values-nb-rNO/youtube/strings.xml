@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fjern restriksjoner for avspilling i bakgrunnen</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiver avspilling i bakgrunnen</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Automatisk pause når enheten er låst</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Av</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Alltid pause når låst</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pause med mindre trådløs lyd er tilkoblet</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Deaktiver rullehastighetsgrense</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Endringer inkluderer:
   <string name="morphe_hide_ask_section_title">Skjul Spørsmål-seksjon</string>
   <string name="morphe_hide_attributes_section_title">Skjul Attributter-seksjon</string>
   <string name="morphe_hide_attributes_section_summary">Skjuler Utvalgte steder, Spill, Musikk og Nevnte personer-seksjonene</string>
+  <string name="morphe_hide_channel_links_section_title">Skjul kanallinker-seksjonen</string>
   <string name="morphe_hide_chapters_section_title">Skjul Kapitler-seksjon</string>
   <string name="morphe_hide_corrections_section_title">Skjul Korreksjoner-seksjon</string>
   <string name="morphe_hide_course_progress_section_title">Skjul «Kursfremgang»-seksjon</string>

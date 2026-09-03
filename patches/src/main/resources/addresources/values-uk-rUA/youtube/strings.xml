@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Зняти обмеження фонового відтворення</string>
   <string name="morphe_shorts_disable_background_playback_title">Вимкнути фонове відтворення</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Автоматично призупиняти, коли пристрій заблоковано</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Вимкнено</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Завжди призупиняти при блокуванні</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Призупиняти, якщо не підключено бездротовий звук</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Вимкнути обмеження швидкості прокручування</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">Приховати секцію \"Запитати\"</string>
   <string name="morphe_hide_attributes_section_title">Приховати секцію \"Атрибути\"</string>
   <string name="morphe_hide_attributes_section_summary">Приховує секції \"Рекомендовані місця\", \"Ігри\", \"Музика\" та \"Згадані люди\"</string>
+  <string name="morphe_hide_channel_links_section_title">Приховати секцію \"Посилання каналу\"</string>
   <string name="morphe_hide_chapters_section_title">Приховати секцію \"Розділи\"</string>
   <string name="morphe_hide_corrections_section_title">Приховати секцію \"Виправлення\"</string>
   <string name="morphe_hide_course_progress_section_title">Приховати секцію \"Прогрес курсу\"</string>

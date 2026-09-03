@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Κατάργηση περιορισμών αναπαραγωγής στο παρασκήνιο</string>
   <string name="morphe_shorts_disable_background_playback_title">Απενεργοποίηση αναπαραγωγής παρασκηνίου</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Αυτόματη παύση όταν η συσκευή είναι κλειδωμένη</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Ανενεργό</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Πάντα παύση όταν η συσκευή είναι κλειδωμένη</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Παύση εκτός αν είναι συνδεδεμένη ασύρματη συσκευή ήχου</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Απενεργοποίηση ορίου ταχύτητας κύλισης</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">Απόκρυψη τμήματος Ερωτήσεων</string>
   <string name="morphe_hide_attributes_section_title">Απόκρυψη τμήματος Χαρακτηριστικών</string>
   <string name="morphe_hide_attributes_section_summary">Απόκρυψη των τμημάτων Επιλεγμένα μέρη, Παιχνίδια, Μουσική και «Οι χρήστες ανέφεραν»</string>
+  <string name="morphe_hide_channel_links_section_title">Απόκρυψη ενότητας συνδέσμων καναλιού</string>
   <string name="morphe_hide_chapters_section_title">Απόκρυψη τμήματος Κεφαλαίων</string>
   <string name="morphe_hide_corrections_section_title">Απόκρυψη τμήματος Διορθώσεων</string>
   <string name="morphe_hide_course_progress_section_title">Απόκρυψη τμήματος «Πρόοδος μαθήματος»</string>

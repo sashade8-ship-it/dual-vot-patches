@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">পটভূমির প্লেব্যাক সীমাবদ্ধতা সরান</string>
   <string name="morphe_shorts_disable_background_playback_title">ব্যাকগ্রাউন্ড প্লে অক্ষম করুন</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">ডিভাইস লক থাকলে স্বয়ংক্রিয়ভাবে বিরতি</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">বন্ধ</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">লক থাকলে সর্বদা বিরতি</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">ওয়্যারলেস অডিও সংযুক্ত না থাকলে বিরতি</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">স্ক্রলিং গতির সীমা অক্ষম করুন</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">Ask বিভাগটি লুকান</string>
   <string name="morphe_hide_attributes_section_title">Attributes বিভাগটি লুকান</string>
   <string name="morphe_hide_attributes_section_summary">বৈশিষ্ট্যযুক্ত স্থান, গেমস, সঙ্গীত এবং উল্লিখিত ব্যক্তি বিভাগগুলি লুকায়</string>
+  <string name="morphe_hide_channel_links_section_title">চ্যানেল লিংক বিভাগটি লুকান</string>
   <string name="morphe_hide_chapters_section_title">Chapters বিভাগটি লুকান</string>
   <string name="morphe_hide_corrections_section_title">Corrections বিভাগটি লুকান</string>
   <string name="morphe_hide_course_progress_section_title">\'Course progress\' বিভাগটি লুকান</string>

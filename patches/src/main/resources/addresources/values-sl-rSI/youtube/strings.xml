@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Odstrani omejitve predvajanja v ozadju</string>
   <string name="morphe_shorts_disable_background_playback_title">Onemogoči predvajanje v ozadju</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Samodejni premor, ko je naprava zaklenjena</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Izklopljeno</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Vedno začasno ustavi, ko je naprava zaklenjena</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Začasno ustavi, razen če je povezana brezžična avdio naprava</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Onemogoči omejitev hitrosti drsenja</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Spremembe vključujejo:
   <string name="morphe_hide_ask_section_title">Skrij odsek \'Vprašaj\'</string>
   <string name="morphe_hide_attributes_section_title">Skrij odsek \'Atributi\'</string>
   <string name="morphe_hide_attributes_section_summary">Skrije odseke \'Predstavljeni kraji\', \'Igre\', \'Glasba\' in \'Osebe\'</string>
+  <string name="morphe_hide_channel_links_section_title">Skrij razdelek s povezavami kanala</string>
   <string name="morphe_hide_chapters_section_title">Skrij odsek \'Poglavja\'</string>
   <string name="morphe_hide_corrections_section_title">Skrij odsek \'Popravki\'</string>
   <string name="morphe_hide_course_progress_section_title">Skrij odsek \'Napredek tečaja\'</string>

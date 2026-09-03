@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">הסר הגבלות השמעת רקע</string>
   <string name="morphe_shorts_disable_background_playback_title">השבת הפעלת רקע</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">השהייה אוטומטית כשהמכשיר נעול</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">כבוי</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">השהה תמיד כשהמכשיר נעול</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">השהה אלא אם כן אודיו אלחוטי מחובר</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">השבת מגבלת מהירות גלילה</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">הסתר סעיף \'שאלות\'</string>
   <string name="morphe_hide_attributes_section_title">הסתר סעיף \'מאפיינים\'</string>
   <string name="morphe_hide_attributes_section_summary">מסתיר \'מקומות בתכונה\', \'משחקים\', \'מוזיקה\' וסעיפים \'אנשים שאוזכרו\'</string>
+  <string name="morphe_hide_channel_links_section_title">הסתר קטע קישורי ערוץ</string>
   <string name="morphe_hide_chapters_section_title">הסתר את סעיף \'פרקים\'</string>
   <string name="morphe_hide_corrections_section_title">הסתר את סעיף \'תיקונים\'</string>
   <string name="morphe_hide_course_progress_section_title">הסתר את סעיף \'התקדמות הקורס\'</string>

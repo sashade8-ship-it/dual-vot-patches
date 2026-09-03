@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Odstrániť obmedzenia prehrávania na pozadí</string>
   <string name="morphe_shorts_disable_background_playback_title">Zakázať prehrávanie Shorts na pozadí</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Automaticky pozastaviť pri zamknutom zariadení</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Vypnuté</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Vždy pozastaviť pri uzamknutí</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pozastaviť, ak nie je pripojené bezdrôtové audio</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Vypnúť obmedzenie rýchlosti posúvania</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_ask_section_title">Skryť sekciu Otázky</string>
   <string name="morphe_hide_attributes_section_title">Skryť sekciu atribútov</string>
   <string name="morphe_hide_attributes_section_summary">Skryje odporúčané miesta, hry, hudbu a spomenuté osoby</string>
+  <string name="morphe_hide_channel_links_section_title">Skryť sekciu odkazov kanála</string>
   <string name="morphe_hide_chapters_section_title">Skryť sekciu Kapitoly</string>
   <string name="morphe_hide_corrections_section_title">Skryť sekciu Oprav</string>
   <string name="morphe_hide_course_progress_section_title">Skryť sekciu \'Postup v kurze\'</string>

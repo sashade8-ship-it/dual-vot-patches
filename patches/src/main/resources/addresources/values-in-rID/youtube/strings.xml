@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Hapus pembatasan pemutaran latar belakang</string>
   <string name="morphe_shorts_disable_background_playback_title">Nonaktifkan pemutaran di latar belakang</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Jeda otomatis saat perangkat dikunci</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Nonaktif</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Selalu jeda saat perangkat dikunci</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Jeda kecuali jika audio nirkabel terhubung</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Nonaktifkan batas kecepatan menggulir</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -159,6 +163,7 @@ Perubahan termasuk:
   <string name="morphe_hide_ask_section_title">Sembunyikan bagian Tanya</string>
   <string name="morphe_hide_attributes_section_title">Sembunyikan bagian Atribut</string>
   <string name="morphe_hide_attributes_section_summary">Bagian tempat Unggulan, Game, Musik, dan disebutkan Orang ditampilkan</string>
+  <string name="morphe_hide_channel_links_section_title">Sembunyikan bagian tautan saluran</string>
   <string name="morphe_hide_chapters_section_title">Sembunyikan bagian Bab</string>
   <string name="morphe_hide_corrections_section_title">Sembunyikan bagian komentar</string>
   <string name="morphe_hide_course_progress_section_title">Sembunyikan bagian \'Kemajuan kursus\'</string>
@@ -1043,11 +1048,11 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_bypass_image_region_restrictions_summary">Mengalihkan permintaan thumbnail ke server alternatif untuk memperbaiki gambar yang hilang di negara yang dibatasi</string>
   <!-- layout.thumbnails.alternativeThumbnailsPatch -->
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Tab Untuk Beranda</string>
+  <string name="morphe_alt_thumbnail_home_title">Untuk tab Beranda</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_alt_thumbnail_subscription_title">Untuk tab Subscription</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Tab Untuk Anda</string>
+  <string name="morphe_alt_thumbnail_library_title">Untuk tab Anda</string>
   <string name="morphe_alt_thumbnail_player_title">Untuk daftar putar &amp; rekomendasi pemutar</string>
   <string name="morphe_alt_thumbnail_search_title">Untuk hasil pencarian</string>
   <string name="morphe_alt_thumbnail_options_entry_1">Thumbnail asli</string>

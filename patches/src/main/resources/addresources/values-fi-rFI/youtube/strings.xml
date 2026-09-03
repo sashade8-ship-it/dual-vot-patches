@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Poista taustatoiston rajoitukset</string>
   <string name="morphe_shorts_disable_background_playback_title">Poista Shortsien taustatoisto käytöstä</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Automaattinen tauko, kun laite on lukittu</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Pois</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Tauota aina, kun laite on lukittu</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Tauota, ellei langatonta ääntä ole yhdistetty</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Poista vieritysnopeuden rajoitus</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_ask_section_title">Piilota Kysy-osio</string>
   <string name="morphe_hide_attributes_section_title">Piilota Ominaisuudet-osio</string>
   <string name="morphe_hide_attributes_section_summary">Piilottaa Esitellyt paikat, Pelit, Musiikki ja Mainitut ihmiset -osiot</string>
+  <string name="morphe_hide_channel_links_section_title">Piilota kanavan linkit -osio</string>
   <string name="morphe_hide_chapters_section_title">Piilota Luvut-osio</string>
   <string name="morphe_hide_corrections_section_title">Piilota Korjaukset-osio</string>
   <string name="morphe_hide_course_progress_section_title">Piilota \"Kurssin edistyminen\" -osio</string>

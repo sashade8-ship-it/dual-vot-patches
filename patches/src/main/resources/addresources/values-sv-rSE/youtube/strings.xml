@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Ta bort begränsningar för uppspelning i bakgrunden</string>
   <string name="morphe_shorts_disable_background_playback_title">Inaktivera uppspelning i bakgrunden</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Automatisk paus när enheten är låst</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Av</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Pausa alltid när enheten är låst</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pausa om inte trådlöst ljud är anslutet</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Inaktivera rullningshastighetsgräns</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_ask_section_title">Dölj avsnittet Fråga</string>
   <string name="morphe_hide_attributes_section_title">Dölj avsnittet med attribut</string>
   <string name="morphe_hide_attributes_section_summary">Döljer avsnitten Platser som visas, Spel, Musik och Personer som förekommer</string>
+  <string name="morphe_hide_channel_links_section_title">Dölj avsnittet med kanallänkar</string>
   <string name="morphe_hide_chapters_section_title">Dölj avsnittet Kapitel</string>
   <string name="morphe_hide_corrections_section_title">Dölj avsnittet Korrigeringar</string>
   <string name="morphe_hide_course_progress_section_title">Dölj avsnittet Kursförlopp</string>

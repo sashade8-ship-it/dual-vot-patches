@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Háttérben lejátszás korlátozásainak feloldása</string>
   <string name="morphe_shorts_disable_background_playback_title">Háttérben történő lejátszás kikapcsolása</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Automatikus szüneteltetés, ha az eszköz le van zárva</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Ki</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Mindig szüneteltetés, ha le van zárva</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Szüneteltetés, hacsak nincs vezeték nélküli hang csatlakoztatva</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Görgetési sebességkorlát letiltása. ,\"key\":\"morphe_disable_scrolling_speed_limit_title\",\"context\":\"morphe_disable_scrolling_speed_limit_title\nlayout.disableScrollSpeedLimitPatch\",\"maxLength\":null,\"terms\":[]}</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_ask_section_title">Kérdések szekció elrejtése</string>
   <string name="morphe_hide_attributes_section_title">Attribútumok szekció elrejtése</string>
   <string name="morphe_hide_attributes_section_summary">Kiemelt helyek, játékok, zenék és említett emberek szekció elrejtése</string>
+  <string name="morphe_hide_channel_links_section_title">Csatornalinkek szakasz elrejtése</string>
   <string name="morphe_hide_chapters_section_title">Fejezetek szekció elrejtése</string>
   <string name="morphe_hide_corrections_section_title">Javítások szekció elrejtése</string>
   <string name="morphe_hide_course_progress_section_title">Kurzus előrehaladása szekció elrejtése</string>

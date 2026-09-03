@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Ukloni ograničenja reprodukcije u pozadini</string>
   <string name="morphe_shorts_disable_background_playback_title">Onemogući reprodukciju u pozadini</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Automatska pauza kada je uređaj zaključan</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Isključeno</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Uvijek pauziraj kada je uređaj zaključan</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pauziraj osim ako je bežični audio povezan</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Onemogući ograničenje brzine pomicanja</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -162,6 +166,7 @@ Promjene uključuju:
   <string name="morphe_hide_ask_section_title">Sakrij odjeljak Pitaj</string>
   <string name="morphe_hide_attributes_section_title">Sakrij odjeljak Atributi</string>
   <string name="morphe_hide_attributes_section_summary">Sakriva odjeljke Istaknutih mjesta, Igri, Glazbe i Osoba o kojima se spominje</string>
+  <string name="morphe_hide_channel_links_section_title">Sakrij odjeljak s poveznicama kanala</string>
   <string name="morphe_hide_chapters_section_title">Sakrij odjeljak poglavlja</string>
   <string name="morphe_hide_corrections_section_title">Sakrij odjeljak Ispravci</string>
   <string name="morphe_hide_course_progress_section_title">Sakrij odjeljak \'Izmjena napredovanja tečaja\'</string>

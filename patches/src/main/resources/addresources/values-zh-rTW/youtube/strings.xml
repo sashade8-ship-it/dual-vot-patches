@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">移除背景播放限制</string>
   <string name="morphe_shorts_disable_background_playback_title">停用背景播放 Shorts</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">裝置鎖定時自動暫停</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">關閉</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">鎖定時一律暫停</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">除非連接無線音訊，否則暫停</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">停用捲動速度限制</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">隱藏「問」區段</string>
   <string name="morphe_hide_attributes_section_title">隱藏「屬性」區段</string>
   <string name="morphe_hide_attributes_section_summary">隱藏精選地點、遊戲、音樂和提及的人區塊</string>
+  <string name="morphe_hide_channel_links_section_title">隱藏頻道連結區塊</string>
   <string name="morphe_hide_chapters_section_title">隱藏「章節」區段</string>
   <string name="morphe_hide_corrections_section_title">隱藏「更正」區段</string>
   <string name="morphe_hide_course_progress_section_title">隱藏「課程進度」區段</string>

@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Verwyder agtergrond speel beperkings</string>
   <string name="morphe_shorts_disable_background_playback_title">Deaktiveer agtergrondweergawe</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Outomatiese onderbreking wanneer toestel gesluit is</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Af</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Onderbreek altyd wanneer toestel gesluit is</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Onderbreek tensy draadlose oudio gekoppel is</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Deaktiveer blaai-spoedlimiet</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Veranderings sluit in:
   <string name="morphe_hide_ask_section_title">Verberg Vra-afdeling</string>
   <string name="morphe_hide_attributes_section_title">Verberg Attributes-afdeling</string>
   <string name="morphe_hide_attributes_section_summary">Verberg Featured plekke, Speletjies, Musiek en People mentioned afdelings</string>
+  <string name="morphe_hide_channel_links_section_title">Versteek kanaalafdeling</string>
   <string name="morphe_hide_chapters_section_title">Verberg Chapters-afdeling</string>
   <string name="morphe_hide_corrections_section_title">Verberg Corrections-afdeling</string>
   <string name="morphe_hide_course_progress_section_title">Verberg \'Course progress\' afdeling</string>

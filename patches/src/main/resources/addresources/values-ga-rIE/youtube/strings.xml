@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Bain srianta súgartha cúlra</string>
   <string name="morphe_shorts_disable_background_playback_title">Díchumasaigh súgradh sa chúlra</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Sos uathoibríoch nuair a bhíonn an gléas faoi ghlas</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">As</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Sos i gcónaí nuair a bhíonn sé faoi ghlas</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Cuir ar sos mura bhfuil fuaim gan sreang ceangailte</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Díchumasaigh teorainn luais scrollaigh</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_ask_section_title">Folaigh an rannán Iarr</string>
   <string name="morphe_hide_attributes_section_title">An rannán Tréithe a Fholach</string>
   <string name="morphe_hide_attributes_section_summary">Folaíonn sé na rannóga Áiteanna Réadmhaoine, Cluichí, Ceol, agus Daoine a luaitear</string>
+  <string name="morphe_hide_channel_links_section_title">Folaigh an chuid Naisc na gCainéal</string>
   <string name="morphe_hide_chapters_section_title">Folaigh an chuid Caibidlí</string>
   <string name="morphe_hide_corrections_section_title">Folaigh an chuid Ceartúcháin</string>
   <string name="morphe_hide_course_progress_section_title">Folaigh an chuid \'Dul chun cinn an chúrsa\'</string>

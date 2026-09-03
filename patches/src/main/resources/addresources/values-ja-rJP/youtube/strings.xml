@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">バックグラウンド再生の制限を解除</string>
   <string name="morphe_shorts_disable_background_playback_title">ショートのバックグラウンド再生を無効化</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">画面ロック時に再生を一時停止</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">オフ</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">常に一時停止</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">ワイヤレス オーディオ機器の接続時を除き一時停止</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">スクロールの速度制限を無効化</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ask_section_title">「質問する」セクションを非表示</string>
   <string name="morphe_hide_attributes_section_title">関連情報を非表示</string>
   <string name="morphe_hide_attributes_section_summary">注目の場所 / ゲーム / 音楽 / 「言及されている人物」セクションを非表示にします</string>
+  <string name="morphe_hide_channel_links_section_title">チャンネル リンク セクションを非表示</string>
   <string name="morphe_hide_chapters_section_title">チャプター セクションを非表示</string>
   <string name="morphe_hide_corrections_section_title">修正セクションを非表示</string>
   <string name="morphe_hide_course_progress_section_title">「コースの進捗状況」セクションを非表示</string>

@@ -33,6 +33,10 @@ Second \"item\" text"</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Fjarlægja takmarkanir á spilun í bakgrunni</string>
   <string name="morphe_shorts_disable_background_playback_title">Slökkva á spilun í bakgrunni</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">Sjálfvirk hlé þegar tæki er læst</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">Af</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Alltaf hlé þegar tæki er læst</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Hlé nema þráðlaust hljóð sé tengt</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">Slökkva á hraðatakmörkun skrunningar.</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -160,6 +164,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_ask_section_title">Felur Spyrja hluta</string>
   <string name="morphe_hide_attributes_section_title">Felur Eiginleika hluta</string>
   <string name="morphe_hide_attributes_section_summary">Felur sérstaka staði, Leiki, Tónlist og Fólk sem nefnt er</string>
+  <string name="morphe_hide_channel_links_section_title">Fela rásatenglahlutann</string>
   <string name="morphe_hide_chapters_section_title">Felur Kafla hluta</string>
   <string name="morphe_hide_corrections_section_title">Felur Leiðréttingar hluta</string>
   <string name="morphe_hide_course_progress_section_title">Felur \'Námsfylgdar\' hluta</string>
