@@ -1,3 +1,13 @@
+## 1.42.0-dev.2-dualvot.8.3 (2026-09-04)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.42.0-dev.2](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.2).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.42.0-dev.1-dualvot.8.3 (2026-09-03)
 
 ### Automated Morphe update
@@ -242,6 +252,20 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.42.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.1...v1.42.0-dev.2) (2026-09-04)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Theme:** Apply the foreground color to text and icons in more locations ([#2707](https://github.com/MorpheApp/morphe-patches/issues/2707)) ([126a7d7](https://github.com/MorpheApp/morphe-patches/commit/126a7d7baacc3783e88681028612304e54e74608))
+
+### ✨ New Features
+
+* **YouTube - Hide player overlay buttons:** Add option to change the player control buttons background opacity ([#2764](https://github.com/MorpheApp/morphe-patches/issues/2764)) ([4a2d3a4](https://github.com/MorpheApp/morphe-patches/commit/4a2d3a4ddd4006c9aa8efa2546f8d734cf85f28f))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.35.54` ([7e42c2a](https://github.com/MorpheApp/morphe-patches/commit/7e42c2a57aa3838338b02569bce5e69f102457d2))
 
 ## [1.42.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0...v1.42.0-dev.1) (2026-09-03)
 
