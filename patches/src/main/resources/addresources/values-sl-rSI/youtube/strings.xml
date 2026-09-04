@@ -551,7 +551,6 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_swipe_overlay_timeout_summary">Čas, ki traja prikaz pojavnega okna</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Prosojnost ozadja pojavnega okna</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Prilagodite raven preglednosti (0 je pregledna, 100 je neprosojna)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Prosojnost mora biti med 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Barva vidne indikacije svetlosti</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Nastavite barvo vrstice napredka nadzora svetlosti</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Barva vidne indikacije glasnosti</string>
@@ -560,7 +559,6 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Nastavi barvo vrstice napredka za nadzor hitrosti predvajanja</string>
   <string name="morphe_swipe_text_overlay_size_title">Velikost pisave pojavnega okna</string>
   <string name="morphe_swipe_text_overlay_size_summary">Prilagodite velikost besedila na zaslonu (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Velikost pisave mora biti med 1-30</string>
   <string name="morphe_swipe_threshold_title">Prag drsenja</string>
   <string name="morphe_swipe_threshold_summary">Nastavite zahtevano razdaljo drsenja, preden se sproži prilagoditev</string>
   <string name="morphe_swipe_volume_sensitivity_title">Občutljivost drsenja glasnosti</string>
@@ -766,6 +764,8 @@ Za prikaz menija 'Audio Track' spremenite 'Spoofanje video tokov' v katerega kol
   <string name="morphe_hide_fullscreen_button_title">Skrij gumb za celozaslonski način</string>
   <string name="morphe_hide_player_control_buttons_background_title">Skrij ozadje gumbov za nadzor predvajanja</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Skrije temno senčenje okoli gumbov predvajalnika videa</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Prosojnost kontrolnih gumbov</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Prilagodi prosojnost kroga v ozadju gumbov za upravljanje predvajalnika (0 je nevidno, 100 je neprosojno)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Skrij gumba »Prejšnji« in »Naslednji«</string>
   <string name="morphe_hide_settings_button_title">Skrij gumb za nastavitve</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Nastavitve → Predvajanje (ali Samodejno predvajanje) → Samodejno predvajanje
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opaznost prekrivnega sloja predvajalnika</string>
   <string name="morphe_player_overlay_opacity_summary">Prilagodite raven preglednosti (0 je pregleden, 100 je neprozoren)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Prosojna plast predloge za predvajanje mora biti med 0 in 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Iskalna vrstica</string>
   <string name="morphe_searchbar_type_entry_disabled">Onemogočeno</string>
@@ -1007,7 +1006,6 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_miniplayer_width_dip_invalid_toast">Velikost v pikslih mora biti med %1$s in %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Opaznost</string>
   <string name="morphe_miniplayer_opacity_summary">Prilagodite raven preglednosti (0 je pregleden, 100 je neprozoren)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Opaznost prekrivnega okna predvajalnika mora biti med 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Gumb za nazaj zapre vir</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pritisk na gumb za nazaj vedno zapre aplikacijo namesto, da bi se pomaknila na vrh vira</string>

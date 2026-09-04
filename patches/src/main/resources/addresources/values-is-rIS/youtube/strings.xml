@@ -549,7 +549,6 @@ Til að laga þetta, skaltu virkja 'Fölsa vídeóstrauma' og breyta 'Sjálfgefi
   <string name="morphe_swipe_overlay_timeout_summary">Uppsetning lobni</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Gestur á lobni</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Stilltu gegnsærastegð (0 er gagnsætt, 100 er ógegnsætt)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Lobni þarf að vera á milli 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Lobni litur sveipa</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Stilltu litinn á birtastigs stjórntækjabálkinn</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Hljóðstyrkur litur sveipa</string>
@@ -558,7 +557,6 @@ Til að laga þetta, skaltu virkja 'Fölsa vídeóstrauma' og breyta 'Sjálfgefi
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Stilltu lit hraðatakkan á leitarstikunni</string>
   <string name="morphe_swipe_text_overlay_size_title">Stærð texta sveipa</string>
   <string name="morphe_swipe_text_overlay_size_summary">Stilltu stærð textans á skjánum (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Textastærðin verður að vera á milli 1-30</string>
   <string name="morphe_swipe_threshold_title">Markmið sveipa</string>
   <string name="morphe_swipe_threshold_summary">Stilltu nauðsynlegt stríðufjarlægð áður en stilling gerist</string>
   <string name="morphe_swipe_volume_sensitivity_title">Hljóðstyrk næmis sveipa</string>
@@ -762,6 +760,8 @@ Til þess að fá access til stillingarinnar skaltu koma á stillinguna í gegnu
   <string name="morphe_hide_fullscreen_button_title">Felur Fullskjástilling hnappinn</string>
   <string name="morphe_hide_player_control_buttons_background_title">Fela spilarstýri bakgrunn</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Felur dökkri skuggana um kringum vídeóspilara stjórntækin</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Ógagnsæi bakgrunns stjórnhnappa</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Stilltu ógagnsæi hringsins á bak við stjórnhnappa spilarans (0 er ósýnilegt, 100 er fullkomlega ógagnsætt)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Felur Fyrri &amp; Næsti hnappa</string>
   <string name="morphe_hide_settings_button_title">Felur Stillingar hnappinn</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -883,7 +883,6 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spilar murargyga </string>
   <string name="morphe_player_overlay_opacity_summary">Stilltu gegnsærastefnu (0 er gagnsætt, 100 er ógegnsætt)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Muragygð skal vera á bilinu 0-100 </string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Leitastika</string>
   <string name="morphe_searchbar_type_entry_disabled">Óvirk</string>
@@ -1002,7 +1001,6 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixel stærð verður að vera á milli %1$s og %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Yfirborðs opacité</string>
   <string name="morphe_miniplayer_opacity_summary">Stilltu gegnsæisstig (0 er gagnsætt, 100 er ógegnsær)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Opacité miniplayer yfirborðsins verður að vera á milli 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Til baka-hnappur fer út úr straumnum</string>
   <string name="morphe_back_button_always_exits_feed_summary">Að ýta á til baka fer alltaf út úr appinu í stað þess að skrilla upp efst í strauminn</string>

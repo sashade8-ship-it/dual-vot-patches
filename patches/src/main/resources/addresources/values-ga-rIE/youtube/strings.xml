@@ -551,7 +551,6 @@ Chun seo a shocrú, cas ar ‘Sruthanna físe bréige’ agus athraigh an ‘Cli
   <string name="morphe_swipe_overlay_timeout_summary">An méid milleasoicind atá an forleagan le feiceáil</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Teimhneacht chúlra forleagan svaidhpeála</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Coigeartaigh an leibhéal trédhearcachta (is é 0 trédhearcach, is é 100 teimhneach)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Teimhneacht svaidhpeála idir 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Dath gile forleagan svaidhpeála</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Socraigh dath an bharra dul chun cinn rialuithe gile</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Dath toirte forleagan svaidhpeála</string>
@@ -560,7 +559,6 @@ Chun seo a shocrú, cas ar ‘Sruthanna físe bréige’ agus athraigh an ‘Cli
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Socraigh dath an bharra dul chun cinn maidir le rialuithe luas athsheinm</string>
   <string name="morphe_swipe_text_overlay_size_title">Méid téacs forleagan svaidhpeála</string>
   <string name="morphe_swipe_text_overlay_size_summary">Coigeartaigh méid an téacs ar an scáileán (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Caithfidh méid an téacs a bheith idir 1-30</string>
   <string name="morphe_swipe_threshold_title">Tairseach méide svaidhpeála</string>
   <string name="morphe_swipe_threshold_summary">Socraigh an fad svaidhpeála riachtanach sula ngníomhaítear coigeartú</string>
   <string name="morphe_swipe_volume_sensitivity_title">Íogaireacht svaidhpeáil toirte</string>
@@ -766,6 +764,8 @@ Chun an roghchlár ‘Audio Track’ a thaispeáint, athraigh ‘Spoof video str
   <string name="morphe_hide_fullscreen_button_title">Folaigh an cnaipe Lánscáileáin</string>
   <string name="morphe_hide_player_control_buttons_background_title">Folaigh cúlra rialuithe an imreora</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Folaíonn sé an scáthú dorcha timpeall ar rialuithe an imreora físe</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Teimhneacht chúlra na gcnaipí rialaithe</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Coigeartaigh teimhneacht an chiorcail taobh thiar de na cnaipí rialaithe an tseinnteora (0 dofheicthe, 100 soladach)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Folaigh na cnaipí Roimhe Seo &amp; Ar Aghaidh</string>
   <string name="morphe_hide_settings_button_title">Cnaipe Folaigh Socruithe</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Socruithe → Athsheinm (nó Uathsheinm) → Uathsheinm an chéad fhíseán eile
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Teimhneacht fhorleagan imreora</string>
   <string name="morphe_player_overlay_opacity_summary">Coigeartaigh an leibhéal trédhearcachta (is é 0 trédhearcach, is é 100 teimhneach)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Teimhneacht fhorleagan an imreora idir 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Barra cuardaigh</string>
   <string name="morphe_searchbar_type_entry_disabled">Díchumasaithe</string>
@@ -1007,7 +1006,6 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_miniplayer_width_dip_invalid_toast">Ní mór méid na bpicteilíní a bheith idir %1$s agus %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Trédhearcacht forleagan</string>
   <string name="morphe_miniplayer_opacity_summary">Coigeartaigh an leibhéal trédhearcachta (is é 0 trédhearcach, is é 100 teimhneach)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Caithfidh teimhneacht forleagan mion-imreoir a bheith idir 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Fágann an cnaipe cúil as an bhfotha</string>
   <string name="morphe_back_button_always_exits_feed_summary">Má bhrúnn tú ar ais, fágtar an aip i gcónaí seachas scrollaigh go barr an fhotha</string>

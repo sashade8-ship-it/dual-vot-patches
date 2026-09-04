@@ -550,7 +550,6 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_swipe_overlay_timeout_summary">Số mili-giây mà lớp phủ hiển thị</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Độ mờ nền phủ vuốt</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Điều chỉnh độ trong suốt của lớp phủ (0 là trong suốt, 100 là mờ)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Độ mờ vuốt phải nằm trong khoảng từ 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Màu lớp phủ vuốt độ sáng</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Đặt màu cho thanh điều khiển độ sáng</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Màu lớp phủ vuốt âm lượng</string>
@@ -559,7 +558,6 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Đặt màu cho thanh chỉnh tốc độ phát</string>
   <string name="morphe_swipe_text_overlay_size_title">Kích thước văn bản lớp phủ vuốt</string>
   <string name="morphe_swipe_text_overlay_size_summary">Điều chỉnh kích thước văn bản trên màn hình (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Kích thước văn bản phải nằm trong khoảng 1-30</string>
   <string name="morphe_swipe_threshold_title">Độ rộng ngưỡng vuốt</string>
   <string name="morphe_swipe_threshold_summary">Đặt khoảng cách tối thiếu để vuốt có ý nghĩa</string>
   <string name="morphe_swipe_volume_sensitivity_title">Độ nhạy vuốt âm lượng</string>
@@ -765,6 +763,8 @@ Cần cung cấp \"Cookie phụ đề\""</string>
   <string name="morphe_hide_fullscreen_button_title">Ẩn nút Toàn màn hình</string>
   <string name="morphe_hide_player_control_buttons_background_title">Ẩn nền điều khiển trình phát</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Ẩn nền tối xung quanh các nút điều khiển trình phát video</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Độ mờ nền của các nút điều khiển</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Điều chỉnh độ mờ của vòng tròn phía sau các nút điều khiển trình phát (0 là vô hình, 100 là đặc)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Ẩn các nút Trước &amp; Tiếp theo</string>
   <string name="morphe_hide_settings_button_title">Ẩn nút Cài đặt</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -886,7 +886,6 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Độ mờ của lớp phủ trình phát</string>
   <string name="morphe_player_overlay_opacity_summary">Điều chỉnh độ trong suốt (0 là trong suốt, 100 là mờ)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Độ phủ mờ trình phát phải nằm giữa 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Thanh tìm kiếm</string>
   <string name="morphe_searchbar_type_entry_disabled">Đang tắt</string>
@@ -1006,7 +1005,6 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixel phải nằm giữa %1$s và %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Độ mờ lớp phủ</string>
   <string name="morphe_miniplayer_opacity_summary">Điều chỉnh độ trong suốt (0 là trong suốt, 100 là mờ)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Độ mờ lớp phủ phải nằm trong khoảng từ 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Nút quay lại thoát khỏi bảng tin</string>
   <string name="morphe_back_button_always_exits_feed_summary">Nhấn nút quay lại luôn thoát khỏi ứng dụng thay vì cuộn lên đầu bảng tin</string>

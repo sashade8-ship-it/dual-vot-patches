@@ -551,7 +551,6 @@ For at rette dette skal du slå 'Spoof video streams' til og skifte 'Standardkli
   <string name="morphe_swipe_overlay_timeout_summary">Antallet af millisekunder overlejringen er synlig</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Stryg baggrundsgennemsigtighed for overlejring</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Juster gennemsigtighedsniveauet (0 er gennemsigtigt, 100 er uigennemsigtigt)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Gennemsigtighed skal være mellem 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Stryg farven på lysstyrkeoverlejring</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Skjul \'Stop reklamer\'-knap</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Stryg farven på lydstyrkeoverlejring</string>
@@ -560,7 +559,6 @@ For at rette dette skal du slå 'Spoof video streams' til og skifte 'Standardkli
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Indstil farven på fremskridtslinjen for afspilningshastighedskontrollerne</string>
   <string name="morphe_swipe_text_overlay_size_title">Stryg tekststørrelse på overlejring</string>
   <string name="morphe_swipe_text_overlay_size_summary">Skjul Rapport knap</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Tekststørrelsen skal være mellem 1-30</string>
   <string name="morphe_swipe_threshold_title">Stryg størrelse tærskel</string>
   <string name="morphe_swipe_threshold_summary">Indstil den nødvendige strygedistance, før en justering udløses</string>
   <string name="morphe_swipe_volume_sensitivity_title">Lydstyrke strygefølsomhed</string>
@@ -885,7 +883,6 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spiller overlay gennemsigtighed</string>
   <string name="morphe_player_overlay_opacity_summary">Juster gennemsigtighedsniveauet (0 er gennemsigtigt, 100 er uigennemsigtigt)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Spiller overlay gennemsigtighed skal være mellem 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Søgefelt</string>
   <string name="morphe_searchbar_type_entry_disabled">Deaktiveret</string>
@@ -1005,7 +1002,6 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixel størrelse skal være mellem %1$s og %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Overlay uigennemsigtighed</string>
   <string name="morphe_miniplayer_opacity_summary">Juster gennemsigtighedsniveauet (0 er gennemsigtigt, 100 er uigennemsigtigt)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Miniplayer overlay gennemsigtighed skal være mellem 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tilbageknappen forlader feedet</string>
   <string name="morphe_back_button_always_exits_feed_summary">Tryk på tilbage afslutter altid appen i stedet for at rulle til toppen af feedet</string>

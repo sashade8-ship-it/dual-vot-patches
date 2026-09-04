@@ -553,7 +553,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_swipe_overlay_timeout_summary">오버레이가 표시되는 시간을 설정할 수 있습니다 (밀리초)</string>
   <string name="morphe_swipe_overlay_background_opacity_title">스와이프 오버레이 배경 불투명도</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">투명도를 설정할 수 있습니다 (0: 투명, 100: 불투명)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">스와이프 배경 불투명도 값은 0-100 사이여야 합니다</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">스와이프 오버레이 밝기 조절바 색상</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">밝기 조절 진행률 색상을 설정할 수 있습니다</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">스와이프 오버레이 볼륨 조절바 색상</string>
@@ -562,7 +561,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_swipe_overlay_progress_speed_color_summary">속도 조절 진행률 색상을 설정할 수 있습니다</string>
   <string name="morphe_swipe_text_overlay_size_title">스와이프 오버레이 텍스트 크기</string>
   <string name="morphe_swipe_text_overlay_size_summary">화면 텍스트 크기를 설정할 수 있습니다 (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">텍스트 크기는 1-30 사이여야 합니다</string>
   <string name="morphe_swipe_threshold_title">스와이프 한계치</string>
   <string name="morphe_swipe_threshold_summary">제스처 인식을 위해 얼마나 스와이프를 해야 할지를 설정할 수 있습니다</string>
   <string name="morphe_swipe_volume_sensitivity_title">볼륨 스와이프 민감도</string>
@@ -768,6 +766,8 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_hide_fullscreen_button_title">전체 화면 버튼 숨기기</string>
   <string name="morphe_hide_player_control_buttons_background_title">플레이어 컨트롤 버튼 배경 숨기기</string>
   <string name="morphe_hide_player_control_buttons_background_summary">동영상 플레이어 컨트롤 주변에서 어두운 음영을 숨깁니다</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">컨트롤 버튼 배경 투명도</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">플레이어 컨트롤 버튼 뒤에 있는 원의 투명도를 설정할 수 있습니다 (0: 투명, 100: 불투명)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">이전 &amp; 다음 버튼 숨기기</string>
   <string name="morphe_hide_settings_button_title">설정 버튼 숨기기</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -889,7 +889,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">플레이어 오버레이 불투명도</string>
   <string name="morphe_player_overlay_opacity_summary">투명도를 설정할 수 있습니다 (0: 투명, 100: 불투명)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">플레이어 오버레이 불투명도는 0-100 사이여야 합니다</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">검색창</string>
   <string name="morphe_searchbar_type_entry_disabled">사용 안함</string>
@@ -1009,7 +1008,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_miniplayer_width_dip_invalid_toast">픽셀 크기는 %1$s-%2$s 사이여야 합니다</string>
   <string name="morphe_miniplayer_opacity_title">미니 플레이어 오버레이 불투명도</string>
   <string name="morphe_miniplayer_opacity_summary">투명도를 설정할 수 있습니다 (0: 투명, 100: 불투명)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">미니 플레이어 오버레이 불투명도는 0-100 사이여야 합니다</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">뒤로가기 버튼으로 피드 나가기</string>
   <string name="morphe_back_button_always_exits_feed_summary">뒤로가기 버튼을 탭하면 피드 상단으로 이동하지 않고 항상 앱이 종료됩니다</string>

@@ -551,7 +551,6 @@ Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client pre
   <string name="morphe_swipe_overlay_timeout_summary">La visibilità in millisecondi della sovrapposizione</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Opacità sfondo dello scorrimento in sovrapposizione</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">L\'opacità di scorrimento deve essere tra 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Colore overlay durante scorrimento della luminosità</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Imposta il colore della barra di avanzamento dei controlli della luminosità</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Colore sovrapposizione durante scorrimento del volume</string>
@@ -560,7 +559,6 @@ Per risolvere il problema, attiva 'Maschera flussi video' e modifica 'Client pre
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Imposta il colore della barra di avanzamento dei controlli della velocità di riproduzione</string>
   <string name="morphe_swipe_text_overlay_size_title">Dimensione del testo dello scorrimento in sovrapposizione</string>
   <string name="morphe_swipe_text_overlay_size_summary">Regola la dimensione del testo sullo schermo (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">La dimensione del testo deve essere compresa tra 1 e 30</string>
   <string name="morphe_swipe_threshold_title">Ampiezza limite della soglia di scorrimento</string>
   <string name="morphe_swipe_threshold_summary">Imposta la distanza di scorrimento necessaria prima che venga attivata una regolazione</string>
   <string name="morphe_swipe_volume_sensitivity_title">Sensibilità allo scorrimento del volume</string>
@@ -766,6 +764,8 @@ Per mostrare il menu 'Audio Track', cambia 'Falsificazione dei flussi video' in 
   <string name="morphe_hide_fullscreen_button_title">Nascondi il pulsante Schermo intero</string>
   <string name="morphe_hide_player_control_buttons_background_title">Nascondi lo sfondo dei controlli del lettore</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Nasconde l\'ombreggiatura scura che circonda i controlli del lettore video</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Opacità dello sfondo dei pulsanti di controllo</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Regola l\'opacità del cerchio dietro i pulsanti di controllo del lettore (0 è invisibile, 100 è solido)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Nascondi i pulsanti Precedente e Successivo</string>
   <string name="morphe_hide_settings_button_title">Nascondi il pulsante Impostazioni</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacità sovrapposizione del lettore</string>
   <string name="morphe_player_overlay_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">L\'opacità della sovrapposizione del lettore deve essere compresa tra 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Barra di ricerca</string>
   <string name="morphe_searchbar_type_entry_disabled">Disattivato</string>
@@ -1007,7 +1006,6 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_miniplayer_width_dip_invalid_toast">La dimensione del pixel deve essere compresa tra %1$s e %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Opacità sovrapposizione</string>
   <string name="morphe_miniplayer_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">L\'opacità della sovrapposizione del lettore minimizzato deve essere compresa tra 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Il pulsante Indietro esce dal feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Premendo il pulsante Indietro si esce sempre dall\'app invece di scorrere fino all\'inizio del feed</string>

@@ -551,7 +551,6 @@ Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini aç ve 'Vars
   <string name="morphe_swipe_overlay_timeout_summary">Panelin görünür olduğu milisaniye miktarı</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Kaydırma paneli arka plan opaklığı</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Şeffaflık seviyesini ayarlayın (0 şeffaf, 100 opak)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Kaydırma opaklığı 0-100 arasında olmalıdır</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Kaydırma katmanı parlaklık rengi</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Parlaklık kontrolleri ilerleme çubuğunun rengini ayarlayın</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Kaydırma katmanı ses rengi</string>
@@ -560,7 +559,6 @@ Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini aç ve 'Vars
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Oynatma hızı kontrolleri ilerleme çubuğunun rengini ayarlayın</string>
   <string name="morphe_swipe_text_overlay_size_title">Kaydırma katmanı metin boyutu</string>
   <string name="morphe_swipe_text_overlay_size_summary">Ekrandaki metin boyutunu ayarlayın (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Metin boyutu 1-30 arasında olmalıdır</string>
   <string name="morphe_swipe_threshold_title">Kaydırma büyüklük eşiği</string>
   <string name="morphe_swipe_threshold_summary">Bir ayarlamanın tetiklenmesi için gerekli kaydırma mesafesini ayarlayın</string>
   <string name="morphe_swipe_volume_sensitivity_title">Ses kaydırma hassasiyeti</string>
@@ -766,6 +764,8 @@ Ayarlara erişmek için, Genel → Araç Çubuğu → Ayarları Göster yoluyla 
   <string name="morphe_hide_fullscreen_button_title">Tam ekran düğmesini gizle</string>
   <string name="morphe_hide_player_control_buttons_background_title">Oynatıcı kontrolleri arka planını gizle</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Video oynatıcı kontrollerinin etrafındaki koyu gölgelendirmeyi gizler</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Düğme arka plan opaklığı</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Oynatıcı düğmelerinin arkasındaki döngünün opaklığını ayarlayın (0 görünmez, 100 opak)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Önceki &amp; Sonraki düğmelerini gizle</string>
   <string name="morphe_hide_settings_button_title">Ayarlar düğmesini gizle</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Ayarlar → Oynatma (veya Otomatik Oynatma) → Sonraki videoyu otomatik oynat"<
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Oynatıcı katmanı opaklığı</string>
   <string name="morphe_player_overlay_opacity_summary">Şeffaflık düzeyini ayarlayın (0 şeffaf, 100 opak)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Oynatıcı katmanı opaklığı 0-100 arasında olmalıdır</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Arama çubuğu</string>
   <string name="morphe_searchbar_type_entry_disabled">Devre dışı</string>
@@ -1007,7 +1006,6 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_miniplayer_width_dip_invalid_toast">Piksel boyutu %1$s ve %2$s arasında olmalıdır</string>
   <string name="morphe_miniplayer_opacity_title">Katman opaklığı</string>
   <string name="morphe_miniplayer_opacity_summary">Oynatma katmanının şeffaflık düzeyini ayarlayın (0 şeffaf, 100 opak)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Mini oynatıcı katman opaklığı 0-100 arasında olmalıdır</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Geri düğmesi akıştan çıkar</string>
   <string name="morphe_back_button_always_exits_feed_summary">Geri tuşuna basmak, akışın en üstüne kaydırmak yerine her zaman uygulamadan çıkar.  This is a placeholder to ensure validity.</string>

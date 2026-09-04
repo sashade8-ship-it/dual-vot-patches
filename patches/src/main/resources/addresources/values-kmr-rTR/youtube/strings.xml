@@ -544,7 +544,6 @@ Ji bo çareserkirina vê, 'Sextekirina streamên vîdyoyê' çalak bike û 'clie
   <string name="morphe_swipe_overlay_timeout_summary">Zamanê ku pêşanda bilindtîrî jêre vêjre</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Bax de heya nimûne pêşanda sêwirana dûvekirî</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Astê guhartina ronahiyê (0 ronahiyê, 100 têvjîn)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Nimûne bax di nav 0-100 de be</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Rengê pêşanda sêwirana serdestkirî</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Rengê dîmeniya ronahiyê ronahiyê guherîne</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Rengê pêşanda sêwirana dengê</string>
@@ -553,7 +552,6 @@ Ji bo çareserkirina vê, 'Sextekirina streamên vîdyoyê' çalak bike û 'clie
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Rengê barek pêşdebirina kontrolên lezê yê saz bike</string>
   <string name="morphe_swipe_text_overlay_size_title">Mezinahiya nivîsa pêşanda</string>
   <string name="morphe_swipe_text_overlay_size_summary">Tevahiyê nivîsê li ser ekranê guherîne (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Qasî fontê divê di navbera 1-30 de be</string>
   <string name="morphe_swipe_threshold_title">Astê sêwirîna germê</string>
   <string name="morphe_swipe_threshold_summary">Mesafeya destgîrkirinê ji bo guhertina pêşniyarî</string>
   <string name="morphe_swipe_volume_sensitivity_title">Hêwêdayîya germê</string>
@@ -877,7 +875,6 @@ Settings → Playback (an Autoplay) → Autoplay next video"</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Şewitîya zeviyayê pêşandanê.</string>
   <string name="morphe_player_overlay_opacity_summary">Astê şeffafiyê bistîne (0 şeffaf e, 100 neşeffaf e)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Şewitîya zeviyayê pêşandanê divê di navbera 0-100an de be.</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Bara lêgerînê</string>
   <string name="morphe_searchbar_type_entry_disabled">Vemirandî</string>
@@ -981,7 +978,6 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <string name="morphe_miniplayer_width_dip_invalid_toast">Mezinahiya pîksele divê di navbera %1$s û %2$s de be</string>
   <string name="morphe_miniplayer_opacity_title">Astê dorpelê</string>
   <string name="morphe_miniplayer_opacity_summary">Rengê têkildar ê Sebarê</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Astê dorpelê yê dorpelê divê di navbera 0-100 de be</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Paşxaneya temaya ronî</string>

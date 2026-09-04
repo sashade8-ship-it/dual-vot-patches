@@ -551,7 +551,6 @@ Tämän korjaamiseksi, ota 'Väärennä videostriimeja' käyttöön ja vaihtaa '
   <string name="morphe_swipe_overlay_timeout_summary">Kuinka monta millisekuntia ikkuna on näkyvissä</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Pyyhkäisyn peittokuvan taustan läpinäkymättömyys</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Aseta äänenvoimakkuuden edistymispalkin väri</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Pyyhkäisyn läpinäkymättömyys oltava välillä 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Kirkkauspyyhkäisyn peittokuvan väri</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Säädä näytön tekstin kokoa (1-30)</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Äänenvoimakkuuspyyhkäisyn peittokuvan väri</string>
@@ -560,7 +559,6 @@ Tämän korjaamiseksi, ota 'Väärennä videostriimeja' käyttöön ja vaihtaa '
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Aseta toistonopeuden säätöjen edistymispalkin väri</string>
   <string name="morphe_swipe_text_overlay_size_title">Pyyhkäisyn peittokuvan tekstin koko</string>
   <string name="morphe_swipe_text_overlay_size_summary">Säädä, kuinka äänenvoimakkuus muuttuu pyyhkäisyn aikana</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Tekstin koon tulee olla välillä 1-30</string>
   <string name="morphe_swipe_threshold_title">Pyyhkäisyn kynnysraja</string>
   <string name="morphe_swipe_threshold_summary">Pyyhkäise koko näytön tilassa siirtyäksesi seuraavaan tai edelliseen videoon</string>
   <string name="morphe_swipe_volume_sensitivity_title">Äänenvoimakkuuspyyhkäisyn herkkyys</string>
@@ -766,6 +764,8 @@ Jos haluat näyttää ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetuk
   <string name="morphe_hide_fullscreen_button_title">Piilota kokoruutupainike</string>
   <string name="morphe_hide_player_control_buttons_background_title">Piilota soittimen ohjainten tausta</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Piilottaa tumman varjostuksen videotoiston säätimien ympäriltä</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Säätöpainikkeiden taustan läpinäkyvyys</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Säädä soittimen säätöpainikkeiden takana olevan ympyrän läpinäkyvyyttä (0 on näkymätön, 100 on kiinteä)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Piilota Edellinen ja Seuraava -painikkeeet</string>
   <string name="morphe_hide_settings_button_title">Piilota Asetukset-painike</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Soittimen peittokuvan läpinäkymättömyys</string>
   <string name="morphe_player_overlay_opacity_summary">Säädä läpinäkyvyys (0 on täysin läpinäkyvä, 100 on peittävä)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Soittimen peittokuvan läpinäkymättömyyden tulee olla 0–100 välillä</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Hakupalkki</string>
   <string name="morphe_searchbar_type_entry_disabled">Pois käytöstä</string>
@@ -1007,7 +1006,6 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pikselikoon tulee olla %1$s ja %2$s välillä</string>
   <string name="morphe_miniplayer_opacity_title">Peittokuvan läpinäkymättömyys</string>
   <string name="morphe_miniplayer_opacity_summary">Säädä läpinäkyvyys (0 on täysin läpinäkyvä, 100 on peittävä)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Minisoittimen peittokuvan läpinäkymättömyyden tulee olla 0–100 välillä</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Takaisin-painike sulkee syötteen</string>
   <string name="morphe_back_button_always_exits_feed_summary">Takaisin-painikkeen painaminen sulkee aina sovelluksen sen sijaan, että se vierittäisi syötteen alkuun</string>

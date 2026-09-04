@@ -551,7 +551,6 @@ For å fikse dette, slå på 'Forfalsk videostrømmer' og endre 'Standardklient'
   <string name="morphe_swipe_overlay_timeout_summary">Antall millisekunder overlegget er synlig</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Opasitet for bakgrunn til sveipeoverlegg</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Juster gjennomsiktighetsnivået (0 er gjennomsiktig, 100 er ugjennomsiktig)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Opasiteten må være mellom 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Farge for lysstyrkefremdrift i sveipeoverlegg</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Angi fargen på fremskrittslinjen for lysstyrkekontrollene</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Farge for volumfremdrift i sveipeoverlegg</string>
@@ -560,7 +559,6 @@ For å fikse dette, slå på 'Forfalsk videostrømmer' og endre 'Standardklient'
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Angi fargen på fremdriftslinjen for hastighetskontrollene for avspilling</string>
   <string name="morphe_swipe_text_overlay_size_title">Skriftstørrelse for sveipeoverlegg</string>
   <string name="morphe_swipe_text_overlay_size_summary">Juster størrelsen på teksten på skjermen (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Skriftstørrelsen må være mellom 1-30</string>
   <string name="morphe_swipe_threshold_title">Sveipmagnitudeterskel</string>
   <string name="morphe_swipe_threshold_summary">Angi den nødvendige svepeavstanden før en justering utløses</string>
   <string name="morphe_swipe_volume_sensitivity_title">Volumfølsomhet for sveip</string>
@@ -766,6 +764,8 @@ For å vise 'Audio Track'-menyen, endre 'Forfalsk videostrømmer' til en hvilken
   <string name="morphe_hide_fullscreen_button_title">Skjul Fullskjerm-knappen</string>
   <string name="morphe_hide_player_control_buttons_background_title">Skjul spillerkontrollbakgrunn</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Skjuler den mørke skyggeleggingen rundt videospillerkontrollene</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Bakgrunnsopasitet for kontrollknapper</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Juster opasiteten til sirkelen bak avspillerkontrollknappene (0 er usynlig, 100 er ugjennomsiktig)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Skjul Forrige &amp; Neste-knapper</string>
   <string name="morphe_hide_settings_button_title">Skjul Innstillinger-knappen</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Innstillinger → Avspilling (eller Autoplay) → Spill av neste video automatis
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spilleroverleggs opasitet</string>
   <string name="morphe_player_overlay_opacity_summary">Juster gjennomsiktighetsnivået (0 er gjennomsiktig, 100 er ugjennomsiktig)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Spilleroverleggs opasitet må være mellom 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Søkefelt</string>
   <string name="morphe_searchbar_type_entry_disabled">Deaktivert</string>
@@ -1007,7 +1006,6 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pikselstørrelsen må være mellom %1$s og %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Overlays opasitet</string>
   <string name="morphe_miniplayer_opacity_summary">Juster gjennomsiktighetsnivået (0 er gjennomsiktig, 100 er ugjennomsiktig)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Minispillerens overleggsopasitet må være mellom 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tilbake-knappen avslutter feeden</string>
   <string name="morphe_back_button_always_exits_feed_summary">Å trykke tilbake avslutter alltid appen i stedet for å rulle til toppen av feeden</string>

@@ -309,7 +309,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_timeout_summary">Времетраењето на прекривката во милисекунди</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Непроѕирност на позадина на прекривката</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Прилагодете ја транспарентноста (0 е транспарентно, 100 е непровидно)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Непроѕирноста мора да биде меѓу 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Боја на напредокот на прекривката за светлост</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Поставете ја бојата на лентата за напредок на контролите за осветленост</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Боја на напредокот на прекривката за јачина на звук</string>
@@ -318,7 +317,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Поставете ја бојата на лентата за напредок на контролите за брзина на репродукција</string>
   <string name="morphe_swipe_text_overlay_size_title">Големина на текстот на прекривката</string>
   <string name="morphe_swipe_text_overlay_size_summary">Прилагодете ја големината на текстот на екранот (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Големината на текстот мора да биде меѓу 1-30</string>
   <string name="morphe_swipe_threshold_title">Праг на гестот за повлекување</string>
   <string name="morphe_swipe_threshold_summary">Поставете ја потребната оддалеченост на кликнување пред да се активира прилагодувањето</string>
   <string name="morphe_swipe_volume_sensitivity_title">Осетливост на повлекување за јачина на звук</string>
@@ -608,7 +606,6 @@ Second \"item\" text"</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Непроѕирност на прекривката на плеер</string>
   <string name="morphe_player_overlay_opacity_summary">Прилагодете ја провидноста (0 е провидно, 100 е непровидно)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Непроѕирноста мора да биде меѓу 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_entry_disabled">Оневозможено</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
@@ -693,7 +690,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Големината на пикселите мора да биде помеѓу %1$s и %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Непровидност на наслагата</string>
   <string name="morphe_miniplayer_opacity_summary">Прилагодете ја транспарентноста (0 е транспарентно, 100 е непровидно)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Непровидноста на наслагата на мини-плеер мора да биде помеѓу 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_gradient_loading_screen_title">Вклучи анимиран екран за вчитување</string>

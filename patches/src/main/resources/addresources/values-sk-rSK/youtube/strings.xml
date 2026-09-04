@@ -551,7 +551,6 @@ Ak to chcete opraviť, zapnite 'Spoofovať video streamy' a zmeňte 'Predvolený
   <string name="morphe_swipe_overlay_timeout_summary">Dĺžka trvania zobrazenia prekryvu v milisekundách</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Priepustnosť pozadia prekryvu posúvania</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Upravte úroveň priehľadnosti (0 je priehľadná, 100 je nepriehľadná)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Priepustnosť posúvania musí byť medzi 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Farba pokroku prekryvu posúvania jasu</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Nastavte farbu ukazovateľa priebehu jasu</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Farba pokroku prekryvu posúvania hlasitosti</string>
@@ -560,7 +559,6 @@ Ak to chcete opraviť, zapnite 'Spoofovať video streamy' a zmeňte 'Predvolený
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Nastavte farbu ukazovateľa priebehu ovládania rýchlosti prehrávania</string>
   <string name="morphe_swipe_text_overlay_size_title">Veľkosť textu prekryvu posúvania</string>
   <string name="morphe_swipe_text_overlay_size_summary">Upravte veľkosť textu na obrazovke (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Veľkosť textu musí byť medzi 1-30</string>
   <string name="morphe_swipe_threshold_title">Prah posúvania</string>
   <string name="morphe_swipe_threshold_summary">Nastavte požadovanú vzdialenosť posúvania pred spustením úpravy</string>
   <string name="morphe_swipe_volume_sensitivity_title">Citlivosť ovládania hlasitosti posúvaním</string>
@@ -887,7 +885,6 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Priehľadnosť prekrytia prehrávača</string>
   <string name="morphe_player_overlay_opacity_summary">Upravte úroveň priehľadnosti (0 je priehľadná, 100 je nepriehľadná)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Hodnota priehľadnosti musí byť medzi 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Vyhľadávací panel</string>
   <string name="morphe_searchbar_type_entry_disabled">Vypnutý</string>
@@ -1006,7 +1003,6 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_miniplayer_width_dip_invalid_toast">Veľkosť v pixeloch musí byť medzi %1$s a %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Priehľadnosť prekrytia</string>
   <string name="morphe_miniplayer_opacity_summary">Upravte úroveň priehľadnosti (0 je priehľadná, 100 je nepriehľadná)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Priehľadnosť prekrytia miniplayer sa musí pohybovať medzi 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tlačidlo späť ukončí informačný kanál</string>
   <string name="morphe_back_button_always_exits_feed_summary">Stlačením tlačidla späť sa vždy ukončí aplikácia namiesto posúvania na začiatok informačného kanála</string>

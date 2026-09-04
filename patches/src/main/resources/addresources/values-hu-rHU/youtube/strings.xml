@@ -551,7 +551,6 @@ A javításhoz kapcsold be a 'Videóstreamek meghamisítása' opciót, és módo
   <string name="morphe_swipe_overlay_timeout_summary">Az átfedés láthatóságának időtartama ezredmásodpercben</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Az áthúzás átfedésének átlátszósága</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Állítsa be az átlátszóság szintjét (0 átlátszó, 100 opák)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">A csúsztatás átlátszóságának 0 és 100 között kell lennie</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">A húzással előhívható fedőréteg fényerejének színe</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Állítsa be a fényerő szabályozó progresszív sáv színét</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">A húzással előhívható fedőréteg hangerejének színe</string>
@@ -560,7 +559,6 @@ A javításhoz kapcsold be a 'Videóstreamek meghamisítása' opciót, és módo
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Állítsa be a lejátszási sebesség szabályozó sáv színét</string>
   <string name="morphe_swipe_text_overlay_size_title">Áthúzás fedvény szövegmérete</string>
   <string name="morphe_swipe_text_overlay_size_summary">Állítsa be a képernyőn megjelenő szöveg méretét (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">A szövegméretnek 1-30 között kell lennie</string>
   <string name="morphe_swipe_threshold_title">A csúsztatás küszöbértéke</string>
   <string name="morphe_swipe_threshold_summary">Állítsa be a szükséges gesztus távolságot, mielőtt a beállítás érvénybe lép</string>
   <string name="morphe_swipe_volume_sensitivity_title">Hangerő-görgetés érzékenysége</string>
@@ -766,6 +764,8 @@ Az 'Audio Track' menü megjelenítéséhez állítsa a 'Videóstream-ek megtéve
   <string name="morphe_hide_fullscreen_button_title">Teljes képernyős gomb elrejtése</string>
   <string name="morphe_hide_player_control_buttons_background_title">Lejátszóvezérlők hátterének elrejtése</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Rejtse el a sötét árnyékolást a videólejátszó vezérlőgombjai körül.</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Vezérlőgombok hátterének átlátszatlansága</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Állítsd be a lejátszó vezérlőgombjai mögötti kör átlátszatlanságát (0 = láthatatlan, 100 = átlátszatlan)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Elrejteni a \'Következő\' és \'Előző\' gombokat</string>
   <string name="morphe_hide_settings_button_title">Elrejteni a \'Beállítások\' gombot</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Lejátszó fedőrétegének átlátszatlansága</string>
   <string name="morphe_player_overlay_opacity_summary">Állítsa be az átlátszó szintet (0 átlátszó, 100 opák)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">A lejátszó fedvény átlátszatlanságának 0 és 100 között kell lennie</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Keresőmező. ,\"key\":\"morphe_searchbar_type_title\",\"context\":\"morphe_searchbar_type_title\nlayout.searchbar.wideSearchbarPatch\",\"maxLength\":null,\"terms\":[]}</string>
   <string name="morphe_searchbar_type_entry_disabled">Letiltva</string>
@@ -1007,7 +1006,6 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_miniplayer_width_dip_invalid_toast">A képpont méretének %1$s és %2$s között kell lennie</string>
   <string name="morphe_miniplayer_opacity_title">Átfedés átlátszósága</string>
   <string name="morphe_miniplayer_opacity_summary">Állítsa be az átlátszó szintet (0 átlátszó, 100 opák)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">A minilejátszó fedvény átlátszatlanságának 0 és 100 között kell lennie</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Kilépés a kezdőoldalról a vissza gombbal</string>
   <string name="morphe_back_button_always_exits_feed_summary">A vissza gomb megnyomása esetén kilép az alkalmazásból a kezdőoldal tetejére görgetés helyett</string>

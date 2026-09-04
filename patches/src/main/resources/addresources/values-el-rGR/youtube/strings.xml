@@ -551,7 +551,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_timeout_summary">Το χρονικό διάστημα χιλιοστών του δευτερολέπτου που είναι ορατό το πλαίσιο σάρωσης</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Αδιαφάνεια φόντου σάρωσης</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Ρυθμίστε το επίπεδο διαφάνειας (0 είναι διαφανές, 100 είναι αδιαφανές)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Η αδιαφάνεια σάρωσης πρέπει να είναι μεταξύ 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Χρώμα γραμμής σάρωσης για φωτεινότητα</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Απόκρυψη κουμπιού \"Σταμάτα διαφημίσεις\"</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Χρώμα γραμμής σάρωσης για ένταση ήχου</string>
@@ -560,7 +559,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Ορίστε το χρώμα της γραμμής προόδου για τα χειριστήρια ταχύτητας αναπαραγωγής</string>
   <string name="morphe_swipe_text_overlay_size_title">Μέγεθος κειμένου φόντου σάρωσης</string>
   <string name="morphe_swipe_text_overlay_size_summary">Προσαρμόστε το μέγεθος του κειμένου που εμφανίζεται στην οθόνη (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Το μέγεθος κειμένου πρέπει να είναι μεταξύ 1-30</string>
   <string name="morphe_swipe_threshold_title">Κατώτατο όριο μεγέθους σάρωσης</string>
   <string name="morphe_swipe_threshold_summary">Ορίστε την απαιτούμενη απόσταση μεταφοράς πριν ενεργοποιηθεί μια ρύθμιση</string>
   <string name="morphe_swipe_volume_sensitivity_title">Ευαισθησία σάρωσης έντασης ήχου</string>
@@ -766,6 +764,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_fullscreen_button_title">Κρύψτε το κουμπί \'Πλήρης οθόνη\'</string>
   <string name="morphe_hide_player_control_buttons_background_title">Φόντο κουμπιών ελέγχου οθόνης αναπαραγωγής</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Κρύβει την σκοτεινή σκίαση γύρω από τα στοιχεία ελέγχου του αναπαραγωγέα βίντεο</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Αδιαφάνεια φόντου κουμπιών ελέγχου</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Προσαρμόστε την αδιαφάνεια του κύκλου πίσω από τα κουμπιά ελέγχου του προγράμματος αναπαραγωγής (0 είναι αόρατο, 100 είναι πλήρως αδιαφανές)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Κουμπιά προηγούμενου &amp; επόμενου βίντεο</string>
   <string name="morphe_hide_settings_button_title">Κρύψτε το κουμπί \'Ρυθμίσεις\'</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Second \"item\" text"</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Αδιαφάνεια φόντου οθόνης αναπαραγωγής</string>
   <string name="morphe_player_overlay_opacity_summary">Ρυθμίστε το επίπεδο διαφάνειας (0 είναι διαφανές, 100 είναι αδιαφανές)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Η αδιαφάνεια φόντου οθόνης αναπαραγωγής πρέπει να είναι μεταξύ 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Γραμμή αναζήτησης</string>
   <string name="morphe_searchbar_type_entry_disabled">Απενεργοποιημένο</string>
@@ -992,7 +991,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Τα pixel πρέπει να είναι μεταξύ %1$s και %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Αδιαφάνεια φόντου παρασκηνίου</string>
   <string name="morphe_miniplayer_opacity_summary">Ρυθμίστε το επίπεδο διαφάνειας (0 είναι διαφανές, 100 είναι αδιαφανές)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Η αδιαφάνεια φόντου οθόνης αναπαραγωγής πρέπει να είναι μεταξύ 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Το κουμπί πίσω βγαίνει από τη ροή</string>
   <string name="morphe_back_button_always_exits_feed_summary">Πατώντας πίσω βγαίνετε πάντα από την εφαρμογή αντί να μεταφέρεστε στην κορυφή της ροής.</string>

@@ -551,7 +551,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_timeout_summary">Скільки мілісекунд спливаюча панель при жесті буде показуватися</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Затемнення фону панелі жесту</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Налаштовує рівень прозорості (0 це прозоро, 100 це непрозоро)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Значення затемнення панелі жесту має бути в межах від 0 до 100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Колір смуги прогресу яскравості</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Встановлює колір індикатора яскравості</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Колір смуги прогресу гучності</string>
@@ -560,7 +559,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Встановлює колір індикатора швидкості відтворення</string>
   <string name="morphe_swipe_text_overlay_size_title">Розмір тексту панелі жесту</string>
   <string name="morphe_swipe_text_overlay_size_summary">Налаштовує розміру тексту на екрані (від 1 до 30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Розмір тексту має бути від 1 до 30</string>
   <string name="morphe_swipe_threshold_title">Поріг величини жесту</string>
   <string name="morphe_swipe_threshold_summary">Встановлює мінімальну дистанцію свайпу для спрацювання</string>
   <string name="morphe_swipe_volume_sensitivity_title">Чутливість жесту гучності</string>
@@ -766,6 +764,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_fullscreen_button_title">Приховати кнопку \"Повний екран\"</string>
   <string name="morphe_hide_player_control_buttons_background_title">Приховати фон кнопок керування плеєром</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Приховує темне затемнення навколо елементів керування плеєром</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Прозорість фону кнопок керування</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Налаштуйте прозорість кола за кнопками керування плеєром (0 - невидиме, 100 - суцільне)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Приховати кнопки \"Попереднє\" та \"Наступне\"</string>
   <string name="morphe_hide_settings_button_title">Приховати кнопку \"Налаштування\"</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -886,7 +886,6 @@ Second \"item\" text"</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Затемнення плеєра при натисканні</string>
   <string name="morphe_player_overlay_opacity_summary">Налаштовує рівень прозорості (0 це прозоро, 100 це непрозоро)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Значення затемнення плеєра має бути в межах від 0 до 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Панель пошуку</string>
   <string name="morphe_searchbar_type_entry_disabled">Вимкнена</string>
@@ -1006,7 +1005,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Розмір у пікселях повинен бути від %1$s до %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Затемнення мініплеєра</string>
   <string name="morphe_miniplayer_opacity_summary">Налаштовує рівень прозорості (0 це прозоро, 100 це непрозоро)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Значення затемнення мініплеєра має бути від 0 до 100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Кнопка \"Назад\" виходить зі стрічки</string>
   <string name="morphe_back_button_always_exits_feed_summary">Натискання кнопки \"Назад\" завжди закриває застосунок замість прокручування до початку стрічки</string>

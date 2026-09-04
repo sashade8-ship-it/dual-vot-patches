@@ -551,7 +551,6 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_swipe_overlay_timeout_summary">Liczba milisekund, przez które nakładka jest widoczna</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Przezroczystość tła nakładki gestów</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Dostosuj poziom przezroczystości (0 to pełna przezroczystość, 100 to brak przezroczystości)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Przezroczystość nakładki musi wynosić 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Kolor wskaźnika jasności</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Ustaw kolor paska postępu dla regulacji jasności</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Kolor wskaźnika głośności</string>
@@ -560,7 +559,6 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Ustaw kolor paska postępu regulacji prędkości odtwarzania</string>
   <string name="morphe_swipe_text_overlay_size_title">Rozmiar tekstu nakładki gestów</string>
   <string name="morphe_swipe_text_overlay_size_summary">Dostosuj rozmiar tekstu wyświetlanego na ekranie (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Rozmiar tekstu musi wynosić 1-30</string>
   <string name="morphe_swipe_threshold_title">Próg aktywacji gestu</string>
   <string name="morphe_swipe_threshold_summary">Ustaw wymagany dystans przesunięcia palcem, zanim rozpocznie się regulacja</string>
   <string name="morphe_swipe_volume_sensitivity_title">Czułość gestu głośności</string>
@@ -766,6 +764,8 @@ Aby przejść do ustawień, włącz przycisk w menu: Ogólne → Pasek narzędzi
   <string name="morphe_hide_fullscreen_button_title">Ukryj przycisk Pełny ekran</string>
   <string name="morphe_hide_player_control_buttons_background_title">Ukryj tło przycisków w odtwarzaczu</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Ukrywa ciemne zacienienie wokół przycisków odtwarzacza</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Krycie tła przycisków sterowania</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Dostosuj krycie koła za przyciskami sterowania odtwarzacza (0 to niewidoczne, 100 to pełne krycie)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Ukryj przyciski Poprzedni i Następny</string>
   <string name="morphe_hide_settings_button_title">Ukryj przycisk Ustawienia</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -886,7 +886,6 @@ To ustawienie działa tylko wtedy, gdy autoodtwarzanie jest wyłączone. Możesz
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Przezroczystość nakładki odtwarzacza</string>
   <string name="morphe_player_overlay_opacity_summary">Dostosuj poziom przezroczystości (0 to pełna przezroczystość, 100 to brak przezroczystości)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Przezroczystość nakładki musi wynosić 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Pasek wyszukiwania</string>
   <string name="morphe_searchbar_type_entry_disabled">Wyłączony</string>
@@ -1006,7 +1005,6 @@ Ograniczenia: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_miniplayer_width_dip_invalid_toast">Rozmiar musi mieścić się w przedziale od %1$s do %2$s pikseli</string>
   <string name="morphe_miniplayer_opacity_title">Przezroczystość nakładki</string>
   <string name="morphe_miniplayer_opacity_summary">Dostosuj poziom przezroczystości (0 to pełna przezroczystość, 100 to brak przezroczystości)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Przezroczystość nakładki musi wynosić 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Przycisk wstecz zamyka kanał</string>
   <string name="morphe_back_button_always_exits_feed_summary">Naciśnięcie wstecz zawsze zamyka aplikację, zamiast przewijać na górę kanału</string>

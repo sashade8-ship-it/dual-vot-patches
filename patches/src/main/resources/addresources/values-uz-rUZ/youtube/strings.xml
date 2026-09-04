@@ -541,7 +541,6 @@ Buni tuzatish uchun, 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart mi
   <string name="morphe_swipe_overlay_timeout_summary">Qoplama necha millisekund davomida ko\'rsatilishi</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Sirt bilan surish qoplamasining fonini shaffoflik darajasi</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">On-ekrandagi matnning oʻlchamini sozlash (1–30)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Sirt bilan surish qoplamasining shaffofligi 0–100 oraligʻida boʻlishi kerak.</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Sirt bilan surish qoplamasining yorqinlik rangi</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Sozlash harakatini boshlash uchun talab qilinadigan surish masofasini sozlang</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Sirt bilan surish qoplamasining hajmi rangi</string>
@@ -550,7 +549,6 @@ Buni tuzatish uchun, 'Video oqimlarini soxtalashtirish'ni yoqing va 'Standart mi
   <string name="morphe_swipe_overlay_progress_speed_color_summary">O\'ynash tezligi boshqaruvlari progress bosqichlarining rangini belgilang</string>
   <string name="morphe_swipe_text_overlay_size_title">Sirt bilan surish qoplamasining matn hajmi</string>
   <string name="morphe_swipe_text_overlay_size_summary">On-ekrandagi matnning oʻlchamini sozlash (1–30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Matn hajmi 1-30 oralig\'ida bo\'lishi kerak</string>
   <string name="morphe_swipe_threshold_title">Sirt bilan surish harakatining chegarasi</string>
   <string name="morphe_swipe_threshold_summary">\'Yoqish\' va \'Obuna\' tugmalari ijodkor ularni aytganda porlamasligi</string>
   <string name="morphe_swipe_volume_sensitivity_title">Hajm bilan sirt bilan surish sezgirligi</string>
@@ -876,7 +874,6 @@ Sozlamalar → Oynatish (yoki Avtoijro) → Keyingi videoni avtomatik ravishda i
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Pleyer qoplamasining shaffofligi</string>
   <string name="morphe_player_overlay_opacity_summary">Pleyerdagi qoplama shaffofligini sozlash (0 shaffof, 100 toʻliq qorongʻi)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Pleyer qoplamasining shaffofligi 0–100 oraligʻida boʻlishi kerak.</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Qidiruv paneli</string>
   <string name="morphe_searchbar_type_entry_disabled">O\'chirilgan</string>
@@ -980,7 +977,6 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <string name="morphe_miniplayer_width_dip_invalid_toast">Sekbar panelining kengligi %1$s va %2$s orasida bo\'lishi kerak</string>
   <string name="morphe_miniplayer_opacity_title">Qoplama shaffofligi</string>
   <string name="morphe_miniplayer_opacity_summary">Shaffoflik darajasini sozlang (0 shaffof, 100 to\'liq qorong\'i)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Mini pleyer qoplamasining shaffofligi 0-100 orasida bo\'lishi kerak</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Orqaga tugmasi lentadan chiqadi</string>
   <string name="morphe_back_button_always_exits_feed_summary">Orqaga qaytarish tugmasini bosganda lenta tepasiga qaytarish o\'rniga har doim ilovadan chiqib ketiladi</string>

@@ -551,7 +551,6 @@ Promene uključuju:
   <string name="morphe_swipe_overlay_timeout_summary">Количина милисекунди у којој је покрет превлачења видљив</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Непрозирност позадине покрета превлачења</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Подесите ниво прозирности (0 је провидно, 100 је непровидно)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Непрозирност покрета превлачења мора бити између 0 и 100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Боја покрета превлачења за осветљеност</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Подесите боју траке за напредак контроле осветљености</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Боја покрета превлачења за јачину звука</string>
@@ -560,7 +559,6 @@ Promene uključuju:
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Подесите боју траке напретка контрола брзине репродукције</string>
   <string name="morphe_swipe_text_overlay_size_title">Величина текста покрета превлачења</string>
   <string name="morphe_swipe_text_overlay_size_summary">Подесите величину текста на екрану (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Величина текста мора бити између 1 и 30</string>
   <string name="morphe_swipe_threshold_title">Праг трајања превлачења</string>
   <string name="morphe_swipe_threshold_summary">Подесите потребну удаљеност превлачења пре него што се покрене подешавање</string>
   <string name="morphe_swipe_volume_sensitivity_title">Осетљивост превлачења за јачину звука</string>
@@ -885,7 +883,6 @@ Promene uključuju:
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Непрозирност преклопа плејера</string>
   <string name="morphe_player_overlay_opacity_summary">Прилагодите ниво провидности (0 је провидно, 100 је непровидно)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Непрозирност преклопа плејера мора бити између 0 и 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Трака за претрагу</string>
   <string name="morphe_searchbar_type_entry_disabled">Онемогућен</string>
@@ -990,7 +987,6 @@ Promene uključuju:
   <string name="morphe_miniplayer_width_dip_invalid_toast">Величина пиксела мора бити између %1$s и %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Непрозирност преклопа</string>
   <string name="morphe_miniplayer_opacity_summary">Прилагодите ниво провидности (0 је провидно, 100 је непровидно)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Непрозирност преклопа мини-плејера мора бити између 0 и 100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Дугме назад излази из фида</string>
   <string name="morphe_back_button_always_exits_feed_summary">Притискање назад увек излази из апликације уместо да се помера на врх фида</string>

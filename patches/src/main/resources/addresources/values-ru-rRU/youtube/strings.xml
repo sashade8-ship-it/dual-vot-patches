@@ -553,7 +553,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_timeout_summary">Количество миллисекунд для показа всплывающей панели при жестах</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Затемнение фона панели жестов</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Отрегулируйте уровень прозрачности наложения (0 — прозрачный, 100 — непрозрачный)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Значение затемнения панели жестов должно быть от 0 до 100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Цвет индикатора яркости при жестах</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Установите цвет индикатора выполнения управления яркостью</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Цвет индикатора громкости при жестах</string>
@@ -562,7 +561,6 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Установите цвет индикатора прогресса управления скоростью воспроизведения</string>
   <string name="morphe_swipe_text_overlay_size_title">Размер текста панели жестов</string>
   <string name="morphe_swipe_text_overlay_size_summary">Отрегулируйте размер текста на экране (от 1 до 30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Размер текста должен быть в диапазоне от 1 до 30</string>
   <string name="morphe_swipe_threshold_title">Порог величины жеста</string>
   <string name="morphe_swipe_threshold_summary">Установите необходимое расстояние смахивания перед срабатыванием регулировки</string>
   <string name="morphe_swipe_volume_sensitivity_title">Чувствительность жеста регулировки громкости</string>
@@ -768,6 +766,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_fullscreen_button_title">Скрыть кнопку \"Полный экран\"</string>
   <string name="morphe_hide_player_control_buttons_background_title">Скрыть фон кнопок управления плеера</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Скрывает темное затенение вокруг элементов управления видеоплеером</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Непрозрачность фона кнопок управления</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Отрегулируйте непрозрачность круга за кнопками управления плеером (0 — невидимый, 100 — непрозрачный)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Скрыть кнопки предыдущего и следующего видео</string>
   <string name="morphe_hide_settings_button_title">Скрыть кнопку \"Настройки\"</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -889,7 +889,6 @@ Second \"item\" text"</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Затемнение плеера при нажатии</string>
   <string name="morphe_player_overlay_opacity_summary">Настройте уровень прозрачности (0 — прозрачный, 100 — непрозрачный)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Значение затемнения плеера должно быть от 0 до 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Строка поиска</string>
   <string name="morphe_searchbar_type_entry_disabled">Выключено</string>
@@ -1009,7 +1008,6 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Размер в пикселях должен быть между %1$s и %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Затемнение миниплеера при нажатии</string>
   <string name="morphe_miniplayer_opacity_summary">Настройте уровень прозрачности (0 — прозрачный, 100 — непрозрачный)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Значение затемнения миниплеера должно быть от 0 до 100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Кнопка «Назад» выходит из ленты</string>
   <string name="morphe_back_button_always_exits_feed_summary">Нажатие кнопки «Назад» всегда выходит из приложения вместо прокрутки к началу ленты</string>

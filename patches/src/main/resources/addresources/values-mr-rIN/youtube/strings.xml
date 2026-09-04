@@ -519,7 +519,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_swipe_overlay_timeout_summary">ओव्हरले किती मिलीसेकंद दृश्यमान आहे</string>
   <string name="morphe_swipe_overlay_background_opacity_title">स्वाइप ओव्हरले पार्श्वभूमी अस्पष्टता</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">ऑन-स्क्रीन मजकूराचा आकार समायोजित करा (1-30)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">स्वाइप अस्पष्टता 0-100 दरम्यान असणे आवश्यक आहे</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">स्वाइप ओव्हरले रंग</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">ऍडजस्टमेंट ट्रिगर होण्यापूर्वी आवश्यक स्वाइप अंतर सेट करा</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">स्वाइप ओव्हरले व्हॉल्यूम रंग</string>
@@ -528,7 +527,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_swipe_overlay_progress_speed_color_summary">प्लेबॅक वेग नियंत्रण प्रगती बारचा रंग सेट करा</string>
   <string name="morphe_swipe_text_overlay_size_title">स्वाइप ओव्हरले मजकूर आकार</string>
   <string name="morphe_swipe_text_overlay_size_summary">पुढील किंवा मागील व्हिडिओवर जाण्यासाठी फुलस्क्रीन मोडमध्ये स्वाइप करा</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">मजकूर आकार 1-30 दरम्यान असणे आवश्यक आहे</string>
   <string name="morphe_swipe_threshold_title">स्वाइप परिमाण थ्रेशोल्ड</string>
   <string name="morphe_swipe_threshold_summary">तळाच्या नेव्हिगेशन बारमध्ये कोणते बटण दिसतात ते निवडा</string>
   <string name="morphe_swipe_volume_sensitivity_title">व्हॉल्यूम स्वॅप संवेदनशीलता</string>
@@ -840,7 +838,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">प्लेअर ओव्हरले अपारदर्शकता</string>
   <string name="morphe_player_overlay_opacity_summary">ओव्हरले (Overlay) पातळी समायोजित करा (0 म्हणजे पारदर्शक, 100 म्हणजे अपारदर्शक)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">प्लेअर ओव्हरले अपारदर्शकता 0-100 दरम्यान असावी</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
@@ -938,7 +935,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_miniplayer_width_dip_invalid_toast">पिक्सेल आकार %1$s आणि %2$s दरम्यान असणे आवश्यक आहे</string>
   <string name="morphe_miniplayer_opacity_title">ओव्हरले अपारदर्शकता</string>
   <string name="morphe_miniplayer_opacity_summary">ओव्हरले (Overlay) पातळी समायोजित (Adjust) करा (0 म्हणजे पारदर्शक, 100 म्हणजे अपारदर्शक)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">मिनीप्लेअर ओव्हरले अपारदर्शकता 0-100 दरम्यान असणे आवश्यक आहे</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">लाइट थीम पार्श्वभूमी</string>

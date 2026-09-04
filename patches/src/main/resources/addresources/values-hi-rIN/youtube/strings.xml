@@ -551,7 +551,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_swipe_overlay_timeout_summary">ओवरले कोटि के मिलिसೆन्ड्स के लिए दृश्यमान होना</string>
   <string name="morphe_swipe_overlay_background_opacity_title">स्लाइड ओवरलेय बैकग्राउंड ऑपैकसीटी</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">ओवरले पृष्ठभूमि की पारदर्शिता स्तर को समायोजित करें (0 पारदर्शी है, 100 अपारदर्शी है)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">अपारदर्शकता का मान 0-100 के बीच होना चाहिए</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">ओवरलेय ब्राइटनेस कलर स्वाइप करें</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">चमक नियंत्रण प्रगति बार का रंग सेट करें</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">ओवरलेय वॉल्यूम कलर स्वाइप करें</string>
@@ -560,7 +559,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_swipe_overlay_progress_speed_color_summary">प्लेबैक स्पीड कंट्रोल के प्रोग्रेस बार का रंग सेट करें</string>
   <string name="morphe_swipe_text_overlay_size_title">ओवरलेयर स्वाइप टेक्स्ट साइज़</string>
   <string name="morphe_swipe_text_overlay_size_summary">ऑन-स्क्रीन टेक्स्ट के आकार को समायोजित करें (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">टेक्स्ट साइज़ 1-30 के बीच होनी चाहिए</string>
   <string name="morphe_swipe_threshold_title">स्वाइप मात्रा सीमा</string>
   <string name="morphe_swipe_threshold_summary">समायोजन को ट्रिगर करने से पहले आवश्यक स्वाइप दूरी सेट करें</string>
   <string name="morphe_swipe_volume_sensitivity_title"> Volume स्वाइप संवेदनशीलता</string>
@@ -766,6 +764,8 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_hide_fullscreen_button_title">फुलस्क्रीन बटन छुपाएं</string>
   <string name="morphe_hide_player_control_buttons_background_title">प्लेयर नियंत्रण पृष्ठभूमि छिपाएं</string>
   <string name="morphe_hide_player_control_buttons_background_summary">वीडियो प्लेयर नियंत्रणों के चारों ओर डार्क शेडिंग छुपाता है</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">नियंत्रण बटनों की पृष्ठभूमि अपारदर्शिता</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">खिलाड़ी नियंत्रण बटनों के पीछे के वृत्त की अपारदर्शिता समायोजित करें (0 अदृश्य है, 100 ठोस है)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">पिछले और अगले बटन छुपाएं</string>
   <string name="morphe_hide_settings_button_title">सेटिंग्स बटन छुपाएं</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">प्लेयर ओवरले अस्पष्टता</string>
   <string name="morphe_player_overlay_opacity_summary">ओवरले पारदर्शिता स्तर समायोजित करें (0 पारदर्शी है, 100 अपारदर्शी है)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">प्लेयर ओवरले अस्पष्टता 0-100 के बीच होनी चाहिए</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">खोज बार</string>
   <string name="morphe_searchbar_type_entry_disabled">अक्षम</string>
@@ -1007,7 +1006,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_miniplayer_width_dip_invalid_toast">पिक्सेल आकार %1$s और %2$s के बीच होना चाहिए</string>
   <string name="morphe_miniplayer_opacity_title">ओवरले अस्पष्टता</string>
   <string name="morphe_miniplayer_opacity_summary">ओवरले पारदर्शिता स्तर समायोजित करें (0 पारदर्शी है, 100 अपारदर्शी है)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">मिनीप्लेयर ओवरले अस्पष्टता 0-100 के बीच होनी चाहिए</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">बैक बटन फ़ीड से बाहर निकलता है</string>
   <string name="morphe_back_button_always_exits_feed_summary">बैक दबाने से हमेशा ऐप से बाहर निकलता है, फ़ीड के शीर्ष पर स्क्रॉल करने के बजाय</string>

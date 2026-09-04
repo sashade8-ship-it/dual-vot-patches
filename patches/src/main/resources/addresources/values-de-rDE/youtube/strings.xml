@@ -552,7 +552,6 @@ Um das zu beheben, aktiviere 'Video-Streams vortäuschen' und stelle den 'Standa
   <string name="morphe_swipe_overlay_timeout_summary">Anzeigedauer der Gestenüberlagerung in Millisekunden</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Deckkraft des Gesten-Overlay-Hintergrunds</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Passt die Deckkraft an (0 ist transparent, 100 ist undurchsichtig)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Die Deckkraft muss zwischen 0 und 100 liegen</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Akzentfarbe Helligkeitsregler</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Die Farbe des Helligkeitsreglers im Overlay der Gestensteuerung</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Akzentfarbe Lautstärkeregler</string>
@@ -561,7 +560,6 @@ Um das zu beheben, aktiviere 'Video-Streams vortäuschen' und stelle den 'Standa
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Die Farbe der Geschwindigkeitsanzeige im Overlay der Gestensteuerung</string>
   <string name="morphe_swipe_text_overlay_size_title">Textgröße Gesten-Overlays</string>
   <string name="morphe_swipe_text_overlay_size_summary">Passt die Größe auf dem Bildschirm an (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Die Textgröße muss zwischen 1 und 30 liegen</string>
   <string name="morphe_swipe_threshold_title">Wischgrößenschwelle</string>
   <string name="morphe_swipe_threshold_summary">Legen Sie die erforderliche Wischdistanz fest, bevor eine Anpassung ausgelöst wird</string>
   <string name="morphe_swipe_volume_sensitivity_title">Empfindlichkeit der Lautstärken-Gestensteuerung</string>
@@ -767,6 +765,8 @@ Um das Menü anzuzeigen, ändern Sie \"Video-Streams fälschen\" in einen belieb
   <string name="morphe_hide_fullscreen_button_title">Vollbild-Schaltfläche ausblenden</string>
   <string name="morphe_hide_player_control_buttons_background_title">Hintergrund der Player-Steuerelemente ausblenden</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Verbirgt die dunkle Schattierung um die Steuerungselemente des Videoplayers</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Hintergrundtransparenz der Steuertasten</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Hintergrundtransparenz der Steuertasten</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Vorherige &amp; Nächste Tasten ausblenden</string>
   <string name="morphe_hide_settings_button_title">Schaltfläche „Einstellungen“ ausblenden</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -888,7 +888,6 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spieler-Überlagerung Deckkraft</string>
   <string name="morphe_player_overlay_opacity_summary">Passen Sie die Transparenz an (0 ist transparent, 100 ist opak)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Die Overlay-Deckkraft muss zwischen 0-100 liegen</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Suche</string>
   <string name="morphe_searchbar_type_entry_disabled">Deaktiviert</string>
@@ -1008,7 +1007,6 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixelgröße muss zwischen %1$s und %2$s liegen</string>
   <string name="morphe_miniplayer_opacity_title">Deckkraft der Überlagerung</string>
   <string name="morphe_miniplayer_opacity_summary">Passen Sie die Transparenz an (0 ist transparent, 100 ist opak)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Miniplayer-Overlay-Deckkraft muss zwischen 0-100 liegen</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Zurück-Taste verlässt den Feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Durch Drücken der Zurück-Taste wird die App immer beendet, anstatt zum Anfang des Feeds zu scrollen.</string>

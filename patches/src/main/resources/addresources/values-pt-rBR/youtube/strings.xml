@@ -550,7 +550,6 @@ Para corrigir isso, ative 'Simular streams de vídeo' e altere o 'Cliente padrã
   <string name="morphe_swipe_overlay_timeout_summary">A quantidade de milissegundos em que a sobreposição é visível</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Opacidade do plano de fundo de sobreposição de deslize</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Ajuste o nível de transparência (0 é transparente, 100 é opaco)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">A opacidade do deslizar deve estar entre 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Cor da barra de brilho da sobreposição de deslize</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Definir a cor da barra de progresso dos controles de brilho</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Cor da barra de volume da sobreposição de deslize</string>
@@ -559,7 +558,6 @@ Para corrigir isso, ative 'Simular streams de vídeo' e altere o 'Cliente padrã
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Defina a cor da barra de progresso dos controles de velocidade de reprodução</string>
   <string name="morphe_swipe_text_overlay_size_title">Tamanho do texto da sobreposição de deslize</string>
   <string name="morphe_swipe_text_overlay_size_summary">Ajuste o tamanho do texto na tela (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">O tamanho do texto deve estar entre 1 e 30</string>
   <string name="morphe_swipe_threshold_title">Limiar distância no gesto</string>
   <string name="morphe_swipe_threshold_summary">Defina a distância de deslize necessária antes que um ajuste seja acionado</string>
   <string name="morphe_swipe_volume_sensitivity_title">Sensibilidade ao deslizar o volume</string>
@@ -765,6 +763,8 @@ Para mostrar o menu 'Faixa de áudio', altere 'Simular streams de vídeo' para q
   <string name="morphe_hide_fullscreen_button_title">Ocultar botão Tela cheia</string>
   <string name="morphe_hide_player_control_buttons_background_title">Ocultar plano de fundo dos controles do player</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Oculta o sombreamento escuro ao redor dos controles do player de vídeo</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Opacidade do fundo dos botões de controle</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Ajuste a opacidade do círculo atrás dos controles do player (0 é invisível, 100 é opaco)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Ocultar botões Anterior e Próximo</string>
   <string name="morphe_hide_settings_button_title">Ocultar botão Configurações</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -886,7 +886,6 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacidade do player</string>
   <string name="morphe_player_overlay_opacity_summary">Ajuste o nível de transparência (0 é transparente, 100 é opaco)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Opacidade do reprodutor deve estar entre 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Barra de pesquisa</string>
   <string name="morphe_searchbar_type_entry_disabled">Desativado</string>
@@ -1006,7 +1005,6 @@ Limitação: Se 'Restaurar barra de ações de vídeo antiga' estiver desativado
   <string name="morphe_miniplayer_width_dip_invalid_toast">O tamanho do pixel deve estar entre %1$s e %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Opacidade de sobreposição</string>
   <string name="morphe_miniplayer_opacity_summary">Ajuste o nível de transparência (0 é transparente, 100 é opaco)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Opacidade da sobreposição de miniplayer deve estar entre 0-100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Botão Voltar sai do feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pressionar voltar sempre sai do aplicativo em vez de rolar até o topo do feed</string>

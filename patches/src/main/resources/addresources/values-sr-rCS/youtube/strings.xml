@@ -551,7 +551,6 @@ Da biste to popravili, uključite opciju „Lažiranje video tokova“ i promeni
   <string name="morphe_swipe_overlay_timeout_summary">Količina milisekundi u kojoj je pokret prevlačenja vidljiv</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Neprozirnost pozadine pokreta prevlačenja</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Podesite nivo transparentnosti (0 je transparentno, 100 je neprozirno)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Neprozirnost pokreta prevlačenja mora biti između 0 i 100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Boja pokreta prevlačenja za osvetljenost</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Podesite boju trake napretka kontrole osvetljenosti</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Boja pokreta prevlačenja za jačinu zvuka</string>
@@ -560,7 +559,6 @@ Da biste to popravili, uključite opciju „Lažiranje video tokova“ i promeni
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Podesite boju trake napretka za kontrole brzine reprodukcije</string>
   <string name="morphe_swipe_text_overlay_size_title">Veličina teksta pokreta prevlačenja</string>
   <string name="morphe_swipe_text_overlay_size_summary">Podesite veličinu teksta na ekranu (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Veličina teksta mora biti između 1 i 30</string>
   <string name="morphe_swipe_threshold_title">Prag trajanja prevlačenja</string>
   <string name="morphe_swipe_threshold_summary">Podesite potrebnu udaljenost prevlačenja pre nego što se aktivira podešavanje</string>
   <string name="morphe_swipe_volume_sensitivity_title">Osetljivost prevlačenja za jačinu zvuka</string>
@@ -766,6 +764,8 @@ Da biste prikazali meni 'Audio Track', promenite 'Spoofovanje video tokova' na b
   <string name="morphe_hide_fullscreen_button_title">Sakrij dugme „Puni ekran”</string>
   <string name="morphe_hide_player_control_buttons_background_title">Sakrij pozadinu kontrola plejera</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Sakriva tamnu senku oko kontrolnih dugmadi plejera</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Neprozirnost pozadine kontrolnih dugmadi</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Podesite neprozirnost kruga iza dugmadi za kontrolu plejera (0 je nevidljivo, 100 je potpuno neprozirno)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Sakrij dugmad „Prethodni” i „Sledeći”</string>
   <string name="morphe_hide_settings_button_title">Sakrij dugme „Podešavanja”</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Neprozirnost preklopa plejera</string>
   <string name="morphe_player_overlay_opacity_summary">Podesi nivo prozirnosti (0 je providno, 100 je neprovidno)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Neprozirnost preklopa plejera mora biti između 0 i 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Traka za pretragu</string>
   <string name="morphe_searchbar_type_entry_disabled">Onemogućen</string>
@@ -1007,7 +1006,6 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_miniplayer_width_dip_invalid_toast">Veličina piksela mora biti između %1$s i %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Neprozirnost preklopa</string>
   <string name="morphe_miniplayer_opacity_summary">Podesi nivo prozirnosti (0 je prozirno, 100 je neprovidno)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Neprozirnost preklopa mini-plejera mora biti između 0 i 100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Dugme za nazad izlazi iz feed-a</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pritiskanje nazad uvek izlazi iz aplikacije umesto da skrolujete do vrha feed-a</string>

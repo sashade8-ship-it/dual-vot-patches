@@ -553,7 +553,6 @@ Kako biste to popravili, uključite \"Lažiranje video streamova\" i promijenite
   <string name="morphe_swipe_overlay_timeout_summary">Trajanje popisa je u milisekundi</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Trajanje popisa pozadnog zaslona</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Prilagodite razinu prozirnosti (0 je prozirno, 100 je neprozirno)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Vrijednost popisa pozadnog zaslona mora biti između 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Trajanje popisa jakosti</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Postavite boju trake napretka za upravljanje svjetlinom</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Trajanje popisa visine</string>
@@ -562,7 +561,6 @@ Kako biste to popravili, uključite \"Lažiranje video streamova\" i promijenite
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Postavite boju trake napretka za kontrole brzine reprodukcije</string>
   <string name="morphe_swipe_text_overlay_size_title">Vrijednost popisa visine mora biti između 1-30</string>
   <string name="morphe_swipe_text_overlay_size_summary">Prilagodite veličinu teksta na zaslonu (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Trajanje popisa visine je nevaže između 1-30</string>
   <string name="morphe_swipe_threshold_title">Trajanje popisa jakosti</string>
   <string name="morphe_swipe_threshold_summary">Postavite potrebnu udaljenost povlačenja prije nego što se aktivira prilagodba</string>
   <string name="morphe_swipe_volume_sensitivity_title">Vrijednost popisa jakosti</string>
@@ -768,6 +766,8 @@ Da biste prikazali izbornik audio zapisa, promijenite 'Parodija video streamova'
   <string name="morphe_hide_fullscreen_button_title">Sakrij gumb Pun zaslon</string>
   <string name="morphe_hide_player_control_buttons_background_title">Tipka za Cast je skrivena</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Skriva tamno sjenčanje oko kontrola video playera</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Neprozirnost pozadine kontrolnih gumba</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Prilagodite neprozirnost kruga iza kontrolnih gumba playera (0 je nevidljivo, 100 je potpuno neprozirno)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Sakrij gumbove Prethodni &amp; Sljedeći</string>
   <string name="morphe_hide_settings_button_title">Sakrij gumb Postavke</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -889,7 +889,6 @@ Postavke $\rightarrow$ Reprodukcija (ili Automatsko reproduciranje) $\rightarrow
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Prikaži dugmice za zvuk</string>
   <string name="morphe_player_overlay_opacity_summary">Prilagodite razinu prozirnosti (0 je prozirno, 100 je neprozirno)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Vrijednost opacnosti mora biti između 0-100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Traka za pretraživanje</string>
   <string name="morphe_searchbar_type_entry_disabled">Onemogućeno</string>
@@ -1009,7 +1008,6 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_miniplayer_width_dip_invalid_toast">Veličina piksela mora biti između %1$s i %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Inicijalna veličina</string>
   <string name="morphe_miniplayer_opacity_summary">Prilagodite razinu prozirnosti (0 je prozirno, 100 je neprozirno)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Veličina miniplayera mora biti između %1$s i %2$s</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Gumb natrag izlazi iz feeda</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pritiskanje gumba natrag uvijek izlazi iz aplikacije umjesto pomicanja na vrh feeda</string>

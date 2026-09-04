@@ -551,7 +551,6 @@ Para maayos ito, i-on ang 'Pag-spoof ng mga video stream' at palitan ang 'Defaul
   <string name="morphe_swipe_overlay_timeout_summary">Ang dami ng miliseconds na nakikita ang overlay</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Opacity ng background ng swipe overlay</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Ayusin ang antas ng transparency (0 ay transparent, 100 ay opaque)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Ang opacity ay dapat nasa pagitan ng 0-100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Kulay ng kaliwanagan ng swipe overlay</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Itakda ang kulay ng progress bar ng mga kontrol ng liwanag</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Kulay ng swipe overlay volume</string>
@@ -560,7 +559,6 @@ Para maayos ito, i-on ang 'Pag-spoof ng mga video stream' at palitan ang 'Defaul
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Itakda ang kulay ng progress bar ng mga kontrol sa bilis ng pagpapalabas</string>
   <string name="morphe_swipe_text_overlay_size_title">Laki ng teksto ng swipe overlay</string>
   <string name="morphe_swipe_text_overlay_size_summary">Ayusin ang laki ng text sa screen (1-30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Ang laki ng teksto ay dapat nasa pagitan ng 1-30</string>
   <string name="morphe_swipe_threshold_title">Threshold ng swipe magnitude</string>
   <string name="morphe_swipe_threshold_summary">Itakda ang kinakailangang distansya ng swipe bago ma-trigger ang isang pagsasaayos</string>
   <string name="morphe_swipe_volume_sensitivity_title">Sensitivity ng swipe volume</string>
@@ -764,6 +762,8 @@ Upang ma-access ang Settings, i-enable ang Settings button sa pamamagitan ng Gen
   <string name="morphe_hide_fullscreen_button_title">Itago ang Fullscreen button</string>
   <string name="morphe_hide_player_control_buttons_background_title">Itago ang background ng player controls</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Tinatakpan ang madilim na anino sa paligid ng mga kontrol ng video player</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Opacity ng background ng mga control button</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Ayusin ang opacity ng bilog sa likod ng mga control button ng player (0 ay transparent, 100 ay opaque)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Itago ang Previous at Next na mga button</string>
   <string name="morphe_hide_settings_button_title">Itago ang Settings button</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -885,7 +885,6 @@ Mga Setting → Playback (o Autoplay) → Autoplay ng susunod na video."</string
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacity ng overlay ng player</string>
   <string name="morphe_player_overlay_opacity_summary">Ayusin ang antas ng transparency (0 ay transparent, 100 ay opaque)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Dapat nasa pagitan ng 0-100 ang opacity ng overlay ng player</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Bar ng paghahanap</string>
   <string name="morphe_searchbar_type_entry_disabled">Nakapatay</string>
@@ -1005,7 +1004,6 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <string name="morphe_miniplayer_width_dip_invalid_toast">Dapat nasa pagitan ng %1$s at %2$s ang sukat ng pixel</string>
   <string name="morphe_miniplayer_opacity_title">Opasidad ng overlay</string>
   <string name="morphe_miniplayer_opacity_summary">Ayusin ang antas ng transparency (0 ay transparent, 100 ay opaque)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Dapat nasa pagitan ng 0-100 ang opasidad ng miniplayer overlay</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Back button exits the feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pressing back always exits the app instead of scrolling to the top of the feed</string>

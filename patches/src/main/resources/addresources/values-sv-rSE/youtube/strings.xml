@@ -551,7 +551,6 @@ För att åtgärda detta, aktivera \"Falska videoströmmar\" och ändra \"Standa
   <string name="morphe_swipe_overlay_timeout_summary">Antalet millisekunder som överlägget är synligt</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Bakgrundsopacitet för svepöverlägg</string>
   <string name="morphe_swipe_overlay_background_opacity_summary">Justera genomskinlighetsnivån (0 är genomskinligt, 100 är ogenomskinligt)</string>
-  <string name="morphe_swipe_overlay_background_opacity_invalid_toast">Svepöverläggets opacitet måste vara mellan 0 och 100</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Färg på svepöverlägg för ljusstyrkegest</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Ange ljusstyrkereglagets färg</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Färg på svepöverlägg för volymgest</string>
@@ -560,7 +559,6 @@ För att åtgärda detta, aktivera \"Falska videoströmmar\" och ändra \"Standa
   <string name="morphe_swipe_overlay_progress_speed_color_summary">Ange färg för hastighetsreglagets förloppsindikator</string>
   <string name="morphe_swipe_text_overlay_size_title">Textstorlek för svepöverlägg</string>
   <string name="morphe_swipe_text_overlay_size_summary">Justera textstorleken på skärmen (1–30)</string>
-  <string name="morphe_swipe_text_overlay_size_invalid_toast">Textstorleken måste vara mellan 1 och 30</string>
   <string name="morphe_swipe_threshold_title">Tröskelvärde för svep</string>
   <string name="morphe_swipe_threshold_summary">Ange det avstånd som krävs för att svepgesten ska utlösa en justering</string>
   <string name="morphe_swipe_volume_sensitivity_title">Svepkänslighet för volymgest</string>
@@ -766,6 +764,8 @@ För att visa menyn 'Ljudspår', ändra 'Förfalska videostreamar' till valfri k
   <string name="morphe_hide_fullscreen_button_title">Dölj helskärmsknappen</string>
   <string name="morphe_hide_player_control_buttons_background_title">Dölj bakgrunder för uppspelningsknappar</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Döljer den mörka skuggningen runt uppspelningsknapparna</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">Bakgrundsopacitet för kontrollknappar</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Justera opaciteten för cirkeln bakom spelarens kontrollknappar (0 är osynlig, 100 är ogenomskinlig)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Dölj knapparna Föregående och Nästa</string>
   <string name="morphe_hide_settings_button_title">Dölj knappen Inställningar</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -887,7 +887,6 @@ Inställningar → Uppspelning (eller Autouppspelning) → Autouppspela nästa v
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Spelaröverläggets opacitet</string>
   <string name="morphe_player_overlay_opacity_summary">Justera genomskinlighetsnivån (0 är genomskinligt, 100 är ogenomskinligt)</string>
-  <string name="morphe_player_overlay_opacity_invalid_toast">Spelaröverläggets opacitet måste vara mellan 0 och 100</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Sökfält</string>
   <string name="morphe_searchbar_type_entry_disabled">Inaktiverad</string>
@@ -1007,7 +1006,6 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_miniplayer_width_dip_invalid_toast">Pixelstorlek måste vara mellan %1$s och %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Överläggets opacitet</string>
   <string name="morphe_miniplayer_opacity_summary">Justera genomskinlighetsnivån (0 är genomskinligt, 100 är ogenomskinligt)</string>
-  <string name="morphe_miniplayer_opacity_invalid_toast">Minispelaröverläggets opacitet måste vara mellan 0 och 100</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tillbaka-knappen avslutar flödet</string>
   <string name="morphe_back_button_always_exits_feed_summary">Att trycka på Tillbaka avslutar alltid appen istället för att rulla till toppen av flödet</string>
