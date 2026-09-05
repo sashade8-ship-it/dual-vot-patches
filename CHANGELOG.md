@@ -1,3 +1,13 @@
+## 1.42.0-dev.3-dualvot.8.3 (2026-09-05)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.42.0-dev.3](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.3).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.42.0-dev.2-dualvot.8.3 (2026-09-04)
 
 ### Automated Morphe update
@@ -252,6 +262,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.42.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.2...v1.42.0-dev.3) (2026-09-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Video quality:** Restore `ShortsPlayerState` check to fix default video quality ([b596375](https://github.com/MorpheApp/morphe-patches/commit/b59637570cc477d09a236cf14582e4b06d1abc37))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Report AI channel" video menu entry ([#2763](https://github.com/MorpheApp/morphe-patches/issues/2763)) ([17d1135](https://github.com/MorpheApp/morphe-patches/commit/17d1135c33d7af159c48198e30d14623ea738aff))
+* **YouTube - Hide Shorts components:** Add "Hide gesture hints" setting ([#2760](https://github.com/MorpheApp/morphe-patches/issues/2760)) ([73df92a](https://github.com/MorpheApp/morphe-patches/commit/73df92adf973775ac42f8d89f938bf17ec7e03b3))
+* **YouTube:** Add channel whitelists for ads and playback speed ([#2334](https://github.com/MorpheApp/morphe-patches/issues/2334)) ([4850003](https://github.com/MorpheApp/morphe-patches/commit/4850003c90948552383f7bead3e185d6085a2b57))
 
 ## [1.42.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.1...v1.42.0-dev.2) (2026-09-04)
 
