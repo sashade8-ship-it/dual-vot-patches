@@ -331,7 +331,37 @@ Teorainneacha:
   <string name="morphe_hide_aislist_attribution_summary">"Soláthraíonn AiSList na sonraí
 
 Tapáil anseo chun AiSlopList.com a oscailt agus íoslódálacha d'ardáin eile a fheiceáil"</string>
+  <string name="morphe_aislist_submit_category_title">Tuairiscigh cainéil AI</string>
+  <string name="morphe_aislist_submit_flyout_menu_title">Cuir iontráil tuairiscithe le roghchlár an fhíseáin</string>
+  <string name="morphe_aislist_submit_flyout_menu_summary">Cuir iontráil a thuairiscíonn cainéal físeáin chuig AiSList le roghchlár an fhíseáin</string>
+  <string name="morphe_aislist_submit_username_title">Ainm an tseoltóra</string>
+  <string name="morphe_aislist_submit_username_summary">Ainm a thaispeántar in aice le do chuid tuairiscí ar chlár ceannaireachta poiblí AiSList. Ní féidir tuairisciú fad is atá an réimse seo folamh</string>
+  <string name="morphe_aislist_submit_title">Tuairiscigh cainéal AI</string>
+  <string name="morphe_aislist_submit_dialog_message">"An seolfaidh tú %s chuig AiSList, ag baint úsáide as an bhfíseán seo mar fhianaise?
+
+Ná tuairiscigh ach cainéil:
+• A úsáideann guthanna, íomhánna, scripteanna nó ceol AI mar phríomhábhar a gcuid físeán
+• A tháirgeann ábhar ar an mórchóir le huirlisí AI agus le beagán saothair dhaonna
+
+Ná tuairiscigh cainéil nach ndéanann ach plé ar AI, nó cainéil a úsáideann AI do chodanna áirithe dá gcuid físeán.
+
+Tá tuairiscí poiblí agus déantar athbhreithniú orthu sula gcuirtear cainéal le liosta. Ní féidir cainéal a bhaint ach amháin trí iarratas a dhéanamh ar GitHub"</string>
+  <string name="morphe_aislist_submit_already_blocklisted">Tá an cainéal seo ar liosta blocála AiSList cheana féin</string>
+  <string name="morphe_aislist_submit_already_warnlisted">Tá an cainéal seo ar liosta rabhaidh AiSList cheana féin</string>
+  <string name="morphe_aislist_submit_dialog_confirm">Tuairiscigh</string>
+  <string name="morphe_aislist_submit_no_username">Socraigh ainm seoltóra i socruithe an scagaire cainéal AI chun cainéil a thuairisciú</string>
+  <string name="morphe_aislist_submit_resolving">Ag cuardach an chainéil…</string>
+  <string name="morphe_aislist_submit_failed_channel">Ní féidir cainéal an fhíseáin seo a aimsiú</string>
+  <string name="morphe_aislist_submit_success">Tá an cainéal tuairiscithe agus ag fanacht le hathbhreithniú</string>
+  <string name="morphe_aislist_submit_failed_conflict">Níorbh fhéidir le AiSList an tuairisc a shábháil, bain triail eile as ar ball</string>
+  <string name="morphe_aislist_submit_failed_rate_limit">Seoladh an iomarca tuairiscí, bain triail eile as ar ball</string>
+  <string name="morphe_aislist_submit_failed_rejected">Dhiúltaigh AiSList don thuairisc</string>
+  <string name="morphe_aislist_submit_failed">Theip ar an tuairisc, seiceáil do nasc</string>
   <!-- ad.hideAdsPatch -->
+  <string name="morphe_ads_channel_whitelist_title">Liosta bán fógraí do chainéil</string>
+  <string name="morphe_ads_channel_whitelist_summary">Seinntear físeáin ó chainéil atá ar an liosta bán fógraí le fógraí, ionas go n-íoctar a gcuid cruthaitheoirí. Fanann fógraí blocáilte ar gach cainéal eile.</string>
+  <string name="morphe_ads_channel_whitelist_flyout_add">Cuir cainéal leis an liosta bán fógraí</string>
+  <string name="morphe_ads_channel_whitelist_flyout_remove">Bain cainéal den liosta bán fógraí</string>
   <string name="morphe_hide_creator_store_shelf_title">Folaigh seilf siopa an chruthaitheora</string>
   <string name="morphe_hide_end_screen_store_banner_title">Folaigh meirge siopa scáileáin deiridh</string>
   <string name="morphe_hide_general_ads_title">Folaigh fógraí ginearálta</string>
@@ -342,6 +372,14 @@ Tapáil anseo chun AiSlopList.com a oscailt agus íoslódálacha d'ardáin eile 
   <string name="morphe_hide_shopping_links_title">Folaigh naisc siopadóireachta</string>
   <string name="morphe_hide_video_ads_title">Folaigh fógraí físe</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Folaigh ardú céime YouTube Premium</string>
+  <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
+  <string name="morphe_channel_whitelist_current_channel">Cainéal reatha:</string>
+  <string name="morphe_channel_whitelist_add">Cuir leis an liosta bán</string>
+  <string name="morphe_channel_whitelist_remove">Bain</string>
+  <string name="morphe_channel_whitelist_channels_header">Cainéil ar an liosta bán</string>
+  <string name="morphe_channel_whitelist_empty">Níl aon chainéil ar an liosta bán</string>
+  <string name="morphe_channel_whitelist_channel_added">Cainéal curtha leis an liosta bán</string>
+  <string name="morphe_channel_whitelist_channel_removed">Baineadh an cainéal den liosta bán</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Nasc cóipeáilte chuig an ghearrthaisce</string>
@@ -474,6 +512,10 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Osclaíonn sé an scuaine Morphe in ionad scuaine YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Cuir mír roghchláir scuaine amach beatha leis</string>
   <string name="morphe_queue_add_flyout_menu_summary">Cuireann sé mír bhreise ar an leathanach leis. Cumasaigh é seo mura bhfuil \"Cuir leis an scuaine\" le feiceáil.</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_title">Liosta bán fógraí sa roghchlár aníos</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Cuireann sé mír aníos leis a cheadaíonn fógraí a sheinm ar chainéal an fhíseáin sin</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Liosta bán luais sa roghchlár aníos</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Cuireann sé mír aníos leis a sheinneann cainéal an fhíseáin sin ar luas 1.0x i gcónaí</string>
   <string name="morphe_queue_manager_check_failed_auth">Gan logáil isteach</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Gan aon ID seinmliosta</string>
   <string name="morphe_queue_manager_check_failed_queue">Tá an scuaine folamh</string>
@@ -765,7 +807,7 @@ Chun an roghchlár ‘Audio Track’ a thaispeáint, athraigh ‘Spoof video str
   <string name="morphe_hide_player_control_buttons_background_title">Folaigh cúlra rialuithe an imreora</string>
   <string name="morphe_hide_player_control_buttons_background_summary">Folaíonn sé an scáthú dorcha timpeall ar rialuithe an imreora físe</string>
   <string name="morphe_player_control_buttons_background_opacity_title">Teimhneacht chúlra na gcnaipí rialaithe</string>
-  <string name="morphe_player_control_buttons_background_opacity_summary">Coigeartaigh teimhneacht an chiorcail taobh thiar de na cnaipí rialaithe an tseinnteora (0 dofheicthe, 100 soladach)</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">Coigeartaigh teimhneacht an chiorcail taobh thiar de chnaipí rialaithe an imreora (is é 0 dofheicthe, is é 100 soladach)</string>
   <string name="morphe_hide_player_previous_next_buttons_title">Folaigh na cnaipí Roimhe Seo &amp; Ar Aghaidh</string>
   <string name="morphe_hide_settings_button_title">Cnaipe Folaigh Socruithe</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
@@ -788,8 +830,6 @@ Chun an roghchlár ‘Audio Track’ a thaispeáint, athraigh ‘Spoof video str
   <string name="morphe_hide_seekbar_thumbnail_summary">Folaíonn sé an barra dul chun cinn féachana a thaispeántar ar mhionsamhlacha físeáin atá feicthe agat cheana féin</string>
   <string name="morphe_fullscreen_large_seekbar_title">Cumasaigh barra cuardaigh mór scáileáin iomláin</string>
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
-  <string name="morphe_shorts_player_screen_title">Shorts seinnteoir</string>
-  <string name="morphe_shorts_player_screen_summary">Roghnaigh cé na comhpháirteanna a thaispeánfar sa seinnteoir Shorts</string>
   <string name="morphe_hide_shorts_category_title">Folaigh Shorts</string>
   <string name="morphe_hide_shorts_channel_title">Folaigh ar leathanach an chainéil</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -799,45 +839,48 @@ Chun an roghchlár ‘Audio Track’ a thaispeáint, athraigh ‘Spoof video str
   <string name="morphe_hide_shorts_subscriptions_title">Folaigh i mbeatha na Síntiúis</string>
   <string name="morphe_hide_shorts_video_description_title">Folaigh i dtuairisc an fhíseáin</string>
   <string name="morphe_hide_shorts_history_title">Folaigh i stair faire</string>
+  <string name="morphe_shorts_player_screen_title">Shorts seinnteoir</string>
+  <string name="morphe_shorts_player_screen_summary">Roghnaigh cé na comhpháirteanna a thaispeánfar sa seinnteoir Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Díchumasaigh an sconna faoi dhó le thaitin</string>
   <string name="morphe_hide_shorts_ai_button_title">Folaigh cnaipe IS</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Folaigh an lipéad \'Uath-dhubáilte\'</string>
-  <string name="morphe_hide_shorts_super_thanks_button_title">Folaigh an cnaipe \'Ceannaigh Super Thanks\'</string>
+  <string name="morphe_hide_shorts_channel_bar_title">Folaigh barra cainéal</string>
+  <string name="morphe_hide_shorts_comments_button_title">Folaigh cnaipe na Tuairimí</string>
   <string name="morphe_hide_shorts_effect_button_title">Cnaipe Folaigh Éifeacht</string>
+  <string name="morphe_hide_shorts_full_video_link_label_title">Folaigh lipéad nasc físe</string>
+  <string name="morphe_hide_shorts_gesture_hints_title">Folaigh leideanna gothaí</string>
   <string name="morphe_hide_shorts_green_screen_button_title">Folaigh an cnaipe \'Scáileán Glas\'</string>
   <string name="morphe_hide_shorts_hashtag_button_title">Folaigh an cnaipe Hashtag</string>
+  <string name="morphe_hide_shorts_info_panel_title">Folaigh an painéal eolais</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_join_button_title">Folaigh an cnaipe Glac páirt</string>
+  <string name="morphe_hide_shorts_like_button_title">Folaigh cnaipe Is maith liom</string>
+  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
+  <string name="morphe_hide_shorts_like_fountain_title">Folaigh an cnaipe Is maith liom \'beochan tobair\'</string>
   <string name="morphe_hide_shorts_live_preview_title">Folaigh réamhamharc beo</string>
   <string name="morphe_hide_shorts_location_label_title">Folaigh lipéad suímh</string>
+  <string name="morphe_hide_shorts_navigation_bar_title">Folaigh an barra nascleanúna</string>
   <string name="morphe_hide_shorts_new_posts_button_title">Folaigh an cnaipe \'Poist nua\'</string>
   <string name="morphe_hide_shorts_paused_overlay_buttons_title">Folaigh cnaipí forleagan ar sos</string>
   <string name="morphe_hide_shorts_preview_comment_title">Folaigh trácht réamhamhairc</string>
+  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_remix_button_title">Folaigh an cnaipe Remix</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_save_button_title">Folaigh an cnaipe Sábháil</string>
   <string name="morphe_hide_shorts_save_sound_button_title">Folaigh cnaipe \'Sábháil Ceoil\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Folaigh moltaí cuardaigh</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_share_button_title">Folaigh cnaipe Roinn</string>
   <string name="morphe_hide_shorts_shop_button_title">Folaigh cnaipe Siopa</string>
+  <string name="morphe_hide_shorts_sound_button_title">Cnaipe Folaigh Fuaime</string>
+  <string name="morphe_hide_shorts_sound_metadata_label_title">Folaigh lipéad meiteashonraí fuaime</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Folaigh cnaipe Liostáil</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">Folaigh an cnaipe \'Ceannaigh Super Thanks\'</string>
   <string name="morphe_hide_shorts_tagged_products_title">Folaigh táirgí clibeáilte</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Folaigh an cnaipe \'at le teacht\'</string>
   <string name="morphe_hide_shorts_use_sound_button_title">Folaigh cnaipe \'Úsáid an fuaime seo\'</string>
   <string name="morphe_hide_shorts_use_template_button_title">Folaigh cnaipe \'Úsáid an teimpléad seo\'</string>
-  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
-  <string name="morphe_hide_shorts_like_fountain_title">Folaigh an cnaipe Is maith liom \'beochan tobair\'</string>
-  <string name="morphe_hide_shorts_like_button_title">Folaigh cnaipe Is maith liom</string>
-  <string name="morphe_hide_shorts_comments_button_title">Folaigh cnaipe na Tuairimí</string>
-  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_save_button_title">Folaigh an cnaipe Sábháil</string>
-  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_share_button_title">Folaigh cnaipe Roinn</string>
-  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_remix_button_title">Folaigh an cnaipe Remix</string>
-  <string name="morphe_hide_shorts_sound_button_title">Cnaipe Folaigh Fuaime</string>
-  <string name="morphe_hide_shorts_info_panel_title">Folaigh an painéal eolais</string>
-  <string name="morphe_hide_shorts_channel_bar_title">Folaigh barra cainéal</string>
   <string name="morphe_hide_shorts_video_title_title">Folaigh teideal an fhíseáin</string>
-  <string name="morphe_hide_shorts_sound_metadata_label_title">Folaigh lipéad meiteashonraí fuaime</string>
-  <string name="morphe_hide_shorts_full_video_link_label_title">Folaigh lipéad nasc físe</string>
-  <string name="morphe_disable_shorts_double_tap_to_like_title">Díchumasaigh an sconna faoi dhó le thaitin</string>
-  <string name="morphe_hide_shorts_navigation_bar_title">Folaigh an barra nascleanúna</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Folaigh físeán molta scáileáin deiridh</string>
   <string name="morphe_hide_end_screen_suggested_video_summary">"Folaíonn sé an forleagan físe molta a thaispeántar tar éis dheireadh an fhíseáin
@@ -1151,6 +1194,10 @@ Tapáil anseo chun DeArrow.ajay.app a oscailt."</string>
   <string name="morphe_remember_playback_speed_toast">Athraíodh an luas athsheinm réamhshocraithe go: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Úsáid gnáthluas don cheol</string>
   <string name="morphe_disable_playback_speed_music_summary">Seinn físeáin cheoil i gcónaí ag luas 1.0x</string>
+  <string name="morphe_playback_speed_channel_whitelist_title">Liosta bán luais cainéil</string>
+  <string name="morphe_playback_speed_channel_whitelist_summary">Seinneann físeáin ó chainéil ar an liosta bán ar luas 1.0x i gcónaí</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_add">Cuir cainéal leis an liosta bán luais</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_remove">Bain cainéal den liosta bán luais</string>
   <string name="morphe_enable_playback_audio_pitch_controls_title">Cumasaigh rialuithe páirce fuaime</string>
   <string name="morphe_playback_audio_pitch_default_title">Páirc fuaime athsheinm réamhshocraithe</string>
   <string name="morphe_remember_playback_audio_pitch_toast">Athraíodh an pháirc fuaime réamhshocraithe go: %s</string>

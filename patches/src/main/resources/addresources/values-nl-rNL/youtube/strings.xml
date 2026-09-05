@@ -331,7 +331,37 @@ Beperkingen:
   <string name="morphe_hide_aislist_attribution_summary">"Gegevens worden geleverd door AiSList
 
 Tik hier om AiSlopList.com te openen en downloads voor andere platforms te bekijken"</string>
+  <string name="morphe_aislist_submit_category_title">AI-kanalen rapporteren</string>
+  <string name="morphe_aislist_submit_flyout_menu_title">Rapportage-item aan het videomenu toevoegen</string>
+  <string name="morphe_aislist_submit_flyout_menu_summary">Voeg aan het videomenu een item toe dat het kanaal van een video aan AiSList rapporteert</string>
+  <string name="morphe_aislist_submit_username_title">Indienersnaam</string>
+  <string name="morphe_aislist_submit_username_summary">Naam die naast je rapporten op het openbare AiSList-klassement wordt weergegeven. Rapporteren is niet beschikbaar zolang dit leeg is</string>
+  <string name="morphe_aislist_submit_title">AI-kanaal rapporteren</string>
+  <string name="morphe_aislist_submit_dialog_message">"Dien je %s in bij AiSList met deze video als bewijs?
+
+Rapporteer alleen kanalen die:
+• AI-stemmen, AI-beeldmateriaal, AI-scripts of AI-muziek als hoofdinhoud gebruiken
+• Massaal content produceren met AI-tools en weinig menselijk werk
+
+Rapporteer geen kanalen die alleen over AI praten of AI voor sommige delen van hun video's gebruiken.
+
+Rapporten zijn openbaar en worden beoordeeld voordat een kanaal aan een lijst wordt toegevoegd. Verwijdering is alleen mogelijk via een verzoek op GitHub"</string>
+  <string name="morphe_aislist_submit_already_blocklisted">Dit kanaal staat al op de AiSList-blokkeerlijst</string>
+  <string name="morphe_aislist_submit_already_warnlisted">Dit kanaal staat al op de AiSList-waarschuwingslijst</string>
+  <string name="morphe_aislist_submit_dialog_confirm">Rapporteren</string>
+  <string name="morphe_aislist_submit_no_username">Stel in de AI-kanaalfilterinstellingen een indienersnaam in om kanalen te rapporteren</string>
+  <string name="morphe_aislist_submit_resolving">Kanaal wordt opgezocht…</string>
+  <string name="morphe_aislist_submit_failed_channel">Kan het kanaal van deze video niet vinden</string>
+  <string name="morphe_aislist_submit_success">Kanaal gerapporteerd en in afwachting van beoordeling</string>
+  <string name="morphe_aislist_submit_failed_conflict">AiSList kon het rapport niet opslaan, probeer het later opnieuw</string>
+  <string name="morphe_aislist_submit_failed_rate_limit">Er zijn te veel rapporten verzonden, probeer het later opnieuw</string>
+  <string name="morphe_aislist_submit_failed_rejected">AiSList heeft het rapport afgewezen</string>
+  <string name="morphe_aislist_submit_failed">Rapportage mislukt, controleer je verbinding</string>
   <!-- ad.hideAdsPatch -->
+  <string name="morphe_ads_channel_whitelist_title">Advertentiewitelijst voor kanalen</string>
+  <string name="morphe_ads_channel_whitelist_summary">Video\'s van kanalen op de advertentiewitelijst worden met advertenties afgespeeld, zodat de makers ervan worden betaald. Op elk ander kanaal blijven advertenties geblokkeerd.</string>
+  <string name="morphe_ads_channel_whitelist_flyout_add">Kanaal aan de advertentiewitelijst toevoegen</string>
+  <string name="morphe_ads_channel_whitelist_flyout_remove">Kanaal van de advertentiewitelijst verwijderen</string>
   <string name="morphe_hide_creator_store_shelf_title">Makerswinkelplank verbergen</string>
   <string name="morphe_hide_end_screen_store_banner_title">Verberg de Store-banner op het eindscherm</string>
   <string name="morphe_hide_general_ads_title">Algemene advertenties verbergen</string>
@@ -342,6 +372,14 @@ Tik hier om AiSlopList.com te openen en downloads voor andere platforms te bekij
   <string name="morphe_hide_shopping_links_title">Winkellinks verbergen</string>
   <string name="morphe_hide_video_ads_title">Video-advertenties verbergen</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium promoties verbergen</string>
+  <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
+  <string name="morphe_channel_whitelist_current_channel">Huidig kanaal:</string>
+  <string name="morphe_channel_whitelist_add">Toevoegen aan de witte lijst</string>
+  <string name="morphe_channel_whitelist_remove">Verwijderen</string>
+  <string name="morphe_channel_whitelist_channels_header">Kanaalen op de witte lijst</string>
+  <string name="morphe_channel_whitelist_empty">Geen kanalen op de witte lijst</string>
+  <string name="morphe_channel_whitelist_channel_added">Kanaal toegevoegd aan de witte lijst</string>
+  <string name="morphe_channel_whitelist_channel_removed">Kanaal verwijderd van de witte lijst</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link naar klembord gekopieerd</string>
@@ -474,6 +512,10 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Opent de Morphe-wachtrij in plaats van de YouTube-wachtrij</string>
   <string name="morphe_queue_add_flyout_menu_title">Feed-flyoutmenu-item toevoegen</string>
   <string name="morphe_queue_add_flyout_menu_summary">Voegt een extra flyout-item toe. Schakel dit in als \"Toevoegen aan wachtrij\" niet wordt weergegeven</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_title">Advertentie-whitelist in flyoutmenu</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Voegt een flyoutitem toe waarmee advertenties op het kanaal van die video kunnen worden afgespeeld</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Snelheids-whitelist in flyoutmenu</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Voegt een flyoutitem toe dat het kanaal van die video altijd op 1.0x snelheid afspeelt</string>
   <string name="morphe_queue_manager_check_failed_auth">Niet ingelogd</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Geen afspeellijst-ID</string>
   <string name="morphe_queue_manager_check_failed_queue">De wachtrij is leeg</string>
@@ -786,8 +828,6 @@ Om het 'Audio Track'-menu weer te geven, wijzig 'Spoof video streams' naar elke 
   <string name="morphe_hide_seekbar_thumbnail_summary">Verbergt de voortgangsbalk die wordt weergegeven op de thumbnails van video\'s die je al hebt bekeken</string>
   <string name="morphe_fullscreen_large_seekbar_title">Volledig scherm grote zoekbalk inschakelen</string>
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
-  <string name="morphe_shorts_player_screen_title">Shorts-speler</string>
-  <string name="morphe_shorts_player_screen_summary">Kies welke componenten verschijnen in de Shorts-speler</string>
   <string name="morphe_hide_shorts_category_title">Verberg Shorts</string>
   <string name="morphe_hide_shorts_channel_title">Verbergen op kanalenpagina</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -797,45 +837,48 @@ Om het 'Audio Track'-menu weer te geven, wijzig 'Spoof video streams' naar elke 
   <string name="morphe_hide_shorts_subscriptions_title">Verbergen in Abonnementen-feed</string>
   <string name="morphe_hide_shorts_video_description_title">Verbergen in videobeschrijving</string>
   <string name="morphe_hide_shorts_history_title">Verbergen in kijkgeschiedenis</string>
+  <string name="morphe_shorts_player_screen_title">Shorts-speler</string>
+  <string name="morphe_shorts_player_screen_summary">Kies welke componenten verschijnen in de Shorts-speler</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Dubbeltikken om een like te geven uitschakelen</string>
   <string name="morphe_hide_shorts_ai_button_title">AI-knop verbergen</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Verberg \'Auto-vertalen\' label</string>
-  <string name="morphe_hide_shorts_super_thanks_button_title">Verberg \'Koop Super Thanks\' knop</string>
+  <string name="morphe_hide_shorts_channel_bar_title">Verberg de kanaalbalk</string>
+  <string name="morphe_hide_shorts_comments_button_title">Verberg de knop \"Reacties\"</string>
   <string name="morphe_hide_shorts_effect_button_title">Verberg effectknop</string>
+  <string name="morphe_hide_shorts_full_video_link_label_title">Videolinklabel verbergen</string>
+  <string name="morphe_hide_shorts_gesture_hints_title">Verberg gebarenhints</string>
   <string name="morphe_hide_shorts_green_screen_button_title">Verberg \'Groen scherm\' knop</string>
   <string name="morphe_hide_shorts_hashtag_button_title">Verberg de knop \"Hashtag\"</string>
+  <string name="morphe_hide_shorts_info_panel_title">Verberg het informatiepaneel</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_join_button_title">Verberg de knop \"Word lid\"</string>
+  <string name="morphe_hide_shorts_like_button_title">Verberg de knop \"Vind ik leuk\"</string>
+  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
+  <string name="morphe_hide_shorts_like_fountain_title">Verberg de fonteinanimatie van de vind-ik-leukknop</string>
   <string name="morphe_hide_shorts_live_preview_title">Verberg live-voorbeeld</string>
   <string name="morphe_hide_shorts_location_label_title">Verberg locatie-etiket</string>
+  <string name="morphe_hide_shorts_navigation_bar_title">Verberg de navigatiebalk</string>
   <string name="morphe_hide_shorts_new_posts_button_title">Verberg \'Nieuwe berichten\' knop</string>
   <string name="morphe_hide_shorts_paused_overlay_buttons_title">Verberg knoppen van de pauze-overlay</string>
   <string name="morphe_hide_shorts_preview_comment_title">Voorbeeldcommentaar verbergen</string>
+  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_remix_button_title">Verberg de knop \"Remixen\"</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_save_button_title">Verberg de knop \"Opslaan\"</string>
   <string name="morphe_hide_shorts_save_sound_button_title">Verberg \'Muziek opslaan\' knop</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Verberg zoeksuggesties</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_share_button_title">Verberg de knop \"Delen\"</string>
   <string name="morphe_hide_shorts_shop_button_title">Verberg Winkelknop</string>
+  <string name="morphe_hide_shorts_sound_button_title">Verberg de geluidsknop</string>
+  <string name="morphe_hide_shorts_sound_metadata_label_title">Verberg het label \"Geluidsinformatie\"</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Verberg de knop \"Abonneren\"</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">Verberg \'Koop Super Thanks\' knop</string>
   <string name="morphe_hide_shorts_tagged_products_title">Verberg getagde producten</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Verberg de knop \"Aanstaande\"</string>
   <string name="morphe_hide_shorts_use_sound_button_title">Verberg \'Geluid gebruiken\' knop</string>
   <string name="morphe_hide_shorts_use_template_button_title">Verberg \'Dit sjabloon gebruiken\' knop</string>
-  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
-  <string name="morphe_hide_shorts_like_fountain_title">Verberg de fonteinanimatie van de vind-ik-leukknop</string>
-  <string name="morphe_hide_shorts_like_button_title">Verberg de knop \"Vind ik leuk\"</string>
-  <string name="morphe_hide_shorts_comments_button_title">Verberg de knop \"Reacties\"</string>
-  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_save_button_title">Verberg de knop \"Opslaan\"</string>
-  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_share_button_title">Verberg de knop \"Delen\"</string>
-  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_remix_button_title">Verberg de knop \"Remixen\"</string>
-  <string name="morphe_hide_shorts_sound_button_title">Verberg de geluidsknop</string>
-  <string name="morphe_hide_shorts_info_panel_title">Verberg het informatiepaneel</string>
-  <string name="morphe_hide_shorts_channel_bar_title">Verberg de kanaalbalk</string>
   <string name="morphe_hide_shorts_video_title_title">Verberg de videotitel</string>
-  <string name="morphe_hide_shorts_sound_metadata_label_title">Verberg het label \"Geluidsinformatie\"</string>
-  <string name="morphe_hide_shorts_full_video_link_label_title">Videolinklabel verbergen</string>
-  <string name="morphe_disable_shorts_double_tap_to_like_title">Dubbeltikken om een like te geven uitschakelen</string>
-  <string name="morphe_hide_shorts_navigation_bar_title">Verberg de navigatiebalk</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Voorgestelde video op eindscherm verbergen</string>
   <string name="morphe_hide_end_screen_suggested_video_summary">"Verbergt de suggestievideo-overlay die verschijnt na het einde van de video
@@ -1149,6 +1192,10 @@ Tik hier om meer te weten te komen over DeArrow"</string>
   <string name="morphe_remember_playback_speed_toast">Standaard afspeelsnelheid gewijzigd naar: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Gebruik normale snelheid voor muziek</string>
   <string name="morphe_disable_playback_speed_music_summary">Speel muziekvideo\'s altijd af op 1.0x snelheid</string>
+  <string name="morphe_playback_speed_channel_whitelist_title">Whitelist voor kanaalsnelheid</string>
+  <string name="morphe_playback_speed_channel_whitelist_summary">Video\'s van kanalen op de whitelist worden altijd op 1.0x snelheid afgespeeld</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_add">Kanaal toevoegen aan snelheids-whitelist</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_remove">Kanaal verwijderen van snelheids-whitelist</string>
   <string name="morphe_enable_playback_audio_pitch_controls_title">Audio-toonhoogtebediening inschakelen</string>
   <string name="morphe_playback_audio_pitch_default_title">Standaard toonhoogte audioafspeling</string>
   <string name="morphe_remember_playback_audio_pitch_toast">Standaard toonhoogte audio gewijzigd naar: %s</string>

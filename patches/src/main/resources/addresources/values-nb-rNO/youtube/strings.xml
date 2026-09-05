@@ -331,7 +331,37 @@ Begrensninger:
   <string name="morphe_hide_aislist_attribution_summary">"Data leveres av AiSList
 
 Trykk her for å åpne AiSlopList.com og se nedlastinger for andre plattformer"</string>
+  <string name="morphe_aislist_submit_category_title">Rapporter AI-kanaler</string>
+  <string name="morphe_aislist_submit_flyout_menu_title">Legg til en rapportoppføring i videomenyen</string>
+  <string name="morphe_aislist_submit_flyout_menu_summary">Legg til en oppføring i videomenyen som rapporterer kanalen til en video til AiSList</string>
+  <string name="morphe_aislist_submit_username_title">Innsendernavn</string>
+  <string name="morphe_aislist_submit_username_summary">Navn som vises ved siden av rapportene dine på den offentlige AiSList-ledertavlen. Rapportering er utilgjengelig mens dette er tomt</string>
+  <string name="morphe_aislist_submit_title">Rapporter AI-kanal</string>
+  <string name="morphe_aislist_submit_dialog_message">"Send inn %s til AiSList, med denne videoen som bevis?
+
+Rapporter kun kanaler som:
+• Bruker AI-stemmer, bilder, manus eller musikk som hovedinnhold
+• Masseproduserer innhold med AI-verktøy og lite menneskelig arbeid
+
+Ikke rapporter kanaler som bare diskuterer AI, eller som bruker AI i deler av videoene sine.
+
+Rapporter er offentlige og blir gjennomgått før en kanal legges til en liste. Fjerning er kun mulig gjennom en forespørsel på GitHub"</string>
+  <string name="morphe_aislist_submit_already_blocklisted">Denne kanalen er allerede på AiSList-blokkeringslisten</string>
+  <string name="morphe_aislist_submit_already_warnlisted">Denne kanalen er allerede på AiSList-advarselslisten</string>
+  <string name="morphe_aislist_submit_dialog_confirm">Rapporter</string>
+  <string name="morphe_aislist_submit_no_username">Angi et innsendernavn i innstillingene for AI-kanalfilteret for å rapportere kanaler</string>
+  <string name="morphe_aislist_submit_resolving">Slår opp kanalen …</string>
+  <string name="morphe_aislist_submit_failed_channel">Finner ikke kanalen til denne videoen</string>
+  <string name="morphe_aislist_submit_success">Kanalen er rapportert og venter på gjennomgang</string>
+  <string name="morphe_aislist_submit_failed_conflict">AiSList kunne ikke lagre rapporten, prøv igjen senere</string>
+  <string name="morphe_aislist_submit_failed_rate_limit">For mange rapporter ble sendt, prøv igjen senere</string>
+  <string name="morphe_aislist_submit_failed_rejected">AiSList avviste rapporten</string>
+  <string name="morphe_aislist_submit_failed">Rapporteringen mislyktes, sjekk tilkoblingen din</string>
   <!-- ad.hideAdsPatch -->
+  <string name="morphe_ads_channel_whitelist_title">Annonsehviteliste for kanaler</string>
+  <string name="morphe_ads_channel_whitelist_summary">Videoer fra kanaler på hvitelisten spilles med annonser, slik at skaperne deres får betalt. Annonser forblir blokkert på alle andre kanaler.</string>
+  <string name="morphe_ads_channel_whitelist_flyout_add">Legg til kanal i annonsehvitelisten</string>
+  <string name="morphe_ads_channel_whitelist_flyout_remove">Fjern kanal fra annonsehvitelisten</string>
   <string name="morphe_hide_creator_store_shelf_title">Skjul creator store shelf</string>
   <string name="morphe_hide_end_screen_store_banner_title">Skjul sluttbanner for butikk</string>
   <string name="morphe_hide_general_ads_title">Skjul generelle annonser</string>
@@ -342,6 +372,14 @@ Trykk her for å åpne AiSlopList.com og se nedlastinger for andre plattformer"<
   <string name="morphe_hide_shopping_links_title">Skjul shoppinglenker</string>
   <string name="morphe_hide_video_ads_title">Skjul videoannonser</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skjul YouTube Premium-kampanjer</string>
+  <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
+  <string name="morphe_channel_whitelist_current_channel">Aktuell kanal:</string>
+  <string name="morphe_channel_whitelist_add">Legg til i hvitelisten</string>
+  <string name="morphe_channel_whitelist_remove">Fjern</string>
+  <string name="morphe_channel_whitelist_channels_header">Hviteliste-kanaler</string>
+  <string name="morphe_channel_whitelist_empty">Ingen kanaler er hvitelistet</string>
+  <string name="morphe_channel_whitelist_channel_added">Kanal lagt til i hvitelisten</string>
+  <string name="morphe_channel_whitelist_channel_removed">Kanal fjernet fra hvitelisten</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Koblet til utklippstavlen</string>
@@ -474,6 +512,10 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Åpner Morphe-køen i stedet for YouTube-køen</string>
   <string name="morphe_queue_add_flyout_menu_title">Legg til menyelement for kø i feed-undermeny</string>
   <string name="morphe_queue_add_flyout_menu_summary">Legger til et ekstra flyout-element. Aktiver dette hvis «Legg til i kø» ikke vises</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_title">Annonsehviteliste i flyout-menyen</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Legger til et flyout-element som lar annonser spille på kanalen til den videoen</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Hastighetshviteliste i flyout-menyen</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Legger til et flyout-element som alltid spiller kanalen til den videoen i 1.0x hastighet</string>
   <string name="morphe_queue_manager_check_failed_auth">Ikke logget inn</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">Ingen spillelist-ID</string>
   <string name="morphe_queue_manager_check_failed_queue">Køen er tom</string>
@@ -788,8 +830,6 @@ For å vise 'Audio Track'-menyen, endre 'Forfalsk videostrømmer' til en hvilken
   <string name="morphe_hide_seekbar_thumbnail_summary">Skjuler fremdriftslinjen for visning på miniatyrbilder av videoer du allerede har sett</string>
   <string name="morphe_fullscreen_large_seekbar_title">Aktiver stor søkelinje i fullskjerm</string>
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
-  <string name="morphe_shorts_player_screen_title">Shorts-spiller</string>
-  <string name="morphe_shorts_player_screen_summary">Velg hvilke komponenter som vises i Shorts-spilleren</string>
   <string name="morphe_hide_shorts_category_title">Skjul Shorts</string>
   <string name="morphe_hide_shorts_channel_title">Skjul i kanalsiden</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -799,45 +839,48 @@ For å vise 'Audio Track'-menyen, endre 'Forfalsk videostrømmer' til en hvilken
   <string name="morphe_hide_shorts_subscriptions_title">Skjul i Abonnement-feed</string>
   <string name="morphe_hide_shorts_video_description_title">Skjul i videobeskrivelsen</string>
   <string name="morphe_hide_shorts_history_title">Skjul i visningshistorikk</string>
+  <string name="morphe_shorts_player_screen_title">Shorts-spiller</string>
+  <string name="morphe_shorts_player_screen_summary">Velg hvilke komponenter som vises i Shorts-spilleren</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Deaktiver dobbelttrykk for å like</string>
   <string name="morphe_hide_shorts_ai_button_title">Skjul AI-knappen</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Skjul \'Auto-dubbed\'-etikett</string>
-  <string name="morphe_hide_shorts_super_thanks_button_title">Skjul \'Kjøp Super Thanks\'-knappen</string>
+  <string name="morphe_hide_shorts_channel_bar_title">Skjul kanalbar</string>
+  <string name="morphe_hide_shorts_comments_button_title">Skjul Kommentar-knapp</string>
   <string name="morphe_hide_shorts_effect_button_title">Skjul effektknapp</string>
+  <string name="morphe_hide_shorts_full_video_link_label_title">Skjul videolenke-etikett</string>
+  <string name="morphe_hide_shorts_gesture_hints_title">Skjul bevegelsestips</string>
   <string name="morphe_hide_shorts_green_screen_button_title">Skjul \'Grønn skjerm\'-knappen</string>
   <string name="morphe_hide_shorts_hashtag_button_title">Skjul hashtag-knapp</string>
+  <string name="morphe_hide_shorts_info_panel_title">Skjul info-panel</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_join_button_title">Skjul Bli med-knapp</string>
+  <string name="morphe_hide_shorts_like_button_title">Skjul Like-knapp</string>
+  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
+  <string name="morphe_hide_shorts_like_fountain_title">Skjul Like-knappfontene</string>
   <string name="morphe_hide_shorts_live_preview_title">Skjul forhåndsvisning</string>
   <string name="morphe_hide_shorts_location_label_title">Skjul stedslabel</string>
+  <string name="morphe_hide_shorts_navigation_bar_title">Skjul navigasjonslinje</string>
   <string name="morphe_hide_shorts_new_posts_button_title">Skjul \'Nye innlegg\'-knappen</string>
   <string name="morphe_hide_shorts_paused_overlay_buttons_title">Skjul pausede overleggsknapper</string>
   <string name="morphe_hide_shorts_preview_comment_title">Skjul forhåndsvisningskommentar</string>
+  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_remix_button_title">Skjul Remix-knapp</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_save_button_title">Skjul Lagre-knappen</string>
   <string name="morphe_hide_shorts_save_sound_button_title">Skjul \'Lagre musikk\'-knappen</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Skjul søkeforslag</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_share_button_title">Skjul Del-knapp</string>
   <string name="morphe_hide_shorts_shop_button_title">Skjul Shop-knapp</string>
+  <string name="morphe_hide_shorts_sound_button_title">Skjul Lyd-knapp</string>
+  <string name="morphe_hide_shorts_sound_metadata_label_title">Skjul lydmetadata-etikett</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Skjul abonner-knapp</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">Skjul \'Kjøp Super Thanks\'-knappen</string>
   <string name="morphe_hide_shorts_tagged_products_title">Skjul merkede produkter</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Skjul kommende knapp</string>
   <string name="morphe_hide_shorts_use_sound_button_title">Skjul \'Bruk denne lyden\'-knappen</string>
   <string name="morphe_hide_shorts_use_template_button_title">Skjul \'Bruk denne malen\'-knappen</string>
-  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
-  <string name="morphe_hide_shorts_like_fountain_title">Skjul Like-knappfontene</string>
-  <string name="morphe_hide_shorts_like_button_title">Skjul Like-knapp</string>
-  <string name="morphe_hide_shorts_comments_button_title">Skjul Kommentar-knapp</string>
-  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_save_button_title">Skjul Lagre-knappen</string>
-  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_share_button_title">Skjul Del-knapp</string>
-  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_remix_button_title">Skjul Remix-knapp</string>
-  <string name="morphe_hide_shorts_sound_button_title">Skjul Lyd-knapp</string>
-  <string name="morphe_hide_shorts_info_panel_title">Skjul info-panel</string>
-  <string name="morphe_hide_shorts_channel_bar_title">Skjul kanalbar</string>
   <string name="morphe_hide_shorts_video_title_title">Skjul videotittel</string>
-  <string name="morphe_hide_shorts_sound_metadata_label_title">Skjul lydmetadata-etikett</string>
-  <string name="morphe_hide_shorts_full_video_link_label_title">Skjul videolenke-etikett</string>
-  <string name="morphe_disable_shorts_double_tap_to_like_title">Deaktiver dobbelttrykk for å like</string>
-  <string name="morphe_hide_shorts_navigation_bar_title">Skjul navigasjonslinje</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Skjul foreslått video på sluttskjermen</string>
   <string name="morphe_hide_end_screen_suggested_video_summary">"Skjuler overleggsvideoen som vises etter at videoen er ferdig
@@ -1149,6 +1192,10 @@ Hvis aktivert, sendes videourler til API-serveren og ingen andre data sendes. Hv
   <string name="morphe_remember_playback_speed_toast">Endret standard avspillingshastighet til: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Bruk normal hastighet for musikk</string>
   <string name="morphe_disable_playback_speed_music_summary">Spill alltid av musikkvideoer med 1,0x hastighet</string>
+  <string name="morphe_playback_speed_channel_whitelist_title">Kanalhastighetshviteliste</string>
+  <string name="morphe_playback_speed_channel_whitelist_summary">Videoer fra hvitelistede kanaler spilles alltid i 1.0x hastighet</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_add">Legg til kanal i hastighetshvitelisten</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_remove">Fjern kanal fra hastighetshvitelisten</string>
   <string name="morphe_enable_playback_audio_pitch_controls_title">Enable audio pitch controls</string>
   <string name="morphe_playback_audio_pitch_default_title">Default playback audio pitch</string>
   <string name="morphe_remember_playback_audio_pitch_toast">Changed default audio pitch to: %s</string>

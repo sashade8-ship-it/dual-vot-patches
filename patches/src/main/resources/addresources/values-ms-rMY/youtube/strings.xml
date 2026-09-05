@@ -116,6 +116,14 @@ Perubahan termasuk:
   <string name="morphe_hide_about_category_title">Mengenai</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_hide_video_ads_title">Sorokkan iklan video</string>
+  <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
+  <string name="morphe_channel_whitelist_current_channel">Saluran semasa:</string>
+  <string name="morphe_channel_whitelist_add">Tambahkan ke senarai putih</string>
+  <string name="morphe_channel_whitelist_remove">Keluarkan</string>
+  <string name="morphe_channel_whitelist_channels_header">Saluran dalam senarai putih</string>
+  <string name="morphe_channel_whitelist_empty">Tiada saluran dalam senarai putih</string>
+  <string name="morphe_channel_whitelist_channel_added">Saluran ditambahkan ke senarai putih</string>
+  <string name="morphe_channel_whitelist_channel_removed">Saluran dikeluarkan daripada senarai putih</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Pautan disalin ke papan keratan</string>
@@ -235,10 +243,10 @@ To fix this, turn on 'Spoof video streams' and change the 'Default client' to 'T
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
+  <string name="morphe_hide_shorts_navigation_bar_title">Sorokkan bar pandu arah</string>
+  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
-  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_navigation_bar_title">Sorokkan bar pandu arah</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->

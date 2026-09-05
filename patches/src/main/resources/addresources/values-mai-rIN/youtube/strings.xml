@@ -160,6 +160,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shopping_links_title">शॉपिंग लिंक छिपाएं</string>
   <string name="morphe_hide_video_ads_title">वीडियो विज्ञापन छिपाएं</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium प्रमोशन छिपाइ</string>
+  <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
@@ -338,41 +339,41 @@ Second \"item\" text"</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_ai_button_title">एआई बटन लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">\'ऑटो-डब\' लेबल छिपाइ</string>
-  <string name="morphe_hide_shorts_super_thanks_button_title">\'सुपर धन्यवाद\' बटन छिपाइ</string>
+  <string name="morphe_hide_shorts_channel_bar_title">च्यानल बार लुकाउनुहोस्</string>
+  <string name="morphe_hide_shorts_comments_button_title">टिप्पणी बटन लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_effect_button_title">इफेक्ट बटन लुकाउनुहोस्</string>
+  <string name="morphe_hide_shorts_full_video_link_label_title">भिडियो लिङ्क लेबल लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_green_screen_button_title">\'ग्रीन स्क्रीन\' बटन छिपाइ</string>
   <string name="morphe_hide_shorts_hashtag_button_title">ह्यासट्याग बटन लुकाउनुहोस्</string>
+  <string name="morphe_hide_shorts_info_panel_title">जानकारी प्यानल लुकाउनुहोस्</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_join_button_title">जवाइन बटन लुकाउनुहोस्</string>
+  <string name="morphe_hide_shorts_like_button_title">लाइक बटन लुकाउनुहोस्</string>
+  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
+  <string name="morphe_hide_shorts_like_fountain_title">लाइक बटन फाउन्टेशन लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_live_preview_title">लाइव पूर्वावलोकन छिपाइ</string>
   <string name="morphe_hide_shorts_location_label_title">स्थान लेबल लुकाउनुहोस्</string>
+  <string name="morphe_hide_shorts_navigation_bar_title">नेभिगेसन बार लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_new_posts_button_title">\'नया पोस्ट\' बटन छिपाइ</string>
   <string name="morphe_hide_shorts_paused_overlay_buttons_title">पज गरिएका ओभरले बटनहरू लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_preview_comment_title">टिप्पणी पूर्वावलोकन लुकाउनुहोस्</string>
+  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_remix_button_title">रिमिक्स बटन लुकाउनुहोस्</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_save_sound_button_title">\'संगीत सहेज\' बटन छिपाइ</string>
   <string name="morphe_hide_shorts_search_suggestions_title">साउंड बटन देखाइएको छ</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_share_button_title">साझेदारी बटन लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_shop_button_title">सर्च सुझावहरू देखाइका छन्</string>
+  <string name="morphe_hide_shorts_sound_button_title">ध्वनि बटन लुकाउनुहोस्</string>
+  <string name="morphe_hide_shorts_sound_metadata_label_title">ध्वनि मेटाडाटा लेबल लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_subscribe_button_title">स्टिकरहरू देखाइका छन्</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">\'सुपर धन्यवाद\' बटन छिपाइ</string>
   <string name="morphe_hide_shorts_tagged_products_title">सब्सक्राइब बटन देखाइएको छ</string>
   <string name="morphe_hide_shorts_upcoming_button_title">ट्याग्ड उत्पादनहरू देखाइका छन्</string>
   <string name="morphe_hide_shorts_use_sound_button_title">\'एह ध्वनि क उपयोग करी\' बटन छिपाइ</string>
   <string name="morphe_hide_shorts_use_template_button_title">\'एह टेम्पलेट क उपयोग करी\' बटन छिपाइ</string>
-  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
-  <string name="morphe_hide_shorts_like_fountain_title">लाइक बटन फाउन्टेशन लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_like_button_title">लाइक बटन लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_comments_button_title">टिप्पणी बटन लुकाउनुहोस्</string>
-  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
-  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_share_button_title">साझेदारी बटन लुकाउनुहोस्</string>
-  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_remix_button_title">रिमिक्स बटन लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_sound_button_title">ध्वनि बटन लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_info_panel_title">जानकारी प्यानल लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_channel_bar_title">च्यानल बार लुकाउनुहोस्</string>
   <string name="morphe_hide_shorts_video_title_title">भिडियो शीर्षक लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_sound_metadata_label_title">ध्वनि मेटाडाटा लेबल लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_full_video_link_label_title">भिडियो लिङ्क लेबल लुकाउनुहोस्</string>
-  <string name="morphe_hide_shorts_navigation_bar_title">नेभिगेसन बार लुकाउनुहोस्</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">किनाराको स्क्रिनमा सुझाव भएको भिडियो लुकाउनुहोस्</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->

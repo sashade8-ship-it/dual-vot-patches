@@ -331,7 +331,37 @@ Limitări:
   <string name="morphe_hide_aislist_attribution_summary">"Datele sunt furnizate de AiSList
 
 Atingeți aici pentru a deschide AiSlopList.com și a vedea descărcările pentru alte platforme"</string>
+  <string name="morphe_aislist_submit_category_title">Raportează canale AI</string>
+  <string name="morphe_aislist_submit_flyout_menu_title">Adaugă o intrare de raportare în meniul videoclipului</string>
+  <string name="morphe_aislist_submit_flyout_menu_summary">Adaugă o intrare în meniul videoclipului care raportează canalul unui videoclip către AiSList</string>
+  <string name="morphe_aislist_submit_username_title">Numele raportorului</string>
+  <string name="morphe_aislist_submit_username_summary">Numele afișat lângă rapoartele tale pe clasamentul public AiSList. Raportarea nu este disponibilă cât timp acest câmp este gol.</string>
+  <string name="morphe_aislist_submit_title">Raportează canalul AI</string>
+  <string name="morphe_aislist_submit_dialog_message">"Trimite %s către AiSList, folosind acest videoclip ca dovadă?
+
+Raportează doar canale care:
+• Folosesc voci, imagini, scenarii sau muzică AI ca principalul conținut
+• Produc în masă conținut cu instrumente AI și puțină muncă umană
+
+Nu raporta canale care doar discută despre AI sau folosesc AI pentru unele părți ale videoclipurilor lor.
+
+Rapoartele sunt publice și sunt analizate înainte ca un canal să fie adăugat pe o listă. Eliminarea este posibilă doar printr-o cerere pe GitHub"</string>
+  <string name="morphe_aislist_submit_already_blocklisted">Acest canal este deja pe lista neagră AiSList.</string>
+  <string name="morphe_aislist_submit_already_warnlisted">Acest canal este deja pe lista de avertizare AiSList.</string>
+  <string name="morphe_aislist_submit_dialog_confirm">Raportează</string>
+  <string name="morphe_aislist_submit_no_username">Setează un nume de raportor în setările filtrului de canale AI pentru a raporta canale.</string>
+  <string name="morphe_aislist_submit_resolving">Se caută canalul…</string>
+  <string name="morphe_aislist_submit_failed_channel">Nu s-a putut găsi canalul acestui videoclip.</string>
+  <string name="morphe_aislist_submit_success">Canalul a fost raportat și așteaptă analiza.</string>
+  <string name="morphe_aislist_submit_failed_conflict">AiSList nu a putut salva raportul, încearcă din nou mai târziu.</string>
+  <string name="morphe_aislist_submit_failed_rate_limit">Prea multe rapoarte au fost trimise, încearcă din nou mai târziu.</string>
+  <string name="morphe_aislist_submit_failed_rejected">AiSList a respins raportul.</string>
+  <string name="morphe_aislist_submit_failed">Raportarea a eșuat, verifică conexiunea.</string>
   <!-- ad.hideAdsPatch -->
+  <string name="morphe_ads_channel_whitelist_title">Lista albă de reclame pentru canale</string>
+  <string name="morphe_ads_channel_whitelist_summary">Videoclipurile de pe canalele din lista albă se redau cu reclame, astfel încât creatorii lor sunt plătiți. Reclamele rămân blocate pe toate celelalte canale.</string>
+  <string name="morphe_ads_channel_whitelist_flyout_add">Adaugă canalul la lista albă de reclame</string>
+  <string name="morphe_ads_channel_whitelist_flyout_remove">Elimină canalul din lista albă de reclame</string>
   <string name="morphe_hide_creator_store_shelf_title">Ascunde raftul magazinului creatorului</string>
   <string name="morphe_hide_end_screen_store_banner_title">Ascunde bannerul magazinului de la finalul ecranului</string>
   <string name="morphe_hide_general_ads_title">Ascunde reclamele generale</string>
@@ -342,6 +372,14 @@ Atingeți aici pentru a deschide AiSlopList.com și a vedea descărcările pentr
   <string name="morphe_hide_shopping_links_title">Ascunde linkurile de cumpărături</string>
   <string name="morphe_hide_video_ads_title">Ascunde reclamele video</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Ascunde promoțiile YouTube Premium</string>
+  <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
+  <string name="morphe_channel_whitelist_current_channel">Canalul curent:</string>
+  <string name="morphe_channel_whitelist_add">Adăugare la lista albă</string>
+  <string name="morphe_channel_whitelist_remove">Elimină</string>
+  <string name="morphe_channel_whitelist_channels_header">Canale din lista albă</string>
+  <string name="morphe_channel_whitelist_empty">Nu există canale în lista albă</string>
+  <string name="morphe_channel_whitelist_channel_added">Canal adăugat în lista albă</string>
+  <string name="morphe_channel_whitelist_channel_removed">Canal eliminat din lista albă</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link copiat în clipboard</string>
@@ -474,6 +512,10 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Deschide coada Morphe în loc de coada YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Adaugă element de meniu pentru coada flyout de feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Adaugă un element suplimentar de flyout. Activează această opțiune dacă \"Adaugă în coadă\" nu este afișat.</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_title">Lista albă pentru anunțuri din meniul pop-up</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Adaugă un element în meniul pop-up care permite redarea anunțurilor pe canalul acelui videoclip</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Lista albă pentru viteză din meniul pop-up</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Adaugă un element în meniul pop-up care redă întotdeauna canalul acelui videoclip la viteza 1.0x</string>
   <string name="morphe_queue_manager_check_failed_auth">Nu ești autentificat</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">ID playlistă inexistent</string>
   <string name="morphe_queue_manager_check_failed_queue">Coada este goală</string>
@@ -788,8 +830,6 @@ Pentru a afișa meniul 'Audio Track', schimbă 'Spoof video streams' în orice c
   <string name="morphe_hide_seekbar_thumbnail_summary">Ascunde bara de progres a vizionării afișată pe miniaturile videoclipurilor pe care le-ai urmărit deja</string>
   <string name="morphe_fullscreen_large_seekbar_title">Activare bară de căutare mare în ecran complet</string>
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
-  <string name="morphe_shorts_player_screen_title">Player Shorts</string>
-  <string name="morphe_shorts_player_screen_summary">Alege care componente apar în playerul Shorts</string>
   <string name="morphe_hide_shorts_category_title">Ascunde Shorts</string>
   <string name="morphe_hide_shorts_channel_title">Ascunde în pagina canalului</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -799,45 +839,48 @@ Pentru a afișa meniul 'Audio Track', schimbă 'Spoof video streams' în orice c
   <string name="morphe_hide_shorts_subscriptions_title">Ascunde în fluxul Abonnamente</string>
   <string name="morphe_hide_shorts_video_description_title">Ascunde în descrierea video</string>
   <string name="morphe_hide_shorts_history_title">Ascunde în istoricul de vizionare</string>
+  <string name="morphe_shorts_player_screen_title">Player Shorts</string>
+  <string name="morphe_shorts_player_screen_summary">Alege care componente apar în playerul Shorts</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">Dezactivează dubla atingere pentru a aprecia</string>
   <string name="morphe_hide_shorts_ai_button_title">Ascunde butonul AI</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Ascunde etichetă \'Auto-dubbed\'</string>
-  <string name="morphe_hide_shorts_super_thanks_button_title">Ascunde butonul \'Cumpără Super Mulțumiri\'</string>
+  <string name="morphe_hide_shorts_channel_bar_title">Ascunde bara de canal</string>
+  <string name="morphe_hide_shorts_comments_button_title">Ascunde butonul Comentarii</string>
   <string name="morphe_hide_shorts_effect_button_title">Ascunde butonul Efect</string>
+  <string name="morphe_hide_shorts_full_video_link_label_title">Ascunde eticheta linkului video</string>
+  <string name="morphe_hide_shorts_gesture_hints_title">Ascunde indiciile pentru gesturi</string>
   <string name="morphe_hide_shorts_green_screen_button_title">Ascunde butonul \'Ecran verde\'</string>
   <string name="morphe_hide_shorts_hashtag_button_title">Ascunde butonul hashtag</string>
+  <string name="morphe_hide_shorts_info_panel_title">Ascunde panoul de informaţii</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_shorts_join_button_title">Ascunde butonul Alătură-te</string>
+  <string name="morphe_hide_shorts_like_button_title">Ascunde butonul Like</string>
+  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
+  <string name="morphe_hide_shorts_like_fountain_title">Ascunde animația fântână a butonului Like</string>
   <string name="morphe_hide_shorts_live_preview_title">Ascunde previzualizarea live</string>
   <string name="morphe_hide_shorts_location_label_title">Ascunde eticheta locației</string>
+  <string name="morphe_hide_shorts_navigation_bar_title">Ascunde bara de navigare</string>
   <string name="morphe_hide_shorts_new_posts_button_title">Ascunde butonul \'Postări noi\'</string>
   <string name="morphe_hide_shorts_paused_overlay_buttons_title">Ascunde butoanele de suprapunere din pauză</string>
   <string name="morphe_hide_shorts_preview_comment_title">Ascunde comentariul de previzualizare</string>
+  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_remix_button_title">Ascunde butonul Remix</string>
+  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_save_button_title">Ascunde butonul Salvează</string>
   <string name="morphe_hide_shorts_save_sound_button_title">Ascunde butonul \'Salvează melodia\'</string>
   <string name="morphe_hide_shorts_search_suggestions_title">Ascunde sugestiile de căutare</string>
+  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_share_button_title">Ascunde butonul Distribuie</string>
   <string name="morphe_hide_shorts_shop_button_title">Ascunde butonul Cumpără</string>
+  <string name="morphe_hide_shorts_sound_button_title">Ascunde butonul de sunet</string>
+  <string name="morphe_hide_shorts_sound_metadata_label_title">Ascunde eticheta metadata sunet</string>
   <string name="morphe_hide_shorts_subscribe_button_title">Ascunde butonul Abonează-te</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">Ascunde butonul \'Cumpără Super Mulțumiri\'</string>
   <string name="morphe_hide_shorts_tagged_products_title">Ascunde produsele etichetate</string>
   <string name="morphe_hide_shorts_upcoming_button_title">Ascunde butonul Următor</string>
   <string name="morphe_hide_shorts_use_sound_button_title">Ascunde butonul \'Folosește acest sunet\'</string>
   <string name="morphe_hide_shorts_use_template_button_title">Ascunde butonul \'Folosește acest șablon\'</string>
-  <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
-  <string name="morphe_hide_shorts_like_fountain_title">Ascunde animația fântână a butonului Like</string>
-  <string name="morphe_hide_shorts_like_button_title">Ascunde butonul Like</string>
-  <string name="morphe_hide_shorts_comments_button_title">Ascunde butonul Comentarii</string>
-  <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_save_button_title">Ascunde butonul Salvează</string>
-  <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_share_button_title">Ascunde butonul Distribuie</string>
-  <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
-  <string name="morphe_hide_shorts_remix_button_title">Ascunde butonul Remix</string>
-  <string name="morphe_hide_shorts_sound_button_title">Ascunde butonul de sunet</string>
-  <string name="morphe_hide_shorts_info_panel_title">Ascunde panoul de informaţii</string>
-  <string name="morphe_hide_shorts_channel_bar_title">Ascunde bara de canal</string>
   <string name="morphe_hide_shorts_video_title_title">Ascunde titlul videoclipului</string>
-  <string name="morphe_hide_shorts_sound_metadata_label_title">Ascunde eticheta metadata sunet</string>
-  <string name="morphe_hide_shorts_full_video_link_label_title">Ascunde eticheta linkului video</string>
-  <string name="morphe_disable_shorts_double_tap_to_like_title">Dezactivează dubla atingere pentru a aprecia</string>
-  <string name="morphe_hide_shorts_navigation_bar_title">Ascunde bara de navigare</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
   <string name="morphe_hide_end_screen_suggested_video_title">Ascunde videoclipul sugerat de pe ecranul final</string>
   <string name="morphe_hide_end_screen_suggested_video_summary">"Ascunde suprapunerea video sugerată care apare după ce videoclipul se termină
@@ -1151,6 +1194,10 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <string name="morphe_remember_playback_speed_toast">Viteza de redare implicită a fost modificată la: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Utilizaţi viteza normală pentru muzică</string>
   <string name="morphe_disable_playback_speed_music_summary">Reda înviteza videoclipurile muzicale în mod constant la 1.0x</string>
+  <string name="morphe_playback_speed_channel_whitelist_title">Lista albă pentru viteza canalelor</string>
+  <string name="morphe_playback_speed_channel_whitelist_summary">Videoclipurile de pe canalele din lista albă se redau întotdeauna la viteza 1.0x</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_add">Adaugă canalul la lista albă pentru viteză</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_remove">Elimină canalul din lista albă pentru viteză</string>
   <string name="morphe_enable_playback_audio_pitch_controls_title">Activați controalele pentru tonalitatea audio</string>
   <string name="morphe_playback_audio_pitch_default_title">Tonalitate audio de redare implicită</string>
   <string name="morphe_remember_playback_audio_pitch_toast">Tonalitatea implicită a fost modificată la: %s</string>
