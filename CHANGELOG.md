@@ -1,3 +1,13 @@
+## 1.42.0-dev.6-dualvot.8.3 (2026-09-06)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.42.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.42.0-dev.5-dualvot.8.3 (2026-09-06)
 
 ### Automated Morphe update
@@ -273,11 +283,17 @@
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
 
+## [1.42.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.5...v1.42.0-dev.6) (2026-09-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Channel whitelists:** Hide injected flyout menu buttons from other unrelated menu's  ([#2808](https://github.com/MorpheApp/morphe-patches/issues/2808)) ([5ba4ab4](https://github.com/MorpheApp/morphe-patches/commit/5ba4ab46f1a1ff62a8a733adc1b52a5614208036))
+
 ## [1.42.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.4...v1.42.0-dev.5) (2026-09-06)
 
 ### 🐛 Bug Fixes
 
-* **YouTube - SponsorBlock:** Skip buttons are not show with `21.26.45` ([f667d85](https://github.com/MorpheApp/morphe-patches/commit/f667d85352b8165b1680c54bd22e211e81e7f1ce))
+* **YouTube - SponsorBlock:** Skip buttons not working on `21.36.45` ([f667d85](https://github.com/MorpheApp/morphe-patches/commit/f667d85352b8165b1680c54bd22e211e81e7f1ce))
 
 ## [1.42.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.3...v1.42.0-dev.4) (2026-09-06)
 
