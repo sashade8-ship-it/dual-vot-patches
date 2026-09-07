@@ -120,6 +120,15 @@ final class YandexVotAudioDownloader {
     private YandexVotAudioDownloader() {
     }
 
+    private static void logDiagnostic(String message) {
+        try {
+            Class.forName("app.morphe.extension.shared.Logger");
+            Logger.printDebug(() -> message);
+        } catch (ClassNotFoundException ignored) {
+            // Unit tests intentionally run without the Android logging backend.
+        }
+    }
+
     static YandexVotAudioResult downloadAndSend(
             String videoId,
             String videoUrl,
@@ -251,16 +260,38 @@ final class YandexVotAudioDownloader {
             String videoId,
             @Nullable StreamingDataRequest request
     ) throws IOException {
-        if (request == null) return null;
+        if (request == null) {
+            logDiagnostic( "Yandex VOT audio diagnostics: no cached player response for " + videoId);
+            return null;
+        }
 
         StreamingDataRequest.StreamData streamData = request.getStream();
-        if (streamData == null) return null;
+        if (streamData == null) {
+            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
+                    + " is unavailable or still loading for " + videoId);
+            return null;
+        }
 
         byte[] playerResponseBytes = streamData.streamingData();
-        if (playerResponseBytes == null || playerResponseBytes.length == 0) return null;
+        if (playerResponseBytes == null || playerResponseBytes.length == 0) {
+            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
+                    + " has empty streaming data for " + videoId);
+            return null;
+        }
 
-        PlayerResponse playerResponse = PlayerResponse.parseFrom(playerResponseBytes);
-        if (!playerResponse.hasStreamingData()) return null;
+        PlayerResponse playerResponse;
+        try {
+            playerResponse = PlayerResponse.parseFrom(playerResponseBytes);
+        } catch (Exception e) {
+            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
+                    + " could not be parsed for " + videoId);
+            return null;
+        }
+        if (!playerResponse.hasStreamingData()) {
+            logDiagnostic( "Yandex VOT audio diagnostics: parsed player response"
+                    + " has no streaming data for " + videoId);
+            return null;
+        }
 
         return selectBestCapturedAudioFormat(
                 videoId, playerResponse.getStreamingData().getAdaptiveFormatsList());
@@ -278,8 +309,20 @@ final class YandexVotAudioDownloader {
                     format.getItag(), format.getUrl(), format.getMimeType(), getBitrate(format)));
         }
 
+        if (candidates.isEmpty()) {
+            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
+                    + " has no audio-only formats for " + videoId);
+            return null;
+        }
+
         CapturedAudioCandidate selected = selectBestCapturedAudioCandidate(videoId, candidates);
-        if (selected == null) return null;
+        if (selected == null) {
+            final String snapshotSummary = YandexVotPlayerMediaTransport.snapshotSummary(videoId);
+            logDiagnostic( "Yandex VOT audio diagnostics: audio itags "
+                    + describeItags(candidates) + " have no matching live media request; "
+                    + snapshotSummary + " for " + videoId);
+            return null;
+        }
         for (Format format : formats) {
             if (format.getItag() == selected.candidate().itag()
                     && selected.candidate().url().equals(format.getUrl())) {
@@ -287,6 +330,15 @@ final class YandexVotAudioDownloader {
             }
         }
         return null;
+    }
+
+    private static String describeItags(List<AudioCandidate> candidates) {
+        StringBuilder itags = new StringBuilder("[");
+        for (int i = 0; i < candidates.size(); i++) {
+            if (i > 0) itags.append(',');
+            itags.append(candidates.get(i).itag());
+        }
+        return itags.append(']').toString();
     }
 
     @Nullable

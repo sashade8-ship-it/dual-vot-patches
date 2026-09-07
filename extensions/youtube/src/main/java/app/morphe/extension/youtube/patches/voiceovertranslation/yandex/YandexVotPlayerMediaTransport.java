@@ -22,6 +22,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import app.morphe.extension.shared.requests.CronetTransport;
+import app.morphe.extension.shared.Logger;
 
 /**
  * Captures a <em>live player</em> media request at the MediaDataSource construction boundary
@@ -48,8 +49,18 @@ final class YandexVotPlayerMediaTransport {
     private static final int DATA_SPEC_HTTP_METHOD_POST = 2;
     private static final Object LOCK = new Object();
     private static final ArrayList<Snapshot> SNAPSHOTS = new ArrayList<>();
+    private static volatile long lastBodyfulDiagnosticLogMs;
 
     private YandexVotPlayerMediaTransport() {
+    }
+
+    private static void logDiagnostic(String message) {
+        try {
+            Class.forName("app.morphe.extension.shared.Logger");
+            Logger.printDebug(() -> message);
+        } catch (ClassNotFoundException ignored) {
+            // Unit tests intentionally run without the Android logging backend.
+        }
     }
 
     /** Bytecode injection point: records the app-wide engine used by player networking. */
@@ -94,15 +105,24 @@ final class YandexVotPlayerMediaTransport {
             return;
         }
         if (uri.getPath() == null || !uri.getPath().contains("/videoplayback")) return;
+        int itag = parsePositiveInt(queryParameter(uri.getRawQuery(), "itag"));
         // Spoof video streams can clear DataSpec.d while leaving its method as POST. Replaying
         // that bodyless POST exactly is safe; transforming it into GET would lose semantics.
         if (replayHttpMethod(httpMethod) == null
                 || (requestBody != null && requestBody.length != 0)) {
+            if (itag > 0 && requestBody != null && requestBody.length > 0) {
+                long nowMs = System.currentTimeMillis();
+                if (nowMs - lastBodyfulDiagnosticLogMs >= 15_000L) {
+                    lastBodyfulDiagnosticLogMs = nowMs;
+                    logDiagnostic( "Yandex VOT media transport diagnostics:"
+                            + " ignored bodyful SABR-style media request, itag=" + itag
+                            + ", bodyBytes=" + requestBody.length);
+                }
+            }
             return;
         }
 
         String videoId = firstVideoId(uri.getRawQuery(), requestVideoId);
-        int itag = parsePositiveInt(queryParameter(uri.getRawQuery(), "itag"));
         // Media URLs normally carry an opaque googlevideo stream id, while DataSpec.key is an
         // implementation detail rather than a guaranteed YouTube video id.  Keep a bodyless
         // candidate even without a video id; selection later requires the cached current-video
@@ -112,6 +132,7 @@ final class YandexVotPlayerMediaTransport {
         }
 
         Map<String, String> copiedHeaders = copyHeaders(headers);
+        int snapshotCount;
         synchronized (LOCK) {
             // Keep the newest exact request for every video/itag pair.  Player prefetch, ads and
             // next-video requests must not evict the active video's still-valid snapshot.
@@ -127,7 +148,12 @@ final class YandexVotPlayerMediaTransport {
             while (SNAPSHOTS.size() > MAX_SNAPSHOTS) {
                 SNAPSHOTS.remove(0);
             }
+            snapshotCount = SNAPSHOTS.size();
         }
+        logDiagnostic( "Yandex VOT media transport diagnostics: retained "
+                + replayHttpMethod(httpMethod) + " itag=" + itag
+                + ", videoIdKnown=" + (videoId != null)
+                + ", totalSnapshots=" + snapshotCount);
     }
 
     /** Returns the newest exact current-video/audio-format request, or null when unavailable. */
@@ -173,6 +199,19 @@ final class YandexVotPlayerMediaTransport {
     static void resetForTests() {
         synchronized (LOCK) {
             SNAPSHOTS.clear();
+        }
+    }
+
+    static String snapshotSummary(@Nullable String videoId) {
+        synchronized (LOCK) {
+            StringBuilder currentItags = new StringBuilder();
+            for (Snapshot snapshot : SNAPSHOTS) {
+                if (videoId == null || !videoId.equals(snapshot.videoId)) continue;
+                if (currentItags.length() > 0) currentItags.append(',');
+                currentItags.append(snapshot.itag);
+            }
+            return "snapshots=" + SNAPSHOTS.size()
+                    + ", currentVideoItags=[" + currentItags + "]";
         }
     }
 
