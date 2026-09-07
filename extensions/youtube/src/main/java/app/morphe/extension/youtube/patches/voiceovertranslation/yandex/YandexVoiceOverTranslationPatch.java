@@ -162,8 +162,6 @@ public class YandexVoiceOverTranslationPatch {
     private static volatile String lastSuccessfulAudioUploadKey = "";
     /** Request key for which the failed-audio abort was already sent to Yandex. */
     private static volatile String lastFailedAudioRequestKey = "";
-    private static final int AUDIO_REQUESTED_FALLBACK_WAIT_SECONDS = 10;
-    private static final int PENDING_FALLBACK_WAIT_SECONDS = 63;
 
     private static void setWaitingTimeSeconds(int seconds) {
         waitingTimeSeconds = seconds;
@@ -181,6 +179,40 @@ public class YandexVoiceOverTranslationPatch {
             setWaitingTimeSeconds(seconds);
             notifyTranslationStateChanged();
         });
+    }
+
+    /**
+     * Audio was accepted by Yandex, but that response can predate the upload and therefore is
+     * not a processing ETA.  Keep the shared button/sheet state indeterminate until a fresh
+     * post-upload status supplies a positive server estimate.
+     */
+    private static void ensurePostUploadWaiting(long generation) {
+        runOnUiIfCurrentGen(generation, () -> {
+            if (waitingDeadlineMs < 0) {
+                setWaitingTimeSeconds(-1);
+                clearAudioUploadProgress();
+                notifyTranslationStateChanged();
+            }
+        });
+    }
+
+    private static void beginWaitingFromServerEstimate(long generation, int serverRemainingSeconds) {
+        int serverEstimate = YandexVotTiming.serverEstimateOrNone(serverRemainingSeconds);
+        if (serverEstimate > 0) {
+            beginWaitingEstimate(generation, serverEstimate);
+        } else {
+            ensurePostUploadWaiting(generation);
+        }
+    }
+
+    private static void updateWaitingFromServerEstimate(long generation, int serverRemainingSeconds) {
+        int serverEstimate = YandexVotTiming.serverEstimateOrNone(serverRemainingSeconds);
+        if (serverEstimate > 0) {
+            updateWaitingEstimate(generation, serverEstimate);
+        } else {
+            // Do not reset an already-running server countdown when a later poll omits ETA.
+            ensurePostUploadWaiting(generation);
+        }
     }
 
     private static void updateWaitingEstimate(long generation, int seconds) {
@@ -630,24 +662,22 @@ public class YandexVoiceOverTranslationPatch {
                     handleAudioAcquisitionFailure(generation, audioResult);
                     return;
                 }
-                int estimateSeconds = YandexVotTiming.estimateOrDefault(
-                        result.remainingTime(),
-                        AUDIO_REQUESTED_FALLBACK_WAIT_SECONDS
-                );
-                beginWaitingEstimate(generation, estimateSeconds);
+                // `result` was received before the original track was uploaded.  Its ETA is
+                // stale (and often absent), so do not turn it into a countdown.  Poll once
+                // immediately for a post-upload status; only that response may start the ETA.
+                ensurePostUploadWaiting(generation);
                 pollTranslation(videoId, videoTitle, youtubeUrl, durationSeconds, sourceLang, targetLang,
-                        YandexVotTiming.pollDelaySeconds(result.remainingTime()),
+                        0,
                         useLiveVoices, generation, 0);
             } else {
-                int estimateSeconds = YandexVotTiming.estimateOrDefault(
-                        result.remainingTime(),
-                        PENDING_FALLBACK_WAIT_SECONDS
-                );
-                beginWaitingEstimate(generation, estimateSeconds);
-                runOnUiIfCurrentGen(generation, () -> Utils.showToastLong(str(
-                        "dualvot_yandex_stream_waiting",
-                        formatRemainingTime(estimateSeconds)
-                )));
+                int serverEstimate = YandexVotTiming.serverEstimateOrNone(result.remainingTime());
+                beginWaitingFromServerEstimate(generation, result.remainingTime());
+                if (serverEstimate > 0) {
+                    runOnUiIfCurrentGen(generation, () -> Utils.showToastLong(str(
+                            "dualvot_yandex_stream_waiting",
+                            formatRemainingTime(serverEstimate)
+                    )));
+                }
                 pollTranslation(videoId, videoTitle, youtubeUrl, durationSeconds, sourceLang, targetLang,
                         YandexVotTiming.pollDelaySeconds(result.remainingTime()),
                         useLiveVoices, generation, 0);
@@ -768,24 +798,18 @@ public class YandexVoiceOverTranslationPatch {
                     handleAudioAcquisitionFailure(generation, audioResult);
                     return;
                 }
-                int estimateSeconds = YandexVotTiming.estimateOrDefault(
-                        result.remainingTime(),
-                        AUDIO_REQUESTED_FALLBACK_WAIT_SECONDS
-                );
                 int nextPollDelaySeconds = YandexVotTiming.pollDelaySeconds(result.remainingTime());
                 Logger.printDebug(() -> "VOT audio requested (poll), next readiness check in "
                         + nextPollDelaySeconds + "s");
-                updateWaitingEstimate(generation, estimateSeconds);
+                // The server still asks for audio.  The upload is already deduplicated by the
+                // request key, so wait without fabricating an ETA until it reports processing.
+                ensurePostUploadWaiting(generation);
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang,
                         nextPollDelaySeconds, useLiveVoices, generation, 0);
                 return;
             } else {
-                int estimateSeconds = YandexVotTiming.estimateOrDefault(
-                        result.remainingTime(),
-                        PENDING_FALLBACK_WAIT_SECONDS
-                );
                 int nextPollDelaySeconds = YandexVotTiming.pollDelaySeconds(result.remainingTime());
-                updateWaitingEstimate(generation, estimateSeconds);
+                updateWaitingFromServerEstimate(generation, result.remainingTime());
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang,
                         nextPollDelaySeconds, useLiveVoices, generation, 0);
                 return;

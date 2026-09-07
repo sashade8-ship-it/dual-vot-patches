@@ -116,4 +116,30 @@ public class YandexVotPlayerMediaTransportTest {
 
         assertNull(YandexVotPlayerMediaTransport.find(VIDEO_A, 251));
     }
+
+    @Test
+    public void matchesOpaqueMediaIdToCurrentCachedFormatWithoutTrustingDataSpecKey() {
+        String captured = "https://rr1.example/videoplayback?id=o-opaque-media-stream"
+                + "&itag=251&clen=9000000&audio_track=default&sig=captured";
+        String cachedFormat = "https://rr9.example/videoplayback?id=o-opaque-media-stream"
+                + "&itag=251&clen=9000000&audio_track=default&sig=player-response";
+
+        // The DataSpec key is not a YouTube video id.  The transport must retain it and then
+        // prove the match against the cached format for the requested current video.
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                captured, 1, null, new HashMap<>(), "cache-key:251");
+
+        YandexVotPlayerMediaTransport.Snapshot snapshot =
+                YandexVotPlayerMediaTransport.findForFormat(VIDEO_A, 251, cachedFormat);
+        assertNotNull(snapshot);
+        assertEquals(captured, snapshot.url);
+        assertNull(YandexVotPlayerMediaTransport.findForFormat(
+                VIDEO_A,
+                250,
+                cachedFormat.replace("itag=251", "itag=250")));
+        assertNull(YandexVotPlayerMediaTransport.findForFormat(
+                VIDEO_A,
+                251,
+                cachedFormat.replace("audio_track=default", "audio_track=alternate")));
+    }
 }

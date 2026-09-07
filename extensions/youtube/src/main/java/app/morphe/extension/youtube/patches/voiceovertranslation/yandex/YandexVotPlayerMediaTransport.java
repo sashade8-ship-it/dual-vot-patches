@@ -103,7 +103,11 @@ final class YandexVotPlayerMediaTransport {
 
         String videoId = firstVideoId(uri.getRawQuery(), requestVideoId);
         int itag = parsePositiveInt(queryParameter(uri.getRawQuery(), "itag"));
-        if (videoId == null || itag <= 0) {
+        // Media URLs normally carry an opaque googlevideo stream id, while DataSpec.key is an
+        // implementation detail rather than a guaranteed YouTube video id.  Keep a bodyless
+        // candidate even without a video id; selection later requires the cached current-video
+        // format to prove it is the same media stream.
+        if (itag <= 0) {
             return;
         }
 
@@ -113,7 +117,9 @@ final class YandexVotPlayerMediaTransport {
             // next-video requests must not evict the active video's still-valid snapshot.
             for (int i = SNAPSHOTS.size() - 1; i >= 0; i--) {
                 Snapshot existing = SNAPSHOTS.get(i);
-                if (videoId.equals(existing.videoId) && itag == existing.itag) {
+                if (itag == existing.itag
+                        && ((videoId != null && videoId.equals(existing.videoId))
+                        || sameMediaStream(existing.url, url))) {
                     SNAPSHOTS.remove(i);
                 }
             }
@@ -132,6 +138,27 @@ final class YandexVotPlayerMediaTransport {
             for (int i = SNAPSHOTS.size() - 1; i >= 0; i--) {
                 Snapshot snapshot = SNAPSHOTS.get(i);
                 if (videoId.equals(snapshot.videoId) && itag == snapshot.itag) {
+                    return snapshot;
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Returns a captured request only when it belongs to the cached format of the current
+     * video.  This accommodates opaque DataSpec keys without allowing an arbitrary prefetch
+     * request to be used as the source track.
+     */
+    @Nullable
+    static Snapshot findForFormat(String videoId, int itag, String formatUrl) {
+        Snapshot exactVideoMatch = find(videoId, itag);
+        if (exactVideoMatch != null) return exactVideoMatch;
+        if (formatUrl == null || formatUrl.isEmpty() || itag <= 0) return null;
+        synchronized (LOCK) {
+            for (int i = SNAPSHOTS.size() - 1; i >= 0; i--) {
+                Snapshot snapshot = SNAPSHOTS.get(i);
+                if (snapshot.itag == itag && sameMediaStream(snapshot.url, formatUrl)) {
                     return snapshot;
                 }
             }
@@ -221,6 +248,51 @@ final class YandexVotPlayerMediaTransport {
         return true;
     }
 
+    /**
+     * Compares only immutable media identity shared by player response and DataSpec URI.  The
+     * signature and transient request parameters may differ, so string equality is too strict.
+     */
+    private static boolean sameMediaStream(String firstUrl, String secondUrl) {
+        try {
+            URI first = new URI(firstUrl);
+            URI second = new URI(secondUrl);
+            if (!same(first.getPath(), second.getPath())) {
+                return false;
+            }
+            String firstItag = queryParameter(first.getRawQuery(), "itag");
+            String secondItag = queryParameter(second.getRawQuery(), "itag");
+            if (!same(firstItag, secondItag)) return false;
+            String firstMediaId = queryParameter(first.getRawQuery(), "id");
+            String secondMediaId = queryParameter(second.getRawQuery(), "id");
+            if (firstMediaId == null || firstMediaId.isEmpty() || !same(firstMediaId, secondMediaId)) {
+                return false;
+            }
+            // A video may expose alternate audio tracks with the same itag.  Require every
+            // identity-bearing value that both URLs disclose to agree before falling back from
+            // the explicit current-video id match.
+            return sameWhenBothPresent(first.getRawQuery(), second.getRawQuery(), "clen")
+                    && sameWhenBothPresent(first.getRawQuery(), second.getRawQuery(), "audio_track")
+                    && sameWhenBothPresent(first.getRawQuery(), second.getRawQuery(), "lmt")
+                    && sameWhenBothPresent(first.getRawQuery(), second.getRawQuery(), "xtags");
+        } catch (URISyntaxException | NullPointerException ignored) {
+            return false;
+        }
+    }
+
+    private static boolean same(@Nullable String first, @Nullable String second) {
+        return first != null && first.equals(second);
+    }
+
+    private static boolean sameWhenBothPresent(
+            @Nullable String firstQuery,
+            @Nullable String secondQuery,
+            String parameter
+    ) {
+        String first = queryParameter(firstQuery, parameter);
+        String second = queryParameter(secondQuery, parameter);
+        return first == null || second == null || first.equals(second);
+    }
+
     @SuppressWarnings("rawtypes")
     private static Map<String, String> copyHeaders(Map headers) {
         LinkedHashMap<String, String> copy = new LinkedHashMap<>();
@@ -247,13 +319,14 @@ final class YandexVotPlayerMediaTransport {
     }
 
     static final class Snapshot {
+        @Nullable
         final String videoId;
         final int itag;
         final String url;
         final int httpMethod;
         final Map<String, String> headers;
 
-        Snapshot(String videoId, int itag, String url, int httpMethod,
+        Snapshot(@Nullable String videoId, int itag, String url, int httpMethod,
                  Map<String, String> headers) {
             this.videoId = videoId;
             this.itag = itag;

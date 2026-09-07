@@ -16,8 +16,12 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.function.IntConsumer;
 
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.AbortSignal;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.PartReader;
@@ -39,6 +43,7 @@ public class YandexVotHttpAudioPartReaderTest {
         boolean closed = false;
         int slice = Integer.MAX_VALUE;
         Runnable afterChunk;
+        long bodyBytesRead;
 
         FakeConn(int status) {
             this.status = status;
@@ -77,7 +82,7 @@ public class YandexVotHttpAudioPartReaderTest {
 
         @Override
         public InputStream stream() {
-            return new ChunkedInput(body, slice, afterChunk);
+            return new ChunkedInput(body, slice, afterChunk, amount -> bodyBytesRead += amount);
         }
 
         @Override
@@ -91,12 +96,14 @@ public class YandexVotHttpAudioPartReaderTest {
         private final byte[] data;
         private final int slice;
         private final Runnable afterChunk;
+        private final IntConsumer afterRead;
         private int position = 0;
 
-        ChunkedInput(byte[] data, int slice, Runnable afterChunk) {
+        ChunkedInput(byte[] data, int slice, Runnable afterChunk, IntConsumer afterRead) {
             this.data = data == null ? new byte[0] : data;
             this.slice = slice;
             this.afterChunk = afterChunk;
+            this.afterRead = afterRead;
         }
 
         @Override
@@ -110,6 +117,7 @@ public class YandexVotHttpAudioPartReaderTest {
             int amount = Math.min(length, Math.min(slice, data.length - position));
             System.arraycopy(data, position, buffer, offset, amount);
             position += amount;
+            if (afterRead != null) afterRead.accept(amount);
             if (afterChunk != null) afterChunk.run();
             return amount;
         }
@@ -289,12 +297,62 @@ public class YandexVotHttpAudioPartReaderTest {
     }
 
     @Test
-    public void http200FirstPartOfMultipartTrackIsRejectedBeforeAnyUpload() {
-        FakeConn conn = open(new FakeConn(200, PART + 1)).withBody(bytes(PART + 1, 1));
-        PartReader reader = reader(PART + 1L, factoryOf(conn));
+    public void http200WholeBodySupportsMultipartPartsByDiscardingEarlierBytes() throws Exception {
+        byte[] whole = bytes(2 * PART + 3, 1);
+        List<Long> starts = new ArrayList<>();
+        List<FakeConn> connections = new ArrayList<>();
+        Factory wholeBodyFactory = new Factory() {
+            @Override
+            public Connection open(String url, long start, long endInclusive) {
+                starts.add(start);
+                FakeConn connection = new FakeConn(200, whole.length).withBody(whole);
+                connections.add(connection);
+                return connection;
+            }
+        };
+        PartReader reader = reader(whole.length, wholeBodyFactory);
 
-        expectSourceRead(() -> reader.read(0, PART, NO_ABORT));
-        assertTrue(conn.closed);
+        assertArrayEquals(Arrays.copyOfRange(whole, 0, PART), reader.read(0, PART, NO_ABORT));
+        assertArrayEquals(
+                Arrays.copyOfRange(whole, PART, 2 * PART),
+                reader.read(PART, PART, NO_ABORT));
+        assertArrayEquals(
+                Arrays.copyOfRange(whole, 2 * PART, whole.length),
+                reader.read(2L * PART, 3, NO_ABORT));
+
+        assertEquals(Arrays.asList(0L), starts);
+        assertEquals(1, connections.size());
+        assertEquals((long) whole.length, connections.get(0).bodyBytesRead);
+        assertTrue(connections.get(0).closed);
+    }
+
+    @Test
+    public void http200WholeBodyTruncationClosesTheRetainedConnection() throws Exception {
+        long total = PART + 5L;
+        FakeConn connection = open(new FakeConn(200, total)).withBody(bytes(PART + 2, 1));
+        PartReader reader = reader(total, factoryOf(connection));
+
+        reader.read(0, PART, NO_ABORT);
+        expectSourceRead(() -> reader.read(PART, 5, NO_ABORT));
+
+        assertTrue(connection.closed);
+    }
+
+    @Test
+    public void http200WholeBodyCancellationClosesTheRetainedConnection() throws Exception {
+        long total = PART + 3L;
+        FakeConn connection = open(new FakeConn(200, total)).withBody(bytes((int) total, 1));
+        PartReader reader = reader(total, factoryOf(connection));
+
+        reader.read(0, PART, NO_ABORT);
+        try {
+            reader.read(PART, 3, () -> true);
+            fail("Expected ReadAbortedException");
+        } catch (ReadAbortedException expected) {
+            // expected
+        }
+
+        assertTrue(connection.closed);
     }
 
     @Test

@@ -303,7 +303,8 @@ final class YandexVotAudioDownloader {
             if (isEmpty(candidate.url())) continue;
 
             YandexVotPlayerMediaTransport.Snapshot mediaRequest =
-                    YandexVotPlayerMediaTransport.find(videoId, candidate.itag());
+                    YandexVotPlayerMediaTransport.findForFormat(
+                            videoId, candidate.itag(), candidate.url());
             if (mediaRequest == null) continue;
 
             int bitrate = candidate.bitrate();

@@ -54,6 +54,12 @@ final class YandexVotHttpAudioPartReader implements YandexVotAudioTransfer.PartR
     /** Full track size when already known (from clen or a probe), otherwise 0. */
     private final long knownTotal;
     private final Factory factory;
+    /** A single full-body response reused for sequential multipart reads when Range is ignored. */
+    @Nullable
+    private Connection wholeBodyConnection;
+    @Nullable
+    private InputStream wholeBodyStream;
+    private long wholeBodyPosition;
 
     YandexVotHttpAudioPartReader(String url, long knownTotal) {
         this(url, knownTotal, YandexVotHttpAudioPartReader::openRealConnection);
@@ -144,6 +150,9 @@ final class YandexVotHttpAudioPartReader implements YandexVotAudioTransfer.PartR
         if (length <= 0 || length > YandexVotAudioParts.PART_SIZE_BYTES) {
             throw new YandexVotAudioTransfer.SourceReadException("Invalid audio part size");
         }
+        if (wholeBodyConnection != null) {
+            return readFromWholeBody(start, length, abort);
+        }
         long end = start + length - 1;
 
         Connection connection = null;
@@ -161,22 +170,30 @@ final class YandexVotHttpAudioPartReader implements YandexVotAudioTransfer.PartR
                 YandexVotContentRange.require(
                         connection.header("Content-Range"), start, end, knownTotal);
             } else if (status == HttpURLConnection.HTTP_OK) {
-                // A server that ignores Range is safe only for a request whose one part is
-                // the entire known track.  Reading a leading prefix of a multipart file would
-                // upload part 0 before failing on part 1 and corrupt the Yandex source.
-                if (start != 0
-                        || knownTotal <= 0
-                        || length != knownTotal
-                        || connection.contentLength() != knownTotal) {
+                // Some player transports return the complete resource even when Range is
+                // present. Keep that one validated body open and consume its parts in order;
+                // reopening and discarding the prefix per part would turn a long track into
+                // quadratic network traffic.
+                if (knownTotal <= 0 || connection.contentLength() != knownTotal) {
                     throw new YandexVotAudioTransfer.SourceReadException(
-                            "Media server ignored a multipart or unknown range request");
+                            "Media server returned an unproven whole-body response");
                 }
+                if (start != 0) {
+                    throw new YandexVotAudioTransfer.SourceReadException(
+                            "Whole-body source did not begin at the first audio part");
+                }
+                InputStream fullBodyStream = connection.stream();
+                wholeBodyConnection = connection;
+                wholeBodyStream = fullBodyStream;
+                wholeBodyPosition = 0;
+                connection = null; // Ownership moved to close()/readFromWholeBody().
+                return readFromWholeBody(start, length, abort);
             } else {
                 throw new YandexVotAudioTransfer.SourceReadException(
                         "Audio download failed: HTTP " + status);
             }
 
-            return readBody(connection, length, abort);
+            return readConnectionBody(connection, length, abort);
         } catch (YandexVotAudioTransfer.SourceDeniedException ex) {
             throw ex;
         } catch (YandexVotAudioTransfer.SourceReadException ex) {
@@ -198,31 +215,51 @@ final class YandexVotHttpAudioPartReader implements YandexVotAudioTransfer.PartR
 
     @Override
     public void close() {
-        // Every part connection is closed inside read(); nothing else to release.
+        closeWholeBody();
     }
 
-    private static byte[] readBody(
+    private byte[] readFromWholeBody(
+            long start,
+            int length,
+            YandexVotAudioTransfer.AbortSignal abort
+    ) throws YandexVotAudioTransfer.SourceReadException,
+            YandexVotAudioTransfer.ReadAbortedException {
+        if (wholeBodyStream == null || start != wholeBodyPosition) {
+            closeWholeBody();
+            throw new YandexVotAudioTransfer.SourceReadException(
+                    "Whole-body source cannot serve a non-sequential audio part");
+        }
+        try {
+            byte[] part = readStream(wholeBodyStream, length, abort);
+            wholeBodyPosition += length;
+            if (wholeBodyPosition == knownTotal) {
+                closeWholeBody();
+            }
+            return part;
+        } catch (YandexVotAudioTransfer.SourceReadException
+                 | YandexVotAudioTransfer.ReadAbortedException ex) {
+            closeWholeBody();
+            throw ex;
+        } catch (IOException ex) {
+            closeWholeBody();
+            if (abort != null && abort.shouldAbort()) {
+                throw new YandexVotAudioTransfer.ReadAbortedException();
+            }
+            throw new YandexVotAudioTransfer.SourceReadException("Audio part could not be read");
+        }
+    }
+
+    private static byte[] readConnectionBody(
             Connection connection,
             int length,
             YandexVotAudioTransfer.AbortSignal abort
     ) throws YandexVotAudioTransfer.SourceReadException,
             YandexVotAudioTransfer.ReadAbortedException,
             IOException {
-        byte[] out = new byte[length];
-        int total = 0;
         InputStream inputStream = null;
         try {
             inputStream = connection.stream();
-            while (total < length) {
-                if (abort.shouldAbort()) {
-                    // Stop the active transfer now; the connection is closed by the caller.
-                    throw new YandexVotAudioTransfer.ReadAbortedException();
-                }
-                int read = inputStream.read(out, total, length - total);
-                if (read == -1) break;
-                if (read <= 0) continue;
-                total += read;
-            }
+            return readStream(inputStream, length, abort);
         } finally {
             if (inputStream != null) {
                 try {
@@ -231,11 +268,47 @@ final class YandexVotHttpAudioPartReader implements YandexVotAudioTransfer.PartR
                 }
             }
         }
+    }
+
+    private static byte[] readStream(
+            InputStream inputStream,
+            int length,
+            YandexVotAudioTransfer.AbortSignal abort
+    ) throws YandexVotAudioTransfer.SourceReadException,
+            YandexVotAudioTransfer.ReadAbortedException,
+            IOException {
+        byte[] out = new byte[length];
+        int total = 0;
+        while (total < length) {
+            if (abort.shouldAbort()) {
+                // Stop the active transfer now; the connection is closed by the caller.
+                throw new YandexVotAudioTransfer.ReadAbortedException();
+            }
+            int read = inputStream.read(out, total, length - total);
+            if (read == -1) break;
+            if (read <= 0) continue;
+            total += read;
+        }
         if (total != length) {
             throw new YandexVotAudioTransfer.SourceReadException(
                     "Incomplete audio part: expected " + length + " bytes, got " + total);
         }
         return out;
+    }
+
+    private void closeWholeBody() {
+        InputStream stream = wholeBodyStream;
+        wholeBodyStream = null;
+        if (stream != null) {
+            try {
+                stream.close();
+            } catch (IOException ignored) {
+            }
+        }
+        Connection connection = wholeBodyConnection;
+        wholeBodyConnection = null;
+        wholeBodyPosition = 0;
+        if (connection != null) connection.close();
     }
 
     private static YandexVotHttpAudioPartReader.Connection openRealConnection(
