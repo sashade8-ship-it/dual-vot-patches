@@ -25,7 +25,7 @@ import app.morphe.extension.shared.requests.CronetTransport;
 
 /**
  * Captures a <em>live player</em> media request at the MediaDataSource construction boundary
- * and reopens its GET representation through the application's recorded Cronet engine.
+ * and reopens its effective byte-addressable method through the recorded Cronet engine.
  *
  * <p>This deliberately has no platform-HTTP fallback.  The old standalone request was the
  * cause of prefix-only authorization: if an app engine or a matching current-video audio
@@ -45,6 +45,7 @@ final class YandexVotPlayerMediaTransport {
     // The constructor fingerprint is ExoPlayer DataSpec(Uri, long, int, byte[], Map, long,
     // long, String, int, Object); DataSpec.HTTP_METHOD_GET is 1 (POST is 2, HEAD is 3).
     private static final int DATA_SPEC_HTTP_METHOD_GET = 1;
+    private static final int DATA_SPEC_HTTP_METHOD_POST = 2;
     private static final Object LOCK = new Object();
     private static final ArrayList<Snapshot> SNAPSHOTS = new ArrayList<>();
 
@@ -60,8 +61,8 @@ final class YandexVotPlayerMediaTransport {
     /**
      * Bytecode injection point at the player's MediaDataSource constructor.
      *
-     * <p>Only an id/itag-addressable, bodyless media request is retained.  In particular, a
-     * SABR POST is not a fallback candidate because its body requires protocol-aware parsing.
+     * <p>Only an id/itag-addressable, bodyless GET or POST is retained. A body-carrying SABR
+     * POST is not a fallback candidate because its response requires protocol-aware parsing.
      */
     @SuppressWarnings({"unused", "rawtypes"})
     public static void recordPlayerMediaRequest(
@@ -93,9 +94,9 @@ final class YandexVotPlayerMediaTransport {
             return;
         }
         if (uri.getPath() == null || !uri.getPath().contains("/videoplayback")) return;
-        // A range reader can only faithfully replay a bodyless DataSpec GET.  Do not turn an
-        // unknown method, POST, or HEAD into GET: any such replay loses request semantics.
-        if (httpMethod != DATA_SPEC_HTTP_METHOD_GET
+        // Spoof video streams can clear DataSpec.d while leaving its method as POST. Replaying
+        // that bodyless POST exactly is safe; transforming it into GET would lose semantics.
+        if (replayHttpMethod(httpMethod) == null
                 || (requestBody != null && requestBody.length != 0)) {
             return;
         }
@@ -153,12 +154,13 @@ final class YandexVotPlayerMediaTransport {
             long start,
             long endInclusive
     ) throws IOException {
-        if (snapshot.httpMethod != DATA_SPEC_HTTP_METHOD_GET) {
-            throw new IOException("Yandex VoT player request is not a bodyless GET");
+        String requestMethod = replayHttpMethod(snapshot.httpMethod);
+        if (requestMethod == null) {
+            throw new IOException("Yandex VoT player request is not a supported bodyless method");
         }
         HttpURLConnection connection = CronetTransport.openConnection(
                 new URL(snapshot.url), false, false);
-        connection.setRequestMethod("GET");
+        connection.setRequestMethod(requestMethod);
         for (Map.Entry<String, String> header : snapshot.headers.entrySet()) {
             String name = header.getKey();
             if (isTransferControlledHeader(name)) continue;
@@ -170,6 +172,15 @@ final class YandexVotPlayerMediaTransport {
         connection.setReadTimeout(READ_TIMEOUT_MS);
         connection.setInstanceFollowRedirects(true);
         return YandexVotHttpAudioPartReader.wrap(connection);
+    }
+
+    @Nullable
+    static String replayHttpMethod(int dataSpecMethod) {
+        return switch (dataSpecMethod) {
+            case DATA_SPEC_HTTP_METHOD_GET -> "GET";
+            case DATA_SPEC_HTTP_METHOD_POST -> "POST";
+            default -> null;
+        };
     }
 
     private static boolean isTransferControlledHeader(String name) {

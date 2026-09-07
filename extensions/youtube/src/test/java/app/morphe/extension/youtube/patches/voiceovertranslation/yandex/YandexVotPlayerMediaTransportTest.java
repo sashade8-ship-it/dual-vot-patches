@@ -41,6 +41,7 @@ public class YandexVotPlayerMediaTransportTest {
                 YandexVotPlayerMediaTransport.find(VIDEO_A, 251);
         assertNotNull(snapshot);
         assertEquals(url, snapshot.url);
+        assertEquals("GET", YandexVotPlayerMediaTransport.replayHttpMethod(snapshot.httpMethod));
         assertEquals("YouTube", snapshot.headers.get("User-Agent"));
         assertEquals("runtime-only", snapshot.headers.get("X-Goog-Visitor-Id"));
         assertNull(snapshot.headers.get("not-a-string"));
@@ -57,12 +58,34 @@ public class YandexVotPlayerMediaTransportTest {
     }
 
     @Test
-    public void rejectsBodylessNonGetRequestRatherThanReplayingItAsGet() {
+    public void retainsBodylessPostAndReplaysItAsPost() {
         YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
                 "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=251",
                 2, null, new HashMap<>(), VIDEO_A);
 
+        YandexVotPlayerMediaTransport.Snapshot snapshot =
+                YandexVotPlayerMediaTransport.find(VIDEO_A, 251);
+        assertNotNull(snapshot);
+        assertEquals("POST", YandexVotPlayerMediaTransport.replayHttpMethod(snapshot.httpMethod));
+    }
+
+    @Test
+    public void rejectsBodyfulPostHeadAndUnknownMethods() {
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=251",
+                2, new byte[] {1}, new HashMap<>(), VIDEO_A);
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=250",
+                3, null, new HashMap<>(), VIDEO_A);
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=249",
+                99, null, new HashMap<>(), VIDEO_A);
+
         assertNull(YandexVotPlayerMediaTransport.find(VIDEO_A, 251));
+        assertNull(YandexVotPlayerMediaTransport.find(VIDEO_A, 250));
+        assertNull(YandexVotPlayerMediaTransport.find(VIDEO_A, 249));
+        assertNull(YandexVotPlayerMediaTransport.replayHttpMethod(3));
+        assertNull(YandexVotPlayerMediaTransport.replayHttpMethod(99));
     }
 
     @Test
