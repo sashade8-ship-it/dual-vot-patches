@@ -1,3 +1,13 @@
+## 1.42.0-dev.7-dualvot.8.3 (2026-09-07)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.42.0-dev.7](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.7).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.42.0-dev.6-dualvot.8.3 (2026-09-06)
 
 ### Automated Morphe update
@@ -282,6 +292,12 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.42.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.6...v1.42.0-dev.7) (2026-09-07)
+
+### 🐛 Bug Fixes
+
+* **GmsCore support:** Prompt to update outdated MicroG ([#2787](https://github.com/MorpheApp/morphe-patches/issues/2787)) ([c30850d](https://github.com/MorpheApp/morphe-patches/commit/c30850dea5d27aae956d0c6e10e6d32fc98c3e5f))
 
 ## [1.42.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.5...v1.42.0-dev.6) (2026-09-06)
 
