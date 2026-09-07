@@ -179,6 +179,8 @@ val backgroundPlaybackPatch = bytecodePatch(
             // Client flag that interferes with background playback of some video types.
             // Exact purpose is not clear and it's used in ~ 100 locations.
             // Flag cannot be forced off with 21.36+ or the player seekbar is missing.
+            //
+            // Edit: This override may not be needed and only 45752335L override might be needed.
             NewPlayerTypeEnumFeatureFlagFingerprint.matchAll().forEach {
                 it.method.addBackgroundPlaybackFeatureFlagHook(it.instructionMatches.first().index, false)
             }

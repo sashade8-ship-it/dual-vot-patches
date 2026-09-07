@@ -36,7 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_auto_pause_on_screen_lock_title">기기 잠금 시 자동 일시 정지</string>
   <string name="morphe_auto_pause_on_screen_lock_off">사용 안함</string>
   <string name="morphe_auto_pause_on_screen_lock_always">화면 잠금 시 항상 일시 정지</string>
-  <string name="morphe_auto_pause_on_screen_lock_except_wireless">무선 오디오 연결이 끊기면 일시정지</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">무선 오디오 미연결 시 일시 정지</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
   <string name="morphe_disable_scrolling_speed_limit_title">스크롤 속도 제한 비활성화하기</string>
   <!-- layout.disableLayoutUpdatesPatch -->
@@ -92,7 +92,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_movies_section_title">영화 선반 숨기기</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_notifications_menu_header_title">알림 메뉴 헤더 숨기기</string>
-  <string name="morphe_hide_notifications_menu_header_summary">벨 버튼을 탭하면 표시되는 알림 메뉴에서 헤더가 숨겨집니다</string>
+  <string name="morphe_hide_notifications_menu_header_summary">알림벨 버튼을 탭하면 표시되는 메뉴에서 헤더가 숨겨집니다</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Subscriptions feed for future livestreams or unreleased videos. -->
   <string name="morphe_hide_notify_me_button_title">\'알림 받기\' 버튼 숨기기</string>
@@ -512,12 +512,12 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_swap_save_and_queue_actions_summary">버튼을 탭하여 현재 재생목록 옵션을 실행할 수 있고, 길게 탭하면 \'나중에 볼 동영상\'에 저장됩니다</string>
   <string name="morphe_queue_override_flyout_menu_title">\'현재 재생목록\' 피드 메뉴 재정의하기</string>
   <string name="morphe_queue_override_flyout_menu_summary">\'현재 재생목록에서 다음 순서로 재생\' 메뉴를 탭하면 YouTube 현재 재생목록 대신 Morphe 현재 재생목록이 실행됩니다</string>
-  <string name="morphe_queue_add_flyout_menu_title">\'현재 재생목록\' 피드 메뉴 항목 추가하기</string>
+  <string name="morphe_queue_add_flyout_menu_title">\'현재 재생목록\' 메뉴 항목 추가하기</string>
   <string name="morphe_queue_add_flyout_menu_summary">추가적인 메뉴 구성요소 항목을 추가합니다. \'현재 재생목록에서 다음 순서로 재생\' 메뉴가 표시되지 않는 경우에 이 옵션을 활성화하세요</string>
-  <string name="morphe_ads_channel_whitelist_flyout_menu_title">메뉴 구성요소의 광고 화이트리스트</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_title">\'광고 화이트리스트\' 메뉴 항목 추가하기</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">해당 동영상의 채널에서 광고가 재생되도록 하는 메뉴 구성요소 항목을 추가합니다</string>
-  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">메뉴 구성요소의 속도 화이트리스트</string>
-  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">해당 동영상의 채널을 항상 1.0배 속도로 재생하는 메뉴 구성요소 항목을 추가합니다</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">\'속도 화이트리스트\' 메뉴 항목 추가하기</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">해당 동영상의 채널을 항상 1.0 배속으로 재생하는 메뉴 구성요소 항목을 추가합니다</string>
   <string name="morphe_queue_manager_check_failed_auth">로그인하지 않았습니다</string>
   <string name="morphe_queue_manager_check_failed_playlist_id">재생목록 ID가 없습니다</string>
   <string name="morphe_queue_manager_check_failed_queue">현재 재생목록이 비어 있습니다</string>
@@ -933,10 +933,10 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_player_overlay_opacity_title">플레이어 오버레이 불투명도</string>
   <string name="morphe_player_overlay_opacity_summary">투명도를 설정할 수 있습니다 (0: 투명, 100: 불투명)</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
-  <string name="morphe_searchbar_type_title">검색창</string>
+  <string name="morphe_searchbar_type_title">넓은 검색창</string>
   <string name="morphe_searchbar_type_entry_disabled">사용 안함</string>
-  <string name="morphe_searchbar_type_entry_wide">넓음</string>
-  <string name="morphe_searchbar_type_entry_extra_wide">매우 넓음</string>
+  <string name="morphe_searchbar_type_entry_wide">헤더가 있는 검색창</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">헤더가 없는 검색창</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">기기 레이아웃</string>
@@ -1197,7 +1197,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_disable_playback_speed_music_title">음악 일반 동영상 재생 속도 사용하기</string>
   <string name="morphe_disable_playback_speed_music_summary">음악 동영상을 항상 1.0 배속으로 재생합니다</string>
   <string name="morphe_playback_speed_channel_whitelist_title">채널 속도 화이트리스트</string>
-  <string name="morphe_playback_speed_channel_whitelist_summary">화이트리스트에 등록된 채널의 동영상은 항상 1.0배 재생 속도로 재생됩니다</string>
+  <string name="morphe_playback_speed_channel_whitelist_summary">화이트리스트에 등록된 채널의 동영상은 항상 1.0 배속로 재생됩니다</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_add">속도 화이트리스트에 채널 추가</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_remove">속도 화이트리스트에서 채널 제거</string>
   <string name="morphe_enable_playback_audio_pitch_controls_title">오디오 피치 컨트롤 활성화하기</string>
@@ -1207,7 +1207,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_playback_audio_time_stretching_summary">속도와 피치를 서로 독립적으로 설정할 수 있습니다. 오디오에 잡음이나 음질 저하 등의 왜곡이 발생할 수 있습니다</string>
   <!-- video.livestreams.rememberLivestreamPositionPatch -->
   <string name="morphe_remember_livestream_position_title">실시간 스트림 재생 위치 저장하기</string>
-  <string name="morphe_remember_livestream_position_summary">진행 중인 실시간 스트림의 경우 현재 실시간 위치로 이동하는 대신 재생 위치를 기억하고 이어서 재생합니다</string>
+  <string name="morphe_remember_livestream_position_summary">진행 중인 실시간 스트림의 경우 현재 실시간 위치로 이동하는 대신 재생 위치를 저장하고 이어서 재생합니다</string>
   <string name="morphe_remember_livestream_position_user_dialog_message">이 기능은 24/7 실시간 스트림 및 \'항상 켜짐\' 상태인 기타 스트림에서는 작동하지 않습니다</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">HDR 동영상 비활성화하기</string>
