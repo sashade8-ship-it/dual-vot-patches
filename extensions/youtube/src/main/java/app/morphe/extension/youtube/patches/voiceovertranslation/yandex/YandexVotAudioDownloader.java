@@ -43,6 +43,7 @@ package app.morphe.extension.youtube.patches.voiceovertranslation.yandex;
 import androidx.annotation.Nullable;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -55,10 +56,11 @@ import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
  * Uploads the original compressed audio track of the currently playing video to Yandex in
  * ordered parts of {@link YandexVotAudioParts#PART_SIZE_BYTES}.
  *
- * <p><b>Implemented here.</b> The cached player response identifies a low-bitrate audio itag,
- * but its URL is used only to match the MediaDataSource request made by the live player. The
- * matching request is reopened through the app's captured Cronet engine with in-memory player
- * headers, never through a new platform HTTP session. The obsolete standalone ANDROID_VR
+ * <p><b>Implemented here.</b> The cached player response supplies audio candidates, but only a
+ * candidate whose exact itag has a live MediaDataSource request is selected. Among those
+ * captured candidates, low-bitrate Opus remains preferred. The matching request is reopened
+ * through the app's captured Cronet engine with in-memory player headers, never through a new
+ * platform HTTP session. The obsolete standalone ANDROID_VR
  * watch-page/player scraping is removed. The complete byte-addressable response is streamed in
  * validated bounded parts; signed URLs, cookies, tokens and private request headers are never
  * logged or persisted.
@@ -90,6 +92,23 @@ final class YandexVotAudioDownloader {
     ) {
     }
 
+    /** A cached protobuf format paired with the exact live player request that can deliver it. */
+    private record CapturedAudioFormat(
+            Format format,
+            YandexVotPlayerMediaTransport.Snapshot mediaRequest
+    ) {
+    }
+
+    /** Pure format metadata used to select among only the requests the active player opened. */
+    static record AudioCandidate(int itag, String url, String mimeType, int bitrate) {
+    }
+
+    static record CapturedAudioCandidate(
+            AudioCandidate candidate,
+            YandexVotPlayerMediaTransport.Snapshot mediaRequest
+    ) {
+    }
+
     interface ProgressListener {
         boolean isCancelled();
 
@@ -116,21 +135,25 @@ final class YandexVotAudioDownloader {
 
         try {
             listener.onPreparing();
-            AudioFormatInfo audioFormat = resolveAudioFormat(videoId);
+            CapturedAudioFormat capturedAudio = resolveAudioFormat(videoId);
             if (listener.isCancelled()) return YandexVotAudioResult.CANCELLED;
-            if (audioFormat == null || isEmpty(audioFormat.url())) {
+            if (capturedAudio == null || isEmpty(capturedAudio.format().getUrl())) {
                 Logger.printDebug(() -> "Yandex VOT audio upload: no playing-session audio"
                         + " format for " + videoId);
                 return YandexVotAudioResult.SOURCE_UNAVAILABLE;
             }
 
-            YandexVotPlayerMediaTransport.Snapshot mediaRequest =
-                    YandexVotPlayerMediaTransport.find(videoId, audioFormat.itag());
-            if (mediaRequest == null) {
-                Logger.printDebug(() -> "Yandex VOT audio upload: no matching live player media"
-                        + " request for " + videoId);
-                return YandexVotAudioResult.SOURCE_UNAVAILABLE;
-            }
+            Format cachedFormat = capturedAudio.format();
+            AudioFormatInfo audioFormat = new AudioFormatInfo(
+                    cachedFormat.getUrl(),
+                    cachedFormat.getItag(),
+                    -1,
+                    cachedFormat.getMimeType(),
+                    getBitrate(cachedFormat)
+            );
+            // Keep this exact format/request pair: a different player itag is not
+            // interchangeable even when it belongs to the same current video.
+            YandexVotPlayerMediaTransport.Snapshot mediaRequest = capturedAudio.mediaRequest();
 
             String audioUrl = mediaRequest.url;
             long fileSize = parseClen(audioUrl);
@@ -218,23 +241,16 @@ final class YandexVotAudioDownloader {
      * authorize the whole track.
      */
     @Nullable
-    private static AudioFormatInfo resolveAudioFormat(String videoId) throws Exception {
+    private static CapturedAudioFormat resolveAudioFormat(String videoId) throws Exception {
         StreamingDataRequest request = StreamingDataRequest.getRequestForVideoId(videoId);
-        Format cachedFormat = getAudioFormat(request);
-        if (cachedFormat == null) {
-            return null;
-        }
-        return new AudioFormatInfo(
-                cachedFormat.getUrl(),
-                cachedFormat.getItag(),
-                -1,
-                cachedFormat.getMimeType(),
-                getBitrate(cachedFormat)
-        );
+        return getCapturedAudioFormat(videoId, request);
     }
 
     @Nullable
-    private static Format getAudioFormat(@Nullable StreamingDataRequest request) throws IOException {
+    private static CapturedAudioFormat getCapturedAudioFormat(
+            String videoId,
+            @Nullable StreamingDataRequest request
+    ) throws IOException {
         if (request == null) return null;
 
         StreamingDataRequest.StreamData streamData = request.getStream();
@@ -246,28 +262,60 @@ final class YandexVotAudioDownloader {
         PlayerResponse playerResponse = PlayerResponse.parseFrom(playerResponseBytes);
         if (!playerResponse.hasStreamingData()) return null;
 
-        return selectBestAudioFormat(playerResponse.getStreamingData().getAdaptiveFormatsList());
+        return selectBestCapturedAudioFormat(
+                videoId, playerResponse.getStreamingData().getAdaptiveFormatsList());
     }
 
     @Nullable
-    private static Format selectBestAudioFormat(List<Format> formats) {
-        Format bestOpus = null;
-        int bestOpusBitrate = Integer.MAX_VALUE;
-        Format bestOther = null;
-        int bestOtherBitrate = Integer.MAX_VALUE;
-
+    private static CapturedAudioFormat selectBestCapturedAudioFormat(
+            String videoId,
+            List<Format> formats
+    ) {
+        List<AudioCandidate> candidates = new ArrayList<>();
         for (Format format : formats) {
             if (isEmpty(format.getUrl()) || !isAudioFormat(format)) continue;
+            candidates.add(new AudioCandidate(
+                    format.getItag(), format.getUrl(), format.getMimeType(), getBitrate(format)));
+        }
 
-            int bitrate = getBitrate(format);
-            boolean opus = format.getMimeType().toLowerCase(Locale.US).contains("opus");
+        CapturedAudioCandidate selected = selectBestCapturedAudioCandidate(videoId, candidates);
+        if (selected == null) return null;
+        for (Format format : formats) {
+            if (format.getItag() == selected.candidate().itag()
+                    && selected.candidate().url().equals(format.getUrl())) {
+                return new CapturedAudioFormat(format, selected.mediaRequest());
+            }
+        }
+        return null;
+    }
+
+    @Nullable
+    static CapturedAudioCandidate selectBestCapturedAudioCandidate(
+            String videoId,
+            List<AudioCandidate> candidates
+    ) {
+        CapturedAudioCandidate bestOpus = null;
+        int bestOpusBitrate = Integer.MAX_VALUE;
+        CapturedAudioCandidate bestOther = null;
+        int bestOtherBitrate = Integer.MAX_VALUE;
+
+        for (AudioCandidate candidate : candidates) {
+            if (isEmpty(candidate.url())) continue;
+
+            YandexVotPlayerMediaTransport.Snapshot mediaRequest =
+                    YandexVotPlayerMediaTransport.find(videoId, candidate.itag());
+            if (mediaRequest == null) continue;
+
+            int bitrate = candidate.bitrate();
+            boolean opus = candidate.mimeType() != null
+                    && candidate.mimeType().toLowerCase(Locale.US).contains("opus");
             if (opus) {
                 if (bestOpus == null || bitrate < bestOpusBitrate) {
-                    bestOpus = format;
+                    bestOpus = new CapturedAudioCandidate(candidate, mediaRequest);
                     bestOpusBitrate = bitrate;
                 }
             } else if (bestOther == null || bitrate < bestOtherBitrate) {
-                bestOther = format;
+                bestOther = new CapturedAudioCandidate(candidate, mediaRequest);
                 bestOtherBitrate = bitrate;
             }
         }
