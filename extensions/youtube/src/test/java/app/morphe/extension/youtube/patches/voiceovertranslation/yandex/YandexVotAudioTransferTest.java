@@ -17,10 +17,12 @@ import java.util.List;
 
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioParts.Part;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioResult.FailureKind;
+import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.AbortSignal;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.Deadline;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.PartReader;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.PartUploader;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.Progress;
+import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.ReadAbortedException;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.SourceDeniedException;
 import app.morphe.extension.youtube.patches.voiceovertranslation.yandex.YandexVotAudioTransfer.SourceReadException;
 
@@ -34,16 +36,20 @@ public class YandexVotAudioTransferTest {
     }
 
     private static final class FakeTrack implements PartReader {
+        private final State state;
         private final byte[] track;
         private int faultOnRead = -1;
         private SourceDeniedException deniedFault;
         private SourceReadException readFault;
+        private int cancelDuringRead = -1;
+        private int expireDuringRead = -1;
         private boolean truncate = false;
         private boolean emptyPart = false;
         private int reads = 0;
         private boolean closed = false;
 
-        FakeTrack(byte[] track) {
+        FakeTrack(State state, byte[] track) {
+            this.state = state;
             this.track = track;
         }
 
@@ -59,6 +65,16 @@ public class YandexVotAudioTransferTest {
             return this;
         }
 
+        FakeTrack cancelDuringRead(int readNumber) {
+            cancelDuringRead = readNumber;
+            return this;
+        }
+
+        FakeTrack expireDuringRead(int readNumber) {
+            expireDuringRead = readNumber;
+            return this;
+        }
+
         FakeTrack truncate() {
             truncate = true;
             return this;
@@ -70,12 +86,23 @@ public class YandexVotAudioTransferTest {
         }
 
         @Override
-        public byte[] read(long start, int length)
-                throws SourceDeniedException, SourceReadException {
+        public byte[] read(long start, int length, AbortSignal abort)
+                throws SourceDeniedException, SourceReadException, ReadAbortedException {
             reads++;
             if (reads == faultOnRead) {
                 if (deniedFault != null) throw deniedFault;
                 if (readFault != null) throw readFault;
+            }
+            // Simulate a stop/deadline arriving while this part is being read: the abort
+            // signal is false when the read begins and true at the next chunk boundary.
+            if (reads == cancelDuringRead && abort != null && !abort.shouldAbort()) {
+                state.cancelRequested = true;
+            }
+            if (reads == expireDuringRead && abort != null && !abort.shouldAbort()) {
+                state.deadlineExpired = true;
+            }
+            if (abort != null && abort.shouldAbort()) {
+                throw new ReadAbortedException();
             }
             if (emptyPart) return new byte[0];
             int wanted = truncate ? Math.max(0, length - 1) : length;
@@ -161,21 +188,17 @@ public class YandexVotAudioTransferTest {
         return track;
     }
 
-    private static State newState() {
-        return new State();
-    }
-
-    private static FakeProgress newProgress(State state) {
+    private static FakeProgress progress(State state) {
         return new FakeProgress(state);
     }
 
     @Test
     public void shortAudioUploadsSingleWholePart() {
-        State state = newState();
+        State state = new State();
         byte[] track = makeTrack(100);
         FakeUploader uploader = new FakeUploader(state);
-        FakeProgress progress = newProgress(state);
-        FakeTrack reader = new FakeTrack(track);
+        FakeProgress progress = progress(state);
+        FakeTrack reader = new FakeTrack(state, track);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
                 track.length, reader, FILE_ID, uploader, progress, null);
@@ -185,20 +208,20 @@ public class YandexVotAudioTransferTest {
         assertEquals(1, uploader.total);
         assertEquals(0, (int) uploader.indices.get(0));
         assertEquals(track.length, uploader.parts.get(0).length);
-        assertTrue(uploader.fileId.equals(FILE_ID));
+        assertEquals(FILE_ID, uploader.fileId);
         assertEquals(1, progress.reported.size());
         assertTrue(reader.closed);
     }
 
     @Test
     public void exactOnePartAudioUploadsWholeTrack() {
-        State state = newState();
+        State state = new State();
         byte[] track = makeTrack(PART);
         FakeUploader uploader = new FakeUploader(state);
-        FakeTrack reader = new FakeTrack(track);
+        FakeTrack reader = new FakeTrack(state, track);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                track.length, reader, FILE_ID, uploader, newProgress(state), null);
+                track.length, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.SUCCESS, result);
         assertEquals(1, uploader.parts.size());
@@ -208,11 +231,11 @@ public class YandexVotAudioTransferTest {
     @Test
     public void multipartAudioUploadsAllPartsInOrderWithExactBoundaries() {
         int fileSize = 2 * PART + 7;
-        State state = newState();
+        State state = new State();
         byte[] track = makeTrack(fileSize);
         FakeUploader uploader = new FakeUploader(state);
-        FakeProgress progress = newProgress(state);
-        FakeTrack reader = new FakeTrack(track);
+        FakeProgress progress = progress(state);
+        FakeTrack reader = new FakeTrack(state, track);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
                 track.length, reader, FILE_ID, uploader, progress, null);
@@ -225,10 +248,7 @@ public class YandexVotAudioTransferTest {
         assertEquals(PART, uploader.parts.get(1).length);
         assertEquals(7, uploader.parts.get(2).length);
 
-        // The bytes arrive in ascending, contiguous source order (final remainder included).
         assertTrue(java.util.Arrays.equals(track, concat(uploader.parts)));
-
-        // 1/N, 2/N, 3/N progress events in order.
         assertEquals(List.of(1, 2, 3), progress.reported);
         assertEquals(3, progress.reportedTotal);
     }
@@ -244,7 +264,6 @@ public class YandexVotAudioTransferTest {
         assertEquals((long) 2 * PART, parts.get(2).start());
         assertEquals(5, parts.get(2).length());
 
-        // Ascending, non-overlapping, gap-free and complete coverage of [0, fileSize).
         long cursor = 0;
         for (Part part : parts) {
             assertEquals(cursor, part.start());
@@ -261,13 +280,13 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void partialReadNeverSucceedsAndStopsFurtherParts() {
-        State state = newState();
+        State state = new State();
         int fileSize = PART + 100;
-        FakeTrack reader = new FakeTrack(makeTrack(fileSize)).truncate();
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize)).truncate();
         FakeUploader uploader = new FakeUploader(state);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                fileSize, reader, FILE_ID, uploader, newProgress(state), null);
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.SOURCE_READ_FAILED, result);
         assertEquals(0, uploader.parts.size());
@@ -276,13 +295,13 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void emptyPartDataNeverSucceeds() {
-        State state = newState();
+        State state = new State();
         int fileSize = PART;
-        FakeTrack reader = new FakeTrack(makeTrack(fileSize)).emptyPart();
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize)).emptyPart();
         FakeUploader uploader = new FakeUploader(state);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                fileSize, reader, FILE_ID, uploader, newProgress(state), null);
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.SOURCE_READ_FAILED, result);
         assertEquals(0, uploader.parts.size());
@@ -291,14 +310,14 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void http403AfterInitialPrefixIsClassifiedAndNeverRetried() {
-        State state = newState();
+        State state = new State();
         int fileSize = 2 * PART + 1;
         byte[] track = makeTrack(fileSize);
         FakeUploader uploader = new FakeUploader(state);
-        FakeTrack reader = new FakeTrack(track).failDeniedOnRead(2);
+        FakeTrack reader = new FakeTrack(state, track).failDeniedOnRead(2);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                fileSize, reader, FILE_ID, uploader, newProgress(state), null);
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.SOURCE_DENIED, result);
         assertEquals(1, uploader.parts.size());
@@ -308,14 +327,14 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void cancellationStopsTransferCleanly() {
-        State state = newState();
+        State state = new State();
         int fileSize = 3 * PART;
         byte[] track = makeTrack(fileSize);
         FakeUploader uploader = new FakeUploader(state).cancelAfter(1);
-        FakeTrack reader = new FakeTrack(track);
+        FakeTrack reader = new FakeTrack(state, track);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                fileSize, reader, FILE_ID, uploader, newProgress(state), null);
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.CANCELLED, result);
         assertEquals(1, uploader.parts.size());
@@ -324,15 +343,13 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void videoChangeAbortsLikeCancellation() {
-        // A video change invalidates the translation generation, which is surfaced to the
-        // transfer through the same isCancelled() check as a user stop.
-        State state = newState();
+        State state = new State();
         int fileSize = 2 * PART;
         FakeUploader uploader = new FakeUploader(state).cancelAfter(1);
-        FakeTrack reader = new FakeTrack(makeTrack(fileSize));
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize));
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                fileSize, reader, FILE_ID, uploader, newProgress(state), null);
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.CANCELLED, result);
         assertEquals(1, uploader.parts.size());
@@ -340,12 +357,80 @@ public class YandexVotAudioTransferTest {
     }
 
     @Test
+    public void cancellationDuringReadAbortsActivePartAndUploadsNothingAfter() {
+        State state = new State();
+        int fileSize = 2 * PART;
+        FakeUploader uploader = new FakeUploader(state).cancelAfter(1);
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize)).cancelDuringRead(2);
+
+        YandexVotAudioResult result = YandexVotAudioTransfer.run(
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
+
+        assertEquals(YandexVotAudioResult.CANCELLED, result);
+        assertEquals(1, uploader.parts.size());
+        assertTrue(reader.closed);
+    }
+
+    @Test
+    public void deadlineDuringReadStopsActivePart() {
+        State state = new State();
+        int fileSize = 2 * PART;
+        FakeUploader uploader = new FakeUploader(state);
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize)).expireDuringRead(2);
+        Deadline deadline = new Deadline() {
+            @Override
+            public boolean isExpired() {
+                return state.deadlineExpired;
+            }
+        };
+
+        YandexVotAudioResult result = YandexVotAudioTransfer.run(
+                fileSize, reader, FILE_ID, uploader, progress(state), deadline);
+
+        assertEquals(YandexVotAudioResult.DEADLINE_EXCEEDED, result);
+        assertEquals(1, uploader.parts.size());
+        assertTrue(reader.closed);
+    }
+
+    @Test
+    public void cancellationOnLastPartNeverUploadsTheLastPart() {
+        State state = new State();
+        int fileSize = 2 * PART;
+        FakeUploader uploader = new FakeUploader(state).cancelAfter(1);
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize)).cancelDuringRead(2);
+
+        YandexVotAudioResult result = YandexVotAudioTransfer.run(
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
+
+        assertEquals(YandexVotAudioResult.CANCELLED, result);
+        assertEquals(1, uploader.parts.size());
+        assertEquals(1, (int) uploader.indices.size());
+        assertTrue(reader.closed);
+    }
+
+    @Test
+    public void cancelAfterLastUploadIsNotReportedAsSuccess() {
+        State state = new State();
+        byte[] track = makeTrack(100);
+        FakeUploader uploader = new FakeUploader(state).cancelAfter(1);
+        FakeTrack reader = new FakeTrack(state, track);
+
+        YandexVotAudioResult result = YandexVotAudioTransfer.run(
+                track.length, reader, FILE_ID, uploader, progress(state), null);
+
+        assertEquals(YandexVotAudioResult.CANCELLED, result);
+        assertEquals(1, uploader.parts.size());
+        assertFalse(result.isSuccess());
+        assertTrue(reader.closed);
+    }
+
+    @Test
     public void deadlineStopsTransferWithoutWaitingForever() {
-        State state = newState();
+        State state = new State();
         int fileSize = 3 * PART;
         FakeUploader uploader = new FakeUploader(state).expireAfter(1);
-        FakeTrack reader = new FakeTrack(makeTrack(fileSize));
-        FakeProgress progress = newProgress(state);
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize));
+        FakeProgress progress = progress(state);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
                 fileSize,
@@ -368,18 +453,18 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void alreadyExpiredDeadlineStartsNothing() {
-        State state = newState();
+        State state = new State();
         state.deadlineExpired = true;
         int fileSize = 2 * PART;
         FakeUploader uploader = new FakeUploader(state);
-        FakeTrack reader = new FakeTrack(makeTrack(fileSize));
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize));
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
                 fileSize,
                 reader,
                 FILE_ID,
                 uploader,
-                newProgress(state),
+                progress(state),
                 new Deadline() {
                     @Override
                     public boolean isExpired() {
@@ -395,30 +480,30 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void emptyOrInvalidSourceIsNeverSuccess() {
-        State state = newState();
-        FakeTrack reader = new FakeTrack(new byte[0]);
+        State state = new State();
+        FakeTrack reader = new FakeTrack(state, new byte[0]);
 
         YandexVotAudioResult empty = YandexVotAudioTransfer.run(
-                0, reader, FILE_ID, new FakeUploader(state), newProgress(state), null);
+                0, reader, FILE_ID, new FakeUploader(state), progress(state), null);
         assertEquals(YandexVotAudioResult.SOURCE_UNAVAILABLE, empty);
         assertTrue(reader.closed);
 
-        FakeTrack reader2 = new FakeTrack(makeTrack(10));
+        FakeTrack reader2 = new FakeTrack(state, makeTrack(10));
         YandexVotAudioResult negative = YandexVotAudioTransfer.run(
-                -1, reader2, FILE_ID, new FakeUploader(state), newProgress(state), null);
+                -1, reader2, FILE_ID, new FakeUploader(state), progress(state), null);
         assertEquals(YandexVotAudioResult.SOURCE_UNAVAILABLE, negative);
         assertTrue(reader2.closed);
     }
 
     @Test
     public void sourceReadFailureStopsFurtherParts() {
-        State state = newState();
+        State state = new State();
         int fileSize = 2 * PART + 1;
         FakeUploader uploader = new FakeUploader(state);
-        FakeTrack reader = new FakeTrack(makeTrack(fileSize)).failReadOnRead(2);
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize)).failReadOnRead(2);
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                fileSize, reader, FILE_ID, uploader, newProgress(state), null);
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.SOURCE_READ_FAILED, result);
         assertEquals(1, uploader.parts.size());
@@ -427,25 +512,23 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void uploadFailureIsClassifiedSeparatelyFromSourceFailure() {
-        State state = newState();
+        State state = new State();
         int fileSize = 2 * PART;
         FakeUploader uploader = new FakeUploader(state).failOnUpload(2);
-        FakeTrack reader = new FakeTrack(makeTrack(fileSize));
+        FakeTrack reader = new FakeTrack(state, makeTrack(fileSize));
 
         YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                fileSize, reader, FILE_ID, uploader, newProgress(state), null);
+                fileSize, reader, FILE_ID, uploader, progress(state), null);
 
         assertEquals(YandexVotAudioResult.UPLOAD_FAILED, result);
         assertEquals(1, uploader.parts.size());
         assertTrue(reader.closed);
-        assertTrue(result.isSourceFailure() == false);
+        assertFalse(result.isSourceFailure());
         assertEquals(FailureKind.UPLOAD, result.failureKind());
     }
 
     @Test
     public void downloadUploadAndPlaybackFailuresMapToDistinctCategories() {
-        // Source acquisition, Yandex upload and cancelled/aborted operations must never be
-        // presented as the same failure as a translation playback error by the callers.
         assertEquals(FailureKind.SOURCE, YandexVotAudioResult.SOURCE_UNAVAILABLE.failureKind());
         assertEquals(FailureKind.SOURCE, YandexVotAudioResult.SOURCE_DENIED.failureKind());
         assertEquals(FailureKind.SOURCE, YandexVotAudioResult.SOURCE_READ_FAILED.failureKind());
@@ -465,41 +548,37 @@ public class YandexVotAudioTransferTest {
 
     @Test
     public void progressIsReportedPerPartAndReaderIsClosedOnEveryOutcome() {
-        // Success
-        State state = newState();
-        FakeTrack reader1 = new FakeTrack(makeTrack(PART));
+        State state = new State();
+        FakeTrack reader1 = new FakeTrack(state, makeTrack(PART));
         YandexVotAudioTransfer.run(
-                PART, reader1, FILE_ID, new FakeUploader(state), newProgress(state), null);
+                PART, reader1, FILE_ID, new FakeUploader(state), progress(state), null);
         assertTrue(reader1.closed);
 
-        // Failure
-        FakeTrack reader2 = new FakeTrack(makeTrack(PART)).emptyPart();
+        FakeTrack reader2 = new FakeTrack(state, makeTrack(PART)).emptyPart();
         YandexVotAudioTransfer.run(
-                PART, reader2, FILE_ID, new FakeUploader(state), newProgress(state), null);
+                PART, reader2, FILE_ID, new FakeUploader(state), progress(state), null);
         assertTrue(reader2.closed);
 
-        // Cancellation
-        State state2 = newState();
-        FakeTrack reader3 = new FakeTrack(makeTrack(2 * PART));
+        State state2 = new State();
+        FakeTrack reader3 = new FakeTrack(state2, makeTrack(2 * PART));
         YandexVotAudioTransfer.run(
                 2 * PART,
                 reader3,
                 FILE_ID,
                 new FakeUploader(state2).cancelAfter(1),
-                newProgress(state2),
+                progress(state2),
                 null);
         assertTrue(reader3.closed);
 
-        // Deadline
-        State state3 = newState();
+        State state3 = new State();
         state3.deadlineExpired = true;
-        FakeTrack reader4 = new FakeTrack(makeTrack(PART));
+        FakeTrack reader4 = new FakeTrack(state3, makeTrack(PART));
         YandexVotAudioTransfer.run(
                 PART,
                 reader4,
                 FILE_ID,
                 new FakeUploader(state3),
-                newProgress(state3),
+                progress(state3),
                 new Deadline() {
                     @Override
                     public boolean isExpired() {

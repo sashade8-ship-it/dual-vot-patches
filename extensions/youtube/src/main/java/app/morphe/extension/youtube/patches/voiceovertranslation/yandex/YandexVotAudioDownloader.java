@@ -7,9 +7,10 @@
  * Original author(s):
  * - anddea (https://github.com/anddea)
  *
- * Modified for Dual VoT Patches and Morphe 1.37.0.
- * The independent YouTube stream fallback is adapted from the MIT-licensed
- * ilyhalight/voice-over-translation project.
+ * Modified for Dual VoT Patches and Morphe.
+ * The standalone ANDROID_VR stream fallback previously adapted from the MIT-licensed
+ * ilyhalight/voice-over-translation project was removed: audio now comes only from the
+ * playing session's streaming data (see the class comment below).
  *
  * Licensed under the GNU General Public License v3.0.
  *
@@ -39,16 +40,9 @@
 
 package app.morphe.extension.youtube.patches.voiceovertranslation.yandex;
 
-import android.net.Uri;
-
 import androidx.annotation.Nullable;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.security.SecureRandom;
 import java.util.List;
 import java.util.Locale;
 
@@ -58,36 +52,35 @@ import app.morphe.extension.shared.innertube.utils.PlayerResponseOuterClass.Play
 import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
 
 /**
- * Acquires the complete original compressed audio track of the currently playing video and
- * uploads it to Yandex in ordered parts of {@link YandexVotAudioParts#PART_SIZE_BYTES}.
+ * Uploads the original compressed audio track of the currently playing video to Yandex in
+ * ordered parts of {@link YandexVotAudioParts#PART_SIZE_BYTES}.
  *
- * <p>Only the format list of the YouTube session that is actually playing the video is used
- * as the source. The obsolete standalone {@code ANDROID_VR} watch-page/player scraping is
- * gone: on supported app versions YouTube only authorizes a short initial prefix of such
- * externally requested URLs, so a whole-track fetch can never be proven from them. The
- * acquisition is transport-explicit and never falls back to empty audio.
+ * <p><b>Implemented here.</b> The cached player response identifies a low-bitrate audio itag,
+ * but its URL is used only to match the MediaDataSource request made by the live player. The
+ * matching request is reopened through the app's captured Cronet engine with in-memory player
+ * headers, never through a new platform HTTP session. The obsolete standalone ANDROID_VR
+ * watch-page/player scraping is removed. The complete byte-addressable response is streamed in
+ * validated bounded parts; signed URLs, cookies, tokens and private request headers are never
+ * logged or persisted.
  *
- * <p>Signed URLs, cookies, tokens and private request headers are never logged.
+ * <p><b>Not solved here.</b> A Morphe {@link StreamingDataRequest} entry only proves that a
+ * player-API response was cached; it is not a handle to the app player's authorized media
+ * session. When the YouTube delivery mode behind that session authorizes only an initial
+ * prefix of the URL (SABR-style), later-offset ranges fail with HTTP 403 and the whole
+ * track cannot be obtained through the current public patch/extension API. This code then
+ * fails fast with a distinct {@link YandexVotAudioResult#SOURCE_DENIED} result instead of
+ * uploading a prefix or empty audio. A body-carrying SABR request deliberately fails closed
+ * until its response framing and reassembly are verified on a target APK.
  */
 final class YandexVotAudioDownloader {
-    private static final int CONNECTION_TIMEOUT_MS = 15_000;
-    private static final int READ_TIMEOUT_MS = 30_000;
-
     /**
      * Safety net for the whole acquisition + upload run. Every network operation is also
-     * individually bounded by the connect/read timeouts, so a stalled run ends in bounded
-     * time instead of waiting forever.
+     * individually bounded by the connect/read timeouts and re-checked between reads, so a
+     * stalled or slowly trickling run ends in bounded time instead of waiting forever.
      */
     private static final long OVERALL_TRANSFER_DEADLINE_MS = 15 * 60 * 1000L;
 
     private static final String AUDIO_DOWNLOAD_TYPE = "web_api_steal_sig_and_n";
-    private static final String USER_AGENT =
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-                    "(KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36";
-    private static final String CPN_ALPHABET =
-            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
-    private static final SecureRandom CPN_RANDOM = new SecureRandom();
-
     private record AudioFormatInfo(
             String url,
             int itag,
@@ -131,16 +124,30 @@ final class YandexVotAudioDownloader {
                 return YandexVotAudioResult.SOURCE_UNAVAILABLE;
             }
 
-            String audioUrl = audioFormat.url();
-            long fileSize;
-            try {
-                fileSize = audioFormat.fileSize() > 0
-                        ? audioFormat.fileSize()
-                        : resolveFileSize(audioUrl);
-            } catch (YandexVotAudioTransfer.SourceDeniedException ex) {
-                return YandexVotAudioResult.SOURCE_DENIED;
-            } catch (IOException ex) {
-                return YandexVotAudioResult.SOURCE_READ_FAILED;
+            YandexVotPlayerMediaTransport.Snapshot mediaRequest =
+                    YandexVotPlayerMediaTransport.find(videoId, audioFormat.itag());
+            if (mediaRequest == null) {
+                Logger.printDebug(() -> "Yandex VOT audio upload: no matching live player media"
+                        + " request for " + videoId);
+                return YandexVotAudioResult.SOURCE_UNAVAILABLE;
+            }
+
+            String audioUrl = mediaRequest.url;
+            long fileSize = parseClen(audioUrl);
+            if (fileSize <= 0) {
+                // The MediaDataSource URL can omit clen while the cached player format has it.
+                fileSize = parseClen(audioFormat.url());
+            }
+            if (fileSize <= 0) {
+                try {
+                    fileSize = YandexVotHttpAudioPartReader.probeTotalSize(
+                            audioUrl,
+                            YandexVotPlayerMediaTransport.factoryFor(mediaRequest));
+                } catch (YandexVotAudioTransfer.SourceDeniedException ex) {
+                    return YandexVotAudioResult.SOURCE_DENIED;
+                } catch (IOException ex) {
+                    return YandexVotAudioResult.SOURCE_READ_FAILED;
+                }
             }
             if (listener.isCancelled()) return YandexVotAudioResult.CANCELLED;
             if (fileSize <= 0) {
@@ -149,19 +156,23 @@ final class YandexVotAudioDownloader {
                 return YandexVotAudioResult.SOURCE_UNAVAILABLE;
             }
 
-            int parts = YandexVotAudioParts.partCount(fileSize);
+            final long resolvedFileSize = fileSize;
+            int parts = YandexVotAudioParts.partCount(resolvedFileSize);
             Logger.printDebug(() -> "Yandex VOT audio upload: selected itag="
                     + audioFormat.itag() + ", mime=" + audioFormat.mimeType()
                     + ", bitrate=" + audioFormat.bitrate()
-                    + ", bytes=" + fileSize + ", parts=" + parts);
-            String fileId = makeFileId(audioFormat.itag(), fileSize);
+                    + ", bytes=" + resolvedFileSize + ", parts=" + parts);
+            String fileId = makeFileId(audioFormat.itag(), resolvedFileSize);
 
             final long deadlineMs = android.os.SystemClock.elapsedRealtime()
                     + OVERALL_TRANSFER_DEADLINE_MS;
             YandexVotAudioTransfer.Deadline deadline =
                     () -> android.os.SystemClock.elapsedRealtime() >= deadlineMs;
             YandexVotAudioTransfer.PartReader reader =
-                    new HttpPartReader(audioUrl);
+                    new YandexVotHttpAudioPartReader(
+                            audioUrl,
+                            resolvedFileSize,
+                            YandexVotPlayerMediaTransport.factoryFor(mediaRequest));
 
             YandexVotAudioTransfer.Progress progress = new YandexVotAudioTransfer.Progress() {
                 @Override
@@ -176,7 +187,7 @@ final class YandexVotAudioDownloader {
             };
 
             YandexVotAudioResult result = YandexVotAudioTransfer.run(
-                    fileSize,
+                    resolvedFileSize,
                     reader,
                     fileId,
                     new YandexVotApiUploader(videoUrl, translationId),
@@ -201,10 +212,10 @@ final class YandexVotAudioDownloader {
     }
 
     /**
-     * Resolves the best audio-only format from the player-response streaming data of the
-     * session that is playing the video. No separate YouTube request is started here:
-     * a standalone request does not share the working player session and cannot be proven
-     * to authorize the whole track.
+     * Resolves the best audio-only format from the cached player-response streaming data of
+     * the session that is playing the video. No separate YouTube request is started here: a
+     * standalone request does not share the working player session and cannot be proven to
+     * authorize the whole track.
      */
     @Nullable
     private static AudioFormatInfo resolveAudioFormat(String videoId) throws Exception {
@@ -214,7 +225,7 @@ final class YandexVotAudioDownloader {
             return null;
         }
         return new AudioFormatInfo(
-                addCpn(cachedFormat.getUrl()),
+                cachedFormat.getUrl(),
                 cachedFormat.getItag(),
                 -1,
                 cachedFormat.getMimeType(),
@@ -281,160 +292,6 @@ final class YandexVotAudioDownloader {
         return bitrate > 0 ? bitrate : Integer.MAX_VALUE - 1;
     }
 
-    /**
-     * Learns the total audio size from the {@code clen} URL parameter when present,
-     * otherwise probes the first byte range. The probe result also proves the chosen
-     * session URL still authorizes reads before a whole-track transfer is attempted.
-     */
-    private static long resolveFileSize(String audioUrl) throws IOException {
-        long size = parseClen(audioUrl);
-        if (size > 0) return size;
-
-        HttpURLConnection connection = openAudioConnection(audioUrl, 0, 0);
-        try {
-            int code = connection.getResponseCode();
-            if (code == HttpURLConnection.HTTP_FORBIDDEN) {
-                throw new YandexVotAudioTransfer.SourceDeniedException(
-                        "Media server denied the range probe (HTTP 403)");
-            }
-            if (code == HttpURLConnection.HTTP_PARTIAL) {
-                size = parseContentRangeSize(connection.getHeaderField("Content-Range"));
-                if (size > 0) return size;
-            }
-            if (code != HttpURLConnection.HTTP_OK
-                    && code != HttpURLConnection.HTTP_PARTIAL) {
-                throw new IOException("Audio size probe failed: HTTP " + code);
-            }
-
-            long contentLength = connection.getContentLengthLong();
-            return contentLength > 0 ? contentLength : -1;
-        } finally {
-            connection.disconnect();
-        }
-    }
-
-    /** Reads one Yandex part (bounded byte range) over plain HTTP(S). */
-    private static final class HttpPartReader implements YandexVotAudioTransfer.PartReader {
-        private final String audioUrl;
-
-        HttpPartReader(String audioUrl) {
-            this.audioUrl = audioUrl;
-        }
-
-        @Override
-        public byte[] read(long start, int length)
-                throws YandexVotAudioTransfer.SourceDeniedException,
-                YandexVotAudioTransfer.SourceReadException {
-            if (length <= 0 || length > YandexVotAudioParts.PART_SIZE_BYTES) {
-                throw new YandexVotAudioTransfer.SourceReadException("Invalid audio part size");
-            }
-            long end = start + length - 1;
-
-            HttpURLConnection connection = null;
-            try {
-                connection = openAudioConnection(audioUrl, start, end);
-                int code = connection.getResponseCode();
-                if (code == HttpURLConnection.HTTP_FORBIDDEN) {
-                    throw new YandexVotAudioTransfer.SourceDeniedException(
-                            "Media server denied the requested range (HTTP 403)");
-                }
-                if (code == HttpURLConnection.HTTP_PARTIAL) {
-                    verifyRangeStart(connection.getHeaderField("Content-Range"), start);
-                } else if (code == HttpURLConnection.HTTP_OK) {
-                    // The server ignored the Range header. Only a first (single) part request
-                    // can still be salvaged by reading the leading bytes.
-                    if (start > 0) {
-                        throw new YandexVotAudioTransfer.SourceReadException(
-                                "Media server ignored the range request");
-                    }
-                } else {
-                    throw new YandexVotAudioTransfer.SourceReadException(
-                            "Audio download failed: HTTP " + code);
-                }
-
-                try (InputStream inputStream = connection.getInputStream()) {
-                    return readExactly(inputStream, length);
-                }
-            } catch (YandexVotAudioTransfer.SourceDeniedException ex) {
-                throw ex;
-            } catch (YandexVotAudioTransfer.SourceReadException ex) {
-                throw ex;
-            } catch (IOException ex) {
-                throw new YandexVotAudioTransfer.SourceReadException(
-                        "Audio part could not be read");
-            } finally {
-                if (connection != null) connection.disconnect();
-            }
-        }
-
-        @Override
-        public void close() {
-            // Every part connection is closed inside read(); nothing else to release.
-        }
-    }
-
-    private static void verifyRangeStart(@Nullable String contentRange, long expectedStart)
-            throws YandexVotAudioTransfer.SourceReadException {
-        if (contentRange == null) return;
-
-        int dash = contentRange.indexOf('-');
-        if (dash <= 0) return;
-        long actualStart;
-        try {
-            actualStart = Long.parseLong(contentRange.substring(0, dash).trim());
-        } catch (NumberFormatException ex) {
-            return;
-        }
-        if (actualStart != expectedStart) {
-            throw new YandexVotAudioTransfer.SourceReadException(
-                    "Media server returned an unexpected byte range");
-        }
-    }
-
-    private static byte[] readExactly(InputStream inputStream, int length)
-            throws YandexVotAudioTransfer.SourceReadException {
-        if (length == 0) return new byte[0];
-
-        ByteArrayOutputStream out = new ByteArrayOutputStream(length);
-        byte[] buffer = new byte[8192];
-        int total = 0;
-        try {
-            int read;
-            while (total < length
-                    && (read = inputStream.read(buffer, 0, Math.min(buffer.length, length - total)))
-                    != -1) {
-                if (read <= 0) continue;
-                out.write(buffer, 0, read);
-                total += read;
-            }
-        } catch (IOException ex) {
-            throw new YandexVotAudioTransfer.SourceReadException(
-                    "Audio part could not be read");
-        }
-        if (total != length) {
-            throw new YandexVotAudioTransfer.SourceReadException(
-                    "Incomplete audio part: expected " + length + " bytes, got " + total);
-        }
-        return out.toByteArray();
-    }
-
-    private static HttpURLConnection openAudioConnection(
-            String audioUrl,
-            long start,
-            long end
-    ) throws IOException {
-        HttpURLConnection connection = (HttpURLConnection) new URL(audioUrl).openConnection();
-        connection.setRequestMethod("GET");
-        connection.setRequestProperty("Range", "bytes=" + start + "-" + end);
-        connection.setRequestProperty("Accept", "*/*");
-        connection.setRequestProperty("Accept-Encoding", "identity");
-        connection.setRequestProperty("User-Agent", USER_AGENT);
-        connection.setConnectTimeout(CONNECTION_TIMEOUT_MS);
-        connection.setReadTimeout(READ_TIMEOUT_MS);
-        connection.setInstanceFollowRedirects(true);
-        return connection;
-    }
-
     /** Uploads a whole part to Yandex using the existing validated protocol calls. */
     private record YandexVotApiUploader(String videoUrl, String translationId)
             implements YandexVotAudioTransfer.PartUploader {
@@ -463,35 +320,6 @@ final class YandexVotAudioDownloader {
             }
         }
         return -1;
-    }
-
-    private static long parseContentRangeSize(@Nullable String contentRange) {
-        if (contentRange == null) return -1;
-
-        int slash = contentRange.lastIndexOf('/');
-        if (slash < 0 || slash == contentRange.length() - 1) return -1;
-
-        try {
-            return Long.parseLong(contentRange.substring(slash + 1).trim());
-        } catch (NumberFormatException ignored) {
-            return -1;
-        }
-    }
-
-    private static String addCpn(String audioUrl) {
-        return Uri.parse(audioUrl)
-                .buildUpon()
-                .appendQueryParameter("cpn", makeCpn())
-                .build()
-                .toString();
-    }
-
-    private static String makeCpn() {
-        StringBuilder cpn = new StringBuilder(16);
-        for (int i = 0; i < 16; i++) {
-            cpn.append(CPN_ALPHABET.charAt(CPN_RANDOM.nextInt(CPN_ALPHABET.length())));
-        }
-        return cpn.toString();
     }
 
     private static String makeFileId(int itag, long fileSize) {

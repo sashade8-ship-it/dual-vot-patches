@@ -1,0 +1,244 @@
+/*
+ * Copyright (C) 2026 Dual VoT contributors
+ *
+ * Licensed under the GNU General Public License v3.0.
+ */
+
+package app.morphe.extension.youtube.patches.voiceovertranslation.yandex;
+
+import android.net.Uri;
+
+import androidx.annotation.Nullable;
+
+import org.chromium.net.CronetEngine;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import app.morphe.extension.shared.requests.CronetTransport;
+
+/**
+ * Captures a <em>live player</em> media request at the MediaDataSource construction boundary
+ * and reopens its GET representation through the application's recorded Cronet engine.
+ *
+ * <p>This deliberately has no platform-HTTP fallback.  The old standalone request was the
+ * cause of prefix-only authorization: if an app engine or a matching current-video audio
+ * request is unavailable, the caller fails closed before uploading any source bytes.
+ * Captured headers are used only in-process to reproduce the player request and are never
+ * logged, persisted or exposed through an API.
+ *
+ * <p>This is a transport bridge for ordinary byte-addressable media responses.  A request with
+ * a body is intentionally not accepted: that is a SABR/media-fetch request whose response
+ * framing cannot be claimed to be an original WebM/Opus file without a verified body hook and
+ * reassembler.  Treating it as raw audio would be data corruption.
+ */
+final class YandexVotPlayerMediaTransport {
+    private static final int CONNECT_TIMEOUT_MS = 15_000;
+    private static final int READ_TIMEOUT_MS = 30_000;
+    private static final int MAX_SNAPSHOTS = 12;
+    private static final Object LOCK = new Object();
+    private static final ArrayList<Snapshot> SNAPSHOTS = new ArrayList<>();
+
+    private YandexVotPlayerMediaTransport() {
+    }
+
+    /** Bytecode injection point: records the app-wide engine used by player networking. */
+    @SuppressWarnings("unused")
+    public static void setCronetEngine(CronetEngine engine) {
+        CronetTransport.setMainCronetEngine(engine);
+    }
+
+    /**
+     * Bytecode injection point at the player's MediaDataSource constructor.
+     *
+     * <p>Only an id/itag-addressable, bodyless media request is retained.  In particular, a
+     * SABR POST is not a fallback candidate because its body requires protocol-aware parsing.
+     */
+    @SuppressWarnings({"unused", "rawtypes"})
+    public static void recordPlayerMediaRequest(
+            Uri uri,
+            int httpMethod,
+            byte[] requestBody,
+            Map headers,
+            String requestVideoId
+    ) {
+        if (uri == null) {
+            return;
+        }
+        recordPlayerMediaRequest(uri.toString(), httpMethod, requestBody, headers, requestVideoId);
+    }
+
+    /** Package-visible pure entrypoint for request-selection tests. */
+    @SuppressWarnings("rawtypes")
+    static void recordPlayerMediaRequest(
+            String url,
+            int httpMethod,
+            byte[] requestBody,
+            Map headers,
+            String requestVideoId
+    ) {
+        URI uri;
+        try {
+            uri = new URI(url);
+        } catch (URISyntaxException | NullPointerException ignored) {
+            return;
+        }
+        if (uri.getPath() == null || !uri.getPath().contains("/videoplayback")) return;
+        if (requestBody != null && requestBody.length != 0) {
+            return;
+        }
+
+        String videoId = firstVideoId(uri.getRawQuery(), requestVideoId);
+        int itag = parsePositiveInt(queryParameter(uri.getRawQuery(), "itag"));
+        if (videoId == null || itag <= 0) {
+            return;
+        }
+
+        Map<String, String> copiedHeaders = copyHeaders(headers);
+        synchronized (LOCK) {
+            // New-video requests invalidate stale request credentials before retaining the new
+            // snapshot.  Concurrent calls for audio/video of the same video stay bounded.
+            for (int i = SNAPSHOTS.size() - 1; i >= 0; i--) {
+                if (!videoId.equals(SNAPSHOTS.get(i).videoId)) {
+                    SNAPSHOTS.remove(i);
+                }
+            }
+            SNAPSHOTS.add(new Snapshot(videoId, itag, url, httpMethod, copiedHeaders));
+            while (SNAPSHOTS.size() > MAX_SNAPSHOTS) {
+                SNAPSHOTS.remove(0);
+            }
+        }
+    }
+
+    /** Returns the newest exact current-video/audio-format request, or null when unavailable. */
+    @Nullable
+    static Snapshot find(String videoId, int itag) {
+        if (videoId == null || videoId.isEmpty() || itag <= 0) return null;
+        synchronized (LOCK) {
+            for (int i = SNAPSHOTS.size() - 1; i >= 0; i--) {
+                Snapshot snapshot = SNAPSHOTS.get(i);
+                if (videoId.equals(snapshot.videoId) && itag == snapshot.itag) {
+                    return snapshot;
+                }
+            }
+        }
+        return null;
+    }
+
+    static YandexVotHttpAudioPartReader.Factory factoryFor(Snapshot snapshot) {
+        return (ignoredUrl, start, endInclusive) -> open(snapshot, start, endInclusive);
+    }
+
+    static void resetForTests() {
+        synchronized (LOCK) {
+            SNAPSHOTS.clear();
+        }
+    }
+
+    private static YandexVotHttpAudioPartReader.Connection open(
+            Snapshot snapshot,
+            long start,
+            long endInclusive
+    ) throws IOException {
+        HttpURLConnection connection = CronetTransport.openConnection(
+                new URL(snapshot.url), false, false);
+        connection.setRequestMethod("GET");
+        for (Map.Entry<String, String> header : snapshot.headers.entrySet()) {
+            String name = header.getKey();
+            if (isTransferControlledHeader(name)) continue;
+            connection.setRequestProperty(name, header.getValue());
+        }
+        connection.setRequestProperty("Range", "bytes=" + start + "-" + endInclusive);
+        connection.setRequestProperty("Accept-Encoding", "identity");
+        connection.setConnectTimeout(CONNECT_TIMEOUT_MS);
+        connection.setReadTimeout(READ_TIMEOUT_MS);
+        connection.setInstanceFollowRedirects(true);
+        return YandexVotHttpAudioPartReader.wrap(connection);
+    }
+
+    private static boolean isTransferControlledHeader(String name) {
+        return "range".equalsIgnoreCase(name)
+                || "accept-encoding".equalsIgnoreCase(name)
+                || "content-length".equalsIgnoreCase(name)
+                || "host".equalsIgnoreCase(name);
+    }
+
+    @Nullable
+    private static String firstVideoId(@Nullable String rawQuery, String requestVideoId) {
+        String fromUri = queryParameter(rawQuery, "id");
+        if (isVideoId(fromUri)) return fromUri;
+        return isVideoId(requestVideoId) ? requestVideoId : null;
+    }
+
+    @Nullable
+    private static String queryParameter(@Nullable String rawQuery, String name) {
+        if (rawQuery == null || rawQuery.isEmpty()) return null;
+        String prefix = name + "=";
+        for (String entry : rawQuery.split("&")) {
+            if (entry.startsWith(prefix)) return entry.substring(prefix.length());
+        }
+        return null;
+    }
+
+    private static boolean isVideoId(@Nullable String value) {
+        if (value == null || value.length() != 11) return false;
+        for (int i = 0; i < value.length(); i++) {
+            char c = value.charAt(i);
+            if (!(c >= 'a' && c <= 'z')
+                    && !(c >= 'A' && c <= 'Z')
+                    && !(c >= '0' && c <= '9')
+                    && c != '-' && c != '_') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @SuppressWarnings("rawtypes")
+    private static Map<String, String> copyHeaders(Map headers) {
+        LinkedHashMap<String, String> copy = new LinkedHashMap<>();
+        if (headers == null) return copy;
+        for (Object rawEntry : headers.entrySet()) {
+            if (!(rawEntry instanceof Map.Entry)) continue;
+            Map.Entry entry = (Map.Entry) rawEntry;
+            if (!(entry.getKey() instanceof String) || !(entry.getValue() instanceof String)) {
+                continue;
+            }
+            copy.put((String) entry.getKey(), (String) entry.getValue());
+        }
+        return copy;
+    }
+
+    private static int parsePositiveInt(@Nullable String value) {
+        if (value == null || value.isEmpty()) return -1;
+        try {
+            int parsed = Integer.parseInt(value);
+            return parsed > 0 ? parsed : -1;
+        } catch (NumberFormatException ignored) {
+            return -1;
+        }
+    }
+
+    static final class Snapshot {
+        final String videoId;
+        final int itag;
+        final String url;
+        final int httpMethod;
+        final Map<String, String> headers;
+
+        Snapshot(String videoId, int itag, String url, int httpMethod,
+                 Map<String, String> headers) {
+            this.videoId = videoId;
+            this.itag = itag;
+            this.url = url;
+            this.httpMethod = httpMethod;
+            this.headers = headers;
+        }
+    }
+}

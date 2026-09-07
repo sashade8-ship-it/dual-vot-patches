@@ -880,11 +880,13 @@ public class YandexVoiceOverTranslationPatch {
                 return;
             }
             String message;
-            switch (result.failureKind()) {
-                case UPLOAD, ABORTED ->
-                        message = str("dualvot_yandex_upload_error");
-                default ->
-                        message = str("dualvot_yandex_source_error");
+            if (result == YandexVotAudioResult.UPLOAD_FAILED) {
+                // Only a genuine Yandex upload rejection is an upload error. A deadline
+                // exceeded is usually slow/stalled source reads, so it stays an
+                // acquisition (source) error like the other SOURCE outcomes.
+                message = str("dualvot_yandex_upload_error");
+            } else {
+                message = str("dualvot_yandex_source_error");
             }
             showTranslationErrorToast(message);
         });

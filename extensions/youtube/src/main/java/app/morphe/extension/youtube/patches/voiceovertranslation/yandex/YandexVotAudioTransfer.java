@@ -23,26 +23,39 @@ final class YandexVotAudioTransfer {
     private YandexVotAudioTransfer() {
     }
 
-    /** Cancellation hook. {@link #isCancelled()} is checked before every part. */
+    /** Cancellation hook. {@link #isCancelled()} is checked before and after every part. */
     interface Progress {
         boolean isCancelled();
 
         void onUploading(int part, int totalParts);
     }
 
-    /** Overall acquisition + upload deadline, checked before every part. */
+    /** Overall acquisition + upload deadline, checked before and after every part. */
     interface Deadline {
         boolean isExpired();
+    }
+
+    /**
+     * Combined cancellation + deadline signal that is passed into every part read, so an
+     * active network read stops at the next bounded chunk instead of finishing first.
+     */
+    interface AbortSignal {
+        boolean shouldAbort();
     }
 
     /** Source of the original compressed audio, read one bounded part at a time. */
     interface PartReader extends AutoCloseable {
         /**
          * Reads the closed byte range {@code [start, start + length)} and returns exactly
-         * {@code length} bytes, or throws when the media host denied the range or the body
-         * was truncated/empty. Implementations must never buffer more than one part.
+         * {@code length} bytes, or throws when the media host denied the range, the range
+         * headers were missing/inconsistent, or the body was truncated/empty.
+         *
+         * <p>Implementations must poll {@code abort} while reading and stop promptly by
+         * throwing {@link ReadAbortedException} when it fires. They must never buffer more
+         * than one part.
          */
-        byte[] read(long start, int length) throws SourceDeniedException, SourceReadException;
+        byte[] read(long start, int length, AbortSignal abort)
+                throws SourceDeniedException, SourceReadException, ReadAbortedException;
 
         /**
          * Releases any source resources. Called exactly once after every outcome.
@@ -70,15 +83,27 @@ final class YandexVotAudioTransfer {
         }
     }
 
-    /** A source read did not yield the requested part bytes. */
+    /** A source response did not carry the requested part bytes (missing/invalid headers, truncation, empty body). */
     static final class SourceReadException extends IOException {
         SourceReadException(String message) {
             super(message);
         }
     }
 
+    /** Thrown by a reader when cancellation or the deadline fired while a part was being read. */
+    static final class ReadAbortedException extends IOException {
+        ReadAbortedException() {
+            super("Audio read aborted");
+        }
+    }
+
     /**
      * Streams the whole track from {@code reader} into Yandex parts in ascending order.
+     *
+     * <p>Cancellation and the deadline are enforced before every part, inside every part
+     * read (via {@link AbortSignal}), immediately after every part read and before every
+     * upload, and again before reporting {@link YandexVotAudioResult#SUCCESS}. A run that
+     * was cancelled never reports success, even if the final upload completed first.
      *
      * @param fileSize total source size in bytes; zero or negative is an invalid/empty source
      * @param reader the injectable full-track source
@@ -124,21 +149,38 @@ final class YandexVotAudioTransfer {
                 progress.onUploading(partIndex + 1, totalParts);
 
                 YandexVotAudioParts.Part part = parts.get(partIndex);
+                AbortSignal abort = () -> progress.isCancelled() || isExpired(deadline);
+
                 byte[] partData;
                 try {
-                    partData = reader.read(part.start(), part.length());
+                    partData = reader.read(part.start(), part.length(), abort);
                 } catch (SourceDeniedException ex) {
                     return YandexVotAudioResult.SOURCE_DENIED;
                 } catch (SourceReadException ex) {
                     return YandexVotAudioResult.SOURCE_READ_FAILED;
+                } catch (ReadAbortedException ex) {
+                    return aborted(progress, deadline);
                 }
                 if (partData == null || partData.length != part.length()) {
                     // Never treat an empty or truncated part as a successful upload.
                     return YandexVotAudioResult.SOURCE_READ_FAILED;
                 }
+                // Re-check right before the upload: a read that completed just after the
+                // abort fired must not upload its part.
+                if (abort.shouldAbort()) {
+                    return aborted(progress, deadline);
+                }
                 if (!uploader.uploadPart(fileId, totalParts, partIndex, partData)) {
                     return YandexVotAudioResult.UPLOAD_FAILED;
                 }
+            }
+
+            // Never report success for a run that was cancelled or outlived its deadline.
+            if (progress.isCancelled()) {
+                return YandexVotAudioResult.CANCELLED;
+            }
+            if (isExpired(deadline)) {
+                return YandexVotAudioResult.DEADLINE_EXCEEDED;
             }
             return YandexVotAudioResult.SUCCESS;
         } finally {
@@ -147,6 +189,12 @@ final class YandexVotAudioTransfer {
             } catch (Exception ignored) {
             }
         }
+    }
+
+    private static YandexVotAudioResult aborted(Progress progress, Deadline deadline) {
+        return progress.isCancelled()
+                ? YandexVotAudioResult.CANCELLED
+                : YandexVotAudioResult.DEADLINE_EXCEEDED;
     }
 
     private static boolean isExpired(Deadline deadline) {
