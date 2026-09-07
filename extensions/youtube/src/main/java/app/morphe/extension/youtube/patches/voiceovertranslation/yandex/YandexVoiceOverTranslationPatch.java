@@ -160,8 +160,8 @@ public class YandexVoiceOverTranslationPatch {
     private static volatile int audioUploadTotalParts = -1;
     private static volatile String lastAudioDownloadAttemptKey = "";
     private static volatile String lastSuccessfulAudioUploadKey = "";
-    private static volatile String lastFailedAudioFallbackUrl = "";
-    private static volatile String lastEmptyAudioFallbackKey = "";
+    /** Request key for which the failed-audio abort was already sent to Yandex. */
+    private static volatile String lastFailedAudioRequestKey = "";
     private static final int AUDIO_REQUESTED_FALLBACK_WAIT_SECONDS = 10;
     private static final int PENDING_FALLBACK_WAIT_SECONDS = 63;
 
@@ -260,8 +260,7 @@ public class YandexVoiceOverTranslationPatch {
         clearAudioUploadProgress();
         lastAudioDownloadAttemptKey = "";
         lastSuccessfulAudioUploadKey = "";
-        lastFailedAudioFallbackUrl = "";
-        lastEmptyAudioFallbackKey = "";
+        lastFailedAudioRequestKey = "";
     }
 
     /** Incremented on every new video or stop, invalidates in-flight async translation chains. */
@@ -618,14 +617,19 @@ public class YandexVoiceOverTranslationPatch {
                 });
             } else if (status == YandexVotApiClient.STATUS_AUDIO_REQUESTED) {
                 String translationId = result.translationId();
-                sendAudioRequestedAudio(
+                YandexVotAudioResult audioResult = sendAudioRequestedAudio(
                         videoId,
                         youtubeUrl,
                         translationId,
-                        useLiveVoices,
                         generation
                 );
                 if (translationGeneration != generation) return;
+                if (!audioResult.isSuccess()) {
+                    // Without the complete original audio Yandex cannot produce the
+                    // translation; do not start a waiting countdown that can never finish.
+                    handleAudioAcquisitionFailure(generation, audioResult);
+                    return;
+                }
                 int estimateSeconds = YandexVotTiming.estimateOrDefault(
                         result.remainingTime(),
                         AUDIO_REQUESTED_FALLBACK_WAIT_SECONDS
@@ -753,14 +757,17 @@ public class YandexVoiceOverTranslationPatch {
                 });
                 return;
             } else if (status == YandexVotApiClient.STATUS_AUDIO_REQUESTED) {
-                sendAudioRequestedAudio(
+                YandexVotAudioResult audioResult = sendAudioRequestedAudio(
                         videoId,
                         url,
                         result.translationId(),
-                        useLiveVoices,
                         generation
                 );
                 if (translationGeneration != generation) return;
+                if (!audioResult.isSuccess()) {
+                    handleAudioAcquisitionFailure(generation, audioResult);
+                    return;
+                }
                 int estimateSeconds = YandexVotTiming.estimateOrDefault(
                         result.remainingTime(),
                         AUDIO_REQUESTED_FALLBACK_WAIT_SECONDS
@@ -799,23 +806,24 @@ public class YandexVoiceOverTranslationPatch {
         }
     }
 
-    private static boolean sendAudioRequestedAudio(
+    private static YandexVotAudioResult sendAudioRequestedAudio(
             String videoId,
             String url,
             String translationId,
-            boolean useLiveVoices,
             long generation
     ) {
-        if (translationId == null || translationId.isEmpty()) return false;
+        if (translationId == null || translationId.isEmpty()) {
+            return YandexVotAudioResult.SOURCE_UNAVAILABLE;
+        }
 
         String requestKey = url + "#" + translationId;
         if (requestKey.equals(lastSuccessfulAudioUploadKey)) {
-            return true;
+            return YandexVotAudioResult.SUCCESS;
         }
 
         if (!requestKey.equals(lastAudioDownloadAttemptKey)) {
             lastAudioDownloadAttemptKey = requestKey;
-            boolean uploaded = YandexVotAudioDownloader.downloadAndSend(
+            YandexVotAudioResult result = YandexVotAudioDownloader.downloadAndSend(
                     videoId,
                     url,
                     translationId,
@@ -836,27 +844,52 @@ public class YandexVoiceOverTranslationPatch {
                         }
                     }
             );
-            if (uploaded) {
+            if (result.isSuccess()) {
                 lastSuccessfulAudioUploadKey = requestKey;
                 Logger.printDebug(() -> "Yandex VOT audio uploaded for " + videoId);
-                return true;
+                return YandexVotAudioResult.SUCCESS;
             }
+            // A real outcome is surfaced below. Empty audio is never sent as if it were a
+            // successful upload, and a failed source/upload never starts the waiting timer.
+            if (translationGeneration != generation) return result;
+            if (!requestKey.equals(lastFailedAudioRequestKey)) {
+                // Abort a possibly partially uploaded Yandex queue so it does not wait forever.
+                YandexVotApiClient.sendFailedAudio(url);
+                lastFailedAudioRequestKey = requestKey;
+            }
+            return result;
         }
 
-        if (translationGeneration != generation) return false;
-        if (!url.equals(lastFailedAudioFallbackUrl)) {
-            YandexVotApiClient.sendFailedAudio(url);
-            lastFailedAudioFallbackUrl = url;
-        }
-        if (!requestKey.equals(lastEmptyAudioFallbackKey)) {
-            String oauth = useLiveVoices
-                    ? Settings.DUAL_VOT_YANDEX_OAUTH_TOKEN.get()
-                    : null;
-            YandexVotApiClient.sendEmptyAudio(url, translationId, oauth);
-            lastEmptyAudioFallbackKey = requestKey;
-        }
-        return false;
+        Logger.printDebug(() -> "Yandex VOT audio upload already attempted for " + videoId);
+        return YandexVotAudioResult.CANCELLED;
     }
+
+    /**
+     * Stops the misleading waiting flow after a failed audio acquisition/upload and shows a
+     * distinct error: source problems never surface as translation playback errors.
+     */
+    private static void handleAudioAcquisitionFailure(long generation, YandexVotAudioResult result) {
+        if (result == null || result.isSuccess()) return;
+        runOnUiIfCurrentGen(generation, () -> {
+            setWaitingTimeSeconds(-1);
+            clearAudioUploadProgress();
+            translationStarting = false;
+            refreshOriginalAudioVolume();
+            if (result == YandexVotAudioResult.CANCELLED) {
+                // The stop/cancel path already reset the UI state.
+                return;
+            }
+            String message;
+            switch (result.failureKind()) {
+                case UPLOAD, ABORTED ->
+                        message = str("dualvot_yandex_upload_error");
+                default ->
+                        message = str("dualvot_yandex_source_error");
+            }
+            showTranslationErrorToast(message);
+        });
+    }
+
 
     private static void startAudioPlayback(String videoId, String audioUrl, String fallbackUrl) {
         stopAudioPlayback();

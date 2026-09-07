@@ -1446,6 +1446,8 @@ Limitation: Reverts to old style \'More videos\' overlay"</string>
     <string name="dualvot_yandex_stream_ready">Translation ready, playing</string>
     <string name="dualvot_yandex_audio_preparing">Preparing the original audio…</string>
     <string name="dualvot_yandex_audio_uploading">Sending audio to Yandex… %1$d/%2$d</string>
+    <string name="dualvot_yandex_source_error">Could not get the full original audio needed for this translation</string>
+    <string name="dualvot_yandex_upload_error">Could not send the original audio to Yandex</string>
     <string name="dualvot_yandex_time_sec">%d sec</string>
     <string name="dualvot_yandex_time_min">%d min</string>
     <string name="dualvot_yandex_live_voices_unavailable">Live voices unavailable, using standard</string>

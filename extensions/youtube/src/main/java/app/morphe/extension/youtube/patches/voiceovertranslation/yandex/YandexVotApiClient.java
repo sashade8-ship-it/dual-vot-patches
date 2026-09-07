@@ -757,21 +757,6 @@ public class YandexVotApiClient {
     }
 
     /**
-     * Sends an empty audio protobuf request (PUT) to trigger translation generation
-     * on Yandex servers. Kept only as a fallback if the real YouTube audio stream
-     * cannot be downloaded or uploaded.
-     */
-    public static void sendEmptyAudio(String videoUrl, String translationId, String oauthToken) {
-        try {
-            byte[] body = YandexVotProtobuf.encodeEmptyAudioRequest(translationId, videoUrl);
-            String path = "/video-translation/audio";
-            sendApiRequest(path, body, "PUT", oauthToken);
-        } catch (Exception e) {
-            Logger.printException(() -> "YandexVotApiClient.sendEmptyAudio failed for " + videoUrl, e);
-        }
-    }
-
-    /**
      * Sends a JSON request to the Yandex VOT API (for fail-audio-js endpoint).
      */
     private static void sendJsonRequest(String path, String jsonBody, String method) throws IOException {

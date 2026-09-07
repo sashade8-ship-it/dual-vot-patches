@@ -1303,6 +1303,8 @@ Second \"item\" text"</string>
     <string name="dualvot_yandex_stream_ready">Перевод готов, воспроизведение</string>
     <string name="dualvot_yandex_audio_preparing">Подготовка оригинальной аудиодорожки…</string>
     <string name="dualvot_yandex_audio_uploading">Отправка аудио в Яндекс… %1$d/%2$d</string>
+    <string name="dualvot_yandex_source_error">Не удалось получить полную оригинальную аудиодорожку для этого перевода</string>
+    <string name="dualvot_yandex_upload_error">Не удалось отправить оригинальную аудиодорожку в Яндекс</string>
     <string name="dualvot_yandex_time_sec">%d сек</string>
     <string name="dualvot_yandex_time_min">%d мин</string>
     <string name="dualvot_yandex_live_voices_unavailable">Живые голоса недоступны, используются стандартные</string>
