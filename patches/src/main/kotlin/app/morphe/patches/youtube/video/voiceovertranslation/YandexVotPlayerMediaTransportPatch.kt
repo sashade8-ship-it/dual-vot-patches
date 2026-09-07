@@ -13,6 +13,7 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.shared.misc.proxy.MainCronetEngineFingerprint
 import app.morphe.patches.shared.misc.spoof.BuildMediaDataSourceFingerprint
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.misc.spoof.spoofVideoStreamsPatch
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.indexOfFirstInstructionReversedOrThrow
 import com.android.tools.smali.dexlib2.Opcode
@@ -33,18 +34,25 @@ val yandexVotPlayerMediaTransportPatch = bytecodePatch(
     name = "Yandex VoT player media transport",
     description = "Uses the active YouTube media transport for Yandex source audio.",
 ) {
-    dependsOn(sharedExtensionPatch)
+    // Spoof video streams normalizes DataSpec.d just before its constructor returns.  Making it
+    // a dependency guarantees this hook is inserted afterwards, so it sees the effective body
+    // rather than the original constructor parameter.
+    dependsOn(sharedExtensionPatch, spoofVideoStreamsPatch)
 
     execute {
         BuildMediaDataSourceFingerprint.method.apply {
             val returnIndex = indexOfFirstInstructionReversedOrThrow(Opcode.RETURN_VOID)
-            // Parameters: Uri, long, int method, byte[] body, Map headers, long, long, String,
-            // int, Object.  The final String is used only as a fallback video id; the extension
-            // validates it before retaining a request.
+            // Read a/c/d from the completed DataSpec.  In particular d may have been cleared by
+            // Spoof video streams; recording p5 here would incorrectly retain the pre-mutation
+            // SABR body.  p6/p11 are immutable constructor metadata (headers/key).
             addInstructions(
                 returnIndex,
                 """
-                    invoke-static { p1, p4, p5, p6, p11 }, $PLAYER_MEDIA_TRANSPORT->recordPlayerMediaRequest(Landroid/net/Uri;I[BLjava/util/Map;Ljava/lang/String;)V
+                    move-object v0, p0
+                    iget-object v1, v0, $definingClass->a:Landroid/net/Uri;
+                    iget v2, v0, $definingClass->c:I
+                    iget-object v3, v0, $definingClass->d:[B
+                    invoke-static { v1, v2, v3, p6, p11 }, $PLAYER_MEDIA_TRANSPORT->recordPlayerMediaRequest(Landroid/net/Uri;I[BLjava/util/Map;Ljava/lang/String;)V
                 """
             )
         }

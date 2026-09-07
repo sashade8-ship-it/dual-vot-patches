@@ -42,6 +42,9 @@ final class YandexVotPlayerMediaTransport {
     private static final int CONNECT_TIMEOUT_MS = 15_000;
     private static final int READ_TIMEOUT_MS = 30_000;
     private static final int MAX_SNAPSHOTS = 12;
+    // The constructor fingerprint is ExoPlayer DataSpec(Uri, long, int, byte[], Map, long,
+    // long, String, int, Object); DataSpec.HTTP_METHOD_GET is 1 (POST is 2, HEAD is 3).
+    private static final int DATA_SPEC_HTTP_METHOD_GET = 1;
     private static final Object LOCK = new Object();
     private static final ArrayList<Snapshot> SNAPSHOTS = new ArrayList<>();
 
@@ -90,7 +93,10 @@ final class YandexVotPlayerMediaTransport {
             return;
         }
         if (uri.getPath() == null || !uri.getPath().contains("/videoplayback")) return;
-        if (requestBody != null && requestBody.length != 0) {
+        // A range reader can only faithfully replay a bodyless DataSpec GET.  Do not turn an
+        // unknown method, POST, or HEAD into GET: any such replay loses request semantics.
+        if (httpMethod != DATA_SPEC_HTTP_METHOD_GET
+                || (requestBody != null && requestBody.length != 0)) {
             return;
         }
 
@@ -102,10 +108,11 @@ final class YandexVotPlayerMediaTransport {
 
         Map<String, String> copiedHeaders = copyHeaders(headers);
         synchronized (LOCK) {
-            // New-video requests invalidate stale request credentials before retaining the new
-            // snapshot.  Concurrent calls for audio/video of the same video stay bounded.
+            // Keep the newest exact request for every video/itag pair.  Player prefetch, ads and
+            // next-video requests must not evict the active video's still-valid snapshot.
             for (int i = SNAPSHOTS.size() - 1; i >= 0; i--) {
-                if (!videoId.equals(SNAPSHOTS.get(i).videoId)) {
+                Snapshot existing = SNAPSHOTS.get(i);
+                if (videoId.equals(existing.videoId) && itag == existing.itag) {
                     SNAPSHOTS.remove(i);
                 }
             }
@@ -146,6 +153,9 @@ final class YandexVotPlayerMediaTransport {
             long start,
             long endInclusive
     ) throws IOException {
+        if (snapshot.httpMethod != DATA_SPEC_HTTP_METHOD_GET) {
+            throw new IOException("Yandex VoT player request is not a bodyless GET");
+        }
         HttpURLConnection connection = CronetTransport.openConnection(
                 new URL(snapshot.url), false, false);
         connection.setRequestMethod("GET");

@@ -57,15 +57,28 @@ public class YandexVotPlayerMediaTransportTest {
     }
 
     @Test
-    public void newVideoInvalidatesPreviousRequestCredentials() {
+    public void rejectsBodylessNonGetRequestRatherThanReplayingItAsGet() {
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=251",
+                2, null, new HashMap<>(), VIDEO_A);
+
+        assertNull(YandexVotPlayerMediaTransport.find(VIDEO_A, 251));
+    }
+
+    @Test
+    public void preservesSnapshotsForMultipleVideosAndReplacesOnlyExactPair() {
         YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
                 "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=251",
                 1, null, new HashMap<>(), VIDEO_A);
         YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
                 "https://r.example/videoplayback?id=" + VIDEO_B + "&itag=250",
                 1, null, new HashMap<>(), VIDEO_B);
+        String replacement = "https://r.example/videoplayback?id=" + VIDEO_A
+                + "&itag=251&generation=2";
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                replacement, 1, null, new HashMap<>(), VIDEO_A);
 
-        assertNull(YandexVotPlayerMediaTransport.find(VIDEO_A, 251));
+        assertEquals(replacement, YandexVotPlayerMediaTransport.find(VIDEO_A, 251).url);
         assertNotNull(YandexVotPlayerMediaTransport.find(VIDEO_B, 250));
     }
 
