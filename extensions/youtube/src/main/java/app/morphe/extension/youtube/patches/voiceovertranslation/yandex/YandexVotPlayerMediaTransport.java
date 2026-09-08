@@ -20,6 +20,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
 
 import app.morphe.extension.shared.requests.CronetTransport;
 
@@ -48,6 +49,19 @@ final class YandexVotPlayerMediaTransport {
     private static final int DATA_SPEC_HTTP_METHOD_POST = 2;
     private static final Object LOCK = new Object();
     private static final ArrayList<Snapshot> SNAPSHOTS = new ArrayList<>();
+    private static final AtomicLong ENGINE_HOOKS = new AtomicLong();
+    private static final AtomicLong REQUEST_HOOKS = new AtomicLong();
+    private static final AtomicLong NULL_URI = new AtomicLong();
+    private static final AtomicLong INVALID_URI = new AtomicLong();
+    private static final AtomicLong PLAYBACK_ROUTE = new AtomicLong();
+    private static final AtomicLong OTHER_ROUTE = new AtomicLong();
+    private static final AtomicLong METHOD_GET = new AtomicLong();
+    private static final AtomicLong METHOD_POST = new AtomicLong();
+    private static final AtomicLong METHOD_OTHER = new AtomicLong();
+    private static final AtomicLong BODYFUL = new AtomicLong();
+    private static final AtomicLong MISSING_ITAG = new AtomicLong();
+    private static final AtomicLong RETAINED = new AtomicLong();
+    private static volatile boolean engineReady;
     private static volatile long lastBodyfulDiagnosticLogMs;
 
     private YandexVotPlayerMediaTransport() {
@@ -56,6 +70,8 @@ final class YandexVotPlayerMediaTransport {
     /** Bytecode injection point: records the app-wide engine used by player networking. */
     @SuppressWarnings("unused")
     public static void setCronetEngine(CronetEngine engine) {
+        ENGINE_HOOKS.incrementAndGet();
+        engineReady = engine != null;
         CronetTransport.setMainCronetEngine(engine);
     }
 
@@ -74,6 +90,8 @@ final class YandexVotPlayerMediaTransport {
             String requestVideoId
     ) {
         if (uri == null) {
+            REQUEST_HOOKS.incrementAndGet();
+            NULL_URI.incrementAndGet();
             return;
         }
         recordPlayerMediaRequest(uri.toString(), httpMethod, requestBody, headers, requestVideoId);
@@ -88,19 +106,34 @@ final class YandexVotPlayerMediaTransport {
             Map headers,
             String requestVideoId
     ) {
+        REQUEST_HOOKS.incrementAndGet();
         URI uri;
         try {
             uri = new URI(url);
         } catch (URISyntaxException | NullPointerException ignored) {
+            INVALID_URI.incrementAndGet();
             return;
         }
-        if (uri.getPath() == null || !uri.getPath().contains("/videoplayback")) return;
+        if (uri.getPath() == null || !uri.getPath().contains("/videoplayback")) {
+            OTHER_ROUTE.incrementAndGet();
+            return;
+        }
+        PLAYBACK_ROUTE.incrementAndGet();
         int itag = parsePositiveInt(queryParameter(uri.getRawQuery(), "itag"));
+        String replayMethod = replayHttpMethod(httpMethod);
+        if (DATA_SPEC_HTTP_METHOD_GET == httpMethod) {
+            METHOD_GET.incrementAndGet();
+        } else if (DATA_SPEC_HTTP_METHOD_POST == httpMethod) {
+            METHOD_POST.incrementAndGet();
+        } else {
+            METHOD_OTHER.incrementAndGet();
+        }
+        boolean hasRequestBody = requestBody != null && requestBody.length != 0;
+        if (hasRequestBody) BODYFUL.incrementAndGet();
         // Spoof video streams can clear DataSpec.d while leaving its method as POST. Replaying
         // that bodyless POST exactly is safe; transforming it into GET would lose semantics.
-        if (replayHttpMethod(httpMethod) == null
-                || (requestBody != null && requestBody.length != 0)) {
-            if (itag > 0 && requestBody != null && requestBody.length > 0) {
+        if (replayMethod == null || hasRequestBody) {
+            if (itag > 0 && hasRequestBody) {
                 long nowMs = System.currentTimeMillis();
                 if (nowMs - lastBodyfulDiagnosticLogMs >= 15_000L) {
                     lastBodyfulDiagnosticLogMs = nowMs;
@@ -120,6 +153,7 @@ final class YandexVotPlayerMediaTransport {
         // candidate even without a video id; selection later requires the cached current-video
         // format to prove it is the same media stream.
         if (itag <= 0) {
+            MISSING_ITAG.incrementAndGet();
             return;
         }
 
@@ -142,8 +176,9 @@ final class YandexVotPlayerMediaTransport {
             }
             snapshotCount = SNAPSHOTS.size();
         }
+        RETAINED.incrementAndGet();
         YandexVotDiagnostics.transport(
-                "retained-" + replayHttpMethod(httpMethod).toLowerCase(java.util.Locale.US),
+                "retained-" + replayMethod.toLowerCase(java.util.Locale.US),
                 itag,
                 0,
                 snapshotCount);
@@ -193,12 +228,48 @@ final class YandexVotPlayerMediaTransport {
         synchronized (LOCK) {
             SNAPSHOTS.clear();
         }
+        ENGINE_HOOKS.set(0);
+        REQUEST_HOOKS.set(0);
+        NULL_URI.set(0);
+        INVALID_URI.set(0);
+        PLAYBACK_ROUTE.set(0);
+        OTHER_ROUTE.set(0);
+        METHOD_GET.set(0);
+        METHOD_POST.set(0);
+        METHOD_OTHER.set(0);
+        BODYFUL.set(0);
+        MISSING_ITAG.set(0);
+        RETAINED.set(0);
+        engineReady = false;
+        lastBodyfulDiagnosticLogMs = 0;
     }
 
     static int snapshotCount() {
         synchronized (LOCK) {
             return SNAPSHOTS.size();
         }
+    }
+
+    static DiagnosticSummary diagnosticSummary() {
+        return new DiagnosticSummary(
+                ENGINE_HOOKS.get(),
+                engineReady,
+                REQUEST_HOOKS.get(),
+                NULL_URI.get(),
+                INVALID_URI.get(),
+                PLAYBACK_ROUTE.get(),
+                OTHER_ROUTE.get(),
+                METHOD_GET.get(),
+                METHOD_POST.get(),
+                METHOD_OTHER.get(),
+                BODYFUL.get(),
+                MISSING_ITAG.get(),
+                RETAINED.get(),
+                snapshotCount());
+    }
+
+    static void logDiagnosticSummary() {
+        YandexVotDiagnostics.transportSummary(diagnosticSummary());
     }
 
     private static YandexVotHttpAudioPartReader.Connection open(
@@ -359,5 +430,23 @@ final class YandexVotPlayerMediaTransport {
             this.httpMethod = httpMethod;
             this.headers = headers;
         }
+    }
+
+    static record DiagnosticSummary(
+            long engineHooks,
+            boolean engineReady,
+            long requestHooks,
+            long nullUri,
+            long invalidUri,
+            long playbackRoute,
+            long otherRoute,
+            long methodGet,
+            long methodPost,
+            long methodOther,
+            long bodyful,
+            long missingItag,
+            long retained,
+            int snapshots
+    ) {
     }
 }

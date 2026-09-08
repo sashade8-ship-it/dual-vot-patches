@@ -12,7 +12,7 @@ import app.morphe.extension.shared.Logger;
 
 /** Sanitized, stable markers for one Yandex translation attempt. */
 final class YandexVotDiagnostics {
-    static final String BUILD_ID = "yandex-audio-diag-v2";
+    static final String BUILD_ID = "yandex-audio-diag-v3";
     private static final String PREFIX = "Yandex VOT diagnostics build=" + BUILD_ID + " ";
 
     private YandexVotDiagnostics() {
@@ -77,11 +77,49 @@ final class YandexVotDiagnostics {
                 + " snapshots=" + Math.max(0, snapshotCount);
     }
 
+    static void sourceEnvironment(boolean spoofIncluded, boolean spoofSetting,
+                                  int snapshotCount) {
+        log(sourceEnvironmentMessage(spoofIncluded, spoofSetting, snapshotCount));
+    }
+
+    static String sourceEnvironmentMessage(boolean spoofIncluded, boolean spoofSetting,
+                                           int snapshotCount) {
+        return PREFIX + "phase=source event=environment"
+                + " spoofIncluded=" + spoofIncluded
+                + " spoofSetting=" + spoofSetting
+                + " spoofEffective=" + (spoofIncluded && spoofSetting)
+                + " snapshots=" + Math.max(0, snapshotCount);
+    }
+
     static void transport(String event, int itag, int bodyBytes, int snapshotCount) {
         log(PREFIX + "phase=transport event=" + event
                 + " itag=" + itag
                 + " bodyBytes=" + Math.max(0, bodyBytes)
                 + " snapshots=" + Math.max(0, snapshotCount));
+    }
+
+    static void transportSummary(YandexVotPlayerMediaTransport.DiagnosticSummary summary) {
+        log(transportSummaryMessage(summary));
+    }
+
+    static String transportSummaryMessage(
+            YandexVotPlayerMediaTransport.DiagnosticSummary summary
+    ) {
+        return PREFIX + "phase=transport event=summary"
+                + " engineHooks=" + summary.engineHooks()
+                + " engineReady=" + summary.engineReady()
+                + " requestHooks=" + summary.requestHooks()
+                + " nullUri=" + summary.nullUri()
+                + " invalidUri=" + summary.invalidUri()
+                + " playbackRoute=" + summary.playbackRoute()
+                + " otherRoute=" + summary.otherRoute()
+                + " methodGet=" + summary.methodGet()
+                + " methodPost=" + summary.methodPost()
+                + " methodOther=" + summary.methodOther()
+                + " bodyful=" + summary.bodyful()
+                + " missingItag=" + summary.missingItag()
+                + " retained=" + summary.retained()
+                + " snapshots=" + summary.snapshots();
     }
 
     static void uploadPart(String event, int part, int totalParts, @Nullable Boolean accepted) {

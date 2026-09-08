@@ -28,10 +28,14 @@ public class YandexVotDiagnosticsTest {
                 YandexVotDiagnostics.audioRequestMessage(
                         "exit", YandexVotAudioResult.SOURCE_UNAVAILABLE),
                 YandexVotDiagnostics.sourceMessage("selected", 251, 4),
+                YandexVotDiagnostics.sourceEnvironmentMessage(true, false, 4),
+                YandexVotDiagnostics.transportSummaryMessage(
+                        new YandexVotPlayerMediaTransport.DiagnosticSummary(
+                                1, true, 9, 0, 0, 8, 1, 4, 4, 0, 4, 1, 3, 3)),
                 YandexVotDiagnostics.uploadPartMessage("result", 2, 3, true),
                 YandexVotDiagnostics.playbackMessage("error", "direct", 1, -1004));
 
-        assertTrue(markers.contains("build=yandex-audio-diag-v2"));
+        assertTrue(markers.contains("build=yandex-audio-diag-v3"));
         assertTrue(markers.contains("phase=button event=pressed"));
         assertTrue(markers.contains("phase=api request=initial"));
         assertTrue(markers.contains("resultNull=false status=6"));
@@ -39,6 +43,11 @@ public class YandexVotDiagnosticsTest {
         assertTrue(markers.contains("audioUrlPresent=false"));
         assertTrue(markers.contains("phase=audio-request event=exit"));
         assertTrue(markers.contains("phase=source event=selected selectedItag=251 snapshots=4"));
+        assertTrue(markers.contains("phase=source event=environment spoofIncluded=true"
+                + " spoofSetting=false spoofEffective=false snapshots=4"));
+        assertTrue(markers.contains("phase=transport event=summary engineHooks=1"
+                + " engineReady=true requestHooks=9"));
+        assertTrue(markers.contains("bodyful=4 missingItag=1 retained=3 snapshots=3"));
         assertTrue(markers.contains("phase=upload event=result part=2/3 accepted=true"));
         assertTrue(markers.contains("phase=playback event=error source=direct what=1 extra=-1004"));
 

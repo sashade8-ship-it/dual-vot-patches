@@ -49,6 +49,8 @@ import java.util.Locale;
 
 import app.morphe.extension.shared.innertube.utils.PlayerResponseOuterClass.Format;
 import app.morphe.extension.shared.innertube.utils.PlayerResponseOuterClass.PlayerResponse;
+import app.morphe.extension.shared.settings.SharedYouTubeSettings;
+import app.morphe.extension.shared.spoof.SpoofVideoStreamsPatch;
 import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
 
 /**
@@ -125,6 +127,13 @@ final class YandexVotAudioDownloader {
             String translationId,
             ProgressListener listener
     ) {
+        boolean spoofIncluded = SpoofVideoStreamsPatch.isPatchIncluded();
+        boolean spoofSetting = SharedYouTubeSettings.SPOOF_VIDEO_STREAMS.get();
+        YandexVotDiagnostics.sourceEnvironment(
+                spoofIncluded,
+                spoofSetting,
+                YandexVotPlayerMediaTransport.snapshotCount());
+        YandexVotPlayerMediaTransport.logDiagnosticSummary();
         YandexVotDiagnostics.source("enter", -1, YandexVotPlayerMediaTransport.snapshotCount());
         if (isEmpty(videoId) || isEmpty(videoUrl) || isEmpty(translationId)) {
             return finish(YandexVotAudioResult.SOURCE_UNAVAILABLE);

@@ -142,4 +142,34 @@ public class YandexVotPlayerMediaTransportTest {
                 251,
                 cachedFormat.replace("audio_track=default", "audio_track=alternate")));
     }
+
+    @Test
+    public void summarizesHookTrafficAndRejectionReasonsWithoutRequestDetails() {
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                (String) null, 1, null, new HashMap<>(), VIDEO_A);
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/other?itag=251", 1, null, new HashMap<>(), VIDEO_A);
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/videoplayback?id=" + VIDEO_A,
+                1, null, new HashMap<>(), VIDEO_A);
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=251",
+                2, new byte[] {1}, new HashMap<>(), VIDEO_A);
+        YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
+                "https://r.example/videoplayback?id=" + VIDEO_A + "&itag=250",
+                1, null, new HashMap<>(), VIDEO_A);
+
+        YandexVotPlayerMediaTransport.DiagnosticSummary summary =
+                YandexVotPlayerMediaTransport.diagnosticSummary();
+        assertEquals(5, summary.requestHooks());
+        assertEquals(1, summary.invalidUri());
+        assertEquals(1, summary.otherRoute());
+        assertEquals(3, summary.playbackRoute());
+        assertEquals(2, summary.methodGet());
+        assertEquals(1, summary.methodPost());
+        assertEquals(1, summary.bodyful());
+        assertEquals(1, summary.missingItag());
+        assertEquals(1, summary.retained());
+        assertEquals(1, summary.snapshots());
+    }
 }
