@@ -139,7 +139,11 @@ public class YandexVoiceOverTranslationPatch {
     /** Runs a Runnable on the main thread only if translation generation hasn't changed. */
     private static void runOnUiIfCurrentGen(long gen, Runnable r) {
         Utils.runOnMainThread(() -> {
-            if (translationGeneration == gen) r.run();
+            if (translationGeneration == gen) {
+                r.run();
+            } else {
+                YandexVotDiagnostics.lifecycle("stale-generation-discarded");
+            }
         });
     }
 
@@ -329,6 +333,7 @@ public class YandexVoiceOverTranslationPatch {
         if (!Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
         String newId = videoId != null ? videoId : "";
         if (!newId.equals(pendingVideoId)) {
+            YandexVotDiagnostics.lifecycle("video-changed");
             translationStarting = false;
             setWaitingTimeSeconds(-1);
             resetAudioUploadRequestState();
@@ -346,9 +351,14 @@ public class YandexVoiceOverTranslationPatch {
     }
 
     public static void toggleTranslation() {
-        if (!Settings.DUAL_VOT_YANDEX_ENABLED.get()) return;
+        YandexVotDiagnostics.buttonPressed();
+        if (!Settings.DUAL_VOT_YANDEX_ENABLED.get()) {
+            YandexVotDiagnostics.failure("button", "disabled");
+            return;
+        }
 
         if (isTranslationActive()) {
+            YandexVotDiagnostics.lifecycle("stop-requested");
             translationStarting = false;
             setWaitingTimeSeconds(-1);
             stopAudioPlayback();
@@ -360,20 +370,26 @@ public class YandexVoiceOverTranslationPatch {
         }
 
         if (pendingIsLive) {
+            YandexVotDiagnostics.failure("attempt", "live-video-unavailable");
             showTranslationErrorToast(str("dualvot_yandex_unavailable_live"));
             return;
         }
         if (pendingVideoLength > 4 * 60 * 60 * 1000L) {
+            YandexVotDiagnostics.failure("attempt", "video-too-long");
             showTranslationErrorToast(str("dualvot_yandex_unavailable_too_long"));
             return;
         }
         String sourceLang = normalizeLanguageCode(Settings.DUAL_VOT_YANDEX_SOURCE_LANGUAGE.get());
         String targetLang = normalizeLanguageCode(Settings.DUAL_VOT_YANDEX_TARGET_LANGUAGE.get());
         if (!sourceLang.isEmpty() && !"auto".equalsIgnoreCase(sourceLang) && sourceLang.equals(targetLang)) {
+            YandexVotDiagnostics.failure("attempt", "same-language");
             showTranslationErrorToast(str("dualvot_yandex_unavailable_same_language"));
             return;
         }
-        if (pendingVideoId == null || pendingVideoId.isEmpty()) return;
+        if (pendingVideoId == null || pendingVideoId.isEmpty()) {
+            YandexVotDiagnostics.failure("attempt", "no-current-video");
+            return;
+        }
 
         final String videoId = pendingVideoId;
         final String videoTitle = pendingVideoTitle;
@@ -393,6 +409,7 @@ public class YandexVoiceOverTranslationPatch {
      * The coordinator uses this before another voice-over engine starts.
      */
     public static void cancelTranslation() {
+        YandexVotDiagnostics.lifecycle("cancelled");
         translationGeneration++;
         translationStarting = false;
         setWaitingTimeSeconds(-1);
@@ -568,12 +585,17 @@ public class YandexVoiceOverTranslationPatch {
             String sourceLang, String targetLang,
             double durationSeconds, boolean useLiveVoices
     ) {
-        if (isTranslating.getAndSet(true)) return;
+        if (isTranslating.getAndSet(true)) {
+            YandexVotDiagnostics.failure("attempt", "deduplicated");
+            return;
+        }
         final long generation = translationGeneration;
+        YandexVotDiagnostics.attemptStarted(useLiveVoices);
         try {
             String youtubeUrl = "https://youtu.be/" + videoId;
             YandexVotApiClient.TranslationResult result = YandexVotApiClient.requestTranslation(
                     youtubeUrl, durationSeconds, sourceLang, targetLang, videoTitle, useLiveVoices);
+            YandexVotDiagnostics.apiResult("initial", result, useLiveVoices);
             if (result == null) {
                 runOnUiIfCurrentGen(generation, () -> {
                     setWaitingTimeSeconds(-1);
@@ -583,12 +605,6 @@ public class YandexVoiceOverTranslationPatch {
                 });
                 return;
             }
-            Logger.printDebug(() -> "VOT response: status=" + result.status()
-                    + " remainingTime=" + result.remainingTime()
-                    + " useLiveVoices=" + useLiveVoices
-                    + " audioUrl=" + (result.audioUrl() != null ? result.audioUrl().substring(0, Math.min(80, result.audioUrl().length())) : "null")
-                    + " translationId=" + result.translationId()
-                    + " message=" + result.message());
             int status = result.status();
             if (status == YandexVotApiClient.STATUS_FINISHED || status == YandexVotApiClient.STATUS_PART_CONTENT) {
                 if (result.audioUrl() != null && !result.audioUrl().isEmpty()) {
@@ -683,7 +699,7 @@ public class YandexVoiceOverTranslationPatch {
                         useLiveVoices, generation, 0);
             }
         } catch (Exception e) {
-            Logger.printException(() -> "requestTranslation failed", e);
+            YandexVotDiagnostics.failure("api", "initial-exception");
             runOnUiIfCurrentGen(generation, () -> {
                 translationStarting = false;
                 refreshOriginalAudioVolume();
@@ -721,6 +737,7 @@ public class YandexVoiceOverTranslationPatch {
         try {
             YandexVotApiClient.TranslationResult result = YandexVotApiClient.requestTranslation(
                     url, duration, sourceLang, targetLang, videoTitle, useLiveVoices, false);
+            YandexVotDiagnostics.apiResult("poll", result, useLiveVoices);
             if (result == null) {
                 if (retryCount < 1 && translationGeneration == generation) {
                     // Network error — retry once with a short delay
@@ -815,7 +832,7 @@ public class YandexVoiceOverTranslationPatch {
                 return;
             }
         } catch (Exception e) {
-            Logger.printException(() -> "pollTranslation failure", e);
+            YandexVotDiagnostics.failure("api", "poll-exception");
             if (retryCount < 1 && translationGeneration == generation) {
                 // Retry once on exception
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang,
@@ -836,13 +853,14 @@ public class YandexVoiceOverTranslationPatch {
             String translationId,
             long generation
     ) {
+        YandexVotDiagnostics.audioRequest("enter", null);
         if (translationId == null || translationId.isEmpty()) {
-            return YandexVotAudioResult.SOURCE_UNAVAILABLE;
+            return finishAudioRequest(YandexVotAudioResult.SOURCE_UNAVAILABLE);
         }
 
         String requestKey = url + "#" + translationId;
         if (requestKey.equals(lastSuccessfulAudioUploadKey)) {
-            return YandexVotAudioResult.SUCCESS;
+            return finishAudioRequest(YandexVotAudioResult.SUCCESS);
         }
 
         if (!requestKey.equals(lastAudioDownloadAttemptKey)) {
@@ -870,22 +888,25 @@ public class YandexVoiceOverTranslationPatch {
             );
             if (result.isSuccess()) {
                 lastSuccessfulAudioUploadKey = requestKey;
-                Logger.printDebug(() -> "Yandex VOT audio uploaded for " + videoId);
-                return YandexVotAudioResult.SUCCESS;
+                return finishAudioRequest(YandexVotAudioResult.SUCCESS);
             }
             // A real outcome is surfaced below. Empty audio is never sent as if it were a
             // successful upload, and a failed source/upload never starts the waiting timer.
-            if (translationGeneration != generation) return result;
+            if (translationGeneration != generation) return finishAudioRequest(result);
             if (!requestKey.equals(lastFailedAudioRequestKey)) {
                 // Abort a possibly partially uploaded Yandex queue so it does not wait forever.
                 YandexVotApiClient.sendFailedAudio(url);
                 lastFailedAudioRequestKey = requestKey;
             }
-            return result;
+            return finishAudioRequest(result);
         }
 
-        Logger.printDebug(() -> "Yandex VOT audio upload already attempted for " + videoId);
-        return YandexVotAudioResult.CANCELLED;
+        return finishAudioRequest(YandexVotAudioResult.CANCELLED);
+    }
+
+    private static YandexVotAudioResult finishAudioRequest(YandexVotAudioResult result) {
+        YandexVotDiagnostics.audioRequest("exit", result);
+        return result;
     }
 
     /**
@@ -918,6 +939,11 @@ public class YandexVoiceOverTranslationPatch {
 
 
     private static void startAudioPlayback(String videoId, String audioUrl, String fallbackUrl) {
+        YandexVotDiagnostics.playback(
+                "start",
+                isProxyUrl(audioUrl) ? "proxy" : "direct",
+                0,
+                0);
         stopAudioPlayback();
         setWaitingTimeSeconds(-1);
         mainHandler.removeCallbacks(proxyPrepareTimeoutRunnable);
@@ -1000,13 +1026,13 @@ public class YandexVoiceOverTranslationPatch {
                 if (bytes < 1000) {
                     boolean deleted = tempFile.delete();
                     if (!deleted) {
-                        Logger.printDebug(() -> "VOT temp proxy file could not be deleted: " + tempFile.getAbsolutePath());
+                        YandexVotDiagnostics.failure("playback", "proxy-temp-delete-failed");
                     }
                     return null;
                 }
                 return tempFile.getAbsolutePath();
             } catch (Exception e) {
-                Logger.printException(() -> "VOT proxy fetch failed", e);
+                YandexVotDiagnostics.failure("playback", "proxy-fetch-failed");
                 return null;
             } finally {
                 if (fos != null) {
@@ -1030,6 +1056,7 @@ public class YandexVoiceOverTranslationPatch {
                             .build());
             mp.setDataSource(filePath);
             mp.setOnPreparedListener(player -> Utils.runOnMainThread(() -> {
+                YandexVotDiagnostics.playback("prepared", "proxy-file", 0, 0);
                 translationStarting = false;
                 clearAudioUploadProgress();
                 float vol = Settings.DUAL_VOT_YANDEX_TRANSLATION_VOLUME.get() / 100.0f;
@@ -1049,7 +1076,7 @@ public class YandexVoiceOverTranslationPatch {
                 notifyTranslationStateChanged();
             }));
             mp.setOnErrorListener((p, what, extra) -> {
-                Logger.printDebug(() -> "VOT MediaPlayer error: what=" + what + " extra=" + extra);
+                YandexVotDiagnostics.playback("error", "proxy-file", what, extra);
                 Utils.runOnMainThread(() -> {
                     stopAudioPlayback();
                     translationStarting = false;
@@ -1064,7 +1091,7 @@ public class YandexVoiceOverTranslationPatch {
             notifyTranslationStateChanged();
             mp.prepareAsync();
         } catch (IOException e) {
-            Logger.printException(() -> "startAudioPlaybackFromFile failed", e);
+            YandexVotDiagnostics.playback("setup-failed", "proxy-file", 0, 0);
             deleteTempProxyFile();
             translationStarting = false;
             refreshOriginalAudioVolume();
@@ -1080,7 +1107,7 @@ public class YandexVoiceOverTranslationPatch {
                 File file = new File(path);
                 boolean deleted = file.delete();
                 if (!deleted) {
-                    Logger.printDebug(() -> "VOT temp proxy file could not be deleted: " + file.getAbsolutePath());
+                    YandexVotDiagnostics.failure("playback", "proxy-temp-delete-failed");
                 }
             } catch (Exception ignored) { }
         }
@@ -1097,6 +1124,7 @@ public class YandexVoiceOverTranslationPatch {
             mp.setDataSource(audioUrl);
             final String fallback = fallbackUrl;
             mp.setOnPreparedListener(player -> Utils.runOnMainThread(() -> {
+                YandexVotDiagnostics.playback("prepared", "direct", 0, 0);
                 translationStarting = false;
                 clearAudioUploadProgress();
                 mainHandler.removeCallbacks(proxyPrepareTimeoutRunnable);
@@ -1115,7 +1143,7 @@ public class YandexVoiceOverTranslationPatch {
                 notifyTranslationStateChanged();
             }));
             mp.setOnErrorListener((p, what, extra) -> {
-                Logger.printDebug(() -> "VOT MediaPlayer error: what=" + what + " extra=" + extra + " url=" + audioUrl);
+                YandexVotDiagnostics.playback("error", "direct", what, extra);
                 Utils.runOnMainThread(() -> {
                     stopAudioPlayback();
                     if (fallback != null && !fallback.isEmpty()) {
@@ -1135,7 +1163,7 @@ public class YandexVoiceOverTranslationPatch {
                 proxyPrepareTimeoutRunnable = () -> {
                     MediaPlayer p = mediaPlayer.get();
                     if (p != null && p == mp && !p.isPlaying()) {
-                        Logger.printDebug(() -> "VOT proxy prepare timeout, retrying direct");
+                        YandexVotDiagnostics.playback("prepare-timeout", "proxy", 0, 0);
                         Utils.runOnMainThread(() -> {
                             stopAudioPlayback();
                             startAudioPlayback(videoId, fallback, null);
@@ -1146,7 +1174,7 @@ public class YandexVoiceOverTranslationPatch {
             }
             mp.prepareAsync();
         } catch (IOException e) {
-            Logger.printException(() -> "startAudioPlayback failed for videoId: " + videoId, e);
+            YandexVotDiagnostics.playback("setup-failed", "direct", 0, 0);
             Utils.runOnMainThread(() -> {
                 if (fallbackUrl != null && !fallbackUrl.isEmpty()) {
                     startAudioPlayback(videoId, fallbackUrl, null);

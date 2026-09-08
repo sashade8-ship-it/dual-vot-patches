@@ -33,6 +33,7 @@ private const val PLAYER_MEDIA_TRANSPORT =
 val yandexVotPlayerMediaTransportPatch = bytecodePatch(
     name = "Yandex VoT player media transport",
     description = "Uses the active YouTube media transport for Yandex source audio.",
+    default = false,
 ) {
     // Spoof video streams normalizes DataSpec.d just before its constructor returns.  Making it
     // a dependency guarantees this hook is inserted afterwards, so it sees the effective body

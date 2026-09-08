@@ -22,7 +22,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import app.morphe.extension.shared.requests.CronetTransport;
-import app.morphe.extension.shared.Logger;
 
 /**
  * Captures a <em>live player</em> media request at the MediaDataSource construction boundary
@@ -52,15 +51,6 @@ final class YandexVotPlayerMediaTransport {
     private static volatile long lastBodyfulDiagnosticLogMs;
 
     private YandexVotPlayerMediaTransport() {
-    }
-
-    private static void logDiagnostic(String message) {
-        try {
-            Class.forName("app.morphe.extension.shared.Logger");
-            Logger.printDebug(() -> message);
-        } catch (ClassNotFoundException ignored) {
-            // Unit tests intentionally run without the Android logging backend.
-        }
     }
 
     /** Bytecode injection point: records the app-wide engine used by player networking. */
@@ -114,9 +104,11 @@ final class YandexVotPlayerMediaTransport {
                 long nowMs = System.currentTimeMillis();
                 if (nowMs - lastBodyfulDiagnosticLogMs >= 15_000L) {
                     lastBodyfulDiagnosticLogMs = nowMs;
-                    logDiagnostic( "Yandex VOT media transport diagnostics:"
-                            + " ignored bodyful SABR-style media request, itag=" + itag
-                            + ", bodyBytes=" + requestBody.length);
+                    YandexVotDiagnostics.transport(
+                            "ignored-bodyful-sabr",
+                            itag,
+                            requestBody.length,
+                            snapshotCount());
                 }
             }
             return;
@@ -150,10 +142,11 @@ final class YandexVotPlayerMediaTransport {
             }
             snapshotCount = SNAPSHOTS.size();
         }
-        logDiagnostic( "Yandex VOT media transport diagnostics: retained "
-                + replayHttpMethod(httpMethod) + " itag=" + itag
-                + ", videoIdKnown=" + (videoId != null)
-                + ", totalSnapshots=" + snapshotCount);
+        YandexVotDiagnostics.transport(
+                "retained-" + replayHttpMethod(httpMethod).toLowerCase(java.util.Locale.US),
+                itag,
+                0,
+                snapshotCount);
     }
 
     /** Returns the newest exact current-video/audio-format request, or null when unavailable. */
@@ -202,16 +195,9 @@ final class YandexVotPlayerMediaTransport {
         }
     }
 
-    static String snapshotSummary(@Nullable String videoId) {
+    static int snapshotCount() {
         synchronized (LOCK) {
-            StringBuilder currentItags = new StringBuilder();
-            for (Snapshot snapshot : SNAPSHOTS) {
-                if (videoId == null || !videoId.equals(snapshot.videoId)) continue;
-                if (currentItags.length() > 0) currentItags.append(',');
-                currentItags.append(snapshot.itag);
-            }
-            return "snapshots=" + SNAPSHOTS.size()
-                    + ", currentVideoItags=[" + currentItags + "]";
+            return SNAPSHOTS.size();
         }
     }
 

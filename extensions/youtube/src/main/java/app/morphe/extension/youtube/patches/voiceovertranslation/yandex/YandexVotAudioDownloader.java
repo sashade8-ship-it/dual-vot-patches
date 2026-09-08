@@ -47,7 +47,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.innertube.utils.PlayerResponseOuterClass.Format;
 import app.morphe.extension.shared.innertube.utils.PlayerResponseOuterClass.PlayerResponse;
 import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
@@ -120,36 +119,26 @@ final class YandexVotAudioDownloader {
     private YandexVotAudioDownloader() {
     }
 
-    private static void logDiagnostic(String message) {
-        try {
-            Class.forName("app.morphe.extension.shared.Logger");
-            Logger.printDebug(() -> message);
-        } catch (ClassNotFoundException ignored) {
-            // Unit tests intentionally run without the Android logging backend.
-        }
-    }
-
     static YandexVotAudioResult downloadAndSend(
             String videoId,
             String videoUrl,
             String translationId,
             ProgressListener listener
     ) {
+        YandexVotDiagnostics.source("enter", -1, YandexVotPlayerMediaTransport.snapshotCount());
         if (isEmpty(videoId) || isEmpty(videoUrl) || isEmpty(translationId)) {
-            return YandexVotAudioResult.SOURCE_UNAVAILABLE;
+            return finish(YandexVotAudioResult.SOURCE_UNAVAILABLE);
         }
         if (listener == null || listener.isCancelled()) {
-            return YandexVotAudioResult.CANCELLED;
+            return finish(YandexVotAudioResult.CANCELLED);
         }
 
         try {
             listener.onPreparing();
             CapturedAudioFormat capturedAudio = resolveAudioFormat(videoId);
-            if (listener.isCancelled()) return YandexVotAudioResult.CANCELLED;
+            if (listener.isCancelled()) return finish(YandexVotAudioResult.CANCELLED);
             if (capturedAudio == null || isEmpty(capturedAudio.format().getUrl())) {
-                Logger.printDebug(() -> "Yandex VOT audio upload: no playing-session audio"
-                        + " format for " + videoId);
-                return YandexVotAudioResult.SOURCE_UNAVAILABLE;
+                return finish(YandexVotAudioResult.SOURCE_UNAVAILABLE);
             }
 
             Format cachedFormat = capturedAudio.format();
@@ -163,6 +152,10 @@ final class YandexVotAudioDownloader {
             // Keep this exact format/request pair: a different player itag is not
             // interchangeable even when it belongs to the same current video.
             YandexVotPlayerMediaTransport.Snapshot mediaRequest = capturedAudio.mediaRequest();
+            YandexVotDiagnostics.source(
+                    "selected",
+                    audioFormat.itag(),
+                    YandexVotPlayerMediaTransport.snapshotCount());
 
             String audioUrl = mediaRequest.url;
             long fileSize = parseClen(audioUrl);
@@ -176,24 +169,18 @@ final class YandexVotAudioDownloader {
                             audioUrl,
                             YandexVotPlayerMediaTransport.factoryFor(mediaRequest));
                 } catch (YandexVotAudioTransfer.SourceDeniedException ex) {
-                    return YandexVotAudioResult.SOURCE_DENIED;
+                    return finish(YandexVotAudioResult.SOURCE_DENIED);
                 } catch (IOException ex) {
-                    return YandexVotAudioResult.SOURCE_READ_FAILED;
+                    return finish(YandexVotAudioResult.SOURCE_READ_FAILED);
                 }
             }
-            if (listener.isCancelled()) return YandexVotAudioResult.CANCELLED;
+            if (listener.isCancelled()) return finish(YandexVotAudioResult.CANCELLED);
             if (fileSize <= 0) {
-                Logger.printDebug(() -> "Yandex VOT audio upload: unknown/empty audio size for "
-                        + videoId);
-                return YandexVotAudioResult.SOURCE_UNAVAILABLE;
+                return finish(YandexVotAudioResult.SOURCE_UNAVAILABLE);
             }
 
             final long resolvedFileSize = fileSize;
             int parts = YandexVotAudioParts.partCount(resolvedFileSize);
-            Logger.printDebug(() -> "Yandex VOT audio upload: selected itag="
-                    + audioFormat.itag() + ", mime=" + audioFormat.mimeType()
-                    + ", bitrate=" + audioFormat.bitrate()
-                    + ", bytes=" + resolvedFileSize + ", parts=" + parts);
             String fileId = makeFileId(audioFormat.itag(), resolvedFileSize);
 
             final long deadlineMs = android.os.SystemClock.elapsedRealtime()
@@ -226,21 +213,20 @@ final class YandexVotAudioDownloader {
                     progress,
                     deadline
             );
-            if (result.isSuccess()) {
-                Logger.printDebug(() -> "Yandex VOT audio upload completed for " + videoId
-                        + " (" + parts + " part(s))");
-            } else {
-                Logger.printDebug(() -> "Yandex VOT audio upload failed for " + videoId
-                        + ": " + result);
-            }
-            return result;
+            return finish(result);
         } catch (Exception e) {
             // Never expose the signed source URL or its host details. Fail the acquisition
             // with the generic source category and keep the exact cause out of logs.
-            Logger.printDebug(() -> "Yandex VOT audio upload aborted unexpectedly for "
-                    + videoId);
-            return YandexVotAudioResult.SOURCE_READ_FAILED;
+            return finish(YandexVotAudioResult.SOURCE_READ_FAILED);
         }
+    }
+
+    private static YandexVotAudioResult finish(YandexVotAudioResult result) {
+        YandexVotDiagnostics.source(
+                "exit-" + result.name().toLowerCase(Locale.US).replace('_', '-'),
+                -1,
+                YandexVotPlayerMediaTransport.snapshotCount());
+        return result;
     }
 
     /**
@@ -261,21 +247,22 @@ final class YandexVotAudioDownloader {
             @Nullable StreamingDataRequest request
     ) throws IOException {
         if (request == null) {
-            logDiagnostic( "Yandex VOT audio diagnostics: no cached player response for " + videoId);
+            YandexVotDiagnostics.source(
+                    "no-cached-player-response", -1, YandexVotPlayerMediaTransport.snapshotCount());
             return null;
         }
 
         StreamingDataRequest.StreamData streamData = request.getStream();
         if (streamData == null) {
-            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
-                    + " is unavailable or still loading for " + videoId);
+            YandexVotDiagnostics.source(
+                    "player-response-loading", -1, YandexVotPlayerMediaTransport.snapshotCount());
             return null;
         }
 
         byte[] playerResponseBytes = streamData.streamingData();
         if (playerResponseBytes == null || playerResponseBytes.length == 0) {
-            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
-                    + " has empty streaming data for " + videoId);
+            YandexVotDiagnostics.source(
+                    "empty-streaming-data", -1, YandexVotPlayerMediaTransport.snapshotCount());
             return null;
         }
 
@@ -283,13 +270,13 @@ final class YandexVotAudioDownloader {
         try {
             playerResponse = PlayerResponse.parseFrom(playerResponseBytes);
         } catch (Exception e) {
-            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
-                    + " could not be parsed for " + videoId);
+            YandexVotDiagnostics.source(
+                    "unparseable-player-response", -1, YandexVotPlayerMediaTransport.snapshotCount());
             return null;
         }
         if (!playerResponse.hasStreamingData()) {
-            logDiagnostic( "Yandex VOT audio diagnostics: parsed player response"
-                    + " has no streaming data for " + videoId);
+            YandexVotDiagnostics.source(
+                    "no-streaming-data", -1, YandexVotPlayerMediaTransport.snapshotCount());
             return null;
         }
 
@@ -310,17 +297,15 @@ final class YandexVotAudioDownloader {
         }
 
         if (candidates.isEmpty()) {
-            logDiagnostic( "Yandex VOT audio diagnostics: cached player response"
-                    + " has no audio-only formats for " + videoId);
+            YandexVotDiagnostics.source(
+                    "no-audio-formats", -1, YandexVotPlayerMediaTransport.snapshotCount());
             return null;
         }
 
         CapturedAudioCandidate selected = selectBestCapturedAudioCandidate(videoId, candidates);
         if (selected == null) {
-            final String snapshotSummary = YandexVotPlayerMediaTransport.snapshotSummary(videoId);
-            logDiagnostic( "Yandex VOT audio diagnostics: audio itags "
-                    + describeItags(candidates) + " have no matching live media request; "
-                    + snapshotSummary + " for " + videoId);
+            YandexVotDiagnostics.source(
+                    "no-matching-media-request", -1, YandexVotPlayerMediaTransport.snapshotCount());
             return null;
         }
         for (Format format : formats) {
@@ -330,15 +315,6 @@ final class YandexVotAudioDownloader {
             }
         }
         return null;
-    }
-
-    private static String describeItags(List<AudioCandidate> candidates) {
-        StringBuilder itags = new StringBuilder("[");
-        for (int i = 0; i < candidates.size(); i++) {
-            if (i > 0) itags.append(',');
-            itags.append(candidates.get(i).itag());
-        }
-        return itags.append(']').toString();
     }
 
     @Nullable
@@ -398,11 +374,17 @@ final class YandexVotAudioDownloader {
             implements YandexVotAudioTransfer.PartUploader {
         @Override
         public boolean uploadPart(String fileId, int totalParts, int partIndex, byte[] partData) {
+            YandexVotDiagnostics.uploadPart("start", partIndex + 1, totalParts, null);
+            boolean accepted;
             if (totalParts <= 1) {
-                return YandexVotApiClient.sendAudio(videoUrl, translationId, fileId, partData);
+                accepted = YandexVotApiClient.sendAudio(
+                        videoUrl, translationId, fileId, partData);
+            } else {
+                accepted = YandexVotApiClient.sendPartialAudio(
+                        videoUrl, translationId, fileId, totalParts, 1, partIndex, partData);
             }
-            return YandexVotApiClient.sendPartialAudio(
-                    videoUrl, translationId, fileId, totalParts, 1, partIndex, partData);
+            YandexVotDiagnostics.uploadPart("result", partIndex + 1, totalParts, accepted);
+            return accepted;
         }
     }
 
