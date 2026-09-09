@@ -1,3 +1,48 @@
+## 1.42.0-dev.10-dualvot.8.4 (2026-09-09)
+
+### Yandex source-audio recovery
+
+* Replace the obsolete standalone Android VR download with source audio obtained
+  through YouTube's current player request stack and active media transport.
+* Work independently of the user's **Spoof video streams** setting by reusing a
+  compatible cached response or requesting a fresh direct-DASH player response.
+* Prefer low-bitrate Opus, validate every byte range and content length, preserve
+  part ordering, bound memory use, and reject unsupported bodyful SABR responses
+  instead of treating transport frames as an audio file.
+
+### Multipart, proxy, and timing reliability
+
+* Stream new-video audio to Yandex in exact multipart chunks with visible `N/M`
+  progress, cancellation, deterministic cleanup, and distinct acquisition,
+  upload, server-status, translated-URL, and playback failures.
+* Preserve the uploaded request state when switching between standard and lively
+  voices so the countdown and readiness polling restart correctly.
+* Retry the same signed proxy upload part at most twice after transient
+  `429`, `502`, `503`, or `504` responses with bounded backoff.
+* Keep the existing `413` large-body fallback for known limited public workers,
+  while leaving direct and custom proxy routes unchanged.
+* Report a Yandex `STATUS_FAILED` response as a server translation failure rather
+  than a translated-audio playback error.
+
+### Compatibility and diagnostics
+
+* Use structural Morphe request hooks instead of a YouTube-version-specific
+  standalone scraper, with safe diagnostics that do not record signed URLs,
+  cookies, tokens, private headers, or video identifiers.
+* Keep the player media-transport patch as an internal dependency so it no longer
+  appears as a separate Universal patch in Morphe Manager.
+* Validate the Dev10 candidate with 77 YouTube unit tests and a complete Android
+  patch-bundle build. Device tests covered spoofing both off and on, standard and
+  lively voices, and an 18-part upload through the public proxy.
+
+### Acknowledgment
+
+* The player-session audio-acquisition direction was inspired by
+  [ilyhalight's MSE-based fix for voice-over-translation issue #1820](
+  https://github.com/ilyhalight/voice-over-translation/commit/b2dff042ca298b101a547e61e451cf7f40dc3305).
+  Dual VoT uses an independent Android/Morphe implementation; no browser
+  JavaScript from that change was copied.
+
 ## 1.42.0-dev.10-dualvot.8.3 (2026-09-09)
 
 ### Automated Morphe update
