@@ -66,7 +66,7 @@ public class YandexVotDiagnosticsTest {
     }
 
     @Test
-    public void internalUniversalPatchIsOptInDependency() throws IOException {
+    public void internalTransportPatchIsHiddenDependency() throws IOException {
         Path root = findRepositoryRoot();
         String transportPatch = readUtf8(root.resolve(
                 "patches/src/main/kotlin/app/morphe/patches/youtube/video/voiceovertranslation/"
@@ -81,20 +81,28 @@ public class YandexVotDiagnosticsTest {
                 "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
                         + "voiceovertranslation/yandex/YandexVoiceOverTranslationPatch.java"));
 
-        assertTrue(transportPatch.contains("name = \"Yandex VoT player media transport\""));
-        assertTrue(transportPatch.contains("default = false"));
+        assertTrue(transportPatch.contains(
+                "internal val yandexVotPlayerMediaTransportPatch = bytecodePatch {"));
+        assertFalse(transportPatch.contains("name = \"Yandex VoT player media transport\""));
+        assertFalse(transportPatch.contains("default = false"));
         assertTrue(transportPatch.contains("hookBuildRequest"));
         assertTrue(transportPatch.contains("recordPlayerRequest"));
         assertTrue(yandexPatch.contains("yandexVotPlayerMediaTransportPatch"));
         assertTrue(transportClass.contains("public final class YandexVotPlayerMediaTransport"));
         assertTrue(voicePatch.contains("private static void beginTranslationRequestState()"));
-        assertTrue(voicePatch.contains("YandexVotApiClient.clearTranslationCache();"
-                + " // force fresh request after settings change\n"
-                + "        beginTranslationRequestState();"));
+        int clearCacheIndex = voicePatch.indexOf("YandexVotApiClient.clearTranslationCache();");
+        int restartStateIndex = voicePatch.indexOf(
+                "beginTranslationRequestState();",
+                clearCacheIndex
+        );
+        assertTrue(clearCacheIndex >= 0
+                && restartStateIndex > clearCacheIndex
+                && restartStateIndex - clearCacheIndex < 256);
     }
 
     private static String readUtf8(Path path) throws IOException {
-        return new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
+        return new String(Files.readAllBytes(path), StandardCharsets.UTF_8)
+                .replace("\r\n", "\n");
     }
 
     private static Path findRepositoryRoot() {

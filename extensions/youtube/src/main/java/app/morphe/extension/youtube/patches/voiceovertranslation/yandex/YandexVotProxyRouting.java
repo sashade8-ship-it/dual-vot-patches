@@ -13,8 +13,10 @@ import androidx.annotation.Nullable;
 final class YandexVotProxyRouting {
     static final String LARGE_AUDIO_FALLBACK_BASE_URL =
             "https://vot-new.toil-dump.workers.dev";
+    static final int MAX_TRANSIENT_AUDIO_UPLOAD_RETRIES = 2;
 
     private static final String AUDIO_UPLOAD_PATH = "/video-translation/audio";
+    private static final long TRANSIENT_RETRY_BASE_DELAY_MS = 750L;
     private static final String LIMITED_PROXY_BASE_URL = "https://vot-worker.eu.cc";
     private static final String LIMITED_PROXY_ALTERNATE_BASE_URL =
             "https://vot-worker.vtrans.eu.cc";
@@ -53,6 +55,26 @@ final class YandexVotProxyRouting {
 
         oversizedProxyBaseUrl = configuredProxyBaseUrl;
         return fallbackUrl(path);
+    }
+
+    static boolean shouldRetryTransientAudioUpload(
+            @NonNull String path,
+            @NonNull String method,
+            int responseCode,
+            int retriesUsed
+    ) {
+        if (retriesUsed >= MAX_TRANSIENT_AUDIO_UPLOAD_RETRIES
+                || !isAudioUpload(path, method)) {
+            return false;
+        }
+        return responseCode == 429
+                || responseCode == 502
+                || responseCode == 503
+                || responseCode == 504;
+    }
+
+    static long transientRetryDelayMillis(int retriesUsed) {
+        return TRANSIENT_RETRY_BASE_DELAY_MS * (retriesUsed + 1L);
     }
 
     private static boolean isAudioUpload(@NonNull String path, @NonNull String method) {

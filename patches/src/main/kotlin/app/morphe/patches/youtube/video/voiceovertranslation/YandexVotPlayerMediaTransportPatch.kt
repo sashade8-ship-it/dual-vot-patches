@@ -31,11 +31,7 @@ private const val PLAYER_MEDIA_TRANSPORT =
  * hook: a data-source request with a body is SABR and is rejected by extension code until its
  * payload framing is established for the target YouTube APK.
  */
-val yandexVotPlayerMediaTransportPatch = bytecodePatch(
-    name = "Yandex VoT player media transport",
-    description = "Uses the active YouTube media transport for Yandex source audio.",
-    default = false,
-) {
+internal val yandexVotPlayerMediaTransportPatch = bytecodePatch {
     // Spoof video streams normalizes DataSpec.d just before its constructor returns.  Making it
     // a dependency guarantees this hook is inserted afterwards, so it sees the effective body
     // rather than the original constructor parameter.

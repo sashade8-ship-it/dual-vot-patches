@@ -7,7 +7,9 @@
 package app.morphe.extension.youtube.patches.voiceovertranslation.yandex;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.nio.charset.StandardCharsets;
@@ -112,6 +114,31 @@ public class YandexVotProxyRoutingTest {
                 "PUT",
                 413
         ));
+    }
+
+    @Test
+    public void transientAudioUploadRetriesAreScopedAndBounded() {
+        for (int responseCode : new int[]{429, 502, 503, 504}) {
+            assertTrue(YandexVotProxyRouting.shouldRetryTransientAudioUpload(
+                    AUDIO_PATH, "PUT", responseCode, 0));
+            assertTrue(YandexVotProxyRouting.shouldRetryTransientAudioUpload(
+                    AUDIO_PATH, "PUT", responseCode, 1));
+            assertFalse(YandexVotProxyRouting.shouldRetryTransientAudioUpload(
+                    AUDIO_PATH, "PUT", responseCode, 2));
+        }
+
+        assertFalse(YandexVotProxyRouting.shouldRetryTransientAudioUpload(
+                AUDIO_PATH, "PUT", 500, 0));
+        assertFalse(YandexVotProxyRouting.shouldRetryTransientAudioUpload(
+                AUDIO_PATH, "POST", 503, 0));
+        assertFalse(YandexVotProxyRouting.shouldRetryTransientAudioUpload(
+                "/video-translation/translate", "POST", 503, 0));
+    }
+
+    @Test
+    public void transientAudioUploadBackoffIsShortAndBounded() {
+        assertEquals(750L, YandexVotProxyRouting.transientRetryDelayMillis(0));
+        assertEquals(1_500L, YandexVotProxyRouting.transientRetryDelayMillis(1));
     }
 
     @Test

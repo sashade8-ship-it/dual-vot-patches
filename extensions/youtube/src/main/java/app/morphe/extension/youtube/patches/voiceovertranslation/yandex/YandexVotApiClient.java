@@ -443,12 +443,13 @@ public class YandexVotApiClient {
         Logger.printDebug(() -> "VOT sendApiRequest: method=" + method
                 + " endpoint=" + path + " proxy=" + useProxy);
 
-        ApiResponse response = executeApiRequest(
+        ApiResponse response = executeApiRequestWithTransientProxyRetries(
                 requestUrl,
                 body,
                 method,
                 useProxy,
-                yandexHeaders
+                yandexHeaders,
+                path
         );
 
         if (useProxy) {
@@ -462,12 +463,13 @@ public class YandexVotApiClient {
             if (retryUrl != null) {
                 Logger.printDebug(() -> "VOT sendApiRequest: endpoint=" + path
                         + " status=413 proxy-large-body-fallback=true");
-                response = executeApiRequest(
+                response = executeApiRequestWithTransientProxyRetries(
                         retryUrl,
                         body,
                         method,
                         true,
-                        yandexHeaders
+                        yandexHeaders,
+                        path
                 );
             }
         }
@@ -483,6 +485,51 @@ public class YandexVotApiClient {
     }
 
     private record ApiResponse(int statusCode, byte[] body) {
+    }
+
+    @NonNull
+    private static ApiResponse executeApiRequestWithTransientProxyRetries(
+            @NonNull String requestUrl,
+            @NonNull byte[] body,
+            @NonNull String method,
+            boolean useProxy,
+            @NonNull Map<String, String> yandexHeaders,
+            @NonNull String path
+    ) throws IOException {
+        int retriesUsed = 0;
+        while (true) {
+            ApiResponse response = executeApiRequest(
+                    requestUrl,
+                    body,
+                    method,
+                    useProxy,
+                    yandexHeaders
+            );
+            if (!useProxy || !YandexVotProxyRouting.shouldRetryTransientAudioUpload(
+                    path,
+                    method,
+                    response.statusCode(),
+                    retriesUsed
+            )) {
+                return response;
+            }
+
+            int retryNumber = retriesUsed + 1;
+            long delayMillis = YandexVotProxyRouting.transientRetryDelayMillis(retriesUsed);
+            int responseCode = response.statusCode();
+            Logger.printDebug(() -> "VOT sendApiRequest: endpoint=" + path
+                    + " status=" + responseCode
+                    + " proxy-transient-retry=" + retryNumber
+                    + "/" + YandexVotProxyRouting.MAX_TRANSIENT_AUDIO_UPLOAD_RETRIES
+                    + " delayMs=" + delayMillis);
+            try {
+                Thread.sleep(delayMillis);
+            } catch (InterruptedException exception) {
+                Thread.currentThread().interrupt();
+                throw new IOException("Interrupted while retrying audio upload", exception);
+            }
+            retriesUsed = retryNumber;
+        }
     }
 
     @NonNull
