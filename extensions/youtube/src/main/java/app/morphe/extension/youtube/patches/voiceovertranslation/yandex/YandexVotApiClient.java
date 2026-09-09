@@ -182,7 +182,7 @@ public class YandexVotApiClient {
         }
     }
 
-    private static void writeBinaryProxyRequest(
+    static void writeBinaryProxyRequest(
             @NonNull OutputStream output,
             @NonNull byte[] body,
             @NonNull Map<String, String> headers
@@ -436,9 +436,63 @@ public class YandexVotApiClient {
         }
 
         boolean useProxy = isProxyEnabled();
-        String requestUrl = getApiUrl(path);
+        String configuredProxyBaseUrl = useProxy ? getProxyBaseUrl() : null;
+        String requestUrl = useProxy
+                ? YandexVotProxyRouting.initialUrl(configuredProxyBaseUrl, path, method)
+                : getApiUrl(path);
         Logger.printDebug(() -> "VOT sendApiRequest: method=" + method
                 + " endpoint=" + path + " proxy=" + useProxy);
+
+        ApiResponse response = executeApiRequest(
+                requestUrl,
+                body,
+                method,
+                useProxy,
+                yandexHeaders
+        );
+
+        if (useProxy) {
+            String retryUrl = YandexVotProxyRouting.retryUrlAfterResponse(
+                    configuredProxyBaseUrl,
+                    requestUrl,
+                    path,
+                    method,
+                    response.statusCode()
+            );
+            if (retryUrl != null) {
+                Logger.printDebug(() -> "VOT sendApiRequest: endpoint=" + path
+                        + " status=413 proxy-large-body-fallback=true");
+                response = executeApiRequest(
+                        retryUrl,
+                        body,
+                        method,
+                        true,
+                        yandexHeaders
+                );
+            }
+        }
+
+        if (response.statusCode() != 200) {
+            int responseCode = response.statusCode();
+            Logger.printDebug(() -> "VOT sendApiRequest: endpoint=" + path
+                    + " status=" + responseCode);
+            return null;
+        }
+
+        return response.body();
+    }
+
+    private record ApiResponse(int statusCode, byte[] body) {
+    }
+
+    @NonNull
+    private static ApiResponse executeApiRequest(
+            @NonNull String requestUrl,
+            @NonNull byte[] body,
+            @NonNull String method,
+            boolean useProxy,
+            @NonNull Map<String, String> yandexHeaders
+    ) throws IOException {
 
         HttpURLConnection connection = (HttpURLConnection) new URL(requestUrl).openConnection();
         try {
@@ -472,12 +526,10 @@ public class YandexVotApiClient {
 
             int responseCode = connection.getResponseCode();
             if (responseCode != 200) {
-                Logger.printDebug(() -> "VOT sendApiRequest: endpoint=" + path
-                        + " status=" + responseCode);
-                return null;
+                return new ApiResponse(responseCode, null);
             }
 
-            return readBytes(connection.getInputStream());
+            return new ApiResponse(responseCode, readBytes(connection.getInputStream()));
 
         } finally {
             connection.disconnect();
