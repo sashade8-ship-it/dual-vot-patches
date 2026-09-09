@@ -41,7 +41,7 @@ import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
  * framing cannot be claimed to be an original WebM/Opus file without a verified body hook and
  * reassembler.  Treating it as raw audio would be data corruption.
  */
-final class YandexVotPlayerMediaTransport {
+public final class YandexVotPlayerMediaTransport {
     private static final int CONNECT_TIMEOUT_MS = 15_000;
     private static final int READ_TIMEOUT_MS = 30_000;
     private static final int MAX_SNAPSHOTS = 12;
@@ -91,6 +91,15 @@ final class YandexVotPlayerMediaTransport {
     @SuppressWarnings({"unused", "rawtypes"})
     public static void recordPlayerRequest(String url, Map headers) {
         PLAYER_REQUEST_HOOKS.incrementAndGet();
+        try {
+            recordPlayerRequestSafely(url, headers);
+        } catch (RuntimeException ignored) {
+            // A diagnostic/source-acquisition hook must never interrupt YouTube networking.
+        }
+    }
+
+    @SuppressWarnings("rawtypes")
+    private static void recordPlayerRequestSafely(String url, Map headers) {
         URI uri;
         try {
             uri = new URI(url);

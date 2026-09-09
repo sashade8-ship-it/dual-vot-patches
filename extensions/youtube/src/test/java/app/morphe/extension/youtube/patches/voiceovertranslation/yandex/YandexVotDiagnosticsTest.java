@@ -36,7 +36,7 @@ public class YandexVotDiagnosticsTest {
                 YandexVotDiagnostics.uploadPartMessage("result", 2, 3, true),
                 YandexVotDiagnostics.playbackMessage("error", "direct", 1, -1004));
 
-        assertTrue(markers.contains("build=yandex-audio-direct-v4"));
+        assertTrue(markers.contains("build=yandex-audio-direct-v5"));
         assertTrue(markers.contains("phase=button event=pressed"));
         assertTrue(markers.contains("phase=api request=initial"));
         assertTrue(markers.contains("resultNull=false status=6"));
@@ -74,12 +74,16 @@ public class YandexVotDiagnosticsTest {
         String yandexPatch = readUtf8(root.resolve(
                 "patches/src/main/kotlin/app/morphe/patches/youtube/video/voiceovertranslation/"
                         + "YandexVoiceOverTranslationPatch.kt"));
+        String transportClass = readUtf8(root.resolve(
+                "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+                        + "voiceovertranslation/yandex/YandexVotPlayerMediaTransport.java"));
 
         assertTrue(transportPatch.contains("name = \"Yandex VoT player media transport\""));
         assertTrue(transportPatch.contains("default = false"));
         assertTrue(transportPatch.contains("hookBuildRequest"));
         assertTrue(transportPatch.contains("recordPlayerRequest"));
         assertTrue(yandexPatch.contains("yandexVotPlayerMediaTransportPatch"));
+        assertTrue(transportClass.contains("public final class YandexVotPlayerMediaTransport"));
     }
 
     private static String readUtf8(Path path) throws IOException {
