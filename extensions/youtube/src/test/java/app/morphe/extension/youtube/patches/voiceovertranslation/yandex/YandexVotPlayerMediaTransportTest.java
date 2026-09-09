@@ -172,4 +172,30 @@ public class YandexVotPlayerMediaTransportTest {
         assertEquals(1, summary.retained());
         assertEquals(1, summary.snapshots());
     }
+
+    @Test
+    public void retainsPlayerContextIndependentlyOfMediaDataSourceHooks() {
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Authorization", "Bearer runtime-only");
+        headers.put("X-Goog-Visitor-Id", "must-not-be-retained");
+
+        YandexVotPlayerMediaTransport.recordPlayerRequest(
+                "https://youtubei.googleapis.com/youtubei/v1/player?id=" + VIDEO_A
+                        + "&inline=1",
+                headers);
+        YandexVotPlayerMediaTransport.recordPlayerRequest(
+                "https://youtubei.googleapis.com/youtubei/v1/heartbeat?id=" + VIDEO_B,
+                headers);
+        YandexVotPlayerMediaTransport.recordPlayerRequest(
+                "https://youtubei.googleapis.com/youtubei/v1/player",
+                headers);
+
+        YandexVotPlayerMediaTransport.DiagnosticSummary summary =
+                YandexVotPlayerMediaTransport.diagnosticSummary();
+        assertEquals(3, summary.playerRequestHooks());
+        assertEquals(1, summary.playerContextsRetained());
+        assertEquals(1, summary.playerContexts());
+        assertEquals(0, summary.requestHooks());
+        assertEquals(0, summary.snapshots());
+    }
 }

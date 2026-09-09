@@ -632,7 +632,7 @@ public class YandexVoiceOverTranslationPatch {
                     setWaitingTimeSeconds(-1);
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_server_error"));
                 });
             } else if (status == YandexVotApiClient.STATUS_SESSION_REQUIRED) {
                 if (useLiveVoices) {
@@ -776,7 +776,7 @@ public class YandexVoiceOverTranslationPatch {
                 runOnUiIfCurrentGen(generation, () -> {
                     translationStarting = false;
                     refreshOriginalAudioVolume();
-                    showTranslationErrorToast(str("dualvot_yandex_playback_error"));
+                    showTranslationErrorToast(str("dualvot_yandex_server_error"));
                 });
                 return;
             } else if (status == YandexVotApiClient.STATUS_SESSION_REQUIRED) {

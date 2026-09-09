@@ -11,6 +11,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.shared.misc.proxy.MainCronetEngineFingerprint
+import app.morphe.patches.shared.misc.request.hookBuildRequest
 import app.morphe.patches.shared.misc.spoof.BuildMediaDataSourceFingerprint
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.spoof.spoofVideoStreamsPatch
@@ -41,6 +42,11 @@ val yandexVotPlayerMediaTransportPatch = bytecodePatch(
     dependsOn(sharedExtensionPatch, spoofVideoStreamsPatch)
 
     execute {
+        // This structural request-builder hook is shared with Morphe's spoof implementation and
+        // runs regardless of the user's runtime spoof setting. It captures only the minimal
+        // in-memory context needed to start a direct-stream request if Yandex asks for audio.
+        hookBuildRequest("$PLAYER_MEDIA_TRANSPORT->recordPlayerRequest")
+
         BuildMediaDataSourceFingerprint.method.apply {
             val returnIndex = indexOfFirstInstructionReversedOrThrow(Opcode.RETURN_VOID)
             // Read a/c/d from the completed DataSpec.  In particular d may have been cleared by

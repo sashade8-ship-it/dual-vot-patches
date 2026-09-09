@@ -18,11 +18,13 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 import app.morphe.extension.shared.requests.CronetTransport;
+import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
 
 /**
  * Captures a <em>live player</em> media request at the MediaDataSource construction boundary
@@ -43,14 +45,20 @@ final class YandexVotPlayerMediaTransport {
     private static final int CONNECT_TIMEOUT_MS = 15_000;
     private static final int READ_TIMEOUT_MS = 30_000;
     private static final int MAX_SNAPSHOTS = 12;
+    private static final int MAX_PLAYER_CONTEXTS = 20;
+    private static final String AUTHORIZATION_HEADER = "Authorization";
     // The constructor fingerprint is ExoPlayer DataSpec(Uri, long, int, byte[], Map, long,
     // long, String, int, Object); DataSpec.HTTP_METHOD_GET is 1 (POST is 2, HEAD is 3).
     private static final int DATA_SPEC_HTTP_METHOD_GET = 1;
     private static final int DATA_SPEC_HTTP_METHOD_POST = 2;
     private static final Object LOCK = new Object();
     private static final ArrayList<Snapshot> SNAPSHOTS = new ArrayList<>();
+    private static final ArrayList<PlayerRequestContext> PLAYER_CONTEXTS = new ArrayList<>();
     private static final AtomicLong ENGINE_HOOKS = new AtomicLong();
     private static final AtomicLong REQUEST_HOOKS = new AtomicLong();
+    private static final AtomicLong PLAYER_REQUEST_HOOKS = new AtomicLong();
+    private static final AtomicLong PLAYER_CONTEXTS_RETAINED = new AtomicLong();
+    private static final AtomicLong DIRECT_STREAM_REQUESTS = new AtomicLong();
     private static final AtomicLong NULL_URI = new AtomicLong();
     private static final AtomicLong INVALID_URI = new AtomicLong();
     private static final AtomicLong PLAYBACK_ROUTE = new AtomicLong();
@@ -73,6 +81,64 @@ final class YandexVotPlayerMediaTransport {
         ENGINE_HOOKS.incrementAndGet();
         engineReady = engine != null;
         CronetTransport.setMainCronetEngine(engine);
+    }
+
+    /**
+     * Structural request-builder hook. It runs even when stream spoofing is disabled and keeps
+     * only the current player request's login context in memory. No URL, video id, or header is
+     * logged or persisted.
+     */
+    @SuppressWarnings({"unused", "rawtypes"})
+    public static void recordPlayerRequest(String url, Map headers) {
+        PLAYER_REQUEST_HOOKS.incrementAndGet();
+        URI uri;
+        try {
+            uri = new URI(url);
+        } catch (URISyntaxException | NullPointerException ignored) {
+            return;
+        }
+        String path = uri.getPath();
+        if (path == null || !path.contains("player")
+                || path.contains("get_drm_license")
+                || path.contains("heartbeat")
+                || path.contains("refresh")
+                || path.contains("ad_break")) {
+            return;
+        }
+        String videoId = queryParameter(uri.getRawQuery(), "id");
+        if (!isVideoId(videoId)) return;
+
+        boolean isInline = "1".equals(queryParameter(uri.getRawQuery(), "inline"));
+        Map<String, String> authContext = copyAuthorizationHeader(headers);
+        int contexts;
+        synchronized (LOCK) {
+            for (int i = PLAYER_CONTEXTS.size() - 1; i >= 0; i--) {
+                if (videoId.equals(PLAYER_CONTEXTS.get(i).videoId)) {
+                    PLAYER_CONTEXTS.remove(i);
+                }
+            }
+            PLAYER_CONTEXTS.add(new PlayerRequestContext(videoId, isInline, authContext));
+            while (PLAYER_CONTEXTS.size() > MAX_PLAYER_CONTEXTS) {
+                PLAYER_CONTEXTS.remove(0);
+            }
+            contexts = PLAYER_CONTEXTS.size();
+        }
+        PLAYER_CONTEXTS_RETAINED.incrementAndGet();
+        YandexVotDiagnostics.source("player-context-retained", -1, contexts);
+    }
+
+    /** Starts one on-demand, non-SABR player request without touching the spoof cache. */
+    static StreamingDataRequest requestDirectStreams(String videoId) {
+        PlayerRequestContext context = findPlayerRequestContext(videoId);
+        DIRECT_STREAM_REQUESTS.incrementAndGet();
+        YandexVotDiagnostics.source(
+                context == null ? "direct-request-without-context" : "direct-request-with-context",
+                -1,
+                playerContextCount());
+        return StreamingDataRequest.fetchDirectStreamRequest(
+                videoId,
+                context != null && context.isInline,
+                context == null ? Collections.emptyMap() : context.headers);
     }
 
     /**
@@ -227,9 +293,13 @@ final class YandexVotPlayerMediaTransport {
     static void resetForTests() {
         synchronized (LOCK) {
             SNAPSHOTS.clear();
+            PLAYER_CONTEXTS.clear();
         }
         ENGINE_HOOKS.set(0);
         REQUEST_HOOKS.set(0);
+        PLAYER_REQUEST_HOOKS.set(0);
+        PLAYER_CONTEXTS_RETAINED.set(0);
+        DIRECT_STREAM_REQUESTS.set(0);
         NULL_URI.set(0);
         INVALID_URI.set(0);
         PLAYBACK_ROUTE.set(0);
@@ -255,6 +325,9 @@ final class YandexVotPlayerMediaTransport {
                 ENGINE_HOOKS.get(),
                 engineReady,
                 REQUEST_HOOKS.get(),
+                PLAYER_REQUEST_HOOKS.get(),
+                PLAYER_CONTEXTS_RETAINED.get(),
+                DIRECT_STREAM_REQUESTS.get(),
                 NULL_URI.get(),
                 INVALID_URI.get(),
                 PLAYBACK_ROUTE.get(),
@@ -265,7 +338,8 @@ final class YandexVotPlayerMediaTransport {
                 BODYFUL.get(),
                 MISSING_ITAG.get(),
                 RETAINED.get(),
-                snapshotCount());
+                snapshotCount(),
+                playerContextCount());
     }
 
     static void logDiagnosticSummary() {
@@ -311,6 +385,24 @@ final class YandexVotPlayerMediaTransport {
                 || "accept-encoding".equalsIgnoreCase(name)
                 || "content-length".equalsIgnoreCase(name)
                 || "host".equalsIgnoreCase(name);
+    }
+
+    @Nullable
+    private static PlayerRequestContext findPlayerRequestContext(String videoId) {
+        if (!isVideoId(videoId)) return null;
+        synchronized (LOCK) {
+            for (int i = PLAYER_CONTEXTS.size() - 1; i >= 0; i--) {
+                PlayerRequestContext context = PLAYER_CONTEXTS.get(i);
+                if (videoId.equals(context.videoId)) return context;
+            }
+        }
+        return null;
+    }
+
+    private static int playerContextCount() {
+        synchronized (LOCK) {
+            return PLAYER_CONTEXTS.size();
+        }
     }
 
     @Nullable
@@ -404,6 +496,21 @@ final class YandexVotPlayerMediaTransport {
         return copy;
     }
 
+    @SuppressWarnings("rawtypes")
+    private static Map<String, String> copyAuthorizationHeader(Map headers) {
+        if (headers == null) return Collections.emptyMap();
+        for (Object rawEntry : headers.entrySet()) {
+            if (!(rawEntry instanceof Map.Entry)) continue;
+            Map.Entry entry = (Map.Entry) rawEntry;
+            if (entry.getKey() instanceof String name
+                    && entry.getValue() instanceof String value
+                    && AUTHORIZATION_HEADER.equalsIgnoreCase(name)) {
+                return Collections.singletonMap(AUTHORIZATION_HEADER, value);
+            }
+        }
+        return Collections.emptyMap();
+    }
+
     private static int parsePositiveInt(@Nullable String value) {
         if (value == null || value.isEmpty()) return -1;
         try {
@@ -432,10 +539,25 @@ final class YandexVotPlayerMediaTransport {
         }
     }
 
+    private static final class PlayerRequestContext {
+        final String videoId;
+        final boolean isInline;
+        final Map<String, String> headers;
+
+        PlayerRequestContext(String videoId, boolean isInline, Map<String, String> headers) {
+            this.videoId = videoId;
+            this.isInline = isInline;
+            this.headers = headers;
+        }
+    }
+
     static record DiagnosticSummary(
             long engineHooks,
             boolean engineReady,
             long requestHooks,
+            long playerRequestHooks,
+            long playerContextsRetained,
+            long directStreamRequests,
             long nullUri,
             long invalidUri,
             long playbackRoute,
@@ -446,7 +568,8 @@ final class YandexVotPlayerMediaTransport {
             long bodyful,
             long missingItag,
             long retained,
-            int snapshots
+            int snapshots,
+            int playerContexts
     ) {
     }
 }

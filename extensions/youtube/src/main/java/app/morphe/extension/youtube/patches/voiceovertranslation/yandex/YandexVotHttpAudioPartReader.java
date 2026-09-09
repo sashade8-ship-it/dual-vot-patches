@@ -109,6 +109,14 @@ final class YandexVotHttpAudioPartReader implements YandexVotAudioTransfer.PartR
         }
     }
 
+    static Factory factoryForUserAgent(@Nullable String userAgent) {
+        String effectiveUserAgent = userAgent == null || userAgent.isEmpty()
+                ? USER_AGENT
+                : userAgent;
+        return (url, start, endInclusive) ->
+                openRealConnection(url, start, endInclusive, effectiveUserAgent);
+    }
+
     /**
      * Pure size-resolution policy shared by the probe and by tests.
      *
@@ -316,12 +324,21 @@ final class YandexVotHttpAudioPartReader implements YandexVotAudioTransfer.PartR
             long start,
             long end
     ) throws IOException {
+        return openRealConnection(url, start, end, USER_AGENT);
+    }
+
+    private static YandexVotHttpAudioPartReader.Connection openRealConnection(
+            String url,
+            long start,
+            long end,
+            String userAgent
+    ) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Range", "bytes=" + start + "-" + end);
         connection.setRequestProperty("Accept", "*/*");
         connection.setRequestProperty("Accept-Encoding", "identity");
-        connection.setRequestProperty("User-Agent", USER_AGENT);
+        connection.setRequestProperty("User-Agent", userAgent);
         connection.setConnectTimeout(CONNECT_TIMEOUT_MS);
         connection.setReadTimeout(READ_TIMEOUT_MS);
         connection.setInstanceFollowRedirects(true);

@@ -31,11 +31,12 @@ public class YandexVotDiagnosticsTest {
                 YandexVotDiagnostics.sourceEnvironmentMessage(true, false, 4),
                 YandexVotDiagnostics.transportSummaryMessage(
                         new YandexVotPlayerMediaTransport.DiagnosticSummary(
-                                1, true, 9, 0, 0, 8, 1, 4, 4, 0, 4, 1, 3, 3)),
+                                1, true, 9, 11, 5, 2,
+                                0, 0, 8, 1, 4, 4, 0, 4, 1, 3, 3, 5)),
                 YandexVotDiagnostics.uploadPartMessage("result", 2, 3, true),
                 YandexVotDiagnostics.playbackMessage("error", "direct", 1, -1004));
 
-        assertTrue(markers.contains("build=yandex-audio-diag-v3"));
+        assertTrue(markers.contains("build=yandex-audio-direct-v4"));
         assertTrue(markers.contains("phase=button event=pressed"));
         assertTrue(markers.contains("phase=api request=initial"));
         assertTrue(markers.contains("resultNull=false status=6"));
@@ -47,7 +48,10 @@ public class YandexVotDiagnosticsTest {
                 + " spoofSetting=false spoofEffective=false snapshots=4"));
         assertTrue(markers.contains("phase=transport event=summary engineHooks=1"
                 + " engineReady=true requestHooks=9"));
+        assertTrue(markers.contains("playerRequestHooks=11 playerContextsRetained=5"
+                + " directStreamRequests=2"));
         assertTrue(markers.contains("bodyful=4 missingItag=1 retained=3 snapshots=3"));
+        assertTrue(markers.contains("playerContexts=5"));
         assertTrue(markers.contains("phase=upload event=result part=2/3 accepted=true"));
         assertTrue(markers.contains("phase=playback event=error source=direct what=1 extra=-1004"));
 
@@ -73,6 +77,8 @@ public class YandexVotDiagnosticsTest {
 
         assertTrue(transportPatch.contains("name = \"Yandex VoT player media transport\""));
         assertTrue(transportPatch.contains("default = false"));
+        assertTrue(transportPatch.contains("hookBuildRequest"));
+        assertTrue(transportPatch.contains("recordPlayerRequest"));
         assertTrue(yandexPatch.contains("yandexVotPlayerMediaTransportPatch"));
     }
 

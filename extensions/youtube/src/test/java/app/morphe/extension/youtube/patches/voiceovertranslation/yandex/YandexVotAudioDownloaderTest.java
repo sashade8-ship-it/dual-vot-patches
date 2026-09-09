@@ -8,12 +8,14 @@ package app.morphe.extension.youtube.patches.voiceovertranslation.yandex;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.After;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 /** Verifies that cached metadata never selects an itag the live player did not open. */
 public class YandexVotAudioDownloaderTest {
@@ -57,6 +59,27 @@ public class YandexVotAudioDownloaderTest {
         assertEquals(140, selected.mediaRequest().itag);
     }
 
+    @Test
+    public void directSourcePrefersLowestBitrateOpus() {
+        YandexVotAudioDownloader.AudioCandidate selected =
+                YandexVotAudioDownloader.selectBestDirectAudioCandidate(List.of(
+                audioFormat(140, "audio/mp4; codecs=mp4a", 48_000),
+                audioFormat(251, "audio/webm; codecs=opus", 128_000),
+                audioFormat(250, "audio/webm; codecs=opus", 70_000)
+        ));
+
+        assertNotNull(selected);
+        assertEquals(250, selected.itag());
+    }
+
+    @Test
+    public void directSourceRejectsSabrMetadataWithoutByteAddressableUrl() {
+        assertNull(YandexVotAudioDownloader.selectBestDirectAudioCandidate(List.of(
+                new YandexVotAudioDownloader.AudioCandidate(
+                        251, "", "audio/webm; codecs=opus", 70_000)
+        )));
+    }
+
     private static void recordPlayerRequest(int itag) {
         YandexVotPlayerMediaTransport.recordPlayerMediaRequest(
                 "https://r.example/videoplayback?id=" + VIDEO_ID + "&itag=" + itag,
@@ -75,4 +98,5 @@ public class YandexVotAudioDownloaderTest {
                 bitrate
         );
     }
+
 }

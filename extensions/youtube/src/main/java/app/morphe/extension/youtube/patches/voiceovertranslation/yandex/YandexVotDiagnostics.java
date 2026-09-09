@@ -12,7 +12,7 @@ import app.morphe.extension.shared.Logger;
 
 /** Sanitized, stable markers for one Yandex translation attempt. */
 final class YandexVotDiagnostics {
-    static final String BUILD_ID = "yandex-audio-diag-v3";
+    static final String BUILD_ID = "yandex-audio-direct-v4";
     private static final String PREFIX = "Yandex VOT diagnostics build=" + BUILD_ID + " ";
 
     private YandexVotDiagnostics() {
@@ -109,6 +109,9 @@ final class YandexVotDiagnostics {
                 + " engineHooks=" + summary.engineHooks()
                 + " engineReady=" + summary.engineReady()
                 + " requestHooks=" + summary.requestHooks()
+                + " playerRequestHooks=" + summary.playerRequestHooks()
+                + " playerContextsRetained=" + summary.playerContextsRetained()
+                + " directStreamRequests=" + summary.directStreamRequests()
                 + " nullUri=" + summary.nullUri()
                 + " invalidUri=" + summary.invalidUri()
                 + " playbackRoute=" + summary.playbackRoute()
@@ -119,7 +122,8 @@ final class YandexVotDiagnostics {
                 + " bodyful=" + summary.bodyful()
                 + " missingItag=" + summary.missingItag()
                 + " retained=" + summary.retained()
-                + " snapshots=" + summary.snapshots();
+                + " snapshots=" + summary.snapshots()
+                + " playerContexts=" + summary.playerContexts();
     }
 
     static void uploadPart(String event, int part, int totalParts, @Nullable Boolean accepted) {
