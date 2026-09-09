@@ -299,6 +299,14 @@ public class YandexVoiceOverTranslationPatch {
         lastFailedAudioRequestKey = "";
     }
 
+    private static void beginTranslationRequestState() {
+        resetAudioUploadRequestState();
+        setWaitingTimeSeconds(-1);
+        translationStarting = true;
+        refreshOriginalAudioVolume();
+        notifyTranslationStateChanged();
+    }
+
     /** Incremented on every new video or stop, invalidates in-flight async translation chains. */
     private static volatile long translationGeneration = 0;
 
@@ -394,9 +402,7 @@ public class YandexVoiceOverTranslationPatch {
         final String videoId = pendingVideoId;
         final String videoTitle = pendingVideoTitle;
         final double durationSeconds = pendingVideoLength / 1000.0;
-        resetAudioUploadRequestState();
-        translationStarting = true;
-        refreshOriginalAudioVolume();
+        beginTranslationRequestState();
         Utils.runOnBackgroundThread(() -> requestTranslation(
                 videoId, videoTitle,
                 sourceLang, targetLang,
@@ -505,6 +511,7 @@ public class YandexVoiceOverTranslationPatch {
 
         stopAudioPlayback();
         YandexVotApiClient.clearTranslationCache(); // force fresh request after settings change
+        beginTranslationRequestState();
         double durationSeconds = pendingVideoLength / 1000.0;
         Utils.runOnBackgroundThread(() -> requestTranslation(
                 videoId, pendingVideoTitle,

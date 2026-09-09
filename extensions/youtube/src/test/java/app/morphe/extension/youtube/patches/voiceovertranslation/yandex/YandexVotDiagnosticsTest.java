@@ -36,7 +36,7 @@ public class YandexVotDiagnosticsTest {
                 YandexVotDiagnostics.uploadPartMessage("result", 2, 3, true),
                 YandexVotDiagnostics.playbackMessage("error", "direct", 1, -1004));
 
-        assertTrue(markers.contains("build=yandex-audio-direct-v5"));
+        assertTrue(markers.contains("build=yandex-audio-direct-v6"));
         assertTrue(markers.contains("phase=button event=pressed"));
         assertTrue(markers.contains("phase=api request=initial"));
         assertTrue(markers.contains("resultNull=false status=6"));
@@ -77,6 +77,9 @@ public class YandexVotDiagnosticsTest {
         String transportClass = readUtf8(root.resolve(
                 "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
                         + "voiceovertranslation/yandex/YandexVotPlayerMediaTransport.java"));
+        String voicePatch = readUtf8(root.resolve(
+                "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
+                        + "voiceovertranslation/yandex/YandexVoiceOverTranslationPatch.java"));
 
         assertTrue(transportPatch.contains("name = \"Yandex VoT player media transport\""));
         assertTrue(transportPatch.contains("default = false"));
@@ -84,6 +87,10 @@ public class YandexVotDiagnosticsTest {
         assertTrue(transportPatch.contains("recordPlayerRequest"));
         assertTrue(yandexPatch.contains("yandexVotPlayerMediaTransportPatch"));
         assertTrue(transportClass.contains("public final class YandexVotPlayerMediaTransport"));
+        assertTrue(voicePatch.contains("private static void beginTranslationRequestState()"));
+        assertTrue(voicePatch.contains("YandexVotApiClient.clearTranslationCache();"
+                + " // force fresh request after settings change\n"
+                + "        beginTranslationRequestState();"));
     }
 
     private static String readUtf8(Path path) throws IOException {

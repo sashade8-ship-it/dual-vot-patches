@@ -12,7 +12,7 @@ import app.morphe.extension.shared.Logger;
 
 /** Sanitized, stable markers for one Yandex translation attempt. */
 final class YandexVotDiagnostics {
-    static final String BUILD_ID = "yandex-audio-direct-v5";
+    static final String BUILD_ID = "yandex-audio-direct-v6";
     private static final String PREFIX = "Yandex VOT diagnostics build=" + BUILD_ID + " ";
 
     private YandexVotDiagnostics() {
