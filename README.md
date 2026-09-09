@@ -91,13 +91,10 @@ and the work of
 untranslated videos is adapted from
 [anddea/revanced-patches commit 7fe8ff3](https://github.com/anddea/revanced-patches/commit/7fe8ff3585f3e0d3dc91e63b192cdbe4a520d10e),
 with the original notices preserved in the corresponding source files and a
-visible credit in the Yandex settings screen. The earlier independent YouTube
-audio-stream fallback was adapted from the MIT-licensed
+visible credit in the Yandex settings screen. The independent YouTube
+audio-stream fallback is adapted from the MIT-licensed
 [ilyhalight/voice-over-translation](https://github.com/ilyhalight/voice-over-translation)
-audio downloader, and its license notice remains in `NOTICE`. The current
-Android player-session transport is an independent implementation inspired by
-[ilyhalight's MSE-based fix for issue #1820](https://github.com/ilyhalight/voice-over-translation/commit/b2dff042ca298b101a547e61e451cf7f40dc3305);
-no browser JavaScript from that change is included.
+audio downloader; its license notice is retained in `NOTICE`.
 
 The project is distributed under GPL-3.0 with the additional requirements
 described in [NOTICE](NOTICE). The Morphe name and logo remain the property of
@@ -146,7 +143,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.42.0-dev.10-dualvot.8.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.42.0-dev.10-dualvot.8.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;147 patches total
+> **[v1.42.0-dualvot.8.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.42.0-dualvot.8.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;147 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;83 patches</summary>
 <br>

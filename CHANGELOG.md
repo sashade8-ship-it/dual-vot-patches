@@ -1,134 +1,9 @@
-## 1.42.0-dev.10-dualvot.8.4 (2026-09-09)
-
-### Yandex source-audio recovery
-
-* Replace the obsolete standalone Android VR download with source audio obtained
-  through YouTube's current player request stack and active media transport.
-* Work independently of the user's **Spoof video streams** setting by reusing a
-  compatible cached response or requesting a fresh direct-DASH player response.
-* Prefer low-bitrate Opus, validate every byte range and content length, preserve
-  part ordering, bound memory use, and reject unsupported bodyful SABR responses
-  instead of treating transport frames as an audio file.
-
-### Multipart, proxy, and timing reliability
-
-* Stream new-video audio to Yandex in exact multipart chunks with visible `N/M`
-  progress, cancellation, deterministic cleanup, and distinct acquisition,
-  upload, server-status, translated-URL, and playback failures.
-* Preserve the uploaded request state when switching between standard and lively
-  voices so the countdown and readiness polling restart correctly.
-* Retry the same signed proxy upload part at most twice after transient
-  `429`, `502`, `503`, or `504` responses with bounded backoff.
-* Keep the existing `413` large-body fallback for known limited public workers,
-  while leaving direct and custom proxy routes unchanged.
-* Report a Yandex `STATUS_FAILED` response as a server translation failure rather
-  than a translated-audio playback error.
-
-### Compatibility and diagnostics
-
-* Use structural Morphe request hooks instead of a YouTube-version-specific
-  standalone scraper, with safe diagnostics that do not record signed URLs,
-  cookies, tokens, private headers, or video identifiers.
-* Keep the player media-transport patch as an internal dependency so it no longer
-  appears as a separate Universal patch in Morphe Manager.
-* Validate the Dev10 candidate with 77 YouTube unit tests and a complete Android
-  patch-bundle build. Device tests covered spoofing both off and on, standard and
-  lively voices, and an 18-part upload through the public proxy.
-
-### Acknowledgment
-
-* The player-session audio-acquisition direction was inspired by
-  [ilyhalight's MSE-based fix for voice-over-translation issue #1820](
-  https://github.com/ilyhalight/voice-over-translation/commit/b2dff042ca298b101a547e61e451cf7f40dc3305).
-  Dual VoT uses an independent Android/Morphe implementation; no browser
-  JavaScript from that change was copied.
-
-## 1.42.0-dev.10-dualvot.8.3 (2026-09-09)
+## 1.42.0-dualvot.8.3 (2026-09-09)
 
 ### Automated Morphe update
 
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.10](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.10).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.9-dualvot.8.3 (2026-09-09)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.9](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.9).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.8-dualvot.8.3 (2026-09-08)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.8](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.8).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.7-dualvot.8.3 (2026-09-07)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.7](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.7).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.6-dualvot.8.3 (2026-09-06)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.6](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.6).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.5-dualvot.8.3 (2026-09-06)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.5](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.5).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.3-dualvot.8.3 (2026-09-05)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.3](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.3).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.2-dualvot.8.3 (2026-09-04)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.2](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.2).
-* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
-  volume controls, and automatic reset when the video changes.
-* Build and structural Dual VoT checks passed before publication.
-
-## 1.42.0-dev.1-dualvot.8.3 (2026-09-03)
-
-### Automated Morphe update
-
-* Update the pre-release base to [Morphe Patches 1.42.0-dev.1](
-  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0-dev.1).
+* Update the stable base to [Morphe Patches 1.42.0](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.0).
 * Preserve Google/other and Yandex voice-over translation, mutual exclusion,
   volume controls, and automatic reset when the video changes.
 * Build and structural Dual VoT checks passed before publication.
@@ -367,6 +242,41 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.42.0](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0...v1.42.0) (2026-09-09)
+
+### 🐛 Bug Fixes
+
+* **GmsCore support:** Prompt to update outdated MicroG ([#2787](https://github.com/MorpheApp/morphe-patches/issues/2787)) ([c30850d](https://github.com/MorpheApp/morphe-patches/commit/c30850dea5d27aae956d0c6e10e6d32fc98c3e5f))
+* **YouTube - Channel whitelists:** Hide injected flyout menu buttons from other unrelated menu's  ([#2808](https://github.com/MorpheApp/morphe-patches/issues/2808)) ([5ba4ab4](https://github.com/MorpheApp/morphe-patches/commit/5ba4ab46f1a1ff62a8a733adc1b52a5614208036))
+* **YouTube - Channel whitelists:** Whitelists buttons are visible in some flyouts ([#2802](https://github.com/MorpheApp/morphe-patches/issues/2802)) ([2f482ff](https://github.com/MorpheApp/morphe-patches/commit/2f482ff33e5b0fa59d7877b9e34b7a47aa110397))
+* **YouTube - Hide layout components:** App may crash when 'You may like' section is hidden ([#2852](https://github.com/MorpheApp/morphe-patches/issues/2852)) ([407411d](https://github.com/MorpheApp/morphe-patches/commit/407411db710c8beb6e94e4e5f29fab3dc9060a30))
+* **YouTube - Hide layout components:** Hide guidelines in live chat ([b7528e0](https://github.com/MorpheApp/morphe-patches/commit/b7528e0e3c63f8d50caa3ebefa6dfd4c6a1859b1))
+* **YouTube - Hide layout components:** Hide new type of community posts ([17b13ff](https://github.com/MorpheApp/morphe-patches/commit/17b13fff559866ef733e0b738a3ab7f3ba548200))
+* **YouTube - Hide layout components:** Resolve empty channel tabs when using "Hide channel tab filter" ([#2747](https://github.com/MorpheApp/morphe-patches/issues/2747)) ([8232fa7](https://github.com/MorpheApp/morphe-patches/commit/8232fa7eeeb8d7c6e458e3ac16503fadccfceec4))
+* **YouTube - Hide player overlay buttons:** Apply the control buttons background opacity to the player time bar ([#2805](https://github.com/MorpheApp/morphe-patches/issues/2805)) ([302ab28](https://github.com/MorpheApp/morphe-patches/commit/302ab28ce8c00b2b5a093dcbedeb739706360d67))
+* **YouTube - Hide Shorts components:** Hide new type of paused overlay button ([c958fb6](https://github.com/MorpheApp/morphe-patches/commit/c958fb666cac54aaa3c822b736db85479c4dc6db))
+* **YouTube - SponsorBlock:** Skip buttons are not show with `21.26.45` ([f667d85](https://github.com/MorpheApp/morphe-patches/commit/f667d85352b8165b1680c54bd22e211e81e7f1ce))
+* **YouTube - Theme:** Apply the foreground color to text and icons in more locations ([#2707](https://github.com/MorpheApp/morphe-patches/issues/2707)) ([126a7d7](https://github.com/MorpheApp/morphe-patches/commit/126a7d7baacc3783e88681028612304e54e74608))
+* **YouTube - Video quality:** Restore `ShortsPlayerState` check to fix default video quality ([b596375](https://github.com/MorpheApp/morphe-patches/commit/b59637570cc477d09a236cf14582e4b06d1abc37))
+* **YouTube Music - Downloads:** Prevent external downloader triggering on non-download actions ([#2858](https://github.com/MorpheApp/morphe-patches/issues/2858)) ([a4cd837](https://github.com/MorpheApp/morphe-patches/commit/a4cd8377166eb308ba6d09ecc0f4be166535e9b4))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide channel links section" setting ([ddcdabe](https://github.com/MorpheApp/morphe-patches/commit/ddcdabe19a50aedb0eb80fa62de68e9d534e3167))
+* **YouTube - Hide layout components:** Add "Report AI channel" video menu entry ([#2763](https://github.com/MorpheApp/morphe-patches/issues/2763)) ([17d1135](https://github.com/MorpheApp/morphe-patches/commit/17d1135c33d7af159c48198e30d14623ea738aff))
+* **YouTube - Hide player overlay buttons:** Add option to change the player control buttons background opacity ([#2764](https://github.com/MorpheApp/morphe-patches/issues/2764)) ([4a2d3a4](https://github.com/MorpheApp/morphe-patches/commit/4a2d3a4ddd4006c9aa8efa2546f8d734cf85f28f))
+* **YouTube - Hide Shorts components:** Add "Hide gesture hints" setting ([#2760](https://github.com/MorpheApp/morphe-patches/issues/2760)) ([73df92a](https://github.com/MorpheApp/morphe-patches/commit/73df92adf973775ac42f8d89f938bf17ec7e03b3))
+* **YouTube - Remove background playback restrictions:** Add "Auto pause when device is locked" setting ([#2719](https://github.com/MorpheApp/morphe-patches/issues/2719)) ([f8bc479](https://github.com/MorpheApp/morphe-patches/commit/f8bc479af4e8b53cf1eea71cfaab923ddfb00910))
+* **YouTube Music - Scrobbling:** Add "Fill in missing album" setting ([#2666](https://github.com/MorpheApp/morphe-patches/issues/2666)) ([c94ecbd](https://github.com/MorpheApp/morphe-patches/commit/c94ecbddec7454d866c05b85926dc6670d3ef648))
+* **YouTube:** Add `Remember livestream playback position` patch ([#2753](https://github.com/MorpheApp/morphe-patches/issues/2753)) ([6252c85](https://github.com/MorpheApp/morphe-patches/commit/6252c85e7ce22ee4030a0a9b9094f467f42fa863))
+* **YouTube:** Add channel whitelists for ads and playback speed ([#2334](https://github.com/MorpheApp/morphe-patches/issues/2334)) ([4850003](https://github.com/MorpheApp/morphe-patches/commit/4850003c90948552383f7bead3e185d6085a2b57))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.35.54` ([7e42c2a](https://github.com/MorpheApp/morphe-patches/commit/7e42c2a57aa3838338b02569bce5e69f102457d2))
+* **YouTube:** Add support for `21.13.164` ([58b9a75](https://github.com/MorpheApp/morphe-patches/commit/58b9a7540847828dc543e0056821d451acfdbfdf))
+* **YouTube:** Add support for `21.36.45` ([#2814](https://github.com/MorpheApp/morphe-patches/issues/2814)) ([07d36c3](https://github.com/MorpheApp/morphe-patches/commit/07d36c334ec9834e671bf1bb97b14f6a20dcdbbe))
 
 ## [1.42.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0-dev.9...v1.42.0-dev.10) (2026-09-09)
 
