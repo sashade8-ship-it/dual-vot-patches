@@ -1,3 +1,39 @@
+## 1.42.0-dualvot.8.4 (2026-09-09)
+
+### Yandex source-audio recovery
+
+* Replace the obsolete standalone Android VR download with source audio from
+  YouTube's current player request stack and active media transport.
+* Work with Spoof video streams both disabled and enabled by reusing a
+  compatible cached response or requesting a fresh direct-DASH response.
+* Prefer low-bitrate Opus and validate byte ranges, content lengths, part
+  ordering, bounded memory use, cancellation, and cleanup.
+
+### Multipart, proxy, and timing reliability
+
+* Stream exact multipart uploads with visible `N/M` progress and separate
+  errors for acquisition, upload, Yandex processing, translated URL readiness,
+  and playback.
+* Restore ETA and readiness polling when switching between standard and lively
+  voices.
+* Retry transient public-proxy upload failures with bounded backoff and retain
+  the targeted `413` large-body fallback without changing direct or custom
+  proxy routes.
+* Report Yandex `STATUS_FAILED` as a server translation failure instead of a
+  translated-audio playback failure.
+
+### Compatibility and diagnostics
+
+* Use structural Morphe request hooks instead of a standalone scraper tied to
+  one YouTube version.
+* Keep diagnostics free of signed URLs, cookies, tokens, private headers, and
+  video identifiers.
+* Keep the player media transport as an internal dependency so it does not
+  appear as a separate Universal patch in Morphe Manager.
+* Credit ilyhalight's MSE-based fix for voice-over-translation issue `#1820`
+  as the architectural inspiration; the Android/Morphe implementation is
+  independent and does not copy its browser JavaScript.
+
 ## 1.42.0-dualvot.8.3 (2026-09-09)
 
 ### Automated Morphe update
