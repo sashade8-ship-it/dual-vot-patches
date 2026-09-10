@@ -1,3 +1,13 @@
+## 1.42.1-dev.1-dualvot.8.5.1 (2026-09-10)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.42.1-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.42.1-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.42.0-dev.10-dualvot.8.5.1 (2026-09-10)
 
 ### Compatibility hotfix
@@ -306,6 +316,15 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.42.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0...v1.42.1-dev.1) (2026-09-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Fullscreen video scale:** Restore UI after leaving fullscreen on tablet/foldable landscape ([#2874](https://github.com/MorpheApp/morphe-patches/issues/2874)) ([75f477f](https://github.com/MorpheApp/morphe-patches/commit/75f477f5c8834bd30cb27f66cc13b7f9c1f4c981))
+* **YouTube - Video quality:** Prevent infinite loading when opening videos from Shorts ([#2871](https://github.com/MorpheApp/morphe-patches/issues/2871)) ([8fb3e31](https://github.com/MorpheApp/morphe-patches/commit/8fb3e318dc19fa25f96c85b1759c1d534a7a931f))
+* **YouTube Music - Remember shuffle state:** Prevent continuous queue shuffling ([#2870](https://github.com/MorpheApp/morphe-patches/issues/2870)) ([b58019c](https://github.com/MorpheApp/morphe-patches/commit/b58019c16a54b315533cc5f61f6f8718c6d66651))
+* **YouTube:** Remove "Restore old player button style" from `21.36` and later experimental targets ([8cc2f54](https://github.com/MorpheApp/morphe-patches/commit/8cc2f549833219384320bf5d43128702bbc1b2bb))
 
 ## [1.42.0](https://github.com/MorpheApp/morphe-patches/compare/v1.41.0...v1.42.0) (2026-09-09)
 
