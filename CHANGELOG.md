@@ -1,3 +1,12 @@
+## 1.42.0-dev.10-dualvot.8.5.1 (2026-09-10)
+
+### Compatibility hotfix
+
+* Use the range-form invoke instruction for the Cronet engine hook so methods
+  returning registers above `v15` patch without an invalid-register warning.
+* Add the missing Russian translation for the message shown when Yandex voice
+  translation is requested on a live stream.
+
 ## 1.42.0-dev.10-dualvot.8.5 (2026-09-10)
 
 ### PoToken source-audio recovery

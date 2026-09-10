@@ -85,6 +85,8 @@ public class YandexVotDiagnosticsTest {
         String voicePatch = readUtf8(root.resolve(
                 "extensions/youtube/src/main/java/app/morphe/extension/youtube/patches/"
                         + "voiceovertranslation/yandex/YandexVoiceOverTranslationPatch.java"));
+        String russianStrings = readUtf8(root.resolve(
+                "patches/src/main/resources/addresources/values-ru-rRU/youtube/strings.xml"));
 
         assertTrue(transportPatch.contains(
                 "internal val yandexVotPlayerMediaTransportPatch = bytecodePatch {"));
@@ -92,9 +94,15 @@ public class YandexVotDiagnosticsTest {
         assertFalse(transportPatch.contains("default = false"));
         assertTrue(transportPatch.contains("hookBuildRequest"));
         assertTrue(transportPatch.contains("recordPlayerRequest"));
+        assertTrue(transportPatch.contains(
+                "invoke-static/range { v$register .. v$register }"));
+        assertFalse(transportPatch.contains("invoke-static { v$register }"));
         assertTrue(yandexPatch.contains("yandexVotPlayerMediaTransportPatch"));
         assertTrue(transportClass.contains("public final class YandexVotPlayerMediaTransport"));
         assertTrue(voicePatch.contains("private static void beginTranslationRequestState()"));
+        assertTrue(russianStrings.contains(
+                "<string name=\"dualvot_yandex_unavailable_live\">"
+                        + "Перевод недоступен для прямых трансляций</string>"));
         int clearCacheIndex = voicePatch.indexOf("YandexVotApiClient.clearTranslationCache();");
         int restartStateIndex = voicePatch.indexOf(
                 "beginTranslationRequestState();",
