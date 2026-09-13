@@ -14,13 +14,13 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Base64;
 import android.util.Pair;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,19 +95,6 @@ public final class FlyoutUtils {
             getAsciiBytes("video_metadata_carousel.e"),
             getAsciiBytes("com.google.android.apps.youtube.kids"),
             getAsciiBytes("https://www.youtube.com/myfamily/#mf-compare")
-    );
-    private static final List<byte[]> VIDEO_ELEMENTS_BYTES = List.of(
-            getAsciiBytes("compact_playlist.e"),
-            getAsciiBytes("compact_video.e"),
-            getAsciiBytes("grid_video.e"),
-            getAsciiBytes("grid_video_wrapper.e"),
-            getAsciiBytes("horizontal_shelf.e"),
-            getAsciiBytes("rich_grid_row.e"),
-            getAsciiBytes("shorts_pivot_item.e"),
-            getAsciiBytes("shorts_shelf.e"),
-            getAsciiBytes("shorts_video_cell.e"),
-            getAsciiBytes("swipeable_row.e"),
-            getAsciiBytes("video_lockup_with_attachment.e")
     );
     private static final List<byte[]> LIST_ITEM_SHARE_BYTES = List.of(
             getAsciiBytes("list_item.e"),
@@ -765,9 +752,10 @@ public final class FlyoutUtils {
             secondaryContainer.setVisibility(View.GONE);
         }
 
-        int[] attrs = {android.R.attr.selectableItemBackground};
-        try (TypedArray typedArray = context.obtainStyledAttributes(attrs)) {
-            customButton.setForeground(typedArray.getDrawable(0));
+        TypedValue ripple = new TypedValue();
+        if (context.getTheme().resolveAttribute(
+                android.R.attr.selectableItemBackground, ripple, true)) {
+            customButton.setForeground(context.getDrawable(ripple.resourceId));
         }
 
         customButton.setOnClickListener(clickListener);
@@ -859,28 +847,26 @@ public final class FlyoutUtils {
             return;
         }
 
-        if (!byteIndexesOf(flyoutBuffer, VIDEO_ELEMENTS_BYTES).isEmpty()) {
-            setFlyoutPlaylistId(flyoutBuffer);
+        setFlyoutPlaylistId(flyoutBuffer);
 
-            View senderView = senderViewRef.get();
-            if (senderView != null) {
-                ViewParent parent = senderView.getParent();
-                while (parent != null) {
-                    if (parent instanceof ComponentHost componentHost) {
-                        CharSequence description = componentHost.getContentDescription();
-                        if (description != null) {
-                            String stringDescription = description.toString();
+        View senderView = senderViewRef.get();
+        if (senderView != null) {
+            ViewParent parent = senderView.getParent();
+            while (parent != null) {
+                if (parent instanceof ComponentHost componentHost) {
+                    CharSequence description = componentHost.getContentDescription();
+                    if (description != null) {
+                        String stringDescription = description.toString();
 
-                            Logger.printDebug(() -> "Flyout content desription: " + stringDescription);
+                        Logger.printDebug(() -> "Flyout content desription: " + stringDescription);
 
-                            setFlyoutVideoId(flyoutBuffer, stringDescription);
-                            setFlyoutChannel(flyoutBuffer, stringDescription);
+                        setFlyoutVideoId(flyoutBuffer, stringDescription);
+                        setFlyoutChannel(flyoutBuffer, stringDescription);
 
-                            break;
-                        }
+                        break;
                     }
-                    parent = parent.getParent();
                 }
+                parent = parent.getParent();
             }
         }
     }
