@@ -515,6 +515,8 @@ Promene uključuju:
   <string name="morphe_queue_add_flyout_menu_summary">Додаје додатну искачућу ставку. Омогућите ово ако се \"Додај у ред\" не приказује.</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Бела листа за огласе у искачућем менију</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Додаје ставку у искачући мени која омогућава да се огласи репродукују на каналу тог видеа</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Ова функција може захтевати коришћење PotHelper-а или промену „Лажирање видео стримова“ на TV или Android VR пријаву.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Бела листа за брзину у искачућем менију</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Додаје ставку у искачући мени која увек репродукује канал тог видеа брзином 1,0x</string>
   <string name="morphe_queue_manager_check_failed_auth">Нисте пријављени</string>
@@ -912,6 +914,7 @@ Promene uključuju:
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Онемогући гест превлачења надоле у портретном режиму</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Онемогући гест превлачења надоле у ландскептном режиму</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Онемогући покрет штипања за зумирање</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Врати штипање за зумирање</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Отвори видео записе у режиму пуног екрана</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Онемогућен</string>
@@ -924,6 +927,8 @@ Promene uključuju:
   <string name="morphe_fullscreen_video_scale_entry_zoom">Зумирај (исеци да попуни)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Прикажи дугме за размеру видеа</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Додирни да пребацујеш: Подразумевано, Развуци и Зумирај</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Прикажи само преко целог екрана</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Сакриј дугме за скалирање видеа у портретном плејеру</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Прикажи дугме за искључивање звука</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -948,6 +953,7 @@ Promene uključuju:
 
 Ограничење: Ако је „Враћање старе траке акција видеа“ искључено, преклапање „Више видеа“ можда неће бити доступно"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Врати старо понашање титлова</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Враћа старе иконице плејера</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Искључи жирне иконе</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Враћа име канала испод плејера видео снимка</string>

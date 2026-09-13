@@ -515,6 +515,8 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_queue_add_flyout_menu_summary">Tilføjer et ekstra flyout-element. Aktiver dette, hvis \"Tilføj til kø\" ikke vises.</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Annoncehvidliste i flyout-menu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Tilføjer et flyout-element, der lader annoncer afspille på kanalen for den video</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Denne funktion kan kræve, at du bruger PotHelper eller ændrer \"Spoof video streams\" til TV- eller Android VR-login.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Hastighedshvidliste i flyout-menu</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Tilføjer et flyout-element, der altid afspiller kanalen for den video ved 1,0x hastighed</string>
   <string name="morphe_queue_manager_check_failed_auth">Ikke logget ind</string>
@@ -912,6 +914,7 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Deaktiver gestus med nedadstræk i portrættilstand</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Deaktiver gestus med nedadstræk i landskabsttilstand</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Deaktiver knib-og-zoom-bevægelse</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Gendan knib for at zoome</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Åbn videoer i fuldskærmstilstand</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Deaktiveret</string>
@@ -924,6 +927,8 @@ Indstillinger → Afspilning (eller Automatisk afspilning) → Afspil næste vid
   <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (beskær for at fylde)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Vis knappen for videoskala</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Tryk for at skifte mellem Standard, Stræk og Zoom</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Vis kun i fuldskærm</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Skjul videotilpasningsknappen i portrætafspilleren</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Vis mute-knap</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -963,6 +968,7 @@ Bil layout
 
 Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere videoer'-overlejringen muligvis ikke tilgængelig"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Genopret den gamle adfærd for undertekster</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - gendan old save til spilleliste</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Deaktiver fed bogstaver</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Gendan kanalnavn under videoplayer</string>

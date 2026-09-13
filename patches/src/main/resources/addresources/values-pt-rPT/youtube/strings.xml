@@ -515,6 +515,8 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_queue_add_flyout_menu_summary">Adiciona um item adicional de menu flutuante. Ative isso se \"Adicionar à fila\" não for exibido.</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Lista de permissões de anúncios no menu flutuante</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Adiciona um item de menu flutuante que permite que anúncios sejam reproduzidos no canal desse vídeo</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Este recurso pode exigir usar o PotHelper ou alterar \"Falsificar fluxos de vídeo\" para TV ou login Android VR.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Lista de permissões de velocidad no menu flutuante</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Adiciona um item de menu flutuante que sempre reproduz o canal desse vídeo na velocidad 1.0x</string>
   <string name="morphe_queue_manager_check_failed_auth">Não conectado</string>
@@ -914,6 +916,7 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Desativar gesto de deslizar para baixo na vertical</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Desativar gesto de deslizar para baixo na horizontal</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Desativar o gesto de pinça para zoom</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Restaurar pinça para ampliar</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Abrir vídeos em tela cheia</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Desativado</string>
@@ -926,6 +929,8 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (cortar para preencher)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Mostrar botão de escala de vídeo</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Toque para alternar entre Padrão, Esticar e Zoom</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Mostrar apenas em tela cheia</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Ocultar o botão de escala de vídeo no player em retrato</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Mostrar botão de mudo</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -965,6 +970,7 @@ Layout automotivo
 
 Limitação: Se 'Restaurar a barra de ação de vídeo antiga' estiver desativado, a sobreposição de 'Mais vídeos' pode não estar disponível"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Restaurar comportamento antigo de legendas</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restaurar a versão antiga do Morphe Spoof para a playlist</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Desativar Ã­cones em negrito</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Restaurar nome do canal abaixo do reprodutor de vídeo</string>

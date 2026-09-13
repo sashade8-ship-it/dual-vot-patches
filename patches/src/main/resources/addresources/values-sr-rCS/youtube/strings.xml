@@ -515,6 +515,8 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_queue_add_flyout_menu_summary">Dodaje dodatnu stavku letećeg menija. Omogući ovo ako se \"Dodaj u red\" ne prikazuje.</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Bela lista oglasa u meniju</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Dodaje stavku u meni koja omogućava prikazivanje oglasa na kanalu tog video snimka</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Ova funkcija može da zahteva korišćenje PotHelper-a ili promenu \"Lažiranje video tokova\" na TV ili Android VR prijavu.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Bela lista brzine u meniju</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Dodaje stavku u meni koja uvek reprodukuje kanal tog video snimka pri brzini od 1.0x</string>
   <string name="morphe_queue_manager_check_failed_auth">Nije prijavljen</string>
@@ -914,6 +916,7 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Isključi gest povlačenja prema dole u portretnom režimu</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Isključi gest povlačenja prema dole u pejzažnom režimu</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Onemogući gest štipanja za zumiranje</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Vrati štipanje za zumiranje</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Otvorite video zapise u režimu punog ekrana</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Onemogućen</string>
@@ -926,6 +929,8 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_fullscreen_video_scale_entry_zoom">Zumiraj (iseci da ispuni)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Prikaži dugme za skaliranje videa</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Dodirni da ciklično menjaš Podrazumevano, Rastegnuto i Zumirano</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Prikaži samo na celom ekranu</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Sakrij dugme za skaliranje videa u portretnom plejeru</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Prikaži dugme za isključivanje zvuka</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -965,6 +970,7 @@ Raspored za automobil
 
 Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prekrivanje \"Više video zapisa\" možda neće biti dostupno"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Vrati staro ponašanje titlova</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Vraća stare ikonice Shorts plejera</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Izgubi bold ikone</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Vrati naziv kanala ispod plejera videa</string>

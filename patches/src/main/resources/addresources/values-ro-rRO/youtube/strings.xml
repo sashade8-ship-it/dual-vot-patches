@@ -515,6 +515,8 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_queue_add_flyout_menu_summary">Adaugă un element suplimentar de flyout. Activează această opțiune dacă \"Adaugă în coadă\" nu este afișat.</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Lista albă pentru anunțuri din meniul pop-up</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Adaugă un element în meniul pop-up care permite redarea anunțurilor pe canalul acelui videoclip</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Această funcție poate necesita utilizarea PotHelper sau schimbarea „Falsifică fluxurile video” în autentificare TV sau Android VR.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Lista albă pentru viteză din meniul pop-up</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Adaugă un element în meniul pop-up care redă întotdeauna canalul acelui videoclip la viteza 1.0x</string>
   <string name="morphe_queue_manager_check_failed_auth">Nu ești autentificat</string>
@@ -914,6 +916,7 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Dezactivează gestul de glisare în jos în modul portret</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Dezactivează gestul de glisare în jos în modul peisaj</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Dezactivează gestul de zoom prin ciupire</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Restabiliți pinch-to-zoom</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Deschide videoclipurile în modul ecran complet</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Dezactivat</string>
@@ -926,6 +929,8 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (decupare pentru umplere)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Afișează butonul de scală video</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Atingeți pentru a comuta între Implicit, Întindere și Zoom</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Afișează doar pe ecran complet</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Ascunde butonul pentru scalarea videoclipului din playerul portret</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Afișează butonul de mutare</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -965,6 +970,7 @@ Aspect auto
 
 Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, stratul 'Mai multe videoclipuri' ar putea să nu fie disponibil"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Restabilește comportamentul vechi al subtitrărilor</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restore old save to playlist</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Dezactiva­te icoanele ­bold</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Restaurează numele canalului sub playerul video</string>

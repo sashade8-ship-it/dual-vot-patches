@@ -513,6 +513,8 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_queue_add_flyout_menu_summary">Bætir við auka flugvalsatriði. Virkjaðu þetta ef \"Bæta í biðröð\" er ekki sýnt</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Auglýsingahvítlisti í sprettivalmynd</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Bætir við sprettivalmyndaratriði sem leyfir auglýsingum að spilast á rás þess myndbands</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Þessi eiginleiki gæti krafist þess að nota PotHelper eða breyta \"Falsa myndstreymi\" í TV eða Android VR innskráningu.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Hraðahvítlisti í sprettivalmynd</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Bætir við sprettivalmyndaratriði sem spilar alltaf rás þess myndbands á 1.0x hraða</string>
   <string name="morphe_queue_manager_check_failed_auth">Ekki skráður inn</string>
@@ -910,6 +912,7 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Gerðu portrettsniður snertihreyfinguna óvirkja</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Gerðu landslagsniður snertihreyfinguna óvirkja</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Óvirkja klíp-stækkunarbending</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Endurheimta klíp til að stækka</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Opna myndband í fullskjáhamri</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Gerilt</string>
@@ -922,6 +925,8 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <string name="morphe_fullscreen_video_scale_entry_zoom">Stækka (klippa til að fylla)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Sýna hnappinn fyrir myndbandsskala</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Bankaðu til að skipta á milli Sjálfgefið, Teysja og Stækka</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Sýna aðeins í fullskjá</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Fela stærðarhnapp myndbandsins í lóðrétta spilaranum</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Sýna slökkvunarhnapp</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -960,6 +965,7 @@ Bílaútlit
 
 Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleiri myndbönd' lagskiptarinn ekki verið tiltæk"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Endurheimta gamla textahegðun</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Endursafnaðu gamla vistun á spilalista</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Gerðu leturstöðva óvirka</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Endurheimtu rásarnafnið undir myndavörpun</string>

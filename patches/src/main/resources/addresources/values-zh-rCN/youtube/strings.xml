@@ -515,6 +515,8 @@ Second \"item\" text"</string>
   <string name="morphe_queue_add_flyout_menu_summary">添加额外的弹出菜单项。如果未显示“添加到队列”，请启用此选项</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">弹出菜单中的广告白名单</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">添加一个弹出菜单项，让广告可以在该视频所属的频道上播放</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">此功能可能需要使用 PotHelper，或将“Spoof video streams”更改为 TV 或 Android VR 登录。</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">弹出菜单中的播放速度白名单</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">添加一个弹出菜单项，让该视频所属的频道始终以 1.0 倍速播放</string>
   <string name="morphe_queue_manager_check_failed_auth">未登录</string>
@@ -914,6 +916,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">禁用竖屏下滑手势</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">禁用横屏下滑手势</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">禁用捏合缩放手势</string>
+  <string name="morphe_restore_pinch_to_zoom_title">恢复双指缩放</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">以全屏模式打开视频</string>
   <string name="morphe_open_videos_fullscreen_entry_1">已禁用</string>
@@ -926,6 +929,8 @@ Second \"item\" text"</string>
   <string name="morphe_fullscreen_video_scale_entry_zoom">缩放（裁剪填充）</string>
   <string name="morphe_fullscreen_video_scale_button_title">显示视频缩放按钮</string>
   <string name="morphe_fullscreen_video_scale_button_summary">点击循环切换默认、拉伸和缩放</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">仅在全屏显示</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">在竖屏播放器中隐藏视频缩放按钮</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">显示静音按钮</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -965,6 +970,7 @@ Second \"item\" text"</string>
 
 限制：如果关闭“恢复旧版视频操作栏”选项，则“更多视频”叠加层可能不可用"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - 恢复旧版字幕行为</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - 恢复旧的保存到播放列表</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - 禁用粗体图标</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - 恢复视频播放器下方的频道名称</string>

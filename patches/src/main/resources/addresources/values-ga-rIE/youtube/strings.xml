@@ -515,6 +515,8 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_queue_add_flyout_menu_summary">Cuireann sé mír bhreise ar an leathanach leis. Cumasaigh é seo mura bhfuil \"Cuir leis an scuaine\" le feiceáil.</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Liosta bán fógraí sa roghchlár sleamhnáin</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Cuireann sé mír fillte leis a ligeann do fhógraí seinm ar chainéal an fhíseáin sin</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Seans go mbeidh ort PotHelper a úsáid nó \"Sruthanna físeáin a spoofáil\" a athrú go TV nó go logáil isteach Android VR.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Liosta bán luais sa roghchlár aníos</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Cuireann mír fillteán leis a sheinneann cainéal an fhíseáin sin i gcónaí ag luas 1.0x</string>
   <string name="morphe_queue_manager_check_failed_auth">Gan logáil isteach</string>
@@ -914,6 +916,7 @@ Socruithe → Athsheinm (nó Uathsheinm) → Uathsheinm an chéad fhíseán eile
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Díchumasaigh gotha ​​svaidhpeála síos portráide</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Díchumasaigh gotha ​​svaidhpeála tírdhreacha</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Díchumasaigh gotha ​​pinch-to-súmáil</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Athchóirigh an phinseáil chun súmála</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Oscail físeáin i mód lánscáileáin</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Díchumasaithe</string>
@@ -926,6 +929,8 @@ Socruithe → Athsheinm (nó Uathsheinm) → Uathsheinm an chéad fhíseán eile
   <string name="morphe_fullscreen_video_scale_entry_zoom">Zúmáil (bearr chun líonadh)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Taispeáin cnaipe scála físe</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Beartaigh chun dul tríd an Réamhshocrú, an Síneadh agus an Zúmáil</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Taispeáin i lánscáileán amháin</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Folaigh an cnaipe scála físeáin sa seinnteoir portráide</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Taispeáin an cnaipe Balbhaigh</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -965,6 +970,7 @@ Leagan amach gluaisteán
 
 Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múchta, b'fhéidir nach mbeidh forleagan 'Tuilleadh físeáin' ar fáil"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Athchóirigh sean-iompar na bhfotheideal</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Athchóirigh an sean-shábháil chuig an seinmliosta</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Díchumasaigh deilbhíní troma</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Athchóirigh ainm an chainéil faoin seinnteoir físe</string>

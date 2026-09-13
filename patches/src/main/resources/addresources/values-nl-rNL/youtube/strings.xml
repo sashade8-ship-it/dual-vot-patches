@@ -515,6 +515,8 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_queue_add_flyout_menu_summary">Voegt een extra flyout-item toe. Schakel dit in als \"Toevoegen aan wachtrij\" niet wordt weergegeven</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Advertentie-whitelist in flyoutmenu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Voegt een flyoutitem toe waarmee advertenties op het kanaal van die video kunnen worden afgespeeld</string>
+  <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Deze functie vereist mogelijk het gebruik van PotHelper of het wijzigen van \"Videostreams vervalsen\" in TV- of Android VR-aanmelding.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Snelheids-whitelist in flyoutmenu</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Voegt een flyoutitem toe dat het kanaal van die video altijd op 1.0x snelheid afspeelt</string>
   <string name="morphe_queue_manager_check_failed_auth">Niet ingelogd</string>
@@ -912,6 +914,7 @@ Instellingen → Weergave (of automatisch afspelen) → Volgende video automatis
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Schakel gebaar vegen omlaag in portretmodus uit</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Schakel gebaar vegen omlaag in landschapmodus uit</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Knijpen om te zoomen uitschakelen</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Herstel knijpen om te zoomen</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Video\'s openen in volledig schermmodus</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Uitgeschakeld</string>
@@ -924,6 +927,8 @@ Instellingen → Weergave (of automatisch afspelen) → Volgende video automatis
   <string name="morphe_fullscreen_video_scale_entry_zoom">Zoom (bijsnijden om te vullen)</string>
   <string name="morphe_fullscreen_video_scale_button_title">Toon videoschaalknop</string>
   <string name="morphe_fullscreen_video_scale_button_summary">Tik om te wisselen tussen Standaard, Uitrekken en Zoom</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Alleen in volledig scherm weergeven</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Verbergt de videoscalingknop in de staande speler</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">Mute-knop tonen</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -963,6 +968,7 @@ Automotive-indeling
 
 Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer video's\" overlay mogelijk niet beschikbaar"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Herstel het oude gedrag van ondertitels</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Herstel oude Shorts-speler pictogrammen</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Uitschakelen van vetgedrukte pictogrammen</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Herstel kanaalnaam onder videospeler</string>
