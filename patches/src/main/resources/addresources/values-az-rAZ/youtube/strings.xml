@@ -516,6 +516,7 @@ Məlumat: Canlı yayımlarda işləməyə bilər"</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Açılan menyuda reklam ağ siyahısı</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Həmin videonun kanalında reklamların oynadılmasına imkan verən açılan menyu bəndi əlavə edir</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Bu xüsusiyyət PotHelper istifadə etməyi və ya \"Video yayımlarını saxtalaşdırı\" TV və ya Android VR girişinə dəyişdirməyi tələb edə bilər.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Açılan menyuda sürət ağ siyahısı</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Həmin videonun kanalını həmişə 1.0x sürətlə oynadan açılan menyu bəndi əlavə edir</string>
   <string name="morphe_queue_manager_check_failed_auth">Daxil olunmayıb</string>
@@ -915,6 +916,7 @@ Ayarlar→ Oxunuş (və ya Avtomatik oxunuş) → Növbəti videonu avtomatik ox
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Portret aşağı sürüşdürmə jestini qapat</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Landşaft aşağı sürüşdürmə jestini qapat</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">Yaxınlaşdırmaq üçün çimdikləmə jestini qapat</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Böyütmək üçün çimdikləməni bərpa et</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Videoları tam ekran rejimində aç</string>
   <string name="morphe_open_videos_fullscreen_entry_1">Qapalıdı</string>

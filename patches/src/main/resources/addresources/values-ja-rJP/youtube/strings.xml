@@ -405,12 +405,13 @@ AIについて議論するだけのチャンネルや、動画の一部にだけ
   <string name="morphe_vot_screen_title">吹き替え翻訳</string>
   <string name="morphe_vot_screen_summary">動画字幕を翻訳し、デバイス上のテキスト読み上げ機能で字幕の翻訳を字幕に同期しながら読み上げます</string>
   <string name="morphe_vot_enabled_title">吹き替え翻訳</string>
+  <string name="morphe_vot_enabled_summary">プレーヤー オーバーレイにボタンを表示します。タップするとオン / オフを切り替えます。長押しすると簡易設定メニューを表示します</string>
   <string name="morphe_vot_caption_language_title">言語</string>
   <string name="morphe_vot_translation_service_title">翻訳サービス</string>
   <string name="morphe_vot_original_audio_volume_title">動画の音量</string>
   <string name="morphe_vot_original_audio_volume_summary">吹き替え音声を再生しているときの YouTube 動画の音量</string>
   <string name="morphe_vot_translation_volume_title">吹き替えの音量</string>
-  <string name="morphe_vot_translation_volume_summary">吹き替え音声の音量</string>
+  <string name="morphe_vot_translation_volume_summary">動画に重ねる吹き替え音声の音量</string>
   <string name="morphe_vot_max_speech_rate_title">吹き替え音声の加速上限</string>
   <string name="morphe_vot_max_speech_rate_summary">吹き替え元の字幕に同期するために吹き替え音声を加速して再生する際の上限値</string>
   <string name="morphe_vot_mymemory_info_summary">"無料の翻訳API。APIキーは不要です。無料プランでは1日あたり最大5,000文字、またはEメールアドレスを使用すると1日あたり最大50,000文字です。
@@ -515,7 +516,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">フライアウトメニュー内の広告ホワイトリスト</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">その動画のチャンネルで広告を再生できるフライアウト項目を追加します</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
-  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">この機能では、PotHelper を使用するか、「動画ストリームを偽装」を TV または Android VR のサインインに変更する必要がある場合があります。</string>
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">この機能を使用するには、PotHelper を使用する、もしくは [動画ストリームを偽装] のクライアントを「TV」または「Android VR (ログイン)」に変更する必要がある場合があります。</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">フライアウトメニュー内の再生速度ホワイトリスト</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">その動画のチャンネルの動画を常に1.0倍速で再生するフライアウト項目を追加します</string>
   <string name="morphe_queue_manager_check_failed_auth">ログインしていません</string>
@@ -916,7 +917,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">縦画面での下へのスワイプ ジェスチャーを無効化</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">横画面での下へのスワイプ ジェスチャーを無効化</string>
   <string name="morphe_disable_fullscreen_zoom_gesture_title">「ピンチしてズーム」ジェスチャーを無効化</string>
-  <string name="morphe_restore_pinch_to_zoom_title">ピンチでズームを復元</string>
+  <string name="morphe_restore_pinch_to_zoom_title">「ピンチしてズーム」を復元</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">全画面表示で動画を開く</string>
   <string name="morphe_open_videos_fullscreen_entry_1">無効</string>
@@ -929,8 +930,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_fullscreen_video_scale_entry_zoom">ズーム（切り抜いて画面いっぱい）</string>
   <string name="morphe_fullscreen_video_scale_button_title">ビデオスケールボタンを表示</string>
   <string name="morphe_fullscreen_video_scale_button_summary">タップすると、デフォルト → 引き伸ばす → ズーム → デフォルトの順に切り替わります</string>
-  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">フルスクリーンのみに表示</string>
-  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">縦向きプレイヤーでビデオスケールボタンを非表示にする</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">全画面表示でのみ表示</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">縦画面のプレーヤーには「画面の埋め方」ボタンを表示しません</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
   <string name="morphe_mute_video_button_title">消音ボタンを表示</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
@@ -970,8 +971,8 @@ Automotive レイアウト
 
 制限事項: [アクションバーを旧式に戻す] がオフのとき、「その他の動画」オーバーレイが利用できない場合があります"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - 以前のキャプションの動作を復元</string>
-  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - 以前の「再生リストに保存」に戻す</string>
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - 字幕の動作を以前の仕様に戻す</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 -「再生リストに保存」を以前の仕様に戻す</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - アイコンの太字表示を無効化</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - 動画プレーヤー下のチャンネル名表示を復元</string>
   <!-- misc.sharesheet.openSystemShareSheetPatch -->

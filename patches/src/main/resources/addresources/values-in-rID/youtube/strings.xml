@@ -515,7 +515,7 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Daftar putih iklan di menu melayang</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Menambahkan item menu melayang yang memungkinkan iklan diputar di saluran video tersebut</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
-  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Fitur ini mungkin memerlukan penggunaan PotHelper atau mengubah \"Palsukan streaming video\" menjadi masuk dengan TV atau Android VR.</string>
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">Fitur ini mungkin memerlukan penggunaan PotHelper atau mengubah \"Palsukan aliran video\" menjadi login TV atau Android VR sign-in.</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Daftar putih kecepatan di menu melayang</string>
   <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">Menambahkan item menu melayang yang selalu memutar saluran video tersebut dengan kecepatan 1,0x</string>
   <string name="morphe_queue_manager_check_failed_auth">Belum masuk</string>
@@ -969,7 +969,7 @@ Tata letak Otomotif
 
 Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Video lainnya' mungkin tidak tersedia"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
-  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Kembalikan perilaku teks tertutup lama</string>
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Kembalikan perilaku teks lama</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Kembalikan penyimpanan lama ke daftar putar</string>
   <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Nonaktifkan ikon tebal</string>
   <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Kembalikan nama saluran di bawah pemutar video</string>
