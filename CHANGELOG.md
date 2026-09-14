@@ -1,3 +1,13 @@
+## 1.43.0-dev.5-dualvot.8.5.2 (2026-09-14)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.43.0-dev.5](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.43.0-dev.5).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.43.0-dev.4-dualvot.8.5.2 (2026-09-13)
 
 ### Automated Morphe update
@@ -376,6 +386,12 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.43.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.43.0-dev.4...v1.43.0-dev.5) (2026-09-13)
+
+### ✨ New Features
+
+* **YouTube - Swipe controls:** Add a volume steps option and set the swipe distance per step ([#2938](https://github.com/MorpheApp/morphe-patches/issues/2938)) ([f06d565](https://github.com/MorpheApp/morphe-patches/commit/f06d565ad899c022370237d9694aa29fbe22e95b))
 
 ## [1.43.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.43.0-dev.3...v1.43.0-dev.4) (2026-09-13)
 
