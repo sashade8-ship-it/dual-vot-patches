@@ -1,3 +1,13 @@
+## 1.43.0-dev.6-dualvot.8.5.2 (2026-09-14)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.43.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.43.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.43.0-dev.5-dualvot.8.5.2 (2026-09-14)
 
 ### Automated Morphe update
@@ -387,6 +397,12 @@
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
 
+## [1.43.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.43.0-dev.5...v1.43.0-dev.6) (2026-09-14)
+
+### 🐛 Bug Fixes
+
+* **YouTube - FlyoutUtils:** Fetch element description straight from ViewGroup instead componentHost ([7565b9d](https://github.com/MorpheApp/morphe-patches/commit/7565b9d4409d20cf58075fb7d53eca081d2ac282))
+
 ## [1.43.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.43.0-dev.4...v1.43.0-dev.5) (2026-09-13)
 
 ### ✨ New Features
@@ -398,7 +414,7 @@
 ### ✨ New Features
 
 * **Custom branding:** Add an app icon patch option and support mounted installations ([#2518](https://github.com/MorpheApp/morphe-patches/issues/2518)) ([e7a508f](https://github.com/MorpheApp/morphe-patches/commit/e7a508f2b1b629066e49776254e5c2e2f625976a))
-* **Reddit:** Add `Custom app icon` patch ([#2937](https://github.com/MorpheApp/morphe-patches/issues/2937)) ([c17f699](https://github.com/MorpheApp/morphe-patches/commit/c17f6990a6d3ed5f8041f07eb3cb129a939e529e))
+* **Reddit:** Add `App icon` patch ([#2937](https://github.com/MorpheApp/morphe-patches/issues/2937)) ([c17f699](https://github.com/MorpheApp/morphe-patches/commit/c17f6990a6d3ed5f8041f07eb3cb129a939e529e))
 
 ## [1.43.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.43.0-dev.2...v1.43.0-dev.3) (2026-09-13)
 
