@@ -1,11 +1,16 @@
 /*
  * Copyright 2026 Morphe.
  * https://github.com/MorpheApp/morphe-patches/pull/2911
+ * https://github.com/MorpheApp/morphe-patches/pull/2928
  *
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to this code.
  */
 
 package app.morphe.extension.youtube.patches;
+
+import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType.MINIMAL_BAR;
+import static app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType.MINIMAL_BAR_2;
+import static app.morphe.extension.youtube.patches.MiniplayerPatch.getCurrentMiniplayerType;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -30,6 +35,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import java.lang.ref.WeakReference;
 
 import app.morphe.extension.shared.Logger;
@@ -39,8 +46,6 @@ import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.theme.ThemeUtils;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.shared.ui.ViewAnimations;
-import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType;
-import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
 import kotlin.Unit;
 
@@ -70,8 +75,10 @@ public final class MinimalMiniplayerPatch {
     private static final String ACCESSIBILITY_MINIPLAYER_VIEW_STRING = ResourceUtils.getString(
             "accessibility_miniplayer_view");
 
-    private static final boolean ENABLED =
-            Settings.MINIPLAYER_TYPE.get() == MiniplayerType.MINIMAL_BAR;
+    // Not read from the settings a second time, or a type changed mid-session would leave
+    // this and the type the rest of the class reads disagreeing.
+    private static final boolean ENABLED = getCurrentMiniplayerType() == MINIMAL_BAR
+            || getCurrentMiniplayerType() == MINIMAL_BAR_2;
 
     /**
      * YouTube's own {@code floaty_bar_height}.
@@ -82,6 +89,15 @@ public final class MinimalMiniplayerPatch {
      * Detached from the edges, so the rounded corners the miniplayer already has are visible.
      */
     private static final int BAR_MARGIN = Dim.dp8;
+
+    /**
+     * Type 2 draws the bar on the video, which is dimmed but never light, so the app colors
+     * cannot be used. These are what YouTube puts on its own player overlays.
+     */
+    private static final int OVERLAY_SCRIM_COLOR = Color.argb(100, 0, 0, 0);
+    private static final int OVERLAY_BUTTON_COLOR = Color.argb(80, 255, 255, 255);
+    private static final int OVERLAY_PRIMARY_COLOR = Color.WHITE;
+    private static final int OVERLAY_SECONDARY_COLOR = Color.argb(179, 255, 255, 255);
 
     /**
      * Derived from the height, so the thumbnail keeps 16:9 through every frame of the morph.
@@ -125,6 +141,7 @@ public final class MinimalMiniplayerPatch {
     private static final Rect morphCurrent = new Rect();
 
     private static WeakReference<ViewGroup> controlsRef = new WeakReference<>(null);
+    private static WeakReference<View> barContainerRef = new WeakReference<>(null);
     private static WeakReference<TextView> titleRef = new WeakReference<>(null);
     private static WeakReference<TextView> subtitleRef = new WeakReference<>(null);
     private static WeakReference<ImageView> playPauseRef = new WeakReference<>(null);
@@ -140,6 +157,16 @@ public final class MinimalMiniplayerPatch {
     private static boolean ticking;
     private static boolean playing;
     private static boolean morphing;
+
+    /**
+     * Whether the bar container is currently moved in front of the player, and what it has to
+     * go back to. Putting it back matters more than moving it: left in front it also takes the
+     * taps meant for the expanded player.
+     */
+    private static boolean barDrawsOverPlayer;
+    @Nullable
+    private static Drawable originalBarBackground;
+    private static int barIndexInParent;
 
     /**
      * Set while pushing bounds of our own, which come back through the hook that reads them.
@@ -163,6 +190,12 @@ public final class MinimalMiniplayerPatch {
 
         try {
             controlsRef = new WeakReference<>(controlsLayout);
+            barContainerRef = new WeakReference<>(
+                    controlsLayout.getParent() instanceof View barContainer ? barContainer : null);
+            // A new watch page brings its own views, so what the last ones were left in
+            // does not carry over.
+            barDrawsOverPlayer = false;
+            originalBarBackground = null;
 
             TextView title = Utils.getChildViewByResourceName(controlsLayout, "floaty_title");
             titleRef = new WeakReference<>(title);
@@ -196,8 +229,18 @@ public final class MinimalMiniplayerPatch {
                 subtitleBar.setVisibility(View.VISIBLE);
             }
 
-            startAfterVideo(title);
-            startAfterVideo(subtitleBar);
+            if (getCurrentMiniplayerType() == MINIMAL_BAR) {
+                startAfterVideo(title);
+                startAfterVideo(subtitleBar);
+            } else {
+                // The contents sit on the video rather than beside it, so it is dimmed and
+                // they take the overlay colors.
+                controlsLayout.setBackgroundColor(OVERLAY_SCRIM_COLOR);
+                setTextColor(title, OVERLAY_PRIMARY_COLOR);
+                setTextColor(subtitle, OVERLAY_SECONDARY_COLOR);
+                setIconColor(playPause);
+                setIconColor(close);
+            }
 
             // Nothing drives this anymore and it would only draw an empty track.
             View progressBar = Utils.getChildViewByResourceName(controlsLayout, "progress_bar");
@@ -336,7 +379,7 @@ public final class MinimalMiniplayerPatch {
      */
     public static void applyVideoRect(Rect videoRect) {
         try {
-            if (ENABLED && inBarMode()) {
+            if (getCurrentMiniplayerType() == MINIMAL_BAR && inBarMode()) {
                 final int videoWidth = videoWidthFor(currentBounds.height());
 
                 videoRect.set(currentBounds);
@@ -744,41 +787,109 @@ public final class MinimalMiniplayerPatch {
     }
 
     /**
-     * The player view covers the whole bar, so it is clipped down to the video box. The box is
-     * taken from the shape the player currently has.
+     * The player draws outside the bar, so it is clipped down to the box the video belongs in.
+     * The box is taken from the shape the player currently has.
      */
     private static void updateVideoClip() {
-        View watchPlayer = watchPlayerRef.get();
-        if (watchPlayer == null) {
-            ViewGroup controls = controlsRef.get();
-            if (controls == null) return;
+        View watchPlayer = watchPlayer();
+        if (watchPlayer == null) return;
 
-            watchPlayer = Utils.getChildViewByResourceName(controls.getRootView(), "watch_player");
-            if (watchPlayer == null) {
-                Logger.printDebug(() -> "Could not find the player view");
-                return;
-            }
-            watchPlayerRef = new WeakReference<>(watchPlayer);
+        // Not from showControls(), which YouTube bypasses when it puts the bar up itself.
+        // Called for every bounds change and tick, and does nothing once the order is set.
+        if (getCurrentMiniplayerType() == MINIMAL_BAR_2) {
+            setBarDrawsOverPlayer(inBarMode());
         }
 
         final int height = currentBounds.height();
-        final int videoWidth = videoWidthFor(height);
-
-        // Only a bar is far wider than the video it holds. Going by the state instead would
-        // uncover the video for as long as the player still holds the bar shape. Ads are
-        // uncovered as well, their skip button is part of the overlay this hides.
-        if (!inBarMode() || height <= 0 || currentBounds.width() <= videoWidth || isSkipAdShown()) {
-            watchPlayer.setClipBounds(null);
-            return;
-        }
-
         final int width = currentBounds.width();
-        clipBounds.set(0, 0, videoWidth, height);
-        if (Utils.isRightToLeftLocale()) {
-            clipBounds.offset(width - videoWidth, 0);
+
+        if (getCurrentMiniplayerType() == MINIMAL_BAR) {
+            final int videoWidth = videoWidthFor(height);
+
+            // Only a bar is far wider than the video it holds. Going by the state instead would
+            // uncover the video for as long as the player still holds the bar shape. Ads are
+            // uncovered as well, their skip button is part of the overlay this hides.
+            if (!inBarMode() || height <= 0 || width <= videoWidth || isSkipAdShown()) {
+                watchPlayer.setClipBounds(null);
+                return;
+            }
+
+            clipBounds.set(0, 0, videoWidth, height);
+            if (Utils.isRightToLeftLocale()) {
+                clipBounds.offset(width - videoWidth, 0);
+            }
+        } else {
+            // Type 2 keeps the video as the background of the bar, and YouTube lays it out at
+            // the full bar width in 16:9, far taller than the bar. Uncut it hangs over the
+            // feed and the navigation bar.
+            if (!inBarMode() || height <= 0) {
+                watchPlayer.setClipBounds(null);
+                return;
+            }
+
+            clipBounds.set(0, 0, width, height);
         }
 
         watchPlayer.setClipBounds(clipBounds);
+    }
+
+    @Nullable
+    private static View watchPlayer() {
+        View watchPlayer = watchPlayerRef.get();
+        if (watchPlayer != null) return watchPlayer;
+
+        ViewGroup controls = controlsRef.get();
+        if (controls == null) return null;
+
+        watchPlayer = Utils.getChildViewByResourceName(controls.getRootView(), "watch_player");
+        if (watchPlayer == null) {
+            Logger.printDebug(() -> "Could not find the player view");
+            return null;
+        }
+
+        watchPlayerRef = new WeakReference<>(watchPlayer);
+
+        return watchPlayer;
+    }
+
+    /**
+     * Type 2 draws the bar on the video, and the player holds a {@code SurfaceView} that punches
+     * a hole through whatever was drawn before it, so the bar has to come after the player in the
+     * watch layout. Elevation is no use, this layout draws its children through its own
+     * {@code drawChild} and does not order them by it.
+     * <p>
+     * The order is put back when the bar goes away. It also decides who gets a touch first, and
+     * a bar left in front swallows the taps that should reach the expanded player.
+     */
+    private static void setBarDrawsOverPlayer(boolean over) {
+        if (barDrawsOverPlayer == over) return;
+
+        View barContainer = barContainerRef.get();
+        if (barContainer == null || !(barContainer.getParent() instanceof ViewGroup parent)) return;
+
+        if (over) {
+            barIndexInParent = parent.indexOfChild(barContainer);
+            if (barIndexInParent < 0) return;
+
+            originalBarBackground = barContainer.getBackground();
+            // Here the video is the background of the bar.
+            barContainer.setBackground(null);
+            parent.bringChildToFront(barContainer);
+        } else {
+            barContainer.setBackground(originalBarBackground);
+            originalBarBackground = null;
+
+            final int childCount = parent.getChildCount();
+            if (parent.indexOfChild(barContainer) == childCount - 1) {
+                // Moving everything the bar jumped over back to the front, in order, leaves
+                // the bar itself at the index it started from.
+                for (int i = barIndexInParent; i < childCount - 1; i++) {
+                    parent.bringChildToFront(parent.getChildAt(barIndexInParent));
+                }
+            }
+        }
+
+        barDrawsOverPlayer = over;
     }
 
     private static void showControls(boolean show) {
@@ -836,17 +947,23 @@ public final class MinimalMiniplayerPatch {
      * cannot use, so the background is replaced rather than kept.
      */
     private static void styleButton(View button) {
+        final boolean overVideo = getCurrentMiniplayerType() == MINIMAL_BAR_2;
+
         GradientDrawable circle = new GradientDrawable();
         circle.setShape(GradientDrawable.OVAL);
-        // Follows the theme, so a custom app color carries into the bar.
-        circle.setColor(Utils.adjustColorBrightness(
-                ThemeUtils.getAppBackgroundColor(), 0.9f, 1.25f));
+        // Beside the video this follows the theme, so a custom app color carries into the bar.
+        // On the video it is a translucent scrim instead, which the video shows through.
+        circle.setColor(overVideo
+                ? OVERLAY_BUTTON_COLOR
+                : Utils.adjustColorBrightness(ThemeUtils.getAppBackgroundColor(), 0.9f, 1.25f));
 
         // 48dp is the touch target, 40dp the button, which also keeps the circles apart.
         Drawable inset = new InsetDrawable(circle, Dim.dp4);
         Drawable ripple = new InsetDrawable(new ShapeDrawable(new OvalShape()), Dim.dp4);
 
-        final int foreground = ThemeUtils.getAppForegroundColor();
+        final int foreground = overVideo
+                ? OVERLAY_PRIMARY_COLOR
+                : ThemeUtils.getAppForegroundColor();
         RippleDrawable background = new RippleDrawable(
                 ColorStateList.valueOf(Color.argb(60, Color.red(foreground),
                         Color.green(foreground), Color.blue(foreground))),
@@ -869,10 +986,10 @@ public final class MinimalMiniplayerPatch {
                 ? "player_play_pause_vector_transition"
                 : "player_pause_play_vector_transition";
 
-        Drawable drawable = ResourceUtils.getDrawable(name + "_delhi");
-        if (drawable == null) {
-            drawable = ResourceUtils.getDrawable(name);
-        }
+        final int drawableIdentifier = ResourceUtils.getDrawableIdentifier(name + "_delhi");
+        Drawable drawable = drawableIdentifier == 0
+                ? ResourceUtils.getDrawable(name)
+                : Utils.getContext().getDrawable(drawableIdentifier);
 
         if (!(drawable instanceof AnimatedVectorDrawable morph)) return false;
 
@@ -882,14 +999,29 @@ public final class MinimalMiniplayerPatch {
         return true;
     }
 
+    private static void setTextColor(@Nullable TextView view, int color) {
+        if (view != null) {
+            view.setTextColor(color);
+        }
+    }
+
+    /**
+     * The bar layout tints its icons with the app text color, which is dark in a light theme.
+     */
+    private static void setIconColor(@Nullable ImageView view) {
+        if (view != null) {
+            view.setImageTintList(ColorStateList.valueOf(OVERLAY_PRIMARY_COLOR));
+        }
+    }
+
     /**
      * The bar layout still points at the thin icon set, so the bold one is used when the app has it.
      */
     private static void setIcon(ImageView view, String boldName, String legacyName) {
-        Drawable drawable = ResourceUtils.getDrawable(boldName);
-        if (drawable == null) {
-            drawable = ResourceUtils.getDrawable(legacyName);
-        }
+        final int drawableIdentifier = ResourceUtils.getDrawableIdentifier(boldName);
+        Drawable drawable = drawableIdentifier == 0
+                ? ResourceUtils.getDrawable(legacyName)
+                : Utils.getContext().getDrawable(drawableIdentifier);
 
         if (drawable != null) {
             view.setImageDrawable(drawable);

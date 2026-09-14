@@ -607,6 +607,9 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_threshold_title">آستانهٔ اندازهٔ کشیدن</string>
   <string name="morphe_swipe_threshold_summary">فاصلهٔ لازم برای کشیدن پیش از فعال‌شدن تنظیم را تعیین کنید</string>
   <string name="morphe_swipe_volume_distance_title">حساسیت کشیدن برای بلندی صدا</string>
+  <string name="morphe_swipe_volume_distance_summary">مقدار‌های بالاتر به ازای هر گام بلندی از صدا، نیاز به کشیدن انگشت بیشتری دارند</string>
+  <string name="morphe_swipe_volume_steps_title">گام‌های حجم</string>
+  <string name="morphe_swipe_volume_steps_entry_default">دستگاه پیش‌فرض</string>
   <string name="morphe_swipe_brightness_sensitivity_title">حساسیت کشیدن برای روشنایی</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">مقادیر بالاتر، برای هر گام روشنایی به کشیدن بیشتری نیاز دارند</string>
   <string name="morphe_swipe_speed_sensitivity_title">حساسیت کشیدن برای سرعت</string>
@@ -1034,11 +1037,12 @@ Second \"item\" text"</string>
   <string name="morphe_miniplayer_type_entry_0">غیرفعال</string>
   <string name="morphe_miniplayer_type_entry_1">پیش‌فرض</string>
   <string name="morphe_miniplayer_type_entry_2">حداقلی</string>
-  <string name="morphe_miniplayer_type_entry_3">تبلت</string>
-  <string name="morphe_miniplayer_type_entry_4">مدرن ۱</string>
-  <string name="morphe_miniplayer_type_entry_5">مدرن ۲</string>
-  <string name="morphe_miniplayer_type_entry_6">مدرن ۳</string>
-  <string name="morphe_miniplayer_type_entry_7">مدرن ۴</string>
+  <string name="morphe_miniplayer_type_entry_3">مینیمال ۲</string>
+  <string name="morphe_miniplayer_type_entry_4">تبلت</string>
+  <string name="morphe_miniplayer_type_entry_5">مدرن ۱</string>
+  <string name="morphe_miniplayer_type_entry_6">مدرن ۲</string>
+  <string name="morphe_miniplayer_type_entry_7">مدرن ۳</string>
+  <string name="morphe_miniplayer_type_entry_8">مدرن ۴</string>
   <string name="morphe_miniplayer_disable_rounded_corners_title">غیرفعال‌کردن گوشه‌های گرد</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_title">غیرفعال‌کردن کشیدن و رهاکردن</string>
   <string name="morphe_miniplayer_disable_drag_and_drop_summary">از کشیدن پخش‌کنندهٔ کوچک‌شده به گوشه‌های مختلف صفحه جلوگیری می‌کند</string>

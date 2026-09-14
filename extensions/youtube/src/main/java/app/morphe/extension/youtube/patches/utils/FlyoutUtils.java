@@ -852,7 +852,7 @@ public final class FlyoutUtils {
         if (senderView != null) {
             ViewParent parent = senderView.getParent();
             int parentCount = 0;
-            while (parent != null && !parent.toString().contains("id.results")) {
+            while (parent != null && !parent.toString().contains("results")) {
                 parentCount++;
 
                 ViewParent loggingParent = parent;
