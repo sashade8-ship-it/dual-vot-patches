@@ -606,8 +606,10 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_text_overlay_size_summary">选择要在工具栏中显示的组件</string>
   <string name="morphe_swipe_threshold_title">滑动幅度阈值</string>
   <string name="morphe_swipe_threshold_summary">设置触发调整所需的滑动距离</string>
-  <string name="morphe_swipe_volume_sensitivity_title">音量滑动灵敏度</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">较高的值会增加每次滑动的音量变化</string>
+  <string name="morphe_swipe_volume_distance_title">音量滑动灵敏度</string>
+  <string name="morphe_swipe_volume_distance_summary">数值越高，每个音量步进所需的滑动次数越多。</string>
+  <string name="morphe_swipe_volume_steps_title">音量步进</string>
+  <string name="morphe_swipe_volume_steps_entry_default">设备默认</string>
   <string name="morphe_swipe_brightness_sensitivity_title">亮度滑动灵敏度</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">较高的值需要每个亮度级别更多地滑动</string>
   <string name="morphe_swipe_speed_sensitivity_title">速度滑动灵敏度</string>

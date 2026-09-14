@@ -606,8 +606,10 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Προσαρμόστε το μέγεθος του κειμένου που εμφανίζεται στην οθόνη (1-30)</string>
   <string name="morphe_swipe_threshold_title">Κατώτατο όριο μεγέθους σάρωσης</string>
   <string name="morphe_swipe_threshold_summary">Ορίστε την απαιτούμενη απόσταση μεταφοράς πριν ενεργοποιηθεί μια ρύθμιση</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Ευαισθησία σάρωσης έντασης ήχου</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Υψηλότερες τιμές αυξάνουν την αλλαγή της έντασης ήχου ανά σάρωση</string>
+  <string name="morphe_swipe_volume_distance_title">Ευαισθησία σάρωσης έντασης ήχου</string>
+  <string name="morphe_swipe_volume_distance_summary">Οι υψηλότερες τιμές απαιτούν περισσότερο σύρσιμο ανά βήμα έντασης.</string>
+  <string name="morphe_swipe_volume_steps_title">Βήματα έντασης</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Προεπιλογή συσκευής</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Ευαισθησία σάρωσης φωτεινότητας</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Υψηλότερες τιμές απαιτούν περισσότερες σαρώσεις ανά βήμα φωτεινότητας</string>
   <string name="morphe_swipe_speed_sensitivity_title">Ευαισθησία σάρωσης ταχύτητας</string>

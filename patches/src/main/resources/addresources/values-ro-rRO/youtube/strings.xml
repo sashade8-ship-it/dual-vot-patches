@@ -606,8 +606,10 @@ Pentru a remedia, activează 'Falsifică fluxurile video' și schimbă 'clientul
   <string name="morphe_swipe_text_overlay_size_summary">Ascunde butonul Descărcare</string>
   <string name="morphe_swipe_threshold_title">Pragul mărimii glisării</string>
   <string name="morphe_swipe_threshold_summary">Ascunde butonul Hype</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Sensibilitate glisare volum</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Valorile mai mari cresc modificarea volumului per glisare</string>
+  <string name="morphe_swipe_volume_distance_title">Sensibilitate glisare volum</string>
+  <string name="morphe_swipe_volume_distance_summary">Valorile mai mari necesită mai multă glisare pe pas de volum</string>
+  <string name="morphe_swipe_volume_steps_title">Trepte de volum</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Implicit dispozitiv</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilitate glisare luminozitate</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Valorile mai mari necesită mai multe glisări pentru fiecare pas de luminozitate</string>
   <string name="morphe_swipe_speed_sensitivity_title">Sensibilitate glisare viteză</string>

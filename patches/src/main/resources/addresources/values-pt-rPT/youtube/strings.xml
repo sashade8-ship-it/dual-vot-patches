@@ -606,8 +606,10 @@ Para corrigir isso, ative 'Falsificar streams de vídeo' e altere o 'Cliente pad
   <string name="morphe_swipe_text_overlay_size_summary">Ajuste o tamanho do texto na tela (1-30)</string>
   <string name="morphe_swipe_threshold_title">Limite de magnitude</string>
   <string name="morphe_swipe_threshold_summary">Defina a distância de deslize necessária antes que um ajuste seja acionado</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Sensibilidade ao deslizar o volume</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Valores mais altos aumentam a mudança de volume por deslize</string>
+  <string name="morphe_swipe_volume_distance_title">Sensibilidade ao deslizar o volume</string>
+  <string name="morphe_swipe_volume_distance_summary">Valores mais altos exigem mais deslizes por passo de volume.</string>
+  <string name="morphe_swipe_volume_steps_title">Passos de volume</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Padrão do dispositivo</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilidade ao deslizar do brilho</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Valores mais altos exigem mais deslizes por etapa de brilho</string>
   <string name="morphe_swipe_speed_sensitivity_title">Sensibilidade ao deslizar da velocidade</string>

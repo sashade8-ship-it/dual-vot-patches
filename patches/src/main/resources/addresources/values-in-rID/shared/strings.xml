@@ -188,8 +188,8 @@ Harap perbarui MicroG ke versi terbaru v%2s."</string>
 
 %1s
 
-Ketuk untuk mencopot pemasangannya, lalu buka kembali aplikasi ini dan instal MicroG RE."</string>
-  <string name="gms_core_dialog_uninstall_text">Hapus pemasangan</string>
+Ketuk untuk mencopot, lalu buka kembali aplikasi ini dan pasang MicroG RE."</string>
+  <string name="gms_core_dialog_uninstall_text">Copot</string>
   <!-- "Don't kill my app" should be kept in English and not translated -->
   <string name="gms_core_dialog_not_whitelisted_not_allowed_in_background_message">"MicroG tidak memiliki izin untuk berjalan di latar belakang.
 
@@ -220,11 +220,11 @@ Jika optimasi baterai tidak diubah, Anda mungkin mengalami:
   <string name="morphe_link_handling_open">Buka pengaturan</string>
   <!-- misc.checks.experimentalAppNoticePatch -->
   <string name="morphe_experimental_app_version_dialog_title">🚨 Peringatan Eksperimental 🚨</string>
-  <string name="morphe_experimental_app_version_dialog_message">"Anda menggunakan versi aplikasi eksperimental ⚠️ &lt;b&gt;%1$s&lt;/b&gt;
+  <string name="morphe_experimental_app_version_dialog_message">"Anda menggunakan versi aplikasi eksperimental dari ⚠️ &lt;b&gt;%1$s&lt;/b&gt;
 &lt;br/&gt;&lt;br/&gt;
 🔧 Harap bersiap dengan perilaku aplikasi yang tidak biasa atau bug yang belum teridentifikasi selagi kami menyempurnakan tambalan untuk versi aplikasi ini.
 &lt;br/&gt;&lt;br/&gt;
-Jika Anda ingin pengalaman tanpa kendala, silakan &lt;b&gt;copot pemasangan&lt;/b&gt; ini dan tambal versi aplikasi yang direkomendasikan ✅ &lt;b&gt;%2$s&lt;/b&gt;"</string>
+Jika Anda ingin pengalaman tanpa kendala, silakan &lt;b&gt;copot&lt;/b&gt; ini dan tambal versi aplikasi yang direkomendasikan ✅ &lt;b&gt;%2$s&lt;/b&gt;"</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ Saya ingin versi eksperimental</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ Saya ingin versi stabil</string>
 </resources>

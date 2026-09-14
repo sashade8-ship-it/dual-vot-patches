@@ -606,8 +606,10 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Налаштовує розміру тексту на екрані (від 1 до 30)</string>
   <string name="morphe_swipe_threshold_title">Поріг величини жесту</string>
   <string name="morphe_swipe_threshold_summary">Встановлює мінімальну дистанцію свайпу для спрацювання</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Чутливість жесту гучності</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Вищі значення збільшують зміну гучності за один свайп</string>
+  <string name="morphe_swipe_volume_distance_title">Чутливість жесту гучності</string>
+  <string name="morphe_swipe_volume_distance_summary">Вищі значення потребують більше свайпів на крок гучності</string>
+  <string name="morphe_swipe_volume_steps_title">Кроки гучності</string>
+  <string name="morphe_swipe_volume_steps_entry_default">За замовчуванням пристрою</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Чутливість жесту яскравості</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Вищі значення потребують більшого свайпу на один крок яскравості</string>
   <string name="morphe_swipe_speed_sensitivity_title">Чутливість жесту швидкості</string>

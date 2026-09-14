@@ -606,8 +606,10 @@ Pour corriger cela, activez 'Falsifier les flux vidéo' et définissez 'Client p
   <string name="morphe_swipe_text_overlay_size_summary">Ajustez la taille du texte à l\'écran (1-30)</string>
   <string name="morphe_swipe_threshold_title">Seuil de magnitude du balayage</string>
   <string name="morphe_swipe_threshold_summary">Définir la distance de balayage nécessaire avant qu\'un ajustement ne soit déclenché</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Sensibilité du balayage de volume</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Des valeurs plus élevées augmentent le changement de volume par balayage</string>
+  <string name="morphe_swipe_volume_distance_title">Sensibilité du balayage de volume</string>
+  <string name="morphe_swipe_volume_distance_summary">Des valeurs plus élevées nécessitent plus de balayages par pas de volume</string>
+  <string name="morphe_swipe_volume_steps_title">Pas de volume</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Par défaut de l’appareil</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilité du balayage de luminosité</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Des valeurs plus élevées nécessitent plus de balayages par palier de luminosité</string>
   <string name="morphe_swipe_speed_sensitivity_title">Sensibilité du balayage de vitesse</string>

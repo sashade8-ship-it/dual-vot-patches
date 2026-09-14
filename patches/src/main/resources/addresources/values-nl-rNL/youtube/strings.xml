@@ -606,8 +606,10 @@ Om dit op te lossen, schakel 'Videostreams vervalsen' in en wijzig de 'Standaard
   <string name="morphe_swipe_text_overlay_size_summary">Pas de grootte van de tekst op het scherm aan (1-30)</string>
   <string name="morphe_swipe_threshold_title">Drempelwaarde swipe-sterkte</string>
   <string name="morphe_swipe_threshold_summary">Stel de benodigde veegafstand in voordat een aanpassing wordt geactiveerd</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Gevoeligheid volumegest</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Hogere waarden vergroten de volume verandering per veegbeweging</string>
+  <string name="morphe_swipe_volume_distance_title">Gevoeligheid volumegest</string>
+  <string name="morphe_swipe_volume_distance_summary">Hogere waarden vereisen meer vegen per volumestap</string>
+  <string name="morphe_swipe_volume_steps_title">Volumestappen</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Apparaatstandaard</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Veeggevoeligheid helderheid</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Hogere waarden vereisen meer vegen per helderheidsstap</string>
   <string name="morphe_swipe_speed_sensitivity_title">Veeggevoeligheid snelheid</string>

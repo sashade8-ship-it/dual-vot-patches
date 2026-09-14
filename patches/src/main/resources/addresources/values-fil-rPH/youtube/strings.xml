@@ -606,8 +606,10 @@ Para ayusin ito, i-on ang 'I-spoof ang mga video stream' at baguhin ang 'Default
   <string name="morphe_swipe_text_overlay_size_summary">Ayusin ang laki ng text sa screen (1-30)</string>
   <string name="morphe_swipe_threshold_title">Threshold ng swipe magnitude</string>
   <string name="morphe_swipe_threshold_summary">Itakda ang kinakailangang distansya ng swipe bago ma-trigger ang isang pagsasaayos</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Sensitivity ng swipe volume</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Ang mas mataas na halaga ay nagpapataas ng pagbabago sa volume sa bawat paggalaw</string>
+  <string name="morphe_swipe_volume_distance_title">Sensitivity ng pag-swipe ng volume</string>
+  <string name="morphe_swipe_volume_distance_summary">Ang mas mataas na halaga ay nangangailangan ng mas maraming pag-swipe sa bawat hakbang ng volume</string>
+  <string name="morphe_swipe_volume_steps_title">Mga hakbang ng volume</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Default ng device</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensitibidad ng paggalaw ng liwanag</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Ang mas mataas na halaga ay nangangailangan ng mas maraming paggalaw sa bawat hakbang ng liwanag</string>
   <string name="morphe_swipe_speed_sensitivity_title">Sensitibidad ng paggalaw ng bilis</string>

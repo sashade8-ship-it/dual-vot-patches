@@ -606,8 +606,10 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Prilagodite velikost besedila na zaslonu (1-30)</string>
   <string name="morphe_swipe_threshold_title">Prag drsenja</string>
   <string name="morphe_swipe_threshold_summary">Nastavite zahtevano razdaljo drsenja, preden se sproži prilagoditev</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Občutljivost drsenja glasnosti</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Višje vrednosti povečajo spremembo glasnosti na pomik</string>
+  <string name="morphe_swipe_volume_distance_title">Občutljivost potega za glasnost</string>
+  <string name="morphe_swipe_volume_distance_summary">Višje vrednosti zahtevajo več potegov za posamezni korak glasnosti.</string>
+  <string name="morphe_swipe_volume_steps_title">Koraki glasnosti</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Privzeto za napravo</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Občutljivost geste za svetlost</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Višje vrednosti zahtevajo več pomikov za vsako stopnjo svetlosti</string>
   <string name="morphe_swipe_speed_sensitivity_title">Občutljivost geste za hitrost</string>

@@ -606,8 +606,10 @@ För att åtgärda detta, aktivera 'Spoofa videoströmmar' och ändra 'Standardk
   <string name="morphe_swipe_text_overlay_size_summary">Justera textstorleken på skärmen (1–30)</string>
   <string name="morphe_swipe_threshold_title">Tröskelvärde för svep</string>
   <string name="morphe_swipe_threshold_summary">Ange det avstånd som krävs för att svepgesten ska utlösa en justering</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Svepkänslighet för volymgest</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Högre värden ökar volymändringen per svep</string>
+  <string name="morphe_swipe_volume_distance_title">Svepkänslighet för volymgest</string>
+  <string name="morphe_swipe_volume_distance_summary">Högre värden kräver fler svepningar per volymsteg</string>
+  <string name="morphe_swipe_volume_steps_title">Volymsteg</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Enhetsstandard</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Svepkänslighet för ljusstyrkegest</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Högre värden kräver mer svepande per ljusstyrkesteg</string>
   <string name="morphe_swipe_speed_sensitivity_title">Svepkänslighet för hastighetsgest</string>

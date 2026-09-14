@@ -605,8 +605,10 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_swipe_text_overlay_size_summary">Điều chỉnh kích thước văn bản trên màn hình (1-30)</string>
   <string name="morphe_swipe_threshold_title">Độ rộng ngưỡng vuốt</string>
   <string name="morphe_swipe_threshold_summary">Đặt khoảng cách tối thiếu để vuốt có ý nghĩa</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Độ nhạy vuốt âm lượng</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Giá trị càng cao, mức âm lượng tăng/giảm càng nhanh mỗi khi vuốt</string>
+  <string name="morphe_swipe_volume_distance_title">Độ nhạy vuốt âm lượng</string>
+  <string name="morphe_swipe_volume_distance_summary">Giá trị cao hơn yêu cầu vuốt nhiều hơn cho mỗi bước âm lượng</string>
+  <string name="morphe_swipe_volume_steps_title">Các bước âm lượng</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Mặc định của thiết bị</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Độ nhạy vuốt chỉnh độ sáng</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Giá trị càng cao, vuốt càng dài hơn để chỉnh độ sáng</string>
   <string name="morphe_swipe_speed_sensitivity_title">Độ nhạy vuốt chỉnh tốc độ phát</string>

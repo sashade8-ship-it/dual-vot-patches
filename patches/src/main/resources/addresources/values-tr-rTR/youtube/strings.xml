@@ -606,8 +606,10 @@ Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini etkinleştir
   <string name="morphe_swipe_text_overlay_size_summary">Ekrandaki metin boyutunu ayarlayın (1-30)</string>
   <string name="morphe_swipe_threshold_title">Kaydırma büyüklük eşiği</string>
   <string name="morphe_swipe_threshold_summary">Bir ayarlamanın tetiklenmesi için gerekli kaydırma mesafesini ayarlayın</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Ses kaydırma hassasiyeti</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Daha yüksek değerler, kaydırma başına ses değişiklik miktarını artırır</string>
+  <string name="morphe_swipe_volume_distance_title">Ses kaydırma hassasiyeti</string>
+  <string name="morphe_swipe_volume_distance_summary">Daha yüksek değerler, ses seviyesi adımı başına daha fazla kaydırma gerektirir.</string>
+  <string name="morphe_swipe_volume_steps_title">Ses seviyesi adımları</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Cihaz varsayılanı</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Parlaklık kaydırma hassasiyeti</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Daha yüksek değerler, her parlaklık adımı için daha fazla kaydırma gerektirir</string>
   <string name="morphe_swipe_speed_sensitivity_title">Hız kaydırma hassasiyeti</string>

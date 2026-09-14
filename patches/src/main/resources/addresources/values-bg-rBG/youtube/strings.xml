@@ -606,8 +606,10 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Скрий бутона „Докладвай“</string>
   <string name="morphe_swipe_threshold_title">Порог за свайп</string>
   <string name="morphe_swipe_threshold_summary">Скрий бутона „Remix“</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Чувствителност на свайп за volum</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">По-високите стойности увеличават промяната в силата на звука при всяко плъзгане.</string>
+  <string name="morphe_swipe_volume_distance_title">Чувствителност на плъзването за силата на звука</string>
+  <string name="morphe_swipe_volume_distance_summary">По-високите стойности изискват повече плъзване за стъпка на силата на звука</string>
+  <string name="morphe_swipe_volume_steps_title">Стъпки на силата на звука</string>
+  <string name="morphe_swipe_volume_steps_entry_default">По подразбиране на устройството</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Чувствителност при плъзгане за яркост</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">По-високите стойности изискват повече плъзгане за всяка стъпка на яркостта.</string>
   <string name="morphe_swipe_speed_sensitivity_title">Чувствителност при плъзгане за скорост</string>

@@ -606,8 +606,10 @@ Chun é seo a shocrú, cuir 'Spoof video streams' ar siúl agus athraigh an 'Cli
   <string name="morphe_swipe_text_overlay_size_summary">Coigeartaigh méid an téacs ar an scáileán (1-30)</string>
   <string name="morphe_swipe_threshold_title">Tairseach méide svaidhpeála</string>
   <string name="morphe_swipe_threshold_summary">Socraigh an fad svaidhpeála riachtanach sula ngníomhaítear coigeartú</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Íogaireacht svaidhpeáil toirte</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Méadaíonn luachanna níos airde an t-athrú toirte in aghaidh an svaidhpeála.</string>
+  <string name="morphe_swipe_volume_distance_title">Íogaireacht svaidhpeáil toirte</string>
+  <string name="morphe_swipe_volume_distance_summary">Éilíonn luachanna níos airde níos mó sleamhnú in aghaidh na céime toirte</string>
+  <string name="morphe_swipe_volume_steps_title">Céimeanna toirte</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Réamhshocrú an ghléis</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Íogaireacht gile svaidhpeála</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Éilíonn luachanna níos airde níos mó svaidhpeála in aghaidh gach céim gile</string>
   <string name="morphe_swipe_speed_sensitivity_title">Íogaireacht luas-swipeála</string>

@@ -606,8 +606,10 @@ Chcete-li to opravit, zapněte 'Spoof video streams' a změňte 'Default client'
   <string name="morphe_swipe_text_overlay_size_summary">Upravte velikost textu na obrazovce (1–30)</string>
   <string name="morphe_swipe_threshold_title">Práh vynucení gesta</string>
   <string name="morphe_swipe_threshold_summary">Nastavte požadovanou vzdálenost posouvání před spuštěním úpravy</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Citlivost přejetí hlasitosti</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Vyšší hodnoty zvyšují změnu hlasitosti na jedno přejetí</string>
+  <string name="morphe_swipe_volume_distance_title">Citlivost přejetí hlasitosti</string>
+  <string name="morphe_swipe_volume_distance_summary">Vyšší hodnoty vyžadují více přejetí na krok hlasitosti</string>
+  <string name="morphe_swipe_volume_steps_title">Kroky hlasitosti</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Výchozí nastavení zařízení</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Citlivost přejetí jasu</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Vyšší hodnoty vyžadují více přejetí pro každý krok jasu</string>
   <string name="morphe_swipe_speed_sensitivity_title">Citlivost přejetí rychlosti</string>

@@ -606,8 +606,10 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_swipe_text_overlay_size_summary">ऑन-स्क्रीन टेक्स्ट के आकार को समायोजित करें (1-30)</string>
   <string name="morphe_swipe_threshold_title">स्वाइप मात्रा सीमा</string>
   <string name="morphe_swipe_threshold_summary">समायोजन को ट्रिगर करने से पहले आवश्यक स्वाइप दूरी सेट करें</string>
-  <string name="morphe_swipe_volume_sensitivity_title"> Volume स्वाइप संवेदनशीलता</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">उच्च मान प्रति स्वाइप वॉल्यूम परिवर्तन को बढ़ाते हैं</string>
+  <string name="morphe_swipe_volume_distance_title"> Volume स्वाइप संवेदनशीलता</string>
+  <string name="morphe_swipe_volume_distance_summary">उच्च मानों के लिए प्रति वॉल्यूम चरण अधिक स्वाइपिंग की आवश्यकता होती है</string>
+  <string name="morphe_swipe_volume_steps_title">वॉल्यूम चरण</string>
+  <string name="morphe_swipe_volume_steps_entry_default">डिवाइस डिफ़ॉल्ट</string>
   <string name="morphe_swipe_brightness_sensitivity_title">चमक स्वाइप संवेदनशीलता</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">उच्च मान प्रति चमक चरण के लिए अधिक स्वाइपिंग की आवश्यकता होती है</string>
   <string name="morphe_swipe_speed_sensitivity_title">स्पीड स्वाइप संवेदनशीलता</string>

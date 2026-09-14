@@ -604,8 +604,10 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <string name="morphe_swipe_text_overlay_size_summary">Stilltu stærð textans á skjánum (1-30)</string>
   <string name="morphe_swipe_threshold_title">Markmið sveipa</string>
   <string name="morphe_swipe_threshold_summary">Stilltu nauðsynlegt stríðufjarlægð áður en stilling gerist</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Hljóðstyrk næmis sveipa</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Hærri skilvirki auka hljóðbreytingu á birtanki</string>
+  <string name="morphe_swipe_volume_distance_title">Næmi hljóðstyrksstrokunar</string>
+  <string name="morphe_swipe_volume_distance_summary">Hærri gildi krefjast meiri strokunar fyrir hvert hljóðstyrksþrep.</string>
+  <string name="morphe_swipe_volume_steps_title">Hljóðstyrksþrep</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Sjálfgefið fyrir tækið</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Áframbreytingar á skærleika</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Hærri skilvirki krefjast meira dýfbjarg á breytingar</string>
   <string name="morphe_swipe_speed_sensitivity_title">Hraðafræðilegar áhrif</string>

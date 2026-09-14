@@ -606,8 +606,10 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_swipe_text_overlay_size_summary">スワイプ オーバーレイに表示される文字の大きさを設定します (1-30)</string>
   <string name="morphe_swipe_threshold_title">スワイプのしきい値</string>
   <string name="morphe_swipe_threshold_summary">ジェスチャーとして判定される最小のスワイプ距離を設定します</string>
-  <string name="morphe_swipe_volume_sensitivity_title">音量ジェスチャーのスワイプ感度</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">この値を大きくすると、スワイプによる音量の変化量が大きくなります</string>
+  <string name="morphe_swipe_volume_distance_title">音量ジェスチャーのスワイプ感度</string>
+  <string name="morphe_swipe_volume_distance_summary">値が大きいほど、音量ステップごとのスワイプ量が多くなります。</string>
+  <string name="morphe_swipe_volume_steps_title">音量ステップ</string>
+  <string name="morphe_swipe_volume_steps_entry_default">端末のデフォルト</string>
   <string name="morphe_swipe_brightness_sensitivity_title">明るさジェスチャーのスワイプ感度</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">この値を大きくすると、明るさを変化させるために必要なスワイプ距離が大きくなり、細かい調整がスムーズになります</string>
   <string name="morphe_swipe_speed_sensitivity_title">再生速度ジェスチャーのスワイプ感度</string>

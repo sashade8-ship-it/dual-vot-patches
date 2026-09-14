@@ -606,8 +606,10 @@ Per risolvere, attiva 'Spoof dei flussi video' e cambia il 'Client predefinito' 
   <string name="morphe_swipe_text_overlay_size_summary">Regola la dimensione del testo sullo schermo (1-30)</string>
   <string name="morphe_swipe_threshold_title">Ampiezza limite della soglia di scorrimento</string>
   <string name="morphe_swipe_threshold_summary">Imposta la distanza di scorrimento necessaria prima che venga attivata una regolazione</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Sensibilità allo scorrimento del volume</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Valori più alti aumentano la variazione di volume per scorrimento</string>
+  <string name="morphe_swipe_volume_distance_title">Sensibilità allo scorrimento del volume</string>
+  <string name="morphe_swipe_volume_distance_summary">Valori più alti richiedono più trascinamenti per passo del volume.</string>
+  <string name="morphe_swipe_volume_steps_title">Passi del volume</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Predefinito del dispositivo</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilità allo scorrimento della luminosità</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Valori più elevati richiedono più scorrimenti per ogni passo di luminosità</string>
   <string name="morphe_swipe_speed_sensitivity_title">Sensibilità allo scorrimento della velocità</string>

@@ -606,8 +606,10 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Dostosuj rozmiar tekstu wyświetlanego na ekranie (1-30)</string>
   <string name="morphe_swipe_threshold_title">Próg aktywacji gestu</string>
   <string name="morphe_swipe_threshold_summary">Ustaw wymagany dystans przesunięcia palcem, zanim rozpocznie się regulacja</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Czułość gestu głośności</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Wyższe wartości zwiększają zmianę głośności przy przesunięciu palcem</string>
+  <string name="morphe_swipe_volume_distance_title">Czułość gestu głośności</string>
+  <string name="morphe_swipe_volume_distance_summary">Wyższe wartości wymagają większej liczby przeciągnięć na krok głośności</string>
+  <string name="morphe_swipe_volume_steps_title">Kroki głośności</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Domyślnie dla urządzenia</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Czułość gestu jasności</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Wyższe wartości wymagają dłuższego przesunięcia przy zmianie poziomu jasności</string>
   <string name="morphe_swipe_speed_sensitivity_title">Czułość gestu prędkości</string>

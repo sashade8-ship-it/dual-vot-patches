@@ -606,8 +606,10 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_text_overlay_size_summary">調整螢幕上文字的大小 (1-30)</string>
   <string name="morphe_swipe_threshold_title">滑動幅度臨界點</string>
   <string name="morphe_swipe_threshold_summary">設定觸發調整所需滑動距離</string>
-  <string name="morphe_swipe_volume_sensitivity_title">音量滑動靈敏度</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">較高的數值會增加每次滑動的音量變化</string>
+  <string name="morphe_swipe_volume_distance_title">音量滑動靈敏度</string>
+  <string name="morphe_swipe_volume_distance_summary">數值越高，每段音量需要滑動更多次</string>
+  <string name="morphe_swipe_volume_steps_title">音量階級</string>
+  <string name="morphe_swipe_volume_steps_entry_default">裝置預設</string>
   <string name="morphe_swipe_brightness_sensitivity_title">亮度滑動靈敏度</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">較高的數值需要更頻繁的滑動才能改變亮度</string>
   <string name="morphe_swipe_speed_sensitivity_title">速度滑動靈敏度</string>

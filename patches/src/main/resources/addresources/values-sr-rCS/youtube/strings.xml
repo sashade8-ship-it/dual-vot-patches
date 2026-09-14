@@ -606,8 +606,10 @@ Da biste to popravili, uključite 'Spoof video strimovi' i promenite 'Podrazumev
   <string name="morphe_swipe_text_overlay_size_summary">Podesite veličinu teksta na ekranu (1-30)</string>
   <string name="morphe_swipe_threshold_title">Prag trajanja prevlačenja</string>
   <string name="morphe_swipe_threshold_summary">Podesite potrebnu udaljenost prevlačenja pre nego što se aktivira podešavanje</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Osetljivost prevlačenja za jačinu zvuka</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Više vrednosti povećavaju promenu jačine zvuka po prevlačenju</string>
+  <string name="morphe_swipe_volume_distance_title">Osetljivost prevlačenja za jačinu zvuka</string>
+  <string name="morphe_swipe_volume_distance_summary">Veće vrednosti zahtevaju više prevlačenja po koraku jačine.</string>
+  <string name="morphe_swipe_volume_steps_title">Koraci jačine</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Podrazumevano za uređaj</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Osetljivost prevlačenja za osvetljenost</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Više vrednosti zahtevaju više prevlačenja po koraku osvetljenosti</string>
   <string name="morphe_swipe_speed_sensitivity_title">Osetljivost prevlačenja za brzinu</string>

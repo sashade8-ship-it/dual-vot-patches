@@ -606,8 +606,10 @@ Promene uključuju:
   <string name="morphe_swipe_text_overlay_size_summary">Подесите величину текста на екрану (1-30)</string>
   <string name="morphe_swipe_threshold_title">Праг трајања превлачења</string>
   <string name="morphe_swipe_threshold_summary">Подесите потребну удаљеност превлачења пре него што се покрене подешавање</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Осетљивост превлачења за јачину звука</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Веће вредности повећавају промену јачине звука при сваком превлачењу</string>
+  <string name="morphe_swipe_volume_distance_title">Осетљивост превлачења за јачину звука</string>
+  <string name="morphe_swipe_volume_distance_summary">Веће вредности захтевају висе превлачења по степену јачине звука</string>
+  <string name="morphe_swipe_volume_steps_title">Степени јачине звука</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Подразумевано за уређај</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Осетљивост превлачења за осветљење</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Веће вредности захтевају више превлачења по кораку осветљења</string>
   <string name="morphe_swipe_speed_sensitivity_title">Осетљивост превлачења за брзину</string>

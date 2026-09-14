@@ -605,8 +605,10 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
   <string name="morphe_swipe_text_overlay_size_summary">Sesuaikan ukuran teks di layar (1-30)</string>
   <string name="morphe_swipe_threshold_title">Ambang batas magnitudo usap</string>
   <string name="morphe_swipe_threshold_summary">Atur jarak usap yang diperlukan agar penyesuaian dimulai</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Sensitivitas volume usap</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Nilai yang lebih tinggi meningkatkan perubahan volume per usapan</string>
+  <string name="morphe_swipe_volume_distance_title">Sensitivitas volume usap</string>
+  <string name="morphe_swipe_volume_distance_summary">Nilai yang lebih tinggi memerlukan lebih banyak gesekan per langkah volume</string>
+  <string name="morphe_swipe_volume_steps_title">Langkah volume</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Default perangkat</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensitivitas usap kecerahan</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Nilai yang lebih tinggi memerlukan lebih banyak usapan per langkah kecerahan</string>
   <string name="morphe_swipe_speed_sensitivity_title">Sensitivitas usap kecepatan</string>
@@ -1150,7 +1152,7 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <string name="morphe_disable_notification_media_seekbar_title">Nonaktifkan bilah geser</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Mencegah penyeretan bilah geser di layar kunci dan panel pemberitahuan</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
-  <string name="microg_offline_account_login_error">Jika Anda baru saja mengubah detail login akun Anda, hapus pemasangan dan ulangi memasang MicroG.</string>
+  <string name="microg_offline_account_login_error">Jika Anda baru saja mengubah detail login akun Anda, copot dan pasang ulang MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->
   <string name="morphe_bypass_link_redirects_title">Lewati pengalihan tautan</string>
   <string name="morphe_bypass_link_redirects_summary">Membuka tautan asli secara langsung, melewati tautan pelacakan (youtube.com/redirect)</string>

@@ -606,8 +606,10 @@ Ak to chcete vyriešiť, zapnite 'Spoofovať video streamy' a zmeňte 'Predvolen
   <string name="morphe_swipe_text_overlay_size_summary">Upravte veľkosť textu na obrazovke (1-30)</string>
   <string name="morphe_swipe_threshold_title">Prah posúvania</string>
   <string name="morphe_swipe_threshold_summary">Nastavte požadovanú vzdialenosť posúvania pred spustením úpravy</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Citlivosť ovládania hlasitosti posúvaním</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Vyššie hodnoty zvýšia zmenu hlasitosti na jedno posunutie</string>
+  <string name="morphe_swipe_volume_distance_title">Citlivosť ovládania hlasitosti posúvaním</string>
+  <string name="morphe_swipe_volume_distance_summary">Vyššie hodnoty vyžadujú viac potiahnutí na jeden krok hlasitosti</string>
+  <string name="morphe_swipe_volume_steps_title">Kroky hlasitosti</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Predvolené zariadenia</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Citlivosť posúvania jasu</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Vyššie hodnoty vyžadujú viac posúvania pre každý krok jasu</string>
   <string name="morphe_swipe_speed_sensitivity_title">Citlivosť posúvania rýchlosti</string>

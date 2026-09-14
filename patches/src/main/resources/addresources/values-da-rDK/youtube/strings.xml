@@ -606,8 +606,10 @@ For at løse dette skal du slå 'Spoof video streams' til og ændre 'Standardkli
   <string name="morphe_swipe_text_overlay_size_summary">Skjul Rapport knap</string>
   <string name="morphe_swipe_threshold_title">Stryg størrelse tærskel</string>
   <string name="morphe_swipe_threshold_summary">Indstil den nødvendige strygedistance, før en justering udløses</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Lydstyrke strygefølsomhed</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Højere værdier øger lydstyrkeændringen pr. strygning</string>
+  <string name="morphe_swipe_volume_distance_title">Lydstyrke strygefølsomhed</string>
+  <string name="morphe_swipe_volume_distance_summary">Højere værdier kræver mere strygning pr. lydstyrketrin.</string>
+  <string name="morphe_swipe_volume_steps_title">Lydstyrketrin</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Enhedens standard</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Lysstyrke strygefølsomhed</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Højere værdier kræver flere strygninger pr. lysstyrketrin</string>
   <string name="morphe_swipe_speed_sensitivity_title">Hastigheds strygefølsomhed</string>

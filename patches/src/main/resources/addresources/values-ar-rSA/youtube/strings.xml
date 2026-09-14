@@ -610,8 +610,10 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_swipe_text_overlay_size_summary">ضبط حجم النص على الشاشة (1-30)</string>
   <string name="morphe_swipe_threshold_title">مقدار حد التمرير</string>
   <string name="morphe_swipe_threshold_summary">تعيين مسافة التمرير المطلوبة قبل بدء التعديل</string>
-  <string name="morphe_swipe_volume_sensitivity_title">حساسية تمرير مستوى الصوت</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">القيم الأعلى تزيد من تغيُّر مستوى الصوت مع كل تمريرة</string>
+  <string name="morphe_swipe_volume_distance_title">حساسية تمرير مستوى الصوت</string>
+  <string name="morphe_swipe_volume_distance_summary">تتطلب القيم الأعلى مزيدًا من التمرير لكل خطوة مستوى الصوت</string>
+  <string name="morphe_swipe_volume_steps_title">خطوات مستوى الصوت</string>
+  <string name="morphe_swipe_volume_steps_entry_default">إعداد الجهاز الافتراضي</string>
   <string name="morphe_swipe_brightness_sensitivity_title">حساسية تمرير مستوى السطوع</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">القيم الأعلى تتطلب التمرير أكثر لكل مستوى سطوع</string>
   <string name="morphe_swipe_speed_sensitivity_title">حساسية تمرير السرعة</string>

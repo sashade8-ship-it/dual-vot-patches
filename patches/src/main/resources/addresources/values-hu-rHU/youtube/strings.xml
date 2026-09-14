@@ -606,8 +606,10 @@ A javításhoz kapcsolja be a „Videostreamek meghamisítása” beállítást,
   <string name="morphe_swipe_text_overlay_size_summary">Állítsa be a képernyőn megjelenő szöveg méretét (1-30)</string>
   <string name="morphe_swipe_threshold_title">A csúsztatás küszöbértéke</string>
   <string name="morphe_swipe_threshold_summary">Állítsa be a szükséges gesztus távolságot, mielőtt a beállítás érvénybe lép</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Hangerő-görgetés érzékenysége</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">A nagyobb értékek növelik a hangerőváltozást egy húzás során</string>
+  <string name="morphe_swipe_volume_distance_title">Hangerő-görgetés érzékenysége</string>
+  <string name="morphe_swipe_volume_distance_summary">A magasabb értékek több húzást igényelnek hangerőlépésenként.</string>
+  <string name="morphe_swipe_volume_steps_title">Hangerőlépések</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Eszköz alapértelmezése</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Fényerő-húzásérzékenység</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">A nagyobb értékek több húzást igényelnek a fényerő lépésenkénti változásához</string>
   <string name="morphe_swipe_speed_sensitivity_title">Sebesség-húzásérzékenység</string>

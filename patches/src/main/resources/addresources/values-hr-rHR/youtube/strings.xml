@@ -608,8 +608,10 @@ Da biste to popravili, uključite \"Lažiranje video streamova\" i promijenite \
   <string name="morphe_swipe_text_overlay_size_summary">Prilagodite veličinu teksta na zaslonu (1-30)</string>
   <string name="morphe_swipe_threshold_title">Trajanje popisa jakosti</string>
   <string name="morphe_swipe_threshold_summary">Postavite potrebnu udaljenost povlačenja prije nego što se aktivira prilagodba</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Vrijednost popisa jakosti</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Veće vrijednosti povećavaju promjenu glasnoće po povlačenju</string>
+  <string name="morphe_swipe_volume_distance_title">Osjetljivost klizanja za glasnoću</string>
+  <string name="morphe_swipe_volume_distance_summary">Veće vrijednosti zahtijevaju više klizanja po koraku glasnoće</string>
+  <string name="morphe_swipe_volume_steps_title">Koraci glasnoće</string>
+  <string name="morphe_swipe_volume_steps_entry_default">Zadano za uređaj</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Osjetljivost povlačenja svjetline</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Veće vrijednosti zahtijevaju više povlačenja po koraku svjetline</string>
   <string name="morphe_swipe_speed_sensitivity_title">Osjetljivost povlačenja brzine</string>

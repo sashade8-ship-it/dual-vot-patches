@@ -608,8 +608,10 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_text_overlay_size_summary">Отрегулируйте размер текста на экране (от 1 до 30)</string>
   <string name="morphe_swipe_threshold_title">Порог величины жеста</string>
   <string name="morphe_swipe_threshold_summary">Установите необходимое расстояние смахивания перед срабатыванием регулировки</string>
-  <string name="morphe_swipe_volume_sensitivity_title">Чувствительность жеста регулировки громкости</string>
-  <string name="morphe_swipe_volume_sensitivity_summary">Более высокие значения увеличивают изменение громкости при каждом жесте</string>
+  <string name="morphe_swipe_volume_distance_title">Чувствительность жеста регулировки громкости</string>
+  <string name="morphe_swipe_volume_distance_summary">Более высокие значения требуют больше смахиваний на шаг громкости</string>
+  <string name="morphe_swipe_volume_steps_title">Шаги громкости</string>
+  <string name="morphe_swipe_volume_steps_entry_default">По умолчанию</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Чувствительность жеста регулировки яркости</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Более высокие значения требуют большего свайпа для каждого шага яркости</string>
   <string name="morphe_swipe_speed_sensitivity_title">Чувствительность жеста скорости</string>
