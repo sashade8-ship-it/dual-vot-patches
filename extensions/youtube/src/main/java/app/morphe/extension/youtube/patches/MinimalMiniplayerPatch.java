@@ -106,6 +106,10 @@ public final class MinimalMiniplayerPatch {
         return Math.round(height * 16f / 9f);
     }
 
+    private static int videoHeightFor(int width) {
+        return Math.round(width * 9f / 16f);
+    }
+
     private static final long TICK_MILLIS = 500;
 
     /**
@@ -233,7 +237,7 @@ public final class MinimalMiniplayerPatch {
                 startAfterVideo(title);
                 startAfterVideo(subtitleBar);
             } else {
-                // The contents sit on the video rather than beside it, so it is dimmed and
+                // The contents sit on the video rather than beside it, so it is dimmed, and
                 // they take the overlay colors.
                 controlsLayout.setBackgroundColor(OVERLAY_SCRIM_COLOR);
                 setTextColor(title, OVERLAY_PRIMARY_COLOR);
@@ -379,7 +383,9 @@ public final class MinimalMiniplayerPatch {
      */
     public static void applyVideoRect(Rect videoRect) {
         try {
-            if (getCurrentMiniplayerType() == MINIMAL_BAR && inBarMode()) {
+            if (!inBarMode()) return;
+
+            if (getCurrentMiniplayerType() == MINIMAL_BAR) {
                 final int videoWidth = videoWidthFor(currentBounds.height());
 
                 videoRect.set(currentBounds);
@@ -388,6 +394,16 @@ public final class MinimalMiniplayerPatch {
                 } else {
                     videoRect.right = videoRect.left + videoWidth;
                 }
+            } else {
+                // Type 2 spans the bar with the video. YouTube fits anything that is not 16:9
+                // inside the bar instead, and the miniplayer has no background of its own, so
+                // the feed shows through beside it. The overflow is clipped away again.
+                final int overflow = Math.max(0,
+                        videoHeightFor(currentBounds.width()) - currentBounds.height()) / 2;
+
+                videoRect.set(currentBounds);
+                videoRect.top -= overflow;
+                videoRect.bottom += overflow;
             }
         } catch (Exception ex) {
             Logger.printException(() -> "applyVideoRect failure", ex);
@@ -609,7 +625,9 @@ public final class MinimalMiniplayerPatch {
         cancelMorph();
         morphFrom.set(currentBounds);
         morphTo.set(currentBounds);
-        morphTo.offset(0, currentBounds.height());
+        // Clear of the screen, not one bar height down. That only reaches the navigation bar,
+        // which the bar then sits behind until YouTube is done closing after the click below.
+        morphTo.offset(0, Dim.getScreenHeight() - currentBounds.top);
 
         runMorph(false, () -> clickModernButton(modernCloseButtonRef, "close"));
     }
