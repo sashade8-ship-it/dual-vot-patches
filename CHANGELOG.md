@@ -1,3 +1,13 @@
+## 1.43.1-dev.2-dualvot.8.5.2 (2026-09-15)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.43.1-dev.2](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.43.1-dev.2).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.43.1-dev.1-dualvot.8.5.2 (2026-09-15)
 
 ### Automated Morphe update
@@ -341,6 +351,14 @@
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
 
+## [1.43.1-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.43.1-dev.1...v1.43.1-dev.2) (2026-09-15)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Minimal miniplayer:** Improved type 2 bar UI ([299af68](https://github.com/MorpheApp/morphe-patches/commit/299af68d5e90326a76febbaa0a28bbe7b7600986))
+* **YouTube - Miniplayer:** Default size setting is not grayed out with modern minimal ([aa9bc8e](https://github.com/MorpheApp/morphe-patches/commit/aa9bc8e6b51f81b9dc497f006372efb0a13f798b))
+* **YouTube:** Deprecated componentHost extension ([c42f07d](https://github.com/MorpheApp/morphe-patches/commit/c42f07df385805aa22744fd2bc169f77b24a77c0))
+
 ## [1.43.1-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.43.0...v1.43.1-dev.1) (2026-09-15)
 
 ### 🐛 Bug Fixes
@@ -352,7 +370,7 @@
 
 ### 🚀 Updated App Support
 
-* **YouTube:** Add experimental support for `21.47.42` ([#2962](https://github.com/MorpheApp/morphe-patches/issues/2962)) ([9418faa](https://github.com/MorpheApp/morphe-patches/commit/9418faaf46610875781a4952a379523c09a462db))
+* **YouTube:** Add experimental support for `21.37.42` ([#2962](https://github.com/MorpheApp/morphe-patches/issues/2962)) ([9418faa](https://github.com/MorpheApp/morphe-patches/commit/9418faaf46610875781a4952a379523c09a462db))
 
 ## [1.43.0](https://github.com/MorpheApp/morphe-patches/compare/v1.42.0...v1.43.0) (2026-09-14)
 
