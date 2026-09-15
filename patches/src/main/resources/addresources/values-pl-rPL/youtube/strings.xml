@@ -381,6 +381,12 @@ Zgłoszenia są publiczne i podlegają weryfikacji przed dodaniem kanału do lis
   <string name="morphe_channel_whitelist_channel_added">Dodano kanał do białej listy</string>
   <string name="morphe_channel_whitelist_channel_removed">Usunięto kanał z białej listy</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
+  <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Szukaj w kanale</string>
+  <string name="morphe_channel_search_summary">Wyszukiwanie przy otwartym kanale obejmuje wyłącznie ten kanał</string>
+  <string name="morphe_channel_search_results_title">Wyszukiwanie: %s</string>
+  <string name="morphe_channel_search_no_results">Nic nie znaleziono na tym kanale</string>
+  <string name="morphe_channel_search_failed">Nie udało się przeszukać tego kanału</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Skopiowano link do schowka</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Skopiowano link z czasem do schowka</string>

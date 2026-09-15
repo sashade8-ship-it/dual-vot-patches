@@ -380,6 +380,12 @@ As denúncias são públicas e passam por revisão antes de um canal ser adicion
   <string name="morphe_channel_whitelist_channel_added">Canal adicionado à lista branca</string>
   <string name="morphe_channel_whitelist_channel_removed">Canal removido da lista branca</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
+  <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Pesquisar no canal</string>
+  <string name="morphe_channel_search_summary">Ao pesquisar com um canal aberto, a busca é realizada apenas nesse canal</string>
+  <string name="morphe_channel_search_results_title">Pesquisar: %s</string>
+  <string name="morphe_channel_search_no_results">Nada encontrado neste canal</string>
+  <string name="morphe_channel_search_failed">Não foi possível pesquisar neste canal</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link copiado para a área de transferência</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Link com timestamp copiado para a área de transferência</string>
