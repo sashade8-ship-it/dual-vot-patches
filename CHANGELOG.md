@@ -1,3 +1,13 @@
+## 1.44.0-dev.2-dualvot.8.5.2 (2026-09-16)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.44.0-dev.2](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.44.0-dev.2).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.44.0-dev.1-dualvot.8.5.2 (2026-09-15)
 
 ### Automated Morphe update
@@ -360,6 +370,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.44.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.1...v1.44.0-dev.2) (2026-09-16)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Channel search:** Search is scoped to a channel after leaving its page ([#2997](https://github.com/MorpheApp/morphe-patches/issues/2997)) ([3cc051b](https://github.com/MorpheApp/morphe-patches/commit/3cc051bfffaaee21a579a059a9be198b6d887f74))
+* **YouTube - Hide layout components:** Hide movie shelf in search results ([#2933](https://github.com/MorpheApp/morphe-patches/issues/2933)) ([032e0f5](https://github.com/MorpheApp/morphe-patches/commit/032e0f51f6ccf2ebbaff0c4d57f2f12b32bd8be8))
+* **YouTube:** Player seekbar is not shown for some users ([bb2b91e](https://github.com/MorpheApp/morphe-patches/commit/bb2b91e118f1d3e6766340226e4697c758e8efe3))
+
+### ✨ New Features
+
+* **YouTube Music - Third-party lyrics:** Add syllable lyrics, new providers, romanized lyrics, mediasession lyrics, miniplayer lyrics ([#2625](https://github.com/MorpheApp/morphe-patches/issues/2625)) ([ea883b3](https://github.com/MorpheApp/morphe-patches/commit/ea883b34f6a750eb3f6b954742d41088b6b99879))
 
 ## [1.44.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.43.1-dev.2...v1.44.0-dev.1) (2026-09-15)
 
