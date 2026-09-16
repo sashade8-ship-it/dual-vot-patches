@@ -382,6 +382,11 @@ Pampubliko ang mga ulat at sinusuri ang mga ito bago idagdag ang isang channel s
   <string name="morphe_channel_whitelist_channel_removed">Tinanggal ang channel sa whitelist</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Maghanap sa loob ng channel</string>
+  <string name="morphe_channel_search_summary">Ang paghahanap habang bukas ang isang channel ay sa channel na iyon lamang</string>
+  <string name="morphe_channel_search_results_title">Paghahanap: %s</string>
+  <string name="morphe_channel_search_no_results">Walang nahanap sa channel na ito</string>
+  <string name="morphe_channel_search_failed">Hindi ma-search ang channel na ito</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Nakalink sa clipboard</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Nakalink na may timestamp sa clipboard</string>

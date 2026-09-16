@@ -124,3 +124,9 @@ internal object NewPlayerOverlaysFeatureFlagFingerprint : Fingerprint(
         literal(45752335L)
     )
 )
+
+internal object PlayerSeekbarFeatureFlagFingerprint : Fingerprint(
+    filters = listOf(
+        literal(45698813)
+    )
+)

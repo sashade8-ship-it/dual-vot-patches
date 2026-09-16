@@ -382,6 +382,11 @@ Hlášení jsou veřejná a před přidáním kanálu do seznamu jsou kontrolov�
   <string name="morphe_channel_whitelist_channel_removed">Kanál byl odebrán ze seznamu povolených</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Hledat v kanálu</string>
+  <string name="morphe_channel_search_summary">Když je otevřený kanál, hledá se pouze v tomto kanálu.</string>
+  <string name="morphe_channel_search_results_title">Hledat: %s</string>
+  <string name="morphe_channel_search_no_results">Na tomto kanálu se nic nenašlo</string>
+  <string name="morphe_channel_search_failed">Tento kanál se nepodařilo prohledat</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Odkaz zkopírován do schránky</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Odkaz s časovým razítkem zkopírován do schránky</string>

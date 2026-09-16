@@ -382,6 +382,11 @@ Laporan bersifat publik dan ditinjau sebelum saluran ditambahkan ke daftar. Peng
   <string name="morphe_channel_whitelist_channel_removed">Saluran dihapus dari daftar putih</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Cari di dalam saluran</string>
+  <string name="morphe_channel_search_summary">Pencarian saat saluran terbuka hanya menelusuri saluran tersebut</string>
+  <string name="morphe_channel_search_results_title">Cari: %s</string>
+  <string name="morphe_channel_search_no_results">Tidak ada yang ditemukan di saluran ini</string>
+  <string name="morphe_channel_search_failed">Tidak dapat mencari di saluran ini</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Tautan disalin ke papan klip</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Tautan dengan tanda waktu disalin ke papan klip</string>

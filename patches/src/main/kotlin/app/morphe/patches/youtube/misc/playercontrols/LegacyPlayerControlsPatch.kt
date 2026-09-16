@@ -193,14 +193,25 @@ private var newPlayerControlsOverride = false
 
 context(patchContext: BytecodePatchContext)
 internal fun disableNewPlayerControlsFeatureFlag() {
-    if (!is_21_04_or_greater || newPlayerControlsOverride) return
+    if (newPlayerControlsOverride) return
     newPlayerControlsOverride = true
 
-    NewPlayerOverlaysFeatureFlagFingerprint.matchAll().forEach {
-        it.method.insertLiteralOverride(
-            it.instructionMatches.first().index,
-            false
-        )
+    if (is_20_31_or_greater) {
+        PlayerSeekbarFeatureFlagFingerprint.matchAll().forEach {
+            it.method.insertLiteralOverride(
+                it.instructionMatches.first().index,
+                "$EXTENSION_CLASS->forcePlayerSeekbar(Z)Z"
+            )
+        }
+    }
+
+    if (is_21_04_or_greater) {
+        NewPlayerOverlaysFeatureFlagFingerprint.matchAll().forEach {
+            it.method.insertLiteralOverride(
+                it.instructionMatches.first().index,
+                false
+            )
+        }
     }
 }
 

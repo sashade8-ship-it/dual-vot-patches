@@ -382,6 +382,11 @@ Tá tuairiscí poiblí agus déantar athbhreithniú orthu sula gcuirtear cainéa
   <string name="morphe_channel_whitelist_channel_removed">Baineadh an cainéal den liosta bán</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Cuardaigh sa chainéal</string>
+  <string name="morphe_channel_search_summary">Nuair a bhíonn cainéal ar oscailt, ní dhéantar ach an cainéal sin a chuardach</string>
+  <string name="morphe_channel_search_results_title">Cuardach: %s</string>
+  <string name="morphe_channel_search_no_results">Níor aimsíodh aon rud ar an gcainéal seo</string>
+  <string name="morphe_channel_search_failed">Níorbh fhéidir an cainéal seo a chuardach</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Nasc cóipeáilte chuig an ghearrthaisce</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Nasc le stampa ama cóipeáilte chuig an ghearrthaisce</string>

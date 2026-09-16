@@ -384,6 +384,11 @@ Prijave su javne i pregledavaju se prije nego što se kanal doda na popis. Uklan
   <string name="morphe_channel_whitelist_channel_removed">Kanal je uklonjen s popisa dopuštenih</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Pretraži unutar kanala</string>
+  <string name="morphe_channel_search_summary">Dok je kanal otvoren, pretraga se ograničava samo na taj kanal</string>
+  <string name="morphe_channel_search_results_title">Pretraga: %s</string>
+  <string name="morphe_channel_search_no_results">Na ovom kanalu nema rezultata</string>
+  <string name="morphe_channel_search_failed">Pretraživanje ovog kanala nije uspjelo</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Poveznica kopirana u međuspremnik</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Poveznica s vremenskim žigom kopirana u međuspremnik</string>

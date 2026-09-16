@@ -382,6 +382,11 @@ Raportit ovat julkisia ja ne tarkistetaan ennen kuin kanava lisätään listaan.
   <string name="morphe_channel_whitelist_channel_removed">Kanava poistettu valkolistalta</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Hae kanavasta</string>
+  <string name="morphe_channel_search_summary">Kun kanava on avoinna, haku kohdistuu vain kyseiseen kanavaan.</string>
+  <string name="morphe_channel_search_results_title">Haku: %s</string>
+  <string name="morphe_channel_search_no_results">Tältä kanavalta ei löytynyt mitään</string>
+  <string name="morphe_channel_search_failed">Tätä kanavaa ei voitu hakea</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Linkki kopioitu leikepöydälle</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Linkki aikaleimalla kopioitu leikepöydälle</string>

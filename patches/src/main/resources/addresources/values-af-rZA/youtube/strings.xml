@@ -382,6 +382,11 @@ Verslae is openbaar en word nagegaan voordat 'n kanaal by 'n lys gevoeg word. Ve
   <string name="morphe_channel_whitelist_channel_removed">Kanaal van witlys verwyder</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Soek binne die kanaal</string>
+  <string name="morphe_channel_search_summary">Wanneer jy soek terwyl \'n kanaal oop is, word slegs daardie kanaal deursoek</string>
+  <string name="morphe_channel_search_results_title">Soek: %s</string>
+  <string name="morphe_channel_search_no_results">Niks op hierdie kanaal gevind nie</string>
+  <string name="morphe_channel_search_failed">Kon nie hierdie kanaal deursoek nie</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Skakel na knipbord gekopieer</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Skakel met tydstempel na knipbord gekopieer</string>

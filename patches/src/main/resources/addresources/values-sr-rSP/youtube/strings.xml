@@ -382,6 +382,11 @@ Promene uključuju:
   <string name="morphe_channel_whitelist_channel_removed">Канал је уклоњен са беле листе</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Претрага у оквиру канала</string>
+  <string name="morphe_channel_search_summary">Док је канал отворен, претрага се врши само у том каналу.</string>
+  <string name="morphe_channel_search_results_title">Претрага: %s</string>
+  <string name="morphe_channel_search_no_results">Ништа није пронађено на овом каналу</string>
+  <string name="morphe_channel_search_failed">Претрага овог канала није успела</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Линк копиран у привремену меморију</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Линк са временском ознаком копиран у привремену меморију</string>

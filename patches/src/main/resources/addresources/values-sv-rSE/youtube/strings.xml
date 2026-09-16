@@ -382,6 +382,11 @@ Rapporter är offentliga och granskas innan en kanal läggs till i en lista. Bor
   <string name="morphe_channel_whitelist_channel_removed">Kanal borttagen från vitlistan</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Sök i kanalen</string>
+  <string name="morphe_channel_search_summary">När du söker medan en kanal är öppen söker du bara i den kanalen</string>
+  <string name="morphe_channel_search_results_title">Sök: %s</string>
+  <string name="morphe_channel_search_no_results">Inget hittades i den här kanalen</string>
+  <string name="morphe_channel_search_failed">Det gick inte att söka i den här kanalen</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Länk kopierad till urklipp</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Länk med tidsstämpel kopierad till urklipp</string>

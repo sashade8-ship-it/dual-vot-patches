@@ -383,6 +383,11 @@ Meldungen sind öffentlich und werden überprüft, bevor ein Kanal zu einer List
   <string name="morphe_channel_whitelist_channel_removed">Kanal von der Whitelist entfernt</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Diesen Kanal durchsuchen</string>
+  <string name="morphe_channel_search_summary">Wenn ein Kanal geöffnet ist, wird bei der Suche nur dieser Kanal durchsucht.</string>
+  <string name="morphe_channel_search_results_title">Suche: %s</string>
+  <string name="morphe_channel_search_no_results">Auf diesem Kanal wurde nichts gefunden.</string>
+  <string name="morphe_channel_search_failed">Dieser Kanal konnte nicht durchsucht werden.</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link in Zwischenablage kopiert</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Link mit Zeitstempel in Zwischenablage kopiert</string>

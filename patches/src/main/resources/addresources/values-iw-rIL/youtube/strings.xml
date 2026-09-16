@@ -382,6 +382,11 @@ Second \"item\" text"</string>
   <string name="morphe_channel_whitelist_channel_removed">הערוץ הוסר מהרשימה הלבנה</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">חיפוש בערוץ</string>
+  <string name="morphe_channel_search_summary">בזמן שערוץ פתוח, החיפוש מתבצע רק באותו ערוץ</string>
+  <string name="morphe_channel_search_results_title">חיפוש: %s</string>
+  <string name="morphe_channel_search_no_results">לא נמצא דבר בערוץ זה</string>
+  <string name="morphe_channel_search_failed">לא ניתן לחפש בערוץ זה</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">קישור הועתק ללוח הגזירים</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">קישור עם חותמת זמן הועתק ללוח הגזירים</string>

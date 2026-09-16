@@ -382,6 +382,11 @@ Second \"item\" text"</string>
   <string name="morphe_channel_whitelist_channel_removed">Канал видалено з білого списку</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">Пошук на каналі</string>
+  <string name="morphe_channel_search_summary">Пошук під час відкритого каналу шукає лише в цьому каналі</string>
+  <string name="morphe_channel_search_results_title">Пошук: %s</string>
+  <string name="morphe_channel_search_no_results">Нічого не знайдено на цьому каналі</string>
+  <string name="morphe_channel_search_failed">Не вдалося виконати пошук на цьому каналі</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Посилання скопійовано в буфер обміну</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Посилання з позначкою часу скопійовано в буфер обміну</string>
