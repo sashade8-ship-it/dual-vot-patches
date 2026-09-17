@@ -309,13 +309,46 @@ Varmistaaksesi, että scrobbling synkronoidaan taustatoiston aikana, varmista, e
   <string name="morphe_music_lyrics_enabled_title">Käytä kolmannen osapuolen lyriikoita</string>
   <string name="morphe_music_lyrics_enabled_summary">Näyttää lyriikoita kolmannen osapuolen palvelusta. Jos lyriikoita ei löydy, käytetään sisäänrakennettuja lyriikoita.</string>
   <string name="morphe_music_lyrics_section_service_title">Sanoituspalvelu</string>
+  <string name="morphe_music_lyrics_section_overlay_title">Päällekkäisnäyttö</string>
+  <string name="morphe_music_lyrics_section_sync_title">Synkronointi.</string>
   <string name="morphe_music_lyrics_section_about_title">Tietoja</string>
   <!-- Shown under the preference; the actual priority list is rendered live by the custom preference. -->
+  <string name="morphe_music_lyrics_source_summary">Napauta ▲/▼ asettaaksesi prioriteettijärjestyksen ja valintaruutua ottaaksesi kunkin palveluntarjoajan käyttöön tai poistaaksesi sen käytöstä.</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Kaikki palveluntarjoajat poistettu käytöstä — sisäänrakennetut ja upotetut sanoitukset.</string>
+  <string name="morphe_music_lyrics_source_reset_title">Palautetaanko palveluntarjoajien järjestys?</string>
+  <string name="morphe_music_lyrics_source_reset_message">Palauta palveluntarjoajat oletusarvoiseen prioriteettijärjestykseen.</string>
+  <string name="morphe_music_token_dialog_get_token">Hae tunnus.</string>
+  <string name="morphe_music_apple_music_token_dialog_instruction">"Liitä media-user-token-eväste music.apple.comista.
+
+Vaiheet:
+1. Kirjaudu music.apple.comiin käyttäjänä.
+2. Avaa DevTools → Sovellus → Evästeet → music.apple.com
+3. Kopioi arvo kohdasta \"media-user-token\""</string>
+  <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc […] Ilman sitä Lyricallyä käytetään varavaihtoehtona.</string>
+  <string name="morphe_music_deezer_arl_title">Deezer […] Kopioi \"arl\"-arvo.</string>
+  <string name="morphe_music_deezer_arl_toast_saved">Deezer: arl tallennettu.</string>
+  <string name="morphe_music_deezer_arl_toast_cleared">Virheellinen ARL, yritä uudelleen.</string>
+  <string name="morphe_music_musixmatch_token_title">Musixmatch […] Kopioi käyttäjätunnuksen arvo.</string>
+  <string name="morphe_music_musixmatch_token_dialog_hint">Virheellinen käyttäjätunnus, yritä uudelleen.</string>
+  <string name="morphe_music_youtube_cookies_title">YouTuben evästeet.</string>
+  <string name="morphe_music_youtube_cookies_dialog_instruction">"Liitä […] Kopioi koko evästerivi (avain=arvo-parit puolipisteillä erotettuina)
+
+Vaaditut evästeet: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID, LOGIN_INFO."</string>
+  <string name="morphe_music_youtube_cookies_toast_saved">YouTube: evästeet tallennettu.</string>
+  <string name="morphe_music_youtube_cookies_toast_cleared">YouTube: evästeet tyhjennetty.</string>
+  <string name="morphe_music_youtube_cookies_toast_invalid">YouTube: virheelliset evästeet — tarkista ja yritä uudelleen.</string>
   <!-- 'LRCLIB', 'KuGou', 'NetEase', 'QQ', 'BiniLyrics', 'Unison' and 'AMLL' are service names and must be kept untranslated -->
+  <string name="morphe_music_lyrics_source_entry_lrclib_then_kugou">LRCLIB, sitten QQ, sitten KuGou, sitten NetEase, sitten BiniLyrics, sitten Unison, sitten AMLL.</string>
   <string name="morphe_music_lyrics_tap_to_seek_title">Napauta riviä siirtyäksesi</string>
   <string name="morphe_music_lyrics_tap_to_seek_summary">Rivin napauttaminen hyppää siihen kohtaan kappaleessa</string>
   <string name="morphe_music_lyrics_show_copy_button_title">Näytä kopioi -painike</string>
+  <string name="morphe_music_lyrics_show_copy_button_summary">Napauta kopioidaksesi alkuperäiset sanoitukset pelkkänä tekstinä; pitkä painallus tallentaa raa\'an sanoituslähdetiedoston Lataukset-kansioon.</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Näytä käännä -painike</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Käännä sanoitukset palveluntarjoajan käännösten tai Google Kääntäjän avulla.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_title">Näytä romanisointipainike.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Romanisoi sanoitukset palveluntarjoajan romanisoinnin tai Google Kääntäjän avulla.</string>
+  <string name="morphe_music_lyrics_show_refresh_button_title">Napauta vaihtaaksesi seuraavaan sanoitusehdotukseen; pitkä painallus päivittää.</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">Tallennettu.</string>
   <string name="morphe_music_lyrics_text_size_title">Tekstin koko</string>
   <string name="morphe_music_lyrics_text_size_summary">Sanoitusten tekstin koko</string>
   <string name="morphe_music_lyrics_offset_ms_title">Aikasiirtymä</string>

@@ -38,6 +38,52 @@ Second \"item\" text"</string>
     <string name="morphe_external_downloader_action_button_summary">Uses your chosen external downloader instead of the stock Download action button</string>
     <string name="morphe_external_downloader_flyout_menu_title">Override Download menu</string>
     <string name="morphe_external_downloader_flyout_menu_summary">Uses your chosen external downloader instead of the stock Download flyout menu</string>
+    <string name="morphe_music_in_app_downloads_title">Download in app</string>
+    <string name="morphe_music_in_app_downloads_summary">Downloads audio inside YouTube Music instead of opening the external downloader app</string>
+    <string name="morphe_music_in_app_downloads_user_dialog_message">"In app downloads reuse the audio stream the app already resolved and require 'Spoof video streams' to be enabled.
+
+Tracks are saved to the private storage of the app and are deleted if YouTube Music is uninstalled.
+
+While this is on, the Downloads tab lists these tracks instead of the Music Premium offline library. Turning it off restores the tab, and Premium downloads are never touched."</string>
+    <string name="morphe_music_downloads_screen_title">Downloads</string>
+    <string name="morphe_music_downloads_empty">"No downloads
+Downloaded tracks appear here"</string>
+    <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
+    <string name="morphe_music_downloads_summary">%1$s tracks • %2$s MB</string>
+    <string name="morphe_music_downloads_search_hint">Search downloads</string>
+    <string name="morphe_music_downloads_sort">Sort</string>
+    <string name="morphe_music_downloads_sort_artist">Sort by artist</string>
+    <string name="morphe_music_downloads_sort_title">Sort by title</string>
+    <string name="morphe_music_downloads_sort_size">Sort by size</string>
+    <string name="morphe_music_downloads_delete_all">Delete all downloads</string>
+    <string name="morphe_music_downloads_delete_all_title">Delete all downloads?</string>
+    <string name="morphe_music_downloads_delete_all_message">All downloaded tracks will be deleted from this device</string>
+    <string name="morphe_music_downloads_all_deleted">Downloads deleted</string>
+    <string name="morphe_music_downloads_nothing_found">Nothing found</string>
+    <string name="morphe_music_downloads_actions_for">Actions for %s</string>
+    <string name="morphe_music_downloads_play">Play</string>
+    <string name="morphe_music_downloads_play_pause">Play or pause</string>
+    <string name="morphe_music_downloads_previous">Previous</string>
+    <string name="morphe_music_downloads_next">Next</string>
+    <string name="morphe_music_downloads_pause">Pause</string>
+    <string name="morphe_music_downloads_close">Close</string>
+    <string name="morphe_music_downloads_delete">Delete</string>
+    <string name="morphe_music_downloads_delete_track">Delete download</string>
+    <string name="morphe_music_downloads_delete_track_title">Delete download?</string>
+    <string name="morphe_music_downloads_delete_track_message">%s will be deleted from this device</string>
+    <string name="morphe_music_downloads_track_deleted">Download deleted</string>
+    <string name="morphe_music_downloads_track_delete_failed">Could not delete the download</string>
+    <string name="morphe_music_downloads_play_failed">Could not play the download</string>
+    <string name="morphe_music_downloads_notification_channel">Audio downloads</string>
+    <string name="morphe_music_downloads_playback_channel">Offline playback</string>
+    <string name="morphe_music_downloads_unknown_track">Could not identify the track to download</string>
+    <string name="morphe_music_downloads_already_running">Download already in progress</string>
+    <string name="morphe_music_downloads_already_saved">Already downloaded</string>
+    <string name="morphe_music_downloads_started">Download started</string>
+    <string name="morphe_music_downloads_starting">Starting download…</string>
+    <string name="morphe_music_downloads_progress">Downloading %s%%</string>
+    <string name="morphe_music_downloads_complete">Download complete</string>
+    <string name="morphe_music_downloads_failed">Download failed</string>
 
     <!-- misc.settings.settingsPatch -->
 
@@ -364,7 +410,7 @@ Steps:
 1. Sign in at music.apple.com as a member user
 2. Open DevTools → Application → Cookies → music.apple.com
 3. Copy the value of \"media-user-token\""</string>
-    <string name="morphe_music_apple_music_token_dialog_hint">media-user-token</string>
+    <string name="morphe_music_apple_music_token_dialog_hint" translatable="false">media-user-token</string>
     <string name="morphe_music_apple_music_token_toast_saved">Apple Music: media-user-token saved</string>
     <string name="morphe_music_apple_music_token_toast_cleared">Apple Music: media-user-token cleared</string>
     <string name="morphe_music_apple_music_token_toast_invalid">Apple Music: invalid media-user-token — please check and try again</string>
@@ -387,7 +433,7 @@ Steps:
 1. Sign in at deezer.com
 2. Open DevTools → Application → Cookies → deezer.com
 3. Copy the value of \"arl\""</string>
-    <string name="morphe_music_deezer_arl_dialog_hint">arl</string>
+    <string name="morphe_music_deezer_arl_dialog_hint" translatable="false">arl</string>
     <string name="morphe_music_deezer_arl_toast_saved">Deezer: arl saved</string>
     <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl cleared</string>
     <string name="morphe_music_deezer_arl_toast_invalid">Deezer: invalid arl — please check and try again</string>

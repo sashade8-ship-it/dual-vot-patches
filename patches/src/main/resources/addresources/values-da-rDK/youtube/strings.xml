@@ -508,8 +508,12 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Denne video er allerede gemt i afspilningslisten til senere</string>
   <string name="morphe_save_to_watch_later_error_toast">Kunne ikke gemme denne video i afspilningslisten til senere</string>
   <string name="morphe_save_to_watch_later_flyout_title">Gem til Se senere</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">Vis knappen Gem til Se senere i afspillerens indstillingsmenu</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">Giver mulighed for at gemme den aktuelle video i \'Se senere\' fra videoindstillingsmenuen</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Vis knappen Gem til Se senere i børnevideoer</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Giver mulighed for at gemme børnerelaterede videoer i menuen \'Se senere\'</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Giver mulighed for at gemme børnerelaterede videoer i \'Se senere\' fra flyoutmenuen</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Vis knappen Gem til Se senere i Shorts-flyoutmenuen</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Giver mulighed for at gemme Shorts i \'Se senere\' fra flyoutmenuen</string>
   <string name="morphe_queue_flyout_title">Tilføj til Morphe-kø</string>
   <string name="morphe_queue_restore_title">Behold køen mellem sessioner</string>
   <string name="morphe_queue_restore_summary">Køen bevares efter genstart af appen</string>

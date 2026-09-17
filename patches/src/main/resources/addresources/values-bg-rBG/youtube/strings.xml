@@ -508,8 +508,12 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Този видеоклип вече е запазен в плейлиста Гледай по-късно</string>
   <string name="morphe_save_to_watch_later_error_toast">Не може да се запази този видеоклип в плейлиста Гледай по-късно</string>
   <string name="morphe_save_to_watch_later_flyout_title">Запазване в „Гледай по-късно“</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">Показване на бутона за запазване в „Гледай по-късно“ в изскачащото меню с настройки на плейъра</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">Позволява запазването на гледания в момента видеоклип в „Гледай по-късно“ от изскачащото меню с настройките на видеоклипа.</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Показване на бутона „Запазване в Гледай по-късно“ в детски видеоклипове</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Позволява запазване на видеоклипове, свързани с деца, в менюто „Гледай по-късно“.ите JSON формат.</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Позволява запазването на видеоклипове, свързани с деца, в „Гледай по-късно“ от изскачащото меню.</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Показване на бутона „Запазване в ‘Гледай по-късно’“ в изскачащото меню на Shorts</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Позволява запазване на Shorts в „Гледай по-късно“ от изскачащото меню</string>
   <string name="morphe_queue_flyout_title">Добавяне към опашката на Morphe</string>
   <string name="morphe_queue_restore_title">Запазване на опашката между сесиите</string>
   <string name="morphe_queue_restore_summary">Опашката се запазва след рестартиране на приложението</string>

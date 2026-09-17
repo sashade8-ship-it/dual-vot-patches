@@ -32,6 +32,44 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_action_button_summary">Використовує вибраний зовнішній завантажувач замість вбудованої кнопки завантаження</string>
   <string name="morphe_external_downloader_flyout_menu_title">Замінити меню \"Завантажити\"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Використовує вибраний зовнішній завантажувач замість вбудованого меню завантаження</string>
+  <string name="morphe_music_in_app_downloads_title">Завантаження в застосунку</string>
+  <string name="morphe_music_in_app_downloads_summary">Завантажує аудіо у YouTube Music замість відкриття зовнішнього застосунку для завантаження.</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"Завантаження в застосунку повторно використовують аудіопотік, який застосунок уже визначив, і потребують увімкнення опції «Підміна відеопотоків».
+
+Треки зберігаються у приватному сховищі застосунку та видаляються, якщо YouTube Music буде видалено.
+
+Поки цю функцію ввімкнено, вкладка «Завантаження» показує ці треки замість офлайн-бібліотеки Music Premium. Якщо її вимкнути, вкладку буде відновлено, а завантаження Premium ніколи не зачіпаються."</string>
+  <string name="morphe_music_downloads_screen_title">Завантаження</string>
+  <string name="morphe_music_downloads_empty">"Немає завантажень
+Тут з’являться завантажені треки"</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s МБ</string>
+  <string name="morphe_music_downloads_summary">%1$s треків • %2$s МБ</string>
+  <string name="morphe_music_downloads_search_hint">Пошук у завантаженнях</string>
+  <string name="morphe_music_downloads_sort">Сортувати</string>
+  <string name="morphe_music_downloads_sort_artist">Сортувати за виконавцем</string>
+  <string name="morphe_music_downloads_sort_title">Впорядкувати за назвою</string>
+  <string name="morphe_music_downloads_sort_size">Впорядкувати за розміром</string>
+  <string name="morphe_music_downloads_delete_all">Видалити всі завантаження</string>
+  <string name="morphe_music_downloads_delete_all_title">Видалити всi завантаження?</string>
+  <string name="morphe_music_downloads_delete_all_message">Усі завантажені треки буде видалено з цього пристрою</string>
+  <string name="morphe_music_downloads_all_deleted">Завантаження успішно видалено</string>
+  <string name="morphe_music_downloads_nothing_found">Нічого не виявлено</string>
+  <string name="morphe_music_downloads_actions_for">Дії для %s</string>
+  <string name="morphe_music_downloads_play">Відтворити</string>
+  <string name="morphe_music_downloads_play_pause">Відтворити або призупинити</string>
+  <string name="morphe_music_downloads_previous">Попередній</string>
+  <string name="morphe_music_downloads_next">Далі</string>
+  <string name="morphe_music_downloads_pause">Пауза</string>
+  <string name="morphe_music_downloads_close">Закрити</string>
+  <string name="morphe_music_downloads_delete">Видалити</string>
+  <string name="morphe_music_downloads_delete_track">Видалити завантаження</string>
+  <string name="morphe_music_downloads_track_deleted">Завантаження видалено</string>
+  <string name="morphe_music_downloads_track_delete_failed">Не вдалося видалити завантаження</string>
+  <string name="morphe_music_downloads_play_failed">Не вдалося відтворити завантажений файл</string>
+  <string name="morphe_music_downloads_already_saved">Вже завантажено</string>
+  <string name="morphe_music_downloads_started">Завантаження розпочато</string>
+  <string name="morphe_music_downloads_starting">Початок завантаження…</string>
+  <string name="morphe_music_downloads_complete">Завантаження завершено</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">Про Morphe</string>
@@ -309,24 +347,114 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_music_lyrics_enabled_title">Використовувати сторонні тексти пісень</string>
   <string name="morphe_music_lyrics_enabled_summary">Показує текст пісні зі стороннього сервісу, повертаючись до вбудованого тексту, якщо нічого не знайдено</string>
   <string name="morphe_music_lyrics_section_service_title">Сервіс текстів пісень</string>
+  <string name="morphe_music_lyrics_section_overlay_title">Оверлей</string>
+  <string name="morphe_music_lyrics_section_sync_title">Синхронізація</string>
   <string name="morphe_music_lyrics_section_about_title">Про фільтр</string>
   <!-- Shown under the preference; the actual priority list is rendered live by the custom preference. -->
+  <string name="morphe_music_lyrics_source_summary">Натисніть ▲/▼, щоб установити порядок пріоритету, і позначте прапорець, щоб увімкнути або вимкнути кожне джерело</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Усі постачальники вимкнено — вбудовані тексти та тексти з медіафайлів</string>
+  <string name="morphe_music_lyrics_source_reset_title">Скинути порядок провайдерів?</string>
+  <string name="morphe_music_lyrics_source_reset_message">Відновити провайдерів у порядку пріоритету за замовчуванням.</string>
   <string name="morphe_music_token_dialog_get_token">Отримати токен</string>
+  <string name="morphe_music_apple_music_token_dialog_instruction">"Вставте cookie media-user-token з music.apple.com
+
+Кроки:
+1. Увійдіть на music.apple.com як користувач-учасник
+2. Відкрийте DevTools → Application → Cookies → music.apple.com
+3. Скопіюйте значення \"media-user-token\""</string>
+  <string name="morphe_music_apple_music_token_toast_saved">Apple Music: media-user-token збережено</string>
+  <string name="morphe_music_apple_music_token_toast_cleared">Apple Music: media-user-token очищено</string>
+  <string name="morphe_music_apple_music_token_toast_invalid">Apple Music: недійсний media-user-token — перевірте та спробуйте ще раз</string>
+  <string name="morphe_music_spotify_token_title">Spotify: скопіюйте значення \"sp_dc\".</string>
+  <string name="morphe_music_spotify_token_dialog_instruction">"Вставте cookie sp_dc з Spotify.
+
+Кроки:
+1. Увійдіть на open.spotify.com
+2. Відкрийте DevTools → Application → Cookies → open.spotify.com
+3. Скопіюйте значення \"sp_dc\""</string>
+  <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc збережено.</string>
+  <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc необов’язковий. Без нього Lyrically використовуватиметься як резервний варіант.</string>
+  <string name="morphe_music_spotify_token_toast_invalid">Spotify: недійсний sp_dc — перевірте та спробуйте ще раз</string>
+  <string name="morphe_music_apple_token_optional_hint">Deezer: скопіюйте значення \"arl\".</string>
+  <string name="morphe_music_deezer_arl_title">Deezer: arl збережено.</string>
+  <string name="morphe_music_deezer_arl_dialog_instruction">"Вставте cookie arl з Deezer.
+
+Кроки:
+1. Увійдіть на deezer.com
+2. Відкрийте DevTools → Application → Cookies → deezer.com
+3. Скопіюйте значення \"arl\""</string>
+  <string name="morphe_music_deezer_arl_toast_saved">Musixmatch: скопіюйте значення токена користувача.</string>
+  <string name="morphe_music_deezer_arl_toast_cleared">Musixmatch: токен користувача збережено.</string>
+  <string name="morphe_music_deezer_arl_toast_invalid">Deezer: недійсний arl — перевірте та спробуйте ще раз</string>
+  <string name="morphe_music_musixmatch_token_title">Токен Musixmatch</string>
+  <string name="morphe_music_musixmatch_token_dialog_instruction">"Вставте ваш користувацький токен Musixmatch.
+
+Кроки:
+1. Відвідайте musixmatch.com та увійдіть
+2. Відкрийте DevTools → Application → Local Storage
+3. Скопіюйте значення користувацького токена"</string>
+  <string name="morphe_music_musixmatch_token_dialog_hint">Куки YouTube</string>
+  <string name="morphe_music_musixmatch_token_toast_saved">YouTube: кукі збережено.</string>
+  <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: користувацький токен очищено</string>
+  <string name="morphe_music_musixmatch_token_toast_invalid">Musixmatch: недійсний користувацький токен — перевірте та спробуйте ще раз</string>
+  <string name="morphe_music_youtube_cookies_title">Куки YouTube</string>
+  <string name="morphe_music_youtube_cookies_dialog_instruction">"LRCLIB, потім QQ, потім KuGou, потім NetEase, потім BiniLyrics, потім Unison, потім AMLL."</string>
+  <string name="morphe_music_youtube_cookies_toast_saved">Торкніться, щоб скопіювати оригінальний текст пісні як звичайний текст; довго натисніть, щоб зберегти вихідний файл тексту пісні у Завантаження.</string>
+  <string name="morphe_music_youtube_cookies_toast_cleared">YouTube: куки очищено</string>
+  <string name="morphe_music_youtube_cookies_toast_invalid">Перекладати текст пісні за допомогою перекладів від провайдера або Google Translate.</string>
   <!-- 'LRCLIB', 'KuGou', 'NetEase', 'QQ', 'BiniLyrics', 'Unison' and 'AMLL' are service names and must be kept untranslated -->
+  <string name="morphe_music_lyrics_source_entry_lrclib_then_kugou">LRCLIB, потім QQ, потім KuGou, потім NetEase, потім BiniLyrics, потім Unison, потім AMLL</string>
   <string name="morphe_music_lyrics_tap_to_seek_title">Натисніть на рядок для переходу</string>
   <string name="morphe_music_lyrics_tap_to_seek_summary">Натискання на рядок переходить до цього моменту в пісні</string>
   <string name="morphe_music_lyrics_show_copy_button_title">Показати кнопку \"Копіювати\"</string>
+  <string name="morphe_music_lyrics_show_copy_button_summary">Торкніться, щоб скопіювати оригінальний текст пісні як звичайний текст; довге натискання, щоб зберегти вихідний файл сирих текстів у завантаження</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Показати кнопку \"Пеоекласти\"</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Перекласти текст пісні за допомогою перекладів постачальника або Google Translate</string>
+  <string name="morphe_music_lyrics_show_romanize_button_title">Показувати кнопку «Романізувати».</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Романізувати текст пісні за допомогою романізації від провайдера або Google Translate.</string>
+  <string name="morphe_music_lyrics_show_refresh_button_title">Показувати кнопку оновлення</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">Торкніться, щоб перейти до наступного варіанта тексту пісні; довго натисніть, щоб оновити.</string>
   <string name="morphe_music_lyrics_saved">Збережено</string>
+  <string name="morphe_music_lyrics_word_sync_title">Підсвічувати синхронізовані слова або склади</string>
+  <string name="morphe_music_lyrics_word_sync_summary">Пріоритетне підсвічування слів, коли текст пісні синхронізовано.</string>
+  <string name="morphe_music_lyrics_hide_played_title">Приховувати вже відтворені рядки тексту пісні.</string>
+  <string name="morphe_music_lyrics_hide_played_summary">Приховати рядки тексту пісні вище поточного рядка, що відтворюється</string>
+  <string name="morphe_music_lyrics_hide_unplayed_title">Приховувати ще не відтворені рядки тексту пісні.</string>
+  <string name="morphe_music_lyrics_hide_unplayed_summary">Показувати текст пісні на екрані блокування.</string>
+  <string name="morphe_music_lyrics_mediasession_title">Показувати текст пісні MediaSession на екрані блокування</string>
+  <string name="morphe_music_lyrics_miniplayer_title">Показувати текст пісні в мініплеєрі</string>
+  <string name="morphe_music_lyrics_display_artist_first_title">Показувати текст пісні в міні-плеєрі.</string>
+  <string name="morphe_music_lyrics_display_artist_first_summary">Перемикайте порядок відображення виконавця та назви в мініплеєрі та MediaSession. УВІМКНЕНО \"Виконавець - Назва\", а ВИМКНЕНО \"Назва - Виконавець\". Не впливає на пошук текстів пісень</string>
+  <string name="morphe_settings_music_lyrics_metadata_title">Фільтри</string>
+  <string name="morphe_music_lyrics_custom_regex_title">Регулярний вираз метаданих</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">Регулярний вираз застосовується до назв, виконавців та альбомів перед пошуком текстів пісень. Залиште порожнім, щоб вимкнути. За замовчуванням видаляє типові зайві елементи, такі як \"Official Video\", \"Remaster\" та \"- Topic\"</string>
+  <string name="morphe_music_lyrics_text_filter_title">Регулярний вираз фільтра тексту пісні</string>
+  <string name="morphe_music_lyrics_text_filter_summary">Регулярний вираз застосовується лише до оригінального тексту пісні (не до перекладів або транслітерацій). Залиште порожнім, щоб вимкнути</string>
+  <string name="morphe_music_lyrics_credit_line_regex_title">Маркери інформаційних рядків</string>
+  <string name="morphe_music_lyrics_credit_line_regex_summary">Якщо тексти пісень неправильно фільтруються вниз, відкоригуйте або очистіть це. Маркери, розділені комами: рядки, що містять маркер, за яким слідує двокрапка, відображаються як інформація про авторство внизу. Залиште порожнім, щоб вимкнути</string>
   <string name="morphe_music_lyrics_text_size_title">Розмір тексту</string>
   <string name="morphe_music_lyrics_text_size_summary">Розмір тексту пісні</string>
   <string name="morphe_music_lyrics_offset_ms_title">Зсув синхронізації</string>
+  <string name="morphe_music_lyrics_offset_ms_summary">Синхронізовані тексти пісень слідують за відтворенням. Якщо вони розходяться, відкоригуйте зсув часу. Зсувайте синхронізовані тексти вперед або назад. Використовуйте додатне значення, якщо тексти випереджають пісню</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Джерело: %s</string>
+  <string name="morphe_music_lyrics_translated_by_google">Перекладено Google</string>
+  <string name="morphe_music_lyrics_romanized_by_google">Транслітеровано Google</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->
+  <string name="morphe_music_lyrics_translate_hide">Переклад</string>
   <string name="morphe_music_lyrics_translating">Переклад…</string>
   <string name="morphe_music_lyrics_translate_failed">Не вдалося перекласти текст пісні</string>
+  <string name="morphe_music_lyrics_romanize_hide">Транслітерація</string>
+  <string name="morphe_music_lyrics_romanizing">Транслітерація…</string>
+  <string name="morphe_music_lyrics_romanize_failed">Не вдалося транслітерувати текст пісні</string>
   <string name="morphe_music_lyrics_copied">Скопійовано в буфер обміну</string>
+  <string name="morphe_music_lyrics_refreshing">Оновлення…</string>
+  <string name="morphe_music_lyrics_refreshed">Оновлено</string>
+  <string name="morphe_music_lyrics_about_summary">"Тексти пісень шукаються за назвою треку та виконавцем, тому трек із незвичайними метаданими може нічого не знайти або знайти неправильну версію. Ви також можете спробувати кнопку оновлення, щоб вручну перемкнути версії. Коли сторонні тексти не знайдено, замість них показуються вбудовані або вбудовані тексти. Постачальники, позначені *, потребують токен для увімкнення. Усі ввімкнені постачальники не завжди запитуються у вашому порядку, а відповідають залежно від їхньої швидкості"</string>
+  <string name="morphe_music_lyrics_hide_info_title">Приховати рядок авторства</string>
+  <string name="morphe_music_lyrics_hide_info_summary">Приховати рядок авторства, який відображається під текстом пісні</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_title">Поміняти місцями переклад і транслітерацію</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_summary">УВІМКНЕНО розміщує транслітерацію під текстом пісні, а переклад над ним; ВИМКНЕНО залишає транслітерацію над текстом, а переклад під ним</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - Вимкнути товсті іконки</string>
   <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - Відновити вкладки \"Далі\", \"Текст\" та \"Схожі\" в плеєрі</string>

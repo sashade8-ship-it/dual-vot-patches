@@ -509,7 +509,6 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <string name="morphe_save_to_watch_later_error_toast">Impossibile salvare questo video nella playlist \"Guardalo più tardi\"</string>
   <string name="morphe_save_to_watch_later_flyout_title">Salva in Guarda più tardi</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Mostra il pulsante Salva per guardare più tardi nei video per bambini</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Consente di salvare video correlati ai bambini nel menu a comparsa \"Guarda più tardi\"</string>
   <string name="morphe_queue_flyout_title">Aggiungi alla coda di Morphe</string>
   <string name="morphe_queue_restore_title">Mantieni la coda tra le sessioni</string>
   <string name="morphe_queue_restore_summary">La coda viene mantenuta anche riavviando l\'app</string>
@@ -586,10 +585,10 @@ Per risolvere, attiva 'Spoof dei flussi video' e cambia il 'Client predefinito' 
   <string name="morphe_swipe_zone_label_brightness">Luminosità</string>
   <string name="morphe_swipe_zone_label_volume">Volume</string>
   <string name="morphe_swipe_zone_label_native">Nativo</string>
-  <string name="morphe_swipe_zone_label_off">Off</string>
+  <string name="morphe_swipe_zone_label_off">Disattivato</string>
   <string name="morphe_swipe_ignore_when_locked_title">Ignora i gesti di scorrimento quando bloccato</string>
   <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the player menu item. -->
-  <string name="morphe_swipe_ignore_when_locked_summary">I gesti di scorrimento vengono ignorati mentre il player è bloccato con \"Blocca schermo\"</string>
+  <string name="morphe_swipe_ignore_when_locked_summary">I gesti di scorrimento vengono ignorati mentre il player è bloccato con \'Blocca schermo\'</string>
   <string name="morphe_swipe_press_to_engage_title">Abilita gesto di premi per scorrere</string>
   <string name="morphe_swipe_press_to_engage_summary">Richiede la pressione prolungata prima che venga riconosciuto un gesto di scorrimento</string>
   <string name="morphe_swipe_haptic_feedback_title">Abilita il feedback aptico</string>
@@ -705,7 +704,7 @@ Per risolvere, attiva 'Spoof dei flussi video' e cambia il 'Client predefinito' 
   <string name="morphe_set_caption_cookies_title">Imposta i cookie dei sottotitoli</string>
   <string name="morphe_set_caption_cookies_summary">"Risolve un bug di YouTube in cui i sottotitoli di traduzione automatica potrebbero non essere disponibili a causa della mancanza di cookie.
 
-I 'Cookie dei sottotitoli' devono essere forniti"</string>
+'Cookie dei sottotitoli' devono essere forniti"</string>
   <string name="morphe_caption_cookies_title">Cookie dei sottotitoli</string>
   <string name="morphe_caption_cookies_summary">Cookie da impostare nelle richieste Timed Text API (Caption Data API)</string>
   <string name="morphe_get_caption_cookies_title">Ottieni cookie dei sottotitoli</string>
@@ -923,7 +922,7 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Disabilita il gesto di scorrimento verso l\'alto in verticale</string>
   <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Disabilita gesto di scorrimento verso il basso in verticale</string>
   <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Disabilita gesto di scorrimento verso il basso in orizzontale</string>
-  <string name="morphe_disable_fullscreen_zoom_gesture_title">Disattiva il gesto di pizzica per zoomare</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Disattiva il gesto di pizzico per zoomare</string>
   <string name="morphe_restore_pinch_to_zoom_title">Ripristina il pinch-to-zoom</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
   <string name="morphe_open_videos_fullscreen_title">Apri i video a schermo intero</string>
@@ -940,7 +939,7 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Mostra solo a schermo intero</string>
   <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Nascondi il pulsante di ridimensionamento video nel player verticale</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
-  <string name="morphe_mute_video_button_title">Mostra pulsante muto</string>
+  <string name="morphe_mute_video_button_title">Mostra il pulsante muto</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opacità sovrapposizione del lettore</string>
   <string name="morphe_player_overlay_opacity_summary">Regola il livello di trasparenza (0 è trasparente, 100 è opaco)</string>
@@ -948,7 +947,7 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_searchbar_type_title">Barra di ricerca</string>
   <string name="morphe_searchbar_type_entry_disabled">Disattivato</string>
   <string name="morphe_searchbar_type_entry_wide">Largo</string>
-  <string name="morphe_searchbar_type_entry_extra_wide">Molto larga</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">Extra largo</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
   <string name="morphe_change_form_factor_title">Layout del dispositivo</string>
@@ -970,7 +969,7 @@ Layout automotive
 • L'impostazione 'Riproduzione nei feed' non è disponibile
 • Il pulsante Remix e il pulsante Audio non sono disponibili negli Short
 • L'overlay 'Altri video' potrebbe non essere disponibile
-• Gli Short si aprono nel lettore normale
+• Gli Shorts si aprono nel lettore normale
 • Viene mostrata la vecchia barra delle azioni del video non compattata"</string>
   <string name="morphe_tablet_layout_in_player_title">Abilita layout per tablet nel lettore</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
@@ -987,7 +986,7 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_open_system_share_sheet_summary">Apre il pannello di condivisione di sistema anziché quello integrato duranre la condivisione di un contenuto</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
   <string name="morphe_override_youtube_music_buttons_title">Sovrascrivi i pulsanti di YouTube Music</string>
-  <string name="morphe_override_youtube_music_buttons_summary">Apre l\'app musicale preferita anziché l\'app ufficiale di YouTube Music</string>
+  <string name="morphe_override_youtube_music_buttons_summary">Apre l\'app musicale preferita anziché l\'app YouTube Music integrata</string>
   <string name="morphe_custom_music_package_name_title">Nome pacchetto dell\'app musicale</string>
   <string name="morphe_custom_music_package_name_summary">Nome del pacchetto dell\'app musicale installata</string>
   <!-- layout.startpage.changeStartPagePatch -->
@@ -1225,11 +1224,11 @@ Tocca qui per saperne di più su DeArrow"</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Disattiva video in HDR</string>
   <string name="morphe_force_hdr_video_title">Forza video HDR</string>
-  <string name="morphe_force_hdr_video_summary">Forza l\'app a riconoscere questo dispositivo come compatibile con HDR</string>
+  <string name="morphe_force_hdr_video_summary">Forza app a riconoscere questo dispositivo come compatibile con HDR</string>
   <string name="morphe_force_hdr_video_user_dialog_message">"Usa questa opzione se la decodifica HDR funziona ma YouTube non offre l'HDR, come su alcuni dispositivi HyperOS che nascondono HLG.
 
 Limitazioni:
-• I colori potrebbero apparire errati se il display non puo effettivamente mostrare l'HDR
+• I colori potrebbero apparire errati se il display non può effettivamente mostrare l'HDR
 • La riproduzione potrebbe fallire se il decoder non è in grado di gestire l'HDR
 • L'HDR dipende ancora dal client spoofato dei flussi video"</string>
   <string name="morphe_force_avc_codec_title">Forza il codec AVC (H.264)</string>

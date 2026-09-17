@@ -508,8 +508,12 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Це відео вже збережено у списку відтворення \"Подивитися пізніше\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Не вдалося зберегти це відео у списку відтворення \"Подивитися пізніше\"</string>
   <string name="morphe_save_to_watch_later_flyout_title">\"Зберегти для перегляду пізніше\"</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">Показувати кнопку «Зберегти у списку „Подивитися пізніше“» у спливаючому меню налаштувань програвача</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">Дозволяє зберігати поточне відео у списку «Подивитися пізніше» зі спливаючого меню налаштувань відео</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Показувати кнопку \"Зберегти для перегляду пізніше\" у дитячих відео</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Дозволяє зберігати відео для дітей у спливному меню \"Переглянути пізніше\"</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Дозволяє зберігати дитячі відео у списку «Подивитися пізніше» зі спливаючого меню</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Показувати кнопку «Зберегти у списку „Подивитися пізніше“» у спливаючому меню Shorts</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Дозволяє зберігати Shorts у списку «Подивитися пізніше» зі спливаючого меню</string>
   <string name="morphe_queue_flyout_title">Додати до черги Morphe</string>
   <string name="morphe_queue_restore_title">Зберігати чергу між сесіями</string>
   <string name="morphe_queue_restore_summary">Черга зберігається після перезапуску застосунку</string>

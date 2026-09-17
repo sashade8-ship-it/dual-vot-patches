@@ -383,7 +383,7 @@ Tá tuairiscí poiblí agus déantar athbhreithniú orthu sula gcuirtear cainéa
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
   <string name="morphe_channel_search_title">Cuardaigh sa chainéal</string>
-  <string name="morphe_channel_search_summary">Nuair a bhíonn cainéal ar oscailt, ní dhéantar ach an cainéal sin a chuardach</string>
+  <string name="morphe_channel_search_summary">Má dhéantar cuardach agus cainéal ar oscailt, ní dhéantar cuardach ach sa chainéal sin.</string>
   <string name="morphe_channel_search_results_title">Cuardach: %s</string>
   <string name="morphe_channel_search_no_results">Níor aimsíodh aon rud ar an gcainéal seo</string>
   <string name="morphe_channel_search_failed">Níorbh fhéidir an cainéal seo a chuardach</string>
@@ -508,8 +508,12 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Tá an físeán seo sábháilte cheana féin sa seinmliosta féach níos déanaí</string>
   <string name="morphe_save_to_watch_later_error_toast">Ní féidir an físeán seo a shábháil sa seinmliosta féach níos déanaí</string>
   <string name="morphe_save_to_watch_later_flyout_title">Sábháil le Féachaint Níos Déanaí</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">Taispeáin an cnaipe \"Sábháil sa liosta \'Féach ar ball\'\" sa roghchlár aníos de na socruithe seinnteora.</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">Ligeann sé duit an físeán atá ar siúl faoi láthair a shábháil sa liosta \'Féach ar ball\' ón roghchlár aníos de na socruithe físeáin.</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Taispeáin an cnaipe Sábháil le Féach Níos Déanaí i bhfíseáin do pháistí</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Ceadaíonn sé físeáin a bhaineann le páistí a shábháil sa roghchlár eitleáin \'Féach níos déanaí\'</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Ligeann sé duit físeáin a bhaineann le leanaí a shábháil sa liosta \'Féach ar ball\' ón roghchlár aníos.</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Taispeáin an cnaipe \"Sábháil sa liosta \'Féach ar ball\'\" sa roghchlár aníos Shorts.</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Ligeann sé duit Shorts a shábháil sa liosta \'Féach ar ball\' ón roghchlár aníos.</string>
   <string name="morphe_queue_flyout_title">Cuir leis an scuaine Morphe</string>
   <string name="morphe_queue_restore_title">Coinnigh scuaine idir seisiúin</string>
   <string name="morphe_queue_restore_summary">Coinnítear an scuaine tar éis an aip a atosú</string>

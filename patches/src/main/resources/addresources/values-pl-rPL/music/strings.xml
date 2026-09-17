@@ -32,6 +32,10 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_action_button_summary">Używa wybranej zewnętrznej aplikacji do pobierania zamiast domyślnego przycisku akcji Pobierz</string>
   <string name="morphe_external_downloader_flyout_menu_title">Zastąp menu Pobierz</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Używa wybranej zewnętrznej aplikacji do pobierania zamiast domyślnego wysuwanego menu Pobierz</string>
+  <string name="morphe_music_downloads_sort">Sortuj</string>
+  <string name="morphe_music_downloads_next">Dalej</string>
+  <string name="morphe_music_downloads_close">Zamknij</string>
+  <string name="morphe_music_downloads_delete">Usuń</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">Informacje</string>
@@ -293,7 +297,7 @@ Ekran blokady lub powiadomienie może przez chwilę pokazywać nieaktualny stan 
   <string name="morphe_settings_music_scrobbling_metadata_title">Oczyszczanie metadanych</string>
   <string name="morphe_music_scrobbling_metadata_cleanup_title">Oczyszczaj metadane</string>
   <string name="morphe_music_scrobbling_metadata_cleanup_summary">Automatycznie usuwa typowe śmieci (takie jak \"Official Video\", \"Remaster\", \"Live\") z tytułów, wykonawców i albumów przed scrobblowaniem</string>
-  <string name="morphe_music_scrobbling_custom_regex_title">Oczyszczanie własnym regexem</string>
+  <string name="morphe_music_scrobbling_custom_regex_title">Oczyszczanie własnym wyrażeniem regularnym</string>
   <string name="morphe_music_scrobbling_custom_regex_summary">Wprowadź własne wyrażenie regularne, aby usunąć dodatkowy tekst z tytułów utworów, wykonawców lub albumów. Przykład: (?i)\\s*\\((clean|explicit)\\)</string>
   <string name="morphe_music_scrobbling_parse_title_title">Wyodrębnij wykonawcę i utwór z tytułu</string>
   <string name="morphe_music_scrobbling_parse_title_summary">Wyciąga nazwę wykonawcy i utworu z tytułu filmu, używając separatora \" - \". Przydaje się przy reuploadach, gdzie nazwa kanału mogłaby zostać mylnie uznana za wykonawcę</string>
@@ -325,7 +329,6 @@ Kroki:
 1. Zaloguj się na music.apple.com jako subskrybent
 2. Otwórz DevTools → Application → Cookies → music.apple.com
 3. Skopiuj wartość \"media-user-token\""</string>
-  <string name="morphe_music_apple_music_token_dialog_hint">media-user-token</string>
   <string name="morphe_music_apple_music_token_toast_saved">Apple Music: zapisano media-user-token</string>
   <string name="morphe_music_apple_music_token_toast_cleared">Apple Music: wyczyszczono media-user-token</string>
   <string name="morphe_music_apple_music_token_toast_invalid">Apple Music: nieprawidłowy media-user-token - sprawdź i spróbuj ponownie</string>
@@ -347,7 +350,6 @@ Kroki:
 1. Zaloguj się na deezer.com
 2. Otwórz DevTools → Application → Cookies → deezer.com
 3. Skopiuj wartość \"arl\""</string>
-  <string name="morphe_music_deezer_arl_dialog_hint">arl</string>
   <string name="morphe_music_deezer_arl_toast_saved">Deezer: zapisano arl</string>
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: wyczyszczono arl</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: nieprawidłowy arl - sprawdź i spróbuj ponownie</string>
@@ -375,20 +377,58 @@ Wymagane ciasteczka: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_youtube_cookies_toast_cleared">YouTube: wyczyszczono ciasteczka</string>
   <string name="morphe_music_youtube_cookies_toast_invalid">YouTube: nieprawidłowe ciasteczka - sprawdź i spróbuj ponownie</string>
   <!-- 'LRCLIB', 'KuGou', 'NetEase', 'QQ', 'BiniLyrics', 'Unison' and 'AMLL' are service names and must be kept untranslated -->
+  <string name="morphe_music_lyrics_source_entry_lrclib_then_kugou">LRCLIB, następnie QQ, następnie KuGou, następnie NetEase, następnie BiniLyrics, następnie Unison, następnie AMLL</string>
   <string name="morphe_music_lyrics_tap_to_seek_title">Dotknij linijki, aby przewinąć</string>
   <string name="morphe_music_lyrics_tap_to_seek_summary">Dotknięcie linijki przeskakuje do tego momentu w utworze</string>
   <string name="morphe_music_lyrics_show_copy_button_title">Pokaż przycisk Kopiuj</string>
+  <string name="morphe_music_lyrics_show_copy_button_summary">Dotknij, aby skopiować oryginalny tekst jako zwykły tekst. Przytrzymaj, aby zapisać surowy plik źródłowy z tekstem w folderze Pobrane</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Pokaż przycisk Przetłumacz</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Tłumacz teksty za pomocą tłumaczeń dostawcy lub Tłumacza Google</string>
+  <string name="morphe_music_lyrics_show_romanize_button_title">Pokaż przycisk Romanizuj</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Romanizuj teksty za pomocą romanizacji dostawcy lub Tłumacza Google</string>
+  <string name="morphe_music_lyrics_show_refresh_button_title">Pokaż przycisk Odśwież</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">Dotknij, aby przełączyć na kolejną propozycję tekstu. Przytrzymaj, aby tymczasowo wyłączyć teksty zewnętrzne i pokazać oryginalne</string>
   <string name="morphe_music_lyrics_saved">Zapisano</string>
+  <string name="morphe_music_lyrics_word_sync_title">Podświetlaj zsynchronizowane słowa lub sylaby</string>
+  <string name="morphe_music_lyrics_word_sync_summary">Nadaje priorytet tekstom synchronizowanym słowo po słowie, o ile są dostępne. Gdy tekst zawiera znaczniki czasu, podświetla każde słowo lub sylabę w rytm muzyki</string>
+  <string name="morphe_music_lyrics_hide_played_title">Ukryj odtworzony tekst</string>
+  <string name="morphe_music_lyrics_hide_played_summary">Ukrywa linijki tekstu znajdujące się powyżej tej aktualnie odtwarzanej</string>
+  <string name="morphe_music_lyrics_hide_unplayed_title">Ukryj nieodtworzony tekst</string>
+  <string name="morphe_music_lyrics_hide_unplayed_summary">Ukrywa linijki tekstu znajdujące się poniżej tej aktualnie odtwarzanej</string>
+  <string name="morphe_music_lyrics_mediasession_title">Pokaż teksty MediaSession na ekranie blokady</string>
+  <string name="morphe_music_lyrics_miniplayer_title">Pokaż teksty w miniodtwarzaczu</string>
+  <string name="morphe_music_lyrics_display_artist_first_title">Kolejność wyświetlania wykonawcy i tytułu</string>
+  <string name="morphe_music_lyrics_display_artist_first_summary">Zmienia kolejność wyświetlania wykonawcy i tytułu w miniodtwarzaczu i MediaSession. Włączone: \"Wykonawca - Tytuł\", wyłączone: \"Tytuł - Wykonawca\". Nie wpływa to na wyszukiwanie tekstów</string>
+  <string name="morphe_settings_music_lyrics_metadata_title">Filtry</string>
+  <string name="morphe_music_lyrics_custom_regex_title">Wyrażenie regularne dla metadanych</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">Wyrażenie regularne stosowane do tytułów, wykonawców i albumów przed wyszukaniem tekstu. Pozostaw puste, aby wyłączyć. Domyślne ustawienie usuwa powszechne dopiski, takie jak \"Official Video\", \"Remaster\" czy \"- Topic\"</string>
+  <string name="morphe_music_lyrics_text_filter_title">Wyrażenie regularne filtra tekstu</string>
+  <string name="morphe_music_lyrics_text_filter_summary">Wyrażenie regularne stosowane wyłącznie do oryginalnego tekstu piosenki (z pominięciem tłumaczeń i romanizacji). Pozostaw puste, aby wyłączyć</string>
+  <string name="morphe_music_lyrics_credit_line_regex_title">Znaczniki wierszy informacyjnych</string>
+  <string name="morphe_music_lyrics_credit_line_regex_summary">Jeśli standardowy tekst piosenki jest błędnie przenoszony na sam dół, dostosuj to pole lub je wyczyść. Znaczniki oddzielane przecinkami: wiersze zawierające znacznik, po którym następuje dwukropek, są traktowane jako informacje o twórcach i wyświetlane na dole. Pozostaw puste, aby wyłączyć</string>
   <string name="morphe_music_lyrics_text_size_title">Rozmiar tekstu</string>
   <string name="morphe_music_lyrics_text_size_summary">Rozmiar tekstu utworu</string>
   <string name="morphe_music_lyrics_offset_ms_title">Przesunięcie czasowe</string>
+  <string name="morphe_music_lyrics_offset_ms_summary">Zsynchronizowane teksty podążają za odtwarzaniem. Jeśli się rozjeżdżają, dostosuj przesunięcie czasowe do przodu lub do tyłu. Użyj wartości dodatniej, jeśli tekst wyprzedza piosenkę</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Źródło: %s</string>
+  <string name="morphe_music_lyrics_translated_by_google">Przetłumaczone przez Google</string>
+  <string name="morphe_music_lyrics_romanized_by_google">Zromanizowane przez Google</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->
+  <string name="morphe_music_lyrics_translate_hide">Przetłumaczone</string>
   <string name="morphe_music_lyrics_translating">Tłumaczenie…</string>
   <string name="morphe_music_lyrics_translate_failed">Nie udało się przetłumaczyć tekstu</string>
+  <string name="morphe_music_lyrics_romanize_hide">Zromanizowane</string>
+  <string name="morphe_music_lyrics_romanizing">Romanizowanie…</string>
+  <string name="morphe_music_lyrics_romanize_failed">Nie udało się zromanizować tekstu</string>
   <string name="morphe_music_lyrics_copied">Skopiowano do schowka</string>
+  <string name="morphe_music_lyrics_refreshing">Odświeżanie</string>
+  <string name="morphe_music_lyrics_refreshed">Odświeżono</string>
+  <string name="morphe_music_lyrics_about_summary">"Teksty są wyszukiwane po tytule i wykonawcy, więc przy nietypowych metadanych aplikacja może nic nie znaleźć lub pobrać złą wersję. Możesz użyć przycisku odświeżania, aby ręcznie zmienić wersję. Gdy brak tekstów zewnętrznych, wyświetlane są te wbudowane lub osadzone. Dostawcy z gwiazdką (*) wymagają tokena. Wszyscy włączeni dostawcy nie zawsze są odpytywani w ustalonej kolejności, a ostateczny wynik zależy od szybkości ich odpowiedzi"</string>
+  <string name="morphe_music_lyrics_hide_info_title">Ukryj informacje o twórcach</string>
+  <string name="morphe_music_lyrics_hide_info_summary">Ukrywa informacje o twórcach wyświetlane pod tekstem</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_title">Zamień miejscami tłumaczenie i romanizację</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_summary">Włączone: romanizacja znajduje się pod tekstem, a tłumaczenie nad nim. Wyłączone: romanizacja nad tekstem, a tłumaczenie pod nim</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - Wyłącza pogrubione ikony</string>
   <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - Przywraca zakładki Następne, Tekst i Powiązane w odtwarzaczu</string>

@@ -508,14 +508,18 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Video ini sudah disimpan di daftar tonton nanti</string>
   <string name="morphe_save_to_watch_later_error_toast">Tidak dapat menyimpan video ini di daftar tonton nanti</string>
   <string name="morphe_save_to_watch_later_flyout_title">Simpan ke Tonton Nanti</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">Tampilkan tombol Simpan ke Tonton Nanti di flyout setelan pemutar</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">Memungkinkan Anda menyimpan video yang sedang ditonton ke \'Tonton Nanti\' melalui flyout setelan video.</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Tampilkan tombol Simpan ke Tonton Nanti di video anak-anak</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Memungkinkan penyimpanan video terkait anak-anak di menu flyout \'Tonton Nanti\'</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Memungkinkan Anda menyimpan video terkait anak-anak ke \'Tonton Nanti\' melalui menu flyout.</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Tampilkan tombol Simpan ke Tonton Nanti di flyout Shorts</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Memungkinkan Anda menyimpan Shorts ke \'Tonton Nanti\' melalui menu flyout.</string>
   <string name="morphe_queue_flyout_title">Tambahkan ke antrean Morphe</string>
   <string name="morphe_queue_restore_title">Simpan antrean antar sesi</string>
   <string name="morphe_queue_restore_summary">Antrean disimpan setelah memulai ulang aplikasi</string>
   <string name="morphe_swap_save_and_queue_actions_title">Tukar Tindakan Simpan dan Antrean</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Ketuk untuk pilihan antrean, ketuk dan tahan untuk menyimpan ke Tonton Nanti</string>
-  <string name="morphe_queue_override_flyout_menu_title">Mengganti tombol feed hamparan antrean </string>
+  <string name="morphe_queue_override_flyout_menu_title">Gantikan tombol antrean feed flyout</string>
   <string name="morphe_queue_override_flyout_menu_summary">Membuka antrean Morphe daripada antrean YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Tambahkan item menu antrean feed flyout</string>
   <string name="morphe_queue_add_flyout_menu_summary">Menambahkan item flyout tambahan. Aktifkan ini jika \"Tambahkan ke antrean\" tidak ditampilkan</string>
@@ -763,7 +767,7 @@ Untuk mengakses Setelan, aktifkan tombol Setelan melalui Umum → Bilah Alat →
   <string name="morphe_show_toolbar_settings_button_type_title">Tindakan tombol Setelan</string>
   <string name="morphe_show_toolbar_settings_button_type_summary">Saat diaktifkan, ketuk membuka setelan Morphe dan tahan membuka setelan YouTube, nonaktifkan untuk menukarnya</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
-  <string name="morphe_hide_player_flyout_title">Menu melayang</string>
+  <string name="morphe_hide_player_flyout_title">Menu flyout</string>
   <string name="morphe_hide_player_flyout_summary">Pilih komponen mana yang akan ditampilkan di menu flyout</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Sembunyikan \'Setelan tambahan\' / menu Lainnya</string>
@@ -1217,7 +1221,7 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <string name="morphe_playback_audio_pitch_default_title">Nada audio pemutaran bawaan</string>
   <string name="morphe_remember_playback_audio_pitch_toast">Nada audio bawaan telah diubah menjadi: %s</string>
   <string name="morphe_playback_audio_time_stretching_title">Perpanjangan waktu audio</string>
-  <string name="morphe_playback_audio_time_stretching_summary">Mengizinkan pengaturan kecepatan dan nada secara terpisah, namun dapat menyebabkan gangguan audio</string>
+  <string name="morphe_playback_audio_time_stretching_summary">Mengizinkan setelan kecepatan dan nada secara terpisah, namun dapat menyebabkan gangguan audio</string>
   <!-- video.livestream.rememberLiveStreamPositionPatch -->
   <string name="morphe_remember_live_stream_position_title">Ingat posisi pemutaran siaran langsung</string>
   <string name="morphe_remember_live_stream_position_summary">Untuk siaran langsung yang sedang berjalan, ini mengingat dan melanjutkan posisi pemutaran Anda daripada melompat ke posisi siaran langsung saat ini</string>
@@ -1252,13 +1256,13 @@ Batasan:
   <!-- video.quality.prioritizeVideoQualityPatch -->
   <string name="morphe_video_quality_prioritize_title">Prioritaskan kualitas video</string>
   <string name="morphe_video_quality_prioritize_summary">Prioritaskan kualitas video tertinggi yang tersedia daripada efisiensi codec</string>
-  <string name="morphe_video_quality_prioritize_dialog">Jika pengaturan ini dimatikan, maka video lama tidak dapat menampilkan pilihan kualitas video</string>
+  <string name="morphe_video_quality_prioritize_dialog">Jika setelan ini dimatikan, maka video lama tidak dapat menampilkan pilihan kualitas video</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
   <string name="morphe_spoof_video_streams_av1_title">Izinkan \'Android VR\' / visionOS AV1</string>
   <string name="morphe_spoof_video_streams_av1_summary">Mengizinkan dekode perangkat lunak AV1 saat menggunakan klien \'Android VR\' / visionOS</string>
-  <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Mengaktifkan pengaturan ini mungkin menggunakan perangkat lunak decoding AV1.
+  <string name="morphe_spoof_video_streams_av1_user_dialog_message">"Mengaktifkan setelan ini mungkin menggunakan dekode perangkat lunak AV1.
 
-Pemutaran video dengan AV1 mungkin tersendat atau kehilangan bingkai."</string>
+Pemutaran video dengan AV1 dapat tersendat atau kehilangan frame."</string>
   <string name="morphe_spoof_video_streams_about_title">Efek samping pemalsuan</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Menu \'Trek Audio\' hilang</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Tidak ada codec video AV1</string>
