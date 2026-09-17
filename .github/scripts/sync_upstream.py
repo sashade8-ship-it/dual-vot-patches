@@ -351,6 +351,17 @@ def replace_exact_once(value: str, old: str, new: str, label: str) -> str:
 
 def merge_streaming_data_request_download_support(ours: str) -> str:
     """Combine the known Dual direct-stream path with Morphe downloads."""
+    merged_markers = (
+        "fetchDirectStreamRequest",
+        "fetchRequestForDownload",
+        "DIRECT_STREAM_CLIENT_ORDER",
+        "lastPlayerHeaders",
+        "directStreamsOnly, includeVideoDetails",
+        "getPlayerResponseConnectionFromRoute(clientType, includeVideoDetails)",
+    )
+    if all(marker in ours for marker in merged_markers):
+        return ours
+
     replacements = (
         (
             "    private static volatile boolean fallbackWithTVDash;\n",
@@ -453,14 +464,7 @@ def merge_streaming_data_request_download_support(ours: str) -> str:
     for old, new, label in replacements:
         merged = replace_exact_once(merged, old, new, label)
 
-    for marker in (
-        "fetchDirectStreamRequest",
-        "fetchRequestForDownload",
-        "DIRECT_STREAM_CLIENT_ORDER",
-        "lastPlayerHeaders",
-        "directStreamsOnly, includeVideoDetails",
-        "getPlayerResponseConnectionFromRoute(clientType, includeVideoDetails)",
-    ):
+    for marker in merged_markers:
         if marker not in merged:
             raise SyncError(f"Merged streaming request is missing: {marker}")
     return merged
