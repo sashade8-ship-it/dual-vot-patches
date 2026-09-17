@@ -1,3 +1,13 @@
+## 1.44.0-dev.3-dualvot.8.5.2 (2026-09-17)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.44.0-dev.3](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.44.0-dev.3).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.44.0-dev.2-dualvot.8.5.2 (2026-09-16)
 
 ### Automated Morphe update
@@ -370,6 +380,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.44.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.2...v1.44.0-dev.3) (2026-09-17)
+
+### 🐛 Bug Fixes
+
+* **YouTube - SponsorBlock:** Auto-hide skip button is sometimes shown when not inside a skippable segment ([2655af1](https://github.com/MorpheApp/morphe-patches/commit/2655af1d4240f5cd35844676fad82b489e7597c5))
+* **YouTube Music - Hide ads:** Premium promotion banners are not hidden ([5529b68](https://github.com/MorpheApp/morphe-patches/commit/5529b6887aac2728fafef8fe39c1b011742e03d7))
+
+### ✨ New Features
+
+* **YouTube - Save to Watch later:** Add support for Shorts ([#2934](https://github.com/MorpheApp/morphe-patches/issues/2934)) ([b4540c9](https://github.com/MorpheApp/morphe-patches/commit/b4540c91b1ae361f5184b96438d8f3a627a8367a))
+* **YouTube Music:** Add offline audio downloads ([#2528](https://github.com/MorpheApp/morphe-patches/issues/2528)) ([d9999ca](https://github.com/MorpheApp/morphe-patches/commit/d9999ca6695be270461b46bf41ee6e5e6ca3d0e6))
 
 ## [1.44.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.1...v1.44.0-dev.2) (2026-09-16)
 
