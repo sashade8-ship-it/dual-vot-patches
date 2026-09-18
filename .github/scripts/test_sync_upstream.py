@@ -92,10 +92,15 @@ class SyncUpstreamTests(unittest.TestCase):
         self.assertIn("fetchDirectStreamRequest", merged)
         self.assertIn("fetchRequestForDownload", merged)
         self.assertIn("DIRECT_STREAM_CLIENT_ORDER", merged)
-        self.assertIn(
-            "new StreamingDataRequest(videoId, false, lastPlayerHeaders, false, true)",
-            merged,
-        )
+        if "private static List<ClientType> buildClientOrder" in merged:
+            self.assertIn("DIRECT_STREAM_CLIENT_ORDER, false, true", merged)
+            self.assertIn("clientOrderToUse, false, false", merged)
+            self.assertIn("clientOrder, true, false", merged)
+        else:
+            self.assertIn(
+                "new StreamingDataRequest(videoId, false, lastPlayerHeaders, false, true)",
+                merged,
+            )
         self.assertIn(
             "getPlayerResponseConnectionFromRoute(clientType, includeVideoDetails)",
             merged,
