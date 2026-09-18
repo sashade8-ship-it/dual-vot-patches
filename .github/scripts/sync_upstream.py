@@ -360,7 +360,7 @@ def replace_exact_once(value: str, old: str, new: str, label: str) -> str:
 
 def merge_streaming_data_request_download_support(ours: str) -> str:
     """Combine the known Dual direct-stream path with Morphe downloads."""
-    merged_markers = (
+    original_merged_markers = (
         "fetchDirectStreamRequest",
         "fetchRequestForDownload",
         "DIRECT_STREAM_CLIENT_ORDER",
@@ -368,7 +368,20 @@ def merge_streaming_data_request_download_support(ours: str) -> str:
         "directStreamsOnly, includeVideoDetails",
         "getPlayerResponseConnectionFromRoute(clientType, includeVideoDetails)",
     )
-    if all(marker in ours for marker in merged_markers):
+    client_order_merged_markers = (
+        "private static List<ClientType> buildClientOrder",
+        "fetchDirectStreamRequest",
+        "DIRECT_STREAM_CLIENT_ORDER, false, true",
+        "clientOrderToUse, false, false",
+        "clientOrder, true, false",
+        "boolean isDownload,",
+        "boolean directStreamsOnly",
+        "getPlayerResponseConnectionFromRoute(clientType, includeVideoDetails)",
+    )
+    if (
+        all(marker in ours for marker in original_merged_markers)
+        or all(marker in ours for marker in client_order_merged_markers)
+    ):
         return ours
 
     replacements = (
@@ -473,7 +486,7 @@ def merge_streaming_data_request_download_support(ours: str) -> str:
     for old, new, label in replacements:
         merged = replace_exact_once(merged, old, new, label)
 
-    for marker in merged_markers:
+    for marker in original_merged_markers:
         if marker not in merged:
             raise SyncError(f"Merged streaming request is missing: {marker}")
     return merged
