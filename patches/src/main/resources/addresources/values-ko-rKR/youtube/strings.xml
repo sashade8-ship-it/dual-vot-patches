@@ -923,6 +923,9 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_exit_fullscreen_entry_2">세로 모드에서만</string>
   <string name="morphe_exit_fullscreen_entry_3">가로 모드에서만</string>
   <string name="morphe_exit_fullscreen_entry_4">세로 및 가로 모드</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">전체 화면에서 가로 방향 강제</string>
+  <string name="morphe_force_fullscreen_landscape_summary">전체 화면 모드 진입 시 플레이어를 가로 방향으로 회전합니다. 이미 가로 방향으로 전체 화면이 열리는 작은 화면에서는 사용할 수 없습니다</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">전체 화면 제스처</string>
   <string name="morphe_disable_fullscreen_gestures_summary">전체 화면에서 사용할 수 있는 플레이어 제스처를 설정할 수 있습니다</string>

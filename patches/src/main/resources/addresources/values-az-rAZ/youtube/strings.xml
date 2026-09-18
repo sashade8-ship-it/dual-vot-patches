@@ -921,6 +921,9 @@ Ayarlar→ Oxunuş (və ya Avtomatik oxunuş) → Növbəti videonu avtomatik ox
   <string name="morphe_exit_fullscreen_entry_2">Yalnız portret</string>
   <string name="morphe_exit_fullscreen_entry_3">Yalnız landşaft</string>
   <string name="morphe_exit_fullscreen_entry_4">Portret və landşaft</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Tam ekranda məcburi landşaft rejimini aktivləşdir</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Tam ekrana keçdikdə oynadıcını landşaft rejiminə fırlat. Kiçik ekranlarda əlçatmazdır, çünki onlar artıq tam ekranı landşaft rejimində açır</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Tam ekran jestləri</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Tam ekran rejimində oynadıcı jestləri</string>

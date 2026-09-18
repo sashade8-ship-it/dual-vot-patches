@@ -23,6 +23,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,6 +32,7 @@ import app.morphe.extension.music.patches.lyrics.LyricsLine;
 import app.morphe.extension.music.patches.lyrics.LyricsMerge;
 import app.morphe.extension.music.patches.lyrics.TrackInfo;
 import app.morphe.extension.music.patches.lyrics.Word;
+import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.requests.Requester;
 
 /**
@@ -79,7 +81,7 @@ public final class QQProvider implements LyricsProvider {
         if (song == null || !song.has("id")) {
             return null;
         }
-        return fetchFromSong(song, track);
+        return fetchFromSong(song);
     }
 
     @Override
@@ -95,18 +97,19 @@ public final class QQProvider implements LyricsProvider {
                 continue;
             }
             try {
-                Lyrics lyrics = fetchFromSong(song, track);
+                Lyrics lyrics = fetchFromSong(song);
                 if (lyrics != null) {
                     results.add(lyrics);
                 }
             } catch (Exception ex) {
+                Logger.printDebug(() -> "Could not fetch QQ lyrics for a song", ex);
             }
         }
         return results;
     }
 
     @Nullable
-    private Lyrics fetchFromSong(JSONObject song, TrackInfo track) throws Exception {
+    private Lyrics fetchFromSong(JSONObject song) throws Exception {
         JSONObject data = fetchLyricData(song);
         if (data == null) {
             return null;
@@ -150,9 +153,7 @@ public final class QQProvider implements LyricsProvider {
         if (transLines == null || transLines.isEmpty()) {
             transLines = LrcParser.parseSynced(transPayload);
         }
-        if (transLines != null) {
-            transLines.removeIf(line -> "//".equals(line.text().trim()));
-        }
+        transLines.removeIf(line -> "//".equals(line.text().trim()));
         List<LyricsLine> translation = LyricsMerge.mergeRomanization(lines, transLines);
         Map<String, List<LyricsLine>> translations =
                 LyricsMerge.singleLanguageTranslations(translation, "zh");
@@ -211,10 +212,8 @@ public final class QQProvider implements LyricsProvider {
         }
 
         JSONObject response = Requester.parseJSONObject(connection);
-        JSONArray songs = response.optJSONObject("req_0")
-                .optJSONObject("data")
-                .optJSONObject("body")
-                .optJSONArray("item_song");
+        JSONObject body = LyricsRequests.optPath(response, "req_0", "data", "body");
+        JSONArray songs = body == null ? null : body.optJSONArray("item_song");
         if (songs == null || songs.length() == 0) {
             return new ArrayList<>();
         }
@@ -250,7 +249,6 @@ public final class QQProvider implements LyricsProvider {
             }
             String name = singer.optString("name", "");
             if (!name.isEmpty()) {
-                //noinspection SizeReplaceableByIsEmpty
                 if (builder.length() > 0) {
                     builder.append('/');
                 }
@@ -304,9 +302,7 @@ public final class QQProvider implements LyricsProvider {
         }
 
         JSONObject response = Requester.parseJSONObject(connection);
-        JSONObject respReq0 = response.optJSONObject("req_0");
-        JSONObject data = respReq0 == null ? null : respReq0.optJSONObject("data");
-        return data;
+        return LyricsRequests.optPath(response, "req_0", "data");
     }
 
     private static String base64Text(String text) {
@@ -351,7 +347,7 @@ public final class QQProvider implements LyricsProvider {
         while (matcher.find()) {
             builder.append(text, last, matcher.start());
             try {
-                builder.append((char) Integer.parseInt(matcher.group(1)));
+                builder.append((char) Integer.parseInt(Objects.requireNonNull(matcher.group(1))));
             } catch (NumberFormatException ignored) {
                 builder.append(matcher.group(0));
             }
@@ -380,8 +376,8 @@ public final class QQProvider implements LyricsProvider {
             if (!m.matches()) {
                 continue;
             }
-            String key = m.group(1);
-            String value = m.group(2);
+            String key = Objects.requireNonNull(m.group(1));
+            String value = Objects.requireNonNull(m.group(2));
             if ("offset".equalsIgnoreCase(key)) {
                 try {
                     offsetOut[0] = Long.parseLong(value);
@@ -447,10 +443,10 @@ public final class QQProvider implements LyricsProvider {
                 continue;
             }
 
-            long lineStart = Long.parseLong(lineMatch.group(1));
-            long lineDuration = Long.parseLong(lineMatch.group(2));
+            long lineStart = Long.parseLong(Objects.requireNonNull(lineMatch.group(1)));
+            long lineDuration = Long.parseLong(Objects.requireNonNull(lineMatch.group(2)));
             long lineEnd = lineStart + lineDuration;
-            String lineContent = lineMatch.group(3);
+            String lineContent = Objects.requireNonNull(lineMatch.group(3));
 
             if (QRC_WHOLE_LINE_COMMENT.matcher(lineContent).find()) {
                 continue;
@@ -461,7 +457,7 @@ public final class QQProvider implements LyricsProvider {
             Matcher wordMatch = QRC_WORD.matcher(lineContent);
             int prevEnd = 0;
             while (wordMatch.find()) {
-                offsets.add(Long.parseLong(wordMatch.group(1)));
+                offsets.add(Long.parseLong(Objects.requireNonNull(wordMatch.group(1))));
                 texts.add(lineContent.substring(prevEnd, wordMatch.start()));
                 prevEnd = wordMatch.end();
             }
@@ -478,8 +474,8 @@ public final class QQProvider implements LyricsProvider {
                 if (wordText.isEmpty()) {
                     continue;
                 }
-                boolean endsWithSpace = !wordText.isEmpty()
-                        && Character.isWhitespace(wordText.charAt(wordText.length() - 1));
+                boolean endsWithSpace =
+                        Character.isWhitespace(wordText.charAt(wordText.length() - 1));
                 words.add(new Word(wordStart, wordEnd, wordText.trim(), null, endsWithSpace));
                 full.append(wordText);
             }

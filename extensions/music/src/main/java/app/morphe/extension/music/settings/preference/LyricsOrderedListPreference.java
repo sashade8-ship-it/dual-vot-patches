@@ -60,7 +60,7 @@ public final class LyricsOrderedListPreference extends Preference {
         PROVIDER_LABELS.put("Luna", "Soda (Luna)");
         PROVIDER_LABELS.put("bLyrics", "BetterLyrics (bLyrics)");
         PROVIDER_LABELS.put("BiniLyrics", "BiniLyrics (Binimum)");
-        PROVIDER_LABELS.put("Musixmatch", "Musixmatch *");
+        PROVIDER_LABELS.put("Musixmatch", "Musixmatch");
         PROVIDER_LABELS.put("Spotify", "Spotify *");
         PROVIDER_LABELS.put("Deezer", "Deezer *");
     }
@@ -197,7 +197,6 @@ public final class LyricsOrderedListPreference extends Preference {
             case "Captions" -> Settings.LYRICS_CAPTION_COOKIES;
             case "Spotify" -> Settings.SPOTIFY_TOKEN;
             case "Deezer" -> Settings.DEEZER_ARL;
-            case "Musixmatch" -> Settings.MUSIXMATCH_TOKEN;
             default -> null;
         };
         return setting != null && setting.get().isBlank();
@@ -400,7 +399,6 @@ public final class LyricsOrderedListPreference extends Preference {
         }
         StringBuilder sb = new StringBuilder();
         for (Item item : items) {
-            //noinspection SizeReplaceableByIsEmpty
             if (sb.length() > 0) {
                 sb.append(',');
             }

@@ -508,7 +508,12 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Questo video è già stato salvato nella playlist \"Guarda più tardi\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Impossibile salvare questo video nella playlist \"Guardalo più tardi\"</string>
   <string name="morphe_save_to_watch_later_flyout_title">Salva in Guarda più tardi</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">Mostra il pulsante Salva in Guarda più tardi nel menu a comparsa delle impostazioni del player</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">Consente di salvare il video attualmente in riproduzione in \'Guarda più tardi\' dal menu a comparsa delle impostazioni video</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Mostra il pulsante Salva per guardare più tardi nei video per bambini</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Consente di salvare video per bambini in \'Guarda più tardi\' dal menu a comparsa</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Mostra il pulsante Salva in Guarda più tardi nel menu a comparsa degli Shorts</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Consente di salvare gli Shorts in \'Guarda più tardi\' dal menu a comparsa</string>
   <string name="morphe_queue_flyout_title">Aggiungi alla coda di Morphe</string>
   <string name="morphe_queue_restore_title">Mantieni la coda tra le sessioni</string>
   <string name="morphe_queue_restore_summary">La coda viene mantenuta anche riavviando l\'app</string>
@@ -916,6 +921,9 @@ Impostazioni → Riproduzione (o Autoplay) → Riproduci il video successivo aut
   <string name="morphe_exit_fullscreen_entry_2">Solo verticale</string>
   <string name="morphe_exit_fullscreen_entry_3">Solo orizzontale</string>
   <string name="morphe_exit_fullscreen_entry_4">Verticale e orizzontale</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Forza l\'orientamento orizzontale a schermo intero</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Ruota il player in orizzontale quando si passa a schermo intero. Non disponibile su schermi piccoli, che si aprono già a schermo intero in orizzontale.</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesti a schermo intero</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gesti del lettore in modalità schermo intero</string>

@@ -922,6 +922,9 @@ Paramètres → Lecture (ou Lecture automatique) → Lecture automatique de la v
   <string name="morphe_exit_fullscreen_entry_2">Portrait uniquement</string>
   <string name="morphe_exit_fullscreen_entry_3">Paysage uniquement</string>
   <string name="morphe_exit_fullscreen_entry_4">Portrait et paysage</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Forcer le mode paysage en plein écran</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Faire pivoter le lecteur en mode paysage lors du passage en plein écran. Indisponible sur les petits écrans, qui s\'ouvrent déjà en plein écran en mode paysage</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestes en mode plein écran</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gestes du lecteur en mode plein écran</string>

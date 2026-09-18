@@ -34,9 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Utilise le téléchargeur externe de votre choix au lieu du menu déroulant \'Télécharger\' par défaut</string>
   <string name="morphe_music_in_app_downloads_title">Télécharger dans l\'application</string>
   <string name="morphe_music_in_app_downloads_summary">Télécharge l\'audio directement dans YouTube Music au lieu d\'ouvrir l\'application de téléchargement externe</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"Les téléchargements dans l'application réutilisent le flux audio que l'application a déjà identifié et nécessitent que l'option 'Falsifier les flux vidéo' soit activée.
-
-Les morceaux sont enregistrés dans le stockage privé de l'application et sont supprimés si YouTube Music est désinstallé.
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"Les morceaux sont enregistrés dans le stockage privé de l'application et sont supprimés si YouTube Music est désinstallé.
 
 Lorsque cette option est activée, l'onglet 'Téléchargés' affiche ces morceaux à la place de la bibliothèque hors connexion de Music Premium. La désactiver restaure l'onglet, et les téléchargements Premium ne sont jamais touchés."</string>
   <string name="morphe_music_downloads_screen_title">Téléchargements</string>
@@ -384,7 +382,7 @@ Pour que le scrobbling continue à se synchroniser pendant la lecture en arrièr
   <string name="morphe_music_spotify_token_toast_saved">Spotify : sp_dc enregistré</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify : sp_dc supprimé</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify : sp_dc invalide — veuillez vérifier et réessayer</string>
-  <string name="morphe_music_apple_token_optional_hint">Le jeton Apple Music est optionnel. Sans celui-ci, Lyrically sera utilisé comme solution de secours.</string>
+  <string name="morphe_music_apple_token_optional_hint">Le jeton Apple Music est optionnel. Sans celui-ci, Lyrically sera utilisé comme solution de secours</string>
   <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Collez le cookie arl de Deezer.
 
@@ -396,12 +394,9 @@ Pour que le scrobbling continue à se synchroniser pendant la lecture en arrièr
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer : arl supprimé</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer : arl invalide — veuillez vérifier et réessayer</string>
   <string name="morphe_music_musixmatch_token_title">Jeton Musixmatch</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"Collez votre jeton utilisateur Musixmatch.
+  <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch fonctionne sans jeton, vous pouvez donc laisser ce champ vide.
 
-Étapes :
-1. Rendez-vous sur musixmatch.com et connectez-vous.
-2. Ouvrez DevTools → Application → Stockage local
-3. Copiez la valeur du jeton utilisateur"</string>
+Ajoutez un jeton uniquement si vous souhaitez utiliser votre propre compte. Il doit provenir de l'application Android Musixmatch : les jetons copiés depuis musixmatch.com appartiennent à l'ancien client de bureau qui a été retiré et l'API les refuse"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">Jeton utilisateur</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch : jeton utilisateur enregistré</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch : jeton utilisateur supprimé</string>

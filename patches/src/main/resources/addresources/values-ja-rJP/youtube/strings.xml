@@ -508,7 +508,12 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_save_to_watch_later_already_exists_toast">この動画は既に「後で見る」に保存されています</string>
   <string name="morphe_save_to_watch_later_error_toast">この動画は「後で見る」に保存できません</string>
   <string name="morphe_save_to_watch_later_flyout_title">[後で見る] に保存</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">プレーヤー設定のフライアウトに「後で見る」に保存ボタンを表示する</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">動画設定のフライアウトから、現在視聴中の動画を「後で見る」に保存できるようにします</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">子ども向け動画の関連動画に「[後で見る] に保存」を表示</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">フライアウトメニューから、キッズ関連動画を「後で見る」に保存できるようにします</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">ショート動画のフライアウトに「後で見る」に保存するボタンを表示する</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">フライアウトメニューからショート動画を「後で見る」に保存できるようにします</string>
   <string name="morphe_queue_flyout_title">Morphe キューに追加</string>
   <string name="morphe_queue_restore_title">セッションをまたいでキューを保持</string>
   <string name="morphe_queue_restore_summary">アプリを終了または再起動したときにキューを保持します</string>
@@ -917,6 +922,9 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_exit_fullscreen_entry_2">縦画面のみ</string>
   <string name="morphe_exit_fullscreen_entry_3">横画面のみ</string>
   <string name="morphe_exit_fullscreen_entry_4">縦画面 &amp; 横画面</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">全画面で横向きを強制</string>
+  <string name="morphe_force_fullscreen_landscape_summary">全画面に入るときにプレイヤーを横向きに回転します。小さな画面では、すでに全画面が横向きで開くため、利用できません</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">全画面表示ジェスチャー</string>
   <string name="morphe_disable_fullscreen_gestures_summary">全画面表示モードに関連するジェスチャー</string>

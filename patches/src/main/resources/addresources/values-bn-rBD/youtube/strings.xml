@@ -921,6 +921,9 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_exit_fullscreen_entry_2">শুধু পোর্ট্রেট</string>
   <string name="morphe_exit_fullscreen_entry_3">শুধু ল্যান্ডস্কেপ</string>
   <string name="morphe_exit_fullscreen_entry_4">আনুভূমিক এবং ল্যান্ডস্কেপ</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">ফুলস্ক্রিনে ল্যান্ডস্কেপ বাধ্যতামূলক করুন</string>
+  <string name="morphe_force_fullscreen_landscape_summary">ফুলস্ক্রিনে প্রবেশ করার সময় প্লেয়ারটিকে ল্যান্ডস্কেপে ঘোরান। ছোট স্ক্রিনগুলোতে অনুপলব্ধ, যেগুলো ইতিমধ্যে ল্যান্ডস্কেপে ফুলস্ক্রিন খোলে।</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">পুরো স্ক্রিন জুড়ে জেসচার ব্যবহার করুন</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Player gestures in fullscreen mode</string>

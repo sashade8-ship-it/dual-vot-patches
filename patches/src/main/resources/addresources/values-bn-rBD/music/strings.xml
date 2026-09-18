@@ -32,7 +32,50 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_action_button_summary">আপনার নির্বাচিত বাহ্যিক ডাউনলোডারটি স্টক ডাউনলোড অ্যাকশন বোতামের পরিবর্তে ব্যবহার করে।</string>
   <string name="morphe_external_downloader_flyout_menu_title">ডাউনলোড মেনু ওভাররাইড করুন</string>
   <string name="morphe_external_downloader_flyout_menu_summary">আপনার নির্বাচিত বাহ্যিক ডাউনলোডারটি স্টক ডাউনলোড ফ্লাইআউট মেনুর পরিবর্তে ব্যবহার করে।</string>
+  <string name="morphe_music_in_app_downloads_title">অ্যাপে ডাউনলোড</string>
+  <string name="morphe_music_in_app_downloads_summary">YouTube Music-এর ভিতরে অডিও ডাউনলোড করে, বাহ্যিক ডাউনলোডার অ্যাপ খোলার পরিবর্তে</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"ট্র্যাকগুলি অ্যাপের ব্যক্তিগত স্টোরেজে সংরক্ষিত হয় এবং YouTube মিউজিক আনইনস্টল করলে সেগুলি মুছে যায়।
+
+যখন এটি চালু থাকে, ডাউনলোড ট্যাবটি মিউজিক Premium অফলাইন লাইব্রেরির পরিবর্তে এই ট্র্যাকগুলিকে তালিকাভুক্ত করে। এটি বন্ধ করলে ট্যাবটি পুনরুদ্ধার হয়, এবং Premium ডাউনলোডগুলি কখনও স্পর্শ করা হয় না।"</string>
+  <string name="morphe_music_downloads_screen_title">ডাউনলোড</string>
+  <string name="morphe_music_downloads_empty">"কোনো ডাউনলোড নেই
+ডাউনলোড করা ট্র্যাকগুলো এখানে দেখা যাবে"</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
+  <string name="morphe_music_downloads_summary">%1$sটি ট্র্যাক • %2$s MB</string>
+  <string name="morphe_music_downloads_search_hint">ডাউনলোড অনুসন্ধান করুন</string>
   <string name="morphe_music_downloads_sort">ক্রমানুসারে সাজান</string>
+  <string name="morphe_music_downloads_sort_artist">শিল্পী অনুসারে সাজান</string>
+  <string name="morphe_music_downloads_sort_title">শিরোনাম অনুসারে সাজান</string>
+  <string name="morphe_music_downloads_sort_size">আকার অনুসারে সাজান</string>
+  <string name="morphe_music_downloads_delete_all">সব ডাউনলোড মুছুন</string>
+  <string name="morphe_music_downloads_delete_all_title">সব ডাউনলোড মুছবেন?</string>
+  <string name="morphe_music_downloads_delete_all_message">এই ডিভাইস থেকে সব ডাউনলোড করা ট্র্যাক মুছে ফেলা হবে</string>
+  <string name="morphe_music_downloads_all_deleted">ডাউনলোড মুছে ফেলা হয়েছে</string>
+  <string name="morphe_music_downloads_nothing_found">কিছু পাওয়া যায়নি</string>
+  <string name="morphe_music_downloads_actions_for">%s-এর জন্য অ্যাকশন</string>
+  <string name="morphe_music_downloads_play">চালান</string>
+  <string name="morphe_music_downloads_play_pause">চালান বা বিরতি দিন</string>
+  <string name="morphe_music_downloads_previous">পূর্ববর্তী</string>
+  <string name="morphe_music_downloads_next">পরবর্তী</string>
+  <string name="morphe_music_downloads_pause">বিরতি দিন</string>
+  <string name="morphe_music_downloads_close">বন্ধ করুন</string>
+  <string name="morphe_music_downloads_delete">মুছুন</string>
+  <string name="morphe_music_downloads_delete_track">ডাউনলোড মুছুন</string>
+  <string name="morphe_music_downloads_delete_track_title">ডাউনলোড মুছবেন?</string>
+  <string name="morphe_music_downloads_delete_track_message">%s এই ডিভাইস থেকে মুছে ফেলা হবে</string>
+  <string name="morphe_music_downloads_track_deleted">ডাউনলোডটি মুছে ফেলা হয়েছে</string>
+  <string name="morphe_music_downloads_track_delete_failed">ডাউনলোডটি মুছে ফেলা যায়নি</string>
+  <string name="morphe_music_downloads_play_failed">ডাউনলোডটি চালানো যায়নি</string>
+  <string name="morphe_music_downloads_notification_channel">অডিও ডাউনলোড</string>
+  <string name="morphe_music_downloads_playback_channel">অফলাইন প্লেব্যাক</string>
+  <string name="morphe_music_downloads_unknown_track">ডাউনলোড করার জন্য ট্র্যাকটি শনাক্ত করা যায়নি</string>
+  <string name="morphe_music_downloads_already_running">ডাউনলোড ইতিমধ্যে চলছে</string>
+  <string name="morphe_music_downloads_already_saved">ইতিমধ্যে ডাউনলোড করা হয়েছে</string>
+  <string name="morphe_music_downloads_started">ডাউনলোড শুরু হয়েছে</string>
+  <string name="morphe_music_downloads_starting">ডাউনলোড শুরু হচ্ছে…</string>
+  <string name="morphe_music_downloads_progress">ডাউনলোড হচ্ছে %s%%</string>
+  <string name="morphe_music_downloads_complete">ডাউনলোড সম্পন্ন হয়েছে</string>
+  <string name="morphe_music_downloads_failed">ডাউনলোড ব্যর্থ হয়েছে</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">মর্ফ সম্পর্কে</string>
@@ -319,6 +362,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_source_reset_title">প্রদানকারীর ক্রম পুনরায় সেট করবেন?</string>
   <string name="morphe_music_lyrics_source_reset_message">প্রদানকারীদের ডিফল্ট অগ্রাধিকার ক্রমে পুনরুদ্ধার করুন</string>
   <string name="morphe_music_token_dialog_get_token">টোকেন পান</string>
+  <string name="morphe_music_apple_music_token_title">Apple Music মিডিয়া-ব্যবহারকারী-টোকেন</string>
   <string name="morphe_music_apple_music_token_dialog_instruction">"music.apple.com থেকে media-user-token কুকি পেস্ট করুন
 
 ধাপ:
@@ -338,7 +382,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc […] এটি ছাড়া, Lyrically ফলব্যাক হিসেবে ব্যবহার করা হবে।</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc মুছে ফেলা হয়েছে</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify: অবৈধ sp_dc — অনুগ্রহ করে পরীক্ষা করে আবার চেষ্টা করুন</string>
-  <string name="morphe_music_apple_token_optional_hint">Apple Music টোকেন ঐচ্ছিক। এটি ছাড়া, Lyrically ফলব্যাক হিসেবে ব্যবহার করা হবে।</string>
+  <string name="morphe_music_apple_token_optional_hint">Apple Music টোকেন ঐচ্ছিক। এটি না থাকলে, Lyrically ফলব্যাক হিসেবে ব্যবহৃত হবে।</string>
   <string name="morphe_music_deezer_arl_title">Deezer […] \"arl\"-এর মান কপি করুন</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Deezer থেকে arl কুকিটি পেস্ট করুন।
 
@@ -350,12 +394,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl অবৈধ — অনুগ্রহ করে আবার পরীক্ষা করে চেষ্টা করুন।</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: অবৈধ arl — অনুগ্রহ করে পরীক্ষা করে আবার চেষ্টা করুন</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch […] ব্যবহারকারীর টোকেনের মান কপি করুন</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"আপনার Musixmatch ইউজার টোকেন পেস্ট করুন।
-
-পদক্ষেপ:
-1. musixmatch.com-এ যান এবং সাইন ইন করুন
-2. DevTools → Application → Cookies → Local Storage খুলুন
-3. ইউজার টোকেনের মান কপি করুন"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">Musixmatch: ব্যবহারকারীর টোকেন অবৈধ — অনুগ্রহ করে আবার পরীক্ষা করে চেষ্টা করুন।</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: ইউজার টোকেন সংরক্ষিত হয়েছে</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: ব্যবহারকারীর টোকেন মুছে ফেলা হয়েছে</string>

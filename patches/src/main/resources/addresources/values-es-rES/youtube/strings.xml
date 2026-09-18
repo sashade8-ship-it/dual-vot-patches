@@ -921,6 +921,9 @@ Configuración → Reproducción (o Reproducción automática) → Reproducción
   <string name="morphe_exit_fullscreen_entry_2">Solo vertical</string>
   <string name="morphe_exit_fullscreen_entry_3">Solo horizontal</string>
   <string name="morphe_exit_fullscreen_entry_4">Vertical y horizontal</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Forzar modo horizontal en pantalla completa</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Gira el reproductor a modo horizontal al entrar en pantalla completa. No disponible en pantallas pequeñas, que ya se abren en pantalla completa en modo horizontal</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestos de pantalla completa</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gestos del reproductor en modo pantalla completa</string>

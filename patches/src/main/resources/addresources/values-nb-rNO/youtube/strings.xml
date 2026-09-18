@@ -921,6 +921,9 @@ Innstillinger → Avspilling (eller Autoplay) → Spill av neste video automatis
   <string name="morphe_exit_fullscreen_entry_2">Stående format</string>
   <string name="morphe_exit_fullscreen_entry_3">Liggende format</string>
   <string name="morphe_exit_fullscreen_entry_4">Stående og liggende</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Tving landskapsmodus i fullskjerm</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Roter spilleren til landskapsmodus når du går inn i fullskjerm. Ikke tilgjengelig på små skjermer, som allerede åpner fullskjerm i landskapsmodus</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Fullskjermbevegelser</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Avspillerbevegelser i fullskjermmodus</string>

@@ -34,11 +34,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Utiliza el descargador externo seleccionado en lugar del menú desplegable de descarga original</string>
   <string name="morphe_music_in_app_downloads_title">Descargar en la aplicación</string>
   <string name="morphe_music_in_app_downloads_summary">Descarga el audio dentro de YouTube Music en lugar de abrir la aplicación de descarga externa</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"Las descargas en la aplicación reutilizan la transmisión de audio que la aplicación ya ha resuelto y requieren que 'Falsificar transmisiones de vídeo' esté activado.
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"Las canciones se guardan en el almacenamiento privado de la aplicación y se eliminan si se desinstala YouTube Music.
 
-Las pistas se guardan en el almacenamiento privado de la aplicación y se eliminan si se desinstala YouTube Music.
-
-Mientras esté activado, la pestaña Descargas muestra estas pistas en lugar de la biblioteca sin conexión de Music Premium. Al desactivarlo se restaura la pestaña, y las descargas de Premium nunca se ven afectadas."</string>
+Mientras esta opción esté activada, la pestaña Descargas muestra estas canciones en lugar de la biblioteca sin conexión de Music Premium. Al desactivarla, la pestaña vuelve a aparecer y las descargas Premium nunca se ven afectadas."</string>
   <string name="morphe_music_downloads_screen_title">Descargas</string>
   <string name="morphe_music_downloads_empty">"No hay descargas
 Las pistas descargadas aparecen aquí"</string>
@@ -396,12 +394,9 @@ Pasos:
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl borrado</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: arl no válido. Compruébalo e inténtalo de nuevo</string>
   <string name="morphe_music_musixmatch_token_title">Token de Musixmatch</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"Pega tu token de usuario de Musixmatch.
+  <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch funciona sin token, así que este campo puede quedarse vacío.
 
-Pasos:
-1. Visita musixmatch.com e inicia sesión
-2. Abre DevTools → Aplicación → Almacenamiento local
-3. Copia el valor del token de usuario"</string>
+Añade un token solo para usar tu propia cuenta. Tiene que provenir de la aplicación de Musixmatch para Android: los tokens copiados de musixmatch.com pertenecen al cliente de escritorio que ya no está disponible y la API los rechaza."</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">token de usuario</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: token de usuario guardado</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: token de usuario borrado</string>

@@ -34,9 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Açılan əsas Yükləmə menyusunun əvəzinə seçdiyiniz xarici yükləyicini istifadə edir</string>
   <string name="morphe_music_in_app_downloads_title">Tətbiqdə yüklə</string>
   <string name="morphe_music_in_app_downloads_summary">Xarici yükləyici tətbiqini açmaq əvəzinə, YouTube Music daxilində səsi yükləyir</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"Tətbiqdaxili yükləmələr tətbiqin artıq həll etdiyi səs yayımın təkrar istifadə edir və \"Video yayımlarını saxtalaşdırın\" aktivləşdirilməsini tələb edir.
-
-​Treklər tətbiqin şəxsi yaddaşında saxlanılır və YouTube Music silindikdə silinir.
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"Treklər tətbiqin şəxsi yaddaşında saxlanılır və YouTube Music silindikdə silinir.
 
 ​Bu açıq olduqda, Yükləmələr paneli Music Premium oflayn kitabxanası əvəzinə bu trekləri siyahıya alır. Bunu qapatdıqda panel bərpa olunur və Premium yükləmələri toxunulmaz qalır."</string>
   <string name="morphe_music_downloads_screen_title">Yükləmələr</string>
@@ -384,7 +382,7 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc saxlanıldı</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc təmizləndi</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify: etibarsız sp_dc — xahiş olunur, yoxla və təkrar cəhd et</string>
-  <string name="morphe_music_apple_token_optional_hint">Apple Music tokeni məcburi deyil. O olmadıqda, ehtiyat keçid kimi Lyrically istifadə ediləcək.</string>
+  <string name="morphe_music_apple_token_optional_hint">Apple Music tokeni məcburi deyil. O olmadıqda, ehtiyat keçid kimi Lyrically istifadə ediləcək</string>
   <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Deezer-dən arl kukisini yapışdır.
 
@@ -396,12 +394,6 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl təmizləndi</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: etibarsız arl — xahiş olunur, yoxla və təkrar cəhd et</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch Token</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch istifadəçi tokeninizi yapışdırın.
-
-​Mərhələlər:
-1. musixmatch.com 'u ziyarət et və daxil ol
-2. DevTools → Application → Local Storage bölməsini aç
-3. User token dəyərini köçür"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">user token</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: user token saxlanıldı</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: user token təmizləndi</string>

@@ -9,7 +9,9 @@ package app.morphe.extension.music.patches.lyrics.requests;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,9 +50,9 @@ final class LyricifyParser {
                 continue;
             }
 
-            final long startMs = Long.parseLong(m.group(1)) + offsetMs;
-            final long endMs = Long.parseLong(m.group(2)) + offsetMs;
-            final String body = m.group(3).trim();
+            final long startMs = Long.parseLong(Objects.requireNonNull(m.group(1))) + offsetMs;
+            final long endMs = Long.parseLong(Objects.requireNonNull(m.group(2))) + offsetMs;
+            final String body = Objects.requireNonNull(m.group(3)).trim();
             if (body.isEmpty()) {
                 continue;
             }
@@ -62,7 +64,7 @@ final class LyricifyParser {
             return Collections.emptyList();
         }
 
-        lines.sort((a, b) -> Long.compare(a.startTimeMs(), b.startTimeMs()));
+        lines.sort(Comparator.comparingLong(LyricsLine::startTimeMs));
         return lines;
     }
 
@@ -102,7 +104,7 @@ final class LyricifyParser {
             return Collections.emptyList();
         }
 
-        lines.sort((a, b) -> Long.compare(a.startTimeMs(), b.startTimeMs()));
+        lines.sort(Comparator.comparingLong(LyricsLine::startTimeMs));
         return lines;
     }
 
@@ -111,9 +113,9 @@ final class LyricifyParser {
         final Matcher m = WORD_TIMING.matcher(body);
 
         while (m.find()) {
-            final String wordText = m.group(1);
-            final long startMs = Long.parseLong(m.group(2)) + offsetMs;
-            final long durMs = Long.parseLong(m.group(3));
+            final String wordText = Objects.requireNonNull(m.group(1));
+            final long startMs = Long.parseLong(Objects.requireNonNull(m.group(2))) + offsetMs;
+            final long durMs = Long.parseLong(Objects.requireNonNull(m.group(3)));
             final long endMs = startMs + durMs;
 
             final boolean endsWithSpace = wordText.endsWith(" ");
@@ -130,8 +132,7 @@ final class LyricifyParser {
 
     private static String joinWordTexts(List<Word> words) {
         final StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < words.size(); i++) {
-            final Word w = words.get(i);
+        for (Word w : words) {
             sb.append(w.text());
         }
         return sb.toString();
@@ -155,9 +156,9 @@ final class LyricifyParser {
                 continue;
             }
 
-            final long min = Long.parseLong(m.group(1));
-            final String secPart = m.group(2);
-            final String text = m.group(3).trim();
+            final long min = Long.parseLong(Objects.requireNonNull(m.group(1)));
+            final String secPart = Objects.requireNonNull(m.group(2));
+            final String text = Objects.requireNonNull(m.group(3)).trim();
             if (text.isEmpty()) {
                 continue;
             }
@@ -170,11 +171,11 @@ final class LyricifyParser {
             return Collections.emptyList();
         }
 
-        entries.sort((a, b) -> Long.compare(a.timeMs, b.timeMs));
+        entries.sort(Comparator.comparingLong(TranslatedEntry::timeMs));
 
         final List<String> result = new ArrayList<>(entries.size());
         for (TranslatedEntry e : entries) {
-            result.add(e.text);
+            result.add(e.text());
         }
         return result;
     }
@@ -200,13 +201,5 @@ final class LyricifyParser {
         return (minutes * 60 + seconds) * 1000 + fractionMs;
     }
 
-    private static final class TranslatedEntry {
-        final long timeMs;
-        final String text;
-
-        TranslatedEntry(long timeMs, String text) {
-            this.timeMs = timeMs;
-            this.text = text;
-        }
-    }
+    private record TranslatedEntry(long timeMs, String text) {}
 }

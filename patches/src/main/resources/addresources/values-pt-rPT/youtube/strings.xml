@@ -921,6 +921,9 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_exit_fullscreen_entry_2">Apenas retrato</string>
   <string name="morphe_exit_fullscreen_entry_3">Apenas paisagem</string>
   <string name="morphe_exit_fullscreen_entry_4">Retrato e paisagem</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Forçar o modo paisagem em tela cheia</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Girar o player para o modo paisagem ao entrar em tela cheia. Indisponível em telas pequenas, que já abrem em tela cheia no modo paisagem.</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestos de tela cheia</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gestos do player em modo de ecrã inteiro</string>

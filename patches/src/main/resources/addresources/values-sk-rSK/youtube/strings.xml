@@ -921,6 +921,9 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
   <string name="morphe_exit_fullscreen_entry_2">Na výšku</string>
   <string name="morphe_exit_fullscreen_entry_3">Na šírku</string>
   <string name="morphe_exit_fullscreen_entry_4">Na výšku aj na šírku</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Vynútiť na šírku v režime celej obrazovky</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Otočiť prehrávač na šírku pri vstupe do režimu celej obrazovky. Na malých obrazovkách, ktoré už otvárajú celú obrazovku na šírku, je nedostupná</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesty na celú obrazovku</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gestá prehrávača v režime celej obrazovky</string>

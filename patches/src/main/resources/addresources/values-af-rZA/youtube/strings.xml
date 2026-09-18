@@ -921,6 +921,9 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_exit_fullscreen_entry_2">Portretmodus slegs</string>
   <string name="morphe_exit_fullscreen_entry_3">Landskapmodus slegs</string>
   <string name="morphe_exit_fullscreen_entry_4">Portret en landskap</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Dwing landskapmodus in volskerm</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Roteer die speler na landskap wanneer jy volskerm binnegaan. Onbeskikbaar op klein skerms, wat reeds in landskap volskerm oopmaak</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Volskerm gebare</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Spelergebare in volskermmodus</string>

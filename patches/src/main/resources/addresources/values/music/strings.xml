@@ -40,9 +40,7 @@ Second \"item\" text"</string>
     <string name="morphe_external_downloader_flyout_menu_summary">Uses your chosen external downloader instead of the stock Download flyout menu</string>
     <string name="morphe_music_in_app_downloads_title">Download in app</string>
     <string name="morphe_music_in_app_downloads_summary">Downloads audio inside YouTube Music instead of opening the external downloader app</string>
-    <string name="morphe_music_in_app_downloads_user_dialog_message">"In app downloads reuse the audio stream the app already resolved and require 'Spoof video streams' to be enabled.
-
-Tracks are saved to the private storage of the app and are deleted if YouTube Music is uninstalled.
+    <string name="morphe_music_in_app_downloads_user_dialog_message">"Tracks are saved to the private storage of the app and are deleted if YouTube Music is uninstalled.
 
 While this is on, the Downloads tab lists these tracks instead of the Music Premium offline library. Turning it off restores the tab, and Premium downloads are never touched."</string>
     <string name="morphe_music_downloads_screen_title">Downloads</string>
@@ -425,7 +423,7 @@ Steps:
     <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc saved</string>
     <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc cleared</string>
     <string name="morphe_music_spotify_token_toast_invalid">Spotify: invalid sp_dc — please check and try again</string>
-    <string name="morphe_music_apple_token_optional_hint">Apple Music token is optional. Without it, Lyrically will be used as fallback.</string>
+    <string name="morphe_music_apple_token_optional_hint">Apple Music token is optional. Without it, Lyrically will be used as fallback</string>
     <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
     <string name="morphe_music_deezer_arl_dialog_instruction">"Paste the arl cookie from Deezer.
 
@@ -438,12 +436,9 @@ Steps:
     <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl cleared</string>
     <string name="morphe_music_deezer_arl_toast_invalid">Deezer: invalid arl — please check and try again</string>
     <string name="morphe_music_musixmatch_token_title">Musixmatch Token</string>
-    <string name="morphe_music_musixmatch_token_dialog_instruction">"Paste your Musixmatch user token.
+    <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch works without a token, so this field can stay empty.
 
-Steps:
-1. Visit musixmatch.com and sign in
-2. Open DevTools → Application → Local Storage
-3. Copy the value of the user token"</string>
+Add a token only to use your own account. It has to come from the Musixmatch Android app: tokens copied from musixmatch.com belong to the retired desktop client and the API refuses them"</string>
     <string name="morphe_music_musixmatch_token_dialog_hint">user token</string>
     <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: user token saved</string>
     <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: user token cleared</string>

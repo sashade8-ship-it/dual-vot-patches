@@ -20,7 +20,6 @@ import app.morphe.extension.music.patches.lyrics.Word;
 
 public final class LyricsFileParser {
 
-    private static final String REQUIRED_VERSION = "1.0";
     private static final String[] CREDIT_META_KEYS = {"title", "artist", "album"};
 
     private LyricsFileParser() {
@@ -48,11 +47,7 @@ public final class LyricsFileParser {
             return null;
         }
 
-        // FIXME: require version to be exactly "1.0" once all files migrate
-        // Object versionValue = top.get("version");
-        // if (!REQUIRED_VERSION.equals(versionValue)) {
-        //     return null;
-        // }
+        // FIXME: reject files whose "version" is not exactly 1.0 once all files migrate
 
         List<String> creditLines = new ArrayList<>();
         boolean instrumental = false;
@@ -88,25 +83,29 @@ public final class LyricsFileParser {
         if (instrumental) {
             return parsedLines.isEmpty()
                     ? Lyrics.NOT_FOUND
-                    : new Lyrics(parsedLines, providerName, true, null,
-                    null, null, creditLinesOut, yaml, "lyricsfile.yaml", null);
+                    : fileLyrics(parsedLines, providerName, true, creditLinesOut, yaml);
         }
 
         boolean synced = parsedLines.stream()
                 .anyMatch(line -> line.startTimeMs() != LyricsLine.NO_TIME);
         if (synced) {
-            return new Lyrics(parsedLines, providerName, true, null,
-                    null, null, creditLinesOut, yaml, "lyricsfile.yaml", null);
+            return fileLyrics(parsedLines, providerName, true, creditLinesOut, yaml);
         }
 
         Object plainObject = top.get("plain");
         if (plainObject instanceof String) {
             List<LyricsLine> plain = LrcParser.parsePlain((String) plainObject);
             if (!plain.isEmpty()) {
-                return new Lyrics(plain, providerName, false, null, null, null, creditLinesOut, yaml, "lyricsfile.yaml", null);
+                return fileLyrics(plain, providerName, false, creditLinesOut, yaml);
             }
         }
         return Lyrics.NOT_FOUND;
+    }
+
+    private static Lyrics fileLyrics(List<LyricsLine> lines, String providerName, boolean synced,
+                                     @Nullable List<String> creditLines, String yaml) {
+        return new Lyrics(lines, providerName, synced, null, null, null,
+                creditLines, yaml, "lyricsfile.yaml", null);
     }
 
     @Nullable
@@ -140,7 +139,6 @@ public final class LyricsFileParser {
                 if (wordText.isEmpty()) {
                     continue;
                 }
-                //noinspection SizeReplaceableByIsEmpty
                 if (builder.length() > 0) {
                     builder.append(' ');
                 }
@@ -259,15 +257,12 @@ public final class LyricsFileParser {
     }
 
     private static String readBlockScalar(List<String> lines, Cursor cursor, int indent) {
-        int base = -1;
-        for (int i = cursor.index; i < lines.size(); i++) {
-            if (indentOf(lines.get(i)) <= indent) {
-                break;
-            }
-            base = indentOf(lines.get(i));
-            break;
+        if (cursor.index >= lines.size()) {
+            return "";
         }
-        if (base < 0) {
+        // The first line of the block sets the indentation stripped from all of them.
+        int base = indentOf(lines.get(cursor.index));
+        if (base <= indent) {
             return "";
         }
 
@@ -277,7 +272,6 @@ public final class LyricsFileParser {
             if (indentOf(line) <= indent) {
                 break;
             }
-            //noinspection SizeReplaceableByIsEmpty
             if (builder.length() > 0) {
                 builder.append('\n');
             }

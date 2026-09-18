@@ -508,7 +508,12 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">הסרטון הזה כבר שמור בפלייליסט \'צפייה מאוחרת\'</string>
   <string name="morphe_save_to_watch_later_error_toast">לא ניתן לשמור סרטון זה בפלייליסט \'צפייה מאוחרת\'.</string>
   <string name="morphe_save_to_watch_later_flyout_title">שמור לצפייה מאוחרת</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">הצג כפתור שמירה לצפייה מאוחרת בתפריט ההגדרות של הנגן</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">מאפשר לשמור את הסרטון הנוכחי ברשימת \'צפה מאוחר יותר\' מתפריט ההגדרות של הסרטון</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">הצג כפתור שמירה לצפייה מאוחרת בסרטוני ילדים</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">מאפשר לשמור סרטונים הקשורים לילדים ברשימת \'צפה מאוחר יותר\' מהתפריט הנפתח</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">הצג כפתור שמירה ל\'צפה מאוחר יותר\' בתפריט הנפתח של הסרטונים הקצרים</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">מאפשר לשמור סרטונים קצרים ברשימת \'צפה מאוחר יותר\' מהתפריט הנפתח</string>
   <string name="morphe_queue_flyout_title">הוסף לתור Morphe</string>
   <string name="morphe_queue_restore_title">שמור תור בין הפעלות</string>
   <string name="morphe_queue_restore_summary">התור נשמר גם לאחר הפעלה מחדש של האפליקציה</string>
@@ -916,6 +921,9 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_2">דיוקן בלבד</string>
   <string name="morphe_exit_fullscreen_entry_3">נוף בלבד</string>
   <string name="morphe_exit_fullscreen_entry_4">לאורך ולרוחב</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">אלץ מצב לרוחב במסך מלא</string>
+  <string name="morphe_force_fullscreen_landscape_summary">סובב את הנגן למצב אופקי בעת כניסה למסך מלא. לא זמין במסכים קטנים, שכבר נפתחים למסך מלא במצב אופקי</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">מחוות מסך מלא</string>
   <string name="morphe_disable_fullscreen_gestures_summary">מחוות נגן במצב מסך מלא</string>

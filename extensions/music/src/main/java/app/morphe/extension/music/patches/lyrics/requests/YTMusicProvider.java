@@ -51,7 +51,7 @@ public final class YTMusicProvider implements LyricsProvider {
     @Override
     public Lyrics fetch(TrackInfo track) throws Exception {
         final String videoId = VideoInformation.getVideoId();
-        if (videoId == null || videoId.isEmpty()) {
+        if (videoId.isEmpty()) {
             return null;
         }
 
@@ -116,26 +116,19 @@ public final class YTMusicProvider implements LyricsProvider {
                     .getJSONObject("watchNextTabbedResultsRenderer")
                     .getJSONArray("tabs");
             for (int i = 0; i < tabs.length(); i++) {
-                final JSONObject tab = tabs.optJSONObject(i);
-                if (tab == null || !tab.has("tabRenderer")) {
-                    continue;
-                }
-                final JSONObject endpoint = tab
-                        .optJSONObject("tabRenderer")
-                        .optJSONObject("endpoint");
-                if (endpoint == null) {
-                    continue;
-                }
-                final JSONObject browseEndpoint = endpoint.optJSONObject("browseEndpoint");
+                final JSONObject browseEndpoint = LyricsRequests.optPath(tabs.optJSONObject(i),
+                        "tabRenderer", "endpoint", "browseEndpoint");
                 if (browseEndpoint == null) {
                     continue;
                 }
-                final String pageType = browseEndpoint
-                        .optJSONObject("browseEndpointContextSupportedConfigs")
-                        .optJSONObject("browseEndpointContextMusicConfig")
-                        .optString("pageType", "");
-                if ("MUSIC_PAGE_TYPE_TRACK_LYRICS".equals(pageType)) {
-                    return browseEndpoint.optString("browseId", null);
+                final JSONObject musicConfig = LyricsRequests.optPath(browseEndpoint,
+                        "browseEndpointContextSupportedConfigs",
+                        "browseEndpointContextMusicConfig");
+                if (musicConfig == null) {
+                    continue;
+                }
+                if ("MUSIC_PAGE_TYPE_TRACK_LYRICS".equals(musicConfig.optString("pageType", ""))) {
+                    return LyricsRequests.optString(browseEndpoint, "browseId");
                 }
             }
         } catch (Exception ignored) {
@@ -301,7 +294,10 @@ public final class YTMusicProvider implements LyricsProvider {
                 if (runs != null && runs.length() > 0) {
                     final StringBuilder sb = new StringBuilder();
                     for (int r = 0; r < runs.length(); r++) {
-                        sb.append(runs.optJSONObject(r).optString("text", ""));
+                        final JSONObject run = runs.optJSONObject(r);
+                        if (run != null) {
+                            sb.append(run.optString("text", ""));
+                        }
                     }
                     return sb.toString();
                 }
@@ -368,6 +364,7 @@ public final class YTMusicProvider implements LyricsProvider {
         conn.setReadTimeout(READ_TIMEOUT_MS);
         conn.setRequestProperty("Content-Type", "application/json");
         conn.setRequestProperty("User-Agent", INNERTUBE_USER_AGENT);
+        conn.setRequestProperty("X-YouTube-Client-Version", clientVersion);
         conn.setRequestProperty("Accept", "*/*");
         conn.setRequestProperty("Cookie", "SOCS=CAI");
         conn.setRequestProperty("Origin", "https://music.youtube.com");

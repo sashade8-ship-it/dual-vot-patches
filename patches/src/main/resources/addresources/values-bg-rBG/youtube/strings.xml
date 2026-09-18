@@ -921,6 +921,9 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_2">Само портретна ориентация</string>
   <string name="morphe_exit_fullscreen_entry_3">Само пейзажна ориентация</string>
   <string name="morphe_exit_fullscreen_entry_4">Портрет и пейзаж</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Принудително пейзажно в цял екран</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Завърта плейъра в пейзажна ориентация при влизане в цял екран. Не е налично на малки екрани, които вече се отварят в цял екран в пейзажна ориентация.</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Гъвкави жестове за цял екран</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Жестове на плейъра в цял екран</string>

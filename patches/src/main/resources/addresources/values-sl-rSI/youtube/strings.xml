@@ -921,6 +921,9 @@ Nastavitve → Predvajanje (ali Samodejno predvajanje) → Samodejno predvajanje
   <string name="morphe_exit_fullscreen_entry_2">Portretni način</string>
   <string name="morphe_exit_fullscreen_entry_3">Ležeči način</string>
   <string name="morphe_exit_fullscreen_entry_4">Portretni in ležeči način</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Vsili ležeči prikaz v celozaslonskem načinu</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Ob vstopu v celozaslonski način zavrti predvajalnik v ležeči položaj. Ni na voljo na majhnih zaslonih, ki se že odprejo v ležečem celozaslonskem načinu.</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesture za celozaslonski način</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Poteze predvajalnika v celozaslonskem načinu</string>

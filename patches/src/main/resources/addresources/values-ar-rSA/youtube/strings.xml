@@ -926,6 +926,9 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_exit_fullscreen_entry_2">الوضع الطولي فقط</string>
   <string name="morphe_exit_fullscreen_entry_3">وضع بالعرض فقط</string>
   <string name="morphe_exit_fullscreen_entry_4">بالطول والعرض</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">فرض الوضع الأفقي في ملء الشاشة</string>
+  <string name="morphe_force_fullscreen_landscape_summary">قم بتدوير المشغّل إلى الوضع الأفقي عند الدخول إلى ملء الشاشة. غير متاح على الشاشات الصغيرة، التي تفتح بالفعل بملء الشاشة في الوضع الأفقي</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">إيماءات ملء الشاشة</string>
   <string name="morphe_disable_fullscreen_gestures_summary">إيماءات المشغل في وضع ملء الشاشة</string>

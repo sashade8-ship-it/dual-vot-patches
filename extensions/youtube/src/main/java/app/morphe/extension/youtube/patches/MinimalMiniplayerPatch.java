@@ -199,6 +199,11 @@ public final class MinimalMiniplayerPatch {
                             ? barContainer
                             : null
             );
+
+            watchPlayerRef = new WeakReference<>(null);
+            skipAdRef = new WeakReference<>(null);
+            navigationBarRef = new WeakReference<>(null);
+
             // A new watch page brings its own views, so what the last ones were left in
             // does not carry over.
             barDrawsOverPlayer = false;

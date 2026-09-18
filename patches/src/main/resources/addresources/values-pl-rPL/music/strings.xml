@@ -32,10 +32,50 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_action_button_summary">Używa wybranej zewnętrznej aplikacji do pobierania zamiast domyślnego przycisku akcji Pobierz</string>
   <string name="morphe_external_downloader_flyout_menu_title">Zastąp menu Pobierz</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Używa wybranej zewnętrznej aplikacji do pobierania zamiast domyślnego wysuwanego menu Pobierz</string>
+  <string name="morphe_music_in_app_downloads_title">Pobieranie w aplikacji</string>
+  <string name="morphe_music_in_app_downloads_summary">Pobiera dźwięk wewnątrz YouTube Music, zamiast otwierać zewnętrzną aplikację do pobierania</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"​Utwory są zapisywane w prywatnej pamięci aplikacji i zostaną usunięte w przypadku odinstalowania YouTube Music.
+
+​Gdy ta opcja jest włączona, karta Pobrane wyświetla te utwory zamiast biblioteki offline Music Premium. Wyłączenie jej przywraca pierwotny stan karty, a pobrane pliki Premium pozostają nienaruszone."</string>
+  <string name="morphe_music_downloads_screen_title">Pobrane</string>
+  <string name="morphe_music_downloads_empty">"Brak pobranych
+Tutaj pojawią się pobrane utwory"</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
+  <string name="morphe_music_downloads_summary">%1$s utw. • %2$s MB</string>
+  <string name="morphe_music_downloads_search_hint">Szukaj w pobranych</string>
   <string name="morphe_music_downloads_sort">Sortuj</string>
-  <string name="morphe_music_downloads_next">Dalej</string>
+  <string name="morphe_music_downloads_sort_artist">Sortuj według wykonawcy</string>
+  <string name="morphe_music_downloads_sort_title">Sortuj według tytułu</string>
+  <string name="morphe_music_downloads_sort_size">Sortuj według rozmiaru</string>
+  <string name="morphe_music_downloads_delete_all">Usuń wszystkie pobrane</string>
+  <string name="morphe_music_downloads_delete_all_title">Usunąć wszystkie pobrane?</string>
+  <string name="morphe_music_downloads_delete_all_message">Wszystkie pobrane utwory zostaną usunięte z tego urządzenia</string>
+  <string name="morphe_music_downloads_all_deleted">Usunięto pobrane</string>
+  <string name="morphe_music_downloads_nothing_found">Nic nie znaleziono</string>
+  <string name="morphe_music_downloads_actions_for">Akcje dla %s</string>
+  <string name="morphe_music_downloads_play">Odtwórz</string>
+  <string name="morphe_music_downloads_play_pause">Odtwórz lub wstrzymaj</string>
+  <string name="morphe_music_downloads_previous">Poprzedni</string>
+  <string name="morphe_music_downloads_next">Następny</string>
+  <string name="morphe_music_downloads_pause">Wstrzymaj</string>
   <string name="morphe_music_downloads_close">Zamknij</string>
   <string name="morphe_music_downloads_delete">Usuń</string>
+  <string name="morphe_music_downloads_delete_track">Usuń pobrany utwór</string>
+  <string name="morphe_music_downloads_delete_track_title">Usunąć pobrany utwór?</string>
+  <string name="morphe_music_downloads_delete_track_message">Utwór %s zostanie usunięty z tego urządzenia</string>
+  <string name="morphe_music_downloads_track_deleted">Usunięto pobrany utwór</string>
+  <string name="morphe_music_downloads_track_delete_failed">Nie udało się usunąć pobranego utworu</string>
+  <string name="morphe_music_downloads_play_failed">Nie udało się odtworzyć pobranego utworu</string>
+  <string name="morphe_music_downloads_notification_channel">Pobieranie muzyki</string>
+  <string name="morphe_music_downloads_playback_channel">Odtwarzanie offline</string>
+  <string name="morphe_music_downloads_unknown_track">Nie udało się zidentyfikować utworu do pobrania</string>
+  <string name="morphe_music_downloads_already_running">Pobieranie już trwa</string>
+  <string name="morphe_music_downloads_already_saved">Już pobrano</string>
+  <string name="morphe_music_downloads_started">Rozpoczęto pobieranie</string>
+  <string name="morphe_music_downloads_starting">Rozpoczynanie pobierania…</string>
+  <string name="morphe_music_downloads_progress">Pobieranie: %s%%</string>
+  <string name="morphe_music_downloads_complete">Pobieranie ukończone</string>
+  <string name="morphe_music_downloads_failed">Pobieranie nie powiodło się</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">Informacje</string>
@@ -342,7 +382,7 @@ Kroki:
   <string name="morphe_music_spotify_token_toast_saved">Spotify: zapisano sp_dc</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify: wyczyszczono sp_dc</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify: nieprawidłowy sp_dc - sprawdź i spróbuj ponownie</string>
-  <string name="morphe_music_apple_token_optional_hint">Token Apple Music jest opcjonalny. Bez niego jako rozwiązanie zapasowe zostanie użyte Lyrically.</string>
+  <string name="morphe_music_apple_token_optional_hint">Token Apple Music jest opcjonalny. Bez niego jako rozwiązanie zapasowe zostanie użyte Lyrically</string>
   <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Wklej ciasteczka arl z Deezera.
 
@@ -354,12 +394,9 @@ Kroki:
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: wyczyszczono arl</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: nieprawidłowy arl - sprawdź i spróbuj ponownie</string>
   <string name="morphe_music_musixmatch_token_title">Token Musixmatch</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"Wklej token użytkownika Musixmatch.
+  <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch działa bez tokena, więc to pole może pozostać puste.
 
-Kroki:
-1. Wejdź na musixmatch.com i zaloguj się
-2. Otwórz DevTools → Application → Local Storage
-3. Skopiuj wartość tokena użytkownika"</string>
+Dodaj token tylko, jeśli chcesz używać własnego konta. Musi on pochodzić z aplikacji Musixmatch na Androida: tokeny skopiowane z musixmatch.com przypisane są do wycofanej aplikacji komputerowej i API je odrzuca"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">token użytkownika</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: zapisano token użytkownika</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: wyczyszczono token użytkownika</string>

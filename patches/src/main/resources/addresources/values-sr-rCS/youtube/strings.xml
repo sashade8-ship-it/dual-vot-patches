@@ -511,6 +511,9 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_save_to_watch_later_flyout_button_title">Prikaži dugme „Sačuvaj u listu Pogledaj kasnije“ u iskačućem meniju podešavanja plejera.</string>
   <string name="morphe_save_to_watch_later_flyout_button_summary">Omogućava čuvanje trenutno gledanog videa u listu \'Pogledaj kasnije\' iz menija sa podešavanjima videa.</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Prikaži dugme Sačuvaj za kasnije u dečjim video snimcima</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Omogućava čuvanje video snimaka povezanih sa decom u listi „Pogledaj kasnije“ iz menija koji se otvara.</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Prikaži dugme Sačuvaj u listu „Pogledaj kasnije“ u meniju Shortsa.</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Omogućava čuvanje Shortsa u listi „Pogledaj kasnije“ iz menija koji se otvara.</string>
   <string name="morphe_queue_flyout_title">Dodaj u Morphe red</string>
   <string name="morphe_queue_restore_title">Zadrži red čekanja između sesija</string>
   <string name="morphe_queue_restore_summary">Red čekanja je sačuvan nakon ponovnog pokretanja aplikacije</string>
@@ -918,6 +921,9 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_exit_fullscreen_entry_2">Portretni režim</string>
   <string name="morphe_exit_fullscreen_entry_3">Pejzažni režim</string>
   <string name="morphe_exit_fullscreen_entry_4">Uspravno i vodoravno</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Prisili pejzažni prikaz u režimu preko celog ekrana</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Rotiraj plejer u pejzažni prikaz pri ulasku u režim preko celog ekrana. Nije dostupno na malim ekranima, koji se već otvaraju preko celog ekrana u pejzažnom prikazu</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gestovi punog ekrana</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Pokreti plejera u režimu preko celog ekrana</string>

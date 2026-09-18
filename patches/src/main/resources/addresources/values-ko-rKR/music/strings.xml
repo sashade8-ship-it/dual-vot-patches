@@ -34,11 +34,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">피드 \'동영상 오프라인 저장\' 메뉴로 기본 다운로더 대신 사용자가 선택한 외부 다운로더를 사용합니다</string>
   <string name="morphe_music_in_app_downloads_title">앱 내 다운로드</string>
   <string name="morphe_music_in_app_downloads_summary">외부 다운로더 앱을 실행하지 않고 YouTube Music 내에서 오디오를 다운로드합니다</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"앱 내 다운로드 기능은 앱에서 이미 확인한 오디오 스트림을 그대로 다시 사용하며, ‘동영상 스트림 속이기’ 옵션을 활성화해야 합니다.
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"트랙은 앱의 비공개 저장 공간에 저장되며, YouTube Music 앱을 설치 제거하면 함께 삭제됩니다
 
-트랙은 앱의 비공개 저장 공간에 저장되며, YouTube Music 앱을 삭제하면 함께 삭제됩니다.
-
-이 기능이 활성화되어 있는 동안에는 다운로드 탭에 Music Premium의 오프라인 음악 보관함 대신 이 기능으로 다운로드한 트랙이 표시됩니다. 기능을 비활성화하면 원래대로 다운로드 탭이 복원되며, Music Premium으로 다운로드한 음악에는 어떠한 영향도 주지 않습니다."</string>
+이 기능이 활성화되어 있는 동안에는 다운로드 탭에 Music Premium의 오프라인 라이브러리 대신 이 트랙들이 표시됩니다. 이 기능을 비활성화되면 원래대로 다운로드 탭이 복원되며, Premium으로 다운로드한 콘텐츠에는 어떠한 영향도 주지 않습니다"</string>
   <string name="morphe_music_downloads_screen_title">다운로드</string>
   <string name="morphe_music_downloads_empty">"다운로드가 없습니다
 다운로드한 트랙이 여기에 표시됩니다"</string>
@@ -384,7 +382,6 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc가 저장됨</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc가 삭제됨</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify: 잘못된 sp_dc — 확인 후 다시 시도하세요</string>
-  <string name="morphe_music_apple_token_optional_hint">Apple Music 토큰은 선택 사항입니다. 토큰이 없으면 Lyrically가 대체 앱으로 사용됩니다</string>
   <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Deezer에서 arl 쿠키를 붙여넣으세요
 
@@ -396,12 +393,6 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl 삭제됨</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: 잘못된 arl — 확인 후 다시 시도하세요</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch 토큰</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch 사용자 토큰을 붙여넣으세요
-
-단계:
-1. musixmatch.com에 접속하여 로그인합니다
-2. 개발자 도구 → 응용 프로그램 → 로컬 저장소를 엽니다
-3. 사용자 토큰 값을 복사합니다"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">사용자 토큰</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: 사용자 토큰이 저장됨</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: 사용자 토큰이 삭제됨</string>

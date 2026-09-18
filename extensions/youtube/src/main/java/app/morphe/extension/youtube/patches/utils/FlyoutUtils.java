@@ -157,13 +157,11 @@ public final class FlyoutUtils {
 
     private static Dialog flyoutDialog;
     private static PopupWindow flyoutPopupWindow;
-    private static volatile ChannelIdRequest flyoutChannelIdRequest;
-    private static volatile String flyoutVideoId = "";
-    private static volatile String flyoutPlaylistId = "";
-    private static volatile String flyoutCommentId = "";
-    private static volatile String flyoutChannelId = "";
-    private static volatile String flyoutChannelName = "";
-
+    private static String flyoutVideoId = "";
+    private static String flyoutPlaylistId = "";
+    private static String flyoutCommentId = "";
+    private static String flyoutChannelId = "";
+    private static String flyoutChannelName = "";
     private static final List<String> commentsPanelNames = List.of(
             "comment-item-section",
             "shorts-comments-panel"
@@ -172,6 +170,7 @@ public final class FlyoutUtils {
     private static boolean videoMarkedAsForKids;
     private static boolean isMyTabHistoryFlyout;
     private static boolean isShortFlyout;
+    private static ChannelIdRequest flyoutChannelIdRequest;
 
     private static Drawable getSettingsScreenDrawable(String drawableName) {
         return ResourceUtils.getDrawable(Utils.appIsUsingBoldIcons()
@@ -926,20 +925,19 @@ public final class FlyoutUtils {
                             }
 
                             flyoutChannelIdRequest = ChannelIdRequest.fetchRequestIfNeeded(flyoutVideoId);
-                            Utils.runOnBackgroundThread(() -> {
-                                Pair<String, String> remoteFlyoutChannelInfo = flyoutChannelIdRequest.getChannelInfo();
-                                if (remoteFlyoutChannelInfo != null) {
-                                    String remoteFlyoutChannelName = remoteFlyoutChannelInfo.first;
-                                    if (!TextUtils.isEmpty(remoteFlyoutChannelName)) {
-                                        flyoutChannelName = remoteFlyoutChannelName;
-                                    }
-
-                                    String remoteFlyoutChannelId = remoteFlyoutChannelInfo.second;
-                                    if (!TextUtils.isEmpty(remoteFlyoutChannelId)) {
-                                        flyoutChannelId = remoteFlyoutChannelId;
-                                    }
+                            // Unfortunately must block main thread to ensure channel name is set.
+                            Pair<String, String> remoteFlyoutChannelInfo = flyoutChannelIdRequest.getChannelInfo();
+                            if (remoteFlyoutChannelInfo != null) {
+                                String remoteFlyoutChannelName = remoteFlyoutChannelInfo.first;
+                                if (!TextUtils.isEmpty(remoteFlyoutChannelName)) {
+                                    flyoutChannelName = remoteFlyoutChannelName;
                                 }
-                            });
+
+                                String remoteFlyoutChannelId = remoteFlyoutChannelInfo.second;
+                                if (!TextUtils.isEmpty(remoteFlyoutChannelId)) {
+                                    flyoutChannelId = remoteFlyoutChannelId;
+                                }
+                            }
                         }
                     }
                 }

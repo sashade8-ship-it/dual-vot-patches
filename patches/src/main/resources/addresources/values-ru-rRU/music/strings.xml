@@ -34,11 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Использует выбранный вами внешний загрузчик вместо стандартного выпадающего меню загрузки</string>
   <string name="morphe_music_in_app_downloads_title">Скачивание в приложении</string>
   <string name="morphe_music_in_app_downloads_summary">Скачивает аудио внутри YouTube Music вместо открытия внешнего приложения-загрузчика.</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"Загрузки в приложении повторно используют аудиопоток, уже определённый приложением, и требуют, чтобы была включена «Подмена видеопотоков».
-
-Треки сохраняются в приватном хранилище приложения и удаляются при удалении YouTube Music.
-
-Пока эта функция включена, вкладка «Загрузки» показывает эти треки вместо офлайн-библиотеки Music Premium. При её отключении вкладка восстанавливается, а загрузки Premium никогда не затрагиваются."</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"Треки сохраняются в приватном хранилище приложения и удаляются при удалении YouTube Music.\n\nПока эта функция включена, вкладка «Загрузки» отображает эти треки вместо офлайн-библиотеки Music Premium. При её отключении вкладка восстанавливается, а загрузки Premium никогда не затрагиваются."</string>
   <string name="morphe_music_downloads_screen_title">Загрузки</string>
   <string name="morphe_music_downloads_empty">"Нет загрузок
 Загруженные треки появятся здесь"</string>
@@ -384,7 +380,7 @@ YouTube Music версии 8.x — плавный переход работае�
   <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc […] Без него Lyrically будет использоваться как запасной вариант.</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc очищен</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify: недействительный sp_dc — проверьте и повторите попытку</string>
-  <string name="morphe_music_apple_token_optional_hint">Токен Apple Music необязателен. Без него будет использоваться Lyrically в качестве запасного варианта.</string>
+  <string name="morphe_music_apple_token_optional_hint">Токен Apple Music необязателен. Без него в качестве резервного варианта будет использоваться Lyrically</string>
   <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Вставьте файл cookie arl из Deezer.
 
@@ -396,12 +392,6 @@ YouTube Music версии 8.x — плавный переход работае�
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl очищено</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: недействительный arl — проверьте и повторите попытку</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch Token</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"Вставьте свой токен пользователя Musixmatch.
-
-Шаги:
-1. Откройте musixmatch.com и войдите в систему
-2. Откройте DevTools → Приложение → Локальное хранилище
-3. Скопируйте значение токена пользователя"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">Токен пользователя</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: токен пользователя сохранён</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: токен пользователя очищен</string>

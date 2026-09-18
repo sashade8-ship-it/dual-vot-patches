@@ -511,6 +511,7 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_save_to_watch_later_flyout_button_title">Zobrazit tlačítko Uložit do seznamu Přehrát později v rozbalovací nabídce nastavení přehrávače</string>
   <string name="morphe_save_to_watch_later_flyout_button_summary">Umožňuje uložit právě sledované video do seznamu „Přehrát později“ z rozbalovací nabídky nastavení videa</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Zobrazit tlačítko Uložit do seznamu Později u videí pro děti</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Umožňuje ukládat videa související s dětmi do seznamu „Přehrát později“ z rozbalovací nabídky</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Zobrazit tlačítko Uložit k přehrání později v nabídce Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Umožňuje ukládat Shorts do seznamu „Přehrát později“ z rozbalovací nabídky</string>
   <string name="morphe_queue_flyout_title">Přidat do Morphe fronty</string>
@@ -918,6 +919,9 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <string name="morphe_exit_fullscreen_entry_2">Na výšku</string>
   <string name="morphe_exit_fullscreen_entry_3">Na šířku</string>
   <string name="morphe_exit_fullscreen_entry_4">Na výšku i na šířku</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Vynutit orientaci na šířku v režimu celé obrazovky</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Při přepnutí na celou obrazovku otočte přehrávač na šířku. Na malých obrazovkách není k dispozici, protože se už otevírají na celou obrazovku na šířku.</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesta pro celou obrazovku</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gesta přehrávače v režimu celé obrazovky</string>

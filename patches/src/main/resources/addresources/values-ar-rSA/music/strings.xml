@@ -32,19 +32,17 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_action_button_summary">يستخدم أداة التنزيل الخارجية التي اخترتها بدلاً من زر التنزيل الافتراضي</string>
   <string name="morphe_external_downloader_flyout_menu_title">تجاوز قائمة التنزيل</string>
   <string name="morphe_external_downloader_flyout_menu_summary">يستخدم أداة التنزيل الخارجية التي اخترتها بدلاً من قائمة التنزيل الافتراضية</string>
-  <string name="morphe_music_in_app_downloads_title">التنزيل في التطبيق</string>
-  <string name="morphe_music_in_app_downloads_summary">يقوم بتنزيل الصوت داخل YouTube Music بدلاً من فتح تطبيق التنزيل الخارجي</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"تستخدم التنزيلات داخل التطبيق دفق الصوت الذي حله التطبيق بالفعل وتتطلب تمكين 'انتحال تدفقات الفيديو'.
+  <string name="morphe_music_in_app_downloads_title">التنزيل داخل التطبيق</string>
+  <string name="morphe_music_in_app_downloads_summary">تنزيل الصوت داخل YouTube Music بدلاً من فتح تطبيق التنزيل الخارجي</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"تُحفظ المسارات في التخزين الخاص بالتطبيق وتُحذف إذا تم إلغاء تثبيت YouTube Music.
 
-يتم حفظ المسارات في التخزين الخاص للتطبيق ويتم حذفها إذا تم إلغاء تثبيت YouTube Music.
-
-أثناء تشغيل هذا، يسرد تبويب التنزيلات هذه المسارات بدلاً من مكتبة Premium غير المتصلة. إيقاف تشغيله يستعيد التبويب، ولا يتم لمس تنزيلات Premium أبدًا."</string>
+وعندما يكون هذا الخيار مفعّلًا، تعرض علامة تبويب التنزيلات هذه المسارات بدلاً من مكتبة Music Premium دون اتصال. وإيقافه يعيد علامة التبويب، ولا يتم المساس بتنزيلات Premium أبدًا."</string>
   <string name="morphe_music_downloads_screen_title">التنزيلات</string>
   <string name="morphe_music_downloads_empty">"لا توجد تنزيلات
-تظهر المسارات التي تم تنزيلها هنا"</string>
-  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
+tظهر المسارات التي تم تنزيلها هنا"</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s ميغابايت</string>
   <string name="morphe_music_downloads_summary">%1$s مسارات • %2$s MB</string>
-  <string name="morphe_music_downloads_search_hint">ابحث في التنزيلات</string>
+  <string name="morphe_music_downloads_search_hint">البحث في التنزيلات</string>
   <string name="morphe_music_downloads_sort">فرز</string>
   <string name="morphe_music_downloads_sort_artist">الترتيب حسب الفنان</string>
   <string name="morphe_music_downloads_sort_title">الترتيب حسب العنوان</string>
@@ -53,8 +51,8 @@ Second \"item\" text"</string>
   <string name="morphe_music_downloads_delete_all_title">حذف جميع التنزيلات؟</string>
   <string name="morphe_music_downloads_delete_all_message">سيتم حذف جميع المسارات التي تم تنزيلها من هذا الجهاز</string>
   <string name="morphe_music_downloads_all_deleted">تم حذف التنزيلات</string>
-  <string name="morphe_music_downloads_nothing_found">لم يتم العثور على شيء</string>
-  <string name="morphe_music_downloads_actions_for">إجراءات لـ%s</string>
+  <string name="morphe_music_downloads_nothing_found">لا توجد نتائج</string>
+  <string name="morphe_music_downloads_actions_for">إجراءات لـ %s</string>
   <string name="morphe_music_downloads_play">تشغيل</string>
   <string name="morphe_music_downloads_play_pause">تشغيل أو إيقاف مؤقت</string>
   <string name="morphe_music_downloads_previous">السابق</string>
@@ -66,13 +64,13 @@ Second \"item\" text"</string>
   <string name="morphe_music_downloads_delete_track_title">حذف التنزيل؟</string>
   <string name="morphe_music_downloads_delete_track_message">سيتم حذف %s من هذا الجهاز</string>
   <string name="morphe_music_downloads_track_deleted">تم حذف التنزيل</string>
-  <string name="morphe_music_downloads_track_delete_failed">تعذر حذف التنزيل</string>
-  <string name="morphe_music_downloads_play_failed">تعذر تشغيل التنزيل</string>
+  <string name="morphe_music_downloads_track_delete_failed">تعذّر حذف التنزيل</string>
+  <string name="morphe_music_downloads_play_failed">تعذّر تشغيل التنزيل</string>
   <string name="morphe_music_downloads_notification_channel">تنزيلات الصوت</string>
-  <string name="morphe_music_downloads_playback_channel">التشغيل دون اتصال</string>
-  <string name="morphe_music_downloads_unknown_track">تعذر التعرف على المسار لتنزيله</string>
-  <string name="morphe_music_downloads_already_running">يوجد تنزيل قيد التقدم بالفعل</string>
-  <string name="morphe_music_downloads_already_saved">تم التنزيل بالفعل</string>
+  <string name="morphe_music_downloads_playback_channel">التشغيل بدون اتصال</string>
+  <string name="morphe_music_downloads_unknown_track">تعذّر تحديد المسار المطلوب تنزيله</string>
+  <string name="morphe_music_downloads_already_running">التنزيل جارٍ بالفعل</string>
+  <string name="morphe_music_downloads_already_saved">تم تنزيله مسبقًا</string>
   <string name="morphe_music_downloads_started">بدأ التنزيل</string>
   <string name="morphe_music_downloads_starting">جارٍ بدء التنزيل…</string>
   <string name="morphe_music_downloads_progress">جارٍ التنزيل %s%%</string>
@@ -374,7 +372,7 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <string name="morphe_music_spotify_token_toast_saved">Spotify: تكون قيمة sp_dc مطلوبة — بدونها لن تعمل الميزة.</string>
   <string name="morphe_music_spotify_token_toast_cleared">سبوتيفاي: \"sp_cd\" تم مسحه</string>
   <string name="morphe_music_spotify_token_toast_invalid">سبوتيفاي: \"sp_dc\" غير صحيح — رجاءاً تحقق وحاول مرة اخرى</string>
-  <string name="morphe_music_apple_token_optional_hint">مفتاح أبل ميوزك اختياري. بدونه، سيتم استعمال ليريكلي كإحتياط.</string>
+  <string name="morphe_music_apple_token_optional_hint">مفتاح أبل ميوزك اختياري. بدونه، سيتم استعمال ليريكلي كإحتياط</string>
   <string name="morphe_music_deezer_arl_title">Deezer: انسخ قيمة \"arl\".</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"إلصق ملف تعريف إرتباط \"arl\" من ديزر.
 
@@ -386,12 +384,6 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: قيمة arl غير صالحة — حاول مرة أخرى.</string>
   <string name="morphe_music_deezer_arl_toast_invalid">ديزر: \"sp_dc\" غير صحيح — رجاءاً تحقق وحاول مرة اخرى</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch: انسخ قيمة رمز المستخدم.</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"إلصق توكين ميوزكسماج.
-
-الخطوات:
-1. سجل الدخول في musixmatch.com
-2. افتح DevTools → Application → Local Storage
-3. إنسخ الحقل user token"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">Musixmatch: الرمز غير صالح — حاول مرة أخرى.</string>
   <string name="morphe_music_musixmatch_token_toast_saved">ميوزكسماج: تم حفظ توكين المستخدم</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">ميوزكسماج: تم مسح توكين المستخدم</string>

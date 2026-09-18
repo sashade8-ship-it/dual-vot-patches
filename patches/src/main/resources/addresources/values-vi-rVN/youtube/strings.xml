@@ -920,6 +920,9 @@ Cài đặt → Phát (hoặc Tự động phát) → tự động phát video t
   <string name="morphe_exit_fullscreen_entry_2">Chỉ dọc</string>
   <string name="morphe_exit_fullscreen_entry_3">Chỉ ngang</string>
   <string name="morphe_exit_fullscreen_entry_4">Chế độ dọc và ngang</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Buộc xoay ngang khi toàn màn hình</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Xoay trình phát sang ngang khi vào chế độ toàn màn hình. Không khả dụng trên màn hình nhỏ vì các màn hình này đã mở toàn màn hình ở chế độ ngang</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Cử chỉ toàn màn hình</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Cử chỉ của trình phát ở chế độ toàn màn hình</string>

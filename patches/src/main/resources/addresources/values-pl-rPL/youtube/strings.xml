@@ -508,12 +508,12 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_save_to_watch_later_already_exists_toast">Film jest już na playliście \"Do obejrzenia\"</string>
   <string name="morphe_save_to_watch_later_error_toast">Nie udało się zapisać na playliście \"Do obejrzenia\"</string>
   <string name="morphe_save_to_watch_later_flyout_title">Zapisz do obejrzenia</string>
-  <string name="morphe_save_to_watch_later_flyout_button_title">Pokaż przycisk „Zapisz na później” w wysuwanym menu ustawień odtwarzacza</string>
-  <string name="morphe_save_to_watch_later_flyout_button_summary">Umożliwia zapisywanie aktualnie oglądanego filmu na liście „Do obejrzenia” z wysuwanego menu ustawień wideo</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">Pokaż przycisk \"Zapisz do obejrzenia\" w menu ustawień odtwarzacza</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">Umożliwia zapisywanie aktualnie oglądanego filmu na liście \"Do obejrzenia\" z poziomu menu ustawień filmu</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">Pokaż przycisk Zapisz do obejrzenia w filmach dla dzieci</string>
-  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Umożliwia zapisywanie filmów dla dzieci na liście „Obejrzyj później” z wysuwanego menu</string>
-  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Pokaż przycisk Zapisz na liście „Obejrzyj później” w wysuwanym menu Shorts</string>
-  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Umożliwia zapisywanie krótkich filmów na liście „Obejrzyj później” z wysuwanego menu</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Umożliwia zapisywanie filmów przeznaczonych dla dzieci na liście \"Do obejrzenia\" z poziomu menu</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Pokaż przycisk \"Zapisz do obejrzenia\" w menu Shorts</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Umożliwia zapisywanie filmów Short na liście \"Do obejrzenia\" z poziomu menu</string>
   <string name="morphe_queue_flyout_title">Dodaj do kolejki Morphe</string>
   <string name="morphe_queue_restore_title">Zachowaj kolejkę po wyjściu</string>
   <string name="morphe_queue_restore_summary">Kolejka nie zniknie po ponownym uruchomieniu aplikacji</string>
@@ -920,6 +920,9 @@ To ustawienie działa tylko wtedy, gdy autoodtwarzanie jest wyłączone. Możesz
   <string name="morphe_exit_fullscreen_entry_2">Tylko w orientacji pionowej</string>
   <string name="morphe_exit_fullscreen_entry_3">Tylko w orientacji poziomej</string>
   <string name="morphe_exit_fullscreen_entry_4">W orientacji pionowej i poziomej</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Wymuś orientację poziomą na pełnym ekranie</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Obraca odtwarzacz do orientacji poziomej po przejściu na pełny ekran. Opcja niedostępna na małych ekranach, które domyślnie otwierają tryb pełnoekranowy w orientacji poziomej</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gesty trybu pełnoekranowego</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gesty odtwarzacza w trybie pełnoekranowym</string>

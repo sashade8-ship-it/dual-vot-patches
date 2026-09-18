@@ -508,7 +508,12 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_save_to_watch_later_already_exists_toast">यह वीडियो पहले से ही बाद में देखने की प्लेलिस्ट में सहेजा गया है</string>
   <string name="morphe_save_to_watch_later_error_toast">इस वीडियो को बाद में देखने की प्लेलिस्ट में सहेजा नहीं जा सकता</string>
   <string name="morphe_save_to_watch_later_flyout_title">बाद में देखने के लिए सहेजें</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">प्लेयर सेटिंग फ्लाईआउट में बाद में देखने के लिए सेव करें बटन दिखाएँ</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">वीडियो सेटिंग फ्लाईआउट से वर्तमान में देखे जा रहे वीडियो को \'बाद में देखें\' में सेव करने की अनुमति देता है</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_title">बच्चों के वीडियो में \'बाद में देखने के लिए सहेजें\' बटन दिखाएं</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">फ्लाईआउट मेनू से बच्चों से जुड़े वीडियो को \'बाद में देखें\' में सेव करने की अनुमति देता है</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">शॉर्ट्स फ्लाईआउट में बाद में देखने के लिए सेव करें बटन दिखाएँ</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">फ्लाईआउट मेनू से शॉर्ट्स को \'बाद में देखें\' में सेव करने की अनुमति देता है</string>
   <string name="morphe_queue_flyout_title">Morphe कतार में जोड़ें</string>
   <string name="morphe_queue_restore_title">सत्रों के बीच कतार बनाए रखें</string>
   <string name="morphe_queue_restore_summary">ऐप को पुनरारंभ करने के बाद कतार बनी रहती है</string>
@@ -916,6 +921,9 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_exit_fullscreen_entry_2">पोर्ट्रेट ओनली</string>
   <string name="morphe_exit_fullscreen_entry_3">लैंडस्केप ओनली</string>
   <string name="morphe_exit_fullscreen_entry_4">पोर्ट्रेट और लैंडस्केप</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">फ़ुलस्क्रीन में लैंडस्केप जबरदस्ती लागू करें</string>
+  <string name="morphe_force_fullscreen_landscape_summary">फ़ुलस्क्रीन में जाने पर प्लेयर को लैंडस्केप में घुमाएँ। छोटी स्क्रीनों पर अनुपलब्ध है, जो पहले से ही लैंडस्केप में फ़ुलस्क्रीन खोलती हैं।</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">फ़ुलस्क्रीन जेस्चर</string>
   <string name="morphe_disable_fullscreen_gestures_summary">फुलस्क्रीन मोड में प्लेयर जेस्चर</string>

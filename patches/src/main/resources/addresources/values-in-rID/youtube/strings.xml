@@ -921,6 +921,9 @@ Setelan → Pemutaran (atau Pemutaran Otomatis) → Putar video berikutnya secar
   <string name="morphe_exit_fullscreen_entry_2">Potret saja</string>
   <string name="morphe_exit_fullscreen_entry_3">Lanskap saja</string>
   <string name="morphe_exit_fullscreen_entry_4">Potret dan lanskap</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Paksa lanskap saat layar penuh</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Putar pemutar ke lanskap saat memasuki layar penuh. Tidak tersedia di layar kecil, yang sudah membuka layar penuh dalam mode lanskap.</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Gerakan layar penuh</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Gerakan pemutar dalam mode layar penuh</string>

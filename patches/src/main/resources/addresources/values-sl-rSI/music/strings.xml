@@ -32,6 +32,50 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_action_button_summary">Uporabi izbrani zunanji prenašalnik namesto privzetega gumba za dejanje Prenos</string>
   <string name="morphe_external_downloader_flyout_menu_title">Prepiši meni Prenos</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Uporabi izbrani zunanji prenašalnik namesto privzetega pojavnega menija Prenos</string>
+  <string name="morphe_music_in_app_downloads_title">Prenos v aplikaciji</string>
+  <string name="morphe_music_in_app_downloads_summary">Prenese zvok znotraj YouTube Music namesto odpiranja zunanje aplikacije za prenose</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"Skladbe so shranjene v zasebnem pomnilniku aplikacije in se izbrišejo, če odstranite YouTube Music.
+
+Dokler je to vklopljeno, zavihek Prenosi prikazuje te skladbe namesto knjižnice Music Premium za brez povezave. Ko to izklopite, se zavihek vrne, prenosi Premium pa nikoli niso prizadeti."</string>
+  <string name="morphe_music_downloads_screen_title">Prenosi</string>
+  <string name="morphe_music_downloads_empty">"Ni prenosov
+Prenesene skladbe se prikažejo tukaj"</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
+  <string name="morphe_music_downloads_summary">%1$s skladb • %2$s MB</string>
+  <string name="morphe_music_downloads_search_hint">Iskanje prenosov</string>
+  <string name="morphe_music_downloads_sort">Razvrsti</string>
+  <string name="morphe_music_downloads_sort_artist">Razvrsti po izvajalcu</string>
+  <string name="morphe_music_downloads_sort_title">Razvrsti po naslovu</string>
+  <string name="morphe_music_downloads_sort_size">Razvrsti po velikosti</string>
+  <string name="morphe_music_downloads_delete_all">Izbriši vse prenose</string>
+  <string name="morphe_music_downloads_delete_all_title">Izbrišem vse prenose?</string>
+  <string name="morphe_music_downloads_delete_all_message">Vse prenesene skladbe bodo izbrisane iz te naprave</string>
+  <string name="morphe_music_downloads_all_deleted">Prenosi izbrisani</string>
+  <string name="morphe_music_downloads_nothing_found">Ni zadetkov</string>
+  <string name="morphe_music_downloads_actions_for">Dejanja za %s</string>
+  <string name="morphe_music_downloads_play">Predvajaj</string>
+  <string name="morphe_music_downloads_play_pause">Predvajaj ali začasno ustavi</string>
+  <string name="morphe_music_downloads_previous">Prejšnja</string>
+  <string name="morphe_music_downloads_next">Naslednja</string>
+  <string name="morphe_music_downloads_pause">Premor</string>
+  <string name="morphe_music_downloads_close">Zapri</string>
+  <string name="morphe_music_downloads_delete">Izbriši</string>
+  <string name="morphe_music_downloads_delete_track">Izbriši prenos</string>
+  <string name="morphe_music_downloads_delete_track_title">Izbrišem prenos?</string>
+  <string name="morphe_music_downloads_delete_track_message">%s bo izbrisan iz te naprave</string>
+  <string name="morphe_music_downloads_track_deleted">Prenos izbrisan</string>
+  <string name="morphe_music_downloads_track_delete_failed">Prenosa ni bilo mogoče izbrisati</string>
+  <string name="morphe_music_downloads_play_failed">Prenosa ni bilo mogoče predvajati</string>
+  <string name="morphe_music_downloads_notification_channel">Zvočni prenosi</string>
+  <string name="morphe_music_downloads_playback_channel">Predvajanje brez povezave</string>
+  <string name="morphe_music_downloads_unknown_track">Ni bilo mogoče prepoznati skladbe za prenos</string>
+  <string name="morphe_music_downloads_already_running">Prenos že poteka</string>
+  <string name="morphe_music_downloads_already_saved">Že preneseno</string>
+  <string name="morphe_music_downloads_started">Prenos se je začel</string>
+  <string name="morphe_music_downloads_starting">Prenos se začenja…</string>
+  <string name="morphe_music_downloads_progress">Prenašanje %s%%</string>
+  <string name="morphe_music_downloads_complete">Prenos končan</string>
+  <string name="morphe_music_downloads_failed">Prenos ni uspel</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_music_screen_0_about_title">O nas</string>
@@ -318,6 +362,7 @@ Za zagotovitev sinhronizacije med predvajanjem v ozadju poskrbite, da je uporaba
   <string name="morphe_music_lyrics_source_reset_title">Ponastavitev vrstnega reda ponudnikov?</string>
   <string name="morphe_music_lyrics_source_reset_message">Ponastavi ponudnike na privzeti vrstni red.</string>
   <string name="morphe_music_token_dialog_get_token">Pridobi žeton</string>
+  <string name="morphe_music_apple_music_token_title">Apple Music medijski uporabniški žeton</string>
   <string name="morphe_music_apple_music_token_dialog_instruction">"Prilepite piškotek media-user-token s spletnega mesta music.apple.com
 
 Koraki:
@@ -335,17 +380,12 @@ Koraki:
   <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc … Brez njega bo kot nadomestna uporabljena storitev Lyrically.</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc je izbrisan</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify: neveljaven sp_dc — preverite in poskusite znova.</string>
-  <string name="morphe_music_apple_token_optional_hint">Apple Music token ni obvezen. Brez njega bo Lyrically uporabljen kot rezerva.</string>
   <string name="morphe_music_deezer_arl_title">Deezer … Kopirajte vrednost \"arl\".</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Prilepite piškotek arl iz […] Kopirajte vrednost \"arl\""</string>
   <string name="morphe_music_deezer_arl_toast_saved">Deezer: arl je shranjen.</string>
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: ARL ni veljaven. Poskusite znova.</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: neveljaven arl — preverite in poskusite znova.</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch … Kopirajte vrednost uporabniškega žetona.</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"Prilepite svoj uporabniški žeton Musixmatch.
-
-Koraki:
-1. […] Kopirajte vrednost uporabniškega žetona."</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">Uporabniški žeton ni veljaven. Poskusite znova.</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: uporabniški žeton je shranjen</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: uporabniški žeton je izbrisan</string>

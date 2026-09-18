@@ -923,6 +923,9 @@ Second \"item\" text"</string>
   <string name="morphe_exit_fullscreen_entry_2">Портрет</string>
   <string name="morphe_exit_fullscreen_entry_3">Ландшафт</string>
   <string name="morphe_exit_fullscreen_entry_4">Портрет и ландшафт</string>
+  <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Принудительно включать альбомную ориентацию в полноэкранном режиме</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Поверните плеер в альбомную ориентацию при переходе в полноэкранный режим. Недоступно на маленьких экранах, которые уже открывают полноэкранный режим в альбомной ориентации</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">Жесты полноэкранного режима</string>
   <string name="morphe_disable_fullscreen_gestures_summary">Жесты плеера в полноэкранном режиме</string>

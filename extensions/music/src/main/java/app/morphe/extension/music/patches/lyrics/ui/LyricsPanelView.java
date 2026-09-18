@@ -9,10 +9,14 @@ package app.morphe.extension.music.patches.lyrics.ui;
 
 import static app.morphe.extension.shared.StringRef.str;
 
+import android.animation.ArgbEvaluator;
+import android.animation.LayoutTransition;
+import android.animation.ValueAnimator;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -27,6 +31,7 @@ import android.text.Layout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.text.StaticLayout;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.ReplacementSpan;
@@ -42,6 +47,7 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
@@ -123,6 +129,9 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
     private static final int ACTIVE_BUTTON_BG_COLOR = 0xFFFFFFFF;
     /** Active (feature on) button foreground: pure black, readable on white. */
     private static final int ACTIVE_BUTTON_FG_COLOR = 0xFF000000;
+    /** How long a button takes to cross between its inactive and active colors. */
+    private static final long BUTTON_STATE_FADE_MILLISECONDS = 150;
+    private static final ArgbEvaluator BUTTON_COLOR_EVALUATOR = new ArgbEvaluator();
 
     /** Alpha channel for the unsung (not-yet-sung) word color. */
     private static final int UNSUNG_ALPHA = 0x66;
@@ -184,7 +193,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
     private final List<TextView> lineViews = new ArrayList<>();
 
-    /** Wrapper holding the optional romanization line above each lyrics line. */
+    /** Wrapper holding the optional romanization line above each line of lyrics. */
     private final List<View> lineRows = new ArrayList<>();
 
     private final List<List<WordTiming>> lineWordSpans = new ArrayList<>();
@@ -201,30 +210,11 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
     private boolean seekPending;
 
-    private static final class WordTiming {
-        final int start;
-        final int end;
-        final long startMs;
-        final long endMs;
-        @Nullable final String romaji;
-
-        WordTiming(int start, int end, long startMs, long endMs, @Nullable String romaji) {
-            this.start = start;
-            this.end = end;
-            this.startMs = startMs;
-            this.endMs = endMs;
-            this.romaji = romaji;
-        }
+    private record WordTiming(int start, int end, long startMs, long endMs,
+            @Nullable String romaji) {
     }
 
-    private static final class BuildResult {
-        final Spannable text;
-        @Nullable final ForegroundColorSpan unsungSpan;
-
-        BuildResult(Spannable text, @Nullable ForegroundColorSpan unsungSpan) {
-            this.text = text;
-            this.unsungSpan = unsungSpan;
-        }
+    private record BuildResult(Spannable text, @Nullable ForegroundColorSpan unsungSpan) {
     }
 
     private static final class RomajiSpan extends ReplacementSpan {
@@ -262,8 +252,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         }
 
         @Override
-        public void draw(Canvas canvas, CharSequence text, int start, int end,
-                float x, int top, int y, int bottom, Paint paint) {
+        public void draw(@NonNull Canvas canvas, CharSequence text, int start, int end,
+                float x, int top, int y, int bottom, @NonNull Paint paint) {
             romajiPaint.set(paint);
             romajiPaint.setTextSize(paint.getTextSize() * relativeSize);
             romajiPaint.setColor(color);
@@ -298,14 +288,12 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         private float[] lineMaxSungX;
 
         private Layout cachedLayout;
-        private float[] cachedWordX;
-        private float[] cachedWordWidth;
+        /** Where the word starts and ends being sung, in the direction its script runs. */
+        private float[] cachedWordLeadX;
+        private float[] cachedWordTrailX;
         private int[] cachedWordLine;
         private int cachedWordCount;
         private int cachedLineCount;
-        private int[] cachedLineStart;
-        private int[] cachedLineEnd;
-        private float[] cachedLineBaseline;
         private int[] cachedLineTop;
         private int[] cachedLineBottom;
         private float[] cachedLineLeft;
@@ -314,6 +302,13 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
         private CharSequence cachedText;
         private String cachedTextStr;
+
+        /** The same text painted in the sung color, drawn clipped over the unsung text. */
+        private Layout sungLayout;
+        private CharSequence sungLayoutText;
+        private int sungLayoutWidth = -1;
+        private int sungLayoutColor;
+        private int sungLayoutOrigStart = -1;
 
         LyricsLineView(Context context) {
             super(context);
@@ -338,6 +333,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             this.originalTextStart = origStart;
             if (structuralChange) {
                 cachedLayout = null;
+                sungLayout = null;
             }
             invalidate();
         }
@@ -351,45 +347,91 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             cachedLayout = layout;
             cachedWordCount = timings.size();
             cachedOrigStart = origStart;
-            cachedWordX = new float[cachedWordCount];
-            cachedWordWidth = new float[cachedWordCount];
+            cachedWordLeadX = new float[cachedWordCount];
+            cachedWordTrailX = new float[cachedWordCount];
             cachedWordLine = new int[cachedWordCount];
             for (int i = 0; i < cachedWordCount; i++) {
                 final WordTiming timing = timings.get(i);
-                final int s = timing.start + origStart;
-                final int e = Math.min(timing.end + origStart, text.length());
+                final int s = timing.start() + origStart;
+                final int e = Math.min(timing.end() + origStart, text.length());
                 if (s >= text.length() || s >= e) {
                     continue;
                 }
-                final float x = layout.getPrimaryHorizontal(s);
-                cachedWordX[i] = x;
-                float w = layout.getPrimaryHorizontal(e) - x;
-                if (w <= 0f && e > s) {
-                    w = paint.measureText(text, s, e);
+                final int line = layout.getLineForOffset(s);
+                final float lead = layout.getPrimaryHorizontal(s);
+                float trail = layout.getPrimaryHorizontal(e);
+                // A word broken across visual lines, or one whose end falls on a bidi
+                // boundary, gets its width measured instead of read off the layout.
+                if (trail == lead || layout.getLineForOffset(e) != line) {
+                    final float width = paint.measureText(text, s, e);
+                    trail = layout.isRtlCharAt(s) ? lead - width : lead + width;
                 }
-                cachedWordWidth[i] = w;
-                cachedWordLine[i] = layout.getLineForOffset(s);
+                cachedWordLeadX[i] = lead;
+                cachedWordTrailX[i] = trail;
+                cachedWordLine[i] = line;
             }
             final int lineCount = layout.getLineCount();
             if (cachedLineCount != lineCount) {
                 cachedLineCount = lineCount;
-                cachedLineStart = new int[lineCount];
-                cachedLineEnd = new int[lineCount];
-                cachedLineBaseline = new float[lineCount];
                 cachedLineTop = new int[lineCount];
                 cachedLineBottom = new int[lineCount];
                 cachedLineLeft = new float[lineCount];
                 cachedLineRight = new float[lineCount];
             }
             for (int ln = 0; ln < lineCount; ln++) {
-                cachedLineStart[ln] = layout.getLineStart(ln);
-                cachedLineEnd[ln] = layout.getLineEnd(ln);
-                cachedLineBaseline[ln] = layout.getLineBaseline(ln);
                 cachedLineTop[ln] = layout.getLineTop(ln);
                 cachedLineBottom[ln] = layout.getLineBottom(ln);
                 cachedLineLeft[ln] = layout.getLineLeft(ln);
                 cachedLineRight[ln] = layout.getLineRight(ln);
             }
+        }
+
+        /**
+         * Builds the sung copy of the text. Drawing it as a layout keeps Arabic and Hebrew
+         * shaped and ordered, which {@link Canvas#drawText} cannot do because it paints the
+         * characters in logical order from a single left edge.
+         */
+        private Layout ensureSungLayout(Layout base, CharSequence text, int origStart) {
+            if (sungLayout != null && sungLayoutText == text
+                    && sungLayoutWidth == base.getWidth()
+                    && sungLayoutColor == sungColor
+                    && sungLayoutOrigStart == origStart) {
+                return sungLayout;
+            }
+
+            SpannableString copy = new SpannableString(text);
+            final int end = originalEnd(copy, origStart);
+            if (origStart < end) {
+                for (ForegroundColorSpan span : copy.getSpans(origStart, end, ForegroundColorSpan.class)) {
+                    copy.removeSpan(span);
+                }
+                copy.setSpan(new ForegroundColorSpan(sungColor), origStart, end,
+                        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+
+            sungLayout = StaticLayout.Builder
+                    .obtain(copy, 0, copy.length(), getPaint(), base.getWidth())
+                    .setAlignment(base.getAlignment())
+                    .setLineSpacing(getLineSpacingExtra(), getLineSpacingMultiplier())
+                    .setIncludePad(getIncludeFontPadding())
+                    .setBreakStrategy(getBreakStrategy())
+                    .setHyphenationFrequency(getHyphenationFrequency())
+                    .build();
+            sungLayoutText = text;
+            sungLayoutWidth = base.getWidth();
+            sungLayoutColor = sungColor;
+            sungLayoutOrigStart = origStart;
+            return sungLayout;
+        }
+
+        /** End of the lyric line itself, before any translation or romanization below it. */
+        private int originalEnd(CharSequence text, int origStart) {
+            if (text != cachedText) {
+                cachedText = text;
+                cachedTextStr = text.toString();
+            }
+            final int newline = cachedTextStr.indexOf('\n', origStart);
+            return newline >= 0 ? newline : cachedTextStr.length();
         }
 
         @Override
@@ -410,31 +452,32 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
             ensureWordCache(layout, text, tp, wordTimings, origStart);
 
-            // Track sung extent per visual line for multi-line wrap support.
+            // Track how far the highlight reached on each visual line, so wrapped lines
+            // and right to left scripts both fill from the edge their text starts at.
             final int lineCount = cachedLineCount;
             if (lineMaxSungX == null || lineMaxSungX.length != lineCount) {
                 lineMaxSungX = new float[lineCount];
             }
-            Arrays.fill(lineMaxSungX, 0, lineCount, -1f);
+            Arrays.fill(lineMaxSungX, 0, lineCount, Float.NaN);
             int firstSungLine = -1;
 
             for (int i = 0; i < cachedWordCount; i++) {
                 final WordTiming timing = wordTimings.get(i);
-                final int s = timing.start + origStart;
-                final int e = Math.min(timing.end + origStart, text.length());
+                final int s = timing.start() + origStart;
+                final int e = Math.min(timing.end() + origStart, text.length());
                 if (s >= text.length() || s >= e) {
                     continue;
                 }
                 float progress;
                 if (allSung) {
                     progress = 1f;
-                } else if (positionMs >= timing.endMs) {
+                } else if (positionMs >= timing.endMs()) {
                     progress = 1f;
-                } else if (positionMs <= timing.startMs) {
+                } else if (positionMs <= timing.startMs()) {
                     progress = 0f;
                 } else {
-                    progress = (float) (positionMs - timing.startMs)
-                            / (float) (timing.endMs - timing.startMs);
+                    progress = (float) (positionMs - timing.startMs())
+                            / (float) (timing.endMs() - timing.startMs());
                 }
                 if (progress <= 0f) {
                     continue;
@@ -443,50 +486,55 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
                 if (firstSungLine < 0) {
                     firstSungLine = lineNum;
                 }
-                final float x = cachedWordX[i];
-                final float wordWidth = cachedWordWidth[i];
-                if (wordWidth > 0f) {
-                    lineMaxSungX[lineNum] = Math.max(lineMaxSungX[lineNum],
-                            x + wordWidth * progress);
-                }
+                final float lead = cachedWordLeadX[i];
+                final float edge = lead + (cachedWordTrailX[i] - lead) * progress;
+                lineMaxSungX[lineNum] = extendSung(lineMaxSungX[lineNum], edge,
+                        isRightToLeftLine(layout, lineNum));
             }
 
             if (allSung && firstSungLine < 0 && origStart < text.length()) {
-                if (text != cachedText) {
-                    cachedText = text;
-                    cachedTextStr = text.toString();
-                }
-                final int origEnd = cachedTextStr.indexOf('\n', origStart);
-                final int lastChar = (origEnd >= 0 ? origEnd : cachedTextStr.length()) - 1;
+                final int lastChar = originalEnd(text, origStart) - 1;
                 final int firstLine = layout.getLineForOffset(origStart);
-                final int lastLine = layout.getLineForOffset(
-                        Math.max(lastChar, origStart));
-                for (int ln = firstLine; ln <= lastLine; ln++) {
-                    lineMaxSungX[ln] = cachedLineRight[ln];
+                final int lastLine = layout.getLineForOffset(Math.max(lastChar, origStart));
+                for (int ln = firstLine; ln <= lastLine && ln < lineCount; ln++) {
+                    lineMaxSungX[ln] = isRightToLeftLine(layout, ln)
+                            ? cachedLineLeft[ln] : cachedLineRight[ln];
                 }
-                firstSungLine = firstLine;
             }
+
+            Layout sung = ensureSungLayout(layout, text, origStart);
 
             canvas.save();
             canvas.translate(paddingLeft, paddingTop);
             for (int ln = 0; ln < lineCount; ln++) {
-                if (lineMaxSungX[ln] <= 0f) {
+                final float edge = lineMaxSungX[ln];
+                if (Float.isNaN(edge)) {
                     continue;
                 }
-                if (!allSung) {
-                    canvas.save();
+                canvas.save();
+                if (isRightToLeftLine(layout, ln)) {
+                    canvas.clipRect(edge, cachedLineTop[ln],
+                            cachedLineRight[ln], cachedLineBottom[ln]);
+                } else {
                     canvas.clipRect(cachedLineLeft[ln], cachedLineTop[ln],
-                            lineMaxSungX[ln], cachedLineBottom[ln]);
+                            edge, cachedLineBottom[ln]);
                 }
-                tp.setColor(sungColor);
-                tp.setShader(null);
-                canvas.drawText(text, cachedLineStart[ln], cachedLineEnd[ln],
-                        cachedLineLeft[ln], cachedLineBaseline[ln], tp);
-                if (!allSung) {
-                    canvas.restore();
-                }
+                sung.draw(canvas);
+                canvas.restore();
             }
             canvas.restore();
+        }
+
+        private static boolean isRightToLeftLine(Layout layout, int line) {
+            return layout.getParagraphDirection(line) == Layout.DIR_RIGHT_TO_LEFT;
+        }
+
+        /** Right to left lines fill leftwards, so their furthest point is the smallest one. */
+        private static float extendSung(float current, float edge, boolean rightToLeft) {
+            if (Float.isNaN(current)) {
+                return edge;
+            }
+            return rightToLeft ? Math.min(current, edge) : Math.max(current, edge);
         }
     }
 
@@ -518,10 +566,9 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         if ("DEFAULT".equals(rate)) {
             float deviceRate = 0f;
             try {
-                android.view.WindowManager wm = (android.view.WindowManager)
-                        getContext().getSystemService(Context.WINDOW_SERVICE);
-                if (wm != null) {
-                    deviceRate = wm.getDefaultDisplay().getRefreshRate();
+                android.view.Display display = getDisplay();
+                if (display != null) {
+                    deviceRate = display.getRefreshRate();
                 }
             } catch (Exception ignored) {
             }
@@ -550,7 +597,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
                 // The app restores its own panel content asynchronously, and switching
                 // to another engagement panel gives no lyrics state change to react to,
                 // so the wanted state is reapplied on every tick rather than on changes.
-                syncOverlay();
+                // The cached answer is kept here, since ticks carry no news of their own.
+                applyOverlayVisibility();
             } catch (Exception ex) {
                 Logger.printDebug(() -> "Could not update lyrics panel view", ex);
             }
@@ -576,6 +624,12 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         buttonRow = new LinearLayout(context);
         buttonRow.setOrientation(LinearLayout.HORIZONTAL);
         buttonRow.setGravity(Gravity.CENTER);
+        LayoutTransition buttonTransition = new LayoutTransition();
+        buttonTransition.enableTransitionType(LayoutTransition.CHANGING);
+        buttonTransition.setDuration(LayoutTransition.CHANGING, BUTTON_STATE_FADE_MILLISECONDS);
+        // Without this the panel around the row animates along with the buttons.
+        buttonTransition.setAnimateParentHierarchy(false);
+        buttonRow.setLayoutTransition(buttonTransition);
         buttonRow.setVisibility(GONE);
 
         if (Settings.LYRICS_SHOW_COPY_BUTTON.get()) {
@@ -783,8 +837,12 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
      * Reapplies the wanted state, because reopening the panel makes the app restore
      * its own content, and opening another engagement panel makes it take the same
      * container over, neither of which is a lyrics state change to react to.
+     *
+     * <p>Called when the panel on screen has just changed, so the cached answer from
+     * before the change would keep the built-in lyrics visible until it expires.
      */
     public void syncOverlay() {
+        overlayCacheUptimeMs = 0;
         applyOverlayVisibility();
     }
 
@@ -870,7 +928,6 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
         for (int i = 0; i < newLyrics.lines().size(); i++) {
             LyricsLine line = newLyrics.lines().get(i);
-            final int index = i;
             // Placeholder until the background pass fills in the real timings.
             lineWordSpans.add(new ArrayList<>());
             lineOriginalStarts.add(0);
@@ -902,7 +959,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
             lineView.setOnLongClickListener(v -> {
                 String textToCopy = line.text();
-                if (textToCopy == null || textToCopy.isEmpty()) {
+                if (textToCopy.isEmpty()) {
                     return false;
                 }
                 ClipboardManager clipboard = (ClipboardManager) getContext()
@@ -958,9 +1015,9 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
                     TextView tv = lineViews.get(i);
                     if (i < newLyrics.lines().size()) {
                         BuildResult result = buildLineText(newLyrics.lines().get(i),
-                                allTimings.get(i), i, Long.MIN_VALUE, false);
-                        tv.setText(result.text);
-                        lineUnsungSpans.set(i, result.unsungSpan);
+                                allTimings.get(i), i);
+                        tv.setText(result.text());
+                        lineUnsungSpans.set(i, result.unsungSpan());
                     }
                 }
             });
@@ -1047,7 +1104,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
 
     /**
      * Builds the displayed text for a line, appending the translation (when shown) in a
-     * smaller, dimmer style and colouring each word sung or unsung for the karaoke
+     * smaller, dimmer style and coloring each word sung or unsung for the karaoke
      * highlight.
      *
      * <p>A fresh {@link SpannableString} is returned on every call so that
@@ -1055,11 +1112,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
      * and repaint. Mutating an existing Spannable in place was not reliably redrawn by
      * this TextView, which left the highlight invisible.
      *
-     * @param positionMs Current playback position, used to decide which words are sung.
-     * @param allSung   When true every word is treated as sung, used to reset a line.
      */
-    private BuildResult buildLineText(LyricsLine line, List<WordTiming> timings, int index,
-            long positionMs, boolean allSung) {
+    private BuildResult buildLineText(LyricsLine line, List<WordTiming> timings, int index) {
         String original = line.text();
         String originalTrimmed = original.trim();
 
@@ -1160,9 +1214,9 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         if (usePerWord) {
             final int romajiColor = secondaryTextColor();
             for (WordTiming timing : timings) {
-                if (timing.romaji != null && !timing.romaji.isEmpty()) {
-                    text.setSpan(new RomajiSpan(timing.romaji, romajiColor, ROMAJI_RELATIVE_SIZE),
-                            originalStart + timing.start, originalStart + timing.end,
+                if (timing.romaji() != null && !timing.romaji().isEmpty()) {
+                    text.setSpan(new RomajiSpan(timing.romaji(), romajiColor, ROMAJI_RELATIVE_SIZE),
+                            originalStart + timing.start(), originalStart + timing.end(),
                             Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
             }
@@ -1282,14 +1336,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             }
             clipboard.setPrimaryClip(ClipData.newPlainText("lyrics", text.toString()));
             Utils.showToastShort(str("morphe_music_lyrics_copied"));
-            if (copyView != null) {
-                setButtonLabel(copyView, str("morphe_music_lyrics_copied"), true);
-                handler.postDelayed(() -> {
-                    if (copyView != null) {
-                        setButtonLabel(copyView, null, false);
-                    }
-                }, 1500);
-            }
+            setButtonLabel(copyView, str("morphe_music_lyrics_copied"), true);
+            handler.postDelayed(() -> setButtonLabel(copyView, null, false), 1500);
         } catch (Exception ex) {
             Logger.printException(() -> "onCopyClicked failure", ex);
         }
@@ -1308,14 +1356,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             String savedPath = LyricsFileSaver.save(getContext(), track, current);
             if (savedPath != null) {
                 Utils.showToastShort("Saved to " + savedPath);
-                if (copyView != null) {
-                    setButtonLabel(copyView, str("morphe_music_lyrics_saved"), true);
-                    handler.postDelayed(() -> {
-                        if (copyView != null) {
-                            setButtonLabel(copyView, null, false);
-                        }
-                    }, 1500);
-                }
+                setButtonLabel(copyView, str("morphe_music_lyrics_saved"), true);
+                handler.postDelayed(() -> setButtonLabel(copyView, null, false), 1500);
             }
         } catch (Exception ignored) {
         }
@@ -1377,7 +1419,7 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
                     return;
                 }
 
-                final boolean romaOk = lines != null && LyricsMerge.hasText(lines);
+                final boolean romaOk = LyricsMerge.hasText(lines);
                 romanizedLines = romaOk ? lines : null;
                 romanizedFromGoogle = romaOk && fromGoogle;
                 perWordRomaji = romaOk && perWord;
@@ -1486,8 +1528,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
                     && highlightedIndex < lineWordSpans.size()) {
                 List<WordTiming> timings = lineWordSpans.get(highlightedIndex);
                 if (!timings.isEmpty()) {
-                    final long lastEnd = timings.get(timings.size() - 1).endMs;
-                    final long firstStart = timings.get(0).startMs;
+                    final long lastEnd = timings.get(timings.size() - 1).endMs();
+                    final long firstStart = timings.get(0).startMs();
                     if (pos < lastEnd && pos >= firstStart) {
                         keepFullOpacity = true;
                     }
@@ -1602,8 +1644,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
         if (pendingOldWordLineIndex >= 0 && pendingOldWordLineIndex < count) {
             List<WordTiming> pendingTimings = lineWordSpans.get(pendingOldWordLineIndex);
             if (!pendingTimings.isEmpty()) {
-                final long lastEnd = pendingTimings.get(pendingTimings.size() - 1).endMs;
-                final long firstStart = pendingTimings.get(0).startMs;
+                final long lastEnd = pendingTimings.get(pendingTimings.size() - 1).endMs();
+                final long firstStart = pendingTimings.get(0).startMs();
                 if (positionMs >= lastEnd || positionMs < firstStart) {
                     clearWordHighlight(pendingOldWordLineIndex);
                     fadeTo(lineViews.get(pendingOldWordLineIndex), INACTIVE_LINE_ALPHA);
@@ -1622,8 +1664,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             if (lastWordLineIndex >= 0 && lastWordLineIndex != active) {
                 List<WordTiming> oldTimings = lineWordSpans.get(lastWordLineIndex);
                 if (!oldTimings.isEmpty()) {
-                    final long lastEnd = oldTimings.get(oldTimings.size() - 1).endMs;
-                    final long firstStart = oldTimings.get(0).startMs;
+                    final long lastEnd = oldTimings.get(oldTimings.size() - 1).endMs();
+                    final long firstStart = oldTimings.get(0).startMs();
                     if (positionMs < lastEnd && positionMs >= firstStart) {
                         pendingOldWordLineIndex = lastWordLineIndex;
                     } else {
@@ -1643,8 +1685,8 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
             if (lastWordLineIndex >= 0) {
                 List<WordTiming> oldTimings = lineWordSpans.get(lastWordLineIndex);
                 if (!oldTimings.isEmpty()) {
-                    final long lastEnd = oldTimings.get(oldTimings.size() - 1).endMs;
-                    final long firstStart = oldTimings.get(0).startMs;
+                    final long lastEnd = oldTimings.get(oldTimings.size() - 1).endMs();
+                    final long firstStart = oldTimings.get(0).startMs();
                     if (positionMs < lastEnd && positionMs >= firstStart) {
                         pendingOldWordLineIndex = lastWordLineIndex;
                     } else {
@@ -1791,28 +1833,73 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
     }
 
     private void applyButtonAppearance(TextView button, boolean active) {
-        GradientDrawable background = new GradientDrawable();
-        background.setShape(GradientDrawable.RECTANGLE);
-        background.setCornerRadius(Dim.dp20);
-        background.setColor(active ? ACTIVE_BUTTON_BG_COLOR
-                : ResourceUtils.getColor(APP_BUTTON_BACKGROUND_COLOR, 0x1AFFFFFF));
-        button.setBackground(background);
-        ViewAnimations.applyPressEffect(button);
-
-        final int fg = active ? ACTIVE_BUTTON_FG_COLOR : lineTextColor();
         Drawable icon = button.getCompoundDrawablesRelative()[0];
         if (icon != null) {
-            icon = icon.mutate();
-            icon.setTint(fg);
-            button.setCompoundDrawablesRelative(icon, null, null, null);
             // Reserve padding for the label only when one is actually shown, otherwise
             // the reserved space pushes the icon to the left of the pill.
             CharSequence currentText = button.getText();
-            //noinspection SizeReplaceableByIsEmpty
             button.setCompoundDrawablePadding(
                     currentText != null && currentText.length() > 0 ? Dim.dp8 : 0);
         }
-        button.setTextColor(fg);
+
+        fadeButtonColors(button,
+                active ? ACTIVE_BUTTON_BG_COLOR
+                        : ResourceUtils.getColor(APP_BUTTON_BACKGROUND_COLOR, 0x1AFFFFFF),
+                active ? ACTIVE_BUTTON_FG_COLOR : lineTextColor());
+    }
+
+    /**
+     * Eases a button between its inactive and active colors. The pill, the label and the
+     * icon all change at once, so they are driven by a single animator.
+     */
+    private static void fadeButtonColors(TextView button, int background, int foreground) {
+        // The tag is free on these buttons and keeps the running animator with its view.
+        if (button.getTag() instanceof ValueAnimator running) {
+            running.cancel();
+        }
+
+        GradientDrawable pill;
+        if (button.getBackground() instanceof GradientDrawable existing) {
+            pill = existing;
+        } else {
+            pill = new GradientDrawable();
+            pill.setShape(GradientDrawable.RECTANGLE);
+            pill.setCornerRadius(Dim.dp20);
+            button.setBackground(pill);
+        }
+
+        final ColorStateList pillColor = pill.getColor();
+        final int fromBackground = pillColor == null ? background : pillColor.getDefaultColor();
+        final int fromForeground = button.getCurrentTextColor();
+        final Drawable icon = button.getCompoundDrawablesRelative()[0];
+
+        // Nothing to ease from before the panel is on screen, or when nothing changed.
+        if (!button.isAttachedToWindow()
+                || (fromBackground == background && fromForeground == foreground)) {
+            setButtonColors(button, pill, icon, background, foreground);
+            return;
+        }
+
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f);
+        animator.setDuration(BUTTON_STATE_FADE_MILLISECONDS);
+        animator.addUpdateListener(update -> {
+            final float fraction = update.getAnimatedFraction();
+            setButtonColors(button, pill, icon,
+                    (int) BUTTON_COLOR_EVALUATOR.evaluate(fraction, fromBackground, background),
+                    (int) BUTTON_COLOR_EVALUATOR.evaluate(fraction, fromForeground, foreground));
+        });
+        button.setTag(animator);
+        animator.start();
+    }
+
+    private static void setButtonColors(TextView button, GradientDrawable pill,
+                                        @Nullable Drawable icon, int background, int foreground) {
+        pill.setColor(background);
+        button.setTextColor(foreground);
+        if (icon != null) {
+            icon.mutate().setTint(foreground);
+            button.invalidate();
+        }
     }
 
     /**
@@ -1830,10 +1917,10 @@ public final class LyricsPanelView extends FrameLayout implements LyricsManager.
     }
 
     private static int secondaryTextColor() {
-        // The karaoke highlight needs a colour that visibly differs from the sung
-        // (primary) colour. Prefer the app's secondary text colour, but if that
+        // The karaoke highlight needs a color that visibly differs from the sung
+        // (primary) color. Prefer the app's secondary text color, but if that
         // resource is unavailable fall back to a dimmed primary so the effect is
-        // always visible instead of collapsing to the sung colour.
+        // always visible instead of collapsing to the sung color.
         int secondary = ResourceUtils.getColor(APP_SECONDARY_TEXT_COLOR, 0);
         if (secondary != 0) {
             return secondary;

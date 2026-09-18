@@ -25,6 +25,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,14 +47,13 @@ public final class NetEaseProvider implements LyricsProvider {
 
     private static final String EAPI_HOST = "https://interface.music.163.com";
     private static final String EAPI_KEY = "e82ckenh8dichen8";
+    private static final String REGISTER_PATH = "/eapi/register/anonimous";
 
     private static final String NETEASE_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) "
             + "AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36 Chrome/91.0.4472.164 "
             + "NeteaseMusicDesktop/3.1.3.203419";
     private static final String APP_VER = "3.1.3.203419";
     private static final String DEVICEID_XOR_KEY = "3go8&$8*3*3h0k(2)2";
-    private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 "
-            + "(KHTML, like Gecko) Safari/537.36 Chrome/91.0.4472.164 NeteaseMusicDesktop/3.1.3.203419";
 
     private static final String[] MOTHERBOARD_MODES = {
             "MS-iCraft B760M WIFI", "ASUS ROG STRIX Z790", "MSI MAG B550 TOMAHAWK",
@@ -62,16 +62,16 @@ public final class NetEaseProvider implements LyricsProvider {
 
     private static final Random RANDOM = new Random();
 
-    private static String deviceId = randomChars(32, "0123456789abcdef");
-    private static String clientSign = generateClientSign();
-    private static String osver = "Microsoft-Windows-10--build-" + (20000 + RANDOM.nextInt(10000)) + "-64bit";
-    private static String mode = MOTHERBOARD_MODES[RANDOM.nextInt(MOTHERBOARD_MODES.length)];
+    private static final String deviceId = randomChars(32, "0123456789abcdef");
+    private static final String clientSign = generateClientSign();
+    private static final String osver = "Microsoft-Windows-10--build-" + (20000 + RANDOM.nextInt(10000)) + "-64bit";
+    private static final String mode = MOTHERBOARD_MODES[RANDOM.nextInt(MOTHERBOARD_MODES.length)];
     private static boolean initialized;
     private static final Map<String, String> cookieJar = new HashMap<>();
 
     private static final Pattern YRC_LINE = Pattern.compile("^\\[(\\d+),(\\d+)](.*)");
     private static final Pattern YRC_WORD = Pattern.compile("\\((\\d+),(\\d+),\\d+\\)([^()]*)");
-    private static final Pattern LRC_TIME = Pattern.compile("\\[(\\d{1,}):(\\d{2})(?:[.:](\\d{1,3}))?]");
+    private static final Pattern LRC_TIME = Pattern.compile("\\[(\\d+):(\\d{2})(?:[.:](\\d{1,3}))?]");
     private static final Pattern RICH_JSON = Pattern.compile("^\\s*\\{\"");
 
     @Override
@@ -92,7 +92,7 @@ public final class NetEaseProvider implements LyricsProvider {
         if (song == null || !song.has("id")) {
             return null;
         }
-        return fetchFromSong(song, track);
+        return fetchFromSong(song);
     }
 
     @Override
@@ -108,18 +108,19 @@ public final class NetEaseProvider implements LyricsProvider {
                 continue;
             }
             try {
-                Lyrics lyrics = fetchFromSong(song, track);
+                Lyrics lyrics = fetchFromSong(song);
                 if (lyrics != null) {
                     results.add(lyrics);
                 }
             } catch (Exception ex) {
+                Logger.printDebug(() -> "Could not fetch NetEase lyrics for a song", ex);
             }
         }
         return results;
     }
 
     @Nullable
-    private Lyrics fetchFromSong(JSONObject song, TrackInfo track) throws Exception {
+    private Lyrics fetchFromSong(JSONObject song) throws Exception {
         JSONObject root = eapiRequest("/eapi/song/lyric/v1", new JSONObject()
                 .put("id", song.getLong("id"))
                 .put("lv", "-1")
@@ -137,38 +138,7 @@ public final class NetEaseProvider implements LyricsProvider {
             return null;
         }
 
-        List<String> creditLines = new ArrayList<>();
-
-        if (!yrc.isEmpty()) {
-            for (String rawLine : yrc.split("\\r?\\n")) {
-                String trimmed = rawLine.trim();
-                if (!trimmed.startsWith("{")) {
-                    continue;
-                }
-                try {
-                    JSONObject obj = new JSONObject(trimmed);
-                    JSONArray parts = obj.optJSONArray("c");
-                    if (parts == null) {
-                        continue;
-                    }
-                    StringBuilder sb = new StringBuilder();
-                    for (int i = 0; i < parts.length(); i++) {
-                        JSONObject part = parts.optJSONObject(i);
-                        if (part != null) {
-                            String tx = part.optString("tx", "");
-                            if (!tx.isEmpty()) {
-                                sb.append(tx);
-                            }
-                        }
-                    }
-                    String value = sb.toString().trim();
-                    if (!value.isEmpty()) {
-                        creditLines.add(value);
-                    }
-                } catch (Exception ignored) {
-                }
-            }
-        }
+        List<String> creditLines = parseYrcCredits(yrc);
 
         List<LyricsLine> romaLines = romalrc.isEmpty() ? null : LrcParser.parseSynced(romalrc);
         List<LyricsLine> romanization = LyricsMerge.mergeRomanization(lines, romaLines);
@@ -186,6 +156,43 @@ public final class NetEaseProvider implements LyricsProvider {
                 creditLines.isEmpty() ? null : creditLines, rawFormat, formatType, sourceUrl);
     }
 
+    /** YRC files carry the credits as JSON lines mixed in with the timed lines. */
+    private static List<String> parseYrcCredits(String yrc) {
+        List<String> creditLines = new ArrayList<>();
+        if (yrc.isEmpty()) {
+            return creditLines;
+        }
+        for (String rawLine : yrc.split("\\r?\\n")) {
+            String trimmed = rawLine.trim();
+            if (!trimmed.startsWith("{")) {
+                continue;
+            }
+            try {
+                JSONObject obj = new JSONObject(trimmed);
+                JSONArray parts = obj.optJSONArray("c");
+                if (parts == null) {
+                    continue;
+                }
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < parts.length(); i++) {
+                    JSONObject part = parts.optJSONObject(i);
+                    if (part != null) {
+                        String tx = part.optString("tx", "");
+                        if (!tx.isEmpty()) {
+                            sb.append(tx);
+                        }
+                    }
+                }
+                String value = sb.toString().trim();
+                if (!value.isEmpty()) {
+                    creditLines.add(value);
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return creditLines;
+    }
+
     private static String optLyric(JSONObject root, String key) {
         JSONObject section = root.optJSONObject(key);
         return section == null ? "" : section.optString("lyric", "");
@@ -201,7 +208,6 @@ public final class NetEaseProvider implements LyricsProvider {
             if (trimmed.startsWith("{")) {
                 continue;
             }
-            //noinspection SizeReplaceableByIsEmpty
             if (builder.length() > 0) {
                 builder.append('\n');
             }
@@ -272,7 +278,8 @@ public final class NetEaseProvider implements LyricsProvider {
                 .put("scene", "NORMAL")
                 .put("needCorrect", "true"));
 
-        JSONArray resources = root.optJSONObject("data").optJSONArray("resources");
+        JSONObject data = root.optJSONObject("data");
+        JSONArray resources = data == null ? null : data.optJSONArray("resources");
         List<JSONObject> songs = new ArrayList<>();
         if (resources == null) {
             return songs;
@@ -282,7 +289,7 @@ public final class NetEaseProvider implements LyricsProvider {
             if (resource == null) {
                 continue;
             }
-            JSONObject simple = resource.optJSONObject("baseInfo").optJSONObject("simpleSongData");
+            JSONObject simple = LyricsRequests.optPath(resource, "baseInfo", "simpleSongData");
             if (simple != null) {
                 JSONObject mapped = mapSong(simple);
                 if (mapped != null) {
@@ -303,7 +310,8 @@ public final class NetEaseProvider implements LyricsProvider {
         }
 
         JSONObject root = Requester.parseJSONObject(connection);
-        JSONArray songs = root.optJSONObject("result").optJSONArray("songs");
+        JSONObject result = root.optJSONObject("result");
+        JSONArray songs = result == null ? null : result.optJSONArray("songs");
         List<JSONObject> mapped = new ArrayList<>();
         if (songs == null) {
             return mapped;
@@ -356,7 +364,6 @@ public final class NetEaseProvider implements LyricsProvider {
             }
             String name = artist.optString("name", "");
             if (!name.isEmpty()) {
-                //noinspection SizeReplaceableByIsEmpty
                 if (builder.length() > 0) {
                     builder.append('/');
                 }
@@ -366,14 +373,14 @@ public final class NetEaseProvider implements LyricsProvider {
         return builder.toString();
     }
 
-    private static void ensureInit() throws JSONException {
+    private static void ensureInit() {
         if (initialized) {
             return;
         }
         resetPreCookies();
         try {
-            String username = getAnonimousUsername(deviceId);
-            JSONObject root = eapiRequestRaw("/eapi/register/anonimous",
+            String username = getAnonimousUsername();
+            JSONObject root = registerAnonimous(
                     new JSONObject().put("username", username).put("e_r", true));
             if (!"200".equals(String.valueOf(root.opt("code")))) {
                 throw new IOException("NetEase anonymous login failed: " + root);
@@ -441,8 +448,8 @@ public final class NetEaseProvider implements LyricsProvider {
         return root;
     }
 
-    private static JSONObject eapiRequestRaw(String path, JSONObject params) throws IOException, JSONException {
-        String body = "params=" + buildEapiParams(path, params);
+    private static JSONObject registerAnonimous(JSONObject params) throws IOException, JSONException {
+        String body = "params=" + buildEapiParams(REGISTER_PATH, params);
         Map<String, String> headers = new HashMap<>();
         headers.put("Referer", "https://music.163.com/");
         headers.put("User-Agent", NETEASE_USER_AGENT);
@@ -452,7 +459,7 @@ public final class NetEaseProvider implements LyricsProvider {
         if (!cookie.isEmpty()) {
             headers.put("Cookie", cookie);
         }
-        HttpURLConnection connection = LyricsRequests.postForm(EAPI_HOST + path, body, headers);
+        HttpURLConnection connection = LyricsRequests.postForm(EAPI_HOST + REGISTER_PATH, body, headers);
         int httpCode = connection.getResponseCode();
         if (httpCode != 200) {
             LyricsRequests.logFailure("NetEase", connection);
@@ -496,20 +503,19 @@ public final class NetEaseProvider implements LyricsProvider {
         }
         byte[] raw = out.toByteArray();
         String base64 = Base64.encodeToString(raw, Base64.NO_WRAP);
-        String decrypted = LyricsCrypto.aesEcbPkcs5DecryptBase64ToString(base64, EAPI_KEY);
-        return decrypted;
+        return LyricsCrypto.aesEcbPkcs5DecryptBase64ToString(base64, EAPI_KEY);
     }
 
-    private static String getAnonimousUsername(String deviceIdValue) {
+    private static String getAnonimousUsername() {
         StringBuilder xored = new StringBuilder();
-        for (int i = 0; i < deviceIdValue.length(); i++) {
-            char left = deviceIdValue.charAt(i);
+        for (int i = 0; i < deviceId.length(); i++) {
+            char left = deviceId.charAt(i);
             char right = DEVICEID_XOR_KEY.charAt(i % DEVICEID_XOR_KEY.length());
             xored.append((char) (left ^ right));
         }
         byte[] md5 = LyricsCrypto.md5Bytes(xored.toString().getBytes(StandardCharsets.UTF_8));
         String base64Md5 = Base64.encodeToString(md5, Base64.NO_WRAP);
-        String combined = deviceIdValue + " " + base64Md5;
+        String combined = deviceId + " " + base64Md5;
         return Base64.encodeToString(combined.getBytes(StandardCharsets.UTF_8), Base64.NO_WRAP);
     }
 
@@ -542,7 +548,6 @@ public final class NetEaseProvider implements LyricsProvider {
     private static String cookieHeader() {
         StringBuilder builder = new StringBuilder();
         for (Map.Entry<String, String> entry : cookieJar.entrySet()) {
-            //noinspection SizeReplaceableByIsEmpty
             if (builder.length() > 0) {
                 builder.append("; ");
             }
@@ -551,7 +556,7 @@ public final class NetEaseProvider implements LyricsProvider {
         return builder.toString();
     }
 
-    private static List<LyricsLine> parseNeteaseOriginalLyrics(String yrc, String lrc) throws JSONException {
+    private static List<LyricsLine> parseNeteaseOriginalLyrics(String yrc, String lrc) {
         if (yrc != null && !yrc.isEmpty()) {
             List<LyricsLine> lines = parseYrc(yrc);
             if (!lines.isEmpty()) {
@@ -566,7 +571,7 @@ public final class NetEaseProvider implements LyricsProvider {
         return parseLrc(lrc);
     }
 
-    private static List<LyricsLine> parseYrc(String text) throws JSONException {
+    private static List<LyricsLine> parseYrc(String text) {
         List<LyricsLine> lines = new ArrayList<>();
         if (text == null || text.isEmpty()) {
             return lines;
@@ -583,18 +588,18 @@ public final class NetEaseProvider implements LyricsProvider {
                 continue;
             }
 
-            long lineStart = Long.parseLong(lineMatch.group(1));
-            long lineDuration = Long.parseLong(lineMatch.group(2));
+            long lineStart = Long.parseLong(Objects.requireNonNull(lineMatch.group(1)));
+            long lineDuration = Long.parseLong(Objects.requireNonNull(lineMatch.group(2)));
             long lineEnd = lineStart + lineDuration;
-            String content = lineMatch.group(3);
+            String content = Objects.requireNonNull(lineMatch.group(3));
 
             List<Long> starts = new ArrayList<>();
             List<Long> durations = new ArrayList<>();
             List<String> texts = new ArrayList<>();
             Matcher wordMatch = YRC_WORD.matcher(content);
             while (wordMatch.find()) {
-                starts.add(Long.parseLong(wordMatch.group(1)));
-                durations.add(Long.parseLong(wordMatch.group(2)));
+                starts.add(Long.parseLong(Objects.requireNonNull(wordMatch.group(1))));
+                durations.add(Long.parseLong(Objects.requireNonNull(wordMatch.group(2))));
                 texts.add(wordMatch.group(3));
             }
 
@@ -607,13 +612,12 @@ public final class NetEaseProvider implements LyricsProvider {
                 if (wordText.isEmpty()) {
                     continue;
                 }
-                boolean endsWithSpace = !wordText.isEmpty()
-                        && Character.isWhitespace(wordText.charAt(wordText.length() - 1));
+                boolean endsWithSpace =
+                        Character.isWhitespace(wordText.charAt(wordText.length() - 1));
                 String trimmed = wordText.trim();
                 if (trimmed.isEmpty()) {
                     continue;
                 }
-                //noinspection SizeReplaceableByIsEmpty
                 if (full.length() > 0 && needsSpaceBetween(full.toString(), trimmed)) {
                     full.append(' ');
                 }
@@ -639,7 +643,7 @@ public final class NetEaseProvider implements LyricsProvider {
         return lines;
     }
 
-    private static List<LyricsLine> parseLrc(String text) throws JSONException {
+    private static List<LyricsLine> parseLrc(String text) {
         List<LyricsLine> lines = new ArrayList<>();
         if (text == null || text.isEmpty()) {
             return lines;
@@ -670,14 +674,14 @@ public final class NetEaseProvider implements LyricsProvider {
             }
         }
 
-        items.sort(Comparator.comparingLong(i -> i.start));
+        items.sort(Comparator.comparingLong(Item::start));
         for (Item item : items) {
-            lines.add(new LyricsLine(item.start, item.text));
+            lines.add(new LyricsLine(item.start(), item.text()));
         }
         return lines;
     }
 
-    private static List<LyricsLine> parseMixedNeteaseLyrics(String text) throws JSONException {
+    private static List<LyricsLine> parseMixedNeteaseLyrics(String text) {
         List<Item> items = new ArrayList<>();
         if (text == null || text.isEmpty()) {
             return new ArrayList<>();
@@ -735,10 +739,10 @@ public final class NetEaseProvider implements LyricsProvider {
             }
         }
 
-        items.sort(Comparator.comparingLong(i -> i.start));
+        items.sort(Comparator.comparingLong(Item::start));
         List<LyricsLine> lines = new ArrayList<>();
         for (Item item : items) {
-            lines.add(new LyricsLine(item.start, item.text));
+            lines.add(new LyricsLine(item.start(), item.text()));
         }
         return lines;
     }
@@ -746,23 +750,14 @@ public final class NetEaseProvider implements LyricsProvider {
     private static long parseTimeMs(String minutes, String seconds, String fraction) {
         long min = Long.parseLong(minutes);
         long sec = Long.parseLong(seconds);
-        String fractionText = (fraction == null) ? "0" : fraction;
+        StringBuilder fractionText = new StringBuilder(fraction == null ? "0" : fraction);
         while (fractionText.length() < 3) {
-            fractionText += "0";
+            fractionText.append('0');
         }
-        fractionText = fractionText.substring(0, 3);
-        return (min * 60 + sec) * 1000 + Long.parseLong(fractionText);
+        return (min * 60 + sec) * 1000 + Long.parseLong(fractionText.substring(0, 3));
     }
 
-    private static final class Item {
-        final long start;
-        final String text;
-
-        Item(long start, String text) {
-            this.start = start;
-            this.text = text;
-        }
-    }
+    private record Item(long start, String text) {}
 
     private static String randomChars(int length, String alphabet) {
         StringBuilder builder = new StringBuilder(length);
@@ -808,6 +803,6 @@ public final class NetEaseProvider implements LyricsProvider {
         }
         char last = a.charAt(a.length() - 1);
         char first = b.charAt(0);
-        return !isCjk(last) && !isCjk(first);
+        return !(isCjk(last) || isCjk(first));
     }
 }

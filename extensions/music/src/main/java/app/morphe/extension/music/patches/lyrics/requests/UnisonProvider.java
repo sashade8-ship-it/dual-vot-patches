@@ -48,7 +48,7 @@ public final class UnisonProvider implements LyricsProvider {
     @Override
     public Lyrics fetch(TrackInfo track) throws Exception {
         final String videoId = VideoInformation.getVideoId();
-        if (videoId == null || videoId.isEmpty()) {
+        if (videoId.isEmpty()) {
             return null;
         }
         final String title = track.title() != null ? track.title() : "";

@@ -34,9 +34,7 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">使用您選擇的外部下載器取代內建的下載飛出選單</string>
   <string name="morphe_music_in_app_downloads_title">在應用程式內下載</string>
   <string name="morphe_music_in_app_downloads_summary">不開啟外部下載器應用程式，改在 YouTube Music 中下載音訊。</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"在應用程式內下載重複使用已解析的音訊串流，並需要啟用「偽裝視訊串流」。
-
-歌曲會儲存到應用程式的專用儲存區域中，如果解除安裝 YouTube Music，歌曲也會被刪除。
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"歌曲會儲存到應用程式的專用儲存區域中，如果解除安裝 YouTube Music，歌曲也會被刪除。
 
 啟用此功能後，「下載」頁籤會列出這些歌曲，而非 Music Premium 離線庫。關閉此功能將會恢復該頁籤，而且Premium下載永遠不會受到影響。"</string>
   <string name="morphe_music_downloads_screen_title">已下載的音樂</string>
@@ -50,7 +48,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_downloads_sort_title">按標題排序</string>
   <string name="morphe_music_downloads_sort_size">按大小排序</string>
   <string name="morphe_music_downloads_delete_all">刪除所有已下載的音樂</string>
-  <string name="morphe_music_downloads_delete_all_title">確定要刪除所有已下載的音樂？</string>
+  <string name="morphe_music_downloads_delete_all_title">要刪除所有已下載的內容嗎？</string>
   <string name="morphe_music_downloads_delete_all_message">這個裝置中所有已下載的曲目將會被刪除</string>
   <string name="morphe_music_downloads_all_deleted">已刪除下載的音樂</string>
   <string name="morphe_music_downloads_nothing_found">沒有找到任何內容</string>
@@ -364,6 +362,7 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_music_lyrics_source_reset_title">重設提供者順序？</string>
   <string name="morphe_music_lyrics_source_reset_message">將提供者還原為預設優先順序</string>
   <string name="morphe_music_token_dialog_get_token">取得權杖</string>
+  <string name="morphe_music_apple_music_token_title">Apple Music Media-user-token</string>
   <string name="morphe_music_apple_music_token_dialog_instruction">"貼上來自 music.apple.com 的 media-user-token Cookie
 
 步驟：
@@ -382,8 +381,8 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
 3. 複製「sp_dc」的值"</string>
   <string name="morphe_music_spotify_token_toast_saved">Spotify：sp_dc 為選填。未提供時，將使用 Lyrically 作為替代。</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify：sp_dc 已清除</string>
-  <string name="morphe_music_spotify_token_toast_invalid">Spotify：sp_dc 無效 — 請檢查並重試</string>
-  <string name="morphe_music_apple_token_optional_hint">Apple Music 權杖為選用。未提供的話，Lyrically 會使用備用方案。</string>
+  <string name="morphe_music_spotify_token_toast_invalid">Spotify：無效的 sp_dc — 請檢查後重試</string>
+  <string name="morphe_music_apple_token_optional_hint">Apple Music Token是可選的。若沒有Token，將會用Lyrically作為備用方案。</string>
   <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"貼上來自 Deezer 的 arl cookie。
 
@@ -395,12 +394,9 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_music_deezer_arl_toast_cleared">Could not romanize the lyrics</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer：arl 無效。請檢查後再試一次。</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch：[…] 複製「token」的值</string>
-  <string name="morphe_music_musixmatch_token_dialog_instruction">"貼上你的 Musixmatch 使用者權杖。
+  <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch無需Token即可運作，因此該欄位可以留空。
 
-步驟：
-1. 前往 musixmatch.com 並登入
-2. 開啟 DevTools → Application → Local Storage
-3. 複製使用者權杖的值"</string>
+新增Token僅用於使用您自己的帳戶。Token必須來自Musixmatch Android應用程式：從 musixmatch.com 複製的Token屬於已淘汰的桌面客戶端，而且 API 會拒絕那些Token。"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">使用者Token</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch：已儲存使用者Token</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch：已清除使用者Token</string>
@@ -418,7 +414,7 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_music_youtube_cookies_toast_cleared">YouTube：已清除Cookie</string>
   <string name="morphe_music_youtube_cookies_toast_invalid">YouTube：無效Cookie — 請檢查並重試</string>
   <!-- 'LRCLIB', 'KuGou', 'NetEase', 'QQ', 'BiniLyrics', 'Unison' and 'AMLL' are service names and must be kept untranslated -->
-  <string name="morphe_music_lyrics_source_entry_lrclib_then_kugou">LRCLIB、QQ、酷狗、網易、BiniLyrics、Unison、AMLL</string>
+  <string name="morphe_music_lyrics_source_entry_lrclib_then_kugou">LRCLIB、QQ、KuGou、NetEase、BiniLyrics、Unison、AMLL</string>
   <string name="morphe_music_lyrics_tap_to_seek_title">點擊行以尋找</string>
   <string name="morphe_music_lyrics_tap_to_seek_summary">點擊一行會跳到歌曲的那個時間點</string>
   <string name="morphe_music_lyrics_show_copy_button_title">顯示複製按鈕</string>

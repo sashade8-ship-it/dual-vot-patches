@@ -24,15 +24,15 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.requests.Requester;
 import app.morphe.extension.shared.settings.BaseSettings;
 
-import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.Utils;
-
 @SuppressWarnings("unused")
 public class ChannelIdRequest {
-    private static final int MAX_MILLISECONDS_TO_WAIT_FOR_FETCH = 5 * 1000;
+    // Must be less than 5 seconds to ensure Android "App not responding" dialog does not show.
+    private static final int MAX_MILLISECONDS_TO_WAIT_FOR_FETCH = 3 * 1000;
     private final Future<Pair<String, String>> future;
 
     private static final Map<String, ChannelIdRequest> cache = Collections.synchronizedMap(
@@ -51,7 +51,7 @@ public class ChannelIdRequest {
     public Pair<String, String> getChannelInfo() {
         try {
             if (BaseSettings.DEBUG.get() && !fetchIsDone() && Utils.isCurrentlyOnMainThread()) {
-                Logger.printException(() -> "Debug: Blocking main thread");
+                Logger.printDebug(() -> "Debug: Blocking main thread");
             }
             return future.get(MAX_MILLISECONDS_TO_WAIT_FOR_FETCH, TimeUnit.MILLISECONDS);
         } catch (TimeoutException ex) {
