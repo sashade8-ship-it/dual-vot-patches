@@ -923,8 +923,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_exit_fullscreen_entry_3">横画面のみ</string>
   <string name="morphe_exit_fullscreen_entry_4">縦画面 &amp; 横画面</string>
   <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
-  <string name="morphe_force_fullscreen_landscape_title">全画面で横向きを強制</string>
-  <string name="morphe_force_fullscreen_landscape_summary">全画面に入るときにプレイヤーを横向きに回転します。小さな画面では、すでに全画面が横向きで開くため、利用できません</string>
+  <string name="morphe_force_fullscreen_landscape_title">横向きの全画面表示を有効化</string>
+  <string name="morphe_force_fullscreen_landscape_summary">全画面表示を開始する際に、プレーヤーの映像を横向きで表示します。通常のスマートフォンでの動作を、タブレットなどの大画面デバイスで再現する機能です。そのため、利用可能なのは大画面デバイスのみです</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
   <string name="morphe_disable_fullscreen_gestures_title">全画面表示ジェスチャー</string>
   <string name="morphe_disable_fullscreen_gestures_summary">全画面表示モードに関連するジェスチャー</string>

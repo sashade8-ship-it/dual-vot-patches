@@ -319,7 +319,7 @@ public final class MinimalMiniplayerPatch {
                 return original;
             }
 
-            Rect docked = dockToStart(original);
+            Rect docked = fullWidthSpan(original);
             lastBounds.set(docked);
 
             if (PlayerType.getCurrent() == PlayerType.WATCH_WHILE_MINIMIZED) {
@@ -340,14 +340,11 @@ public final class MinimalMiniplayerPatch {
     }
 
     /**
-     * Docked where the thumbnail sits, otherwise YouTube's collapse animation ends in the
-     * opposite corner and the thumbnail has to travel the whole width afterward.
+     * Prevents the video from anchoring into one of the display corners by spanning the
+     * bounds to full display width, making the transition to miniplayer smoother.
      */
-    private static Rect dockToStart(Rect original) {
-        if (original.left <= 0) return original;
-        if (original.width() >= getWidthPixels()) return original;
-
-        dockedBounds.set(0, original.top, original.width(), original.bottom);
+    private static Rect fullWidthSpan(Rect original) {
+        dockedBounds.set(0, original.top, getWidthPixels(), original.bottom);
 
         return dockedBounds;
     }
@@ -359,8 +356,8 @@ public final class MinimalMiniplayerPatch {
     }
 
     /**
-     * Not {@link Dim#getScreenWidth()}, which measures the display. A bar spans the window,
-     * and the two differ in split screen and on foldables.
+     * Not {@link Dim#getScreenWidth()}, which measures the display. A bar spans
+     * the window, and the two differ in split screen and on foldables.
      */
     private static int getWidthPixels() {
         return Dim.getMetrics().widthPixels;
@@ -391,7 +388,16 @@ public final class MinimalMiniplayerPatch {
      */
     public static void applyVideoRect(Rect videoRect) {
         try {
-            if (!inBarMode()) return;
+            if (!ENABLED) {
+                return;
+            }
+
+            if (!inBarMode()) {
+                videoRect.left = 0;
+                videoRect.right = getWidthPixels();
+
+                return;
+            }
 
             if (getCurrentMiniplayerType() == MINIMAL_BAR) {
                 final int videoWidth = videoWidthFor(currentBounds.height());

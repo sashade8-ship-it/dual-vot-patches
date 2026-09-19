@@ -34,6 +34,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">Úsáideann sé an íoslódálaí seachtrach roghnaithe agat in ionad an roghchláir Íoslódála stoic</string>
   <string name="morphe_music_in_app_downloads_title">Íoslódáil san aip</string>
   <string name="morphe_music_in_app_downloads_summary">Íoslódáiltear fuaim laistigh de YouTube Music seachas an aip sheachtrach íoslódála a oscailt</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"Sábháiltear riananna sa stóráisteáil phríobháideach an app agus baintear iad má scioltar YouTube Music.
+
+Leanfaidh an tab Oscailteach na riananna seo in ionad leorán offline Music Premium nuair a bhíonn sé seoa uaigh. Athchriosann an taba nuair a chuirtear stop leo, agus ní bhaineann sé leo iad na hoscailteacha Premium riamh."</string>
   <string name="morphe_music_downloads_screen_title">Íoslódálacha</string>
   <string name="morphe_music_downloads_empty">"Gan íoslódálacha
 Taispeánfar rianta íoslódáilte anseo"</string>
@@ -391,6 +394,9 @@ Céimeanna:
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl glanta</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: arl neamhbhailí — seiceáil é agus déan iarracht arís, le do thoil.</string>
   <string name="morphe_music_musixmatch_token_title">Comhartha Musixmatch</string>
+  <string name="morphe_music_musixmatch_token_dialog_instruction">"Oibríonn Musixmatch gan token, agus mar sin is féidir leis an bhfuil an réimse seo folly.
+
+Cuir token isteach amháin chun do chuntais féin a úsáid. Caithfidh sé teacht ó app Android Musixmatch: bailíonn tokenaí a chóipeálann ó musixmatch.com leis an gclianta desktop a bhfuil sé críochaithe leis agus diúltaíonn an API iad."</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">comhartha úsáideora</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: comhartha úsáideora sábháilte</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: comhartha úsáideora glanta</string>

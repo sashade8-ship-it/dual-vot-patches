@@ -34,6 +34,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_flyout_menu_summary">フライアウト メニューの「オフラインに一時保存」の呼び出し先を、「純正アプリ内蔵のダウンロード機能」から「設定した外部ダウンローダー」に変更します</string>
   <string name="morphe_music_in_app_downloads_title">アプリ内ダウンロード</string>
   <string name="morphe_music_in_app_downloads_summary">外部のダウンローダーアプリを開かずに、YouTube Music内で音声をダウンロードします。</string>
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"トラックはアプリのプライベートストレージに保存され、YouTube Music をアンインストールすると削除されます。
+
+この設定がオンの間、ダウンロードタブには Music Premium のオフラインライブラリの代わりにこれらのトラックが表示されます。オフにするとタブが復元され、Premium のダウンロードが影響を受けることは一切ありません。"</string>
   <string name="morphe_music_downloads_screen_title">ダウンロード</string>
   <string name="morphe_music_downloads_empty">"まだダウンロードしていません
 ダウンロードした楽曲がここに表示されます
@@ -380,6 +383,7 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc を保存しました</string>
   <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc […] これがない場合、Lyrically がフォールバックとして使用されます</string>
   <string name="morphe_music_spotify_token_toast_invalid">Spotify: sp_dc が無効です。値を確認してもう一度お試しください</string>
+  <string name="morphe_music_apple_token_optional_hint">Apple Music のトークンは任意です。設定しない場合は、Lyrically がフォールバックとして使用されます。</string>
   <string name="morphe_music_deezer_arl_title">Deezer […] \"arl\" の値をコピーしてください</string>
   <string name="morphe_music_deezer_arl_dialog_instruction">"Deezer の arl Cookie を貼り付けてください。
 
@@ -391,6 +395,9 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl が無効です。もう一度お試しください</string>
   <string name="morphe_music_deezer_arl_toast_invalid">Deezer: arl が無効です。値を確認してもう一度お試しください</string>
   <string name="morphe_music_musixmatch_token_title">Musixmatch […] ユーザートークンの値をコピーしてください</string>
+  <string name="morphe_music_musixmatch_token_dialog_instruction">"Musixmatch はトークンなしでも動作するため、この欄は空のままにできます。
+
+トークンを追加するのは、自分のアカウントを使用する場合だけです。トークンは Musixmatch Android アプリから取得する必要があります。musixmatch.com からコピーしたトークンは廃止されたデスクトップクライアントに属しており、API はそれらを拒否します。"</string>
   <string name="morphe_music_musixmatch_token_dialog_hint">ユーザートークンが無効です。もう一度お試しください</string>
   <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: user token 保存済み</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: user token 削除済み</string>
