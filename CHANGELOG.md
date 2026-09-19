@@ -1,3 +1,13 @@
+## 1.44.0-dev.7-dualvot.8.5.3 (2026-09-19)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.44.0-dev.7](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.44.0-dev.7).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.44.0-dev.6-dualvot.8.5.3 (2026-09-18)
 
 ### Automated Morphe update
@@ -416,6 +426,17 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.44.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.6...v1.44.0-dev.7) (2026-09-19)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Minimal miniplayer:** Fully expand the player width during the minimization animation. ([aaa1211](https://github.com/MorpheApp/morphe-patches/commit/aaa1211855d245b44940575dc8f9e3428593bde5))
+* **YouTube - Remove background playback restrictions:** Auto pause when video is loading ([#3060](https://github.com/MorpheApp/morphe-patches/issues/3060)) ([cbffcf3](https://github.com/MorpheApp/morphe-patches/commit/cbffcf3c09bde19ac1e16921cd5f359d1b9430be))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.38.123` ([#3053](https://github.com/MorpheApp/morphe-patches/issues/3053)) ([fd4a726](https://github.com/MorpheApp/morphe-patches/commit/fd4a72611ea561f605085fc1512a91b8084410fe))
 
 ## [1.44.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.5...v1.44.0-dev.6) (2026-09-18)
 
