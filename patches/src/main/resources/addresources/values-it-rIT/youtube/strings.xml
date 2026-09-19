@@ -406,12 +406,12 @@ Le segnalazioni sono pubbliche e vengono esaminate prima che un canale venga agg
   <string name="morphe_external_downloader_summary">Mostra un pulsante di overlay sul lettore video per aprire il tuo downloader esterno</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Sovrascrivi il pulsante azione Download e il menu</string>
-  <string name="morphe_external_downloader_action_button_summary">Utilizza il downloader esterno scelto invece della funzionalità di download integrata di YouTube</string>
+  <string name="morphe_external_downloader_action_button_summary">Utilizza il downloader esterno scelto invece della funzionalità di download integrata</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Traduzione voice over</string>
   <string name="morphe_vot_screen_summary">Leggi ad alta voce i sottotitoli del video utilizzando la sintesi vocale del dispositivo, sincronizzata con la riproduzione</string>
   <string name="morphe_vot_enabled_title">Traduzione voice over</string>
-  <string name="morphe_vot_enabled_summary">Mostra un pulsante in sovrapposizione nel lettore video. Tocca il toggle per attivare la traduzione, tocca e tieni premuto per impostazioni rapide</string>
+  <string name="morphe_vot_enabled_summary">Mostra un pulsante in sovrapposizione nel lettore video. Tocca l\'interruttore per attivare la traduzione, tocca e tieni premuto per impostazioni rapide</string>
   <string name="morphe_vot_caption_language_title">Lingua</string>
   <string name="morphe_vot_translation_service_title">Fornitore di traduzione</string>
   <string name="morphe_vot_original_audio_volume_title">Volume audio originale</string>
@@ -1271,6 +1271,7 @@ La riproduzione video con AV1 potrebbe rallentare o perdere fotogrammi."</string
   <string name="morphe_spoof_video_streams_about_no_av1">• Nessun codec video AV1</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• Modalità immersiva a 360° VR non disponibile</string>
   <string name="morphe_spoof_video_streams_about_no_stable_volume">• Il volume stabile non è disponibile</string>
+  <string name="morphe_spoof_video_streams_about_end_early">• La riproduzione potrebbe terminare 1 secondo prima</string>
   <string name="morphe_spoof_video_streams_about_js">• In caso di fallimento della deobfuscazione, la riproduzione potrebbe fallire</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
   <string name="morphe_spoof_video_streams_about_no_force_original_audio">• L\'audio originale forzato non è disponibile</string>
