@@ -1,3 +1,13 @@
+## 1.44.0-dev.11-dualvot.8.5.3 (2026-09-19)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.44.0-dev.11](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.44.0-dev.11).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.44.0-dev.10-dualvot.8.5.3 (2026-09-19)
 
 ### Automated Morphe update
@@ -446,6 +456,12 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.44.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.10...v1.44.0-dev.11) (2026-09-19)
+
+### ✨ New Features
+
+* **YouTube - Channel search:** Show the searched channel in the results header ([c0e49d4](https://github.com/MorpheApp/morphe-patches/commit/c0e49d4ba97a5ca79033e379f3f581a395cda7a4))
 
 ## [1.44.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.9...v1.44.0-dev.10) (2026-09-19)
 
