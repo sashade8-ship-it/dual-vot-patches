@@ -1,3 +1,13 @@
+## 1.44.0-dev.12-dualvot.8.5.3 (2026-09-20)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.44.0-dev.12](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.44.0-dev.12).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.44.0-dev.11-dualvot.8.5.3 (2026-09-19)
 
 ### Automated Morphe update
@@ -456,6 +466,17 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.44.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.11...v1.44.0-dev.12) (2026-09-20)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Navigation bar:** Use black system bars in Shorts ([#3088](https://github.com/MorpheApp/morphe-patches/issues/3088)) ([e88ec7d](https://github.com/MorpheApp/morphe-patches/commit/e88ec7db71993dd412f656a2c5d988edc07e00a1))
+* **YouTube:** Hide Shorts captions flyout item ([#3082](https://github.com/MorpheApp/morphe-patches/issues/3082)) ([a0d8171](https://github.com/MorpheApp/morphe-patches/commit/a0d8171790c2f6f50dfb8588d973697f731785c8))
+
+### ✨ New Features
+
+* **YouTube - Miniplayer:** Add option to hide Minimal 2 miniplayer title ([#3087](https://github.com/MorpheApp/morphe-patches/issues/3087)) ([6e1ca28](https://github.com/MorpheApp/morphe-patches/commit/6e1ca285e43094004fa6b828d4482ddab6949ff6))
 
 ## [1.44.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.10...v1.44.0-dev.11) (2026-09-19)
 
