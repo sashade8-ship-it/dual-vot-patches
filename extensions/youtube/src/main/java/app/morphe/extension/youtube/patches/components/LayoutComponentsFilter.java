@@ -383,7 +383,8 @@ public final class LayoutComponentsFilter extends Filter {
                 Settings.HIDE_SURVEYS,
                 "in_feed_survey",
                 "slimline_survey",
-                "feed_nudge"
+                "feed_nudge",
+                "in_short_survey"
         );
 
         final var timedReactions = new StringFilterGroup(
