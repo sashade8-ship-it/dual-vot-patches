@@ -1,3 +1,13 @@
+## 1.44.0-dev.18-dualvot.8.5.3 (2026-09-21)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.44.0-dev.18](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.44.0-dev.18).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.44.0-dev.17-dualvot.8.5.3 (2026-09-21)
 
 ### Automated Morphe update
@@ -486,6 +496,21 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.44.0-dev.18](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.17...v1.44.0-dev.18) (2026-09-21)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Comments:** Hide new comments carousel ([#3110](https://github.com/MorpheApp/morphe-patches/issues/3110)) ([b733f2e](https://github.com/MorpheApp/morphe-patches/commit/b733f2ef05ff798d4b9caba0e6f6c90e67bbc6f3))
+* **YouTube - Hide layout components:** Hide Community button in search ([#3112](https://github.com/MorpheApp/morphe-patches/issues/3112)) ([9b3d122](https://github.com/MorpheApp/morphe-patches/commit/9b3d1222cd9199532835dfe9224c738a96fd0a84))
+* **YouTube - Hide layout components:** Preserve live chat replay ([#3115](https://github.com/MorpheApp/morphe-patches/issues/3115)) ([dff81a7](https://github.com/MorpheApp/morphe-patches/commit/dff81a79b0fc1a7f193cfb59c2903467dd4ecdc2))
+* **YouTube - Minimal miniplayer:** Dim the Minimal 2 video less and hide the channel together with the title ([5f8f5e1](https://github.com/MorpheApp/morphe-patches/commit/5f8f5e1894e64de6a7ff605e88e24b3e8fd12b68))
+* **YouTube - Minimal miniplayer:** Keep the gap above an opaque navigation bar after a system theme change ([05eff03](https://github.com/MorpheApp/morphe-patches/commit/05eff034bd03d6279b0928da7e56a6b0661b89f0))
+* **YouTube Music - Return YouTube Dislike:** Show dislikes beside the dislike icon like YouTube does ([#3107](https://github.com/MorpheApp/morphe-patches/issues/3107)) ([ca839ce](https://github.com/MorpheApp/morphe-patches/commit/ca839ce4c46c20e0ae3ca0977511993b87031d5f))
+
+### ✨ New Features
+
+* **YouTube Music - Third-party lyrics:** Add new lyric providers ([#3041](https://github.com/MorpheApp/morphe-patches/issues/3041)) ([d5b00ae](https://github.com/MorpheApp/morphe-patches/commit/d5b00aed59fe2f333e2e155637a50ffae208f6de))
 
 ## [1.44.0-dev.17](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.16...v1.44.0-dev.17) (2026-09-21)
 
