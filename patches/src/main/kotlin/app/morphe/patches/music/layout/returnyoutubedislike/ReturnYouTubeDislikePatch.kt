@@ -38,7 +38,6 @@ private val returnYouTubeDislikeResourcePatch = resourcePatch {
         PreferenceScreen.RETURN_YOUTUBE_DISLIKE.addPreferences(
             SwitchPreference("morphe_ryd_enabled"),
             SwitchPreference("morphe_ryd_dislike_percentage", summary = true),
-            SwitchPreference("morphe_ryd_compact_layout", summary = true),
             SwitchPreference("morphe_ryd_estimated_like", summary = true),
             SwitchPreference("morphe_ryd_toast_on_connection_error", summary = true),
             NonInteractivePreference(

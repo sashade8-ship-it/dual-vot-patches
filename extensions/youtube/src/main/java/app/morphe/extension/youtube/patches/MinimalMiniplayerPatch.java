@@ -81,7 +81,6 @@ public final class MinimalMiniplayerPatch {
     // this and the type the rest of the class reads disagreeing.
     private static final boolean ENABLED = getCurrentMiniplayerType() == MINIMAL_BAR
             || getCurrentMiniplayerType() == MINIMAL_BAR_2;
-
     private static final boolean HIDE_TITLE =
             getCurrentMiniplayerType() == MINIMAL_BAR_2
                     && Settings.MINIPLAYER_HIDE_TITLE.get();
@@ -120,7 +119,7 @@ public final class MinimalMiniplayerPatch {
     private static final int PAUSE_DESCRIPTION = ResourceUtils.
             getStringIdentifier("accessibility_pause");
 
-    private static final long MORPH_MILLIS = 300;
+    private static final long MORPH_MILLIS = 220;
 
     /**
      * Reused, because the bounds hooks run for every frame of a drag.
@@ -163,6 +162,7 @@ public final class MinimalMiniplayerPatch {
     private static boolean ticking;
     private static boolean playing;
     private static boolean morphing;
+    private static float contentAlpha = 1f;
 
     /**
      * Whether the bar container is currently moved in front of the player, and what it has to
@@ -216,11 +216,12 @@ public final class MinimalMiniplayerPatch {
 
             TextView title = Utils.getChildViewByResourceName(controlsLayout, "floaty_title");
             titleRef = new WeakReference<>(title);
+
+            TextView subtitle = Utils.getChildViewByResourceName(controlsLayout, "floaty_subtitle_text");
             if (title != null && HIDE_TITLE) {
                 title.setVisibility(View.GONE);
             }
-
-            TextView subtitle = Utils.getChildViewByResourceName(controlsLayout, "floaty_subtitle_text");
+            
             subtitleRef = new WeakReference<>(subtitle);
 
             ImageView playPause = Utils.getChildViewByResourceName(controlsLayout, "floaty_play_pause_button");
@@ -287,10 +288,9 @@ public final class MinimalMiniplayerPatch {
     public static int getLegacyControlsVisibility(int original) {
         // Any other shape and these would sit across the whole screen.
         if (ENABLED && inBarMode()) {
-            // The morph owns the alpha while it runs.
-            if (!morphing) {
-                setContentAlpha(1f);
-            }
+            // YouTube sets its own alpha on these right before, which the morph owns while it
+            // runs. Left alone, the contents are drawn fully opaque for a frame.
+            setContentAlpha(morphing ? contentAlpha : 1f);
 
             return View.VISIBLE;
         }
@@ -320,41 +320,27 @@ public final class MinimalMiniplayerPatch {
                 return original;
             }
 
-            if (morphing || applyingBounds) {
+            if (applyingBounds) {
                 // Ours, YouTube is only being told where the player is. Recording it as the
                 // resting bounds would leave the next collapse with nothing to animate.
                 currentBounds.set(original);
                 return original;
             }
 
+            if (morphing) {
+                // YouTube settles its own corner miniplayer after reporting minimized, which is
+                // after the morph began. Let through, that shape is drawn for a frame.
+                return currentBounds;
+            }
+
             Rect docked = fullWidthSpan(original);
             lastBounds.set(docked);
 
-            barBoundsFor(docked);
-
-            PlayerType currentType = PlayerType.getCurrent();
-            if (currentType == PlayerType.WATCH_WHILE_MINIMIZED) {
+            if (PlayerType.getCurrent() == PlayerType.WATCH_WHILE_MINIMIZED) {
+                barBoundsFor(docked);
                 currentBounds.set(barBounds);
                 barShapeApplied = true;
                 return barBounds;
-            }
-            if (currentType.isMaximizedOrFullscreen()) {
-                barShapeApplied = false;
-                currentBounds.set(docked);
-                return docked;
-            }
-
-            // Interpolate bounds during player minimization.
-            int targetTop = barBounds.top;
-            if (targetTop > 0 && docked.top > 0) {
-                float fraction = Math.min(1f, Math.max(0f, (float) docked.top / targetTop));
-                currentBounds.set(
-                        interpolate(docked.left, barBounds.left, fraction),
-                        interpolate(docked.top, barBounds.top, fraction),
-                        interpolate(docked.right, barBounds.right, fraction),
-                        interpolate(docked.bottom, barBounds.bottom, fraction)
-                );
-                return currentBounds;
             }
 
             currentBounds.set(docked);
@@ -507,9 +493,15 @@ public final class MinimalMiniplayerPatch {
             barBoundsFor(lastBounds);
             morphTo.set(barBounds);
             barShapeApplied = true;
+            showControls(true);
+
+            if (morphFrom.equals(morphTo)) {
+                setBounds(controller, morphTo);
+                updateVideoClip();
+                return;
+            }
 
             setContentAlpha(0f);
-            showControls(true);
             runMorph(true, () -> setContentAlpha(1f));
         } catch (Exception ex) {
             morphing = false;
@@ -517,7 +509,6 @@ public final class MinimalMiniplayerPatch {
         }
     }
 
-    @SuppressWarnings("SameParameterValue")
     private static void setBounds(MiniplayerBoundsController controller, Rect bounds) {
         applyingBounds = true;
         try {
@@ -592,6 +583,8 @@ public final class MinimalMiniplayerPatch {
     }
 
     private static void setContentAlpha(float alpha) {
+        contentAlpha = alpha;
+
         ViewGroup controls = controlsRef.get();
         if (controls != null) {
             controls.setAlpha(alpha);
@@ -1059,10 +1052,15 @@ public final class MinimalMiniplayerPatch {
                 ? "player_play_pause_vector_transition"
                 : "player_pause_play_vector_transition";
 
-        final int drawableIdentifier = ResourceUtils.getDrawableIdentifier(name + "_delhi");
-        Drawable drawable = drawableIdentifier == 0
-                ? ResourceUtils.getDrawable(name)
-                : Utils.getContext().getDrawable(drawableIdentifier);
+        int drawableIdentifier = ResourceUtils.getDrawableIdentifier(name + "_delhi");
+        if (drawableIdentifier == 0) {
+            drawableIdentifier = ResourceUtils.getDrawableIdentifier(name);
+        }
+        if (drawableIdentifier == 0) return false;
+
+        // Its fill is a YouTube theme attribute. The extension context has no theme once an app
+        // language is set, so the icon would come out transparent.
+        Drawable drawable = view.getContext().getDrawable(drawableIdentifier);
 
         if (!(drawable instanceof AnimatedVectorDrawable morph)) return false;
 

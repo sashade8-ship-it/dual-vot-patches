@@ -37,6 +37,7 @@ import com.facebook.litho.TextContent;
 import com.facebook.yoga.YogaNative;
 
 import java.util.Map;
+import java.util.Objects;
 import java.util.WeakHashMap;
 
 import app.morphe.extension.shared.Logger;
@@ -96,14 +97,9 @@ public class ReturnYouTubeDislikePatch {
     }
 
     /**
-     * Injection point.
-     * <p>
      * Called when a litho text component is created, and also when a Span is later reused
-     * (such as scrolling off and back on screen).  Usually called off the main thread, and
+     * (such as scrolling off and back on screen). Usually called off the main thread, and
      * can be called several times for the same element.
-     * <p>
-     * Only a segmented button that YouTube lays out itself is handled here.  When the old action
-     * bar is restored the dislike count is drawn over the button instead.
      *
      * @param original Original char sequence created or reused by Litho.
      * @return The original char sequence, or a replacement that contains the dislikes.
@@ -111,7 +107,12 @@ public class ReturnYouTubeDislikePatch {
     public static CharSequence onLithoTextLoaded(ContextInterface contextInterface,
                                                  CharSequence original) {
         try {
-            if (!RYD_ENABLED || OLD_ACTION_BAR_ENABLED) {
+            if (!RYD_ENABLED) {
+                return original;
+            }
+
+            String identifier = contextInterface.patch_getIdentifier();
+            if (identifier == null || !identifier.contains("video_action_bar.e")) {
                 return original;
             }
 
@@ -127,7 +128,7 @@ public class ReturnYouTubeDislikePatch {
             if (!(original instanceof Spanned)) {
                 original = new SpannableString(original);
             }
-            return videoData.getDislikesSpanForRegularVideo((Spanned) original, true, false);
+            return videoData.getDislikesSpanForRegularVideo((Spanned) original);
         } catch (Exception ex) {
             Logger.printException(() -> "onLithoTextLoaded failure", ex);
         }
@@ -146,19 +147,41 @@ public class ReturnYouTubeDislikePatch {
             RYD_ENABLED && Settings.RESTORE_OLD_VIDEO_ACTION_BAR.get();
 
     private static final int OLD_BAR_DISLIKE_ICON_WIDTH = Dim.dp16;
-    private static final int OLD_BAR_SEPARATOR_WIDTH = Dim.dp1;
+    /**
+     * {@link Dim} truncates, while Litho rounds, so at a density such as 2.75 a 1dp width is
+     * 2 there and 3 in the layout. The widths of the layout are matched against the exact size.
+     */
+    private static final float OLD_BAR_DISLIKE_ICON_EXACT_WIDTH = exactDp(16);
+    private static final float OLD_BAR_SEPARATOR_EXACT_WIDTH = exactDp(1);
+    private static final float OLD_BAR_BEFORE_SEPARATOR_MIN_WIDTH = exactDp(2);
+    private static final float OLD_BAR_BEFORE_SEPARATOR_MAX_WIDTH = exactDp(100);
     private static final float OLD_BAR_COUNT_TEXT_SIZE_SP = 12;
-    private static final int OLD_BAR_COUNT_SIDE_MARGIN = Dim.dp4;
+    /**
+     * The like icon has more empty space beside it, so the dislike count needs a wider gap to sit
+     * as far from its icon. The end gap brings the padding after it up to what YouTube leaves
+     * after text.
+     */
+    private static final int OLD_BAR_COUNT_START_MARGIN = Dim.dp(9);
+    private static final int OLD_BAR_COUNT_END_MARGIN = Dim.dp(5);
 
     /**
      * Nothing identifies the button, since the whole bar is a single Litho component, so it is
-     * found by the separator that is always laid out immediately before it.
+     * found by the separator that is always laid out immediately before it. The feed also has
+     * 1dp dividers followed by 16dp nodes. There the node before the divider is another divider,
+     * empty or as wide as a card, while in the bar it is a small part of the like button.
+     * <p>
+     * The last two widths of the thread, oldest first.
      */
-    private static final ThreadLocal<Boolean> previousWidthWasSeparator = new ThreadLocal<>();
+    private static final ThreadLocal<float[]> previousWidths =
+            ThreadLocal.withInitial(() -> new float[2]);
 
     private static Paint oldBarCountPaint;
 
-    private static boolean isDimension(float width, int dimension) {
+    private static float exactDp(float dp) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Dim.getMetrics());
+    }
+
+    private static boolean isDimension(float width, float dimension) {
         return Math.abs(width - dimension) < 1;
     }
 
@@ -176,13 +199,13 @@ public class ReturnYouTubeDislikePatch {
     }
 
     private static int oldBarWidthOf(String count) {
-        return 2 * OLD_BAR_COUNT_SIDE_MARGIN
+        return OLD_BAR_COUNT_START_MARGIN + OLD_BAR_COUNT_END_MARGIN
                 + (int) Math.ceil(oldBarCountPaint().measureText(count));
     }
 
     /**
      * The count of the segmented button is drawn by the layout engine and not by the text view
-     * beside it, so its color cannot be changed.  The count drawn here takes the color of that
+     * beside it, so its color cannot be changed. The count drawn here takes the color of that
      * view instead, which is the one the engine draws with.
      */
     private static int oldBarCountColor(View host) {
@@ -233,10 +256,15 @@ public class ReturnYouTubeDislikePatch {
                 return;
             }
 
-            final boolean afterSeparator = Boolean.TRUE.equals(previousWidthWasSeparator.get());
-            previousWidthWasSeparator.set(isDimension(width, OLD_BAR_SEPARATOR_WIDTH));
+            float[] previous = Objects.requireNonNull(previousWidths.get());
+            final boolean afterSeparator =
+                    previous[0] > OLD_BAR_BEFORE_SEPARATOR_MIN_WIDTH
+                    && previous[0] < OLD_BAR_BEFORE_SEPARATOR_MAX_WIDTH
+                    && isDimension(previous[1], OLD_BAR_SEPARATOR_EXACT_WIDTH);
+            previous[0] = previous[1];
+            previous[1] = width;
 
-            if (!afterSeparator || !isDimension(width, OLD_BAR_DISLIKE_ICON_WIDTH)) {
+            if (!afterSeparator || !isDimension(width, OLD_BAR_DISLIKE_ICON_EXACT_WIDTH)) {
                 return;
             }
 
@@ -363,6 +391,74 @@ public class ReturnYouTubeDislikePatch {
         for (IconButtonCountDrawable drawable : iconButtonCounts.values()) {
             drawable.refresh();
         }
+    }
+
+    /**
+     * YouTube gives the like button no description when the creator hides the likes, so the hook
+     * never sees it. It is the button laid out just before the dislike button.
+     */
+    private static void addCountToUnlabeledLikeButton(ComponentHost dislikeHost) {
+        try {
+            ComponentHost likeHost = buttonBefore(dislikeHost);
+            if (likeHost == null || iconButtonCounts.containsKey(likeHost)
+                    || !TextUtils.isEmpty(likeHost.getContentDescription())) {
+                return;
+            }
+            String accessibilityId = accessibilityIdOf(likeHost);
+            if (accessibilityId != null && !accessibilityId.startsWith(LIKE_BUTTON_ACCESSIBILITY_ID)) {
+                return;
+            }
+
+            IconButtonCountDrawable drawable = new IconButtonCountDrawable(likeHost);
+            likeHost.getOverlay().add(drawable);
+            iconButtonCounts.put(likeHost, drawable);
+            drawable.setButton("", true);
+            Logger.printDebug(() -> "Like button without a description: " + accessibilityId);
+            refreshIconButtonCounts();
+        } catch (Exception ex) {
+            Logger.printException(() -> "addCountToUnlabeledLikeButton failure", ex);
+        }
+    }
+
+    /**
+     * Each button of the compact action bar sits in wrappers of its own width, so the first
+     * ancestor with an earlier sibling of that width holds the previous button.
+     */
+    @Nullable
+    private static ComponentHost buttonBefore(View button) {
+        View view = button;
+        for (int i = 0; i < MAX_BAR_PARENTS; i++) {
+            if (!(view.getParent() instanceof ViewGroup parent)) {
+                return null;
+            }
+            final int index = parent.indexOfChild(view);
+            if (index > 0) {
+                View sibling = parent.getChildAt(index - 1);
+                return sibling.getWidth() == view.getWidth()
+                        ? clickableHostOfSize(sibling, button, 0)
+                        : null;
+            }
+            view = parent;
+        }
+        return null;
+    }
+
+    @Nullable
+    private static ComponentHost clickableHostOfSize(View view, View button, int depth) {
+        if (view instanceof ComponentHost host && host.isClickable()
+                && host.getWidth() == button.getWidth() && host.getHeight() == button.getHeight()) {
+            return host;
+        }
+        if (depth >= MAX_BAR_DEPTH || !(view instanceof ViewGroup group)) {
+            return null;
+        }
+        for (int i = 0, childCount = group.getChildCount(); i < childCount; i++) {
+            ComponentHost host = clickableHostOfSize(group.getChildAt(i), button, depth + 1);
+            if (host != null) {
+                return host;
+            }
+        }
+        return null;
     }
 
     /**
@@ -530,6 +626,10 @@ public class ReturnYouTubeDislikePatch {
          * Like count from the label, {@link #LIKES_HIDDEN} or {@link #LIKES_UNKNOWN}.
          */
         private long youTubeLikes;
+        /**
+         * If the like button beside this dislike button was looked for, which needs the layout.
+         */
+        private boolean likeButtonSearched;
 
         IconButtonCountDrawable(ComponentHost host) {
             this.host = host;
@@ -539,7 +639,7 @@ public class ReturnYouTubeDislikePatch {
 
         /**
          * @return If the count goes beside the icon, which only the dislike button of the old
-         *         action bar has room for.  Every other button is square.
+         *         action bar has room for. Every other button is square.
          */
         private boolean drawsBeside() {
             return !isLike && hasOwnLabel() && host.getWidth() > host.getHeight();
@@ -551,6 +651,7 @@ public class ReturnYouTubeDislikePatch {
             youTubeLikes = isLike ? parseLabelCount(label) : LIKES_UNKNOWN;
             hasOwnLabel = null;
             spokenLabel = null;
+            likeButtonSearched = false;
         }
 
         /**
@@ -572,14 +673,13 @@ public class ReturnYouTubeDislikePatch {
         }
 
         /**
-         * @return Where to center the count, in the space the margin freed.  The insets the
-         *         button had while it was square cancel out, leaving half of the icon.
+         * @return Where to center the count, in the space the margin freed. The insets the
+         *         button had while it was square cancel out, leaving half of the icon and the gap.
          */
         private float countCenterX() {
-            final int icon = Utils.isRightToLeftLocale()
-                    ? -OLD_BAR_DISLIKE_ICON_WIDTH
-                    : OLD_BAR_DISLIKE_ICON_WIDTH;
-            return (host.getWidth() + icon) / 2f;
+            final int start = OLD_BAR_DISLIKE_ICON_WIDTH
+                    + OLD_BAR_COUNT_START_MARGIN - OLD_BAR_COUNT_END_MARGIN;
+            return (host.getWidth() + (Utils.isRightToLeftLocale() ? -start : start)) / 2f;
         }
 
         /**
@@ -641,8 +741,17 @@ public class ReturnYouTubeDislikePatch {
         @Override
         public void draw(@NonNull Canvas canvas) {
             // In case a recycled host was given a new description without passing through the hook.
+            // A like button without a description is given an empty label.
             CharSequence current = host.getContentDescription();
+            if (current == null) {
+                current = "";
+            }
             final boolean beside = drawsBeside();
+            if (!isLike && !beside && !likeButtonSearched && host.getWidth() > 0) {
+                likeButtonSearched = true;
+                // Not while drawing, since this adds to the overlay of another view.
+                host.post(() -> addCountToUnlabeledLikeButton(host));
+            }
             if ((!TextUtils.equals(current, label) && !TextUtils.equals(current, spokenLabel))
                     || (hasOwnLabel() && !beside)) {
                 return;
@@ -663,19 +772,9 @@ public class ReturnYouTubeDislikePatch {
             paint.setAlpha(Color.alpha(color) * alpha / 255);
 
             if (beside) {
-                TextView likeTextView = barTextOf(barOf(host), 0);
-                final float baselineY;
-                if (likeTextView != null && likeTextView.getBaseline() != -1 && likeTextView.isAttachedToWindow()) {
-                    int[] textLoc = new int[2];
-                    int[] hostLoc = new int[2];
-                    likeTextView.getLocationInWindow(textLoc);
-                    host.getLocationInWindow(hostLoc);
-                    baselineY = (textLoc[1] + likeTextView.getBaseline()) - hostLoc[1];
-                } else {
-                    Paint.FontMetrics fm = paint.getFontMetrics();
-                    baselineY = (host.getHeight() - fm.bottom - fm.top) / 2f;
-                }
-                canvas.drawText(text, countCenterX(), baselineY, paint);
+                Paint.FontMetrics fm = paint.getFontMetrics();
+                canvas.drawText(text, countCenterX(),
+                        (host.getHeight() - fm.bottom - fm.top) / 2f, paint);
                 return;
             }
             canvas.drawText(text, host.getWidth() / 2f,
@@ -703,7 +802,7 @@ public class ReturnYouTubeDislikePatch {
     //
 
     /**
-     * Injection point.  Uses 'playback response' video ID hook to preload RYD.
+     * Injection point. Uses 'playback response' video ID hook to preload RYD.
      */
     public static void preloadVideoId(String videoId, boolean isShortAndOpeningOrPlaying) {
         try {
@@ -793,8 +892,8 @@ public class ReturnYouTubeDislikePatch {
      * <p>
      * Called when the user likes or dislikes.
      *
-     * @param endpoint      string that matches {@link Vote#endpoint}
-     * @param videoId       video ID included in the endpoint request body
+     * @param endpoint string that matches {@link Vote#endpoint}.
+     * @param videoId  video ID included in the endpoint request body.
      */
     public static void sendVote(String endpoint, String videoId) {
         try {

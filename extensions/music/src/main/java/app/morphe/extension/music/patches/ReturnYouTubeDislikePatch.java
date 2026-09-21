@@ -31,10 +31,6 @@ import app.morphe.extension.shared.returnyoutubedislike.requests.ReturnYouTubeDi
 @SuppressWarnings("unused")
 public class ReturnYouTubeDislikePatch {
 
-    static {
-        ReturnYouTubeDislike.setIsMusic(true);
-    }
-
     /**
      * RYD data for the current track on screen.
      */
@@ -69,7 +65,7 @@ public class ReturnYouTubeDislikePatch {
             if (!(original instanceof Spanned)) {
                 original = new SpannableString(original);
             }
-            return videoData.getDislikesSpanForRegularVideo((Spanned) original, true, false);
+            return videoData.getDislikesSpanForRegularVideo((Spanned) original);
         } catch (Exception ex) {
             Logger.printException(() -> "onLithoTextLoaded failure", ex);
         }

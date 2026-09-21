@@ -284,7 +284,8 @@ public final class LayoutComponentsFilter extends Filter {
 
         expandableMetadata = new StringFilterGroup(
                 null,
-                "expandable_metadata"
+                "expandable_metadata",
+                "inline_expander"
         );
 
         summaryCardBuffer = new ByteArrayFilterGroup(
@@ -393,7 +394,7 @@ public final class LayoutComponentsFilter extends Filter {
 
         videoLabels = new StringFilterGroup(
                 null,
-                "|badge.e"
+                "badge.e"
         );
         videoLabelsGroupList.addAll(
                 new ByteArrayFilterGroup(
