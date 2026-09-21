@@ -234,6 +234,11 @@ public final class LayoutComponentsFilter extends Filter {
                 "compact_channel_bar"
         );
 
+        final var compactChannelCommunityButton = new StringFilterGroup(
+                Settings.HIDE_COMMUNITY_BUTTON,
+                "compact_channel$FEcommunity"
+        );
+
         compactChannelBarInner = new StringFilterGroup(
                 Settings.HIDE_JOIN_MEMBERSHIP_BUTTON,
                 "compact_channel_bar_inner",
@@ -436,6 +441,7 @@ public final class LayoutComponentsFilter extends Filter {
                 chipBar,
                 compactBanner,
                 compactChannelBar,
+                compactChannelCommunityButton,
                 compactChannelBarInner,
                 communityPosts,
                 crowdfundingBox,

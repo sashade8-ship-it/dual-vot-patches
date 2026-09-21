@@ -50,7 +50,7 @@ private const val LYRICS_PANEL_FILTER =
 @Suppress("unused")
 val lyricsPatch = bytecodePatch(
     name = "Third-party lyrics",
-    description = "Adds an option to show synced lyrics with experience enhancement from 10+ providers in the lyrics panel."
+    description = "Adds an option to show synced lyrics with experience enhancement from 15+ providers in the lyrics panel."
 ) {
     dependsOn(
         sharedExtensionPatch,
@@ -125,6 +125,11 @@ val lyricsPatch = bytecodePatch(
                     SwitchPreference("morphe_music_lyrics_show_copy_button", summary = true),
                     SwitchPreference("morphe_music_lyrics_show_translate_button", summary = true),
                     SwitchPreference("morphe_music_lyrics_show_romanize_button", summary = true),
+                    SwitchPreference(
+                        key = "morphe_music_lyrics_use_ai_translation",
+                        summary = true,
+                        tag = "app.morphe.extension.music.settings.preference.LyricsAiConfigPreference"
+                    ),
                     SwitchPreference("morphe_music_lyrics_show_refresh_button", summary = true),
                     SwitchPreference("morphe_music_lyrics_hide_info", summary = true),
                     SwitchPreference("morphe_music_lyrics_swap_trans_roma", summary = true)

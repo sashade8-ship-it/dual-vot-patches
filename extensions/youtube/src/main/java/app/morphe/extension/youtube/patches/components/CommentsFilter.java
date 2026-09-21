@@ -95,7 +95,8 @@ public class CommentsFilter extends Filter {
         comments = new StringFilterGroup(
                 null,
                 "video_metadata_carousel",
-                "_comments"
+                "_comments",
+                "teaser_carousel_with_controller"
         );
 
         var commentsByMembers = new StringFilterGroup(
@@ -140,7 +141,6 @@ public class CommentsFilter extends Filter {
 
         var previewComment = new StringFilterGroup(
                 Settings.HIDE_COMMENTS_PREVIEW_COMMENT,
-                "|carousel_item",
                 "comments_entry_point_teaser",
                 "comments_entry_point_simplebox"
         );
