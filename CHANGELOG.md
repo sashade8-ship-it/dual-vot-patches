@@ -1,3 +1,13 @@
+## 1.44.0-dev.17-dualvot.8.5.3 (2026-09-21)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.44.0-dev.17](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.44.0-dev.17).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.44.0-dev.13-dualvot.8.5.3 (2026-09-21)
 
 ### Automated Morphe update
@@ -476,6 +486,40 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.44.0-dev.17](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.16...v1.44.0-dev.17) (2026-09-21)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Minimal miniplayer:** Remove one frame flicker when minimizing and missing play/pause icon with an app language set ([10e9c9f](https://github.com/MorpheApp/morphe-patches/commit/10e9c9f9084ea8c7e0f04e77f995a4c28ab98411))
+
+## [1.44.0-dev.16](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.15...v1.44.0-dev.16) (2026-09-21)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide ads:** Hide new product cards ([#3103](https://github.com/MorpheApp/morphe-patches/issues/3103)) ([ea4a310](https://github.com/MorpheApp/morphe-patches/commit/ea4a310f1a06bf60804d774fcd40219a2a93aaca))
+* **YouTube - Hide layout components:** Hide new expandable cards ([#3102](https://github.com/MorpheApp/morphe-patches/issues/3102)) ([1f79c62](https://github.com/MorpheApp/morphe-patches/commit/1f79c62e2dc3f0210cf73f29b65e1c94b3c105ec))
+* **YouTube - Return YouTube Dislike:** Dislikes are not shown on the old action bar of some devices ([258cbe6](https://github.com/MorpheApp/morphe-patches/commit/258cbe6fe66f432156aa7ef6bcb73f5932a9d672))
+* **YouTube - Return YouTube Dislike:** Estimated likes are not shown on the segmented like button ([bf58420](https://github.com/MorpheApp/morphe-patches/commit/bf5842044a46a53263f178624c5fa1a59f18eecc))
+* **YouTube - Return YouTube Dislike:** Show dislikes on the segmented like button of tablets and do not widen matching nodes in the feed ([d8717cd](https://github.com/MorpheApp/morphe-patches/commit/d8717cd9a5c67668c928e410d70b28b974ee08e5))
+* **YouTube - Return YouTube Dislike:** Show estimated likes on the compact action bar when the like count is hidden ([a6efacf](https://github.com/MorpheApp/morphe-patches/commit/a6efacfd0cdb0c8aa11312c33900a4ab70689ae1))
+
+## [1.44.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.14...v1.44.0-dev.15) (2026-09-21)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide Auto-dubbed label in feed ([#3101](https://github.com/MorpheApp/morphe-patches/issues/3101)) ([5e2af7f](https://github.com/MorpheApp/morphe-patches/commit/5e2af7fbed2e35123c4a4a82c47b0dbb4bd46bbb))
+* **YouTube - Return YouTube Dislike:** Show dislikes of the old action bar at every screen density and match the like count spacing ([0ce1259](https://github.com/MorpheApp/morphe-patches/commit/0ce1259bd1d455932c4f9bf0d2dba37d6e5de21b))
+* **YouTube - Voice over translation:** Add button accessibility label ([#3099](https://github.com/MorpheApp/morphe-patches/issues/3099)) ([1c6f2dd](https://github.com/MorpheApp/morphe-patches/commit/1c6f2ddd178212cca2cbc33ff5cc495822da0607))
+
+## [1.44.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.13...v1.44.0-dev.14) (2026-09-21)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Minimal miniplayer:** Restored commit [#6e1ca28](https://github.com/MorpheApp/morphe-patches/issues/6e1ca28) ([33595a2](https://github.com/MorpheApp/morphe-patches/commit/33595a279bd0ee2870d390152f86a9615a99153c))
+* **YouTube - Minimal miniplayer:** Restored commit [#6e1ca28](https://github.com/MorpheApp/morphe-patches/issues/6e1ca28) ([1101cad](https://github.com/MorpheApp/morphe-patches/commit/1101cad85f4213eec2cfb6c420e018854fa208b0))
+* **YouTube - Minimal miniplayer:** Reverted last changes to commit [#aaa1211](https://github.com/MorpheApp/morphe-patches/issues/aaa1211) ([64caec5](https://github.com/MorpheApp/morphe-patches/commit/64caec55020841014dea23c5a773b4372e6883e6))
+* **YouTube - Return YouTube Dislike:** Dislike vertical text alignment may not be correct ([320aca2](https://github.com/MorpheApp/morphe-patches/commit/320aca2d9785305e81fea17967a3eb5ed39bff9a))
 
 ## [1.44.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.44.0-dev.12...v1.44.0-dev.13) (2026-09-20)
 
