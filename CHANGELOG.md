@@ -1,3 +1,13 @@
+## 1.45.0-dev.5-dualvot.8.5.3 (2026-09-23)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.45.0-dev.5](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.5).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.45.0-dev.4-dualvot.8.5.3 (2026-09-23)
 
 ### Automated Morphe update
@@ -396,6 +406,12 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.45.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.4...v1.45.0-dev.5) (2026-09-23)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Playback speed:** Music videos do not play at 1x speed ([#3210](https://github.com/MorpheApp/morphe-patches/issues/3210)) ([1c7086d](https://github.com/MorpheApp/morphe-patches/commit/1c7086da6270a723da370f89440d70475f96c888))
 
 ## [1.45.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.3...v1.45.0-dev.4) (2026-09-23)
 
