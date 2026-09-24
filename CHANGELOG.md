@@ -1,3 +1,13 @@
+## 1.45.0-dev.12-dualvot.8.5.3 (2026-09-24)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.45.0-dev.12](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.12).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.45.0-dev.11-dualvot.8.5.3 (2026-09-24)
 
 ### Automated Morphe update
@@ -446,6 +456,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.45.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.11...v1.45.0-dev.12) (2026-09-24)
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide Menu button" for comments ([#3253](https://github.com/MorpheApp/morphe-patches/issues/3253)) ([9b30447](https://github.com/MorpheApp/morphe-patches/commit/9b30447302de598bd51e612610a858c7a6de9dfb))
+* **YouTube Music - Hide buttons:** Add "Hide Voice search button" and "Hide Sound search button" ([#3250](https://github.com/MorpheApp/morphe-patches/issues/3250)) ([cfc880b](https://github.com/MorpheApp/morphe-patches/commit/cfc880bbba4b2ef9451c537fcdb4751e2ce09caa))
+* **YouTube Music - Hide layout components:** Add "Hide podcast episode Download button" ([#3251](https://github.com/MorpheApp/morphe-patches/issues/3251)) ([d94ca13](https://github.com/MorpheApp/morphe-patches/commit/d94ca13031d57b80edce4a872d633ffcffdae002))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.38.51` ([314116f](https://github.com/MorpheApp/morphe-patches/commit/314116f3bad8eb4b42773651da7b663a2fcf759c))
 
 ## [1.45.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.10...v1.45.0-dev.11) (2026-09-24)
 
