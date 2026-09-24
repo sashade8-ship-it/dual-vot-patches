@@ -1,3 +1,13 @@
+## 1.45.0-dev.11-dualvot.8.5.3 (2026-09-24)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.45.0-dev.11](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.11).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.45.0-dev.8-dualvot.8.5.3 (2026-09-24)
 
 ### Automated Morphe update
@@ -436,6 +446,26 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.45.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.10...v1.45.0-dev.11) (2026-09-24)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Fix patching non-experimental targets ([4625872](https://github.com/MorpheApp/morphe-patches/commit/46258727492fb31cd60db65e9322602408dd32a8))
+
+## [1.45.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.9...v1.45.0-dev.10) (2026-09-24)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Open the correct channel tab when channel tabs are hidden ([#3200](https://github.com/MorpheApp/morphe-patches/issues/3200)) ([53cc35b](https://github.com/MorpheApp/morphe-patches/commit/53cc35b0552b59d0ff34ed057e4c167cb8881322))
+* **YouTube Music - Third-party lyrics:** Keep the token dialog buttons on screen with long cookies ([#3245](https://github.com/MorpheApp/morphe-patches/issues/3245)) ([1cf6be0](https://github.com/MorpheApp/morphe-patches/commit/1cf6be0051247409030199b54d864540f9e3f55a))
+
+## [1.45.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.8...v1.45.0-dev.9) (2026-09-24)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Player overlay buttons:** Fix startup crash with a partial patch selection ([#3228](https://github.com/MorpheApp/morphe-patches/issues/3228)) ([aee4774](https://github.com/MorpheApp/morphe-patches/commit/aee47746643c948191b25435a8f1b4e96ffb6df7))
+* **YouTube Music - Third-party lyrics:** Keep the screen on after the track changes ([#3246](https://github.com/MorpheApp/morphe-patches/issues/3246)) ([e730ebf](https://github.com/MorpheApp/morphe-patches/commit/e730ebfa8be5b689e484eefa33b380554884a862))
 
 ## [1.45.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.7...v1.45.0-dev.8) (2026-09-24)
 
