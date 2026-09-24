@@ -972,6 +972,17 @@ val hideLayoutComponentsPatch = bytecodePatch(
         // region hide channel tab
 
         ChannelTabRendererFingerprint.method.apply {
+            val channelTabMatch = ChannelTabRendererFingerprint.instructionMatches[1]
+            val selectedIndexRegister = channelTabMatch.getInstruction<FiveRegisterInstruction>().registerD
+
+            addInstructions(
+                channelTabMatch.index,
+                """
+                    invoke-static { v$selectedIndexRegister }, $LAYOUT_COMPONENTS_FILTER->getChannelTabSelectedIndex(I)I
+                    move-result v$selectedIndexRegister
+                """
+            )
+
             val iteratorIndex = indexOfFirstInstructionReversedOrThrow(
                 methodCall(name = "hasNext")
             )
@@ -1072,6 +1083,17 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     ExternalLabel("next_iterator", getInstruction(iteratorIndex))
                 )
             }
+
+            val addAllIndex = indexOfFirstInstructionOrThrow(
+                methodCall(smali = "Ljava/util/List;->addAll(Ljava/util/Collection;)Z")
+            )
+            val addAllInstruction = getInstruction<FiveRegisterInstruction>(addAllIndex)
+
+            addInstruction(
+                addAllIndex,
+                "invoke-static { v${addAllInstruction.registerC}, v${addAllInstruction.registerD} }, " +
+                        "$LAYOUT_COMPONENTS_FILTER->setChannelTabs(Ljava/util/List;Ljava/util/List;)V"
+            )
         }
 
         // endregion
