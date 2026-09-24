@@ -49,7 +49,10 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_FILTER_BAR = new BooleanSetting("morphe_music_hide_filter_bar", FALSE, true);
     public static final BooleanSetting HIDE_HISTORY_BUTTON = new BooleanSetting("morphe_music_hide_history_button", FALSE, true);
     public static final BooleanSetting HIDE_SEARCH_BUTTON = new BooleanSetting("morphe_music_hide_search_button", FALSE, true);
+    public static final BooleanSetting HIDE_VOICE_SEARCH_BUTTON = new BooleanSetting("morphe_music_hide_voice_search_button", FALSE, true);
+    public static final BooleanSetting HIDE_SOUND_SEARCH_BUTTON = new BooleanSetting("morphe_music_hide_sound_search_button", FALSE, true);
     public static final BooleanSetting HIDE_NOTIFICATION_BUTTON = new BooleanSetting("morphe_music_hide_notification_button", FALSE, true);
+    public static final BooleanSetting HIDE_PODCAST_EPISODE_DOWNLOAD_BUTTON = new BooleanSetting("morphe_music_hide_podcast_episode_download_button", FALSE, true);
     public static final BooleanSetting HIDE_NAVIGATION_BAR = new BooleanSetting("morphe_music_hide_navigation_bar", FALSE, true);
     public static final BooleanSetting HIDE_NAVIGATION_BAR_HOME_BUTTON = new BooleanSetting("morphe_music_hide_navigation_bar_home_button", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));
     public static final BooleanSetting HIDE_NAVIGATION_BAR_SAMPLES_BUTTON = new BooleanSetting("morphe_music_hide_navigation_bar_samples_button", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));

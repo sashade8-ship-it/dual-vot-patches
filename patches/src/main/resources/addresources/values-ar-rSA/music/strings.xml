@@ -100,6 +100,7 @@ tظهر المسارات التي تم تنزيلها هنا"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">إخفاء زر الترجمة</string>
   <string name="morphe_music_hide_new_from_shelf_title">إخفاء رف \'جديد من\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">إخفاء رفوف قوائم التشغيل</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">إخفاء زر تنزيل حلقة البودكاست</string>
   <string name="morphe_music_hide_repeat_button_title">إخفاء زر التكرار</string>
   <string name="morphe_music_hide_shuffle_button_title">إخفاء زر التشغيل العشوائي</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">إخفاء رف \'الاتصال السريع\'</string>
@@ -187,6 +188,8 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <string name="morphe_music_hide_history_button_title">إخفاء زر السجل</string>
   <string name="morphe_music_hide_notification_button_title">إخفاء زر الإشعارات</string>
   <string name="morphe_music_hide_search_button_title">إخفاء زر البحث</string>
+  <string name="morphe_music_hide_voice_search_button_title">إخفاء زر البحث الصوتي</string>
+  <string name="morphe_music_hide_sound_search_button_title">إخفاء زر البحث عن الصوت</string>
   <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
   <string name="morphe_music_action_buttons_screen_title">أزرار الإجراء</string>
   <string name="morphe_music_action_buttons_screen_summary">اختر الأزرار التي تظهر أسفل المشغل</string>

@@ -100,6 +100,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">翻訳ボタンを非表示</string>
   <string name="morphe_music_hide_new_from_shelf_title">「\"アーティスト名\" の新作」欄を非表示</string>
   <string name="morphe_music_hide_playlist_shelves_title">プレイリスト欄を非表示</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">ポッドキャストエピソードのダウンロードボタンを非表示</string>
   <string name="morphe_music_hide_repeat_button_title">リピートボタンを非表示</string>
   <string name="morphe_music_hide_shuffle_button_title">シャッフル ボタンを非表示</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">「クイック アクセス」欄を非表示</string>
@@ -187,6 +188,8 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <string name="morphe_music_hide_history_button_title">履歴ボタンを非表示</string>
   <string name="morphe_music_hide_notification_button_title">通知ボタンを非表示</string>
   <string name="morphe_music_hide_search_button_title">検索ボタンを非表示</string>
+  <string name="morphe_music_hide_voice_search_button_title">音声検索ボタンを非表示</string>
+  <string name="morphe_music_hide_sound_search_button_title">サウンド検索ボタンを非表示</string>
   <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
   <string name="morphe_music_action_buttons_screen_title">アクション ボタン</string>
   <string name="morphe_music_action_buttons_screen_summary">プレーヤー画面の下に表示するアクションボタンを設定します</string>

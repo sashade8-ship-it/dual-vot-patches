@@ -263,8 +263,11 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_live_chat_donators_bar_title">隱藏直播聊天捐款者欄</string>
   <string name="morphe_hide_comments_live_chat_tooltips_title">隱藏即時聊天工具提示</string>
   <string name="morphe_hide_comments_live_chat_tooltips_summary">隱藏在聊天輸入列附近顯示的工具提示彈出視窗，例如僅限訂閱者聊天通知</string>
+  <string name="morphe_hide_comments_menu_button_title">隱藏選單按鈕</string>
+  <string name="morphe_hide_comments_menu_button_summary">隱藏每則留言的三點選單按鈕</string>
   <string name="morphe_hide_comments_preview_comment_title">隱藏留言預覽</string>
   <string name="morphe_hide_comments_preview_comment_summary">隱藏在開啟完整的評論區之前，影片下方的評論預覽</string>
+  <string name="morphe_hide_comments_preview_comment_hidden">留言已由 Morphe 隱藏...</string>
   <string name="morphe_hide_comments_thanks_button_title">隱藏「感謝」按鈕</string>
   <string name="morphe_hide_comments_timestamp_button_title">隱藏時間戳按鈕</string>
   <string name="morphe_hide_comments_top_fans_button_title">隱藏「Top fans」按鈕</string>
@@ -1126,7 +1129,7 @@ Second \"item\" text"</string>
 
 點擊這裡以進一步了解 DeArrow"</string>
   <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">在 DeArrow 伺服器無法使用時顯示通知</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">改善載入速度，方法是使用中等品質的影像。直播、未發布和較舊的影片可能會顯示空白的縮圖</string>
+  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">當 DeArrow 伺服器無法使用時顯示通知</string>
   <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API 端點</string>
   <string name="morphe_alt_thumbnail_dearrow_api_url_summary">DeArrow URL 縮圖快取端點</string>
   <string name="morphe_alt_thumbnail_stills_about_title">靜態影片擷取</string>
