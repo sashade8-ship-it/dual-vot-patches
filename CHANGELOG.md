@@ -1,3 +1,13 @@
+## 1.45.0-dev.14-dualvot.8.5.3 (2026-09-25)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.45.0-dev.14](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.14).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.45.0-dev.13-dualvot.8.5.3 (2026-09-25)
 
 ### Automated Morphe update
@@ -466,6 +476,27 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.45.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.13...v1.45.0-dev.14) (2026-09-25)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Minimal miniplayer:** Restored interpolate minimizing transitions ([#3280](https://github.com/MorpheApp/morphe-patches/issues/3280)) ([dff3749](https://github.com/MorpheApp/morphe-patches/commit/dff3749d6b665b2669a4ccc9b1b8f70985b1c358))
+* **YouTube:** Hidden preview comment still has clickable timestamps ([#3268](https://github.com/MorpheApp/morphe-patches/issues/3268)) ([1dfd537](https://github.com/MorpheApp/morphe-patches/commit/1dfd537aa48d56f050556e262c8547de619f88ea))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide channel names in subscribed channels bar" ([#3274](https://github.com/MorpheApp/morphe-patches/issues/3274)) ([f8b330f](https://github.com/MorpheApp/morphe-patches/commit/f8b330f7d317632766cb0eeb8b98f64f0c974b0a))
+* **YouTube - Hide layout components:** Add "Hide History shelf" ([#3277](https://github.com/MorpheApp/morphe-patches/issues/3277)) ([50c4f34](https://github.com/MorpheApp/morphe-patches/commit/50c4f34ae3728e318d2e61512674167616fedc0c))
+* **YouTube - Hide layout components:** Add "Hide Translate button" setting  ([#3265](https://github.com/MorpheApp/morphe-patches/issues/3265)) ([16894f1](https://github.com/MorpheApp/morphe-patches/commit/16894f1ecb93ffdbe8269b0b04aced6a6805da55))
+* **YouTube - Navigation bar:** Add "Hide new content dot" setting  ([#3269](https://github.com/MorpheApp/morphe-patches/issues/3269)) ([c8d440d](https://github.com/MorpheApp/morphe-patches/commit/c8d440d309550c8d41e31238b61ecdc99e993b42))
+* **YouTube Music - Hide buttons:** Add "Hide New button" setting  ([#3264](https://github.com/MorpheApp/morphe-patches/issues/3264)) ([d535e8d](https://github.com/MorpheApp/morphe-patches/commit/d535e8daa7119f86f1a7bd92f16c8ed1aba23d2a))
+* **YouTube:** Added "Minimal comments button" setting ([916f228](https://github.com/MorpheApp/morphe-patches/commit/916f228495509ac2af2780a93502e0b872f61aa8))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.39.0` ([755bf21](https://github.com/MorpheApp/morphe-patches/commit/755bf216267521a3d206d19be0cb230d8034ebb8))
+* **Reddit:** Add support for `2026.24.0` ([707ba5e](https://github.com/MorpheApp/morphe-patches/commit/707ba5ed71d4713d213126db9477e8dde9fd2493))
 
 ## [1.45.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.12...v1.45.0-dev.13) (2026-09-24)
 
