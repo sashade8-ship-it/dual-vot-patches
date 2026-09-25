@@ -75,6 +75,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">ซ่อนปุ่มไมโครโฟนแบบลอย</string>
   <string name="morphe_hide_floating_microphone_button_summary">ซ่อนปุ่มไมโครโฟนลอยที่มุมล่างขวาของหน้าจอคำแนะนำการค้นหา</string>
   <string name="morphe_hide_get_premium_button_title">ซ่อนปุ่ม \'รับ Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">ซ่อนแถวประวัติการดู</string>
+  <string name="morphe_hide_history_shelf_summary">ซ่อนแถวประวัติการดูในแท็บคุณ</string>
   <string name="morphe_hide_horizontal_shelves_title">ซ่อนชั้นวางแนวนอน</string>
   <string name="morphe_hide_horizontal_shelves_summary">ซ่อนชั้นวางแนวนอน เช่น ข่าวเด่น, โพสต์จากชุมชนที่คุณอาจชอบ, รับชมต่อ, สำรวจช่องเพิ่มเติม, สำรวจหัวข้อเพิ่มเติม, สำหรับคุณ, วิดีโอล่าสุด, ที่เกี่ยวข้องมากที่สุด, โพสต์จากชุมชนของผู้สร้าง, ร้านค้า และ ดูอีกครั้ง</string>
   <string name="morphe_hide_hyped_label_title">ซ่อนป้ายกำกับ \'Hyped\'</string>
@@ -106,6 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">ซ่อนปุ่ม \'แสดงเพิ่มเติม\'</string>
   <string name="morphe_hide_show_more_button_summary">ซ่อนปุ่มขยายใต้วิดีโอในผลการค้นหา</string>
   <string name="morphe_hide_subscribed_channels_bar_title">ซ่อนแถบช่องที่ติดตาม</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">ซ่อนชื่อช่องในแถบช่องที่ติดตาม</string>
   <string name="morphe_hide_surveys_title">ซ่อนแบบสำรวจ</string>
   <string name="morphe_hide_surveys_summary">ซ่อนแบบสำรวจและการแนะนำเกี่ยวกับความแม่นยำของการแนะนำฟีด</string>
   <string name="morphe_hide_ticket_shelf_title">ซ่อนชั้นวางตั๋ว</string>
@@ -268,9 +271,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_title">ซ่อนความคิดเห็นตัวอย่าง</string>
   <string name="morphe_hide_comments_preview_comment_summary">ซ่อนตัวอย่างความคิดเห็นใต้คลิปวิดีโอ ก่อนที่จะเปิดส่วนความคิดเห็นทั้งหมด</string>
   <string name="morphe_hide_comments_preview_comment_hidden">ความคิดเห็นถูกซ่อนโดย Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">เปิดใช้ปุ่มความคิดเห็นแบบมินิมอล</string>
+  <string name="morphe_minimal_comments_button_summary">ซ่อนการ์ดเลื่อนและตัวเลือกหน้าซึ่งแสดงอยู่บนปุ่มความคิดเห็น</string>
   <string name="morphe_hide_comments_thanks_button_title">ซ่อนปุ่มขอบคุณ</string>
   <string name="morphe_hide_comments_timestamp_button_title">ซ่อนปุ่มตราประทับเวลา</string>
   <string name="morphe_hide_comments_top_fans_button_title">ซ่อนปุ่ม \'Top fans\'</string>
+  <string name="morphe_hide_comments_translate_button_title">ซ่อนปุ่มแปลภาษา</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">ทำให้ลิงก์การค้นหาที่ไฮไลต์เป็นรูปแบบปกติ</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">เปลี่ยนลิงก์การค้นหาที่ไฮไลต์เป็นข้อความธรรมดา</string>
   <string name="morphe_hide_keyword_content_screen_title">ตัวกรองคำหลัก</string>
@@ -746,6 +752,7 @@ Second \"item\" text"</string>
   <string name="morphe_swap_create_with_notifications_button_title">สลับปุ่มสร้างกับปุ่มการแจ้งเตือน</string>
   <string name="morphe_swap_create_with_notifications_button_summary">หากการเปลี่ยนแปลงการตั้งค่านี้ไม่มีผล ให้ลองสลับไปโหมดไม่ระบุตัวตน</string>
   <string name="morphe_hide_navigation_button_labels_title">ซ่อนป้ายกำกับปุ่มนำทาง</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">ซ่อนจุดเนื้อหาใหม่</string>
   <string name="morphe_hide_navigation_bar_title">ซ่อนแถบนำทาง</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"สิ่งนี้จะซ่อนแถบนำทางอย่างสมบูรณ์ รวมถึงแท็บ 'คุณ'
 

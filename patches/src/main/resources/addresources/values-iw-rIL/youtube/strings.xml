@@ -75,6 +75,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">הסתר לחצן מיקרופון צף</string>
   <string name="morphe_hide_floating_microphone_button_summary">מסתיר כפתור מיקרופון צף בפינה הימנית התחתונה של מסך הצעות החיפוש</string>
   <string name="morphe_hide_get_premium_button_title">הסתר לחצן \'קבל מנוי פרימיום\'</string>
+  <string name="morphe_hide_history_shelf_title">הסתר את מדף ההיסטוריה</string>
+  <string name="morphe_hide_history_shelf_summary">מסתיר את מדף ההיסטוריה בכרטיסייה \'אתה\'</string>
   <string name="morphe_hide_horizontal_shelves_title">הסתר מדפים אופקיים</string>
   <string name="morphe_hide_horizontal_shelves_summary">מסתיר מדפים אופקיים כגון חדשות דחופות, פוסטים קהילתיים שאולי תרצה, המשך צפייה, גלה ערוצים נוספים, גלה נושאים נוספים, בשבילך, סרטונים אחרונים, הרלוונטיים ביותר, פוסטים מקהילת היוצרים, קניות וצפה שוב</string>
   <string name="morphe_hide_hyped_label_title">הסתר תווית \'ויראלי\'</string>
@@ -106,6 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">הסתר לחצן \'הצג עוד\'</string>
   <string name="morphe_hide_show_more_button_summary">מסתיר את כפתור ההרחבה מתחת לסרטונים בתוצאות החיפוש</string>
   <string name="morphe_hide_subscribed_channels_bar_title">הסתר סרגל תעודות מנויים</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">הסתר שמות ערוצים בסרגל הערוצים המנויים</string>
   <string name="morphe_hide_surveys_title">הסתר סקרים</string>
   <string name="morphe_hide_surveys_summary">מסתיר סקרים והנחיות לגבי דיוק המלצות הפיד</string>
   <string name="morphe_hide_ticket_shelf_title">הסתר מדף כרטיסים</string>
@@ -268,9 +271,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_title">הסתר תצוגה מקדימה של תגובה</string>
   <string name="morphe_hide_comments_preview_comment_summary">מסתיר את תצוגת המקדימה של תגובות מתחת לסרטון לפני פתיחת סעיף התגובות המלא</string>
   <string name="morphe_hide_comments_preview_comment_hidden">תגובה הוסתרה על ידי Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">הפעל כפתור תגובות מינימלי</string>
+  <string name="morphe_minimal_comments_button_summary">מסתיר את הכרטיסים המחליקים ואת בורר העמודים שלהם, המוצגים על כפתור התגובות</string>
   <string name="morphe_hide_comments_thanks_button_title">הסתר לחצן תודה</string>
   <string name="morphe_hide_comments_timestamp_button_title">הסתר לחצן חותמת זמן</string>
   <string name="morphe_hide_comments_top_fans_button_title">הסתר כפתור \'המעריצים המובילים\'</string>
+  <string name="morphe_hide_comments_translate_button_title">הסתר את כפתור התרגום</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">ניקוי קישורים בחיפוש מודגשים</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">מנקה קישורים בחיפוש מודגשים, ומשאיר רק את הטקסט המקורי</string>
   <string name="morphe_hide_keyword_content_screen_title">מסנן מילות מפתח</string>
@@ -746,6 +752,7 @@ Second \"item\" text"</string>
   <string name="morphe_swap_create_with_notifications_button_title">החלף את כפתור \'יצירה\' בכפתור \'התראות\'</string>
   <string name="morphe_swap_create_with_notifications_button_summary">אם שינוי הגדרה זו לא נכנס לתוקף, נסה לעבור למצב גלישה בסתר</string>
   <string name="morphe_hide_navigation_button_labels_title">הסתר תוויות לחצני ניווט</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">הסתר נקודת תוכן חדש</string>
   <string name="morphe_hide_navigation_bar_title">הסתר סרגל ניווט</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"זה מסתיר לחלוטין את סרגל הניווט, כולל הלשונית 'אתה'.
 

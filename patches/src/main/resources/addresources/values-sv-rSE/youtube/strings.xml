@@ -75,6 +75,8 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_floating_microphone_button_title">Dölj flytande mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Döljer den flytande mikrofonknappen nere till höger på skärmen för sökförslag</string>
   <string name="morphe_hide_get_premium_button_title">Dölj knappen Skaffa Premium</string>
+  <string name="morphe_hide_history_shelf_title">Dölj historikhyllan</string>
+  <string name="morphe_hide_history_shelf_summary">Döljer historikhyllan i Du-fliken</string>
   <string name="morphe_hide_horizontal_shelves_title">Dölj horisontella hyllor</string>
   <string name="morphe_hide_horizontal_shelves_summary">Döljer horisontella hyllor som Senaste nytt, Community-inlägg du kanske gillar, Fortsätt titta, Utforska fler kanaler, Utforska fler ämnen, För dig, Senaste videorna, Mest relevanta, Inlägg från kreatörs community, Shopping och Titta igen</string>
   <string name="morphe_hide_hyped_label_title">Dölj hajpetikett</string>
@@ -106,6 +108,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_show_more_button_title">Dölj knappen Visa mer</string>
   <string name="morphe_hide_show_more_button_summary">Döljer expanderingsknappen under videor i sökresultaten</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Dölj fältet med kanaler du prenumererar på</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Dölj kanalnamn i fältet för prenumererade kanaler</string>
   <string name="morphe_hide_surveys_title">Dölj enkäter</string>
   <string name="morphe_hide_surveys_summary">Dölj enkäter och puffar om hur korrekta rekommendationerna är i flödet</string>
   <string name="morphe_hide_ticket_shelf_title">Dölj biljetthylla</string>
@@ -268,9 +271,12 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_comments_preview_comment_title">Dölj förhandsvisad kommentar</string>
   <string name="morphe_hide_comments_preview_comment_summary">Döljer förhandsvisningen av kommentarer under videon innan det fullständiga kommentarsfältet har öppnats</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Kommentar dold av Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Aktivera minimal kommentarsknapp</string>
+  <string name="morphe_minimal_comments_button_summary">Döljer de glidande korten och deras sidväljare, som visas på kommentarsknappen</string>
   <string name="morphe_hide_comments_thanks_button_title">Dölj knappen Thanks</string>
   <string name="morphe_hide_comments_timestamp_button_title">Dölj tidsstämpelknappen</string>
   <string name="morphe_hide_comments_top_fans_button_title">Dölj knappen \'Toppfans\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Dölj översättningsknappen</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Rensa markerade söklänkar</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Rensar markerade söklänkar och lämnar bara den ursprungliga vanliga texten</string>
   <string name="morphe_hide_keyword_content_screen_title">Nyckelordsfilter</string>
@@ -746,6 +752,7 @@ För att åtgärda detta, aktivera 'Spoofa videoströmmar' och ändra 'Standardk
   <string name="morphe_swap_create_with_notifications_button_title">Byt knappen Skapa mot knappen Aviseringar</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Om den här inställningen inte träder i kraft kan du testa att byta till inkognitoläget</string>
   <string name="morphe_hide_navigation_button_labels_title">Dölj etiketter för navigeringsknappar</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Dölj pricken för nytt innehåll</string>
   <string name="morphe_hide_navigation_bar_title">Dölj navigeringsfältet</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Det här döljer navigeringsfältet helt, inklusive fliken Ditt YouTube.
 

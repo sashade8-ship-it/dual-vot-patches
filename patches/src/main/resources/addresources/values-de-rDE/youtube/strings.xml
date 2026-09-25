@@ -75,6 +75,8 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_floating_microphone_button_title">Schwebende Mikrofon-Schaltfläche ausblenden</string>
   <string name="morphe_hide_floating_microphone_button_summary">Blendet die schwebende Mikrofon-Schaltfläche unten rechts in den Suchvorschlägen aus.</string>
   <string name="morphe_hide_get_premium_button_title">\'Get Premium\'-Button ausblenden</string>
+  <string name="morphe_hide_history_shelf_title">Verlaufsbereich ausblenden</string>
+  <string name="morphe_hide_history_shelf_summary">Blendet den Verlaufsbereich im Tab „Du“ aus.</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale Reihen ausblenden</string>
   <string name="morphe_hide_horizontal_shelves_summary">Blendet horizontale Bereiche wie „Aktuelle Nachrichten“, „Community-Beiträge, die dir gefallen könnten“, „Weiter ansehen“, „Mehr Kanäle entdecken“, „Mehr Themen entdecken“, „Für dich“, „Neueste Videos“, „Am relevantesten“, „Beiträge aus der Community des Erstellers“, „Shopping“ und „Nochmal ansehen“ aus.</string>
   <string name="morphe_hide_hyped_label_title">Verstecke Hyped Label</string>
@@ -106,6 +108,7 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_show_more_button_title">Schaltfläche „Mehr anzeigen“ ausblenden.</string>
   <string name="morphe_hide_show_more_button_summary">Verbirgt die Schaltfläche „Mehr anzeigen“ unter Videos in den Suchergebnissen</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Leiste mit abonnierten Kanälen ausblenden</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Kanalnamen in der Leiste für abonnierte Kanäle ausblenden</string>
   <string name="morphe_hide_surveys_title">Umfragen ausblenden</string>
   <string name="morphe_hide_surveys_summary">Blendet Umfragen und Hinweise zur Genauigkeit der Feed-Empfehlungen aus</string>
   <string name="morphe_hide_ticket_shelf_title">Ticket-Bereich ausblenden</string>
@@ -269,9 +272,12 @@ Folgende Änderungen werden vorgenommen:
   <string name="morphe_hide_comments_preview_comment_title">Vorschaukommentar ausblenden</string>
   <string name="morphe_hide_comments_preview_comment_summary">Verbirgt die Kommentarvorschau unter dem Video, bevor der vollständige Kommentarbereich geöffnet wird</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Kommentar von Morphe ausgeblendet...</string>
+  <string name="morphe_minimal_comments_button_title">Minimalen Kommentare-Button aktivieren</string>
+  <string name="morphe_minimal_comments_button_summary">Blendet die Schiebekarten und deren Seitenauswahl aus, die auf dem Kommentare-Button angezeigt werden.</string>
   <string name="morphe_hide_comments_thanks_button_title">Schaltfläche \'Dankeschön\' ausblenden</string>
   <string name="morphe_hide_comments_timestamp_button_title">Zeitstempel-Schaltfläche ausblenden</string>
   <string name="morphe_hide_comments_top_fans_button_title">„Top-Fans“-Button ausblenden</string>
+  <string name="morphe_hide_comments_translate_button_title">Schaltfläche „Übersetzen“ ausblenden</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Hervorgehobene Suchlinks bereinigen</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Bereinigt hervorgehobene Suchlinks und belässt nur den ursprünglichen Klartext</string>
   <string name="morphe_hide_keyword_content_screen_title">Stichwortfilter</string>
@@ -747,6 +753,7 @@ Um das zu beheben, aktiviere 'Video-Streams vortäuschen' und ändere den 'Stand
   <string name="morphe_swap_create_with_notifications_button_title">Erstellen-Schaltfläche mit Benachrichtigungsschaltfläche tauschen</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Wenn die Änderung dieser Einstellung keinen Effekt hat, versuchen Sie, in den Inkognito-Modus zu wechseln.</string>
   <string name="morphe_hide_navigation_button_labels_title">Navigationstastenbezeichnungen ausblenden</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Punkt für neue Inhalte ausblenden</string>
   <string name="morphe_hide_navigation_bar_title">Navigationsleiste ausblenden</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Diese Einstellung blendet die Navigationsleiste vollständig aus, einschließlich des Tabs „You“.
 

@@ -75,6 +75,8 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_floating_microphone_button_title">Lebegő mikrofon gomb elrejtése</string>
   <string name="morphe_hide_floating_microphone_button_summary">A keresési javaslatok képernyő jobb alsó sarkában lévő lebegő mikrofon gomb elrejtése</string>
   <string name="morphe_hide_get_premium_button_title">\"Prémium előfizetés\" gomb elrejtése</string>
+  <string name="morphe_hide_history_shelf_title">Előzmények polc elrejtése</string>
+  <string name="morphe_hide_history_shelf_summary">Elrejti az Előzmények polcot a Neked lapon</string>
   <string name="morphe_hide_horizontal_shelves_title">Vízszintes polcok elrejtése</string>
   <string name="morphe_hide_horizontal_shelves_summary">Olyan vízszintes polcok elrejtése, mint a Friss hírek, Közösségi bejegyzések, amik érdekelhetnek, Megtekintés folytatása, További csatornák felfedezése, További témák felfedezése, Neked, Legújabb videók, Legrelevánsabb, Bejegyzések az alkotói közösségtől, Vásárlás és Megtekintés újra</string>
   <string name="morphe_hide_hyped_label_title">Hájpolt címke elrejtése</string>
@@ -106,6 +108,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_show_more_button_title">„Továbbiak” gomb elrejtése</string>
   <string name="morphe_hide_show_more_button_summary">Kibontás gomb elrejtése a keresési találatok alatt</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Feliratkozott csatornák sávjának elrejtése</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Csatornanevek elrejtése a feliratkozott csatornák sávjában</string>
   <string name="morphe_hide_surveys_title">Felmérések elrejtése</string>
   <string name="morphe_hide_surveys_summary">Értékelési felmérések és javaslatok elrejtése a hírcsatorna pontosságával kapcsolatban</string>
   <string name="morphe_hide_ticket_shelf_title">Jegyértékesítési polc elrejtése</string>
@@ -268,9 +271,12 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_comments_preview_comment_title">Megjegyzés előnézet elrejtése</string>
   <string name="morphe_hide_comments_preview_comment_summary">Megjegyzések előnézetének elrejtése a teljes megjegyzések szekció megnyitása előtt</string>
   <string name="morphe_hide_comments_preview_comment_hidden">A hozzászólást a Morphe elrejtette...</string>
+  <string name="morphe_minimal_comments_button_title">Minimális hozzászólásgomb engedélyezése</string>
+  <string name="morphe_minimal_comments_button_summary">Elrejti a hozzászólásgombon megjelenő csúsztatható kártyákat és azok oldalválasztóját</string>
   <string name="morphe_hide_comments_thanks_button_title">Köszönet gomb elrejtése</string>
   <string name="morphe_hide_comments_timestamp_button_title">Időbélyeg gomb elrejtése</string>
   <string name="morphe_hide_comments_top_fans_button_title">A \'Top fans\' gomb elrejtése</string>
+  <string name="morphe_hide_comments_translate_button_title">Fordítás gomb elrejtése</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">A kiemelt keresési hivatkozások higiénikusabbá tétele</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">A kiemelt keresési hivatkozások higiénikusabbá tétele, csak az eredeti szöveget hagyva</string>
   <string name="morphe_hide_keyword_content_screen_title">Kulcsszószűrő</string>
@@ -746,6 +752,7 @@ A javításhoz kapcsolja be a „Videostreamek meghamisítása” beállítást,
   <string name="morphe_swap_create_with_notifications_button_title">Cserélje fel a Létrehozás gombot az Értesítések gombbal</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Ha ennek a beállításnak a módosítása nem érvényesül, próbálkozzon titkos üzemmóddal.</string>
   <string name="morphe_hide_navigation_button_labels_title">A navigációs gombok címkéinek elrejtése</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Új tartalom pont elrejtése</string>
   <string name="morphe_hide_navigation_bar_title">Navigációs sáv elrejtése</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Ez teljesen elrejti a navigációs sávot, beleértve a 'Te' fület is.
 

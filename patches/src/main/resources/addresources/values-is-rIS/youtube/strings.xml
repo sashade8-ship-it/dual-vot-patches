@@ -75,6 +75,8 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_floating_microphone_button_title">Fela fljótandi hljóðnemahnapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Felur fljótandi hljóðnemahnapp neðst í hægra horninu á skjá leitaruppástungna</string>
   <string name="morphe_hide_get_premium_button_title">Fela hnappinn \'Fá Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Fela spilunarsöguhilluna</string>
+  <string name="morphe_hide_history_shelf_summary">Felur spilunarsöguhilluna í Þú-flipanum</string>
   <string name="morphe_hide_horizontal_shelves_title">Fela láréttar raðir</string>
   <string name="morphe_hide_horizontal_shelves_summary">Felur láréttar raðir eins og Fréttir, Samfélagsfærslur sem þú gætir haft áhuga á, Halda áfram að horfa, Fleiri rásir, Fleiri efni, Fyrir þig, Nýjustu myndbönd, Mest viðeigandi, Samfélagsfærslur höfunda, Verslun og Horfa aftur</string>
   <string name="morphe_hide_hyped_label_title">Fela „Hyped“ merkið</string>
@@ -106,6 +108,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_show_more_button_title">Fela \'Sýna meira\' hnappinn</string>
   <string name="morphe_hide_show_more_button_summary">Hyl leiðbeiningar listunum</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Fela áskriftarrásastiku</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Fela nöfn rása í áskriftastiku</string>
   <string name="morphe_hide_surveys_title">Fela kannelana</string>
   <string name="morphe_hide_surveys_summary">Hylur kannanir og hröggur um nákvæmni um tillögur um umhverfi</string>
   <string name="morphe_hide_ticket_shelf_title">Fela miðaskjá</string>
@@ -268,9 +271,12 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_comments_preview_comment_title">Fela forsýningu athugasemda</string>
   <string name="morphe_hide_comments_preview_comment_summary">Felur athugasmd forskoðunina undir vídeó áður en full athugasmdakassinn opnast</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Athugasemd falin af Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Virkja lágmarksathugasemdahnapp</string>
+  <string name="morphe_minimal_comments_button_summary">Felur rennispjöldin og síðuveljarann sem birtast á athugasemdahnappinum</string>
   <string name="morphe_hide_comments_thanks_button_title">Fela þakknsemishnappinn</string>
   <string name="morphe_hide_comments_timestamp_button_title">Fela Tímalínu hnapp</string>
   <string name="morphe_hide_comments_top_fans_button_title">Fela \'Topp aðdáendur\' hnappinn</string>
+  <string name="morphe_hide_comments_translate_button_title">Fela þýðingarhnappinn</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Hreinsa lýst tengla í leit</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Hreinsar lýsta leittengla og skilur eftir aðeins upprunalega textann</string>
   <string name="morphe_hide_keyword_content_screen_title">Hraðvæðir</string>
@@ -744,6 +750,7 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <string name="morphe_swap_create_with_notifications_button_title">Skildu við skipti Create hnappinn og Notifications hnappinn</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Ef breyting á þessari stillingu hefur ekki áhrif skaltu prófa að skipta yfir í leynistillinga ham</string>
   <string name="morphe_hide_navigation_button_labels_title">Fela stýrihnappamerki</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Fela punkt fyrir nýtt efni</string>
   <string name="morphe_hide_navigation_bar_title">Fela stjórnstikur</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Þetta fela heilt og hljótt nautastjórnstikuna, þar á meðal 'Þér' flipa.
 

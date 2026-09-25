@@ -75,6 +75,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">隐藏浮动麦克风按钮</string>
   <string name="morphe_hide_floating_microphone_button_summary">隐藏在搜索建议屏幕右下角的悬浮麦克风按钮</string>
   <string name="morphe_hide_get_premium_button_title">隐藏“获取高级版”按钮</string>
+  <string name="morphe_hide_history_shelf_title">隐藏历史记录板块</string>
+  <string name="morphe_hide_history_shelf_summary">隐藏“你”标签页中的历史记录板块</string>
   <string name="morphe_hide_horizontal_shelves_title">隐藏横排展示架</string>
   <string name="morphe_hide_horizontal_shelves_summary">隐藏诸如“突发新闻”、“你可能喜欢的社区帖子”、“继续观看”、“探索更多频道”、“探索更多话题”、“为你推荐”、“最新视频”、“最相关”、“创作者社区帖子”、“购物”和“再次观看”等横向内容架</string>
   <string name="morphe_hide_hyped_label_title">隐藏热门标签</string>
@@ -106,6 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">隐藏“显示更多”按钮</string>
   <string name="morphe_hide_show_more_button_summary">隐藏搜索结果中视频下方的展开按钮</string>
   <string name="morphe_hide_subscribed_channels_bar_title">隐藏订阅频道栏</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">隐藏订阅频道栏中的频道名称</string>
   <string name="morphe_hide_surveys_title">隐藏调查</string>
   <string name="morphe_hide_surveys_summary">隐藏关于信息流推荐准确性的调查和提示</string>
   <string name="morphe_hide_ticket_shelf_title">隐藏票券架</string>
@@ -268,9 +271,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_title">隐藏评论预览</string>
   <string name="morphe_hide_comments_preview_comment_summary">隐藏在打开完整评论部分之前，视频下方的评论预览</string>
   <string name="morphe_hide_comments_preview_comment_hidden">评论已被Morphe隐藏...</string>
+  <string name="morphe_minimal_comments_button_title">启用极简评论按钮</string>
+  <string name="morphe_minimal_comments_button_summary">隐藏评论按钮上显示的滑动卡片及其页面选择器</string>
   <string name="morphe_hide_comments_thanks_button_title">隐藏感谢按钮</string>
   <string name="morphe_hide_comments_timestamp_button_title">隐藏时间戳按钮</string>
   <string name="morphe_hide_comments_top_fans_button_title">隐藏“Top fans”按钮</string>
+  <string name="morphe_hide_comments_translate_button_title">隐藏翻译按钮</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">清理高亮显示的搜索链接</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">清理高亮显示的搜索链接，仅保留原始纯文本</string>
   <string name="morphe_hide_keyword_content_screen_title">关键词过滤</string>
@@ -746,6 +752,7 @@ Second \"item\" text"</string>
   <string name="morphe_swap_create_with_notifications_button_title">交换“创建”按钮与“通知”按钮</string>
   <string name="morphe_swap_create_with_notifications_button_summary">如果更改此设置没有生效，请尝试切换到无痕模式。</string>
   <string name="morphe_hide_navigation_button_labels_title">隐藏导航栏按钮标签</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">隐藏新内容圆点</string>
   <string name="morphe_hide_navigation_bar_title">隐藏导航栏</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"这会完全隐藏导航栏，包括“您”标签。
 

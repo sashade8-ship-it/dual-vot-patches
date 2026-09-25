@@ -75,6 +75,8 @@ Změny zahrnují:
   <string name="morphe_hide_floating_microphone_button_title">Skrýt plovoucí tlačítko mikrofonu</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skryje plovoucí tlačítko mikrofonu v pravém dolním rohu obrazovky s návrhy vyhledávání</string>
   <string name="morphe_hide_get_premium_button_title">Skrýt tlačítko \"Získat Premium\"</string>
+  <string name="morphe_hide_history_shelf_title">Skrýt polici Historie</string>
+  <string name="morphe_hide_history_shelf_summary">Skryje polici Historie na kartě Ty</string>
   <string name="morphe_hide_horizontal_shelves_title">Skrýt horizontální sekce</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skryje horizontální sekce, jako jsou Mimořádné zprávy, Příspěvky komunity, které by se vám mohly líbit, Pokračovat ve sledování, Prozkoumat další kanály, Prozkoumat další témata, Pro vás, Nejnovější videa, Nejrelevantnější, Příspěvky z komunity autora, Nakupování a Sledovat znovu</string>
   <string name="morphe_hide_hyped_label_title">Skrýt štítek Hype</string>
@@ -106,6 +108,7 @@ Změny zahrnují:
   <string name="morphe_hide_show_more_button_title">Skrýt tlačítko „Zobrazit více“</string>
   <string name="morphe_hide_show_more_button_summary">Skryje tlačítko pro rozbalení pod videi ve výsledcích vyhledávání</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skrýt panel odebíraných kanálů</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skrýt názvy kanálů v liště odebíraných kanálů</string>
   <string name="morphe_hide_surveys_title">Skrýt průzkumy</string>
   <string name="morphe_hide_surveys_summary">Skryje průzkumy a pobídky týkající se přesnosti doporučeného obsahu</string>
   <string name="morphe_hide_ticket_shelf_title">Skrýt sekci se vstupenkami</string>
@@ -268,9 +271,12 @@ Změny zahrnují:
   <string name="morphe_hide_comments_preview_comment_title">Skrýt náhled komentáře</string>
   <string name="morphe_hide_comments_preview_comment_summary">Skrývá náhled komentáře pod videem před otevřením celé sekce komentářů</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Komentář skrytý uživatelem Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Povolit minimální tlačítko komentářů</string>
+  <string name="morphe_minimal_comments_button_summary">Skryje posuvné karty a jejich volič stránek zobrazovaný na tlačítku komentářů</string>
   <string name="morphe_hide_comments_thanks_button_title">Skrýt tlačítko Poděkování</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skrýt tlačítko časového razítka</string>
   <string name="morphe_hide_comments_top_fans_button_title">Skrýt tlačítko \'Top fanoušci\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Skrýt tlačítko Přeložit</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Vyčistí zvýrazněné odkazy ve vyhledávání</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Vyčistí zvýrazněné odkazy ve vyhledávání a ponechá pouze původní čistý text</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtr klíčových slov</string>
@@ -744,6 +750,7 @@ Chcete-li to opravit, zapněte 'Spoof video streams' a změňte 'Default client'
   <string name="morphe_swap_create_with_notifications_button_title">Vyměňte tlačítko Vytvořit za tlačítko Oznámení</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Pokud změna tohoto nastavení nemá efekt, zkuste přepnout do režimu Inkognito</string>
   <string name="morphe_hide_navigation_button_labels_title">Skrýt štítky navigačních tlačítek</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Skrýt tečku nového obsahu</string>
   <string name="morphe_hide_navigation_bar_title">Skrýt navigační panel</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"To zcela skryje navigační lištu, včetně záložky 'You'.
 

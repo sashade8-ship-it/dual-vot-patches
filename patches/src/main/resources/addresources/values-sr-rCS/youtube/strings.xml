@@ -75,6 +75,8 @@ Promene uključuju:
   <string name="morphe_hide_floating_microphone_button_title">Sakrij plutajuće dugme mikrofona</string>
   <string name="morphe_hide_floating_microphone_button_summary">Sakriva plutajuće dugme za mikrofon u donjem desnom uglu ekrana predloga pretrage</string>
   <string name="morphe_hide_get_premium_button_title">Sakrij dugme \'Nabavite Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Sakrij red sa istorijom</string>
+  <string name="morphe_hide_history_shelf_summary">Sakriva red sa istorijom u kartici Ti</string>
   <string name="morphe_hide_horizontal_shelves_title">Sakrij horizontalne police</string>
   <string name="morphe_hide_horizontal_shelves_summary">Sakriva horizontalne police kao što su Najnovije vesti, Obaveštenja zajednice koje bi vam se dopale, Nastavi sa gledanjem, Istraži više kanala, Istraži više tema, Za vas, Najnoviji video snimci, Najrelevantniji, Obaveštenja od autora, Kupovina i Pogledaj ponovo.</string>
   <string name="morphe_hide_hyped_label_title">Sakrij popularni natpis</string>
@@ -106,6 +108,7 @@ Promene uključuju:
   <string name="morphe_hide_show_more_button_title">Sakrij dugme „Prikaži još”</string>
   <string name="morphe_hide_show_more_button_summary">Sakriva dugme za proširenje ispod video zapisa u rezultatima pretrage</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Sakrij traku pretpljenih kanala</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Sakrij nazive kanala u traci pretplaćenih kanala</string>
   <string name="morphe_hide_surveys_title">Sakrij ankete</string>
   <string name="morphe_hide_surveys_summary">Sakriva ankete i predloge u vezi preciznosti preporuka za sadržaj</string>
   <string name="morphe_hide_ticket_shelf_title">Sakrij policu sa kartama</string>
@@ -268,9 +271,12 @@ Promene uključuju:
   <string name="morphe_hide_comments_preview_comment_title">Sakrij komentar za pregled</string>
   <string name="morphe_hide_comments_preview_comment_summary">Sakriva pregled komentara ispod videa pre otvaranja celog odeljka za komentare</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Komentar je sakrio Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Omogući minimalno dugme za komentare</string>
+  <string name="morphe_minimal_comments_button_summary">Sakriva klizne kartice i njihov selektor stranica, prikazani na dugmetu za komentare</string>
   <string name="morphe_hide_comments_thanks_button_title">Sakrij dugme „Hvala”</string>
   <string name="morphe_hide_comments_timestamp_button_title">Sakrij dugme za vremensku oznaku</string>
   <string name="morphe_hide_comments_top_fans_button_title">Sakrij dugme \'Top fanovi\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Sakrij dugme za prevod</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Dezinfikuje naglašene linkove za pretragu</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Dezinfikuje naglašene linkove za pretragu, ostavljajući samo originalni tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtriranje po ključnim rečima</string>
@@ -746,6 +752,7 @@ Da biste to popravili, uključite 'Spoof video strimovi' i promenite 'Podrazumev
   <string name="morphe_swap_create_with_notifications_button_title">Zameni dugme Napravi sa dugmetom Obaveštenja</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Ako menjanje ove postavke ne stupi na snagu, pokušajte da pređete u Incognito režim</string>
   <string name="morphe_hide_navigation_button_labels_title">Sakrij oznake dugmadi za navigaciju</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Sakrij tačku za novi sadržaj</string>
   <string name="morphe_hide_navigation_bar_title">Sakrij traku za navigaciju</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Ovo potpuno sakriva navigacionu traku, uključujući karticu 'You'.
 

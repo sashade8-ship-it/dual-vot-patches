@@ -75,6 +75,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">छुपाएं तैरती माइक्रोफोन बटन</string>
   <string name="morphe_hide_floating_microphone_button_summary">खोज सुझाव स्क्रीन के निचले-दाएं कोने में फ्लोटिंग माइक्रोफ़ोन बटन को छुपाता है</string>
   <string name="morphe_hide_get_premium_button_title">\'Get Premium\' बटन छिपाएं</string>
+  <string name="morphe_hide_history_shelf_title">इतिहास शेल्फ़ छिपाएँ</string>
+  <string name="morphe_hide_history_shelf_summary">आप टैब में इतिहास शेल्फ़ छिपाता है</string>
   <string name="morphe_hide_horizontal_shelves_title">छुपाएं क्षैतिज रैक</string>
   <string name="morphe_hide_horizontal_shelves_summary">ब्रेकिंग न्यूज़, कम्युनिटी पोस्ट जिन्हें आप पसंद कर सकते हैं, देखना जारी रखें, और अधिक चैनल देखें, और अधिक विषय देखें, आपके लिए, नवीनतम वीडियो, सबसे प्रासंगिक, क्रिएटर के कम्युनिटी से पोस्ट, शॉपिंग और फिर से देखें जैसे क्षैतिज शेल्फ़ को छुपाता है</string>
   <string name="morphe_hide_hyped_label_title">हाइप लेबल छुपाएं</string>
@@ -106,6 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">छुपाएं \'और दिखाएं\' बटन</string>
   <string name="morphe_hide_show_more_button_summary">खोज परिणामों में वीडियो के नीचे विस्तार बटन को छुपाता है</string>
   <string name="morphe_hide_subscribed_channels_bar_title">छुपाएं सब्सक्राइब चैनल बार</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">सदस्यता वाले चैनल बार में चैनल के नाम छिपाएँ</string>
   <string name="morphe_hide_surveys_title">सर्वेक्षण छुपाएं</string>
   <string name="morphe_hide_surveys_summary">फ़ीड अनुशंसा सटीकता के बारे में सर्वेक्षण और नज़दीकी को छुपाता है</string>
   <string name="morphe_hide_ticket_shelf_title">छिपाएं टिकट शेल्फ</string>
@@ -268,9 +271,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_title">छुपाएं पूर्वावलोकन टिप्पणी</string>
   <string name="morphe_hide_comments_preview_comment_summary">संपूर्ण टिप्पणी अनुभाग खोलने से पहले वीडियो के नीचे टिप्पणी पूर्वावलोकन को छुपाता है</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Morphe द्वारा टिप्पणी छिपाई गई...</string>
+  <string name="morphe_minimal_comments_button_title">न्यूनतम कमेंट बटन सक्षम करें</string>
+  <string name="morphe_minimal_comments_button_summary">कमेंट बटन पर प्रदर्शित स्लाइडिंग कार्ड और उसका पेज चयनकर्ता को छिपाता है</string>
   <string name="morphe_hide_comments_thanks_button_title">छुपाएं \'धन्यवाद\' बटन</string>
   <string name="morphe_hide_comments_timestamp_button_title">टाइमस्टैम्प बटन छुपाएं</string>
   <string name="morphe_hide_comments_top_fans_button_title">\'टॉप फैंस\' बटन छिपाएँ</string>
+  <string name="morphe_hide_comments_translate_button_title">अनुवाद बटन छिपाएँ</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">हाइलाइट किए गए खोज लिंक सैनिटाइज़ करें</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">हाइलाइट किए गए खोज लिंक सैनिटाइज़ करता है, केवल मूल सादे पाठ को छोड़ देता है</string>
   <string name="morphe_hide_keyword_content_screen_title">कीवर्ड फ़िल्टर</string>
@@ -746,6 +752,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_swap_create_with_notifications_button_title">बनाएं बटन को सूचनाएँ बटन से बदलें</string>
   <string name="morphe_swap_create_with_notifications_button_summary">यदि इस सेटिंग को बदलने से कोई प्रभाव नहीं होता है, तो गुप्त मोड में स्विच करने का प्रयास करें।</string>
   <string name="morphe_hide_navigation_button_labels_title">नेविगेशन बटन लेबल्स छिपाएं</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">नए कंटेंट का डॉट छिपाएं</string>
   <string name="morphe_hide_navigation_bar_title">नेविगेशन बार छिपाएँ</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"यह नेविगेशन बार को पूरी तरह से छिपा देता है, जिसमें 'You' टैब भी शामिल है।
 

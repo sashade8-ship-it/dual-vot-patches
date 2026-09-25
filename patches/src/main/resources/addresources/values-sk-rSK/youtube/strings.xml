@@ -75,6 +75,8 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_floating_microphone_button_title">Skryť plávajúce tlačidlo mikrofónu</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skryje plávajúce tlačidlo mikrofónu v pravom dolnom rohu obrazovky návrhov vyhľadávania</string>
   <string name="morphe_hide_get_premium_button_title">Skryť tlačidlo \'Získať Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Skryť panel História</string>
+  <string name="morphe_hide_history_shelf_summary">Skryje panel História na karte Vy</string>
   <string name="morphe_hide_horizontal_shelves_title">Skryť horizontálne police</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skryje horizontálne police, ako napríklad Aktuality, Príspevky od komunity, ktoré by sa vám mohli páčiť, Pokračujte v sledovaní, Preskúmajte ďalšie kanály, Preskúmajte ďalšie témy, Pre vás, Najnovšie videá, Najrelevantnejšie, Príspevky z komunity tvorcu, Nakupovanie a Pozrite si to znova</string>
   <string name="morphe_hide_hyped_label_title">Skryť populárny štítok</string>
@@ -106,6 +108,7 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_show_more_button_title">Skryť tlačidlo „Zobraziť viac“</string>
   <string name="morphe_hide_show_more_button_summary">Skryje tlačidlo rozbaliť pod videami vo výsledkoch vyhľadávania</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skryť panel odoberaných kanálov</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skryť názvy kanálov v paneli odoberaných kanálov</string>
   <string name="morphe_hide_surveys_title">Skryť prieskumy</string>
   <string name="morphe_hide_surveys_summary">Skryje prieskumy a návrhy týkajúce sa presnosti odporúčania kanála</string>
   <string name="morphe_hide_ticket_shelf_title">Skryť policu lístkov</string>
@@ -268,9 +271,12 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_comments_preview_comment_title">Skryť predhliadku komentára</string>
   <string name="morphe_hide_comments_preview_comment_summary">Skryje ukážku komentára pod videami pred otvorením celej sekcie komentárov</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Komentár skrytý aplikáciou Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Povoliť minimálne tlačidlo komentárov</string>
+  <string name="morphe_minimal_comments_button_summary">Skryje posuvné karty aj ich výber stránok zobrazené na tlačidle komentárov.</string>
   <string name="morphe_hide_comments_thanks_button_title">Skryť tlačidlo Vďaka</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skryť tlačidlo Časové značky</string>
   <string name="morphe_hide_comments_top_fans_button_title">Skryť tlačidlo \'Top fans\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Skryť tlačidlo Preložiť</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Vyčistí zvýraznené odkazy vo vyhľadávaní</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Vyčistí zvýraznené odkazy vo vyhľadávaní, ponechajúc iba pôvodný jednoduchý text</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter kľúčových slov</string>
@@ -746,6 +752,7 @@ Je potrebné poskytnúť 'Cookies pre titulky'"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Vymení tlačidlo Vytvoriť za tlačidlo Notifikácie</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Ak zmena tohto nastavenia nemá účinok, skúste prepnúť do režimu inkognito</string>
   <string name="morphe_hide_navigation_button_labels_title">Skryť popisky navigačných tlačidiel</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Skryť bodku nového obsahu</string>
   <string name="morphe_hide_navigation_bar_title">Skryť navigačný panel</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Toto úplne skryje navigačný panel, vrátane karty „Vy“.
 

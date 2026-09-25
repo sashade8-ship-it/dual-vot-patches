@@ -74,6 +74,8 @@ As mudanças incluem:
   <string name="morphe_hide_floating_microphone_button_title">Ocultar botão de microfone flutuante</string>
   <string name="morphe_hide_floating_microphone_button_summary">Oculta o botão de microfone flutuante no canto inferior direito da tela de sugestões de pesquisa</string>
   <string name="morphe_hide_get_premium_button_title">Ocultar botão \'Obter Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Ocultar prateleira do histórico</string>
+  <string name="morphe_hide_history_shelf_summary">Oculta a prateleira do histórico na aba Você</string>
   <string name="morphe_hide_horizontal_shelves_title">Ocultar prateleiras horizontais</string>
   <string name="morphe_hide_horizontal_shelves_summary">Oculta carrosséis horizontais como Últimas notícias, Postagens da comunidade que você pode gostar, Continuar assistindo, Conheça mais canais, Conheça mais tópicos, Para você, Vídeos mais recentes, Mais relevantes, Postagens da comunidade de criadores, Shopping e Assistir novamente</string>
   <string name="morphe_hide_hyped_label_title">Ocultar rótulo Hypado</string>
@@ -105,6 +107,7 @@ As mudanças incluem:
   <string name="morphe_hide_show_more_button_title">Ocultar botão \'Mostrar mais\'</string>
   <string name="morphe_hide_show_more_button_summary">Oculta o botão de expandir sob vídeos nos resultados da pesquisa</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Esconder a barra de canais assinados</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Ocultar nomes de canais na barra de canais inscritos</string>
   <string name="morphe_hide_surveys_title">Ocultar pesquisas</string>
   <string name="morphe_hide_surveys_summary">Ocultar pesquisas e avisos sobre a precisão das recomendações do feed</string>
   <string name="morphe_hide_ticket_shelf_title">Ocultar seção de ingressos</string>
@@ -267,9 +270,12 @@ As mudanças incluem:
   <string name="morphe_hide_comments_preview_comment_title">Ocultar prévia de comentário</string>
   <string name="morphe_hide_comments_preview_comment_summary">Oculta a pré-visualização do comentário abaixo do vídeo antes de abrir a seção completa de comentários</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Comentário oculto por Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Ativar botão de comentários minimalista</string>
+  <string name="morphe_minimal_comments_button_summary">Oculta os cartões deslizantes e o seletor de páginas exibidos no botão de comentários</string>
   <string name="morphe_hide_comments_thanks_button_title">Ocultar botão Valeu</string>
   <string name="morphe_hide_comments_timestamp_button_title">Ocultar botão Minutagem</string>
   <string name="morphe_hide_comments_top_fans_button_title">Ocultar o botão \'Top fãs\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Ocultar botão Traduzir</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Sanitiza links de pesquisa destacados</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Sanitiza links de pesquisa destacados, deixando apenas o texto original</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro de palavras-chave</string>
@@ -745,6 +751,7 @@ Os 'cookies de legenda' devem ser fornecidos"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Troca o botão Criar pelo botão Notificações</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Se alterar esta configuração não tiver efeito, tente mudar para o modo de navegação anônima</string>
   <string name="morphe_hide_navigation_button_labels_title">Ocultar rótulos dos botões de navegação</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Ocultar ponto de conteúdo novo</string>
   <string name="morphe_hide_navigation_bar_title">Ocultar barra de navegação</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Isso oculta completamente a barra de navegação, incluindo a aba 'Você'.
 

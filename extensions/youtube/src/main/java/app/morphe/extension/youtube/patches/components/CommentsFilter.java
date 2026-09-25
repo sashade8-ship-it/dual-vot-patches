@@ -23,6 +23,7 @@ import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
 import java.util.List;
+import java.util.Map;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
@@ -34,17 +35,26 @@ import app.morphe.extension.shared.patches.components.ByteArrayFilterGroupList;
 import app.morphe.extension.shared.patches.components.ContextInterface;
 import app.morphe.extension.shared.patches.components.Filter;
 import app.morphe.extension.shared.patches.components.StringFilterGroup;
+import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.youtube.innertube.NextResponseOuterClass.NewElement;
 import app.morphe.extension.youtube.patches.VersionCheckPatch;
 import app.morphe.extension.youtube.settings.Settings;
+import app.morphe.extension.youtube.shared.EngagementPanel;
 import app.morphe.extension.youtube.shared.PlayerType;
 
 @SuppressWarnings("unused")
 public class CommentsFilter extends Filter {
 
+    private static final String ELEMENTS_SENDER_VIEW =
+            "com.google.android.libraries.youtube.rendering.elements.sender_view";
+
     private static final String CHIP_BAR_PATH_PREFIX = "chip_bar.e";
     private static final String COMMENT_COMPOSER_PATH = "comment_composer.e";
     private static final String COMMENT_PATH = "|comment.e";
+    /**
+     * The button text is localized, and the component also holds other tri-state buttons.
+     */
+    private static final String TRANSLATE_BUTTON_ACCESSIBILITY_ID = "id.ui.comments.translate.button";
     private static final String VIDEO_LOCKUP_WITH_ATTACHMENT_PATH = "video_lockup_with_attachment.e";
     private static final String VIDEO_METADATA_CAROUSEL_PATH = "video_metadata_carousel.e";
     private static final int ID_LIVE_CHAT_ACTION_PANEL =
@@ -59,7 +69,9 @@ public class CommentsFilter extends Filter {
     private final StringFilterGroup comments;
     private final StringFilterGroup commentsFilterBar;
     private final StringFilterGroup emojiButton;
+    private final StringFilterGroup commentCardsIndicator;
     private final StringFilterGroup menuButton;
+    private final StringFilterGroup translateButton;
 
     private static final CharSequence hiddenPreviewCommentCharSequence =
             str("morphe_hide_comments_preview_comment_hidden");
@@ -151,6 +163,17 @@ public class CommentsFilter extends Filter {
                 "gift_attribution_card_classic_live.e"
         );
 
+        var previewComment = new StringFilterGroup(
+                Settings.MINIMAL_COMMENTS_BUTTON,
+                "|carousel_item.e"
+        );
+
+        commentCardsIndicator = new StringFilterGroup(
+                Settings.MINIMAL_COMMENTS_BUTTON,
+                VIDEO_METADATA_CAROUSEL_PATH
+        );
+
+
         var thanksButton = new StringFilterGroup(
                 Settings.HIDE_COMMENTS_THANKS_BUTTON,
                 "super_thanks_button.e"
@@ -166,6 +189,11 @@ public class CommentsFilter extends Filter {
                 "live_viewer_leaderboard_chat_entry_point.e"
         );
 
+        translateButton = new StringFilterGroup(
+                Settings.HIDE_COMMENTS_TRANSLATE_BUTTON,
+                "tri_state_button.e"
+        );
+
         addPathCallbacks(
                 channelGuidelines,
                 chatSummary,
@@ -179,10 +207,13 @@ public class CommentsFilter extends Filter {
                 createAShortButton,
                 emojiButton,
                 giftAnimationAndCards,
+                previewComment,
+                commentCardsIndicator,
                 menuButton,
                 thanksButton,
                 timestampButton,
-                topFansButton
+                topFansButton,
+                translateButton
         );
     }
 
@@ -218,8 +249,18 @@ public class CommentsFilter extends Filter {
             return Utils.contains(path, COMMENT_PATH);
         }
 
+        if (matchedGroup == translateButton) {
+            return accessibility.startsWith(TRANSLATE_BUTTON_ACCESSIBILITY_ID)
+                    && Utils.contains(path, COMMENT_PATH);
+        }
+
         if (matchedGroup == commentsFilterBar) {
             return Settings.HIDE_FILTER_BAR_IN_COMMENTS.get() && PlayerType.getCurrent().isMaximizedOrFullscreen();
+        }
+
+        if (matchedGroup == commentCardsIndicator) {
+            return Utils.contains(path, "carousel_header") &&
+                    Utils.endsWith(path, "|ContainerType|ContainerType|ContainerType|");
         }
 
         return true;
@@ -450,13 +491,11 @@ public class CommentsFilter extends Filter {
             if (!Settings.HIDE_COMMENTS_PREVIEW_COMMENT.get()) {
                 return original;
             }
-
             StringBuilder pathBuilder = contextInterface.patch_getPathBuilder();
-            if (pathBuilder.indexOf("comments_entry_point_teaser.e") < 0
-                    && pathBuilder.indexOf("comments_entry_point_simplebox.e") < 0) {
+            if (pathBuilder.indexOf("comments_entry_point_teaser.e") == -1
+                    && pathBuilder.indexOf("comments_entry_point_simplebox.e") == -1) {
                 return original;
             }
-
             Spanned originalSpanned = original instanceof Spanned spanned
                     ? spanned
                     : new SpannableString(original);
@@ -466,5 +505,23 @@ public class CommentsFilter extends Filter {
             Logger.printException(() -> "onLithoTextLoaded failure", ex);
         }
         return original;
+    }
+
+    /**
+     * Injection point.
+     * Disable clickable timestamps for preview comments.
+     */
+    public static boolean onVideoIntentLoaded(Map<Object, Object> playbackStartDescriptorMap, String videoId) {
+        if (!Settings.HIDE_COMMENTS_PREVIEW_COMMENT.get()) {
+            return false;
+        }
+        if (!(playbackStartDescriptorMap.get(ELEMENTS_SENDER_VIEW) instanceof ViewGroup senderView)) {
+            return false;
+        }
+        final int height = senderView.getHeight();
+        boolean isTimestamp = height >= Dim.dp(40) && height <= Dim.dp(60);
+        return PlayerType.getCurrent().isMaximizedOrFullscreen() &&
+                EngagementPanel.getCurrentOpenedPanels().isEmpty() &&
+                isTimestamp;
     }
 }

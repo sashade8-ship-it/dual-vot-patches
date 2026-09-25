@@ -24,29 +24,29 @@ Second \"item\" text"</string>
   <!-- misc.album.albumMusicVideoPatch -->
   <string name="morphe_music_play_album_songs_title">एल्बम ऑडियो ट्रैक चलाएँ</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
-  <string name="morphe_music_play_album_songs_summary">एल्बम के गानों का केवल ऑडियो संस्करण चलाएं, म्यूजिक वीडियो के बजाय। ‘स्पूफ वीडियो स्ट्रीम्स’ की आवश्यकता है</string>
+  <string name="morphe_music_play_album_songs_summary">म्यूज़िक वीडियो के बजाय गानों का केवल ऑडियो वर्ज़न चलाएँ। इसके लिए \'स्पूफ़ वीडियो स्ट्रीम्स\' चालू होना ज़रूरी है</string>
   <!-- interaction.downloads.downloadsPatch -->
-  <string name="morphe_external_downloader_screen_summary">तृतीय-पक्ष डाउनलोडिंग ऐप्स के साथ संगीत वीडियो, पॉडकास्ट या गाने डाउनलोड करें</string>
+  <string name="morphe_external_downloader_screen_summary">थर्ड-पार्टी डाउनलोडर ऐप्स से म्यूज़िक वीडियो, पॉडकास्ट या गाने डाउनलोड करें</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">डाउनलोड बटन को ओवरराइड करें</string>
-  <string name="morphe_external_downloader_action_button_summary">आपके चुने हुए बाहरी डाउनलोडर का उपयोग करता है, बजाय स्टॉक डाउनलोड एक्शन बटन के।</string>
+  <string name="morphe_external_downloader_action_button_summary">डिफ़ॉल्ट डाउनलोड बटन की जगह आपके चुने हुए बाहरी डाउनलोडर का उपयोग करता है</string>
   <string name="morphe_external_downloader_flyout_menu_title">डाउनलोड मेनू ओवरराइड करें</string>
-  <string name="morphe_external_downloader_flyout_menu_summary">आपके चुने हुए बाहरी डाउनलोडर का उपयोग करता है, बजाय स्टॉक डाउनलोड फ्लाईआउट मेनू के।</string>
+  <string name="morphe_external_downloader_flyout_menu_summary">डिफ़ॉल्ट डाउनलोड फ्लाईआउट मेनू की जगह आपके चुने हुए बाहरी डाउनलोडर का उपयोग करता है</string>
   <string name="morphe_music_in_app_downloads_title">ऐप में डाउनलोड करें</string>
   <string name="morphe_music_in_app_downloads_summary">YouTube Music के अंदर ऑडियो डाउनलोड करता है, बाहरी डाउनलोडर ऐप खोलने के बजाय</string>
-  <string name="morphe_music_in_app_downloads_user_dialog_message">"ट्रैक ऐप की निजी स्टोरेज में सहेजे जाते हैं और YouTube Music अनइंस्टॉल करने पर हटा दिए जाते हैं।
+  <string name="morphe_music_in_app_downloads_user_dialog_message">"ट्रैक ऐप के प्राइवेट स्टोरेज में सेव किए जाते हैं और YouTube Music अनइंस्टॉल करने पर हटा दिए जाते हैं।
 
-जब यह चालू होता है, तो डाउनलोड टैब Music Premium ऑफ़लाइन लाइब्रेरी के बजाय इन ट्रैक्स को सूचीबद्ध करता है। इसे बंद करने पर टैब बहाल हो जाता है, और Premium डाउनलोड कभी प्रभावित नहीं होते।"</string>
+जब यह चालू होता है, तो डाउनलोड टैब Music Premium ऑफ़लाइन लाइब्रेरी के बजाय इन ट्रैक्स को दिखाता है। इसे बंद करने पर टैब पहले जैसा हो जाता है, और Premium डाउनलोड कभी प्रभावित नहीं होते।"</string>
   <string name="morphe_music_downloads_screen_title">डाउनलोड</string>
   <string name="morphe_music_downloads_empty">"कोई डाउनलोड नहीं
 डाउनलोड किए गए ट्रैक यहाँ दिखाई देंगे"</string>
-  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s एमबी</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
   <string name="morphe_music_downloads_summary">%1$s ट्रैक • %2$s MB</string>
   <string name="morphe_music_downloads_search_hint">डाउनलोड खोजें</string>
   <string name="morphe_music_downloads_sort">क्रमबद्ध करें</string>
   <string name="morphe_music_downloads_sort_artist">कलाकार के अनुसार क्रमबद्ध करें</string>
   <string name="morphe_music_downloads_sort_title">शीर्षक के अनुसार क्रमबद्ध करें</string>
-  <string name="morphe_music_downloads_sort_size">आकार के अनुसार क्रमबद्ध करें</string>
+  <string name="morphe_music_downloads_sort_size">साइज़ के अनुसार क्रमबद्ध करें</string>
   <string name="morphe_music_downloads_delete_all">सभी डाउनलोड हटाएँ</string>
   <string name="morphe_music_downloads_delete_all_title">सभी डाउनलोड हटाएँ?</string>
   <string name="morphe_music_downloads_delete_all_message">सभी डाउनलोड किए गए ट्रैक इस डिवाइस से हटा दिए जाएँगे</string>
@@ -190,6 +190,8 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_hide_search_button_title">खोज बटन छुपाएं</string>
   <string name="morphe_music_hide_voice_search_button_title">वॉइस सर्च बटन छिपाएँ</string>
   <string name="morphe_music_hide_sound_search_button_title">साउंड सर्च बटन छिपाएँ</string>
+  <string name="morphe_music_hide_library_new_button_title">नया बटन छिपाएं</string>
+  <string name="morphe_music_hide_library_new_button_summary">लाइब्रेरी टैब में मौजूद नया बटन छिपाता है</string>
   <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
   <string name="morphe_music_action_buttons_screen_title">क्रिया बटन</string>
   <string name="morphe_music_action_buttons_screen_summary">प्लेयर के नीचे दिखने वाले एक्शन बटन चुनें</string>

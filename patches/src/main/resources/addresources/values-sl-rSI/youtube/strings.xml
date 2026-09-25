@@ -75,6 +75,8 @@ Spremembe vključujejo:
   <string name="morphe_hide_floating_microphone_button_title">Skrij plavajoči gumb za mikrofon</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skrije plavajoči gumb za mikrofon v spodnjem desnem kotu zaslona s predlogi iskanja</string>
   <string name="morphe_hide_get_premium_button_title">Skrij gumb \'Pridobi Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Skrij polico Zgodovina</string>
+  <string name="morphe_hide_history_shelf_summary">Skrije polico Zgodovina v zavihku Vi</string>
   <string name="morphe_hide_horizontal_shelves_title">Skrij vodoravne police</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skrije horizontalne police, kot so Aktualne novice, objave skupnosti, ki so morda zanimive za vas, Nadaljujte z gledanjem, raziščite več kanalov, raziščite več tem, za vas, najnovejši videoposnetki, najbolj relevantni, objave iz skupnosti ustvarjalca, nakupovanje in ponovno oglejte si</string>
   <string name="morphe_hide_hyped_label_title">Skrij oznako \'Hype\'</string>
@@ -106,6 +108,7 @@ Spremembe vključujejo:
   <string name="morphe_hide_show_more_button_title">Skrij gumb \'Prikaži več\'</string>
   <string name="morphe_hide_show_more_button_summary">Skrije gumb za razširitev pod videoposnetki v rezultatih iskanja</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skrij vrstico naročenih kanalov.</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skrij imena kanalov v vrstici naročenih kanalov</string>
   <string name="morphe_hide_surveys_title">Skrij ankete</string>
   <string name="morphe_hide_surveys_summary">Skrije ankete in spodbude glede natančnosti priporočil za vir</string>
   <string name="morphe_hide_ticket_shelf_title">Skrij polico s karticami</string>
@@ -268,9 +271,12 @@ Spremembe vključujejo:
   <string name="morphe_hide_comments_preview_comment_title">Skrij predogled komentarja</string>
   <string name="morphe_hide_comments_preview_comment_summary">Skrije predogled komentarja pod videoposnetkom, preden se odpre celoten oddelek za komentarje</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Komentar je skril Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Omogoči minimalen gumb za komentarje</string>
+  <string name="morphe_minimal_comments_button_summary">Skrije drsne kartice in njihov izbirnik strani, prikazan na gumbu za komentarje</string>
   <string name="morphe_hide_comments_thanks_button_title">Skrij gumb \'Hvala\'</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skrij gumb Časovni žig</string>
   <string name="morphe_hide_comments_top_fans_button_title">Skrij gumb »Najboljši oboževalci«</string>
+  <string name="morphe_hide_comments_translate_button_title">Skrij gumb Prevedi</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Počisti poudarjene povezave iskanja</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Počisti poudarjene povezave iskanja in pusti samo prvotno besedilo</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtr ključnih besed</string>
@@ -746,6 +752,7 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Zamenjaj gumb Ustvari z gumbom Obvestila</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Če sprememba te nastavitve ne ucinkuje, poskusite prekljuciti v incognito nacina.</string>
   <string name="morphe_hide_navigation_button_labels_title">Skrij oznake gumbov navigacije</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Skrij piko za novo vsebino</string>
   <string name="morphe_hide_navigation_bar_title">Skrij navigacijsko vrstico</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"To popolnoma skrije navigacijsko vrstico, vključno z zavihtkom 'You'.
 

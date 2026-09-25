@@ -75,6 +75,8 @@ Wijzigingen zijn:
   <string name="morphe_hide_floating_microphone_button_title">Verberg zwevende microfoonknop</string>
   <string name="morphe_hide_floating_microphone_button_summary">Verbergt de zwevende microfoonknop in de rechteronderhoek van het scherm met zoeksuggesties</string>
   <string name="morphe_hide_get_premium_button_title">\'Get Premium\' knop verbergen</string>
+  <string name="morphe_hide_history_shelf_title">Verberg de geschiedenis-sectie</string>
+  <string name="morphe_hide_history_shelf_summary">Verbergt de geschiedenis-sectie in het tabblad Jij</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale planken verbergen</string>
   <string name="morphe_hide_horizontal_shelves_summary">Verbergt horizontale schappen zoals Breaking news, Community posts die je misschien leuk vindt, Verder kijken, Meer kanalen verkennen, Meer onderwerpen verkennen, Voor jou, Nieuwste video\'s, Meest relevant, Posts van de Creator\'s Community, Shopping, en Kijk opnieuw</string>
   <string name="morphe_hide_hyped_label_title">Verberg Hyped label</string>
@@ -106,6 +108,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_show_more_button_title">Verberg knop \'Meer weergeven\'</string>
   <string name="morphe_hide_show_more_button_summary">Verbergt de uitbreidingsknop onder video\'s in de zoekresultaten</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Verberg abonneerde kanalen balk</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Verberg kanaalnamen in de balk met geabonneerde kanalen</string>
   <string name="morphe_hide_surveys_title">Enquêtes verbergen</string>
   <string name="morphe_hide_surveys_summary">Verbergt enquêtes en aanmoedigingen over de nauwkeurigheid van feed-aanbevelingen</string>
   <string name="morphe_hide_ticket_shelf_title">Ticketsectie verbergen</string>
@@ -268,9 +271,12 @@ Wijzigingen zijn:
   <string name="morphe_hide_comments_preview_comment_title">Reactie in preview verbergen</string>
   <string name="morphe_hide_comments_preview_comment_summary">Verbergt het commentaarvoorbeeldunder de video voordat de volledige commentaarsectie wordt geopend</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Reactie verborgen door Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Minimale reactiesknop inschakelen</string>
+  <string name="morphe_minimal_comments_button_summary">Verbergt de schuifkaarten en de bijbehorende paginaselector, weergegeven op de reactiesknop</string>
   <string name="morphe_hide_comments_thanks_button_title">Verberg de knop \'Bedankt\'</string>
   <string name="morphe_hide_comments_timestamp_button_title">Tijdstempelknop verbergen</string>
   <string name="morphe_hide_comments_top_fans_button_title">Verberg de knop \'Top fans\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Verberg de vertaalknop</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Schoon gehighlighte search URL\'s op</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Schoont gehighlighte search URL\'s op, zodat alleen de originele tekst overblijft</string>
   <string name="morphe_hide_keyword_content_screen_title">Trefwoordfilter</string>
@@ -744,6 +750,7 @@ Om dit op te lossen, schakel 'Videostreams vervalsen' in en wijzig de 'Standaard
   <string name="morphe_swap_create_with_notifications_button_title">Wissel de knop \'Maken\' om met de knop \'Meldingen\'</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Als het wijzigen van deze instelling geen effect heeft, probeer dan over te schakelen naar de Incognitomodus</string>
   <string name="morphe_hide_navigation_button_labels_title">Navigatieknoppenlabels verbergen</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Verberg nieuwe contentstip</string>
   <string name="morphe_hide_navigation_bar_title">Verberg de navigatiebalk</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Dit verbergt de navigatiebalk volledig, inclusief het tabblad 'Jij'.
 

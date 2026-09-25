@@ -75,6 +75,8 @@ Endringer inkluderer:
   <string name="morphe_hide_floating_microphone_button_title">Skjul flytende mikrofonknapp</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skjuler flytende mikrofonknapp i nedre høyre hjørne av søkeforslags-skjermen</string>
   <string name="morphe_hide_get_premium_button_title">Skjul \'Få Premium\'-knappen</string>
+  <string name="morphe_hide_history_shelf_title">Skjul historikkhyllen</string>
+  <string name="morphe_hide_history_shelf_summary">Skjuler historikkhyllen i Du-fanen</string>
   <string name="morphe_hide_horizontal_shelves_title">Skjul horisontale hyller</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skjuler horisontale hyller som Breaking news, Community-innlegg du kanskje liker, Fortsett å se på, Utforsk flere kanaler, Utforsk flere emner, For deg, Nyeste videoer, Mest relevante, Innlegg fra Creator\'s Community, Shopping og Se igjen</string>
   <string name="morphe_hide_hyped_label_title">Skjul \'Hypet\'-etikett</string>
@@ -106,6 +108,7 @@ Endringer inkluderer:
   <string name="morphe_hide_show_more_button_title">Skjul \'Vis mer\'-knapp</string>
   <string name="morphe_hide_show_more_button_summary">Skjuler utvidingsknappen under videoer i søkeresultatene</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skjul abonnementskanaler-linjen</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skjul kanalnavn i linjen for abonnerte kanaler</string>
   <string name="morphe_hide_surveys_title">Skjul undersøkelser</string>
   <string name="morphe_hide_surveys_summary">Skjuler undersøkelser og oppfordringer om nøyaktigheten til mates anbefalinger</string>
   <string name="morphe_hide_ticket_shelf_title">Skjul billetthylle</string>
@@ -268,9 +271,12 @@ Endringer inkluderer:
   <string name="morphe_hide_comments_preview_comment_title">Skjul forhåndsvisningskommentar</string>
   <string name="morphe_hide_comments_preview_comment_summary">Skjuler kommentarforslag under videoen før du åpner hele kommentarfeltet</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Kommentar skjult av Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Aktiver minimal kommentarknapp</string>
+  <string name="morphe_minimal_comments_button_summary">Skjuler de glidende kortene og sidevelgeren deres, som vises på kommentarknappen</string>
   <string name="morphe_hide_comments_thanks_button_title">Skjul takkeknapp</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skjul tidsstempelknapp</string>
   <string name="morphe_hide_comments_top_fans_button_title">Skjul \'Topp fans\'-knappen</string>
+  <string name="morphe_hide_comments_translate_button_title">Skjul oversett-knappen</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Desinfiser fremhevede søkelenker</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Desinfiserer fremhevede søkelenker, og viser kun den originale, rene teksten</string>
   <string name="morphe_hide_keyword_content_screen_title">Nøkkelordfilter</string>
@@ -746,6 +752,7 @@ For å fikse dette, slå på 'Forfalsk videostrømmer' og endre 'Standardklient'
   <string name="morphe_swap_create_with_notifications_button_title">Bytt Create-knappen med Notifications-knappen</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Hvis endring av denne innstillingen ikke trer i kraft, kan du prøve å bytte til inkognitomodus</string>
   <string name="morphe_hide_navigation_button_labels_title">Skjul navigasjonsknappetiketter</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Skjul prikk for nytt innhold</string>
   <string name="morphe_hide_navigation_bar_title">Skjul navigasjonslinjen</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Dette skjuler fullstendig navigasjonslinjen, inkludert 'Du'-fanen.
 

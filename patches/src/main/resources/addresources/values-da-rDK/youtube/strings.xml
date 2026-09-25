@@ -75,6 +75,8 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_floating_microphone_button_title">Skjul svævende mikrofonknap</string>
   <string name="morphe_hide_floating_microphone_button_summary">Skjuler den flydende mikrofontilføjelser i nederste højre hjørne af søgeforslagsskærmen</string>
   <string name="morphe_hide_get_premium_button_title">Skjul \'Få Premium\' knappen</string>
+  <string name="morphe_hide_history_shelf_title">Skjul historiksektionen</string>
+  <string name="morphe_hide_history_shelf_summary">Skjuler historiksektionen i Du-fanen</string>
   <string name="morphe_hide_horizontal_shelves_title">Skjul vandrette hylder</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skjuler vandrette hylder som f.eks. Breaking news, Community-opslag du måske vil lide, Fortsæt med at se, Udforsk flere kanaler, Udforsk flere emner, Til dig, Seneste videoer, Mest relevante, Opslag fra Creator\'s Community, Shopping og Se det igen</string>
   <string name="morphe_hide_hyped_label_title">Skjul \'Hyped\' label</string>
@@ -106,6 +108,7 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_show_more_button_title">Skjul knappen \'Vis mere\'</string>
   <string name="morphe_hide_show_more_button_summary">Skjuler udvidelsesknappen under videoer i søgeresultaterne</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skjul abonnementskanalerne</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skjul kanalnavne i linjen med abonnerede kanaler</string>
   <string name="morphe_hide_surveys_title">Skjul undersøgelser</string>
   <string name="morphe_hide_surveys_summary">Skjuler undersøgelser og forslag vedrørende nøjagtigheden af feedanbefalinger</string>
   <string name="morphe_hide_ticket_shelf_title">Skjul billetreolen</string>
@@ -268,9 +271,12 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_comments_preview_comment_title">Skjul forhåndsvisning kommentar</string>
   <string name="morphe_hide_comments_preview_comment_summary">Skjuler kommentar preview under videoen inden åbning af hele kommentarsektionen</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Kommentar skjult af Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Aktivér minimal kommentarknap</string>
+  <string name="morphe_minimal_comments_button_summary">Skjuler de glidende kort og deres sidevælger, der vises på kommentarknappen</string>
   <string name="morphe_hide_comments_thanks_button_title">Skjul \"Tak\"-knap</string>
   <string name="morphe_hide_comments_timestamp_button_title">Skjul Tidsstempel-knap</string>
   <string name="morphe_hide_comments_top_fans_button_title">Skjul \'Top fans\'-knappen</string>
+  <string name="morphe_hide_comments_translate_button_title">Skjul oversæt-knappen</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Renser fremhævede søgelinks</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Renser fremhævede søgelinks og efterlader kun den originale tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Nøgleordsfilter</string>
@@ -744,6 +750,7 @@ For at løse dette skal du slå 'Spoof video streams' til og ændre 'Standardkli
   <string name="morphe_swap_create_with_notifications_button_title">Byt Opret-knap med Notifikationsknap</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Hvis ændringen af denne indstilling ikke virker, prøv at skifte til Incognito-tilstand</string>
   <string name="morphe_hide_navigation_button_labels_title">Skjul navigationsknappers tekst</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Skjul prik for nyt indhold</string>
   <string name="morphe_hide_navigation_bar_title">Skjul navigationsbjælke</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Dette skjuler navigationslinjen helt, inklusiv fanen 'Dig'.
 

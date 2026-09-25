@@ -75,6 +75,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">Απόκρυψη \"Αιωρούμενο Κουμπί Μικροφώνου\" στην αναζήτηση</string>
   <string name="morphe_hide_floating_microphone_button_summary">Απόκρυψη του πλωτού κουμπιού μικροφώνου στην κάτω δεξιά γωνία της οθόνης προτάσεων αναζήτησης</string>
   <string name="morphe_hide_get_premium_button_title">Απόκρυψη κουμπιού \"Απόκτηση Premium\"</string>
+  <string name="morphe_hide_history_shelf_title">Απόκρυψη ραφιού Ιστορικού</string>
+  <string name="morphe_hide_history_shelf_summary">Αποκρύπτει το ράφι Ιστορικού στην καρτέλα Εσείς</string>
   <string name="morphe_hide_horizontal_shelves_title">Απόκρυψη \"Οριζοντίων Ραφιών\"</string>
   <string name="morphe_hide_horizontal_shelves_summary">Κρύβει οριζόντια ράφια όπως Επικαιρότητα, Δημοσιεύσεις κοινότητας που μπορεί να σας αρέσουν, Συνέχεια παρακολούθησης, Εξερεύνηση περισσότερων καναλιών, Εξερεύνηση περισσότερων θεμάτων, Για εσάς, Πιο πρόσφατα βίντεο, Πιο σχετικά, Δημοσιεύσεις από την κοινότητα του δημιουργού, Αγορές και Παρακολουθήστε ξανά</string>
   <string name="morphe_hide_hyped_label_title">Απόκρυψη ετικέτας \"Δημοφιλή\"</string>
@@ -106,6 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Απόκρυψη κουμπιού \"Εμφάνιση περισσότερων\" στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_show_more_button_summary">Απόκρυψη του κουμπιού επέκτασης κάτω από τα βίντεο στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Απόκρυψη μπάρας \"Εγγεγραμμένων καναλιών\"</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Απόκρυψη ονομάτων καναλιών στη γραμμή συνδρομημένων καναλιών</string>
   <string name="morphe_hide_surveys_title">Έρευνες</string>
   <string name="morphe_hide_surveys_summary">Κρύβει έρευνες και προτάσεις σχετικά με την ακρίβεια των προτάσεων ροής</string>
   <string name="morphe_hide_ticket_shelf_title">Ενότητα εισιτηρίων</string>
@@ -268,9 +271,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_title">Προεπισκόπηση σχολίου</string>
   <string name="morphe_hide_comments_preview_comment_summary">Απόκρυψη της προεπισκόπησης σχολίων κάτω από το βίντεο πριν ανοίξετε την πλήρη ενότητα σχολίων</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Σχόλιο κρυμμένο από τον Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Ενεργοποίηση μίνιμαλ κουμπιού σχολίων</string>
+  <string name="morphe_minimal_comments_button_summary">Αποκρύπτει τις συρόμενες κάρτες και τον επιλογέα σελίδας τους, που εμφανίζονται στο κουμπί σχολίων.</string>
   <string name="morphe_hide_comments_thanks_button_title">Κουμπί «Σας ευχαριστούμε»</string>
   <string name="morphe_hide_comments_timestamp_button_title">Απόκρυψη κουμπιού ώρας</string>
   <string name="morphe_hide_comments_top_fans_button_title">Απόκρυψη κουμπιού \'Κορυφαίοι θαυμαστές\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Απόκρυψη κουμπιού Μετάφρασης</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Απολυμαίνετε τις διασυνδεδεμένες αναζητήσεις</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Απολυμαίνει τις διασυνδεδεμένες αναζητήσεις, αφήνοντας μόνο το αρχικό απλό κείμενο</string>
   <string name="morphe_hide_keyword_content_screen_title">Φίλτρο λέξεων-κλειδιών</string>
@@ -746,6 +752,7 @@ Second \"item\" text"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Ανταλλάξτε το κουμπί Δημιουργία με το κουμπί Ειδοποιήσεις</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Εάν η αλλαγή αυτής της ρύθμισης δεν έχει αποτέλεσμα, δοκιμάστε να μεταβείτε σε λειτουργία ανώνυμης περιήγησης</string>
   <string name="morphe_hide_navigation_button_labels_title">Ονομασίες κουμπιών γραμμής πλοήγησης</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Απόκρυψη κουκκίδας νέου περιεχομένου</string>
   <string name="morphe_hide_navigation_bar_title">Γραμμή πλοήγησης</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Αυτό κρύβει εντελώς τη γραμμή πλοήγησης, συμπεριλαμβανομένου του 'Εγώ' tab.
 

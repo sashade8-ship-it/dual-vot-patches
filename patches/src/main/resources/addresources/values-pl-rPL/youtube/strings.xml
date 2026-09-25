@@ -75,6 +75,8 @@ Zmiany obejmują:
   <string name="morphe_hide_floating_microphone_button_title">Ukryj pływający przycisk mikrofonu</string>
   <string name="morphe_hide_floating_microphone_button_summary">Ukrywa pływający przycisk mikrofonu w prawym dolnym rogu na ekranie sugestii wyszukiwania</string>
   <string name="morphe_hide_get_premium_button_title">Ukryj przycisk \"Kup Premium\"</string>
+  <string name="morphe_hide_history_shelf_title">Ukryj sekcję Historia</string>
+  <string name="morphe_hide_history_shelf_summary">Ukrywa sekcję Historia w zakładce Ty</string>
   <string name="morphe_hide_horizontal_shelves_title">Ukryj sekcje poziome</string>
   <string name="morphe_hide_horizontal_shelves_summary">Ukrywa poziome sekcje, takie jak Najważniejsze wiadomości, Posty, które mogą Cię zainteresować, Kontynuuj oglądanie, Odkryj więcej kanałów, Odkryj więcej tematów, Dla Ciebie, Najnowsze filmy, Najbardziej istotne, Posty ze Społeczności twórcy, Zakupy oraz Obejrzyj ponownie</string>
   <string name="morphe_hide_hyped_label_title">Ukryj etykietę podbitych filmów</string>
@@ -106,6 +108,7 @@ Zmiany obejmują:
   <string name="morphe_hide_show_more_button_title">Ukryj przycisk \"Pokaż więcej\"</string>
   <string name="morphe_hide_show_more_button_summary">Ukrywa przycisk rozwijania pod filmami w wynikach wyszukiwania</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Ukryj pasek subskrybowanych kanałów</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Ukryj nazwy kanałów na pasku subskrybowanych kanałów</string>
   <string name="morphe_hide_surveys_title">Ukryj ankiety</string>
   <string name="morphe_hide_surveys_summary">Ukrywa ankiety i monity dotyczące trafności rekomendacji</string>
   <string name="morphe_hide_ticket_shelf_title">Ukryj sekcję biletów</string>
@@ -268,9 +271,12 @@ Zmiany obejmują:
   <string name="morphe_hide_comments_preview_comment_title">Ukryj podgląd komentarza</string>
   <string name="morphe_hide_comments_preview_comment_summary">Ukrywa podgląd komentarza pod filmem przed otwarciem pełnej sekcji komentarzy</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Komentarz ukryty przez Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Włącz minimalistyczny przycisk Komentarze</string>
+  <string name="morphe_minimal_comments_button_summary">Ukrywa przesuwane karty oraz ich selektor stron, które wyświetlają się na przycisku komentarzy</string>
   <string name="morphe_hide_comments_thanks_button_title">Ukryj przycisk Podziękuj</string>
   <string name="morphe_hide_comments_timestamp_button_title">Ukryj przycisk Znacznik czasu</string>
   <string name="morphe_hide_comments_top_fans_button_title">Ukryj przycisk \"Najlepsi odbiorcy\"</string>
+  <string name="morphe_hide_comments_translate_button_title">Ukryj przycisk Przetłumacz</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Oczyść wyróżnione frazy wyszukiwania</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Oczyszcza linkowanie z wyróżnionych fraz wyszukiwania, zostawiając tylko oryginalny, zwykły tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtry słów</string>
@@ -746,6 +752,7 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Zamień przycisk Utwórz z przyciskiem Powiadomienia</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Jeśli zmiana tego ustawienia nie przyniesie efektu, spróbuj przełączyć się w tryb incognito</string>
   <string name="morphe_hide_navigation_button_labels_title">Ukryj etykiety przycisków nawigacji</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Ukryj kropkę nowych treści</string>
   <string name="morphe_hide_navigation_bar_title">Ukryj pasek nawigacji</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"To całkowicie ukrywa pasek nawigacji, w tym zakładkę \"Ty\".
 

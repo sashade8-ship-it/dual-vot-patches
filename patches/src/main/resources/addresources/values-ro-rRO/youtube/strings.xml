@@ -75,6 +75,8 @@ Schimbari incluse:
   <string name="morphe_hide_floating_microphone_button_title">Ascunderea butonului microfon plutitor</string>
   <string name="morphe_hide_floating_microphone_button_summary">Ascunde butonul plutitor al microfonului în colțul din dreapta jos al ecranului de sugestii de căutare</string>
   <string name="morphe_hide_get_premium_button_title">Ascunde butonul \'Obține Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Ascunde secțiunea Istoric</string>
+  <string name="morphe_hide_history_shelf_summary">Ascunde secțiunea Istoric din fila Tu</string>
   <string name="morphe_hide_horizontal_shelves_title">Ascunde rafturile orizontale</string>
   <string name="morphe_hide_horizontal_shelves_summary">Ascunde rafturile orizontale, cum ar fi Știri de ultimă oră, Postări din comunitate care s-ar putea să-ți placă, Continuă să urmărești, Explorează mai multe canale, Explorează mai multe subiecte, Pentru tine, Ultimele videoclipuri, Cele mai relevante, Postări din comunitatea creatorului, Cumpărături și Urmărește din nou</string>
   <string name="morphe_hide_hyped_label_title">Ascunde eticheta \"În tendințe\"</string>
@@ -106,6 +108,7 @@ Schimbari incluse:
   <string name="morphe_hide_show_more_button_title">Ascunderea butonului „Afișează mai multe”</string>
   <string name="morphe_hide_show_more_button_summary">Ascunde butonul de extindere de sub videoclipuri în rezultatele căutării</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Ascunde bara cu canale abonate</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Ascunde numele canalelor din bara de canale abonate</string>
   <string name="morphe_hide_surveys_title">Ascunde sondajele</string>
   <string name="morphe_hide_surveys_summary">Ascunde sondaje și sugestii despre acuratețea recomandărilor pentru fluxul de conținut</string>
   <string name="morphe_hide_ticket_shelf_title">Ascunde raftul de bilete</string>
@@ -268,9 +271,12 @@ Schimbari incluse:
   <string name="morphe_hide_comments_preview_comment_title">Ascunde previzualizarea comentariului</string>
   <string name="morphe_hide_comments_preview_comment_summary">Ascunde previzualizarea comentariului de sub videoclip înainte de a deschide secțiunea completă de comentarii</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Comentariu ascuns de Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Activează butonul minimal de comentarii</string>
+  <string name="morphe_minimal_comments_button_summary">Ascunde cardurile glisante și selectorul de pagini al acestora de pe butonul de comentarii</string>
   <string name="morphe_hide_comments_thanks_button_title">Ascunde butonul „Mulțumesc”</string>
   <string name="morphe_hide_comments_timestamp_button_title">Ascunde butonul Timestamp</string>
   <string name="morphe_hide_comments_top_fans_button_title">Ascunde butonul \'Top fani\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Ascunde butonul de traducere</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Dezactivează legăturile de căutare evidențiate</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Dezactivează legăturile de căutare evidențiate, afișând doar textul original simplu</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtru de cuvinte-cheie</string>
@@ -746,6 +752,7 @@ Trebuie furnizate „Cookie-uri pentru subtitrări”"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Inversează butonul Creare cu butonul Notificări</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Dacă schimbarea acestei setări nu are efect, încercați să comutați la modul Incognito</string>
   <string name="morphe_hide_navigation_button_labels_title">Ascunde etichetele butoanelor de navigare</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Ascunde punctul de conținut nou</string>
   <string name="morphe_hide_navigation_bar_title">Ascunde bara de navigare</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Aceasta ascunde complet bara de navigare, inclusiv fila 'You'.
 

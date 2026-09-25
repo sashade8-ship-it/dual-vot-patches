@@ -75,6 +75,8 @@ Veranderings sluit in:
   <string name="morphe_hide_floating_microphone_button_title">Deaktiveer mikrofoonknoppie wat vry dryf</string>
   <string name="morphe_hide_floating_microphone_button_summary">Verberg drywende mikrofoon-knoppie in die onderste regterhoek van soekvoorstelle skerm</string>
   <string name="morphe_hide_get_premium_button_title">Verberg \'kry Premium\'-knoppie</string>
+  <string name="morphe_hide_history_shelf_title">Versteek geskiedenisrak</string>
+  <string name="morphe_hide_history_shelf_summary">Versteek die geskiedenisrak in die Jy-oortjie</string>
   <string name="morphe_hide_horizontal_shelves_title">Verberg horisontale rakke</string>
   <string name="morphe_hide_horizontal_shelves_summary">Verberg horisontale rakke soos Breaking news, Gemeenskapinskrywings wat jy dalk wil hê, Gaan voort om te kyk, Verken meer kanale, Verken meer onderwerpe, Vir jou, Nuutste video\'s, Mees relevante, Inskrywings van Skepper se Gemeenskap, Winkels en Kyk dit weer</string>
   <string name="morphe_hide_hyped_label_title">Versteek Hip-etiket</string>
@@ -106,6 +108,7 @@ Veranderings sluit in:
   <string name="morphe_hide_show_more_button_title">Verberg \'Wys meer\'-knoppie</string>
   <string name="morphe_hide_show_more_button_summary">Verberg die uitbreidingsknoppie onder video\'s in die soekresultate</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Versteek intekenaar-kanaalbalk</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Versteek kanaalname in die geabonneerde kanale-balk</string>
   <string name="morphe_hide_surveys_title">Verberg noodbokse</string>
   <string name="morphe_hide_surveys_summary">Verberg opnames en aansporings oor voer-aanbevelings akkuraatheid</string>
   <string name="morphe_hide_ticket_shelf_title">Verberg mediese panele</string>
@@ -268,9 +271,12 @@ Veranderings sluit in:
   <string name="morphe_hide_comments_preview_comment_title">Verberg voorskou kommentaar</string>
   <string name="morphe_hide_comments_preview_comment_summary">Verberg die kommentaar voorbeskouing onder video voordat die volledige kommentaar afdeling oopmaak</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Kommentaar versteek deur Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Aktiveer minimale kommentaarknoppie</string>
+  <string name="morphe_minimal_comments_button_summary">Versteek die glykaarte en sy bladsykieser wat op die kommentaarknoppie vertoon word</string>
   <string name="morphe_hide_comments_thanks_button_title">Verberg Dankie knoppie</string>
   <string name="morphe_hide_comments_timestamp_button_title">Verberg Tydstempel-knoppie</string>
   <string name="morphe_hide_comments_top_fans_button_title">Versteek die \'Top fans\'-knoppie</string>
+  <string name="morphe_hide_comments_translate_button_title">Versteek vertaalknoppie</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Saniteer uitgeligte soekskakels</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Saniteer uitgeligte soekskakels en laat slegs die oorspronklike platte teks oor</string>
   <string name="morphe_hide_keyword_content_screen_title">Sleutelwoord filter</string>
@@ -746,6 +752,7 @@ Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkli
   <string name="morphe_swap_create_with_notifications_button_title">Ruil die \'Skep\'-knoppie met die \'Kennisgewings\'-knoppie</string>
   <string name="morphe_swap_create_with_notifications_button_summary">As die verandering van hierdie instelling nie effektief is nie, probeer om na incognitomodus oor te skakel</string>
   <string name="morphe_hide_navigation_button_labels_title">Wegspringnavigasieknoppielabels</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Versteek nuwe inhoudkolletjie</string>
   <string name="morphe_hide_navigation_bar_title">Versteek navigasiebalk</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Dit verberg die navigasiebalk heeltemal, insluitend die 'Jy' oortjie.
 

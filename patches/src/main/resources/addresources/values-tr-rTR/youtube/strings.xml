@@ -75,6 +75,8 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_floating_microphone_button_title">Yüzen mikrofon düğmesini gizle</string>
   <string name="morphe_hide_floating_microphone_button_summary">Arama önerileri ekranının sağ alt köşesindeki yüzen mikrofon düğmesini gizler</string>
   <string name="morphe_hide_get_premium_button_title">\'Get Premium\' düğmesini gizle</string>
+  <string name="morphe_hide_history_shelf_title">Geçmiş rafını gizle</string>
+  <string name="morphe_hide_history_shelf_summary">Sen sekmesindeki Geçmiş rafını gizler</string>
   <string name="morphe_hide_horizontal_shelves_title">Yatay rafları gizle</string>
   <string name="morphe_hide_horizontal_shelves_summary">Son dakika haberleri, Beğenebileceğiniz topluluk gönderileri, İzlemeye devam et, Daha fazla kanal keşfet, Daha fazla konu keşfet, Senin için, En yeni videolar, En alakalı, İçerik Üreticisi Topluluğu\'ndan gönderiler, Alışveriş ve Tekrar izle gibi yatay rafları gizler</string>
   <string name="morphe_hide_hyped_label_title">Hyped etiketini gizle</string>
@@ -106,6 +108,7 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_show_more_button_title">\'Daha fazla göster\' düğmesini gizle</string>
   <string name="morphe_hide_show_more_button_summary">Arama sonuçlarında videoların altındaki genişlet düğmesini gizler</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Abone olunmuş kanallar çubuğunu gizle</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Abone olunan kanallar çubuğunda kanal adlarını gizle</string>
   <string name="morphe_hide_surveys_title">Anketleri gizle</string>
   <string name="morphe_hide_surveys_summary">Akış öneri doğruluğuyla ilgili anketleri ve hatırlatmaları gizler</string>
   <string name="morphe_hide_ticket_shelf_title">Bilet rafını gizle</string>
@@ -268,9 +271,12 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_comments_preview_comment_title">Ön izlenen yorumu gizle</string>
   <string name="morphe_hide_comments_preview_comment_summary">Tam yorumlar bölümünü açmadan önce videonun altındaki yorum ön izlemesini gizler</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Yorum Morphe tarafından gizlendi...</string>
+  <string name="morphe_minimal_comments_button_title">Minimal yorumlar düğmesini etkinleştir</string>
+  <string name="morphe_minimal_comments_button_summary">Yorumlar düğmesinde görüntülenen kayan kartları ve sayfa seçicisini gizler</string>
   <string name="morphe_hide_comments_thanks_button_title">Teşekkürler düğmesini gizle</string>
   <string name="morphe_hide_comments_timestamp_button_title">Zaman damgası düğmesini gizle</string>
   <string name="morphe_hide_comments_top_fans_button_title">\'En iyi hayranlar\' düğmesini gizle</string>
+  <string name="morphe_hide_comments_translate_button_title">Çevir düğmesini gizle</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Öne çıkan arama bağlantılarını temizle</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Öne çıkan arama bağlantılarını temizler, yalnızca orijinal düz metni bırakır</string>
   <string name="morphe_hide_keyword_content_screen_title">Anahtar kelime filtresi</string>
@@ -746,6 +752,7 @@ Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini etkinleştir
   <string name="morphe_swap_create_with_notifications_button_title">Oluştur düğmesini Bildirimler düğmesiyle değiştir</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Bu ayarı değiştirmek etkili olmazsa, Gizli moda geçmeyi deneyin</string>
   <string name="morphe_hide_navigation_button_labels_title">Gezinme düğmesi etiketlerini gizle</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Yeni içerik noktasını gizle</string>
   <string name="morphe_hide_navigation_bar_title">Gezinme çubuğunu gizle</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Bu, 'Siz' sekmesi de dahil olmak üzere gezinme çubuğunu tamamen gizler.
 

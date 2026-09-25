@@ -91,19 +91,19 @@ Las pistas descargadas aparecen aquí"</string>
   <string name="morphe_music_hide_video_ads_title">Ocultar anuncios de vídeo</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Ocultar selector Audio / Vídeo</string>
-  <string name="morphe_music_hide_explore_shelf_title">Ocultar sección Explorar</string>
+  <string name="morphe_music_hide_explore_shelf_title">Ocultar estantería Explorar</string>
   <string name="morphe_music_hide_grid_shelves_title">Ocultar secciones en cuadrícula</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Ocultar secciones horizontales</string>
   <string name="morphe_music_hide_list_shelves_title">Ocultar secciones en lista</string>
   <string name="morphe_music_hide_lyrics_panel_category_title">Panel de letras</string>
   <string name="morphe_music_hide_lyrics_share_button_title">Ocultar botón Compartir</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Ocultar botón Traducir</string>
-  <string name="morphe_music_hide_new_from_shelf_title">Ocultar sección \'Novedades de\'</string>
+  <string name="morphe_music_hide_new_from_shelf_title">Ocultar estantería \'Novedades de\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Ocultar secciones de listas de reproducción</string>
   <string name="morphe_music_hide_podcast_episode_download_button_title">Ocultar botón Descargar de episodios de podcast</string>
   <string name="morphe_music_hide_repeat_button_title">Ocultar botón Repetir</string>
   <string name="morphe_music_hide_shuffle_button_title">Ocultar botón Aleatorio</string>
-  <string name="morphe_music_hide_speed_dial_shelf_title">Ocultar sección \'Acceso rápido\'</string>
+  <string name="morphe_music_hide_speed_dial_shelf_title">Ocultar estantería \'Acceso rápido\'</string>
   <string name="morphe_music_comments_screen_title">Comentarios</string>
   <string name="morphe_music_comments_screen_summary">Elige qué componentes aparecen en la sección de comentarios</string>
   <string name="morphe_music_hide_comments_community_guidelines_title">Ocultar normas de la comunidad</string>
@@ -190,6 +190,8 @@ YouTube Music 8.x: el fundido entre canciones solo funciona en la versión 9.x y
   <string name="morphe_music_hide_search_button_title">Ocultar botón de búsqueda</string>
   <string name="morphe_music_hide_voice_search_button_title">Ocultar botón de búsqueda por voz</string>
   <string name="morphe_music_hide_sound_search_button_title">Ocultar botón de búsqueda por sonido</string>
+  <string name="morphe_music_hide_library_new_button_title">Ocultar botón Nueva</string>
+  <string name="morphe_music_hide_library_new_button_summary">Oculta el botón Nueva en la pestaña Biblioteca</string>
   <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
   <string name="morphe_music_action_buttons_screen_title">Botones de acción</string>
   <string name="morphe_music_action_buttons_screen_summary">Elige qué botones de acción aparecen debajo del reproductor</string>

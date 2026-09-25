@@ -75,6 +75,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">Плаващ бутон за микрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary">Скрива плаващия бутон за микрофон в долния десен ъгъл на екрана за предложения за търсене</string>
   <string name="morphe_hide_get_premium_button_title">Скриване на бутона \"Получи Premium\"</string>
+  <string name="morphe_hide_history_shelf_title">Скриване на рафта „История“</string>
+  <string name="morphe_hide_history_shelf_summary">Скрива рафта „История“ в раздела „Ти“</string>
   <string name="morphe_hide_horizontal_shelves_title">Хоризонтални секции</string>
   <string name="morphe_hide_horizontal_shelves_summary">Скрива хоризонтални рафтове като Актуални новини, Публикации от общността, които може да ви харесат, Продължете да гледате, Разгледайте повече канали, Разгледайте повече теми, За вас, Последни видеа, Най-подходящи, Публикации от общността на автора, Пазаруване и Гледайте отново</string>
   <string name="morphe_hide_hyped_label_title">Скриване на етикета \"Популярно\"</string>
@@ -106,6 +108,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Скриване на бутона \"Покажи още\"</string>
   <string name="morphe_hide_show_more_button_summary">Скрива бутона „Разгъване“ под видеата в резултатите от търсенето</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Скриване на лентата на подписаните канали</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Скриване на имената на каналите в лентата на абонираните канали</string>
   <string name="morphe_hide_surveys_title">Скриване на анкетите</string>
   <string name="morphe_hide_surveys_summary">Скрива проучвания и подкани относно точността на препоръките за канала</string>
   <string name="morphe_hide_ticket_shelf_title">Скриване на рафта за билети</string>
@@ -268,9 +271,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_title">Скрийте предварителен коментар</string>
   <string name="morphe_hide_comments_preview_comment_summary">Скрива предварителния преглед на коментара под видеото, преди да се отвори пълната секция с коментари</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Коментарът е скрит от Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Включване на минимален бутон за коментари</string>
+  <string name="morphe_minimal_comments_button_summary">Скрива плъзгащите се карти и техния селектор за страници, показани на бутона за коментари</string>
   <string name="morphe_hide_comments_thanks_button_title">Скрийте бутона \'Благодаряне\'</string>
   <string name="morphe_hide_comments_timestamp_button_title">Скриване на бутона за времето</string>
   <string name="morphe_hide_comments_top_fans_button_title">Скриване на бутона „Топ фенове“</string>
+  <string name="morphe_hide_comments_translate_button_title">Скриване на бутона „Преведи“</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Пречистване на подчертаните връзки от търсенето</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Пречиства връзките от търсенето, оставяйки само оригиналния обикновен текст</string>
   <string name="morphe_hide_keyword_content_screen_title">Филтър по ключова дума</string>
@@ -746,6 +752,7 @@ Second \"item\" text"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Разменя бутона \"Създаване\" с бутона \"Известия\"</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Ако промяната на тази настройка не влезе в сила, опитайте да превключите в режим на инкогнито</string>
   <string name="morphe_hide_navigation_button_labels_title">Етикетите са скрити</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Скриване на точката за ново съдържание</string>
   <string name="morphe_hide_navigation_bar_title">Скриване на лентата за навигация</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Това напълно скрива навигационната лента, включително раздела 'You'.
 

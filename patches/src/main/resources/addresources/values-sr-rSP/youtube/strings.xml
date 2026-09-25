@@ -75,6 +75,8 @@ Promene uključuju:
   <string name="morphe_hide_floating_microphone_button_title">Сакриј плутајуће дугме микрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary">Саскрива плутајући дугме за микрофон у доњем десном углу екрана предлога за претрагу</string>
   <string name="morphe_hide_get_premium_button_title">Сакриј дугме „Набави Премиум”</string>
+  <string name="morphe_hide_history_shelf_title">Сакриј полицу историје</string>
+  <string name="morphe_hide_history_shelf_summary">Сакрива полицу историје у картици „Ви“.</string>
   <string name="morphe_hide_horizontal_shelves_title">Сакриј хоризонталне полице</string>
   <string name="morphe_hide_horizontal_shelves_summary">Сакрива хоризонталне полице као што су „Брзе вести“, „Објаве из заједнице које би вам могле задолити“, „Настави гледање“, „Истражите више канала“, „Истражите више тема“, „За вас“, „Најновији видео снимци“, „Најрелевантнији“, „Објаве из заједнице креатора“, „Куповина“ и „Поново гледај“</string>
   <string name="morphe_hide_hyped_label_title">Сакриј ознаку \"Ускоро\"</string>
@@ -106,6 +108,7 @@ Promene uključuju:
   <string name="morphe_hide_show_more_button_title">Сакриј дугме „Прикажи још”</string>
   <string name="morphe_hide_show_more_button_summary">Саскрива дугме за проширење испод видео снимака у резултатима претраге</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Скријте траку претплаћених канала</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Сакриј називе канала у траци претплаћених канала</string>
   <string name="morphe_hide_surveys_title">Сакриј анкете</string>
   <string name="morphe_hide_surveys_summary">Сакрива анкете и подстицаје у вези са тачношћу препорука фида</string>
   <string name="morphe_hide_ticket_shelf_title">Сакриј полицу са картама</string>
@@ -268,9 +271,12 @@ Promene uključuju:
   <string name="morphe_hide_comments_preview_comment_title">Сакриј коментар за преглед</string>
   <string name="morphe_hide_comments_preview_comment_summary">Саскрива преглед коментара испод видеа пре отварања пуног одељка за коментаре</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Коментар сакривен од стране Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Омогући минимално дугме за коментаре</string>
+  <string name="morphe_minimal_comments_button_summary">Сакрива клизне картице и њихов селектор страница, који су приказани на дугмету за коментаре.</string>
   <string name="morphe_hide_comments_thanks_button_title">Сакриј дугме „Хвала”</string>
   <string name="morphe_hide_comments_timestamp_button_title">Сакриј дугме за временску ознаку</string>
   <string name="morphe_hide_comments_top_fans_button_title">Сакриј дугме „Топ фанови“</string>
+  <string name="morphe_hide_comments_translate_button_title">Сакриј дугме „Преведи“</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Дезинфикуј истакнуте линкове претраге</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Дезинфикује истакнуте линкове претраге, остављајући само оригинални чисти текст</string>
   <string name="morphe_hide_keyword_content_screen_title">Филтер кључних речи</string>
@@ -744,6 +750,7 @@ Promene uključuju:
   <string name="morphe_swap_create_with_notifications_button_title">Замените дугме „Направи“ дугметом „Обавештења“</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Ако промена ове поставке не ступи на снагу, покушајте да пређете у режим инкогнита</string>
   <string name="morphe_hide_navigation_button_labels_title">Сакриј ознаке дугмади за навигацију</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Сакриј тачку новог садржаја</string>
   <string name="morphe_hide_navigation_bar_title">Сакриј траку за навигацију</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Ово потпуно скрива траку навигације, укључујући и картицу 'Ти'.
 

@@ -80,6 +80,8 @@ Changes include:
     <string name="morphe_hide_floating_microphone_button_title">Hide floating microphone button</string>
     <string name="morphe_hide_floating_microphone_button_summary">Hides floating microphone button in the lower-right corner of search suggestions screen</string>
     <string name="morphe_hide_get_premium_button_title">Hide \'Get Premium\' button</string>
+    <string name="morphe_hide_history_shelf_title">Hide History shelf</string>
+    <string name="morphe_hide_history_shelf_summary">Hides the History shelf in the You tab</string>
     <string name="morphe_hide_horizontal_shelves_title">Hide horizontal shelves</string>
     <string name="morphe_hide_horizontal_shelves_summary">Hides horizontal shelves such as Breaking news, Community posts you may like, Continue watching, Explore more channels, Explore more topics, For You, Latest videos, Most relevant, Posts from Creator\'s Community, Shopping, and Watch it again</string>
     <string name="morphe_hide_hyped_label_title">Hide Hyped label</string>
@@ -111,6 +113,7 @@ Changes include:
     <string name="morphe_hide_show_more_button_title">Hide \'Show more\' button</string>
     <string name="morphe_hide_show_more_button_summary">Hides the expand button under videos in the search results</string>
     <string name="morphe_hide_subscribed_channels_bar_title">Hide subscribed channels bar</string>
+    <string name="morphe_hide_subscribed_channels_bar_names_title">Hide channel names in subscribed channels bar</string>
     <string name="morphe_hide_surveys_title">Hide surveys</string>
     <string name="morphe_hide_surveys_summary">Hide surveys and nudges about feed recommendation accuracy</string>
     <string name="morphe_hide_ticket_shelf_title">Hide ticket shelf</string>
@@ -279,9 +282,12 @@ Changes include:
     <string name="morphe_hide_comments_preview_comment_title">Hide preview comment</string>
     <string name="morphe_hide_comments_preview_comment_summary">Hides the comment preview under video before opening the full comments section</string>
     <string name="morphe_hide_comments_preview_comment_hidden">Comment hidden by Morphe...</string>
+    <string name="morphe_minimal_comments_button_title">Enable minimal comments button</string>
+    <string name="morphe_minimal_comments_button_summary">Hides the sliding cards and its page selector, displayed on the comments button</string>
     <string name="morphe_hide_comments_thanks_button_title">Hide Thanks button</string>
     <string name="morphe_hide_comments_timestamp_button_title">Hide Timestamp button</string>
     <string name="morphe_hide_comments_top_fans_button_title">Hide \'Top fans\' button</string>
+    <string name="morphe_hide_comments_translate_button_title">Hide Translate button</string>
     <string name="morphe_sanitize_comments_highlighted_search_links_title">Sanitize highlighted search links</string>
     <string name="morphe_sanitize_comments_highlighted_search_links_summary">Sanitizes highlighted search links, leaving only the original plain text</string>
 
@@ -806,6 +812,7 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swap_create_with_notifications_button_title">Swap Create button with Notifications button</string>
     <string name="morphe_swap_create_with_notifications_button_summary">If changing this setting does not take effect, try switching to Incognito mode</string>
     <string name="morphe_hide_navigation_button_labels_title">Hide navigation button labels</string>
+    <string name="morphe_hide_navigation_new_content_dot_title">Hide new content dot</string>
     <string name="morphe_hide_navigation_bar_title">Hide navigation bar</string>
     <string name="morphe_hide_navigation_bar_user_dialog_message">"This completely hides the navigation bar, including the \'You\' tab.
 

@@ -75,6 +75,8 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_floating_microphone_button_title">Nascondi il pulsante flottante del microfono</string>
   <string name="morphe_hide_floating_microphone_button_summary">Nasconde il pulsante mobile del microfono nell\'angolo in basso a destra dello schermo dei suggerimenti di ricerca</string>
   <string name="morphe_hide_get_premium_button_title">Nascondi il pulsante \'Ottieni Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Nascondi la sezione Cronologia</string>
+  <string name="morphe_hide_history_shelf_summary">Nasconde la sezione Cronologia nella scheda Tu</string>
   <string name="morphe_hide_horizontal_shelves_title">Nascondi sezioni orizzontali</string>
   <string name="morphe_hide_horizontal_shelves_summary">Nasconde gli scaffali orizzontali come Notizie dell\'ultima ora, Post della community che potrebbero piacerti, Continua a guardare, Esplora altri canali, Esplora altri argomenti, Per te, Video più recenti, Più rilevanti, Post dalla community del creatore, Shopping e Guarda di nuovo</string>
   <string name="morphe_hide_hyped_label_title">Nascondi etichetta Hype</string>
@@ -106,6 +108,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_show_more_button_title">Nascondi il pulsante \'Mostra di più\'</string>
   <string name="morphe_hide_show_more_button_summary">Nasconde il pulsante di espansione sotto i video nei risultati della ricerca</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Nascondi la barra dei canali iscritti</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Nascondi i nomi dei canali nella barra dei canali a cui sei iscritto</string>
   <string name="morphe_hide_surveys_title">Nascondi sondaggi</string>
   <string name="morphe_hide_surveys_summary">Nasconde i sondaggi e i suggerimenti relativi alla precisione dei consigli nel feed</string>
   <string name="morphe_hide_ticket_shelf_title">Nascondi la sezione dei biglietti</string>
@@ -268,9 +271,12 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_comments_preview_comment_title">Nascondi il commento di anteprima</string>
   <string name="morphe_hide_comments_preview_comment_summary">Nasconde l\'anteprima del commento sotto il video prima di aprire la sezione commenti completa</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Commento nascosto da Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Abilita il pulsante minimale dei commenti</string>
+  <string name="morphe_minimal_comments_button_summary">Nasconde le card scorrevoli e il relativo selettore di pagina, mostrati sul pulsante dei commenti</string>
   <string name="morphe_hide_comments_thanks_button_title">Nascondi il pulsante Grazie</string>
   <string name="morphe_hide_comments_timestamp_button_title">Nascondi il pulsante Data</string>
   <string name="morphe_hide_comments_top_fans_button_title">Nascondi il pulsante \'Migliori fan\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Nascondi il pulsante Traduci</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Disattiva l\'evidenziazione dei link di ricerca, lasciando solo il testo originale</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Disattiva l\'evidenziazione dei link di ricerca, lasciando solo il testo originale</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtro parole chiave</string>
@@ -746,6 +752,7 @@ Per risolvere, attiva 'Spoof dei flussi video' e cambia il 'Client predefinito' 
   <string name="morphe_swap_create_with_notifications_button_title">Scambia il pulsante Crea con il pulsante Notifiche</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Se il cambiamento di questa impostazione non ha effetto, prova a passare alla modalità Incognito</string>
   <string name="morphe_hide_navigation_button_labels_title">Nascondi etichette dei pulsanti di navigazione</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Nascondi il punto dei nuovi contenuti</string>
   <string name="morphe_hide_navigation_bar_title">Nascondi la barra di navigazione</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Questo nasconde completamente la barra di navigazione, compresa la scheda 'Tu'.
 

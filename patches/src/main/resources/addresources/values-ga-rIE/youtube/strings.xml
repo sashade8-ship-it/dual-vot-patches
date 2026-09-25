@@ -75,6 +75,8 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_floating_microphone_button_title">Folaigh an cnaipe micreafón ar snámh</string>
   <string name="morphe_hide_floating_microphone_button_summary">Folaíonn sé cnaipe an mhicreafóin ar snámh sa chúinne íochtarach ar dheis de scáileán na moltaí cuardaigh</string>
   <string name="morphe_hide_get_premium_button_title">Folaigh an cnaipe \'Get Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Folaigh an tseilf staire</string>
+  <string name="morphe_hide_history_shelf_summary">Folaíonn sé an tseilf staire sa chluaisín You</string>
   <string name="morphe_hide_horizontal_shelves_title">Folaigh seilfeanna cothrománacha</string>
   <string name="morphe_hide_horizontal_shelves_summary">Folaíonn sé seilfeanna cothrománacha amhail Nuacht Briste, Poist Pobail a d’fhéadfadh a bheith spéisiúil duit, Lean ort ag breathnú, Iniúchadh a dhéanamh ar níos mó bealaí, Iniúchadh a dhéanamh ar níos mó topaicí, Duitse, Físeáin is déanaí, Is ábhartha, Poist ó Phobal an Chruthaitheora, Siopadóireacht, agus Féach air arís</string>
   <string name="morphe_hide_hyped_label_title">Folaigh an lipéad \'hype\'</string>
@@ -106,6 +108,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_show_more_button_title">Folaigh an cnaipe \'Taispeáin níos mó\'</string>
   <string name="morphe_hide_show_more_button_summary">Folaíonn sé an cnaipe leathnaithe faoi fhíseáin sna torthaí cuardaigh</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Folaigh barra na gcainéal suibscríofa</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Folaigh ainmneacha cainéal i mbarra na gcainéal suibscríofa</string>
   <string name="morphe_hide_surveys_title">Folaigh suirbhéanna</string>
   <string name="morphe_hide_surveys_summary">Folaigh suirbhéanna agus brúidí faoi chruinneas moltaí beatha</string>
   <string name="morphe_hide_ticket_shelf_title">Folaigh an seilf ticéad</string>
@@ -268,9 +271,12 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_comments_preview_comment_title">Folaigh trácht réamhamharc</string>
   <string name="morphe_hide_comments_preview_comment_summary">Folaíonn sé réamhamharc na dtuairimí faoin bhfíseán sula n-osclaítear an chuid iomlán de na tuairimí</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Trácht i bhfolach ag Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Cumasaigh an cnaipe íosta tráchtaí</string>
+  <string name="morphe_minimal_comments_button_summary">Folaíonn sé na cártaí sleamhnáin agus a roghnóir leathanaigh, a thaispeántar ar an gcnaipe tráchtaí</string>
   <string name="morphe_hide_comments_thanks_button_title">Folaigh an cnaipe Buíochais</string>
   <string name="morphe_hide_comments_timestamp_button_title">Cnaipe Folaigh an Stampa Ama</string>
   <string name="morphe_hide_comments_top_fans_button_title">Folaigh cnaipe \'Top fans\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Folaigh an cnaipe Aistrigh</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Glanadh naisc chuardaigh aibhsithe</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Glanann sé naisc chuardaigh aibhsithe, ag fágáil an téacs simplí bunaidh amháin</string>
   <string name="morphe_hide_keyword_content_screen_title">Scagaire eochairfhocal</string>
@@ -746,6 +752,7 @@ Ní mór 'fianáin fotheidil' a sholáthar."</string>
   <string name="morphe_swap_create_with_notifications_button_title">Malartaigh an cnaipe Cruthaigh leis an gcnaipe Fógraí</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Mura dtiocfaidh athrú ar an socrú seo i bhfeidhm, déan iarracht aistriú go mód Incognito</string>
   <string name="morphe_hide_navigation_button_labels_title">Folaigh lipéid na gcnaipí nascleanúna</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Folaigh ponc ábhair nua</string>
   <string name="morphe_hide_navigation_bar_title">Folaigh an barra nascleanúna</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Cuireann sé seo an barra nascleanúna i bhfolach go hiomlán, an cluaisín 'Tusa' san áireamh.
 

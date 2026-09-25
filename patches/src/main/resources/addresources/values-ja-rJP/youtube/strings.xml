@@ -75,6 +75,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_title">音声入力のフローティング ボタンを非表示</string>
   <string name="morphe_hide_floating_microphone_button_summary">検索候補画面の右下に表示されるマイクボタンを非表示にします</string>
   <string name="morphe_hide_get_premium_button_title">「Premium を購入」ボタンを非表示</string>
+  <string name="morphe_hide_history_shelf_title">履歴欄を非表示</string>
+  <string name="morphe_hide_history_shelf_summary">マイページタブの履歴欄を非表示にします</string>
   <string name="morphe_hide_horizontal_shelves_title">横スクロール欄を非表示</string>
   <string name="morphe_hide_horizontal_shelves_summary">ニュース速報、おすすめのコミュニティ投稿、続きを見る、他のチャンネルを探す、その他のトピック、おすすめ、新着動画、関連が強い、\"チャンネル名\" のコミュニティの投稿、ショッピング、もう一度見る、などの横スクロール欄を非表示にします</string>
   <string name="morphe_hide_hyped_label_title">「大盛り上がり」ラベルを非表示</string>
@@ -105,7 +107,8 @@ Second \"item\" text"</string>
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">「もっと見る」ボタンを非表示</string>
   <string name="morphe_hide_show_more_button_summary">検索結果の動画の下に表示される、展開してより多くの動画を表示するボタンを非表示にします</string>
-  <string name="morphe_hide_subscribed_channels_bar_title">横スクロールする横一列の登録済みチャンネルのリストを非表示</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">登録済みチャンネルの横スクロールバーを非表示</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">登録済みチャンネルの横スクロールバーのチャンネル名を非表示</string>
   <string name="morphe_hide_surveys_title">アンケートを非表示</string>
   <string name="morphe_hide_surveys_summary">フィードのおすすめ精度に関するアンケートやフィードバック要求を非表示にします</string>
   <string name="morphe_hide_ticket_shelf_title">チケット欄を非表示</string>
@@ -245,7 +248,7 @@ Second \"item\" text"</string>
 • 横スワイプ欄を非表示にすると予期しない副作用が引き起こされる可能性がある
 • すべての横スワイプ欄を非表示にした場合、コメント セクションごと表示されなくなる"</string>
   <string name="morphe_hide_comments_carousel_filter_strings_title">横スワイプ欄のフィルタ</string>
-  <string name="morphe_hide_comments_carousel_filter_strings_summary">非表示にするコメント セクションの横スワイプ欄のタイトルを改行区切りで入力してください</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">非表示にする、コメント セクションの横スワイプ欄のタイトルを改行区切りで入力してください</string>
   <string name="morphe_hide_comments_ai_chat_summary_title">AI による「チャットの要約」を非表示</string>
   <string name="morphe_hide_comments_channel_guidelines_title">チャンネルのガイドラインを非表示</string>
   <string name="morphe_hide_comments_contexts_title">コメントの表示方法のヒントを非表示</string>
@@ -268,9 +271,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_preview_comment_title">コメントのプレビューを非表示</string>
   <string name="morphe_hide_comments_preview_comment_summary">コメント欄を開く前に動画の下に表示される、コメントのプレビューを非表示にします</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Morphe によってコメントが非表示になりました</string>
+  <string name="morphe_minimal_comments_button_title">コメント セクションをコンパクト化</string>
+  <string name="morphe_minimal_comments_button_summary">コメント セクションの横スワイプ欄を切り替える機能を無効にし、コンパクトなスタイルで表示します</string>
   <string name="morphe_hide_comments_thanks_button_title">Thanks ボタンを非表示</string>
   <string name="morphe_hide_comments_timestamp_button_title">タイムスタンプ ボタンを非表示</string>
   <string name="morphe_hide_comments_top_fans_button_title">「トップファン」ボタンを非表示</string>
+  <string name="morphe_hide_comments_translate_button_title">翻訳 / 原文ボタンを非表示</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">テキスト内の検索リンクを除去</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">テキスト内の単語やフレーズに埋め込まれた虫眼鏡アイコン付きの検索リンクを取り除き、通常のテキストに戻します</string>
   <string name="morphe_hide_keyword_content_screen_title">キーワード フィルタ</string>
@@ -746,6 +752,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_swap_create_with_notifications_button_title">作成ボタンと通知ボタンを入れ替える</string>
   <string name="morphe_swap_create_with_notifications_button_summary">この設定を変更しても反映されない場合は、シークレット モードへの切り替えをお試しください</string>
   <string name="morphe_hide_navigation_button_labels_title">ボタンをアイコンのみで表示</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">通知ドットを非表示</string>
   <string name="morphe_hide_navigation_bar_title">ナビゲーション バーを非表示</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"この機能は、マイページタブを含むナビゲーション バー全体を完全に非表示にします。
 

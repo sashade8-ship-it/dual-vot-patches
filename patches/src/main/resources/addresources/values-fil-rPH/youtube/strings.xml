@@ -75,6 +75,8 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_floating_microphone_button_title">Itago ang button ng lumulutang na mikropono</string>
   <string name="morphe_hide_floating_microphone_button_summary">Itinatago ang lumulutang na button ng microphone sa ibabang-kanang sulok ng search suggestions screen</string>
   <string name="morphe_hide_get_premium_button_title">Itago ang button na \'Kumuha ng Premium\'</string>
+  <string name="morphe_hide_history_shelf_title">Itago ang History shelf</string>
+  <string name="morphe_hide_history_shelf_summary">Itinatago ang History shelf sa tab na You</string>
   <string name="morphe_hide_horizontal_shelves_title">Itago ang mga horizontal shelf</string>
   <string name="morphe_hide_horizontal_shelves_summary">Itinatago ang mga pahalang na shelf tulad ng Breaking news, Mga post sa Komunidad na maaaring magustuhan mo, Ipagpatuloy ang panonood, Galugarin ang higit pang mga channel, Galugarin ang higit pang mga paksa, Para sa Iyo, Pinakabagong mga video, Pinaka-nauugnay, Mga post mula sa Komunidad ng Creator, Shopping, at Panoorin itong muli</string>
   <string name="morphe_hide_hyped_label_title">Itago ang Hyped label</string>
@@ -106,6 +108,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_show_more_button_title">Itago ang button na \'Magpakita ng higit pa\'</string>
   <string name="morphe_hide_show_more_button_summary">Itinatago ang expand button sa ilalim ng mga video sa mga resulta ng paghahanap</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Itago ang subscribed channels bar</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Itago ang mga pangalan ng channel sa bar ng mga naka-subscribe na channel</string>
   <string name="morphe_hide_surveys_title">Itago ang mga pagsusuri</string>
   <string name="morphe_hide_surveys_summary">Itinatago ang mga survey at mga pahiwatig tungkol sa katumpakan ng rekomendasyon ng feed</string>
   <string name="morphe_hide_ticket_shelf_title">Itago ang ticket shelf</string>
@@ -268,9 +271,12 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_comments_preview_comment_title">Itago ang pasilip na komento</string>
   <string name="morphe_hide_comments_preview_comment_summary">Itinatago ang preview ng komento sa ilalim ng video bago buksan ang buong seksyon ng mga komento</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Komentong itinago ni Morphe...</string>
+  <string name="morphe_minimal_comments_button_title">Paganahin ang minimal na button ng mga komento</string>
+  <string name="morphe_minimal_comments_button_summary">Itinatago ang mga dumudulas na card at ang tagapili ng pahina nito, na ipinapakita sa button ng mga komento</string>
   <string name="morphe_hide_comments_thanks_button_title">Itago ang button na Salamat</string>
   <string name="morphe_hide_comments_timestamp_button_title">Itago ang Timestamp button</string>
   <string name="morphe_hide_comments_top_fans_button_title">Itago ang button na \'Top fans\'</string>
+  <string name="morphe_hide_comments_translate_button_title">Itago ang button na Isalin</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Linisin ang mga naka-highlight na link sa paghahanap</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Nililinis ang mga naka-highlight na link sa paghahanap, at iniiwan lamang ang orihinal na simpleng teksto</string>
   <string name="morphe_hide_keyword_content_screen_title">Filter ng keyword</string>
@@ -746,6 +752,7 @@ Dapat ibigay ang 'Caption cookies'"</string>
   <string name="morphe_swap_create_with_notifications_button_title">Pagpalitin ang button na Create sa button na Notifications</string>
   <string name="morphe_swap_create_with_notifications_button_summary">Kung ang pagbabago sa setting na ito ay hindi magkaroon ng epekto, subukang lumipat sa Incognito mode.</string>
   <string name="morphe_hide_navigation_button_labels_title">Itago ang mga tatak ng navigation button</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">Itago ang tuldok ng bagong nilalaman</string>
   <string name="morphe_hide_navigation_bar_title">Itago ang navigation bar</string>
   <string name="morphe_hide_navigation_bar_user_dialog_message">"Lubos na itinatago nito ang navigation bar, kabilang ang tab na 'You'.
 
