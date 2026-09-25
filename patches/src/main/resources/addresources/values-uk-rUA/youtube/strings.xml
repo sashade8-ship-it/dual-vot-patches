@@ -263,8 +263,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_live_chat_donators_bar_title">Приховати панель спонсорів у живому чаті</string>
   <string name="morphe_hide_comments_live_chat_tooltips_title">Приховати підказки живого чату</string>
   <string name="morphe_hide_comments_live_chat_tooltips_summary">Приховує спливні підказки біля панелі вводу чату, наприклад повідомлення про чат лише для підписників</string>
-  <string name="morphe_hide_comments_menu_button_title">Сховати кнопку меню</string>
-  <string name="morphe_hide_comments_menu_button_summary">Ховає кнопку меню з 3 крапками кожного коментаря</string>
+  <string name="morphe_hide_comments_menu_button_title">Приховати кнопку \"Меню\"</string>
+  <string name="morphe_hide_comments_menu_button_summary">Приховує кнопку меню з трьома крапками для кожного коментаря</string>
   <string name="morphe_hide_comments_preview_comment_title">Приховати прев\'ю коментар</string>
   <string name="morphe_hide_comments_preview_comment_summary">Приховує попередній перегляд коментаря під відео до повного відкриття секції коментарів</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Коментар приховано Morphe...</string>
@@ -387,6 +387,7 @@ Second \"item\" text"</string>
   <!-- interaction.channelsearch.channelSearchPatch -->
   <string name="morphe_channel_search_title">Пошук на каналі</string>
   <string name="morphe_channel_search_summary">Пошук під час відкритого каналу шукає лише в цьому каналі</string>
+  <string name="morphe_channel_search_hint">Пошук на каналі</string>
   <string name="morphe_channel_search_results">Результати пошуку з каналу</string>
   <string name="morphe_channel_search_no_results">Нічого не знайдено на цьому каналі</string>
   <string name="morphe_channel_search_failed">Не вдалося виконати пошук на цьому каналі</string>

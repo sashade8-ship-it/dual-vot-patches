@@ -263,6 +263,8 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_comments_live_chat_donators_bar_title">Canlı söhbət ianəçiləri cərgəsin gizlət</string>
   <string name="morphe_hide_comments_live_chat_tooltips_title">Canlı söhbət tövsiyələrini gizlət</string>
   <string name="morphe_hide_comments_live_chat_tooltips_summary">Söhbətin giriş zolağının yaxınlığında göstərilən tövsiyə pəncərələrini, məsələn, yalnız abunəçi söhbət bildirişini gizlədir</string>
+  <string name="morphe_hide_comments_menu_button_title">Menyu düyməsini gizlət</string>
+  <string name="morphe_hide_comments_menu_button_summary">Hər şərhin 3 nöqtəli menyu düyməsini gizlədir</string>
   <string name="morphe_hide_comments_preview_comment_title">Önbaxış şərhin gizlət</string>
   <string name="morphe_hide_comments_preview_comment_summary">Bütün şərh bölməsin açmazdan əvvəl videonun aşağısında şərh önizləməsini gizlədir</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Morphe tərəfindən gizlədilən şərh...</string>
@@ -385,6 +387,7 @@ AiSlopList.com 'u açmaq və digər platformalar üçün yükləmələri görmə
   <!-- interaction.channelsearch.channelSearchPatch -->
   <string name="morphe_channel_search_title">Kanal daxilində axtar</string>
   <string name="morphe_channel_search_summary">Kanal açıq olarkən axtarış etmək yalnız həmin kanalı axtarır</string>
+  <string name="morphe_channel_search_hint">Kanal axtar</string>
   <string name="morphe_channel_search_results">Kanal axtarış nəticələri</string>
   <string name="morphe_channel_search_no_results">Bu kanalda heç nə tapılmadı</string>
   <string name="morphe_channel_search_failed">Bu kanalda axtarış etmək olmadı</string>

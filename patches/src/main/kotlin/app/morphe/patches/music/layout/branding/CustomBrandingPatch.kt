@@ -28,6 +28,7 @@ import app.morphe.patches.shared.misc.lottie.lottieAnimationPatch
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.util.getReference
 import app.morphe.util.indexOfFirstInstructionOrThrow
+import app.morphe.util.returnEarly
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -76,6 +77,10 @@ private val startupAnimationPatch = bytecodePatch {
                 )
             }
         }
+
+        // With a warm cache the first content is ready before the delayed animation draws a frame.
+        // The end of the animation or the app timeout removes it instead.
+        SplashAnimationContentReadyFingerprint.method.returnEarly()
     }
 }
 
