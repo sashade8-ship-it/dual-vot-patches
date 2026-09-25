@@ -681,6 +681,8 @@ Pentru a remedia, activează 'Falsifică fluxurile video' și schimbă 'clientul
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Afișează când nu este pe mut</string>
+  <string name="morphe_hide_channel_profile_button_title">Ascunde canalul și butonul Abonare</string>
+  <string name="morphe_hide_channel_profile_button_summary">Ascunde avatarul canalului și butonul Abonare de la începutul barei de acțiuni</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Activează cookie-urile subtitrărilor</string>
   <string name="morphe_hide_clip_button_summary">Este posibil ca aceasta să nu funcționeze pentru unele conturi de utilizator</string>
@@ -1167,13 +1169,6 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Dezactivare haptics anulare căutare</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Dezactivaţi hapticile la tap şi hold</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Dezactivare haptics zoom</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Comenzi media pentru notificări</string>
-  <string name="morphe_notification_media_screen_summary">Personalizează comenzile de redare afișate pe ecranul de blocare și panoul de notificări</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Ascunde butoanele Înapoi &amp; Înainte</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Ascunde butoanele anterioare și următoare din notificarea media, pe ecranul de blocare și pe comenzile pentru căști</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Dezactivează bara de căutare</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Împiedică tragerea barei de căutare pe ecranul de blocare și panoul de notificări</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Dacă ți-ai schimbat recent detaliile de conectare la cont, dezinstalează și reinstalează MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

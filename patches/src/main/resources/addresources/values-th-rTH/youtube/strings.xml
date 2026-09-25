@@ -681,6 +681,8 @@ Second \"item\" text"</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">ซ่อนปุ่มถาม</string>
+  <string name="morphe_hide_channel_profile_button_title">ซ่อนช่องและปุ่มติดตาม</string>
+  <string name="morphe_hide_channel_profile_button_summary">ซ่อนรูปโปรไฟล์ช่องและปุ่มติดตามที่ตอนต้นของแถบการทำงาน</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">ซ่อนปุ่มคลิป</string>
   <string name="morphe_hide_clip_button_summary">คุณสมบัตินี้อาจใช้งานไม่ได้กับบางบัญชีผู้ใช้</string>
@@ -1167,13 +1169,6 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">ปิดใช้งานแฮปติกยกเลิกการค้นหา</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">ปิดใช้งานแฮปติกการกดและถือ</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">ปิดใช้งานแฮปติกซูม</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">ตัวควบคุมสื่อการแจ้งเตือน</string>
-  <string name="morphe_notification_media_screen_summary">ปรับแต่งการควบคุมการเล่นที่แสดงบนหน้าจอล็อคและแผงการแจ้งเตือนของคุณ</string>
-  <string name="morphe_hide_notification_media_prev_next_title">ซ่อนปุ่มก่อนหน้า &amp; ถัดไป</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">ซ่อนปุ่มก่อนหน้าและถัดไปในแผงการแจ้งเตือน หน้าจอล็อค และการควบคุมหูฟัง</string>
-  <string name="morphe_disable_notification_media_seekbar_title">ปิดใช้งานแถบเลื่อน</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">ป้องกันการลากแถบเลื่อนบนหน้าจอล็อคและแผงการแจ้งเตือน</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">หากคุณเพิ่งเปลี่ยนรายละเอียดการเข้าสู่ระบบบัญชีของคุณ ให้ถอนการติดตั้งและติดตั้ง MicroG ใหม่อีกครั้ง</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

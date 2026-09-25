@@ -681,6 +681,8 @@ Promene uključuju:
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Саскриј дугме „Питај”</string>
+  <string name="morphe_hide_channel_profile_button_title">Сакриј канал и дугме Претплати се</string>
+  <string name="morphe_hide_channel_profile_button_summary">Сакрива аватар канала и дугме Претплати се на почетку акционе траке</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Саскриј дугме „Исечак”</string>
   <string name="morphe_hide_clip_button_summary">Ово можда неће радити за неке корисничке налоге</string>
@@ -1150,13 +1152,6 @@ Promene uključuju:
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Онемогући вибрацију поништавања премотавања </string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Онемогући вибрације при дугом притиску</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Онемогући вибрацију при увеличавању</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Контроле медија за обавештења</string>
-  <string name="morphe_notification_media_screen_summary">Прилагодите изглед и понашање видео плејера у смањеном режиму</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Сакриј дугмад „Претходно” &amp; „Следеће”</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Саскрива претходна и следећа дугмад у медијском обавештењу, на екрану за закључавање и на контролама слушалица</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Онемогући траку за подешавање гласноће</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Спречава превлачење траке за премотавање на екрану за закључавање и на контролној табли</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ако сте недавно променили податке за пријаву на налог, деинсталирајте и поново инсталирајте MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

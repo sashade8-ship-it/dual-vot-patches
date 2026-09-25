@@ -681,6 +681,8 @@ Second \"item\" text"</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">הסתר את הכותרת התחתונה של תפריט \'רצועת אודיו\'</string>
+  <string name="morphe_hide_channel_profile_button_title">הסתר את תמונת הערוץ וכפתור ההרשמה</string>
+  <string name="morphe_hide_channel_profile_button_summary">מסתיר את תמונת הערוץ וכפתור ההרשמה בתחילת סרגל הפעולות</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">הסתר תפריט \'כתוביות\'</string>
   <string name="morphe_hide_clip_button_summary">ייתכן שזה לא יעבוד עבור חלק מחשבונות המשתמשים</string>
@@ -1167,13 +1169,6 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">השבת משוב ברטט עבור ביטול דילוג</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">השבת משוב טאפ אנד הולד</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">השבת משוב זום ברטט</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">פקדי מדיה בהתראות</string>
-  <string name="morphe_notification_media_screen_summary">התאם אישית את המראה וההתנהגות של פקדי הנגן המוקטנים במסך הנעילה ובפאנל ההתראות</string>
-  <string name="morphe_hide_notification_media_prev_next_title">הסתר כפתורי קודם &amp; הבא</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">מסתיר את כפתורי \'הקודם\' ו\'הבא\' בהתראות מדיה, במסך הנעילה ובפקדי האוזניות</string>
-  <string name="morphe_disable_notification_media_seekbar_title">השבת סרגל חיפוש</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">מונע גרירת סרגל החיפוש במסך הנעילה ובפאנל ההתראות</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">אם פרטי הכניסה לחשבונך השתנו לאחרונה, אז יש להסיר ולהתקין מחדש את MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

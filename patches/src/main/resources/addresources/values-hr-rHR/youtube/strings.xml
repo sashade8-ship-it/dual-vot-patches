@@ -683,6 +683,8 @@ Da biste to popravili, uključite \"Lažiranje video streamova\" i promijenite \
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Sakrij gumb Pitaj</string>
+  <string name="morphe_hide_channel_profile_button_title">Sakrij kanal i gumb za pretplatu</string>
+  <string name="morphe_hide_channel_profile_button_summary">Skriva avatar kanala i gumb za pretplatu na početku trake radnji</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Sakrij gumb Isječak</string>
   <string name="morphe_hide_clip_button_summary">Ovo možda neće raditi za neke korisničke račune</string>
@@ -1169,13 +1171,6 @@ Dodirnite ovdje za otvaranje DeArrow.ajay.app"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Onemogu dugmice za poništavanje pomicanja</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Onemogući haptiku dodirom i držanjem</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Onemogu dugmice za zoom</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Upravljanje medijima u obavijestima</string>
-  <string name="morphe_notification_media_screen_summary">Prilagodite kontrole reprodukcije prikazane na zaključanom zaslonu i ploči obavijesti</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Sakrij gumbove Prethodni &amp; Sljedeći</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Skriva gumbove Prethodni i Sljedeći u obavijesti o medijima, zaključanom zaslonu i kontrolama slušalica</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Onemogući traku za traženje</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Sprječava povlačenje trake za traženje na zaključanom zaslonu i ploči obavijesti</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ako nedavno ste promijenili računski prijavne detalje, morate deinstalirati i ponovo instalirati MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

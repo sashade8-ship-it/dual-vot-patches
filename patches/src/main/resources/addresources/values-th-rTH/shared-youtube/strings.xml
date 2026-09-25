@@ -136,6 +136,13 @@ Second \"item\" text"</string>
   <string name="morphe_oauth2_connection_failure_auth_error">ไม่สามารถเข้าสู่ระบบ VR: %s</string>
   <string name="morphe_oauth2_toast_reset">ออกจากระบบ VR แล้ว</string>
   <string name="morphe_oauth2_toast_invalid">โทเค็นเข้าสู่ระบบ VR ไม่ถูกต้อง กรุณาลองเข้าสู่ระบบ VR อีกครั้ง</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">ตัวควบคุมสื่อการแจ้งเตือน</string>
+  <string name="morphe_notification_media_screen_summary">ปรับแต่งการควบคุมการเล่นที่แสดงบนหน้าจอล็อกและแผงการแจ้งเตือน</string>
+  <string name="morphe_hide_notification_media_prev_next_title">ซ่อนปุ่มก่อนหน้าและถัดไป</string>
+  <string name="morphe_hide_notification_media_prev_next_summary">ซ่อนปุ่มก่อนหน้าและถัดไปในการแจ้งเตือนสื่อ หน้าจอล็อก และตัวควบคุมหูฟัง</string>
+  <string name="morphe_disable_notification_media_seekbar_title">ปิดใช้งานแถบเลื่อน</string>
+  <string name="morphe_disable_notification_media_seekbar_summary">ป้องกันการลากแถบเลื่อนบนหน้าจอล็อกและแผงการแจ้งเตือน</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">ปิดใช้งานโพรโทคอล QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

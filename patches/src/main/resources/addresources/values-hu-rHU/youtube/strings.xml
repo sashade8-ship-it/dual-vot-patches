@@ -681,6 +681,8 @@ A javításhoz kapcsolja be a „Videostreamek meghamisítása” beállítást,
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Kérdés gomb elrejtése</string>
+  <string name="morphe_hide_channel_profile_button_title">Csatorna és Feliratkozás gomb elrejtése</string>
+  <string name="morphe_hide_channel_profile_button_summary">Elrejti a csatorna avatárját és a Feliratkozás gombot a műveletsáv elején</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Vágás gomb elrejtése</string>
   <string name="morphe_hide_clip_button_summary">Előfordulhat, hogy ez nem működik egyes felhasználói fiókoknál.</string>
@@ -1167,13 +1169,6 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Keresés visszavonása haptikus visszajelzésének letiltása</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Haptikus visszajelzések tap és tartás letiltása</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Haptikus zoom letiltása</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Értesítési médiavezérlők</string>
-  <string name="morphe_notification_media_screen_summary">A lezárt képernyőn és az értesítési panelban megjelenő lejátszásvezérlők testreszabása</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Előző &amp; Következő gombok elrejtése</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Elrejti a \'Következő\' és \'Előző\' gombokat a médiaértesítéseken, a zárolt képernyőn és a fejhallgató vezérlőin</string>
-  <string name="morphe_disable_notification_media_seekbar_title">A keresősáv letiltása</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Megakadályozza a keresősáv áthúzását a lezárt képernyőn és az értesítési panelen</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ha nemrég módosította a fiókja bejelentkezési adatait, távolítsa el, majd telepítse újra a MicroG-t.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

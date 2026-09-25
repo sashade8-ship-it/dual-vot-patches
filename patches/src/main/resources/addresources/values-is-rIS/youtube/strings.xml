@@ -679,6 +679,8 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Felur Spyrja hnappinn</string>
+  <string name="morphe_hide_channel_profile_button_title">Fela rás og áskriftarhnapp</string>
+  <string name="morphe_hide_channel_profile_button_summary">Felur sniðsmynd rásar og áskriftarhnappinn í byrjun aðgerðastikunnar</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Felur Clip hnappinn</string>
   <string name="morphe_hide_clip_button_summary">Þetta virkar kannski ekki fyrir sum notendareikninga</string>
@@ -1162,13 +1164,6 @@ Bankaðu hér til að opna DeArrow.ajay.app"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Lokað afturskiptunar hapticum</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Lokað snertiapulptareignum</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Lokað zoom hapticum</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Athugasemda plagar</string>
-  <string name="morphe_notification_media_screen_summary">Sérsniðu útlitið og hegðun mínkaðs vídeó</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Fela fyrri &amp; næstu hnappa</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Hylur „Fyrri“ og „Næsta“ hnappi á miðilupplýsingum, læsiskjármynd og heyrnartækjastjórn</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Lokað dul</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Kemur í veg fyrir að draga leitarstikuna á læsiskjármynd og á miðilupplýsingastjórn</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ef þú hefur nýlega breytt innskráningartölum reikningsins þíns, afmálið og settu MicroG upp á ný.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

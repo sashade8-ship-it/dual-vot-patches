@@ -681,6 +681,8 @@ Om dit op te lossen, schakel 'Videostreams vervalsen' in en wijzig de 'Standaard
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Verberg Vraag-knop</string>
+  <string name="morphe_hide_channel_profile_button_title">Verberg kanaal en abonneerknop</string>
+  <string name="morphe_hide_channel_profile_button_summary">Verbergt de kanaalavatar en de abonneerknop aan het begin van de actiebalk</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Verberg Clip-knop</string>
   <string name="morphe_hide_clip_button_summary">Dit werkt mogelijk niet voor sommige gebruikersaccounts</string>
@@ -1165,13 +1167,6 @@ Tik hier om meer te weten te komen over DeArrow"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Haptiek voor ongedaan maken van zoeken uitschakelen</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Uitschakelen tap en houd haptiek</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zoom-haptics uitschakelen</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Melding media bedieningselementen</string>
-  <string name="morphe_notification_media_screen_summary">Pas het uiterlijk en het gedrag van de video speler aan op je vergrendelscherm en meldingspaneel</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Verberg Vorige &amp; Volgende knoppen</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Verbergt de Vorige en Volgende knoppen in mediasnelding, vergrendelscherm en koptelefoonbedieningselementen</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Zoekbalk uitschakelen</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Voorkomt dat de media voortgangsbalk op het vergrendelscherm en meldingspaneel wordt gesleept</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Als u onlangs de inloggegevens van uw account hebt gewijzigd, verwijder dan MicroG en installeer het opnieuw.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

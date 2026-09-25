@@ -681,6 +681,8 @@ Ak to chcete vyriešiť, zapnite 'Spoofovať video streamy' a zmeňte 'Predvolen
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Skryť tlačidlo Pýtať</string>
+  <string name="morphe_hide_channel_profile_button_title">Skryť kanál a tlačidlo Odoberať</string>
+  <string name="morphe_hide_channel_profile_button_summary">Skryje avatar kanála a tlačidlo Odoberať na začiatku panela akcií</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Skryť tlačidlo Klip</string>
   <string name="morphe_hide_clip_button_summary">Táto funkcia nemusí fungovať pre niektoré používateľské účty</string>
@@ -1166,13 +1168,6 @@ Ak je povolené, URL adresy videí sa odošlú na server API a neodosielajú sa 
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Zakázať haptickú spätnú väzbu pre vrátenie prehľadávania</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Zakázať haptickú odozvu pri stlačení a podržaní</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Zakázať haptickú spätnú väzbu pre zoom</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Ovládacie prvky médií v upozorneniach</string>
-  <string name="morphe_notification_media_screen_summary">Prispôsobte vzhľad a správanie prehrávača videa na obrazovke uzamknutia a v paneli upozornení</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Skryť predchádzajúce &amp; ďalšie tlačidlá</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Skryje tlačidlá Predchádzajúce a Nasledujúce v mini prehrávači, na obrazovke uzamknutia a v ovládacích prvkoch slúchadiel</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Zakázať ukazovateľ priebehu (seekbar)</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Zabráni ťahaniu časovej osy na obrazovke uzamknutia a v paneloch upozornení</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ak ste nedávno zmenili svoje prihlasovacie údaje k účtu, odinštalujte a znovu nainštalujte microG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

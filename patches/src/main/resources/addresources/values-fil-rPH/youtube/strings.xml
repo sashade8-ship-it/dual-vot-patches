@@ -681,6 +681,8 @@ Para ayusin ito, i-on ang 'I-spoof ang mga video stream' at baguhin ang 'Default
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Itago ang Ask button</string>
+  <string name="morphe_hide_channel_profile_button_title">Itago ang channel at ang Subscribe button</string>
+  <string name="morphe_hide_channel_profile_button_summary">Itinatago ang avatar ng channel at ang Subscribe button sa simula ng action bar</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Itago ang Clip button</string>
   <string name="morphe_hide_clip_button_summary">Maaaring hindi ito gumana para sa ilang mga user account.</string>
@@ -1165,13 +1167,6 @@ I-tap dito upang buksan ang DeArrow.ajay.app"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">I-disable ang haptics ng pag-undo sa paghahanap</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">I-disable ang mga haptic na feedback sa pag-tap at pagpindot</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">I-disable ang haptics ng pag-zoom</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Mga kontrol sa media ng abiso</string>
-  <string name="morphe_notification_media_screen_summary">I-customize ang mga playback control na ipinapakita sa iyong lock screen at notification panel</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Itago ang mga pindutan ng Nakaraan &amp; Susunod</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Itinatago ang mga Previous at Next button sa media notification, lock screen, at headphone controls</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Huwag paganahin ang seekbar</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Pinipigilan ang pag-drag ng seekbar sa lock screen at notification panel</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Kung kamakailan mo binago ang iyong mga detalye sa pag-login ng account, i-uninstall at i-reinstall ang MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

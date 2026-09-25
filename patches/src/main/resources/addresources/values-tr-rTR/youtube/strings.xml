@@ -681,6 +681,8 @@ Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini etkinleştir
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Soru düğmesini gizle</string>
+  <string name="morphe_hide_channel_profile_button_title">Kanalı ve Abone Ol düğmesini gizle</string>
+  <string name="morphe_hide_channel_profile_button_summary">Eylem çubuğunun başındaki kanal avatarını ve Abone Ol düğmesini gizler.</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Klip düğmesini gizle</string>
   <string name="morphe_hide_clip_button_summary">Bu, bazı kullanıcı hesapları için çalışmayabilir</string>
@@ -1167,13 +1169,6 @@ DeArrow hakkında daha fazla bilgi edinmek için buraya dokunun"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Sardırmayı geri alma titreşimini devre dışı bırak</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Dokunma ve basılı tutma titreşimini devre dışı bırak</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Yakınlaştırma titreşimini devre dışı bırak</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Bildirim medya kontrolleri</string>
-  <string name="morphe_notification_media_screen_summary">Kilit ekranınızda ve bildirim panelinizde görünen oynatma kontrollerini özelleştirin</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Önceki &amp; Sonraki butonlarını gizle</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Medya bildirimi, kilit ekranı ve kulaklık kontrollerinde Önceki ve Sonraki düğmelerini gizler</string>
-  <string name="morphe_disable_notification_media_seekbar_title">İlerleme çubuğunu devre dışı bırak</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Bildirim panelindeki ve kilit ekranındaki ilerleme çubuğunu sürüklemeyi engeller</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Yakın zamanda hesap giriş bilgilerinizi değiştirdiyseniz MicroG\'yi kaldırıp yeniden yükleyin.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

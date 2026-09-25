@@ -680,6 +680,8 @@ Para corrigir isso, ative 'Falsificar streams de vídeo' e altere o 'Cliente pad
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Ocultar botão Perguntar</string>
+  <string name="morphe_hide_channel_profile_button_title">Ocultar canal e botão de Inscrição</string>
+  <string name="morphe_hide_channel_profile_button_summary">Oculta o avatar do canal e o botão de Inscrição no início da barra de ações</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Ocultar botão Clip</string>
   <string name="morphe_hide_clip_button_summary">Isso pode não funcionar para algumas contas de usuário</string>
@@ -1166,13 +1168,6 @@ Toque aqui para abrir DeArrow.ajay.app"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Desativar feedback tátil de desfazer busca</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Desativar feedback tátil de toque e segurar</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Desativar zoom tátil</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Controles de mídia da notificação</string>
-  <string name="morphe_notification_media_screen_summary">Personalize os controles de reprodução mostrados na tela de bloqueio e no painel de notificação</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Ocultar botões Anterior e Próximo</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Oculta os botões Anterior e Próximo na notificação, tela de bloqueio e controles de fone de ouvido</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Desativar barra de progresso</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Impede o arrasto da barra de progresso na tela de bloqueio e no painel de notificação</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Se você alterou recentemente os detalhes de login da sua conta, desinstale e reinstale o MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

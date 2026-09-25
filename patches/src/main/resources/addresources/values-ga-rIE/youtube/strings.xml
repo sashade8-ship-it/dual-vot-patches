@@ -76,7 +76,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_floating_microphone_button_summary">Folaíonn sé cnaipe an mhicreafóin ar snámh sa chúinne íochtarach ar dheis de scáileán na moltaí cuardaigh</string>
   <string name="morphe_hide_get_premium_button_title">Folaigh an cnaipe \'Get Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Folaigh an tseilf staire</string>
-  <string name="morphe_hide_history_shelf_summary">Folaíonn sé an tseilf staire sa chluaisín You</string>
+  <string name="morphe_hide_history_shelf_summary">Folaíonn sé an tseilf staire sa chluaisín Tú</string>
   <string name="morphe_hide_horizontal_shelves_title">Folaigh seilfeanna cothrománacha</string>
   <string name="morphe_hide_horizontal_shelves_summary">Folaíonn sé seilfeanna cothrománacha amhail Nuacht Briste, Poist Pobail a d’fhéadfadh a bheith spéisiúil duit, Lean ort ag breathnú, Iniúchadh a dhéanamh ar níos mó bealaí, Iniúchadh a dhéanamh ar níos mó topaicí, Duitse, Físeáin is déanaí, Is ábhartha, Poist ó Phobal an Chruthaitheora, Siopadóireacht, agus Féach air arís</string>
   <string name="morphe_hide_hyped_label_title">Folaigh an lipéad \'hype\'</string>
@@ -108,7 +108,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_show_more_button_title">Folaigh an cnaipe \'Taispeáin níos mó\'</string>
   <string name="morphe_hide_show_more_button_summary">Folaíonn sé an cnaipe leathnaithe faoi fhíseáin sna torthaí cuardaigh</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Folaigh barra na gcainéal suibscríofa</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Folaigh ainmneacha cainéal i mbarra na gcainéal suibscríofa</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Folaigh ainmneacha na gcainéal sa bharra cainéal síntiúis</string>
   <string name="morphe_hide_surveys_title">Folaigh suirbhéanna</string>
   <string name="morphe_hide_surveys_summary">Folaigh suirbhéanna agus brúidí faoi chruinneas moltaí beatha</string>
   <string name="morphe_hide_ticket_shelf_title">Folaigh an seilf ticéad</string>
@@ -271,7 +271,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_comments_preview_comment_title">Folaigh trácht réamhamharc</string>
   <string name="morphe_hide_comments_preview_comment_summary">Folaíonn sé réamhamharc na dtuairimí faoin bhfíseán sula n-osclaítear an chuid iomlán de na tuairimí</string>
   <string name="morphe_hide_comments_preview_comment_hidden">Trácht i bhfolach ag Morphe...</string>
-  <string name="morphe_minimal_comments_button_title">Cumasaigh an cnaipe íosta tráchtaí</string>
+  <string name="morphe_minimal_comments_button_title">Cumasaigh an cnaipe tráchtanna íosta</string>
   <string name="morphe_minimal_comments_button_summary">Folaíonn sé na cártaí sleamhnáin agus a roghnóir leathanaigh, a thaispeántar ar an gcnaipe tráchtaí</string>
   <string name="morphe_hide_comments_thanks_button_title">Folaigh an cnaipe Buíochais</string>
   <string name="morphe_hide_comments_timestamp_button_title">Cnaipe Folaigh an Stampa Ama</string>
@@ -681,6 +681,8 @@ Chun é seo a shocrú, cuir 'Spoof video streams' ar siúl agus athraigh an 'Cli
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Folaigh an cnaipe Iarr</string>
+  <string name="morphe_hide_channel_profile_button_title">Folaigh an cainéal agus an cnaipe Liostáil</string>
+  <string name="morphe_hide_channel_profile_button_summary">Folaíonn sé abhatár an chainéil agus an cnaipe Liostáil ag tús an bharra gníomhaíochta.</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Cnaipe Folaigh an Gearrthóg</string>
   <string name="morphe_hide_clip_button_summary">B’fhéidir nach n-oibreoidh sé seo do roinnt cuntas úsáideora</string>
@@ -1167,13 +1169,6 @@ Tapáil anseo chun DeArrow.ajay.app a oscailt."</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Díchumasaigh haptaic cuardaigh agus cealaithe</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Díchumasaigh haptaic tapáil agus coinnigh</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Díchumasaigh haptaic súmála</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Rialuithe meán fógra</string>
-  <string name="morphe_notification_media_screen_summary">Saincheap na rialuithe athsheinm a thaispeántar ar do scáileán glasála agus ar do phainéal fógraí</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Folaigh Roimhe Seo &amp; Ar Aghaidh</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Folaíonn sé cnaipí Roimhe Seo agus Ar Aghaidh i bhfógraí meán, scáileán glasála, agus rialuithe cluasán</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Díchumasaigh barra cuardaigh</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Coscann sé an barra cuardaigh a tharraingt ar an scáileán glasála agus ar an bpainéal fógraí</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Má d’athraigh tú sonraí logála isteach do chuntais le déanaí, ansin díshuiteáil agus athshuiteáil MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

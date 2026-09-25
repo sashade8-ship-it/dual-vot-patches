@@ -681,6 +681,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">「質問する」ボタンを非表示</string>
+  <string name="morphe_hide_channel_profile_button_title">チャンネルとチャンネル登録ボタンを非表示</string>
+  <string name="morphe_hide_channel_profile_button_summary">アクションバーの先頭にあるチャンネルのアバターとチャンネル登録ボタンを非表示にします</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">クリップボタンを非表示</string>
   <string name="morphe_hide_clip_button_summary">この機能は、一部のユーザー アカウントでは正常に動作しない場合があります</string>
@@ -1166,13 +1168,6 @@ Automotive レイアウト
   <string name="morphe_disable_haptic_feedback_seek_undo_title">シーク取り消しの触覚フィードバックを無効化</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">長押しの触覚フィードバックを無効化</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">ズームの触覚フィードバックを無効化</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">ロック画面のメディア コントロール</string>
-  <string name="morphe_notification_media_screen_summary">通知パネルとロック画面に表示されるプレーヤーのコントロールをカスタマイズします</string>
-  <string name="morphe_hide_notification_media_prev_next_title">前の動画ボタンと次の動画ボタンを非表示</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">通知パネルとロック画面に表示されるプレーヤーの前の動画ボタンと次の動画ボタンを非表示にします。ヘッドホンからの操作によって前の動画 / 次の動画へ移動する機能も無効にします</string>
-  <string name="morphe_disable_notification_media_seekbar_title">シークバーでのシーク操作を無効化</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">通知パネルとロック画面に表示されるプレーヤーのシークバーでのシーク操作を無効にします</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">最近アカウントのログイン情報を変更した場合は、MicroG をアンインストールして再インストールしてください。</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

@@ -681,6 +681,8 @@ Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkli
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Verberg Vra-knoppie</string>
+  <string name="morphe_hide_channel_profile_button_title">Versteek kanaal- en intekenknoppie</string>
+  <string name="morphe_hide_channel_profile_button_summary">Versteek die kanaalavatar en intekenknoppie aan die begin van die aksiebalk</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Hide Clip button</string>
   <string name="morphe_hide_clip_button_summary">Dit werk moontlik nie vir sommige gebruikersrekeninge nie</string>
@@ -1167,13 +1169,6 @@ Tik hier om DeArrow.ajay.app oop te maak"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Deaktiveer terugtrek-haptika</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Deaktiveer tik en vas hou haptiese terugvoer</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Deaktiveer zoem-haptika</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Kennisgewing media kontroles</string>
-  <string name="morphe_notification_media_screen_summary">Pas die voorkoms en gedrag van die verkleinde videospeler aan</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Verberg Vorige &amp; Volgende knoppies</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Verberg Vorige en Volgende knoppies in media kennisgewing, skermsluiting en koptelefoonbeheerders</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Deaktiveer skyfiebalk</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Verhoed dat die seekbar op die skermsluiting en kennisgewingspaneel gesleep word</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">As jy onlangs jou rekening se aanmeldingsbesonderhede verander het, deïnstalleer en herinstalleer MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

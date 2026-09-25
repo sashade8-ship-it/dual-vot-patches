@@ -136,6 +136,13 @@ Second \"item\" text"</string>
   <string name="morphe_oauth2_connection_failure_auth_error">Не удается войти в VR: %s</string>
   <string name="morphe_oauth2_toast_reset">Вышли из войти Android VR</string>
   <string name="morphe_oauth2_toast_invalid">Недействительный токен входа в VR, попробуйте войти в VR еще раз</string>
+  <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">Элементы управления мультимедиа в уведомлении</string>
+  <string name="morphe_notification_media_screen_summary">Настройте элементы управления воспроизведением, отображаемые на экране блокировки и в панели уведомлений</string>
+  <string name="morphe_hide_notification_media_prev_next_title">Скрыть предыдущий &amp; Следующие кнопки</string>
+  <string name="morphe_hide_notification_media_prev_next_summary">Скрывает кнопки «Предыдущий» и «Следующий» в медиауведомлении, на экране блокировки и в элементах управления гарнитуры</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Отключить ползунок перемотки</string>
+  <string name="morphe_disable_notification_media_seekbar_summary">Предотвращает перетаскивание ползунка перемотки на экране блокировки и в панели уведомлений</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Отключить протокол QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

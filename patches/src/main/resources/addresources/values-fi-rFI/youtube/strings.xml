@@ -681,6 +681,8 @@ Korjaa tämä ottamalla käyttöön 'Väärennä videovirrat' ja vaihtamalla 'Ol
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Piilota osan edistymispalkki -painike</string>
+  <string name="morphe_hide_channel_profile_button_title">Piilota kanava ja Tilaa-painike</string>
+  <string name="morphe_hide_channel_profile_button_summary">Piilottaa kanavan avatarin ja Tilaa-painikkeen toimintopalkin alussa.</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Aseta automaattisten tekstitysten tyyli lasi -painike</string>
   <string name="morphe_hide_clip_button_summary">Tämä ei välttämättä toimi joillakin käyttäjätileillä</string>
@@ -1167,13 +1169,6 @@ Napauta tästä saadaksesi lisätietoja DeArrowista"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Poista etsinnän kumoamisen haptiikka käytöstä</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Poista kosketus- ja pitämisen haptikot</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Poista zoomaushaptiikka käytöstä</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Ilmoitusten mediakontrollit</string>
-  <string name="morphe_notification_media_screen_summary">Muokkaa pienennetyn videotoistimen ulkoasua ja toimintaa</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Piilota Edellinen &amp; Seuraava -painikkeet</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Piilottaa edelliset ja seuraavat painikkeet median ilmoituksesta, lukitusnäytöstä ja kuulokkeiden säätimistä</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Poista seekbar käytöstä</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Estää etenemispalkin vetämisen lukitusnäytössä ja ilmoituspaneelissa</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Jos olet äskettäin muuttanut tilisi kirjautumistietoja, poista ja asenna MicroG uudelleen.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

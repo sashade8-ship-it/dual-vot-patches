@@ -681,6 +681,8 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">লুকান জিজ্ঞাসা বোতাম</string>
+  <string name="morphe_hide_channel_profile_button_title">চ্যানেল এবং সাবস্ক্রাইব বোতাম লুকান</string>
+  <string name="morphe_hide_channel_profile_button_summary">অ্যাকশন বারের শুরুতে চ্যানেলের অ্যাভাটার এবং সাবস্ক্রাইব বোতাম লুকিয়ে রাখে</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title"> คลิป লুকান বাটন</string>
   <string name="morphe_hide_clip_button_summary">কিছু ব্যবহারকারীর অ্যাকাউন্টের জন্য এটি কাজ নাও করতে পারে</string>
@@ -1152,13 +1154,6 @@ DeArrow.ajay.app ওপেন করতে এখানে ট্যাপ ক�
   <string name="morphe_disable_haptic_feedback_seek_undo_title">সীক আনডু কম্পন নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">ট্যাপ এবং হোল্ড হ্যাপ্টিক্স নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">জুম করার কম্পন নিষ্ক্রিয় করুন</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">নোটিফিকেশন মিডিয়া কন্ট্রোল</string>
-  <string name="morphe_notification_media_screen_summary">আপনার পছন্দের মিউজিক কন্ট্রোলগুলোর চেহারা এবং আচরণ কাস্টমাইজ করুন</string>
-  <string name="morphe_hide_notification_media_prev_next_title">আগের &amp; পরের বোতাম লুকান</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">মিডিয়া বিজ্ঞপ্তি, লক স্ক্রিন এবং হেডফোন কন্ট্রোলগুলিতে আগের এবং পরের বোতামগুলি লুকায়</string>
-  <string name="morphe_disable_notification_media_seekbar_title">সিকবার নিষ্ক্রিয় করুন</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">লক স্ক্রিন এবং বিজ্ঞপ্তি প্যানেলে Seekbar সরানোর থেকে বিরত করে</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">আপনি যদি সম্প্রতি আপনার অ্যাকাউন্ট লগইন বিশদ পরিবর্তন করে থাকেন, তবে MicroG আনইনস্টল করুন এবং পুনরায় ইনস্টল করুন।</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

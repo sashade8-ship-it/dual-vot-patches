@@ -681,6 +681,8 @@ Da biste to popravili, uključite 'Spoof video strimovi' i promenite 'Podrazumev
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Sakrij dugme „Pitaj”</string>
+  <string name="morphe_hide_channel_profile_button_title">Sakrij kanal i dugme za pretplatu</string>
+  <string name="morphe_hide_channel_profile_button_summary">Sakriva avatar kanala i dugme za pretplatu na početku trake sa radnjama</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Sakrij dugme „Isečak”</string>
   <string name="morphe_hide_clip_button_summary">Ovo možda neće raditi za neke korisničke naloge</string>
@@ -1167,13 +1169,6 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Onemogući vibraciju poništavanja premotavanja</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Onemogući tap i držanje haptika</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Onemogući vibraciju pri uveličavanju</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Kontrole medija za obaveštenja</string>
-  <string name="morphe_notification_media_screen_summary">Prilagodite kontrole reprodukcije koje se prikazuju na zaključanom ekranu i na kontrolnoj tabli obaveštenja</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Sakrij dugmad za Prethodno i Sledeće</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Sakriva prethodne i sledeće dugmad u obaveštenjima medija, na zaključanom ekranu i na kontrolama slušalica</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Onemogući traku za traženje</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Sprečava povlačenje trake za traženje na zaključanom ekranu i na kontrolnoj tabli obaveštenja</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Ako ste nedavno promenili podatke za prijavu na nalog, deinstalirajte i ponovo instalirajte MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->

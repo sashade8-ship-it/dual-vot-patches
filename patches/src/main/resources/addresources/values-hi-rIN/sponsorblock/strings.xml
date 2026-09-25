@@ -16,23 +16,23 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_sb_enabled_title">SponsorBlock सक्षम करें</string>
-  <string name="morphe_sb_enabled_summary">SponsorBlock YouTube वीडियो के कष्टप्रद भागों को छोड़ने के लिए एक क्राउडसोर्स्ड प्रणाली है</string>
-  <string name="morphe_sb_appearance_category_title">स्वरूप</string>
-  <string name="morphe_sb_voting_button_title">वोटिंग बटन दिखाएं</string>
-  <string name="morphe_sb_voting_button_summary">सेगमेंट को ऊपर या नीचे वोट करने के लिए एक बटन जोड़ता है</string>
-  <string name="morphe_sb_square_layout_title">स्क्वायर लेआउट का उपयोग करें</string>
-  <string name="morphe_sb_square_layout_summary">SponsorBlock बटन और नियंत्रणों के लिए वर्गाकार कोने का उपयोग करता है</string>
+  <string name="morphe_sb_enabled_title">SponsorBlock चालू करें</string>
+  <string name="morphe_sb_enabled_summary">SponsorBlock YouTube वीडियो के गैर-ज़रूरी हिस्सों को स्किप करने का एक क्राउडसोर्स्ड सिस्टम है</string>
+  <string name="morphe_sb_appearance_category_title">दिखावट</string>
+  <string name="morphe_sb_voting_button_title">वोटिंग बटन दिखाएँ</string>
+  <string name="morphe_sb_voting_button_summary">सेगमेंट को अपवोट या डाउनवोट करने के लिए एक बटन जोड़ता है</string>
+  <string name="morphe_sb_square_layout_title">वर्गाकार लेआउट इस्तेमाल करें</string>
+  <string name="morphe_sb_square_layout_summary">SponsorBlock बटन और कंट्रोल्स के लिए वर्गाकार कोनों का इस्तेमाल करता है</string>
   <string name="morphe_sb_compact_skip_button_title">कॉम्पैक्ट स्किप बटन का उपयोग करें</string>
   <string name="morphe_sb_compact_skip_button_summary">जगह बचाने के लिए स्किप बटन की चौड़ाई कम करता है</string>
-  <string name="morphe_sb_auto_hide_skip_button_title">स्किप बटन को स्वचालित रूप से छिपाएं</string>
-  <string name="morphe_sb_auto_hide_skip_button_summary">सेगमेंट के लिए पूरे समय के लिए इसे दृश्यमान रखने के बजाय कुछ सेकंड के बाद स्किप बटन को छिपा देता है</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration_title">स्किप बटन अवधि</string>
-  <string name="morphe_sb_auto_hide_skip_button_duration_summary">सेट करें कि स्किप बटन कितने समय तक दिखाई देता है</string>
-  <string name="morphe_sb_toast_on_skip_title">स्किप सूचना दिखाएं</string>
-  <string name="morphe_sb_toast_on_skip_summary">जब किसी सेगमेंट को स्वचालित रूप से छोड़ दिया जाता है तो एक सूचना दिखाता है</string>
-  <string name="morphe_sb_toast_on_skip_duration_title">स्किप सूचना अवधि</string>
-  <string name="morphe_sb_toast_on_skip_duration_summary">स्किप करने पर सूचना कितने समय तक दिखाई देती है, इसे सेट करें</string>
+  <string name="morphe_sb_auto_hide_skip_button_title">स्किप बटन अपने आप छिपाएँ</string>
+  <string name="morphe_sb_auto_hide_skip_button_summary">पूरे सेगमेंट के दौरान दिखाए रखने के बजाय, कुछ सेकंड बाद स्किप बटन को छिपा देता है</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_title">स्किप बटन दिखने का समय</string>
+  <string name="morphe_sb_auto_hide_skip_button_duration_summary">चुनें कि स्किप बटन कितने समय तक दिखेगा</string>
+  <string name="morphe_sb_toast_on_skip_title">स्किप नोटिफ़िकेशन दिखाएँ</string>
+  <string name="morphe_sb_toast_on_skip_summary">सेगमेंट के अपने आप स्किप होने पर नोटिफ़िकेशन दिखाता है</string>
+  <string name="morphe_sb_toast_on_skip_duration_title">स्किप नोटिफ़िकेशन का समय</string>
+  <string name="morphe_sb_toast_on_skip_duration_summary">चुनें कि अनडू नोटिफ़िकेशन कितने समय तक दिखेगा</string>
   <string name="morphe_sb_duration_1s">1 सेकंड</string>
   <string name="morphe_sb_duration_2s">2 सेकंड</string>
   <string name="morphe_sb_duration_3s">3 सेकंड</string>
@@ -43,8 +43,8 @@ Second \"item\" text"</string>
   <string name="morphe_sb_duration_8s">8 सेकंड</string>
   <string name="morphe_sb_duration_9s">9 सेकंड</string>
   <string name="morphe_sb_duration_10s">10 सेकंड</string>
-  <string name="morphe_sb_video_length_without_segments_title">सेगमेंट के बिना वीडियो लंबाई दिखाएं</string>
-  <string name="morphe_sb_video_length_without_segments_summary">सीकबार पर दिखाए गए कुल वीडियो अवधि में सभी सेगमेंट घटाता है</string>
+  <string name="morphe_sb_video_length_without_segments_title">सेगमेंट के बिना वीडियो की लंबाई दिखाएँ</string>
+  <string name="morphe_sb_video_length_without_segments_summary">सीकबार पर दिखने वाले कुल वीडियो समय में से सभी सेगमेंट घटाता है</string>
   <string name="morphe_sb_create_segment_category_title">नए सेगमेंट बनाना</string>
   <string name="morphe_sb_create_new_segment_title">\'नया सेगमेंट बनाएं\' बटन दिखाएं</string>
   <string name="morphe_sb_create_new_segment_summary">वीडियो प्लेयर में एक बटन जोड़ता है जो आपको नए SponsorBlock सेगमेंट सबमिट करने की अनुमति देता है</string>

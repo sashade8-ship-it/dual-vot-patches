@@ -681,6 +681,8 @@ Second \"item\" text"</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Απόκρυψη κουμπιού Αποθήκευσης</string>
+  <string name="morphe_hide_channel_profile_button_title">Απόκρυψη καναλιού και κουμπιού Εγγραφής</string>
+  <string name="morphe_hide_channel_profile_button_summary">Αποκρύπτει το avatar του καναλιού και το κουμπί Εγγραφής στην αρχή της γραμμής ενεργειών</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Επιλέξτε ποια στοιχεία εμφανίζονται στην οθόνη του αναλογικού πίνακα</string>
   <string name="morphe_hide_clip_button_summary">Ενδέχεται να μην λειτουργεί για ορισμένους λογαριασμούς χρηστών</string>
@@ -1152,13 +1154,6 @@ Second \"item\" text"</string>
   <string name="morphe_disable_haptic_feedback_seek_undo_title">Απενεργοποίηση απόκρισης δόνησης κατά τη λειτουργία «Αφήστε για ακύρωση»</string>
   <string name="morphe_disable_haptic_feedback_tap_and_hold_title">Απενεργοποίηση απόκρισης δόνησης κατά το πατημα και κρατημα</string>
   <string name="morphe_disable_haptic_feedback_zoom_title">Απενεργοποίηση απόκρισης δόνησης χειρονομίας ζουμ</string>
-  <!-- misc.medianotification.mediaNotificationControlsPatch -->
-  <string name="morphe_notification_media_screen_title">Έλεγχοι αναπαραγωγής πολυμέσων ειδοποίησης</string>
-  <string name="morphe_notification_media_screen_summary">Προσαρμόστε την εμφάνιση και τη συμπεριφορά του μειωμένου μεγέθους αναπαραγωγέα βίντεο</string>
-  <string name="morphe_hide_notification_media_prev_next_title">Απόκρυψη κουμπιών Προηγούμενο &amp; Επόμενο</string>
-  <string name="morphe_hide_notification_media_prev_next_summary">Κρύβει τα κουμπιά \'Προηγούμενο\' και \'Επόμενο\' στην ειδοποίηση πολυμέσων, στην οθόνη κλειδώματος και στα χειριστήρια ακουστικών</string>
-  <string name="morphe_disable_notification_media_seekbar_title">Απενεργοποίηση γραμμής αναζήτησης</string>
-  <string name="morphe_disable_notification_media_seekbar_summary">Αποτρέπει τη μεταφορά της γραμμής προόδου στην οθόνη κλειδώματος και στο πλαίσιο ειδοποιήσεων</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
   <string name="microg_offline_account_login_error">Εάν αλλάξατε πρόσφατα τα στοιχεία σύνδεσης του λογαριασμού σας, απεγκαταστήστε και εγκαταστήστε ξανά το MicroG.</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->
