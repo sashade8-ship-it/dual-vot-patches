@@ -95,7 +95,15 @@ class SyncUpstreamTests(unittest.TestCase):
         )
         self.assertIn("final int buttonNumber = getEnabledButtonIndex()", source)
         self.assertIn("chapterTitleContainer.updateMargin(source.getWidth(), effectiveCustomButtons, spacingPercentage)", source)
-        self.assertIn("setTextSize(TypedValue.COMPLEX_UNIT_PX, Dim.dp(14))", source)
+        if "PlayerIcons.styleText(textOverlay);" in source:
+            icons = (
+                root
+                / "extensions/youtube/src/main/java/app/morphe/extension/youtube/videoplayer/PlayerIcons.java"
+            ).read_text(encoding="utf-8")
+            self.assertIn("public static void styleText(TextView text)", icons)
+            self.assertIn("setTextSize(TypedValue.COMPLEX_UNIT_PX, Dim.dp(14))", icons)
+        else:
+            self.assertIn("setTextSize(TypedValue.COMPLEX_UNIT_PX, Dim.dp(14))", source)
 
     def test_dev3_volume_hook_keeps_dual_coordinator(self):
         root = MODULE_PATH.parents[2]
