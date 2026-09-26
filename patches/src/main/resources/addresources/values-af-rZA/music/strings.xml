@@ -417,9 +417,9 @@ Vereiste koekies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_show_copy_button_title">Wys Kopièer knoppie</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">Raak om oorspronklike lirieke as gewone teks te kopieer; druk lank om rou lirieke-bronlêer na Downloads te stoor</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Wys Vertaal knoppie</string>
-  <string name="morphe_music_lyrics_show_translate_button_summary">Vertaal lirieke met behulp van verskaffervertalings, Google Translate, of \'n OpenAI-versoenbare API.</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Tik om vertaling te wissel; druk lank vir slegs vertaling. Gebruik die verskaffer se vertalings, Google Translate, of \'n OpenAI-versoenbare API.</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Wys romaniseer-knoppie</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">Romaniseer lirieke met behulp van verskafferromanisering, Google Translate, of \'n OpenAI-versoenbare API.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Tik om romanisering te wissel; druk lank vir slegs romanisering. Gebruik die verskaffer se romanisering, Google Translate, of \'n OpenAI-versoenbare API.</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Wys verfris-knoppie</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Raak om na die volgende liriekkandidaat te wissel; […] :\"Gestoor\"</string>
   <string name="morphe_music_lyrics_saved">Gestoor</string>
@@ -435,7 +435,7 @@ Vereiste koekies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_display_artist_first_summary">Wissel die vertoonorde van Kunstenaar en Titel in die Mini-speler en MediaSession. AAN \"Kunstenaar - Titel\" en AF \"Titel - Kunstenaar\". Dit raak nie die soektog na lirieke nie.</string>
   <string name="morphe_settings_music_lyrics_metadata_title">Lirieke-bron?</string>
   <string name="morphe_music_lyrics_custom_regex_title">Me […] lirieke. […] :\"Lirieke\"</string>
-  <string name="morphe_music_lyrics_custom_regex_summary">Reëlmatige uitdrukking word op titels, kunstenaars en albums toegepas voordat daar na lirieke gesoek word. Los dit leeg om te deaktiveer. Die verstek verwyder algemene rommel soos \"Official Video\", \"Remaster\" en \"- Topic\".</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">Reguliere uitdrukking word toegepas op titels, kunstenaars en albums voordat lirieke opgesoek word en wanneer daar beoordeel word of twee titels ooreenstem. Los leeg om albei te deaktiveer. Die verstek verwyder algemene rommel soos \"Official Video\", \"Remaster\", \"【插曲】\" en \"- Topic\".</string>
   <string name="morphe_music_lyrics_text_filter_title">Lirieke-filter-regex</string>
   <string name="morphe_music_lyrics_text_filter_summary">Vertaal lirieke met verskaffervertalings of Google Translate</string>
   <string name="morphe_music_lyrics_credit_line_regex_title">Wys romaniseer-knoppie</string>
@@ -458,6 +458,8 @@ Vereiste koekies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_romanize_hide">Lirieke-bron?</string>
   <string name="morphe_music_lyrics_romanizing">Me […] lirieke. […] :\"Lirieke\"</string>
   <string name="morphe_music_lyrics_romanize_failed">Gereedskapsafdelings?</string>
+  <string name="morphe_music_lyrics_translate_only">Slegs vertaal.</string>
+  <string name="morphe_music_lyrics_romanize_only">Slegs geromaniseer</string>
   <string name="morphe_music_lyrics_copied">Na knipbord gekopieer</string>
   <string name="morphe_music_lyrics_refreshing">Besig om te verfris</string>
   <string name="morphe_music_lyrics_refreshed">Lirieke-bron?</string>

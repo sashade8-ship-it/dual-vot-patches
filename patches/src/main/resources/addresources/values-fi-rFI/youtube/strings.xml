@@ -257,6 +257,7 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_comments_section_in_home_feed_title">Piilota kommentiosio Koti-syötteessä</string>
   <string name="morphe_hide_comments_community_guidelines_title">Piilota yhteisön säännöt</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Piilota \"Luo Shorts-video\" -painike</string>
+  <string name="morphe_hide_comments_dislike_button_title">Piilota En tykkää -painike</string>
   <string name="morphe_hide_comments_emoji_button_title">Piilota emoji-painike</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Piilota suodatinpalkin asetukset</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Piilottaa kaikki suodatinpalkin asetukset paitsi \"Parhaat\" ja \"Uusimmat\"</string>
@@ -397,6 +398,13 @@ Raportit ovat julkisia ja ne tarkistetaan ennen kuin kanava lisätään listaan.
   <string name="morphe_channel_search_results">Kanavahaun tulokset</string>
   <string name="morphe_channel_search_no_results">Tältä kanavalta ei löytynyt mitään</string>
   <string name="morphe_channel_search_failed">Tätä kanavaa ei voitu hakea</string>
+  <string name="morphe_channel_search_sort_relevance">Osuvuus</string>
+  <string name="morphe_channel_search_sort_most_viewed">Eniten katsottu</string>
+  <string name="morphe_channel_search_sort_least_viewed">Vähiten katsottu</string>
+  <string name="morphe_channel_search_sort_newest">Uusin</string>
+  <string name="morphe_channel_search_sort_oldest">Vanhin</string>
+  <string name="morphe_channel_search_sort_shortest">Lyhin</string>
+  <string name="morphe_channel_search_sort_longest">Pisin</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Linkki kopioitu leikepöydälle</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Linkki aikaleimalla kopioitu leikepöydälle</string>
@@ -1200,6 +1208,8 @@ Napauta tästä saadaksesi lisätietoja DeArrowista"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Näytä laadun painike</string>
   <string name="morphe_video_quality_dialog_button_summary">Napauta ja pidä painettuna nollataksesi laatu oletusarvoon</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Näytä resoluutio Laatu-painikkeessa</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Näytä resoluutio (esim. 1080) etiketin (esim. FHD) sijaan</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Mukautettu toistonopeusvalikko</string>
   <string name="morphe_restore_old_speed_menu_title">Palauta vanha toistonopeusvalikko</string>
@@ -1288,4 +1298,11 @@ AV1-videon toisto saattaa pätkiä."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Korjaa videotoimintapainikkeiden piilottamisen
 
 Rajoitus: Palauttaa vanhan tyylin 'Lisää videoita' -peittokuvan"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Soittimen kuvakkeen tyyli</string>
+  <string name="morphe_player_icon_style_entry_auto">Automaattinen</string>
+  <string name="morphe_player_icon_style_entry_default">Oletus</string>
+  <string name="morphe_player_icon_style_entry_regular">Ohut</string>
+  <string name="morphe_player_icon_style_entry_bold">Lihavoitu</string>
+  <string name="morphe_shorts_icon_style_title">Shorts-kuvakkeen tyyli</string>
 </resources>

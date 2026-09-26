@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">মন্তব্য বিভাগ লুকান</string>
   <string name="morphe_hide_comments_community_guidelines_title">কমিউনিটি নির্দেশিকা লুকান</string>
   <string name="morphe_hide_comments_create_a_short_button_title">\'Short তৈরি করুন\' বোতাম লুকান</string>
+  <string name="morphe_hide_comments_dislike_button_title">ডিসলাইক বোতামটি লুকান</string>
   <string name="morphe_hide_comments_emoji_button_title">ইমোজি বোতাম লুকান</string>
   <string name="morphe_hide_comments_filter_bar_options_title">ফিল্টার বার অপশন লুকান</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">\"Top\" এবং \"Newest\" ছাড়া ফিল্টার বার-এর সমস্ত অপশন লুকায়</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">চ্যানেল অনুসন্ধানের ফলাফল</string>
   <string name="morphe_channel_search_no_results">এই চ্যানেলে কিছুই পাওয়া যায়নি</string>
   <string name="morphe_channel_search_failed">এই চ্যানেলে অনুসন্ধান করা যায়নি</string>
+  <string name="morphe_channel_search_sort_relevance">প্রাসঙ্গিকতা</string>
+  <string name="morphe_channel_search_sort_most_viewed">সবচেয়ে বেশি দেখা</string>
+  <string name="morphe_channel_search_sort_least_viewed">সবচেয়ে কম দেখা</string>
+  <string name="morphe_channel_search_sort_newest">সবচেয়ে নতুন</string>
+  <string name="morphe_channel_search_sort_oldest">সবচেয়ে পুরনো</string>
+  <string name="morphe_channel_search_sort_shortest">সবচেয়ে ছোট</string>
+  <string name="morphe_channel_search_sort_longest">সবচেয়ে দীর্ঘ</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">ক্লিপবোর্ডে URL অনুলিপি করা হয়েছে</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">লিঙ্কটি ক্লিপবোর্ডে অনুলিপি করা হয়েছে</string>
@@ -1185,6 +1193,8 @@ DeArrow.ajay.app ওপেন করতে এখানে ট্যাপ ক�
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">গুণমান বোতাম দেখান</string>
   <string name="morphe_video_quality_dialog_button_summary">গুণমান রিসেট করতে ট্যাপ করুন এবং ধরে রাখুন</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">কোয়ালিটি বোতামে রেজোলিউশন দেখান</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">FHD-এর মতো লেবেলের পরিবর্তে 1080-এর মতো রেজোলিউশন দেখান</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">কাস্টম প্লেব্যাক গতি মেনু</string>
   <string name="morphe_restore_old_speed_menu_title">পুরানো প্লেব্যাক গতি মেনু পুনরুদ্ধার করুন</string>
@@ -1273,4 +1283,11 @@ AV1 সহ ভিডিও প্লেব্যাক আটকে যেতে
   <string name="morphe_restore_old_video_action_bar_summary">"ভিডিও অ্যাকশন বোতাম লুকানো যায় না এমন সমস্যা সমাধান করে
 
 সীমাবদ্ধতা: 'More videos' ওভারলে পুরনো শৈলীতে ফিরে যায়"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">প্লেয়ার আইকন স্টাইল</string>
+  <string name="morphe_player_icon_style_entry_auto">স্বয়ংক্রিয়</string>
+  <string name="morphe_player_icon_style_entry_default">ডিফল্ট</string>
+  <string name="morphe_player_icon_style_entry_regular">পাতলা</string>
+  <string name="morphe_player_icon_style_entry_bold">বোল্ড</string>
+  <string name="morphe_shorts_icon_style_title">Shorts আইকন স্টাইল</string>
 </resources>

@@ -422,9 +422,9 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_show_copy_button_title">Másolás gomb megjelenítése</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">Koppintson az eredeti dalszöveg egyszerű szövegként történő másolásához; tartsa hosszan a nyers dalszöveg-forrásfájl mentéséhez a Letöltések mappába.</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Fordítás gomb megjelenítése</string>
-  <string name="morphe_music_lyrics_show_translate_button_summary">Dalszövegek fordítása a szolgáltató által biztosított fordításokkal, a Google Fordítóval vagy egy OpenAI-kompatibilis API-val.</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Koppintson a fordítás be-/kikapcsolásához; hosszú megnyomással csak a fordítás jelenik meg. Szolgáltatói fordításokat, Google Fordítót vagy OpenAI-kompatibilis API-t használ.</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Romanizálás gomb megjelenítése</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">Dalszövegek romanizálása a szolgáltató által biztosított romanizálással, a Google Fordítóval vagy egy OpenAI-kompatibilis API-val.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Koppintson a romanizálás be-/kikapcsolásához; hosszú megnyomással csak a romanizálás jelenik meg. Szolgáltatói romanizálást, Google Fordítót vagy OpenAI-kompatibilis API-t használ.</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Frissítés gomb megjelenítése</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Koppintson a következő dalszöveg-jelöltre váltáshoz; […] : „A szinkronizált szavak vagy szótagok kiemelése”</string>
   <string name="morphe_music_lyrics_saved">Mentett</string>
@@ -440,7 +440,7 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_display_artist_first_summary">Váltja az előadó és a cím sorrendjét a minilejátszóban és a MediaSessionben. BE: \"Előadó - Cím\", KI: \"Cím - Előadó\". Nem befolyásolja a dalszövegkeresést.</string>
   <string name="morphe_settings_music_lyrics_metadata_title">Szűrők</string>
   <string name="morphe_music_lyrics_custom_regex_title">Dalszöveg-szűrő regex</string>
-  <string name="morphe_music_lyrics_custom_regex_summary">A címekre, előadókra és albumokra alkalmazott reguláris kifejezés a dalszövegek keresése előtt. A letiltáshoz hagyd üresen. Az alapértelmezett eltávolítja a gyakori felesleges elemeket, például az \"Official Video\", a \"Remaster\" és a \"- Topic\" kifejezéseket.</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">A címekre, előadókra és albumokra alkalmazott reguláris kifejezés a dalszöveg keresése előtt, valamint annak kiértékelésekor, hogy két cím egyezik-e. Hagyja üresen mindkettő letiltásához. Az alapértelmezett reguláris kifejezés eltávolítja a gyakori felesleges elemeket, például \"Official Video\", \"Remaster\", \"【插曲】\" és \"- Topic\".</string>
   <string name="morphe_music_lyrics_text_filter_title">Dalszöveg-szűrő regex</string>
   <string name="morphe_music_lyrics_text_filter_summary">Csak az eredeti dalszövegre alkalmazott reguláris kifejezés (nem a fordításokra vagy romanizációkra). A letiltáshoz hagyd üresen.</string>
   <string name="morphe_music_lyrics_credit_line_regex_title">Információs sorok jelölői</string>
@@ -463,6 +463,8 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_romanize_hide">Romanizált</string>
   <string name="morphe_music_lyrics_romanizing">Romanizálás…</string>
   <string name="morphe_music_lyrics_romanize_failed">Nem sikerült romanizálni a dalszöveget.</string>
+  <string name="morphe_music_lyrics_translate_only">Csak a fordítás</string>
+  <string name="morphe_music_lyrics_romanize_only">Csak romanizált</string>
   <string name="morphe_music_lyrics_copied">Másolva a vágólapra</string>
   <string name="morphe_music_lyrics_refreshing">Frissítés</string>
   <string name="morphe_music_lyrics_refreshed">Frissítve</string>

@@ -257,6 +257,7 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_comments_section_in_home_feed_title">Skryť sekciu komentárov vo feede Domov</string>
   <string name="morphe_hide_comments_community_guidelines_title">Skryť Pokyny pre komunitu</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Skryť tlačidlo \'Vytvoriť Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">Skryť tlačidlo \'Nepáči sa mi\'</string>
   <string name="morphe_hide_comments_emoji_button_title">Skryť tlačidlo Emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Skryť možnosti panela filtrov</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Skryje všetky možnosti panela filtrov okrem položiek \'Najlepšie\' a \'Najnovšie\'</string>
@@ -397,6 +398,13 @@ Hlásenia sú verejné a pred pridaním kanála do zoznamu sa posudzujú. Odstr�
   <string name="morphe_channel_search_results">Výsledky vyhľadávania kanálov</string>
   <string name="morphe_channel_search_no_results">Na tomto kanáli sa nič nenašlo</string>
   <string name="morphe_channel_search_failed">Vyhľadávanie v tomto kanáli sa nepodarilo</string>
+  <string name="morphe_channel_search_sort_relevance">Relevantnosť</string>
+  <string name="morphe_channel_search_sort_most_viewed">Najsledovanejšie</string>
+  <string name="morphe_channel_search_sort_least_viewed">Najmenej sledované</string>
+  <string name="morphe_channel_search_sort_newest">Najnovšie</string>
+  <string name="morphe_channel_search_sort_oldest">Najstaršie</string>
+  <string name="morphe_channel_search_sort_shortest">Najkratšie</string>
+  <string name="morphe_channel_search_sort_longest">Najdlhšie</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Odkaz skopírovaný do schránky</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Odkaz s časovou pečiatkou skopírovaný do schránky</string>
@@ -1199,6 +1207,8 @@ Ak je povolené, URL adresy videí sa odošlú na server API a neodosielajú sa 
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Zobraziť tlačidlo Kvality</string>
   <string name="morphe_video_quality_dialog_button_summary">Ťuknutím a podržaním resetujete kvalitu na predvolenú</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Zobraziť rozlíšenie na tlačidle Kvalita</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Zobraziť rozlíšenie, napríklad 1080, namiesto označenia ako FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Vlastné menu rýchlosti prehrávania</string>
   <string name="morphe_restore_old_speed_menu_title">Obnoviť staré menu rýchlosti prehrávania</string>
@@ -1287,4 +1297,11 @@ Pri prehrávaní pomocou AV1 sa video môže zasekávať alebo vynechávať sní
   <string name="morphe_restore_old_video_action_bar_summary">"Opravuje problém, že akčné tlačidlá videa sa nedajú skryť
 
 Obmedzenie: Vracia sa k starému štýlu prekrytia 'Ďalšie videá'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Štýl ikony prehrávača</string>
+  <string name="morphe_player_icon_style_entry_auto">Automaticky</string>
+  <string name="morphe_player_icon_style_entry_default">Predvolený</string>
+  <string name="morphe_player_icon_style_entry_regular">Tenký</string>
+  <string name="morphe_player_icon_style_entry_bold">Tučný</string>
+  <string name="morphe_shorts_icon_style_title">Štýl ikony Shorts</string>
 </resources>

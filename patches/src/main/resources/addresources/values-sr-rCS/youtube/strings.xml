@@ -257,6 +257,7 @@ Promene uključuju:
   <string name="morphe_hide_comments_section_in_home_feed_title">Sakrij odeljak za komentare u Feed-u</string>
   <string name="morphe_hide_comments_community_guidelines_title">Sakrij smernice zajednice</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Sakrij dugme „Napravi Short”</string>
+  <string name="morphe_hide_comments_dislike_button_title">Sakrij dugme „Nesviđanje”</string>
   <string name="morphe_hide_comments_emoji_button_title">Sakrij dugme za emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Sakrij opcije trake filtera</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Sakriva sve opcije trake filtera, osim \"Najbolje\" i \"Najnovije\"</string>
@@ -397,6 +398,13 @@ Prijave su javne i pregledaju se pre nego što kanal bude dodat na listu. Uklanj
   <string name="morphe_channel_search_results">Rezultati pretrage kanala</string>
   <string name="morphe_channel_search_no_results">Ništa nije pronađeno na ovom kanalu</string>
   <string name="morphe_channel_search_failed">Pretraga ovog kanala nije uspela</string>
+  <string name="morphe_channel_search_sort_relevance">Relevantnost</string>
+  <string name="morphe_channel_search_sort_most_viewed">Najgledanije</string>
+  <string name="morphe_channel_search_sort_least_viewed">Najmanje gledano</string>
+  <string name="morphe_channel_search_sort_newest">Najnovije</string>
+  <string name="morphe_channel_search_sort_oldest">Najstarije</string>
+  <string name="morphe_channel_search_sort_shortest">Najkraće</string>
+  <string name="morphe_channel_search_sort_longest">Najduže</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link kopiran u privremenu memoriju</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Link sa vremenskom oznakom kopiran u privremenu memoriju</string>
@@ -1200,6 +1208,8 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Prikaži dugme kvaliteta</string>
   <string name="morphe_video_quality_dialog_button_summary">Dodirnite i zadržite da biste vratili kvalitet na podrazumevanu</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Prikaži rezoluciju na dugmetu Kvalitet</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Prikaži rezoluciju, kao što je 1080, umesto oznake kao što je FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Meni prilagođene brzine reprodukcije</string>
   <string name="morphe_restore_old_speed_menu_title">Vrati stari meni za brzinu reprodukcije</string>
@@ -1288,4 +1298,11 @@ Reprodukcija videa s AV1 može zastajkivati ili preskakati kadrove."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Popravlja problem kada se dugmad za akcije videa ne mogu sakriti
 
 Ograničenje: Vraća se na stari stil 'More videos' preklopa"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Stil ikonica plejera</string>
+  <string name="morphe_player_icon_style_entry_auto">Automatski</string>
+  <string name="morphe_player_icon_style_entry_default">Podrazumevana</string>
+  <string name="morphe_player_icon_style_entry_regular">Tanak</string>
+  <string name="morphe_player_icon_style_entry_bold">Podebljan</string>
+  <string name="morphe_shorts_icon_style_title">Stil ikonica za Shorts</string>
 </resources>

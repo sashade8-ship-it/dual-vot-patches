@@ -257,6 +257,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_comments_section_in_home_feed_title">Megjegyzések szekció elrejtése a Kezdőlapon</string>
   <string name="morphe_hide_comments_community_guidelines_title">Közösségi irányelvek elrejtése</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Shorts létrehozása gomb elrejtése</string>
+  <string name="morphe_hide_comments_dislike_button_title">Nem tetszik gomb elrejtése</string>
   <string name="morphe_hide_comments_emoji_button_title">Emoji gomb elrejtése</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Szűrőpanel-opciók elrejtése</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">A „Legnépszerűbb” és „Legújabb előre” opciókon kívüli összes rendezési mód elrejtése</string>
@@ -397,6 +398,13 @@ A jelentések nyilvánosak, és felülvizsgálják őket, mielőtt egy csatorna 
   <string name="morphe_channel_search_results">Csatornakeresési eredmények</string>
   <string name="morphe_channel_search_no_results">Nincs találat ezen a csatornán</string>
   <string name="morphe_channel_search_failed">Nem sikerült keresni ezen a csatornán</string>
+  <string name="morphe_channel_search_sort_relevance">Relevancia</string>
+  <string name="morphe_channel_search_sort_most_viewed">Legnézettebb</string>
+  <string name="morphe_channel_search_sort_least_viewed">Legkevésbé nézett</string>
+  <string name="morphe_channel_search_sort_newest">Legújabb</string>
+  <string name="morphe_channel_search_sort_oldest">Legrégebbi</string>
+  <string name="morphe_channel_search_sort_shortest">Legrövidebb</string>
+  <string name="morphe_channel_search_sort_longest">Leghosszabb</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link másolva a vágólapra</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">A videó időbélyeggel ellátott linkje másolva a vágólapra</string>
@@ -1200,6 +1208,8 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Minőség gomb megjelenítése</string>
   <string name="morphe_video_quality_dialog_button_summary">Érintse meg és tartsa lenyomva a minőség alaphelyzetbe állításához</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Felbontás megjelenítése a Minőség gombon</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">A felbontás megjelenítése, például 1080, egy olyan címke helyett, mint az FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Egyedi lejátszási sebesség menü</string>
   <string name="morphe_restore_old_speed_menu_title">Régi lejátszási sebesség menü visszaállítása</string>
@@ -1288,4 +1298,11 @@ Az AV1-es videólejátszás akadozhat vagy képkockákat ejthet."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Javítja azt a problémát, hogy a videó műveletgombjai nem rejthetők el
 
 Korlátozás: Visszaáll a régi stílusú 'További videók' átfedésre"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Lejátszó ikonstílusa</string>
+  <string name="morphe_player_icon_style_entry_auto">Automatikus</string>
+  <string name="morphe_player_icon_style_entry_default">Alapértelmezett</string>
+  <string name="morphe_player_icon_style_entry_regular">Vékony</string>
+  <string name="morphe_player_icon_style_entry_bold">Félkövér</string>
+  <string name="morphe_shorts_icon_style_title">Shorts ikonstílus</string>
 </resources>

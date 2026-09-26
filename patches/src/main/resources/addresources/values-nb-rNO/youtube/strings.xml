@@ -257,6 +257,7 @@ Endringer inkluderer:
   <string name="morphe_hide_comments_section_in_home_feed_title">Skjul kommentarseksjonen i Hjem-feeden</string>
   <string name="morphe_hide_comments_community_guidelines_title">Skjul retningslinjer for fellesskapet</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Skjul \'Opprett en Short\'-knapp</string>
+  <string name="morphe_hide_comments_dislike_button_title">Skjul misliker-knappen</string>
   <string name="morphe_hide_comments_emoji_button_title">Skjul emojiknapp</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Skjul filterlinjealternativer</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Skjuler alle filterlinjealternativer unntatt \'Best\' og \'Nyeste\'</string>
@@ -397,6 +398,13 @@ Rapporter er offentlige og blir gjennomgått før en kanal legges til en liste. 
   <string name="morphe_channel_search_results">Søkeresultater for kanalen</string>
   <string name="morphe_channel_search_no_results">Fant ingenting på denne kanalen</string>
   <string name="morphe_channel_search_failed">Kunne ikke søke i denne kanalen</string>
+  <string name="morphe_channel_search_sort_relevance">Relevans</string>
+  <string name="morphe_channel_search_sort_most_viewed">Mest sett</string>
+  <string name="morphe_channel_search_sort_least_viewed">Minst sett</string>
+  <string name="morphe_channel_search_sort_newest">Nyeste</string>
+  <string name="morphe_channel_search_sort_oldest">Eldste</string>
+  <string name="morphe_channel_search_sort_shortest">Korteste</string>
+  <string name="morphe_channel_search_sort_longest">Lengste</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Koblet til utklippstavlen</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Koblet til utklippstavlen med tidsstempel</string>
@@ -1198,6 +1206,8 @@ Hvis aktivert, sendes videourler til API-serveren og ingen andre data sendes. Hv
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Vis Kvalitetsknapp</string>
   <string name="morphe_video_quality_dialog_button_summary">Trykk og hold for å tilbakestille kvaliteten til standard</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Vis oppløsning på kvalitetsknappen</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Vis oppløsningen, for eksempel 1080, i stedet for en etikett som FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Tilpasset hastighetsmeny</string>
   <string name="morphe_restore_old_speed_menu_title">Gjenopprett gammel hastighetsmeny</string>
@@ -1286,4 +1296,11 @@ Videospilling med AV1 kan hakke eller miste bilder."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Fikser at videohandlingsknapper ikke kan skjules
 
 Begrensning: Går tilbake til gammel stil for 'Flere videoer'-overlegg"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Spillerikonstil</string>
+  <string name="morphe_player_icon_style_entry_auto">Automatisk</string>
+  <string name="morphe_player_icon_style_entry_default">Standard</string>
+  <string name="morphe_player_icon_style_entry_regular">Tynn</string>
+  <string name="morphe_player_icon_style_entry_bold">Fet</string>
+  <string name="morphe_shorts_icon_style_title">Shorts-ikonstil</string>
 </resources>

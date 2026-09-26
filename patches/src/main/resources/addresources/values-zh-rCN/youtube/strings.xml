@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">隐藏主页动态的评论区</string>
   <string name="morphe_hide_comments_community_guidelines_title">隐藏社区指南</string>
   <string name="morphe_hide_comments_create_a_short_button_title">隐藏“创建 Short”按钮</string>
+  <string name="morphe_hide_comments_dislike_button_title">隐藏点踩按钮</string>
   <string name="morphe_hide_comments_emoji_button_title">隐藏表情符号按钮</string>
   <string name="morphe_hide_comments_filter_bar_options_title">隐藏筛选栏选项</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">隐藏所有筛选栏选项，除了“热门”和“最新”</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">频道搜索结果</string>
   <string name="morphe_channel_search_no_results">此频道中未找到任何内容</string>
   <string name="morphe_channel_search_failed">无法搜索此频道</string>
+  <string name="morphe_channel_search_sort_relevance">相关性</string>
+  <string name="morphe_channel_search_sort_most_viewed">最多观看</string>
+  <string name="morphe_channel_search_sort_least_viewed">最少观看</string>
+  <string name="morphe_channel_search_sort_newest">最新</string>
+  <string name="morphe_channel_search_sort_oldest">最早</string>
+  <string name="morphe_channel_search_sort_shortest">Shortest</string>
+  <string name="morphe_channel_search_sort_longest">最长</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">链接已复制到剪贴板</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">带有时间戳的链接已复制到剪贴板</string>
@@ -1200,6 +1208,8 @@ Second \"item\" text"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">显示视频画质按钮</string>
   <string name="morphe_video_quality_dialog_button_summary">点按并按住以将画质重置为默认值</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">在画质按钮上显示分辨率</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">显示分辨率（例如 1080），而不是像 FHD 这样的标签</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">自定义播放速度菜单</string>
   <string name="morphe_restore_old_speed_menu_title">恢复旧版播放速度菜单</string>
@@ -1288,4 +1298,11 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_video_action_bar_summary">"修复视频操作按钮无法隐藏的问题
 
 限制：恢复旧版“更多视频”叠加层"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">播放器图标样式</string>
+  <string name="morphe_player_icon_style_entry_auto">自动</string>
+  <string name="morphe_player_icon_style_entry_default">默认</string>
+  <string name="morphe_player_icon_style_entry_regular">细体</string>
+  <string name="morphe_player_icon_style_entry_bold">粗体</string>
+  <string name="morphe_shorts_icon_style_title">Shorts 图标样式</string>
 </resources>

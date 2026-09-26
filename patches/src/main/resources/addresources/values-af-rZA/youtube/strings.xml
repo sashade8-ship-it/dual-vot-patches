@@ -257,6 +257,7 @@ Veranderings sluit in:
   <string name="morphe_hide_comments_section_in_home_feed_title">Versteek kommentaar-afdeling in Tuisvoedsel</string>
   <string name="morphe_hide_comments_community_guidelines_title">Verberg Gemeenskapriglyne</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Verberg \'Maak \'n Short\'-knoppie</string>
+  <string name="morphe_hide_comments_dislike_button_title">Versteek Dislike-knoppie</string>
   <string name="morphe_hide_comments_emoji_button_title">Verberg Emoji-knoppie</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Versteek filterbalk-opsies</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Versteek alle filterbalk-opsies behalwe \'Beste\' en \'Nuutste\'</string>
@@ -397,6 +398,13 @@ Verslae is openbaar en word nagegaan voordat 'n kanaal by 'n lys gevoeg word. Ve
   <string name="morphe_channel_search_results">Kanaalsoekresultate</string>
   <string name="morphe_channel_search_no_results">Niks op hierdie kanaal gevind nie</string>
   <string name="morphe_channel_search_failed">Kon nie hierdie kanaal deursoek nie</string>
+  <string name="morphe_channel_search_sort_relevance">Relevansie</string>
+  <string name="morphe_channel_search_sort_most_viewed">Meeste gekyk</string>
+  <string name="morphe_channel_search_sort_least_viewed">Minste gekyk</string>
+  <string name="morphe_channel_search_sort_newest">Nuutste</string>
+  <string name="morphe_channel_search_sort_oldest">Oudste</string>
+  <string name="morphe_channel_search_sort_shortest">Kortste</string>
+  <string name="morphe_channel_search_sort_longest">Langste</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Skakel na knipbord gekopieer</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Skakel met tydstempel na knipbord gekopieer</string>
@@ -1200,6 +1208,8 @@ Tik hier om DeArrow.ajay.app oop te maak"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Wys kwaliteitknoppie</string>
   <string name="morphe_video_quality_dialog_button_summary">Tik en hou in om kwaliteit na verstek terug te stel</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Wys resolusie op die kwaliteit-knoppie</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Wys die resolusie, soos 1080, in plaas van \'n etiket soos FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Pasgemaakte speel spoedmenu</string>
   <string name="morphe_restore_old_speed_menu_title">Herstel ou speel spoedmenu</string>
@@ -1288,4 +1298,11 @@ Videoweergawe met AV1 kan hakkel of rame laat val."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Maak reg dat video-aksieknoppies nie versteek kan word nie
 
 Beperking: Keer terug na ou-styl 'Meer video's'-oorleg"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Speler-ikoonstyl</string>
+  <string name="morphe_player_icon_style_entry_auto">Outomaties</string>
+  <string name="morphe_player_icon_style_entry_default">Verstek</string>
+  <string name="morphe_player_icon_style_entry_regular">Dun</string>
+  <string name="morphe_player_icon_style_entry_bold">Vet</string>
+  <string name="morphe_shorts_icon_style_title">Shorts-ikoonstyl</string>
 </resources>

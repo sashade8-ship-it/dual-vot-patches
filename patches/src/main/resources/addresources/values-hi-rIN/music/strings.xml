@@ -417,9 +417,9 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_lyrics_show_copy_button_title">कॉपी बटन दिखाएं</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">मूल लिरिक्स को सादे पाठ के रूप में कॉपी करने के लिए टैप करें; कच्ची लिरिक्स स्रोत फ़ाइल को डाउनलोड में सहेजने के लिए लॉन्ग प्रेस करें</string>
   <string name="morphe_music_lyrics_show_translate_button_title">अनुवाद बटन दिखाएं</string>
-  <string name="morphe_music_lyrics_show_translate_button_summary">प्रदाता अनुवाद, Google Translate या OpenAI-संगत API का उपयोग करके गीत के बोल का अनुवाद करें।</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">अनुवाद टॉगल करने के लिए टैप करें; केवल अनुवाद के लिए देर तक दबाएँ। प्रदाता अनुवाद, Google Translate, या OpenAI-संगत API का उपयोग करता है।</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">रोमनाइज़ बटन दिखाएँ</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">प्रदाता रोमनीकरण, Google Translate या OpenAI-संगत API का उपयोग करके गीत के बोल को रोमन में लिखें।</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">रोमनकरण टॉगल करने के लिए टैप करें; केवल रोमनकरण के लिए देर तक दबाएँ। प्रदाता रोमनकरण, Google Translate, या OpenAI-संगत API का उपयोग करता है।</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">रिफ़्रेश बटन दिखाएँ</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">अगले गीत विकल्प पर जाने के लिए टैप करें; तृतीय-पक्ष गीतों को अस्थायी रूप से अक्षम करने और अंतर्निहित गीत दिखाने के लिए देर तक दबाएँ</string>
   <string name="morphe_music_lyrics_saved">सहेजा गया</string>
@@ -435,7 +435,7 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_lyrics_display_artist_first_summary">मिनीप्लेयर और MediaSession में कलाकार और शीर्षक के प्रदर्शन क्रम को टॉगल करें। चालू: \"कलाकार - शीर्षक\" और बंद: \"शीर्षक - कलाकार\"। गीत खोज पर इसका कोई प्रभाव नहीं पड़ता।</string>
   <string name="morphe_settings_music_lyrics_metadata_title">फ़िल्टर</string>
   <string name="morphe_music_lyrics_custom_regex_title">मेटाडेटा regex</string>
-  <string name="morphe_music_lyrics_custom_regex_summary">शीर्षकों, कलाकारों और एल्बमों पर एक रेगुलर एक्सप्रेशन लागू किया जाता है। अक्षम करने के लिए खाली छोड़ें। डिफ़ॉल्ट रूप से, यह \"Official Video\", \"Remaster\" और \"- Topic\" जैसी सामान्य अनावश्यक चीज़ें हटाता है।</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">रेगुलर एक्सप्रेशन शीर्षकों, कलाकारों और एल्बमों पर गीत खोजने से पहले और यह जाँचते समय लागू किया जाता है कि दो शीर्षक मेल खाते हैं या नहीं। दोनों को अक्षम करने के लिए खाली छोड़ें। डिफ़ॉल्ट \"Official Video\", \"Remaster\", \"【插曲】\" और \"- Topic\" जैसी सामान्य अनावश्यक चीज़ें हटा देता है।</string>
   <string name="morphe_music_lyrics_text_filter_title">गीत फ़िल्टर रेगुलर एक्सप्रेशन</string>
   <string name="morphe_music_lyrics_text_filter_summary">रेगुलर एक्सप्रेशन केवल मूल गीत पाठ पर लागू होता है (अनुवाद या रोमनीकरण पर नहीं)। अक्षम करने के लिए खाली छोड़ें</string>
   <string name="morphe_music_lyrics_credit_line_regex_title">जानकारी पंक्ति मार्कर</string>
@@ -458,6 +458,8 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_lyrics_romanize_hide">रोमनीकृत</string>
   <string name="morphe_music_lyrics_romanizing">रोमनीकृत किया जा रहा है…</string>
   <string name="morphe_music_lyrics_romanize_failed">गीतों को रोमनीकृत नहीं किया जा सका</string>
+  <string name="morphe_music_lyrics_translate_only">केवल अनुवाद</string>
+  <string name="morphe_music_lyrics_romanize_only">केवल रोमनकृत</string>
   <string name="morphe_music_lyrics_copied">क्लिपबोर्ड में कॉपी किया गया</string>
   <string name="morphe_music_lyrics_refreshing">रिफ़्रेश हो रहा है</string>
   <string name="morphe_music_lyrics_refreshed">रीफ़्रेश किया गया</string>

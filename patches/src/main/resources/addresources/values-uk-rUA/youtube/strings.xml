@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">Приховати секцію коментарів у стрічці</string>
   <string name="morphe_hide_comments_community_guidelines_title">Приховати правила спільноти</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Приховати кнопку \"Створити Short\"</string>
+  <string name="morphe_hide_comments_dislike_button_title">Приховати кнопку \"Дизлайк\"</string>
   <string name="morphe_hide_comments_emoji_button_title">Приховати кнопку \"Емодзі\"</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Приховати параметри панелі фільтрів</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Приховує всі варіанти панелі фільтрів, окрім  \"Найпопулярніші\" та \"Найновіші\"</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">Результати пошуку з каналу</string>
   <string name="morphe_channel_search_no_results">Нічого не знайдено на цьому каналі</string>
   <string name="morphe_channel_search_failed">Не вдалося виконати пошук на цьому каналі</string>
+  <string name="morphe_channel_search_sort_relevance">Релевантність</string>
+  <string name="morphe_channel_search_sort_most_viewed">Найбільш переглядані</string>
+  <string name="morphe_channel_search_sort_least_viewed">Найменш переглядані</string>
+  <string name="morphe_channel_search_sort_newest">Найновіші</string>
+  <string name="morphe_channel_search_sort_oldest">Найстаріші</string>
+  <string name="morphe_channel_search_sort_shortest">Найкоротші</string>
+  <string name="morphe_channel_search_sort_longest">Найдовші</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Посилання скопійовано в буфер обміну</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Посилання з позначкою часу скопійовано в буфер обміну</string>
@@ -1199,6 +1207,8 @@ Second \"item\" text"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Показати кнопку \"Якість\"</string>
   <string name="morphe_video_quality_dialog_button_summary">Натисніть і утримуйте для скидання якості до типової</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Показати роздільну здатність на кнопці Якість</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Показувати роздільну здатність, наприклад 1080, замість позначки, як-от FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Власне меню швидкості відтворення</string>
   <string name="morphe_restore_old_speed_menu_title">Відновити старе меню швидкості відтворення</string>
@@ -1287,4 +1297,11 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Виправляє неможливість приховати кнопки дій відео
 
 Обмеження: повертає старий стиль накладки \"Інші відео\""</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Стиль іконок плеєра</string>
+  <string name="morphe_player_icon_style_entry_auto">Автоматично</string>
+  <string name="morphe_player_icon_style_entry_default">Типова</string>
+  <string name="morphe_player_icon_style_entry_regular">Тонкий</string>
+  <string name="morphe_player_icon_style_entry_bold">Жирний</string>
+  <string name="morphe_shorts_icon_style_title">Стиль іконки Shorts</string>
 </resources>

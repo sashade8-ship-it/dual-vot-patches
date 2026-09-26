@@ -257,6 +257,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_comments_section_in_home_feed_title">Dölj kommentarsfältet i hemflödet</string>
   <string name="morphe_hide_comments_community_guidelines_title">Dölj communityns riktlinjer</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Dölj knappen Skapa en Shorts-video</string>
+  <string name="morphe_hide_comments_dislike_button_title">Dölj knappen Ogilla</string>
   <string name="morphe_hide_comments_emoji_button_title">Dölj emoji-knappen</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Dölj filterfältsalternativ</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Döljer alla filterfältsalternativ utom Populärast och Senaste</string>
@@ -397,6 +398,13 @@ Rapporter är offentliga och granskas innan en kanal läggs till i en lista. Bor
   <string name="morphe_channel_search_results">Sökresultat för kanaler</string>
   <string name="morphe_channel_search_no_results">Inget hittades i den här kanalen</string>
   <string name="morphe_channel_search_failed">Det gick inte att söka i den här kanalen</string>
+  <string name="morphe_channel_search_sort_relevance">Relevans</string>
+  <string name="morphe_channel_search_sort_most_viewed">Mest visade</string>
+  <string name="morphe_channel_search_sort_least_viewed">Minst visade</string>
+  <string name="morphe_channel_search_sort_newest">Nyaste</string>
+  <string name="morphe_channel_search_sort_oldest">Äldsta</string>
+  <string name="morphe_channel_search_sort_shortest">Shortaste</string>
+  <string name="morphe_channel_search_sort_longest">Längsta</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Länk kopierad till urklipp</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Länk med tidsstämpel kopierad till urklipp</string>
@@ -1200,6 +1208,8 @@ Tryck här för att öppna DeArrow.ajay.app"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Visa knappen Kvalitet</string>
   <string name="morphe_video_quality_dialog_button_summary">Tryck länge för att återställa till standardkvaliteten</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Visa upplösning på kvalitetsknappen</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Visa upplösningen, till exempel 1080, i stället för en etikett som FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Anpassad meny för uppspelningshastighet</string>
   <string name="morphe_restore_old_speed_menu_title">Återställ gammal meny för uppspelningshastighet</string>
@@ -1288,4 +1298,11 @@ Videouppspelning med AV1 kan hacka eller tappa bildrutor."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Åtgärdar att videons åtgärdsknappar inte kan döljas
 
 Begränsning: Återgår till gammal stil för 'Fler videor'-överlägget"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Ikonstil i spelaren</string>
+  <string name="morphe_player_icon_style_entry_auto">Automatisk</string>
+  <string name="morphe_player_icon_style_entry_default">Standard</string>
+  <string name="morphe_player_icon_style_entry_regular">Tunn</string>
+  <string name="morphe_player_icon_style_entry_bold">Fet</string>
+  <string name="morphe_shorts_icon_style_title">Ikonstil för Shorts</string>
 </resources>

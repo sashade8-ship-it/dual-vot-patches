@@ -257,6 +257,7 @@ Promene uključuju:
   <string name="morphe_hide_comments_section_in_home_feed_title">Сакриј одељак за коментаре у Хом фуд</string>
   <string name="morphe_hide_comments_community_guidelines_title">Сакриј смернице заједнице</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Сакриј дугме „Направи Short”</string>
+  <string name="morphe_hide_comments_dislike_button_title">Сакриј дугме „Несвиђање”</string>
   <string name="morphe_hide_comments_emoji_button_title">Сакриј дугме за емоџије</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Сакиј опције траке филтера</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Сакиј све опције траке филтера осим ‘Најбоље’ и ‘Најновије’</string>
@@ -397,6 +398,13 @@ Promene uključuju:
   <string name="morphe_channel_search_results">Резултати претраге канала</string>
   <string name="morphe_channel_search_no_results">Ништа није пронађено на овом каналу</string>
   <string name="morphe_channel_search_failed">Претрага овог канала није успела</string>
+  <string name="morphe_channel_search_sort_relevance">Релевантност</string>
+  <string name="morphe_channel_search_sort_most_viewed">Најгледанији</string>
+  <string name="morphe_channel_search_sort_least_viewed">Најмање гледани</string>
+  <string name="morphe_channel_search_sort_newest">Најновији</string>
+  <string name="morphe_channel_search_sort_oldest">Најстарији</string>
+  <string name="morphe_channel_search_sort_shortest">Најкраћи</string>
+  <string name="morphe_channel_search_sort_longest">Најдужи</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Линк копиран у привремену меморију</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Линк са временском ознаком копиран у привремену меморију</string>
@@ -1183,6 +1191,8 @@ Promene uključuju:
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Прикажи дугме квалитета</string>
   <string name="morphe_video_quality_dialog_button_summary">Додините и задржите дугме квалитета</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Прикажи резолуцију на дугмету Квалитет</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Прикажи резолуцију, нпр. 1080, уместо ознаке попут FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Мени прилагођене брзине репродукције</string>
   <string name="morphe_restore_old_speed_menu_title">Врати стари мени брзине репродукције</string>
@@ -1271,4 +1281,11 @@ Promene uključuju:
   <string name="morphe_restore_old_video_action_bar_summary">"Исправља проблем што се дугмад за акције на видео снимку не могу сакрити
 
 Ограничење: Враћа се на стари стил преклапања 'Више видеа'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Стил иконице плејера</string>
+  <string name="morphe_player_icon_style_entry_auto">Аутоматски</string>
+  <string name="morphe_player_icon_style_entry_default">Подразумевано</string>
+  <string name="morphe_player_icon_style_entry_regular">Танко</string>
+  <string name="morphe_player_icon_style_entry_bold">Подебљано</string>
+  <string name="morphe_shorts_icon_style_title">Стил икона за Shorts</string>
 </resources>

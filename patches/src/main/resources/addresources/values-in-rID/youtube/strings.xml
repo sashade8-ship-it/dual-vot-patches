@@ -257,6 +257,7 @@ Perubahan termasuk:
   <string name="morphe_hide_comments_section_in_home_feed_title">Sembunyikan bagian komentar di feed Beranda</string>
   <string name="morphe_hide_comments_community_guidelines_title">Sembunyikan Pedoman Komunitas</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Sembunyikan tombol \'Buat Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">Sembunyikan tombol Tidak Suka</string>
   <string name="morphe_hide_comments_emoji_button_title">Sembunyikan tombol Emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Sembunyikan opsi bilah penyaring</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Menyembunyikan semua opsi bilah penyaring kecuali \'Teratas\' dan \'Terbaru\'</string>
@@ -397,6 +398,13 @@ Laporan bersifat publik dan ditinjau sebelum saluran ditambahkan ke daftar. Peng
   <string name="morphe_channel_search_results">Hasil pencarian saluran</string>
   <string name="morphe_channel_search_no_results">Tidak ada yang ditemukan di saluran ini</string>
   <string name="morphe_channel_search_failed">Tidak dapat mencari di saluran ini</string>
+  <string name="morphe_channel_search_sort_relevance">Relevansi</string>
+  <string name="morphe_channel_search_sort_most_viewed">Paling banyak ditonton</string>
+  <string name="morphe_channel_search_sort_least_viewed">Paling sedikit ditonton</string>
+  <string name="morphe_channel_search_sort_newest">Terbaru</string>
+  <string name="morphe_channel_search_sort_oldest">Terlama</string>
+  <string name="morphe_channel_search_sort_shortest">Terpendek</string>
+  <string name="morphe_channel_search_sort_longest">Terpanjang</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Tautan disalin ke papan klip</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Tautan dengan tanda waktu disalin ke papan klip</string>
@@ -1200,6 +1208,8 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Tampilkan tombol Kualitas</string>
   <string name="morphe_video_quality_dialog_button_summary">Ketuk dan tahan untuk mereset kualitas ke bawaan</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Tampilkan resolusi pada tombol Kualitas</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Tampilkan resolusi, misalnya 1080, alih-alih label seperti FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Menu kecepatan pemutaran khusus</string>
   <string name="morphe_restore_old_speed_menu_title">Kembalikan menu kecepatan pemutaran lama</string>
@@ -1288,4 +1298,11 @@ Pemutaran video dengan AV1 dapat tersendat atau kehilangan frame."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Memperbaiki masalah tombol tindakan video yang tidak dapat disembunyikan
 
 Batasan: Mengembalikan tampilan hamparan 'Video lainnya' ke gaya lama"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Gaya ikon pemutar</string>
+  <string name="morphe_player_icon_style_entry_auto">Otomatis</string>
+  <string name="morphe_player_icon_style_entry_default">Bawaan</string>
+  <string name="morphe_player_icon_style_entry_regular">Tipis</string>
+  <string name="morphe_player_icon_style_entry_bold">Tebal</string>
+  <string name="morphe_shorts_icon_style_title">Gaya ikon Shorts</string>
 </resources>

@@ -257,6 +257,7 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_comments_section_in_home_feed_title">Ana sayfa akışında yorumlar bölümünü gizle</string>
   <string name="morphe_hide_comments_community_guidelines_title">Topluluk kurallarını gizle</string>
   <string name="morphe_hide_comments_create_a_short_button_title">\'Short oluştur\' düğmesini gizle</string>
+  <string name="morphe_hide_comments_dislike_button_title">Beğenmeme düğmesini gizle</string>
   <string name="morphe_hide_comments_emoji_button_title">Emoji düğmesini gizle</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Filtre çubuğu seçeneklerini gizle</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">\'En popüler\' ve \'En yeni\' dışındaki tüm filtre çubuğu seçeneklerini gizler</string>
@@ -397,6 +398,13 @@ Raporlar herkese açıktır ve bir kanal listeye eklenmeden önce incelenir. Kal
   <string name="morphe_channel_search_results">Kanal arama sonuçları</string>
   <string name="morphe_channel_search_no_results">Bu kanalda sonuç bulunamadı</string>
   <string name="morphe_channel_search_failed">Bu kanalda arama yapılamadı</string>
+  <string name="morphe_channel_search_sort_relevance">Alaka</string>
+  <string name="morphe_channel_search_sort_most_viewed">En çok izlenen</string>
+  <string name="morphe_channel_search_sort_least_viewed">En az izlenen</string>
+  <string name="morphe_channel_search_sort_newest">En yeni</string>
+  <string name="morphe_channel_search_sort_oldest">En eski</string>
+  <string name="morphe_channel_search_sort_shortest">En kısa Short</string>
+  <string name="morphe_channel_search_sort_longest">En uzun</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Bağlantı panoya kopyalandı</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Zaman damgasıyla birlikte bağlantı panoya kopyalandı</string>
@@ -1200,6 +1208,8 @@ DeArrow hakkında daha fazla bilgi edinmek için buraya dokunun"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Kalite düğmesini göster</string>
   <string name="morphe_video_quality_dialog_button_summary">Kaliteyi varsayılana sıfırlamak için dokunup basılı tutun</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Kalite düğmesinde çözünürlüğü göster</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Çözünürlüğü, FHD gibi bir etiket yerine 1080 gibi göster</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Özel oynatma hızı menüsü</string>
   <string name="morphe_restore_old_speed_menu_title">Eski oynatma hızı menüsünü geri getir</string>
@@ -1288,4 +1298,11 @@ AV1 ile video oynatma takılabilir veya kare atlayabilir."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Video eylem düğmelerinin gizlenememesi sorununu düzeltir
 
 Sınırlama: Eski stil 'Diğer videolar' katmanına geri döner"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Oynatıcı simge stili</string>
+  <string name="morphe_player_icon_style_entry_auto">Otomatik</string>
+  <string name="morphe_player_icon_style_entry_default">Varsayılan</string>
+  <string name="morphe_player_icon_style_entry_regular">İnce</string>
+  <string name="morphe_player_icon_style_entry_bold">Kalın</string>
+  <string name="morphe_shorts_icon_style_title">Shorts simge stili</string>
 </resources>

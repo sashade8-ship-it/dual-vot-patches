@@ -40,6 +40,8 @@ import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
+import app.morphe.patches.youtube.video.format.hookAdaptiveFormat
+import app.morphe.patches.youtube.video.format.videoFormatPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.cloneParameters
 import app.morphe.util.findFreeRegister
@@ -76,7 +78,8 @@ val miniplayerPatch = bytecodePatch(
         sharedExtensionPatch,
         settingsPatch,
         versionCheckPatch,
-        playerOverlayButtonsHookPatch
+        playerOverlayButtonsHookPatch,
+        videoFormatPatch
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -672,5 +675,7 @@ val miniplayerPatch = bytecodePatch(
         )
 
         // endregion
+
+        hookAdaptiveFormat("$MINIMAL_EXTENSION_CLASS->setVideoAspectRatio")
     }
 }

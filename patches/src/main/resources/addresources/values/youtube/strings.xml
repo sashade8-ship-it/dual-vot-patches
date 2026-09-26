@@ -268,6 +268,7 @@ Changes include:
     <string name="morphe_hide_comments_section_in_home_feed_title">Hide comments section in Home feed</string>
     <string name="morphe_hide_comments_community_guidelines_title">Hide Community Guidelines</string>
     <string name="morphe_hide_comments_create_a_short_button_title">Hide \'Create a Short\' button</string>
+    <string name="morphe_hide_comments_dislike_button_title">Hide Dislike button</string>
     <string name="morphe_hide_comments_emoji_button_title">Hide Emoji button</string>
     <string name="morphe_hide_comments_filter_bar_options_title">Hide filter bar options</string>
     <string name="morphe_hide_comments_filter_bar_options_summary">Hides all filter bar options except \'Top\' and \'Newest\'</string>
@@ -426,6 +427,13 @@ Reports are public and are reviewed before a channel is added to a list. Removal
     <string name="morphe_channel_search_results">Channel search results</string>
     <string name="morphe_channel_search_no_results">Nothing found on this channel</string>
     <string name="morphe_channel_search_failed">Could not search this channel</string>
+    <string name="morphe_channel_search_sort_relevance">Relevance</string>
+    <string name="morphe_channel_search_sort_most_viewed">Most viewed</string>
+    <string name="morphe_channel_search_sort_least_viewed">Least viewed</string>
+    <string name="morphe_channel_search_sort_newest">Newest</string>
+    <string name="morphe_channel_search_sort_oldest">Oldest</string>
+    <string name="morphe_channel_search_sort_shortest">Shortest</string>
+    <string name="morphe_channel_search_sort_longest">Longest</string>
 
     <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
     <string name="morphe_share_copy_link_button_success">Link copied to clipboard</string>
@@ -1322,6 +1330,8 @@ Tap here to open DeArrow.ajay.app"</string>
     <!-- video.quality.button.videoQualityDialogButtonPatch -->
     <string name="morphe_video_quality_dialog_button_title">Show Quality button</string>
     <string name="morphe_video_quality_dialog_button_summary">Tap and hold to reset quality to default</string>
+    <string name="morphe_video_quality_dialog_button_resolution_title">Show resolution on Quality button</string>
+    <string name="morphe_video_quality_dialog_button_resolution_summary">Show the resolution, such as 1080, instead of a label such as FHD</string>
 
     <!-- video.speed.custom.customPlaybackSpeedPatch -->
     <string name="morphe_custom_speed_menu_title">Custom playback speed menu</string>
@@ -1419,6 +1429,21 @@ Video playback with AV1 may stutter or drop frames."</string>
     <string name="morphe_restore_old_video_action_bar_summary">"Fixes video action buttons cannot be hidden
 
 Limitation: Reverts to old style \'More videos\' overlay"</string>
+
+    <!-- layout.player.icons.playerIconStylePatch -->
+    <string name="morphe_player_icon_style_title">Player icon style</string>
+    <string name="morphe_player_icon_style_entry_auto">Automatic</string>
+    <string name="morphe_player_icon_style_entry_default">Default</string>
+    <string name="morphe_player_icon_style_entry_regular">Thin</string>
+    <string name="morphe_player_icon_style_entry_bold">Bold</string>
+    <string name="morphe_player_icon_style_entry_fluent" translatable="false">Fluent</string>
+    <string name="morphe_player_icon_style_entry_phosphor" translatable="false">Phosphor</string>
+    <string name="morphe_player_icon_style_entry_phosphor_light" translatable="false">Phosphor Light</string>
+    <string name="morphe_player_icon_style_entry_phosphor_fill" translatable="false">Phosphor Fill</string>
+    <string name="morphe_player_icon_style_entry_phosphor_duotone" translatable="false">Phosphor Duotone</string>
+    <string name="morphe_player_icon_style_entry_ionicons" translatable="false">Ionicons</string>
+    <string name="morphe_player_icon_style_entry_sharp" translatable="false">Sharp</string>
+    <string name="morphe_shorts_icon_style_title">Shorts icon style</string>
     <string name="dualvot_yandex_screen_title">Yandex translation</string>
     <string name="dualvot_yandex_screen_summary">Configure Yandex translation and its player button</string>
     <string name="dualvot_yandex_enabled_title">Enable Yandex translation</string>

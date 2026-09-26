@@ -254,6 +254,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">پنهان‌کردن بخش دیدگاه‌ها در خوراک خانه</string>
   <string name="morphe_hide_comments_community_guidelines_title">پنهان‌کردن دستورالعمل‌های جامعه</string>
   <string name="morphe_hide_comments_create_a_short_button_title">پنهان‌کردن دکمهٔ «ساخت Short»</string>
+  <string name="morphe_hide_comments_dislike_button_title">پنهان‌کردن دکمهٔ نپسندیدن</string>
   <string name="morphe_hide_comments_emoji_button_title">پنهان‌کردن دکمهٔ ایموجی</string>
   <string name="morphe_hide_comments_filter_bar_options_title">پنهان‌کردن گزینه‌های نوار فیلتر</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">همهٔ گزینه‌های نوار فیلتر به‌جز «برترها» و «جدیدترین‌ها» را پنهان می‌کند</string>
@@ -1263,4 +1264,7 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_stats_for_nerds_title">نمایش جعل در «آمار برای نردها»</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
   <string name="morphe_restore_old_video_action_bar_title">بازیابی نوار عملیات قدیمی ویدئو</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_entry_auto">خودکار</string>
+  <string name="morphe_player_icon_style_entry_default">پیش‌فرض</string>
 </resources>

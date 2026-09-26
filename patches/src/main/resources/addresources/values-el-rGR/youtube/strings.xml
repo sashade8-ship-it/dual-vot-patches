@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">Απόκρυψη ενότητας σχολίων στο Home feed</string>
   <string name="morphe_hide_comments_community_guidelines_title">Οδηγίες κοινότητας</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Κουμπί «Δημιουργία Short»</string>
+  <string name="morphe_hide_comments_dislike_button_title">Κουμπί «Δεν μου αρέσει»</string>
   <string name="morphe_hide_comments_emoji_button_title">Απόκρυψη κουμπιού Emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Κρύψτε επιλογές γραμμής φίλτρων</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Κρύβει όλες τις επιλογές της γραμμής φίλτρων εκτός από τις \'Κορυφαία\' και \'Νεότερη\'</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">Αποτελέσματα αναζήτησης καναλιών</string>
   <string name="morphe_channel_search_no_results">Δεν βρέθηκαν αποτελέσματα σε αυτό το κανάλι</string>
   <string name="morphe_channel_search_failed">Δεν ήταν δυνατή η αναζήτηση σε αυτό το κανάλι</string>
+  <string name="morphe_channel_search_sort_relevance">Συνάφεια</string>
+  <string name="morphe_channel_search_sort_most_viewed">Περισσότερες προβολές</string>
+  <string name="morphe_channel_search_sort_least_viewed">Λιγότερες προβολές</string>
+  <string name="morphe_channel_search_sort_newest">Νεότερα</string>
+  <string name="morphe_channel_search_sort_oldest">Παλαιότερα</string>
+  <string name="morphe_channel_search_sort_shortest">Συντομότερα</string>
+  <string name="morphe_channel_search_sort_longest">Μακρύτερα</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Η διεύθυνση URL αντιγράφηκε στο πρόχειρο</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Η διεύθυνση URL με χρονοσήμανση αντιγράφηκε στο πρόχειρο</string>
@@ -1185,6 +1193,8 @@ Second \"item\" text"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Εμφάνιση κουμπιού ποιότητας</string>
   <string name="morphe_video_quality_dialog_button_summary">Πατήστε και κρατήστε για επαναφορά στην προεπιλεγμένη ποιότητα</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Εμφάνιση ανάλυσης στο κουμπί Ποιότητας</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Εμφάνιση της ανάλυσης, όπως 1080, αντί για ετικέτα όπως FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Μενού προσαρμοσμένης ταχύτητας αναπαραγωγής</string>
   <string name="morphe_restore_old_speed_menu_title">Επαναφορά παλιού μενού ταχύτητας αναπαραγωγής</string>
@@ -1273,4 +1283,11 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Διορθώνει το πρόβλημα με τα κουμπιά ενεργειών βίντεο που δεν μπορούν να αποκρυφθούν
 
 Περιορισμός: Επαναφέρει το παλιό στυλ επικάλυψης 'Περισσότερα βίντεο'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Στυλ εικονιδίου player</string>
+  <string name="morphe_player_icon_style_entry_auto">Αυτόματο</string>
+  <string name="morphe_player_icon_style_entry_default">Προεπιλογή</string>
+  <string name="morphe_player_icon_style_entry_regular">Λεπτό</string>
+  <string name="morphe_player_icon_style_entry_bold">Έντονο</string>
+  <string name="morphe_shorts_icon_style_title">Στυλ εικονιδίων Shorts</string>
 </resources>

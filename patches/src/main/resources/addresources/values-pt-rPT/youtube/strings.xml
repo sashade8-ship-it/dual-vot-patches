@@ -257,6 +257,7 @@ As mudanças incluem:
   <string name="morphe_hide_comments_section_in_home_feed_title">Esconder seção de comentários em Home feed</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ocultar diretrizes da comunidade</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Ocultar o botão \'Criar um Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">Ocultar botão de Não Gosto</string>
   <string name="morphe_hide_comments_emoji_button_title">Ocultar botão de emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Ocultar opções da barra de filtros</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Oculta todas as opções da barra de filtros, exceto \'Mais relevantes\' e \'Mais recentes\'</string>
@@ -397,6 +398,13 @@ As denúncias são públicas e são analisadas antes de um canal ser adicionado 
   <string name="morphe_channel_search_results">Resultados da pesquisa de canais</string>
   <string name="morphe_channel_search_no_results">Nada encontrado neste canal</string>
   <string name="morphe_channel_search_failed">Não foi possível pesquisar neste canal</string>
+  <string name="morphe_channel_search_sort_relevance">Relevância</string>
+  <string name="morphe_channel_search_sort_most_viewed">Mais vistos</string>
+  <string name="morphe_channel_search_sort_least_viewed">Menos vistos</string>
+  <string name="morphe_channel_search_sort_newest">Mais recentes</string>
+  <string name="morphe_channel_search_sort_oldest">Mais antigos</string>
+  <string name="morphe_channel_search_sort_shortest">Mais curtos</string>
+  <string name="morphe_channel_search_sort_longest">Mais longos</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link copiado para a área de transferência</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Link com timestamp copiado para a área de transferência</string>
@@ -1200,6 +1208,8 @@ Toque aqui para aprender mais sobre o DeArrow"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Mostrar botão de qualidade</string>
   <string name="morphe_video_quality_dialog_button_summary">Toque e segure para redefinir a qualidade para o padrão</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Mostrar resolução no botão Qualidade</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Mostrar a resolução, como 1080, em vez de um rótulo, como FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Menu personalizado de velocidade de reprodução</string>
   <string name="morphe_restore_old_speed_menu_title">Restaurar menu antigo de velocidade de reprodução</string>
@@ -1288,4 +1298,11 @@ A reprodução de vídeo com AV1 pode apresentar soluços ou perder quadros."</s
   <string name="morphe_restore_old_video_action_bar_summary">"Corrige o problema em que os botões de ação do vídeo não podem ser ocultados
 
 Limitação: Reverte para a sobreposição antiga 'Mais vídeos'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Estilo do ícone do player</string>
+  <string name="morphe_player_icon_style_entry_auto">Automático</string>
+  <string name="morphe_player_icon_style_entry_default">Padrão</string>
+  <string name="morphe_player_icon_style_entry_regular">Fino</string>
+  <string name="morphe_player_icon_style_entry_bold">Negrito</string>
+  <string name="morphe_shorts_icon_style_title">Estilo do ícone do Shorts</string>
 </resources>

@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">הסתר את מדור התגובות בפיד</string>
   <string name="morphe_hide_comments_community_guidelines_title">הסתר הנחיות קהילה</string>
   <string name="morphe_hide_comments_create_a_short_button_title">הסתר לחצן \'יצירת Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">הסתר לחצן דיסלייק</string>
   <string name="morphe_hide_comments_emoji_button_title">הסתר לחצן אימוג\'י</string>
   <string name="morphe_hide_comments_filter_bar_options_title">הסתר אפשרויות של סרגל הפילטרים</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">מסתיר את כל אפשרויות סרגל הפילטרים למעט \'המומלצים ביותר\' ו\'החדשים ביותר\'</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">תוצאות חיפוש ערוצים</string>
   <string name="morphe_channel_search_no_results">לא נמצא דבר בערוץ זה</string>
   <string name="morphe_channel_search_failed">לא ניתן לחפש בערוץ זה</string>
+  <string name="morphe_channel_search_sort_relevance">רלוונטיות</string>
+  <string name="morphe_channel_search_sort_most_viewed">הנצפים ביותר</string>
+  <string name="morphe_channel_search_sort_least_viewed">הפחות נצפים</string>
+  <string name="morphe_channel_search_sort_newest">החדשים ביותר</string>
+  <string name="morphe_channel_search_sort_oldest">הוותיקים ביותר</string>
+  <string name="morphe_channel_search_sort_shortest">הקצרים ביותר</string>
+  <string name="morphe_channel_search_sort_longest">הארוכים ביותר</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">קישור הועתק ללוח הגזירים</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">קישור עם חותמת זמן הועתק ללוח הגזירים</string>
@@ -1200,6 +1208,8 @@ Second \"item\" text"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">הצג כפתור איכות</string>
   <string name="morphe_video_quality_dialog_button_summary">הקש והחזק כדי לאפס לאיכות ברירת מחדל</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">הצג רזולוציה בכפתור האיכות</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">הצג את הרזולוציה, כגון 1080, במקום תווית כגון FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">תפריט מהירות הפעלה מותאם אישית</string>
   <string name="morphe_restore_old_speed_menu_title">שחזר תפריט מהירות השמעה ישן</string>
@@ -1288,4 +1298,11 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_video_action_bar_summary">"מתקן בעיה שכפתורי פעולה של סרטון לא ניתנים להסתרה
 
 מגבלה: חוזר לסגנון הישן של שכבת 'עוד סרטונים'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">סגנון סמל הנגן</string>
+  <string name="morphe_player_icon_style_entry_auto">אוטומטי</string>
+  <string name="morphe_player_icon_style_entry_default">ברירת מחדל</string>
+  <string name="morphe_player_icon_style_entry_regular">דק</string>
+  <string name="morphe_player_icon_style_entry_bold">מודגש</string>
+  <string name="morphe_shorts_icon_style_title">סגנון אייקון Shorts</string>
 </resources>

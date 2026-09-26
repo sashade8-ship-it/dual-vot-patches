@@ -259,6 +259,7 @@ Promjene uključuju:
   <string name="morphe_hide_comments_section_in_home_feed_title">Sakrij odjeljak komentara u Home feed-u</string>
   <string name="morphe_hide_comments_community_guidelines_title">Sakrij Smjernice zajednice</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Sakrij \'Prikaži\' odjel</string>
+  <string name="morphe_hide_comments_dislike_button_title">Sakrij gumb „Ne sviđa mi se“</string>
   <string name="morphe_hide_comments_emoji_button_title">Sakrij gumb Emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Sakrij opcije trake filtra</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Skriva sve opcije trake filtra osim \'Najbolje\' i \'Najnovije\'</string>
@@ -399,6 +400,13 @@ Prijave su javne i pregledavaju se prije nego što se kanal doda na popis. Uklan
   <string name="morphe_channel_search_results">Rezultati pretraživanja kanala</string>
   <string name="morphe_channel_search_no_results">Na ovom kanalu nema rezultata</string>
   <string name="morphe_channel_search_failed">Pretraživanje ovog kanala nije uspjelo</string>
+  <string name="morphe_channel_search_sort_relevance">Relevantnost</string>
+  <string name="morphe_channel_search_sort_most_viewed">Najgledaniji</string>
+  <string name="morphe_channel_search_sort_least_viewed">Najmanje gledani</string>
+  <string name="morphe_channel_search_sort_newest">Najnoviji</string>
+  <string name="morphe_channel_search_sort_oldest">Najstariji</string>
+  <string name="morphe_channel_search_sort_shortest">Najkraći</string>
+  <string name="morphe_channel_search_sort_longest">Najduži</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Poveznica kopirana u međuspremnik</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Poveznica s vremenskim žigom kopirana u međuspremnik</string>
@@ -1202,6 +1210,8 @@ Dodirnite ovdje za otvaranje DeArrow.ajay.app"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Prikaži gumb Kvaliteta</string>
   <string name="morphe_video_quality_dialog_button_summary">Dodirnite i držite za resetiranje kvalitete na zadanu</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Prikaži razlučivost na gumbu Kvaliteta</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Prikaži razlučivost, kao što je 1080, umjesto oznake kao što je FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Custom playback speed menu</string>
   <string name="morphe_restore_old_speed_menu_title">Restore old playback speed menu</string>
@@ -1290,4 +1300,11 @@ Video playback s AV1 može stutterati ili padati frame-ove."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Popravlja problem što se gumbi radnji videozapisa ne mogu sakriti
 
 Ograničenje: Vraća se na stari stil 'More videos' prekrivača"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Stil ikone playera</string>
+  <string name="morphe_player_icon_style_entry_auto">Automatski</string>
+  <string name="morphe_player_icon_style_entry_default">Zadano</string>
+  <string name="morphe_player_icon_style_entry_regular">Tanko</string>
+  <string name="morphe_player_icon_style_entry_bold">Podebljano</string>
+  <string name="morphe_shorts_icon_style_title">Stil ikone Shorts</string>
 </resources>

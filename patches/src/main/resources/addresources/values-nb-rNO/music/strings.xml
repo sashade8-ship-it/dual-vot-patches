@@ -422,9 +422,9 @@ Nødvendige informasjonskapsler: SID, HSID, SSID, SAPISID, __Secure-1PAPISID, __
   <string name="morphe_music_lyrics_show_copy_button_title">Vis kopier-knapp</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">Deezer: ugyldig ARL-informasjonskapsel. Kopier en fersk ARL-informasjonskapsel fra nettleseren.</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Vis oversettelsesknapp</string>
-  <string name="morphe_music_lyrics_show_translate_button_summary">Oversett sangtekster med leverandøroversettelser, Google Translate eller et OpenAI-kompatibelt API.</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Trykk for å slå oversettelsen av/på; trykk og hold for kun oversettelse. Bruker oversettelser fra leverandøren, Google Translate eller et OpenAI-kompatibelt API.</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Vis romaniseringsknappen</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">Romaniser sangtekster ved hjelp av leverandørens romanisering, Google Translate eller et OpenAI-kompatibelt API.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Trykk for å slå romaniseringen av/på; trykk og hold for kun romanisering. Bruker romanisering fra leverandøren, Google Translate eller et OpenAI-kompatibelt API.</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Vis oppdater-knappen</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Trykk for å bytte til neste tekstkandidat […] \"Lagret\"</string>
   <string name="morphe_music_lyrics_saved">Lagret</string>
@@ -440,7 +440,7 @@ Nødvendige informasjonskapsler: SID, HSID, SSID, SAPISID, __Secure-1PAPISID, __
   <string name="morphe_music_lyrics_display_artist_first_summary">Bytt visningsrekkefølgen til Artist og Tittel i Minispilleren og MediaSession. PÅ «Artist – Tittel» og AV «Tittel – Artist». Påvirker ikke tekstsøk</string>
   <string name="morphe_settings_music_lyrics_metadata_title">Filtre</string>
   <string name="morphe_music_lyrics_custom_regex_title">Metadata […] \"Lyrics filter regex\"</string>
-  <string name="morphe_music_lyrics_custom_regex_summary">Regulært uttrykk brukes på titler, artister og album før tekstsøk. La feltet stå tomt for å deaktivere. Standardinnstillingen fjerner vanlig støy som «Official Video», «Remaster» og «- Topic»</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">Regulært uttrykk som brukes på titler, artister og album før sangtekster slås opp, og ved vurdering av om to titler samsvarer. La det stå tomt for å deaktivere begge. Standarden fjerner vanlig støy som «Official Video», «Remaster», «【插曲】» og «- Topic».</string>
   <string name="morphe_music_lyrics_text_filter_title">Regulært uttrykk for sangtekstfilter</string>
   <string name="morphe_music_lyrics_text_filter_summary">Regulært uttrykk brukes bare på originalteksten (ikke oversettelser eller romanisering). La feltet stå tomt for å deaktivere</string>
   <string name="morphe_music_lyrics_credit_line_regex_title">Markører for info-linjer</string>
@@ -463,6 +463,8 @@ Nødvendige informasjonskapsler: SID, HSID, SSID, SAPISID, __Secure-1PAPISID, __
   <string name="morphe_music_lyrics_romanize_hide">Romanisert</string>
   <string name="morphe_music_lyrics_romanizing">Romaniserer …</string>
   <string name="morphe_music_lyrics_romanize_failed">Kunne ikke romanisere […] g</string>
+  <string name="morphe_music_lyrics_translate_only">Kun oversatt</string>
+  <string name="morphe_music_lyrics_romanize_only">Kun romanisert</string>
   <string name="morphe_music_lyrics_copied">Kopiert til utklippstavlen</string>
   <string name="morphe_music_lyrics_refreshing">Oppdaterer</string>
   <string name="morphe_music_lyrics_refreshed">Oppdatert</string>

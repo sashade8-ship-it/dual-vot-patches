@@ -257,6 +257,7 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_comments_section_in_home_feed_title">Itago ang seksyon ng mga komento sa feed ng Bahay</string>
   <string name="morphe_hide_comments_community_guidelines_title">Itago ang mga alituntunin ng komunidad</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Itago ang button na \'Gumawa ng Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">Itago ang Dislike button</string>
   <string name="morphe_hide_comments_emoji_button_title">Itago ang Emoji button</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Itago ang mga opsyon ng filter bar</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Itinatago ang lahat ng mga opsyon ng filter bar maliban sa \'Pinakamahusay\' at \'Pinakabago\'</string>
@@ -397,6 +398,13 @@ Pampubliko ang mga ulat at sinusuri ang mga ito bago idagdag ang isang channel s
   <string name="morphe_channel_search_results">Mga resulta ng paghahanap sa channel</string>
   <string name="morphe_channel_search_no_results">Walang nahanap sa channel na ito</string>
   <string name="morphe_channel_search_failed">Hindi ma-search ang channel na ito</string>
+  <string name="morphe_channel_search_sort_relevance">Kaugnayan</string>
+  <string name="morphe_channel_search_sort_most_viewed">Pinakamaraming napanood</string>
+  <string name="morphe_channel_search_sort_least_viewed">Pinakakaunting napanood</string>
+  <string name="morphe_channel_search_sort_newest">Pinakabago</string>
+  <string name="morphe_channel_search_sort_oldest">Pinakaluma</string>
+  <string name="morphe_channel_search_sort_shortest">Pinakamaikli</string>
+  <string name="morphe_channel_search_sort_longest">Pinakamahaba</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Nakalink sa clipboard</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Nakalink na may timestamp sa clipboard</string>
@@ -1198,6 +1206,8 @@ I-tap dito upang buksan ang DeArrow.ajay.app"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Ipakita ang Quality button</string>
   <string name="morphe_video_quality_dialog_button_summary">I-tap at pindutin upang i-reset ang kalidad sa default</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Ipakita ang resolution sa Quality button</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Ipakita ang resolution, tulad ng 1080, sa halip na isang label tulad ng FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Menu ng pasadyang bilis ng playback</string>
   <string name="morphe_restore_old_speed_menu_title">Ibalik ang lumang menu ng bilis ng playback</string>
@@ -1286,4 +1296,11 @@ Ang pag-playback ng video gamit ang AV1 ay maaaring mag-stutter o mag-drop ng mg
   <string name="morphe_restore_old_video_action_bar_summary">"Inaayos ang isyu kung saan hindi maitatago ang mga pindutan ng aksyon sa video
 
 Limitasyon: Bumabalik sa lumang istilo ng overlay na 'Higit pang mga video'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Estilo ng icon ng player</string>
+  <string name="morphe_player_icon_style_entry_auto">Awtomatiko</string>
+  <string name="morphe_player_icon_style_entry_default">Awtomatiko</string>
+  <string name="morphe_player_icon_style_entry_regular">Manipis</string>
+  <string name="morphe_player_icon_style_entry_bold">Makapal</string>
+  <string name="morphe_shorts_icon_style_title">Estilo ng icon ng Shorts</string>
 </resources>

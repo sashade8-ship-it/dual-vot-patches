@@ -257,6 +257,7 @@ Schimbari incluse:
   <string name="morphe_hide_comments_section_in_home_feed_title">Ascunde secţiunea comentarii în fluxul principal</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ascunde regulile comunității</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Ascunde butonul \'Creare Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">Ascunde butonul Dislike</string>
   <string name="morphe_hide_comments_emoji_button_title">Ascunde butonul Emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Ascunde opțiunile barei de filtre</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Ascunde toate opțiunile din bara de filtre, cu excepția \'Top\' și \'Cele mai noi\'</string>
@@ -397,6 +398,13 @@ Rapoartele sunt publice și sunt analizate înainte ca un canal să fie adăugat
   <string name="morphe_channel_search_results">Rezultatele căutării în canal</string>
   <string name="morphe_channel_search_no_results">Nu s-a găsit nimic în acest canal.</string>
   <string name="morphe_channel_search_failed">Nu s-a putut căuta în acest canal.</string>
+  <string name="morphe_channel_search_sort_relevance">Relevanță</string>
+  <string name="morphe_channel_search_sort_most_viewed">Cele mai vizionate</string>
+  <string name="morphe_channel_search_sort_least_viewed">Cele mai puțin vizionate</string>
+  <string name="morphe_channel_search_sort_newest">Cele mai noi</string>
+  <string name="morphe_channel_search_sort_oldest">Cele mai vechi</string>
+  <string name="morphe_channel_search_sort_shortest">Cele mai scurte</string>
+  <string name="morphe_channel_search_sort_longest">Cele mai lungi</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link copiat în clipboard</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Link cu marcaj temporal copiat în clipboard</string>
@@ -1200,6 +1208,8 @@ Atingeți aici pentru a afla mai multe despre DeArrow"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Afișează butonul Calitate</string>
   <string name="morphe_video_quality_dialog_button_summary">Atinge și menține apăsat pentru a reseta calitatea la valoarea implicită</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Afișează rezoluția pe butonul Calitate</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Afișează rezoluția, de exemplu 1080, în loc de o etichetă precum FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Meniu de redare personalizat</string>
   <string name="morphe_restore_old_speed_menu_title">Restaurare meniu vechi de viteză de redare</string>
@@ -1288,4 +1298,11 @@ Redarea video cu AV1 poate sacada sau pierde cadre."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Remediază problema că butoanele de acțiune video nu pot fi ascunse
 
 Limitare: Revenire la suprapunerea de stil vechi 'Mai multe videoclipuri'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Stilul pictogramei playerului</string>
+  <string name="morphe_player_icon_style_entry_auto">Automat</string>
+  <string name="morphe_player_icon_style_entry_default">Implicit</string>
+  <string name="morphe_player_icon_style_entry_regular">Subțire</string>
+  <string name="morphe_player_icon_style_entry_bold">Aldin</string>
+  <string name="morphe_shorts_icon_style_title">Stilul pictogramei Shorts</string>
 </resources>

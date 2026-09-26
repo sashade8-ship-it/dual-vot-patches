@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">ซ่อนส่วนความคิดเห็นในหน้าแชทหลัก</string>
   <string name="morphe_hide_comments_community_guidelines_title">ซ่อนแนวทางชุมชน</string>
   <string name="morphe_hide_comments_create_a_short_button_title">ซ่อนปุ่ม \'สร้าง Shorts\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">ซ่อนปุ่มไม่ชอบ</string>
   <string name="morphe_hide_comments_emoji_button_title">ซ่อนปุ่มอีโมจิ</string>
   <string name="morphe_hide_comments_filter_bar_options_title">ซ่อนตัวเลือกแถบกรอง</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">ซ่อนตัวเลือกแถบกรองทั้งหมด ยกเว้น \'ยอดนิยม\' และ \'ใหม่ล่าสุด\'</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">ผลการค้นหาช่อง</string>
   <string name="morphe_channel_search_no_results">ไม่พบผลลัพธ์ในช่องนี้</string>
   <string name="morphe_channel_search_failed">ไม่สามารถค้นหาช่องนี้ได้</string>
+  <string name="morphe_channel_search_sort_relevance">ความเกี่ยวข้อง</string>
+  <string name="morphe_channel_search_sort_most_viewed">ดูมากที่สุด</string>
+  <string name="morphe_channel_search_sort_least_viewed">ดูน้อยที่สุด</string>
+  <string name="morphe_channel_search_sort_newest">ใหม่ล่าสุด</string>
+  <string name="morphe_channel_search_sort_oldest">เก่าที่สุด</string>
+  <string name="morphe_channel_search_sort_shortest">สั้นที่สุด</string>
+  <string name="morphe_channel_search_sort_longest">ยาวที่สุด</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">คัดลอกลิงก์ไปยังคลิปบอร์ด</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">คัดลอกลิงก์ที่มีช่วงเวลาไปยังคลิปบอร์ด</string>
@@ -1200,6 +1208,8 @@ Second \"item\" text"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">แสดงปุ่มคุณภาพ</string>
   <string name="morphe_video_quality_dialog_button_summary">แตะค้างไว้เพื่อรีเซ็ตคุณภาพเป็นค่าเริ่มต้น</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">แสดงความละเอียดบนปุ่มคุณภาพ</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">แสดงความละเอียด เช่น 1080 แทนที่จะเป็นป้ายกำกับ เช่น FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">เมนูกำหนดความเร็วในการเล่นแบบกำหนดเอง</string>
   <string name="morphe_restore_old_speed_menu_title">คืนค่าเมนูความเร็วในการเล่นแบบเก่า</string>
@@ -1288,4 +1298,11 @@ Second \"item\" text"</string>
   <string name="morphe_restore_old_video_action_bar_summary">"แก้ไขปัญหาที่ปุ่มการทำงานของวิดีโอไม่สามารถซ่อนได้
 
 ข้อจำกัด: ย้อนกลับไปใช้รูปแบบโอเวอร์เลย์ 'More videos' แบบเก่า"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">สไตล์ไอคอนเครื่องเล่น</string>
+  <string name="morphe_player_icon_style_entry_auto">อัตโนมัติ</string>
+  <string name="morphe_player_icon_style_entry_default">ค่าเริ่มต้นThe</string>
+  <string name="morphe_player_icon_style_entry_regular">บาง</string>
+  <string name="morphe_player_icon_style_entry_bold">หนา</string>
+  <string name="morphe_shorts_icon_style_title">สไตล์ไอคอน Shorts</string>
 </resources>

@@ -408,9 +408,9 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_show_copy_button_title">Prikaži tipku za kopiranje</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">Dodirni za kopiranje izvornih tekstova pjesama kao obični tekst; dugo pritisni za spremanje sirove izvorne datoteke s tekstovima pjesama u Preuzimanja.</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Prikaži tipku za prijevod</string>
-  <string name="morphe_music_lyrics_show_translate_button_summary">Prevedi tekst pjesme koristeći prijevode pružatelja usluge, Google Translate ili API kompatibilan s OpenAI-jem.</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Dodirnite za uključivanje/isključivanje prijevoda; dugi pritisak za samo prijevod. Koristi prijevode pružatelja usluge, Google Translate ili API kompatibilan s OpenAI-jem.</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Prikaži gumb za romanizaciju</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">Romaniziraj tekst pjesme koristeći romanizaciju pružatelja usluge, Google Translate ili API kompatibilan s OpenAI-jem.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Dodirnite za uključivanje/isključivanje romanizacije; dugi pritisak za samo romanizaciju. Koristi romanizaciju pružatelja usluge, Google Translate ili API kompatibilan s OpenAI-jem.</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Prikaži gumb za osvježavanje</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Dodirni za prebacivanje na sljedeći kandidat teksta pjesme; dugo pritisni za privremeno isključivanje tekstova pjesama trećih strana i prikaz ugrađenih tekstova pjesama.</string>
   <string name="morphe_music_lyrics_saved">Spremljeno</string>
@@ -426,7 +426,7 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_display_artist_first_summary">Prebacuje redoslijed prikaza izvođača i naslova u miniplayeru i MediaSessionu. ULJUČENO: \"Izvođač - Naslov\", ISKLJUČENO: \"Naslov - Izvođač\". Ne utječe na pretragu tekstova pjesama.</string>
   <string name="morphe_settings_music_lyrics_metadata_title">Filteri</string>
   <string name="morphe_music_lyrics_custom_regex_title">Regex za metapodatke</string>
-  <string name="morphe_music_lyrics_custom_regex_summary">Regularni izraz koji se primjenjuje na naslove, izvođače i albume prije pretrage tekstova pjesama. Ostavi prazno za onemogućavanje. Zadani izraz uklanja uobičajene nepotrebne dijelove poput \"Official Video\", \"Remaster\" i \"- Topic\".</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">Regularni izraz primjenjuje se na naslove, izvođače i albume prije pretraživanja tekstova pjesama i pri ocjenjivanju odgovaraju li dva naslova. Ostavite prazno da biste onemogućili oboje. Zadana vrijednost uklanja uobičajene nepotrebne dijelove poput \"Official Video\", \"Remaster\", \"【插曲】\" i \"- Topic\".</string>
   <string name="morphe_music_lyrics_text_filter_title">Regex za filtriranje tekstova pjesama</string>
   <string name="morphe_music_lyrics_text_filter_summary">Regularni izraz koji se primjenjuje samo na izvorni tekst pjesama (ne na prijevode ili romanizacije). Ostavi prazno za onemogućavanje.</string>
   <string name="morphe_music_lyrics_credit_line_regex_title">Oznake redaka s informacijama</string>
@@ -449,6 +449,8 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_romanize_hide">Romanizacija</string>
   <string name="morphe_music_lyrics_romanizing">Romanizacija…</string>
   <string name="morphe_music_lyrics_romanize_failed">Nije uspjelo romanizirati tekstove pjesama.</string>
+  <string name="morphe_music_lyrics_translate_only">Samo prevedeno</string>
+  <string name="morphe_music_lyrics_romanize_only">Samo romanizirano</string>
   <string name="morphe_music_lyrics_copied">Kopirano u međuspremnik</string>
   <string name="morphe_music_lyrics_refreshing">Osvježavanje…</string>
   <string name="morphe_music_lyrics_refreshed">Osvježeno</string>

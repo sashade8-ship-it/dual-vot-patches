@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">إخفاء قسم التعليقات في خلاصة الصفحة الرئيسية</string>
   <string name="morphe_hide_comments_community_guidelines_title">إخفاء إرشادات المجتمع</string>
   <string name="morphe_hide_comments_create_a_short_button_title">إخفاء زر \'إنشاء Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">إخفاء زر لم يعجبني</string>
   <string name="morphe_hide_comments_emoji_button_title">إخفاء زر الإيموجي</string>
   <string name="morphe_hide_comments_filter_bar_options_title">إخفاء خيارات شريط التصفية</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">يخفي جميع خيارات فرز التعليقات باستثناء ‘الأهم‘ و ‘أحدث التعليقات‘</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">نتائج البحث في القناة</string>
   <string name="morphe_channel_search_no_results">لا توجد نتائج في هذه القناة</string>
   <string name="morphe_channel_search_failed">تعذر البحث في هذه القناة</string>
+  <string name="morphe_channel_search_sort_relevance">مدى الصلة</string>
+  <string name="morphe_channel_search_sort_most_viewed">الأكثر مشاهدةً</string>
+  <string name="morphe_channel_search_sort_least_viewed">الأقل مشاهدةً</string>
+  <string name="morphe_channel_search_sort_newest">الأحدَّث</string>
+  <string name="morphe_channel_search_sort_oldest">الأقدَّم</string>
+  <string name="morphe_channel_search_sort_shortest">الأقصَّر</string>
+  <string name="morphe_channel_search_sort_longest">الأطوَّل</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">تم نسخ الرابط إلى الحافظة</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">تم نسخ الرابط مع الطابع الزمني إلى الحافظة</string>
@@ -1205,6 +1213,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">عرض زر الجودة</string>
   <string name="morphe_video_quality_dialog_button_summary">اضغط مع الاستمرار لإعادة الجودة إلى الوضع الافتراضي</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">عرض الدقة على زر الجودة</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">عرض الدقة، مثل 1080، بدلًا من تسمية مثل FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">قائمة سرعة التشغيل المخصصة</string>
   <string name="morphe_restore_old_speed_menu_title">استعادة قائمة سرعة التشغيل القديمة</string>
@@ -1293,4 +1303,11 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_restore_old_video_action_bar_summary">"يُصلح مشكلة عدم إمكانية إخفاء أزرار إجراءات الفيديو
 
 القيود: يعود إلى نمط 'المزيد من الفيديوهات' القديم"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">نمط أيقونة المشغّل</string>
+  <string name="morphe_player_icon_style_entry_auto">تلقائي</string>
+  <string name="morphe_player_icon_style_entry_default">الافتراضي</string>
+  <string name="morphe_player_icon_style_entry_regular">نحيف</string>
+  <string name="morphe_player_icon_style_entry_bold">عريض</string>
+  <string name="morphe_shorts_icon_style_title">نمط أيقونة Shorts</string>
 </resources>

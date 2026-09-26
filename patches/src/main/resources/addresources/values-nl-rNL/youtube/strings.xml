@@ -257,6 +257,7 @@ Wijzigingen zijn:
   <string name="morphe_hide_comments_section_in_home_feed_title">Verberg reactiessectie in Home-feed</string>
   <string name="morphe_hide_comments_community_guidelines_title">Communityrichtlijnen verbergen</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Verberg \'Create a Short\' knop</string>
+  <string name="morphe_hide_comments_dislike_button_title">Verberg de knop \"Niet leuk\"</string>
   <string name="morphe_hide_comments_emoji_button_title">Emoji-knop verbergen</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Filterbalkopties verbergen</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Verbergt alle filterbalkopties, behalve \'Top\' en \'Nieuwste\'</string>
@@ -397,6 +398,13 @@ Rapporten zijn openbaar en worden beoordeeld voordat een kanaal aan een lijst wo
   <string name="morphe_channel_search_results">Zoekresultaten voor kanalen</string>
   <string name="morphe_channel_search_no_results">Niets gevonden op dit kanaal</string>
   <string name="morphe_channel_search_failed">Kan dit kanaal niet doorzoeken</string>
+  <string name="morphe_channel_search_sort_relevance">Relevantie</string>
+  <string name="morphe_channel_search_sort_most_viewed">Meest bekeken</string>
+  <string name="morphe_channel_search_sort_least_viewed">Minst bekeken</string>
+  <string name="morphe_channel_search_sort_newest">Nieuwste</string>
+  <string name="morphe_channel_search_sort_oldest">Oudste</string>
+  <string name="morphe_channel_search_sort_shortest">Shortste</string>
+  <string name="morphe_channel_search_sort_longest">Langste</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link naar klembord gekopieerd</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Link met tijdstempel naar klembord gekopieerd</string>
@@ -1198,6 +1206,8 @@ Tik hier om meer te weten te komen over DeArrow"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Toon de \'Kwaliteit\'-knop</string>
   <string name="morphe_video_quality_dialog_button_summary">Tik en houd vast om de kwaliteit naar de vooraf ingestelde waarde terug te zetten</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Toon resolutie op kwaliteitsknop</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Toon de resolutie, zoals 1080, in plaats van een label zoals FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Menu voor aangepaste afspeelsnelheid</string>
   <string name="morphe_restore_old_speed_menu_title">Oud afspeelsnelheidsmenu herstellen</string>
@@ -1286,4 +1296,11 @@ Het afspelen van video met AV1 kan haperen of frames overslaan."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Verhelpt dat video-actieknoppen niet kunnen worden verborgen
 
 Beperking: keert terug naar de oude stijl van de overlay 'Meer video's'."</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Stijl van het pictogram van de speler</string>
+  <string name="morphe_player_icon_style_entry_auto">Automatisch</string>
+  <string name="morphe_player_icon_style_entry_default">Standaard</string>
+  <string name="morphe_player_icon_style_entry_regular">Dun</string>
+  <string name="morphe_player_icon_style_entry_bold">Vet</string>
+  <string name="morphe_shorts_icon_style_title">Shorts-pictogramstijl</string>
 </resources>

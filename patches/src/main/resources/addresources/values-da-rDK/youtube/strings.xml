@@ -257,6 +257,7 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_comments_section_in_home_feed_title">Skjul kommentarer i Home-feed</string>
   <string name="morphe_hide_comments_community_guidelines_title">Skjul Fællesskabsretningslinjer</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Skjul knappen \'Opret en Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">Skjul knappen Dislike</string>
   <string name="morphe_hide_comments_emoji_button_title">Skjul Emoji-knap</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Skjul filterbjælkeindstillinger</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Skjuler alle filterbjælkeindstillinger undtagen \'Top\' og \'Nyeste\'</string>
@@ -397,6 +398,13 @@ Rapporter er offentlige og gennemgås, før en kanal tilføjes til en liste. Fje
   <string name="morphe_channel_search_results">Kanalens søgeresultater</string>
   <string name="morphe_channel_search_no_results">Intet fundet på denne kanal</string>
   <string name="morphe_channel_search_failed">Kunne ikke søge i denne kanal</string>
+  <string name="morphe_channel_search_sort_relevance">Relevans</string>
+  <string name="morphe_channel_search_sort_most_viewed">Mest sete</string>
+  <string name="morphe_channel_search_sort_least_viewed">Mindst sete</string>
+  <string name="morphe_channel_search_sort_newest">Nyeste</string>
+  <string name="morphe_channel_search_sort_oldest">Ældste</string>
+  <string name="morphe_channel_search_sort_shortest">Korteste</string>
+  <string name="morphe_channel_search_sort_longest">Længste</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Link kopieret til udklipsholder</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Link med tidsstempel kopieret til udklipsholder</string>
@@ -1198,6 +1206,8 @@ Tryk her for at lære mere om DeArrow"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Vis kvalitetsknap</string>
   <string name="morphe_video_quality_dialog_button_summary">Tryk og hold for at nulstille kvaliteten til standard</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Vis opløsning på kvalitetsknappen</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Vis opløsningen, f.eks. 1080, i stedet for en etiket som FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Tilpasset afspilningshastighed menu</string>
   <string name="morphe_restore_old_speed_menu_title">Gendan gammel afspilningshastighedsmenu</string>
@@ -1286,4 +1296,11 @@ Videoafspilning med AV1 kan hakke eller tabe billeder."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Retter, at videohandlingsknapper ikke kan skjules
 
 Begrænsning: Vender tilbage til gammeldags 'Flere videoer'-overlay"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Ikonstil for afspiller</string>
+  <string name="morphe_player_icon_style_entry_auto">Automatisk</string>
+  <string name="morphe_player_icon_style_entry_default">Standard</string>
+  <string name="morphe_player_icon_style_entry_regular">Tynd</string>
+  <string name="morphe_player_icon_style_entry_bold">Fed</string>
+  <string name="morphe_shorts_icon_style_title">Shorts-ikonstil</string>
 </resources>

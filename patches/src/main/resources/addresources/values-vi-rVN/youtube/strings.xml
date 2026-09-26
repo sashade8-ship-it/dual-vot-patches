@@ -256,6 +256,7 @@ Ví dụ:
   <string name="morphe_hide_comments_section_in_home_feed_title">Ẩn phần bình luận trong thẻ Trang chủ</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ẩn Nguyên tắc cộng đồng</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Ẩn nút \"Tạo video ngắn\"</string>
+  <string name="morphe_hide_comments_dislike_button_title">Ẩn nút Không thích</string>
   <string name="morphe_hide_comments_emoji_button_title">Ẩn nút Biểu tượng cảm xúc</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Ẩn các tùy chọn thanh bộ lọc</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Ẩn tất cả các tùy chọn sắp xếp bình luận ngoại trừ \'Nổi bật nhất\' và \'Mới nhất\'</string>
@@ -396,6 +397,13 @@ Báo cáo được công khai và được xem xét trước khi một kênh đ�
   <string name="morphe_channel_search_results">Kết quả tìm kiếm kênh</string>
   <string name="morphe_channel_search_no_results">Không tìm thấy gì trên kênh này</string>
   <string name="morphe_channel_search_failed">Không thể tìm kiếm trên kênh này</string>
+  <string name="morphe_channel_search_sort_relevance">Mức độ liên quan</string>
+  <string name="morphe_channel_search_sort_most_viewed">Xem nhiều nhất</string>
+  <string name="morphe_channel_search_sort_least_viewed">Xem ít nhất</string>
+  <string name="morphe_channel_search_sort_newest">Mới nhất</string>
+  <string name="morphe_channel_search_sort_oldest">Cũ nhất</string>
+  <string name="morphe_channel_search_sort_shortest">Ngắn nhất</string>
+  <string name="morphe_channel_search_sort_longest">Dài nhất</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Đã sao chép liên kết vào bảng nhớ tạm</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Đã sao chép liên kết với dấu thời gian vào bảng nhớ tạm</string>
@@ -1199,6 +1207,8 @@ Nhấn vào đây để truy cập DeArrow.ajay.app"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Hiện nút Chất lượng</string>
   <string name="morphe_video_quality_dialog_button_summary">Bấm giữ để đặt lại chất lượng về mặc định</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Hiển thị độ phân giải trên nút Chất lượng</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Hiển thị độ phân giải, chẳng hạn như 1080, thay vì nhãn như FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Menu tốc độ phát tùy chỉnh</string>
   <string name="morphe_restore_old_speed_menu_title">Khôi phục menu tốc độ phát cũ</string>
@@ -1287,4 +1297,11 @@ Phát video bằng AV1 có thể bị giật hoặc tụt khung hình."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Khắc phục lỗi không thể ẩn các nút hành động video
 
 Hạn chế: Trở về lớp phủ 'Xem thêm video' kiểu cũ"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Kiểu biểu tượng trình phát</string>
+  <string name="morphe_player_icon_style_entry_auto">Tự động</string>
+  <string name="morphe_player_icon_style_entry_default">Mặc định</string>
+  <string name="morphe_player_icon_style_entry_regular">Mảnh</string>
+  <string name="morphe_player_icon_style_entry_bold">Đậm</string>
+  <string name="morphe_shorts_icon_style_title">Kiểu biểu tượng Shorts</string>
 </resources>

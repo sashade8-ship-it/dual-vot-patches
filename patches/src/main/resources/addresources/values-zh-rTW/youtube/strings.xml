@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">隱藏首頁推薦內容中的留言區</string>
   <string name="morphe_hide_comments_community_guidelines_title">隱藏社群規範</string>
   <string name="morphe_hide_comments_create_a_short_button_title">隱藏「建立 Short」按鈕</string>
+  <string name="morphe_hide_comments_dislike_button_title">隱藏「不喜歡」按鈕</string>
   <string name="morphe_hide_comments_emoji_button_title">隱藏表情符號按鈕</string>
   <string name="morphe_hide_comments_filter_bar_options_title">隱藏篩選列選項</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">隱藏篩選列選項，僅保留「熱門」和「最新」</string>
@@ -397,6 +398,13 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">頻道搜尋結果</string>
   <string name="morphe_channel_search_no_results">此頻道找不到任何結果</string>
   <string name="morphe_channel_search_failed">無法搜尋此頻道</string>
+  <string name="morphe_channel_search_sort_relevance">相關性</string>
+  <string name="morphe_channel_search_sort_most_viewed">觀看次數最多</string>
+  <string name="morphe_channel_search_sort_least_viewed">觀看次數最少</string>
+  <string name="morphe_channel_search_sort_newest">最新</string>
+  <string name="morphe_channel_search_sort_oldest">最舊</string>
+  <string name="morphe_channel_search_sort_shortest">最短</string>
+  <string name="morphe_channel_search_sort_longest">最長</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">已將網址複製到剪貼簿</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">已將帶時間戳的連結複製到剪貼簿</string>
@@ -1200,6 +1208,8 @@ Second \"item\" text"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">點擊並按住以重設為預設畫質</string>
   <string name="morphe_video_quality_dialog_button_summary">輸入您偏好的播放速度選項</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">在畫質按鈕上顯示解析度</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">顯示解析度（例如 1080），而不是像 FHD 那樣的標籤</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">自訂播放速度選單</string>
   <string name="morphe_restore_old_speed_menu_title">復原舊版播放速度選單</string>
@@ -1287,4 +1297,11 @@ AV1 視訊播放可能會卡頓或丟格。"</string>
   <string name="morphe_restore_old_video_action_bar_summary">"修正影片操作按鈕無法隱藏的問題
 
 限制：還原為舊式「更多影片」覆蓋畫面"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">播放器圖示樣式</string>
+  <string name="morphe_player_icon_style_entry_auto">自動</string>
+  <string name="morphe_player_icon_style_entry_default">預設</string>
+  <string name="morphe_player_icon_style_entry_regular">細體</string>
+  <string name="morphe_player_icon_style_entry_bold">粗體</string>
+  <string name="morphe_shorts_icon_style_title">Shorts 圖示樣式</string>
 </resources>

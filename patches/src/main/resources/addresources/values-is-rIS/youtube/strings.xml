@@ -257,6 +257,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_comments_section_in_home_feed_title">Húfa viðfjörðunardeild á Heim</string>
   <string name="morphe_hide_comments_community_guidelines_title">Fela samfélagsreglur</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Fela \'Búa til stutta vídeó\' hnappinn</string>
+  <string name="morphe_hide_comments_dislike_button_title">Fela hnappinn „Ekki líka við“</string>
   <string name="morphe_hide_comments_emoji_button_title">Fela Emoji hnapp</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Fela valmöguleika stjórnibarans</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Félur alla valmöguleika stjórnibarans nema \'Efst\' og \'Nýjast\'</string>
@@ -397,6 +398,13 @@ Tilkynningar eru opinberar og endurskoðaðar áður en rás er bætt við lista
   <string name="morphe_channel_search_results">Leitarniðurstöður rása</string>
   <string name="morphe_channel_search_no_results">Ekkert fannst á þessari rás</string>
   <string name="morphe_channel_search_failed">Ekki tókst að leita í þessari rás</string>
+  <string name="morphe_channel_search_sort_relevance">Mikilvægi</string>
+  <string name="morphe_channel_search_sort_most_viewed">Mest áhorft</string>
+  <string name="morphe_channel_search_sort_least_viewed">Minnst áhorft</string>
+  <string name="morphe_channel_search_sort_newest">Nýjustu</string>
+  <string name="morphe_channel_search_sort_oldest">Elstu</string>
+  <string name="morphe_channel_search_sort_shortest">Stystu</string>
+  <string name="morphe_channel_search_sort_longest">Lengstu</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Tengill kopíruðu á klippiborðið</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Tengill með tímastampu kopíruðu á klippiborðið</string>
@@ -1195,6 +1203,8 @@ Bankaðu hér til að opna DeArrow.ajay.app"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Sýnir hnappinn gæðavideo</string>
   <string name="morphe_video_quality_dialog_button_summary">Snertu og haltu til að endurstill gæðið í sjálfgefið</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Sýna upplausn á gæðahnappi</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Sýna upplausn, svo sem 1080, í stað merkis eins og FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Sérsniðin hraðavalmynd</string>
   <string name="morphe_restore_old_speed_menu_title">Endurheimta gamla hraðavalmynd</string>
@@ -1283,4 +1293,11 @@ Myndbandsspilun með AV1 getur hakka eða orðið með rammalegsfall."</string>
   <string name="morphe_restore_old_video_action_bar_summary">"Lagfærir að ekki er hægt að fela myndbandsaðgerðahnappana
 
 Takmörkun: Snýr aftur í gamla 'Fleiri myndbönd' yfirlagsstílinn"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Táknstíll spilara</string>
+  <string name="morphe_player_icon_style_entry_auto">Sjálfvirkt</string>
+  <string name="morphe_player_icon_style_entry_default">Sjálfgefið</string>
+  <string name="morphe_player_icon_style_entry_regular">Þunnur</string>
+  <string name="morphe_player_icon_style_entry_bold">Feitletraður</string>
+  <string name="morphe_shorts_icon_style_title">Stíll Shorts-táknsins</string>
 </resources>

@@ -257,6 +257,7 @@ Los cambios incluyen:
   <string name="morphe_hide_comments_section_in_home_feed_title">Ocultar sección Comentarios en el feed de inicio</string>
   <string name="morphe_hide_comments_community_guidelines_title">Ocultar normas de la comunidad</string>
   <string name="morphe_hide_comments_create_a_short_button_title">Ocultar botón \'Crear un Short\'</string>
+  <string name="morphe_hide_comments_dislike_button_title">Ocultar botón \'No me gusta\'</string>
   <string name="morphe_hide_comments_emoji_button_title">Ocultar botón Emoji</string>
   <string name="morphe_hide_comments_filter_bar_options_title">Ocultar opciones de la barra de filtro</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">Oculta todas las opciones de la barra de filtro excepto Destacados y \'Más recientes\'</string>
@@ -397,6 +398,13 @@ Los reportes son públicos y se revisan antes de añadir un canal a una lista. L
   <string name="morphe_channel_search_results">Resultados de búsqueda del canal</string>
   <string name="morphe_channel_search_no_results">No se encontró nada en este canal</string>
   <string name="morphe_channel_search_failed">No se pudo buscar en este canal</string>
+  <string name="morphe_channel_search_sort_relevance">Relevancia</string>
+  <string name="morphe_channel_search_sort_most_viewed">Más vistos</string>
+  <string name="morphe_channel_search_sort_least_viewed">Menos vistos</string>
+  <string name="morphe_channel_search_sort_newest">Más recientes</string>
+  <string name="morphe_channel_search_sort_oldest">Más antiguos</string>
+  <string name="morphe_channel_search_sort_shortest">Más cortos</string>
+  <string name="morphe_channel_search_sort_longest">Más largos</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">Enlace copiado al portapapeles</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">Enlace con marca de tiempo copiado al portapapeles</string>
@@ -1102,7 +1110,7 @@ Limitación: si la opción 'Restaurar antigua barra de acciones de vídeo' está
   <string name="morphe_theme_color_light_custom_summary">Establece el color de fondo del tema claro</string>
   <string name="morphe_theme_color_change_foreground_title">Cambiar el color de primer plano</string>
   <string name="morphe_theme_color_change_foreground_summary">Usa el color del tema para el texto y los iconos</string>
-  <string name="morphe_gradient_loading_screen_title">Activar pantalla de carga de degradado</string>
+  <string name="morphe_gradient_loading_screen_title">Activar pantalla de carga con degradado</string>
   <string name="morphe_gradient_loading_screen_summary">Muestra un degradado de fondo en la pantalla de carga en lugar de un color sólido</string>
   <string name="morphe_seekbar_custom_color_title">Activar color personalizado de la barra de progreso</string>
   <string name="morphe_seekbar_custom_color_primary_title">Color de la barra de progreso</string>
@@ -1200,6 +1208,8 @@ Pulsa aquí para saber más sobre DeArrow"</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">Mostrar botón de calidad</string>
   <string name="morphe_video_quality_dialog_button_summary">Toca y mantén pulsado para restablecer la calidad a la predeterminada</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Mostrar resolución en el botón Calidad</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">Muestra la resolución, como 1080, en lugar de una etiqueta como FHD</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">Menú de velocidad personalizada de reproducción</string>
   <string name="morphe_restore_old_speed_menu_title">Restaurar menú antiguo de velocidad de reproducción</string>
@@ -1288,4 +1298,11 @@ La reproducción de vídeo con AV1 se puede atascar o perder fotogramas."</strin
   <string name="morphe_restore_old_video_action_bar_summary">"Corrige que no se puedan ocultar los botones de acción de vídeo
 
 Limitación: Vuelve al antiguo estilo de superposición de 'Más vídeos'"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Estilo del icono del reproductor</string>
+  <string name="morphe_player_icon_style_entry_auto">Automático</string>
+  <string name="morphe_player_icon_style_entry_default">Predeterminado</string>
+  <string name="morphe_player_icon_style_entry_regular">Delgado</string>
+  <string name="morphe_player_icon_style_entry_bold">Ancho</string>
+  <string name="morphe_shorts_icon_style_title">Estilo del icono de Shorts</string>
 </resources>

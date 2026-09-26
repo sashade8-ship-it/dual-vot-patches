@@ -19,7 +19,6 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
-import app.morphe.patches.youtube.shared.YouTubeActivityOnCreateFingerprint
 import app.morphe.util.findFreeRegister
 import app.morphe.util.getReference
 import app.morphe.util.indexOfFirstInstructionOrThrow
@@ -48,13 +47,6 @@ val channelSearchPatch = bytecodePatch(
     execute {
         PreferenceScreen.GENERAL.addPreferences(
             SwitchPreference("morphe_channel_search", summary = true)
-        )
-
-        // Activity is used as the context of the result dialog.
-        YouTubeActivityOnCreateFingerprint.method.addInstruction(
-            0,
-            "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->" +
-                    "setMainActivity(Landroid/app/Activity;)V",
         )
 
         // A channel page browses by its channel id, which is what the search is scoped to.

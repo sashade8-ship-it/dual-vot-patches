@@ -35,9 +35,11 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
@@ -48,6 +50,7 @@ import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.shared.ui.ViewAnimations;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
+import app.morphe.extension.youtube.shared.ShortsPlayerState;
 import kotlin.Unit;
 
 /**
@@ -111,6 +114,8 @@ public final class MinimalMiniplayerPatch {
     private static int videoWidthFor(int height) {
         return Math.round(height * 16f / 9f);
     }
+    private static int videoFormatWidth = 0;
+    private static int videoFormatHeight = 0;
 
     private static final long TICK_MILLIS = 500;
 
@@ -191,6 +196,7 @@ public final class MinimalMiniplayerPatch {
      * Do not set it to 1.00f, otherwise it will cause artifacts (e.g: with the controls fading).
      */
     private static final float maxDragProgress = 0.95f;
+
 
     /**
      * Injection point.
@@ -442,12 +448,9 @@ public final class MinimalMiniplayerPatch {
                 // Type 2 spans the bar with the video. YouTube fits anything that is not 16:9
                 // inside the bar instead, and the miniplayer has no background of its own, so
                 // the feed shows through beside it. The overflow is clipped away again.
-                final float videoWidth = videoRect.width();
-                final float videoHeight = videoRect.height();
-                final float videoAspectRatio =
-                        (videoWidth > 0 && videoHeight > 0)
-                                ? videoWidth / videoHeight
-                                : 16f / 9f;
+                final float currentVideoRatio = (videoFormatWidth > 0 && videoFormatHeight > 0)
+                        ? (float) videoFormatWidth / videoFormatHeight
+                        : 16f / 9f;
 
                 final float barWidth = currentBounds.width();
                 final float barHeight = currentBounds.height();
@@ -455,20 +458,16 @@ public final class MinimalMiniplayerPatch {
 
                 videoRect.set(currentBounds);
 
-                if (videoAspectRatio < barAspectRatio) {
-                    // Video is narrower than the bar
-                    final int targetHeight = Math.round(barWidth / videoAspectRatio);
-                    final int overflowY = Math.max(0, (int) (targetHeight - barHeight)) / 2;
-
-                    videoRect.top -= overflowY;
-                    videoRect.bottom += overflowY;
-                } else {
-                    // Video is wider than the bar
-                    final int targetWidth = Math.round(barHeight * videoAspectRatio);
-                    final int overflowX = Math.max(0, (int) (targetWidth - barWidth)) / 2;
-
+                if (currentVideoRatio > barAspectRatio) {
+                    final float scale = barHeight / (barWidth / currentVideoRatio);
+                    final int overflowX = Math.round(barWidth * (scale - 1f)) / 2;
                     videoRect.left -= overflowX;
                     videoRect.right += overflowX;
+                } else {
+                    final float scale = barWidth / (barHeight * currentVideoRatio);
+                    final int overflowY = Math.round(barHeight * (scale - 1f)) / 2;
+                    videoRect.top -= overflowY;
+                    videoRect.bottom += overflowY;
                 }
             }
         } catch (Exception ex) {
@@ -1157,5 +1156,25 @@ public final class MinimalMiniplayerPatch {
         }
 
         return view.getContext().getDrawable(identifier);
+    }
+
+    /**
+     * Injection point.
+     * Records the encoded video size.
+     */
+    public static List<VideoFormat.FormatInterface> setVideoAspectRatio(@NonNull String videoId, @NonNull List<VideoFormat.FormatInterface> adaptiveFormats) {
+        if (ShortsPlayerState.isOpen()) {
+            Logger.printDebug(() -> "Ignoring shorts video aspect ratio, videoId: " + videoId);
+            return adaptiveFormats;
+        }
+
+        for (VideoFormat.FormatInterface format : adaptiveFormats) {
+            String mimeType = format.patch_getMimeType();
+            if (mimeType != null && mimeType.contains("video")) {
+                videoFormatWidth = format.patch_getWidth();
+                videoFormatHeight = format.patch_getHeight();
+            }
+        }
+        return adaptiveFormats;
     }
 }

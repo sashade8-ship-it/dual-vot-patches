@@ -257,6 +257,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">ホームフィードでのコメント欄を非表示</string>
   <string name="morphe_hide_comments_community_guidelines_title">コミュニティ ガイドラインを非表示</string>
   <string name="morphe_hide_comments_create_a_short_button_title">「ショート動画を作成」ボタンを非表示</string>
+  <string name="morphe_hide_comments_dislike_button_title">低評価ボタンを非表示</string>
   <string name="morphe_hide_comments_emoji_button_title">絵文字ボタンを非表示</string>
   <string name="morphe_hide_comments_filter_bar_options_title">コメント欄で基本のフィルタボタン以外を非表示</string>
   <string name="morphe_hide_comments_filter_bar_options_summary">「人気順」「新しい順」以外の、コメント欄のフィルタボタンをすべて非表示にします</string>
@@ -397,6 +398,13 @@ AIについて議論するだけのチャンネルや、動画の一部にだけ
   <string name="morphe_channel_search_results">チャンネル内の検索結果</string>
   <string name="morphe_channel_search_no_results">このチャンネルでは見つかりませんでした</string>
   <string name="morphe_channel_search_failed">このチャンネル内を検索できませんでした</string>
+  <string name="morphe_channel_search_sort_relevance">関連性</string>
+  <string name="morphe_channel_search_sort_most_viewed">再生回数が多い</string>
+  <string name="morphe_channel_search_sort_least_viewed">再生回数が少ない</string>
+  <string name="morphe_channel_search_sort_newest">新しい順</string>
+  <string name="morphe_channel_search_sort_oldest">古い順</string>
+  <string name="morphe_channel_search_sort_shortest">Short の短い順</string>
+  <string name="morphe_channel_search_sort_longest">長い順</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_share_copy_link_button_success">リンクをコピーしました</string>
   <string name="morphe_share_copy_link_with_timestamp_button_success">タイムスタンプ付きリンクをコピーしました</string>
@@ -1199,6 +1207,8 @@ Automotive レイアウト
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
   <string name="morphe_video_quality_dialog_button_title">画質ボタンを表示</string>
   <string name="morphe_video_quality_dialog_button_summary">長押しすると、画質をデフォルトの値にリセットします</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">画質ボタンに解像度を表示する</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">FHDなどのラベルの代わりに、1080などの解像度を表示する</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <string name="morphe_custom_speed_menu_title">カスタム再生速度メニュー</string>
   <string name="morphe_restore_old_speed_menu_title">以前の再生速度メニューに戻す</string>
@@ -1287,4 +1297,11 @@ AV1 での動画再生は、カクつくまたはコマ落ちが発生する可�
   <string name="morphe_restore_old_video_action_bar_summary">"アクション ボタンを非表示にできない不具合を修正します
 
 制限事項:「その他の動画」オーバーレイも以前のスタイルに戻ります"</string>
+  <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">プレイヤーアイコンのスタイル</string>
+  <string name="morphe_player_icon_style_entry_auto">自動</string>
+  <string name="morphe_player_icon_style_entry_default">デフォルト</string>
+  <string name="morphe_player_icon_style_entry_regular">細い</string>
+  <string name="morphe_player_icon_style_entry_bold">太い</string>
+  <string name="morphe_shorts_icon_style_title">Short アイコンスタイル</string>
 </resources>

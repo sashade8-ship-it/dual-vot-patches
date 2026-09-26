@@ -410,9 +410,9 @@ Zahtevani piškotki: SID, HSID, SSID, SAPISID, __Secure-3APISID, __Secure-1APISI
   <string name="morphe_music_lyrics_show_copy_button_title">Pokaži gumb Kopiraj</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">Tapnite za kopiranje izvirnega besedila kot navadno besedilo; pritisnite in zadržite za shranjevanje surove izvorne datoteke besedila v mapo Prenosi.</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Pokaži gumb Prevedi</string>
-  <string name="morphe_music_lyrics_show_translate_button_summary">Prevedite besedila s ponudnikovimi prevodi, Google Prevajalnikom ali API-jem, združljivim z OpenAI.</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Tapnite za preklapljanje prevoda; dolg pritisk za samo prevod. Uporablja ponudnikove prevode, Google Prevajalnik ali API, združljiv z OpenAI.</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Prikažite gumb za romanizacijo</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">Romanizirajte besedila s ponudnikovo romanizacijo, Google Prevajalnikom ali API-jem, združljivim z OpenAI.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Tapnite za preklapljanje romanizacije; dolg pritisk za samo romanizacijo. Uporablja ponudnikovo romanizacijo, Google Prevajalnik ali API, združljiv z OpenAI.</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Prikaži gumb Osveži</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Dotaknite se, da preklopite na naslednjega kandidata za besedilo; dolgo pritisnite, da začasno onemogočite besedila tretjih oseb in prikažete izvirno besedilo.</string>
   <string name="morphe_music_lyrics_saved">Shranjeno</string>
@@ -428,7 +428,7 @@ Zahtevani piškotki: SID, HSID, SSID, SAPISID, __Secure-3APISID, __Secure-1APISI
   <string name="morphe_music_lyrics_display_artist_first_summary">Preklopite vrstni red prikaza izvajalca in naslova v mini predvajalniku in MediaSession. VKLOPLJENO \"Izvajalec - Naslov\" in IZKLOPLJENO \"Naslov - Izvajalec\". Ne vpliva na iskanje besedil.</string>
   <string name="morphe_settings_music_lyrics_metadata_title">Filtri</string>
   <string name="morphe_music_lyrics_custom_regex_title">Regex metapodatkov</string>
-  <string name="morphe_music_lyrics_custom_regex_summary">Regularni izraz, uporabljen za naslove, izvajalce in albume pred iskanjem […] Privzeti izraz odstrani pogoste odvečne dele, kot so \"Official Video\", \"Remaster\" in \"- Topic\".</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">Regularni izraz se uporablja za naslove, izvajalce in albume pred iskanjem besedil ter pri ocenjevanju, ali se dva naslova ujemata. Pustite prazno, da onemogočite oboje. Privzeta nastavitev odstrani pogoste odvečne dele, kot so \"Official Video\", \"Remaster\", \"【插曲】\" in \"- Topic\".</string>
   <string name="morphe_music_lyrics_text_filter_title">Regex filtra besedil</string>
   <string name="morphe_music_lyrics_text_filter_summary">Regularni izraz se uporabi samo za izvirno besedilo (ne za prevode ali romanizacije). Pustite prazno, da onemogočite.</string>
   <string name="morphe_music_lyrics_credit_line_regex_title">Oznake informacijskih vrstic</string>
@@ -451,6 +451,8 @@ Zahtevani piškotki: SID, HSID, SSID, SAPISID, __Secure-3APISID, __Secure-1APISI
   <string name="morphe_music_lyrics_romanize_hide">Romanizirano</string>
   <string name="morphe_music_lyrics_romanizing">Poteka romanizacija …</string>
   <string name="morphe_music_lyrics_romanize_failed">Besedila ni bilo mogoče romanizirati.</string>
+  <string name="morphe_music_lyrics_translate_only">Samo prevedeno</string>
+  <string name="morphe_music_lyrics_romanize_only">Samo v latinici</string>
   <string name="morphe_music_lyrics_copied">Kopirano v odložišče</string>
   <string name="morphe_music_lyrics_refreshing">Osveževanje</string>
   <string name="morphe_music_lyrics_refreshed">Osveženo</string>
