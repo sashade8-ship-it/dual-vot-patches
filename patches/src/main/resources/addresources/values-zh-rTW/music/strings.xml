@@ -261,6 +261,9 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_change_start_page_entry_subscriptions">訂閱內容</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">隱藏篩選列</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">強制直向顯示</string>
+  <string name="morphe_music_force_portrait_orientation_summary">當裝置旋轉時，讓應用程式保持直向顯示</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">變更迷你播放器顏色</string>
   <string name="morphe_music_change_miniplayer_color_summary">迷你播放器顏色符合全螢幕播放器</string>

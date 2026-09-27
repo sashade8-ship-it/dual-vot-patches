@@ -29,9 +29,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">Tải xuống video nhạc, podcast hoặc bài hát bằng các ứng dụng tải xuống của bên thứ ba</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_external_downloader_action_button_title">Ghi đè nút Tải xuống</string>
-  <string name="morphe_external_downloader_action_button_summary">Sử dụng trình tải xuống bên ngoài mà bạn đã chọn thay cho nút Tải xuống mặc định</string>
+  <string name="morphe_external_downloader_action_button_summary">Dùng trình tải xuống bên ngoài đã chọn thay cho nút Tải xuống mặc định</string>
   <string name="morphe_external_downloader_flyout_menu_title">Ghi đè menu Tải xuống</string>
-  <string name="morphe_external_downloader_flyout_menu_summary">Sử dụng trình tải xuống bên ngoài mà bạn đã chọn thay cho menu Tải xuống mặc định</string>
+  <string name="morphe_external_downloader_flyout_menu_summary">Dùng trình tải xuống bên ngoài đã chọn thay cho menu Tải xuống mặc định</string>
   <string name="morphe_music_in_app_downloads_title">Tải xuống trong ứng dụng</string>
   <string name="morphe_music_in_app_downloads_summary">Tải xuống âm thanh trong YouTube Music thay vì mở ứng dụng tải xuống bên ngoài</string>
   <string name="morphe_music_in_app_downloads_user_dialog_message">"Các bản nhạc được lưu vào bộ nhớ riêng của ứng dụng và sẽ bị xóa nếu YouTube Music được gỡ cài đặt.
@@ -261,6 +261,9 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <string name="morphe_change_start_page_entry_subscriptions">Kênh đăng ký</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Ẩn thanh bộ lọc</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Luôn giữ hướng dọc</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Giữ ứng dụng ở hướng dọc khi thiết bị được xoay</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Đổi màu trình phát thu nhỏ</string>
   <string name="morphe_music_change_miniplayer_color_summary">Màu trình phát thu nhỏ khớp với trình phát toàn màn hình</string>
@@ -410,9 +413,9 @@ Các bước:
   <string name="morphe_music_youtube_cookies_toast_invalid">YouTube: cookie không hợp lệ — vui lòng kiểm tra và thử lại</string>
   <string name="morphe_music_lyrics_tap_to_seek_title">Chạm vào lời để tua</string>
   <string name="morphe_music_lyrics_tap_to_seek_summary">Chạm vào lời bài hát để tua đến đoạn tương ứng trong bài bát</string>
-  <string name="morphe_music_lyrics_show_copy_button_title">Hiện nút Sao chép</string>
+  <string name="morphe_music_lyrics_show_copy_button_title">Hiện nút Sao chép lời nhạc</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">Nhấn để sao chép lời bài hát gốc dưới dạng văn bản thuần; nhấn giữ để lưu tệp nguồn lời bài hát thô vào Downloads</string>
-  <string name="morphe_music_lyrics_show_translate_button_title">Hiện nút Dịch</string>
+  <string name="morphe_music_lyrics_show_translate_button_title">Hiện nút Dịch lời nhạc</string>
   <string name="morphe_music_lyrics_show_translate_button_summary">Chạm để bật/tắt bản dịch; nhấn giữ để chỉ hiển thị bản dịch. Sử dụng bản dịch từ nhà cung cấp, Google Translate hoặc API tương thích với OpenAI.</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Hiển thị nút Romanize</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Chạm để bật/tắt phiên âm; nhấn giữ để chỉ hiển thị phiên âm. Sử dụng phiên âm từ nhà cung cấp, Google Translate hoặc API tương thích với OpenAI.</string>
@@ -482,5 +485,5 @@ Các bước:
   <string name="morphe_music_lyrics_ai_config_status_validating">Đang kiểm tra kết nối…</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - Vô hiệu hóa biểu tượng đậm</string>
-  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - Khôi phục các tab Trình phát, Tiếp theo, Lời bài hát và Liên quan</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - Khôi phục các tab Tiếp theo, Lời nhạc và Liên quan trong trình phát</string>
 </resources>

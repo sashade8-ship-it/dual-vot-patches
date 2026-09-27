@@ -261,6 +261,9 @@ YouTube Music 8.x — estomparea încrucișată funcționează doar pe 9.x și v
   <string name="morphe_change_start_page_entry_subscriptions">Abonamente</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Ascunde bara de filtre</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Forțează orientarea portret</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Menține aplicația în orientarea portret atunci când dispozitivul este rotit</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Schimbă culoarea miniplayer-ului</string>
   <string name="morphe_music_change_miniplayer_color_summary">Culoarea miniplayer-ului se potrivește cu player-ul pe ecran complet</string>

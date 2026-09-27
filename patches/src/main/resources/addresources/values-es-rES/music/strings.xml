@@ -92,14 +92,14 @@ Las pistas descargadas aparecen aquí"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Ocultar selector Audio / Vídeo</string>
   <string name="morphe_music_hide_explore_shelf_title">Ocultar estantería Explorar</string>
-  <string name="morphe_music_hide_grid_shelves_title">Ocultar secciones en cuadrícula</string>
-  <string name="morphe_music_hide_horizontal_shelves_title">Ocultar secciones horizontales</string>
-  <string name="morphe_music_hide_list_shelves_title">Ocultar secciones en lista</string>
+  <string name="morphe_music_hide_grid_shelves_title">Ocultar estanterías en cuadrícula</string>
+  <string name="morphe_music_hide_horizontal_shelves_title">Ocultar estanterías horizontales</string>
+  <string name="morphe_music_hide_list_shelves_title">Ocultar estanterías en lista</string>
   <string name="morphe_music_hide_lyrics_panel_category_title">Panel de letras</string>
   <string name="morphe_music_hide_lyrics_share_button_title">Ocultar botón Compartir</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Ocultar botón Traducir</string>
   <string name="morphe_music_hide_new_from_shelf_title">Ocultar estantería \'Novedades de\'</string>
-  <string name="morphe_music_hide_playlist_shelves_title">Ocultar secciones de listas de reproducción</string>
+  <string name="morphe_music_hide_playlist_shelves_title">Ocultar estanterías de listas de reproducción</string>
   <string name="morphe_music_hide_podcast_episode_download_button_title">Ocultar botón Descargar de episodios de podcast</string>
   <string name="morphe_music_hide_repeat_button_title">Ocultar botón Repetir</string>
   <string name="morphe_music_hide_shuffle_button_title">Ocultar botón Aleatorio</string>
@@ -261,6 +261,9 @@ YouTube Music 8.x: el fundido entre canciones solo funciona en la versión 9.x y
   <string name="morphe_change_start_page_entry_subscriptions">Suscripciones</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Ocultar barra de filtro</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Forzar orientación vertical</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Mantiene la aplicación en orientación vertical cuando se gira el dispositivo</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Cambiar color del reproductor en miniatura</string>
   <string name="morphe_music_change_miniplayer_color_summary">Adapta el color del reproductor en miniatura al reproductor de pantalla completa</string>
@@ -312,7 +315,7 @@ YouTube Music 8.x: el fundido entre canciones solo funciona en la versión 9.x y
   <string name="morphe_music_listenbrainz_token_title">Cuenta de ListenBrainz</string>
   <string name="morphe_music_listenbrainz_token_summary_logged_in">Has iniciado sesión. Pulsa para administrar la cuenta</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_listenbrainz_token_dialog_instruction">Introduce tu token de usuario de ListenBrainz para habilitar el registro</string>
+  <string name="morphe_music_listenbrainz_token_dialog_instruction">Introduce tu token de usuario de ListenBrainz para habilitar el scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
   <string name="morphe_music_listenbrainz_token_dialog_get_token">Obtener token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verificar</string>
@@ -351,7 +354,7 @@ YouTube Music 8.x: el fundido entre canciones solo funciona en la versión 9.x y
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_title">Acerca del scrobbling</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_summary">"La sincronización automática (scrobbling) sincroniza tu uso de YouTube Music con tu perfil de Last.fm o ListenBrainz.
+  <string name="morphe_music_scrobbling_about_summary">"El scrobbling sincroniza tu uso de YouTube Music con tu perfil de Last.fm o ListenBrainz.
 
 Para garantizar que la sincronización se realice durante la reproducción en segundo plano, asegúrate de que el uso de la batería de la aplicación YouTube Music esté configurado como \"Sin restricciones\""</string>
   <!-- layout.lyrics.lyricsPatch -->

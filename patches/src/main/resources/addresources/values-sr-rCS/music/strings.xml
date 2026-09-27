@@ -260,6 +260,9 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <string name="morphe_change_start_page_entry_subscriptions">Praćenja</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Sakrij traku filtera</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Forsiraj portretnu orijentaciju</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Zadržava aplikaciju u portretnoj orijentaciji kada se uređaj rotira</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Promeni boju mini-plejera</string>
   <string name="morphe_music_change_miniplayer_color_summary">Boja mini-plejera odgovara plejeru preko celog ekrana</string>

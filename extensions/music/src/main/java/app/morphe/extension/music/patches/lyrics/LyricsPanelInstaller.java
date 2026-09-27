@@ -73,16 +73,18 @@ public final class LyricsPanelInstaller {
 
     private static void updateKeepScreenOn(boolean lyricsPanelOpen) {
         Utils.runOnMainThreadNowOrLater(() -> {
-            Activity activity = Utils.getActivity();
-            if (activity == null) {
+            LyricsPanelView panelView = panelReference.get();
+            if (panelView == null) {
                 return;
             }
 
             // The app sets and clears the keep screen on window flag itself, such as when
-            // the next track starts, so a window flag set here would not last. A view that
-            // keeps the screen on is added to the window flags on every layout update and
-            // does not change the flag the app owns.
-            activity.getWindow().getDecorView().setKeepScreenOn(
+            // the next track starts, so a window flag set here would not last. A view flag
+            // is OR-ed into the window flags on every layout update instead, and putting it
+            // on the panel view scopes it: the system only collects the flag from attached
+            // visible views, so closing the panel or leaving for another screen turns it off
+            // even when no engagement panel callback fires, such as on a lyrics load.
+            panelView.setKeepScreenOn(
                     Settings.LYRICS_KEEP_SCREEN_ON.get() && lyricsPanelOpen);
         });
     }
@@ -208,11 +210,13 @@ public final class LyricsPanelInstaller {
         if (existing != null && existing.getParent() == panel) {
             // Reopening the panel makes the app restore its own content, so the
             // overlay state has to be reapplied rather than assumed still correct.
+            existing.setKeepScreenOn(Settings.LYRICS_KEEP_SCREEN_ON.get());
             existing.syncOverlay();
             return true;
         }
 
         LyricsPanelView panelView = new LyricsPanelView(panel.getContext());
+        panelView.setKeepScreenOn(Settings.LYRICS_KEEP_SCREEN_ON.get());
         panel.addView(panelView, new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
                 FrameLayout.LayoutParams.MATCH_PARENT));

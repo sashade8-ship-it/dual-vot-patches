@@ -261,6 +261,9 @@ YouTube Music 8.x — прелазак ради само на 9.x и новиј�
   <string name="morphe_change_start_page_entry_subscriptions">Праћења</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Сакриј филтер траку</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Присили портретну оријентацију</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Задржава апликацију у портретној оријентацији када се уређај ротира</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Промени боју мини плејера</string>
   <string name="morphe_music_change_miniplayer_color_summary">Боја мини плејера одговара плејеру преко целог екрана</string>

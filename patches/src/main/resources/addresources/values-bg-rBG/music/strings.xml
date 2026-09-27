@@ -261,6 +261,9 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <string name="morphe_change_start_page_entry_subscriptions">Абонаменти</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Скриване на филтър лентата</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Принудителна портретна ориентация</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Запазва приложението в портретна ориентация при завъртане на устройството</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Смени цвет на миниплеъра</string>
   <string name="morphe_music_change_miniplayer_color_summary">Цвятът на миниплеера съвпада с цвятът на пълноекранния плеер</string>

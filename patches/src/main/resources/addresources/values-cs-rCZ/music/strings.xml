@@ -261,6 +261,9 @@ YouTube Music 8.x – plynulé přecházení funguje pouze ve verzích 9.x a vy�
   <string name="morphe_change_start_page_entry_subscriptions">Odběry</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Skrýt panel filtrů</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Vynutit orientaci na výšku</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Ponechává aplikaci v orientaci na výšku, když je zařízení otočeno</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Změnit barvu minipřehrávače</string>
   <string name="morphe_music_change_miniplayer_color_summary">Barva minipřehrávače odpovídá přehrávači na celou obrazovku</string>

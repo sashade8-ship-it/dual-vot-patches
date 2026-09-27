@@ -260,6 +260,9 @@ YouTube Music 8.x – crossfade kører kun på 9.x og nyere"</string>
   <string name="morphe_change_start_page_entry_subscriptions">Abonnementer</string>
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Skjul filterlinje</string>
+  <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Tving portrætorientering</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Bevarer appen i portrætorientering, når enheden roteres</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Skift miniafspillerfarve</string>
   <string name="morphe_music_change_miniplayer_color_summary">Miniafspillerfarven matcher fuldskærmsafspilleren</string>
