@@ -180,6 +180,8 @@ YouTube Music 8.x — crossfade radi samo na 9.x i novijim inačicama"</string>
   <string name="morphe_music_remember_repeat_state_title">Zapamti stanje ponavljanja</string>
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
   <string name="morphe_music_remember_shuffle_state_title">Zapamti stanje miješanja</string>
+  <!-- video.speed.playbackSpeedPatch -->
+  <string name="morphe_music_playback_speed_title">Brzina reprodukcije</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Onemogući preusmjeravanje kod ne sviđa mi se</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Sprečava preskakanje na sljedeću pjesmu kada se pritisne tipka Ne sviđa mi se</string>
@@ -429,7 +431,7 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_show_romanize_button_title">Prikaži gumb za romanizaciju</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Dodirnite za uključivanje/isključivanje romanizacije; dugi pritisak za samo romanizaciju. Koristi romanizaciju pružatelja usluge, Google Translate ili API kompatibilan s OpenAI-jem.</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Prikaži gumb za osvježavanje</string>
-  <string name="morphe_music_lyrics_show_refresh_button_summary">Dodirni za prebacivanje na sljedeći kandidat teksta pjesme; dugo pritisni za privremeno isključivanje tekstova pjesama trećih strana i prikaz ugrađenih tekstova pjesama.</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">Dodirnite za prebacivanje na sljedećeg kandidata za tekst pjesme; dugo pritisnite za pretraživanje tekstova pjesama po naslovu pjesme i izvođaču.</string>
   <string name="morphe_music_lyrics_saved">Spremljeno</string>
   <string name="morphe_music_lyrics_word_sync_title">Istakni sinkronizirane riječi ili slogove</string>
   <string name="morphe_music_lyrics_word_sync_summary">Daj prednost tekstovima pjesama riječ po riječ kada su dostupni. Kada tekstovi nose vremenske oznake riječi, istakni svaku riječ ili slog u ritmu s glazbom.</string>

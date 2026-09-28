@@ -180,6 +180,7 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <string name="morphe_music_remember_repeat_state_title">Təkrarlanma vəziyyətini xatırla</string>
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
   <string name="morphe_music_remember_shuffle_state_title">Qarışdırma vəziyyətini xatırla</string>
+  <!-- video.speed.playbackSpeedPatch -->
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Bəyənməmə yönləndirilməsini qapat</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Bəyənməmə düyməsi basıldıqda növbəti trekə keçməyə mane olur</string>
@@ -262,6 +263,8 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <!-- layout.compactheader.hideFilterBarPatch -->
   <string name="morphe_music_hide_filter_bar_title">Filtr cərgəsini gizlət</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Portret istiqamətinə məcbur et</string>
+  <string name="morphe_music_force_portrait_orientation_summary">Cihaz fırladıldıqda tətbiqi portret istiqamətində saxlayır</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Kiçik səsləndirici rəngini dəyişdir</string>
   <string name="morphe_music_change_miniplayer_color_summary">Kiçik səsləndirici rəngini tam ekran səsləndiriciyə uyuşdurur</string>
@@ -427,7 +430,6 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_lyrics_show_romanize_button_title">Oxunuş düyməsini göstər</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Transkripsiyanı dəyişmək üçün toxun; yalnız transkripsiya üçün uzun bas. Təminatçı transkripsiyasını, Google Tərcüməni və ya OpenAI uyğun API-sini istifadə edir</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Yeniləmə düyməsini göstər</string>
-  <string name="morphe_music_lyrics_show_refresh_button_summary">Növbəti söz variantına keçmək üçün toxun; üçüncü tərəf mahnı sözlərini müvəqqəti qapatmaq və yerli sözləri göstərmək üçün basıb saxla</string>
   <string name="morphe_music_lyrics_saved">Saxlanıldı</string>
   <string name="morphe_music_lyrics_word_sync_title">Sinxronlaşdırılmış sözləri və ya hecaları vurğula</string>
   <string name="morphe_music_lyrics_word_sync_summary">Mümkün olduqda sözbəsöz sözlərə üstünlük verir. Sözlərdə zamanlama olduqda, musiqi ilə eyni vaxtda hər bir sözü və ya hecanı vurğulayır</string>

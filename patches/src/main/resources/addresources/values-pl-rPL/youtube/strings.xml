@@ -692,7 +692,7 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_hide_channel_profile_button_title">Ukryj kanał i przycisk Subskrybuj</string>
   <string name="morphe_hide_channel_profile_button_summary">Ukrywa awatar kanału i przycisk Subskrybuj na początku paska akcji</string>
   <string name="morphe_hide_channel_profile_subscribe_button_title">Ukryj przycisk Subskrybuj</string>
-  <string name="morphe_hide_channel_profile_subscribe_button_summary">Ukrywa przyciski Subskrybuj i Dołącz obok awatara kanału na początku paska akcji</string>
+  <string name="morphe_hide_channel_profile_subscribe_button_summary">Ukrywa przyciski Subskrybuj i Wesprzyj obok awatara kanału na początku paska akcji</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">Ukryj przycisk Klip</string>
   <string name="morphe_hide_clip_button_summary">Może nie działać na niektórych kontach</string>
@@ -1099,8 +1099,8 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_back_button_always_exits_feed_title">Przycisk wstecz zamyka kanał</string>
   <string name="morphe_back_button_always_exits_feed_summary">Naciśnięcie wstecz zawsze zamyka aplikację, zamiast przewijać na górę kanału</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
-  <string name="morphe_hide_status_bar_title">Ukryj pasek statusu</string>
-  <string name="morphe_hide_status_bar_summary">Ukrywa systemowy pasek statusu. Przesuń palcem w dół od górnej krawędzi, aby wyświetlić go na chwilę</string>
+  <string name="morphe_hide_status_bar_title">Ukryj pasek stanu</string>
+  <string name="morphe_hide_status_bar_summary">Ukrywa systemowy pasek stanu. Przesuń w dół od górnej krawędzi, aby na chwilę go wyświetlić</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Tło jasnego motywu</string>
   <string name="morphe_theme_color_light_entry_2">Białe</string>

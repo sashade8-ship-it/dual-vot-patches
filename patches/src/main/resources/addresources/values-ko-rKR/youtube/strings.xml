@@ -694,7 +694,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_hide_channel_profile_button_title">채널 및 구독 버튼 숨기기</string>
   <string name="morphe_hide_channel_profile_button_summary">작업 버튼 바의 시작 부분에서 채널 아바타와 구독 버튼을 숨깁니다</string>
   <string name="morphe_hide_channel_profile_subscribe_button_title">구독 버튼 숨기기</string>
-  <string name="morphe_hide_channel_profile_subscribe_button_summary">액션 바 시작 부분의 채널 아바타 옆에 있는 구독 및 가입 버튼을 숨깁니다</string>
+  <string name="morphe_hide_channel_profile_subscribe_button_summary">작업 버튼바 시작 부분의 채널 아바타 옆에 있는 구독 및 가입 버튼을 숨깁니다</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_clip_button_title">클립 버튼 숨기기</string>
   <string name="morphe_hide_clip_button_summary">일부 사용자 계정에서는 작동하지 않을 수 있습니다</string>
@@ -1102,8 +1102,8 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_back_button_always_exits_feed_title">뒤로가기 버튼으로 피드 나가기</string>
   <string name="morphe_back_button_always_exits_feed_summary">뒤로가기 버튼을 탭하면 피드 상단으로 이동하지 않고 항상 앱이 종료됩니다</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
-  <string name="morphe_hide_status_bar_title">상태 표시줄 숨기기</string>
-  <string name="morphe_hide_status_bar_summary">시스템 상태 표시줄을 숨깁니다. 위쪽 가장자리에서 아래로 스와이프하면 잠시 표시됩니다</string>
+  <string name="morphe_hide_status_bar_title">상태바 숨기기</string>
+  <string name="morphe_hide_status_bar_summary">시스템 상태바 숨깁니다. 상단 가장자리에서 아래로 스와이프하면 잠시 표시됩니다</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">밝은 테마 배경 색상</string>
   <string name="morphe_theme_color_light_entry_2">하얀색</string>
