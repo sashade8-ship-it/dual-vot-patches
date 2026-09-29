@@ -1,3 +1,13 @@
+## 1.45.0-dev.20-dualvot.8.5.3 (2026-09-29)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.45.0-dev.20](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.20).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.45.0-dev.19-dualvot.8.5.3 (2026-09-28)
 
 ### Automated Morphe update
@@ -526,6 +536,16 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.45.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.19...v1.45.0-dev.20) (2026-09-29)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Always use Litho instead RenderNext as rendering library ([#3347](https://github.com/MorpheApp/morphe-patches/issues/3347)) ([52e0138](https://github.com/MorpheApp/morphe-patches/commit/52e01385e857b5a9858bef107dbaded6a89078df))
+
+### ✨ New Features
+
+* **YouTube - Player icon style:** Add custom icons from a zip file ([#3374](https://github.com/MorpheApp/morphe-patches/issues/3374)) ([224b731](https://github.com/MorpheApp/morphe-patches/commit/224b731509a1133a770d1c2f9938178d6a81a920))
 
 ## [1.45.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.18...v1.45.0-dev.19) (2026-09-28)
 
