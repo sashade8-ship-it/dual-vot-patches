@@ -1,3 +1,13 @@
+## 1.45.0-dev.21-dualvot.8.5.3 (2026-09-30)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.45.0-dev.21](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.21).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.45.0-dev.20-dualvot.8.5.3 (2026-09-29)
 
 ### Automated Morphe update
@@ -536,6 +546,17 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.45.0-dev.21](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.20...v1.45.0-dev.21) (2026-09-30)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Layout components filter:** Filtered header buttons left empty spaces ([#3402](https://github.com/MorpheApp/morphe-patches/issues/3402)) ([b719412](https://github.com/MorpheApp/morphe-patches/commit/b719412520f3ed7828b7424a9f4814eec3b4ae50))
+
+### ✨ New Features
+
+* **YouTube - Playback buffer:** Add playback buffer size option ([#3386](https://github.com/MorpheApp/morphe-patches/issues/3386)) ([dfff1f5](https://github.com/MorpheApp/morphe-patches/commit/dfff1f5b170058fe14a59abb6da8214e3022842f))
+* **YouTube:** Added "Restore original videos title and description" ([#3384](https://github.com/MorpheApp/morphe-patches/issues/3384)) ([67e650c](https://github.com/MorpheApp/morphe-patches/commit/67e650c1a263a1c26de354527fc00c7dae828db9))
 
 ## [1.45.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.19...v1.45.0-dev.20) (2026-09-29)
 

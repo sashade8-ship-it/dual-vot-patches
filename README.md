@@ -143,9 +143,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.45.0-dev.20-dualvot.8.5.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.45.0-dev.20-dualvot.8.5.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;158 patches total
+> **[v1.45.0-dev.21-dualvot.8.5.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.45.0-dev.21-dualvot.8.5.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;160 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;88 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;90 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -218,6 +218,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Open videos fullscreen](#open-videos-fullscreen) | Adds options to automatically open videos in fullscreen portrait or landscape mode. |  |
 | [Override YouTube Music buttons](#override-youtube-music-buttons) | Overrides YouTube Music buttons to open Morphe Music or any compatible third-party client. |  |
 | [Play all](#play-all) | Adds an option to play all the videos from a channel and to display play all button in the video player. |  |
+| [Playback buffer](#playback-buffer) | Adds an option to change the video playback buffer size. |  |
 | [Playback in feeds](#playback-in-feeds) | Adds the 'Playback in feeds' setting of YouTube to the Morphe settings, where it is always available even if YouTube hides it. |  |
 | [Playback speed](#playback-speed) | Adds options to customize available playback speeds, set a default playback speed, and show a speed dialog button in the video player. |  |
 | [Player icon style](#player-icon-style) | Adds an option to change the style of the player button icons. | • Custom icons |
@@ -226,6 +227,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Remember live stream playback position](#remember-live-stream-playback-position) | Adds an option to remember the playback position of an ongoing live stream and resume from there when reopening that live stream. |  |
 | [Remove background playback restrictions](#remove-background-playback-restrictions) | Removes restrictions on background playback, including playing kids videos in the background. |  |
 | [Remove viewer discretion dialog](#remove-viewer-discretion-dialog) | Adds an option to remove the dialog that appears when opening a video that has been age-restricted by accepting it automatically. This does not bypass the age restriction. |  |
+| [Restore original titles](#restore-original-titles) | Adds an option to show the original video titles and descriptions instead of the auto-translated ones. |  |
 | [Return YouTube Dislike](#return-youtube-dislike) | Adds an option to show the dislike count of videos with Return YouTube Dislike. |  |
 | [Sanitize sharing links](#sanitize-sharing-links) | Removes the tracking query parameters from shared links. |  |
 | [Save to Watch later](#save-to-watch-later) | Adds an option to display save to Watch later button in the video player. |  |
