@@ -1064,6 +1064,10 @@ Limitação: Se 'Restaurar barra de ações de vídeo antiga' estiver desativado
   <string name="morphe_playback_in_feeds_entry_always_on">Sempre ligado</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Somente Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Desligado</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Restaurar títulos originais</string>
+  <string name="morphe_restore_original_titles_summary">Exibe os títulos e as descrições originais dos vídeos em vez dos traduzidos automaticamente.</string>
+  <string name="morphe_restore_original_titles_loading">Carregando título…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Desativar continuar a reproduzir miniplayer</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Desativa o miniplayer \'Continuar assistindo\', um recurso do YouTube Premium que aparece na inicialização do app</string>
@@ -1190,6 +1194,12 @@ Toque aqui para abrir DeArrow.ajay.app"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Abrir links no navegador</string>
   <string name="morphe_external_browser_summary">Abre links em um navegador externo em vez do navegador integrado</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Tamanho do buffer de reprodução</string>
+  <string name="morphe_playback_buffer_size_entry_default">Padrão</string>
+  <string name="morphe_playback_buffer_size_entry_low">Baixo</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Médio</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Máximo</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automático</string>
@@ -1309,5 +1319,6 @@ Limitação: Reverte para o estilo antigo da sobreposição 'Mais vídeos'"</str
   <string name="morphe_player_icon_style_entry_default">Padrão</string>
   <string name="morphe_player_icon_style_entry_regular">Fino</string>
   <string name="morphe_player_icon_style_entry_bold">Negrito</string>
+  <string name="morphe_player_icon_style_entry_custom">Personalizado</string>
   <string name="morphe_shorts_icon_style_title">Estilo do ícone do Shorts</string>
 </resources>

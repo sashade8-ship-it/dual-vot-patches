@@ -181,9 +181,9 @@ Ekran blokady lub powiadomienie może przez chwilę pokazywać nieaktualny stan 
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
   <string name="morphe_music_remember_shuffle_state_title">Zapamiętaj stan odtwarzania losowego</string>
   <!-- video.speed.playbackSpeedPatch -->
-  <string name="morphe_music_playback_speed_title">Szybkość odtwarzania</string>
-  <string name="morphe_music_playback_speed_summary">Prędkość używana dla wszystkich utworów. Przy 100% używana jest prędkość aplikacji, taka jak prędkość odtwarzania podcastu</string>
-  <string name="morphe_music_playback_speed_change_pitch_title">Zmień wysokość dźwięku wraz z prędkością</string>
+  <string name="morphe_music_playback_speed_title">Prędkość odtwarzania</string>
+  <string name="morphe_music_playback_speed_summary">Prędkość stosowana dla wszystkich utworów. Przy 100% używana jest prędkość aplikacji, np. prędkość odtwarzania podcastów</string>
+  <string name="morphe_music_playback_speed_change_pitch_title">Zmieniaj tonację wraz z prędkością</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Wyłącz pomijanie nielubianych piosenek</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Zapobiega przechodzeniu do następnego utworu po naciśnięciu łapki w dół</string>
@@ -433,12 +433,12 @@ Wymagane ciasteczka: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_show_romanize_button_title">Pokaż przycisk Romanizuj</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Dotknij, aby przełączyć romanizację. Przytrzymaj, aby wyświetlić tylko romanizację. Wykorzystuje romanizację dostawcy, Tłumacza Google lub API zgodne z OpenAI</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Pokaż przycisk Odśwież</string>
-  <string name="morphe_music_lyrics_show_refresh_button_summary">Dotknij, aby przełączyć się na następnego kandydata na tekst; naciśnij i przytrzymaj, aby wyszukać teksty na podstawie tytułu utworu i wykonawcy</string>
-  <string name="morphe_music_lyrics_search_dialog_title">Szukaj tekstów</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">Dotknij, aby przełączyć na następną propozycję tekstu. Przytrzymaj, aby wyszukać tekst według tytułu utworu i wykonawcy</string>
+  <string name="morphe_music_lyrics_search_dialog_title">Wyszukaj tekst</string>
   <string name="morphe_music_lyrics_search_title_hint">Tytuł utworu</string>
   <string name="morphe_music_lyrics_search_artist_hint">Wykonawca</string>
   <string name="morphe_music_lyrics_search_empty">Wpisz tytuł utworu i wykonawcę</string>
-  <string name="morphe_music_lyrics_search_no_providers">Żaden z włączonych dostawców nie może wyszukiwać innych utworów</string>
+  <string name="morphe_music_lyrics_search_no_providers">Żaden z włączonych dostawców nie obsługuje wyszukiwania innych utworów</string>
   <string name="morphe_music_lyrics_saved">Zapisano</string>
   <string name="morphe_music_lyrics_word_sync_title">Podświetlaj zsynchronizowane słowa lub sylaby</string>
   <string name="morphe_music_lyrics_word_sync_summary">Nadaje priorytet tekstom synchronizowanym słowo po słowie, o ile są dostępne. Gdy tekst zawiera znaczniki czasu, podświetla każde słowo lub sylabę w rytm muzyki</string>

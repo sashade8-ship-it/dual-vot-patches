@@ -1067,6 +1067,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_always_on">Всегда</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Только по Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Выкл.</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Восстановить исходные названия</string>
+  <string name="morphe_restore_original_titles_summary">Показывает исходные названия и описания видео вместо автоматически переведённых</string>
+  <string name="morphe_restore_original_titles_loading">Загрузка названия…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Отключить возобновление мини-плеера</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Отключает мини-плеер \"Продолжить просмотр\", функцию YouTube Premium, которая появляется при запуске приложения</string>
@@ -1193,6 +1197,12 @@ Second \"item\" text"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Открывать ссылки в браузере</string>
   <string name="morphe_external_browser_summary">Открывает ссылки во внешнем браузере, а не во встроенном браузере</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Размер буфера воспроизведения</string>
+  <string name="morphe_playback_buffer_size_entry_default">По умолчанию</string>
+  <string name="morphe_playback_buffer_size_entry_low">Низкий</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Средний</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Максимальный</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Авто</string>
@@ -1312,6 +1322,7 @@ Second \"item\" text"</string>
   <string name="morphe_player_icon_style_entry_default">По умолчанию</string>
   <string name="morphe_player_icon_style_entry_regular">Тонкий</string>
   <string name="morphe_player_icon_style_entry_bold">Жирный</string>
+  <string name="morphe_player_icon_style_entry_custom">Пользовательское</string>
   <string name="morphe_shorts_icon_style_title">Стиль значка Shorts</string>
     <string name="dualvot_yandex_screen_title">Яндекс-перевод</string>
     <string name="dualvot_yandex_screen_summary">Настройки Яндекс-перевода и его кнопки в плеере</string>

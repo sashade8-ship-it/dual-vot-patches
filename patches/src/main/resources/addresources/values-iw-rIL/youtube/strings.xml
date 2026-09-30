@@ -1065,6 +1065,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_always_on">תמיד מופעל</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">רק Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">כבוי</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">שחזור כותרות מקוריות</string>
+  <string name="morphe_restore_original_titles_summary">מציג את כותרות הסרטונים והתיאורים המקוריים במקום אלה המתורגמים אוטומטית</string>
+  <string name="morphe_restore_original_titles_loading">טוען כותרת…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">השבת המשך נגן מיני</string>
   <string name="morphe_miniplayer_disable_resuming_summary">משבית את הנגן המיני \'המשך לצפות\', תכונה בתשלום של YouTube Premium שמופיעה בעת הפעלת האפליקציה</string>
@@ -1191,6 +1195,9 @@ Second \"item\" text"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">פתח קישורים בדפדפן</string>
   <string name="morphe_external_browser_summary">פותח קישורים בדפדפן חיצוני במקום בדפדפן המובנה</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">גודל חיץ ההשמעה</string>
+  <string name="morphe_playback_buffer_size_entry_default">ברירת מחדל</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">אוטומטי</string>
@@ -1310,5 +1317,6 @@ Second \"item\" text"</string>
   <string name="morphe_player_icon_style_entry_default">ברירת מחדל</string>
   <string name="morphe_player_icon_style_entry_regular">דק</string>
   <string name="morphe_player_icon_style_entry_bold">מודגש</string>
+  <string name="morphe_player_icon_style_entry_custom">מותאם אישית</string>
   <string name="morphe_shorts_icon_style_title">סגנון אייקון Shorts</string>
 </resources>

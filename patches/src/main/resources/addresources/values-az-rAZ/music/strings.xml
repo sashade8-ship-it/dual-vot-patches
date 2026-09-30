@@ -181,6 +181,9 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
   <string name="morphe_music_remember_shuffle_state_title">Qarışdırma vəziyyətini xatırla</string>
   <!-- video.speed.playbackSpeedPatch -->
+  <string name="morphe_music_playback_speed_title">Oynatma sürəti</string>
+  <string name="morphe_music_playback_speed_summary">Bütün treklər üçün istifadə olunan sürət. 100% olduqda tətbiqin sürəti, məsələn, podkastın oynatma sürəti istifadə olunur</string>
+  <string name="morphe_music_playback_speed_change_pitch_title">Ucalığı sürət ilə dəyiş</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Bəyənməmə yönləndirilməsini qapat</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Bəyənməmə düyməsi basıldıqda növbəti trekə keçməyə mane olur</string>
@@ -430,6 +433,12 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_lyrics_show_romanize_button_title">Oxunuş düyməsini göstər</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Transkripsiyanı dəyişmək üçün toxun; yalnız transkripsiya üçün uzun bas. Təminatçı transkripsiyasını, Google Tərcüməni və ya OpenAI uyğun API-sini istifadə edir</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Yeniləmə düyməsini göstər</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">Növbəti mahnı sözləri variantına keçmək üçün toxun; mahnı başlığı və ifaçıya görə axtarmaq üçün uzun bas</string>
+  <string name="morphe_music_lyrics_search_dialog_title">Mahnı sözlərini axtar</string>
+  <string name="morphe_music_lyrics_search_title_hint">Mahnı başlığı</string>
+  <string name="morphe_music_lyrics_search_artist_hint">İfaçı</string>
+  <string name="morphe_music_lyrics_search_empty">Mahnı adını və ifaçını daxil et</string>
+  <string name="morphe_music_lyrics_search_no_providers">Aktivləşdirilmiş təminatçıların heç biri digər mahnıları axtara bilmir</string>
   <string name="morphe_music_lyrics_saved">Saxlanıldı</string>
   <string name="morphe_music_lyrics_word_sync_title">Sinxronlaşdırılmış sözləri və ya hecaları vurğula</string>
   <string name="morphe_music_lyrics_word_sync_summary">Mümkün olduqda sözbəsöz sözlərə üstünlük verir. Sözlərdə zamanlama olduqda, musiqi ilə eyni vaxtda hər bir sözü və ya hecanı vurğulayır</string>
@@ -483,6 +492,7 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_lyrics_ai_config_base_url_hint">API son nöqtəsi URL-si (məsələn, https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API açarı (gizli giriş üçün boş qoy)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Model adı (məsələn, openai-fast, gpt-4o-mini)</string>
+  <string name="morphe_music_lyrics_ai_config_prompt_hint">Şablon sorğu (dəyişənlər: {language}, {task}, {title}, {artist}, {count}, {lines})</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">Süni intellekt tərcümə tənzimləmələri saxlanıldı</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Süni intellekt son nöqtəsinə qoşulmaq olmadı. Zəhmət olmasa, tənzimləmələrinizi yoxlayın.</string>
   <string name="morphe_music_lyrics_ai_config_toast_reset">Süni intellekt tərcümə tənzimləmələri sıfırlandı</string>

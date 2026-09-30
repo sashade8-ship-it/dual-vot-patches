@@ -428,11 +428,11 @@ Mga kinakailangang cookie: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure
   <string name="morphe_music_lyrics_show_romanize_button_title">Ipakita ang Romanize button</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">I-tap upang i-toggle ang romanisasyon; pindutin nang matagal para sa romanisasyon lamang. Gumagamit ng romanisasyon mula sa provider, Google Translate, o isang API na katugma ng OpenAI.</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Ipakita ang button na Refresh</string>
-  <string name="morphe_music_lyrics_show_refresh_button_summary">I-tap upang lumipat sa susunod na kandidatong lyrics; pindutin nang matagal upang maghanap ng lyrics sa pamamagitan ng pamagat ng kanta at ng artist</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">I-tap upang lumipat sa susunod na lyrics; pindutin nang matagal upang maghanap ng lyrics sa pamamagitan ng pamagat ng kanta at ng artist</string>
   <string name="morphe_music_lyrics_search_dialog_title">Maghanap ng lyrics</string>
   <string name="morphe_music_lyrics_search_title_hint">Pamagat ng kanta</string>
-  <string name="morphe_music_lyrics_search_artist_hint">Artista</string>
-  <string name="morphe_music_lyrics_search_empty">Maglagay ng pamagat ng kanta at ng artist</string>
+  <string name="morphe_music_lyrics_search_artist_hint">Artist</string>
+  <string name="morphe_music_lyrics_search_empty">Ilagay ang pangalan ng kanta at ang kumanta nito</string>
   <string name="morphe_music_lyrics_search_no_providers">Wala sa mga pinaganang provider ang makakapaghanap ng iba pang mga kanta</string>
   <string name="morphe_music_lyrics_saved">Na-save</string>
   <string name="morphe_music_lyrics_word_sync_title">I-highlight ang mga salita o pantig na naka-sync</string>

@@ -1065,6 +1065,10 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_playback_in_feeds_entry_always_on">Sempre attivo</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Solo Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Disattivato</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Ripristina i titoli originali</string>
+  <string name="morphe_restore_original_titles_summary">Mostra i titoli e le descrizioni originali dei video invece di quelli tradotti automaticamente</string>
+  <string name="morphe_restore_original_titles_loading">Caricamento del titolo…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Disabilita la ripresa del lettore minimizzato</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Impedisce al lettore minimizzato \'Continua a guardare\' di essere mostrato all\'avvio dell\'app</string>
@@ -1191,6 +1195,12 @@ Tocca qui per saperne di più su DeArrow"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Apri link nel browser</string>
   <string name="morphe_external_browser_summary">Apre i link in un browser esterno anziché nel browser in-app</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Dimensione del buffer di riproduzione</string>
+  <string name="morphe_playback_buffer_size_entry_default">Predefinita</string>
+  <string name="morphe_playback_buffer_size_entry_low">Bassa</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Media</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Massima</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatico</string>
@@ -1310,5 +1320,6 @@ Limitazione: ripristina il vecchio stile della sovrapposizione 'Altri video'"</s
   <string name="morphe_player_icon_style_entry_default">Predefinita</string>
   <string name="morphe_player_icon_style_entry_regular">Sottile</string>
   <string name="morphe_player_icon_style_entry_bold">Grassetto</string>
+  <string name="morphe_player_icon_style_entry_custom">Personalizzato</string>
   <string name="morphe_shorts_icon_style_title">Stile icona Short</string>
 </resources>

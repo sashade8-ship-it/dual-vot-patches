@@ -1064,6 +1064,10 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_playback_in_feeds_entry_always_on">Zawsze włączone</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Tylko Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Wyłączone</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Przywróć oryginalne tytuły</string>
+  <string name="morphe_restore_original_titles_summary">Wyświetla oryginalne tytuły i opisy filmów zamiast tłumaczeń automatycznych</string>
+  <string name="morphe_restore_original_titles_loading">Wczytywanie tytułu…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Wyłącz wznawianie filmu w miniodtwarzaczu</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Wyłącza miniodtwarzacz \"Kontynuuj oglądanie\", funkcję YouTube Premium wyświetlaną przy starcie aplikacji</string>
@@ -1190,6 +1194,12 @@ Dotknij tutaj, aby otworzyć DeArrow.ajay.app"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Otwieraj linki w przeglądarce</string>
   <string name="morphe_external_browser_summary">Otwiera linki w zewnętrznej przeglądarce zamiast we wbudowanej</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Rozmiar bufora odtwarzania</string>
+  <string name="morphe_playback_buffer_size_entry_default">Domyślny</string>
+  <string name="morphe_playback_buffer_size_entry_low">Mały</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Średni</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Maksymalny</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatyczna</string>
@@ -1309,5 +1319,6 @@ Ograniczenie: Przywraca stary wygląd nakładki \"Więcej filmów\""</string>
   <string name="morphe_player_icon_style_entry_default">Domyślny</string>
   <string name="morphe_player_icon_style_entry_regular">Cienki</string>
   <string name="morphe_player_icon_style_entry_bold">Pogrubiony</string>
+  <string name="morphe_player_icon_style_entry_custom">Własny</string>
   <string name="morphe_shorts_icon_style_title">Styl ikon Shorts</string>
 </resources>

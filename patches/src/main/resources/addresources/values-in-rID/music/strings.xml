@@ -195,7 +195,7 @@ YouTube Music 8.x — pudar silang hanya berfungsi pada versi 9.x dan yang lebih
   <string name="morphe_music_hide_voice_search_button_title">Sembunyikan tombol pencarian Suara</string>
   <string name="morphe_music_hide_sound_search_button_title">Sembunyikan tombol pencarian suara</string>
   <string name="morphe_music_hide_library_new_button_title">Sembunyikan tombol Baru</string>
-  <string name="morphe_music_hide_library_new_button_summary">Menyembunyikan tombol Baru di tab Pustaka</string>
+  <string name="morphe_music_hide_library_new_button_summary">Menyembunyikan tombol Baru di tab Koleksi</string>
   <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
   <string name="morphe_music_action_buttons_screen_title">Tombol tindakan</string>
   <string name="morphe_music_action_buttons_screen_summary">Pilih tombol tindakan mana yang akan ditampilkan di bawah pemutar</string>
@@ -290,7 +290,7 @@ YouTube Music 8.x — pudar silang hanya berfungsi pada versi 9.x dan yang lebih
   <!-- 'Samples' should be translated using the same localized wording YouTube Music displays for the tab. -->
   <string name="morphe_music_hide_navigation_bar_samples_button_title">Sembunyikan tombol Sampel</string>
   <!-- 'Explore' should be translated using the same localized wording YouTube Music displays for the tab. -->
-  <string name="morphe_music_hide_navigation_bar_explore_button_title">Sembunyikan tombol Jelajahi</string>
+  <string name="morphe_music_hide_navigation_bar_explore_button_title">Sembunyikan tombol Eksplorasi</string>
   <!-- 'Library' should be translated using the same localized wording YouTube Music displays for the tab. -->
   <string name="morphe_music_hide_navigation_bar_library_button_title">Sembunyikan tombol Koleksi</string>
   <!-- 'Upgrade' should be translated using the same localized wording YouTube Music displays for the tab. -->
@@ -429,9 +429,9 @@ Langkah-langkah:
   <string name="morphe_music_lyrics_show_copy_button_title">Tampilkan tombol Salin</string>
   <string name="morphe_music_lyrics_show_copy_button_summary">Ketuk untuk menyalin lirik asli sebagai teks biasa; tekan lama untuk menyimpan file sumber lirik mentah ke Unduhan.</string>
   <string name="morphe_music_lyrics_show_translate_button_title">Tampilkan tombol Terjemahan</string>
-  <string name="morphe_music_lyrics_show_translate_button_summary">Ketuk untuk mengalihkan terjemahan; tekan lama untuk hanya terjemahan. Menggunakan terjemahan penyedia, Google Terjemahan, atau API yang kompatibel dengan OpenAI</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">Ketuk untuk mengalihkan terjemahan; tekan lama untuk hanya terjemahan. Menggunakan penyedia terjemahan, Google Terjemahan, atau API yang kompatibel dengan OpenAI</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Tampilkan tombol Romanisasi</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">Ketuk untuk mengalihkan romanisasi; tekan lama untuk hanya romanisasi. Menggunakan romanisasi penyedia, Google Terjemahan, atau API yang kompatibel dengan OpenAI</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Ketuk untuk mengalihkan romanisasi; tekan lama untuk hanya romanisasi. Menggunakan penyedia romanisasi, Google Terjemahan, atau API yang kompatibel dengan OpenAI</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Tampilkan tombol Segarkan</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Ketuk untuk berpindah ke kandidat lirik berikutnya; tekan lama untuk mencari lirik berdasarkan judul lagu dan artis.</string>
   <string name="morphe_music_lyrics_search_dialog_title">Cari lirik</string>

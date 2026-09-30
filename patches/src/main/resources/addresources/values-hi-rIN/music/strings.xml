@@ -428,12 +428,12 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_lyrics_show_romanize_button_title">रोमनाइज़ बटन दिखाएँ</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">रोमनकरण टॉगल करने के लिए टैप करें; केवल रोमनकरण के लिए देर तक दबाएँ। प्रदाता रोमनकरण, Google Translate, या OpenAI-संगत API का उपयोग करता है।</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">रिफ़्रेश बटन दिखाएँ</string>
-  <string name="morphe_music_lyrics_show_refresh_button_summary">अगले गीत विकल्प पर स्विच करने के लिए टैप करें; गाने के शीर्षक और कलाकार द्वारा गीत खोजने के लिए लंबे समय तक दबाएं।</string>
-  <string name="morphe_music_lyrics_search_dialog_title">गीत खोजें</string>
-  <string name="morphe_music_lyrics_search_title_hint">गाने का शीर्षक</string>
-  <string name="morphe_music_lyrics_search_artist_hint">कलाकार</string>
-  <string name="morphe_music_lyrics_search_empty">गाने का शीर्षक और कलाकार दर्ज करें</string>
-  <string name="morphe_music_lyrics_search_no_providers">सक्षम प्रदाताओं में से कोई भी अन्य गानों की खोज नहीं कर सकता।</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">लिरिक्स के अगले विकल्प पर जाने के लिए टैप करें; गाने के नाम और आर्टिस्ट से लिरिक्स खोजने के लिए दबाकर रखें</string>
+  <string name="morphe_music_lyrics_search_dialog_title">लिरिक्स खोजें</string>
+  <string name="morphe_music_lyrics_search_title_hint">गाने का नाम</string>
+  <string name="morphe_music_lyrics_search_artist_hint">आर्टिस्ट</string>
+  <string name="morphe_music_lyrics_search_empty">गाने का नाम और आर्टिस्ट डालें</string>
+  <string name="morphe_music_lyrics_search_no_providers">चालू किए गए प्रोवाइडर्स में से कोई भी दूसरे गाने नहीं खोज सकता</string>
   <string name="morphe_music_lyrics_saved">सहेजा गया</string>
   <string name="morphe_music_lyrics_word_sync_title">सिंक किए गए शब्दों या अक्षरों को हाइलाइट करें</string>
   <string name="morphe_music_lyrics_word_sync_summary">जब उपलब्ध हों तो शब्द-दर-शब्द गीतों को प्राथमिकता दें। जब गीतों में शब्द टाइमिंग होती है, तो संगीत के साथ समय पर प्रत्येक शब्द या अक्षर को हाइलाइट करता है</string>
@@ -487,7 +487,7 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_lyrics_ai_config_base_url_hint">API एंडपॉइंट URL (उदा. https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API कुंजी (अनाम पहुंच के लिए खाली छोड़ें)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">मॉडल नाम (उदा. openai-fast, gpt-4o-mini)</string>
-  <string name="morphe_music_lyrics_ai_config_prompt_hint">प्रॉम्प्ट टेम्पलेट (चर: {language}, {task}, {title}, {artist}, {count}, {lines})</string>
+  <string name="morphe_music_lyrics_ai_config_prompt_hint">प्रॉम्प्ट टेम्प्लेट (वेरिएबल्स: {language}, {task}, {title}, {artist}, {count}, {lines})</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">AI अनुवाद सेटिंग्स सहेजी गईं</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">AI एंडपॉइंट से कनेक्ट नहीं हो सका। कृपया अपनी सेटिंग्स जांचें।</string>
   <string name="morphe_music_lyrics_ai_config_toast_reset">AI अनुवाद सेटिंग्स रीसेट हो गईं</string>

@@ -1064,6 +1064,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_always_on">Завжди ввімкнено</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Лише Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Вимкнено</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Відновити оригінальні назви</string>
+  <string name="morphe_restore_original_titles_summary">Показує оригінальні назви та описи відео замість автоматично перекладених</string>
+  <string name="morphe_restore_original_titles_loading">Завантаження назви…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Вимкнути відновлення мініплеєра</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Вимикає мініплеєр \"Продовжити перегляд\", функцію YouTube Premium, що з\'являється при запуску застосунку</string>
@@ -1190,6 +1194,12 @@ Second \"item\" text"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Відкривати посилання у браузері</string>
   <string name="morphe_external_browser_summary">Відкриває посилання у зовнішньому браузері замість вбудованого</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Розмір буфера відтворення</string>
+  <string name="morphe_playback_buffer_size_entry_default">Типовий</string>
+  <string name="morphe_playback_buffer_size_entry_low">Низький</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Середній</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Максимальний</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Авто</string>
@@ -1309,5 +1319,6 @@ Second \"item\" text"</string>
   <string name="morphe_player_icon_style_entry_default">Типовий</string>
   <string name="morphe_player_icon_style_entry_regular">Тонкий</string>
   <string name="morphe_player_icon_style_entry_bold">Жирний</string>
+  <string name="morphe_player_icon_style_entry_custom">Власний</string>
   <string name="morphe_shorts_icon_style_title">Стиль іконок Shorts</string>
 </resources>

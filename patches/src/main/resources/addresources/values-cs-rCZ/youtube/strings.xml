@@ -1062,6 +1062,10 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_playback_in_feeds_entry_always_on">Vždy zapnuto</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Pouze přes Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Vypnuto</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Obnovit původní názvy</string>
+  <string name="morphe_restore_original_titles_summary">Zobrazuje původní názvy videí a popisy místo automaticky přeložených</string>
+  <string name="morphe_restore_original_titles_loading">Načítání názvu…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Zakázat obnovení miniplayeru</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Vypne minipřehrávač \'Pokračovat ve sledování\', funkci YouTube Premium, která se zobrazí při spuštění aplikace</string>
@@ -1188,6 +1192,12 @@ Klepnutím sem se dozvíte více o DeArrow"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Otevírat odkazy v prohlížeči</string>
   <string name="morphe_external_browser_summary">Otevře odkazy v externím prohlížeči namísto prohlížeče v aplikaci</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Velikost vyrovnávací paměti přehrávání</string>
+  <string name="morphe_playback_buffer_size_entry_default">Výchozí</string>
+  <string name="morphe_playback_buffer_size_entry_low">Nízká</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Střední</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Maximální</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automaticky</string>
@@ -1307,5 +1317,6 @@ Omezení: Vrací se ke starému stylu překrytí „Další videa“."</string>
   <string name="morphe_player_icon_style_entry_default">Výchozí</string>
   <string name="morphe_player_icon_style_entry_regular">Tenké</string>
   <string name="morphe_player_icon_style_entry_bold">Tučné</string>
+  <string name="morphe_player_icon_style_entry_custom">Vlastní</string>
   <string name="morphe_shorts_icon_style_title">Styl ikony Shorts</string>
 </resources>

@@ -1065,6 +1065,10 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_playback_in_feeds_entry_always_on">Alltid på</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Kun Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Av</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Gjenopprett originale titler</string>
+  <string name="morphe_restore_original_titles_summary">Viser de originale videotitlene og -beskrivelsene i stedet for de automatisk oversatte</string>
+  <string name="morphe_restore_original_titles_loading">Laster tittel…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Deaktiver gjenopptak av miniplayer</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Deaktiverer minispilleren «Fortsett å se på», en YouTube Premium-funksjon som vises ved oppstart av appen</string>
@@ -1189,6 +1193,12 @@ Hvis aktivert, sendes videourler til API-serveren og ingen andre data sendes. Hv
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Åpne lenker i nettleser</string>
   <string name="morphe_external_browser_summary">Åpner lenker i en ekstern nettleser i stedet for nettleseren i appen</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Bufferstørrelse for avspilling</string>
+  <string name="morphe_playback_buffer_size_entry_default">Standard</string>
+  <string name="morphe_playback_buffer_size_entry_low">Lav</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Middels</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Maksimum</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Auto</string>
@@ -1308,5 +1318,6 @@ Begrensning: Går tilbake til gammel stil for 'Flere videoer'-overlegg"</string>
   <string name="morphe_player_icon_style_entry_default">Standard</string>
   <string name="morphe_player_icon_style_entry_regular">Tynn</string>
   <string name="morphe_player_icon_style_entry_bold">Fet</string>
+  <string name="morphe_player_icon_style_entry_custom">Egendefinert</string>
   <string name="morphe_shorts_icon_style_title">Shorts-ikonstil</string>
 </resources>

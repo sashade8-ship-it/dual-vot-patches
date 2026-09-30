@@ -1160,6 +1160,11 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_playback_in_feeds_entry_wifi_only">Wi-Fi only</string>
     <string name="morphe_playback_in_feeds_entry_off">Off</string>
 
+    <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+    <string name="morphe_restore_original_titles_title">Restore original titles</string>
+    <string name="morphe_restore_original_titles_summary">Shows the original video titles and descriptions instead of the auto-translated ones</string>
+    <string name="morphe_restore_original_titles_loading">Loading title…</string>
+
     <!-- layout.miniplayer.miniplayerPatch -->
     <string name="morphe_miniplayer_disable_resuming_title">Disable resuming miniplayer</string>
     <string name="morphe_miniplayer_disable_resuming_summary">Disables the \'Continue watching\' miniplayer, a YouTube Premium feature that appears on app startup</string>
@@ -1311,6 +1316,13 @@ Tap here to open DeArrow.ajay.app"</string>
     <!-- misc.links.openLinksExternallyPatch -->
     <string name="morphe_external_browser_title">Open links in browser</string>
     <string name="morphe_external_browser_summary">Opens links in an external browser instead of the in-app browser</string>
+
+    <!-- video.buffer.playbackBufferPatch -->
+    <string name="morphe_playback_buffer_size_title">Playback buffer size</string>
+    <string name="morphe_playback_buffer_size_entry_default">Default</string>
+    <string name="morphe_playback_buffer_size_entry_low">Low</string>
+    <string name="morphe_playback_buffer_size_entry_medium">Medium</string>
+    <string name="morphe_playback_buffer_size_entry_maximum">Maximum</string>
 
     <!-- video.quality.rememberVideoQualityPatch -->
     <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->

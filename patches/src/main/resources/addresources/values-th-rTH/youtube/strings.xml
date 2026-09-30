@@ -1065,6 +1065,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_always_on">เปิดตลอดเวลา</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Wi-Fi เท่านั้น</string>
   <string name="morphe_playback_in_feeds_entry_off">ปิด</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">กู้คืนชื่อวิดีโอต้นฉบับ</string>
+  <string name="morphe_restore_original_titles_summary">แสดงชื่อวิดีโอและคำอธิบายต้นฉบับแทนที่ชื่อและคำอธิบายที่แปลอัตโนมัติ</string>
+  <string name="morphe_restore_original_titles_loading">กำลังโหลดชื่อวิดีโอ…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">ปิดใช้งานการกลับมาเล่นต่อของมินิเพลเยอร์</string>
   <string name="morphe_miniplayer_disable_resuming_summary">ปิดใช้งานเครื่องเล่นขนาดเล็ก \'ดูต่อ\' ซึ่งเป็นคุณสมบัติพิเศษสำหรับ YouTube Premium ที่ปรากฏขึ้นเมื่อเริ่มต้นแอป</string>
@@ -1191,6 +1195,12 @@ Second \"item\" text"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">เปิดลิงก์ในเบราว์เซอร์</string>
   <string name="morphe_external_browser_summary">เปิดลิงก์ในเบราว์เซอร์ภายนอกแทนเบราว์เซอร์ในแอป</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">ขนาดบัฟเฟอร์การเล่น</string>
+  <string name="morphe_playback_buffer_size_entry_default">ค่าเริ่มต้นThe</string>
+  <string name="morphe_playback_buffer_size_entry_low">ต่ำ</string>
+  <string name="morphe_playback_buffer_size_entry_medium">ปานกลาง</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">สูงสุด</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">อัตโนมัติ</string>
@@ -1310,5 +1320,6 @@ Second \"item\" text"</string>
   <string name="morphe_player_icon_style_entry_default">ค่าเริ่มต้นThe</string>
   <string name="morphe_player_icon_style_entry_regular">บาง</string>
   <string name="morphe_player_icon_style_entry_bold">หนา</string>
+  <string name="morphe_player_icon_style_entry_custom">กำหนดเอง</string>
   <string name="morphe_shorts_icon_style_title">สไตล์ไอคอน Shorts</string>
 </resources>

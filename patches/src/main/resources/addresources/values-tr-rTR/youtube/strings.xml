@@ -1065,6 +1065,10 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_playback_in_feeds_entry_always_on">Her zaman açık</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Yalnızca Wi-Fi üzerinde</string>
   <string name="morphe_playback_in_feeds_entry_off">Kapalı</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Orijinal başlıkları geri yükle</string>
+  <string name="morphe_restore_original_titles_summary">Otomatik çevrilenler yerine orijinal video başlıklarını ve açıklamalarını gösterir.</string>
+  <string name="morphe_restore_original_titles_loading">Başlık yükleniyor…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Mini oynatıcıyı sürdürmeyi devre dışı bırak</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Uygulama başlangıcında görünen YouTube Premium özelliği \'İzlemeye devam edin\' mini oynatıcısını devre dışı bırakır</string>
@@ -1191,6 +1195,12 @@ DeArrow hakkında daha fazla bilgi edinmek için buraya dokunun"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Bağlantıları tarayıcıda aç</string>
   <string name="morphe_external_browser_summary">Bağlantıları uygulama içi tarayıcı yerine harici bir tarayıcıda açar</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Oynatma arabellek boyutu</string>
+  <string name="morphe_playback_buffer_size_entry_default">Varsayılan</string>
+  <string name="morphe_playback_buffer_size_entry_low">Düşük</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Orta</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Maksimum</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Oto</string>
@@ -1310,5 +1320,6 @@ Sınırlama: Eski stil 'Diğer videolar' katmanına geri döner"</string>
   <string name="morphe_player_icon_style_entry_default">Varsayılan</string>
   <string name="morphe_player_icon_style_entry_regular">İnce</string>
   <string name="morphe_player_icon_style_entry_bold">Kalın</string>
+  <string name="morphe_player_icon_style_entry_custom">Özel</string>
   <string name="morphe_shorts_icon_style_title">Shorts simge stili</string>
 </resources>

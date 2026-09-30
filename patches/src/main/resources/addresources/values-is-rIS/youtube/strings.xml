@@ -1060,6 +1060,10 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_playback_in_feeds_entry_always_on">Alltaf ákveikt</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Aðeins Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Slökkt</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Endurheimta upprunalega titla</string>
+  <string name="morphe_restore_original_titles_summary">Sýnir upprunalega titla og lýsingar myndbanda í stað sjálfþýddra.</string>
+  <string name="morphe_restore_original_titles_loading">Hleð titil…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Lokað rætingarspilarann</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Gerir óvirkt \'Halda áfram að horfa\' litla spilara, YouTube Premium eiginleika sem birtist þegar appið ræsir</string>
@@ -1186,6 +1190,9 @@ Bankaðu hér til að opna DeArrow.ajay.app"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Opnaðu tengla í vafra</string>
   <string name="morphe_external_browser_summary">Opnaðu tenglar í utanfærs vörpun á stað inni í appinu</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Spilunarbiðminnisstærð</string>
+  <string name="morphe_playback_buffer_size_entry_default">Sjálfgefið</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Sjálfvirkt</string>
@@ -1305,5 +1312,6 @@ Takmörkun: Snýr aftur í gamla 'Fleiri myndbönd' yfirlagsstílinn"</string>
   <string name="morphe_player_icon_style_entry_default">Sjálfgefið</string>
   <string name="morphe_player_icon_style_entry_regular">Þunnur</string>
   <string name="morphe_player_icon_style_entry_bold">Feitletraður</string>
+  <string name="morphe_player_icon_style_entry_custom">Sérsniðið</string>
   <string name="morphe_shorts_icon_style_title">Stíll Shorts-táknsins</string>
 </resources>

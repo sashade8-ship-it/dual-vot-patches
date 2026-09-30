@@ -1048,6 +1048,10 @@ Promene uključuju:
   <string name="morphe_playback_in_feeds_entry_always_on">Увек укључено</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Само преко Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Искључено</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Врати оригиналне наслове</string>
+  <string name="morphe_restore_original_titles_summary">Приказује оригиналне наслове и описе видео записа уместо аутоматски преведених</string>
+  <string name="morphe_restore_original_titles_loading">Учитавање наслова…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Онемогући наставак репродукције мини-плејера</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Онемогућава мини-плејер „Настави гледање“, функцију YouTube Premium која се појављује при покретању апликације</string>
@@ -1174,6 +1178,12 @@ Promene uključuju:
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Отвори линкове у прегледачу</string>
   <string name="morphe_external_browser_summary">Отвара линкове у спољашњем прегледачу уместо у прегледачу апликације</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Величина бафера за репродукцију</string>
+  <string name="morphe_playback_buffer_size_entry_default">Подразумевано</string>
+  <string name="morphe_playback_buffer_size_entry_low">Ниска</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Средња</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Максимална</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Аутоматски</string>
@@ -1293,5 +1303,6 @@ Promene uključuju:
   <string name="morphe_player_icon_style_entry_default">Подразумевано</string>
   <string name="morphe_player_icon_style_entry_regular">Танко</string>
   <string name="morphe_player_icon_style_entry_bold">Подебљано</string>
+  <string name="morphe_player_icon_style_entry_custom">Обичај</string>
   <string name="morphe_shorts_icon_style_title">Стил икона за Shorts</string>
 </resources>

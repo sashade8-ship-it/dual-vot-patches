@@ -1065,6 +1065,10 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_playback_in_feeds_entry_always_on">Mindig bekapcsolva</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Csak Wi-Fi esetén</string>
   <string name="morphe_playback_in_feeds_entry_off">Ki</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Eredeti címek visszaállítása</string>
+  <string name="morphe_restore_original_titles_summary">Az eredeti videócímeket és videóleírásokat mutatja az automatikusan lefordítottak helyett</string>
+  <string name="morphe_restore_original_titles_loading">Cím betöltése…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">A miniplayer folytatásának letiltása</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Letiltja a „Folytatás” minilejátszót, a YouTube Premium funkciót, amely az alkalmazás indításakor jelenik meg.</string>
@@ -1191,6 +1195,9 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Hivatkozások megnyitása a böngészőben</string>
   <string name="morphe_external_browser_summary">A linkeket külső böngészőben nyitja meg az alkalmazáson belüli böngésző helyett</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Lejátszási puffer mérete</string>
+  <string name="morphe_playback_buffer_size_entry_default">Alapértelmezett</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatikus</string>
@@ -1310,5 +1317,6 @@ Korlátozás: Visszaáll a régi stílusú 'További videók' átfedésre"</stri
   <string name="morphe_player_icon_style_entry_default">Alapértelmezett</string>
   <string name="morphe_player_icon_style_entry_regular">Vékony</string>
   <string name="morphe_player_icon_style_entry_bold">Félkövér</string>
+  <string name="morphe_player_icon_style_entry_custom">Egyéni</string>
   <string name="morphe_shorts_icon_style_title">Shorts ikonstílus</string>
 </resources>

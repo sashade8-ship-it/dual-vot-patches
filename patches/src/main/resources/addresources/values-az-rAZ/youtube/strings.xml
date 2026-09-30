@@ -1065,6 +1065,10 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_playback_in_feeds_entry_always_on">Həmişə aktiv</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Yalnız Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">Qapalı</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Orijinal başlıqları bərpa et</string>
+  <string name="morphe_restore_original_titles_summary">Avtomatik tərcümə olunmuşlar əvəzinə orijinal video başlıqlarını və təsvirlərini göstərir</string>
+  <string name="morphe_restore_original_titles_loading">Başlıq yüklənilir…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Kiçik oynadıcı davam etdirilməsini qapat</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Tətbiqin açılışında görünən, YouTube Premium xüsusiyyəti olan \"İzləməyə davam et\" kiçik oynadıcısını qapadır</string>
@@ -1191,6 +1195,12 @@ DeArrow.ajay.app 'i açmaq üçün buraya toxun"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Bağlantıları brauzerdə aç</string>
   <string name="morphe_external_browser_summary">Linkləri tətbiqdaxili brauzer əvəzinə, xarici brauzerdə açır</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Oynatma buferinin həcmi</string>
+  <string name="morphe_playback_buffer_size_entry_default">İlkin</string>
+  <string name="morphe_playback_buffer_size_entry_low">Aşağı</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Orta</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Ən yüksək</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Avtomatik</string>
@@ -1310,5 +1320,6 @@ Məhdudiyyət: Köhnə üslub üçün \"Daha çox video\" örtüyünə qayıdır
   <string name="morphe_player_icon_style_entry_default">İlkin</string>
   <string name="morphe_player_icon_style_entry_regular">Nazik</string>
   <string name="morphe_player_icon_style_entry_bold">Qalın</string>
+  <string name="morphe_player_icon_style_entry_custom">Fərdi</string>
   <string name="morphe_shorts_icon_style_title">Shorts simvol üslubu</string>
 </resources>

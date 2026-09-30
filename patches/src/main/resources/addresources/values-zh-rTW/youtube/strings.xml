@@ -1065,6 +1065,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_always_on">持續開啟</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">僅 Wi-Fi</string>
   <string name="morphe_playback_in_feeds_entry_off">關閉</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">還原原始標題</string>
+  <string name="morphe_restore_original_titles_summary">顯示原始影片標題和描述，而非自動翻譯的內容</string>
+  <string name="morphe_restore_original_titles_loading">正在載入標題…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">停用迷你播放器恢復功能</string>
   <string name="morphe_miniplayer_disable_resuming_summary">停用「繼續觀看」迷你播放器，這是 YouTube Premium 的功能，會在應用程式啟動時顯示</string>
@@ -1191,6 +1195,12 @@ Second \"item\" text"</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">在瀏覽器中開啟連結</string>
   <string name="morphe_external_browser_summary">在外部瀏覽器中開啟連結，而不是應用程式內瀏覽器</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">播放緩衝區大小</string>
+  <string name="morphe_playback_buffer_size_entry_default">預設</string>
+  <string name="morphe_playback_buffer_size_entry_low">低</string>
+  <string name="morphe_playback_buffer_size_entry_medium">中</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">最大</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">自動</string>
@@ -1309,5 +1319,6 @@ AV1 視訊播放可能會卡頓或丟格。"</string>
   <string name="morphe_player_icon_style_entry_default">預設</string>
   <string name="morphe_player_icon_style_entry_regular">細體</string>
   <string name="morphe_player_icon_style_entry_bold">粗體</string>
+  <string name="morphe_player_icon_style_entry_custom">自訂</string>
   <string name="morphe_shorts_icon_style_title">Shorts 圖示樣式</string>
 </resources>

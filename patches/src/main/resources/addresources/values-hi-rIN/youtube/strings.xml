@@ -1065,6 +1065,10 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_playback_in_feeds_entry_always_on">हमेशा चालू</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">केवल वाई-फाई पर</string>
   <string name="morphe_playback_in_feeds_entry_off">बंद</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">ओरिजिनल टाइटल वापस लाएँ</string>
+  <string name="morphe_restore_original_titles_summary">अपने आप ट्रांसलेट हुए टाइटल और डिस्क्रिप्शन के बजाय वीडियो के ओरिजिनल टाइटल और डिस्क्रिप्शन दिखाता है।</string>
+  <string name="morphe_restore_original_titles_loading">टाइटल लोड हो रहा है…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">मिनीप्लेयर में फिर से शुरू करने की सुविधा बंद करें</string>
   <string name="morphe_miniplayer_disable_resuming_summary">\'जारी रखें देखें\' मिनीप्लेयर को अक्षम करता है, एक YouTube प्रीमियम सुविधा जो ऐप शुरू होने पर दिखाई देती है।</string>
@@ -1191,6 +1195,12 @@ DeArrow.ajay.app खोलने के लिए यहां टैप कर�
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">लिंक को ब्राउज़र में खोलें</string>
   <string name="morphe_external_browser_summary">लिंक को इन-ऐप ब्राउज़र के बजाय बाहरी ब्राउज़र में खोलता है</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">प्लेबैक बफ़र साइज़</string>
+  <string name="morphe_playback_buffer_size_entry_default">डिफ़ॉल्ट</string>
+  <string name="morphe_playback_buffer_size_entry_low">कम</string>
+  <string name="morphe_playback_buffer_size_entry_medium">मध्यम</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">अधिकतम</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">स्वचालित</string>
@@ -1310,5 +1320,6 @@ AV1 के साथ वीडियो प्लेबैक स्टटर �
   <string name="morphe_player_icon_style_entry_default">डिफ़ॉल्ट</string>
   <string name="morphe_player_icon_style_entry_regular">पतला</string>
   <string name="morphe_player_icon_style_entry_bold">बोल्ड</string>
+  <string name="morphe_player_icon_style_entry_custom">कस्टम</string>
   <string name="morphe_shorts_icon_style_title">Shorts आइकन शैली</string>
 </resources>

@@ -1065,6 +1065,10 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_playback_in_feeds_entry_always_on">I gcónaí ar siúl</string>
   <string name="morphe_playback_in_feeds_entry_wifi_only">Wi-Fi amháin</string>
   <string name="morphe_playback_in_feeds_entry_off">As</string>
+  <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">Athchóirigh na bunteidil</string>
+  <string name="morphe_restore_original_titles_summary">Taispeánann sé bunteidil na bhfíseán agus a dtuairiscí bunaidh in ionad na gceann atá aistrithe go huathoibríoch.</string>
+  <string name="morphe_restore_original_titles_loading">Ag lódáil an teidil…</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Díchumasaigh atosú an mhionimreoir</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Díchumasaíonn sé an miniplayer \'Lean ar aghaidh ag breathnú\', gné de chuid YouTube Premium a thaispeántar nuair a thosaítear an aip</string>
@@ -1191,6 +1195,9 @@ Tapáil anseo chun DeArrow.ajay.app a oscailt."</string>
   <!-- misc.links.openLinksExternallyPatch -->
   <string name="morphe_external_browser_title">Oscail naisc sa bhrabhsála</string>
   <string name="morphe_external_browser_summary">Osclaíonn sé naisc i mbrabhsálaí seachtrach seachas sa bhrabhsálaí san aip</string>
+  <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">Méid an mhaoláin athsheinm</string>
+  <string name="morphe_playback_buffer_size_entry_default">Réamhshocrú</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Uathoibríoch</string>
@@ -1310,5 +1317,6 @@ Teorannú: Filleann sé ar an leagan sean-stíle den fhorleagan 'Tuilleadh físe
   <string name="morphe_player_icon_style_entry_default">Réamhshocrú</string>
   <string name="morphe_player_icon_style_entry_regular">Tanaí</string>
   <string name="morphe_player_icon_style_entry_bold">Trom</string>
+  <string name="morphe_player_icon_style_entry_custom">Custamach</string>
   <string name="morphe_shorts_icon_style_title">Stíl deilbhín Shorts</string>
 </resources>
