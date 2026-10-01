@@ -1,3 +1,13 @@
+## 1.45.0-dev.23-dualvot.8.5.3 (2026-10-01)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.45.0-dev.23](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.45.0-dev.23).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.45.0-dev.22-dualvot.8.5.3 (2026-10-01)
 
 ### Automated Morphe update
@@ -556,6 +566,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.45.0-dev.23](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.22...v1.45.0-dev.23) (2026-10-01)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Captions:** Make "Always show" override a manual caption-off ([#3421](https://github.com/MorpheApp/morphe-patches/issues/3421)) ([a92b8ed](https://github.com/MorpheApp/morphe-patches/commit/a92b8edc30e31e16ca61e072540ac722a2616ff9))
+* **YouTube:** Search bar becomes invisible with Hide Status Bar enabled ([b0492b5](https://github.com/MorpheApp/morphe-patches/commit/b0492b552c0fe9b760bd6e00c56f6ec3bbd005c0))
+
+### ✨ New Features
+
+* **YouTube - Swipe controls:** Add "Volume boost" setting ([#3412](https://github.com/MorpheApp/morphe-patches/issues/3412)) ([9e393e5](https://github.com/MorpheApp/morphe-patches/commit/9e393e542cb8de29edacba412acf127dfc0e775c))
+* **YouTube:** Add `Picture-in-picture button` patch ([#3397](https://github.com/MorpheApp/morphe-patches/issues/3397)) ([6c94728](https://github.com/MorpheApp/morphe-patches/commit/6c947288a3fc75105ef7e1c02d37a324dc20dc76))
 
 ## [1.45.0-dev.22](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0-dev.21...v1.45.0-dev.22) (2026-10-01)
 
