@@ -90,6 +90,8 @@ Muutoksia ovat muun muassa:
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Piilota \"Uusimmat videot\" -nappi</string>
   <string name="morphe_hide_latest_videos_button_summary">Piilottaa sinisen \"Uusimmat videot\" -bannerin, joka näkyy Aloitusnäytön yläreunassa</string>
+  <string name="morphe_hide_live_streams_title">Piilota suorat lähetykset</string>
+  <string name="morphe_hide_live_streams_summary">Piilottaa parhaillaan suorana olevat videot etusivun syötteessä ja hakutuloksissa.</string>
   <string name="morphe_hide_mix_playlists_title">Piilota mix-soittolistat</string>
   <string name="morphe_hide_movies_section_title">Piilota elokuvat-osio</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1067,8 +1069,11 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_playback_in_feeds_entry_off">Pois päältä</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Palauta alkuperäiset otsikot</string>
-  <string name="morphe_restore_original_titles_summary">Näyttää alkuperäiset videoiden otsikot ja kuvaukset automaattisesti käännettyjen sijaan.</string>
+  <string name="morphe_restore_original_titles_summary">Näyttää alkuperäiset videoiden otsikot, videoiden kuvaukset ja kanavien kuvaukset automaattisesti käännettyjen sijaan</string>
   <string name="morphe_restore_original_titles_loading">Ladataan otsikkoa…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">Poista syötteen automaattinen päivitys käytöstä</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">Estää syötteiden automaattisen päivityksen, kun ne vanhenevat</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Poista minisoittimen jatkamisen käytöstä</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Poistaa käytöstä ’Jatka katselua’ -minisoittimen, YouTube Premium -ominaisuuden, joka ilmestyy sovelluksen käynnistyessä</string>

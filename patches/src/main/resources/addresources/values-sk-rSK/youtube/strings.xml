@@ -90,6 +90,8 @@ Zmeny zahŕňajú:
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Skryť tlačidlo \'Najnovšie videá\'</string>
   <string name="morphe_hide_latest_videos_button_summary">Skryje modrý banner \'Najnovšie videá\', ktorý sa zobrazuje v hornej časti domovskej stránky</string>
+  <string name="morphe_hide_live_streams_title">Skryť živé prenosy</string>
+  <string name="morphe_hide_live_streams_summary">Skryje videá, ktoré sú práve naživo v domácom informačnom kanáli a vo výsledkoch vyhľadávania</string>
   <string name="morphe_hide_mix_playlists_title">Skryť mixy</string>
   <string name="morphe_hide_movies_section_title">Skryť sekciu filmov</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1066,8 +1068,11 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_playback_in_feeds_entry_off">Vypnuté</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Obnoviť pôvodné názvy</string>
-  <string name="morphe_restore_original_titles_summary">Zobrazuje pôvodné názvy a popisy videí namiesto automaticky preložených.</string>
+  <string name="morphe_restore_original_titles_summary">Zobrazuje pôvodné názvy videí, popisy videí a popisy kanálov namiesto automaticky preložených</string>
   <string name="morphe_restore_original_titles_loading">Načítava sa názov…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">Zakázať automatické obnovovanie kanála</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">Zabraňuje automatickému obnovovaniu kanálov po tom, čo zastarajú</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Zakázať obnovovanie mini-prehrávača</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Zakáže miniplayer s pokračovaním sledovania, funkciu YouTube Premium, ktorá sa zobrazuje pri spustení aplikácie</string>

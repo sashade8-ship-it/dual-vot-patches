@@ -90,6 +90,8 @@ Second \"item\" text"</string>
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">লুকান \'সর্বশেষ ভিডিও\' বোতাম</string>
   <string name="morphe_hide_latest_videos_button_summary">হোম ফিডের শীর্ষে প্রদর্শিত নীল \'সাম্প্রতিক ভিডিও\' ব্যানারটি লুকিয়ে রাখে</string>
+  <string name="morphe_hide_live_streams_title">লাইভ স্ট্রিমগুলো লুকান</string>
+  <string name="morphe_hide_live_streams_summary">হোম ফিড এবং অনুসন্ধান ফলাফলে বর্তমানে লাইভ থাকা ভিডিওগুলো লুকায়</string>
   <string name="morphe_hide_mix_playlists_title">মিক্স প্লেলিস্ট লুকান</string>
   <string name="morphe_hide_movies_section_title">চলচ্চিত্র বিভাগ লুকান</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1052,8 +1054,11 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_playback_in_feeds_entry_off">বন্ধ</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">মূল শিরোনাম পুনরুদ্ধার করুন</string>
-  <string name="morphe_restore_original_titles_summary">স্বয়ংক্রিয়-অনূদিতগুলির পরিবর্তে মূল ভিডিও শিরোনাম এবং বিবরণ দেখায়</string>
+  <string name="morphe_restore_original_titles_summary">মূল ভিডিও শিরোনাম, ভিডিও বিবরণ এবং চ্যানেল বিবরণ স্বয়ংক্রিয় অনুবাদিতগুলির পরিবর্তে দেখায়</string>
   <string name="morphe_restore_original_titles_loading">শিরোনাম লোড হচ্ছে…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">স্বয়ংক্রিয় ফিড রিফ্রেশ নিষ্ক্রিয় করুন</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">ফিড পুরানো হয়ে গেলে সেগুলি স্বয়ংক্রিয়ভাবে রিফ্রেশ হওয়া প্রতিরোধ করে</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">মিনিপ্লেয়ারে আবার শুরু করা বন্ধ করুন</string>
   <string name="morphe_miniplayer_disable_resuming_summary">\'কন্টিনিউ ওয়াচিং\' মিনিপ্লেয়ারকে নিষ্ক্রিয় করে, যা একটি ইউটিউব প্রিমিয়াম বৈশিষ্ট্য যা অ্যাপ চালু করার সময় প্রদর্শিত হয়</string>

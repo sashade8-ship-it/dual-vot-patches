@@ -90,6 +90,8 @@ Perubahan termasuk:
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Sembunyikan tombol \'Video terbaru\'</string>
   <string name="morphe_hide_latest_videos_button_summary">Menyembunyikan spanduk biru \'Video terbaru\' yang muncul di bagian atas feed Beranda</string>
+  <string name="morphe_hide_live_streams_title">Sembunyikan siaran langsung</string>
+  <string name="morphe_hide_live_streams_summary">Menyembunyikan video yang sedang ditayangkan langsung di feed beranda dan hasil penelusuran</string>
   <string name="morphe_hide_mix_playlists_title">Sembunyikan daftar putar campuran</string>
   <string name="morphe_hide_movies_section_title">Sembunyikan bagian film</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1067,8 +1069,11 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_playback_in_feeds_entry_off">Nonaktif</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Pulihkan judul asli</string>
-  <string name="morphe_restore_original_titles_summary">Menampilkan judul dan deskripsi video asli, bukan yang diterjemahkan secara otomatis</string>
+  <string name="morphe_restore_original_titles_summary">Menampilkan judul video asli, deskripsi video, dan deskripsi saluran, bukan yang diterjemahkan otomatis</string>
   <string name="morphe_restore_original_titles_loading">Memuat judul…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">Nonaktifkan penyegaran feed otomatis</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">Mencegah feed agar tidak disegarkan secara otomatis setelah kedaluwarsa</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Nonaktifkan melanjutkan pemutar mini</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Menonaktifkan pemutar mini \'Lanjutkan menonton\', fitur YouTube Premium yang muncul saat aplikasi dimulai</string>

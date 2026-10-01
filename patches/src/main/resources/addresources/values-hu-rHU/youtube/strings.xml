@@ -90,6 +90,8 @@ A változások a következőket tartalmazzák:
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">„Legújabb videók” gomb elrejtése</string>
   <string name="morphe_hide_latest_videos_button_summary">A Kezdőlap tetején megjelenő kék „Legújabb videók” sáv elrejtése</string>
+  <string name="morphe_hide_live_streams_title">Élő közvetítések elrejtése</string>
+  <string name="morphe_hide_live_streams_summary">Elrejti a jelenleg élő videókat a kezdőlapi hírfolyamban és a keresési találatokban</string>
   <string name="morphe_hide_mix_playlists_title">Egyveleg lejátszási listák elrejtése</string>
   <string name="morphe_hide_movies_section_title">Filmek szekció elrejtése</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1067,8 +1069,11 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_playback_in_feeds_entry_off">Ki</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Eredeti címek visszaállítása</string>
-  <string name="morphe_restore_original_titles_summary">Az eredeti videócímeket és videóleírásokat mutatja az automatikusan lefordítottak helyett</string>
+  <string name="morphe_restore_original_titles_summary">Az eredeti videócímek, videóleírások és csatornaleírások megjelenítése az automatikusan lefordítottak helyett</string>
   <string name="morphe_restore_original_titles_loading">Cím betöltése…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">Automatikus hírcsatorna-frissítés letiltása</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">Megakadályozza, hogy a hírcsatornák automatikusan frissüljenek, miután elavulttá válnak</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">A miniplayer folytatásának letiltása</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Letiltja a „Folytatás” minilejátszót, a YouTube Premium funkciót, amely az alkalmazás indításakor jelenik meg.</string>

@@ -90,6 +90,8 @@ Los cambios incluyen:
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Ocultar botón \'Vídeos recientes\'</string>
   <string name="morphe_hide_latest_videos_button_summary">Oculta el banner azul \'Vídeos recientes\' que aparece en la parte superior del feed de Inicio</string>
+  <string name="morphe_hide_live_streams_title">Ocultar transmisiones en vivo</string>
+  <string name="morphe_hide_live_streams_summary">Oculta los videos que están en vivo ahora en el feed de inicio y en los resultados de búsqueda</string>
   <string name="morphe_hide_mix_playlists_title">Ocultar listas de reproducción Mix</string>
   <string name="morphe_hide_movies_section_title">Ocultar sección de películas</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1067,8 +1069,11 @@ Limitación: si la opción 'Restaurar antigua barra de acciones de vídeo' está
   <string name="morphe_playback_in_feeds_entry_off">Desactivada</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Restaurar títulos originales</string>
-  <string name="morphe_restore_original_titles_summary">Muestra los títulos y las descripciones originales de los vídeos en lugar de los traducidos automáticamente</string>
+  <string name="morphe_restore_original_titles_summary">Muestra los títulos de los vídeos, las descripciones de los vídeos y las descripciones de los canales originales en lugar de las traducidas automáticamente</string>
   <string name="morphe_restore_original_titles_loading">Cargando título…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">Desactivar actualización automática del feed</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">Evita que los feeds se actualicen automáticamente cuando quedan desactualizados</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Desactivar reanudación del reproductor en miniatura</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Desactiva el reproductor en miniatura de \'Seguir viendo\', una función de YouTube Premium que aparece al iniciar la aplicación.</string>

@@ -89,6 +89,8 @@ Ví dụ:
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Ẩn nút \"Video mới nhất\"</string>
   <string name="morphe_hide_latest_videos_button_summary">Ẩn banner “Video mới nhất” màu xanh xuất hiện ở đầu Trang chủ</string>
+  <string name="morphe_hide_live_streams_title">Ẩn video phát trực tiếp</string>
+  <string name="morphe_hide_live_streams_summary">Ẩn các video đang phát trực tiếp trong nguồn cấp dữ liệu trang chủ và kết quả tìm kiếm</string>
   <string name="morphe_hide_mix_playlists_title">Ẩn danh sách phát kết hợp</string>
   <string name="morphe_hide_movies_section_title">Ẩn phần phim</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1066,8 +1068,11 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_playback_in_feeds_entry_off">Tắt</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Khôi phục tiêu đề gốc</string>
-  <string name="morphe_restore_original_titles_summary">Hiển thị tiêu đề và mô tả gốc của video thay vì các bản dịch tự động</string>
+  <string name="morphe_restore_original_titles_summary">Hiển thị tiêu đề video, mô tả video và mô tả kênh gốc thay vì các bản dịch tự động</string>
   <string name="morphe_restore_original_titles_loading">Đang tải tiêu đề…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">Tắt tự động làm mới nguồn cấp dữ liệu</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">Ngăn các nguồn cấp dữ liệu tự động làm mới sau khi chúng trở nên lỗi thời</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Tắt tiếp tục phát trong trình phát thu nhỏ</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Ngăn không cho trình phát thu nhỏ \"tiếp tục xem\" khi mở ứng dụng (một tính năng Premium)</string>

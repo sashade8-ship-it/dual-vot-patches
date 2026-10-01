@@ -16,6 +16,15 @@ Second \"item\" text"</string>
 
 -->
 <resources>
+  <string name="morphe_music_jam_update_host_controls">Perbarui patch Jam pada host untuk menggunakan jeda dan lanjutkan.</string>
+  <string name="morphe_music_jam_cancel">Batalkan</string>
+  <string name="morphe_music_jam_join">Gabung</string>
+  <string name="morphe_music_jam_scan_qr">Pindai QR</string>
+  <string name="morphe_music_jam_copy_code">Salin kode</string>
+  <string name="morphe_music_jam_show_qr">Tampilkan QR</string>
+  <string name="morphe_music_jam_done">Selesai</string>
+  <string name="morphe_music_jam_details">Rincian</string>
+  <string name="morphe_music_jam_open">Buka</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo Header</string>
@@ -415,12 +424,12 @@ Langkah-langkah:
   <string name="morphe_music_youtube_cookies_title">Cookie YouTube</string>
   <string name="morphe_music_youtube_cookies_dialog_instruction">"Tempelkan cookie YouTube Anda untuk mengambil subtitle dan teks waktu dari YouTube.
 
-​Langkah-langkah:
-​Buka youtube.com di peramban (browser) dan masuk (login)
-​Buka DevTools (F12) → Application → Cookies → youtube.com
-​Salin seluruh string cookie (pasangan kunci=nilai yang dipisahkan dengan titik koma)
+Langkah-langkah:
+1. Buka youtube.com di peramban dan masuk
+2. Buka DevTools (F12) → Application → Cookies → youtube.com
+3. Salin seluruh string cookie (pasangan key=value yang dipisahkan oleh titik koma)
 
-​Cookie yang diperlukan: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID, LOGIN_INFO"</string>
+Cookie yang diperlukan: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID, LOGIN_INFO"</string>
   <string name="morphe_music_youtube_cookies_toast_saved">YouTube: cookie disimpan</string>
   <string name="morphe_music_youtube_cookies_toast_cleared">YouTube: cookie dihapus</string>
   <string name="morphe_music_youtube_cookies_toast_invalid">YouTube: cookie tidak valid — periksa kembali dan coba lagi.</string>

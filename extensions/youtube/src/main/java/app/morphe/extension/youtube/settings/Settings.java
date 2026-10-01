@@ -142,6 +142,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_HISTORY_SHELF = new BooleanSetting("morphe_hide_history_shelf", FALSE);
     public static final BooleanSetting HIDE_INVITE_TO_MESSAGE_CARD = new BooleanSetting("morphe_hide_invite_to_message_card", FALSE);
     public static final BooleanSetting HIDE_LATEST_VIDEOS_BUTTON = new BooleanSetting("morphe_hide_latest_videos_button", FALSE);
+    public static final BooleanSetting HIDE_LIVE_STREAMS = new BooleanSetting("morphe_hide_live_streams", FALSE);
     public static final BooleanSetting HIDE_MIX_PLAYLISTS = new BooleanSetting("morphe_hide_mix_playlists", FALSE);
     public static final BooleanSetting HIDE_MOVIES_SECTION = new BooleanSetting("morphe_hide_movies_section", TRUE);
     public static final BooleanSetting HIDE_NOTIFICATIONS_MENU_HEADER = new BooleanSetting("morphe_hide_notifications_menu_header", FALSE);
@@ -162,6 +163,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_YOUTUBE_DOODLES = new BooleanSetting("morphe_hide_youtube_doodles", TRUE, true, "morphe_hide_youtube_doodles_user_dialog_message");
     public static final IntegerSetting PLAYBACK_IN_FEEDS = new IntegerSetting("morphe_playback_in_feeds", PlaybackInFeedsPatch.MODE_ALWAYS_ON, true);
     public static final BooleanSetting RESTORE_ORIGINAL_TITLES = new BooleanSetting("morphe_restore_original_titles", FALSE, true);
+    public static final BooleanSetting DISABLE_AUTO_FEED_REFRESH = new BooleanSetting("morphe_disable_auto_feed_refresh", FALSE);
 
     // AiSList
     public static final BooleanSetting HIDE_AISLIST_BLOCKLIST_HOME = new BooleanSetting("morphe_hide_aislist_blocklist_home", FALSE);

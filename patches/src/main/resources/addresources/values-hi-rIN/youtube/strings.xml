@@ -90,6 +90,8 @@ Second \"item\" text"</string>
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">छुपाएं \'नवीन वीडियो\' बटन</string>
   <string name="morphe_hide_latest_videos_button_summary">होम फ़ीड के शीर्ष पर दिखने वाले नीले \'नवीनतम वीडियो\' बैनर को छुपाता है</string>
+  <string name="morphe_hide_live_streams_title">लाइव स्ट्रीम छिपाएँ</string>
+  <string name="morphe_hide_live_streams_summary">होम फ़ीड और सर्च नतीजों में अभी लाइव चल रहे वीडियो छिपाता है</string>
   <string name="morphe_hide_mix_playlists_title">छुपाएं मिश्रित प्लेलिस्ट</string>
   <string name="morphe_hide_movies_section_title">छुपाएं फिल्मों का अनुभाग</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1067,8 +1069,11 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_playback_in_feeds_entry_off">बंद</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">ओरिजिनल टाइटल वापस लाएँ</string>
-  <string name="morphe_restore_original_titles_summary">अपने आप ट्रांसलेट हुए टाइटल और डिस्क्रिप्शन के बजाय वीडियो के ओरिजिनल टाइटल और डिस्क्रिप्शन दिखाता है।</string>
+  <string name="morphe_restore_original_titles_summary">अपने-आप अनुवाद किए गए कॉन्टेंट के बजाय मूल वीडियो टाइटल, वीडियो विवरण और चैनल विवरण दिखाता है</string>
   <string name="morphe_restore_original_titles_loading">टाइटल लोड हो रहा है…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">फ़ीड का अपने आप रीफ़्रेश होना बंद करें</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">फ़ीड के पुराने होने पर उसे अपने आप रीफ़्रेश होने से रोकता है</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">मिनीप्लेयर में फिर से शुरू करने की सुविधा बंद करें</string>
   <string name="morphe_miniplayer_disable_resuming_summary">\'जारी रखें देखें\' मिनीप्लेयर को अक्षम करता है, एक YouTube प्रीमियम सुविधा जो ऐप शुरू होने पर दिखाई देती है।</string>

@@ -90,6 +90,8 @@ Promene uključuju:
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Sakrij dugme \"Najnovije video\"</string>
   <string name="morphe_hide_latest_videos_button_summary">Sakriva plavi banner „Najnoviji video zapisi” koji se pojavljuje na vrhu početne stranice</string>
+  <string name="morphe_hide_live_streams_title">Sakrij strimove uživo</string>
+  <string name="morphe_hide_live_streams_summary">Sakriva video snimke koji su trenutno uživo u početnom feed-u i rezultatima pretrage</string>
   <string name="morphe_hide_mix_playlists_title">Sakrij miks plejliste</string>
   <string name="morphe_hide_movies_section_title">Sakrij odeljak za filmove</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -1067,8 +1069,11 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_playback_in_feeds_entry_off">Isključen</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Vrati originalne naslove</string>
-  <string name="morphe_restore_original_titles_summary">Prikazuje originalne naslove videa i opise umesto automatski prevedenih</string>
+  <string name="morphe_restore_original_titles_summary">Prikazuje originalne naslove videa, opise videa i opise kanala umesto automatski prevedenih</string>
   <string name="morphe_restore_original_titles_loading">Učitavanje naslova…</string>
+  <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">Onemogući automatsko osvežavanje izvora</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">Sprečava da se izvori automatski osvežavaju nakon što zastare</string>
   <!-- layout.miniplayer.miniplayerPatch -->
   <string name="morphe_miniplayer_disable_resuming_title">Onemogući nastavak reprodukcije mini plejera</string>
   <string name="morphe_miniplayer_disable_resuming_summary">Onemogućava \'Nastavi gledanje\' miniplayer, YouTube Premium funkciju koja se pojavljuje pri pokretanju aplikacije</string>
