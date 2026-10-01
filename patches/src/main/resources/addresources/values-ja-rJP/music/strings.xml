@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">ホストの Jam パッチを更新して、一時停止と再開を使用するようにします。</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">ホストのJamパッチを一時停止と再開を使用するように更新</string>
   <string name="morphe_music_jam_probe_title">Jam キューの共有</string>
-  <string name="morphe_music_jam_probe_summary">近くの Jam をホストするか参加して、Jam Layer 経由でそのキューを編集します。</string>
+  <string name="morphe_music_jam_probe_summary">近くのJamをホストするか参加して、Jam Layerでそのキューを編集します</string>
   <string name="morphe_music_jam_enabled_title">Jam キューの共有を有効にする</string>
-  <string name="morphe_music_jam_enabled_summary">YouTube Music の再起動後に Jam 連携を有効にします。</string>
+  <string name="morphe_music_jam_enabled_summary">YouTube Musicの再起動後にJam連携を有効にします</string>
   <string name="morphe_music_jam_download_title">Jam Layer をダウンロードして利用できるようにする</string>
-  <string name="morphe_music_jam_download_summary">最新の Jam Layer リリースをブラウザで開きます。</string>
+  <string name="morphe_music_jam_download_summary">最新のJam Layerリリースをブラウザで開きます</string>
   <string name="morphe_music_jam_controls_title">Jam コントロール</string>
-  <string name="morphe_music_jam_controls_summary">近くの Jam をホストするか参加して、セッションを管理します。</string>
+  <string name="morphe_music_jam_controls_summary">近くのJamをホストするか参加して、セッションを管理します</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer パッケージ</string>
-  <string name="morphe_music_jam_companion_package_summary">近くのデバイスとのキュー共有に使用する、インストール済みのコンパニオン アプリを選択してください。</string>
-  <string name="morphe_music_jam_package_message">インストール済みのコンパニオン パッケージを使用してください。ペアリングには、承認とローカル ケイパビリティ トークンが必要です。</string>
+  <string name="morphe_music_jam_companion_package_summary">近くのキュー共有に使用する、インストール済みのコンパニオンアプリを選択します</string>
+  <string name="morphe_music_jam_package_message">インストール済みのコンパニオンパッケージを使用します。ペアリングにはあなたの承認とローカル機能トークンが必要です</string>
   <string name="morphe_music_jam_wifi_title">Wi-Fi をオンにしますか？</string>
-  <string name="morphe_music_jam_wifi_message">Wi-Fi をオンにしてから、Jam の開始または参加を再度お試しください。</string>
+  <string name="morphe_music_jam_wifi_message">Wi-Fiをオンにして、もう一度Jamを開始するか参加してみてください</string>
   <string name="morphe_music_jam_wifi_settings">Wi-Fi 設定を開く</string>
   <string name="morphe_music_jam_cancel">キャンセル</string>
   <string name="morphe_music_jam_use_package">パッケージを使用</string>
   <string name="morphe_music_jam_invalid_package">有効な Android パッケージ名を入力してください</string>
-  <string name="morphe_music_jam_package_saved">パッケージを保存しました。接続するには Jam Layer をセットアップしてください。</string>
+  <string name="morphe_music_jam_package_saved">パッケージを保存しました。接続するにはJam Layerを設定してください</string>
   <string name="morphe_music_jam_disconnected">Jam が切断されました</string>
   <string name="morphe_music_jam_enable_layer_first">先に Jam Layer を有効にしてください</string>
   <string name="morphe_music_jam_enable_patch_first">設定で Jam キューの共有を有効にしてから、YouTube Music を再起動してください</string>
   <string name="morphe_music_jam_install_layer_first">先に選択した Jam Layer パッケージをインストールしてください</string>
-  <string name="morphe_music_jam_join_hint">ホストに表示されているコードを入力してください。Wi-Fi Aware は、LAN が異なる場合でも近くのデバイスを接続できます。</string>
+  <string name="morphe_music_jam_join_hint">ホストに表示されたコードを入力してください。Wi-Fi Awareは、LANが異なる場合でも近くのデバイスを接続できます</string>
   <string name="morphe_music_jam_join_with_code">コードで参加</string>
   <string name="morphe_music_jam_join">参加</string>
   <string name="morphe_music_jam_scan_qr">QR コードをスキャン</string>

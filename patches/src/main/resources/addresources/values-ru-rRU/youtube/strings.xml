@@ -498,6 +498,10 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">Очистить</string>
   <string name="morphe_loop_video_range_toast_on">Цикл %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Указано неверное время</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Показывать кнопку оверлея «Картинка в картинке»</string>
+  <string name="morphe_pip_button_flyout_title">Показывать кнопку всплывающего меню «Картинка в картинке»</string>
+  <string name="morphe_pip_button_flyout_name">Переключиться в режим «Картинка в картинке»</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Показать кнопку \"Воспроизвести все\"</string>
   <string name="morphe_play_all_button_summary">"Кнопка «Воспроизвести все» показана
@@ -641,6 +645,8 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_volume_distance_title">Чувствительность жеста регулировки громкости</string>
   <string name="morphe_swipe_volume_distance_summary">Более высокие значения требуют больше смахиваний на шаг громкости</string>
   <string name="morphe_swipe_volume_steps_title">Шаги громкости</string>
+  <string name="morphe_volume_boost_title">Усиление громкости</string>
+  <string name="morphe_volume_boost_summary">Проведение вверх за пределы максимальной громкости усиливает её, что может искажать громкий звук</string>
   <string name="morphe_swipe_volume_steps_entry_default">По умолчанию</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Чувствительность жеста регулировки яркости</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Более высокие значения требуют большего свайпа для каждого шага яркости</string>

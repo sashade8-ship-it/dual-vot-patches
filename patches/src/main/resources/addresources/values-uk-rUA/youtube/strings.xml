@@ -498,6 +498,10 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">Очистити</string>
   <string name="morphe_loop_video_range_toast_on">Повтор %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Недійсний діапазон часу</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Показати кнопку накладання «картинка в картинці»</string>
+  <string name="morphe_pip_button_flyout_title">Показати кнопку випадаючого меню «картинка в картинці»</string>
+  <string name="morphe_pip_button_flyout_name">Перемкнутися на режим «картинка в картинці»</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Показати кнопку \"Відтворити все\"</string>
   <string name="morphe_play_all_button_summary">"Натисніть, щоб створити список відтворення з усіх відео каналу, утримуйте, щоб скасувати
@@ -639,6 +643,8 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_volume_distance_title">Чутливість жесту гучності</string>
   <string name="morphe_swipe_volume_distance_summary">Вищі значення потребують більшого свайпу на один крок гучності</string>
   <string name="morphe_swipe_volume_steps_title">Кроки гучності</string>
+  <string name="morphe_volume_boost_title">Підсилення гучності</string>
+  <string name="morphe_volume_boost_summary">Проведення пальцем угору за межі максимальної гучності підсилює її, що може спотворювати гучний звук</string>
   <string name="morphe_swipe_volume_steps_entry_default">Типова для пристрою</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Чутливість жесту яскравості</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Вищі значення потребують більшого свайпу на один крок яскравості</string>

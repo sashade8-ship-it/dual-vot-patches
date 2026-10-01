@@ -498,6 +498,10 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_loop_video_range_clear">지우기</string>
   <string name="morphe_loop_video_range_toast_on">\'%1$s ~ %2$s\' 연속 재생</string>
   <string name="morphe_loop_video_range_invalid_time">잘못된 시간 범위입니다</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">PIP 모드 오버레이 버튼 표시하기</string>
+  <string name="morphe_pip_button_flyout_title">PIP 모드 버튼 표시하기</string>
+  <string name="morphe_pip_button_flyout_name">PIP 모드로 전환</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">모두 재생 버튼 표시하기</string>
   <string name="morphe_play_all_button_summary">"버튼을 탭하여 채널의 모든 동영상 재생목록을 생성할 수 있습니다
@@ -641,6 +645,8 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_swipe_volume_distance_title">볼륨 스와이프 민감도</string>
   <string name="morphe_swipe_volume_distance_summary">값이 높을수록 볼륨 단계당 더 많은 스와이프가 필요합니다.</string>
   <string name="morphe_swipe_volume_steps_title">볼륨 단계</string>
+  <string name="morphe_volume_boost_title">볼륨 부스트</string>
+  <string name="morphe_volume_boost_summary">최대 볼륨을 넘어서 위로 스와이프하면 볼륨이 더 커지지만, 큰 소리의 오디오가 왜곡될 수 있습니다</string>
   <string name="morphe_swipe_volume_steps_entry_default">기기 기본값</string>
   <string name="morphe_swipe_brightness_sensitivity_title">밝기 스와이프 민감도</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">값이 높을수록 밝기 단계를 변경하려면 더 많이 스와이프해야 합니다</string>

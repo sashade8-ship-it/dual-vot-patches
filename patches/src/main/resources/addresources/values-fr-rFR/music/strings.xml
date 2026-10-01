@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Mettre à jour le patch Jam de l\'hôte pour utiliser la mise en pause et la reprise.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Mettre à jour le patch Jam de l\'hôte pour utiliser la mise en pause et la reprise</string>
   <string name="morphe_music_jam_probe_title">Partage de la file d\'attente Jam</string>
-  <string name="morphe_music_jam_probe_summary">Hébergez ou rejoignez un Jam à proximité et modifiez sa file d’attente via Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Hébergez ou rejoignez un Jam à proximité et modifiez sa file d’attente via Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Activer le partage de la file d\'attente Jam</string>
-  <string name="morphe_music_jam_enabled_summary">Active l\'intégration Jam après le redémarrage de YouTube Music.</string>
+  <string name="morphe_music_jam_enabled_summary">Active l\'intégration Jam après le redémarrage de YouTube Music</string>
   <string name="morphe_music_jam_download_title">Téléchargez Jam Layer pour que cela fonctionne</string>
-  <string name="morphe_music_jam_download_summary">Ouvrez la dernière version de Jam Layer dans votre navigateur.</string>
+  <string name="morphe_music_jam_download_summary">Ouvrez la dernière version de Jam Layer dans votre navigateur</string>
   <string name="morphe_music_jam_controls_title">Contrôles Jam</string>
-  <string name="morphe_music_jam_controls_summary">Hébergez ou rejoignez un Jam à proximité et gérez la session.</string>
+  <string name="morphe_music_jam_controls_summary">Hébergez ou rejoignez un Jam à proximité et gérez la session</string>
   <string name="morphe_music_jam_companion_package_title">Paquet Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Choisissez l\'application compagnon installée utilisée pour le partage de la file d\'attente à proximité</string>
-  <string name="morphe_music_jam_package_message">Utilisez un paquet compagnon installé. L\'association nécessite votre approbation et un jeton de capacité local.</string>
+  <string name="morphe_music_jam_companion_package_summary">Choisissez l\'application compagnon installée utilisée pour le partage de file d\'attente à proximité</string>
+  <string name="morphe_music_jam_package_message">Utilisez un paquet compagnon installé. L\'association nécessite votre approbation et un jeton de capacité local</string>
   <string name="morphe_music_jam_wifi_title">Activer le Wi-Fi ?</string>
-  <string name="morphe_music_jam_wifi_message">Activez le Wi-Fi, puis essayez à nouveau de démarrer ou de rejoindre le Jam.</string>
+  <string name="morphe_music_jam_wifi_message">Activez le Wi-Fi, puis essayez à nouveau de démarrer ou de rejoindre le Jam</string>
   <string name="morphe_music_jam_wifi_settings">Ouvrir les paramètres Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Annuler</string>
   <string name="morphe_music_jam_use_package">Utiliser le paquet</string>
   <string name="morphe_music_jam_invalid_package">Entrez un nom de paquet Android valide</string>
-  <string name="morphe_music_jam_package_saved">Paquet enregistré. Configurez Jam Layer pour vous connecter.</string>
+  <string name="morphe_music_jam_package_saved">Paquet enregistré. Configurez Jam Layer pour vous connecter</string>
   <string name="morphe_music_jam_disconnected">Jam déconnecté</string>
   <string name="morphe_music_jam_enable_layer_first">Activez d\'abord Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">Activez le partage de la file d\'attente Jam dans les paramètres, puis redémarrez YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Installez d\'abord le paquet Jam Layer sélectionné</string>
-  <string name="morphe_music_jam_join_hint">Entrez le code affiché sur l\'hôte. Wi-Fi Aware peut connecter des appareils à proximité même lorsque leurs réseaux locaux diffèrent.</string>
+  <string name="morphe_music_jam_join_hint">Entrez le code affiché sur l\'hôte. Wi-Fi Aware peut connecter des appareils à proximité même lorsque leurs réseaux locaux diffèrent</string>
   <string name="morphe_music_jam_join_with_code">Rejoindre avec un code</string>
   <string name="morphe_music_jam_join">Rejoindre</string>
   <string name="morphe_music_jam_scan_qr">Scanner le QR code</string>

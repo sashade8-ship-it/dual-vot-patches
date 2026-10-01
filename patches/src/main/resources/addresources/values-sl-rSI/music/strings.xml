@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Posodobi gostiteljev popravek za Jam, da bo uporabljal premor in nadaljevanje.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Posodobite gostiteljev Jam popravek, da uporablja premor in nadaljevanje</string>
   <string name="morphe_music_jam_probe_title">Deljenje čakalne vrste Jam</string>
-  <string name="morphe_music_jam_probe_summary">Gosti ali se pridruži bližnji seji Jam in urejaj njeno čakalno vrsto prek Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Gostite ali se pridružite bližnjemu Jamu in urejajte njegovo čakalno vrsto prek Jam Layerja</string>
   <string name="morphe_music_jam_enabled_title">Omogoči deljenje čakalne vrste Jam</string>
-  <string name="morphe_music_jam_enabled_summary">Omogoči integracijo Jam po ponovnem zagonu YouTube Music.</string>
+  <string name="morphe_music_jam_enabled_summary">Omogoči integracijo Jam po ponovnem zagonu YouTube Music</string>
   <string name="morphe_music_jam_download_title">Prenesi Jam Layer, da začne delovati.</string>
-  <string name="morphe_music_jam_download_summary">Odpri najnovejšo izdajo Jam Layer v brskalniku.</string>
+  <string name="morphe_music_jam_download_summary">Odprite najnovejšo izdajo Jam Layerja v svojem brskalniku</string>
   <string name="morphe_music_jam_controls_title">Upravljanje seje Jam</string>
-  <string name="morphe_music_jam_controls_summary">Gosti ali se pridruži bližnji seji Jam in upravljaj sejo.</string>
+  <string name="morphe_music_jam_controls_summary">Gostite ali se pridružite bližnjemu Jamu in upravljajte sejo</string>
   <string name="morphe_music_jam_companion_package_title">Paket Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Izberi nameščeno spremljevalno aplikacijo za deljenje čakalne vrste v bližini.</string>
-  <string name="morphe_music_jam_package_message">Uporabi nameščen spremljevalni paket. Seznanjanje zahteva tvojo odobritev in lokalni žeton zmogljivosti.</string>
+  <string name="morphe_music_jam_companion_package_summary">Izberite nameščeno spremljevalno aplikacijo za deljenje čakalne vrste v bližini</string>
+  <string name="morphe_music_jam_package_message">Uporabite nameščen spremljevalni paket. Seznanjanje zahteva vašo odobritev in lokalni žeton zmogljivosti</string>
   <string name="morphe_music_jam_wifi_title">Vklopim Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">Vklopi Wi-Fi in nato poskusi znova začeti sejo Jam ali se ji pridružiti.</string>
+  <string name="morphe_music_jam_wifi_message">Vklopite Wi-Fi in nato znova poskusite začeti sejo Jam ali se ji pridružiti</string>
   <string name="morphe_music_jam_wifi_settings">Odpri nastavitve Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Prekliči</string>
   <string name="morphe_music_jam_use_package">Uporabi paket</string>
   <string name="morphe_music_jam_invalid_package">Vnesi veljavno ime paketa Android</string>
-  <string name="morphe_music_jam_package_saved">Paket je shranjen. Nastavi Jam Layer za povezavo.</string>
+  <string name="morphe_music_jam_package_saved">Paket je shranjen. Nastavite Jam Layer za vzpostavitev povezave</string>
   <string name="morphe_music_jam_disconnected">Seja Jam je prekinjena.</string>
   <string name="morphe_music_jam_enable_layer_first">Najprej omogoči Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">Omogoči deljenje čakalne vrste Jam v nastavitvah in nato znova zaženi YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Najprej namesti izbrani paket Jam Layer</string>
-  <string name="morphe_music_jam_join_hint">Vnesi kodo, prikazano pri gostitelju. Wi-Fi Aware lahko poveže bližnje naprave tudi, če se njihova omrežja LAN razlikujejo.</string>
+  <string name="morphe_music_jam_join_hint">Vnesite kodo, prikazano na gostitelju. Wi-Fi Aware lahko poveže bližnje naprave tudi, če se njihova omrežja LAN razlikujejo</string>
   <string name="morphe_music_jam_join_with_code">Pridruži se s kodo</string>
   <string name="morphe_music_jam_join">Pridruži se</string>
   <string name="morphe_music_jam_scan_qr">Skeniraj QR-kodo</string>

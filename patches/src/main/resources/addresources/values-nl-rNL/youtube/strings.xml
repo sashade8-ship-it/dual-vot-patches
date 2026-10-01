@@ -498,6 +498,10 @@ Uw API-sleutel mag nooit worden gedeeld. Iedereen met toegang tot deze sleutel k
   <string name="morphe_loop_video_range_clear">Wissen</string>
   <string name="morphe_loop_video_range_toast_on">Herhalen %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ongeldige tijd opgegeven</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Toon de overlayknop voor beeld-in-beeld</string>
+  <string name="morphe_pip_button_flyout_title">Toon de flyoutknop voor beeld-in-beeld</string>
+  <string name="morphe_pip_button_flyout_name">Overschakelen naar beeld-in-beeld</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Toon Speel alles-knop</string>
   <string name="morphe_play_all_button_summary">"Tik om een afspeellijst van alle video's van het kanaal te genereren, houd ingedrukt om ongedaan te maken
@@ -639,6 +643,8 @@ Om dit op te lossen, schakel 'Videostreams vervalsen' in en wijzig de 'Standaard
   <string name="morphe_swipe_volume_distance_title">Gevoeligheid volumegest</string>
   <string name="morphe_swipe_volume_distance_summary">Hogere waarden vereisen meer vegen per volumestap</string>
   <string name="morphe_swipe_volume_steps_title">Volumestappen</string>
+  <string name="morphe_volume_boost_title">Volumeboost</string>
+  <string name="morphe_volume_boost_summary">Als je voorbij het maximale volume omhoog veegt, wordt het volume extra verhoogd, wat hard geluid kan vervormen</string>
   <string name="morphe_swipe_volume_steps_entry_default">Apparaatstandaard</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Veeggevoeligheid helderheid</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Hogere waarden vereisen meer vegen per helderheidsstap</string>

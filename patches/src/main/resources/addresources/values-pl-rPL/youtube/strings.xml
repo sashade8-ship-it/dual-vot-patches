@@ -498,6 +498,10 @@ Zgłoszenia są publiczne i podlegają weryfikacji przed dodaniem kanału do lis
   <string name="morphe_loop_video_range_clear">Wyczyść</string>
   <string name="morphe_loop_video_range_toast_on">Zapętlanie %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Nieprawidłowy zakres czasu</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Pokaż przycisk nakładki obrazu w obrazie</string>
+  <string name="morphe_pip_button_flyout_title">Pokaż wysuwany przycisk obrazu w obrazie</string>
+  <string name="morphe_pip_button_flyout_name">Przełącz na obraz w obrazie</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Pokaż przycisk Odtwórz wszystko</string>
   <string name="morphe_play_all_button_summary">"Dotknij, aby wygenerować playlistę wszystkich filmów z kanału. Przytrzymaj, aby cofnąć
@@ -639,6 +643,8 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_swipe_volume_distance_title">Czułość gestu głośności</string>
   <string name="morphe_swipe_volume_distance_summary">Wyższe wartości wymagają dłuższego przesunięcia palcem dla każdej zmiany głośności</string>
   <string name="morphe_swipe_volume_steps_title">Kroki głośności</string>
+  <string name="morphe_volume_boost_title">Wzmocnienie głośności</string>
+  <string name="morphe_volume_boost_summary">Przesunięcie w górę powyżej maksymalnej głośności wzmacnia ją, co może zniekształcać głośny dźwięk</string>
   <string name="morphe_swipe_volume_steps_entry_default">Domyślnie dla urządzenia</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Czułość gestu jasności</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Wyższe wartości wymagają dłuższego przesunięcia przy zmianie poziomu jasności</string>
@@ -1068,7 +1074,7 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_playback_in_feeds_entry_off">Wyłączone</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Przywróć oryginalne tytuły</string>
-  <string name="morphe_restore_original_titles_summary">Pokazuje oryginalne tytuły filmów, opisy filmów i opisy kanałów zamiast automatycznie tłumaczonych</string>
+  <string name="morphe_restore_original_titles_summary">Wyświetla oryginalne tytuły, opisy filmów i kanałów zamiast tłumaczeń automatycznych</string>
   <string name="morphe_restore_original_titles_loading">Wczytywanie tytułu…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Wyłącz automatyczne odświeżanie</string>

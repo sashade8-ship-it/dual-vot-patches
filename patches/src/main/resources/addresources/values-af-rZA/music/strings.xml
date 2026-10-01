@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Dateer die gasheer se Jam-patch op om pouse en hervat te gebruik.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Werk die gasheer se Jam-patch by om onderbreek en hervat te gebruik</string>
   <string name="morphe_music_jam_probe_title">Jam-tou-deling</string>
-  <string name="morphe_music_jam_probe_summary">Wees gasheer van of sluit aan by ’n nabygeleë Jam en redigeer sy tou deur Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Bied \'n nabygeleë Jam aan of sluit daarby aan en wysig die tou daarvan deur Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Aktiveer Jam-tou-deling</string>
-  <string name="morphe_music_jam_enabled_summary">Aktiveer die Jam-integrasie nadat YouTube Music herbegin.</string>
+  <string name="morphe_music_jam_enabled_summary">Aktiveer die Jam-integrasie nadat YouTube Music herbegin het</string>
   <string name="morphe_music_jam_download_title">Laai Jam Layer af om dit te laat werk</string>
-  <string name="morphe_music_jam_download_summary">Maak die nuutste Jam Layer-vrystelling in jou blaaier oop.</string>
+  <string name="morphe_music_jam_download_summary">Maak die nuutste Jam Layer-vrystelling in jou blaaier oop</string>
   <string name="morphe_music_jam_controls_title">Jam-beheer</string>
-  <string name="morphe_music_jam_controls_summary">Wees gasheer van of sluit aan by ’n nabygeleë Jam en bestuur die sessie.</string>
+  <string name="morphe_music_jam_controls_summary">Bied \'n nabygeleë Jam aan of sluit daarby aan en bestuur die sessie</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer-pakket</string>
-  <string name="morphe_music_jam_companion_package_summary">Kies die geïnstalleerde begeleidende app wat vir nabygeleë tou-deling gebruik word.</string>
-  <string name="morphe_music_jam_package_message">Gebruik ’n geïnstalleerde begeleidende pakket. Koppeling vereis jou goedkeuring en ’n plaaslike vermoë-token.</string>
+  <string name="morphe_music_jam_companion_package_summary">Kies die geïnstalleerde metgesel-app wat vir nabygeleë tou-deling gebruik word</string>
+  <string name="morphe_music_jam_package_message">Gebruik \'n geïnstalleerde metgeselpakket. Koppeling vereis jou goedkeuring en \'n plaaslike vermoëteken</string>
   <string name="morphe_music_jam_wifi_title">Skakel Wi-Fi aan?</string>
-  <string name="morphe_music_jam_wifi_message">Skakel Wi-Fi aan en probeer dan weer om die Jam te begin of daarby aan te sluit.</string>
+  <string name="morphe_music_jam_wifi_message">Skakel Wi-Fi aan en probeer dan om die Jam weer te begin of daarby aan te sluit</string>
   <string name="morphe_music_jam_wifi_settings">Maak Wi-Fi-instellings oop</string>
   <string name="morphe_music_jam_cancel">Kanselleer</string>
   <string name="morphe_music_jam_use_package">Gebruik pakket</string>
   <string name="morphe_music_jam_invalid_package">Voer ’n geldige Android-pakketnaam in</string>
-  <string name="morphe_music_jam_package_saved">Pakket gestoor. Stel Jam Layer op om te koppel.</string>
+  <string name="morphe_music_jam_package_saved">Pakket gestoor. Stel Jam Layer op om te verbind</string>
   <string name="morphe_music_jam_disconnected">Jam ontkoppel</string>
   <string name="morphe_music_jam_enable_layer_first">Aktiveer eers Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">Aktiveer Jam-tou-deling in die instellings, herbegin dan YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Installeer eers die geselekteerde Jam Layer-pakket</string>
-  <string name="morphe_music_jam_join_hint">Voer die kode in wat op die gasheer vertoon word. Wi-Fi Aware kan nabygeleë toestelle koppel selfs wanneer hul LAN’s verskil.</string>
+  <string name="morphe_music_jam_join_hint">Voer die kode wat op die gasheer vertoon word, in. Wi-Fi Aware kan nabygeleë toestelle verbind, selfs wanneer hul LAN\'e verskil</string>
   <string name="morphe_music_jam_join_with_code">Sluit aan met ’n kode</string>
   <string name="morphe_music_jam_join">Sluit aan</string>
   <string name="morphe_music_jam_scan_qr">Skandeer QR</string>

@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Actualiza el parche de Jam del host para usar pausa y reanudación.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Actualiza el parche de Jam del host para usar pausa y reanudación</string>
   <string name="morphe_music_jam_probe_title">Uso compartido de cola de Jam</string>
-  <string name="morphe_music_jam_probe_summary">Organice o únase a una Jam cercana y edite su cola a través de Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Organice o únase a una Jam cercana y edite su cola a través de Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Activar uso compartido de cola de Jam</string>
-  <string name="morphe_music_jam_enabled_summary">Activa la integración de Jam después de reiniciar YouTube Music.</string>
+  <string name="morphe_music_jam_enabled_summary">Activa la integración de Jam después de reiniciar YouTube Music</string>
   <string name="morphe_music_jam_download_title">Descargar Jam Layer para empezar a trabajar</string>
-  <string name="morphe_music_jam_download_summary">Abre la última versión de Jam Layer en tu navegador.</string>
+  <string name="morphe_music_jam_download_summary">Abre la última versión de Jam Layer en tu navegador</string>
   <string name="morphe_music_jam_controls_title">Controles de Jam</string>
-  <string name="morphe_music_jam_controls_summary">Organice o únase a una Jam cercana y gestione la sesión.</string>
+  <string name="morphe_music_jam_controls_summary">Organice o únase a una Jam cercana y gestione la sesión</string>
   <string name="morphe_music_jam_companion_package_title">Paquete de Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Elige la aplicación complementaria instalada que se utiliza para compartir colas cercanas.</string>
-  <string name="morphe_music_jam_package_message">Utiliza un paquete complementario instalado. El emparejamiento requiere su aprobación y un token de capacidad local.</string>
+  <string name="morphe_music_jam_companion_package_summary">Elige la aplicación complementaria instalada que se utiliza para compartir colas cercanas</string>
+  <string name="morphe_music_jam_package_message">Utiliza un paquete complementario instalado. El emparejamiento requiere su aprobación y un token de capacidad local</string>
   <string name="morphe_music_jam_wifi_title">¿Activar Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">Activa el Wi-Fi y, a continuación, intenta iniciar o unirte de nuevo a la Jam.</string>
+  <string name="morphe_music_jam_wifi_message">Activa el Wi-Fi y, a continuación, intenta iniciar o unirte de nuevo a la Jam</string>
   <string name="morphe_music_jam_wifi_settings">Abrir ajustes Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Cancelar</string>
   <string name="morphe_music_jam_use_package">Utilizar paquete</string>
   <string name="morphe_music_jam_invalid_package">Introduzca un nombre de paquete de Android válido</string>
-  <string name="morphe_music_jam_package_saved">Paquete guardado. Configura Jam Layer para conectarte.</string>
+  <string name="morphe_music_jam_package_saved">Paquete guardado. Configura Jam Layer para conectarte</string>
   <string name="morphe_music_jam_disconnected">Jam desconectado</string>
   <string name="morphe_music_jam_enable_layer_first">Primero activa Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">Activa el uso compartido de la cola de Jam en los ajustes y, a continuación, reinicia YouTube Music.</string>
   <string name="morphe_music_jam_install_layer_first">Primero instala el paquete de Jam Layer seleccionado</string>
-  <string name="morphe_music_jam_join_hint">Introduzca el código que aparece en el host. Wi-Fi Aware puede conectar dispositivos cercanos incluso cuando sus LAN son diferentes.</string>
+  <string name="morphe_music_jam_join_hint">Introduzca el código que aparece en el host. Wi-Fi Aware puede conectar dispositivos cercanos incluso cuando sus LAN son diferentes</string>
   <string name="morphe_music_jam_join_with_code">Unirse con un código</string>
   <string name="morphe_music_jam_join">Unirse</string>
   <string name="morphe_music_jam_scan_qr">Escanear QR</string>

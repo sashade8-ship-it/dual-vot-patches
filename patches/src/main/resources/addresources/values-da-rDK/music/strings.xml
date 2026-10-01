@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Opdater værtens Jam-patch til at bruge pause og genoptagelse.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Opdater værtens Jam-patch til at bruge pause og genoptag</string>
   <string name="morphe_music_jam_probe_title">Deling af Jam-kø</string>
-  <string name="morphe_music_jam_probe_summary">Vær vært for eller deltag i en Jam i nærheden, og rediger dens kø via Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Vær vært for eller deltag i en Jam i nærheden, og rediger dens kø via Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Aktivér deling af Jam-kø</string>
-  <string name="morphe_music_jam_enabled_summary">Aktiverer Jam-integrationen, når YouTube Music genstarter.</string>
+  <string name="morphe_music_jam_enabled_summary">Aktiverer Jam-integrationen efter genstart af YouTube Music</string>
   <string name="morphe_music_jam_download_title">Download Jam Layer for at få det til at virke</string>
-  <string name="morphe_music_jam_download_summary">Åbn den nyeste Jam Layer-udgivelse i din browser.</string>
+  <string name="morphe_music_jam_download_summary">Åbn den seneste Jam Layer-udgivelse i din browser</string>
   <string name="morphe_music_jam_controls_title">Jam-kontroller</string>
-  <string name="morphe_music_jam_controls_summary">Vær vært for eller deltag i en Jam i nærheden, og administrer sessionen.</string>
+  <string name="morphe_music_jam_controls_summary">Vær vært for eller deltag i en Jam i nærheden, og administrer sessionen</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer-pakke</string>
-  <string name="morphe_music_jam_companion_package_summary">Vælg den installerede ledsagerapp, der bruges til deling af kø i nærheden.</string>
-  <string name="morphe_music_jam_package_message">Brug en installeret ledsagerpakke. Parring kræver din godkendelse og et lokalt kapabilitetstoken.</string>
+  <string name="morphe_music_jam_companion_package_summary">Vælg den installerede ledsagerapp, der bruges til kø-deling i nærheden</string>
+  <string name="morphe_music_jam_package_message">Brug en installeret ledsagerpakke. Parring kræver din godkendelse og et lokalt capability-token</string>
   <string name="morphe_music_jam_wifi_title">Slå Wi-Fi til?</string>
-  <string name="morphe_music_jam_wifi_message">Slå Wi-Fi til, og prøv derefter at starte eller deltage i Jam igen.</string>
+  <string name="morphe_music_jam_wifi_message">Tænd for Wi-Fi, og prøv derefter at starte eller deltage i Jam igen</string>
   <string name="morphe_music_jam_wifi_settings">Åbn Wi-Fi-indstillinger</string>
   <string name="morphe_music_jam_cancel">Annuller</string>
   <string name="morphe_music_jam_use_package">Brug pakke</string>
   <string name="morphe_music_jam_invalid_package">Indtast et gyldigt Android-pakkenavn</string>
-  <string name="morphe_music_jam_package_saved">Pakken blev gemt. Opsæt Jam Layer for at oprette forbindelse.</string>
+  <string name="morphe_music_jam_package_saved">Pakke gemt. Opsæt Jam Layer for at oprette forbindelse</string>
   <string name="morphe_music_jam_disconnected">Jam afbrudt</string>
   <string name="morphe_music_jam_enable_layer_first">Aktivér Jam Layer først</string>
   <string name="morphe_music_jam_enable_patch_first">Aktivér deling af Jam-kø i indstillingerne, og genstart derefter YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Installer den valgte Jam Layer-pakke først</string>
-  <string name="morphe_music_jam_join_hint">Indtast koden, der vises på værten. Wi-Fi Aware kan oprette forbindelse mellem enheder i nærheden, selvom deres LAN adskiller sig.</string>
+  <string name="morphe_music_jam_join_hint">Indtast koden, der vises på værten. Wi-Fi Aware kan forbinde enheder i nærheden, selv når deres LAN\'er er forskellige</string>
   <string name="morphe_music_jam_join_with_code">Deltag med en kode</string>
   <string name="morphe_music_jam_join">Deltag</string>
   <string name="morphe_music_jam_scan_qr">Scan QR</string>

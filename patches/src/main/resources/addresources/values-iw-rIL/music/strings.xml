@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">עדכן את תיקון ה-Jam של המארח כך שישתמש בהשהיה ובחידוש.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">עדכן את תיקון הג\'אם של המארח כדי להשתמש בהשהיה ובחידוש</string>
   <string name="morphe_music_jam_probe_title">שיתוף תור Jam</string>
-  <string name="morphe_music_jam_probe_summary">ארח או הצטרף ל-Jam סמוך וערוך את התור שלו דרך Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">ארח או הצטרף ל-Jam סמוך וערוך את התור שלו דרך Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">הפעל שיתוף תור Jam</string>
-  <string name="morphe_music_jam_enabled_summary">מפעיל את שילוב Jam לאחר ש-YouTube Music מופעל מחדש.</string>
+  <string name="morphe_music_jam_enabled_summary">מאפשר את שילוב ה-Jam לאחר הפעלה מחדש של YouTube Music</string>
   <string name="morphe_music_jam_download_title">הורד את Jam Layer כדי שיפעל.</string>
-  <string name="morphe_music_jam_download_summary">פתח את הגרסה האחרונה של Jam Layer בדפדפן שלך.</string>
+  <string name="morphe_music_jam_download_summary">פתח את המהדורה האחרונה של Jam Layer בדפדפן שלך</string>
   <string name="morphe_music_jam_controls_title">בקרות Jam</string>
-  <string name="morphe_music_jam_controls_summary">ארח או הצטרף ל-Jam סמוך ונהל את הסשן.</string>
+  <string name="morphe_music_jam_controls_summary">ארח או הצטרף ל-Jam סמוך ונהל את ההפעלה</string>
   <string name="morphe_music_jam_companion_package_title">חבילת Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">בחר את האפליקציה הנלווית המותקנת המשמשת לשיתוף תור בקרבת מקום.</string>
-  <string name="morphe_music_jam_package_message">השתמש בחבילה נלווית מותקנת. ההתאמה דורשת את אישורך ואסימון יכולת מקומי.</string>
+  <string name="morphe_music_jam_companion_package_summary">בחר את האפליקציה הנלווית המותקנת המשמשת לשיתוף תור בין מכשירים סמוכים</string>
+  <string name="morphe_music_jam_package_message">השתמש בחבילה נלווית מותקנת. הצימוד דורש את אישורך ואסימון יכולת מקומי</string>
   <string name="morphe_music_jam_wifi_title">להפעיל Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">הפעל Wi-Fi, ואז נסה שוב להתחיל Jam או להצטרף אליו.</string>
+  <string name="morphe_music_jam_wifi_message">הפעל את ה-Wi-Fi, ולאחר מכן נסה שוב להתחיל את ה-Jam או להצטרף אליו</string>
   <string name="morphe_music_jam_wifi_settings">פתח את הגדרות ה-Wi-Fi.</string>
   <string name="morphe_music_jam_cancel">בטל</string>
   <string name="morphe_music_jam_use_package">השתמש בחבילה</string>
   <string name="morphe_music_jam_invalid_package">הזן שם חבילת Android חוקי.</string>
-  <string name="morphe_music_jam_package_saved">החבילה נשמרה. הגדר את Jam Layer כדי להתחבר.</string>
+  <string name="morphe_music_jam_package_saved">החבילה נשמרה. הגדר את Jam Layer כדי להתחבר</string>
   <string name="morphe_music_jam_disconnected">החיבור ל-Jam נותק</string>
   <string name="morphe_music_jam_enable_layer_first">הפעל קודם את Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">הפעל שיתוף תור Jam בהגדרות, ואז הפעל מחדש את YouTube Music.</string>
   <string name="morphe_music_jam_install_layer_first">התקן קודם את חבילת Jam Layer שנבחרה.</string>
-  <string name="morphe_music_jam_join_hint">הזן את הקוד המוצג במארח. Wi-Fi Aware יכול לחבר מכשירים סמוכים גם אם רשתות ה-LAN שלהם שונות.</string>
+  <string name="morphe_music_jam_join_hint">הזן את הקוד שמוצג במארח. Wi-Fi Aware יכול לחבר בין מכשירים סמוכים גם אם רשתות ה-LAN שלהם שונות</string>
   <string name="morphe_music_jam_join_with_code">הצטרף עם קוד</string>
   <string name="morphe_music_jam_join">הצטרף</string>
   <string name="morphe_music_jam_scan_qr">סרוק QR</string>

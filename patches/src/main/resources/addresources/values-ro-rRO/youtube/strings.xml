@@ -498,6 +498,10 @@ Cheia API nu trebuie niciodată distribuită. Oricine are acces la aceasta poate
   <string name="morphe_loop_video_range_clear">Golește</string>
   <string name="morphe_loop_video_range_toast_on">Buclează %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Interval de timp invalid</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Afișează butonul suprapus pentru Imagine în imagine</string>
+  <string name="morphe_pip_button_flyout_title">Afișează butonul pop-up pentru Imagine în imagine</string>
+  <string name="morphe_pip_button_flyout_name">Comută la Imagine în imagine</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Reține nivelul luminozității la intrarea/ieșirea din modul ecran complet</string>
   <string name="morphe_play_all_button_summary">"Atinge pentru a genera o listă de redare a tuturor videoclipurilor dintr-un canal, atinge și menține apăsat pentru a anula
@@ -639,6 +643,8 @@ Pentru a remedia, activează 'Falsifică fluxurile video' și schimbă 'clientul
   <string name="morphe_swipe_volume_distance_title">Sensibilitate glisare volum</string>
   <string name="morphe_swipe_volume_distance_summary">Valorile mai mari necesită mai multă glisare pe pas de volum</string>
   <string name="morphe_swipe_volume_steps_title">Trepte de volum</string>
+  <string name="morphe_volume_boost_title">Amplificare volum</string>
+  <string name="morphe_volume_boost_summary">Glisarea în sus peste volumul maxim îl amplifică, ceea ce poate distorsiona sunetul puternic</string>
   <string name="morphe_swipe_volume_steps_entry_default">Implicit dispozitiv</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilitate glisare luminozitate</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Valorile mai mari necesită mai multe glisări pentru fiecare pas de luminozitate</string>

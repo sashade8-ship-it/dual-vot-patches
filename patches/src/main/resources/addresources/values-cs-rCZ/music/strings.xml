@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Aktualizujte patch Jamu hostitele, aby podporoval pozastavení a obnovení.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Aktualizujte Jam patch hostitele, aby používal pozastavení a obnovení</string>
   <string name="morphe_music_jam_probe_title">Sdílení fronty Jamu</string>
-  <string name="morphe_music_jam_probe_summary">Hostujte Jam v okolí nebo se k němu připojte a upravujte jeho frontu přes Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Hostujte Jam v okolí nebo se k němu připojte a upravujte jeho frontu přes Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Zapnout sdílení fronty Jamu</string>
-  <string name="morphe_music_jam_enabled_summary">Po restartu YouTube Music povolí integraci Jamu.</string>
+  <string name="morphe_music_jam_enabled_summary">Po restartu YouTube Music povolí integraci Jamu</string>
   <string name="morphe_music_jam_download_title">Stáhnout Jam Layer, aby to fungovalo.</string>
-  <string name="morphe_music_jam_download_summary">Otevřete nejnovější verzi Jam Layer v prohlížeči.</string>
+  <string name="morphe_music_jam_download_summary">Otevřete nejnovější vydání Jam Layer v prohlížeči</string>
   <string name="morphe_music_jam_controls_title">Ovládání Jamu</string>
-  <string name="morphe_music_jam_controls_summary">Hostujte Jam v okolí nebo se k němu připojte a spravujte relaci.</string>
+  <string name="morphe_music_jam_controls_summary">Hostujte Jam v okolí nebo se k němu připojte a spravujte relaci</string>
   <string name="morphe_music_jam_companion_package_title">Balíček Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Vyberte nainstalovanou doprovodnou aplikaci používanou pro sdílení fronty v okolí.</string>
-  <string name="morphe_music_jam_package_message">Použijte nainstalovaný doprovodný balíček. Párování vyžaduje váš souhlas a lokální token oprávnění.</string>
+  <string name="morphe_music_jam_companion_package_summary">Vyberte nainstalovanou doprovodnou aplikaci používanou pro sdílení fronty v okolí</string>
+  <string name="morphe_music_jam_package_message">Použijte nainstalovaný doprovodný balíček. Párování vyžaduje váš souhlas a lokální token schopnosti</string>
   <string name="morphe_music_jam_wifi_title">Zapnout Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">Zapněte Wi-Fi a pak zkuste Jam znovu spustit nebo se k němu připojit.</string>
+  <string name="morphe_music_jam_wifi_message">Zapněte Wi-Fi a poté zkuste znovu spustit Jam nebo se k němu připojit</string>
   <string name="morphe_music_jam_wifi_settings">Otevřít nastavení Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Zrušit</string>
   <string name="morphe_music_jam_use_package">Použít balíček</string>
   <string name="morphe_music_jam_invalid_package">Zadejte platný název balíčku Android</string>
-  <string name="morphe_music_jam_package_saved">Balíček uložen. Nastavte Jam Layer pro připojení.</string>
+  <string name="morphe_music_jam_package_saved">Balíček uložen. Nastavte Jam Layer pro připojení</string>
   <string name="morphe_music_jam_disconnected">Odpojeno od Jamu</string>
   <string name="morphe_music_jam_enable_layer_first">Nejprve zapněte Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">V nastavení zapněte sdílení fronty Jamu a poté restartujte YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Nejprve nainstalujte vybraný balíček Jam Layer</string>
-  <string name="morphe_music_jam_join_hint">Zadejte kód zobrazený na hostiteli. Wi-Fi Aware dokáže propojit zařízení v okolí, i když se jejich LAN liší.</string>
+  <string name="morphe_music_jam_join_hint">Zadejte kód zobrazený na hostiteli. Wi-Fi Aware dokáže propojit blízká zařízení, i když mají různé sítě LAN</string>
   <string name="morphe_music_jam_join_with_code">Připojit se kódem</string>
   <string name="morphe_music_jam_join">Připojit se</string>
   <string name="morphe_music_jam_scan_qr">Naskenovat QR kód</string>

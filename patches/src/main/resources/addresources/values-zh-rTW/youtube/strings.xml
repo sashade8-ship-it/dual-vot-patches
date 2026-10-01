@@ -498,6 +498,10 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">清除</string>
   <string name="morphe_loop_video_range_toast_on">循環播放 %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">所選擇的時間無效</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">顯示子母畫面疊加按鈕</string>
+  <string name="morphe_pip_button_flyout_title">顯示子母畫面彈出式按鈕</string>
+  <string name="morphe_pip_button_flyout_name">切換至子母畫面</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">顯示播放全部按鈕</string>
   <string name="morphe_play_all_button_summary">"點擊播放頻道中的所有影片，長按取消
@@ -639,6 +643,8 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_volume_distance_title">音量滑動靈敏度</string>
   <string name="morphe_swipe_volume_distance_summary">數值越高，每段音量需要滑動更多次</string>
   <string name="morphe_swipe_volume_steps_title">音量階級</string>
+  <string name="morphe_volume_boost_title">音量增強</string>
+  <string name="morphe_volume_boost_summary">向上滑動超過最大音量會增強音量，這可能會使響亮的音訊失真</string>
   <string name="morphe_swipe_volume_steps_entry_default">裝置預設</string>
   <string name="morphe_swipe_brightness_sensitivity_title">亮度滑動靈敏度</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">較高的數值需要更頻繁的滑動才能改變亮度</string>

@@ -498,6 +498,10 @@ API-avaintasi ei saa koskaan jakaa. Kuka tahansa, jolla on pääsy siihen, voi k
   <string name="morphe_loop_video_range_clear">Tyhjennä</string>
   <string name="morphe_loop_video_range_toast_on">Toisto %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Annettu aika on virheellinen</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Näytä kuva kuvassa -päällekkäispainike</string>
+  <string name="morphe_pip_button_flyout_title">Näytä kuva kuvassa -ponnahduspainike</string>
+  <string name="morphe_pip_button_flyout_name">Vaihda kuva kuvassa -tilaan</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Näytä Soita kaikki -painike</string>
   <string name="morphe_play_all_button_summary">"Napauta toistaaksesi kaikki kanavan videot, napauta ja pidä painettuna peruuttaaksesi
@@ -639,6 +643,8 @@ Korjaa tämä ottamalla käyttöön 'Väärennä videovirrat' ja vaihtamalla 'Ol
   <string name="morphe_swipe_volume_distance_title">Äänenvoimakkuuspyyhkäisyn herkkyys</string>
   <string name="morphe_swipe_volume_distance_summary">Suuremmat arvot vaativat enemmän pyyhkäisyjä äänenvoimakkuusaskelta kohti</string>
   <string name="morphe_swipe_volume_steps_title">Äänenvoimakkuuden portaat</string>
+  <string name="morphe_volume_boost_title">Äänenvoimakkuuden vahvistus</string>
+  <string name="morphe_volume_boost_summary">Pyyhkäisemällä ylös maksimivoimakkuuden yli äänenvoimakkuus vahvistuu, mikä voi vääristää kovaa ääntä</string>
   <string name="morphe_swipe_volume_steps_entry_default">Laitteen oletus</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Kirkkauden pyyhkäisyn herkkyys</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Suuremmat arvot vaativat enemmän pyyhkäisyjä kirkkausaskelta kohden</string>

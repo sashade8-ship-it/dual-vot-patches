@@ -498,6 +498,10 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">ล้าง</string>
   <string name="morphe_loop_video_range_toast_on">กำลังทำซ้ำ %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">ช่วงเวลาไม่ถูกต้อง</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">แสดงปุ่มซ้อนทับของภาพซ้อนภาพ</string>
+  <string name="morphe_pip_button_flyout_title">แสดงปุ่มภาพซ้อนภาพในเมนูลอย</string>
+  <string name="morphe_pip_button_flyout_name">สลับไปยังภาพซ้อนภาพ</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">แสดงปุ่มเล่นทั้งหมด</string>
   <string name="morphe_play_all_button_summary">"แตะเพื่อสร้างเพลย์ลิสต์ของวิดีโอทั้งหมดจากช่อง แตะค้างเพื่อยกเลิก
@@ -639,6 +643,8 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_volume_distance_title">ความไวในการปัดปรับระดับเสียง</string>
   <string name="morphe_swipe_volume_distance_summary">ค่าที่สูงขึ้นต้องปัดมากขึ้นต่อขั้นปรับระดับเสียง</string>
   <string name="morphe_swipe_volume_steps_title">ขั้นระดับเสียง</string>
+  <string name="morphe_volume_boost_title">เพิ่มระดับเสียง</string>
+  <string name="morphe_volume_boost_summary">การปัดขึ้นเกินระดับเสียงสูงสุดจะเพิ่มระดับเสียง ซึ่งอาจทำให้เสียงดังเพี้ยนได้</string>
   <string name="morphe_swipe_volume_steps_entry_default">ค่าเริ่มต้นของอุปกรณ์</string>
   <string name="morphe_swipe_brightness_sensitivity_title">ความไวในการปัดปรับความสว่าง</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">ค่าที่สูงขึ้นต้องมีการปัดมากขึ้นต่อการปรับความสว่างแต่ละครั้ง</string>

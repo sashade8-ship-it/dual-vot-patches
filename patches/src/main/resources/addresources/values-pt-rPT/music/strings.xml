@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Atualize o patch de Jam do host para usar pausa e retomada.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Atualize o patch de Jam do host para usar pausa e retomada</string>
   <string name="morphe_music_jam_probe_title">Compartilhamento de fila do Jam</string>
-  <string name="morphe_music_jam_probe_summary">Hospede um Jam por perto ou entre nele e edite a fila pelo Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Hospede ou participe de um Jam próximo e edite a fila dele pelo Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Ativar o compartilhamento de fila do Jam</string>
-  <string name="morphe_music_jam_enabled_summary">Ativa a integração do Jam depois que o YouTube Music for reiniciado.</string>
+  <string name="morphe_music_jam_enabled_summary">Ativa a integração do Jam após o YouTube Music reiniciar</string>
   <string name="morphe_music_jam_download_title">Baixe o Jam Layer para funcionar</string>
-  <string name="morphe_music_jam_download_summary">Abra a versão mais recente do Jam Layer no seu navegador.</string>
+  <string name="morphe_music_jam_download_summary">Abra a versão mais recente do Jam Layer no seu navegador</string>
   <string name="morphe_music_jam_controls_title">Controles do Jam</string>
-  <string name="morphe_music_jam_controls_summary">Hospede um Jam por perto ou entre nele e gerencie a sessão.</string>
+  <string name="morphe_music_jam_controls_summary">Hospede ou participe de um Jam próximo e gerencie a sessão</string>
   <string name="morphe_music_jam_companion_package_title">Pacote do Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Escolha o aplicativo complementar instalado usado para compartilhar a fila nas proximidades.</string>
-  <string name="morphe_music_jam_package_message">Use um pacote complementar instalado. O pareamento requer sua aprovação e um token de capacidade local.</string>
+  <string name="morphe_music_jam_companion_package_summary">Escolha o aplicativo complementar instalado usado para compartilhar a fila nas proximidades</string>
+  <string name="morphe_music_jam_package_message">Use um pacote complementar instalado. O emparelhamento requer sua aprovação e um token de capacidade local</string>
   <string name="morphe_music_jam_wifi_title">Ativar o Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">Ative o Wi-Fi e tente iniciar ou entrar no Jam novamente.</string>
+  <string name="morphe_music_jam_wifi_message">Ative o Wi-Fi e tente iniciar ou participar do Jam novamente</string>
   <string name="morphe_music_jam_wifi_settings">Abrir as configurações de Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Cancelar</string>
   <string name="morphe_music_jam_use_package">Usar pacote</string>
   <string name="morphe_music_jam_invalid_package">Insira um nome de pacote Android válido.</string>
-  <string name="morphe_music_jam_package_saved">Pacote salvo. Configure o Jam Layer para se conectar.</string>
+  <string name="morphe_music_jam_package_saved">Pacote salvo. Configure o Jam Layer para se conectar</string>
   <string name="morphe_music_jam_disconnected">Jam desconectado</string>
   <string name="morphe_music_jam_enable_layer_first">Ative o Jam Layer primeiro</string>
   <string name="morphe_music_jam_enable_patch_first">Ative o compartilhamento de fila do Jam nas configurações e reinicie o YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Instale o pacote do Jam Layer selecionado primeiro</string>
-  <string name="morphe_music_jam_join_hint">Insira o código exibido no host. O Wi-Fi Aware pode conectar dispositivos próximos mesmo quando as LANs deles forem diferentes.</string>
+  <string name="morphe_music_jam_join_hint">Insira o código mostrado no anfitrião. O Wi-Fi Aware pode conectar dispositivos próximos mesmo quando as LANs deles são diferentes</string>
   <string name="morphe_music_jam_join_with_code">Entrar com um código</string>
   <string name="morphe_music_jam_join">Entrar</string>
   <string name="morphe_music_jam_scan_qr">Escanear QR</string>

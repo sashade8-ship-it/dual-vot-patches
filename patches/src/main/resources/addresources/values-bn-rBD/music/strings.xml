@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">পজ এবং রিজিউম ব্যবহার করতে হোস্টের Jam প্যাচ আপডেট করুন।</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">পজ এবং রিজিউম ব্যবহার করতে হোস্টের জ্যাম প্যাচ আপডেট করুন</string>
   <string name="morphe_music_jam_probe_title">Jam কিউ শেয়ারিং</string>
-  <string name="morphe_music_jam_probe_summary">কাছের কোনো Jam হোস্ট করুন বা যোগ দিন এবং Jam Layer-এর মাধ্যমে এর কিউ সম্পাদনা করুন।</string>
+  <string name="morphe_music_jam_probe_summary">কাছাকাছি একটি Jam হোস্ট করুন বা যোগ দিন এবং Jam Layer-এর মাধ্যমে এর কিউ সম্পাদনা করুন</string>
   <string name="morphe_music_jam_enabled_title">Jam কিউ শেয়ারিং সক্ষম করুন</string>
-  <string name="morphe_music_jam_enabled_summary">YouTube Music রিস্টার্ট করার পরে Jam ইন্টিগ্রেশন সক্ষম করে।</string>
+  <string name="morphe_music_jam_enabled_summary">YouTube Music পুনরায় চালু হওয়ার পরে Jam ইন্টিগ্রেশন সক্ষম করে</string>
   <string name="morphe_music_jam_download_title">সক্রিয় করতে Jam Layer ডাউনলোড করুন</string>
-  <string name="morphe_music_jam_download_summary">আপনার ব্রাউজারে সর্বশেষ Jam Layer রিলিজ খুলুন।</string>
+  <string name="morphe_music_jam_download_summary">আপনার ব্রাউজারে সর্বশেষ Jam Layer রিলিজ খুলুন</string>
   <string name="morphe_music_jam_controls_title">Jam নিয়ন্ত্রণ</string>
-  <string name="morphe_music_jam_controls_summary">কাছের কোনো Jam হোস্ট করুন বা যোগ দিন এবং সেশনটি পরিচালনা করুন।</string>
+  <string name="morphe_music_jam_controls_summary">কাছাকাছি একটি Jam হোস্ট করুন বা যোগ দিন এবং সেশনটি পরিচালনা করুন</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer প্যাকেজ</string>
-  <string name="morphe_music_jam_companion_package_summary">কাছাকাছি কিউ শেয়ারিংয়ের জন্য ব্যবহৃত ইনস্টল করা কম্প্যানিয়ন অ্যাপটি বেছে নিন।</string>
-  <string name="morphe_music_jam_package_message">একটি ইনস্টল করা কম্প্যানিয়ন প্যাকেজ ব্যবহার করুন। পেয়ারিংয়ের জন্য আপনার অনুমোদন এবং একটি স্থানীয় ক্যাপাবিলিটি টোকেন প্রয়োজন।</string>
+  <string name="morphe_music_jam_companion_package_summary">কাছাকাছি কিউ শেয়ারিংয়ের জন্য ব্যবহৃত ইনস্টল করা কম্প্যানিয়ন অ্যাপটি বেছে নিন</string>
+  <string name="morphe_music_jam_package_message">একটি ইনস্টল করা কম্প্যানিয়ন প্যাকেজ ব্যবহার করুন। পেয়ারিংয়ের জন্য আপনার অনুমোদন এবং একটি স্থানীয় ক্যাপাবিলিটি টোকেন প্রয়োজন</string>
   <string name="morphe_music_jam_wifi_title">Wi-Fi চালু করবেন?</string>
-  <string name="morphe_music_jam_wifi_message">Wi-Fi চালু করুন, তারপর আবার Jam শুরু করা বা যোগ দেওয়ার চেষ্টা করুন।</string>
+  <string name="morphe_music_jam_wifi_message">Wi-Fi চালু করুন, তারপর আবার Jam শুরু করার বা যোগ দেওয়ার চেষ্টা করুন</string>
   <string name="morphe_music_jam_wifi_settings">Wi-Fi সেটিংস খুলুন</string>
   <string name="morphe_music_jam_cancel">বাতিল করুন</string>
   <string name="morphe_music_jam_use_package">প্যাকেজ ব্যবহার করুন</string>
   <string name="morphe_music_jam_invalid_package">একটি বৈধ Android প্যাকেজ নাম লিখুন</string>
-  <string name="morphe_music_jam_package_saved">প্যাকেজ সংরক্ষিত হয়েছে। সংযোগ করতে Jam Layer সেট আপ করুন।</string>
+  <string name="morphe_music_jam_package_saved">প্যাকেজ সংরক্ষিত হয়েছে। সংযোগ করতে Jam Layer সেট আপ করুন</string>
   <string name="morphe_music_jam_disconnected">Jam সংযোগ বিচ্ছিন্ন</string>
   <string name="morphe_music_jam_enable_layer_first">আগে Jam Layer সক্ষম করুন</string>
   <string name="morphe_music_jam_enable_patch_first">সেটিংসে Jam কিউ শেয়ারিং সক্ষম করুন, তারপর YouTube Music রিস্টার্ট করুন</string>
   <string name="morphe_music_jam_install_layer_first">আগে নির্বাচিত Jam Layer প্যাকেজটি ইনস্টল করুন</string>
-  <string name="morphe_music_jam_join_hint">হোস্টে দেখানো কোডটি লিখুন। Wi-Fi Aware কাছের ডিভাইসগুলোকে সংযুক্ত করতে পারে এমনকি তাদের LAN আলাদা হলেও।</string>
+  <string name="morphe_music_jam_join_hint">হোস্টে দেখানো কোডটি লিখুন। Wi-Fi Aware কাছাকাছি ডিভাইসগুলিকে সংযুক্ত করতে পারে এমনকি তাদের LAN ভিন্ন হলেও</string>
   <string name="morphe_music_jam_join_with_code">কোড দিয়ে যোগ দিন</string>
   <string name="morphe_music_jam_join">যোগ দিন</string>
   <string name="morphe_music_jam_scan_qr">QR স্ক্যান করুন</string>

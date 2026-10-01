@@ -498,6 +498,10 @@ Váš API kľúč by sa nikdy nemal zdieľať. Každý, kto k nemu má prístup,
   <string name="morphe_loop_video_range_clear">Vyčistiť</string>
   <string name="morphe_loop_video_range_toast_on">Opakovanie %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Zadali ste nesprávny čas</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Zobraziť tlačidlo prekrytia obraz v obraze</string>
+  <string name="morphe_pip_button_flyout_title">Zobraziť tlačidlo rozbaľovacej ponuky Obraz v obraze</string>
+  <string name="morphe_pip_button_flyout_name">Prepnúť na Obraz v obraze</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Zobraziť tlačidlo Prehrať všetko</string>
   <string name="morphe_play_all_button_summary">"Ťuknite na vytvorenie playlistu všetkých videí z kanála, ťuknite a podržte na zrušenie
@@ -639,6 +643,8 @@ Ak to chcete vyriešiť, zapnite 'Spoofovať video streamy' a zmeňte 'Predvolen
   <string name="morphe_swipe_volume_distance_title">Citlivosť ovládania hlasitosti posúvaním</string>
   <string name="morphe_swipe_volume_distance_summary">Vyššie hodnoty vyžadujú viac potiahnutí na jeden krok hlasitosti</string>
   <string name="morphe_swipe_volume_steps_title">Kroky hlasitosti</string>
+  <string name="morphe_volume_boost_title">Zosilnenie hlasitosti</string>
+  <string name="morphe_volume_boost_summary">Potiahnutím nahor za maximálnu hlasitosť ju zvýšite, čo môže skresliť hlasný zvuk</string>
   <string name="morphe_swipe_volume_steps_entry_default">Predvolené zariadenia</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Citlivosť posúvania jasu</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Vyššie hodnoty vyžadujú viac posúvania pre každý krok jasu</string>

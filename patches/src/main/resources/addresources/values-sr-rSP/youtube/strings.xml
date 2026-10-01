@@ -498,6 +498,10 @@ Promene uključuju:
   <string name="morphe_loop_video_range_clear">Обриши</string>
   <string name="morphe_loop_video_range_toast_on">Поновно пуштање %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Дато је неважеће време</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Прикажи преклопно дугме слике у слици</string>
+  <string name="morphe_pip_button_flyout_title">Прикажи искачуће дугме слике у слици</string>
+  <string name="morphe_pip_button_flyout_name">Пребаци на слику у слици</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Прикажи дугме „Пусти све”</string>
   <string name="morphe_play_all_button_summary">"Додините да бисте генерисали листу свих видео снимака са канала, додините и задржите да бисте поништили
@@ -639,6 +643,8 @@ Promene uključuju:
   <string name="morphe_swipe_volume_distance_title">Осетљивост превлачења за јачину звука</string>
   <string name="morphe_swipe_volume_distance_summary">Веће вредности захтевају висе превлачења по степену јачине звука</string>
   <string name="morphe_swipe_volume_steps_title">Степени јачине звука</string>
+  <string name="morphe_volume_boost_title">Појачање јачине звука</string>
+  <string name="morphe_volume_boost_summary">Превлачење нагоре преко максималне јачине звука је појачава, што може да изобличи гласан звук</string>
   <string name="morphe_swipe_volume_steps_entry_default">Подразумевано за уређај</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Осетљивост превлачења за осветљење</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Веће вредности захтевају више превлачења по кораку осветљења</string>

@@ -498,6 +498,10 @@ A API kulcsodat soha nem szabad megosztani. Bárki, akinek hozzáférése van ho
   <string name="morphe_loop_video_range_clear">Törlés</string>
   <string name="morphe_loop_video_range_toast_on">%1$s - %2$s ciklusban</string>
   <string name="morphe_loop_video_range_invalid_time">Érvénytelen idő van megadva</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Kép a képben átfedő gomb megjelenítése</string>
+  <string name="morphe_pip_button_flyout_title">Kép a képben kinyíló gomb megjelenítése</string>
+  <string name="morphe_pip_button_flyout_name">Váltás kép a képben módra</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Mind lejátszási gomb megjelenítése</string>
   <string name="morphe_play_all_button_summary">"Koppintson meg a csatorna összes videójának lejátszási listájának létrehozásához, hosszan megnyomva a művelet visszavonásához
@@ -639,6 +643,8 @@ A javításhoz kapcsolja be a „Videostreamek meghamisítása” beállítást,
   <string name="morphe_swipe_volume_distance_title">Hangerő-görgetés érzékenysége</string>
   <string name="morphe_swipe_volume_distance_summary">A magasabb értékek több húzást igényelnek hangerőlépésenként.</string>
   <string name="morphe_swipe_volume_steps_title">Hangerőlépések</string>
+  <string name="morphe_volume_boost_title">Hangerőnövelés</string>
+  <string name="morphe_volume_boost_summary">A maximális hangerőn túli felfelé húzás felerősíti a hangot, ami torzíthatja a hangos hanganyagot</string>
   <string name="morphe_swipe_volume_steps_entry_default">Eszköz alapértelmezése</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Fényerő-húzásérzékenység</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">A nagyobb értékek több húzást igényelnek a fényerő lépésenkénti változásához</string>
@@ -1203,6 +1209,9 @@ Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálóna
   <!-- video.buffer.playbackBufferPatch -->
   <string name="morphe_playback_buffer_size_title">Lejátszási puffer mérete</string>
   <string name="morphe_playback_buffer_size_entry_default">Alapértelmezett</string>
+  <string name="morphe_playback_buffer_size_entry_low">Alacsony</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Közepes</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Maximális</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Automatikus</string>

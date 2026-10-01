@@ -38,7 +38,7 @@ Second \"item\" text"</string>
   <string name="morphe_auto_pause_on_screen_lock_always">Pausa sempre quando il dispositivo è bloccato</string>
   <string name="morphe_auto_pause_on_screen_lock_except_wireless">Pausa a meno che non sia connesso un audio wireless</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
-  <string name="morphe_disable_scrolling_speed_limit_title">Disabilita la velocità di scorrimento</string>
+  <string name="morphe_disable_scrolling_speed_limit_title">Disabilita il limite della velocità di scorrimento</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Disabilita aggiornamenti del layout</string>
   <string name="morphe_disable_layout_updates_summary">Impedisce al server di aggiornare il layout dell\'app</string>
@@ -498,6 +498,10 @@ La tua chiave API non deve mai essere condivisa. Chiunque vi abbia accesso può 
   <string name="morphe_loop_video_range_clear">Disattiva</string>
   <string name="morphe_loop_video_range_toast_on">Ripetizione impostata da %1$s a %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Intervallo di tempo non valido</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Mostra il pulsante Picture-in-picture in sovrapposizione</string>
+  <string name="morphe_pip_button_flyout_title">Mostra il pulsante Picture-in-picture del menu a comparsa</string>
+  <string name="morphe_pip_button_flyout_name">Passa a Picture-in-picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Mostra pulsante Riproduci tutto</string>
   <string name="morphe_play_all_button_summary">"Tocca per generare una playlist di tutti i video del canale, tieni premuto per annullare.
@@ -639,6 +643,8 @@ Per risolvere, attiva 'Spoof dei flussi video' e cambia il 'Client predefinito' 
   <string name="morphe_swipe_volume_distance_title">Sensibilità allo scorrimento del volume</string>
   <string name="morphe_swipe_volume_distance_summary">Valori più alti richiedono più trascinamenti per passo del volume.</string>
   <string name="morphe_swipe_volume_steps_title">Passi del volume</string>
+  <string name="morphe_volume_boost_title">Aumenta il volume</string>
+  <string name="morphe_volume_boost_summary">Scorrere oltre il volume massimo amplifica l\'audio, ma può causare distorsioni ad alto volume.</string>
   <string name="morphe_swipe_volume_steps_entry_default">Predefinito del dispositivo</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilità allo scorrimento della luminosità</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Valori più elevati richiedono più scorrimenti per ogni passo di luminosità</string>

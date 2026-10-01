@@ -499,6 +499,10 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_loop_video_range_clear">消去</string>
   <string name="morphe_loop_video_range_toast_on">%1$s - %2$s をリピートします</string>
   <string name="morphe_loop_video_range_invalid_time">無効なリピート区間です</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">ピクチャーインピクチャーのオーバーレイボタンを表示</string>
+  <string name="morphe_pip_button_flyout_title">ピクチャーインピクチャーのフライアウトボタンを表示</string>
+  <string name="morphe_pip_button_flyout_name">ピクチャーインピクチャーに切り替え</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">「すべて再生」ボタンを表示</string>
   <string name="morphe_play_all_button_summary">"タップするとチャンネルのすべての動画から成るプレイリストを生成します。長押しすると元の状態に戻ります
@@ -640,6 +644,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_swipe_volume_distance_title">音量ジェスチャーのスワイプ感度</string>
   <string name="morphe_swipe_volume_distance_summary">この値を大きくすると、音量の増減に必要なスワイプ距離が大きくなり、細かい調整がスムーズになります</string>
   <string name="morphe_swipe_volume_steps_title">音量レベルの段階数</string>
+  <string name="morphe_volume_boost_title">音量ブースト</string>
+  <string name="morphe_volume_boost_summary">最大音量を超えて上にスワイプすると音量がブーストされ、大音量のオーディオが歪む可能性があります</string>
   <string name="morphe_swipe_volume_steps_entry_default">端末のデフォルト</string>
   <string name="morphe_swipe_brightness_sensitivity_title">明るさジェスチャーのスワイプ感度</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">この値を大きくすると、明るさの増減に必要なスワイプ距離が大きくなり、細かい調整がスムーズになります</string>

@@ -498,6 +498,10 @@ Votre clé API ne doit jamais être partagée. Toute personne ayant accès à ce
   <string name="morphe_loop_video_range_clear">Effacer</string>
   <string name="morphe_loop_video_range_toast_on">Lecture en boucle de %1$s à %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Plage horaire invalide</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Afficher le bouton Picture-in-picture de la superposition</string>
+  <string name="morphe_pip_button_flyout_title">Afficher le bouton Picture-in-picture du menu volant</string>
+  <string name="morphe_pip_button_flyout_name">Passer en Picture-in-picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Afficher un bouton \'Lire tout\'</string>
   <string name="morphe_play_all_button_summary">"Appuyez pour générer une playlist de toutes les vidéos d'une chaîne, appuyez longuement pour annuler
@@ -639,6 +643,8 @@ Pour corriger cela, activez 'Falsifier les flux vidéo' et définissez 'Client p
   <string name="morphe_swipe_volume_distance_title">Sensibilité du balayage de volume</string>
   <string name="morphe_swipe_volume_distance_summary">Des valeurs plus élevées nécessitent plus de balayages par palier de volume</string>
   <string name="morphe_swipe_volume_steps_title">Paliers de volume</string>
+  <string name="morphe_volume_boost_title">Augmentation de volume</string>
+  <string name="morphe_volume_boost_summary">Glisser vers le haut au-delà du volume maximal augmente le volume, ce qui peut déformer les sons forts</string>
   <string name="morphe_swipe_volume_steps_entry_default">Par défaut de l\'appareil</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilité du balayage de luminosité</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Des valeurs plus élevées nécessitent plus de balayages par palier de luminosité</string>

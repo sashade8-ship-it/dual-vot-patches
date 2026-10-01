@@ -498,6 +498,10 @@ Din API-nyckel ska aldrig delas. Alla som har åtkomst till den kan använda din
   <string name="morphe_loop_video_range_clear">Rensa</string>
   <string name="morphe_loop_video_range_toast_on">Upprepar %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ogiltigt tidsintervall</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Visa överlagringsknappen för bild-i-bild</string>
+  <string name="morphe_pip_button_flyout_title">Visa flyoutknappen för bild-i-bild</string>
+  <string name="morphe_pip_button_flyout_name">Växla till bild-i-bild</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Visa knappen Spela upp alla</string>
   <string name="morphe_play_all_button_summary">"Tryck för att generera en spellista med alla videor från kanalen, tryck länge för att ångra
@@ -639,6 +643,8 @@ För att åtgärda detta, aktivera 'Spoofa videoströmmar' och ändra 'Standardk
   <string name="morphe_swipe_volume_distance_title">Svepkänslighet för volymgest</string>
   <string name="morphe_swipe_volume_distance_summary">Högre värden kräver fler svepningar per volymsteg</string>
   <string name="morphe_swipe_volume_steps_title">Volymsteg</string>
+  <string name="morphe_volume_boost_title">Volymförstärkning</string>
+  <string name="morphe_volume_boost_summary">Sveper du uppåt förbi maxvolymen förstärks volymen, vilket kan förvränga högt ljud</string>
   <string name="morphe_swipe_volume_steps_entry_default">Enhetsstandard</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Svepkänslighet för ljusstyrkegest</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Högre värden kräver mer svepande per ljusstyrkesteg</string>

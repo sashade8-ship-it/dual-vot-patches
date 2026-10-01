@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Актуализирайте кръпката за Jam на домакина, за да използва пауза и възобновяване.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Актуализирайте Jam пача на хоста, за да използва пауза и възобновяване</string>
   <string name="morphe_music_jam_probe_title">Споделяне на опашката на Jam</string>
-  <string name="morphe_music_jam_probe_summary">Стартирайте или се присъединете към Jam наблизо и редактирайте опашката му чрез Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Създайте или се присъединете към Jam наблизо и редактирайте опашката му чрез Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Активиране на споделянето на опашката на Jam</string>
-  <string name="morphe_music_jam_enabled_summary">Активира интеграцията с Jam след рестартиране на YouTube Music.</string>
+  <string name="morphe_music_jam_enabled_summary">Активира интеграцията с Jam след рестартиране на YouTube Music</string>
   <string name="morphe_music_jam_download_title">Изтеглете Jam Layer, за да заработи</string>
-  <string name="morphe_music_jam_download_summary">Отворете най-новата версия на Jam Layer в браузъра си.</string>
+  <string name="morphe_music_jam_download_summary">Отворете най-новата версия на Jam Layer в браузъра си</string>
   <string name="morphe_music_jam_controls_title">Контроли за Jam</string>
-  <string name="morphe_music_jam_controls_summary">Стартирайте или се присъединете към Jam наблизо и управлявайте сесията.</string>
+  <string name="morphe_music_jam_controls_summary">Създайте или се присъединете към Jam наблизо и управлявайте сесията</string>
   <string name="morphe_music_jam_companion_package_title">Пакет Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Изберете инсталираното придружаващо приложение, използвано за споделяне на опашката наблизо.</string>
-  <string name="morphe_music_jam_package_message">Използвайте инсталиран пакет на придружаващото приложение. Сдвояването изисква вашето одобрение и локален токен за възможности.</string>
+  <string name="morphe_music_jam_companion_package_summary">Изберете инсталираното приложение-компаньон, използвано за споделяне на опашката наблизо</string>
+  <string name="morphe_music_jam_package_message">Използвайте инсталиран пакет-компаньон. Сдвояването изисква вашето одобрение и локален токен за възможности</string>
   <string name="morphe_music_jam_wifi_title">Да включите ли Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">Включете Wi-Fi и след това опитайте отново да стартирате или да се присъедините към Jam.</string>
+  <string name="morphe_music_jam_wifi_message">Включете Wi-Fi и след това опитайте отново да започнете или да се присъединете към Jam</string>
   <string name="morphe_music_jam_wifi_settings">Отворете настройките за Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Отказ</string>
   <string name="morphe_music_jam_use_package">Използвайте пакета</string>
   <string name="morphe_music_jam_invalid_package">Въведете валидно име на Android пакет</string>
-  <string name="morphe_music_jam_package_saved">Пакетът е запазен. Настройте Jam Layer, за да се свърже.</string>
+  <string name="morphe_music_jam_package_saved">Пакетът е запазен. Настройте Jam Layer, за да се свържете</string>
   <string name="morphe_music_jam_disconnected">Сесията Jam е прекъсната</string>
   <string name="morphe_music_jam_enable_layer_first">Първо активирайте Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">Активирайте споделянето на опашката на Jam в настройките и след това рестартирайте YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Първо инсталирайте избрания пакет Jam Layer</string>
-  <string name="morphe_music_jam_join_hint">Въведете кода, показан на домакина. Wi-Fi Aware може да свързва близки устройства, дори когато локалните им мрежи се различават.</string>
+  <string name="morphe_music_jam_join_hint">Въведете кода, показан на хоста. Wi-Fi Aware може да свързва устройства наблизо, дори когато локалните им мрежи се различават</string>
   <string name="morphe_music_jam_join_with_code">Присъединяване с код</string>
   <string name="morphe_music_jam_join">Присъединяване</string>
   <string name="morphe_music_jam_scan_qr">Сканиране на QR</string>

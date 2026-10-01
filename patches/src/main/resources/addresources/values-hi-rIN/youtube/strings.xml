@@ -498,6 +498,10 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_loop_video_range_clear">खाली करें</string>
   <string name="morphe_loop_video_range_toast_on">%1$s से %2$s लूपिंग</string>
   <string name="morphe_loop_video_range_invalid_time">अमान्य समय सीमा</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">पिक्चर-इन-पिक्चर ओवरले बटन दिखाएं</string>
+  <string name="morphe_pip_button_flyout_title">पिक्चर-इन-पिक्चर फ़्लायआउट बटन दिखाएं</string>
+  <string name="morphe_pip_button_flyout_name">पिक्चर-इन-पिक्चर पर स्विच करें</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">प्ले ऑल बटन दिखाएं</string>
   <string name="morphe_play_all_button_summary">"प्लेलिस्ट उत्पन्न करने के लिए टैप करें चैनल के सभी वीडियो का, टैप और होल्ड करके पूर्ववत करें
@@ -639,6 +643,8 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_swipe_volume_distance_title"> Volume स्वाइप संवेदनशीलता</string>
   <string name="morphe_swipe_volume_distance_summary">उच्च मानों के लिए प्रति वॉल्यूम चरण अधिक स्वाइपिंग की आवश्यकता होती है</string>
   <string name="morphe_swipe_volume_steps_title">वॉल्यूम चरण</string>
+  <string name="morphe_volume_boost_title">वॉल्यूम बूस्ट</string>
+  <string name="morphe_volume_boost_summary">अधिकतम वॉल्यूम के बाद ऊपर स्वाइप करने पर यह बूस्ट हो जाता है, जिससे तेज़ आवाज़ फट सकती है</string>
   <string name="morphe_swipe_volume_steps_entry_default">डिवाइस डिफ़ॉल्ट</string>
   <string name="morphe_swipe_brightness_sensitivity_title">चमक स्वाइप संवेदनशीलता</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">उच्च मान प्रति चमक चरण के लिए अधिक स्वाइपिंग की आवश्यकता होती है</string>

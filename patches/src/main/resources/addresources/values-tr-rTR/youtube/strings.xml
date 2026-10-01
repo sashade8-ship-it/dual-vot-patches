@@ -498,6 +498,10 @@ API anahtarınız asla paylaşılmamalıdır. Ona erişimi olan herkes OpenRoute
   <string name="morphe_loop_video_range_clear">Temizle</string>
   <string name="morphe_loop_video_range_toast_on">%1$s - %2$s arasında döngü</string>
   <string name="morphe_loop_video_range_invalid_time">Geçersiz zaman aralığı</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Resim içinde resim katman düğmesini göster</string>
+  <string name="morphe_pip_button_flyout_title">Resim içinde resim açılır düğmesini göster</string>
+  <string name="morphe_pip_button_flyout_name">Resim içinde resim moduna geç</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Tümünü oynat düğmesini göster</string>
   <string name="morphe_play_all_button_summary">"Kanaldaki tüm videoların oynatma listesini oluşturmak için dokunun, geri almak için basılı tutun
@@ -639,6 +643,8 @@ Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini etkinleştir
   <string name="morphe_swipe_volume_distance_title">Ses kaydırma hassasiyeti</string>
   <string name="morphe_swipe_volume_distance_summary">Daha yüksek değerler, ses seviyesi adımı başına daha fazla kaydırma gerektirir.</string>
   <string name="morphe_swipe_volume_steps_title">Ses seviyesi adımları</string>
+  <string name="morphe_volume_boost_title">Ses güçlendirme</string>
+  <string name="morphe_volume_boost_summary">Maksimum ses seviyesinin ötesine kaydırmak sesi güçlendirir, bu da yüksek seslerin bozulmasına neden olabilir</string>
   <string name="morphe_swipe_volume_steps_entry_default">Cihaz varsayılanı</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Parlaklık kaydırma hassasiyeti</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Daha yüksek değerler, her parlaklık adımı için daha fazla kaydırma gerektirir</string>

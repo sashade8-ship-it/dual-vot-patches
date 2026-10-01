@@ -498,6 +498,10 @@ Jou API-sleutel moet nooit gedeel word nie. Enigeen met toegang daartoe kan jou 
   <string name="morphe_loop_video_range_clear">Klar</string>
   <string name="morphe_loop_video_range_toast_on">Herhalende %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ongeldige tydperk</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Wys beeld-in-beeld-oorlegknoppie</string>
+  <string name="morphe_pip_button_flyout_title">Wys beeld-in-beeld-uitspringknoppie</string>
+  <string name="morphe_pip_button_flyout_name">Skakel oor na beeld-in-beeld</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Laai Speel alle knoppie</string>
   <string name="morphe_play_all_button_summary">"Tik om 'n sn lys van alle video's van kanaal te genereer, tik en hou om ongedaan te maak
@@ -639,6 +643,8 @@ Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkli
   <string name="morphe_swipe_volume_distance_title">Volume-veegsensitiwiteit</string>
   <string name="morphe_swipe_volume_distance_summary">Hoër waardes vereis meer veegbewegings per volume-stap.</string>
   <string name="morphe_swipe_volume_steps_title">Volume-stappe</string>
+  <string name="morphe_volume_boost_title">Volumeversterking</string>
+  <string name="morphe_volume_boost_summary">Om verby die maksimum volume op te vee, verhoog dit, wat harde klank kan vervorm</string>
   <string name="morphe_swipe_volume_steps_entry_default">Toestelstandaard</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Helderheid swiepsensitiwiteit</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Hoër waardes vereis meer swiep per helderheidsvlak</string>

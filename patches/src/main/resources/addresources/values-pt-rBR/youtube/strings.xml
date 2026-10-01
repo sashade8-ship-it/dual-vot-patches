@@ -497,6 +497,10 @@ Sua chave de API nunca deve ser compartilhada. Qualquer pessoa com acesso a ela 
   <string name="morphe_loop_video_range_clear">Limpar</string>
   <string name="morphe_loop_video_range_toast_on">Repetindo %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Tempo inserido inválido</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Mostrar botão de sobreposição do Picture-in-picture</string>
+  <string name="morphe_pip_button_flyout_title">Mostrar botão de menu flutuante do Picture-in-picture</string>
+  <string name="morphe_pip_button_flyout_name">Mudar para o Picture-in-picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Mostrar botão Reproduzir tudo</string>
   <string name="morphe_play_all_button_summary">"Toque para gerar uma playlist de todos os vídeos do canal, toque e segure para desfazer
@@ -638,6 +642,8 @@ Para corrigir isso, ative 'Falsificar streams de vídeo' e altere o 'Cliente pad
   <string name="morphe_swipe_volume_distance_title">Sensibilidade ao deslizar o volume</string>
   <string name="morphe_swipe_volume_distance_summary">Valores mais altos exigem mais deslizes por etapa de volume</string>
   <string name="morphe_swipe_volume_steps_title">Etapas de volume</string>
+  <string name="morphe_volume_boost_title">Aumento de volume</string>
+  <string name="morphe_volume_boost_summary">Deslizar para cima além do volume máximo aumenta o volume, o que pode distorcer áudio alto</string>
   <string name="morphe_swipe_volume_steps_entry_default">Padrão do dispositivo</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensibilidade ao deslizar o brilho</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Valores maiores exigem deslizar mais para cada mudança de brilho</string>

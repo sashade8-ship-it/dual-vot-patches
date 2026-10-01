@@ -498,6 +498,10 @@ API klíč by se nikdy neměl sdílet. Kdokoli s přístupem k němu může pou�
   <string name="morphe_loop_video_range_clear">Vymazat</string>
   <string name="morphe_loop_video_range_toast_on">Opakování %1$s – %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Zadán neplatný čas</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Zobrazit překryvné tlačítko pro obraz v obraze</string>
+  <string name="morphe_pip_button_flyout_title">Zobrazit vyskakovací tlačítko pro obraz v obraze</string>
+  <string name="morphe_pip_button_flyout_name">Přepnout na obraz v obraze</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Zobrazit tlačítko Přehrát vše</string>
   <string name="morphe_play_all_button_summary">"Klepnutím vygenerujete seznam přehrávání všech videí z kanálu, podržením zrušíte
@@ -639,6 +643,8 @@ Chcete-li to opravit, zapněte 'Spoof video streams' a změňte 'Default client'
   <string name="morphe_swipe_volume_distance_title">Citlivost přejetí hlasitosti</string>
   <string name="morphe_swipe_volume_distance_summary">Vyšší hodnoty vyžadují více přejetí na krok hlasitosti</string>
   <string name="morphe_swipe_volume_steps_title">Kroky hlasitosti</string>
+  <string name="morphe_volume_boost_title">Zesílení hlasitosti</string>
+  <string name="morphe_volume_boost_summary">Přejetím nahoru za maximální hlasitost ji zesílíte, což může zkreslit hlasitý zvuk</string>
   <string name="morphe_swipe_volume_steps_entry_default">Výchozí nastavení zařízení</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Citlivost přejetí jasu</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Vyšší hodnoty vyžadují více přejetí pro každý krok jasu</string>

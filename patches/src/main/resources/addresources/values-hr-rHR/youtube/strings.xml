@@ -500,6 +500,10 @@ Vaš API ključ nikada ne smijete dijeliti. Bilo tko s pristupom njemu može kor
   <string name="morphe_loop_video_range_clear">Izbriši</string>
   <string name="morphe_loop_video_range_toast_on">Petlja %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Neispravan vremenski raspon</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Prikaži gumb preklopa za sliku u slici</string>
+  <string name="morphe_pip_button_flyout_title">Prikaži iskočni gumb za sliku u slici</string>
+  <string name="morphe_pip_button_flyout_name">Prebaci na sliku u slici</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Prikaži tipku Reproduciraj sve</string>
   <string name="morphe_play_all_button_summary">"Dodirnite za generiranje popisa pjesama, dodirnite i držite da biste poništili
@@ -641,6 +645,8 @@ Da biste to popravili, uključite \"Lažiranje video streamova\" i promijenite \
   <string name="morphe_swipe_volume_distance_title">Osjetljivost klizanja za glasnoću</string>
   <string name="morphe_swipe_volume_distance_summary">Veće vrijednosti zahtijevaju više klizanja po koraku glasnoće</string>
   <string name="morphe_swipe_volume_steps_title">Koraci glasnoće</string>
+  <string name="morphe_volume_boost_title">Pojačanje glasnoće</string>
+  <string name="morphe_volume_boost_summary">Povlačenjem prema gore preko maksimalne glasnoće pojačava se zvuk, što može izobličiti glasan audio</string>
   <string name="morphe_swipe_volume_steps_entry_default">Zadano za uređaj</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Osjetljivost povlačenja svjetline</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Veće vrijednosti zahtijevaju više povlačenja po koraku svjetline</string>

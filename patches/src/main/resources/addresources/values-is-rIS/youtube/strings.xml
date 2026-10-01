@@ -498,6 +498,10 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_loop_video_range_clear">Hreinsa</string>
   <string name="morphe_loop_video_range_toast_on">Hliðun %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ógilt tímabil</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Sýna mynd-í-mynd yfirlagshnapp</string>
+  <string name="morphe_pip_button_flyout_title">Sýna mynd-í-mynd sprettigluggahnapp</string>
+  <string name="morphe_pip_button_flyout_name">Skipta yfir í mynd-í-mynd</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Sýnir Spila allt hnappinn</string>
   <string name="morphe_play_all_button_summary">"Tap til að hrista allar myndasida í reit, tap og haltu til að aftur"</string>
@@ -637,6 +641,8 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <string name="morphe_swipe_volume_distance_title">Næmi hljóðstyrksstrokunar</string>
   <string name="morphe_swipe_volume_distance_summary">Hærri gildi krefjast meiri strokunar fyrir hvert hljóðstyrksþrep.</string>
   <string name="morphe_swipe_volume_steps_title">Hljóðstyrksþrep</string>
+  <string name="morphe_volume_boost_title">Hljóðstyrkisstyrking</string>
+  <string name="morphe_volume_boost_summary">Þegar þú strýkur upp fram yfir hámarkshljóðstyrkinn eykst hljóðstyrkurinn enn frekar, sem getur afbakað hávært hljóð</string>
   <string name="morphe_swipe_volume_steps_entry_default">Sjálfgefið fyrir tækið</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Áframbreytingar á skærleika</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Hærri skilvirki krefjast meira dýfbjarg á breytingar</string>
@@ -1198,6 +1204,9 @@ Bankaðu hér til að opna DeArrow.ajay.app"</string>
   <!-- video.buffer.playbackBufferPatch -->
   <string name="morphe_playback_buffer_size_title">Spilunarbiðminnisstærð</string>
   <string name="morphe_playback_buffer_size_entry_default">Sjálfgefið</string>
+  <string name="morphe_playback_buffer_size_entry_low">Lág</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Miðlungs</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Hámark</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Sjálfvirkt</string>

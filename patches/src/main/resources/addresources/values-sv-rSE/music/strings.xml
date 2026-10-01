@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Uppdatera värdens Jam-patch för att använda paus och återuppta.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Uppdatera värdens Jam-patch för att använda paus och återuppta</string>
   <string name="morphe_music_jam_probe_title">Jam-ködelning</string>
-  <string name="morphe_music_jam_probe_summary">Var värd eller gå med i en närliggande Jam och redigera dess kö via Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Var värd för eller gå med i en närliggande Jam och redigera dess kö via Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Aktivera Jam-ködelning</string>
-  <string name="morphe_music_jam_enabled_summary">Aktiverar Jam-integreringen efter att YouTube Music startas om.</string>
+  <string name="morphe_music_jam_enabled_summary">Aktiverar Jam-integreringen efter att YouTube Music startas om</string>
   <string name="morphe_music_jam_download_title">Ladda ner Jam Layer för att få det att fungera.</string>
-  <string name="morphe_music_jam_download_summary">Öppna den senaste Jam Layer-versionen i din webbläsare.</string>
+  <string name="morphe_music_jam_download_summary">Öppna den senaste Jam Layer-utgåvan i din webbläsare</string>
   <string name="morphe_music_jam_controls_title">Jam-kontroller</string>
-  <string name="morphe_music_jam_controls_summary">Var värd eller gå med i en närliggande Jam och hantera sessionen.</string>
+  <string name="morphe_music_jam_controls_summary">Var värd för eller gå med i en närliggande Jam och hantera sessionen</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer-paket</string>
-  <string name="morphe_music_jam_companion_package_summary">Välj den installerade kompanjonappen som används för delning av närliggande kö.</string>
-  <string name="morphe_music_jam_package_message">Använd ett installerat kompanjonpaket. Ihopparningen kräver ditt godkännande och en lokal kapabilitetstoken.</string>
+  <string name="morphe_music_jam_companion_package_summary">Välj den installerade följeslagsappen som används för att dela kö i närheten</string>
+  <string name="morphe_music_jam_package_message">Använd ett installerat följeslagspaket. Parkoppling kräver ditt godkännande och en lokal kapabilitetstoken</string>
   <string name="morphe_music_jam_wifi_title">Sätta på Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">Sätt på Wi-Fi och försök sedan starta eller gå med i Jamen igen.</string>
+  <string name="morphe_music_jam_wifi_message">Aktivera Wi-Fi och försök sedan starta eller gå med i Jam igen</string>
   <string name="morphe_music_jam_wifi_settings">Öppna Wi-Fi-inställningar</string>
   <string name="morphe_music_jam_cancel">Avbryt</string>
   <string name="morphe_music_jam_use_package">Använd paket</string>
   <string name="morphe_music_jam_invalid_package">Ange ett giltigt Android-paketnamn</string>
-  <string name="morphe_music_jam_package_saved">Paket sparat. Konfigurera Jam Layer för att ansluta.</string>
+  <string name="morphe_music_jam_package_saved">Paketet har sparats. Ställ in Jam Layer för att ansluta</string>
   <string name="morphe_music_jam_disconnected">Jam frånkopplad</string>
   <string name="morphe_music_jam_enable_layer_first">Aktivera Jam Layer först</string>
   <string name="morphe_music_jam_enable_patch_first">Aktivera Jam-ködelning i inställningarna och starta om YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Installera det valda Jam Layer-paketet först</string>
-  <string name="morphe_music_jam_join_hint">Ange koden som visas på värden. Wi-Fi Aware kan ansluta närliggande enheter även om deras LAN skiljer sig.</string>
+  <string name="morphe_music_jam_join_hint">Ange koden som visas på värden. Wi-Fi Aware kan ansluta närliggande enheter även när deras LAN skiljer sig åt</string>
   <string name="morphe_music_jam_join_with_code">Gå med med en kod</string>
   <string name="morphe_music_jam_join">Gå med</string>
   <string name="morphe_music_jam_scan_qr">Skanna QR</string>

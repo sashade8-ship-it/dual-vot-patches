@@ -498,6 +498,10 @@ Kunci API Anda tidak boleh dibagikan. Siapa pun yang memiliki akses ke kunci ter
   <string name="morphe_loop_video_range_clear">Hapus</string>
   <string name="morphe_loop_video_range_toast_on">Melakukan perulangan %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Rentang waktu tidak sah</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Tampilkan tombol overlay Picture-in-picture</string>
+  <string name="morphe_pip_button_flyout_title">Tampilkan tombol flyout Picture-in-picture</string>
+  <string name="morphe_pip_button_flyout_name">Beralih ke Picture-in-picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Tampilkan tombol Putar semua</string>
   <string name="morphe_play_all_button_summary">"Ketuk untuk membuat daftar putar dari semua video dari saluran, ketuk dan tahan untuk membatalkan
@@ -639,6 +643,8 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
   <string name="morphe_swipe_volume_distance_title">Sensitivitas volume usap</string>
   <string name="morphe_swipe_volume_distance_summary">Nilai yang lebih tinggi memerlukan lebih banyak gesekan per langkah volume</string>
   <string name="morphe_swipe_volume_steps_title">Langkah volume</string>
+  <string name="morphe_volume_boost_title">Penguat volume</string>
+  <string name="morphe_volume_boost_summary">Menggeser ke atas melewati volume maksimum akan meningkatkannya, yang dapat menyebabkan distorsi pada audio yang keras</string>
   <string name="morphe_swipe_volume_steps_entry_default">Default perangkat</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensitivitas usap kecerahan</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Nilai yang lebih tinggi memerlukan lebih banyak usapan per langkah kecerahan</string>

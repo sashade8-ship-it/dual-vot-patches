@@ -498,6 +498,10 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">Διαγραφή</string>
   <string name="morphe_loop_video_range_toast_on">Επανάληψη %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Δόθηκε μη έγκυρος χρόνος</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Εμφάνιση κουμπιού επικάλυψης για εικόνα σε εικόνα</string>
+  <string name="morphe_pip_button_flyout_title">Εμφάνιση κουμπιού αναδυόμενου μενού για εικόνα σε εικόνα</string>
+  <string name="morphe_pip_button_flyout_name">Μετάβαση σε εικόνα σε εικόνα</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Απαιτείται πίεση και κράτημα πριν αναγνωριστεί μια χειρονομία σάρωσης</string>
   <string name="morphe_play_all_button_summary">"Πατήστε για να δημιουργήσετε μια λίστα αναπαραγωγής με όλα τα βίντεο από το κανάλι, πατήστε και κρατήστε για να αναιρέσετε
@@ -639,6 +643,8 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_volume_distance_title">Ευαισθησία σάρωσης έντασης ήχου</string>
   <string name="morphe_swipe_volume_distance_summary">Οι υψηλότερες τιμές απαιτούν περισσότερο σύρσιμο ανά βήμα έντασης.</string>
   <string name="morphe_swipe_volume_steps_title">Βήματα έντασης</string>
+  <string name="morphe_volume_boost_title">Ενίσχυση έντασης</string>
+  <string name="morphe_volume_boost_summary">Το σάρωμα προς τα πάνω πέρα από τη μέγιστη ένταση την ενισχύει, κάτι που μπορεί να παραμορφώσει τον δυνατό ήχο</string>
   <string name="morphe_swipe_volume_steps_entry_default">Προεπιλογή συσκευής</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Ευαισθησία σάρωσης φωτεινότητας</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Υψηλότερες τιμές απαιτούν περισσότερες σαρώσεις ανά βήμα φωτεινότητας</string>
@@ -1188,6 +1194,9 @@ Second \"item\" text"</string>
   <!-- video.buffer.playbackBufferPatch -->
   <string name="morphe_playback_buffer_size_title">Μέγεθος buffer αναπαραγωγής</string>
   <string name="morphe_playback_buffer_size_entry_default">Προεπιλογή</string>
+  <string name="morphe_playback_buffer_size_entry_low">Χαμηλό</string>
+  <string name="morphe_playback_buffer_size_entry_medium">Μεσαίο</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">Μέγιστο</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">Αυτόματη</string>

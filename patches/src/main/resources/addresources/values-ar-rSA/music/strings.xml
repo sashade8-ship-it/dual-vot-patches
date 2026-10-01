@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">حدِّث تصحيح Jam الخاص بالمضيف لاستخدام الإيقاف المؤقت والاستئناف.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">قم بتحديث تصحيح Jam الخاص بالمضيف لاستخدام الإيقاف المؤقت والاستئناف</string>
   <string name="morphe_music_jam_probe_title">مشاركة قائمة انتظار Jam</string>
-  <string name="morphe_music_jam_probe_summary">استضف Jam قريبًا أو انضم إليه وعدّل قائمة انتظاره من خلال Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">استضف أو انضم إلى جلسة Jam قريبة وعدّل قائمة الانتظار الخاصة بها عبر Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">تفعيل مشاركة قائمة انتظار Jam</string>
-  <string name="morphe_music_jam_enabled_summary">يُفعّل تكامل Jam بعد إعادة تشغيل YouTube Music.</string>
+  <string name="morphe_music_jam_enabled_summary">يفعّل تكامل Jam بعد إعادة تشغيل YouTube Music</string>
   <string name="morphe_music_jam_download_title">نزّل Jam Layer ليعمل.</string>
-  <string name="morphe_music_jam_download_summary">افتح أحدث إصدار من Jam Layer في متصفحك.</string>
+  <string name="morphe_music_jam_download_summary">افتح أحدث إصدار من Jam Layer في متصفحك</string>
   <string name="morphe_music_jam_controls_title">أدوات التحكم في Jam</string>
-  <string name="morphe_music_jam_controls_summary">استضف Jam قريبًا أو انضم إليه وأدر الجلسة.</string>
+  <string name="morphe_music_jam_controls_summary">استضف أو انضم إلى جلسة Jam قريبة وأدر الجلسة</string>
   <string name="morphe_music_jam_companion_package_title">حزمة Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">اختر التطبيق المصاحب المثبّت المستخدم لمشاركة قائمة الانتظار بين الأجهزة القريبة.</string>
-  <string name="morphe_music_jam_package_message">استخدم حزمة مصاحبة مثبّتة. يتطلب الإقران موافقتك ورمز قدرة محليًا.</string>
+  <string name="morphe_music_jam_companion_package_summary">اختر التطبيق المصاحب المثبّت المستخدم لمشاركة قائمة الانتظار مع الأجهزة القريبة</string>
+  <string name="morphe_music_jam_package_message">استخدم حزمة مصاحبة مثبّتة. يتطلب الإقران موافقتك ورمز قدرة محلية</string>
   <string name="morphe_music_jam_wifi_title">هل تريد تشغيل Wi-Fi؟</string>
-  <string name="morphe_music_jam_wifi_message">شغّل Wi-Fi، ثم حاول بدء Jam أو الانضمام إليه مرة أخرى.</string>
+  <string name="morphe_music_jam_wifi_message">شغّل Wi-Fi، ثم حاول بدء جلسة Jam أو الانضمام إليها مرة أخرى</string>
   <string name="morphe_music_jam_wifi_settings">فتح إعدادات Wi-Fi</string>
   <string name="morphe_music_jam_cancel">إلغاء</string>
   <string name="morphe_music_jam_use_package">استخدام الحزمة</string>
   <string name="morphe_music_jam_invalid_package">أدخل اسم حزمة Android صالحًا.</string>
-  <string name="morphe_music_jam_package_saved">تم حفظ الحزمة. قم بإعداد Jam Layer للاتصال.</string>
+  <string name="morphe_music_jam_package_saved">تم حفظ الحزمة. قم بإعداد Jam Layer للاتصال</string>
   <string name="morphe_music_jam_disconnected">انقطع اتصال Jam</string>
   <string name="morphe_music_jam_enable_layer_first">فعّل Jam Layer أولاً</string>
   <string name="morphe_music_jam_enable_patch_first">فعّل مشاركة قائمة انتظار Jam في الإعدادات، ثم أعد تشغيل YouTube Music.</string>
   <string name="morphe_music_jam_install_layer_first">ثبّت حزمة Jam Layer المحددة أولاً</string>
-  <string name="morphe_music_jam_join_hint">أدخل الرمز المعروض على المضيف. يمكن لـ Wi-Fi Aware توصيل الأجهزة القريبة حتى عندما تختلف شبكات LAN الخاصة بها.</string>
+  <string name="morphe_music_jam_join_hint">أدخل الرمز المعروض على المضيف. يمكن لـ Wi-Fi Aware توصيل الأجهزة القريبة حتى عندما تختلف شبكات LAN الخاصة بها</string>
   <string name="morphe_music_jam_join_with_code">انضم باستخدام رمز</string>
   <string name="morphe_music_jam_join">انضمام</string>
   <string name="morphe_music_jam_scan_qr">مسح رمز QR</string>

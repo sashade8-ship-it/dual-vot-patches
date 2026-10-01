@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Actualizează patch-ul Jam al gazdei pentru a folosi pauza și reluarea.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Actualizează patch-ul Jam al gazdei pentru a folosi pauza și reluarea</string>
   <string name="morphe_music_jam_probe_title">Partajarea cozii Jam</string>
-  <string name="morphe_music_jam_probe_summary">Găzduiește sau alătură-te unei sesiuni Jam din apropiere și editează-i coada prin Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Găzduiește sau alătură-te unui Jam din apropiere și editează-i coada de redare prin Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Activează partajarea cozii Jam</string>
-  <string name="morphe_music_jam_enabled_summary">Activează integrarea Jam după repornirea YouTube Music.</string>
+  <string name="morphe_music_jam_enabled_summary">Activează integrarea Jam după repornirea YouTube Music</string>
   <string name="morphe_music_jam_download_title">Descarcă Jam Layer pentru a-l face să funcționeze</string>
-  <string name="morphe_music_jam_download_summary">Deschide cea mai recentă versiune a Jam Layer în browser.</string>
+  <string name="morphe_music_jam_download_summary">Deschide cea mai recentă versiune Jam Layer în browser</string>
   <string name="morphe_music_jam_controls_title">Comenzi Jam</string>
-  <string name="morphe_music_jam_controls_summary">Găzduiește sau alătură-te unei sesiuni Jam din apropiere și gestionează sesiunea.</string>
+  <string name="morphe_music_jam_controls_summary">Găzduiește sau alătură-te unui Jam din apropiere și gestionează sesiunea</string>
   <string name="morphe_music_jam_companion_package_title">Pachetul Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Alege aplicația parteneră instalată, folosită pentru partajarea cozii în apropiere.</string>
-  <string name="morphe_music_jam_package_message">Folosește un pachet partener instalat. Asocierea necesită aprobarea ta și un token local de capabilitate.</string>
+  <string name="morphe_music_jam_companion_package_summary">Alege aplicația companion instalată folosită pentru partajarea cozii de redare cu dispozitivele din apropiere</string>
+  <string name="morphe_music_jam_package_message">Folosește un pachet companion instalat. Asocierea necesită aprobarea ta și un token local de capabilitate</string>
   <string name="morphe_music_jam_wifi_title">Activezi Wi-Fi-ul?</string>
-  <string name="morphe_music_jam_wifi_message">Activează Wi-Fi-ul, apoi încearcă din nou să pornești sau să te alături sesiunii Jam.</string>
+  <string name="morphe_music_jam_wifi_message">Activează Wi-Fi, apoi încearcă din nou să pornești sau să te alături unui Jam</string>
   <string name="morphe_music_jam_wifi_settings">Deschide setările Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Anulează</string>
   <string name="morphe_music_jam_use_package">Folosește pachetul</string>
   <string name="morphe_music_jam_invalid_package">Introdu un nume de pachet Android valid</string>
-  <string name="morphe_music_jam_package_saved">Pachet salvat. Configurează Jam Layer pentru a te conecta.</string>
+  <string name="morphe_music_jam_package_saved">Pachet salvat. Configurează Jam Layer pentru a te conecta</string>
   <string name="morphe_music_jam_disconnected">Jam deconectat</string>
   <string name="morphe_music_jam_enable_layer_first">Activează mai întâi Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">Activează partajarea cozii Jam din setări, apoi repornește YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Instalează mai întâi pachetul Jam Layer selectat</string>
-  <string name="morphe_music_jam_join_hint">Introdu codul afișat pe gazdă. Wi-Fi Aware poate conecta dispozitivele din apropiere chiar și atunci când rețelele lor locale diferă.</string>
+  <string name="morphe_music_jam_join_hint">Introdu codul afișat pe gazdă. Wi-Fi Aware poate conecta dispozitivele din apropiere chiar și atunci când rețelele lor LAN diferă</string>
   <string name="morphe_music_jam_join_with_code">Alătură-te cu un cod</string>
   <string name="morphe_music_jam_join">Alătură-te</string>
   <string name="morphe_music_jam_scan_qr">Scanează codul QR</string>

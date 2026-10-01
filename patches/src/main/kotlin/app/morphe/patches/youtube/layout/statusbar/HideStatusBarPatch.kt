@@ -15,6 +15,7 @@ import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.shared.YouTubeActivityOnCreateFingerprint
+import app.morphe.util.insertLiteralOverride
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/HideStatusBarPatch;"
 
@@ -39,5 +40,13 @@ val hideStatusBarPatch = bytecodePatch(
             0,
             "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->initialize(Landroid/app/Activity;)V",
         )
+
+        // Top bars are laid out under the hidden status bar and become invisible or clipped.
+        StatusBarInsetsFeatureFlagFingerprint.matchAll().forEach {
+            it.method.insertLiteralOverride(
+                it.instructionMatches.first().index,
+                "$EXTENSION_CLASS->useStatusBarInsetsFeatureFlag(Z)Z"
+            )
+        }
     }
 }

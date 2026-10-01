@@ -498,6 +498,10 @@ Din API-nøgle bør aldrig deles. Enhver med adgang til den kan bruge dine OpenR
   <string name="morphe_loop_video_range_clear">Ryd</string>
   <string name="morphe_loop_video_range_toast_on">Looping %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ugyldigt tidsinterval</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Vis billede-i-billede-overlay-knap</string>
+  <string name="morphe_pip_button_flyout_title">Vis billede-i-billede-flyout-knap</string>
+  <string name="morphe_pip_button_flyout_name">Skift til billede-i-billede</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Kræver tryk og hold, før en strygebevægelse genkendes</string>
   <string name="morphe_play_all_button_summary">"Tryk for at generere en playliste over alle videoer fra kanalen, tryk og hold for at fortryde
@@ -639,6 +643,8 @@ For at løse dette skal du slå 'Spoof video streams' til og ændre 'Standardkli
   <string name="morphe_swipe_volume_distance_title">Lydstyrke strygefølsomhed</string>
   <string name="morphe_swipe_volume_distance_summary">Højere værdier kræver mere strygning pr. lydstyrketrin.</string>
   <string name="morphe_swipe_volume_steps_title">Lydstyrketrin</string>
+  <string name="morphe_volume_boost_title">Lydstyrkeboost</string>
+  <string name="morphe_volume_boost_summary">Hvis du stryger op forbi maksimal lydstyrke, forstærkes lyden, hvilket kan forvrænge høj lyd</string>
   <string name="morphe_swipe_volume_steps_entry_default">Enhedens standard</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Lysstyrke strygefølsomhed</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Højere værdier kræver flere strygninger pr. lysstyrketrin</string>

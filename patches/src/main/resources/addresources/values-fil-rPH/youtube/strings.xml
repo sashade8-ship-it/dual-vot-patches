@@ -498,6 +498,10 @@ Hindi dapat ibahagi ang iyong API key. Sinumang may access dito ay maaaring guma
   <string name="morphe_loop_video_range_clear">Alisin</string>
   <string name="morphe_loop_video_range_toast_on">Pag-uulit %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Hindi balido ang saklaw ng oras</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Ipakita ang button ng overlay ng Picture-in-picture</string>
+  <string name="morphe_pip_button_flyout_title">Ipakita ang button ng flyout ng Picture-in-picture</string>
+  <string name="morphe_pip_button_flyout_name">Lumipat sa Picture-in-picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Ipakita ang button na magpatugtog ng lahat</string>
   <string name="morphe_play_all_button_summary">"I-tap upang makabuo ng playlist ng lahat ng mga video mula sa channel, i-tap at hawakan upang i-undo
@@ -639,6 +643,8 @@ Para ayusin ito, i-on ang 'I-spoof ang mga video stream' at baguhin ang 'Default
   <string name="morphe_swipe_volume_distance_title">Sensitivity ng pag-swipe ng volume</string>
   <string name="morphe_swipe_volume_distance_summary">Kapag mas mataas ang value, mas maraming swipe ang kailangan para madagdagan ng isang level ang volume</string>
   <string name="morphe_swipe_volume_steps_title">Mga hakbang ng volume</string>
+  <string name="morphe_volume_boost_title">Pagpapalakas ng volume</string>
+  <string name="morphe_volume_boost_summary">Ang pag-swipe pataas nang lampas sa pinakamataas na volume ay nagpapalakas nito, na maaaring mag-distort ng malakas na audio</string>
   <string name="morphe_swipe_volume_steps_entry_default">Default ng device</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Sensitibidad ng paggalaw ng liwanag</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Ang mas mataas na halaga ay nangangailangan ng mas maraming paggalaw sa bawat hakbang ng liwanag</string>

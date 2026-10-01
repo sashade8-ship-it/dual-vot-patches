@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">I-update ang Jam patch ng host upang gumamit ng pause at resume.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">I-update ang Jam patch ng host para gamitin ang pause at resume</string>
   <string name="morphe_music_jam_probe_title">Pagbabahagi ng queue ng Jam</string>
-  <string name="morphe_music_jam_probe_summary">Mag-host o sumali sa kalapit na Jam at i-edit ang queue nito sa pamamagitan ng Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Mag-host o sumali sa kalapit na Jam at i-edit ang queue nito sa pamamagitan ng Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">I-enable ang pagbabahagi ng queue ng Jam</string>
-  <string name="morphe_music_jam_enabled_summary">Pinapagana ang Jam integration pagkatapos i-restart ang YouTube Music.</string>
+  <string name="morphe_music_jam_enabled_summary">Pinapagana ang pagsasama ng Jam pagkatapos mag-restart ang YouTube Music</string>
   <string name="morphe_music_jam_download_title">I-download ang Jam Layer para gumana</string>
-  <string name="morphe_music_jam_download_summary">Buksan ang pinakabagong bersyon ng Jam Layer sa iyong browser.</string>
+  <string name="morphe_music_jam_download_summary">Buksan ang pinakabagong release ng Jam Layer sa iyong browser</string>
   <string name="morphe_music_jam_controls_title">Mga kontrol sa Jam</string>
-  <string name="morphe_music_jam_controls_summary">Mag-host o sumali sa kalapit na Jam at pamahalaan ang session.</string>
+  <string name="morphe_music_jam_controls_summary">Mag-host o sumali sa kalapit na Jam at pamahalaan ang session</string>
   <string name="morphe_music_jam_companion_package_title">Package ng Jam Layer</string>
-  <string name="morphe_music_jam_companion_package_summary">Piliin ang naka-install na kasamang app na ginagamit para sa pagbabahagi ng queue sa mga kalapit na device.</string>
-  <string name="morphe_music_jam_package_message">Gumamit ng naka-install na kasamang package. Ang pagpapares ay nangangailangan ng iyong pag-apruba at isang lokal na capability token.</string>
+  <string name="morphe_music_jam_companion_package_summary">Piliin ang naka-install na companion app na ginagamit para sa pagbabahagi ng queue sa mga kalapit na device</string>
+  <string name="morphe_music_jam_package_message">Gumamit ng naka-install na companion package. Ang pagpapares ay nangangailangan ng iyong pag-apruba at lokal na capability token</string>
   <string name="morphe_music_jam_wifi_title">I-on ang Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">I-on ang Wi-Fi, pagkatapos subukang simulan o salihan muli ang Jam.</string>
+  <string name="morphe_music_jam_wifi_message">I-on ang Wi-Fi, pagkatapos ay subukang simulan o salihan muli ang Jam</string>
   <string name="morphe_music_jam_wifi_settings">Buksan ang mga setting ng Wi-Fi</string>
   <string name="morphe_music_jam_cancel">Ikansela</string>
   <string name="morphe_music_jam_use_package">Gamitin ang package</string>
   <string name="morphe_music_jam_invalid_package">Maglagay ng wastong pangalan ng Android package</string>
-  <string name="morphe_music_jam_package_saved">Na-save ang package. I-set up ang Jam Layer para kumonekta.</string>
+  <string name="morphe_music_jam_package_saved">Na-save ang package. I-set up ang Jam Layer para kumonekta</string>
   <string name="morphe_music_jam_disconnected">Nadiskonekta ang Jam</string>
   <string name="morphe_music_jam_enable_layer_first">I-enable muna ang Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">I-enable ang pagbabahagi ng queue ng Jam sa mga setting, pagkatapos i-restart ang YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">I-install muna ang napiling package ng Jam Layer</string>
-  <string name="morphe_music_jam_join_hint">Ilagay ang code na ipinapakita sa host. Maaaring ikonekta ng Wi-Fi Aware ang mga kalapit na device kahit magkaiba ang kanilang mga LAN.</string>
+  <string name="morphe_music_jam_join_hint">Ilagay ang code na ipinapakita sa host. Maaaring ikonekta ng Wi-Fi Aware ang mga kalapit na device kahit magkaiba ang kanilang mga LAN</string>
   <string name="morphe_music_jam_join_with_code">Sumali gamit ang code</string>
   <string name="morphe_music_jam_join">Sumali</string>
   <string name="morphe_music_jam_scan_qr">I-scan ang QR</string>

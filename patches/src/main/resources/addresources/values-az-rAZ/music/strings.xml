@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Fasilə veri və davam eti istifadə etmək üçün ev sahibinin Jam yamağını yenilə.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Fasilə veri və davam eti istifadə etmək üçün ev sahibinin Jam yamağını yenilə</string>
   <string name="morphe_music_jam_probe_title">Jam növbəsinin paylaşılması</string>
-  <string name="morphe_music_jam_probe_summary">Yaxınlıqdakı Jam-ə ev sahibliyi et yaxud qoşul və onun növbəsinə Jam Layer vasitəsilə düzəliş et.</string>
+  <string name="morphe_music_jam_probe_summary">Yaxınlıqdakı Jam-ə ev sahibliyi et yaxud qoşul və onun növbəsinə Jam Layer vasitəsilə düzəliş et</string>
   <string name="morphe_music_jam_enabled_title">Jam növbəsinin paylaşılmasını aktivləşdir</string>
-  <string name="morphe_music_jam_enabled_summary">YouTube Music yenidən başladıqdan sonra Jam inteqrasiyasını aktivləşdirir.</string>
+  <string name="morphe_music_jam_enabled_summary">YouTube Music yenidən başladıqdan sonra Jam inteqrasiyasını aktivləşdirir</string>
   <string name="morphe_music_jam_download_title">İşləməsi üçün Jam Layer-i yüklə</string>
-  <string name="morphe_music_jam_download_summary">Jam Layer-in ən son buraxılışını brauzerinizdə açın.</string>
+  <string name="morphe_music_jam_download_summary">Jam Layer-in ən son buraxılışını brauzerinizdə açın</string>
   <string name="morphe_music_jam_controls_title">Jam idarəetmələri</string>
-  <string name="morphe_music_jam_controls_summary">Yaxınlıqdakı Jam-ə ev sahibliyi et və ya qoşul, sessiyanı idarə et.</string>
+  <string name="morphe_music_jam_controls_summary">Yaxınlıqdakı Jam-ə ev sahibliyi et və ya qoşul, sessiyanı idarə et</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer paketi</string>
-  <string name="morphe_music_jam_companion_package_summary">Yaxınlıqdakı növbəni paylaşmaq üçün quraşdırılmış ortaq tətbiqi seç.</string>
-  <string name="morphe_music_jam_package_message">Quraşdırılmış ortaq paketi istifadə edin. Qoşalaşdırma sizin təsdiqinizi və yerli imkan tokenini tələb edir.</string>
+  <string name="morphe_music_jam_companion_package_summary">Yaxınlıqdakı növbəni paylaşmaq üçün quraşdırılmış ortaq tətbiqi seç</string>
+  <string name="morphe_music_jam_package_message">Quraşdırılmış ortaq paketi istifadə edin. Qoşalaşdırma sizin təsdiqinizi və yerli imkan tokenini tələb edir</string>
   <string name="morphe_music_jam_wifi_title">Wi-Fi açılsın?</string>
-  <string name="morphe_music_jam_wifi_message">Wi-Fi-ı açın, sonra Jam-i başlatmağı və ya ona qoşulmağı təkrar sınayın.</string>
+  <string name="morphe_music_jam_wifi_message">Wi-Fi-ı açın, sonra Jam-i başlatmağı və ya ona qoşulmağı təkrar sınayın</string>
   <string name="morphe_music_jam_wifi_settings">Wi-Fi tənzimləmələrini aç</string>
   <string name="morphe_music_jam_cancel">Ləğv et</string>
   <string name="morphe_music_jam_use_package">Paketi istifadə et</string>
   <string name="morphe_music_jam_invalid_package">Etibarlı Android paket adı daxil et</string>
-  <string name="morphe_music_jam_package_saved">Paket saxlanıldı. Bağlantı yaratmaq üçün Jam Layer-i quraşdırın.</string>
+  <string name="morphe_music_jam_package_saved">Paket saxlanıldı. Bağlantı yaratmaq üçün Jam Layer-i quraşdırın</string>
   <string name="morphe_music_jam_disconnected">Jam bağlantısı kəsildi</string>
   <string name="morphe_music_jam_enable_layer_first">Əvvəlcə Jam Layer-i aktivləşdir</string>
   <string name="morphe_music_jam_enable_patch_first">Tənzimləmələrdə Jam növbə paylaşımını aktivləşdirin, sonra YouTube Music-i yenidən başlat</string>
   <string name="morphe_music_jam_install_layer_first">Əvvəlcə seçilmiş Jam Layer paketini quraşdır</string>
-  <string name="morphe_music_jam_join_hint">Host-da göstərilən kodu daxil edin. Wi-Fi Aware fərqli LAN şəbəkələrində olsalar belə, yaxınlıqdakı cihazları qoşa bilir.</string>
+  <string name="morphe_music_jam_join_hint">Host-da göstərilən kodu daxil edin. Wi-Fi Aware fərqli LAN şəbəkələrində olsalar belə, yaxınlıqdakı cihazları qoşa bilir</string>
   <string name="morphe_music_jam_join_with_code">Kodla qoşul</string>
   <string name="morphe_music_jam_join">Qoşul</string>
   <string name="morphe_music_jam_scan_qr">QR-ı Skanla</string>

@@ -498,6 +498,10 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">נקה</string>
   <string name="morphe_loop_video_range_toast_on">חזרה על %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">ניתן זמן לא חוקי</string>
+  <!-- interaction.pip.pipButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">הצג לחצן שכבת-על של תמונה-בתמונה</string>
+  <string name="morphe_pip_button_flyout_title">הצג לחצן תפריט נשלף של תמונה-בתמונה</string>
+  <string name="morphe_pip_button_flyout_name">עבור לתמונה-בתמונה</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">זוכר את רמת הבהירות בעת כניסה או יציאה ממצב מסך מלא</string>
   <string name="morphe_play_all_button_summary">"הקש כדי ליצור רשימת השמעה של כל הסרטונים מהערוץ, הקש והחזק כדי לבטל
@@ -639,6 +643,8 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_volume_distance_title">רגישות החלקה בעוצמת הקול</string>
   <string name="morphe_swipe_volume_distance_summary">ערכים גבוהים יותר דורשים יותר החלקות לכל שלב עוצמת קול</string>
   <string name="morphe_swipe_volume_steps_title">שלבי עוצמת קול</string>
+  <string name="morphe_volume_boost_title">הגברת עוצמת הקול</string>
+  <string name="morphe_volume_boost_summary">כאשר מחליקים למעלה מעבר לעוצמת הקול המקסימלית, זה מגביר אותה, מה שעלול לעוות שמע חזק</string>
   <string name="morphe_swipe_volume_steps_entry_default">ברירת מחדל של המכשיר</string>
   <string name="morphe_swipe_brightness_sensitivity_title">רגישות החלקה בבהירות</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">ערכים גבוהים יותר דורשים יותר החלקות לכל שלב בהירות</string>
@@ -1203,6 +1209,9 @@ Second \"item\" text"</string>
   <!-- video.buffer.playbackBufferPatch -->
   <string name="morphe_playback_buffer_size_title">גודל חיץ ההשמעה</string>
   <string name="morphe_playback_buffer_size_entry_default">ברירת מחדל</string>
+  <string name="morphe_playback_buffer_size_entry_low">נמוך</string>
+  <string name="morphe_playback_buffer_size_entry_medium">בינוני</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">מקסימלי</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">אוטומטי</string>

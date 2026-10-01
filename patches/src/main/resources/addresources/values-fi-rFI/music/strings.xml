@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Päivitä isännän Jam-päivitys käyttämään taukoa ja jatkamista.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Päivitä isännän Jam-patch käyttämään tauko- ja jatkotoimintoja</string>
   <string name="morphe_music_jam_probe_title">Jam-jonon jakaminen</string>
-  <string name="morphe_music_jam_probe_summary">Isännöi tai liity lähellä olevaan Jamiin ja muokkaa sen jonon Jam Layerin kautta.</string>
+  <string name="morphe_music_jam_probe_summary">Isännöi tai liity lähellä olevaan Jam-sessioon ja muokkaa sen jonoa Jam Layerin kautta</string>
   <string name="morphe_music_jam_enabled_title">Ota Jam-jonon jakaminen käyttöön</string>
-  <string name="morphe_music_jam_enabled_summary">Ottaa Jam-integraation käyttöön YouTube Musicin uudelleenkäynnistyksen jälkeen.</string>
+  <string name="morphe_music_jam_enabled_summary">Ottaa Jam-integraation käyttöön YouTube Musicin uudelleenkäynnistyksen jälkeen</string>
   <string name="morphe_music_jam_download_title">Lataa Jam Layer, jotta saat sen toimimaan.</string>
-  <string name="morphe_music_jam_download_summary">Avaa uusin Jam Layer -julkaisu selaimessasi.</string>
+  <string name="morphe_music_jam_download_summary">Avaa uusin Jam Layer -julkaisu selaimessasi</string>
   <string name="morphe_music_jam_controls_title">Jam-ohjaimet</string>
-  <string name="morphe_music_jam_controls_summary">Isännöi tai liity lähellä olevaan Jamiin ja hallinnoi istuntoa.</string>
+  <string name="morphe_music_jam_controls_summary">Isännöi tai liity lähellä olevaan Jam-sessioon ja hallinnoi istuntoa</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer -paketti</string>
-  <string name="morphe_music_jam_companion_package_summary">Valitse asennettu kumppanisovellus, jota käytetään lähellä olevan jonon jakamiseen.</string>
-  <string name="morphe_music_jam_package_message">Käytä asennettua kumppanipakettia. Pariliitos vaatii hyväksyntäsi ja paikallisen käyttöoikeustunnuksen.</string>
+  <string name="morphe_music_jam_companion_package_summary">Valitse asennettu kumppanisovellus, jota käytetään lähijonojen jakamiseen</string>
+  <string name="morphe_music_jam_package_message">Käytä asennettua kumppanipakettia. Pariliitoksen muodostaminen edellyttää hyväksyntääsi ja paikallista käyttöoikeustunnusta</string>
   <string name="morphe_music_jam_wifi_title">Kytke Wi-Fi päälle?</string>
-  <string name="morphe_music_jam_wifi_message">Kytke Wi-Fi päälle ja yritä sitten aloittaa tai liittyä Jamiin uudelleen.</string>
+  <string name="morphe_music_jam_wifi_message">Ota Wi-Fi käyttöön ja yritä sitten aloittaa Jam tai liittyä siihen uudelleen</string>
   <string name="morphe_music_jam_wifi_settings">Avaa Wi-Fi-asetukset</string>
   <string name="morphe_music_jam_cancel">Peruuta</string>
   <string name="morphe_music_jam_use_package">Käytä pakettia</string>
   <string name="morphe_music_jam_invalid_package">Anna kelvollinen Android-pakettinimi</string>
-  <string name="morphe_music_jam_package_saved">Paketti tallennettu. Määritä Jam Layer muodostamaan yhteys.</string>
+  <string name="morphe_music_jam_package_saved">Paketti tallennettu. Määritä Jam Layer muodostamaan yhteys</string>
   <string name="morphe_music_jam_disconnected">Jam-yhteys katkaistu</string>
   <string name="morphe_music_jam_enable_layer_first">Ota Jam Layer käyttöön ensin</string>
   <string name="morphe_music_jam_enable_patch_first">Ota Jam-jonon jakaminen käyttöön asetuksissa ja käynnistä sitten YouTube Music uudelleen</string>
   <string name="morphe_music_jam_install_layer_first">Asenna valittu Jam Layer -paketti ensin</string>
-  <string name="morphe_music_jam_join_hint">Anna isännällä näkyvä koodi. Wi-Fi Aware voi yhdistää lähellä olevat laitteet, vaikka niiden lähiverkot eroaisivat.</string>
+  <string name="morphe_music_jam_join_hint">Anna isäntälaitteessa näkyvä koodi. Wi-Fi Aware voi yhdistää lähellä olevat laitteet, vaikka niiden lähiverkot eroavat toisistaan</string>
   <string name="morphe_music_jam_join_with_code">Liity koodilla</string>
   <string name="morphe_music_jam_join">Liity</string>
   <string name="morphe_music_jam_scan_qr">Skannaa QR</string>
@@ -63,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_music_jam_updating">Päivitetään Jamia…</string>
   <string name="morphe_music_jam_finding_host">Etsitään isäntää Wi-Fi-verkosta…</string>
   <string name="morphe_music_jam_waiting_people">Odotetaan ihmisiä</string>
+  <string name="morphe_music_jam_one_connected">%d henkilö liittynyt</string>
+  <string name="morphe_music_jam_many_connected">%d henkilöä liittynyt</string>
   <string name="morphe_music_jam_code_expires">Anna tämä koodi lähellä olevassa laitteessa. Wi-Fi Aware toimii erillisten lähiverkkojen välillä, kun se on tuettu. Vanhenee %d minuutin kuluttua.</string>
   <string name="morphe_music_jam_seek_to">Siirry kohtaan %s?</string>
   <string name="morphe_music_jam_edits_open">Muokkaukset avoinna</string>

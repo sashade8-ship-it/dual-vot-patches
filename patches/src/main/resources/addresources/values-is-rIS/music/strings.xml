@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">Uppfærðu Jam-plástrann gestgjafans til að nota hlé og áframhald.</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">Uppfæra Jam-plástur gestgjafans til að nota hlé og halda áfram</string>
   <string name="morphe_music_jam_probe_title">Deiling Jam-biðraðar</string>
-  <string name="morphe_music_jam_probe_summary">Hýstu eða tengdu þig við Jam í nágrenninu og breyttu biðröð þess í gegnum Jam Layer.</string>
+  <string name="morphe_music_jam_probe_summary">Hýstu eða vertu með í nálægu Jam og breyttu biðröð þess í gegnum Jam Layer</string>
   <string name="morphe_music_jam_enabled_title">Virkja deilingu Jam-biðraðar</string>
-  <string name="morphe_music_jam_enabled_summary">Virkjar Jam-samþættinguna eftir að YouTube Music er endurræst.</string>
+  <string name="morphe_music_jam_enabled_summary">Virkjar Jam-samþættinguna eftir að YouTube Music er endurræst</string>
   <string name="morphe_music_jam_download_title">Sæktu Jam Layer til að fá þetta til að virka.</string>
-  <string name="morphe_music_jam_download_summary">Opnaðu nýjustu útgáfu Jam Layer í vafranum þínum.</string>
+  <string name="morphe_music_jam_download_summary">Opnaðu nýjustu Jam Layer-útgáfuna í vafranum þínum</string>
   <string name="morphe_music_jam_controls_title">Jam-stýringar</string>
-  <string name="morphe_music_jam_controls_summary">Hýstu eða tengdu þig við Jam í nágrenninu og stjórnaðu lotunni.</string>
+  <string name="morphe_music_jam_controls_summary">Hýstu eða vertu með í nálægu Jam og stjórnaðu lotunni</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer-pakki</string>
-  <string name="morphe_music_jam_companion_package_summary">Veldu uppsetta fylgiforritið sem notað er til að deila biðröð í nágrenninu.</string>
-  <string name="morphe_music_jam_package_message">Notaðu uppsettan fylgipakka. Pörun krefst samþykkis þíns og staðbundins virknimerkis.</string>
+  <string name="morphe_music_jam_companion_package_summary">Veldu uppsetta fylgiforritið sem notað er til að deila biðröð í nágrenninu</string>
+  <string name="morphe_music_jam_package_message">Notaðu uppsett fylgipakka. Pörun krefst samþykkis þíns og staðbundins virknitákns</string>
   <string name="morphe_music_jam_wifi_title">Kveikja á Wi-Fi?</string>
-  <string name="morphe_music_jam_wifi_message">Kveiktu á Wi-Fi og reyndu svo aftur að hefja eða tengjast Jam.</string>
+  <string name="morphe_music_jam_wifi_message">Kveiktu á Wi-Fi, reyndu síðan að hefja eða tengjast Jam aftur</string>
   <string name="morphe_music_jam_wifi_settings">Opna Wi-Fi-stillingar</string>
   <string name="morphe_music_jam_cancel">Hætta við</string>
   <string name="morphe_music_jam_use_package">Nota pakka</string>
   <string name="morphe_music_jam_invalid_package">Sláðu inn gilt Android-pakkanafn</string>
-  <string name="morphe_music_jam_package_saved">Pakki vistaður. Settu upp Jam Layer til að tengjast.</string>
+  <string name="morphe_music_jam_package_saved">Pakki vistaður. Settu upp Jam Layer til að tengjast</string>
   <string name="morphe_music_jam_disconnected">Jam aftengt</string>
   <string name="morphe_music_jam_enable_layer_first">Virkjaðu Jam Layer fyrst.</string>
   <string name="morphe_music_jam_enable_patch_first">Virkjaðu deilingu Jam-biðraðar í stillingum og endurræstu svo YouTube Music.</string>
   <string name="morphe_music_jam_install_layer_first">Settu upp valinn Jam Layer-pakka fyrst.</string>
-  <string name="morphe_music_jam_join_hint">Sláðu inn kóðann sem birtist hjá gestgjafanum. Wi-Fi Aware getur tengt tæki í nágrenninu jafnvel þótt staðarnetin þeirra séu ólík.</string>
+  <string name="morphe_music_jam_join_hint">Sláðu inn kóðann sem birtist á hýsilnum. Wi-Fi Aware getur tengt tæki í nágrenninu jafnvel þótt staðarnetin þeirra séu ólík</string>
   <string name="morphe_music_jam_join_with_code">Tengjast með kóða</string>
   <string name="morphe_music_jam_join">Tengjast</string>
   <string name="morphe_music_jam_scan_qr">Skanna QR</string>

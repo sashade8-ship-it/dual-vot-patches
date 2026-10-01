@@ -16,30 +16,31 @@ Second \"item\" text"</string>
 
 -->
 <resources>
-  <string name="morphe_music_jam_update_host_controls">更新主控端的 Jam 修補程式，以使用暫停和繼續功能。</string>
+  <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">更新主機的 Jam 修補程式以使用暫停與繼續</string>
   <string name="morphe_music_jam_probe_title">Jam 佇列分享</string>
-  <string name="morphe_music_jam_probe_summary">主持或加入附近的 Jam，並透過 Jam Layer 編輯其佇列。</string>
+  <string name="morphe_music_jam_probe_summary">主持或加入附近的 Jam 並透過 Jam Layer 編輯其佇列</string>
   <string name="morphe_music_jam_enabled_title">啟用 Jam 佇列分享</string>
-  <string name="morphe_music_jam_enabled_summary">在 YouTube Music 重新啟動後啟用 Jam 整合功能。</string>
+  <string name="morphe_music_jam_enabled_summary">YouTube Music 重新啟動後啟用 Jam 整合</string>
   <string name="morphe_music_jam_download_title">下載 Jam Layer 以開始使用</string>
-  <string name="morphe_music_jam_download_summary">在瀏覽器中開啟最新版的 Jam Layer。</string>
+  <string name="morphe_music_jam_download_summary">在瀏覽器中開啟最新的 Jam Layer 版本</string>
   <string name="morphe_music_jam_controls_title">Jam 控制項</string>
-  <string name="morphe_music_jam_controls_summary">主持或加入附近的 Jam，並管理工作階段。</string>
+  <string name="morphe_music_jam_controls_summary">主持或加入附近的 Jam 並管理工作階段</string>
   <string name="morphe_music_jam_companion_package_title">Jam Layer 套件</string>
-  <string name="morphe_music_jam_companion_package_summary">選擇用於附近佇列分享的已安裝配套應用程式。</string>
-  <string name="morphe_music_jam_package_message">使用已安裝的配套套件。配對需要你的核准和本機能力權杖。</string>
+  <string name="morphe_music_jam_companion_package_summary">選擇用於附近佇列共享的已安裝配套應用程式</string>
+  <string name="morphe_music_jam_package_message">使用已安裝的配套軟體包。配對需要你的批准和本機相容的Token。</string>
   <string name="morphe_music_jam_wifi_title">要開啟 Wi-Fi 嗎？</string>
-  <string name="morphe_music_jam_wifi_message">請開啟 Wi-Fi，然後再試著開始或加入 Jam。</string>
+  <string name="morphe_music_jam_wifi_message">開啟 Wi-Fi，然後再次嘗試發起或加入 Jam</string>
   <string name="morphe_music_jam_wifi_settings">開啟 Wi-Fi 設定</string>
   <string name="morphe_music_jam_cancel">取消</string>
   <string name="morphe_music_jam_use_package">使用套件</string>
   <string name="morphe_music_jam_invalid_package">輸入有效的 Android 套件名稱</string>
-  <string name="morphe_music_jam_package_saved">套件已儲存。設定 Jam Layer 以連線。</string>
+  <string name="morphe_music_jam_package_saved">已儲存軟體包。設定 Jam Layer 以進行連線</string>
   <string name="morphe_music_jam_disconnected">Jam 已中斷連線</string>
   <string name="morphe_music_jam_enable_layer_first">請先啟用 Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">請先在設定中啟用 Jam 佇列分享，然後重新啟動 YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">請先安裝所選的 Jam Layer 套件</string>
-  <string name="morphe_music_jam_join_hint">輸入主控端顯示的代碼。即使附近裝置的區域網路不同，Wi-Fi Aware 也能連接。</string>
+  <string name="morphe_music_jam_join_hint">輸入主機上顯示的代碼。Wi-Fi Aware 可以連線到附近的裝置，即使它們使用不同的 LAN。</string>
   <string name="morphe_music_jam_join_with_code">使用代碼加入</string>
   <string name="morphe_music_jam_join">加入</string>
   <string name="morphe_music_jam_scan_qr">掃描 QR Code</string>
