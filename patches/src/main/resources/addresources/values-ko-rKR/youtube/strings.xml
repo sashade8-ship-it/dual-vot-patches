@@ -500,7 +500,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_loop_video_range_invalid_time">잘못된 시간 범위입니다</string>
   <!-- interaction.pip.pipButtonPatch -->
   <string name="morphe_pip_button_overlay_title">PIP 모드 오버레이 버튼 표시하기</string>
-  <string name="morphe_pip_button_flyout_title">PIP 모드 버튼 표시하기</string>
+  <string name="morphe_pip_button_flyout_title">PIP 모드 메뉴 표시하기</string>
   <string name="morphe_pip_button_flyout_name">PIP 모드로 전환</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">모두 재생 버튼 표시하기</string>
@@ -1076,8 +1076,11 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_playback_in_feeds_entry_wifi_only">Wi-Fi 전용</string>
   <string name="morphe_playback_in_feeds_entry_off">사용 안함</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
-  <string name="morphe_restore_original_titles_title">원문 제목 복원하기</string>
-  <string name="morphe_restore_original_titles_summary">자동 번역된 동영상 제목, 동영상 설명 및 채널 설명 대신 원문 동영상 제목, 동영상 설명 및 채널 설명을 표시합니다</string>
+  <string name="morphe_restore_original_titles_title">원본 제목 복원하기</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">번역본</string>
+  <string name="morphe_restore_original_titles_type_entry_original">원본</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">DeArrow 번역본</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">DeArrow 원본</string>
   <string name="morphe_restore_original_titles_loading">제목을 불러오는 중…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">자동 피드 새로고침 비활성화하기</string>

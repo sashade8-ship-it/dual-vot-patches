@@ -8,13 +8,28 @@
 package app.morphe.patches.youtube.layout.statusbar
 
 import app.morphe.patcher.Fingerprint
-import app.morphe.patcher.literal
+import app.morphe.patcher.methodCall
+import com.android.tools.smali.dexlib2.AccessFlags
 
 /**
- * Present in all supported versions. 21.30+ inlines the flag check in many places.
+ * Shows the view drawn behind the status bar and sets its color.
  */
-internal object StatusBarInsetsFeatureFlagFingerprint : Fingerprint(
+internal object StatusBarBackgroundShowFingerprint : Fingerprint(
+    classFingerprint = Fingerprint(
+        accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+        returnType = "V",
+        parameters = listOf(),
+        filters = listOf(
+            methodCall(smali = "Landroid/view/View;->bringToFront()V"),
+            methodCall(smali = "Landroid/view/View;->getParent()Landroid/view/ViewParent;"),
+            methodCall(smali = "Landroid/view/View;->bringToFront()V")
+        )
+    ),
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("I"),
     filters = listOf(
-        literal(45400535L)
+        methodCall(smali = "Landroid/view/View;->setVisibility(I)V"),
+        methodCall(smali = "Landroid/view/View;->setBackgroundColor(I)V")
     )
 )

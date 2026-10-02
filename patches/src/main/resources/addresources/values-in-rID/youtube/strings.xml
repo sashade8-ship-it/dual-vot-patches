@@ -697,7 +697,7 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
   <string name="morphe_hide_ask_button_title">Sembunyikan tombol Tanya</string>
-  <string name="morphe_hide_channel_profile_button_title">Sembunyikan tombol saluran dan tombol berlangganan</string>
+  <string name="morphe_hide_channel_profile_button_title">Sembunyikan tombol saluran dan Subscribe</string>
   <string name="morphe_hide_channel_profile_button_summary">Menyembunyikan avatar saluran dan tombol Subscribe di awal bilah tindakan</string>
   <string name="morphe_hide_channel_profile_subscribe_button_title">Sembunyikan tombol Subscribe</string>
   <string name="morphe_hide_channel_profile_subscribe_button_summary">Menyembunyikan tombol Subscribe dan Gabung di samping avatar saluran di awal bilah tindakan</string>
@@ -1075,7 +1075,10 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_playback_in_feeds_entry_off">Nonaktif</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Pulihkan judul asli</string>
-  <string name="morphe_restore_original_titles_summary">Menampilkan judul video asli, deskripsi video, dan deskripsi saluran, bukan yang diterjemahkan otomatis</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Diterjemahkan</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Asli</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Diterjemahkan dengan DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Asli dengan DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Memuat judul…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Nonaktifkan penyegaran feed otomatis</string>

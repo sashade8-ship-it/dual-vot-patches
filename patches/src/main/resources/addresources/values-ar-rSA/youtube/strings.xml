@@ -502,8 +502,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_loop_video_range_toast_on">تكرار ‎%1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">الوقت المحدد غير صحيح</string>
   <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">إظهار زر تراكب صورة داخل صورة</string>
-  <string name="morphe_pip_button_flyout_title">إظهار زر القائمة المنسدلة لصورة داخل صورة</string>
+  <string name="morphe_pip_button_overlay_title">عرض زر عنصر صورة داخل صورة</string>
+  <string name="morphe_pip_button_flyout_title">عرض زر صورة داخل صورة في القائمة المنبثقة</string>
   <string name="morphe_pip_button_flyout_name">التبديل إلى صورة داخل صورة</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">عرض زر تشغيل الكل</string>
@@ -647,8 +647,8 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_swipe_volume_distance_title">حساسية تمرير مستوى الصوت</string>
   <string name="morphe_swipe_volume_distance_summary">تتطلب القيم الأعلى مزيدًا من التمرير لكل درجة مستوى الصوت</string>
   <string name="morphe_swipe_volume_steps_title">درجات مستوى الصوت</string>
-  <string name="morphe_volume_boost_title">تعزيز الصوت</string>
-  <string name="morphe_volume_boost_summary">التمرير لأعلى بعد تجاوز الحد الأقصى للصوت يزيده، مما قد يشوه الصوت العالي</string>
+  <string name="morphe_volume_boost_title">تضخيم الصوت</string>
+  <string name="morphe_volume_boost_summary">التمرير لأعلى بعد تجاوز الحد الأقصى للصوت يزيد مستوى الصوت، قد يتسبب بتشويه الصوت العالي</string>
   <string name="morphe_swipe_volume_steps_entry_default">إعداد الجهاز الافتراضي</string>
   <string name="morphe_swipe_brightness_sensitivity_title">حساسية تمرير مستوى السطوع</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">القيم الأعلى تتطلب التمرير أكثر لكل مستوى سطوع</string>
@@ -1080,7 +1080,10 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_playback_in_feeds_entry_off">متوقف</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">استعادة العناوين الأصلية</string>
-  <string name="morphe_restore_original_titles_summary">يعرض عناوين الفيديو الأصلية وأوصاف الفيديو وأوصاف القناة بدلًا من العناوين والأوصاف المترجمة تلقائيًا</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">مترجمة</string>
+  <string name="morphe_restore_original_titles_type_entry_original">الأصلية</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">تمت الترجمة باستخدام DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">العنوان الأصلي مع DeArrow</string>
   <string name="morphe_restore_original_titles_loading">جارٍ تحميل العنوان…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">تعطيل تحديث الخلاصة تلقائيًا</string>

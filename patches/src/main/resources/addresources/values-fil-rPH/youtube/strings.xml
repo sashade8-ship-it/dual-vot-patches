@@ -1073,7 +1073,10 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <string name="morphe_playback_in_feeds_entry_off">Naka-off</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Ibalik ang orihinal na mga pamagat</string>
-  <string name="morphe_restore_original_titles_summary">Ipinapakita ang orihinal na mga pamagat ng video, mga paglalarawan ng video at mga paglalarawan ng channel sa halip na ang mga awtomatikong isinalin</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Isinalin</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Orihinal</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Isinalin gamit ang DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Orihinal na may DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Naglo-load ng pamagat…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">I-disable ang awtomatikong pag-refresh ng feed</string>

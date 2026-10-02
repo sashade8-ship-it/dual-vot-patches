@@ -1060,7 +1060,10 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_playback_in_feeds_entry_off">বন্ধ</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">মূল শিরোনাম পুনরুদ্ধার করুন</string>
-  <string name="morphe_restore_original_titles_summary">মূল ভিডিও শিরোনাম, ভিডিও বিবরণ এবং চ্যানেল বিবরণ স্বয়ংক্রিয় অনুবাদিতগুলির পরিবর্তে দেখায়</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">অনূদিত</string>
+  <string name="morphe_restore_original_titles_type_entry_original">মূল</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">DeArrow দিয়ে অনুবাদিত</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">DeArrow সহ মূল</string>
   <string name="morphe_restore_original_titles_loading">শিরোনাম লোড হচ্ছে…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">স্বয়ংক্রিয় ফিড রিফ্রেশ নিষ্ক্রিয় করুন</string>

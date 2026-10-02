@@ -1070,7 +1070,10 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_playback_in_feeds_entry_off">Slökkt</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Endurheimta upprunalega titla</string>
-  <string name="morphe_restore_original_titles_summary">Sýnir upprunalega myndbandstitla, myndbandslýsingar og rásalýsingar í stað hinna sjálfþýddu</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Þýtt</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Upprunalegur</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Þýddur með DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Upprunalegur með DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Hleð titil…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Slökkva á sjálfvirkri endurnýjun straums</string>

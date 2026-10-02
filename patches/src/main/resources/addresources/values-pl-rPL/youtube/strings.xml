@@ -499,9 +499,9 @@ Zgłoszenia są publiczne i podlegają weryfikacji przed dodaniem kanału do lis
   <string name="morphe_loop_video_range_toast_on">Zapętlanie %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Nieprawidłowy zakres czasu</string>
   <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Pokaż przycisk nakładki obrazu w obrazie</string>
-  <string name="morphe_pip_button_flyout_title">Pokaż wysuwany przycisk obrazu w obrazie</string>
-  <string name="morphe_pip_button_flyout_name">Przełącz na obraz w obrazie</string>
+  <string name="morphe_pip_button_overlay_title">Pokaż przycisk \"Obraz w obrazie\" na nakładce</string>
+  <string name="morphe_pip_button_flyout_title">Pokaż przycisk \"Obraz w obrazie\" w wysuwanym menu</string>
+  <string name="morphe_pip_button_flyout_name">Przełącz na \"Obraz w obrazie\"</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Pokaż przycisk Odtwórz wszystko</string>
   <string name="morphe_play_all_button_summary">"Dotknij, aby wygenerować playlistę wszystkich filmów z kanału. Przytrzymaj, aby cofnąć
@@ -1074,7 +1074,10 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_playback_in_feeds_entry_off">Wyłączone</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Przywróć oryginalne tytuły</string>
-  <string name="morphe_restore_original_titles_summary">Wyświetla oryginalne tytuły, opisy filmów i kanałów zamiast tłumaczeń automatycznych</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Przetłumaczone</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Oryginał</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Przetłumaczone przez DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Oryginał z DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Wczytywanie tytułu…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Wyłącz automatyczne odświeżanie</string>

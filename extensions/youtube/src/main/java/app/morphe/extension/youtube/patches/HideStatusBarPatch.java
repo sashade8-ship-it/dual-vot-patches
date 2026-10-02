@@ -50,11 +50,13 @@ public final class HideStatusBarPatch {
     /**
      * Injection point.
      * <p>
-     * Feature flag 45400535 makes the search bar and channel page top bar
-     * invisible or clipped when the status bar is hidden.
+     * The status bar background view is sized with the stable status bar inset,
+     * so when the status bar is hidden it covers the search bar and channel page top bar.
      */
-    public static boolean useStatusBarInsetsFeatureFlag(boolean original) {
-        return original && !Settings.HIDE_STATUS_BAR.get();
+    public static void hideStatusBarBackground(View view) {
+        if (Settings.HIDE_STATUS_BAR.get()) {
+            view.setVisibility(View.INVISIBLE);
+        }
     }
 
     private static boolean isStatusBarVisible(View decorView) {

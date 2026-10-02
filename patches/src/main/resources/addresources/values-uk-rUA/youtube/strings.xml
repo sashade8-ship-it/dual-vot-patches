@@ -499,9 +499,9 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_toast_on">Повтор %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Недійсний діапазон часу</string>
   <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Показати кнопку накладання «картинка в картинці»</string>
-  <string name="morphe_pip_button_flyout_title">Показати кнопку випадаючого меню «картинка в картинці»</string>
-  <string name="morphe_pip_button_flyout_name">Перемкнутися на режим «картинка в картинці»</string>
+  <string name="morphe_pip_button_overlay_title">Показувати кнопку \"Картинка в картинці\"</string>
+  <string name="morphe_pip_button_flyout_title">Показувати кнопку спливного меню \"Картинка в картинці\"</string>
+  <string name="morphe_pip_button_flyout_name">Перейти в режим \"Картинка в картинці\"</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Показати кнопку \"Відтворити все\"</string>
   <string name="morphe_play_all_button_summary">"Натисніть, щоб створити список відтворення з усіх відео каналу, утримуйте, щоб скасувати
@@ -644,7 +644,7 @@ Second \"item\" text"</string>
   <string name="morphe_swipe_volume_distance_summary">Вищі значення потребують більшого свайпу на один крок гучності</string>
   <string name="morphe_swipe_volume_steps_title">Кроки гучності</string>
   <string name="morphe_volume_boost_title">Підсилення гучності</string>
-  <string name="morphe_volume_boost_summary">Проведення пальцем угору за межі максимальної гучності підсилює її, що може спотворювати гучний звук</string>
+  <string name="morphe_volume_boost_summary">Проведення пальцем вгору понад максимальну гучність підсилює її, що може спотворити гучний звук</string>
   <string name="morphe_swipe_volume_steps_entry_default">Типова для пристрою</string>
   <string name="morphe_swipe_brightness_sensitivity_title">Чутливість жесту яскравості</string>
   <string name="morphe_swipe_brightness_sensitivity_summary">Вищі значення потребують більшого свайпу на один крок яскравості</string>
@@ -1074,7 +1074,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_off">Вимкнено</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Відновити оригінальні назви</string>
-  <string name="morphe_restore_original_titles_summary">Показує оригінальні назви відео, описи відео та описи каналів замість автоматично перекладених</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Перекладено</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Оригінал</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Перекладено за допомогою DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Оригінал із DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Завантаження назви…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Вимкнути автоматичне оновлення стрічки</string>

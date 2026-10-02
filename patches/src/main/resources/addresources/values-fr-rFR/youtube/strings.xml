@@ -499,9 +499,9 @@ Votre clé API ne doit jamais être partagée. Toute personne ayant accès à ce
   <string name="morphe_loop_video_range_toast_on">Lecture en boucle de %1$s à %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Plage horaire invalide</string>
   <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Afficher le bouton Picture-in-picture de la superposition</string>
-  <string name="morphe_pip_button_flyout_title">Afficher le bouton Picture-in-picture du menu volant</string>
-  <string name="morphe_pip_button_flyout_name">Passer en Picture-in-picture</string>
+  <string name="morphe_pip_button_overlay_title">Afficher un bouton overlay \'Image dans l\'image\'</string>
+  <string name="morphe_pip_button_flyout_title">Afficher le bouton déroulant \'Image dans l\'image\'</string>
+  <string name="morphe_pip_button_flyout_name">Passer en Image dans l\'image</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Afficher un bouton \'Lire tout\'</string>
   <string name="morphe_play_all_button_summary">"Appuyez pour générer une playlist de toutes les vidéos d'une chaîne, appuyez longuement pour annuler
@@ -1076,7 +1076,10 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_playback_in_feeds_entry_off">Désactivé</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Restaurer les titres d\'origine</string>
-  <string name="morphe_restore_original_titles_summary">Affiche les titres, descriptions des vidéos et descriptions des chaînes d\'origine au lieu de leurs versions traduites automatiquement</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Traduit</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Originale</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Traduit avec DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Original avec DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Chargement du titre…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Désactiver l\'actualisation automatique du flux</string>

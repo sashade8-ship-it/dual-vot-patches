@@ -1075,7 +1075,10 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_playback_in_feeds_entry_off">As</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Athchóirigh na bunteidil</string>
-  <string name="morphe_restore_original_titles_summary">Taispeánann sé na bunleaganacha de na teidil físeán, de na tuairiscí físeán agus de na tuairiscí cainéal in ionad na leaganacha aistrithe go huathoibríoch</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Aistrithe</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Bunaidh</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Aistrithe le DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Bunaidh le DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Ag lódáil an teidil…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Díchumasaigh athnuachan uathoibríoch fothaí</string>

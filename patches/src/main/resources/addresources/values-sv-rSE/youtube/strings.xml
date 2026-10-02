@@ -1075,7 +1075,10 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_playback_in_feeds_entry_off">Av</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Återställ originaltitlar</string>
-  <string name="morphe_restore_original_titles_summary">Visar de ursprungliga videotitlarna, videobeskrivningarna och kanalbeskrivningarna istället för de automatöversatta</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Översatt</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Ursprunglig</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Översatt med DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Original med DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Laddar titel…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Inaktivera automatisk flödesuppdatering</string>

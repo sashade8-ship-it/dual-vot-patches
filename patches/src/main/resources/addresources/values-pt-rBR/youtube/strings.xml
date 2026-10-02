@@ -1074,7 +1074,10 @@ Limitação: Se 'Restaurar barra de ações de vídeo antiga' estiver desativado
   <string name="morphe_playback_in_feeds_entry_off">Desligado</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Restaurar títulos originais</string>
-  <string name="morphe_restore_original_titles_summary">Mostra os títulos originais dos vídeos, as descrições dos vídeos e as descrições dos canais em vez das versões traduzidas automaticamente</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Traduzido</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Original</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Traduzido com DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Original com DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Carregando título…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Desativar atualização automática do feed</string>

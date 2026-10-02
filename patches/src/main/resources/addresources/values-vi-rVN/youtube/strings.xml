@@ -1074,7 +1074,10 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_playback_in_feeds_entry_off">Tắt</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Khôi phục tiêu đề gốc</string>
-  <string name="morphe_restore_original_titles_summary">Hiển thị tiêu đề video, mô tả video và mô tả kênh gốc thay vì các bản dịch tự động</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Đã dịch</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Gốc</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Được dịch bằng DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Bản gốc với DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Đang tải tiêu đề…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Tắt tự động làm mới nguồn cấp dữ liệu</string>

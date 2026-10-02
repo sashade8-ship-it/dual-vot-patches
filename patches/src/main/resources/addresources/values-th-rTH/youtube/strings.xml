@@ -1075,7 +1075,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_off">ปิด</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">กู้คืนชื่อวิดีโอต้นฉบับ</string>
-  <string name="morphe_restore_original_titles_summary">แสดงชื่อวิดีโอ คำอธิบายวิดีโอ และคำอธิบายช่องต้นฉบับแทนคำแปลอัตโนมัติ</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">แปลแล้ว</string>
+  <string name="morphe_restore_original_titles_type_entry_original">ต้นฉบับ</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">แปลด้วย DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">ต้นฉบับพร้อม DeArrow</string>
   <string name="morphe_restore_original_titles_loading">กำลังโหลดชื่อวิดีโอ…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">ปิดการรีเฟรชฟีดอัตโนมัติ</string>

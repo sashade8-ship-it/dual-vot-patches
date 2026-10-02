@@ -1075,7 +1075,10 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_playback_in_feeds_entry_off">Isključen</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Vrati originalne naslove</string>
-  <string name="morphe_restore_original_titles_summary">Prikazuje originalne naslove videa, opise videa i opise kanala umesto automatski prevedenih</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Prevedeno</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Originalna</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Prevedeno uz DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Original uz DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Učitavanje naslova…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Onemogući automatsko osvežavanje izvora</string>

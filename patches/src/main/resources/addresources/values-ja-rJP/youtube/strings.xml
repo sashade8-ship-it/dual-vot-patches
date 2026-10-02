@@ -1077,7 +1077,10 @@ Automotive レイアウト
   <string name="morphe_playback_in_feeds_entry_off">オフ</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">タイトルを原文に戻す</string>
-  <string name="morphe_restore_original_titles_summary">自動翻訳されたものではなく、元の動画タイトル、動画の説明、チャンネルの説明を表示します</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">翻訳済み</string>
+  <string name="morphe_restore_original_titles_type_entry_original">原文</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">DeArrow で翻訳</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">DeArrow でオリジナル</string>
   <string name="morphe_restore_original_titles_loading">タイトルを読み込み中…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">自動フィード更新を無効にする</string>

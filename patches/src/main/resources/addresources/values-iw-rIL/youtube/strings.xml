@@ -1075,7 +1075,10 @@ Second \"item\" text"</string>
   <string name="morphe_playback_in_feeds_entry_off">כבוי</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">שחזור כותרות מקוריות</string>
-  <string name="morphe_restore_original_titles_summary">מציג את כותרות הסרטונים המקוריות, תיאורי הסרטונים ותיאורי הערוצים במקום אלה המתורגמים אוטומטית</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">מתורגם</string>
+  <string name="morphe_restore_original_titles_type_entry_original">מקורי</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">תורגם עם DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">מקורי עם DeArrow</string>
   <string name="morphe_restore_original_titles_loading">טוען כותרת…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">השבת רענון אוטומטי של עדכונים</string>

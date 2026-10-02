@@ -1074,7 +1074,10 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_playback_in_feeds_entry_off">Vypnuté</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Obnoviť pôvodné názvy</string>
-  <string name="morphe_restore_original_titles_summary">Zobrazuje pôvodné názvy videí, popisy videí a popisy kanálov namiesto automaticky preložených</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Preložené</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Pôvodná</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Preložené s DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Originál s DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Načítava sa názov…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Zakázať automatické obnovovanie kanála</string>

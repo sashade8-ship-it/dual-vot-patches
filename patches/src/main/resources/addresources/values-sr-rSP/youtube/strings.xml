@@ -1058,7 +1058,10 @@ Promene uključuju:
   <string name="morphe_playback_in_feeds_entry_off">Искључено</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
   <string name="morphe_restore_original_titles_title">Врати оригиналне наслове</string>
-  <string name="morphe_restore_original_titles_summary">Приказује оригиналне наслове видеа, описе видеа и описе канала уместо аутоматски преведених</string>
+  <string name="morphe_restore_original_titles_type_entry_translated">Преведено</string>
+  <string name="morphe_restore_original_titles_type_entry_original">Оригинална</string>
+  <string name="morphe_restore_original_titles_type_entry_translated_dearrow">Преведено са DeArrow</string>
+  <string name="morphe_restore_original_titles_type_entry_original_dearrow">Оригинал са DeArrow</string>
   <string name="morphe_restore_original_titles_loading">Учитавање наслова…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
   <string name="morphe_disable_auto_feed_refresh_title">Онемогући аутоматско освежавање фидова</string>

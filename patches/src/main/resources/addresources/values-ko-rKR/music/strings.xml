@@ -22,8 +22,8 @@ Second \"item\" text"</string>
   <string name="morphe_music_jam_probe_summary">근처 잼을 호스트하거나 참여하여 잼 레이어를 통해 재생목록을 편집하세요</string>
   <string name="morphe_music_jam_enabled_title">잼 재생목록 공유 활성화하기</string>
   <string name="morphe_music_jam_enabled_summary">YouTube Music을 다시 시작한 후 잼 통합을 활성화합니다</string>
-  <string name="morphe_music_jam_download_title">잼 레이어를 다운로드하여 작동시키기</string>
-  <string name="morphe_music_jam_download_summary">브라우저에서 최신 잼 레이어 릴리스를 여세요</string>
+  <string name="morphe_music_jam_download_title">구동을 위해 잼 레이어 다운로드하기</string>
+  <string name="morphe_music_jam_download_summary">브라우저에서 최신 잼 레이어 릴리스 페이지를 엽니다</string>
   <string name="morphe_music_jam_controls_title">잼 컨트롤</string>
   <string name="morphe_music_jam_controls_summary">근처 잼을 호스트하거나 참여하고 세션을 관리하세요</string>
   <string name="morphe_music_jam_companion_package_title">잼 레이어 패키지</string>
@@ -97,7 +97,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_jam_open_song_first">먼저 YouTube Music에서 노래를 여세요</string>
   <string name="morphe_music_jam_play_on_host">호스트에서 재생</string>
   <string name="morphe_music_jam_quit_and_play">잼을 종료하고 로컬에서 재생</string>
-  <string name="morphe_music_jam_play_next">잼에서 다음에 재생</string>
+  <string name="morphe_music_jam_play_next">잼에서 다음 재생</string>
   <string name="morphe_music_jam_add_to_queue">잼 재생목록에 추가</string>
   <string name="morphe_music_jam_play_track">이 잼 트랙 재생</string>
   <string name="morphe_music_jam_choose_playback">재생 위치 선택</string>
@@ -271,7 +271,7 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <!-- video.speed.playbackSpeedPatch -->
   <string name="morphe_music_playback_speed_title">재생 속도</string>
   <string name="morphe_music_playback_speed_summary">모든 트랙에 사용되는 속도입니다. 100%로 설정하면 팟캐스트 재생 속도와 같은 앱 속도가 사용됩니다</string>
-  <string name="morphe_music_playback_speed_change_pitch_title">속도에 따라 음높이 변경</string>
+  <string name="morphe_music_playback_speed_change_pitch_title">속도에 따라 피치 변경하기</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">싫어요 리다이렉션 비활성화하기</string>
   <string name="morphe_music_disable_dislike_redirection_summary">싫어요 버튼을 탭했을 경우에 다음 트랙으로 건너뛰는 것을 방지합니다</string>
@@ -521,9 +521,9 @@ LOGIN_INFO"</string>
   <string name="morphe_music_lyrics_show_translate_button_title">번역 버튼 표시하기</string>
   <string name="morphe_music_lyrics_show_translate_button_summary">버튼을 탭하여 번역을 켜거나 끌 수 있고, 길게 탭하면 번역만 표시됩니다. 제공자 번역, Google 번역 또는 OpenAI 호환 API를 사용합니다</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">로마자 표기 버튼 표시하기</string>
-  <string name="morphe_music_lyrics_show_romanize_button_summary">버튼을 탭하여 로마자 표기를 켜거나 끌 수 있고, 길게 탭하면 로마자 표기만 표시됩니다. 제공자 로마자 표기, Google 번역 또는 OpenAI 호환 API를 사용합니다.</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">버튼을 탭하여 로마자 표기를 켜거나 끌 수 있고, 길게 탭하면 로마자 표기만 표시됩니다. 제공자 로마자 표기, Google 번역 또는 OpenAI 호환 API를 사용합니다</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">새로고침 버튼 표시하기</string>
-  <string name="morphe_music_lyrics_show_refresh_button_summary">버튼을 탭하여 다음 가사 후보로 전환할 수 있고, 길게 탭하면 노래 제목과 아티스트로 가사를 검색할 수 있습니다</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">버튼을 탭하여 다음 우선순위의 가사 제공자로 전환할 수 있고, 길게 탭하면 노래 제목과 아티스트로 가사를 검색할 수 있습니다</string>
   <string name="morphe_music_lyrics_search_dialog_title">가사 검색</string>
   <string name="morphe_music_lyrics_search_title_hint">노래 제목</string>
   <string name="morphe_music_lyrics_search_artist_hint">아티스트</string>
