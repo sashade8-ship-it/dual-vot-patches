@@ -61,7 +61,7 @@ internal object HistoryMenuItemOfflineTabFingerprint : Fingerprint(
 )
 
 internal object SearchActionViewFingerprint : Fingerprint(
-    definingClass = "/SearchActionProvider;",
+    definingClass = "Lcom/google/android/apps/youtube/music/search/SearchActionProvider;",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "Landroid/view/View;",
     parameters = listOf(),

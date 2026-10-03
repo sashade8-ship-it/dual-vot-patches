@@ -11,7 +11,7 @@
 package app.morphe.patches.shared.misc.gms
 
 import app.morphe.patcher.Fingerprint
-import app.morphe.patcher.InstructionFilter
+import app.morphe.patcher.StringComparisonType
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.instructions
@@ -97,6 +97,8 @@ fun gmsCoreSupportPatch(
     )
 
     execute {
+        GooglePlayUtilityFingerprint.method.returnEarly(0)
+
         val toPackageName = setOrGetFallbackPackageName(toPackageNameDefault)
 
         // Exact string replacements.
@@ -133,18 +135,16 @@ fun gmsCoreSupportPatch(
             )
         }
 
+        val authoritiesPrefix = AUTHORITIES.map { it to "content://$it" }
         fun contentUrisTransform(str: String): String? {
             // only when content:// URI
-            if (str.startsWith("content://")) {
-                // check if matches any authority
-                for (authority in AUTHORITIES) {
-                    val uriPrefix = "content://$authority"
-                    if (str.startsWith(uriPrefix)) {
-                        return str.replace(
-                            uriPrefix,
-                            "content://${authority.replace("com.google", GMS_CORE_VENDOR_GROUP_ID)}",
-                        )
-                    }
+            // check if matches any authority
+            for ((authority, uriPrefix) in authoritiesPrefix) {
+                if (str.startsWith(uriPrefix)) {
+                    return str.replace(
+                        uriPrefix,
+                        "content://${authority.replace("com.google", GMS_CORE_VENDOR_GROUP_ID)}",
+                    )
                 }
             }
 
@@ -168,25 +168,22 @@ fun gmsCoreSupportPatch(
 
         // endregion
 
-        val contentUriFilter = InstructionFilter { _, instruction ->
-            if (instruction.opcode != Opcode.CONST_STRING) return@InstructionFilter false
-            val stringRef = (instruction as? ReferenceInstruction)?.reference as? StringReference ?: return@InstructionFilter false
-            contentUrisTransform(stringRef.string) != null
-        }
-
-        contentUriFilter.matchAllMethodIndicesForEach(requireMatches = false) { index ->
+        string(
+            "content://", StringComparisonType.STARTS_WITH
+        ).matchAllMethodIndicesForEach(requireMatches = false) { index ->
             val instruction = getInstruction<ReferenceInstruction>(index)
             val string = (instruction.reference as StringReference).string
-            val transformedString = contentUrisTransform(string)!!
-
-            replaceInstruction(
-                index,
-                BuilderInstruction21c(
-                    Opcode.CONST_STRING,
-                    (instruction as OneRegisterInstruction).registerA,
-                    ImmutableStringReference(transformedString),
+            val transformedString = contentUrisTransform(string)
+            if (transformedString != null) {
+                replaceInstruction(
+                    index,
+                    BuilderInstruction21c(
+                        Opcode.CONST_STRING,
+                        (instruction as OneRegisterInstruction).registerA,
+                        ImmutableStringReference(transformedString),
+                    )
                 )
-            )
+            }
         }
 
         // Specific method that needs to be patched.
@@ -203,7 +200,6 @@ fun gmsCoreSupportPatch(
             }
         }
         ServiceCheckFingerprint.method.returnEarly()
-        GooglePlayUtilityFingerprint.method.returnEarly(0)
 
         // Set original and patched package names for extension to use.
         OriginalPackageNameExtensionFingerprint.method.returnEarly(fromPackageName)

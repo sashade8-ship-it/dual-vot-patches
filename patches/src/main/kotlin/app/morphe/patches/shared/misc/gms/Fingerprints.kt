@@ -1,16 +1,17 @@
 package app.morphe.patches.shared.misc.gms
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 
 internal object GooglePlayUtilityFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
     returnType = "I",
     parameters = listOf("L", "I"),
-    strings = listOf(
-        "This should never happen.",
-        "MetadataValueReader",
-        "com.google.android.gms",
+    filters = listOf(
+        string("MetadataValueReader"),
+        string("This should never happen."),
+        string("com.google.android.gms")
     )
 )
 
