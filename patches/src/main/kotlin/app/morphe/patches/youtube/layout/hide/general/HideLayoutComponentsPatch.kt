@@ -417,6 +417,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
             SwitchPreference("morphe_hide_horizontal_shelves", summary = true),
             SwitchPreference("morphe_hide_hyped_label"),
             SwitchPreference("morphe_hide_image_shelf", summary = true),
+            SwitchPreference("morphe_hide_help_feedback_menu", summary = true),
             SwitchPreference("morphe_hide_invite_to_message_card", summary = true),
             SwitchPreference("morphe_hide_latest_videos_button", summary = true),
             SwitchPreference("morphe_hide_live_streams", summary = true),
@@ -1301,6 +1302,19 @@ val hideLayoutComponentsPatch = bytecodePatch(
 
         // region hide player chapters & timeline button
 
+        // Hook the later instruction first: both can be in the same method.
+        HideTimeBarChapterTitleFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches.last().index
+                val register = getInstruction<OneRegisterInstruction>(index).registerA
+
+                addInstruction(
+                    index + 1,
+                    "invoke-static { v$register }, $LAYOUT_COMPONENTS_FILTER->hideChapterTitle(Landroid/view/View;)V"
+                )
+            }
+        }
+
         HideTimeBarEntryPointContainerFingerprint.let {
             it.method.apply {
                 val index = it.instructionMatches.last().index
@@ -1312,6 +1326,18 @@ val hideLayoutComponentsPatch = bytecodePatch(
                 )
             }
         }
+
+        // endregion
+
+        // region hide help & feedback in menus
+
+        ListMenuItemViewOnMeasureFingerprint.method.addInstructions(
+            0,
+            """
+                invoke-static { p0, p2 }, $LAYOUT_COMPONENTS_FILTER->hideHelpFeedbackMenuRow(Landroid/view/View;I)I
+                move-result p2
+            """
+        )
 
         // endregion
 

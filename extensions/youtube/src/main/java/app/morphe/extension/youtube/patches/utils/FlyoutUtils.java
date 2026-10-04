@@ -52,11 +52,12 @@ import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.components.BufferAsciiStrings;
+import app.morphe.extension.shared.spoof.SpoofAppVersionPatch;
 import app.morphe.extension.shared.theme.ThemeUtils;
 import app.morphe.extension.shared.ui.Dim;
-import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch;
 import app.morphe.extension.youtube.patches.PipButtonPatch;
 import app.morphe.extension.youtube.patches.SaveToWatchLaterPatch;
+import app.morphe.extension.youtube.patches.VersionCheckPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.patches.components.PlayerFlyoutMenuComponentsFilter;
 import app.morphe.extension.youtube.patches.utils.requests.ChannelIdRequest;
@@ -159,6 +160,10 @@ public final class FlyoutUtils {
 
     private static final int VIDEO_ID_LENGTH = 11;
     public static final int CHANNEL_ID_LENGTH = 24;
+    private static final byte[] POST_ID_PREFIX_BYTES =
+            getAsciiBytes("post-comments-");
+    private static final byte[] PLAYLIST_BROWSE_ID_PREFIX_BYTES =
+            getAsciiBytes("VL");
     private static final byte[] PLAYLIST_ID_PREFIXES_BYTES =
             getAsciiBytes("playlist?list=");
     private static final List<byte[]> VIDEO_ID_PREFIXES_BYTES = List.of(
@@ -195,15 +200,18 @@ public final class FlyoutUtils {
     );
     private static final int ITEM_TEXT_ID = ResourceUtils.getIdentifier(
             ResourceType.ID, "list_item_text");
+    // Flyout menus keep the experimental icons even with old player buttons restored.
+    private static final boolean USE_EXPERIMENTAL_ICONS = VersionCheckPatch.IS_20_31_OR_GREATER
+            && !SpoofAppVersionPatch.isSpoofingToLessThan("20.31.00");
     private static final Drawable saveToWatchLaterDrawable = ResourceUtils.getDrawable(
-            LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS
-                    ? "yt_outline_clock_black_24"
-                    : "yt_outline_experimental_clock_vd_theme_24"
+            USE_EXPERIMENTAL_ICONS
+                    ? "yt_outline_experimental_clock_vd_theme_24"
+                    : "yt_outline_clock_black_24"
     );
     private static final Drawable aiSListSubmitDrawable = ResourceUtils.getDrawable(
-            LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS
-                    ? "yt_outline_flag_black_24"
-                    : "yt_outline_experimental_flag_vd_theme_24"
+            USE_EXPERIMENTAL_ICONS
+                    ? "yt_outline_experimental_flag_vd_theme_24"
+                    : "yt_outline_flag_black_24"
     );
     private static final Drawable adWhitelistButtonDrawable = getSettingsScreenDrawable(
             "morphe_settings_screen_01_ads");
@@ -237,6 +245,7 @@ public final class FlyoutUtils {
     private static String flyoutVideoId = "";
     private static String flyoutPlaylistId = "";
     private static String flyoutCommentId = "";
+    private static String flyoutPostId = "";
     private static String flyoutChannelId = "";
     private static String flyoutChannelName = "";
     private static final List<String> commentsPanelNames = List.of(
@@ -269,6 +278,14 @@ public final class FlyoutUtils {
 
     public static String getFlyoutCommentId() {
         return flyoutCommentId;
+    }
+
+    public static String getFlyoutPostId() {
+        return flyoutPostId;
+    }
+
+    public static void resetFlyoutPostId() {
+        flyoutPostId = "";
     }
 
     public static void resetFlyoutCommentId() {
@@ -403,6 +420,7 @@ public final class FlyoutUtils {
                                     currentButtonIndex = 0;
                                     flyoutVideoId = "";
                                     flyoutPlaylistId = "";
+                                    flyoutPostId = "";
                                     flyoutChannelId = "";
                                     flyoutChannelName = "";
                                     isMyTabHistoryFlyout = false;
@@ -924,6 +942,24 @@ public final class FlyoutUtils {
             if ((PlayerType.getCurrent().isMaximizedOrFullscreen() || ShortsPlayerState.isOpen()) &&
                     EngagementPanel.checkIdsInQueue(commentsPanelNames)) {
                 extractFlyoutIdFromMap(map);
+            } else {
+                // Buttons that do not open a flyout, such as the share button of community posts
+                // and of the playlist page header. The buttons that open a flyout are also called
+                // before the flyout, which then finds the ids with its sender view.
+                senderViewRef = new WeakReference<>(null);
+                extractFlyoutIdFromObject(
+                        map.get("com.google.android.libraries.youtube.innertube.endpoint.tag")
+                );
+                // Reset the ids after the share button is pressed, to prevent unintended usage.
+                Utils.runOnMainThreadDelayed(() -> {
+                    if ((flyoutDialog == null || !flyoutDialog.isShowing())
+                            && (flyoutPopupWindow == null || !flyoutPopupWindow.isShowing())) {
+                        flyoutPostId = "";
+                        flyoutPlaylistId = "";
+                        isMyTabHistoryFlyout = false;
+                        isShortFlyout = false;
+                    }
+                }, 500);
             }
         } catch (Exception ex) {
             Logger.printException(() -> "extractFlyoutIdFromLithoButton failure", ex);
@@ -975,6 +1011,17 @@ public final class FlyoutUtils {
             Logger.printDebug(() -> "Flyout buffer: " + new BufferAsciiStrings(flyoutBuffer).getStrings());
         }
 
+        // Community posts have no video of the flyout.
+        final int postIdIndex = byteIndexOf(flyoutBuffer, POST_ID_PREFIX_BYTES);
+        if (postIdIndex >= 0) {
+            final String postId = readId(flyoutBuffer, postIdIndex + POST_ID_PREFIX_BYTES.length);
+            if (!postId.isEmpty()) {
+                flyoutPostId = postId;
+                Logger.printDebug(() -> "Flyout Post ID found: " + postId);
+                return;
+            }
+        }
+
         // Check whether the buffer contains the specified IDs within a certain initial
         // range of the buffer, to avoid matching with false positives when share
         // button is called from a comment flyout.
@@ -1008,7 +1055,13 @@ public final class FlyoutUtils {
         Logger.printDebug(() -> "Flyout sender view object: " +
                             (senderView != null));
         if (senderView != null) {
-            ViewParent parent = senderView.getParent();
+            // Long pressing an item, such as a Short in the Shorts tab of a channel, sends the flyout
+            // from the item itself, which has the description. The item is still pressed, unlike
+            // a button of the item that opens the flyout when released.
+            ViewParent parent = senderView instanceof ViewGroup senderViewGroup
+                    && senderView.isPressed() && senderView.getContentDescription() != null
+                    ? senderViewGroup
+                    : senderView.getParent();
             int parentCount = 0;
             while (parent != null && !parent.toString().contains("results")) {
                 parentCount++;
@@ -1207,7 +1260,49 @@ public final class FlyoutUtils {
             Logger.printDebug(() -> "Flyout Playlist ID found: " +
                     flyoutPlaylistId
             );
+            return;
         }
+
+        // The playlist page header has the browse id of the playlist instead of the url, which is
+        // 'VL' followed by the playlist id, and the header also includes the playlist id alone.
+        // Both are text fields of the buffer, so they are preceded by their length.
+        int browseIdIndex = 0;
+        while ((browseIdIndex = byteIndexOf(flyoutBuffer, PLAYLIST_BROWSE_ID_PREFIX_BYTES, browseIdIndex)) >= 0) {
+            final int playlistIdStart = browseIdIndex + PLAYLIST_BROWSE_ID_PREFIX_BYTES.length;
+            final String playlistId = readId(flyoutBuffer, playlistIdStart);
+            if (isTextField(flyoutBuffer, browseIdIndex, PLAYLIST_BROWSE_ID_PREFIX_BYTES.length + playlistId.length())) {
+                final byte[] playlistIdBytes = playlistId.getBytes(StandardCharsets.US_ASCII);
+                int textIndex = 0;
+                while ((textIndex = byteIndexOf(flyoutBuffer, playlistIdBytes, textIndex)) >= 0) {
+                    if (isTextField(flyoutBuffer, textIndex, playlistIdBytes.length)) {
+                        flyoutPlaylistId = playlistId;
+                        Logger.printDebug(() -> "Flyout Playlist ID found: " + playlistId);
+                        return;
+                    }
+                    textIndex++;
+                }
+            }
+            browseIdIndex = playlistIdStart;
+        }
+    }
+
+    /**
+     * @return If the text at the index is an entire text field, which is preceded by its length.
+     */
+    private static boolean isTextField(byte[] buffer, int index, int length) {
+        return index > 0 && length > 0 && length < 128 && buffer[index - 1] == length;
+    }
+
+    /**
+     * @return The id that starts at the index, or an empty string if none.
+     */
+    private static String readId(byte[] buffer, int start) {
+        int end = start;
+        while (end < buffer.length
+                && (isByteAlphanumeric(buffer[end]) || buffer[end] == '-' || buffer[end] == '_')) {
+            end++;
+        }
+        return new String(buffer, start, end - start, StandardCharsets.US_ASCII);
     }
 
     private static void setFlyoutCommentId(byte[] buffer) {
