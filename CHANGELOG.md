@@ -1,3 +1,13 @@
+## 1.46.0-dev.3-dualvot.8.5.3 (2026-10-04)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.46.0-dev.3](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.46.0-dev.3).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.46.0-dev.2-dualvot.8.5.3 (2026-10-04)
 
 ### Automated Morphe update
@@ -386,6 +396,21 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.46.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.2...v1.46.0-dev.3) (2026-10-04)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Minimal miniplayer:** Both video and channel titles are overwritten by those of the short video currently playing ([0da4d71](https://github.com/MorpheApp/morphe-patches/commit/0da4d71a7e5e7d5945fe6c082f3c829eae034ffa))
+
+### ✨ New Features
+
+* **DeArrow:** Add setting to show DeArrow icon on crowdsourced video titles ([#3510](https://github.com/MorpheApp/morphe-patches/issues/3510)) ([0db7baa](https://github.com/MorpheApp/morphe-patches/commit/0db7baada9d7748acde8646d39f1b85334e60f77))
+* **YouTube:** Add DeArrow crowdsourced feed video titles, rename `Alternative thumbnails` patch to `DeArrow` ([#3447](https://github.com/MorpheApp/morphe-patches/issues/3447)) ([e6b598d](https://github.com/MorpheApp/morphe-patches/commit/e6b598d2e7d9055d62c3c651d705ca0c774dd6e6))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.40.161` ([#3457](https://github.com/MorpheApp/morphe-patches/issues/3457)) ([30ab48c](https://github.com/MorpheApp/morphe-patches/commit/30ab48c3537d0b642525ea6b2a6c0bf9aba64e73))
 
 ## [1.46.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.1...v1.46.0-dev.2) (2026-10-04)
 
