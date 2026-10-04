@@ -1,3 +1,13 @@
+## 1.46.0-dev.2-dualvot.8.5.3 (2026-10-04)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.46.0-dev.2](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.46.0-dev.2).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.46.0-dev.1-dualvot.8.5.3 (2026-10-03)
 
 ### Automated Morphe update
@@ -376,6 +386,25 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.46.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.1...v1.46.0-dev.2) (2026-10-04)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide the chapter title next to the timestamp ([#3475](https://github.com/MorpheApp/morphe-patches/issues/3475)) ([a940c2a](https://github.com/MorpheApp/morphe-patches/commit/a940c2a714acb847494ea8f1b3f2ddf050b24f4e))
+* **YouTube - Hide status bar:** Added top margin and extended the patch to the app settings ([4a0a726](https://github.com/MorpheApp/morphe-patches/commit/4a0a7263b0dbdcd30f98a18a6199d662f1933fdc))
+* **YouTube - Save to Watch later:** Flyout menu icons are thin with old player button style ([4e9d7e7](https://github.com/MorpheApp/morphe-patches/commit/4e9d7e79c1dae18552762bf6e99d629b3d55ed9a))
+* **YouTube - System share sheet:** Community posts or in-playlists links cannot be shared ([cca505f](https://github.com/MorpheApp/morphe-patches/commit/cca505f2f45d6466e5a24713a5d13ca3762730cb))
+* **YouTube & YT Music - GmsCore support:** Fix notification registration for patched apps ([#3481](https://github.com/MorpheApp/morphe-patches/issues/3481)) ([db5eb58](https://github.com/MorpheApp/morphe-patches/commit/db5eb58fdca24a701e37811fb7c57fba9cebbebc))
+* **YouTube Music - Hide buttons:** Only hide the notification button with Hide Notification button ([#3473](https://github.com/MorpheApp/morphe-patches/issues/3473)) ([d0242f3](https://github.com/MorpheApp/morphe-patches/commit/d0242f39f40d3b57eb28b79f3349368ad1ac25b7))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add Hide Help & feedback in menus ([#3476](https://github.com/MorpheApp/morphe-patches/issues/3476)) ([2311fed](https://github.com/MorpheApp/morphe-patches/commit/2311fed4d4deac9ed0f27093924eb703bec2ec8a))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.40.0` ([2362e48](https://github.com/MorpheApp/morphe-patches/commit/2362e48e932720a668f2e93ae383a2d607e5682e))
 
 ## [1.46.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0...v1.46.0-dev.1) (2026-10-03)
 
