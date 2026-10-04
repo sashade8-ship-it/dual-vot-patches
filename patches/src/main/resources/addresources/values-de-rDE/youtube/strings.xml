@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Über</string>
   <string name="morphe_settings_screen_01_ads_title">Werbung</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Alternative Thumbnails</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
   <string name="morphe_settings_screen_04_general_title">Allgemein</string>
   <string name="morphe_settings_screen_05_player_title">Player</string>
@@ -1155,39 +1154,44 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Bildgebietsbeschränkungen umgehen</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Leitet Bildanfragen an einen alternativen Server weiter, um fehlende Bilder in eingeschränkten Ländern zu beheben</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">DeArrow-Titel</string>
+  <string name="morphe_dearrow_titles_summary">Ersetzt Videotitel durch die bei DeArrow eingereichten Crowdsource-Titel</string>
+  <string name="morphe_dearrow_titles_icon_title">DeArrow-Symbol anzeigen</string>
+  <string name="morphe_dearrow_titles_icon_summary">Zeigt das DeArrow-Symbol bei crowdsourcierten Videotiteln an</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Für den Home-Tab</string>
+  <string name="morphe_dearrow_thumbnail_home_title">Für den Home-Tab</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Für den Abos-Tab</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">Für den Abos-Tab</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Für den \"Für dich\"-Tab</string>
-  <string name="morphe_alt_thumbnail_player_title">Für Player-Wiedergabelisten &amp; Empfehlungen</string>
-  <string name="morphe_alt_thumbnail_search_title">Für Suchergebnisse</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Original-Vorschaubilder</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; Original-Thumbnails</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; Standbild</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Standbild</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow bietet von der Community bereitgestellte Vorschaubilder für YouTube-Videos. Diese Vorschaubilder sind oft relevanter als die von YouTube bereitgestellten.
+  <string name="morphe_dearrow_thumbnail_library_title">Für den \"Für dich\"-Tab</string>
+  <string name="morphe_dearrow_thumbnail_player_title">Für Player-Wiedergabelisten &amp; Empfehlungen</string>
+  <string name="morphe_dearrow_thumbnail_search_title">Für Suchergebnisse</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Original-Vorschaubilder</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Original-Thumbnails</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Standbild</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Standbild</string>
+  <string name="morphe_dearrow_about_summary">"DeArrow stellt Crowdsource-Titel und -Miniaturansichten für YouTube-Videos bereit. Diese sind oft relevanter als die von YouTube bereitgestellten.
 
-Wenn diese Option aktiviert ist, werden Video-URLs an den API-Server gesendet und keine anderen Daten werden gesendet. Wenn ein Video keine DeArrow-Vorschaubilder hat, wird das originale oder ein Standbild angezeigt.
+Wenn diese Option aktiviert ist, werden Video-URLs an den API-Server gesendet und keine anderen Daten gesendet. Wenn ein Video keine DeArrow-Miniaturansichten hat, werden das Original oder Standbilder angezeigt.
 
-Tippen Sie hier, um mehr über DeArrow zu erfahren"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Verbindungsfehler-Benachrichtigungen anzeigen</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Zeigt eine Benachrichtigung an, wenn der DeArrow-Server nicht verfügbar ist</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API-Endpunkt</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">Die URL des Cache Endpunkts der DeArrow Thumbnails</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Standbilder aus Videos</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Standbilder werden vom Anfang / Mitte / Ende jedes Videos erstellt. Diese Bilder stammen von YouTube und es wird keine externe API verwendet</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Schnelle Standbilder verwenden</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">Verbessert die Ladegeschwindigkeit, indem es Bilder mittlerer Qualität verwendet. Live-Streams, unveröffentlichte und ältere Videos zeigen möglicherweise leere Miniaturansichten an</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Video-Frame extrahieren aus</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Anfang</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Mitte</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Ende</string>
+Tippen Sie hier, um DeArrow.ajay.app zu öffnen"</string>
+  <string name="morphe_dearrow_connection_toast_title">Verbindungsfehler-Benachrichtigungen anzeigen</string>
+  <string name="morphe_dearrow_connection_toast_summary">Zeigt eine Benachrichtigung an, wenn der DeArrow-Server nicht verfügbar ist</string>
+  <string name="morphe_dearrow_api_url_title">DeArrow API-Endpunkt</string>
+  <string name="morphe_dearrow_api_url_summary">Die URL des Cache Endpunkts der DeArrow Thumbnails</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Standbilder aus Videos</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Standbilder werden vom Anfang / Mitte / Ende jedes Videos erstellt. Diese Bilder stammen von YouTube und es wird keine externe API verwendet</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Schnelle Standbilder verwenden</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Verbessert die Ladegeschwindigkeit, indem es Bilder mittlerer Qualität verwendet. Live-Streams, unveröffentlichte und ältere Videos zeigen möglicherweise leere Miniaturansichten an</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Video-Frame extrahieren aus</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Anfang</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Mitte</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Ende</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">DeArrow ist vorübergehend nicht verfügbar (Statuscode: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow ist vorübergehend nicht verfügbar</string>
+  <string name="morphe_dearrow_error">DeArrow ist vorübergehend nicht verfügbar (Statuscode: %s)</string>
+  <string name="morphe_dearrow_error_generic">DeArrow ist vorübergehend nicht verfügbar</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Alten Player-Button-Stil wiederherstellen</string>

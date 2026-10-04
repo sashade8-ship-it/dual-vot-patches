@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">O aplikaci</string>
   <string name="morphe_settings_screen_01_ads_title">Reklamy</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Alternativní náhledy</string>
   <string name="morphe_settings_screen_03_feed_title">Domovská stránka</string>
   <string name="morphe_settings_screen_04_general_title">Obecné</string>
   <string name="morphe_settings_screen_05_player_title">Přehrávač</string>
@@ -1151,39 +1150,44 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Obcházet omezení oblasti obrázků</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Přesměruje požadavky na miniaturu na alternativní server a opraví tak chybějící obrázky v omezených zemích</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">Názvy DeArrow</string>
+  <string name="morphe_dearrow_titles_summary">Nahrazuje názvy videí crowdsourcovanými názvy zadanými do DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_title">Zobrazit ikonu DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_summary">Zobrazuje ikonu DeArrow u názvů videí od komunity</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Pro kartu Domů</string>
+  <string name="morphe_dearrow_thumbnail_home_title">Pro kartu Domů</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Pro kartu Odběry</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">Pro kartu Odběry</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Pro kartu Pro vás</string>
-  <string name="morphe_alt_thumbnail_player_title">Pro přehrávače playlistů a doporučení</string>
-  <string name="morphe_alt_thumbnail_search_title">Pro výsledky vyhledávání</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Původní náhledy</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; Původní náhledy</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; Zachycení snímků</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Zachycení snímků</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow poskytuje crowdsourced miniatury pro videa YouTube. Tyto miniatury jsou často relevantnější než ty poskytované YouTube
+  <string name="morphe_dearrow_thumbnail_library_title">Pro kartu Pro vás</string>
+  <string name="morphe_dearrow_thumbnail_player_title">Pro přehrávače playlistů a doporučení</string>
+  <string name="morphe_dearrow_thumbnail_search_title">Pro výsledky vyhledávání</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Původní náhledy</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Původní náhledy</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Zachycení snímků</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Zachycení snímků</string>
+  <string name="morphe_dearrow_about_summary">"DeArrow poskytuje crowdsourcované názvy a miniatury pro videa na YouTube. Ty jsou často relevantnější než ty poskytované YouTube.
 
-Pokud je povoleno, adresy URL videí budou odeslány na server API a nebudou odeslány žádné další údaje. Pokud video nemá miniatury DeArrow, zobrazí se originální nebo statické snímky
+Pokud je povoleno, adresy URL videí budou odeslány na server API a žádná další data se neodesílají. Pokud video nemá miniatury DeArrow, zobrazí se původní nebo statické snímky.
 
-Klepnutím sem se dozvíte více o DeArrow"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Zobrazit upozornění na chyby připojení</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Zobrazí se upozornění, když server DeArrow není k dispozici</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">Koncový bod DeArrow API</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">URL koncového bodu mezipaměti náhledů DeArrow</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Zachycení statických videí</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Zachycení snímků se provádí z počátku/prostředku/konce každého videa. Tyto obrázky jsou vestavěny do YouTube a nepoužívá se žádné externí API</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Použít rychlé zachycení snímků</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">Zlepší rychlost načítání pomocí obrázků střední kvality. Živé přenosy, nepublikovaná a starší videa mohou zobrazovat prázdné miniatury</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Extrahovat snímek videa z</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Začátek</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Střed</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Konec</string>
+Klepnutím sem otevřete DeArrow.ajay.app"</string>
+  <string name="morphe_dearrow_connection_toast_title">Zobrazit upozornění na chyby připojení</string>
+  <string name="morphe_dearrow_connection_toast_summary">Zobrazí se upozornění, když server DeArrow není k dispozici</string>
+  <string name="morphe_dearrow_api_url_title">Koncový bod DeArrow API</string>
+  <string name="morphe_dearrow_api_url_summary">URL koncového bodu mezipaměti náhledů DeArrow</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Zachycení statických videí</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Zachycení snímků se provádí z počátku/prostředku/konce každého videa. Tyto obrázky jsou vestavěny do YouTube a nepoužívá se žádné externí API</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Použít rychlé zachycení snímků</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Zlepší rychlost načítání pomocí obrázků střední kvality. Živé přenosy, nepublikovaná a starší videa mohou zobrazovat prázdné miniatury</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Extrahovat snímek videa z</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Začátek</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Střed</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Konec</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">DeArrow je dočasně nedostupný (kód stavu: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow je dočasně nedostupný</string>
+  <string name="morphe_dearrow_error">DeArrow je dočasně nedostupný (kód stavu: %s)</string>
+  <string name="morphe_dearrow_error_generic">DeArrow je dočasně nedostupný</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Obnovit starý styl tlačítek přehrávače</string>

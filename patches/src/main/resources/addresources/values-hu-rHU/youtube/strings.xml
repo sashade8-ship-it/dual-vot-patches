@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Névjegy</string>
   <string name="morphe_settings_screen_01_ads_title">Hirdetések</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Alternatív indexképek</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
   <string name="morphe_settings_screen_04_general_title">Általános</string>
   <string name="morphe_settings_screen_05_player_title">Lejátszó</string>
@@ -1154,39 +1153,44 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Területi kép-korlátozások megkerülése</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Az URL-átirányítások megkerülése, így a céloldalak közvetlenül nyíljanak meg</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">DeArrow-címek</string>
+  <string name="morphe_dearrow_titles_summary">A videócímeket lecseréli a DeArrow-ba beküldött közösségi címekre</string>
+  <string name="morphe_dearrow_titles_icon_title">DeArrow ikon megjelenítése</string>
+  <string name="morphe_dearrow_titles_icon_summary">Megjeleníti a DeArrow ikont a közösségi videócímeken</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">A Home laphoz</string>
+  <string name="morphe_dearrow_thumbnail_home_title">A Home laphoz</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">A Feliratkozások laphoz</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">A Feliratkozások laphoz</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">A Te laphoz</string>
-  <string name="morphe_alt_thumbnail_player_title">A lejátszó lejátszási listákhoz és ajánlásokhoz</string>
-  <string name="morphe_alt_thumbnail_search_title">A keresési eredményekhez</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Eredeti indexképek</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow és eredeti indexképek</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; Állóképek</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Pillanatképek</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"A DeArrow tömegforrásból származó miniatűr képeket biztosít a YouTube-videókhoz. Ezek a miniatűr képek gyakran relevánsabbak, mint a YouTube által biztosítottak
+  <string name="morphe_dearrow_thumbnail_library_title">A Te laphoz</string>
+  <string name="morphe_dearrow_thumbnail_player_title">A lejátszó lejátszási listákhoz és ajánlásokhoz</string>
+  <string name="morphe_dearrow_thumbnail_search_title">A keresési eredményekhez</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Eredeti indexképek</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow és eredeti indexképek</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Állóképek</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Pillanatképek</string>
+  <string name="morphe_dearrow_about_summary">"A DeArrow közösségi címeket és bélyegképeket biztosít a YouTube-videókhoz. Ezek gyakran relevánsabbak, mint a YouTube által biztosítottak.
 
-Ha engedélyezve van, akkor a videók URL-jeit elküldjük az API kiszolgálónak, és más adatokat nem küldünk. Ha egy videónak nincs DeArrow miniatűr képe, akkor az eredeti vagy állókép miniatűr kép lesz megjelenítve
+Ha engedélyezve van, a videók URL-jei elküldésre kerülnek az API-kiszolgálóra, és semmilyen más adat nem kerül elküldésre. Ha egy videónak nincs DeArrow-bélyegképe, akkor az eredeti vagy kimerevített képkockák jelennek meg.
 
-Érintse meg itt, hogy többet megtudjon a DeArrow-ról"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Kapcsolati hibaüzenetek megjelenítése</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Értesítést jelenít meg, ha a DeArrow szerver nem érhető el</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API végpont</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">A DeArrow bélyegkép cache végpont URL-je</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Videó pillanatképek</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Pillanatképek minden videó elejéről/közepéről/végéről készülnek. Ezek a képek be vannak építve a YouTube-ba és nem használnak külső API-t</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Gyors pillanatképek használata</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">A terhelés gyorsítása közepes minőségű képek használatával. Életközvetítések, kiadatlan és újabb videók esetén üres képek jelenhetnek meg</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Keret kinyerése a videóból</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Kezdőpont</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Közép</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Végpont</string>
+Koppintson ide a DeArrow.ajay.app megnyitásához"</string>
+  <string name="morphe_dearrow_connection_toast_title">Kapcsolati hibaüzenetek megjelenítése</string>
+  <string name="morphe_dearrow_connection_toast_summary">Értesítést jelenít meg, ha a DeArrow szerver nem érhető el</string>
+  <string name="morphe_dearrow_api_url_title">DeArrow API végpont</string>
+  <string name="morphe_dearrow_api_url_summary">A DeArrow bélyegkép cache végpont URL-je</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Videó pillanatképek</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Pillanatképek minden videó elejéről/közepéről/végéről készülnek. Ezek a képek be vannak építve a YouTube-ba és nem használnak külső API-t</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gyors pillanatképek használata</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">A terhelés gyorsítása közepes minőségű képek használatával. Életközvetítések, kiadatlan és újabb videók esetén üres képek jelenhetnek meg</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Keret kinyerése a videóból</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Kezdőpont</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Közép</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Végpont</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">A DeArrow átmenetileg nem érhető el (állapotkód: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">A DeArrow átmenetileg nem érhető el</string>
+  <string name="morphe_dearrow_error">A DeArrow átmenetileg nem érhető el (állapotkód: %s)</string>
+  <string name="morphe_dearrow_error_generic">A DeArrow átmenetileg nem érhető el</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Régi lejátszó gomb stílusának visszaállítása</string>

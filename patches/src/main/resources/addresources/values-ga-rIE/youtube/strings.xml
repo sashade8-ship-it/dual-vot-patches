@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Maidir</string>
   <string name="morphe_settings_screen_01_ads_title">Fógraí</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Mionsamhlacha malartacha</string>
   <string name="morphe_settings_screen_03_feed_title">Fotha</string>
   <string name="morphe_settings_screen_04_general_title">Ginearálta</string>
   <string name="morphe_settings_screen_05_player_title">Seinnteoir</string>
@@ -1154,39 +1153,44 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Seachbhóthar srianta réigiún íomhá</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Atreoraíonn sé iarratais ar mhioníomhánna chuig freastalaí malartach chun íomhánna atá ar iarraidh i dtíortha srianta a dheisiú</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">Teidil DeArrow</string>
+  <string name="morphe_dearrow_titles_summary">Cuireann sé na teidil shluafhoinsithe a chuirtear isteach chuig DeArrow in ionad na dteideal físeán</string>
+  <string name="morphe_dearrow_titles_icon_title">Taispeáin deilbhín DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_summary">Taispeánann sé deilbhín DeArrow ar theidil físeán slua-fhoinsithe</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Don chluaisín Baile</string>
+  <string name="morphe_dearrow_thumbnail_home_title">Don chluaisín Baile</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Don táb Síntiúis</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">Don táb Síntiúis</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Táb Duit</string>
-  <string name="morphe_alt_thumbnail_player_title">Le haghaidh seinmliostaí &amp; moltaí seinnteora</string>
-  <string name="morphe_alt_thumbnail_search_title">Le haghaidh torthaí cuardaigh</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Mionsamhlacha bunaidh</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; Mionsamhlacha bunaidh</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; Gabhálacha fós</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Gabhann fós</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"Soláthraíonn DeArrow mionsamhlacha slua-fhoinsithe do fhíseáin YouTube. Is minic a bhíonn na mionsamhlacha seo níos ábhartha ná na cinn a sholáthraíonn YouTube.
+  <string name="morphe_dearrow_thumbnail_library_title">Táb Duit</string>
+  <string name="morphe_dearrow_thumbnail_player_title">Le haghaidh seinmliostaí &amp; moltaí seinnteora</string>
+  <string name="morphe_dearrow_thumbnail_search_title">Le haghaidh torthaí cuardaigh</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Mionsamhlacha bunaidh</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Mionsamhlacha bunaidh</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Gabhálacha fós</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Gabhann fós</string>
+  <string name="morphe_dearrow_about_summary">"Soláthraíonn DeArrow teidil agus mionsamhlacha atá sluafhoinsithe d'fhíseáin YouTube. Is minic a bhíonn siad níos ábhartha ná na cinn a sholáthraíonn YouTube
 
-Má tá sé cumasaithe, seolfar URLanna físeáin chuig an bhfreastalaí API agus ní sheolfar aon sonraí eile. Mura bhfuil mionsamhlacha DeArrow ag físeán, taispeántar na gabhálacha bunaidh nó na gabhálacha fós.
+Má tá an ghné seo cumasaithe, seolfar URLanna físeán chuig freastalaí an API agus ní sheolfar sonraí eile ar bith. Mura mbíonn mionsamhlacha DeArrow ag físeán, taispeánfar na híomhánna bunaidh nó na gabhálacha statacha
 
-Tapáil anseo chun DeArrow.ajay.app a oscailt."</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Taispeáin foláirimh earráide nasc</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Taispeánann sé fógra nuair nach bhfuil freastalaí DeArrow ar fáil</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">Deirphointe API DeArrow</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">URL críochphointe taisce mionsamhail DeArrow</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Gabhann físeán fós</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Tógtar gabhála fós ó thos/lán/deireadh gach físeáin. Tá na híomhánna seo tógtha isteach i YouTube agus ní úsáidtear aon API seachtrach</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Úsáid gabhálacha gasta fós</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">Feabhsaíonn sé luasanna lódála trí íomhánna meánchaighdeáin a úsáid. D’fhéadfadh mionsamhlacha bána a bheith le feiceáil i sruthanna beo, i bhfíseáin neamheisithe agus i bhfíseáin níos sine.</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Tarraing fráma físe as</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Tús</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Lár</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Deireadh</string>
+Tapáil anseo chun DeArrow.ajay.app a oscailt"</string>
+  <string name="morphe_dearrow_connection_toast_title">Taispeáin foláirimh earráide nasc</string>
+  <string name="morphe_dearrow_connection_toast_summary">Taispeánann sé fógra nuair nach bhfuil freastalaí DeArrow ar fáil</string>
+  <string name="morphe_dearrow_api_url_title">Deirphointe API DeArrow</string>
+  <string name="morphe_dearrow_api_url_summary">URL críochphointe taisce mionsamhail DeArrow</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Gabhann físeán fós</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Tógtar gabhála fós ó thos/lán/deireadh gach físeáin. Tá na híomhánna seo tógtha isteach i YouTube agus ní úsáidtear aon API seachtrach</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Úsáid gabhálacha gasta fós</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Feabhsaíonn sé luasanna lódála trí íomhánna meánchaighdeáin a úsáid. D’fhéadfadh mionsamhlacha bána a bheith le feiceáil i sruthanna beo, i bhfíseáin neamheisithe agus i bhfíseáin níos sine.</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Tarraing fráma físe as</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Tús</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Lár</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Deireadh</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">Níl DeArrow ar fáil go sealadach (cód stádais: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">Níl DeArrow ar fáil go sealadach</string>
+  <string name="morphe_dearrow_error">Níl DeArrow ar fáil go sealadach (cód stádais: %s)</string>
+  <string name="morphe_dearrow_error_generic">Níl DeArrow ar fáil go sealadach</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Athchóirigh seanstíl cnaipe an imreora</string>

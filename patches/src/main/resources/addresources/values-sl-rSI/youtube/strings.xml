@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">O nas</string>
   <string name="morphe_settings_screen_01_ads_title">Oglasi</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Alternativni predogledi</string>
   <string name="morphe_settings_screen_03_feed_title">Vir</string>
   <string name="morphe_settings_screen_04_general_title">Splošno</string>
   <string name="morphe_settings_screen_05_player_title">Predvajalnik</string>
@@ -1154,39 +1153,44 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Izogibanje omejitev slike po regijah</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Preusmeri zahteve za sličice na alternativni strežnik za odpravo manjkajočih slik v omejenih državah</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">Naslovi DeArrow</string>
+  <string name="morphe_dearrow_titles_summary">Nadomesti naslove videoposnetkov z naslovi, ki so jih uporabniki predložili v DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_title">Prikaži ikono DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_summary">Prikaže ikono DeArrow na naslovih videoposnetkov, ki jih je prispevala skupnost</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Za začetno stran</string>
+  <string name="morphe_dearrow_thumbnail_home_title">Za začetno stran</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Za stran naročnin</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">Za stran naročnin</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Za stran »Vi«</string>
-  <string name="morphe_alt_thumbnail_player_title">Za predvajalnike</string>
-  <string name="morphe_alt_thumbnail_search_title">Za rezultate iskanja</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Izvirne predpovesti</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow in izvirne predoglede</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow in zajeti posnetki zaslona</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Zajeti slike</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow zagotavlja množično zbrane sličice za videoposnetke YouTube. Te sličice so pogosto bolj relevantne od tistih, ki jih ponuja YouTube
+  <string name="morphe_dearrow_thumbnail_library_title">Za stran »Vi«</string>
+  <string name="morphe_dearrow_thumbnail_player_title">Za predvajalnike</string>
+  <string name="morphe_dearrow_thumbnail_search_title">Za rezultate iskanja</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Izvirne predpovesti</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow in izvirne predoglede</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow in zajeti posnetki zaslona</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Zajeti slike</string>
+  <string name="morphe_dearrow_about_summary">"DeArrow ponuja naslove in sličice, ki so jih prispevali uporabniki, za videoposnetke na YouTubu. Ti so pogosto bolj ustrezni od tistih, ki jih ponuja YouTube.
 
-Če je omogočeno, se bodo URL-ji videoposnetkov poslani na strežnik API in ne bodo poslani nobeni drugi podatki. Če videoposnetek nima sličic DeArrow, bodo prikazane originalne ali zajete slike
+Če je omogočeno, bodo URL-ji videoposnetkov poslani strežniku API, drugi podatki pa ne bodo poslani. Če videoposnetek nima DeArrow sličic, se prikažejo izvirne ali mirujoče slike.
 
-Tapnite tukaj, da odprete DeArrow.ajay.app"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Pokaži opozorila o napaki povezave</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Pokaže obvestilo, ko je strežnik DeArrow nedostopen</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API naslov</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">URL DeArrowja za shranjevanje predpovedi</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Zajem slike videa</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Posnetki zaslona se snemajo od začetka / sredine / konca vsakega videa. Te slike so vgrajene v YouTube in ne uporabljamo zunanjih API-jev</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Uporaba hitrega zajema slike</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">Izboljša hitrost nalaganja z uporabo srednje kakovostnih slik. Prenosi v živo, neobjavljeni in starejši videoposnetki lahko prikažejo prazne sličice</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Izluči okvir videa iz</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Začetek</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Sredina</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Konec</string>
+Dotaknite se tukaj, da odprete DeArrow.ajay.app"</string>
+  <string name="morphe_dearrow_connection_toast_title">Pokaži opozorila o napaki povezave</string>
+  <string name="morphe_dearrow_connection_toast_summary">Pokaže obvestilo, ko je strežnik DeArrow nedostopen</string>
+  <string name="morphe_dearrow_api_url_title">DeArrow API naslov</string>
+  <string name="morphe_dearrow_api_url_summary">URL DeArrowja za shranjevanje predpovedi</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Zajem slike videa</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Posnetki zaslona se snemajo od začetka / sredine / konca vsakega videa. Te slike so vgrajene v YouTube in ne uporabljamo zunanjih API-jev</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Uporaba hitrega zajema slike</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Izboljša hitrost nalaganja z uporabo srednje kakovostnih slik. Prenosi v živo, neobjavljeni in starejši videoposnetki lahko prikažejo prazne sličice</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Izluči okvir videa iz</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Začetek</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Sredina</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Konec</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">DeArrow je začasno nedostopen (koda stanja: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow je začasno nedostopen</string>
+  <string name="morphe_dearrow_error">DeArrow je začasno nedostopen (koda stanja: %s)</string>
+  <string name="morphe_dearrow_error_generic">DeArrow je začasno nedostopen</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Obnovi star slog gumbov predvajalnika</string>

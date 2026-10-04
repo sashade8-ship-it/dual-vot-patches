@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Tungkol</string>
   <string name="morphe_settings_screen_01_ads_title">Patalastas</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Mga alternatibong thumbnail</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
   <string name="morphe_settings_screen_04_general_title">Pangkalahatan</string>
   <string name="morphe_settings_screen_05_player_title">Manlalaro</string>
@@ -1152,39 +1151,44 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Bypass image region restrictions</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Nagre-redirect ng mga request ng thumbnail sa isang alternatibong server para ayusin ang mga nawawalang imahe sa mga restricted country</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">Mga pamagat ng DeArrow</string>
+  <string name="morphe_dearrow_titles_summary">Pinapalitan ang mga pamagat ng video ng mga pamagat na galing sa publiko at isinumite sa DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_title">Ipakita ang icon ng DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_summary">Ipinapakita ang icon ng DeArrow sa mga pamagat ng video na mula sa karamihan</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Para sa Home tab</string>
+  <string name="morphe_dearrow_thumbnail_home_title">Para sa Home tab</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Para sa Subscriptions tab</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">Para sa Subscriptions tab</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Para sa You tab</string>
-  <string name="morphe_alt_thumbnail_player_title">Para sa player playlists &amp; recommendations</string>
-  <string name="morphe_alt_thumbnail_search_title">Para sa search results</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Mga orihinal na thumbnail</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; Mga orihinal na thumbnail</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; Kinukuha pa rin</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Kinukuha pa rin</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"Ang DeArrow ay nagbibigay ng mga thumbnail na pinagsama-sama ng publiko para sa mga video sa YouTube. Ang mga thumbnail na ito ay madalas na mas may kaugnayan kaysa sa mga ibinigay ng YouTube
+  <string name="morphe_dearrow_thumbnail_library_title">Para sa You tab</string>
+  <string name="morphe_dearrow_thumbnail_player_title">Para sa player playlists &amp; recommendations</string>
+  <string name="morphe_dearrow_thumbnail_search_title">Para sa search results</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Mga orihinal na thumbnail</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Mga orihinal na thumbnail</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Kinukuha pa rin</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Kinukuha pa rin</string>
+  <string name="morphe_dearrow_about_summary">"Ang DeArrow ay nagbibigay ng mga pamagat at thumbnail na galing sa publiko para sa mga video sa YouTube. Kadalasan, mas may kaugnayan ang mga ito kaysa sa mga ibinibigay ng YouTube.
 
-Kung pinagana, ang mga URL ng video ay ipapadala sa server ng API at walang ibang data ang ipapadala. Kung ang isang video ay walang mga thumbnail ng DeArrow, kung gayon ang mga orihinal o still captures ang ipinapakita
+Kung pinagana, ang mga URL ng video ay ipapadala sa server ng API at walang ibang datos na ipapadala. Kung walang mga thumbnail ng DeArrow ang isang video, ipapakita ang orihinal o mga still capture.
 
 I-tap dito upang buksan ang DeArrow.ajay.app"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Ipakita ang mga alerto ng error sa koneksyon</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Ipinapakita ang isang notification kapag hindi magagamit ang DeArrow server</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API endpoint</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">Ang URL ng DeArrow thumbnail cache endpoint</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Still video captures</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Kinukuha pa rin ang mga grabing larawan mula sa simula / gitna / dulo ng bawat video. Ang mga larawang ito ay binuo sa YouTube at walang panlabas na API na ginagamit</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Gumamit ng mabilis na still captures</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">Pinapabuti ang bilis ng paglo-load sa pamamagitan ng paggamit ng medium-quality images. Ang mga live stream, hindi pa nailalabas at mas lumang video ay maaaring magpakita ng blangkong thumbnail</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Kumuha ng frame ng video mula sa</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Simula</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Gitna</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Tapos na</string>
+  <string name="morphe_dearrow_connection_toast_title">Ipakita ang mga alerto ng error sa koneksyon</string>
+  <string name="morphe_dearrow_connection_toast_summary">Ipinapakita ang isang notification kapag hindi magagamit ang DeArrow server</string>
+  <string name="morphe_dearrow_api_url_title">DeArrow API endpoint</string>
+  <string name="morphe_dearrow_api_url_summary">Ang URL ng DeArrow thumbnail cache endpoint</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Still video captures</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Kinukuha pa rin ang mga grabing larawan mula sa simula / gitna / dulo ng bawat video. Ang mga larawang ito ay binuo sa YouTube at walang panlabas na API na ginagamit</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gumamit ng mabilis na still captures</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Pinapabuti ang bilis ng paglo-load sa pamamagitan ng paggamit ng medium-quality images. Ang mga live stream, hindi pa nailalabas at mas lumang video ay maaaring magpakita ng blangkong thumbnail</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Kumuha ng frame ng video mula sa</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Simula</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Gitna</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Tapos na</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">Ang DeArrow ay pansamantalang hindi magagamit (status code: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">Ang DeArrow ay pansamantalang hindi magagamit</string>
+  <string name="morphe_dearrow_error">Ang DeArrow ay pansamantalang hindi magagamit (status code: %s)</string>
+  <string name="morphe_dearrow_error_generic">Ang DeArrow ay pansamantalang hindi magagamit</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Ibalik ang lumang estilo ng button ng player</string>

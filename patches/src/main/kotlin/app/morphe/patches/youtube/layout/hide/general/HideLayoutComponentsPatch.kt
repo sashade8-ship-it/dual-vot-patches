@@ -103,7 +103,6 @@ private const val SEARCH_LINKS_FILTER =
 val hideLayoutComponentsPatch = bytecodePatch(
     name = "Hide layout components",
     description = "Adds options to hide general layout components."
-
 ) {
     dependsOn(
         lithoFilterPatch,
@@ -764,7 +763,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
             ).registerA
 
             addInstructions(
-                applyDimensionIndex - 1,
+                applyDimensionIndex,
                 """
                     invoke-static { v$returnStringRegister, v$floatDimensionRegister }, $LAYOUT_COMPONENTS_FILTER->modifyFeedSubtitleSpan(Landroid/text/SpannableString;F)Landroid/text/SpannableString;
                     move-result-object v$returnStringRegister

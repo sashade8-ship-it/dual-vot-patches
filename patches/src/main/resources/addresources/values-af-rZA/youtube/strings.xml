@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Inligting</string>
   <string name="morphe_settings_screen_01_ads_title">Advertensies</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Alternatiewe miniatuurbeelde</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
   <string name="morphe_settings_screen_04_general_title">Algemeen</string>
   <string name="morphe_settings_screen_05_player_title">Speler</string>
@@ -1154,39 +1153,44 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Omseil beeldregio beperkings</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Herlei duimnaelversoeke na \'n alternatiewe bediener om ontbrekende beelde in beperkte lande reg te stel</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">DeArrow-titels</string>
+  <string name="morphe_dearrow_titles_summary">Vervang video-titels met die skare-gebaseerde titels wat aan DeArrow voorgelê is</string>
+  <string name="morphe_dearrow_titles_icon_title">Wys DeArrow-ikoon</string>
+  <string name="morphe_dearrow_titles_icon_summary">Wys die DeArrow-ikoon op skaregebaseerde videotitels</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Vir Tuis-bladsy</string>
+  <string name="morphe_dearrow_thumbnail_home_title">Vir Tuis-bladsy</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Vir Subscriptions-bladsy</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">Vir Subscriptions-bladsy</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Vir Jy-bladsy</string>
-  <string name="morphe_alt_thumbnail_player_title">Vir spelerlysies &amp; aanbevelings</string>
-  <string name="morphe_alt_thumbnail_search_title">Vir soekresultate</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Oorspronklike foto\'s</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; Oorspronklike foto\'s</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; Stil vasleggings</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Stil vasleggings</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow verskaf geamptelike duimnaels vir YouTube-video's. Hierdie duimnaels is dikwels relevanter as dié wat deur YouTube verskaf word
+  <string name="morphe_dearrow_thumbnail_library_title">Vir Jy-bladsy</string>
+  <string name="morphe_dearrow_thumbnail_player_title">Vir spelerlysies &amp; aanbevelings</string>
+  <string name="morphe_dearrow_thumbnail_search_title">Vir soekresultate</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Oorspronklike foto\'s</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Oorspronklike foto\'s</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Stil vasleggings</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Stil vasleggings</string>
+  <string name="morphe_dearrow_about_summary">"DeArrow verskaf skare-gebaseerde titels en duimnaels vir YouTube-video's. Hierdie is dikwels meer relevant as dié wat deur YouTube verskaf word
 
-Indien geaktiveer, sal video-URL's na die API-bediener gestuur word en geen ander data gestuur nie. Indien 'n video nie DeArrow-duimnaels het nie, word die oorspronklike of nog beelde vertoon
+As dit geaktiveer is, sal video-URL's na die API-bediener gestuur word en geen ander data word gestuur nie. As 'n video nie DeArrow-duimnaels het nie, word die oorspronklike of stilstaande beelde gewys
 
 Tik hier om DeArrow.ajay.app oop te maak"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Wys konneksiefoutwaarskuwings</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Wys \'n kennisgewing wanneer die DeArrow-bediener nie beskikbaar is nie</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API-eindpunt</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">Die URL van die DeArrow-kleurplakhouer-eindpunt</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Stil vangs van video</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Stil vangs word geneem van die begin/middel/einde van elke video. Hierdie beelde is in YouTube ingebou en geen eksterne API word gebruik.</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Gebruik vinnige stil vangs</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">Verbeter laaighede deur medium-kwaliteit beelde te gebruik. Regstreekse uitsendings, nie-vrygestelende en ouer video\'s kan leë duimnaels vertoon</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Onttrek videoraam van</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Begin</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Middel</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Einde</string>
+  <string name="morphe_dearrow_connection_toast_title">Wys konneksiefoutwaarskuwings</string>
+  <string name="morphe_dearrow_connection_toast_summary">Wys \'n kennisgewing wanneer die DeArrow-bediener nie beskikbaar is nie</string>
+  <string name="morphe_dearrow_api_url_title">DeArrow API-eindpunt</string>
+  <string name="morphe_dearrow_api_url_summary">Die URL van die DeArrow-kleurplakhouer-eindpunt</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Stil vangs van video</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Stil vangs word geneem van die begin/middel/einde van elke video. Hierdie beelde is in YouTube ingebou en geen eksterne API word gebruik.</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gebruik vinnige stil vangs</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Verbeter laaighede deur medium-kwaliteit beelde te gebruik. Regstreekse uitsendings, nie-vrygestelende en ouer video\'s kan leë duimnaels vertoon</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Onttrek videoraam van</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Begin</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Middel</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Einde</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">DeArrow is tans nie beskikbaar nie (statuskode: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow is tans nie beskikbaar nie</string>
+  <string name="morphe_dearrow_error">DeArrow is tans nie beskikbaar nie (statuskode: %s)</string>
+  <string name="morphe_dearrow_error_generic">DeArrow is tans nie beskikbaar nie</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Herstel ou speler knoppie styl</string>

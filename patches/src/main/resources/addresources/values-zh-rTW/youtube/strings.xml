@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">關於</string>
   <string name="morphe_settings_screen_01_ads_title">廣告</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">替代縮圖</string>
   <string name="morphe_settings_screen_03_feed_title">推薦內容</string>
   <string name="morphe_settings_screen_04_general_title">一般</string>
   <string name="morphe_settings_screen_05_player_title">播放器</string>
@@ -1154,39 +1153,44 @@ Second \"item\" text"</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">繞過圖片區域限制</string>
   <string name="morphe_bypass_image_region_restrictions_summary">改用替代伺服器來要求縮圖，以解決受限制國家/地區的影像遺失問題</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">DeArrow 標題</string>
+  <string name="morphe_dearrow_titles_summary">將影片標題改為 DeArrow 上由群眾提交的標題</string>
+  <string name="morphe_dearrow_titles_icon_title">顯示 DeArrow 圖示</string>
+  <string name="morphe_dearrow_titles_icon_summary">在群眾外包的影片標題上顯示 DeArrow 圖示</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">首頁標籤</string>
+  <string name="morphe_dearrow_thumbnail_home_title">首頁標籤</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">訂閱標籤</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">訂閱標籤</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">您標籤</string>
-  <string name="morphe_alt_thumbnail_player_title">播放器</string>
-  <string name="morphe_alt_thumbnail_search_title">顯示連線錯誤警示</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">原版縮圖</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; 原版縮圖</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; 靜止捕獲</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">靜態截圖</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow 為 YouTube 影片提供由社群提供的縮圖。這些縮圖通常比 YouTube 提供的更貼切
+  <string name="morphe_dearrow_thumbnail_library_title">您標籤</string>
+  <string name="morphe_dearrow_thumbnail_player_title">播放器</string>
+  <string name="morphe_dearrow_thumbnail_search_title">顯示連線錯誤警示</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">原版縮圖</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; 原版縮圖</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; 靜止捕獲</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">靜態截圖</string>
+  <string name="morphe_dearrow_about_summary">"DeArrow 為 YouTube 影片提供群眾提交的標題與縮圖。這些通常比 YouTube 提供的更為相關。
 
-若您啟用此功能，影片網址將會傳送至 API 伺服器，不會傳送其他資料。如果影片沒有 DeArrow 縮圖，則會顯示原始縮圖或靜態截圖。
+若啟用，影片網址會傳送至 API 伺服器，且不會傳送其他資料。如果影片沒有 DeArrow 縮圖，則會顯示原始或靜止擷取畫面。
 
-點擊這裡以進一步了解 DeArrow"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">在 DeArrow 伺服器無法使用時顯示通知</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">當 DeArrow 伺服器無法使用時顯示通知</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API 端點</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">DeArrow URL 縮圖快取端點</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">靜態影片擷取</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">靜態擷取是擷取每個影片的開頭/中間/結尾作為縮圖。這些圖像內建於 YouTube 中，不會使用外部 API</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">使用快速靜態擷取</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">從指定時間提取影片畫面</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">開始</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">中間</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">將粗體影片播放器控制項復原為較舊、較細的視覺樣式</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">結束</string>
+輕觸此處以開啟 DeArrow.ajay.app"</string>
+  <string name="morphe_dearrow_connection_toast_title">在 DeArrow 伺服器無法使用時顯示通知</string>
+  <string name="morphe_dearrow_connection_toast_summary">當 DeArrow 伺服器無法使用時顯示通知</string>
+  <string name="morphe_dearrow_api_url_title">DeArrow API 端點</string>
+  <string name="morphe_dearrow_api_url_summary">DeArrow URL 縮圖快取端點</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">靜態影片擷取</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">靜態擷取是擷取每個影片的開頭/中間/結尾作為縮圖。這些圖像內建於 YouTube 中，不會使用外部 API</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">使用快速靜態擷取</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">從指定時間提取影片畫面</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">開始</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">中間</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">將粗體影片播放器控制項復原為較舊、較細的視覺樣式</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">結束</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">DeArrow 暫時無法使用（狀態碼：%s）</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow 暫時無法使用</string>
+  <string name="morphe_dearrow_error">DeArrow 暫時無法使用（狀態碼：%s）</string>
+  <string name="morphe_dearrow_error_generic">DeArrow 暫時無法使用</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">還原舊播放器按鈕樣式</string>

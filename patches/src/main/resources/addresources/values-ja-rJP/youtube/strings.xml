@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Morphe について</string>
   <string name="morphe_settings_screen_01_ads_title">広告</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">代替サムネイル</string>
   <string name="morphe_settings_screen_03_feed_title">フィード</string>
   <string name="morphe_settings_screen_04_general_title">全般</string>
   <string name="morphe_settings_screen_05_player_title">プレーヤー</string>
@@ -1156,37 +1155,44 @@ Automotive レイアウト
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">画像表示の地域制限を回避</string>
   <string name="morphe_bypass_image_region_restrictions_summary">制限されている地域で画像を表示するために、デフォルトとは別のサーバーから画像を取得します</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">DeArrowタイトル</string>
+  <string name="morphe_dearrow_titles_summary">動画タイトルを、DeArrowに投稿されたクラウドソーシングによるタイトルに置き換えます</string>
+  <string name="morphe_dearrow_titles_icon_title">DeArrow アイコンを表示</string>
+  <string name="morphe_dearrow_titles_icon_summary">クラウドソースされた動画タイトルに DeArrow アイコンを表示します</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">ホームタブ</string>
+  <string name="morphe_dearrow_thumbnail_home_title">ホームタブ</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">登録チャンネルタブ</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">登録チャンネルタブ</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">マイページタブ</string>
-  <string name="morphe_alt_thumbnail_player_title">プレーヤーのプレイリスト &amp; 関連動画</string>
-  <string name="morphe_alt_thumbnail_search_title">検索結果</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">デフォルトのサムネイル</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow &amp; デフォルト</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow &amp; 静止画</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">静止画サムネイル</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"DeArrow は、YouTube 動画のサムネイルをクラウドソーシングで提供する機能です。DeArrow のサムネイルは、YouTube が提供するサムネイルよりも適切なことが多いです。この機能は、動画の URL を API サーバーに送信しますが、他のデータは送信しません。動画に DeArrow サムネイルがない場合は、デフォルトのサムネイルまたは静止画サムネイルを表示します
+  <string name="morphe_dearrow_thumbnail_library_title">マイページタブ</string>
+  <string name="morphe_dearrow_thumbnail_player_title">プレーヤーのプレイリスト &amp; 関連動画</string>
+  <string name="morphe_dearrow_thumbnail_search_title">検索結果</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">デフォルトのサムネイル</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; デフォルト</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; 静止画</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">静止画サムネイル</string>
+  <string name="morphe_dearrow_about_summary">"DeArrowは、YouTube動画にクラウドソーシングによるタイトルとサムネイルを提供します。これらは、YouTubeが提供するものよりも関連性が高いことがよくあります。
 
-ここをタップすると DeArrow.ajay.app を開きます"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">接続エラーの通知を表示</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">DeArrow サーバーが利用できない場合に通知を表示します</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">DeArrow API のエンドポイント</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">DeArrow がサムネイルのキャッシュを取得するエンドポイントの URL</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">静止画サムネイル</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">静止画は各動画の序盤 / 中盤 / 終盤から取得されます。これらの画像は YouTube に組み込まれており、外部 API は使用されません</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">高速な静止画サムネイルを使用</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">中画質の画像を使用することにより、サムネイルの読み込み速度が速くなります。ライブ配信、未公開動画、非常に古い動画には、空白のサムネイルが表示される場合があります</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">静止画サムネイルを取得する位置</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">動画の序盤</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">動画の中盤</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">動画の終盤</string>
+有効にすると、動画URLがAPIサーバーに送信され、他のデータは送信されません。動画にDeArrowのサムネイルがない場合は、元のサムネイルまたは静止画が表示されます。
+
+ここをタップしてDeArrow.ajay.appを開きます"</string>
+  <string name="morphe_dearrow_connection_toast_title">接続エラーの通知を表示</string>
+  <string name="morphe_dearrow_connection_toast_summary">DeArrow サーバーが利用できない場合に通知を表示します</string>
+  <string name="morphe_dearrow_api_url_title">DeArrow API のエンドポイント</string>
+  <string name="morphe_dearrow_api_url_summary">DeArrow がサムネイルのキャッシュを取得するエンドポイントの URL</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">静止画サムネイル</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">静止画は各動画の序盤 / 中盤 / 終盤から取得されます。これらの画像は YouTube に組み込まれており、外部 API は使用されません</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">高速な静止画サムネイルを使用</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">中画質の画像を使用することにより、サムネイルの読み込み速度が速くなります。ライブ配信、未公開動画、非常に古い動画には、空白のサムネイルが表示される場合があります</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">静止画サムネイルを取得する位置</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">動画の序盤</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">動画の中盤</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">動画の終盤</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">DeArrow は一時的に利用できません (status code: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">DeArrow は一時的に利用できません</string>
+  <string name="morphe_dearrow_error">DeArrow は一時的に利用できません (status code: %s)</string>
+  <string name="morphe_dearrow_error_generic">DeArrow は一時的に利用できません</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">以前のプレーヤーボタンのデザインに戻す</string>

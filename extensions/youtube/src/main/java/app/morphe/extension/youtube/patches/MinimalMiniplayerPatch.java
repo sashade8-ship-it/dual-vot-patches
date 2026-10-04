@@ -199,6 +199,13 @@ public final class MinimalMiniplayerPatch {
      */
     private static final float maxDragProgress = 0.95f;
 
+    /**
+     * In the event that a short would be opened and overwrites the video and channel
+     * names, these fields will save the name of the currently open video.
+     */
+    private static String previousVideoTitle = "";
+    private static String previousChannelTitle = "";
+
 
     /**
      * Injection point.
@@ -1023,10 +1030,15 @@ public final class MinimalMiniplayerPatch {
     }
 
     private static void updateText() {
-        setText(titleRef.get(), VideoInformation.getVideoTitle());
+        if (!ShortsPlayerState.isOpen()) {
+            previousVideoTitle = VideoInformation.getVideoTitle();
+            previousChannelTitle = VideoInformation.getChannelName();
+        }
+
+        setText(titleRef.get(), previousVideoTitle);
 
         TextView subtitle = subtitleRef.get();
-        if (setText(subtitle, VideoInformation.getChannelName())) {
+        if (setText(subtitle, previousChannelTitle)) {
             subtitle.setVisibility(View.VISIBLE);
         }
     }

@@ -1,11 +1,20 @@
-package app.morphe.extension.youtube.patches;
+/*
+ * Copyright 2026 Morphe.
+ * https://github.com/MorpheApp/morphe-patches/pull/3447
+ *
+ * Original hard forked code:
+ * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
+ *
+ * See the included NOTICE file for GPLv3 Section 7 terms that apply to Morphe contributions.
+ */
+
+package app.morphe.extension.youtube.patches.dearrow;
 
 import static app.morphe.extension.shared.StringRef.str;
 
 import android.net.Uri;
 
 import androidx.annotation.GuardedBy;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import org.chromium.net.UrlRequest;
@@ -28,7 +37,10 @@ import app.morphe.extension.youtube.shared.NavigationBar;
 import app.morphe.extension.youtube.shared.PlayerType;
 
 /**
- * Alternative YouTube thumbnails.
+ * DeArrow titles and alternative YouTube thumbnails.
+ * <p>
+ * Titles are replaced by {@link app.morphe.extension.youtube.patches.originaltitles.RestoreOriginalTitlesPatch},
+ * which fetches them with {@link DeArrowTitleRequest}.
  * <p>
  * Can show YouTube provided screen captures of beginning/middle/end of the video.
  * (ie: sd1.jpg, sd2.jpg, sd3.jpg).
@@ -46,43 +58,66 @@ import app.morphe.extension.youtube.shared.PlayerType;
  * because a noticeable number of videos do not have hq720 and too much fail to load.
  */
 @SuppressWarnings("unused")
-public final class AlternativeThumbnailsPatch {
+public final class DeArrowPatch {
 
     // These must be class declarations if declared here,
     // otherwise the app will not load due to cyclic initialization errors.
-    public static final class DeArrowAvailability implements Setting.Availability {
-        public static boolean usingDeArrowAnywhere() {
-            return Settings.ALT_THUMBNAIL_HOME.get().useDeArrow
-                    || Settings.ALT_THUMBNAIL_SUBSCRIPTIONS.get().useDeArrow
-                    || Settings.ALT_THUMBNAIL_LIBRARY.get().useDeArrow
-                    || Settings.ALT_THUMBNAIL_PLAYER.get().useDeArrow
-                    || Settings.ALT_THUMBNAIL_SEARCH.get().useDeArrow;
+    public static final class DeArrowThumbnailsAvailability implements Setting.Availability {
+        public static boolean usingDeArrowThumbnailsAnywhere() {
+            return Settings.DEARROW_THUMBNAIL_HOME.get().useDeArrow
+                    || Settings.DEARROW_THUMBNAIL_SUBSCRIPTIONS.get().useDeArrow
+                    || Settings.DEARROW_THUMBNAIL_LIBRARY.get().useDeArrow
+                    || Settings.DEARROW_THUMBNAIL_PLAYER.get().useDeArrow
+                    || Settings.DEARROW_THUMBNAIL_SEARCH.get().useDeArrow;
         }
 
         @Override
         public boolean isAvailable() {
-            return usingDeArrowAnywhere();
+            return usingDeArrowThumbnailsAnywhere();
         }
 
         @Override
         public List<Setting<?>> getParentSettings() {
             return List.of(
-                    Settings.ALT_THUMBNAIL_HOME,
-                    Settings.ALT_THUMBNAIL_SUBSCRIPTIONS,
-                    Settings.ALT_THUMBNAIL_LIBRARY,
-                    Settings.ALT_THUMBNAIL_PLAYER,
-                    Settings.ALT_THUMBNAIL_SEARCH
+                    Settings.DEARROW_THUMBNAIL_HOME,
+                    Settings.DEARROW_THUMBNAIL_SUBSCRIPTIONS,
+                    Settings.DEARROW_THUMBNAIL_LIBRARY,
+                    Settings.DEARROW_THUMBNAIL_PLAYER,
+                    Settings.DEARROW_THUMBNAIL_SEARCH
+            );
+        }
+    }
+
+    /**
+     * Available if DeArrow is used for titles or thumbnails.
+     */
+    public static final class DeArrowAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return Settings.DEARROW_TITLES.get()
+                    || DeArrowThumbnailsAvailability.usingDeArrowThumbnailsAnywhere();
+        }
+
+        @Override
+        public List<Setting<?>> getParentSettings() {
+            return List.of(
+                    Settings.DEARROW_TITLES,
+                    Settings.DEARROW_THUMBNAIL_HOME,
+                    Settings.DEARROW_THUMBNAIL_SUBSCRIPTIONS,
+                    Settings.DEARROW_THUMBNAIL_LIBRARY,
+                    Settings.DEARROW_THUMBNAIL_PLAYER,
+                    Settings.DEARROW_THUMBNAIL_SEARCH
             );
         }
     }
 
     public static final class StillImagesAvailability implements Setting.Availability {
         public static boolean usingStillImagesAnywhere() {
-            return Settings.ALT_THUMBNAIL_HOME.get().useStillImages
-                    || Settings.ALT_THUMBNAIL_SUBSCRIPTIONS.get().useStillImages
-                    || Settings.ALT_THUMBNAIL_LIBRARY.get().useStillImages
-                    || Settings.ALT_THUMBNAIL_PLAYER.get().useStillImages
-                    || Settings.ALT_THUMBNAIL_SEARCH.get().useStillImages;
+            return Settings.DEARROW_THUMBNAIL_HOME.get().useStillImages
+                    || Settings.DEARROW_THUMBNAIL_SUBSCRIPTIONS.get().useStillImages
+                    || Settings.DEARROW_THUMBNAIL_LIBRARY.get().useStillImages
+                    || Settings.DEARROW_THUMBNAIL_PLAYER.get().useStillImages
+                    || Settings.DEARROW_THUMBNAIL_SEARCH.get().useStillImages;
         }
 
         @Override
@@ -93,11 +128,11 @@ public final class AlternativeThumbnailsPatch {
         @Override
         public List<Setting<?>> getParentSettings() {
             return List.of(
-                    Settings.ALT_THUMBNAIL_HOME,
-                    Settings.ALT_THUMBNAIL_SUBSCRIPTIONS,
-                    Settings.ALT_THUMBNAIL_LIBRARY,
-                    Settings.ALT_THUMBNAIL_PLAYER,
-                    Settings.ALT_THUMBNAIL_SEARCH
+                    Settings.DEARROW_THUMBNAIL_HOME,
+                    Settings.DEARROW_THUMBNAIL_SUBSCRIPTIONS,
+                    Settings.DEARROW_THUMBNAIL_LIBRARY,
+                    Settings.DEARROW_THUMBNAIL_PLAYER,
+                    Settings.DEARROW_THUMBNAIL_SEARCH
             );
         }
     }
@@ -161,12 +196,12 @@ public final class AlternativeThumbnailsPatch {
      * Fix any bad imported data.
      */
     private static Uri validateSettings() {
-        Uri apiURI = Uri.parse(Settings.ALT_THUMBNAIL_DEARROW_API_URL.get());
+        Uri apiURI = Uri.parse(Settings.DEARROW_API_URL.get());
         // Cannot use unsecured 'http', otherwise the connections fail to start and no callbacks hooks are made.
         String scheme = apiURI.getScheme();
         if (scheme == null || scheme.equals("http") || apiURI.getHost() == null) {
             Utils.showToastLong("Invalid DeArrow API URL. Using default");
-            Settings.ALT_THUMBNAIL_DEARROW_API_URL.resetToDefault();
+            Settings.DEARROW_API_URL.resetToDefault();
             return validateSettings();
         }
         return apiURI;
@@ -175,18 +210,18 @@ public final class AlternativeThumbnailsPatch {
     private static ThumbnailOption optionSettingForCurrentNavigation() {
         // Must check player type first, as search bar can be active behind the player.
         if (PlayerType.getCurrent().isMaximizedOrFullscreen()) {
-            return Settings.ALT_THUMBNAIL_PLAYER.get();
+            return Settings.DEARROW_THUMBNAIL_PLAYER.get();
         }
 
         // Must check second, as search can be from any tab.
         if (NavigationBar.isSearchBarActive()) {
-            return Settings.ALT_THUMBNAIL_SEARCH.get();
+            return Settings.DEARROW_THUMBNAIL_SEARCH.get();
         }
 
         // Avoid checking which navigation button is selected, if all other settings are the same.
-        ThumbnailOption homeOption = Settings.ALT_THUMBNAIL_HOME.get();
-        ThumbnailOption subscriptionsOption = Settings.ALT_THUMBNAIL_SUBSCRIPTIONS.get();
-        ThumbnailOption libraryOption = Settings.ALT_THUMBNAIL_LIBRARY.get();
+        ThumbnailOption homeOption = Settings.DEARROW_THUMBNAIL_HOME.get();
+        ThumbnailOption subscriptionsOption = Settings.DEARROW_THUMBNAIL_SUBSCRIPTIONS.get();
+        ThumbnailOption libraryOption = Settings.DEARROW_THUMBNAIL_LIBRARY.get();
         if ((homeOption == subscriptionsOption) && (homeOption == libraryOption)) {
             return homeOption; // All are the same option.
         }
@@ -212,8 +247,8 @@ public final class AlternativeThumbnailsPatch {
      * @return The alternative thumbnail URL, or if not available NULL.
      */
     @Nullable
-    private static String buildYouTubeVideoStillURL(@NonNull DecodedThumbnailURL decodedURL,
-                                                    @NonNull ThumbnailQuality qualityToUse) {
+    private static String buildYouTubeVideoStillURL(DecodedThumbnailURL decodedURL,
+                                                    ThumbnailQuality qualityToUse) {
         String sanitizedReplacement = decodedURL.createStillsURL(qualityToUse, false);
         if (VerifiedQualities.verifyAltThumbnailExist(decodedURL.videoId, qualityToUse, sanitizedReplacement)) {
             return sanitizedReplacement;
@@ -229,7 +264,6 @@ public final class AlternativeThumbnailsPatch {
      * @param fallbackURL URL to fall back to in case.
      * @return The alternative thumbnail URL, without tracking parameters.
      */
-    @NonNull
     private static String buildDeArrowThumbnailURL(String videoId, String fallbackURL) {
         // Build thumbnail request URL.
         // See https://github.com/ajayyy/DeArrowThumbnailCache/blob/a947f33787b8fe2568abc53c86894368e3b61b24/app.py#L38
@@ -241,14 +275,14 @@ public final class AlternativeThumbnailsPatch {
                 .toString();
     }
 
-    private static boolean urlIsDeArrow(@NonNull String imageURL) {
+    private static boolean urlIsDeArrow(String imageURL) {
         return imageURL.startsWith(deArrowAPIURLPrefix);
     }
 
     /**
      * @return If this client has not recently experienced any DeArrow API errors.
      */
-    private static boolean canUseDeArrowAPI() {
+    static boolean canUseDeArrowAPI() {
         if (timeToResumeDeArrowAPICalls == 0) {
             return true;
         }
@@ -260,15 +294,18 @@ public final class AlternativeThumbnailsPatch {
         return false;
     }
 
-    private static void handleDeArrowError(@NonNull String url, int statusCode) {
+    /**
+     * Turns off DeArrow titles and thumbnails for a while.
+     */
+    static void handleDeArrowError(String url, int statusCode) {
         Logger.printDebug(() -> "Encountered DeArrow error.  URL: " + url);
         final long now = System.currentTimeMillis();
         if (timeToResumeDeArrowAPICalls < now) {
             timeToResumeDeArrowAPICalls = now + DEARROW_FAILURE_API_BACKOFF_MILLISECONDS;
-            if (Settings.ALT_THUMBNAIL_DEARROW_CONNECTION_TOAST.get()) {
+            if (Settings.DEARROW_CONNECTION_TOAST.get()) {
                 String toastMessage = (statusCode != 0)
-                        ? str("morphe_alt_thumbnail_dearrow_error", statusCode)
-                        : str("morphe_alt_thumbnail_dearrow_error_generic");
+                        ? str("morphe_dearrow_error", statusCode)
+                        : str("morphe_dearrow_error_generic");
                 Utils.showToastLong(toastMessage);
             }
         }
@@ -340,7 +377,7 @@ public final class AlternativeThumbnailsPatch {
      * <p>
      * Cronet considers all completed connections as a success, even if the response is 404 or 5xx.
      */
-    public static void handleCronetSuccess(UrlRequest request, @NonNull UrlResponseInfo responseInfo) {
+    public static void handleCronetSuccess(UrlRequest request, UrlResponseInfo responseInfo) {
         try {
             final int statusCode = responseInfo.getHttpStatusCode();
             if (statusCode == Requester.HTTP_STATUS_CODE_SUCCESS) {
@@ -455,7 +492,7 @@ public final class AlternativeThumbnailsPatch {
          * ie: "hq720_2" returns {@link #HQ720}.
          */
         @Nullable
-        static ThumbnailQuality altImageNameToQuality(@NonNull String altImageName) {
+        static ThumbnailQuality altImageNameToQuality(String altImageName) {
             return altNameToEnum.get(altImageName);
         }
 
@@ -464,13 +501,13 @@ public final class AlternativeThumbnailsPatch {
          * ie: If fast alt image is enabled, then "hq720" returns {@link #SDDEFAULT}.
          */
         @Nullable
-        static ThumbnailQuality getQualityToUse(@NonNull String originalSize) {
+        static ThumbnailQuality getQualityToUse(String originalSize) {
             ThumbnailQuality quality = originalNameToEnum.get(originalSize);
             if (quality == null) {
                 return null; // Not a thumbnail for a regular video.
             }
 
-            final boolean useFastQuality = Settings.ALT_THUMBNAIL_STILLS_FAST.get();
+            final boolean useFastQuality = Settings.DEARROW_THUMBNAIL_STILLS_FAST.get();
             return switch (quality) {
                 // SD alt images have somewhat worse quality with washed out color and poor contrast.
                 // But the 720 images look much better and don't suffer from these issues.
@@ -505,7 +542,7 @@ public final class AlternativeThumbnailsPatch {
         }
 
         String getAltImageNameToUse() {
-            return altImageName + Settings.ALT_THUMBNAIL_STILLS_TIME.get().altImageNumber;
+            return altImageName + Settings.DEARROW_THUMBNAIL_STILLS_TIME.get().altImageNumber;
         }
     }
 
@@ -528,7 +565,7 @@ public final class AlternativeThumbnailsPatch {
         private static final Map<String, VerifiedQualities> altVideoIdLookup =
                 Utils.createSizeRestrictedMap(1000);
 
-        private static VerifiedQualities getVerifiedQualities(@NonNull String videoId, boolean returnNullIfDoesNotExist) {
+        private static VerifiedQualities getVerifiedQualities(String videoId, boolean returnNullIfDoesNotExist) {
             synchronized (altVideoIdLookup) {
                 VerifiedQualities verified = altVideoIdLookup.get(videoId);
                 if (verified == null) {
@@ -542,14 +579,14 @@ public final class AlternativeThumbnailsPatch {
             }
         }
 
-        static boolean verifyAltThumbnailExist(@NonNull String videoId, @NonNull ThumbnailQuality quality,
-                                               @NonNull String imageURL) {
-            VerifiedQualities verified = getVerifiedQualities(videoId, Settings.ALT_THUMBNAIL_STILLS_FAST.get());
+        static boolean verifyAltThumbnailExist(String videoId, ThumbnailQuality quality,
+                                               String imageURL) {
+            VerifiedQualities verified = getVerifiedQualities(videoId, Settings.DEARROW_THUMBNAIL_STILLS_FAST.get());
             if (verified == null) return true; // Fast alt thumbnails is enabled.
             return verified.verifyYouTubeThumbnailExists(videoId, quality, imageURL);
         }
 
-        static void setAltThumbnailDoesNotExist(@NonNull String videoId, @NonNull ThumbnailQuality quality) {
+        static void setAltThumbnailDoesNotExist(String videoId, ThumbnailQuality quality) {
             VerifiedQualities verified = getVerifiedQualities(videoId, false);
             //noinspection ConstantConditions
             verified.setQualityVerified(videoId, quality, false);
@@ -589,13 +626,13 @@ public final class AlternativeThumbnailsPatch {
         /**
          * Verify if a video alt thumbnail exists.  Does so by making a minimal HEAD HTTP request.
          */
-        synchronized boolean verifyYouTubeThumbnailExists(@NonNull String videoId, @NonNull ThumbnailQuality quality,
-                                                          @NonNull String imageURL) {
+        synchronized boolean verifyYouTubeThumbnailExists(String videoId, ThumbnailQuality quality,
+                                                          String imageURL) {
             if (highestQualityVerified != null && highestQualityVerified.ordinal() >= quality.ordinal()) {
                 return true; // Previously verified as existing.
             }
 
-            final boolean fastQuality = Settings.ALT_THUMBNAIL_STILLS_FAST.get();
+            final boolean fastQuality = Settings.DEARROW_THUMBNAIL_STILLS_FAST.get();
             if (lowestQualityNotAvailable != null && lowestQualityNotAvailable.ordinal() <= quality.ordinal()) {
                 if (fastQuality || System.currentTimeMillis() < timeToReVerifyLowestQuality) {
                     return false; // Previously verified as not existing.
@@ -701,7 +738,7 @@ public final class AlternativeThumbnailsPatch {
         }
 
         @SuppressWarnings("SameParameterValue")
-        String createStillsURL(@NonNull ThumbnailQuality qualityToUse, boolean includeViewTracking) {
+        String createStillsURL(ThumbnailQuality qualityToUse, boolean includeViewTracking) {
             // Images could be upgraded to webp if they are not already, but this fails quite often,
             // especially for new videos uploaded in the last hour.
             // And even if alt webp images do exist, sometimes they can load much slower than the original jpg alt images.

@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Quant a</string>
   <string name="morphe_settings_screen_01_ads_title">Publicitat</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Miniatures alternatives</string>
   <string name="morphe_settings_screen_03_feed_title">Canal</string>
   <string name="morphe_settings_screen_04_general_title">General</string>
   <string name="morphe_settings_screen_05_player_title">Reproductor</string>
@@ -191,7 +190,8 @@ Second \"item\" text"</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->

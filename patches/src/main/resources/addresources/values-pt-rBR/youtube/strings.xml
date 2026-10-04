@@ -20,7 +20,6 @@ Second \"item\" text"</string>
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Sobre</string>
   <string name="morphe_settings_screen_01_ads_title">Anúncios</string>
-  <string name="morphe_settings_screen_02_alt_thumbnails_title">Thumbnails alternativas</string>
   <string name="morphe_settings_screen_03_feed_title">Feed</string>
   <string name="morphe_settings_screen_04_general_title">Geral</string>
   <string name="morphe_settings_screen_05_player_title">Player</string>
@@ -1153,39 +1152,44 @@ Limitação: Se 'Restaurar barra de ações de vídeo antiga' estiver desativado
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <string name="morphe_bypass_image_region_restrictions_title">Ignorar restrições de região de imagem</string>
   <string name="morphe_bypass_image_region_restrictions_summary">Redireciona solicitações de thumbnail para um servidor alternativo para corrigir imagens ausentes em países restritos</string>
-  <!-- layout.thumbnails.alternativeThumbnailsPatch -->
+  <!-- layout.dearrow.deArrowPatch -->
+  <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">Títulos do DeArrow</string>
+  <string name="morphe_dearrow_titles_summary">Substitui os títulos dos vídeos pelos títulos colaborativos enviados ao DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_title">Mostrar ícone do DeArrow</string>
+  <string name="morphe_dearrow_titles_icon_summary">Mostra o ícone do DeArrow em títulos de vídeo colaborativos</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_home_title">Para a aba Início</string>
+  <string name="morphe_dearrow_thumbnail_home_title">Para a aba Início</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_subscription_title">Para a aba Inscrições</string>
+  <string name="morphe_dearrow_thumbnail_subscription_title">Para a aba Inscrições</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_alt_thumbnail_library_title">Para a aba Você</string>
-  <string name="morphe_alt_thumbnail_player_title">Para playlists e recomendações do player</string>
-  <string name="morphe_alt_thumbnail_search_title">Para resultados de pesquisa</string>
-  <string name="morphe_alt_thumbnail_options_entry_1">Thumbnails originais</string>
-  <string name="morphe_alt_thumbnail_options_entry_2">DeArrow e Thumbnails originais</string>
-  <string name="morphe_alt_thumbnail_options_entry_3">DeArrow e Capturas estáticas</string>
-  <string name="morphe_alt_thumbnail_options_entry_4">Captura estática</string>
-  <string name="morphe_alt_thumbnail_dearrow_about_summary">"O DeArrow fornece thumbnails enviadas pela comunidade para vídeos do YouTube. Essas thumbnails são frequentemente mais relevantes do que as fornecidas pelo YouTube
+  <string name="morphe_dearrow_thumbnail_library_title">Para a aba Você</string>
+  <string name="morphe_dearrow_thumbnail_player_title">Para playlists e recomendações do player</string>
+  <string name="morphe_dearrow_thumbnail_search_title">Para resultados de pesquisa</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">Thumbnails originais</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow e Thumbnails originais</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow e Capturas estáticas</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">Captura estática</string>
+  <string name="morphe_dearrow_about_summary">"O DeArrow fornece títulos e miniaturas feitos pela comunidade para vídeos do YouTube. Esses costumam ser mais relevantes do que aqueles fornecidos pelo YouTube
 
-Se ativado, os URLs dos vídeos serão enviados ao servidor da API e nenhum outro dado será enviado. Se um vídeo não tiver thumbnails do DeArrow, as originais ou capturas estáticas serão exibidas
+Se ativado, as URLs de vídeo serão enviadas para o servidor de API e nenhum outro dado é enviado. Se um vídeo não tiver miniaturas do DeArrow, as capturas originais ou estáticas são mostradas
 
 Toque aqui para abrir DeArrow.ajay.app"</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_title">Mostrar alertas de erro de conexão</string>
-  <string name="morphe_alt_thumbnail_dearrow_connection_toast_summary">Mostra uma notificação quando o servidor DeArrow estiver indisponível</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_title">Endpoint da API do DeArrow</string>
-  <string name="morphe_alt_thumbnail_dearrow_api_url_summary">Cache endpoint da URL das thumbnails do DeArrow</string>
-  <string name="morphe_alt_thumbnail_stills_about_title">Capturas estáticas</string>
-  <string name="morphe_alt_thumbnail_stills_about_summary">Capturas estáticas são tiradas do começo / meio / fim de cada vídeo. Estas imagens são construídas no YouTube e nenhuma API externa é usada</string>
-  <string name="morphe_alt_thumbnail_stills_fast_title">Usar capturas estáticas rápidas</string>
-  <string name="morphe_alt_thumbnail_stills_fast_summary">Melhora a velocidade de carregamento usando imagens de qualidade média. Transmissões ao vivo, vídeos não lançados e mais antigos podem exibir thumbnails em branco</string>
-  <string name="morphe_alt_thumbnail_stills_time_title">Extrair o frame de vídeo do</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_1">Início</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_2">Meio</string>
-  <string name="morphe_alt_thumbnail_stills_time_entry_3">Fim</string>
+  <string name="morphe_dearrow_connection_toast_title">Mostrar alertas de erro de conexão</string>
+  <string name="morphe_dearrow_connection_toast_summary">Mostra uma notificação quando o servidor DeArrow estiver indisponível</string>
+  <string name="morphe_dearrow_api_url_title">Endpoint da API do DeArrow</string>
+  <string name="morphe_dearrow_api_url_summary">Cache endpoint da URL das thumbnails do DeArrow</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">Capturas estáticas</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">Capturas estáticas são tiradas do começo / meio / fim de cada vídeo. Estas imagens são construídas no YouTube e nenhuma API externa é usada</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_title">Usar capturas estáticas rápidas</string>
+  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Melhora a velocidade de carregamento usando imagens de qualidade média. Transmissões ao vivo, vídeos não lançados e mais antigos podem exibir thumbnails em branco</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">Extrair o frame de vídeo do</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Início</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Meio</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">Fim</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_alt_thumbnail_dearrow_error">O DeArrow não está disponível temporariamente (código de status: %s)</string>
-  <string name="morphe_alt_thumbnail_dearrow_error_generic">O DeArrow não está disponível temporariamente</string>
+  <string name="morphe_dearrow_error">O DeArrow não está disponível temporariamente (código de status: %s)</string>
+  <string name="morphe_dearrow_error_generic">O DeArrow não está disponível temporariamente</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
   <string name="morphe_restore_old_player_buttons_title">Restaurar estilo antigo dos botões do player</string>
