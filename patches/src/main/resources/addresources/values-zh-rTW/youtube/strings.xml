@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">隱藏藝人資訊卡</string>
   <string name="morphe_hide_artist_cards_summary">隱藏搜尋結果頂部的藝術家卡片</string>
   <string name="morphe_hide_auto_dubbed_label_title">隱藏「自動配音」標籤</string>
+  <string name="morphe_hide_channel_buttons_title">隱藏頻道按鈕</string>
+  <string name="morphe_hide_channel_buttons_summary">隱藏搜尋結果中頻道個人檔案中的訂閱、查看頻道、社群和 YouTube Music 等按鈕</string>
   <string name="morphe_hide_community_posts_title">隱藏社群貼文</string>
   <string name="morphe_hide_compact_banner_title">隱藏精簡橫幅</string>
   <string name="morphe_hide_compact_banner_summary">隱藏精簡的橫幅和某些元件之間的間距</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">隱藏搜尋建議螢幕右下角的浮動麥克風按鈕</string>
   <string name="morphe_hide_get_premium_button_title">隱藏取得 Premium 按鈕</string>
   <string name="morphe_hide_history_shelf_title">隱藏觀看記錄欄</string>
-  <string name="morphe_hide_history_shelf_summary">在「你」分頁中隱藏觀看記錄欄</string>
   <string name="morphe_hide_horizontal_shelves_title">隱藏橫向區塊</string>
   <string name="morphe_hide_horizontal_shelves_summary">已隱藏橫向專區，例如：• 即時新聞• 你可能喜歡的社群貼文• 繼續觀看• 探索更多頻道• 探索更多主題• 為你推薦• 最新影片• 最相關• 來自創作者社群的貼文• 購物• 再次觀看</string>
   <string name="morphe_hide_hyped_label_title">隱藏熱門標籤</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">隱藏「顯示更多」按鈕</string>
   <string name="morphe_hide_show_more_button_summary">隱藏搜尋結果中影片下方的展開按鈕</string>
   <string name="morphe_hide_subscribed_channels_bar_title">隱藏訂閱頻道列</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">隱藏已訂閱頻道列中的頻道名稱</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">隱藏已訂閱頻道名稱</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">隱藏已訂閱頻道列中的頻道名稱</string>
   <string name="morphe_hide_surveys_title">隱藏問卷調查</string>
   <string name="morphe_hide_surveys_summary">隱藏關於資訊流推薦準確度的調查和提示</string>
   <string name="morphe_hide_ticket_shelf_title">隱藏票券架</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">隱藏選單中的「說明 &amp; 意見回饋」</string>
   <string name="morphe_hide_help_feedback_menu_summary">隱藏應用程式列三點選單中的「說明 &amp; 意見回饋」，例如搜尋結果選單</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">在 You 分頁中隱藏頻道代稱</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">在 You 分頁中，隱藏帳號名稱下方的頻道代稱</string>
+  <string name="morphe_hide_handle_title">隱藏頻道代號</string>
+  <string name="morphe_hide_handle_summary">在「You」分頁中隱藏你的頻道代號</string>
   <string name="morphe_hide_video_title_title">隱藏影片標題</string>
   <string name="morphe_hide_video_title_summary">隱藏全螢幕模式下的影片標題</string>
   <string name="morphe_sanitize_video_subtitle_title">清理影片字幕</string>
@@ -685,7 +687,7 @@ Second \"item\" text"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">隱藏「連線」按鈕</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">隱藏檢舉按鈕</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">隱藏「Remix」按鈕</string>
@@ -1182,8 +1184,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">DeArrow URL 縮圖快取端點</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">靜態影片擷取</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">靜態擷取是擷取每個影片的開頭/中間/結尾作為縮圖。這些圖像內建於 YouTube 中，不會使用外部 API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">使用快速靜態擷取</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">從指定時間提取影片畫面</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">開始</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">中間</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">將粗體影片播放器控制項復原為較舊、較細的視覺樣式</string>

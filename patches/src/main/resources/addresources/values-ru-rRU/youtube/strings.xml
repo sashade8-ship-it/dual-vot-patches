@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">Скрыть карточки исполнителей</string>
   <string name="morphe_hide_artist_cards_summary">Скрывает карточку исполнителя в верхней части результатов поиска</string>
   <string name="morphe_hide_auto_dubbed_label_title">Скрыть надпись \"Автоматически озвучено\"</string>
+  <string name="morphe_hide_channel_buttons_title">Скрыть кнопки каналов</string>
+  <string name="morphe_hide_channel_buttons_summary">Скрывает такие кнопки, как «Подписаться», «Смотреть канал», «Сообщество» и «YouTube Music», в профилях каналов в результатах поиска</string>
   <string name="morphe_hide_community_posts_title">Скрыть публикации сообщества</string>
   <string name="morphe_hide_compact_banner_title">Скрыть компактные баннеры</string>
   <string name="morphe_hide_compact_banner_summary">Скрывает компактные баннеры и интервалы между некоторыми компонентами</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">Скрывает плавающую кнопку микрофона в нижнем правом углу экрана предложений поиска</string>
   <string name="morphe_hide_get_premium_button_title">Скрыть кнопку \"Получить Premium\"</string>
   <string name="morphe_hide_history_shelf_title">Скрыть раздел «История»</string>
-  <string name="morphe_hide_history_shelf_summary">Скрывает раздел «История» на вкладке «Вы»</string>
   <string name="morphe_hide_horizontal_shelves_title">Скрыть горизонтальные секции</string>
   <string name="morphe_hide_horizontal_shelves_summary">Скрывает горизонтальные полки, такие как:• Срочные новости• Публикации сообщества, которые вам могут понравиться• Продолжить просмотр• Исследовать больше каналов• Исследовать больше тем• Для вас• Последние видео• Самые актуальные• Публикации из Сообщества создателя• Покупки• Смотреть еще раз</string>
   <string name="morphe_hide_hyped_label_title">Скрыть метку \"В тренде\"</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Скрыть кнопку \"Показать еще\"</string>
   <string name="morphe_hide_show_more_button_summary">Скрывает кнопку развернуть под видео в результатах поиска</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Скрыть панель подписанных каналов</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Скрыть названия каналов на панели подписок</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Скрыть названия подписанных каналов</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Скрывает названия каналов на панели подписок</string>
   <string name="morphe_hide_surveys_title">Скрыть опросы</string>
   <string name="morphe_hide_surveys_summary">Скрывает опросы и подсказки о точности рекомендаций ленты</string>
   <string name="morphe_hide_ticket_shelf_title">Скрыть секцию билетов</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Скрыть «Справка &amp; обратная связь» в меню</string>
   <string name="morphe_hide_help_feedback_menu_summary">Скрывает «Справка &amp; обратная связь» в меню с тремя точками на панели приложения, например, в меню результатов поиска</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Скрыть хэндл канала на вкладке «Вы»</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Скрывает хэндл канала под именем аккаунта на вкладке «Вы»</string>
+  <string name="morphe_hide_handle_title">Скрыть адрес канала</string>
+  <string name="morphe_hide_handle_summary">Скрывает адрес вашего канала во вкладке «Вы»</string>
   <string name="morphe_hide_video_title_title">Скрыть название видео</string>
   <string name="morphe_hide_video_title_summary">Скрывает название видео в полноэкранном режиме</string>
   <string name="morphe_sanitize_video_subtitle_title">Очистить субтитры видео</string>
@@ -687,7 +689,7 @@ Second \"item\" text"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Скрыть кнопку \"Подключиться\"</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Скрыть кнопку \"Пожаловаться\"</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Скрыть кнопку \"Ремикс\"</string>
@@ -1184,8 +1186,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">URL-адрес конечной точки кэша миниатюр DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Захват кадра из видео</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Кадры взяты из начала/середины/конца каждого видео. Эти изображения уже есть в YouTube и внешний API не используется</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Быстрый захват кадра</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Улучшает скорость загрузки за счет использования изображений среднего качества. Живые трансляции, неопубликованные и старые видео могут отображать пустые миниатюры</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Извлечь кадр видео из</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Начало</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Середина</string>

@@ -64,6 +64,8 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_artist_cards_title">Skryť karty interpreta</string>
   <string name="morphe_hide_artist_cards_summary">Skryje kartu interpreta na vrchu výsledkov vyhľadávania</string>
   <string name="morphe_hide_auto_dubbed_label_title">Skryť popisku \'Automaticky nadabované\'</string>
+  <string name="morphe_hide_channel_buttons_title">Skryť tlačidlá kanálov</string>
+  <string name="morphe_hide_channel_buttons_summary">Skryje tlačidlá, ako sú Odoberať, Zobraziť kanál, Komunita a YouTube Music, z profilov kanálov vo výsledkoch vyhľadávania</string>
   <string name="morphe_hide_community_posts_title">Skryť komunitné príspevky</string>
   <string name="morphe_hide_compact_banner_title">Skryť kompaktné bannery</string>
   <string name="morphe_hide_compact_banner_summary">Skryje kompaktné bannery a medzery medzi niektorými komponentmi</string>
@@ -75,7 +77,6 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_floating_microphone_button_summary">Skryje plávajúce tlačidlo mikrofónu v pravom dolnom rohu obrazovky návrhov vyhľadávania</string>
   <string name="morphe_hide_get_premium_button_title">Skryť tlačidlo \'Získať Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Skryť panel História</string>
-  <string name="morphe_hide_history_shelf_summary">Skryje panel História na karte Vy</string>
   <string name="morphe_hide_horizontal_shelves_title">Skryť horizontálne police</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skryje horizontálne police, ako napríklad Aktuality, Príspevky od komunity, ktoré by sa vám mohli páčiť, Pokračujte v sledovaní, Preskúmajte ďalšie kanály, Preskúmajte ďalšie témy, Pre vás, Najnovšie videá, Najrelevantnejšie, Príspevky z komunity tvorcu, Nakupovanie a Pozrite si to znova</string>
   <string name="morphe_hide_hyped_label_title">Skryť populárny štítok</string>
@@ -109,7 +110,8 @@ Zmeny zahŕňajú:
   <string name="morphe_hide_show_more_button_title">Skryť tlačidlo „Zobraziť viac“</string>
   <string name="morphe_hide_show_more_button_summary">Skryje tlačidlo rozbaliť pod videami vo výsledkoch vyhľadávania</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skryť panel odoberaných kanálov</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Skryť názvy kanálov v paneli odoberaných kanálov</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skryť názvy odoberaných kanálov</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Skryje názvy kanálov v lište odoberaných kanálov</string>
   <string name="morphe_hide_surveys_title">Skryť prieskumy</string>
   <string name="morphe_hide_surveys_summary">Skryje prieskumy a návrhy týkajúce sa presnosti odporúčania kanála</string>
   <string name="morphe_hide_ticket_shelf_title">Skryť policu lístkov</string>
@@ -161,8 +163,8 @@ Zmeny zahŕňajú:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Skryť \'Pomoc &amp; spätná väzba\' v ponukách</string>
   <string name="morphe_hide_help_feedback_menu_summary">Skryje \'Pomoc &amp; spätná väzba\' v trojbodkových ponukách panela aplikácie, napríklad v ponuke výsledkov vyhľadávania</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Skryť handle kanála na karte You</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Skryje handle kanála pod menom účtu na karte You</string>
+  <string name="morphe_hide_handle_title">Skryť popisovač</string>
+  <string name="morphe_hide_handle_summary">Skryje popisovač tvojho kanála na karte „You“</string>
   <string name="morphe_hide_video_title_title">Skryť názov videa</string>
   <string name="morphe_hide_video_title_summary">Skryje názov videa v režime na celú obrazovku</string>
   <string name="morphe_sanitize_video_subtitle_title">Vyčistiť titulky videa</string>
@@ -685,7 +687,7 @@ Ak to chcete vyriešiť, zapnite 'Spoofovať video streamy' a zmeňte 'Predvolen
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Skryť tlačidlo Pripojiť</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Skryť tlačidlo Nahlásiť</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Skryť tlačidlo Remixovať</string>
@@ -1181,8 +1183,6 @@ Klepnite sem a otvorte DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">URL adresa koncové miesto cache pre náhľady DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Statické snímky videa</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Zábery sa snímajú z začiatku, stredu alebo konca každého videa. Tieto obrázky sú zabudované do YouTube a nepoužívajú sa žiadne externé API.</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Použiť rýchle zábery</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Zlepšuje rýchlosť načítania pomocou obrázkov strednej kvality. Živé prenosy, nové a staršie videá môžu zobrazovať prázdne miniatúry</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Extrahujte snímku videa z</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Začiatok</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Stred</string>

@@ -40,7 +40,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_scrolling_speed_limit_title">Απενεργοποίηση ορίου ταχύτητας κύλισης</string>
   <!-- layout.disableLayoutUpdatesPatch -->
   <string name="morphe_disable_layout_updates_title">Απενεργοποίηση ενημερώσεων διάταξης</string>
-  <string name="morphe_disable_layout_updates_summary">Αποτρέπει τον διακομιστή από την ενημέρωση της διάταξης της εφαρμογής</string>
+  <string name="morphe_disable_layout_updates_summary">Αποτρέπει τον διακομιστή από το να ενημερώνει τη διάταξη της εφαρμογής</string>
   <string name="morphe_disable_layout_updates_user_dialog_message">"Η διάταξη της εφαρμογής επαναφέρεται στη διάταξη που χρησιμοποιήθηκε όταν εγκαταστάθηκε για πρώτη φορά.
 
 Διάταξεις που είναι διαθέσιμες από τον διακομιστή μπορεί να μην επαναφερθούν.
@@ -59,11 +59,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_account_menu_title">Ενεργοποίηση Βιβλιοθήκης / Φίλτρο στο κάτω μενού σας</string>
   <string name="morphe_hide_account_menu_filter_strings_title">Ενεργοποίηση Βιβλιοθήκης / Φίλτρο στο κάτω μενού σας</string>
   <string name="morphe_hide_account_menu_filter_strings_summary">Εισαγάγετε τα ονόματα των βιβλιοθηκών / Φίλτρο στο κάτω μενού για φιλτράρισμα, χωρισμένα με νέες γραμμές</string>
-  <string name="morphe_hide_album_cards_title">Απόκρυψη \"Καρτών Άλμπουμ\"</string>
+  <string name="morphe_hide_album_cards_title">Απόκρυψη καρτών άλμπουμ</string>
   <string name="morphe_hide_album_cards_summary">Απόκρυψη των καρτών άλμπουμ κάτω από την περιγραφή του καλλιτέχνη</string>
-  <string name="morphe_hide_artist_cards_title">Απόκρυψη \"Κάρτες καλλιτεχνών\"</string>
+  <string name="morphe_hide_artist_cards_title">Απόκρυψη καρτών καλλιτεχνών</string>
   <string name="morphe_hide_artist_cards_summary">Απόκρυψη της κάρτας του καλλιτέχνη στο πάνω μέρος των αποτελεσμάτων αναζήτησης</string>
   <string name="morphe_hide_auto_dubbed_label_title">Απόκρυψη ετικέτας \'Αυτόματης μεταγλώττισης\'</string>
+  <string name="morphe_hide_channel_buttons_title">Απόκρυψη κουμπιών καναλιών</string>
+  <string name="morphe_hide_channel_buttons_summary">Αποκρύπτει κουμπιά όπως Εγγραφή, Προβολή καναλιού, Κοινότητα και YouTube Music από τα προφίλ καναλιών στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_community_posts_title">Απόκρυψη \"Δημοσιεύσεων Κοινότητας\"</string>
   <string name="morphe_hide_compact_banner_title">Απόκρυψη \"Συμπαγών Μπάνερ\"</string>
   <string name="morphe_hide_compact_banner_summary">Απόκρυψη συμπυκτωμένων διαφημιστικών banners και διαστήματος μεταξύ ορισμένων στοιχείων</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">Απόκρυψη του πλωτού κουμπιού μικροφώνου στην κάτω δεξιά γωνία της οθόνης προτάσεων αναζήτησης</string>
   <string name="morphe_hide_get_premium_button_title">Απόκρυψη κουμπιού \"Απόκτηση Premium\"</string>
   <string name="morphe_hide_history_shelf_title">Απόκρυψη ραφιού Ιστορικού</string>
-  <string name="morphe_hide_history_shelf_summary">Αποκρύπτει το ράφι Ιστορικού στην καρτέλα Εσείς</string>
   <string name="morphe_hide_horizontal_shelves_title">Απόκρυψη \"Οριζοντίων Ραφιών\"</string>
   <string name="morphe_hide_horizontal_shelves_summary">Κρύβει οριζόντια ράφια όπως Επικαιρότητα, Δημοσιεύσεις κοινότητας που μπορεί να σας αρέσουν, Συνέχεια παρακολούθησης, Εξερεύνηση περισσότερων καναλιών, Εξερεύνηση περισσότερων θεμάτων, Για εσάς, Πιο πρόσφατα βίντεο, Πιο σχετικά, Δημοσιεύσεις από την κοινότητα του δημιουργού, Αγορές και Παρακολουθήστε ξανά</string>
   <string name="morphe_hide_hyped_label_title">Απόκρυψη ετικέτας \"Δημοφιλή\"</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Απόκρυψη κουμπιού \"Εμφάνιση περισσότερων\" στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_show_more_button_summary">Απόκρυψη του κουμπιού επέκτασης κάτω από τα βίντεο στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Απόκρυψη μπάρας \"Εγγεγραμμένων καναλιών\"</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Απόκρυψη ονομάτων καναλιών στη γραμμή συνδρομημένων καναλιών</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Απόκρυψη ονομάτων συνδρομημένων καναλιών</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Αποκρύπτει τα ονόματα των καναλιών στη γραμμή συνδρομημένων καναλιών</string>
   <string name="morphe_hide_surveys_title">Έρευνες</string>
   <string name="morphe_hide_surveys_summary">Κρύβει έρευνες και προτάσεις σχετικά με την ακρίβεια των προτάσεων ροής</string>
   <string name="morphe_hide_ticket_shelf_title">Ενότητα εισιτηρίων</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Απόκρυψη του \'Βοήθεια &amp; σχόλια\' στα μενού</string>
   <string name="morphe_hide_help_feedback_menu_summary">Αποκρύπτει το \'Βοήθεια &amp; σχόλια\' στα μενού με τις τρεις τελείες της γραμμής εφαρμογής, όπως το μενού των αποτελεσμάτων αναζήτησης</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Απόκρυψη της λαβής του καναλιού στην καρτέλα Εσείς</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Αποκρύπτει τη λαβή του καναλιού κάτω από το όνομα του λογαριασμού στην καρτέλα Εσείς</string>
+  <string name="morphe_hide_handle_title">Απόκρυψη handle</string>
+  <string name="morphe_hide_handle_summary">Αποκρύπτει το handle του καναλιού σου στην καρτέλα \'Εσύ\'</string>
   <string name="morphe_hide_video_title_title">Τίτλος του βίντεο</string>
   <string name="morphe_hide_video_title_summary">Απόκρυψη του τίτλου του βίντεο στην οθόνη πλήρους προβολής</string>
   <string name="morphe_sanitize_video_subtitle_title">Καθαρισμός υπότιτλων βίντεο</string>
@@ -685,7 +687,7 @@ Second \"item\" text"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Απόκρυψη κουμπιού \"Σύνδεση\"</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Κουμπί \"Απόκρυψη Αναφοράς\"</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Κουμπί «Remix»</string>
@@ -1167,8 +1169,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">Η διεύθυνση URL του τελικού σημείου αποθήκευσης μικρογραφιών DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Λήψεις ακίνητων καρέ</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Τα ακίνητα καρέ λαμβάνονται από την αρχή/μέση/τέλος κάθε βίντεο. Αυτές οι εικόνες είναι ενσωματωμένες στο YouTube και δεν χρησιμοποιείται εξωτερικό API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Χρήση γρήγορων λήψεων καρέ</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Βελτιώνει τις ταχύτητες φόρτωσης χρησιμοποιώντας εικόνες μεσαίας ποιότητας. Οι ζωντανές ροές, τα μη δημοσιευμένα και τα παλαιότερα βίντεο ενδέχεται να εμφανίζουν κενή μικρογραφία</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Εξαγωγή καρέ βίντεο από</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Έναρξη</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Μέση</string>

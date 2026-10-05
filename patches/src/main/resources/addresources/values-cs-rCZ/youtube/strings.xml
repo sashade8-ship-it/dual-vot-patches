@@ -64,6 +64,8 @@ Změny zahrnují:
   <string name="morphe_hide_artist_cards_title">Skrýt karty interpretů</string>
   <string name="morphe_hide_artist_cards_summary">Skryje kartu interpreta v horní části výsledků vyhledávání</string>
   <string name="morphe_hide_auto_dubbed_label_title">Skrýt popisek „Automatický dabing“</string>
+  <string name="morphe_hide_channel_buttons_title">Skrýt tlačítka kanálů</string>
+  <string name="morphe_hide_channel_buttons_summary">Skryje tlačítka jako Odebírat, Zobrazit kanál, Komunita a YouTube Music z profilů kanálů ve výsledcích vyhledávání</string>
   <string name="morphe_hide_community_posts_title">Skrýt příspěvky komunity</string>
   <string name="morphe_hide_compact_banner_title">Skrýt kompaktní bannery</string>
   <string name="morphe_hide_compact_banner_summary">Skryje kompaktní bannery a mezery mezi některými prvky</string>
@@ -75,7 +77,6 @@ Změny zahrnují:
   <string name="morphe_hide_floating_microphone_button_summary">Skryje plovoucí tlačítko mikrofonu v pravém dolním rohu obrazovky s návrhy vyhledávání</string>
   <string name="morphe_hide_get_premium_button_title">Skrýt tlačítko \"Získat Premium\"</string>
   <string name="morphe_hide_history_shelf_title">Skrýt polici Historie</string>
-  <string name="morphe_hide_history_shelf_summary">Skryje polici Historie na kartě Ty</string>
   <string name="morphe_hide_horizontal_shelves_title">Skrýt horizontální sekce</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skryje horizontální sekce, jako jsou Mimořádné zprávy, Příspěvky komunity, které by se vám mohly líbit, Pokračovat ve sledování, Prozkoumat další kanály, Prozkoumat další témata, Pro vás, Nejnovější videa, Nejrelevantnější, Příspěvky z komunity autora, Nakupování a Sledovat znovu</string>
   <string name="morphe_hide_hyped_label_title">Skrýt štítek Hype</string>
@@ -109,7 +110,8 @@ Změny zahrnují:
   <string name="morphe_hide_show_more_button_title">Skrýt tlačítko „Zobrazit více“</string>
   <string name="morphe_hide_show_more_button_summary">Skryje tlačítko pro rozbalení pod videi ve výsledcích vyhledávání</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skrýt panel odebíraných kanálů</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Skrýt názvy kanálů v liště odebíraných kanálů</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skrýt názvy odebíraných kanálů</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Skryje názvy kanálů v liště odebíraných kanálů</string>
   <string name="morphe_hide_surveys_title">Skrýt průzkumy</string>
   <string name="morphe_hide_surveys_summary">Skryje průzkumy a pobídky týkající se přesnosti doporučeného obsahu</string>
   <string name="morphe_hide_ticket_shelf_title">Skrýt sekci se vstupenkami</string>
@@ -161,8 +163,8 @@ Změny zahrnují:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Skrýt \'Nápověda &amp; zpětná vazba\' v nabídkách</string>
   <string name="morphe_hide_help_feedback_menu_summary">Skryje \'Nápověda a zpětná vazba\' v nabídkách se třemi tečkami v panelu aplikace, jako je nabídka výsledků vyhledávání</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Skrýt popisek kanálu na kartě Ty</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Skryje popisek kanálu pod jménem účtu na kartě Ty</string>
+  <string name="morphe_hide_handle_title">Skrýt handle</string>
+  <string name="morphe_hide_handle_summary">Skryje handle vašeho kanálu v záložce \'You\'</string>
   <string name="morphe_hide_video_title_title">Skrýt název videa</string>
   <string name="morphe_hide_video_title_summary">Skryje název videa v režimu na celou obrazovku</string>
   <string name="morphe_sanitize_video_subtitle_title">Vyčistit podtitul videa</string>
@@ -685,7 +687,7 @@ Chcete-li to opravit, zapněte 'Spoof video streams' a změňte 'Default client'
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Skrýt tlačítko Připojit</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Skrýt tlačítko Nahlásit</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Skrýt tlačítko Remix</string>
@@ -1179,8 +1181,6 @@ Klepnutím sem otevřete DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">URL koncového bodu mezipaměti náhledů DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Zachycení statických videí</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Zachycení snímků se provádí z počátku/prostředku/konce každého videa. Tyto obrázky jsou vestavěny do YouTube a nepoužívá se žádné externí API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Použít rychlé zachycení snímků</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Zlepší rychlost načítání pomocí obrázků střední kvality. Živé přenosy, nepublikovaná a starší videa mohou zobrazovat prázdné miniatury</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Extrahovat snímek videa z</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Začátek</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Střed</string>
@@ -1299,7 +1299,7 @@ Omezení:
   <string name="morphe_force_avc_codec_not_available">Chcete-li použít tuto funkci, nastavte \'Zfalšovat video streamy\' na \'Android VR\' nebo \'Android Studio\'</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Otevřít nabídku pokročilého nastavení kvality</string>
-  <string name="morphe_advanced_video_quality_menu_summary">Přeskočí menu pro výběr kvality a přímo otevře menu čpokročilých nastavení</string>
+  <string name="morphe_advanced_video_quality_menu_summary">Přeskočí menu pro výběr kvality a přímo otevře menu pokročilých nastavení</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
   <string name="morphe_hide_premium_video_quality_title">Skrýt možnosti Premium kvality</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->

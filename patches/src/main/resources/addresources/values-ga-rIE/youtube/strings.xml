@@ -64,6 +64,8 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_artist_cards_title">Folaigh cártaí ealaíontóra</string>
   <string name="morphe_hide_artist_cards_summary">Folaíonn sé cárta an ealaíontóra ag barr thorthaí an chuardaigh</string>
   <string name="morphe_hide_auto_dubbed_label_title">Folaigh an lipéad \'Uath-dhubáilte\'</string>
+  <string name="morphe_hide_channel_buttons_title">Folaigh cnaipí cainéal</string>
+  <string name="morphe_hide_channel_buttons_summary">Folaíonn sé cnaipí ar nós Liostáil, Féach ar an gcainéal, Pobal, agus YouTube Music ó phróifílí cainéal i dtorthaí cuardaigh</string>
   <string name="morphe_hide_community_posts_title">Folaigh poist phobail</string>
   <string name="morphe_hide_compact_banner_title">Folaigh meirgí dlúth</string>
   <string name="morphe_hide_compact_banner_summary">Folaíonn sé meirgí dlútha agus spásáil idir roinnt comhpháirteanna</string>
@@ -75,7 +77,6 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_floating_microphone_button_summary">Folaíonn sé cnaipe an mhicreafóin ar snámh sa chúinne íochtarach ar dheis de scáileán na moltaí cuardaigh</string>
   <string name="morphe_hide_get_premium_button_title">Folaigh an cnaipe \'Get Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Folaigh an tseilf staire</string>
-  <string name="morphe_hide_history_shelf_summary">Folaíonn sé an tseilf staire sa chluaisín Tú</string>
   <string name="morphe_hide_horizontal_shelves_title">Folaigh seilfeanna cothrománacha</string>
   <string name="morphe_hide_horizontal_shelves_summary">Folaíonn sé seilfeanna cothrománacha amhail Nuacht Briste, Poist Pobail a d’fhéadfadh a bheith spéisiúil duit, Lean ort ag breathnú, Iniúchadh a dhéanamh ar níos mó bealaí, Iniúchadh a dhéanamh ar níos mó topaicí, Duitse, Físeáin is déanaí, Is ábhartha, Poist ó Phobal an Chruthaitheora, Siopadóireacht, agus Féach air arís</string>
   <string name="morphe_hide_hyped_label_title">Folaigh an lipéad \'hype\'</string>
@@ -109,7 +110,8 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_show_more_button_title">Folaigh an cnaipe \'Taispeáin níos mó\'</string>
   <string name="morphe_hide_show_more_button_summary">Folaíonn sé an cnaipe leathnaithe faoi fhíseáin sna torthaí cuardaigh</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Folaigh barra na gcainéal suibscríofa</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Folaigh ainmneacha na gcainéal sa bharra cainéal síntiúis</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Folaigh ainmneacha na gcainéal liostáilte</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Folaíonn sé ainmneacha na gcainéal i mbarra na gcainéal liostáilte</string>
   <string name="morphe_hide_surveys_title">Folaigh suirbhéanna</string>
   <string name="morphe_hide_surveys_summary">Folaigh suirbhéanna agus brúidí faoi chruinneas moltaí beatha</string>
   <string name="morphe_hide_ticket_shelf_title">Folaigh an seilf ticéad</string>
@@ -161,8 +163,8 @@ I measc na n-athruithe tá:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Folaigh \'Cabhair &amp; aiseolas\' i roghchláir</string>
   <string name="morphe_hide_help_feedback_menu_summary">Folaíonn sé \'Cabhair &amp; aiseolas\' sna roghchláir trí phonc den bharra aipe, mar shampla roghchlár na dtorthaí cuardaigh</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Folaigh láimhseáil an chainéil sa chluaisín Tú</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Folaíonn sé láimhseáil an chainéil faoi ainm an chuntais sa chluaisín Tusa</string>
+  <string name="morphe_hide_handle_title">Folaigh hanla</string>
+  <string name="morphe_hide_handle_summary">Folaíonn sé hanla do chainéil sa chluaisín \'Tusa\'</string>
   <string name="morphe_hide_video_title_title">Folaigh teideal an fhíseáin</string>
   <string name="morphe_hide_video_title_summary">Folaíonn sé teideal an fhíseáin sa mhodh lánscáileáin</string>
   <string name="morphe_sanitize_video_subtitle_title">Glanadh fotheideal físe</string>
@@ -685,7 +687,7 @@ Chun é seo a shocrú, cuir 'Spoof video streams' ar siúl agus athraigh an 'Cli
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Folaigh an cnaipe Connect</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Cnaipe Folaigh Tuairisc</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Folaigh an cnaipe Remix</string>
@@ -1182,8 +1184,6 @@ Tapáil anseo chun DeArrow.ajay.app a oscailt"</string>
   <string name="morphe_dearrow_api_url_summary">URL críochphointe taisce mionsamhail DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Gabhann físeán fós</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Tógtar gabhála fós ó thos/lán/deireadh gach físeáin. Tá na híomhánna seo tógtha isteach i YouTube agus ní úsáidtear aon API seachtrach</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Úsáid gabhálacha gasta fós</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Feabhsaíonn sé luasanna lódála trí íomhánna meánchaighdeáin a úsáid. D’fhéadfadh mionsamhlacha bána a bheith le feiceáil i sruthanna beo, i bhfíseáin neamheisithe agus i bhfíseáin níos sine.</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Tarraing fráma físe as</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Tús</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Lár</string>

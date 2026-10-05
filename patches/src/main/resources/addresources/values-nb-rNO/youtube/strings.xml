@@ -64,6 +64,8 @@ Endringer inkluderer:
   <string name="morphe_hide_artist_cards_title">Skjul artistkort</string>
   <string name="morphe_hide_artist_cards_summary">Skjuler artistkortet øverst i søkeresultatene</string>
   <string name="morphe_hide_auto_dubbed_label_title">Skjul \'Auto-dubbet\'-etikett</string>
+  <string name="morphe_hide_channel_buttons_title">Skjul kanalknapper</string>
+  <string name="morphe_hide_channel_buttons_summary">Skjuler knapper som Abonner, Vis kanal, Fellesskap og YouTube Music fra kanalprofiler i søkeresultater</string>
   <string name="morphe_hide_community_posts_title">Skjul fellesskapsinnlegg</string>
   <string name="morphe_hide_compact_banner_title">Skjul kompakte bannere</string>
   <string name="morphe_hide_compact_banner_summary">Skjuler kompakte bannere og mellomrom mellom noen komponenter</string>
@@ -75,7 +77,6 @@ Endringer inkluderer:
   <string name="morphe_hide_floating_microphone_button_summary">Skjuler flytende mikrofonknapp i nedre høyre hjørne av søkeforslags-skjermen</string>
   <string name="morphe_hide_get_premium_button_title">Skjul \'Få Premium\'-knappen</string>
   <string name="morphe_hide_history_shelf_title">Skjul historikkhyllen</string>
-  <string name="morphe_hide_history_shelf_summary">Skjuler historikkhyllen i Du-fanen</string>
   <string name="morphe_hide_horizontal_shelves_title">Skjul horisontale hyller</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skjuler horisontale hyller som Breaking news, Community-innlegg du kanskje liker, Fortsett å se på, Utforsk flere kanaler, Utforsk flere emner, For deg, Nyeste videoer, Mest relevante, Innlegg fra Creator\'s Community, Shopping og Se igjen</string>
   <string name="morphe_hide_hyped_label_title">Skjul \'Hypet\'-etikett</string>
@@ -109,7 +110,8 @@ Endringer inkluderer:
   <string name="morphe_hide_show_more_button_title">Skjul \'Vis mer\'-knapp</string>
   <string name="morphe_hide_show_more_button_summary">Skjuler utvidingsknappen under videoer i søkeresultatene</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skjul abonnementskanaler-linjen</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Skjul kanalnavn i linjen for abonnerte kanaler</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skjul navn på abonnerte kanaler</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Skjuler kanalnavnene i linjen for abonnerte kanaler</string>
   <string name="morphe_hide_surveys_title">Skjul undersøkelser</string>
   <string name="morphe_hide_surveys_summary">Skjuler undersøkelser og oppfordringer om nøyaktigheten til mates anbefalinger</string>
   <string name="morphe_hide_ticket_shelf_title">Skjul billetthylle</string>
@@ -161,8 +163,8 @@ Endringer inkluderer:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Skjul \'Hjelp &amp; tilbakemelding\' i menyer</string>
   <string name="morphe_hide_help_feedback_menu_summary">Skjuler \'Hjelp &amp; tilbakemelding\' i trepunktsmenyene i applinjen, for eksempel søkeresultatmenyen</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Skjul kanalens @-navn i Du-fanen</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Skjuler kanalens @-navn under kontonavnet i Du-fanen</string>
+  <string name="morphe_hide_handle_title">Skjul handle</string>
+  <string name="morphe_hide_handle_summary">Skjuler kanalens handle i \'Du\'-fanen</string>
   <string name="morphe_hide_video_title_title">Skjul videotittel</string>
   <string name="morphe_hide_video_title_summary">Skjuler videotittelen i fullskjermmodus</string>
   <string name="morphe_sanitize_video_subtitle_title">Rens video undertekst</string>
@@ -685,7 +687,7 @@ For å fikse dette, slå på 'Forfalsk videostrømmer' og endre 'Standardklient'
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Skjul Koble til-knappen</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Skjul Rapport-knapp</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Skjul Remix-knapp</string>
@@ -1182,8 +1184,6 @@ Trykk her for å åpne DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">URL-en til DeArrow-hurtigkache-endepunktet</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Stillbildeopptak fra video</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Stillbildeopptak tas fra begynnelsen / midten / slutten av hver video. Disse bildene er innebygd i YouTube og ingen ekstern API brukes</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Bruk raske stillbildeopptak</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">For Shorts</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Hent videobilde fra</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Begynnelse</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Midten</string>

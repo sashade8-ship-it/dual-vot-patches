@@ -64,6 +64,8 @@ Perubahan termasuk:
   <string name="morphe_hide_artist_cards_title">Sembunyikan kartu artis</string>
   <string name="morphe_hide_artist_cards_summary">Menyembunyikan kartu artis di bagian atas hasil pencarian</string>
   <string name="morphe_hide_auto_dubbed_label_title">Sembunyikan label \'Sulih suara Otomatis\'</string>
+  <string name="morphe_hide_channel_buttons_title">Sembunyikan tombol saluran</string>
+  <string name="morphe_hide_channel_buttons_summary">Menyembunyikan tombol seperti Berlangganan, Lihat saluran, Komunitas, dan YouTube Music dari profil saluran di hasil penelusuran</string>
   <string name="morphe_hide_community_posts_title">Sembunyikan postingan komunitas</string>
   <string name="morphe_hide_compact_banner_title">Sembunyikan spanduk ringkas</string>
   <string name="morphe_hide_compact_banner_summary">Menyembunyikan banner ringkas dan spasi antara beberapa komponen</string>
@@ -75,7 +77,6 @@ Perubahan termasuk:
   <string name="morphe_hide_floating_microphone_button_summary">Menyembunyikan tombol mikrofon yang mengambang di sudut kanan bawah layar saran pencarian</string>
   <string name="morphe_hide_get_premium_button_title">Sembunyikan tombol \'Dapatkan Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Sembunyikan rak Riwayat</string>
-  <string name="morphe_hide_history_shelf_summary">Menyembunyikan rak Riwayat di tab Anda</string>
   <string name="morphe_hide_horizontal_shelves_title">Sembunyikan rak-rak mendatar</string>
   <string name="morphe_hide_horizontal_shelves_summary">Rak horizontal disembunyikan, seperti Berita terkini, Postingan komunitas yang mungkin Anda sukai, Lanjutkan menonton, Jelajahi lebih banyak saluran, Jelajahi lebih banyak topik, Untuk Anda, Video terbaru, Paling relevan, Postingan dari Komunitas Kreator, Belanja dan Tonton lagi</string>
   <string name="morphe_hide_hyped_label_title">Sembunyikan label Hype</string>
@@ -109,7 +110,8 @@ Perubahan termasuk:
   <string name="morphe_hide_show_more_button_title">Sembunyikan tombol \'Tampilkan selengkapnya\'</string>
   <string name="morphe_hide_show_more_button_summary">Menyembunyikan tombol perluas di bawah video pada hasil pencarian</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Sembunyikan bilah saluran yang di-subscribe</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Sembunyikan nama saluran di bar saluran yang diikuti</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Sembunyikan nama saluran langganan</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Menyembunyikan nama saluran di bar saluran langganan</string>
   <string name="morphe_hide_surveys_title">Sembunyikan survei</string>
   <string name="morphe_hide_surveys_summary">Sembunyikan survei dan pengingat mengenai akurasi rekomendasi feed</string>
   <string name="morphe_hide_ticket_shelf_title">Sembunyikan rak tiket</string>
@@ -161,8 +163,8 @@ Perubahan termasuk:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Sembunyikan \'Bantuan &amp; saran\' di menu</string>
   <string name="morphe_hide_help_feedback_menu_summary">Menyembunyikan \'Bantuan &amp; saran\' di menu tiga titik pada bilah aplikasi, seperti menu hasil penelusuran</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Sembunyikan handle saluran pada tab Anda</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Menyembunyikan handle saluran di bawah nama akun pada tab Anda</string>
+  <string name="morphe_hide_handle_title">Sembunyikan handle</string>
+  <string name="morphe_hide_handle_summary">Menyembunyikan handle saluran Anda di tab \'You\'</string>
   <string name="morphe_hide_video_title_title">Sembunyikan judul video</string>
   <string name="morphe_hide_video_title_summary">Menyembunyikan judul video dalam mode layar penuh</string>
   <string name="morphe_sanitize_video_subtitle_title">Bersihkan teks subtitel video</string>
@@ -685,7 +687,7 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Sembunyikan tombol Sambungkan</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Sembunyikan tombol Laporkan</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Sembunyikan tombol Remix</string>
@@ -1182,8 +1184,6 @@ Ketuk di sini untuk membuka DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">URL titik akhir cache thumbnail DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Tangkapan video diam</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Tangkapan diam diambil dari awal / tengah / akhir di setiap video. Gambar-gambar ini dibuat di YouTube dan tidak ada API eksternal yang digunakan</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gunakan tangkapan diam cepat</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Meningkatkan kecepatan pemuatan dengan menggunakan gambar berkualitas sedang. Siaran langsung, video yang belum dirilis, dan video lama mungkin menampilkan thumbnail kosong</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Ekstrak bingkai video dari</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Awal</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Tengah</string>

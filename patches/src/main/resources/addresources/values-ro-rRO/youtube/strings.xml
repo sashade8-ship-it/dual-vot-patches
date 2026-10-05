@@ -64,6 +64,8 @@ Schimbari incluse:
   <string name="morphe_hide_artist_cards_title">Ascunde cărțile artistului</string>
   <string name="morphe_hide_artist_cards_summary">Ascunde cardul artistului din partea de sus a rezultatelor căutării</string>
   <string name="morphe_hide_auto_dubbed_label_title">Ascunde eticheta \"Dublat automat\"</string>
+  <string name="morphe_hide_channel_buttons_title">Ascunde butoanele canalului</string>
+  <string name="morphe_hide_channel_buttons_summary">Ascunde butoane precum Abonare, Vezi canalul, Comunitate și YouTube Music din profilurile canalelor din rezultatele căutării</string>
   <string name="morphe_hide_community_posts_title">Ascunde postările comunității</string>
   <string name="morphe_hide_compact_banner_title">Ascunde bannere compacte</string>
   <string name="morphe_hide_compact_banner_summary">Ascunde bannerele compacte și spațierea dintre unele componente</string>
@@ -75,7 +77,6 @@ Schimbari incluse:
   <string name="morphe_hide_floating_microphone_button_summary">Ascunde butonul plutitor al microfonului în colțul din dreapta jos al ecranului de sugestii de căutare</string>
   <string name="morphe_hide_get_premium_button_title">Ascunde butonul \'Obține Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Ascunde secțiunea Istoric</string>
-  <string name="morphe_hide_history_shelf_summary">Ascunde secțiunea Istoric din fila Tu</string>
   <string name="morphe_hide_horizontal_shelves_title">Ascunde rafturile orizontale</string>
   <string name="morphe_hide_horizontal_shelves_summary">Ascunde rafturile orizontale, cum ar fi Știri de ultimă oră, Postări din comunitate care s-ar putea să-ți placă, Continuă să urmărești, Explorează mai multe canale, Explorează mai multe subiecte, Pentru tine, Ultimele videoclipuri, Cele mai relevante, Postări din comunitatea creatorului, Cumpărături și Urmărește din nou</string>
   <string name="morphe_hide_hyped_label_title">Ascunde eticheta \"În tendințe\"</string>
@@ -109,7 +110,8 @@ Schimbari incluse:
   <string name="morphe_hide_show_more_button_title">Ascunderea butonului „Afișează mai multe”</string>
   <string name="morphe_hide_show_more_button_summary">Ascunde butonul de extindere de sub videoclipuri în rezultatele căutării</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Ascunde bara cu canale abonate</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Ascunde numele canalelor din bara de canale abonate</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Ascunde numele canalelor abonate</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Ascunde numele canalelor din bara de canale abonate</string>
   <string name="morphe_hide_surveys_title">Ascunde sondajele</string>
   <string name="morphe_hide_surveys_summary">Ascunde sondaje și sugestii despre acuratețea recomandărilor pentru fluxul de conținut</string>
   <string name="morphe_hide_ticket_shelf_title">Ascunde raftul de bilete</string>
@@ -161,8 +163,8 @@ Schimbari incluse:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Ascunde \'Ajutor &amp; feedback\' din meniuri</string>
   <string name="morphe_hide_help_feedback_menu_summary">Ascunde \'Ajutor &amp; feedback\' din meniurile cu trei puncte ale barei aplicației, cum ar fi meniul rezultatelor căutării</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Ascunde handle-ul canalului în fila Tu</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Ascunde handle-ul canalului sub numele contului în fila Tu</string>
+  <string name="morphe_hide_handle_title">Ascunde identificatorul</string>
+  <string name="morphe_hide_handle_summary">Ascunde identificatorul canalului tău în fila „Tu”</string>
   <string name="morphe_hide_video_title_title">Ascunde titlul videoclipului</string>
   <string name="morphe_hide_video_title_summary">Ascunde titlul videoclipului în modul ecran complet</string>
   <string name="morphe_sanitize_video_subtitle_title">Curăță subtitrările video</string>
@@ -685,7 +687,7 @@ Pentru a remedia, activează 'Falsifică fluxurile video' și schimbă 'clientul
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Ascunde butonul Conectare</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Ascunde butonul Mai multe</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Ascunde butonul Remix</string>
@@ -1182,8 +1184,6 @@ Atingeți aici pentru a deschide DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">URL-ul punctului final al cache-ului DeArrow pentru miniaturi</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Capturi video statice</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Capturile statice sunt preluate de la începutul/mijlocul/sfârșitul fiecărui videoclip. Aceste imagini sunt integrate în YouTube și nu se folosește nicio API externă</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Folosește capturi rapide încă</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Îmbunătățește vitezele de încărcare folosind imagini de calitate medie. Stream-uri live, videoclipuri nerecunoscute și mai vechi pot afișa miniaturi goale</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Extrage cadrul video din</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Început</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Mijloc</string>

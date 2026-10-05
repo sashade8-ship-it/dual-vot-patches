@@ -354,7 +354,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_button_title">Прикријте го копчето за Коментари</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Прикријте го копчето за Пријавување</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Прикријте го копчето за Remix</string>
@@ -730,8 +730,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">URL-адреса на крајната точка за кешот на сликите на DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Снимки од екранот од видеа</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Снимките од екранот се преземаат од почетокот / средината / крајот на секое видео. Овие слики се вградени во YouTube и не се користи надворешен API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Користете брзи снимки од екранот</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Ги подобрува брзините на вчитување со користење на слики со среден квалитет. Преноси во живо, необјавени и постари видеа може да прикажат празни слики</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Преземи кадар од видеото од</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Почеток</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Средно</string>

@@ -64,6 +64,8 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_artist_cards_title">Itago ang mga artist card</string>
   <string name="morphe_hide_artist_cards_summary">Itinatago ang card ng artist sa itaas ng mga resulta ng paghahanap</string>
   <string name="morphe_hide_auto_dubbed_label_title">Itago ang label na \'Auto-dubbed\'</string>
+  <string name="morphe_hide_channel_buttons_title">Itago ang mga button ng channel</string>
+  <string name="morphe_hide_channel_buttons_summary">Itinatago ang mga button tulad ng Mag-subscribe, Tingnan ang Channel, Komunidad, at YouTube Music mula sa mga profile ng channel sa mga resulta ng paghahanap</string>
   <string name="morphe_hide_community_posts_title">Itago ang mga post ng komunidad</string>
   <string name="morphe_hide_compact_banner_title">Itago ang mga compact banner</string>
   <string name="morphe_hide_compact_banner_summary">Itinatago ang mga compact banner at espasyo sa pagitan ng ilang component</string>
@@ -75,7 +77,6 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_floating_microphone_button_summary">Itinatago ang lumulutang na button ng microphone sa ibabang-kanang sulok ng search suggestions screen</string>
   <string name="morphe_hide_get_premium_button_title">Itago ang button na \'Kumuha ng Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Itago ang History shelf</string>
-  <string name="morphe_hide_history_shelf_summary">Itinatago ang History shelf sa tab na You</string>
   <string name="morphe_hide_horizontal_shelves_title">Itago ang mga horizontal shelf</string>
   <string name="morphe_hide_horizontal_shelves_summary">Itinatago ang mga pahalang na shelf tulad ng Breaking news, Mga post sa Komunidad na maaaring magustuhan mo, Ipagpatuloy ang panonood, Galugarin ang higit pang mga channel, Galugarin ang higit pang mga paksa, Para sa Iyo, Pinakabagong mga video, Pinaka-nauugnay, Mga post mula sa Komunidad ng Creator, Shopping, at Panoorin itong muli</string>
   <string name="morphe_hide_hyped_label_title">Itago ang Hyped label</string>
@@ -109,7 +110,8 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_show_more_button_title">Itago ang button na \'Magpakita ng higit pa\'</string>
   <string name="morphe_hide_show_more_button_summary">Itinatago ang expand button sa ilalim ng mga video sa mga resulta ng paghahanap</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Itago ang subscribed channels bar</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Itago ang mga pangalan ng channel sa bar ng mga naka-subscribe na channel</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Itago ang mga pangalan ng mga naka-subscribe na channel</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Itinatago ang mga pangalan ng channel sa bar ng mga naka-subscribe na channel</string>
   <string name="morphe_hide_surveys_title">Itago ang mga pagsusuri</string>
   <string name="morphe_hide_surveys_summary">Itinatago ang mga survey at mga pahiwatig tungkol sa katumpakan ng rekomendasyon ng feed</string>
   <string name="morphe_hide_ticket_shelf_title">Itago ang ticket shelf</string>
@@ -161,8 +163,8 @@ Kasama sa mga pagbabago ang:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Itago ang \'Tulong at feedback\' sa mga menu</string>
   <string name="morphe_hide_help_feedback_menu_summary">Itinatago ang \'Tulong at feedback\' sa mga menu na may tatlong tuldok ng app bar, tulad ng menu ng mga resulta ng paghahanap</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Itago ang handle ng channel sa tab na You</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Itinatago ang handle ng channel sa ilalim ng pangalan ng account sa tab na You</string>
+  <string name="morphe_hide_handle_title">Itago ang handle</string>
+  <string name="morphe_hide_handle_summary">Itinatago ang iyong channel handle sa tab na \'Ikaw\'</string>
   <string name="morphe_hide_video_title_title">Itago ang pamagat ng video</string>
   <string name="morphe_hide_video_title_summary">Itinatago ang pamagat ng video sa fullscreen mode</string>
   <string name="morphe_sanitize_video_subtitle_title">Linisin ang subtitle ng video</string>
@@ -685,7 +687,7 @@ Para ayusin ito, i-on ang 'I-spoof ang mga video stream' at baguhin ang 'Default
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Itago ang button na Sumali</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Itago ang Report button</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Itago ang Remix button</string>
@@ -1180,8 +1182,6 @@ I-tap dito upang buksan ang DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">Ang URL ng DeArrow thumbnail cache endpoint</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Still video captures</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Kinukuha pa rin ang mga grabing larawan mula sa simula / gitna / dulo ng bawat video. Ang mga larawang ito ay binuo sa YouTube at walang panlabas na API na ginagamit</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gumamit ng mabilis na still captures</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Pinapabuti ang bilis ng paglo-load sa pamamagitan ng paggamit ng medium-quality images. Ang mga live stream, hindi pa nailalabas at mas lumang video ay maaaring magpakita ng blangkong thumbnail</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Kumuha ng frame ng video mula sa</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Simula</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Gitna</string>

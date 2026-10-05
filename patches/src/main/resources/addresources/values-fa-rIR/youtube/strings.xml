@@ -651,7 +651,7 @@ Second \"item\" text"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">پنهان‌کردن دکمهٔ اتصال</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">پنهان‌کردن دکمهٔ گزارش</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">پنهان‌کردن دکمهٔ ریمیکس</string>
@@ -1124,8 +1124,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">نشانی نقطهٔ پایانی حافظهٔ پنهان تصاویر بندانگشتی DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">تصاویر ثابت ویدئو</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">تصاویر ثابت از ابتدا / میانه / انتهای هر ویدئو گرفته می‌شوند. این تصاویر در YouTube تعبیه شده‌اند و از API خارجی استفاده نمی‌شود</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">استفاده از تصاویر ثابت سریع</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">با استفاده از تصاویر با کیفیت متوسط، سرعت بارگیری را افزایش می‌دهد. پخش‌های زنده، ویدئوهای منتشرنشده و قدیمی‌تر ممکن است تصاویر بندانگشتی خالی نشان دهند</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">استخراج قاب ویدئو از</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">ابتدا</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">میانه</string>

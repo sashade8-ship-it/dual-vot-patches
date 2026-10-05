@@ -63,6 +63,8 @@ Ví dụ:
   <string name="morphe_hide_artist_cards_title">Ẩn thẻ nghệ sĩ</string>
   <string name="morphe_hide_artist_cards_summary">Ẩn thẻ nghệ sĩ ở đầu kết quả tìm kiếm</string>
   <string name="morphe_hide_auto_dubbed_label_title">Ẩn nhãn \"Bản lồng tiếng\"</string>
+  <string name="morphe_hide_channel_buttons_title">Ẩn các nút kênh</string>
+  <string name="morphe_hide_channel_buttons_summary">Ẩn các nút như Đăng ký, Xem kênh, Cộng đồng và YouTube Music khỏi hồ sơ kênh trong kết quả tìm kiếm</string>
   <string name="morphe_hide_community_posts_title">Ẩn bài đăng cộng đồng</string>
   <string name="morphe_hide_compact_banner_title">Ẩn quảng cáo dưới video</string>
   <string name="morphe_hide_compact_banner_summary">Ẩn banner nhỏ gọn và khoảng cách giữa một số thành phần</string>
@@ -74,7 +76,6 @@ Ví dụ:
   <string name="morphe_hide_floating_microphone_button_summary">Ẩn nút micro nổi ở góc dưới bên phải của màn hình gợi ý tìm kiếm</string>
   <string name="morphe_hide_get_premium_button_title">Ẩn nút \"Mua Premium\"</string>
   <string name="morphe_hide_history_shelf_title">Ẩn ngăn Lịch sử</string>
-  <string name="morphe_hide_history_shelf_summary">Ẩn ngăn Lịch sử trong tab Bạn</string>
   <string name="morphe_hide_horizontal_shelves_title">Ẩn kệ cá nhân hoá</string>
   <string name="morphe_hide_horizontal_shelves_summary">Ẩn các kệ ngang như Tin nổi bật, Bài đăng bạn có thể thích, Tiếp tục xem, Khám phá các kênh khác, Khám phá các chủ đề khác, Dành cho bạn, Mới nhất, Phù hợp nhất, Bài đăng từ cộng đồng của nhà sáng tạo, Mua sắm, và Xem lại</string>
   <string name="morphe_hide_hyped_label_title">Ẩn nhãn nổi bật</string>
@@ -108,7 +109,8 @@ Ví dụ:
   <string name="morphe_hide_show_more_button_title">Ẩn nút \"Hiện thêm\"</string>
   <string name="morphe_hide_show_more_button_summary">Ẩn nút mở rộng dưới video trong kết quả tìm kiếm</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Ẩn thanh kênh đã đăng ký</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Ẩn tên kênh trên thanh các kênh đã đăng ký</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Ẩn tên các kênh đã đăng ký</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Ẩn tên các kênh trong thanh kênh đã đăng ký</string>
   <string name="morphe_hide_surveys_title">Ẩn khảo sát</string>
   <string name="morphe_hide_surveys_summary">Ẩn khảo sát ​​và đánh giá độ phù hợp của đề xuất trang video</string>
   <string name="morphe_hide_ticket_shelf_title">Ẩn kệ vé</string>
@@ -160,8 +162,8 @@ Ví dụ:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Ẩn mục \'Trợ giúp &amp; phản hồi\' trong menu</string>
   <string name="morphe_hide_help_feedback_menu_summary">Ẩn mục \'Trợ giúp &amp; phản hồi\' trong menu ba chấm của thanh ứng dụng, chẳng hạn như menu kết quả tìm kiếm</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Ẩn tên kênh trong tab Bạn</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Ẩn tên kênh dưới tên tài khoản trong tab Bạn</string>
+  <string name="morphe_hide_handle_title">Ẩn handle</string>
+  <string name="morphe_hide_handle_summary">Ẩn handle kênh của bạn trong tab \'Bạn\'</string>
   <string name="morphe_hide_video_title_title">Ẩn tiêu đề video</string>
   <string name="morphe_hide_video_title_summary">Ẩn tiêu đề video ở chế độ toàn màn hình</string>
   <string name="morphe_sanitize_video_subtitle_title">Lọc nội dung phụ đề video</string>
@@ -684,7 +686,7 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Ẩn nút Kết nối</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Ẩn nút Báo vi phạm</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Ẩn nút Phối lại</string>
@@ -1181,8 +1183,6 @@ Nhấn vào đây để mở DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">URL của điểm cuối bộ đệm hình thu nhỏ DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Chụp tĩnh video</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Chụp tĩnh là lấy từ đầu/giữa/cuối của mỗi video. Những hình ảnh này được dựng sẵn trong Youtube và không dùng API bên ngoài</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Dùng hình chụp tĩnh nhanh</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Tăng tốc độ tải bằng cách dùng hình ảnh chất lượng trung bình. Một số video phát trực tiếp, video chưa phát hành hoặc video cũ có thể không hiển thị hình thu nhỏ</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Trích khung video từ</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Đầu video</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Giữa video</string>

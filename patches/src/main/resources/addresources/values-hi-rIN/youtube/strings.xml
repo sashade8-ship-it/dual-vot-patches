@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">कलाकार कार्ड छिपाएँ</string>
   <string name="morphe_hide_artist_cards_summary">सर्च नतीजों में सबसे ऊपर दिखने वाले कलाकार कार्ड छिपाता है</string>
   <string name="morphe_hide_auto_dubbed_label_title">\'ऑटो-डब\' लेबल छुपाएं</string>
+  <string name="morphe_hide_channel_buttons_title">चैनल बटन छिपाएँ</string>
+  <string name="morphe_hide_channel_buttons_summary">खोज परिणामों में चैनल प्रोफ़ाइल से सब्सक्राइब, चैनल देखें, कम्युनिटी और YouTube Music जैसे बटन छिपाता है</string>
   <string name="morphe_hide_community_posts_title">समुदाय पोस्ट छुपाएं</string>
   <string name="morphe_hide_compact_banner_title">कॉम्पैक्ट बैनर छिपाएँ</string>
   <string name="morphe_hide_compact_banner_summary">कॉम्पैक्ट बैनर और कुछ घटकों के बीच का खाली स्पेस छिपाता है</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">सर्च सुझाव स्क्रीन के नीचे दाईं ओर दिखने वाला फ़्लोटिंग माइक्रोफ़ोन बटन छिपाता है</string>
   <string name="morphe_hide_get_premium_button_title">\'Premium की सदस्यता लें\' बटन छिपाएँ</string>
   <string name="morphe_hide_history_shelf_title">इतिहास शेल्फ़ छिपाएँ</string>
-  <string name="morphe_hide_history_shelf_summary">आप टैब में इतिहास शेल्फ़ छिपाता है</string>
   <string name="morphe_hide_horizontal_shelves_title">हॉरिजॉन्टल शेल्फ़ छिपाएँ</string>
   <string name="morphe_hide_horizontal_shelves_summary">ताज़ा खबरें, आपके पसंद आ सकने वाले पोस्ट, देखना जारी रखें, और चैनल एक्सप्लोर करें, और विषय एक्सप्लोर करें, आपके लिए, नए वीडियो, सबसे प्रासंगिक, क्रिएटर कम्युनिटी पोस्ट, शॉपिंग और दोबारा देखें जैसी हॉरिज़ॉन्टल शेल्फ़ छिपाता है</string>
   <string name="morphe_hide_hyped_label_title">हाइप लेबल छिपाएँ</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">छुपाएं \'और दिखाएं\' बटन</string>
   <string name="morphe_hide_show_more_button_summary">खोज परिणामों में वीडियो के नीचे विस्तार बटन को छुपाता है</string>
   <string name="morphe_hide_subscribed_channels_bar_title">छुपाएं सब्सक्राइब चैनल बार</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">सदस्यता वाले चैनल बार में चैनल के नाम छिपाएँ</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">सब्सक्राइब किए गए चैनलों के नाम छिपाएँ</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">सब्सक्राइब किए गए चैनल बार में चैनलों के नाम छिपाता है</string>
   <string name="morphe_hide_surveys_title">सर्वेक्षण छुपाएं</string>
   <string name="morphe_hide_surveys_summary">फ़ीड अनुशंसा सटीकता के बारे में सर्वेक्षण और नज़दीकी को छुपाता है</string>
   <string name="morphe_hide_ticket_shelf_title">छिपाएं टिकट शेल्फ</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">मेन्यू में \'सहायता &amp; प्रतिक्रिया\' छिपाएँ</string>
   <string name="morphe_hide_help_feedback_menu_summary">ऐप बार के तीन-बिंदु वाले मेन्यू, जैसे खोज परिणाम मेन्यू, में \'सहायता &amp; प्रतिक्रिया\' छिपाता है</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">आप टैब में चैनल हैंडल छिपाएँ</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">आप टैब में अकाउंट के नाम के नीचे चैनल हैंडल छिपाता है</string>
+  <string name="morphe_hide_handle_title">हैंडल छिपाएँ</string>
+  <string name="morphe_hide_handle_summary">\'You\' टैब में आपका चैनल हैंडल छिपाता है</string>
   <string name="morphe_hide_video_title_title">छुपाएं वीडियो शीर्षक</string>
   <string name="morphe_hide_video_title_summary">फुलस्क्रीन मोड में वीडियो शीर्षक को छुपाता है</string>
   <string name="morphe_sanitize_video_subtitle_title">वीडियो उपशीर्षक को सैनिटाइज़ करें</string>
@@ -685,7 +687,7 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">कनेक्ट बटन छिपाएं</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">रिपोर्ट बटन छुपाएं</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">रीमिक्स बटन छुपाएं</string>
@@ -1182,8 +1184,6 @@ DeArrow.ajay.app खोलने के लिए यहाँ टैप कर�
   <string name="morphe_dearrow_api_url_summary">DeArrow थंबनेल कैश एंडपॉइंट का URL</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">अभी भी वीडियो कैप्चर</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">स्टिल कैप्चर वीडियो के शुरुआत / मिडिल / अंत से ली गई हैं। ये इमेजेज यूट्यूब में शामिल हैं और कोई बाहरी एपीआई का उपयोग नहीं किया जाता है</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">लूप वीडियो सक्षम करें</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">लोडिंग गति में सुधार के लिए मध्यम गुणवत्ता वाली छवियों का उपयोग करता है। लाइव स्ट्रीम, जारी नहीं किए गए और पुराने वीडियो में खाली थंबनेल दिखाई दे सकते हैं</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">से निकालें वीडियो फ़्रेम</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">शुरुआत</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">मध्य</string>

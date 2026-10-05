@@ -64,6 +64,8 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_artist_cards_title">Előadó kártyák elrejtése</string>
   <string name="morphe_hide_artist_cards_summary">Elrejti az előadói kártyát a keresési találatok tetején</string>
   <string name="morphe_hide_auto_dubbed_label_title">​„Automatikus szinkron” címke elrejtése</string>
+  <string name="morphe_hide_channel_buttons_title">Csatornagombok elrejtése</string>
+  <string name="morphe_hide_channel_buttons_summary">Elrejti az olyan gombokat, mint a Feliratkozás, Csatorna megtekintése, Közösség és a YouTube Music a csatornaprofilokon a keresési találatokban</string>
   <string name="morphe_hide_community_posts_title">Közösségi posztok elrejtése</string>
   <string name="morphe_hide_compact_banner_title">Kompakt szalaghirdetések elrejtése</string>
   <string name="morphe_hide_compact_banner_summary">Kompakt szalagképek és az egyes összetevők közötti térköz elrejtése</string>
@@ -75,7 +77,6 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_floating_microphone_button_summary">A keresési javaslatok képernyő jobb alsó sarkában lévő lebegő mikrofon gomb elrejtése</string>
   <string name="morphe_hide_get_premium_button_title">\"Prémium előfizetés\" gomb elrejtése</string>
   <string name="morphe_hide_history_shelf_title">Előzmények polc elrejtése</string>
-  <string name="morphe_hide_history_shelf_summary">Elrejti az Előzmények polcot a Neked lapon</string>
   <string name="morphe_hide_horizontal_shelves_title">Vízszintes polcok elrejtése</string>
   <string name="morphe_hide_horizontal_shelves_summary">Olyan vízszintes polcok elrejtése, mint a Friss hírek, Közösségi bejegyzések, amik érdekelhetnek, Megtekintés folytatása, További csatornák felfedezése, További témák felfedezése, Neked, Legújabb videók, Legrelevánsabb, Bejegyzések az alkotói közösségtől, Vásárlás és Megtekintés újra</string>
   <string name="morphe_hide_hyped_label_title">Hájpolt címke elrejtése</string>
@@ -109,7 +110,8 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_show_more_button_title">„Továbbiak” gomb elrejtése</string>
   <string name="morphe_hide_show_more_button_summary">Kibontás gomb elrejtése a keresési találatok alatt</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Feliratkozott csatornák sávjának elrejtése</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Csatornanevek elrejtése a feliratkozott csatornák sávjában</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Feliratkozott csatornák neveinek elrejtése</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Elrejti a csatornaneveket a feliratkozott csatornák sávjában</string>
   <string name="morphe_hide_surveys_title">Felmérések elrejtése</string>
   <string name="morphe_hide_surveys_summary">Értékelési felmérések és javaslatok elrejtése a hírcsatorna pontosságával kapcsolatban</string>
   <string name="morphe_hide_ticket_shelf_title">Jegyértékesítési polc elrejtése</string>
@@ -161,8 +163,8 @@ A változások a következőket tartalmazzák:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">„Súgó &amp; visszajelzés” elrejtése a menükben</string>
   <string name="morphe_hide_help_feedback_menu_summary">Elrejti a „Súgó &amp; visszajelzés” elemet az alkalmazássáv hárompontos menüiben, például a keresési találatok menüjében</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Csatorna azonosító elrejtése a Neked lapon</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Elrejti a csatorna azonosítóját a fióknév alatt a Neked lapon</string>
+  <string name="morphe_hide_handle_title">Handle elrejtése</string>
+  <string name="morphe_hide_handle_summary">Elrejti a csatornád handle-jét a „Neked” lapon</string>
   <string name="morphe_hide_video_title_title">Videócímek elrejtése</string>
   <string name="morphe_hide_video_title_summary">Elrejti a videó címét teljes képernyős módban</string>
   <string name="morphe_sanitize_video_subtitle_title">Videofeliratok ellenőrzése</string>
@@ -685,7 +687,7 @@ A javításhoz kapcsolja be a „Videostreamek meghamisítása” beállítást,
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Rejtse el a Csatlakozás gombot</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Jelentés gomb elrejtése</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Remix gomb elrejtése</string>
@@ -1182,8 +1184,6 @@ Koppintson ide a DeArrow.ajay.app megnyitásához"</string>
   <string name="morphe_dearrow_api_url_summary">A DeArrow bélyegkép cache végpont URL-je</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Videó pillanatképek</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Pillanatképek minden videó elejéről/közepéről/végéről készülnek. Ezek a képek be vannak építve a YouTube-ba és nem használnak külső API-t</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gyors pillanatképek használata</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">A terhelés gyorsítása közepes minőségű képek használatával. Életközvetítések, kiadatlan és újabb videók esetén üres képek jelenhetnek meg</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Keret kinyerése a videóból</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Kezdőpont</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Közép</string>

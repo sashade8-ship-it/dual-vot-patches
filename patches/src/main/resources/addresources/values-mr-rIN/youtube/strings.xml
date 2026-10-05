@@ -557,7 +557,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">\'कनेक्ट\' बटण लपवा</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">\'रिपोर्ट\' बटण लपवा</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">\'रीमिक्स\' (Remix) बटण लपवा</string>
@@ -975,8 +975,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_dearrow_api_url_summary">DeArrow थंबनेल कॅशे एंडपॉइंटचा URL</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">व्हिडिओ कॅप्चर</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">व्हिडिओच्या सुरुवाती / मध्यात / शेवटी stills घेतले जातात. ही चित्रे YouTube मध्ये तयार केली जातात आणि कोणत्याही बाह्य API चा वापर केला जात नाही</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">वेगवान व्हिडिओ कॅप्चर वापरा</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">चांगल्या लोडिंग (Loading) वेगासाठी, मध्यम-गुणवत्तेच्या प्रतिमांचा वापर करते. लाईव्ह स्ट्रीम (Live stream), अप्रकाशित (Unreleased) आणि जुने व्हिडिओ (Older videos) रिकामे थंबनेल (Thumbnail) दर्शवू शकतात</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">व्हिडिओ फ्रेममधून (Video frame) काढा</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">सुरुवात</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">मध्य</string>

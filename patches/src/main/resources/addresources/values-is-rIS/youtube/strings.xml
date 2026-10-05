@@ -64,6 +64,8 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_artist_cards_title">Fela listamannaspjöld</string>
   <string name="morphe_hide_artist_cards_summary">Felur listamannaspjaldið efst í leitarniðurstöðum</string>
   <string name="morphe_hide_auto_dubbed_label_title">Fela merkið „Sjálfvirkt talsett“</string>
+  <string name="morphe_hide_channel_buttons_title">Fela rásahnappa</string>
+  <string name="morphe_hide_channel_buttons_summary">Felur hnappa eins og Gerast áskrifandi, Skoða rás, Samfélag og YouTube Music úr rásasniðum í leitarniðurstöðum</string>
   <string name="morphe_hide_community_posts_title">Fela samfélagsfærslur</string>
   <string name="morphe_hide_compact_banner_title">Fela þétta borða</string>
   <string name="morphe_hide_compact_banner_summary">Felur þétta borða og bil á milli sumra viðmótshluta</string>
@@ -75,7 +77,6 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_floating_microphone_button_summary">Felur fljótandi hljóðnemahnapp neðst í hægra horninu á skjá leitaruppástungna</string>
   <string name="morphe_hide_get_premium_button_title">Fela hnappinn \'Fá Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Fela spilunarsöguhilluna</string>
-  <string name="morphe_hide_history_shelf_summary">Felur spilunarsöguhilluna í Þú-flipanum</string>
   <string name="morphe_hide_horizontal_shelves_title">Fela láréttar raðir</string>
   <string name="morphe_hide_horizontal_shelves_summary">Felur láréttar raðir eins og Fréttir, Samfélagsfærslur sem þú gætir haft áhuga á, Halda áfram að horfa, Fleiri rásir, Fleiri efni, Fyrir þig, Nýjustu myndbönd, Mest viðeigandi, Samfélagsfærslur höfunda, Verslun og Horfa aftur</string>
   <string name="morphe_hide_hyped_label_title">Fela „Hyped“ merkið</string>
@@ -109,7 +110,8 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_show_more_button_title">Fela \'Sýna meira\' hnappinn</string>
   <string name="morphe_hide_show_more_button_summary">Hyl leiðbeiningar listunum</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Fela áskriftarrásastiku</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Fela nöfn rása í áskriftastiku</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Fela nöfn áskriftarrása</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Felur nöfn rásanna í áskriftarrásastikunni</string>
   <string name="morphe_hide_surveys_title">Fela kannelana</string>
   <string name="morphe_hide_surveys_summary">Hylur kannanir og hröggur um nákvæmni um tillögur um umhverfi</string>
   <string name="morphe_hide_ticket_shelf_title">Fela miðaskjá</string>
@@ -161,8 +163,8 @@ Breytingarnar fela í sér:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Fela \'Hjálp &amp; endurgjöf\' í valmyndum</string>
   <string name="morphe_hide_help_feedback_menu_summary">Felur \'Hjálp &amp; endurgjöf\' í þriggja punkta valmyndum verkstikunnar, eins og leitarniðurstöðuvalmyndinni</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Fela rásarauðkenni í Þú-flipanum</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Felur rásarauðkennið undir reikningsnafninu í Þú-flipanum</string>
+  <string name="morphe_hide_handle_title">Fela handfang</string>
+  <string name="morphe_hide_handle_summary">Felur rásarhandfangið þitt í flipanum \'Þú\'</string>
   <string name="morphe_hide_video_title_title">Fela myndbandsheiti</string>
   <string name="morphe_hide_video_title_summary">Felur vídeótitilinn í fullskjástillingu</string>
   <string name="morphe_sanitize_video_subtitle_title">Hreinsa undirtitla myndbands</string>
@@ -683,7 +685,7 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Fela Connect hnappinn</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Felur Tilkynna hnappinn</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Felur Endurgerði hnappinn</string>
@@ -1177,8 +1179,6 @@ Snertið hér til að opna DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">URL DeArrow smámynda minnisins</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Stillmyndum af myndböndum</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Stöðumyndir eru teknar frá upphafi / miðju / lokum hvers vídeó. Þessar myndir eru innbyggðar í YouTube og engin utanaðkomandi API er notuð</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Notaðu fljótlegt stillmyndagerð</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Bætir álagshraða með því að nota myndir á miðstigi. Lifandi streymir, útgáfur og eldri myndbönd gætu sýnt tómar myndabræður</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Taktu mynd frá</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Upphafið</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Miðjan</string>

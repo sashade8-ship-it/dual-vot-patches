@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">ซ่อนการ์ดศิลปิน</string>
   <string name="morphe_hide_artist_cards_summary">ซ่อนการ์ดศิลปินที่ด้านบนของผลการค้นหา</string>
   <string name="morphe_hide_auto_dubbed_label_title">ซ่อนป้ายกำกับ \'มีเสียงพากย์อัตโนมัติ\'</string>
+  <string name="morphe_hide_channel_buttons_title">ซ่อนปุ่มของช่อง</string>
+  <string name="morphe_hide_channel_buttons_summary">ซ่อนปุ่มต่างๆ เช่น ติดตาม ดูช่อง ชุมชน และ YouTube Music จากโปรไฟล์ช่องในผลการค้นหา</string>
   <string name="morphe_hide_community_posts_title">ซ่อนโพสต์ชุมชน</string>
   <string name="morphe_hide_compact_banner_title">ซ่อนแบนเนอร์ขนาดกะทัดรัด</string>
   <string name="morphe_hide_compact_banner_summary">ซ่อนแบนเนอร์ขนาดเล็กและช่องว่างระหว่างส่วนประกอบบางอย่าง</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">ซ่อนปุ่มไมโครโฟนลอยที่มุมล่างขวาของหน้าจอคำแนะนำการค้นหา</string>
   <string name="morphe_hide_get_premium_button_title">ซ่อนปุ่ม \'รับ Premium\'</string>
   <string name="morphe_hide_history_shelf_title">ซ่อนแถวประวัติการดู</string>
-  <string name="morphe_hide_history_shelf_summary">ซ่อนแถวประวัติการดูในแท็บคุณ</string>
   <string name="morphe_hide_horizontal_shelves_title">ซ่อนชั้นวางแนวนอน</string>
   <string name="morphe_hide_horizontal_shelves_summary">ซ่อนชั้นวางแนวนอน เช่น ข่าวเด่น, โพสต์จากชุมชนที่คุณอาจชอบ, รับชมต่อ, สำรวจช่องเพิ่มเติม, สำรวจหัวข้อเพิ่มเติม, สำหรับคุณ, วิดีโอล่าสุด, ที่เกี่ยวข้องมากที่สุด, โพสต์จากชุมชนของผู้สร้าง, ร้านค้า และ ดูอีกครั้ง</string>
   <string name="morphe_hide_hyped_label_title">ซ่อนป้ายกำกับ \'Hyped\'</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">ซ่อนปุ่ม \'แสดงเพิ่มเติม\'</string>
   <string name="morphe_hide_show_more_button_summary">ซ่อนปุ่มขยายใต้วิดีโอในผลการค้นหา</string>
   <string name="morphe_hide_subscribed_channels_bar_title">ซ่อนแถบช่องที่ติดตาม</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">ซ่อนชื่อช่องในแถบช่องที่ติดตาม</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">ซ่อนชื่อช่องที่ติดตาม</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">ซ่อนชื่อช่องในแถบช่องที่ติดตาม</string>
   <string name="morphe_hide_surveys_title">ซ่อนแบบสำรวจ</string>
   <string name="morphe_hide_surveys_summary">ซ่อนแบบสำรวจและการแนะนำเกี่ยวกับความแม่นยำของการแนะนำฟีด</string>
   <string name="morphe_hide_ticket_shelf_title">ซ่อนชั้นวางตั๋ว</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">ซ่อน \'ความช่วยเหลือ &amp; ข้อเสนอแนะ\' ในเมนู</string>
   <string name="morphe_hide_help_feedback_menu_summary">ซ่อน \'ความช่วยเหลือ &amp; ข้อเสนอแนะ\' ในเมนูสามจุดของแถบแอป เช่น เมนูผลการค้นหา</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">ซ่อนแฮนเดิลช่องในแท็บคุณ</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">ซ่อนแฮนเดิลช่องใต้ชื่อบัญชีในแท็บคุณ</string>
+  <string name="morphe_hide_handle_title">ซ่อนแฮนเดิล</string>
+  <string name="morphe_hide_handle_summary">ซ่อนแฮนเดิลช่องของคุณในแท็บ \'คุณ\'</string>
   <string name="morphe_hide_video_title_title">ซ่อนชื่อวิดีโอ</string>
   <string name="morphe_hide_video_title_summary">ซ่อนชื่อวิดีโอในโหมดเต็มหน้าจอ</string>
   <string name="morphe_sanitize_video_subtitle_title">ล้างข้อความคำบรรยายวิดีโอ</string>
@@ -685,7 +687,7 @@ Second \"item\" text"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">ซ่อนปุ่มเชื่อมต่อ</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">ซ่อนปุ่มรายงาน</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">ซ่อนปุ่มรีมิกซ์</string>
@@ -1182,8 +1184,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">URL ของจุดสิ้นสุดแคชรูปขนาดย่อ DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">ภาพนิ่งจากวิดีโอ</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">ภาพนิ่งถูกถ่ายจากจุดเริ่มต้น/กลาง/ท้ายของแต่ละวิดีโอ รูปภาพเหล่านี้ถูกสร้างไว้ใน YouTube และไม่มีการใช้ API ภายนอก</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">ใช้ภาพนิ่งรวดเร็ว</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">ปรับปรุงความเร็วในการโหลดโดยใช้ภาพคุณภาพปานกลาง สตรีมสด วิดีโอที่ยังไม่ได้เผยแพร่ และวิดีโอเก่าอาจแสดงภาพขนาดย่อที่ว่างเปล่า</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">ดึงเฟรมวิดีโอจาก</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">เริ่มต้น</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">กลาง</string>

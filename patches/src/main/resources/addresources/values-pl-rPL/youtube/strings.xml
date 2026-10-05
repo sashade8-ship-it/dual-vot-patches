@@ -64,6 +64,8 @@ Zmiany obejmują:
   <string name="morphe_hide_artist_cards_title">Ukryj karty artystów</string>
   <string name="morphe_hide_artist_cards_summary">Ukrywa karty artystów na górze wyników wyszukiwania</string>
   <string name="morphe_hide_auto_dubbed_label_title">Ukryj etykietę automatycznego dubbingu</string>
+  <string name="morphe_hide_channel_buttons_title">Ukryj przyciski kanałów</string>
+  <string name="morphe_hide_channel_buttons_summary">Ukrywa przyciski, takie jak Subskrybuj, Wyświetl kanał, Społeczność i YouTube Music, na profilach kanałów w wynikach wyszukiwania</string>
   <string name="morphe_hide_community_posts_title">Ukryj posty</string>
   <string name="morphe_hide_compact_banner_title">Ukryj kompaktowe banery</string>
   <string name="morphe_hide_compact_banner_summary">Ukrywa kompaktowe banery i odstępy między niektórymi elementami</string>
@@ -75,7 +77,6 @@ Zmiany obejmują:
   <string name="morphe_hide_floating_microphone_button_summary">Ukrywa pływający przycisk mikrofonu w prawym dolnym rogu na ekranie sugestii wyszukiwania</string>
   <string name="morphe_hide_get_premium_button_title">Ukryj przycisk \"Kup Premium\"</string>
   <string name="morphe_hide_history_shelf_title">Ukryj sekcję Historia</string>
-  <string name="morphe_hide_history_shelf_summary">Ukrywa sekcję Historia w zakładce Ty</string>
   <string name="morphe_hide_horizontal_shelves_title">Ukryj sekcje poziome</string>
   <string name="morphe_hide_horizontal_shelves_summary">Ukrywa poziome sekcje, takie jak Najważniejsze wiadomości, Posty, które mogą Cię zainteresować, Kontynuuj oglądanie, Odkryj więcej kanałów, Odkryj więcej tematów, Dla Ciebie, Najnowsze filmy, Najbardziej istotne, Posty ze Społeczności twórcy, Zakupy oraz Obejrzyj ponownie</string>
   <string name="morphe_hide_hyped_label_title">Ukryj etykietę podbitych filmów</string>
@@ -109,7 +110,8 @@ Zmiany obejmują:
   <string name="morphe_hide_show_more_button_title">Ukryj przycisk \"Pokaż więcej\"</string>
   <string name="morphe_hide_show_more_button_summary">Ukrywa przycisk rozwijania pod filmami w wynikach wyszukiwania</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Ukryj pasek subskrybowanych kanałów</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Ukryj nazwy kanałów na pasku subskrybowanych kanałów</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Ukryj nazwy subskrybowanych kanałów</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Ukrywa nazwy kanałów na pasku subskrybowanych kanałów</string>
   <string name="morphe_hide_surveys_title">Ukryj ankiety</string>
   <string name="morphe_hide_surveys_summary">Ukrywa ankiety i monity dotyczące trafności rekomendacji</string>
   <string name="morphe_hide_ticket_shelf_title">Ukryj sekcję biletów</string>
@@ -161,8 +163,8 @@ Zmiany obejmują:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Ukryj \"Pomoc i opinie\" w menu</string>
   <string name="morphe_hide_help_feedback_menu_summary">Ukrywa opcję \"Pomoc i opinie\" w menu z trzema kropkami na pasku aplikacji, na przykład w menu wyników wyszukiwania</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Ukryj identyfikator kanału w zakładce Ty</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Ukrywa identyfikator kanału pod nazwą konta w zakładce Ty</string>
+  <string name="morphe_hide_handle_title">Ukryj uchwyt</string>
+  <string name="morphe_hide_handle_summary">Ukrywa Twój uchwyt kanału w karcie „Ty”</string>
   <string name="morphe_hide_video_title_title">Ukryj tytuł filmu</string>
   <string name="morphe_hide_video_title_summary">Ukrywa tytuł filmu w trybie pełnoekranowym</string>
   <string name="morphe_sanitize_video_subtitle_title">Oczyść tekst pod tytułem filmu</string>
@@ -685,7 +687,7 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Ukryj przycisk Połącz</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Ukryj przycisk Zgłoś</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Ukryj przycisk Remiks</string>
@@ -1155,9 +1157,9 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">Tytuły DeArrow</string>
-  <string name="morphe_dearrow_titles_summary">Zastępuje tytuły filmów tytułami przesłanymi przez społeczność do DeArrow</string>
+  <string name="morphe_dearrow_titles_summary">Zastępuje tytuły filmów społecznościowymi tytułami przesłanymi do DeArrow</string>
   <string name="morphe_dearrow_titles_icon_title">Pokaż ikonę DeArrow</string>
-  <string name="morphe_dearrow_titles_icon_summary">Pokazuje ikonę DeArrow na tytułach filmów z crowdsourcingu</string>
+  <string name="morphe_dearrow_titles_icon_summary">Wyświetla ikonę DeArrow przy społecznościowych tytułach filmów</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">Dla strony głównej</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -1170,9 +1172,9 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow i oryginalne miniaturki</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow i kadry z filmu</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Kadry z filmu</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow zapewnia tytuły i miniatury przesłane przez społeczność dla filmów na YouTube. Są one często bardziej trafne niż te dostarczane przez YouTube.
+  <string name="morphe_dearrow_about_summary">"DeArrow udostępnia tworzone przez społeczność tytuły i miniaturki filmów na YouTube, które są często bardziej trafne niż te dostarczane przez YouTube
 
-Jeśli opcja jest włączona, adresy URL filmów będą wysyłane na serwer API i żadne inne dane nie będą wysyłane. Jeśli film nie ma miniaturek DeArrow, wyświetlane są oryginalne miniatury lub przechwycone klatki.
+Jeśli opcja ta jest włączona, do serwera API wysyłane są wyłącznie adresy filmów. W przypadku braku miniaturek DeArrow, wyświetlana jest miniaturka oryginalna lub kadr z filmu
 
 Dotknij tutaj, aby otworzyć DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_connection_toast_title">Pokaż powiadomienia o błędach połączenia</string>
@@ -1181,8 +1183,6 @@ Dotknij tutaj, aby otworzyć DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">Adres punktu końcowego do miniaturek DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Kadry z filmu</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Statyczne kadry są pobierane z początku, środka lub końca każdego filmu. Obrazy te są wbudowane w YouTube i nie korzystają z zewnętrznych API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Użyj szybkich zrzutów klatek</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Poprawia szybkość ładowania, używając obrazów średniej jakości. Transmisje na żywo, nieopublikowane i starsze filmy mogą wyświetlać puste miniaturki</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Wyodrębnij klatkę filmu z</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Początku</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Środka</string>

@@ -64,6 +64,8 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_artist_cards_title">Nascondi le schede artista</string>
   <string name="morphe_hide_artist_cards_summary">Nasconde la scheda dell\'artista in cima ai risultati di ricerca</string>
   <string name="morphe_hide_auto_dubbed_label_title">Nascondi l\'etichetta \'Doppiato automaticamente\'</string>
+  <string name="morphe_hide_channel_buttons_title">Nascondi i pulsanti del canale</string>
+  <string name="morphe_hide_channel_buttons_summary">Nasconde pulsanti come Iscriviti, Visualizza canale, Community e YouTube Music dai profili dei canali nei risultati di ricerca</string>
   <string name="morphe_hide_community_posts_title">Nascondi i post della community</string>
   <string name="morphe_hide_compact_banner_title">Nascondi i banner compatti</string>
   <string name="morphe_hide_compact_banner_summary">Nasconde banner compatti e spazi tra alcuni componenti</string>
@@ -75,7 +77,6 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_floating_microphone_button_summary">Nasconde il pulsante mobile del microfono nell\'angolo in basso a destra dello schermo dei suggerimenti di ricerca</string>
   <string name="morphe_hide_get_premium_button_title">Nascondi il pulsante \'Ottieni Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Nascondi la sezione Cronologia</string>
-  <string name="morphe_hide_history_shelf_summary">Nasconde la sezione Cronologia nella scheda Tu</string>
   <string name="morphe_hide_horizontal_shelves_title">Nascondi sezioni orizzontali</string>
   <string name="morphe_hide_horizontal_shelves_summary">Nasconde gli scaffali orizzontali come Notizie dell\'ultima ora, Post della community che potrebbero piacerti, Continua a guardare, Esplora altri canali, Esplora altri argomenti, Per te, Video più recenti, Più rilevanti, Post dalla community del creatore, Shopping e Guarda di nuovo</string>
   <string name="morphe_hide_hyped_label_title">Nascondi etichetta Hype</string>
@@ -109,7 +110,8 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_show_more_button_title">Nascondi il pulsante \'Mostra di più\'</string>
   <string name="morphe_hide_show_more_button_summary">Nasconde il pulsante di espansione sotto i video nei risultati della ricerca</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Nascondi la barra dei canali iscritti</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Nascondi i nomi dei canali nella barra dei canali a cui sei iscritto</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Nascondi i nomi dei canali a cui sei iscritto</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Nasconde i nomi dei canali nella barra dei canali iscritti</string>
   <string name="morphe_hide_surveys_title">Nascondi sondaggi</string>
   <string name="morphe_hide_surveys_summary">Nasconde i sondaggi e i suggerimenti relativi alla precisione dei consigli nel feed</string>
   <string name="morphe_hide_ticket_shelf_title">Nascondi la sezione dei biglietti</string>
@@ -161,8 +163,8 @@ I cambiamenti riguarderanno:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Nascondi \'Guida &amp; feedback\' nei menu</string>
   <string name="morphe_hide_help_feedback_menu_summary">Nasconde \'Guida &amp; feedback\' nei menu a tre puntini della barra dell\'app, ad esempio il menu dei risultati di ricerca</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Nascondi l\'handle del canale nella scheda Tu</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Nasconde l\'handle del canale sotto il nome dell\'account nella scheda Tu</string>
+  <string name="morphe_hide_handle_title">Nascondi handle</string>
+  <string name="morphe_hide_handle_summary">Nasconde l\'handle del tuo canale nella scheda \'Tu\'</string>
   <string name="morphe_hide_video_title_title">Nascondi il titolo del video</string>
   <string name="morphe_hide_video_title_summary">Nasconde il titolo del video in modalità a schermo intero</string>
   <string name="morphe_sanitize_video_subtitle_title">Sanitizza i sottotitoli video</string>
@@ -685,7 +687,7 @@ Per risolvere, attiva 'Spoof dei flussi video' e cambia il 'Client predefinito' 
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Nascondi il pulsante Connect</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Nascondi il pulsante Segnala</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Nascondi il pulsante Remix</string>
@@ -1182,8 +1184,6 @@ Tocca qui per aprire DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">L\'URL endpoint della cache delle miniature di DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Istantanee</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Le istantanee sono prese all\'inizio, metà o fine di ogni video. Queste immagini sono integrate in YouTube e non viene usata alcuna API esterna</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Usa istantanee veloci</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Migliora la velocità di caricamento utilizzando immagini di qualità media. I video live, i video inediti e quelli più vecchi potrebbero visualizzare miniature vuote</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Estrai fotogramma video da</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Inizio</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Metà</string>

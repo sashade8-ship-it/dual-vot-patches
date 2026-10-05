@@ -64,6 +64,8 @@ Wijzigingen zijn:
   <string name="morphe_hide_artist_cards_title">Verberg artistkaarten</string>
   <string name="morphe_hide_artist_cards_summary">Verbergt de artiestkaart bovenaan de zoekresultaten</string>
   <string name="morphe_hide_auto_dubbed_label_title">Verberg label \'Automatisch nagesproken\'</string>
+  <string name="morphe_hide_channel_buttons_title">Kanaalknoppen verbergen</string>
+  <string name="morphe_hide_channel_buttons_summary">Verbergt knoppen zoals Abonneren, Kanaal bekijken, Community en YouTube Music uit kanaalprofielen in zoekresultaten</string>
   <string name="morphe_hide_community_posts_title">Community berichten verbergen</string>
   <string name="morphe_hide_compact_banner_title">Verberg compacte banners</string>
   <string name="morphe_hide_compact_banner_summary">Verbergt compacte banners en spaties tussen sommige componenten</string>
@@ -75,7 +77,6 @@ Wijzigingen zijn:
   <string name="morphe_hide_floating_microphone_button_summary">Verbergt de zwevende microfoonknop in de rechteronderhoek van het scherm met zoeksuggesties</string>
   <string name="morphe_hide_get_premium_button_title">\'Get Premium\' knop verbergen</string>
   <string name="morphe_hide_history_shelf_title">Verberg de geschiedenis-sectie</string>
-  <string name="morphe_hide_history_shelf_summary">Verbergt de geschiedenis-sectie in het tabblad Jij</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale planken verbergen</string>
   <string name="morphe_hide_horizontal_shelves_summary">Verbergt horizontale schappen zoals Breaking news, Community posts die je misschien leuk vindt, Verder kijken, Meer kanalen verkennen, Meer onderwerpen verkennen, Voor jou, Nieuwste video\'s, Meest relevant, Posts van de Creator\'s Community, Shopping, en Kijk opnieuw</string>
   <string name="morphe_hide_hyped_label_title">Verberg Hyped label</string>
@@ -109,7 +110,8 @@ Wijzigingen zijn:
   <string name="morphe_hide_show_more_button_title">Verberg knop \'Meer weergeven\'</string>
   <string name="morphe_hide_show_more_button_summary">Verbergt de uitbreidingsknop onder video\'s in de zoekresultaten</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Verberg abonneerde kanalen balk</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Verberg kanaalnamen in de balk met geabonneerde kanalen</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Verberg namen van geabonneerde kanalen</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Verbergt de kanaalnamen in de balk met geabonneerde kanalen</string>
   <string name="morphe_hide_surveys_title">Enquêtes verbergen</string>
   <string name="morphe_hide_surveys_summary">Verbergt enquêtes en aanmoedigingen over de nauwkeurigheid van feed-aanbevelingen</string>
   <string name="morphe_hide_ticket_shelf_title">Ticketsectie verbergen</string>
@@ -161,8 +163,8 @@ Wijzigingen zijn:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Verberg \'Help &amp; feedback\' in menu\'s</string>
   <string name="morphe_hide_help_feedback_menu_summary">Verbergt \'Help &amp; feedback\' in de driepuntsmenu\'s van de appbalk, zoals het menu met zoekresultaten</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Verberg kanaalhandle in het tabblad Jij</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Verbergt de kanaalhandle onder de accountnaam in het tabblad Jij</string>
+  <string name="morphe_hide_handle_title">Verberg handle</string>
+  <string name="morphe_hide_handle_summary">Verbergt je kanaalhandle in het tabblad \'Jij\'</string>
   <string name="morphe_hide_video_title_title">Verberg de videotitel</string>
   <string name="morphe_hide_video_title_summary">Verbergt de videotitel in de volledig schermmodus</string>
   <string name="morphe_sanitize_video_subtitle_title">Ondertitel van video opschonen</string>
@@ -685,7 +687,7 @@ Om dit op te lossen, schakel 'Videostreams vervalsen' in en wijzig de 'Standaard
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Verberg de knop \"Connect\"</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Verberg Rapporteer-knop</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Verberg de knop \"Remixen\"</string>
@@ -1180,8 +1182,6 @@ Tik hier om DeArrow.ajay.app te openen"</string>
   <string name="morphe_dearrow_api_url_summary">De URL van het DeArrow-miniaturencache-eindpunt</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Stilstaande video-opnames</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Nog steeds opgenomen worden vanaf het begin/midden/einde van elke video. Deze afbeeldingen zijn in YouTube ingebouwd en er wordt geen externe API gebruikt</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gebruik snelle stilstaande opnames</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Verbetert de laadsnelheid door gebruik te maken van afbeeldingen van gemiddelde kwaliteit. Live streams, niet uitgebrachte en oudere video’s kunnen mogelijk lege miniaturen weergeven</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Video frame extraheren van</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Begin</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Midden</string>

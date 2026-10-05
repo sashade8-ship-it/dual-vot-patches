@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">アーティスト カードを非表示</string>
   <string name="morphe_hide_artist_cards_summary">検索結果の最上部に表示されるアーティストカードを非表示にします</string>
   <string name="morphe_hide_auto_dubbed_label_title">「オートダビング」ラベルを非表示</string>
+  <string name="morphe_hide_channel_buttons_title">チャンネルボタンを非表示</string>
+  <string name="morphe_hide_channel_buttons_summary">検索結果のチャンネルプロフィールから「登録」「チャンネルを見る」「コミュニティ」「YouTube Music」などのボタンを非表示にします</string>
   <string name="morphe_hide_community_posts_title">コミュニティ投稿を非表示</string>
   <string name="morphe_hide_compact_banner_title">コンパクトなバナーを非表示</string>
   <string name="morphe_hide_compact_banner_summary">コンパクトなバナーおよび一部のコンポーネント間のスペースを非表示にします</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">検索候補画面の右下に表示されるマイクボタンを非表示にします</string>
   <string name="morphe_hide_get_premium_button_title">「Premium を購入」ボタンを非表示</string>
   <string name="morphe_hide_history_shelf_title">履歴欄を非表示</string>
-  <string name="morphe_hide_history_shelf_summary">マイページタブの履歴欄を非表示にします</string>
   <string name="morphe_hide_horizontal_shelves_title">横スクロール欄を非表示</string>
   <string name="morphe_hide_horizontal_shelves_summary">ニュース速報、おすすめのコミュニティ投稿、続きを見る、他のチャンネルを探す、その他のトピック、おすすめ、新着動画、関連が強い、\"チャンネル名\" のコミュニティの投稿、ショッピング、もう一度見る、などの横スクロール欄を非表示にします</string>
   <string name="morphe_hide_hyped_label_title">「大盛り上がり」ラベルを非表示</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">「もっと見る」ボタンを非表示</string>
   <string name="morphe_hide_show_more_button_summary">検索結果の動画の下に表示される、展開してより多くの動画を表示するボタンを非表示にします</string>
   <string name="morphe_hide_subscribed_channels_bar_title">登録済みチャンネルの横スクロールバーを非表示</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">登録済みチャンネルの横スクロールバーのチャンネル名を非表示</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">登録チャンネル名を非表示</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">登録チャンネルバーのチャンネル名を非表示にします</string>
   <string name="morphe_hide_surveys_title">アンケートを非表示</string>
   <string name="morphe_hide_surveys_summary">フィードのおすすめ精度に関するアンケートやフィードバック要求を非表示にします</string>
   <string name="morphe_hide_ticket_shelf_title">チケット欄を非表示</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">3 点メニューの「ヘルプとフィードバック」を非表示</string>
   <string name="morphe_hide_help_feedback_menu_summary">検索結果などのツールバーに表示される 3 点ボタンから呼び出されるメニューの「ヘルプとフィードバック」を非表示にします</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">マイページのチャンネル ハンドルを非表示</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">マイページタブのアカウント名の下に表示されるチャンネル ハンドル (@ 記号で始まるチャンネルの識別子) を非表示にします</string>
+  <string name="morphe_hide_handle_title">ハンドルを非表示</string>
+  <string name="morphe_hide_handle_summary">「You」タブでチャンネルハンドルを非表示にします</string>
   <string name="morphe_hide_video_title_title">動画のタイトルを非表示</string>
   <string name="morphe_hide_video_title_summary">全画面表示モードでの動画のタイトルを非表示にします</string>
   <string name="morphe_sanitize_video_subtitle_title">動画のタグを非表示</string>
@@ -686,7 +688,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">接続ボタンを非表示</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">報告ボタンを非表示</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">リミックス ボタンを非表示</string>
@@ -1157,8 +1159,8 @@ Automotive レイアウト
   <string name="morphe_bypass_image_region_restrictions_summary">制限されている地域で画像を表示するために、デフォルトとは別のサーバーから画像を取得します</string>
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
-  <string name="morphe_dearrow_titles_title">DeArrowタイトル</string>
-  <string name="morphe_dearrow_titles_summary">動画タイトルを、DeArrowに投稿されたクラウドソーシングによるタイトルに置き換えます</string>
+  <string name="morphe_dearrow_titles_title">DeArrow タイトル</string>
+  <string name="morphe_dearrow_titles_summary">動画のタイトルを、ユーザーが DeArrow に投稿した、評価の高いタイトルに置き換えます</string>
   <string name="morphe_dearrow_titles_icon_title">DeArrow アイコンを表示</string>
   <string name="morphe_dearrow_titles_icon_summary">クラウドソースされた動画タイトルに DeArrow アイコンを表示します</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -1184,8 +1186,6 @@ Automotive レイアウト
   <string name="morphe_dearrow_api_url_summary">DeArrow がサムネイルのキャッシュを取得するエンドポイントの URL</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">静止画サムネイル</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">静止画は各動画の序盤 / 中盤 / 終盤から取得されます。これらの画像は YouTube に組み込まれており、外部 API は使用されません</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">高速な静止画サムネイルを使用</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">中画質の画像を使用することにより、サムネイルの読み込み速度が速くなります。ライブ配信、未公開動画、非常に古い動画には、空白のサムネイルが表示される場合があります</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">静止画サムネイルを取得する位置</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">動画の序盤</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">動画の中盤</string>

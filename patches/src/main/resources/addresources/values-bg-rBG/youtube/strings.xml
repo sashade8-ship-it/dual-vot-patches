@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">Скриване на картите на изпълнителите</string>
   <string name="morphe_hide_artist_cards_summary">Скрива картата на изпълнителя в горната част на резултатите от търсенето</string>
   <string name="morphe_hide_auto_dubbed_label_title">Скрий надпис \"Автоматично озвучени\"</string>
+  <string name="morphe_hide_channel_buttons_title">Скриване на бутоните на канала</string>
+  <string name="morphe_hide_channel_buttons_summary">Скрива бутони като Абониране, Преглед на канала, Общност и YouTube Music от профилите на каналите в резултатите от търсенето</string>
   <string name="morphe_hide_community_posts_title">Скриване на публикациите от общността</string>
   <string name="morphe_hide_compact_banner_title">Скриване на компактните банери</string>
   <string name="morphe_hide_compact_banner_summary">Скрива компактните банери и разстоянието между някои компоненти</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">Скрива плаващия бутон за микрофон в долния десен ъгъл на екрана за предложения за търсене</string>
   <string name="morphe_hide_get_premium_button_title">Скриване на бутона \"Получи Premium\"</string>
   <string name="morphe_hide_history_shelf_title">Скриване на рафта „История“</string>
-  <string name="morphe_hide_history_shelf_summary">Скрива рафта „История“ в раздела „Ти“</string>
   <string name="morphe_hide_horizontal_shelves_title">Хоризонтални секции</string>
   <string name="morphe_hide_horizontal_shelves_summary">Скрива хоризонтални рафтове като Актуални новини, Публикации от общността, които може да ви харесат, Продължете да гледате, Разгледайте повече канали, Разгледайте повече теми, За вас, Последни видеа, Най-подходящи, Публикации от общността на автора, Пазаруване и Гледайте отново</string>
   <string name="morphe_hide_hyped_label_title">Скриване на етикета \"Популярно\"</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">Скриване на бутона \"Покажи още\"</string>
   <string name="morphe_hide_show_more_button_summary">Скрива бутона „Разгъване“ под видеата в резултатите от търсенето</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Скриване на лентата на подписаните канали</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Скриване на имената на каналите в лентата на абонираните канали</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Скриване на имената на абонираните канали</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Скрива имената на каналите в лентата на абонираните канали</string>
   <string name="morphe_hide_surveys_title">Скриване на анкетите</string>
   <string name="morphe_hide_surveys_summary">Скрива проучвания и подкани относно точността на препоръките за канала</string>
   <string name="morphe_hide_ticket_shelf_title">Скриване на рафта за билети</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Скриване на „Помощ &amp; обратна връзка“ в менютата</string>
   <string name="morphe_hide_help_feedback_menu_summary">Скрива „Помощ &amp; обратна връзка“ в менютата с трите точки на лентата на приложението, например в менюто с резултатите от търсенето</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Скриване на хендъла на канала в раздела „Ти“</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Скрива хендъла на канала под името на акаунта в раздела „Ти“</string>
+  <string name="morphe_hide_handle_title">Скриване на хендъла</string>
+  <string name="morphe_hide_handle_summary">Скрива хендъла на канала ви в раздела „Ти“</string>
   <string name="morphe_hide_video_title_title">Скриване на заглавието на видеото</string>
   <string name="morphe_hide_video_title_summary">Скрива заглавието на видеото в режим на цял екран</string>
   <string name="morphe_sanitize_video_subtitle_title">Почистване на субтитрите на видео</string>
@@ -685,7 +687,7 @@ Second \"item\" text"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Скриване на бутона \"Свързване\"</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Скрий бутона „Задай въпрос“</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Скрий бутона „Коментари“</string>
@@ -1182,8 +1184,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">URL адресът на крайната точка за съхранение на миниатюри DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Неподвижни миниатюри</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Снимките са взети от началото / средата / края на всеки видеоклип. Тези изображения са вградени в YouTube и не се използва външен API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Използване на среден качество still captures. Зареждаването ще бъде по-бързо, но live stream, непубликувани или много стари видеа може да покажат празни миниатюри</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Подобрява скоростта на зареждане чрез използване на изображения с средно качество. Потоци на живо, непубликувани и стари видеа може да показват празни миниатюри</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Извличане на кадър от видео</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Начало</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Среда</string>

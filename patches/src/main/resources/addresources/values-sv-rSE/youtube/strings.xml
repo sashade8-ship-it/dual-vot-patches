@@ -64,6 +64,8 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_artist_cards_title">Dölj artistkort</string>
   <string name="morphe_hide_artist_cards_summary">Döljer artistkortet högst upp i sökresultaten</string>
   <string name="morphe_hide_auto_dubbed_label_title">Dölj etiketten Automatiskt dubbad</string>
+  <string name="morphe_hide_channel_buttons_title">Dölj kanalknappar</string>
+  <string name="morphe_hide_channel_buttons_summary">Döljer knappar som Prenumerera, Visa kanal, Community och YouTube Music från kanalprofiler i sökresultat</string>
   <string name="morphe_hide_community_posts_title">Dölj community-inlägg</string>
   <string name="morphe_hide_compact_banner_title">Dölj kompakta banners</string>
   <string name="morphe_hide_compact_banner_summary">Döljer kompakta banners och avståndet mellan vissa komponenter</string>
@@ -75,7 +77,6 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_floating_microphone_button_summary">Döljer den flytande mikrofonknappen nere till höger på skärmen för sökförslag</string>
   <string name="morphe_hide_get_premium_button_title">Dölj knappen Skaffa Premium</string>
   <string name="morphe_hide_history_shelf_title">Dölj historikhyllan</string>
-  <string name="morphe_hide_history_shelf_summary">Döljer historikhyllan i Du-fliken</string>
   <string name="morphe_hide_horizontal_shelves_title">Dölj horisontella hyllor</string>
   <string name="morphe_hide_horizontal_shelves_summary">Döljer horisontella hyllor som Senaste nytt, Community-inlägg du kanske gillar, Fortsätt titta, Utforska fler kanaler, Utforska fler ämnen, För dig, Senaste videorna, Mest relevanta, Inlägg från kreatörs community, Shopping och Titta igen</string>
   <string name="morphe_hide_hyped_label_title">Dölj hajpetikett</string>
@@ -109,7 +110,8 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_show_more_button_title">Dölj knappen Visa mer</string>
   <string name="morphe_hide_show_more_button_summary">Döljer expanderingsknappen under videor i sökresultaten</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Dölj fältet med kanaler du prenumererar på</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Dölj kanalnamn i fältet för prenumererade kanaler</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Dölj prenumererade kanalnamn</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Döljer kanalnamnen i raden för prenumererade kanaler</string>
   <string name="morphe_hide_surveys_title">Dölj enkäter</string>
   <string name="morphe_hide_surveys_summary">Dölj enkäter och puffar om hur korrekta rekommendationerna är i flödet</string>
   <string name="morphe_hide_ticket_shelf_title">Dölj biljetthylla</string>
@@ -161,8 +163,8 @@ Vissa layouter på serversidan kanske inte återställs.
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Dölj \'Hjälp &amp; feedback\' i menyer</string>
   <string name="morphe_hide_help_feedback_menu_summary">Döljer \'Hjälp &amp; feedback\' i appfältets trepunktsmenyer, till exempel sökresultatmenyn</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Dölj kanalhandtaget på Du-fliken</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Döljer kanalhandtaget under kontonamnet på Du-fliken</string>
+  <string name="morphe_hide_handle_title">Dölj handtag</string>
+  <string name="morphe_hide_handle_summary">Döljer ditt kanalhandtag på fliken \'Du\'</string>
   <string name="morphe_hide_video_title_title">Dölj videotitel</string>
   <string name="morphe_hide_video_title_summary">Döljer videotiteln i helskärm</string>
   <string name="morphe_sanitize_video_subtitle_title">Rensa videoundertitel</string>
@@ -685,7 +687,7 @@ För att åtgärda detta, aktivera 'Spoofa videoströmmar' och ändra 'Standardk
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Dölj knappen Anslut</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Dölj knappen Rapportera</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Dölj knappen Remixa</string>
@@ -1182,8 +1184,6 @@ Tryck här för att öppna DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">DeArrow-miniatyrcachens slutpunktsadress</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Stillbilder från videor</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Stillbilder tas från början/mitten/slutet av varje video. Dessa bilder är inbyggda i YouTube och inget externt API används</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Använd snabba stillbilder</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Förbättrar inläsningshastigheten genom att använda bilder av medelhög kvalitet. Livestreamar, videor som inte har släppts ännu och äldre videor kan visa tomma miniatyrer</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Extrahera videobild från</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Början</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Mitten</string>

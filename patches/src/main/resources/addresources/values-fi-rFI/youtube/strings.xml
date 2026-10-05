@@ -64,6 +64,8 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_artist_cards_title">Piilota artistikortit</string>
   <string name="morphe_hide_artist_cards_summary">Piilottaa artistikortin hakutulosten yläreunasta</string>
   <string name="morphe_hide_auto_dubbed_label_title">Piilota \"Automaattisesti jälkiäänitetty\" -merkintä</string>
+  <string name="morphe_hide_channel_buttons_title">Piilota kanavapainikkeet</string>
+  <string name="morphe_hide_channel_buttons_summary">Piilottaa painikkeet, kuten Tilaa, Näytä kanava, Yhteisö ja YouTube Music, kanavaprofiileista hakutuloksissa</string>
   <string name="morphe_hide_community_posts_title">Piilota yhteisöpostaukset</string>
   <string name="morphe_hide_compact_banner_title">Piilota kompaktit bannerit</string>
   <string name="morphe_hide_compact_banner_summary">Piilottaa tiivistetyn bannerin ja tilan joidenkin komponenttien välillä</string>
@@ -75,7 +77,6 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_floating_microphone_button_summary">Piilottaa kelluvan mikrofonipainikkeen hakuehdotusten näytön oikeassa alakulmassa</string>
   <string name="morphe_hide_get_premium_button_title">Piilota \"Hanki Premium\" -painike</string>
   <string name="morphe_hide_history_shelf_title">Piilota Historia-hylly</string>
-  <string name="morphe_hide_history_shelf_summary">Piilottaa Historia-hyllyn Sinä-välilehdeltä</string>
   <string name="morphe_hide_horizontal_shelves_title">Piilota vaakasuuntaiset hyllyt</string>
   <string name="morphe_hide_horizontal_shelves_summary">Piilottaa vaakasuuntaiset hyllyt, kuten Uutiset, Yhteisön julkaisut, jotka saattavat kiinnostaa sinua, Jatka katsomista, Tutustu muihin kanaviin, Tutustu muihin aiheisiin, Sinulle, Uusimmat videot, Relevantimmat, Julkaisut tekijän yhteisöstä, Ostokset ja Katso uudelleen</string>
   <string name="morphe_hide_hyped_label_title">Piilota Suositut-merkintä</string>
@@ -109,7 +110,8 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_show_more_button_title">Piilota \"Näytä lisää\" -painike</string>
   <string name="morphe_hide_show_more_button_summary">Piilottaa laajennuspainikkeen videoiden alapuolella hakutuloksissa</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Piilota tilatut kanavat -palkki</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Piilota kanavien nimet tilattujen kanavien palkissa</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Piilota tilattujen kanavien nimet</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Piilottaa kanavien nimet tilattujen kanavien palkissa</string>
   <string name="morphe_hide_surveys_title">Piilota kyselyt</string>
   <string name="morphe_hide_surveys_summary">Piilottaa kyselyt ja ehdotukset syötteen suositustarkkuudesta</string>
   <string name="morphe_hide_ticket_shelf_title">Piilota lippuhylly</string>
@@ -161,8 +163,8 @@ Muutoksia ovat muun muassa:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Piilota \'Ohje &amp; palaute\' valikoista</string>
   <string name="morphe_hide_help_feedback_menu_summary">Piilottaa \'Ohje &amp; palaute\' -kohdan sovelluspalkin kolmen pisteen valikoista, kuten hakutuosten valikosta</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Piilota kanavan @-tunniste Sinä-välilehdellä</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Piilottaa kanavan @-tunnisteen tilin nimen alla Sinä-välilehdellä</string>
+  <string name="morphe_hide_handle_title">Piilota kanavatunnus</string>
+  <string name="morphe_hide_handle_summary">Piilottaa kanavatunnuksesi \"Sinä\"-välilehdessä.</string>
   <string name="morphe_hide_video_title_title">Piilota videon otsikko</string>
   <string name="morphe_hide_video_title_summary">Piilottaa videotunnisteen koko näytön tilassa</string>
   <string name="morphe_sanitize_video_subtitle_title">Puhdista videon tekstitys</string>
@@ -685,7 +687,7 @@ Korjaa tämä ottamalla käyttöön 'Väärennä videovirrat' ja vaihtamalla 'Ol
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Piilota Yhdistä-painike</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Piilota Kysy-painike</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Piilota Remix-painike</string>
@@ -1182,8 +1184,6 @@ Napauta tästä avataksesi DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">DeArrow-pikkukuvien välimuistipäätepisteen URL-osoite</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Videon kuvakaappaukset</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Kuvakaappaukset otetaan kunkin videon alusta/keskeltä/lopusta. Nämä kuvat on sisäänrakennettu YouTubeen, eikä ulkoista API:a käytetä</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Ota nopeat kuvakaappaukset käyttöön</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Parantaa latausnopeuksia käyttämällä keskitasoista kuvanlaatua. Live-striimit, julkaisemattomat ja vanhat videot saattavat näyttää tyhjät pikkukuvat</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Poimi videoruutu</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Alku</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Keskiosa</string>

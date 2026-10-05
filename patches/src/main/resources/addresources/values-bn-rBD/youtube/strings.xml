@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">আর্টিস্ট কার্ড লুকান</string>
   <string name="morphe_hide_artist_cards_summary">অনুসন্ধান ফলাফলের শীর্ষে শিল্পীর কার্ডটি লুকিয়ে রাখে</string>
   <string name="morphe_hide_auto_dubbed_label_title">\'অটো-ডাবড\' লেবেল লুকান</string>
+  <string name="morphe_hide_channel_buttons_title">চ্যানেল বাটন লুকান</string>
+  <string name="morphe_hide_channel_buttons_summary">সাবস্ক্রাইব, ভিউ চ্যানেল, কমিউনিটি এবং YouTube Music এর মতো বাটনগুলো সার্চ ফলাফলে চ্যানেল প্রোফাইল থেকে লুকিয়ে রাখে</string>
   <string name="morphe_hide_community_posts_title">সম্প্রদায় পোস্ট লুকান</string>
   <string name="morphe_hide_compact_banner_title">সংক্ষিপ্ত ব্যানার লুকান</string>
   <string name="morphe_hide_compact_banner_summary">কম্প্যাক্ট ব্যানার এবং কিছু উপাদানের মধ্যে স্থান লুকিয়ে রাখে</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">অনুসন্ধান প্রস্তাবনার স্ক্রিনের নীচের-ডান কোণে ভাসমান মাইক্রোফোন বোতামটি লুকিয়ে রাখে</string>
   <string name="morphe_hide_get_premium_button_title">\'Get Premium\' বোতামটি লুকান</string>
   <string name="morphe_hide_history_shelf_title">ইতিহাস শেলফ লুকান</string>
-  <string name="morphe_hide_history_shelf_summary">আপনি ট্যাবে ইতিহাস শেলফটি লুকিয়ে রাখে</string>
   <string name="morphe_hide_horizontal_shelves_title">আনুভূমিক শেলফ লুকান</string>
   <string name="morphe_hide_horizontal_shelves_summary">ব্রেকিং নিউজ, কমিউনিটি পোস্ট যা আপনার ভালো লাগতে পারে, দেখা চালিয়ে যান, আরও চ্যানেল দেখুন, আরও বিষয় দেখুন, আপনার জন্য, নতুন ভিডিও, সবচেয়ে প্রাসঙ্গিক, নির্মাতার কমিউনিটি থেকে পোস্ট, শপিং এবং আবার দেখুন—এর মতো অনুভূমিক শেলফগুলি লুকায়।</string>
   <string name="morphe_hide_hyped_label_title">হাইপড লেবেল লুকান</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">\'আরও দেখান\' বোতাম লুকান</string>
   <string name="morphe_hide_show_more_button_summary">অনুসন্ধান ফলাফলে ভিডিওর নিচে Expand বোতামটি লুকায়</string>
   <string name="morphe_hide_subscribed_channels_bar_title">সাবস্ক্রাইব করা চ্যানেলগুলির তালিকা লুকান</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">সাবস্ক্রাইবড চ্যানেল বারে চ্যানেলের নামগুলো লুকান</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">সাবস্ক্রাইব করা চ্যানেলের নাম লুকান</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">সাবস্ক্রাইব করা চ্যানেল বারে চ্যানেলের নাম লুকিয়ে রাখে</string>
   <string name="morphe_hide_surveys_title">সার্ভে লুকান</string>
   <string name="morphe_hide_surveys_summary">ফিডের সুপারিশ নির্ভুলতা সম্পর্কে সমীক্ষা এবং নাজগুলি লুকায়।</string>
   <string name="morphe_hide_ticket_shelf_title">টিকিট তাক লুকান</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">মেনুতে \'সাহায্য &amp; মতামত\' লুকান</string>
   <string name="morphe_hide_help_feedback_menu_summary">অ্যাপ বারের তিন-বিন্দু মেনুগুলোতে \'সাহায্য &amp; মতামত\' লুকিয়ে রাখে, যেমন অনুসন্ধান ফলাফল মেনুতে</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">You ট্যাবে চ্যানেল হ্যান্ডেল লুকান</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">You ট্যাবে অ্যাকাউন্টের নামের নীচে চ্যানেল হ্যান্ডেল লুকিয়ে রাখে</string>
+  <string name="morphe_hide_handle_title">হ্যান্ডেল লুকান</string>
+  <string name="morphe_hide_handle_summary">আপনার চ্যানেল হ্যান্ডেল \'You\' ট্যাবে লুকিয়ে রাখে</string>
   <string name="morphe_hide_video_title_title">ভিডিওর শিরোনাম লুকান</string>
   <string name="morphe_hide_video_title_summary">ফুলস্ক্রিন মোডে ভিডিওর শিরোনাম লুকায়</string>
   <string name="morphe_sanitize_video_subtitle_title">ভিডিও সাবটাইটেল স্যানিটাইজ করুন</string>
@@ -685,7 +687,7 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">কানেক্ট বাটনটি লুকিয়ে রাখুন</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">রিপোর্ট লুকানোর বোতাম</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">রিমিক্স বোতামটি লুকান</string>
@@ -1167,8 +1169,6 @@ DeArrow.ajay.app খুলতে এখানে আলতো চাপুন"</
   <string name="morphe_dearrow_api_url_summary">DeArrow থাম্বনেইল ক্যাশ এন্ডপয়েন্টের URL</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">ভিডিওর স্থির ছবি</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">স্টিল ক্যাপচার প্রতিটি ভিডিওর শুরু/মাঝামাঝি/শেষ থেকে নেওয়া হয়। এই ছবিগুলি YouTube-এ তৈরি করা হয়েছে এবং কোনও বাহ্যিক API ব্যবহার করা হয় না</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">দ্রুততম স্থির চিত্র ব্যবহার করুন</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">উচ্চ মানের ছবি ব্যবহার করে লোডিং গতি উন্নত করে। লাইভ স্ট্রিম, অপ্রকাশিত এবং পুরানো ভিডিওগুলিতে ফাঁকা থাম্বনেইল প্রদর্শিত হতে পারে</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">ফ্রেম থেকে ভিডিও বের করুন</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">শুরু</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">মাঝামাঝি</string>

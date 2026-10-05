@@ -64,6 +64,8 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_artist_cards_title">Skjul kunstnerkort</string>
   <string name="morphe_hide_artist_cards_summary">Skjuler kunstnerkortet øverst i søgeresultaterne</string>
   <string name="morphe_hide_auto_dubbed_label_title">Skjul labelen \'Automatisk dubbing\'</string>
+  <string name="morphe_hide_channel_buttons_title">Skjul kanalknapper</string>
+  <string name="morphe_hide_channel_buttons_summary">Skjuler knapper såsom Abonner, Vis kanal, Fællesskab og YouTube Music fra kanalprofiler i søgeresultater</string>
   <string name="morphe_hide_community_posts_title">Skjul fællesskabsopslag</string>
   <string name="morphe_hide_compact_banner_title">Skjul kompakte bannere</string>
   <string name="morphe_hide_compact_banner_summary">Skjuler kompakte bannere og afstand mellem nogle komponenter</string>
@@ -75,7 +77,6 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_floating_microphone_button_summary">Skjuler den flydende mikrofontilføjelser i nederste højre hjørne af søgeforslagsskærmen</string>
   <string name="morphe_hide_get_premium_button_title">Skjul \'Få Premium\' knappen</string>
   <string name="morphe_hide_history_shelf_title">Skjul historiksektionen</string>
-  <string name="morphe_hide_history_shelf_summary">Skjuler historiksektionen i Du-fanen</string>
   <string name="morphe_hide_horizontal_shelves_title">Skjul vandrette hylder</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skjuler vandrette hylder som f.eks. Breaking news, Community-opslag du måske vil lide, Fortsæt med at se, Udforsk flere kanaler, Udforsk flere emner, Til dig, Seneste videoer, Mest relevante, Opslag fra Creator\'s Community, Shopping og Se det igen</string>
   <string name="morphe_hide_hyped_label_title">Skjul \'Hyped\' label</string>
@@ -109,7 +110,8 @@ Nogle server-side layouts kan ikke vende tilbage.
   <string name="morphe_hide_show_more_button_title">Skjul knappen \'Vis mere\'</string>
   <string name="morphe_hide_show_more_button_summary">Skjuler udvidelsesknappen under videoer i søgeresultaterne</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Skjul abonnementskanalerne</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Skjul kanalnavne i linjen med abonnerede kanaler</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Skjul navnene på abonnerede kanaler</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Skjuler kanalnavnene i linjen for abonnerede kanaler</string>
   <string name="morphe_hide_surveys_title">Skjul undersøgelser</string>
   <string name="morphe_hide_surveys_summary">Skjuler undersøgelser og forslag vedrørende nøjagtigheden af feedanbefalinger</string>
   <string name="morphe_hide_ticket_shelf_title">Skjul billetreolen</string>
@@ -161,8 +163,8 @@ Nogle server-side layouts kan ikke vende tilbage.
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Skjul \'Hjælp &amp; feedback\' i menuer</string>
   <string name="morphe_hide_help_feedback_menu_summary">Skjuler \'Hjælp og feedback\' i app-bjælkens trepunktsmenuer, såsom søgeresultatmenuen.</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Skjul kanalens handle i You-fanen</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Skjuler kanalens handle under kontonavnet i You-fanen</string>
+  <string name="morphe_hide_handle_title">Skjul handle</string>
+  <string name="morphe_hide_handle_summary">Skjuler din kanalhandle i fanen \'Du\'</string>
   <string name="morphe_hide_video_title_title">Skjul videotitel</string>
   <string name="morphe_hide_video_title_summary">Skjuler videotitlen i fuldskærmstilstand</string>
   <string name="morphe_sanitize_video_subtitle_title">Rens video undertekst</string>
@@ -685,7 +687,7 @@ For at løse dette skal du slå 'Spoof video streams' til og ændre 'Standardkli
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Skjul knappen \'Forbind\'</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Skjul More knap</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Skjul knappen Remix</string>
@@ -1180,8 +1182,6 @@ Tryk her for at åbne DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">Webadressen på DeArrow thumbnail cache endpoint</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Stilbilleder af video</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Stilbilleder er taget fra begyndelsen / midten / slutningen af hver video. Disse billeder er indbygget i YouTube og ingen ekstern API bruges</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Brug hurtige stilbilleder</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Forbedrer indlæsningshastigheden ved at bruge billeder af medium kvalitet. Live streams, ikke-udgivne og ældre videoer kan vise tomme miniaturebilleder</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Udtræk videobillede fra</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Begyndelsen</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Midten</string>

@@ -64,6 +64,8 @@ Promene uključuju:
   <string name="morphe_hide_artist_cards_title">Сакриј картице извођача</string>
   <string name="morphe_hide_artist_cards_summary">Саскрива картицу уметника на врху резултата претраге</string>
   <string name="morphe_hide_auto_dubbed_label_title">Сакриј ознаку \'Ауто-дублирано\'</string>
+  <string name="morphe_hide_channel_buttons_title">Сакриј дугмад канала</string>
+  <string name="morphe_hide_channel_buttons_summary">Сакрива дугмад као што су Претплати се, Прикажи канал, Заједница и YouTube Music са профила канала у резултатима претраге</string>
   <string name="morphe_hide_community_posts_title">Сакриј објаве заједнице</string>
   <string name="morphe_hide_compact_banner_title">Сакриј компактне банере</string>
   <string name="morphe_hide_compact_banner_summary">Саскрива компактне банере и размаке између одређених компоненти</string>
@@ -75,7 +77,6 @@ Promene uključuju:
   <string name="morphe_hide_floating_microphone_button_summary">Саскрива плутајући дугме за микрофон у доњем десном углу екрана предлога за претрагу</string>
   <string name="morphe_hide_get_premium_button_title">Сакриј дугме „Набави Премиум”</string>
   <string name="morphe_hide_history_shelf_title">Сакриј полицу историје</string>
-  <string name="morphe_hide_history_shelf_summary">Сакрива полицу историје у картици „Ви“.</string>
   <string name="morphe_hide_horizontal_shelves_title">Сакриј хоризонталне полице</string>
   <string name="morphe_hide_horizontal_shelves_summary">Сакрива хоризонталне полице као што су „Брзе вести“, „Објаве из заједнице које би вам могле задолити“, „Настави гледање“, „Истражите више канала“, „Истражите више тема“, „За вас“, „Најновији видео снимци“, „Најрелевантнији“, „Објаве из заједнице креатора“, „Куповина“ и „Поново гледај“</string>
   <string name="morphe_hide_hyped_label_title">Сакриј ознаку \"Ускоро\"</string>
@@ -109,7 +110,8 @@ Promene uključuju:
   <string name="morphe_hide_show_more_button_title">Сакриј дугме „Прикажи још”</string>
   <string name="morphe_hide_show_more_button_summary">Саскрива дугме за проширење испод видео снимака у резултатима претраге</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Скријте траку претплаћених канала</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Сакриј називе канала у траци претплаћених канала</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Сакриј називе претплаћених канала</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Сакрива називе канала у траци са претплаћеним каналима</string>
   <string name="morphe_hide_surveys_title">Сакриј анкете</string>
   <string name="morphe_hide_surveys_summary">Сакрива анкете и подстицаје у вези са тачношћу препорука фида</string>
   <string name="morphe_hide_ticket_shelf_title">Сакриј полицу са картама</string>
@@ -161,8 +163,8 @@ Promene uključuju:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Сакриј \'Помоћ &amp; повратне информације\' у менијима</string>
   <string name="morphe_hide_help_feedback_menu_summary">Сакрива \'Помоћ &amp; повратне информације\' у менијима са три тачке траке апликације, као што је мени резултата претраге</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Сакриј хендл канала у картици Ти</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Сакрива хендл канала испод имена налога у картици Ти</string>
+  <string name="morphe_hide_handle_title">Сакриј хендл</string>
+  <string name="morphe_hide_handle_summary">Сакрива хендл вашег канала у картици \'Ти\'</string>
   <string name="morphe_hide_video_title_title">Сакриј наслов Shorts видеа</string>
   <string name="morphe_hide_video_title_summary">Саскрива наслов видеа у пуном режиму</string>
   <string name="morphe_sanitize_video_subtitle_title">Очисти титлове видеа</string>
@@ -685,7 +687,7 @@ Promene uključuju:
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Сакриј дугме „Повежи се”</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Саскриј дугме „Пријави”</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Сакриј дугме „Ремикс”</string>
@@ -1165,8 +1167,6 @@ Promene uključuju:
   <string name="morphe_dearrow_api_url_summary">URL крајње тачке кеша DeArrow сличица</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Захвати кадра из видеа</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Захвати кадра се праве од почетка/средине/краја сваког видеа. Ове слике су уграђене у YouTube и не користи се ниједан спољни API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Користи брзе захвате кадра</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Побољшава брзину учитавања коришћењем слика средњег квалитета. Стреамови уживо, објављени и старији видео снимци могу приказати празне минијатуре</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Издајте видео кадар из</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Почетак</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Средина</string>

@@ -64,6 +64,8 @@ As mudanças incluem:
   <string name="morphe_hide_artist_cards_title">Esconder cartões de artista</string>
   <string name="morphe_hide_artist_cards_summary">Oculta o card do artista no topo dos resultados da pesquisa</string>
   <string name="morphe_hide_auto_dubbed_label_title">Ocultar rótulo \'Dublado automaticamente\'</string>
+  <string name="morphe_hide_channel_buttons_title">Ocultar botões do canal</string>
+  <string name="morphe_hide_channel_buttons_summary">Oculta botões como Inscrever-se, Ver canal, Comunidade e YouTube Music dos perfis de canal nos resultados de pesquisa</string>
   <string name="morphe_hide_community_posts_title">Esconder publicações da comunidade</string>
   <string name="morphe_hide_compact_banner_title">Esconder banners compactos</string>
   <string name="morphe_hide_compact_banner_summary">Oculta banners compactos e espaçamento entre alguns componentes</string>
@@ -75,7 +77,6 @@ As mudanças incluem:
   <string name="morphe_hide_floating_microphone_button_summary">Oculta o botão de microfone flutuante no canto inferior direito da tela de sugestões de pesquisa</string>
   <string name="morphe_hide_get_premium_button_title">Ocultar botão \'Obter Premium\'</string>
   <string name="morphe_hide_history_shelf_title">Ocultar a prateleira do histórico</string>
-  <string name="morphe_hide_history_shelf_summary">Oculta a prateleira do histórico na aba Você</string>
   <string name="morphe_hide_horizontal_shelves_title">Esconder categorias horizontais</string>
   <string name="morphe_hide_horizontal_shelves_summary">Oculta prateleiras horizontais como Notícias de última hora, Publicações da comunidade que podem te interessar, Continue assistindo, Explore mais canais, Explore mais tópicos, Para você, Vídeos mais recentes, Mais relevantes, Publicações da comunidade do criador, Compras e Assista novamente</string>
   <string name="morphe_hide_hyped_label_title">Ocultar rótulo em destaque</string>
@@ -109,7 +110,8 @@ As mudanças incluem:
   <string name="morphe_hide_show_more_button_title">Ocultar botão \'Mostrar mais\'</string>
   <string name="morphe_hide_show_more_button_summary">Oculta o botão de expandir abaixo dos vídeos nos resultados da pesquisa</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Esconder a barra de canais assinados</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Ocultar nomes de canais na barra de canais inscritos</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Ocultar nomes dos canais inscritos</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Oculta os nomes dos canais na barra de canais inscritos</string>
   <string name="morphe_hide_surveys_title">Ocultar pesquisas</string>
   <string name="morphe_hide_surveys_summary">Oculta enquetes e avisos sobre a precisão da recomendação de feed</string>
   <string name="morphe_hide_ticket_shelf_title">Ocultar prateleira de ingressos</string>
@@ -161,8 +163,8 @@ As mudanças incluem:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Ocultar \'Ajuda &amp; feedback\' nos menus</string>
   <string name="morphe_hide_help_feedback_menu_summary">Oculta \'Ajuda &amp; feedback\' nos menus de três pontos da barra de aplicativos, como o menu de resultados de pesquisa</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Ocultar o identificador do canal na guia Você</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Oculta o identificador do canal abaixo do nome da conta na guia Você</string>
+  <string name="morphe_hide_handle_title">Ocultar identificador</string>
+  <string name="morphe_hide_handle_summary">Oculta o identificador do seu canal na aba \'Você\'</string>
   <string name="morphe_hide_video_title_title">Ocultar título do vídeo</string>
   <string name="morphe_hide_video_title_summary">Oculta o título do vídeo no modo de tela cheia</string>
   <string name="morphe_sanitize_video_subtitle_title">Sanitizar legenda do vídeo</string>
@@ -685,7 +687,7 @@ Para corrigir isso, ative 'Falsificar streams de vídeo' e altere o 'Cliente pad
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Ocultar botão Conectar</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Ocultar botão \'Denunciar\'</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Ocultar botão de remix</string>
@@ -1182,8 +1184,6 @@ Toque aqui para abrir DeArrow.ajay.app"</string>
   <string name="morphe_dearrow_api_url_summary">A URL do ponto de extremidade do cache de miniaturas Derow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Capturas em vídeo ainda</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Capturas de imagem ainda são tiradas do início/meio/fim de cada vídeo. Estas imagens são construídas no YouTube e nenhuma API externa é usada</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Usar capturas rápidas ainda</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Melhora os tempos de carregamento usando imagens de qualidade média. Streams ao vivo, vídeos não lançados e mais antigos podem exibir miniaturas em branco</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Extraia quadro de vídeo de</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Início</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Meio</string>

@@ -64,6 +64,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">隐藏艺人卡片</string>
   <string name="morphe_hide_artist_cards_summary">隐藏搜索结果顶部处的艺术家卡片</string>
   <string name="morphe_hide_auto_dubbed_label_title">隐藏“自动配音”标签</string>
+  <string name="morphe_hide_channel_buttons_title">隐藏频道按钮</string>
+  <string name="morphe_hide_channel_buttons_summary">隐藏搜索结果中频道资料上的订阅、查看频道、社区和 YouTube Music 等按钮</string>
   <string name="morphe_hide_community_posts_title">隐藏社区帖子</string>
   <string name="morphe_hide_compact_banner_title">隐藏紧凑横幅</string>
   <string name="morphe_hide_compact_banner_summary">隐藏紧凑的横幅以及某些组件之间的间距</string>
@@ -75,7 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_floating_microphone_button_summary">隐藏在搜索建议屏幕右下角的悬浮麦克风按钮</string>
   <string name="morphe_hide_get_premium_button_title">隐藏“获取高级版”按钮</string>
   <string name="morphe_hide_history_shelf_title">隐藏历史记录板块</string>
-  <string name="morphe_hide_history_shelf_summary">隐藏“你”标签页中的历史记录板块</string>
   <string name="morphe_hide_horizontal_shelves_title">隐藏横排展示架</string>
   <string name="morphe_hide_horizontal_shelves_summary">隐藏诸如“突发新闻”、“你可能喜欢的社区帖子”、“继续观看”、“探索更多频道”、“探索更多话题”、“为你推荐”、“最新视频”、“最相关”、“创作者社区帖子”、“购物”和“再次观看”等横向内容架</string>
   <string name="morphe_hide_hyped_label_title">隐藏热门标签</string>
@@ -109,7 +110,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_title">隐藏“显示更多”按钮</string>
   <string name="morphe_hide_show_more_button_summary">隐藏搜索结果中视频下方的展开按钮</string>
   <string name="morphe_hide_subscribed_channels_bar_title">隐藏订阅频道栏</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">隐藏订阅频道栏中的频道名称</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">隐藏已订阅频道名称</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">隐藏订阅频道栏中的频道名称</string>
   <string name="morphe_hide_surveys_title">隐藏调查</string>
   <string name="morphe_hide_surveys_summary">隐藏关于信息流推荐准确性的调查和提示</string>
   <string name="morphe_hide_ticket_shelf_title">隐藏票券架</string>
@@ -161,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">在菜单中隐藏“帮助 &amp; 反馈”</string>
   <string name="morphe_hide_help_feedback_menu_summary">在应用栏的三点菜单中，例如搜索结果菜单，隐藏“帮助 &amp; 反馈”</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">在“You”标签页中隐藏频道句柄</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">在“You”标签页中隐藏账户名下的频道句柄</string>
+  <string name="morphe_hide_handle_title">隐藏句柄</string>
+  <string name="morphe_hide_handle_summary">在“You”标签页中隐藏你的频道句柄</string>
   <string name="morphe_hide_video_title_title">隐藏视频标题</string>
   <string name="morphe_hide_video_title_summary">隐藏全屏模式下的视频标题</string>
   <string name="morphe_sanitize_video_subtitle_title">清理视频字幕</string>
@@ -685,7 +687,7 @@ Second \"item\" text"</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">隐藏关联按钮</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">隐藏举报按钮</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">隐藏混剪按钮</string>
@@ -1182,8 +1184,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_api_url_summary">DeArrow 缩略图缓存端点的 URL</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">静止视频截图</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">静止截图从每个视频的开头/中间/结尾截取。这些图像内置于 YouTube，不使用任何外部 API</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">使用快速静止截图</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">提高加载速度，方法是使用中等质量的图像。直播、未发布的视频和较旧的视频可能会显示空白缩略图</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">从以下位置提取视频帧</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">开始</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">中间</string>

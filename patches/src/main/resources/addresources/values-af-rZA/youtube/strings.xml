@@ -64,6 +64,8 @@ Veranderings sluit in:
   <string name="morphe_hide_artist_cards_title">Verberg kunstenaarskaarte</string>
   <string name="morphe_hide_artist_cards_summary">Verberg die kunstenaarskaart bo-aan die soekresultate</string>
   <string name="morphe_hide_auto_dubbed_label_title">Versteek \'Outomaties naspraak\' etiket</string>
+  <string name="morphe_hide_channel_buttons_title">Versteek kanaalknoppies</string>
+  <string name="morphe_hide_channel_buttons_summary">Versteek knoppies soos Teken in, Bekyk kanaal, Gemeenskap, en YouTube Musiek van kanaalprofiele in soekresultate</string>
   <string name="morphe_hide_community_posts_title">Verberg gemeenskapboodskappe</string>
   <string name="morphe_hide_compact_banner_title">Verberg kompakte baniere</string>
   <string name="morphe_hide_compact_banner_summary">Verberg kompakte baniere en spasiëring tussen sommige komponente</string>
@@ -75,7 +77,6 @@ Veranderings sluit in:
   <string name="morphe_hide_floating_microphone_button_summary">Verberg drywende mikrofoon-knoppie in die onderste regterhoek van soekvoorstelle skerm</string>
   <string name="morphe_hide_get_premium_button_title">Verberg \'kry Premium\'-knoppie</string>
   <string name="morphe_hide_history_shelf_title">Versteek geskiedenisrak</string>
-  <string name="morphe_hide_history_shelf_summary">Versteek die geskiedenisrak in die Jy-oortjie</string>
   <string name="morphe_hide_horizontal_shelves_title">Verberg horisontale rakke</string>
   <string name="morphe_hide_horizontal_shelves_summary">Verberg horisontale rakke soos Breaking news, Gemeenskapinskrywings wat jy dalk wil hê, Gaan voort om te kyk, Verken meer kanale, Verken meer onderwerpe, Vir jou, Nuutste video\'s, Mees relevante, Inskrywings van Skepper se Gemeenskap, Winkels en Kyk dit weer</string>
   <string name="morphe_hide_hyped_label_title">Versteek Hip-etiket</string>
@@ -109,7 +110,8 @@ Veranderings sluit in:
   <string name="morphe_hide_show_more_button_title">Verberg \'Wys meer\'-knoppie</string>
   <string name="morphe_hide_show_more_button_summary">Verberg die uitbreidingsknoppie onder video\'s in die soekresultate</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Versteek intekenaar-kanaalbalk</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Versteek kanaalname in die geabonneerde kanale-balk</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Versteek geabonneerde kanaalname</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Versteek die kanaalname in die geabonneerde kanale-balk</string>
   <string name="morphe_hide_surveys_title">Verberg noodbokse</string>
   <string name="morphe_hide_surveys_summary">Verberg opnames en aansporings oor voer-aanbevelings akkuraatheid</string>
   <string name="morphe_hide_ticket_shelf_title">Verberg mediese panele</string>
@@ -161,8 +163,8 @@ Veranderings sluit in:
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Versteek \'Hulp en terugvoer\' in kieslyste</string>
   <string name="morphe_hide_help_feedback_menu_summary">Versteek \'Hulp en terugvoer\' in die drie-punt kieslyste van die toepbalk, soos die soekresultate-kieslys</string>
-  <string name="morphe_hide_you_tab_channel_handle_title">Versteek kanaalhandvatsel in Jy-oortjie</string>
-  <string name="morphe_hide_you_tab_channel_handle_summary">Versteek die kanaalhandvatsel onder die rekeningnaam in die Jy-oortjie</string>
+  <string name="morphe_hide_handle_title">Versteek handvatsel</string>
+  <string name="morphe_hide_handle_summary">Versteek jou kanaalhandvatsel in die \'You\'-oortjie</string>
   <string name="morphe_hide_video_title_title">Versteek video-titel</string>
   <string name="morphe_hide_video_title_summary">Verberg die video-titel in die volskermmodus</string>
   <string name="morphe_sanitize_video_subtitle_title">Maak video-onderskrifte skoon</string>
@@ -685,7 +687,7 @@ Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkli
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_connect_button_title">Verberg Koppel-knoppie</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
-          This button usually appears on live streamed videos. -->
+          This button usually appears on live stream videos. -->
   <string name="morphe_hide_report_button_title">Hide Remix button</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_remix_button_title">Hide Download button</string>
@@ -1182,8 +1184,6 @@ Tik hier om DeArrow.ajay.app oop te maak"</string>
   <string name="morphe_dearrow_api_url_summary">Die URL van die DeArrow-kleurplakhouer-eindpunt</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Stil vangs van video</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Stil vangs word geneem van die begin/middel/einde van elke video. Hierdie beelde is in YouTube ingebou en geen eksterne API word gebruik.</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_title">Gebruik vinnige stil vangs</string>
-  <string name="morphe_dearrow_thumbnail_stills_fast_summary">Verbeter laaighede deur medium-kwaliteit beelde te gebruik. Regstreekse uitsendings, nie-vrygestelende en ouer video\'s kan leë duimnaels vertoon</string>
   <string name="morphe_dearrow_thumbnail_stills_time_title">Onttrek videoraam van</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Begin</string>
   <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Middel</string>
