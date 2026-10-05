@@ -1,3 +1,13 @@
+## 1.46.0-dev.8-dualvot.8.5.3 (2026-10-05)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.46.0-dev.8](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.46.0-dev.8).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.46.0-dev.7-dualvot.8.5.3 (2026-10-05)
 
 ### Automated Morphe update
@@ -406,6 +416,14 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.46.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.7...v1.46.0-dev.8) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide new type of attributes section in video description ([#3532](https://github.com/MorpheApp/morphe-patches/issues/3532)) ([b051959](https://github.com/MorpheApp/morphe-patches/commit/b05195975b54ad5e981bb0d099fbe6e9f750c7fa))
+* **YouTube - Hide layout components:** Some filters don't work after switching to the "You" tab and using the Back button or gesture ([#3542](https://github.com/MorpheApp/morphe-patches/issues/3542)) ([332c6b2](https://github.com/MorpheApp/morphe-patches/commit/332c6b2a96dc441d160dd746c512f013e766e9ba))
+* **YouTube - Restore original titles:** Handle titles of videos with disabled embedding ([#3539](https://github.com/MorpheApp/morphe-patches/issues/3539)) ([8612dd1](https://github.com/MorpheApp/morphe-patches/commit/8612dd107f9e723d48327c929558f10afb01faab))
 
 ## [1.46.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.6...v1.46.0-dev.7) (2026-10-05)
 
