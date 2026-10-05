@@ -1,3 +1,13 @@
+## 1.46.0-dev.7-dualvot.8.5.3 (2026-10-05)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.46.0-dev.7](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.46.0-dev.7).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.46.0-dev.3-dualvot.8.5.3 (2026-10-04)
 
 ### Automated Morphe update
@@ -396,6 +406,36 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.46.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.6...v1.46.0-dev.7) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - DeArrow:** "DeArrow & original thumbnails" sometimes shows still images when no crowdsourced thumbnails exist ([#3531](https://github.com/MorpheApp/morphe-patches/issues/3531)) ([fdfc35d](https://github.com/MorpheApp/morphe-patches/commit/fdfc35d6e2e3c41454421ac7a2c7f7d767a1765f))
+* **YouTube - System share sheet:** In-playlist id searching interfering with videoId sharing ([85207ea](https://github.com/MorpheApp/morphe-patches/commit/85207eab86b6ec1511ef13b6471367a5fa176d9b))
+
+## [1.46.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.5...v1.46.0-dev.6) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Navigation bar:** Experimental targets shows startup error ([3465138](https://github.com/MorpheApp/morphe-patches/commit/3465138af7b0032dac11f9b97a1e6eba2083fb9f))
+
+## [1.46.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.4...v1.46.0-dev.5) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **DeArrow:** Fix patching `21.16.256` ([035ebd2](https://github.com/MorpheApp/morphe-patches/commit/035ebd217c515685714ee805b2d78967ac37874c))
+* **YouTube - Navigation bar:** Disable new toolbar navigation tabs layout ([#3433](https://github.com/MorpheApp/morphe-patches/issues/3433)) ([165dbea](https://github.com/MorpheApp/morphe-patches/commit/165dbea673aae9bc6e11a1fa0e11230bcacd5988))
+
+## [1.46.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.3...v1.46.0-dev.4) (2026-10-05)
+
+### 🐛 Bug Fixes
+
+* **DeArrow:** Always use high quality still images without checking if still exists ([632f5a6](https://github.com/MorpheApp/morphe-patches/commit/632f5a64ba493fd2883729c8bce15dc1773ac91e))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.40.51` ([60f840d](https://github.com/MorpheApp/morphe-patches/commit/60f840d6b003ba0f5febc037143fe28748e6e899))
 
 ## [1.46.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0-dev.2...v1.46.0-dev.3) (2026-10-04)
 
