@@ -19,6 +19,7 @@ import com.facebook.litho.TextContent;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.WeakHashMap;
 
@@ -26,13 +27,17 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
 
 /**
- * Forces Litho views to calculate their layout again, which loads their texts again.
+ * Forces Litho views to calculate their layout again, which reloads the view.
  * Litho otherwise keeps the calculated layout until the view is bound again,
  * such as after scrolling the view off-screen and back.
  * <p>
  * Only the texts with a {@link RelayoutSpan} are laid out again, such as loading texts.
  * The mounted text drawables of these texts are remembered, so a relayout checks only
  * these drawables and lays out only the Litho views that show an outdated text.
+ * <p>
+ * The shown Litho views of lists can also be mounted again, such as to load again the images that
+ * failed to load. Laying out or binding a view again does not load its images again,
+ * as the image components do not change.
  */
 @SuppressWarnings("unused")
 public final class LithoRelayoutPatch {
@@ -45,6 +50,11 @@ public final class LithoRelayoutPatch {
          * Forces the Litho view to calculate the layout again.
          */
         void patch_forceRelayout();
+
+        /**
+         * Unmounts all content of the Litho view, which is mounted again by the next layout.
+         */
+        void patch_forceRemount();
     }
 
     /**
@@ -71,7 +81,14 @@ public final class LithoRelayoutPatch {
      */
     private static final Set<Drawable> relayoutTextDrawables = Collections.newSetFromMap(new WeakHashMap<>());
 
+    /**
+     * Litho views that were measured. Accessed only on the main thread.
+     */
+    private static final Set<View> lithoViews = Collections.newSetFromMap(new WeakHashMap<>());
+
     private static volatile boolean relayoutScheduled;
+
+    private static volatile boolean remountListViewsRequested;
 
     private LithoRelayoutPatch() {
     }
@@ -81,11 +98,35 @@ public final class LithoRelayoutPatch {
      * Can be called on any thread.
      */
     public static void relayoutOutdatedTexts() {
+        scheduleRelayout();
+    }
+
+    /**
+     * Mounts again the content of the shown Litho views of lists, which loads their images again.
+     * Same as when a list item is scrolled off-screen and bound again to a view.
+     * Views outside of lists, such as the player overlay, are not mounted again.
+     * Can be called on any thread.
+     */
+    public static void remountListViews() {
+        remountListViewsRequested = true;
+        scheduleRelayout();
+    }
+
+    private static void scheduleRelayout() {
         if (!relayoutScheduled) {
             relayoutScheduled = true;
             // Delayed, so the layouts calculated in the current frame are mounted.
             Utils.runOnMainThreadDelayed(LithoRelayoutPatch::relayoutOutdatedViews, RELAYOUT_DELAY_MILLISECONDS);
         }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called on the main thread when a Litho view is measured.
+     */
+    public static void onLithoViewMeasured(View lithoView) {
+        lithoViews.add(lithoView);
     }
 
     /**
@@ -110,8 +151,25 @@ public final class LithoRelayoutPatch {
 
     private static void relayoutOutdatedViews() {
         relayoutScheduled = false;
+        final boolean remountListViews = remountListViewsRequested;
+        remountListViewsRequested = false;
 
         try {
+            if (remountListViews) {
+                // Unmounting a Litho view also unmounts its nested Litho views,
+                // so the views are found before any is unmounted.
+                List<LithoViewInterface> remountViews = new ArrayList<>(lithoViews.size());
+                for (View view : new ArrayList<>(lithoViews)) {
+                    if (view.isShown() && view instanceof LithoViewInterface lithoView) {
+                        remountViews.add(lithoView);
+                    }
+                }
+                for (LithoViewInterface lithoView : remountViews) {
+                    lithoView.patch_forceRemount();
+                }
+                Logger.printDebug(() -> "Remounted Litho views: " + remountViews.size());
+            }
+
             Set<LithoViewInterface> relayoutViews = new LinkedHashSet<>();
             for (Drawable textDrawable : new ArrayList<>(relayoutTextDrawables)) {
                 // The callback is the host, or null if the text was unmounted.

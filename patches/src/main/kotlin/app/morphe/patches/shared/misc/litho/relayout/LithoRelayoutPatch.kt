@@ -70,7 +70,38 @@ val lithoRelayoutPatch = bytecodePatch(
                         )
                     }
                 )
+
+                // Unmounting all content mounts it again with the next layout,
+                // which loads the images again.
+                methods.add(
+                    ImmutableMethod(
+                        type,
+                        "patch_forceRemount",
+                        listOf(),
+                        "V",
+                        AccessFlags.PUBLIC.value or AccessFlags.FINAL.value,
+                        null,
+                        null,
+                        MutableMethodImplementation(1),
+                    ).toMutable().apply {
+                        addInstructions(
+                            0,
+                            """
+                                invoke-virtual { p0 }, $type->${LithoViewUnmountAllItemsFingerprint.method.name}()V
+                                invoke-virtual { p0 }, $type->requestLayout()V
+                                return-void
+                            """
+                        )
+                    }
+                )
             }
+
+            // Remember the Litho views, so all shown views can be mounted again.
+            it.method.addInstruction(
+                0,
+                "invoke-static/range { p0 .. p0 }, " +
+                        "$EXTENSION_CLASS->onLithoViewMeasured(Landroid/view/View;)V"
+            )
         }
 
         // Remember the mounted texts that are laid out again when outdated.

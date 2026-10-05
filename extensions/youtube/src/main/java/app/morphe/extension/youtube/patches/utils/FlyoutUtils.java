@@ -21,6 +21,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Log;
 import android.util.Pair;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -162,10 +163,10 @@ public final class FlyoutUtils {
     public static final int CHANNEL_ID_LENGTH = 24;
     private static final byte[] POST_ID_PREFIX_BYTES =
             getAsciiBytes("post-comments-");
-    private static final byte[] PLAYLIST_BROWSE_ID_PREFIX_BYTES =
-            getAsciiBytes("VL");
-    private static final byte[] PLAYLIST_ID_PREFIXES_BYTES =
-            getAsciiBytes("playlist?list=");
+    private static final List<byte[]> PLAYLIST_ID_PREFIXES_BYTES = List.of(
+            getAsciiBytes("playlist?list="),
+            getAsciiBytes("VL")
+    );
     private static final List<byte[]> VIDEO_ID_PREFIXES_BYTES = List.of(
             getAsciiBytes(".ytimg.com/vi/"),
             getAsciiBytes("youtube.com/watch?v=")
@@ -182,6 +183,10 @@ public final class FlyoutUtils {
     private static final List<byte[]> HORIZONTAL_SHELF_HISTORY_BYTES = List.of(
             getAsciiBytes("horizontal_shelf.e"),
             getAsciiBytes("FEhistory")
+    );
+    private static final List<byte[]> PAGE_HEADER_DESCRIPTION_BYTES = List.of(
+            getAsciiBytes("page_header.e"),
+            getAsciiBytes("engagement-panel-page-headers-description")
     );
     private static final List<byte[]> LIST_ITEM_SHARE_BYTES = List.of(
             getAsciiBytes("list_item.e"),
@@ -789,16 +794,6 @@ public final class FlyoutUtils {
         visibleFlyoutButtons.add(new Pair<>(currentButtonName, currentButtonIndex));
     }
 
-    private static boolean containsFlyoutButton(String buttonName) {
-        for (Pair<String, Integer> button : visibleFlyoutButtons) {
-            if (button.first.equals(buttonName)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     public static List<Pair<String, Integer>> getVisibleFlyoutButtons() {
         return visibleFlyoutButtons;
     }
@@ -942,24 +937,35 @@ public final class FlyoutUtils {
             if ((PlayerType.getCurrent().isMaximizedOrFullscreen() || ShortsPlayerState.isOpen()) &&
                     EngagementPanel.checkIdsInQueue(commentsPanelNames)) {
                 extractFlyoutIdFromMap(map);
-            } else {
-                // Buttons that do not open a flyout, such as the share button of community posts
-                // and of the playlist page header. The buttons that open a flyout are also called
-                // before the flyout, which then finds the ids with its sender view.
-                senderViewRef = new WeakReference<>(null);
-                extractFlyoutIdFromObject(
-                        map.get("com.google.android.libraries.youtube.innertube.endpoint.tag")
-                );
-                // Reset the ids after the share button is pressed, to prevent unintended usage.
-                Utils.runOnMainThreadDelayed(() -> {
-                    if ((flyoutDialog == null || !flyoutDialog.isShowing())
-                            && (flyoutPopupWindow == null || !flyoutPopupWindow.isShowing())) {
-                        flyoutPostId = "";
-                        flyoutPlaylistId = "";
-                        isMyTabHistoryFlyout = false;
-                        isShortFlyout = false;
-                    }
-                }, 500);
+            }
+
+            final byte[] flyoutBuffer =
+                    getFlyoutBuffer(map.get("com.google.android.libraries.youtube.innertube.endpoint.tag"));
+            if (flyoutBuffer == null) {
+                return;
+            }
+            List<Integer> pageHeaderDescriptionBytesIndexes =
+                    byteIndexesOf(flyoutBuffer, PAGE_HEADER_DESCRIPTION_BYTES);
+            if (!pageHeaderDescriptionBytesIndexes.isEmpty() &&
+                    pageHeaderDescriptionBytesIndexes.size() == PAGE_HEADER_DESCRIPTION_BYTES.size()) {
+                if (byteIndexInStartRange(pageHeaderDescriptionBytesIndexes.get(0))) {
+                    Log.d("LOLOLOLOLO", "OK");
+                    // Buttons that do not open a flyout, such as the share button of community posts
+                    // and of the playlist page header. The buttons that open a flyout are also called
+                    // before the flyout, which then finds the ids with its sender view.
+                    senderViewRef = new WeakReference<>(null);
+                    setFlyoutPlaylistId(flyoutBuffer);
+                    // Reset the ids after the share button is pressed, to prevent unintended usage.
+                    Utils.runOnMainThreadDelayed(() -> {
+                        if ((flyoutDialog == null || !flyoutDialog.isShowing())
+                                && (flyoutPopupWindow == null || !flyoutPopupWindow.isShowing())) {
+                            flyoutPostId = "";
+                            flyoutPlaylistId = "";
+                            isMyTabHistoryFlyout = false;
+                            isShortFlyout = false;
+                        }
+                    }, 500);
+                }
             }
         } catch (Exception ex) {
             Logger.printException(() -> "extractFlyoutIdFromLithoButton failure", ex);
@@ -993,33 +999,17 @@ public final class FlyoutUtils {
             String videoId = videoIdInterface.patch_getVideoId();
             if (videoId != null) {
                 flyoutVideoId = videoId;
-
             }
             return;
         }
 
-        if (!(bufferObject instanceof ProtocolBufferFieldInterface bufferInterface)) {
-            return;
-        }
-
-        byte[] flyoutBuffer = bufferInterface.patch_getBuffer();
+        byte[] flyoutBuffer = getFlyoutBuffer(bufferObject);
         if (flyoutBuffer == null) {
             return;
         }
 
         if (Settings.DEBUG_PROTOBUFFER.get()) {
             Logger.printDebug(() -> "Flyout buffer: " + new BufferAsciiStrings(flyoutBuffer).getStrings());
-        }
-
-        // Community posts have no video of the flyout.
-        final int postIdIndex = byteIndexOf(flyoutBuffer, POST_ID_PREFIX_BYTES);
-        if (postIdIndex >= 0) {
-            final String postId = readId(flyoutBuffer, postIdIndex + POST_ID_PREFIX_BYTES.length);
-            if (!postId.isEmpty()) {
-                flyoutPostId = postId;
-                Logger.printDebug(() -> "Flyout Post ID found: " + postId);
-                return;
-            }
         }
 
         // Check whether the buffer contains the specified IDs within a certain initial
@@ -1030,7 +1020,6 @@ public final class FlyoutUtils {
                 listItemShareBytesIndexes.size() == LIST_ITEM_SHARE_BYTES.size()) {
             if (byteIndexInStartRange(listItemShareBytesIndexes.get(0))) {
                 setFlyoutCommentId(flyoutBuffer);
-
                 return;
             }
         }
@@ -1049,11 +1038,12 @@ public final class FlyoutUtils {
             isShortFlyout = true;
         }
 
+        setCommunityPostId(flyoutBuffer);
+
         setFlyoutPlaylistId(flyoutBuffer);
 
         View senderView = senderViewRef.get();
-        Logger.printDebug(() -> "Flyout sender view object: " +
-                            (senderView != null));
+        Logger.printDebug(() -> "Flyout sender view object: " + (senderView != null));
         if (senderView != null) {
             // Long pressing an item, such as a Short in the Shorts tab of a channel, sends the flyout
             // from the item itself, which has the description. The item is still pressed, unlike
@@ -1100,6 +1090,7 @@ public final class FlyoutUtils {
                             }
 
                             flyoutChannelIdRequest = ChannelIdRequest.fetchRequestIfNeeded(flyoutVideoId);
+
                             // Unfortunately must block main thread to ensure channel name is set.
                             Pair<String, String> remoteFlyoutChannelInfo = flyoutChannelIdRequest.getChannelInfo();
                             if (remoteFlyoutChannelInfo != null) {
@@ -1119,6 +1110,13 @@ public final class FlyoutUtils {
                 parent = parent.getParent();
             }
         }
+    }
+
+    private static byte[] getFlyoutBuffer(@Nullable Object bufferObject) {
+        if (!(bufferObject instanceof ProtocolBufferFieldInterface bufferInterface)) {
+            return null;
+        }
+        return bufferInterface.patch_getBuffer();
     }
 
     public static void setFlyoutVideoId(byte[] buffer, String rawDescription) {
@@ -1235,74 +1233,71 @@ public final class FlyoutUtils {
         return true;
     }
 
-    private static void setFlyoutPlaylistId(byte[] flyoutBuffer) {
-        final int index = byteIndexOf(flyoutBuffer, PLAYLIST_ID_PREFIXES_BYTES);
-        if (index >= 0) {
-            final int playlistIdStart = index + PLAYLIST_ID_PREFIXES_BYTES.length;
-
-            int playlistIdEnd = playlistIdStart;
-            while (playlistIdEnd < flyoutBuffer.length) {
-                byte b = flyoutBuffer[playlistIdEnd];
-                if (!(isByteAlphanumeric(b) ||
-                        b == '-' ||
-                        b == '_')) {
-                    break;
-                }
-                playlistIdEnd++;
+    private static void setCommunityPostId(byte[] flyoutBuffer) {
+        final int postIdIndex = byteIndexOf(flyoutBuffer, POST_ID_PREFIX_BYTES);
+        if (postIdIndex >= 0) {
+            final int postIdStartIndex = postIdIndex + POST_ID_PREFIX_BYTES.length;
+            int postIdEndIndex = postIdStartIndex;
+            while (postIdEndIndex < flyoutBuffer.length &&
+                    (isByteAlphanumeric(
+                            flyoutBuffer[postIdEndIndex]) ||
+                            flyoutBuffer[postIdEndIndex] == '-' ||
+                            flyoutBuffer[postIdEndIndex] == '_')) {
+                postIdEndIndex++;
             }
-
-            flyoutPlaylistId = new String(
+            final String postId = new String(
                     flyoutBuffer,
-                    playlistIdStart,
-                    playlistIdEnd - playlistIdStart - 1,
+                    postIdStartIndex,
+                    postIdEndIndex - postIdStartIndex,
                     StandardCharsets.US_ASCII
             );
-            Logger.printDebug(() -> "Flyout Playlist ID found: " +
-                    flyoutPlaylistId
-            );
-            return;
+            if (!postId.isEmpty()) {
+                flyoutPostId = postId;
+                Logger.printDebug(() -> "Flyout Post ID found: " + postId);
+            }
         }
+    }
 
-        // The playlist page header has the browse id of the playlist instead of the url, which is
-        // 'VL' followed by the playlist id, and the header also includes the playlist id alone.
-        // Both are text fields of the buffer, so they are preceded by their length.
-        int browseIdIndex = 0;
-        while ((browseIdIndex = byteIndexOf(flyoutBuffer, PLAYLIST_BROWSE_ID_PREFIX_BYTES, browseIdIndex)) >= 0) {
-            final int playlistIdStart = browseIdIndex + PLAYLIST_BROWSE_ID_PREFIX_BYTES.length;
-            final String playlistId = readId(flyoutBuffer, playlistIdStart);
-            if (isTextField(flyoutBuffer, browseIdIndex, PLAYLIST_BROWSE_ID_PREFIX_BYTES.length + playlistId.length())) {
-                final byte[] playlistIdBytes = playlistId.getBytes(StandardCharsets.US_ASCII);
-                int textIndex = 0;
-                while ((textIndex = byteIndexOf(flyoutBuffer, playlistIdBytes, textIndex)) >= 0) {
-                    if (isTextField(flyoutBuffer, textIndex, playlistIdBytes.length)) {
-                        flyoutPlaylistId = playlistId;
-                        Logger.printDebug(() -> "Flyout Playlist ID found: " + playlistId);
-                        return;
+    @SuppressWarnings("ExtractMethodRecommender")
+    private static void setFlyoutPlaylistId(byte[] flyoutBuffer) {
+        for (int i = 0; i < PLAYLIST_ID_PREFIXES_BYTES.size(); i++) {
+            final byte[] PLAYLIST_ID_PREFIX_BYTES = PLAYLIST_ID_PREFIXES_BYTES.get(i);
+            final int index = byteIndexOf(flyoutBuffer, PLAYLIST_ID_PREFIX_BYTES);
+
+            if (index >= 0) {
+                final int playlistIdStart = index + PLAYLIST_ID_PREFIX_BYTES.length;
+
+                int playlistIdEnd = playlistIdStart;
+                while (playlistIdEnd < flyoutBuffer.length) {
+                    byte b = flyoutBuffer[playlistIdEnd];
+                    if (!(isByteAlphanumeric(b) ||
+                            b == '-' ||
+                            b == '_')) {
+                        break;
                     }
-                    textIndex++;
+                    playlistIdEnd++;
+                }
+                // "playlist?list=" always ends with a character extraneous to the
+                // playlist ID, so verify that the current index of being
+                // searched bytes does not belong to this element.
+                final int playlistLength =
+                        playlistIdEnd -
+                                playlistIdStart -
+                                (i == 0 ? 1 : 0);
+
+                if (playlistLength >= 18) {
+                    flyoutPlaylistId = new String(
+                            flyoutBuffer,
+                            playlistIdStart,
+                            playlistLength,
+                            StandardCharsets.US_ASCII
+                    );
+                    Logger.printDebug(() -> "Flyout Playlist ID found: " +
+                            flyoutPlaylistId
+                    );
                 }
             }
-            browseIdIndex = playlistIdStart;
         }
-    }
-
-    /**
-     * @return If the text at the index is an entire text field, which is preceded by its length.
-     */
-    private static boolean isTextField(byte[] buffer, int index, int length) {
-        return index > 0 && length > 0 && length < 128 && buffer[index - 1] == length;
-    }
-
-    /**
-     * @return The id that starts at the index, or an empty string if none.
-     */
-    private static String readId(byte[] buffer, int start) {
-        int end = start;
-        while (end < buffer.length
-                && (isByteAlphanumeric(buffer[end]) || buffer[end] == '-' || buffer[end] == '_')) {
-            end++;
-        }
-        return new String(buffer, start, end - start, StandardCharsets.US_ASCII);
     }
 
     private static void setFlyoutCommentId(byte[] buffer) {

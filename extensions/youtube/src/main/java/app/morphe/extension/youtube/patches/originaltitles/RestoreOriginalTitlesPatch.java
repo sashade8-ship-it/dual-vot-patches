@@ -923,8 +923,7 @@ public final class RestoreOriginalTitlesPatch {
 
         // The preview message includes the truncation text and the command that opens
         // the description panel of the channel.
-        ProtoNode previewText = preview.getParent();
-        ProtoNode previewMessage = previewText == null ? null : previewText.getParent();
+        ProtoNode previewMessage = preview.getParent().getParent();
         List<ProtoNode> previewTextNodes = previewMessage == null || previewMessage.children == null
                 ? textNodes
                 : ProtoNode.textNodes(previewMessage.children);
@@ -952,9 +951,10 @@ public final class RestoreOriginalTitlesPatch {
         int truncationLength = 0;
         for (ProtoNode node : previewTextNodes) {
             String text = node.getText();
-            if (node != preview && !text.trim().isEmpty() && text.length() < shownPreview.length()
-                    && shownPreview.endsWith(text) && text.length() > truncationLength) {
-                truncationLength = text.length();
+            final int textLength = text.length();
+            if (node != preview && textLength < shownPreview.length() && textLength > truncationLength
+                    && shownPreview.endsWith(text) && !text.isBlank()) {
+                truncationLength = textLength;
             }
         }
         String translatedPreview = shownPreview.substring(0, shownPreview.length() - truncationLength).trim();
@@ -981,10 +981,11 @@ public final class RestoreOriginalTitlesPatch {
         final int prefixLength = previewPrefixLength(labelText, translatedPreview);
         if (prefixLength > 0) {
             final int prefixStart = labelText.indexOf(translatedPreview.substring(0, prefixLength));
+            final int originalPreviewLength = originalPreview.length();
             int restoredLength = prefixLength == translatedPreview.length()
-                    ? originalPreview.length()
-                    : Math.min(prefixLength, originalPreview.length());
-            if (restoredLength < originalPreview.length()
+                    ? originalPreviewLength
+                    : Math.min(prefixLength, originalPreviewLength);
+            if (restoredLength < originalPreviewLength
                     && Character.isHighSurrogate(originalPreview.charAt(restoredLength - 1))) {
                 restoredLength--;
             }
@@ -1003,16 +1004,19 @@ public final class RestoreOriginalTitlesPatch {
      *         or 0 if the label does not include the start of the preview.
      */
     private static int previewPrefixLength(String label, String preview) {
-        if (preview.length() < MIN_TITLE_LENGTH) {
+        final int previewLength = preview.length();
+        if (previewLength < MIN_TITLE_LENGTH) {
             return 0;
         }
         final int start = label.indexOf(preview.substring(0, MIN_TITLE_LENGTH));
         if (start < 0) {
             return 0;
         }
+        final int labelLength = label.length();
         int length = MIN_TITLE_LENGTH;
-        while (length < preview.length() && start + length < label.length()
-                && label.charAt(start + length) == preview.charAt(length)) {
+        while (length < previewLength) {
+            if (!(start + length < labelLength
+                    && label.charAt(start + length) == preview.charAt(length))) break;
             length++;
         }
         return length;
@@ -1586,6 +1590,7 @@ public final class RestoreOriginalTitlesPatch {
                 continue;
             }
             if (Character.isWhitespace(c) || Character.isSpaceChar(c)) {
+                //noinspection SizeReplaceableByIsEmpty
                 space = builder.length() > 0;
                 continue;
             }

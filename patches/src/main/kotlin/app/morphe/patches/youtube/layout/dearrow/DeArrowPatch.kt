@@ -11,6 +11,7 @@
 package app.morphe.patches.youtube.layout.dearrow
 
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patches.shared.misc.litho.relayout.lithoRelayoutPatch
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
@@ -40,6 +41,8 @@ val deArrowPatch = bytecodePatch(
         settingsPatch,
         navigationBarHookPatch,
         cronetImageURLHookPatch,
+        // Thumbnails that fail to load are loaded again by mounting the Litho views again.
+        lithoRelayoutPatch,
         // Titles are replaced by the same hooks that restore the original titles.
         restoreOriginalTitlesPatch,
     )
@@ -86,7 +89,6 @@ val deArrowPatch = bytecodePatch(
             SwitchPreference("morphe_dearrow_connection_toast", summary = true),
             TextPreference("morphe_dearrow_api_url"),
             NonInteractivePreference("morphe_dearrow_thumbnail_stills_about"),
-            SwitchPreference("morphe_dearrow_thumbnail_stills_fast", summary = true),
             ListPreference("morphe_dearrow_thumbnail_stills_time"),
         )
 

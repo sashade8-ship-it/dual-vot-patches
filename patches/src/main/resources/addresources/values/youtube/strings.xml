@@ -1295,8 +1295,6 @@ Tap here to open DeArrow.ajay.app"</string>
     <string name="morphe_dearrow_api_url_summary">The URL of the DeArrow thumbnail cache endpoint</string>
     <string name="morphe_dearrow_thumbnail_stills_about_title">Still video captures</string>
     <string name="morphe_dearrow_thumbnail_stills_about_summary">Still captures are taken from the beginning / middle / end of each video. These images are built into YouTube and no external API is used</string>
-    <string name="morphe_dearrow_thumbnail_stills_fast_title">Use fast still captures</string>
-    <string name="morphe_dearrow_thumbnail_stills_fast_summary">Improves loading speeds by using medium-quality images. Live streams, unreleased and older videos may display blank thumbnails</string>
     <string name="morphe_dearrow_thumbnail_stills_time_title">Extract video frame from</string>
     <string name="morphe_dearrow_thumbnail_stills_time_entry_1">Beginning</string>
     <string name="morphe_dearrow_thumbnail_stills_time_entry_2">Middle</string>

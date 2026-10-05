@@ -192,7 +192,6 @@ public class Settings extends SharedYouTubeSettings {
     public static final StringSetting DEARROW_API_URL = new StringSetting("morphe_dearrow_api_url", "https://dearrow-thumb.ajay.app/api/v1/getThumbnail", true, new DeArrowThumbnailsAvailability());
     public static final BooleanSetting DEARROW_CONNECTION_TOAST = new BooleanSetting("morphe_dearrow_connection_toast", TRUE, new DeArrowAvailability());
     public static final EnumSetting<ThumbnailStillTime> DEARROW_THUMBNAIL_STILLS_TIME = new EnumSetting<>("morphe_dearrow_thumbnail_stills_time", ThumbnailStillTime.MIDDLE, new StillImagesAvailability());
-    public static final BooleanSetting DEARROW_THUMBNAIL_STILLS_FAST = new BooleanSetting("morphe_dearrow_thumbnail_stills_fast", FALSE, new StillImagesAvailability());
 
     // Channel page
     public static final BooleanSetting HIDE_CHANNEL_TAB = new BooleanSetting("morphe_hide_channel_tab", FALSE);
@@ -733,7 +732,6 @@ public class Settings extends SharedYouTubeSettings {
     private static final StringSetting DEPRECATED_ALT_THUMBNAIL_DEARROW_API_URL = new StringSetting("morphe_alt_thumbnail_dearrow_api_url", "https://dearrow-thumb.ajay.app/api/v1/getThumbnail", true);
     private static final BooleanSetting DEPRECATED_ALT_THUMBNAIL_DEARROW_CONNECTION_TOAST = new BooleanSetting("morphe_alt_thumbnail_dearrow_connection_toast", TRUE);
     private static final EnumSetting<ThumbnailStillTime> DEPRECATED_ALT_THUMBNAIL_STILLS_TIME = new EnumSetting<>("morphe_alt_thumbnail_stills_time", ThumbnailStillTime.MIDDLE);
-    private static final BooleanSetting DEPRECATED_ALT_THUMBNAIL_STILLS_FAST = new BooleanSetting("morphe_alt_thumbnail_stills_fast", FALSE);
     private static final BooleanSetting DEPRECATED_BYPASS_URL_REDIRECTS = new BooleanSetting("morphe_bypass_url_redirects", TRUE);
     private static final BooleanSetting DEPRECATED_COPY_VIDEO_URL = new BooleanSetting("morphe_copy_video_url", FALSE, true);
     private static final BooleanSetting DEPRECATED_COPY_VIDEO_URL_TIMESTAMP = new BooleanSetting("morphe_copy_video_url_timestamp", TRUE, true, parent(DEPRECATED_COPY_VIDEO_URL));
@@ -848,7 +846,6 @@ public class Settings extends SharedYouTubeSettings {
         migrateOldSettingToNew(DEPRECATED_ALT_THUMBNAIL_DEARROW_API_URL, DEARROW_API_URL);
         migrateOldSettingToNew(DEPRECATED_ALT_THUMBNAIL_DEARROW_CONNECTION_TOAST, DEARROW_CONNECTION_TOAST);
         migrateOldSettingToNew(DEPRECATED_ALT_THUMBNAIL_STILLS_TIME, DEARROW_THUMBNAIL_STILLS_TIME);
-        migrateOldSettingToNew(DEPRECATED_ALT_THUMBNAIL_STILLS_FAST, DEARROW_THUMBNAIL_STILLS_FAST);
 
         migrateSwipeGestureToZone(DEPRECATED_SWIPE_BRIGHTNESS, SWIPE_LEFT_ZONE, SwipeZoneAction.BRIGHTNESS);
         migrateSwipeGestureToZone(DEPRECATED_SWIPE_VOLUME, SWIPE_RIGHT_ZONE, SwipeZoneAction.VOLUME);
