@@ -65,7 +65,7 @@ Les changements incluent :
   <string name="morphe_hide_artist_cards_summary">Masque la carte de l\'artiste en haut des résultats de recherche</string>
   <string name="morphe_hide_auto_dubbed_label_title">Masquer le libellé \'Doublée automatiquement\'</string>
   <string name="morphe_hide_channel_buttons_title">Masquer les boutons des chaînes</string>
-  <string name="morphe_hide_channel_buttons_summary">Masque les boutons tels que S\'abonner, Voir la chaîne, Communauté et YouTube Music sur les profils de chaîne dans les résultats de recherche</string>
+  <string name="morphe_hide_channel_buttons_summary">Masque les boutons tels que \'S\'abonner\', \'Accéder à la chaîne\', \'Communauté\' et \'YouTube Music\' des profils de chaînes dans les résultats de recherche</string>
   <string name="morphe_hide_community_posts_title">Masquer posts destinés à la communauté</string>
   <string name="morphe_hide_compact_banner_title">Masquer les bannières compactes</string>
   <string name="morphe_hide_compact_banner_summary">Masque les bannières compactes et l\'espacement entre certains composants</string>
@@ -110,8 +110,8 @@ Les changements incluent :
   <string name="morphe_hide_show_more_button_title">Masquer le bouton \'Voir plus\'</string>
   <string name="morphe_hide_show_more_button_summary">Masque le bouton d\'extension sous les vidéos dans les résultats de recherche</string>
   <string name="morphe_hide_subscribed_channels_bar_title">Masquer la liste des chaînes</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_title">Masquer les noms des chaînes abonnées</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_summary">Masque les noms des chaînes dans la barre des abonnements</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">Masquer les noms des chaînes auxquelles vous êtes abonné</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">Masque les noms des chaînes dans la barre des chaînes auxquelles vous êtes abonné</string>
   <string name="morphe_hide_surveys_title">Masquer les sondages</string>
   <string name="morphe_hide_surveys_summary">Masque les sondages et les incitations concernant la pertinence des recommandations du flux</string>
   <string name="morphe_hide_ticket_shelf_title">Masquer l\'étagère des \'Places de concert\'</string>
@@ -163,8 +163,8 @@ Les changements incluent :
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Masquer \'Aide et commentaires\' dans les menus</string>
   <string name="morphe_hide_help_feedback_menu_summary">Masquer \'Aide et commentaires\' dans les menus à trois points de la barre d\'application, comme celui des résultats de recherche</string>
-  <string name="morphe_hide_handle_title">Masquer l\'identifiant</string>
-  <string name="morphe_hide_handle_summary">Masque votre identifiant de chaîne dans l\'onglet « Vous »</string>
+  <string name="morphe_hide_handle_title">Masquer le pseudo</string>
+  <string name="morphe_hide_handle_summary">Masque le pseudo de votre chaîne dans l\'onglet \'Vous\'</string>
   <string name="morphe_hide_video_title_title">Masquer le titre de la vidéo</string>
   <string name="morphe_hide_video_title_summary">Masque le titre de la vidéo en mode plein écran</string>
   <string name="morphe_sanitize_video_subtitle_title">Nettoyer les sous-titres de la vidéo</string>

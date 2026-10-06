@@ -7,28 +7,23 @@
 
 package app.morphe.extension.music.patches.lyrics;
 
-import android.os.Build;
-
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import app.morphe.extension.shared.Logger;
-import app.morphe.extension.shared.requests.Requester;
 
 public final class OpenAIClient {
 
@@ -41,12 +36,17 @@ public final class OpenAIClient {
 
     @Nullable
     static String request(String baseUrl, String apiToken, String model,
-                          String userPrompt) {
+                          String userPrompt, @Nullable String systemPrompt) {
         try {
             JSONObject body = new JSONObject();
             body.put("model", model);
 
             JSONArray messages = new JSONArray();
+            if (systemPrompt != null && !systemPrompt.isEmpty()) {
+                messages.put(new JSONObject()
+                        .put("role", "system")
+                        .put("content", systemPrompt));
+            }
             messages.put(new JSONObject()
                     .put("role", "user")
                     .put("content", userPrompt));
@@ -76,7 +76,17 @@ public final class OpenAIClient {
                     return null;
                 }
 
-                JSONArray choices = getJsonArray(conn);
+                StringBuilder sb = new StringBuilder(512);
+                try (BufferedReader br = new BufferedReader(
+                        new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        sb.append(line);
+                    }
+                }
+
+                JSONObject json = new JSONObject(sb.toString());
+                JSONArray choices = json.optJSONArray("choices");
                 if (choices == null || choices.length() == 0) {
                     return null;
                 }
@@ -86,15 +96,18 @@ public final class OpenAIClient {
                     return null;
                 }
 
-                String content = message.optString("content");
-                if (!content.isEmpty()) {
+                String content = message.optString("content", null);
+                if (content != null && !content.isEmpty()) {
                     return content;
                 }
 
-                String reasoning = message.optString("reasoning");
-                if (!reasoning.isEmpty()) {
+                String reasoning = message.optString("reasoning", null);
+                if (reasoning != null && !reasoning.isEmpty()) {
                     String extracted = extractLastNumberedBlock(reasoning);
-                    return Objects.requireNonNullElse(extracted, reasoning);
+                    if (extracted != null) {
+                        return extracted;
+                    }
+                    return reasoning;
                 }
 
                 return null;
@@ -105,12 +118,6 @@ public final class OpenAIClient {
             Logger.printDebug(() -> "OpenAI request failed", e);
             return null;
         }
-    }
-
-    @Nullable
-    private static JSONArray getJsonArray(HttpURLConnection conn) throws IOException, JSONException {
-        JSONObject json = Requester.parseJSONObject(conn);
-        return json.optJSONArray("choices");
     }
 
     @Nullable
@@ -136,12 +143,6 @@ public final class OpenAIClient {
         if (blockEnd == -1) {
             return null;
         }
-        StringBuilder sb = getStringBuilder(blockEnd, lines);
-        return sb.toString();
-    }
-
-    @NonNull
-    private static StringBuilder getStringBuilder(int blockEnd, String[] lines) {
         int blockStart = blockEnd;
         while (blockStart > 0 && lines[blockStart - 1].trim().matches("\\d+\\..+")) {
             blockStart--;
@@ -159,7 +160,7 @@ public final class OpenAIClient {
             }
             sb.append(line);
         }
-        return sb;
+        return sb.toString();
     }
 
     private static String stripLineNumber(String line) {
@@ -175,7 +176,7 @@ public final class OpenAIClient {
 
     @Nullable
     static List<String> mapLines(String baseUrl, String apiToken, String model,
-                                 String prompt, List<String> sourceLines) {
+            String prompt, String systemPrompt, List<String> sourceLines) {
         int totalChars = 0;
         for (String line : sourceLines) {
             totalChars += line.length() + 1;
@@ -183,7 +184,7 @@ public final class OpenAIClient {
         if (totalChars > MAX_CHARS) {
             return null;
         }
-        String response = request(baseUrl, apiToken, model, prompt);
+        String response = request(baseUrl, apiToken, model, prompt, systemPrompt);
         if (response == null) {
             return null;
         }
@@ -237,32 +238,31 @@ public final class OpenAIClient {
      * Unknown variables are left as typed.
      */
     public static final String DEFAULT_PROMPT =
-            """
-                    You are a professional lyrics {task} engine. Perform {task} on every line below for \
-                    {language}, keeping the original meaning, tone and punctuation.
-                    Song: {title} by {artist}
-                    
-                    Output format: Number every result on its own line, like:
-                    1. first result
-                    2. second result
-                    
-                    CRITICAL RULES:
-                    - Output exactly {count} numbered lines (same as input count)
-                    - Number format: "N. text" (number, period, space, text)
-                    - Do NOT include the original lines in your output
-                    - Do NOT use "Line N:" format
-                    - Follow the standard {language} conventions for {task}; no annotations, \
-                    notes or tone marks
-                    - If a line already needs no {task}, output one "SKIP" for it
-                    - Output ONLY the {task}. No reasoning, no explanations, no \
-                    step-by-step thinking.
-                    
-                    {lines}""";
+            "You are a professional lyrics {task} engine. Perform {task} on every line below for "
+                    + "{language}, keeping the original meaning, tone and punctuation.\n"
+                    + "Song: {title} by {artist}\n"
+                    + "\n"
+                    + "Output format: Number every result on its own line, like:\n"
+                    + "1. first result\n"
+                    + "2. second result\n"
+                    + "\n"
+                    + "CRITICAL RULES:\n"
+                    + "- Output exactly {count} numbered lines (same as input count)\n"
+                    + "- Number format: \"N. text\" (number, period, space, text)\n"
+                    + "- Do NOT include the original lines in your output\n"
+                    + "- Do NOT use \"Line N:\" format\n"
+                    + "- Follow the standard {language} conventions for {task}; no annotations, "
+                    + "notes or tone marks\n"
+                    + "- If a line already needs no {task}, output one \"SKIP\" for it\n"
+                    + "- Output ONLY the {task}. No reasoning, no explanations, no "
+                    + "step-by-step thinking.\n"
+                    + "\n"
+                    + "{lines}";
 
     private static final Pattern PROMPT_VARIABLE = Pattern.compile("\\{(\\w+)\\}");
 
     public static String renderPrompt(String template, String task, String language,
-                                      String title, String artist, List<String> lines) {
+            String title, String artist, List<String> lines) {
         if (template == null || template.isEmpty()) {
             template = DEFAULT_PROMPT;
         }
@@ -277,19 +277,15 @@ public final class OpenAIClient {
             String name = matcher.group(1);
             String value = promptValue(name, task, language, title, artist, count,
                     linesText.toString());
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                matcher.appendReplacement(out,
-                        Matcher.quoteReplacement(value != null ? value : matcher.group()));
-            }
+            matcher.appendReplacement(out,
+                    Matcher.quoteReplacement(value != null ? value : matcher.group()));
         }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            matcher.appendTail(out);
-        }
+        matcher.appendTail(out);
         return out.toString();
     }
 
     private static String promptValue(String name, String task, String language,
-                                      String title, String artist, String count, String lines) {
+            String title, String artist, String count, String lines) {
         if ("task".equals(name)) {
             return task;
         }

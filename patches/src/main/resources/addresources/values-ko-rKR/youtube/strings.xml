@@ -111,7 +111,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_show_more_button_summary">검색 결과에서 동영상 아래에 있는 \'자세히 보기\' 버튼을 숨깁니다</string>
   <string name="morphe_hide_subscribed_channels_bar_title">구독 채널바 숨기기</string>
   <string name="morphe_hide_subscribed_channels_bar_names_title">구독 채널 이름 숨기기</string>
-  <string name="morphe_hide_subscribed_channels_bar_names_summary">구독 채널 표시줄에서 채널 이름을 숨깁니다</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">구독 채널바에서 채널 이름을 숨깁니다</string>
   <string name="morphe_hide_surveys_title">설문 조사 숨기기</string>
   <string name="morphe_hide_surveys_summary">피드 추천 정확도에 대한 설문 조사 및 안내 메시지를 숨깁니다</string>
   <string name="morphe_hide_ticket_shelf_title">콘서트 선반 숨기기</string>
@@ -163,8 +163,8 @@ Second \"item\" text"</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">메뉴에서 고객센터 숨기기</string>
   <string name="morphe_hide_help_feedback_menu_summary">검색 결과 메뉴와 같은 앱 바의 3점 메뉴에서 고객센터 메뉴를 숨깁니다</string>
-  <string name="morphe_hide_handle_title">핸들 숨기기</string>
-  <string name="morphe_hide_handle_summary">\'You\' 탭에서 채널 핸들을 숨깁니다</string>
+  <string name="morphe_hide_handle_title">핸들(@사용자 아이디) 숨기기</string>
+  <string name="morphe_hide_handle_summary">\'내 페이지\' 탭에서 채널 핸들을 숨깁니다</string>
   <string name="morphe_hide_video_title_title">동영상 제목 숨기기</string>
   <string name="morphe_hide_video_title_summary">전체 화면 모드에서 동영상 제목을 숨깁니다</string>
   <string name="morphe_sanitize_video_subtitle_title">동영상 제목 하단 정리하기</string>

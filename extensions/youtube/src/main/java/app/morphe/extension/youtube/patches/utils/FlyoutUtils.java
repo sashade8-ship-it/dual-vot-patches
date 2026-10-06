@@ -11,6 +11,7 @@ import static app.morphe.extension.shared.StringRef.str;
 import static app.morphe.extension.youtube.patches.AddToQueuePatch.registerFlyoutProvider;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -93,19 +94,22 @@ public final class FlyoutUtils {
 
     /**
      * Holds the injected items apart from the app list, and scrolls them on its own
-     * when they do not all fit. Only a few injected items are shown at once, so the
-     * menu leaves enough height to the app list (in landscape the menu is too short
-     * to show both). The next item is cut in half to make it clear the injected
-     * items scroll.
+     * when they do not all fit. It dynamically constrains its height based on the
+     * host container or window height.
      */
     private static final class InjectedItemsScrollView extends ScrollView {
-        private static final int LANDSCAPE_MAX_FULLY_VISIBLE_ITEMS = 1;
-        private static final int PORTRAIT_MAX_FULLY_VISIBLE_ITEMS = 3;
+        private static final float LANDSCAPE_MAX_HEIGHT_RATIO = 0.25f;
+        private static final float PORTRAIT_MAX_HEIGHT_RATIO = 0.45f;
 
         private final LinearLayout itemsContainer;
+        private final ViewGroup parentContainer;
+        private int maxAllowedHeight = -1;
 
-        InjectedItemsScrollView(Context context) {
+        InjectedItemsScrollView(Context context, ViewGroup parentContainer) {
             super(context);
+            this.parentContainer = parentContainer;
+
+            setVerticalScrollBarEnabled(false);
 
             itemsContainer = new LinearLayout(context);
             itemsContainer.setOrientation(LinearLayout.VERTICAL);
@@ -114,46 +118,64 @@ public final class FlyoutUtils {
                     ViewGroup.LayoutParams.WRAP_CONTENT
             ));
 
-            // The bottom sheet follows only one nested scrolling child, which must stay the app list.
             setNestedScrollingEnabled(false);
             setOverScrollMode(OVER_SCROLL_IF_CONTENT_SCROLLS);
+
+            initHeightTracking(context);
+        }
+
+        private void initHeightTracking(Context context) {
+            int containerHeight = parentContainer.getHeight();
+
+            if (containerHeight <= 0 && context instanceof Activity activity) {
+                View decorView = activity.getWindow().getDecorView();
+                containerHeight = decorView.getHeight();
+            }
+
+            if (containerHeight > 0) {
+                updateMaxHeight(containerHeight);
+            }
+
+            parentContainer.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
+                int currentHeight = parentContainer.getHeight();
+                if (currentHeight > 0) {
+                    updateMaxHeight(currentHeight);
+                }
+            });
+        }
+
+        private void updateMaxHeight(int containerHeight) {
+            float ratio = getResources().getConfiguration().orientation ==
+                    Configuration.ORIENTATION_LANDSCAPE
+                            ? LANDSCAPE_MAX_HEIGHT_RATIO
+                            : PORTRAIT_MAX_HEIGHT_RATIO;
+
+            int newMaxHeight = (int) (containerHeight * ratio);
+            if (this.maxAllowedHeight != newMaxHeight) {
+                this.maxAllowedHeight = newMaxHeight;
+                requestLayout();
+            }
         }
 
         @Override
         protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+            if (maxAllowedHeight > 0) {
+                heightMeasureSpec =
+                        MeasureSpec.makeMeasureSpec(maxAllowedHeight, MeasureSpec.AT_MOST);
+            }
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-            final int maxFullyVisibleItems =
-                    getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE
-                            ? LANDSCAPE_MAX_FULLY_VISIBLE_ITEMS
-                            : PORTRAIT_MAX_FULLY_VISIBLE_ITEMS;
-            if (itemsContainer.getChildCount() <= maxFullyVisibleItems) {
-                return;
-            }
-
-            int maxHeight = getPaddingTop() + getPaddingBottom();
-            for (int i = 0; i < maxFullyVisibleItems; i++) {
-                maxHeight += itemsContainer.getChildAt(i).getMeasuredHeight();
-            }
-            maxHeight += itemsContainer.getChildAt(maxFullyVisibleItems).getMeasuredHeight() / 2;
-
-            if (getMeasuredHeight() > maxHeight) {
-                setMeasuredDimension(getMeasuredWidth(), maxHeight);
-            }
         }
 
         @Override
         public boolean dispatchTouchEvent(MotionEvent ev) {
-            // Without this the bottom sheet takes a vertical drag over and moves itself
-            // instead of letting these items scroll.
-            if (ev.getActionMasked() == MotionEvent.ACTION_DOWN
-                    && (canScrollVertically(1) || canScrollVertically(-1))) {
+            if (ev.getActionMasked() == MotionEvent.ACTION_DOWN &&
+                    (canScrollVertically(1)
+                            || canScrollVertically(-1))) {
                 ViewParent parent = getParent();
                 if (parent != null) {
                     parent.requestDisallowInterceptTouchEvent(true);
                 }
             }
-
             return super.dispatchTouchEvent(ev);
         }
     }
@@ -707,10 +729,19 @@ public final class FlyoutUtils {
             }
 
             LinearLayout menuContainer = menuInfo.menuContainer();
-            InjectedItemsScrollView injectedItems = findInjectedItemsScrollView(menuContainer);
+            InjectedItemsScrollView currentInjectedItems = null;
+
+            for (int i = 0,
+                 injectedItemsCount = menuContainer.getChildCount();
+                 i < injectedItemsCount; i++
+            ) {
+                if (menuContainer.getChildAt(i) instanceof InjectedItemsScrollView injectedItems) {
+                    currentInjectedItems = injectedItems;
+                }
+            }
 
             if (isDivider) {
-                if (injectedItems == null) {
+                if (currentInjectedItems == null) {
                     return -1;
                 }
 
@@ -718,22 +749,28 @@ public final class FlyoutUtils {
                 // so it stays outside the injected items scroll view.
                 menuContainer.addView(
                         createFlyoutDivider(context),
-                        menuContainer.indexOfChild(injectedItems) + 1
+                        menuContainer.indexOfChild(currentInjectedItems) + 1
                 );
             } else {
-                if (injectedItems == null) {
-                    injectedItems = new InjectedItemsScrollView(context);
+                if (currentInjectedItems == null) {
+                    currentInjectedItems = new InjectedItemsScrollView(context, menuContainer);
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT
                     );
                     // The scroll view ends up under the drag handle, so it has to clear it.
                     params.topMargin = getDragHandleHeight(menuContainer);
-                    menuContainer.addView(injectedItems, menuInfo.adjustedIndex(), params);
+                    menuContainer.addView(currentInjectedItems, menuInfo.adjustedIndex(), params);
                 }
 
-                injectedItems.itemsContainer.addView(
-                        addFlyoutButton(context, injectedItems.itemsContainer, icon, text, clickListener)
+                currentInjectedItems.itemsContainer.addView(
+                        addFlyoutButton(
+                                context,
+                                currentInjectedItems.itemsContainer,
+                                icon,
+                                text,
+                                clickListener
+                        )
                 );
             }
 
@@ -748,17 +785,6 @@ public final class FlyoutUtils {
         }
 
         return -1;
-    }
-
-    @Nullable
-    private static InjectedItemsScrollView findInjectedItemsScrollView(ViewGroup menuContainer) {
-        for (int i = 0, count = menuContainer.getChildCount(); i < count; i++) {
-            if (menuContainer.getChildAt(i) instanceof InjectedItemsScrollView injectedItems) {
-                return injectedItems;
-            }
-        }
-
-        return null;
     }
 
     public static void setFlyoutButtonProvider(@Nullable FlyoutButtonProvider provider) {
