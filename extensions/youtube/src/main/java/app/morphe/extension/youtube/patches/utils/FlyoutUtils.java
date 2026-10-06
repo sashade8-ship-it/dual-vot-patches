@@ -21,7 +21,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.Log;
 import android.util.Pair;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -163,10 +162,10 @@ public final class FlyoutUtils {
     public static final int CHANNEL_ID_LENGTH = 24;
     private static final byte[] POST_ID_PREFIX_BYTES =
             getAsciiBytes("post-comments-");
-    private static final List<byte[]> PLAYLIST_ID_PREFIXES_BYTES = List.of(
-            getAsciiBytes("playlist?list="),
-            getAsciiBytes("VL")
-    );
+    private static final byte[] PLAYLIST_ID_PREFIX_BYTES =
+            getAsciiBytes("playlist?list=");
+    private static final byte[] HEADER_DESCRIPTION_PLAYLIST_ID_PREFIX_BYTES =
+            getAsciiBytes("VL");
     private static final List<byte[]> VIDEO_ID_PREFIXES_BYTES = List.of(
             getAsciiBytes(".ytimg.com/vi/"),
             getAsciiBytes("youtube.com/watch?v=")
@@ -184,7 +183,7 @@ public final class FlyoutUtils {
             getAsciiBytes("horizontal_shelf.e"),
             getAsciiBytes("FEhistory")
     );
-    private static final List<byte[]> PAGE_HEADER_DESCRIPTION_BYTES = List.of(
+    private static final List<byte[]> HEADER_DESCRIPTION_BYTES = List.of(
             getAsciiBytes("page_header.e"),
             getAsciiBytes("engagement-panel-page-headers-description")
     );
@@ -944,17 +943,20 @@ public final class FlyoutUtils {
             if (flyoutBuffer == null) {
                 return;
             }
-            List<Integer> pageHeaderDescriptionBytesIndexes =
-                    byteIndexesOf(flyoutBuffer, PAGE_HEADER_DESCRIPTION_BYTES);
-            if (!pageHeaderDescriptionBytesIndexes.isEmpty() &&
-                    pageHeaderDescriptionBytesIndexes.size() == PAGE_HEADER_DESCRIPTION_BYTES.size()) {
-                if (byteIndexInStartRange(pageHeaderDescriptionBytesIndexes.get(0))) {
-                    Log.d("LOLOLOLOLO", "OK");
+            List<Integer> headerDescriptionBytesIndexes =
+                    byteIndexesOf(flyoutBuffer, HEADER_DESCRIPTION_BYTES);
+            if (!headerDescriptionBytesIndexes.isEmpty() &&
+                    headerDescriptionBytesIndexes.size() == HEADER_DESCRIPTION_BYTES.size()) {
+                if (byteIndexInStartRange(headerDescriptionBytesIndexes.get(0))) {
                     // Buttons that do not open a flyout, such as the share button of community posts
                     // and of the playlist page header. The buttons that open a flyout are also called
                     // before the flyout, which then finds the ids with its sender view.
                     senderViewRef = new WeakReference<>(null);
-                    setFlyoutPlaylistId(flyoutBuffer);
+                    setFlyoutPlaylistId(
+                            flyoutBuffer,
+                            HEADER_DESCRIPTION_PLAYLIST_ID_PREFIX_BYTES,
+                            false
+                    );
                     // Reset the ids after the share button is pressed, to prevent unintended usage.
                     Utils.runOnMainThreadDelayed(() -> {
                         if ((flyoutDialog == null || !flyoutDialog.isShowing())
@@ -1040,7 +1042,7 @@ public final class FlyoutUtils {
 
         setCommunityPostId(flyoutBuffer);
 
-        setFlyoutPlaylistId(flyoutBuffer);
+        setFlyoutPlaylistId(flyoutBuffer, PLAYLIST_ID_PREFIX_BYTES, true);
 
         View senderView = senderViewRef.get();
         Logger.printDebug(() -> "Flyout sender view object: " + (senderView != null));
@@ -1259,43 +1261,44 @@ public final class FlyoutUtils {
     }
 
     @SuppressWarnings("ExtractMethodRecommender")
-    private static void setFlyoutPlaylistId(byte[] flyoutBuffer) {
-        for (int i = 0; i < PLAYLIST_ID_PREFIXES_BYTES.size(); i++) {
-            final byte[] PLAYLIST_ID_PREFIX_BYTES = PLAYLIST_ID_PREFIXES_BYTES.get(i);
-            final int index = byteIndexOf(flyoutBuffer, PLAYLIST_ID_PREFIX_BYTES);
+    private static void setFlyoutPlaylistId(
+            byte[] flyoutBuffer,
+            byte[] playlistIdPrefix,
+            boolean truncateLastChar
+    ) {
+        final int index = byteIndexOf(flyoutBuffer, playlistIdPrefix);
 
-            if (index >= 0) {
-                final int playlistIdStart = index + PLAYLIST_ID_PREFIX_BYTES.length;
+        if (index >= 0) {
+            final int playlistIdStart = index + playlistIdPrefix.length;
 
-                int playlistIdEnd = playlistIdStart;
-                while (playlistIdEnd < flyoutBuffer.length) {
-                    byte b = flyoutBuffer[playlistIdEnd];
-                    if (!(isByteAlphanumeric(b) ||
-                            b == '-' ||
-                            b == '_')) {
-                        break;
-                    }
-                    playlistIdEnd++;
+            int playlistIdEnd = playlistIdStart;
+            while (playlistIdEnd < flyoutBuffer.length) {
+                byte b = flyoutBuffer[playlistIdEnd];
+                if (!(isByteAlphanumeric(b) ||
+                        b == '-' ||
+                        b == '_')) {
+                    break;
                 }
-                // "playlist?list=" always ends with a character extraneous to the
-                // playlist ID, so verify that the current index of being
-                // searched bytes does not belong to this element.
-                final int playlistLength =
-                        playlistIdEnd -
-                                playlistIdStart -
-                                (i == 0 ? 1 : 0);
+                playlistIdEnd++;
+            }
+            // "playlist?list=" always ends with a character extraneous to the
+            // playlist ID, so verify that the current index of being
+            // searched bytes does not belong to this element.
+            final int playlistLength =
+                    playlistIdEnd -
+                            playlistIdStart -
+                            (truncateLastChar ? 1 : 0);
 
-                if (playlistLength >= 18) {
-                    flyoutPlaylistId = new String(
-                            flyoutBuffer,
-                            playlistIdStart,
-                            playlistLength,
-                            StandardCharsets.US_ASCII
-                    );
-                    Logger.printDebug(() -> "Flyout Playlist ID found: " +
-                            flyoutPlaylistId
-                    );
-                }
+            if (playlistLength >= 18) {
+                flyoutPlaylistId = new String(
+                        flyoutBuffer,
+                        playlistIdStart,
+                        playlistLength,
+                        StandardCharsets.US_ASCII
+                );
+                Logger.printDebug(() -> "Flyout Playlist ID found: " +
+                        flyoutPlaylistId
+                );
             }
         }
     }

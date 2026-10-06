@@ -16,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.lang.ref.WeakReference;
@@ -101,7 +102,7 @@ public final class NavigationBar {
 
         searchbarResults.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
             @Override
-            public void onViewAttachedToWindow(View view) {
+            public void onViewAttachedToWindow(@NonNull View view) {
                 if (view == closingSearchBarResultsRef.get()) {
                     // Search was not closed, or was opened again.
                     closingSearchBarResultsRef = new WeakReference<>(null);
@@ -112,7 +113,7 @@ public final class NavigationBar {
             }
 
             @Override
-            public void onViewDetachedFromWindow(View view) {
+            public void onViewDetachedFromWindow(@NonNull View view) {
                 if (view == closingSearchBarResultsRef.get()) {
                     Logger.printDebug(() -> "Search bar closed");
                     closingSearchBarResultsRef = new WeakReference<>(null);
@@ -577,19 +578,22 @@ public final class NavigationBar {
 
             NavigationButton selectedButton = NavigationButton.selectedNavigationButton;
             NavigationButton openedFromButton = openedFromNavigationButton;
-            final boolean isVerifiedTab = selectedButton == NavigationButton.LIBRARY
-                    && (openedFromButton == NavigationButton.HOME || openedFromButton == NavigationButton.SUBSCRIPTIONS);
+            final boolean isVerifiedTab = openedFromButton == NavigationButton.HOME;
             if (!isVerifiedTab) {
                 return;
             }
 
             AppCompatToolbarPatchInterface toolbar = toolbarResultsRef.get();
             PlayerType playerType = PlayerType.getCurrent();
-            if (toolbar == null || toolbar.patch_getNavigationIcon() != null
+            if (toolbar == null ||
+                    toolbar.patch_getNavigationIcon() != null ||
                     // The search bar is set as closing by the back button, and both back hooks can be called.
-                    || isSearchBarActive() || closingSearchBarResultsRef.get() != null
-                    || !(playerType.isNoneOrHidden() || playerType == PlayerType.INLINE_MINIMAL)
-                    || ShortsPlayerState.isOpen()) {
+                    isSearchBarActive() ||
+                    closingSearchBarResultsRef.get() != null ||
+                    !(playerType.isNoneOrHidden()
+                            || playerType == PlayerType.WATCH_WHILE_MINIMIZED
+                            || playerType == PlayerType.INLINE_MINIMAL) ||
+                    ShortsPlayerState.isOpen()) {
                 return;
             }
 
@@ -602,7 +606,7 @@ public final class NavigationBar {
     }
 
     /**
-     * @return The navigation button selected again by going back from the root of the You tab,
+     * @return The navigation button selected again by going back from the root of the "You" tab,
      *         if the navigation bar is not yet updated, or null if not going back.
      */
     @Nullable
