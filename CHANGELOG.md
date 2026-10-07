@@ -1,3 +1,13 @@
+## 1.47.0-dev.1-dualvot.8.5.3 (2026-10-07)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.46.0-dualvot.8.5.3 (2026-10-06)
 
 ### Automated Morphe update
@@ -376,6 +386,21 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0...v1.47.0-dev.1) (2026-10-06)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Picture-in-picture button:** Do not load the flyout icon when the patch is not included ([0902326](https://github.com/MorpheApp/morphe-patches/commit/09023263cd73e85a3a0ea975c5ec514e0aa116f9))
+* **YouTube Music - Third-party lyrics:** App may crash when viewing lyrics ([#3569](https://github.com/MorpheApp/morphe-patches/issues/3569)) ([fe546ad](https://github.com/MorpheApp/morphe-patches/commit/fe546ad518d30833af7b7148f8a9b974088174a7))
+* **YouTube:** Decouple flyout buttons and shared hooks from unrelated patches ([#3567](https://github.com/MorpheApp/morphe-patches/issues/3567)) ([dad074a](https://github.com/MorpheApp/morphe-patches/commit/dad074a50b01775881b1054571fdf08b11bfa012))
+
+### ✨ New Features
+
+* Automatically save crash reports to user documents folder ([#3570](https://github.com/MorpheApp/morphe-patches/issues/3570)) ([f633697](https://github.com/MorpheApp/morphe-patches/commit/f63369780d8a69cd0fb868711ca97e148a650d56))
+* **YouTube - DeArrow:** Add more fine-grained settings for showing DeArrow titles ([#3573](https://github.com/MorpheApp/morphe-patches/issues/3573)) ([4aa01d6](https://github.com/MorpheApp/morphe-patches/commit/4aa01d6068722f343857c16ae9d5b9bc08e57c27))
+* **YouTube Music:** Add `Enable audio/video switch` patch ([#3471](https://github.com/MorpheApp/morphe-patches/issues/3471)) ([87942b7](https://github.com/MorpheApp/morphe-patches/commit/87942b73da43a5fb1f8bf1bc46aea092badc12cb))
+* **YouTube Music:** Add `Playlist track tap action` patch ([#3446](https://github.com/MorpheApp/morphe-patches/issues/3446)) ([66b7e78](https://github.com/MorpheApp/morphe-patches/commit/66b7e7817fb56938a2b6e7bd5a06a4cb2e52e409))
 
 ## [1.46.0](https://github.com/MorpheApp/morphe-patches/compare/v1.45.0...v1.46.0) (2026-10-06)
 
