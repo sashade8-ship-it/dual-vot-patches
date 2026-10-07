@@ -1158,9 +1158,17 @@ Second \"item\" text"</string>
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">ชื่อวิดีโอจาก DeArrow</string>
-  <string name="morphe_dearrow_titles_summary">แทนที่ชื่อวิดีโอด้วยชื่อที่ผู้ใช้ร่วมกันส่งให้ DeArrow</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">สำหรับแท็บหน้าหลัก</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">สำหรับแท็บการติดตาม</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">สำหรับแท็บคุณ</string>
+  <string name="morphe_dearrow_titles_player_title">สำหรับเพลย์ลิสต์ &amp; คำแนะนำของเครื่องเล่น</string>
+  <string name="morphe_dearrow_titles_search_title">สำหรับผลการค้นหา</string>
   <string name="morphe_dearrow_titles_icon_title">แสดงไอคอน DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">แสดงไอคอน DeArrow บนชื่อวิดีโอที่มาจากคราวด์ซอร์ส</string>
+  <string name="morphe_dearrow_thumbnails_title">ภาพขนาดย่อของ DeArrow</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">สำหรับแท็บหน้าแรก</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

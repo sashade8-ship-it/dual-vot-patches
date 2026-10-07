@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Phát các bản nhạc của album</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Phát phiên bản chỉ có âm thanh của các bài hát trong album thay vì một video âm nhạc. Yêu cầu \'Giả mạo các luồng video\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Bật chuyển đổi âm thanh/video</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Thử chuyển đổi giữa Phiên bản âm thanh và Video âm nhạc chính thức</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Tải xuống video nhạc, podcast hoặc bài hát bằng các ứng dụng tải xuống của bên thứ ba</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Tắt chuyển bài khi bấm không thích</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Không chuyển sang bài tiếp theo khi bạn bấm nút Không thích</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Hành động khi chạm vào bài hát trong danh sách phát</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Phát danh sách phát</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Chỉ phát bài hát đã chọn</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Thêm bài hát đã chọn vào hàng đợi</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Đã thêm vào hàng đợi</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Ẩn nút Truyền</string>
   <string name="morphe_music_hide_history_button_title">Ẩn nút Lịch sử</string>

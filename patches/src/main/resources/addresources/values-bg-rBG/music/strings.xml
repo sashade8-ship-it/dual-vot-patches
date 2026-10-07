@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Пусни аудио песните от албума</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Пусни аудио версията на песните от албума вместо музикално видео. Изисква \'Spoof video streams\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Активиране на аудио/видео превключване</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Опит за превключване между версията на аудио записа и официалното музикално видео</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Изтеглете музикални видеа, подкасти или песни с помощта на приложения за изтегляне от трети страни</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Изключване на пренасочването при непонравил се</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Предотвратява преминаването към следващата песен при натискане на бутона \"Не ми харесва\"</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Действие при докосване на песен от плейлист</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Пусни плейлиста</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Пусни само избраната песен</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Добави избраната песен в опашката</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Добавено в опашката</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Скрий бутона за предаване</string>
   <string name="morphe_music_hide_history_button_title">Скрий бутона \"История\"</string>

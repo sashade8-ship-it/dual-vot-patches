@@ -1158,9 +1158,17 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">Titluri DeArrow</string>
-  <string name="morphe_dearrow_titles_summary">Înlocuiește titlurile video cu titlurile create de comunitate trimise către DeArrow</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">Pentru fila Acasă</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">Pentru fila Abonamente</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">Pentru fila Biblioteca</string>
+  <string name="morphe_dearrow_titles_player_title">Pentru playlisturile &amp; recomandările din player</string>
+  <string name="morphe_dearrow_titles_search_title">Pentru rezultatele căutării</string>
   <string name="morphe_dearrow_titles_icon_title">Afișează pictograma DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Afișează pictograma DeArrow pe titlurile video de la comunitate</string>
+  <string name="morphe_dearrow_thumbnails_title">Miniaturi DeArrow</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">Pentru fila Principală</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

@@ -26,6 +26,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Albom audio treklarini ijro etish</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Qo\'shiqlarning faqat audio versiyasini musiqiy video o\'rniga ijro eting. \'Video oqimlarini soxtalashtirish\' talab qiladi.</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Uchinchi tomon yuklab olish ilovalari yordamida musiqa videolari, podkastlar yoki qo‘shiqlarni yuklab oling</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -140,6 +141,8 @@ Krosfeyd YouTube Music'ning 8.x va 9.x undan yuqori versiyalarda ishlaydi"</stri
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">\"Yoqtirmadi\" tugmasi yo‘naltirilishini o‘chirish</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Yoqmaslik tugmasi bosilganda keyingi trekga o\'tishning oldi olinadi</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Chromecast tugmasini yashirish</string>
   <string name="morphe_music_hide_history_button_title">Ko‘rishlar tarixi tugmasini yashirish</string>

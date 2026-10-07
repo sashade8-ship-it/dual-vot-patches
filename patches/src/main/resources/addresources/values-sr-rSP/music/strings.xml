@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Репродукуј аудио нумере албума</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Репродукуј само аудио верзије песама уместо музичког видеа. Захтева \'Лажирање видео стримова\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Омогући аудио/видео пребацивање</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Покушај да пребациш аудио верзију и званични музички видео</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Преузмите музичке спотове, подкасте или песме помоћу апликација за преузимање података од трећих страна</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — прелазак ради само на 9.x и новиј�
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Искључи преусмерење нелајковања</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Спречава прелазак на следећу нумеру када се притисне дугме за нелајковање</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Радња при додиру нумере у плејлисти</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Пусти плејлисту</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Пусти само изабрану нумеру</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Додај изабрану нумеру у ред чекања</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Додато у ред чекања</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Сакриј дугме „Пребацивање”</string>
   <string name="morphe_music_hide_history_button_title">Сакриј дугме „Историја”</string>

@@ -229,4 +229,7 @@ MicroG に対して電池の最適化を無効にしても、バッテリー消�
 できるだけ問題の少ない環境を希望する場合は、このアプリを &lt;b&gt;アンインストール&lt;/b&gt; して推奨アプリ バージョンである ✅ &lt;b&gt;%2$s&lt;/b&gt; にパッチを適用してください。"</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ 実験版にします</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ 安定版にします</string>
+  <!-- misc.crashlog.crashLogPatch -->
+  <string name="morphe_crash_log_saved_documents">クラッシュログがユーザードキュメントに保存されました: %s</string>
+  <string name="morphe_crash_log_saved">クラッシュログが保存されました: %s</string>
 </resources>

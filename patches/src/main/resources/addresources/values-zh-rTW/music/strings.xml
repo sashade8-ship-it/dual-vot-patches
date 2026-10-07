@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">播放專輯音訊曲目</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">播放專輯中歌曲的純音訊版本，而不是音樂錄影帶。需要「欺騙影片串流」</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">啟用音訊/視訊切換</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">嘗試切換音訊軌道版本與官方音樂錄影帶</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">使用第三方下載應用程式下載音樂影片、播客或歌曲</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">停用取消喜歡重新導向</string>
   <string name="morphe_music_disable_dislike_redirection_summary">防止按下不喜歡按鈕時跳到下一首歌曲</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">播放清單曲目輕觸動作</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">播放整個播放清單</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">僅播放選取的曲目</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">將選取的曲目新增至佇列</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">已新增至佇列</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">隱藏投放按鈕</string>
   <string name="morphe_music_hide_history_button_title">隱藏歷史記錄按鈕</string>

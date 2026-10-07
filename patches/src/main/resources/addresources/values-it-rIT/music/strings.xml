@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Riproduci le tracce audio dell\'album</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Riproduci la versione solo audio delle canzoni dell\'album invece di un video musicale. Richiede \'Simula i flussi video\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Abilita il passaggio audio/video</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Prova a commutare tra la versione audio e il video musicale ufficiale</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Scarica video musicali, podcast o canzoni con app di download di terze parti</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -274,6 +277,13 @@ YouTube Music 8.x: il crossfade funziona solo su 9.x e versioni successive"</str
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Disabilita il reindirizzamento dei \"non mi piace\"</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Impedisce il passaggio alla traccia successiva quando viene premuto il pulsante \"non mi piace\"</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Azione al tocco sulla traccia della playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Riproduci la playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Riproduci solo la traccia selezionata</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Aggiungi la traccia selezionata alla coda</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Aggiunto alla coda</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Nascondi pulsante trasmetti</string>
   <string name="morphe_music_hide_history_button_title">Nascondi pulsante cronologia</string>

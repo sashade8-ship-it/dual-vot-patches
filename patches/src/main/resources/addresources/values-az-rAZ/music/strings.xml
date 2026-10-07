@@ -113,6 +113,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Albom səs treklərini səsləndir</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Musiqi videosu əvəzinə mahnıların yalnız albom səsi versiyasını səsləndirir. \'Video yayımlarını saxtalaşdırı\' tələb edir</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Üçüncü tərəf yükləmə tətbiqləri ilə musiqi videolarını, podkastları və ya mahnıları yüklə</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +276,9 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Bəyənməmə yönləndirilməsini qapat</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Bəyənməmə düyməsi basıldıqda növbəti trekə keçməyə mane olur</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Növbəyə əlavə edildi</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Yayımla düyməsini gizlət</string>
   <string name="morphe_music_hide_history_button_title">Tarixçə düyməsini gizlət</string>

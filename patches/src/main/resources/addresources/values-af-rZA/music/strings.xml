@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Speel albumklankbane</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Speel die album-oudio-weergawe van liedjies in plaas van \'n musiekvideo. Vereis \'Vervals videostrome\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Aktiveer oudio/video-skakelaar</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Probeer om tussen die oudiosnitweergawe en die amptelike musiekvideo te wissel</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Laai musiekvideo\'s, podcasts of liedjies af met derdeparty-aflaai-programme</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — vervaag loop slegs op 9.x en nuwer"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Deaktiveer die afkeur-hertoekenning</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Voorkom dat na die volgende snitspring wanneer die afkeur-knoppie gedruk word</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Tikaksie vir snitlyssnit</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Speel die snitlys</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Speel net die geselekteerde snit</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Voeg die geselekteerde snit by die tou</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">By tou gevoeg</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Verberg Cast-knoppie</string>
   <string name="morphe_music_hide_history_button_title">Verberg Geskiedenis-knoppie</string>

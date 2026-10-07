@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Seinn rianta fuaime albam</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Seinn leagan fuaime amháin d’amhráin an albaim in ionad físeán ceoil. Éilíonn sé \'sruthanna físe bréige\'.</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Cumasaigh athrú fuaime/físe</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Féach le haistriú idir Leagan an Rian Fuaime agus an Físeán Ceoil Oifigiúil</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Íoslódáil físeáin ceoil, podchraoltaí, nó amhráin le haipeanna íoslódála tríú páirtí</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — ní ritheann an traschéimniú ach ar 9.x agus níos nuaí
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Díchumasaigh atreorú \"díomá\"</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Coscann sé léim go dtí an chéad rian eile nuair a bhrúitear an cnaipe \'Ní maith liom\'</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Gníomh sconna ar rian seinmliosta</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Seinn an seinmliosta</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Seinn an rian roghnaithe amháin</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Cuir an rian roghnaithe leis an scuaine</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Cuireadh leis an scuaine</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Folaigh an cnaipe Cast</string>
   <string name="morphe_music_hide_history_button_title">Cnaipe Folaigh Stair</string>

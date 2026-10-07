@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Reprodukuj audio sa albuma</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Reprodukuj samo audio verziju pesama sa albuma umesto muzičkog spota. Zahteva „Lažiranje video tokova“</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Omogući prebacivanje audio/video</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Pokušava da prebaci između verzije audio zapisa i zvaničnog muzičkog spota</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Preuzmite muzičke spotove, podkaste ili pesme pomoću aplikacija za preuzimanje trećih strana</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -274,6 +277,13 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Onemogući preusmerBravljenje pri negađenNji</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Sprečava preskakanje na sledeCdeću numeru kada se pritisne dugme za negaNje</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Radnja pri dodiru na numeru u listi reprodukcije</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Reprodukuj plejlistu</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Reprodukuj samo izabranu numeru</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Dodaj izabranu numeru u red čekanja</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Dodato u red čekanja</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Sakrij dugme „Prebacuj”</string>
   <string name="morphe_music_hide_history_button_title">Sakrij dugme „Istorija”</string>

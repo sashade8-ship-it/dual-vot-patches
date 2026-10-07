@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Prehrať audio skladby albumu</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Prehráva iba audio verziu skladieb albumu namiesto hudobného videa. Vyžaduje \'Spoof video streamy\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Povoliť prepínanie audio/video</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Pokúsiť sa prepnúť verziu zvukovej stopy a oficiálne hudobné video</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Stiahnite si hudobné videá, podcasty alebo piesne pomocou sťahovacích aplikácií tretích strán</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x – crossfade funguje iba vo verzii 9.x a novších"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Zakázať presmerovanie dislajkov</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Zabraňuje preskočeniu na ďalšiu skladbu po stlačení tlačidla dislajku</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Akcia po klepnutí na skladbu v zozname skladieb</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Prehrať zoznam skladieb</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Prehrať iba vybranú skladbu</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Pridať vybranú skladbu do frontu</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Pridané do frontu</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Skryť tlačidlo Prenos</string>
   <string name="morphe_music_hide_history_button_title">Skryť tlačidlo histórie</string>

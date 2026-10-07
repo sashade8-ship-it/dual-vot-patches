@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Spela albumets ljudspår</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Spela albumets ljudversion av låtarna istället för en musikvideo. Kräver \'Förfalska videoströmmar\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Aktivera ljud/videoväxling</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Försök att byta ljudspårsversion och officiell musikvideo</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Ladda ner musikvideor, poddar eller låtar med tredjeparts nedladdningsappar</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — crossfade fungerar endast på 9.x och nyare"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Inaktivera omdirigering av ogilla</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Förhindrar att hoppa till nästa låt när ogilla-knappen trycks</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Åtgärd vid tryck på låt i spellista</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Spela spellistan</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Spela endast den valda låten</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Lägg till den valda låten i kön</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Tillagd i kön</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Dölj knappen Casta</string>
   <string name="morphe_music_hide_history_button_title">Dölj historikknappen</string>

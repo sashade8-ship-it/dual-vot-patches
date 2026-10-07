@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Afspil albummets numre</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Afspil kun lydversionen af albummets sange i stedet for en musikvideo. Kræver \'Spoof video streams\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Aktivér lyd/video-skift</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Prøv at skifte mellem lydsporversion og officiel musikvideo</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Download musikvideoer, podcasts eller sange med tredjeparts download-apps</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -274,6 +277,13 @@ YouTube Music 8.x – crossfade kører kun på 9.x og nyere"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Deaktiver omdirigering af \'synes ikke godt om\'</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Forhindrer at der springes til næste nummer, når knappen \'synes ikke godt om\' trykkes</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Handling ved tryk på nummer i playliste</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Afspil playlisten</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Afspil kun det valgte nummer</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Tilføj det valgte nummer til køen</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Tilføjet til køen</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Skjul cast-knap</string>
   <string name="morphe_music_hide_history_button_title">Skjul historikknap</string>

@@ -123,6 +123,10 @@ Second \"item\" text"</string>
     <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
     <string name="morphe_music_play_album_songs_summary">Play the album audio only version of songs instead of a music video. Requires \'Spoof video streams\'</string>
 
+    <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+    <string name="morphe_music_enable_audio_video_switch_title">Enable audio/video switch</string>
+    <string name="morphe_music_enable_audio_video_switch_summary">Try to switch Audio Track Version and Official Music Video</string>
+
     <!-- interaction.downloads.downloadsPatch -->
     <string name="morphe_external_downloader_screen_summary">Download music videos, podcasts, or songs with third-party downloading apps</string>
     <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -300,6 +304,14 @@ YouTube Music 8.x — crossfade only runs on 9.x and newer"</string>
     <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
     <string name="morphe_music_disable_dislike_redirection_title">Disable dislike redirection</string>
     <string name="morphe_music_disable_dislike_redirection_summary">Prevents skipping to the next track when the dislike button is pressed</string>
+
+    <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+    <string name="morphe_music_playlist_track_tap_action_title">Playlist track tap action</string>
+    <string name="morphe_music_playlist_track_tap_action_entry_default">Play the playlist</string>
+    <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Play only the selected track</string>
+    <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Add the selected track to the queue</string>
+    <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+    <string name="morphe_music_playlist_track_tap_added_to_queue">Added to queue</string>
 
     <!-- layout.buttons.hideButtonsPatch -->
     <string name="morphe_music_hide_cast_button_title">Hide Cast button</string>

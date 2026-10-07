@@ -1158,9 +1158,17 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">Titoli DeArrow</string>
-  <string name="morphe_dearrow_titles_summary">Sostituisce i titoli dei video con i titoli inviati dalla community a DeArrow</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">Per la scheda Home</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">Per la scheda Iscrizioni</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">Per la scheda Tu</string>
+  <string name="morphe_dearrow_titles_player_title">Per playlist e consigli del lettore</string>
+  <string name="morphe_dearrow_titles_search_title">Per i risultati della ricerca</string>
   <string name="morphe_dearrow_titles_icon_title">Mostra l\'icona DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Mostra l\'icona DeArrow sui titoli video in crowdsourcing</string>
+  <string name="morphe_dearrow_thumbnails_title">Miniature DeArrow</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">Per la scheda Home</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

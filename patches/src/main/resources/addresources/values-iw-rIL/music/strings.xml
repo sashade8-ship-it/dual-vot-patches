@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">נגן רצועות אודיו של האלבום</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">נגן את גרסת האודיפ בלבד של שירי האלבום במקום קליפ. דורש \'זיוף הזרמות וידאו\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">הפעל החלפת אודיו/וידאו</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">נסה להחליף בין גרסת רצועת האודיו לבין הקליפ המוזיקלי הרשמי</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">הורד קליפי מוזיקה, פודקאסטים או שירים באמצעות אפליקציות הורדה של צד שלישי</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x - מעבר הצלילים פועל רק בגרסה 9.x ומע�
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">ביטול הפנייה בלחיצה על \"דיסלייק\"</string>
   <string name="morphe_music_disable_dislike_redirection_summary">מניעת דילוג רצועה כאשר לוחצים על \"דיסלייק\"</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">פעולת הקשה על שיר ברשימת השמעה</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">הפעל את רשימת ההשמעה</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">הפעל רק את השיר שנבחר</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">הוסף את השיר שנבחר לתור</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">נוסף לתור</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">הסתר לחצן שידור</string>
   <string name="morphe_music_hide_history_button_title">הסתר לחצן היסטוריה</string>

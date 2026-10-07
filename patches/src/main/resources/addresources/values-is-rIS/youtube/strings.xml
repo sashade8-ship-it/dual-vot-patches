@@ -1153,9 +1153,17 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">DeArrow titlar</string>
-  <string name="morphe_dearrow_titles_summary">Skiptir út myndbandstitlum fyrir hópunna titla sem lagðir hafa verið fram til DeArrow</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">Fyrir flipann Heim</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">Fyrir flipann Áskriftir</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">Fyrir flipann Þú</string>
+  <string name="morphe_dearrow_titles_player_title">Fyrir spilunarlista &amp; tillögur í spilaranum</string>
+  <string name="morphe_dearrow_titles_search_title">Fyrir leitarniðurstöður</string>
   <string name="morphe_dearrow_titles_icon_title">Sýna DeArrow táknið</string>
   <string name="morphe_dearrow_titles_icon_summary">Sýnir DeArrow táknið á hópsöfnuðum myndbandstitlum</string>
+  <string name="morphe_dearrow_thumbnails_title">DeArrow-smámyndir</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">Fyrir valmyndina Heim</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

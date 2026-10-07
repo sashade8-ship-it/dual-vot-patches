@@ -113,6 +113,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Spila hljóðlög úr albúmi</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Spila eingöngu hljóðlög úr albúmi í stað tónlistarmyndbands. Krefst \'Blekkja myndbandastreymi\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Sæktu niður tónlistarmyndbönd, þætti eða lög með þriðja aðila niðurhal forrit</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +276,13 @@ YouTube Music 8.x — crossfade virkar bara á 9.x og nýrri útgáfum"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Gerðu kvíða útaf að breyta áttun þegar ólíka takkan er ýtt á</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Kemur í veg fyrir að spila næsta lag þegar ólíka takkan er ýtt á</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Aðgerð þegar smellt er á lag í spilunarlista</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Spila spilunarlistann</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Spila aðeins valda lagið</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Bæta valda laginu við biðröðina</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Bætt í biðröð</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Fela Cast hnapp</string>
   <string name="morphe_music_hide_history_button_title">Fela Sögu hnapp</string>

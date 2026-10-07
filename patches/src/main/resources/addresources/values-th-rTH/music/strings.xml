@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">เล่นแทร็กเสียงอัลบั้ม</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">เล่นเวอร์ชันเสียงเท่านั้นของเพลงในอัลบั้มแทนมิวสิกวิดีโอ ต้องใช้ \'ปลอมแปลงสตรีมวิดีโอ\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">เปิดใช้งานการสลับเสียง/วิดีโอ</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">ลองสลับเวอร์ชันแทร็กเสียงและมิวสิกวิดีโออย่างเป็นทางการ</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">ดาวน์โหลดวิดีโอเพลง พอดแคสต์ หรือเพลงด้วยแอปดาวน์โหลดของบุคคลที่สาม</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — การเฟดข้ามจะทำงานบน 
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">ปิดการเปลี่ยนเพลงเมื่อกดไม่ชอบ</string>
   <string name="morphe_music_disable_dislike_redirection_summary">ป้องกันไม่ให้ข้ามไปยังแทร็กถัดไปเมื่อกดปุ่มไม่ชอบ</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">การแตะแทร็กในเพลย์ลิสต์</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">เล่นเพลย์ลิสต์</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">เล่นเฉพาะแทร็กที่เลือก</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">เพิ่มแทร็กที่เลือกลงในคิว</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">เพิ่มลงในคิวแล้ว</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">ซ่อนปุ่มแคสต์</string>
   <string name="morphe_music_hide_history_button_title">ซ่อนปุ่มประวัติ</string>

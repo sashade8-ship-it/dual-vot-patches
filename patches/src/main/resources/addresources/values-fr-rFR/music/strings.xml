@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Lire les morceaux audio de l\'album</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Lire la version audio des chansons de l\'album au lieu du clip vidéo. Nécessite \'Falsifier les flux vidéo\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Activer le bouton de bascule audio/vidéo</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Essayez de basculer entre la Version Audio et le Clip Vidéo Officiel</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Téléchargez des vidéos, des podcasts ou des chansons avec des applications de téléchargement tierces</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Désactiver la redirection des \'Je n\'aime pas\'</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Empêche de passer au morceau suivant lorsque le bouton \'Je n\'aime pas\' est appuyé</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Action au toucher d’une piste de la playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Lire la playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Lire uniquement la piste sélectionnée</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Ajouter la piste sélectionnée à la file d’attente</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Ajouté à la file d\'attente</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Masquer le bouton \'Caster\'</string>
   <string name="morphe_music_hide_history_button_title">Masquer le bouton \'Historique\'</string>

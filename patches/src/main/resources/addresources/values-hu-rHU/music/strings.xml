@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Album hangszámok lejátszása</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Az album audio-only verzióját játssza le a számoknak a videoklip helyett. \'Videostreamek meghamisítása\' szükséges.</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Hang/videó váltás engedélyezése</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Próbálja meg átváltani az audioverzió és a hivatalos videóklip között</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Töltsön le zenei videókat, podcastokat vagy dalokat külső letöltő alkalmazásokkal</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x – a keresztátmenet csak a 9.x és újabb verziókon fut."</
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Tiltás a nemtetszés átirányításának letiltása</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Megakadályozza, hogy a nemtetszés gomb megnyomása esetén a következő számra ugorjon</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Lejátszási lista számának koppintási művelete</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Lejátszási lista lejátszása</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Csak a kiválasztott szám lejátszása</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">A kiválasztott szám hozzáadása a várólistához</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Hozzáadva a várólistához</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Átküldés gomb elrejtése</string>
   <string name="morphe_music_hide_history_button_title">Előzmények gomb elrejtése</string>

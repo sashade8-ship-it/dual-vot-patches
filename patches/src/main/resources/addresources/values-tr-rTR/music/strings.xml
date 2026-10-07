@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Albüm ses parçalarını çal</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Şarkıların yalnızca sesli albüm sürümünü müzik videosu yerine çal. \'Video akışlarını taklit et\' gerektirir</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Ses/görüntü geçişini etkinleştir</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Ses Parçası Sürümü ile Resmi Müzik Videosu arasında geçiş yapmayı deneyin.</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Üçüncü taraf indirme uygulamalarıyla müzik videoları, podcast\'ler veya şarkılar indirin</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Olumsuz oylama yönlendirmesini devre dışı bırak</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Olumsuz oy tuşuna basıldığında sonraki parçaya geçmeyi engeller</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Çalma listesi parça dokunma eylemi</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Çalma listesini çal</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Yalnızca seçili parçayı çal</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Seçilen parçayı kuyruğa ekle</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Sıraya eklendi</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Yayınla düğmesini gizle</string>
   <string name="morphe_music_hide_history_button_title">Geçmiş düğmesini gizle</string>

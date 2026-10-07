@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Album audiotracks afspelen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Speel de audio-only versie van albumnummers af in plaats van een muziekvideo. Vereist \'Videostreams vervalsen\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Audio/video-omschakeling inschakelen</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Probeer over te schakelen tussen audiotrackversie en officiële muziekvideo</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Download muziekvideo\'s, podcasts of nummers met apps van derden</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x - crossfade werkt alleen op 9.x en nieuwer"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Schakel dislike omleiding uit</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Voorkomt dat naar het volgende nummer wordt gesprongen wanneer op de dislike-knop wordt gedrukt</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Tikactie voor afspeellijstnummers</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Speel de afspeellijst af</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Speel alleen het geselecteerde nummer af</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Voeg het geselecteerde nummer toe aan de wachtrij</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Toegevoegd aan wachtrij</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Cast-knop verbergen</string>
   <string name="morphe_music_hide_history_button_title">Geschiedenisknop verbergen</string>

@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Odtwarzaj utwory z albumu</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Odtwarza utwory w wersji z albumu zamiast teledysków. Wymaga opcji \"Fałszowanie strumieni filmów\"</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Włącz przełącznik Utwór/Film</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Próbuje przełączać między utworem a oficjalnym teledyskiem</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Pobieraj teledyski, podcasty lub utwory za pomocą zewnętrznych aplikacji do pobierania</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ Ekran blokady lub powiadomienie może przez chwilę pokazywać nieaktualny stan 
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Wyłącz pomijanie nielubianych piosenek</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Zapobiega przechodzeniu do następnego utworu po naciśnięciu łapki w dół</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Działanie po dotknięciu utworu na playliście</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Odtwórz playlistę</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Odtwórz tylko wybrany utwór</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Dodaj wybrany utwór do kolejki</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Utwór został dodany do kolejki</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Ukryj przycisk Przesyłaj</string>
   <string name="morphe_music_hide_history_button_title">Ukryj przycisk Historia</string>

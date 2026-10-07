@@ -229,4 +229,7 @@ Jeśli ustawienia optymalizacji baterii nie zostaną zmienione, mogą wystąpić
 Jeśli zależy Ci na stabilności, &lt;b&gt;odinstaluj&lt;/b&gt; obecną aplikację i zmodyfikuj zalecaną wersję ✅ &lt;b&gt;%2$s&lt;/b&gt;"</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ Wybieram eksperymentalną</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ Wybieram stabilną</string>
+  <!-- misc.crashlog.crashLogPatch -->
+  <string name="morphe_crash_log_saved_documents">Zapisano dziennik awarii w dokumentach użytkownika: %s</string>
+  <string name="morphe_crash_log_saved">Zapisano dziennik awarii: %s</string>
 </resources>

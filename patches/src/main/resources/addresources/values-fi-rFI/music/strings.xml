@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Soita albumin ääniraidat</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Soita albumin kappaleiden pelkkä ääniversio musiikkivideon sijaan. Vaatii \'Videosuoratoistojen väärentämisen\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Ota ääni-/videovaihto käyttöön</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Yritä vaihtaa ääniraidan versiota ja virallista musiikkivideota</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Lataa musiikkivideoita, podcasteja tai kappaleita kolmannen osapuolen lataussovelluksilla</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x – crossfade toimii vain versiossa 9.x ja uudemmissa."</strin
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Poista epätykkäysten uudelleenohjaus</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Estää kappaleen ohittamisen, kun epätykkäyspainiketta painetaan</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Soittolistan kappaleen napautustoiminto</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Toista soittolista</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Toista vain valittu kappale</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Lisää valittu kappale jonoon</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Lisätty jonoon</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Piilota Cast-painike</string>
   <string name="morphe_music_hide_history_button_title">Piilota historia-painike</string>

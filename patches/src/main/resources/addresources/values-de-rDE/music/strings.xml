@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Album-Audiotitel abspielen</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Die Audio-Version der Songs des Albums abspielen anstatt eines Musikvideos. Erfordert \'Spoof video streams\'.</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Audio-/Video-Umschaltung aktivieren</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Es wird versucht, zwischen Audio-Track-Version und offiziellem Musikvideo umzuschalten</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Lade Musikvideos, Podcasts oder Songs mit Anwendungen von Drittanbietern herunter</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x – Nahtlose Wiedergabe funktioniert erst ab Version 9.x."</st
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Deaktivieren Sie die Weiterleitung von Nicht-Gefällt-mir-Angaben</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Verhindert das automatische Überspringen zum nächsten Titel, wenn die Taste \"Nicht gefallen\" gedrückt wird</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Tippaktion für Wiedergabelistentitel</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Wiedergabeliste abspielen</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Nur den ausgewählten Titel abspielen</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Den ausgewählten Titel zur Warteschlange hinzufügen</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Zur Warteschlange hinzugefügt</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Cast-Button ausblenden</string>
   <string name="morphe_music_hide_history_button_title">Verlauf-Button ausblenden</string>

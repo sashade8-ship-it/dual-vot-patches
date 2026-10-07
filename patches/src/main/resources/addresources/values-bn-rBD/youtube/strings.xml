@@ -1143,9 +1143,17 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">DeArrow শিরোনাম</string>
-  <string name="morphe_dearrow_titles_summary">DeArrow-এ জমা দেওয়া ক্রাউডসোর্সড শিরোনাম দিয়ে ভিডিও শিরোনামগুলিকে প্রতিস্থাপন করে</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">হোম ট্যাবের জন্য</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">সাবস্ক্রিপশন ট্যাবের জন্য</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">আপনি ট্যাবের জন্য</string>
+  <string name="morphe_dearrow_titles_player_title">প্লেয়ার প্লেলিস্ট &amp; রেকমেন্ডেশনের জন্য</string>
+  <string name="morphe_dearrow_titles_search_title">অনুসন্ধান ফলাফলের জন্য</string>
   <string name="morphe_dearrow_titles_icon_title">DeArrow আইকন দেখান</string>
   <string name="morphe_dearrow_titles_icon_summary">ক্রাউডসোর্সড ভিডিও শিরোনামে DeArrow আইকন দেখায়</string>
+  <string name="morphe_dearrow_thumbnails_title">DeArrow থাম্বনেইল</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">হোম ট্যাবের জন্য</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

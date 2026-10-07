@@ -1158,9 +1158,17 @@ Second \"item\" text"</string>
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">DeArrow 标题</string>
-  <string name="morphe_dearrow_titles_summary">使用提交至 DeArrow 的众包标题替换视频标题</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">适用于首页标签页</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">适用于订阅标签页</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">适用于媒体库标签页</string>
+  <string name="morphe_dearrow_titles_player_title">适用于播放器的播放列表 &amp; 推荐</string>
+  <string name="morphe_dearrow_titles_search_title">适用于搜索结果</string>
   <string name="morphe_dearrow_titles_icon_title">显示DeArrow图标</string>
   <string name="morphe_dearrow_titles_icon_summary">在众包视频标题上显示DeArrow图标</string>
+  <string name="morphe_dearrow_thumbnails_title">DeArrow 缩略图</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">供主页标签使用</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

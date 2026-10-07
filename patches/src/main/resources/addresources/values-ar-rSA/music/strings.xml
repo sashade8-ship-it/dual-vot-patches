@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">تشغيل مسارات الألبوم الصوتية</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">تشغيل مسارات الألبوم الصوتية</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">تفعيل تبديل الصوت/الفيديو</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">محاولة التبديل بين إصدار المسار الصوتي والفيديو الموسيقي الرسمي</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">تنزيل مقاطع الفيديو الموسيقية أو البودكاست أو الأغاني باستخدام تطبيقات تنزيل خارجية</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">تعطيل إعادة توجيه الإعجاب الشديد</string>
   <string name="morphe_music_disable_dislike_redirection_summary">يمنع الانتقال إلى المقطع التالي عند الضغط على زر عدم الإعجاب</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">إجراء النقر على أغنية في قائمة التشغيل</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">تشغيل قائمة التشغيل</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">تشغيل الأغنية المحددة فقط</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">إضافة الأغنية المحددة إلى قائمة الانتظار</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">تمت الإضافة إلى قائمة الانتظار</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">إخفاء زر البث</string>
   <string name="morphe_music_hide_history_button_title">إخفاء زر السجل</string>

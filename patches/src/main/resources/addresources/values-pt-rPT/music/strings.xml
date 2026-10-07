@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Reproduzir faixas de áudio do álbum</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Reproduzir a versão somente de áudio das músicas do álbum em vez de um videoclipe. Exige \'Falsificar streams de vídeo\'\"}],</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Ativar troca de áudio/vídeo</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Tentar alternar entre a versão da faixa de áudio e o videoclipe oficial</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Descarregue vídeos musicais, podcasts ou músicas com aplicações de transferência de terceiros</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — o crossfade só funciona na versão 9.x e mais recentes"</
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Desativar redirecionamento de dislikes</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Impede a passagem para a próxima faixa quando o botão de dislike é pressionado</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Ação de toque na faixa da playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Reproduzir a playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Reproduzir apenas a faixa selecionada</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Adicionar a faixa selecionada à fila</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Adicionada à fila</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Ocultar botão de transmissão</string>
   <string name="morphe_music_hide_history_button_title">Ocultar botão de histórico</string>

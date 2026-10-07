@@ -229,4 +229,7 @@ Ha nem módosítják az akkumulátor-optimalizálást, akkor előfordulhat:
 A legkényelmesebb élmény érdekében &lt;b&gt;eltávolítsa&lt;/b&gt; ezt, és javítsa a ✅ &lt;b&gt;%2$s&lt;/b&gt; ajánlott alkalmazás verzióját."</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ Szeretném kísérleti</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ Szeretném stabil</string>
+  <!-- misc.crashlog.crashLogPatch -->
+  <string name="morphe_crash_log_saved_documents">Összeomlási napló mentve a felhasználói dokumentumok közé: %s</string>
+  <string name="morphe_crash_log_saved">Összeomlási napló mentve: %s</string>
 </resources>

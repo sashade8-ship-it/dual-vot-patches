@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">앨범 오디오 트랙 재생하기</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">뮤직 비디오 대신 앨범 오디오 버전만 재생합니다. \'동영상 스트림 속이기\'가 필요합니다</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">오디오/동영상 스위치 활성화하기</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">오디오 트랙 버전과 공식 뮤직비디오로 전환할 수 있습니다</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">서드파티 다운로드 앱을 사용하여 뮤직비디오, 팟캐스트 또는 노래를 다운로드할 수 있습니다</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">싫어요 리다이렉션 비활성화하기</string>
   <string name="morphe_music_disable_dislike_redirection_summary">싫어요 버튼을 탭했을 경우에 다음 트랙으로 건너뛰는 것을 방지합니다</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">재생목록 트랙 탭 작업</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">재생목록 재생</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">선택한 트랙만 재생</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">선택한 트랙을 현재 재생목록에 추가</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">현재 재생목록에 추가하였습니다</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">크롬캐스트 버튼 숨기기</string>
   <string name="morphe_music_hide_history_button_title">기록 버튼 숨기기</string>

@@ -1158,9 +1158,17 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">DeArrow naslovi</string>
-  <string name="morphe_dearrow_titles_summary">Zamenjuje naslove video zapisa naslovima iz zajednice koji su dostavljeni DeArrow-u</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">Za karticu Početna</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">Za karticu Pretplate</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">Za karticu Vi</string>
+  <string name="morphe_dearrow_titles_player_title">Za plejliste &amp; preporuke u plejeru</string>
+  <string name="morphe_dearrow_titles_search_title">Za rezultate pretrage</string>
   <string name="morphe_dearrow_titles_icon_title">Prikaži DeArrow ikonu</string>
   <string name="morphe_dearrow_titles_icon_summary">Prikazuje DeArrow ikonu na naslovima videa koje su dodali korisnici</string>
+  <string name="morphe_dearrow_thumbnails_title">DeArrow sličice</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">Za početnu karticu</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

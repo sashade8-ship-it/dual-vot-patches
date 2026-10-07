@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">I-play ang mga audio track ng album</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">I-play ang bersyon ng audio-only ng mga kanta sa album sa halip na music video. Nangangailangan ng \'Spoof video streams\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">I-enable ang audio/video switch</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Subukang lumipat sa Audio Track Version at Official Music Video</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">I-download ang mga music video, podcast, o kanta gamit ang mga app sa pag-download mula sa third-party</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — tumatakbo lamang ang crossfade sa 9.x at mas bago"</string
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Huwag paganahin ang pagpapalit ng direksyon ng hindi pagka gusto</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Pinipigilan ang paglaktaw sa susunod na track kapag pinindot ang pindutang hindi pagka gusto</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Aksyon sa pag-tap sa track sa playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">I-play ang playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">I-play lang ang napiling track</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Idagdag ang napiling track sa queue</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Idinagdag sa queue</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Itago ang Cast button</string>
   <string name="morphe_music_hide_history_button_title">Itago ang kasaysayan na button</string>

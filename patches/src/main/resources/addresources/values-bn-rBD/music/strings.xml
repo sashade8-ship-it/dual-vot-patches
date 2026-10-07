@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">অ্যালবাম অডিও ট্র্যাক চালান</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">মিউজিক ভিডিওর পরিবর্তে শুধুমাত্র অডিও সংস্করণ চালান। \'স্পুফ ভিডিও স্ট্রিম\' প্রয়োজন।</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">অডিও/ভিডিও সুইচ সক্ষম করুন</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">অডিও ট্র্যাক সংস্করণ এবং অফিসিয়াল মিউজিক ভিডিও স্যুইচ করার চেষ্টা করুন</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">থার্ড-পার্টি ডাউনলোড করার অ্যাপের মাধ্যমে মিউজিক ভিডিও, পডকাস্ট বা গান ডাউনলোড করুন</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ Second \"item\" text"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">ডিসলাইক রিডাইরেকশন নিষ্ক্রিয় করুন</string>
   <string name="morphe_music_disable_dislike_redirection_summary">ডিসলাইক বোতাম চাপলে পরবর্তী ট্র্যাকে যাওয়া বন্ধ করে</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">প্লেলিস্ট ট্র্যাক ট্যাপ অ্যাকশন</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">প্লেলিস্ট চালান</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">শুধুমাত্র নির্বাচিত ট্র্যাকটি চালান</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">নির্বাচিত ট্র্যাকটি সারিতে যোগ করুন</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">ভিডিও তালিকায় যুক্ত করা হয়েছে</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">কাস্ট বোতাম লুকান</string>
   <string name="morphe_music_hide_history_button_title">ইতিহাস বোতাম লুকান</string>

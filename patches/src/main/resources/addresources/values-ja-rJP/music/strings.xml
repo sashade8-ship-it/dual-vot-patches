@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">アルバムを音声のみモードで再生</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">アルバムを再生するときに、動画モードに切り替わることなくすべての曲を音声のみモードで再生します。[動画ストリームを偽装] をオンにする必要があります</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">音声/動画切り替えを有効にする</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">音声トラックのバージョンと公式ミュージックビデオの切り替えを試みます</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">サードパーティ製のダウンロード アプリで、ミュージック ビデオ、ポッドキャスト、楽曲をダウンロードします</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">低評価によるスキップを無効化</string>
   <string name="morphe_music_disable_dislike_redirection_summary">低評価ボタンを押したときに次の曲にスキップする機能を無効にします</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">プレイリストのトラックタップアクション</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">プレイリストを再生する</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">選択したトラックのみを再生する</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">選択したトラックをキューに追加する</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">キューに追加しました</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">キャストボタンを非表示</string>
   <string name="morphe_music_hide_history_button_title">履歴ボタンを非表示</string>

@@ -1158,9 +1158,17 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <string name="morphe_dearrow_titles_title">DeArrow başlıkları</string>
-  <string name="morphe_dearrow_titles_summary">Video başlıklarını, DeArrow\'a gönderilen ve topluluk tarafından sağlanan başlıklarla değiştirir</string>
+  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">Ana Sayfa sekmesi için</string>
+  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">Abonelikler sekmesi için</string>
+  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">Siz sekmesi için</string>
+  <string name="morphe_dearrow_titles_player_title">Oynatma listeleri &amp; önerileri için</string>
+  <string name="morphe_dearrow_titles_search_title">Arama sonuçları için</string>
   <string name="morphe_dearrow_titles_icon_title">DeArrow simgesini göster</string>
   <string name="morphe_dearrow_titles_icon_summary">Kitle kaynaklı video başlıklarında DeArrow simgesini gösterir</string>
+  <string name="morphe_dearrow_thumbnails_title">DeArrow küçük resimleri</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_home_title">Ana Sayfa sekmesi için</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->

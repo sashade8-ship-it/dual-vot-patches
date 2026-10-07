@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Predvajaj skladbe albuma</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Predvajaj zvočne različice skladb albuma namesto glasbenega videa. Zahteva \'Ponaredi video tokove\'.</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Omogoči preklop med zvokom in videom</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Poskusi preklopiti med zvočno različico in uradnim glasbenim videom</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Prenesite videe, podkaste ali pesmi z aplikacijami za prenašanje tretje osebe</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x – prehod deluje samo v 9.x in novejših različicah."</strin
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Onemogoči preusmeritev všečka</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Preprečuje preskok na nasledno skladbo, ko je pritisnjen gumb »ne všeč«</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Dejanje ob dotiku skladbe v seznamu predvajanja</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Predvajaj seznam predvajanja</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Predvajaj samo izbrano skladbo</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Dodaj izbrano skladbo v čakalno vrsto</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Dodano v čakalno vrsto</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Skrij gumb za oddajanje</string>
   <string name="morphe_music_hide_history_button_title">Skrij gumb Zgodovina</string>

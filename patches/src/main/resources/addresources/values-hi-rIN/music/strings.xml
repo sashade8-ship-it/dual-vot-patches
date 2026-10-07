@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">एल्बम ऑडियो ट्रैक चलाएँ</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">म्यूज़िक वीडियो के बजाय गानों का केवल ऑडियो वर्ज़न चलाएँ। इसके लिए \'स्पूफ़ वीडियो स्ट्रीम्स\' चालू होना ज़रूरी है</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">ऑडियो/वीडियो स्विच सक्षम करें</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">ऑडियो ट्रैक संस्करण और आधिकारिक संगीत वीडियो स्विच करने का प्रयास करें</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">थर्ड-पार्टी डाउनलोडर ऐप्स से म्यूज़िक वीडियो, पॉडकास्ट या गाने डाउनलोड करें</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">अनापसंद पुनर्निर्देशन को अक्षम करें</string>
   <string name="morphe_music_disable_dislike_redirection_summary">जब अनापसंद बटन दबाया जाता है तो अगले ट्रैक पर जाने से रोकता है</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">प्लेलिस्ट ट्रैक टैप करने की कार्रवाई</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">प्लेलिस्ट चलाएँ</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">केवल चयनित ट्रैक चलाएँ</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">चयनित ट्रैक को कतार में जोड़ें</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">कतार में जोड़ा गया</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">कास्ट बटन छुपाएं</string>
   <string name="morphe_music_hide_history_button_title">इतिहास बटन छुपाएं</string>

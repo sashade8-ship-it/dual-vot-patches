@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Reproduciraj audio pjesme s albuma</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Reproduciraj samo audio verziju pjesama s albuma umjesto glazbenog videa. Zahtijeva \'Spoof video streams\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Omogući audio/video prebacivanje</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Pokušaj prebaciti inačicu audio zapisa i službeni glazbeni spot</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Preuzmite glazbene videozapise, podcastove ili pjesme pomoću aplikacija za preuzimanje trećih strana</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — crossfade radi samo na 9.x i novijim inačicama"</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Onemogući preusmjeravanje kod ne sviđa mi se</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Sprečava preskakanje na sljedeću pjesmu kada se pritisne tipka Ne sviđa mi se</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Radnja dodira na pjesmu s popisa za reprodukciju</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Reproduciraj popis za reprodukciju</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Reproduciraj samo odabranu pjesmu</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Dodaj odabranu pjesmu u red čekanja</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Dodano u red</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Sakrij tipku za emitiranje</string>
   <string name="morphe_music_hide_history_button_title">Sakrij tipku za povijest</string>

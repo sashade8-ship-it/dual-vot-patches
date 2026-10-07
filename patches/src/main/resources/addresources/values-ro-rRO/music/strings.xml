@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_play_album_songs_title">Redă piesele audio ale albumului</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Redă numai versiunea audio a melodiilor din album în loc de un videoclip muzical. Necesită \'Spoof video streams\'</string>
+  <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Activează comutarea audio/video</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Încearcă să comute între versiunea audio și videoclipul muzical oficial</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Descarcă videoclipuri muzicale, podcasturi sau melodii folosind aplicații de descărcare terțe</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -275,6 +278,13 @@ YouTube Music 8.x — estomparea încrucișată funcționează doar pe 9.x și v
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
   <string name="morphe_music_disable_dislike_redirection_title">Dezactivează redirecționarea dislike</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Împiedică trecerea la următoarea melodie când este apăsat butonul dislike</string>
+  <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Acțiune la atingerea unei melodii din lista de redare</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Redă lista de redare</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Redă doar melodia selectată</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Adaugă melodia selectată în coada de redare</string>
+  <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">Adăugat în coada de redare</string>
   <!-- layout.buttons.hideButtonsPatch -->
   <string name="morphe_music_hide_cast_button_title">Ascunde butonul de transmisie</string>
   <string name="morphe_music_hide_history_button_title">Ascunde butonul de istoric</string>

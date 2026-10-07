@@ -229,4 +229,7 @@ Second \"item\" text"</string>
 假如您想要最穩定的體驗，請&lt;b&gt;解除安裝&lt;/b&gt;此版本，並改用 ✅ &lt;b&gt;%2$s&lt;/b&gt;應用程式的推薦版本。"</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ 我要用實驗版本</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ 我要用穩定版本</string>
+  <!-- misc.crashlog.crashLogPatch -->
+  <string name="morphe_crash_log_saved_documents">當機記錄已儲存至使用者文件：%s</string>
+  <string name="morphe_crash_log_saved">當機記錄已儲存：%s</string>
 </resources>
