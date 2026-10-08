@@ -17,16 +17,19 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Outline;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -47,6 +50,7 @@ import java.util.List;
 import java.util.Map;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.search.BaseSearchViewController;
 import app.morphe.extension.shared.theme.ThemeUtils;
@@ -136,6 +140,8 @@ public final class ChannelSearchPatch {
     private static final int THUMBNAIL_CORNER_RADIUS = Dim.dp(8);
     private static final int THUMBNAIL_TIMEOUT_MILLISECONDS = 10 * 1000;
 
+    private static final int TOOLBAR_ID = ResourceUtils.getIdIdentifier("toolbar");
+
     private static final int DIALOG_ANIMATION_DURATION_MILLISECONDS = 300;
 
     /**
@@ -154,6 +160,13 @@ public final class ChannelSearchPatch {
      */
     private static String currentBrowseId = "";
 
+    /** Channel selected by the dedicated toolbar button, retained while search opens. */
+    private static volatile String pendingChannelSearchBrowseId = "";
+
+    private static WeakReference<View> searchButtonParentRef = new WeakReference<>(null);
+    private static WeakReference<ImageView> searchButtonViewRef = new WeakReference<>(null);
+    private static WeakReference<View> channelSearchButtonRef = new WeakReference<>(null);
+
     private static String lastQuery = "";
     private static long lastQueryTime;
 
@@ -162,7 +175,12 @@ public final class ChannelSearchPatch {
      * Called on main thread.
      */
     public static void setBrowseId(@Nullable String browseId) {
-        currentBrowseId = browseId == null ? "" : browseId;
+        String nextBrowseId = browseId == null ? "" : browseId;
+        if (isChannelId(nextBrowseId) && !nextBrowseId.equals(currentBrowseId)) {
+            pendingChannelSearchBrowseId = "";
+        }
+        currentBrowseId = nextBrowseId;
+        updateChannelSearchButton();
     }
 
     /**
@@ -171,6 +189,116 @@ public final class ChannelSearchPatch {
      */
     public static void clearBrowseId() {
         currentBrowseId = "";
+        // Keep a dedicated-button selection through the transition to search results.
+        updateChannelSearchButton();
+    }
+
+    /** Injection point. Adds the dedicated channel-search button beside YouTube's global search. */
+    public static void setSearchButtonView(String enumName, View parentView, ImageView imageView) {
+        if (!"SEARCH".equals(enumName) && !"SEARCH_BOLD".equals(enumName)
+                && !"SEARCH_CAIRO".equals(enumName)) {
+            return;
+        }
+        searchButtonParentRef = new WeakReference<>(parentView);
+        searchButtonViewRef = new WeakReference<>(imageView);
+        //noinspection ClickableViewAccessibility
+        imageView.setOnTouchListener((view, event) -> {
+            if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
+                // YouTube's original search icon always starts a global search.
+                pendingChannelSearchBrowseId = "";
+            }
+            return false;
+        });
+        updateChannelSearchButton();
+        parentView.post(ChannelSearchPatch::updateChannelSearchButton);
+    }
+
+    private static void updateChannelSearchButton() {
+        try {
+            View button = channelSearchButtonRef.get();
+            View originalParent = searchButtonParentRef.get();
+            ImageView originalIcon = searchButtonViewRef.get();
+            final boolean visible = Settings.CHANNEL_SEARCH.get() && isChannelId(currentBrowseId);
+
+            View toolbarItem = originalParent;
+            ViewGroup toolbar = null;
+            if (originalParent != null) {
+                View current = originalParent;
+                while (current.getParent() instanceof ViewGroup parent) {
+                    if (current.getId() != View.NO_ID) {
+                        String entryName = current.getResources().getResourceEntryName(current.getId());
+                        if (entryName.startsWith("menu_item_")) {
+                            toolbar = parent;
+                            toolbarItem = current;
+                            break;
+                        }
+                    }
+                    if (TOOLBAR_ID != 0 && parent.getId() == TOOLBAR_ID) {
+                        toolbar = parent;
+                        toolbarItem = current;
+                        break;
+                    }
+                    current = parent;
+                }
+            }
+
+            if (button != null) {
+                button.setVisibility(visible ? View.VISIBLE : View.GONE);
+                if (button.getParent() == toolbar) return;
+                if (button.getParent() instanceof ViewGroup oldParent) oldParent.removeView(button);
+                channelSearchButtonRef = new WeakReference<>(null);
+            }
+            if (!visible || originalParent == null || originalIcon == null || toolbar == null) return;
+
+            ViewGroup.LayoutParams buttonParams = copyLayoutParams(toolbarItem.getLayoutParams());
+            if (buttonParams instanceof LinearLayout.LayoutParams linearParams) {
+                linearParams.width = Dim.dp48;
+                linearParams.weight = 0;
+            }
+            FrameLayout channelButton = new FrameLayout(toolbarItem.getContext());
+            channelButton.setLayoutParams(buttonParams);
+            channelButton.setContentDescription(str("morphe_channel_search_hint"));
+            channelButton.setFocusable(true);
+            channelButton.setClickable(true);
+
+            ImageView icon = new ImageView(originalParent.getContext());
+            Drawable searchIcon = ResourceUtils.getDrawable("morphe_channel_search_button");
+            if (searchIcon == null) {
+                Logger.printException(() -> "updateChannelSearchButton drawable not found");
+                return;
+            }
+            searchIcon.setTint(ThemeUtils.getAppForegroundColor());
+            icon.setImageDrawable(searchIcon);
+            icon.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            channelButton.addView(icon, new FrameLayout.LayoutParams(Dim.dp24, Dim.dp24, Gravity.CENTER));
+            channelButton.setOnClickListener(view -> {
+                pendingChannelSearchBrowseId = currentBrowseId;
+                ImageView searchButton = searchButtonViewRef.get();
+                if (searchButton != null) searchButton.callOnClick();
+            });
+
+            final int index = toolbar.indexOfChild(toolbarItem);
+            toolbar.addView(channelButton, Math.max(index, 0));
+            channelSearchButtonRef = new WeakReference<>(channelButton);
+        } catch (Exception ex) {
+            Logger.printException(() -> "updateChannelSearchButton failure", ex);
+        }
+    }
+
+    private static ViewGroup.LayoutParams copyLayoutParams(ViewGroup.LayoutParams original) {
+        if (original == null) {
+            return new ViewGroup.LayoutParams(Dim.dp48, Dim.dp48);
+        }
+        if (original instanceof LinearLayout.LayoutParams linear) {
+            return new LinearLayout.LayoutParams(linear);
+        }
+        if (original instanceof FrameLayout.LayoutParams frame) {
+            return new FrameLayout.LayoutParams(frame);
+        }
+        if (original instanceof ViewGroup.MarginLayoutParams margins) {
+            return new ViewGroup.MarginLayoutParams(margins);
+        }
+        return new ViewGroup.LayoutParams(original);
     }
 
     /**
@@ -179,7 +307,7 @@ public final class ChannelSearchPatch {
      */
     public static String getSearchHint(String original) {
         try {
-            if (Settings.CHANNEL_SEARCH.get() && isChannelId(currentBrowseId)) {
+            if (Settings.CHANNEL_SEARCH.get() && isChannelId(pendingChannelSearchBrowseId)) {
                 return str("morphe_channel_search_hint");
             }
         } catch (Exception ex) {
@@ -283,7 +411,8 @@ public final class ChannelSearchPatch {
                 return false;
             }
 
-            String channelId = currentBrowseId;
+            String channelId = pendingChannelSearchBrowseId;
+            pendingChannelSearchBrowseId = "";
             if (!isChannelId(channelId)) {
                 return false;
             }
@@ -440,7 +569,7 @@ public final class ChannelSearchPatch {
             if (row == null) {
                 row = createResultRow(activity, result);
                 row.setTag(result.videoId);
-                final String videoId = result.videoId;
+                String videoId = result.videoId;
                 row.setOnClickListener(view -> {
                     dialog.dismiss();
                     Utils.runOnMainThreadDelayed(() -> {

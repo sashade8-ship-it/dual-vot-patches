@@ -396,7 +396,6 @@ YouTube Music 8.x — crossfade fungerar endast på 9.x och nyare"</string>
   <string name="morphe_music_hide_navigation_bar_title">Dölj navigeringsfältet</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Dölj etiketter för navigeringsknappar</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurera integration med Last.fm och ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Inte inloggad. Tryck för att konfigurera</string>
   <string name="morphe_music_scrobbling_log_out">Logga ut</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Utloggad</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — crossfade fungerar endast på 9.x och nyare"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Ange din ListenBrainz-användartoken för att aktivera scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Hämta token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verifiera</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Ange en token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Validerar…</string>
@@ -552,8 +550,11 @@ Obligatoriska cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_credit_line_regex_summary">Om texter filtreras felaktigt till botten, justera eller rensa detta. […] Lämna tomt för att inaktivera.</string>
   <string name="morphe_music_lyrics_text_size_title">Textstorlek</string>
   <string name="morphe_music_lyrics_text_size_summary">Storleken på sångtexten</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Tidsförskjutning</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Global tidsförskjutning</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Synkroniserade texter följer uppspelningen. Om de hamnar fel, justera tidsförskjutningen. […] Använd ett positivt värde om texten ligger före låten.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Använd SponsorBlock-segment för sångtextförskjutning</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Matcha utan de segment som SponsorBlock hoppar över och flytta sångtexten till det utgivna ljudet. Av ignorerar SponsorBlock helt</string>
+  <string name="morphe_music_lyrics_sb_no_video">Det här spåret har inget video-ID att skicka in</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Källa: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Översatt av Google</string>
@@ -574,6 +575,7 @@ Obligatoriska cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_refreshing">Uppdaterar</string>
   <string name="morphe_music_lyrics_refreshed">Uppdaterad</string>
   <string name="morphe_music_lyrics_about_summary">"Texter matchas mot titel och artist, ovanlig metadata kan leda till att ingenting hittas eller att fel version hittas. Använd Uppdatera för att växla versioner. Leverantörer markerade med * kräver en token. Alla aktiverade leverantörer efterfrågas inte alltid i din ordning, utan svarar utifrån deras hastighet."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Aktivera bara de leverantörer du använder, eller behåll standardinställningen — ständiga förfrågningar kan överbelasta små communitysajter för sångtexter</string>
   <string name="morphe_music_lyrics_hide_info_title">Dölj kreditraden</string>
   <string name="morphe_music_lyrics_hide_info_summary">Dölj kreditraden som visas under texten.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Växla mellan översättning och romanisering</string>

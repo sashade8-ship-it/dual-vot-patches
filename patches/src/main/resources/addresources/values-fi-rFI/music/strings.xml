@@ -396,7 +396,6 @@ YouTube Music 8.x – crossfade toimii vain versiossa 9.x ja uudemmissa."</strin
   <string name="morphe_music_hide_navigation_bar_title">Piilota navigointipalkki</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Piilota navigointipainikkeiden tunnisteet</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Määritä Last.fm- ja ListenBrainz-integraatio</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Kirjaudu ulos. Napauta määrittääksesi</string>
   <string name="morphe_music_scrobbling_log_out">Kirjaudu ulos</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Kirjauduttu ulos</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x – crossfade toimii vain versiossa 9.x ja uudemmissa."</strin
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Syötä ListenBrainz-käyttäjätunnuksesi ottaaksesi toiston käyttöön</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Tunnus</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Hae tunnus</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Vahvista</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Anna tunnus</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Validointia…</string>
@@ -552,8 +550,11 @@ Vaaditut evästeet: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_credit_line_regex_summary">Jos lyriikat suodatetaan virheellisesti alareunaan, säädä tai tyhjennä tämä. Pilkulla erotetut merkinnät: rivit, jotka sisältävät merkinnän ja sen jälkeen kaksoispisteen, näytetään tekijätietoina alareunassa. Jätä tyhjäksi poistaaksesi käytöstä</string>
   <string name="morphe_music_lyrics_text_size_title">Tekstin koko</string>
   <string name="morphe_music_lyrics_text_size_summary">Sanoitusten tekstin koko</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Aikasiirtymä</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globaali ajoitussiirtymä</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Synkronoidut lyriikat seuraavat toistoa. Jos ne erkanevat, säädä ajoituksen siirtymää. Siirrä synkronoituja lyriikoita eteen- tai taaksepäin. Käytä positiivista arvoa, jos lyriikat ovat kappaletta edellä</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Käytä SponsorBlock-segmenttejä sanoitusten siirtymään</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Täsmäytä ilman SponsorBlockin ohittamia segmenttejä ja siirrä sanoitukset julkaistulle ääniraidalle. Pois käytöstä -asetus jättää SponsorBlockin kokonaan huomiotta</string>
+  <string name="morphe_music_lyrics_sb_no_video">Tällä kappaleella ei ole videotunnusta lähetettäväksi</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Lähde: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Kääntänyt Google</string>
@@ -574,6 +575,7 @@ Vaaditut evästeet: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_refreshing">Päivitetään</string>
   <string name="morphe_music_lyrics_refreshed">Päivitetty</string>
   <string name="morphe_music_lyrics_about_summary">"Sanoitukset yhdistetään kappaleen nimen ja esittäjän perusteella. Epätavalliset metatiedot voivat jättää tulokset löytymättä tai tuottaa väärän version. Käytä päivitystä vaihtaaksesi versiota. Tähdellä (*) merkityt palveluntarjoajat vaativat tunnuksen. Kaikkia käytössä olevia palveluntarjoajia ei aina pyydetä haluamassasi järjestyksessä, vaan ne vastaavat nopeutensa mukaan."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Ota käyttöön vain käyttämäsi palveluntarjoajat, tai pidä oletusasetus — jatkuvat pyynnöt voivat ylikuormittaa pieniä yhteisöllisiä sanoitussivustoja</string>
   <string name="morphe_music_lyrics_hide_info_title">Piilota tekijätietorivi</string>
   <string name="morphe_music_lyrics_hide_info_summary">Piilota lyriikoiden alla näkyvä tekijätietorivi</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Vaihda käännöksen ja romanisoinnin paikkaa</string>

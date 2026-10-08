@@ -30,13 +30,15 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.zip.InflaterInputStream;
 
-import app.morphe.extension.music.patches.lyrics.Lyrics;
-import app.morphe.extension.music.patches.lyrics.LyricsLine;
-import app.morphe.extension.music.patches.lyrics.LyricsMerge;
-import app.morphe.extension.music.patches.lyrics.TrackInfo;
-import app.morphe.extension.music.patches.lyrics.Word;
+import app.morphe.extension.music.patches.lyrics.model.Lyrics;
+import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
+import app.morphe.extension.music.patches.lyrics.model.LyricsMerge;
+import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
+import app.morphe.extension.music.patches.lyrics.model.Word;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.requests.Requester;
+import app.morphe.extension.music.patches.lyrics.parsers.KrcParser;
+import app.morphe.extension.music.patches.lyrics.parsers.LrcParser;
 
 /**
  * KuGou lyrics, used as a fallback because it covers many tracks LRCLIB does not.
@@ -123,7 +125,7 @@ public final class KuGouProvider implements LyricsProvider {
         return FetchResult.of(new Lyrics(decoded.lines(), name(), true,
                 decoded.attachedRomanization(), decoded.translations(), null,
                 decoded.creditLines(), decoded.rawFormat(), decoded.formatType(), sourceUrl),
-                track);
+                songInfo.title(), songInfo.artist(), songInfo.durationSec(), track);
     }
 
     @Override
@@ -265,6 +267,9 @@ public final class KuGouProvider implements LyricsProvider {
 
         String bestHash = null;
         String bestId = null;
+        String bestTitle = null;
+        String bestArtist = null;
+        int bestDuration = -1;
         int bestScore = -1;
         for (int i = 0; i < info.length(); i++) {
             JSONObject item = info.optJSONObject(i);
@@ -284,12 +289,15 @@ public final class KuGouProvider implements LyricsProvider {
                 bestScore = score;
                 bestHash = hash;
                 bestId = item.optString("id", "");
+                bestTitle = title;
+                bestArtist = artist;
+                bestDuration = item.optInt("duration", 0);
             }
         }
         if (bestHash == null || bestScore < LyricsRequests.SOFT_MIN) {
             return null;
         }
-        return new SongInfo(bestHash, bestId);
+        return new SongInfo(bestHash, bestId, bestTitle, bestArtist, bestDuration);
     }
 
     private static String decryptKrc(byte[] raw) throws IOException {
@@ -311,9 +319,12 @@ public final class KuGouProvider implements LyricsProvider {
         return out.toString(StandardCharsets.UTF_8.name());
     }
 
-    private record SongInfo(String hash, String id) {
+    private record SongInfo(String hash, String id, String title, String artist,
+                            int durationSec) {
         SongInfo {
             id = id != null ? id : "";
+            title = title != null ? title : "";
+            artist = artist != null ? artist : "";
         }
     }
 

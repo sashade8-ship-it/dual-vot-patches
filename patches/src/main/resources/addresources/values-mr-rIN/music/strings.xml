@@ -244,7 +244,6 @@ YouTube Music 8.x – क्रॉसFade फक्त 9.x आणि त्य�
   <string name="morphe_music_hide_navigation_bar_title">नेव्हिगेशन बार लपवा</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">नेव्हिगेशन बटण लेबले लपवा</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">लास्ट.एफएम आणि लिसेनब्रेनझ इंटिग्रेशन कॉन्फिगर करा</string>
   <string name="morphe_music_scrobbling_summary_logged_out">लॉग इन केलेले नाही. कॉन्फिगर करण्यासाठी टॅप करा</string>
   <string name="morphe_music_scrobbling_log_out">लॉग आउट करा</string>
   <string name="morphe_music_scrobbling_logged_out_toast">लॉग आउट केले</string>
@@ -260,7 +259,6 @@ YouTube Music 8.x – क्रॉसFade फक्त 9.x आणि त्य�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">स्क्रबलिंग सक्षम करण्यासाठी तुमचा लिसेनब्रेनझ वापरकर्ता टोकन प्रविष्ट करा</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">टोकन</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">टोकन मिळवा</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">सत्यापित करा</string>
   <string name="morphe_music_listenbrainz_token_status_empty">कृपया टोकन प्रविष्ट करा</string>
   <string name="morphe_music_listenbrainz_token_status_validating">पडताळणी करत आहे…</string>
@@ -307,7 +305,6 @@ YouTube Music 8.x – क्रॉसFade फक्त 9.x आणि त्य�
   <string name="morphe_music_lyrics_show_translate_button_title">भाषांतर बटण दाखवा</string>
   <string name="morphe_music_lyrics_text_size_title">टेक्स्ट आकार</string>
   <string name="morphe_music_lyrics_text_size_summary">लिरिक्स टेक्स्टचा आकार</string>
-  <string name="morphe_music_lyrics_offset_ms_title">टाइमिंग ऑफसेट</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">स्रोत: %s</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->

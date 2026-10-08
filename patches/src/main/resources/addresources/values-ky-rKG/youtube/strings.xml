@@ -67,6 +67,7 @@ Second \"item\" text"</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
+  <!-- interaction.copytext.copyTextPatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <!-- interaction.downloads.downloadsPatch -->
@@ -128,10 +129,7 @@ Second \"item\" text"</string>
   <string name="morphe_show_search_button_index_title">Издөө баскычынын оорду</string>
   <string name="morphe_show_settings_button_title">Оңдоолор баскычын көрсөтүү</string>
   <string name="morphe_show_settings_button_index_title">Оңдоолор баскычынын оорду</string>
-  <string name="morphe_hide_toolbar_create_button_title">Жасоо баскычын жашыруу</string>
   <string name="morphe_hide_toolbar_search_button_title">Издөө баскычын жашыруу</string>
-  <string name="morphe_show_toolbar_settings_button_title">Оңдоолор баскычын көрсөтүү</string>
-  <string name="morphe_show_toolbar_settings_button_index_title">Оңдоолор баскычынын оорду</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -205,9 +203,6 @@ Second \"item\" text"</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
-  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->

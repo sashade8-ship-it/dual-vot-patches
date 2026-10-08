@@ -396,7 +396,6 @@ YouTube Music 8.x — crossfade radi samo na 9.x i novijim inačicama"</string>
   <string name="morphe_music_hide_navigation_bar_title">Sakrij traku navigacije</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Sakrij oznake navigacijskih tipki</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurirajte integraciju usluga Last.fm i ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Niste prijavljeni. Dodirnite za konfiguraciju</string>
   <string name="morphe_music_scrobbling_log_out">Odjava</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Odjavljeno</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — crossfade radi samo na 9.x i novijim inačicama"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Unesite svoj korisnički token za ListenBrainz da biste omogućili scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Nabavi token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Potvrdi</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Unesite token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Provjera u tijeku…</string>
@@ -557,8 +555,11 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_credit_line_regex_summary">Ako su tekstovi pjesama pogrešno filtrirani na dno, prilagodi ili obriši ovo. Oznake odvojene zarezom: retci koji sadrže oznaku nakon koje slijedi dvotočka prikazuju se kao podaci o zaslugama na dnu. Ostavi prazno za onemogućavanje.</string>
   <string name="morphe_music_lyrics_text_size_title">Veličina teksta</string>
   <string name="morphe_music_lyrics_text_size_summary">Veličina teksta stihova</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Vremenski pomak</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globalni vremenski pomak</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Sinkronizirani tekstovi pjesama prate reprodukciju. Ako odstupe, prilagodi vremenski pomak. Pomakni sinkronizirane tekstove pjesama unaprijed ili unatrag. Koristi pozitivnu vrijednost ako tekstovi pjesama idu ispred pjesme.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Koristi SponsorBlock segmente za pomak stihova</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Uskladi bez segmenata koje SponsorBlock preskače i pomakni stihove na objavljeni audio. Isključeno u potpunosti zanemaruje SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Ova pjesma nema id videozapisa za slanje</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Izvor: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Preveo Google</string>
@@ -579,6 +580,7 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_refreshing">Osvježavanje…</string>
   <string name="morphe_music_lyrics_refreshed">Osvježeno</string>
   <string name="morphe_music_lyrics_about_summary">"Tekstovi se usklađuju prema naslovu i izvođaču, a neuobičajeni metapodaci možda neće pronaći ništa ili pogrešnu verziju. Koristite osvježavanje za promjenu verzija. Davatelji označeni sa * zahtijevaju token. Svi omogućeni davatelji nisu uvijek pozvani vašim redoslijedom, već odgovaraju prema svojoj brzini."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Omogući samo pružatelje koje koristiš ili zadrži zadane postavke — stalni zahtjevi mogu preopteretiti male stranice zajednice sa stihovima</string>
   <string name="morphe_music_lyrics_hide_info_title">Sakrij redak sa zaslugama</string>
   <string name="morphe_music_lyrics_hide_info_summary">Sakrij redak sa zaslugama prikazan ispod tekstova pjesama.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Zamijeni prijevod i romanizaciju</string>

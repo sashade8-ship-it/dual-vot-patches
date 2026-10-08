@@ -114,6 +114,8 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Musiqi videosu əvəzinə mahnıların yalnız albom səsi versiyasını səsləndirir. \'Video yayımlarını saxtalaşdırı\' tələb edir</string>
   <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Səs/video keçidini aktivləşdir</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Səs Treki Versiyasını və Rəsmi Musiqi Videosunu dəyişdirməyə çalış</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Üçüncü tərəf yükləmə tətbiqləri ilə musiqi videolarını, podkastları və ya mahnıları yüklə</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -277,6 +279,10 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <string name="morphe_music_disable_dislike_redirection_title">Bəyənməmə yönləndirilməsini qapat</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Bəyənməmə düyməsi basıldıqda növbəti trekə keçməyə mane olur</string>
   <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Pleylist treki toxunma hərəkəti</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Pleylisti səsləndir</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Yalnız seçilmiş treki səsləndir</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Seçilmiş treki növbəyə əlavə et</string>
   <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
   <string name="morphe_music_playlist_track_tap_added_to_queue">Növbəyə əlavə edildi</string>
   <!-- layout.buttons.hideButtonsPatch -->
@@ -390,7 +396,6 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <string name="morphe_music_hide_navigation_bar_title">Fəaliyyət cizgisin gizlət</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Fəaliyyət düyməsi etiketlərini gizlət</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Last.fm və ListenBrainz birləşməsini tənzimlə</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Daxil olmamısınız. Tənzimləmək üçün toxun</string>
   <string name="morphe_music_scrobbling_log_out">Çıxış et</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Çıxış edildi</string>
@@ -413,7 +418,6 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Scrobbling-i aktivləşdirmək üçün ListenBrainz İstifadəçi Tokeninizi qeyd edin</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Tokeni əldə et</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Yoxla</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Xahiş olunur, tokeni qeyd et</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Təsdiqlənir…</string>
@@ -551,7 +555,6 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_lyrics_credit_line_regex_summary">Mahnı sözləri yanlışlıqla aşağıya filtrlənərsə, bunu tənzimləyin və ya təmizləyin. Vergüllə ayrılmış nişanlayıcılar: tərkibində nişanlayıcı ardınca iki nöqtə olan sətirlər aşağıda müəllif məlumatı kimi göstərilir. Qapatmaq üçün boş qoy</string>
   <string name="morphe_music_lyrics_text_size_title">Mətn ölçüsü</string>
   <string name="morphe_music_lyrics_text_size_summary">Mahnı sözlərinin mətn ölçüsü</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Vaxt dəyişikliyi</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Sinxronlaşdırılmış mahnı sözləri səsləndirməni izləyir. Uyğunsuzluq yarandıqda, zamanlama sürüşməsini tənzimlə. Sinxronlaşdırılmış sözləri irəli və ya geri çək. Mahnı sözləri mahnını qabaqlayırsa, müsbət dəyəri istifadə et</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Mənbə: %s</string>

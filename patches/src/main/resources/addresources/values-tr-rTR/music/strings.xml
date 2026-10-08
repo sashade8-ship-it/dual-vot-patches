@@ -396,7 +396,6 @@ YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"
   <string name="morphe_music_hide_navigation_bar_title">Gezinme çubuğunu gizle</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Gezinme düğmeleri etiketlerini gizle</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Last.fm ve ListenBrainz entegrasyonunu yapılandırın</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Oturum açılmadı. Yapılandırmak için dokunun</string>
   <string name="morphe_music_scrobbling_log_out">Oturumu Kapat</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Oturum kapatıldı</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Scrobbling\'i etkinleştirmek için ListenBrainz Kullanıcı Token\'ınızı girin</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Token alın</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Doğrula</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Lütfen bir token girin</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Doğrulama yapılıyor…</string>
@@ -557,8 +555,11 @@ Gerekli çerezler: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISI
   <string name="morphe_music_lyrics_credit_line_regex_summary">Şarkı sözleri yanlışlıkla en alta filtreleniyorsa bu ayarı düzenleyin veya temizleyin. Virgülle ayrılmış belirteçler: Bir belirteç ve ardından iki nokta üst üste içeren satırlar, en altta künye bilgisi olarak gösterilir. Devre dışı bırakmak için boş bırakın</string>
   <string name="morphe_music_lyrics_text_size_title">Yazı tipi boyutu</string>
   <string name="morphe_music_lyrics_text_size_summary">Şarkı sözü metninin boyutu</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Zamanlama kaydırması</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Genel zamanlama farkı</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Senkronize şarkı sözleri oynatmayı takip eder. Senkronizasyon kayarsa zamanlama ofsetini ayarlayın. Senkronize şarkı sözlerini ileri veya geri kaydırın. Şarkı sözleri şarkının önünde gidiyorsa pozitif bir değer kullanın</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Şarkı sözü zamanlama farkı için SponsorBlock bölümlerini kullan</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">SponsorBlock\'un atladığı bölümler olmadan eşleştir ve şarkı sözlerini yayınlanan sese kaydır. Kapalı, SponsorBlock\'u tamamen yok sayar</string>
+  <string name="morphe_music_lyrics_sb_no_video">Bu parçanın gönderilecek video kimliği yok</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Kaynak: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Yenile</string>
@@ -579,6 +580,7 @@ Gerekli çerezler: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISI
   <string name="morphe_music_lyrics_refreshing">Yenileniyor</string>
   <string name="morphe_music_lyrics_refreshed">Yenilendi</string>
   <string name="morphe_music_lyrics_about_summary">"Şarkı sözleri başlık ve sanatçıya göre eşleştirilir, olağandışı meta veriler hiçbir şey bulamayabilir veya yanlış sürümü bulabilir. Sürümleri değiştirmek için yenilemeyi kullanın. * ile işaretlenen sağlayıcılar bir belirteç gerektirir. Etkinleştirilen tüm sağlayıcılar her zaman belirttiğiniz sırada istenmez, ancak hızlarına göre yanıt verirler."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Yalnızca kullandığınız sağlayıcıları etkinleştirin veya varsayılanı koruyun — sürekli istekler küçük topluluk şarkı sözü sitelerini bunaltabilir</string>
   <string name="morphe_music_lyrics_hide_info_title">Yenile</string>
   <string name="morphe_music_lyrics_hide_info_summary">Şarkı sözlerinin altında gösterilen künye satırını gizle</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Çeviri ve okunuşun yerini değiştir</string>

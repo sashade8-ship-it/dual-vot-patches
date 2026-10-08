@@ -396,7 +396,6 @@ YouTube Music 8.x — tumatakbo lamang ang crossfade sa 9.x at mas bago"</string
   <string name="morphe_music_hide_navigation_bar_title">Itago ang navigation bar</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Itago ang mga tatak ng navigation button</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">I-configure ang Last.fm at ListenBrainz integration</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Hindi naka-log in. I-tap para i-configure</string>
   <string name="morphe_music_scrobbling_log_out">Mag-sign out</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Naka-log out na</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — tumatakbo lamang ang crossfade sa 9.x at mas bago"</string
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Ipasok ang iyong ListenBrainz User Token para i-enable ang pag-scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Kumuha ng token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">I-verify</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Mangyaring ipasok ang isang token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Bineberipika…</string>
@@ -552,8 +550,11 @@ Mga kinakailangang cookie: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure
   <string name="morphe_music_lyrics_credit_line_regex_summary">Kung ang mga lyrics ay hindi wastong na-filter sa ibaba, ayusin o i-clear ito. […] Iwanang blangko upang i-disable.</string>
   <string name="morphe_music_lyrics_text_size_title">Laki ng teksto</string>
   <string name="morphe_music_lyrics_text_size_summary">Laki ng teksto ng lyrics</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Pagkaantala ng oras</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Pandaigdigang offset ng timing</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Ang naka-sync na lyrics ay sumusunod sa playback. Kung lumilihis ang mga ito, ayusin ang timing offset. […] Gumamit ng positibong halaga kung ang lyrics ay nauuna sa kanta.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Gamitin ang mga segment ng SponsorBlock para sa offset ng liriko</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Itugma nang wala ang mga segment na nilalaktawan ng SponsorBlock at ilipat ang liriko sa inilabas na audio. Binabalewala ng Off ang SponsorBlock nang buo</string>
+  <string name="morphe_music_lyrics_sb_no_video">Walang video id ang track na ito para isumite</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Pinagmulan: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Isinalin ng Google</string>
@@ -574,6 +575,7 @@ Mga kinakailangang cookie: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure
   <string name="morphe_music_lyrics_refreshing">Nagre-refresh</string>
   <string name="morphe_music_lyrics_refreshed">Na-refresh</string>
   <string name="morphe_music_lyrics_about_summary">"Ang mga liriko ay itinutugma sa pamagat at artist, ang hindi pangkaraniwang metadata ay maaaring walang mahanap o maling bersyon. Gamitin ang refresh upang lumipat ng mga bersyon. Ang mga provider na may markang * ay nangangailangan ng token. Ang lahat ng pinagana na provider ay hindi palaging hinihiling sa iyong order, ngunit tumutugon batay sa kanilang bilis"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Paganahin lamang ang mga provider na ginagamit mo, o panatilihin ang default — ang mga patuloy na kahilingan ay maaaring makapagpabigat sa maliliit na site ng liriko ng komunidad</string>
   <string name="morphe_music_lyrics_hide_info_title">Itago ang linya ng kredito</string>
   <string name="morphe_music_lyrics_hide_info_summary">Itago ang linya ng kredito na ipinapakita sa ibaba ng lyrics.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Pagpalitin ang pagsasalin at romanisasyon.</string>

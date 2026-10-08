@@ -396,7 +396,6 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <string name="morphe_music_hide_navigation_bar_title">Скриване на лентата за навигация</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Имена на бутоните в лентата за навигация</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Конфигуриране на интеграция с Last.fm и ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Не сте влезли. Докоснете, за да конфигурирате</string>
   <string name="morphe_music_scrobbling_log_out">Изход</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Излязохте</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Въведете вашия потребителски токен на ListenBrainz, за да активирате отбелязването</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Токен</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Вземи токен</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Провери</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Моля, въведете токен</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Валидиране…</string>
@@ -543,8 +541,11 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <string name="morphe_music_lyrics_credit_line_regex_summary">Ако редовете на текста неправилно се филтрират към долната част, коригирайте това или го изчистете. Маркери, разделени със запетая: редовете, съдържащи маркер, последван от двоеточие, се показват като информация за авторство в долната част. Оставете празно, за да деактивирате.</string>
   <string name="morphe_music_lyrics_text_size_title">Размер на текста</string>
   <string name="morphe_music_lyrics_text_size_summary">Размер на текста на текста на песните</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Времево отместване</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Глобално отместване на времето</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Синхронизираните текстове следват възпроизвеждането. Ако се разминават, коригирайте отместването на времето. Преместете синхронизираните текстове напред или назад. Използвайте положителна стойност, ако текстът изпреварва песента.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Използвайте сегментите на SponsorBlock за отместване на текста</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Съвпадение без сегментите, които SponsorBlock прескача, и преместване на текста върху официалното аудио. Изключено — SponsorBlock се игнорира напълно</string>
+  <string name="morphe_music_lyrics_sb_no_video">Тази песен няма id на видеото за изпращане</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Източник: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Преведено от Google</string>
@@ -565,6 +566,7 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <string name="morphe_music_lyrics_refreshing">Опресняване</string>
   <string name="morphe_music_lyrics_refreshed">Опреснено</string>
   <string name="morphe_music_lyrics_about_summary">"Текстовете се съпоставят по заглавие и изпълнител. Необичайни метаданни може да не намерят нищо или да намерят грешната версия. Използвайте опресняване, за да превключите версиите. Доставчиците, отбелязани с *, изискват токен. Не всички активирани доставчици винаги се запитват в реда, който сте задали, но отговарят според скоростта си."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Активирайте само доставчиците, които използвате, или запазете настройката по подразбиране — постоянните заявки могат да претоварят малките общностни сайтове за текстове на песни</string>
   <string name="morphe_music_lyrics_hide_info_title">Скриване на реда с кредитна информация</string>
   <string name="morphe_music_lyrics_hide_info_summary">Скриване на реда с кредитна информация, показан под текста.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Размяна на превода и романизацията</string>

@@ -396,7 +396,6 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <string name="morphe_music_hide_navigation_bar_title">隐藏导航栏</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">隐藏导航按钮标签</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">配置 Last.fm 和 ListenBrainz 集成</string>
   <string name="morphe_music_scrobbling_summary_logged_out">未登录。点击进行配置</string>
   <string name="morphe_music_scrobbling_log_out">登出</string>
   <string name="morphe_music_scrobbling_logged_out_toast">已登出</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">输入您的 ListenBrainz 用户令牌以启用播放记录</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">令牌</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">获取令牌</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">验证</string>
   <string name="morphe_music_listenbrainz_token_status_empty">请输入令牌</string>
   <string name="morphe_music_listenbrainz_token_status_validating">验证中…</string>
@@ -557,8 +555,11 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <string name="morphe_music_lyrics_credit_line_regex_summary">如果歌词被错误地过滤到底部，请调整或清除此项。以逗号分隔的标记：包含标记且后跟冒号的行会作为署名信息显示在底部。留空以禁用</string>
   <string name="morphe_music_lyrics_text_size_title">文本大小</string>
   <string name="morphe_music_lyrics_text_size_summary">歌词文本的大小</string>
-  <string name="morphe_music_lyrics_offset_ms_title">时间偏移</string>
+  <string name="morphe_music_lyrics_offset_ms_title">全局时间偏移</string>
   <string name="morphe_music_lyrics_offset_ms_summary">同步歌词会跟随播放。如果出现偏移，请调整时间偏移。将同步歌词向前或向后移动。如果歌词比歌曲超前，请使用正值</string>
+  <string name="morphe_music_lyrics_sb_matching_title">使用 SponsorBlock 片段进行歌词偏移</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">匹配时排除 SponsorBlock 跳过的片段，并将歌词对齐到已发布的音频。关闭则完全忽略 SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">此曲目没有可提交的视频 id</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">来源：%s</string>
   <string name="morphe_music_lyrics_translated_by_google">由 Google 翻译</string>
@@ -579,6 +580,7 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <string name="morphe_music_lyrics_refreshing">正在刷新</string>
   <string name="morphe_music_lyrics_refreshed">已刷新</string>
   <string name="morphe_music_lyrics_about_summary">"歌词根据标题和艺术家进行匹配，异常的元数据可能导致找不到结果或匹配到错误的版本。使用刷新以切换版本。标有 * 的提供程序需要令牌。并非所有已启用的提供程序都会按您的顺序被请求，而是根据其速度进行响应。"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">只启用你使用的提供方，或保持默认——持续请求可能会压垮小型社区歌词网站</string>
   <string name="morphe_music_lyrics_hide_info_title">隐藏署名行</string>
   <string name="morphe_music_lyrics_hide_info_summary">隐藏显示在歌词下方的署名行</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">交换翻译和音译</string>

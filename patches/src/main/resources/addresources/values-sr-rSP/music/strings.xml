@@ -396,7 +396,6 @@ YouTube Music 8.x — прелазак ради само на 9.x и новиј�
   <string name="morphe_music_hide_navigation_bar_title">Сакриј траку за навигацију</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Сакриј ознаке дугмади за навигацију</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Конфигуришите интеграцију са Last.fm и ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Нисте пријављени. Додирните да бисте конфигурисали</string>
   <string name="morphe_music_scrobbling_log_out">Одјавите се</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Одјављени</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — прелазак ради само на 9.x и новиј�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Унесите свој ListenBrainz кориснички токен да бисте омогућили scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Токен</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Набави токен</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Верификуј</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Унесите токен</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Провера се…</string>
@@ -552,8 +550,11 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_credit_line_regex_summary">Ако су текстови погрешно филтрирани на дно, прилагодите или обришите ово. […] Оставите празно да бисте искључили.</string>
   <string name="morphe_music_lyrics_text_size_title">Величина текста</string>
   <string name="morphe_music_lyrics_text_size_summary">Величина текста текстова песама</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Корекција времена</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Глобални временски померај</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Синхронизовани текстови прате репродукцију. Ако одступају, подесите временски помак. […] Користите позитивну вредност ако текст иде испред песме.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Користи SponsorBlock сегменте за померај текста</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Усклади текст без сегмената које SponsorBlock прескаче и помери га на објављени аудио запис. Када је искључено, SponsorBlock се у потпуности игнорише</string>
+  <string name="morphe_music_lyrics_sb_no_video">Ова нумера нема id видео записа за слање</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Извор: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Превео Google</string>
@@ -574,6 +575,7 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_refreshing">Освежавање</string>
   <string name="morphe_music_lyrics_refreshed">Освежено.</string>
   <string name="morphe_music_lyrics_about_summary">"Текстови се подударају према наслову и извођачу, понекада се може десити да се не пронађе ништа или прикаже погрешну верзију. Користите опцију освежи да бисте променили верзију. Добављачи означени * захтевају токен. Сви доступни извођачи не могу увек да одговоре у вашем упиту, али одазивају се у зависности од брзине"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Омогући само провајдере које користиш или задржи подразумеване — стални захтеви могу преоптеретити мале сајтове за текстове из заједнице</string>
   <string name="morphe_music_lyrics_hide_info_title">Сакриј линију са заслугама</string>
   <string name="morphe_music_lyrics_hide_info_summary">Сакриј линију са заслугама приказану испод текстова.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Замени превод и романизацију.</string>

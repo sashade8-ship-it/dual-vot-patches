@@ -107,10 +107,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"ورود به Android VR می‌تواند مشکلات پخش را برای برخی کاربران برطرف کند
 
 برای ورود، دکمهٔ ادامه را در زیر فشار دهید"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">ادامه</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">خروج از حساب</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">دستورالعمل‌ها</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"کد فعال‌سازی: %s
 
 ۱. برای بازکردن وب‌سایت «اتصال دستگاه»، روی «بازکردن وب‌سایت» در زیر ضربه بزنید
@@ -118,7 +117,6 @@ Second \"item\" text"</string>
 ۳. اگر درخواست شد، به Google وارد شوید. اگر چند حساب دارید، این حساب YouTube را انتخاب کنید
 ۴. روی «اجازهٔ دسترسی به YouTube VR» ضربه بزنید
 ۵. پس از رسیدن به پیام «دستگاه متصل شد»، به این برنامه برگردید"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">بازکردن وب‌سایت</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">صدور کد فعال‌سازی ناموفق بود</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">صدور توکن احراز هویت ناموفق بود</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">ورود با موفقیت انجام شد</string>
@@ -193,7 +191,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_screen_title">فیلتر سفارشی</string>
   <string name="morphe_custom_filter_screen_summary">فیلترهای سفارشی را برای پنهان‌کردن هر مؤلفه‌ای پیکربندی کنید</string>
   <string name="morphe_custom_filter_title">فعال‌کردن فیلتر سفارشی</string>
-  <string name="morphe_custom_filter_strings_title">فیلتر سفارشی</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">رشته‌های سازندهٔ مسیر مؤلفه‌ها را برای فیلترکردن، با خطوط جدید از هم جدا کنید</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">فیلتر سفارشی نامعتبر است: %s</string>

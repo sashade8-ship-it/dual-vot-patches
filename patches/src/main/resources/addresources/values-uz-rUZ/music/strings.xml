@@ -248,7 +248,6 @@ Krosfeyd YouTube Music'ning 8.x va 9.x undan yuqori versiyalarda ishlaydi"</stri
   <string name="morphe_music_hide_navigation_bar_title">Navigatsiya panelini yashirish</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Navigatsiya tugmalarining yozuvlarini yashirish</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Last.fm va ListenBrainz integratsiyasini sozlang</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Kirish qilinmagan. Sozlash uchun bosing</string>
   <string name="morphe_music_scrobbling_log_out">Profildan chiqish</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Profildan chiqilgan</string>
@@ -271,7 +270,6 @@ Krosfeyd YouTube Music'ning 8.x va 9.x undan yuqori versiyalarda ishlaydi"</stri
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Ijro tarixini qayd etishni yoqish uchun ListenBrainz foydalanuvchi tokeningizni kiriting</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Tokenni olish</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Tekshirish</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Iltimos, token kiriting</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Tekshirish davom etmoqda…</string>
@@ -320,7 +318,6 @@ Foydalanish ma'lumotlari fon tartibda ham sinxronlashini ta'minlash uchun, YouTu
   <string name="morphe_music_lyrics_show_translate_button_title">Tarjima tugmasini ko‘rsatish</string>
   <string name="morphe_music_lyrics_text_size_title">Matn hajmi</string>
   <string name="morphe_music_lyrics_text_size_summary">Lirikalar matnining hajmi</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Vaqtni sozlash</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Manba: %s</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->

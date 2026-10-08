@@ -32,6 +32,7 @@ message ButtonRenderer {
     NavigationEndpoint navigationEndpoint = 9;
     optional ButtonRendererAccessibilityData buttonRendererAccessibilityData = 10;
     optional RendererAccessibilityData rendererAccessibilityData = 16;
+    optional NavigationEndpoint command = 19;
 }
 
 message TopbarButtonRenderer {
@@ -110,9 +111,59 @@ message NavigationEndpoint {
     optional ReelWatchEndpoint reelWatchEndpoint = 139608561;
     optional CreationEntryEndpoint creationEntryEndpoint = 324622913;
     optional SearchEndpoint searchEndpoint = 48687709;
+    optional CreationEntrySheetEndpoint creationEntrySheetEndpoint = 144891985;
+    optional ShortsCreationEndpoint shortsCreationEndpoint = 307460408;
+    optional CreationModesCommand creationModesCommand = 469274066;
 }
 
 message CreationEntryEndpoint {
+}
+
+// Bottom sheet of the create button of the Android Automotive layout, with the creation buttons.
+message CreationEntrySheetEndpoint {
+    ButtonSheetSupportedRenderers buttonSheetSupportedRenderers = 1;
+}
+
+message ButtonSheetSupportedRenderers {
+    ButtonSheetRenderer buttonSheetRenderer = 144798207;
+}
+
+message ButtonSheetRenderer {
+    repeated Buttons buttons = 1;
+}
+
+message ShortsCreationEndpoint {
+}
+
+// Opens the creation modes, such as the upload mode, as the create button of the phone layout.
+message CreationModesCommand {
+    CreationModesControlsRendererHolder creationModesControlsRenderer = 1;
+}
+
+message CreationModesControlsRendererHolder {
+    CreationModesControlsRenderer creationModesControlsRenderer = 468228182;
+}
+
+message CreationModesControlsRenderer {
+    CreationModesSwitcherRendererHolder creationModesSwitcherRenderer = 1;
+}
+
+message CreationModesSwitcherRendererHolder {
+    CreationModesSwitcherRenderer creationModesSwitcherRenderer = 466829302;
+}
+
+message CreationModesSwitcherRenderer {
+    repeated Buttons modeButtons = 1;
+    repeated CreationMode modes = 2;
+    CreationMode defaultMode = 3;
+    bool defaultToLastUsedMode = 4;
+}
+
+enum CreationMode {
+    CREATION_MODE_UNKNOWN = 0;
+    CREATION_MODE_UPLOADS = 1;
+    CREATION_MODE_SHORTS = 2;
+    CREATION_MODE_LIVE = 3;
 }
 
 message SearchEndpoint {

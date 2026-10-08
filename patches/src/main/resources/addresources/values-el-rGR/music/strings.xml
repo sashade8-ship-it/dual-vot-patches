@@ -396,7 +396,6 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_hide_navigation_bar_title">Απόκρυψη Γραμμή Πλοήγησης</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Απόκρυψη Ονομάτων κουμπιών Γραμμής Πλοήγησης</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Ρύθμιση ενσωμάτωσης Last.fm και ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Δεν έχετε συνδεθεί. Πατήστε για να ρυθμίσετε</string>
   <string name="morphe_music_scrobbling_log_out">Αποσύνδεση</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Αποσυνδέθηκατε</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Εισαγάγετε το token χρήστη ListenBrainz για να ενεργοποιήσετε το scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Λήψη token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Επαλήθευση</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Παρακαλώ εισαγάγετε ένα token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Επικύρωση…</string>
@@ -552,8 +550,11 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_lyrics_credit_line_regex_summary">Αν οι στίχοι φιλτράρονται λανθασμένα προς τα κάτω, προσαρμόστε ή καθαρίστε αυτό το πεδίο. […] Αφήστε το κενό για απενεργοποίηση.</string>
   <string name="morphe_music_lyrics_text_size_title">Μέγεθος κειμένου</string>
   <string name="morphe_music_lyrics_text_size_summary">Μέγεθος κειμένου των στίχων</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Απόκλιση χρονισμού</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Καθολική χρονική μετατόπιση</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Οι συγχρονισμένοι στίχοι ακολουθούν την αναπαραγωγή. Αν αποκλίνουν, προσαρμόστε τη μετατόπιση χρονισμού. […] Χρησιμοποιήστε θετική τιμή αν οι στίχοι προηγούνται του τραγουδιού.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Χρήση τμημάτων του SponsorBlock για τη μετατόπιση στίχων</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Αντιστοίχιση χωρίς τα τμήματα που παραλείπει το SponsorBlock και μετατόπιση των στίχων στο κυκλοφορημένο ήχο. Το Off αγνοεί εντελώς το SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Αυτό το κομμάτι δεν έχει αναγνωριστικό βίντεο για υποβολή</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Πηγή: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Μετάφραση από Google</string>
@@ -574,6 +575,7 @@ YouTube Music 8.x — το crossfade λειτουργεί μόνο στις εκ
   <string name="morphe_music_lyrics_refreshing">Ανανέωση</string>
   <string name="morphe_music_lyrics_refreshed">Ανανεώθηκε</string>
   <string name="morphe_music_lyrics_about_summary">"Οι στίχοι αντιστοιχίζονται με βάση τον τίτλο και τον καλλιτέχνη· ασυνήθιστα μεταδεδομένα μπορεί να μην βρουν τίποτα ή τη λάθος έκδοση. Χρησιμοποιήστε την ανανέωση για να αλλάξετε εκδόσεις. Οι πάροχοι που επισημαίνονται με * απαιτούν διακριτικό (token). Δεν ζητούνται πάντα όλοι οι ενεργοποιημένοι πάροχοι με τη σειρά που έχετε ορίσει, αλλά αποκρίνονται με βάση την ταχύτητά τους."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Ενεργοποιήστε μόνο τους παρόχους που χρησιμοποιείτε ή κρατήστε την προεπιλογή — τα συνεχή αιτήματα μπορούν να κατακλύσουν μικρές ιστοσελίδες στίχων της κοινότητας</string>
   <string name="morphe_music_lyrics_hide_info_title">Απόκρυψη γραμμής πιστώσεων.</string>
   <string name="morphe_music_lyrics_hide_info_summary">Απόκρυψη της γραμμής πιστώσεων που εμφανίζεται κάτω από τους στίχους.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Εναλλαγή μετάφρασης και μεταγραφής.</string>

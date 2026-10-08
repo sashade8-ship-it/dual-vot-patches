@@ -108,10 +108,9 @@ Mura n-úsáideoir YouTube Premium thú, b'fhéidir nach mbeidh an socrú seo ag
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Is féidir le síniú isteach in Android VR fadhbanna athsheinm a réiteach do roinnt úsáideoirí
 
 Chun síniú isteach, brúigh lean ar aghaidh thíos"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Lean ar aghaidh</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Sínigh amach</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Treoracha</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"Cód gníomhachtaithe: %s
 
 1. Tapáil 'Oscail suíomh Gréasáin' thíos chun an suíomh Gréasáin 'Ceangail gléas' a oscailt
@@ -119,7 +118,6 @@ Chun síniú isteach, brúigh lean ar aghaidh thíos"</string>
 3. Sínigh isteach i Google má iarrtar ort é. Má tá cuntais iolracha agat, roghnaigh an cuntas YouTube seo
 4. Tapáil 'Ceadaigh rochtain YouTube VR'
 5. Fill ar an aip seo tar éis duit an teachtaireacht 'Gléas ceangailte' a bhaint amach"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">Oscail an suíomh Gréasáin</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">Theip ar chód gníomhachtaithe a eisiúint</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">Theip ar chomhartha fíordheimhnithe a eisiúint</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">Sínithe isteach go rathúil</string>
@@ -198,7 +196,6 @@ Mar sin féin, má chumasaíonn tú é seo, logálfar roinnt sonraí úsáideora
   <string name="morphe_custom_filter_screen_title">Scagaire saincheaptha</string>
   <string name="morphe_custom_filter_screen_summary">Cumraigh scagairí saincheaptha chun aon chomhpháirt a cheilt</string>
   <string name="morphe_custom_filter_title">Cumasaigh scagaire saincheaptha</string>
-  <string name="morphe_custom_filter_strings_title">Scagaire saincheaptha</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">Liosta de theaghráin thógálaí cosáin chomhpháirte le scagadh, scartha le línte nua</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Scagaire saincheaptha neamhbhailí: %s</string>

@@ -114,8 +114,8 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">म्यूज़िक वीडियो के बजाय गानों का केवल ऑडियो वर्ज़न चलाएँ। इसके लिए \'स्पूफ़ वीडियो स्ट्रीम्स\' चालू होना ज़रूरी है</string>
   <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
-  <string name="morphe_music_enable_audio_video_switch_title">ऑडियो/वीडियो स्विच सक्षम करें</string>
-  <string name="morphe_music_enable_audio_video_switch_summary">ऑडियो ट्रैक संस्करण और आधिकारिक संगीत वीडियो स्विच करने का प्रयास करें</string>
+  <string name="morphe_music_enable_audio_video_switch_title">ऑडियो/वीडियो स्विच चालू करें</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">ऑडियो ट्रैक और ऑफ़िशियल म्यूज़िक वीडियो के बीच स्विच करने की कोशिश करें</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">थर्ड-पार्टी डाउनलोडर ऐप्स से म्यूज़िक वीडियो, पॉडकास्ट या गाने डाउनलोड करें</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -279,10 +279,10 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_disable_dislike_redirection_title">अनापसंद पुनर्निर्देशन को अक्षम करें</string>
   <string name="morphe_music_disable_dislike_redirection_summary">जब अनापसंद बटन दबाया जाता है तो अगले ट्रैक पर जाने से रोकता है</string>
   <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
-  <string name="morphe_music_playlist_track_tap_action_title">प्लेलिस्ट ट्रैक टैप करने की कार्रवाई</string>
+  <string name="morphe_music_playlist_track_tap_action_title">प्लेलिस्ट ट्रैक टैप ऐक्शन</string>
   <string name="morphe_music_playlist_track_tap_action_entry_default">प्लेलिस्ट चलाएँ</string>
-  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">केवल चयनित ट्रैक चलाएँ</string>
-  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">चयनित ट्रैक को कतार में जोड़ें</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">सिर्फ चुना हुआ ट्रैक चलाएँ</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">चुने हुए ट्रैक को कतार में जोड़ें</string>
   <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
   <string name="morphe_music_playlist_track_tap_added_to_queue">कतार में जोड़ा गया</string>
   <!-- layout.buttons.hideButtonsPatch -->
@@ -396,7 +396,6 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_hide_navigation_bar_title">नविगेशन बार छिपाएं</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">नविगेशन बटन लेबल छिपाएं</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Last.fm और ListenBrainz एकीकरण कॉन्फ़िगर करें</string>
   <string name="morphe_music_scrobbling_summary_logged_out">लॉग इन नहीं किया गया। कॉन्फ़िगर करने के लिए टैप करें</string>
   <string name="morphe_music_scrobbling_log_out">लॉग आउट करें</string>
   <string name="morphe_music_scrobbling_logged_out_toast">लॉग आउट किया गया</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">स्क्रबिंग सक्षम करने के लिए अपना ListenBrainz यूजर टोकन दर्ज करें</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">टोकन</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">टोकन प्राप्त करें</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">सत्यापित करें</string>
   <string name="morphe_music_listenbrainz_token_status_empty">कृपया एक टोकन दर्ज करें</string>
   <string name="morphe_music_listenbrainz_token_status_validating">मान्य किया जा रहा है…</string>
@@ -552,8 +550,11 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_lyrics_credit_line_regex_summary">यदि गीत गलत तरीके से नीचे फ़िल्टर हो जाते हैं, तो इसे समायोजित करें या साफ़ करें। अल्पविराम से अलग किए गए मार्कर: जिन पंक्तियों में मार्कर के बाद कोलन होता है, वे नीचे क्रेडिट जानकारी के रूप में दिखाई जाती हैं। अक्षम करने के लिए खाली छोड़ें</string>
   <string name="morphe_music_lyrics_text_size_title">टेक्स्ट का आकार</string>
   <string name="morphe_music_lyrics_text_size_summary">गीत टेक्स्ट का आकार</string>
-  <string name="morphe_music_lyrics_offset_ms_title">समय का अंतर</string>
+  <string name="morphe_music_lyrics_offset_ms_title">वैश्विक समय ऑफ़सेट</string>
   <string name="morphe_music_lyrics_offset_ms_summary">सिंक किए गए गीत प्लेबैक का अनुसरण करते हैं। यदि वे विचलित होते हैं, तो टाइमिंग ऑफ़सेट समायोजित करें। सिंक किए गए गीतों को आगे या पीछे स्थानांतरित करें। यदि गीत गाने से आगे चलते हैं तो सकारात्मक मान का उपयोग करें</string>
+  <string name="morphe_music_lyrics_sb_matching_title">SponsorBlock सेगमेंट का उपयोग गीत ऑफ़सेट के लिए करें</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">SponsorBlock जिन सेगमेंटों को छोड़ता है, उनके बिना मिलान करें और गीतों को रिलीज़ किए गए ऑडियो पर स्थानांतरित करें। बंद करने पर SponsorBlock को पूरी तरह अनदेखा किया जाता है</string>
+  <string name="morphe_music_lyrics_sb_no_video">इस ट्रैक में सबमिट करने के लिए कोई वीडियो आईडी नहीं है</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">स्रोत: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Google द्वारा अनुवादित</string>
@@ -574,6 +575,7 @@ YouTube Music 8.x - क्रॉसफ़ेड केवल 9.x और उस�
   <string name="morphe_music_lyrics_refreshing">रिफ़्रेश हो रहा है</string>
   <string name="morphe_music_lyrics_refreshed">रीफ़्रेश किया गया</string>
   <string name="morphe_music_lyrics_about_summary">"गीत शीर्षक और कलाकार द्वारा मिलान किए जाते हैं, असामान्य मेटाडेटा कुछ नहीं या गलत संस्करण खोज सकता है। संस्करण बदलने के लिए रीफ्रेश का उपयोग करें। * चिह्नित प्रदाताओं को टोकन की आवश्यकता होती है। सभी सक्षम प्रदाताओं से हमेशा आपके क्रम में अनुरोध नहीं किया जाता है, बल्कि वे अपनी गति के आधार पर प्रतिक्रिया देते हैं।"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">केवल उन्हीं प्रदाताओं को सक्षम करें जिनका आप उपयोग करते हैं, या डिफ़ॉल्ट रखें — लगातार अनुरोध छोटे सामुदायिक गीत साइटों को अतिभारित कर सकते हैं</string>
   <string name="morphe_music_lyrics_hide_info_title">क्रेडिट लाइन छिपाएँ</string>
   <string name="morphe_music_lyrics_hide_info_summary">गीतों के नीचे दिखाई जाने वाली क्रेडिट लाइन छिपाएँ</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">अनुवाद और रोमनीकरण आपस में बदलें</string>

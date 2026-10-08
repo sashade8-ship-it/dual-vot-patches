@@ -131,6 +131,7 @@ Perubahan termasuk:
   <string name="morphe_copy_video_link_button_title">Tunjukkan butang \'Salin pautan video\'</string>
   <string name="morphe_copy_video_link_button_summary">Ketik untuk menyalin pautan video, ketik dan tahan untuk menyalin dengan cap masa</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">Membalikkan tindakan ketik serta ketik dan tahan bagi butang \'Salin pautan video\'</string>
+  <!-- interaction.copytext.copyTextPatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <!-- interaction.downloads.downloadsPatch -->
@@ -196,7 +197,6 @@ Perubahan termasuk:
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_more_button_title">Sorokkan butang \'Lebih banyak\'</string>
-  <string name="morphe_hide_quick_actions_more_button_title">Sorokkan butang \'Lebih banyak\'</string>
   <!-- layout.captions.captionsPatch -->
   <!-- layout.captions.autoCaptionsPatch -->
   <!-- layout.captions.captionCookiesPatch -->
@@ -327,9 +327,6 @@ Automotive layout
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
-  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->

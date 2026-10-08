@@ -114,8 +114,8 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Відтворювати лише аудіоверсію треків замість музичного відео. Потребує \"Підміна відеопотоків\"</string>
   <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
-  <string name="morphe_music_enable_audio_video_switch_title">Увімкнути перемикання аудіо/відео</string>
-  <string name="morphe_music_enable_audio_video_switch_summary">Спробувати перемкнути між версією аудіодоріжки та офіційним музичним відео</string>
+  <string name="morphe_music_enable_audio_video_switch_title">Увімкнути перемикач аудіо/відео</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Спробувати перемикати аудіоверсію треку та офіційне музичне відео</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Завантажувати музичні відео, подкасти або пісні за допомогою сторонніх застосунків для завантаження</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -279,8 +279,8 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_music_disable_dislike_redirection_title">Вимкнути перенаправлення при дизлайку</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Запобігає переходу до наступного треку при натисканні кнопки дизлайку</string>
   <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
-  <string name="morphe_music_playlist_track_tap_action_title">Дія натискання на трек у плейлисті</string>
-  <string name="morphe_music_playlist_track_tap_action_entry_default">Відтворити плейлист</string>
+  <string name="morphe_music_playlist_track_tap_action_title">Дія при натисканні на трек у списку відтворення</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Відтворити список відтворення</string>
   <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Відтворити лише вибраний трек</string>
   <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Додати вибраний трек до черги</string>
   <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
@@ -396,7 +396,6 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_music_hide_navigation_bar_title">Приховати панель навігації</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Приховати підписи кнопок навігації</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Налаштуйте інтеграцію з Last.fm та ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Не авторизовано. Натисніть, щоб налаштувати</string>
   <string name="morphe_music_scrobbling_log_out">Вийти</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Вихід виконано</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Введіть ваш User Token ListenBrainz, щоб увімкнути scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Токен</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Отримати токен</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Перевірити</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Будь ласка, введіть токен</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Перевірка…</string>
@@ -557,8 +555,11 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_music_lyrics_credit_line_regex_summary">Якщо тексти пісень неправильно відфільтровано вниз, налаштуйте або очистіть це. Маркери, розділені комами: рядки, що містять маркер, за яким іде двокрапка, показуються як інформація про авторів унизу. Залиште порожнім, щоб вимкнути</string>
   <string name="morphe_music_lyrics_text_size_title">Розмір тексту</string>
   <string name="morphe_music_lyrics_text_size_summary">Розмір тексту пісні</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Зсув синхронізації</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Глобальне зміщення синхронізації</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Синхронізовані тексти пісень слідують за відтворенням. Якщо вони збиваються, налаштуйте зсув часу. Зсуває синхронізовані тексти пісень уперед або назад. Використовуйте позитивне значення, якщо текст випереджає пісню</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Використовувати сегменти SponsorBlock для зсуву тексту пісні</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Зіставляти без сегментів, які пропускає SponsorBlock, і зміщувати текст пісні на опубліковане аудіо. Вимкнено — повністю ігнорує SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Цей трек не має ідентифікатора відео для надсилання</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Джерело: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Перекладено Google</string>
@@ -579,6 +580,7 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_music_lyrics_refreshing">Оновлення</string>
   <string name="morphe_music_lyrics_refreshed">Оновлено</string>
   <string name="morphe_music_lyrics_about_summary">"Текст пісні шукається за назвою та виконавцем, нетипові метадані можуть не знайти нічого або знайти неправильну версію. Скористайтесь оновленням, щоб змінити версію. Постачальники, позначені *, потребують токен. Не всі увімкнені постачальники завжди запитуються у вашому порядку, вони відповідають залежно від швидкості"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Увімкніть лише ті джерела, які використовуєте, або залиште за замовчуванням — постійні запити можуть перевантажити невеликі спільнотні сайти з текстами пісень</string>
   <string name="morphe_music_lyrics_hide_info_title">Приховати рядок з інформацією про авторів</string>
   <string name="morphe_music_lyrics_hide_info_summary">Приховати рядок з інформацією про авторів, що показується під текстом пісні</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Поміняти місцями переклад і романізацію</string>

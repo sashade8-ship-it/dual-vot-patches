@@ -108,10 +108,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"আন্ড্রয়েড ভিআরতে সাইন ইন করলে কিছু ব্যবহারকারীদের জন্য প্লে ব্যাকের সমস্যা সমাধান হতে পারে
 
 সাইন ইন করতে, নিচে কন্টিনিউ প্রেস করুন"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">এগিয়ে যান</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">সাইন আউট করুন</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">নির্দেশনা</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"অ্যাক্টিভেশন কোড: %s
 
 1. নিচের 'ওয়েবসাইট খুলুন' ট্যাপ করে 'কনেক্ট এ ডিভাইস' ওয়েবসাইট খুলুন
@@ -119,7 +118,6 @@ Second \"item\" text"</string>
 3. গুগলে সাইন ইন করতে প্রম্প্ট হলে। যদি আপনার একাধিক অ্যাকাউন্ট থাকে তাহলে এই ইউটিউব অ্যাকাউন্ট বেছে নিন
 4. 'ইউটিউব ভিআর' অ্যাক্সেস অনুমতি দিন
 5. 'ডিভাইস কনেক্টেড' মেসেজ পাওয়ার পর এই অ্যাপে ফিরে আসুন"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">ওয়েবসাইট খুলুন</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">অ্যাক্টিভেশন কোড জারি করতে ব্যর্থ হয়েছে</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">প্রমাণीकरण টোকেন জারি করতে ব্যর্থ হয়েছে</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">সফলভাবে সাইন ইন করা হয়েছে</string>
@@ -198,7 +196,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_screen_title">কাস্টম ফিল্টার</string>
   <string name="morphe_custom_filter_screen_summary">কোনো উপাদান লুকানোর জন্য কাস্টম ফিল্টার কনফিগার করুন</string>
   <string name="morphe_custom_filter_title">কাস্টম ফিল্টার সক্রিয় করুন</string>
-  <string name="morphe_custom_filter_strings_title">কাস্টম ফিল্টার</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">নতুন লাইন দ্বারা পৃথক করা ফিল্টার করার জন্য উপাদান পাথ বিল্ডার স্ট্রিং এর তালিকা</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">ত্রুটিপূর্ণ কাস্টম ফিল্টার: %s</string>

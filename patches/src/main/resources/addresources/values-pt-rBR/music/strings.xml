@@ -396,7 +396,6 @@ YouTube Music 8.x — o Crossfade funciona apenas no YouTube Music 9.x ou mais r
   <string name="morphe_music_hide_navigation_bar_title">Ocultar barra de navegação</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Ocultar rótulos dos botões de navegação</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Configurar integração Last.fm e ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Não conectado. Toque para configurar</string>
   <string name="morphe_music_scrobbling_log_out">Sair</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Desconectado</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — o Crossfade funciona apenas no YouTube Music 9.x ou mais r
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Insira seu token de usuário ListenBrainz para ativar o envio de informações</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Obter token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verificar</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Por favor, insira um token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Validando…</string>
@@ -547,8 +545,11 @@ Cookies necessários: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_credit_line_regex_summary">Se as letras forem filtradas incorretamente para a parte inferior, ajuste ou limpe este campo. Marcadores separados por vírgula: linhas que contêm um marcador seguido de dois pontos são mostradas como informações de crédito na parte inferior. Deixe vazio para desativar</string>
   <string name="morphe_music_lyrics_text_size_title">Tamanho do texto</string>
   <string name="morphe_music_lyrics_text_size_summary">Tamanho do texto da letra</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Deslocamento de tempo</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Deslocamento global de tempo</string>
   <string name="morphe_music_lyrics_offset_ms_summary">As letras sincronizadas acompanham a reprodução. Se elas saírem da sincronia, ajuste a compensação de tempo. Desloque as letras sincronizadas para frente ou para trás. Use um valor positivo se as letras estiverem adiantadas em relação à música</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Usar os segmentos do SponsorBlock para o deslocamento da letra</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Fazer a correspondência sem os segmentos que o SponsorBlock pula e deslocar a letra para o áudio oficial. Desativado ignora o SponsorBlock por completo</string>
+  <string name="morphe_music_lyrics_sb_no_video">Esta faixa não tem id de vídeo para enviar</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Fonte: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Traduzido pelo Google</string>
@@ -569,6 +570,7 @@ Cookies necessários: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_refreshing">Atualizando</string>
   <string name="morphe_music_lyrics_refreshed">Atualizado</string>
   <string name="morphe_music_lyrics_about_summary">"As letras são correspondidas por título e artista; metadados incomuns podem não encontrar nada ou a versão errada. Use a atualização para alternar as versões. Provedores marcados com * exigem um token. Nem todos os provedores ativados são sempre solicitados na sua ordem, mas respondem com base na velocidade deles."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Ative apenas os provedores que você usa ou mantenha o padrão — solicitações constantes podem sobrecarregar pequenos sites comunitários de letras</string>
   <string name="morphe_music_lyrics_hide_info_title">Ocultar linha de créditos.</string>
   <string name="morphe_music_lyrics_hide_info_summary">Ocultar a linha de crédito mostrada abaixo das letras</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Trocar tradução e romanização</string>

@@ -105,7 +105,6 @@ Yeni dilləri tərcümə etmək və ya mövcud tərcümələri təkmilləşdirm�
 Gözlənilməz hallardan xəbərdar olmayacaqsınız."</string>
   <string name="morphe_debug_export_logs_title">Sazlama qeydlərini köçür</string>
   <string name="morphe_debug_export_logs_summary">Morphe sazlama qeydlərini köçür</string>
-  <string name="morphe_debug_export_logs_file">Fayla köçür</string>
   <string name="morphe_debug_export_logs_success">Sazlama qeydləri uğurla köçürüldü</string>
   <string name="morphe_debug_export_logs_failed">Sazlama qeydlərin ixrac etmək olmadı</string>
   <string name="morphe_debug_logs_search_hint">Sazlama qeydlərini axtar…</string>
@@ -231,4 +230,6 @@ Batareya optimallaşmaları dəyişdirilməsə, görə bilərsiniz:
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ Mən təcrübi istəyirəm</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ Mən sabitlik istəyirəm</string>
   <!-- misc.crashlog.crashLogPatch -->
+  <string name="morphe_crash_log_saved_documents">Çökmə qeydi istifadəçi sənədlərində saxlanıldı: %s</string>
+  <string name="morphe_crash_log_saved">Çökmə qeydi saxlanıldı: %s</string>
 </resources>

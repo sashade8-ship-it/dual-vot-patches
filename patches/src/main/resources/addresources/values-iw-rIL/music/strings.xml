@@ -396,7 +396,6 @@ YouTube Music 8.x - מעבר הצלילים פועל רק בגרסה 9.x ומע�
   <string name="morphe_music_hide_navigation_bar_title">הסתר סרגל ניווט</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">הסתר תוויות לחצני ניווט</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">הגדרת אינטגרציה של Last.fm ו-ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">לא מחובר. הקש להגדרה</string>
   <string name="morphe_music_scrobbling_log_out">התנתק</string>
   <string name="morphe_music_scrobbling_logged_out_toast">התנתקתי</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x - מעבר הצלילים פועל רק בגרסה 9.x ומע�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">הזן את אסימון המשתמש של ListenBrainz שלך כדי להפעיל מעקב</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">אסימון</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">קבל אסימון</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">אמת</string>
   <string name="morphe_music_listenbrainz_token_status_empty">אנא הזן אסימון</string>
   <string name="morphe_music_listenbrainz_token_status_validating">מאמת…</string>
@@ -557,8 +555,11 @@ YouTube Music 8.x - מעבר הצלילים פועל רק בגרסה 9.x ומע�
   <string name="morphe_music_lyrics_credit_line_regex_summary">אם מילות שיר מסוננות בטעות לתחתית, כוונן או נקה את זה. סמנים מופרדים בפסיקים: שורות המכילות סמן ואחריו נקודתיים יוצגו כפרטי קרדיט בתחתית. השאר ריק כדי להשבית</string>
   <string name="morphe_music_lyrics_text_size_title">גודל טקסט</string>
   <string name="morphe_music_lyrics_text_size_summary">גודל טקסט המילים</string>
-  <string name="morphe_music_lyrics_offset_ms_title">הזזת תזמון</string>
+  <string name="morphe_music_lyrics_offset_ms_title">היסט תזמון גלובלי</string>
   <string name="morphe_music_lyrics_offset_ms_summary">מילות שיר מסונכרנות עוקבות אחרי ההשמעה. אם הן נסחפות, כוונן את היסט התזמון. הזז מילים מסונכרנות קדימה או אחורה. השתמש בערך חיובי אם המילים מקדימות את השיר</string>
+  <string name="morphe_music_lyrics_sb_matching_title">השתמש במקטעי SponsorBlock עבור היסט המילים</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">התאם ללא המקטעים ש-SponsorBlock מדלג עליהם והזז את המילים אל האודיו שפורסם. כיבוי מתעלם מ-SponsorBlock לחלוטין</string>
+  <string name="morphe_music_lyrics_sb_no_video">לרצועה זו אין מזהה וידאו לשליחה</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">מקור: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">תורגם על ידי Google</string>
@@ -579,6 +580,7 @@ YouTube Music 8.x - מעבר הצלילים פועל רק בגרסה 9.x ומע�
   <string name="morphe_music_lyrics_refreshing">מרענן</string>
   <string name="morphe_music_lyrics_refreshed">רוענן</string>
   <string name="morphe_music_lyrics_about_summary">"מילות השיר מותאמות לפי שם השיר והאמן. מטא-דאטה חריג עלול לא למצוא דבר או למצוא גרסה שגויה. השתמש ברענון כדי לעבור בין גרסאות. ספקים המסומנים ב-* דורשים טוקן. לא כל הספקים המופעלים מתבקשים תמיד לפי הסדר שבחרת, אלא מגיבים לפי המהירות שלהם."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">הפעל רק את הספקים שבהם אתה משתמש, או השאר את ברירת המחדל — בקשות תכופות עלולות להציף אתרי מילים קהילתיים קטנים</string>
   <string name="morphe_music_lyrics_hide_info_title">הסתר שורת קרדיט</string>
   <string name="morphe_music_lyrics_hide_info_summary">הסתר את שורת הקרדיט המוצגת מתחת למילות השיר</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">החלף בין תרגום לרומניזציה</string>

@@ -23,12 +23,17 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicLong;
 
-import app.morphe.extension.music.patches.lyrics.Lyrics;
-import app.morphe.extension.music.patches.lyrics.LyricsLine;
-import app.morphe.extension.music.patches.lyrics.TrackInfo;
+import app.morphe.extension.music.patches.lyrics.LyricsManager;
+import app.morphe.extension.music.patches.lyrics.model.Lyrics;
+import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
+import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.requests.Requester;
+import app.morphe.extension.music.patches.lyrics.parsers.TtmlParser;
+import app.morphe.extension.music.settings.Settings;
 
 public final class LunaBeatProvider implements LyricsProvider {
 
@@ -36,15 +41,30 @@ public final class LunaBeatProvider implements LyricsProvider {
     private static final String MANIFEST_URL = BASE_URL + "api/v1/manifest.json";
     private static final String SONGS_URL = BASE_URL + "api/v1/songs.json";
 
+    private static final long REQUEST_THROTTLE_MS = 500;
+
+    private static final AtomicLong lastRequestTime = new AtomicLong(0);
+
     private static volatile List<Song> lunabeatSongs = Collections.emptyList();
     private static volatile String lunabeatCachedRevision;
     private static final CountDownLatch lunabeatIndexLatch = new CountDownLatch(1);
+    private static final AtomicBoolean lunabeatLoadStarted = new AtomicBoolean(false);
 
     record Song(String id, String title, String[] artists, String album,
                 String path, String sha256) {
     }
 
     public static void preloadIndex() {
+        if (!Settings.LYRICS_ENABLED.get() || !LyricsManager.isProviderEnabled("LunaBeat")) {
+            return;
+        }
+        startIndexLoad();
+    }
+
+    private static void startIndexLoad() {
+        if (!lunabeatLoadStarted.compareAndSet(false, true)) {
+            return;
+        }
         try {
             doPreloadIndex();
         } catch (Exception ex) {
@@ -76,6 +96,7 @@ public final class LunaBeatProvider implements LyricsProvider {
     private static String fetchRevision() {
         HttpURLConnection conn = null;
         try {
+            LyricsRequests.throttle(lastRequestTime, REQUEST_THROTTLE_MS);
             conn = LyricsRequests.openConnection(MANIFEST_URL);
             if (conn.getResponseCode() != Requester.HTTP_STATUS_CODE_SUCCESS) {
                 return null;
@@ -94,6 +115,7 @@ public final class LunaBeatProvider implements LyricsProvider {
     private static List<Song> fetchSongIndex() {
         HttpURLConnection conn = null;
         try {
+            LyricsRequests.throttle(lastRequestTime, REQUEST_THROTTLE_MS);
             conn = LyricsRequests.openConnection(SONGS_URL);
             if (conn.getResponseCode() != Requester.HTTP_STATUS_CODE_SUCCESS) {
                 return null;
@@ -144,12 +166,26 @@ public final class LunaBeatProvider implements LyricsProvider {
     @Nullable
     @Override
     public FetchResult fetch(TrackInfo track) throws Exception {
-        List<Lyrics.ScoredLyrics> candidates = fetchCandidates(track);
-        return candidates.isEmpty() ? null : FetchResult.of(candidates.get(0).lyrics(), track);
+        List<ScoredSong> candidates = fetchScoredSongs(track);
+        if (candidates.isEmpty()) {
+            return null;
+        }
+        ScoredSong top = candidates.get(0);
+        return FetchResult.of(top.lyrics(), top.title(), top.artist(), 0, track);
     }
 
     @Override
     public List<Lyrics.ScoredLyrics> fetchCandidates(TrackInfo track) throws Exception {
+        List<Lyrics.ScoredLyrics> scored = new ArrayList<>();
+        for (ScoredSong candidate : fetchScoredSongs(track)) {
+            scored.add(new Lyrics.ScoredLyrics(candidate.score(), candidate.lyrics()));
+        }
+        return scored;
+    }
+
+    private record ScoredSong(int score, Lyrics lyrics, String title, String artist) {}
+
+    private List<ScoredSong> fetchScoredSongs(TrackInfo track) throws Exception {
         ensureIndexLoaded();
 
         List<Song> matches = searchLunabeatIndex(track);
@@ -157,7 +193,7 @@ public final class LunaBeatProvider implements LyricsProvider {
             return Collections.emptyList();
         }
 
-        List<Lyrics.ScoredLyrics> scored = new ArrayList<>(matches.size());
+        List<ScoredSong> scored = new ArrayList<>(matches.size());
         for (Song song : matches) {
             if (scored.size() >= LyricsRequests.MAX_CANDIDATES) break;
             String artist = song.artists.length > 0 ? song.artists[0] : "";
@@ -169,17 +205,19 @@ public final class LunaBeatProvider implements LyricsProvider {
             if (lyrics != null && !lyrics.isEmpty()) {
                 int score = scoreLunabeatCandidate(
                         song.title(), artist, 0, lyrics, track);
-                scored.add(new Lyrics.ScoredLyrics(score, lyrics));
+                scored.add(new ScoredSong(score, lyrics, song.title(), artist));
             }
         }
 
-        return Lyrics.sortScoredByScore(scored);
+        scored.sort((a, b) -> Integer.compare(b.score(), a.score()));
+        return scored;
     }
 
     private static void ensureIndexLoaded() {
         if (lunabeatSongs != null && !lunabeatSongs.isEmpty()) {
             return;
         }
+        startIndexLoad();
         try {
             lunabeatIndexLatch.await(5, TimeUnit.SECONDS);
         } catch (InterruptedException ex) {
@@ -221,6 +259,7 @@ public final class LunaBeatProvider implements LyricsProvider {
         String url = BASE_URL + song.path;
         HttpURLConnection conn = null;
         try {
+            LyricsRequests.throttle(lastRequestTime, REQUEST_THROTTLE_MS);
             conn = LyricsRequests.openConnection(url);
             if (conn.getResponseCode() != Requester.HTTP_STATUS_CODE_SUCCESS) {
                 return null;

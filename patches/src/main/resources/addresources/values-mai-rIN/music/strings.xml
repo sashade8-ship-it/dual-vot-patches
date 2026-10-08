@@ -157,7 +157,6 @@ YouTube Music 8.x — क्रॉसफेड केवल 9.x आ नय व�
   <string name="morphe_music_hide_navigation_bar_title">नेविगेशन बार छिपाएं</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">नेविगेशन बटन लेबल छिपाएं</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Last.fm आ ListenBrainz इंटीग्रेशन कॉन्फ़िगर करू</string>
   <string name="morphe_music_scrobbling_summary_logged_out">लॉग इन नहि छै। कॉन्फ़िगर करय लेल टैप करू</string>
   <string name="morphe_music_scrobbling_log_out">लॉग आउट करू</string>
   <string name="morphe_music_scrobbling_logged_out_toast">लॉग आउट कएल गेल</string>
@@ -179,7 +178,6 @@ YouTube Music 8.x — क्रॉसफेड केवल 9.x आ नय व�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Scrobbling सक्षम करय लेल अपन ListenBrainz यूजर टोकन दर्ज करू</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">टोकन</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">टोकन प्राप्त करू</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">सत्यापित करू</string>
   <string name="morphe_music_listenbrainz_token_status_empty">कृपया टोकन दर्ज करू</string>
   <string name="morphe_music_listenbrainz_token_status_valid">मान्य टोकन! यूजर: %s</string>

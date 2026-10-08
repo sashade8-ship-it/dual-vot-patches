@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.nio.charset.StandardCharsets;
 import java.text.Normalizer;
@@ -33,9 +34,11 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.WeakHashMap;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
@@ -72,9 +75,12 @@ import app.morphe.extension.youtube.settings.Settings;
  * Elements do not show which text is the title, so a text is replaced only if it's verified
  * to be the title: the original title, which the element shows if the title is not translated,
  * or the title in the language of the app fetched with {@link LocalizedTitleRequest}, which is
- * fetched only if the element does not show the original title. Until the title is verified,
- * the text found as the title by the layout of the element is shown as loading,
- * and it's shown again if it's not the title.
+ * fetched only if the element does not show the original title. If the text found as the title
+ * is neither, the title is also fetched as shown in the lists, where titles can be auto-translated,
+ * and in the language of the text, as elements can show the title in another language, such as
+ * a search result shown in the language of the search.
+ * Until the title is verified, the text found as the title by the layout of the element is shown
+ * as loading, and it's shown again if it's not the title.
  */
 @SuppressWarnings("unused")
 public final class RestoreOriginalTitlesPatch {
@@ -226,9 +232,10 @@ public final class RestoreOriginalTitlesPatch {
     /**
      * Litho identifiers of components, such as 'video_lockup_with_attachment.eml-fe|c0c4a49b6544b5fb'.
      * Elements can start with other identifiers without a component name, such as 'theme|83f890a67c133c77'.
+     * The hash is in hexadecimal without the leading zeros, such as 'about_channel_view.eml-fe|e0cd03134bb123e'.
      */
     private static final Pattern IDENTIFIER_PATTERN =
-            Pattern.compile("^[^\\s|]+\\.[^\\s|]+\\|[0-9a-f]{16}$");
+            Pattern.compile("^[^\\s|]+\\.[^\\s|]+\\|[0-9a-f]{1,16}$");
 
     private static final Pattern CHANNEL_ID_PATTERN = Pattern.compile("^UC[A-Za-z0-9_-]{22}$");
 
@@ -262,6 +269,26 @@ public final class RestoreOriginalTitlesPatch {
      * Requests of the titles in the language of the app that register the title when done.
      */
     private static final Set<CompletableFuture<String>> localizedTitleRequests = ConcurrentHashMap.newKeySet();
+
+    /**
+     * Video id and language of the app -> text found as the title -> request of the other title that
+     * the text can be, for the elements that show neither the original title nor the title in the
+     * language of the app: the title shown in the lists, or the title in the language of the text.
+     * The title is null if neither is the text. The titles are fetched once, as the requests are cached.
+     */
+    private static final Map<String, Map<String, CompletableFuture<String>>> candidateTitleRequests =
+            Collections.synchronizedMap(Utils.createSizeRestrictedMap(1000));
+
+    /**
+     * Maximum number of texts found as the title of a video whose other titles are fetched.
+     */
+    private static final int MAX_CANDIDATE_REQUESTS_PER_VIDEO = 5;
+
+    /**
+     * Time before the other titles of a text that failed to fetch because of network errors
+     * are fetched again. The text is shown meanwhile, so a failing network does not keep loading.
+     */
+    private static final long CANDIDATE_RETRY_MILLISECONDS = 30_000;
 
     /**
      * Length of the longest translated title, so longer texts are ignored without copying them.
@@ -344,6 +371,7 @@ public final class RestoreOriginalTitlesPatch {
      *
      * @return If titles are replaced for the current navigation.
      */
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean replacesTitlesForCurrentNavigation() {
         return RESTORE_ORIGINAL || DeArrowPatch.useDeArrowTitlesForCurrentNavigation();
     }
@@ -416,7 +444,7 @@ public final class RestoreOriginalTitlesPatch {
             findVideoIds(root, thumbnailVideoIds, messageVideoIds);
             String component = identifier == null ? "" : identifier.substring(0, identifier.indexOf('|'));
             boolean modified = restoreVideoTitles(root, messageVideoIds, component);
-            if (messageVideoIds.get(root).isEmpty()) {
+            if (Objects.requireNonNull(messageVideoIds.get(root)).isEmpty()) {
                 // Elements of the opened video that do not include the video id, such as the watch page title.
                 String videoId = openedVideoId;
                 if (videoId != null) {
@@ -588,6 +616,7 @@ public final class RestoreOriginalTitlesPatch {
      * Same as {@link #spannedText(CharSequence, CharSequence, LithoRelayoutPatch.RelayoutSpan)},
      * and shows the DeArrow icon before the title if the title is a DeArrow title.
      */
+    @SuppressWarnings("SameParameterValue")
     private static SpannableString titleText(CharSequence text, String title,
                                              @Nullable LithoRelayoutPatch.RelayoutSpan relayoutSpan) {
         if (!DeArrowTitleIcon.isShown(title)) {
@@ -1400,12 +1429,26 @@ public final class RestoreOriginalTitlesPatch {
         if (titles == null) {
             addPendingTitleTexts(texts, videoId, component);
             String candidate = findCandidate.get();
-            return candidate != null && !isChannelName(videoId, candidate)
-                    && markTitle(textNodes, candidate, Collections.emptySet(), videoId);
+            if (candidate == null || isChannelName(videoId, candidate)) {
+                return false;
+            }
+            requestCandidateTitle(videoId, texts, candidate);
+            return markTitle(textNodes, candidate, Collections.emptySet(), videoId);
         }
 
         String title = findTitle(videoId, texts, titles);
-        if (title == null || isChannelName(videoId, title)) {
+        if (title == null) {
+            // The titles were verified before the element was parsed, such as for another element
+            // of the video, and the element can show the title auto-translated or in another language.
+            String candidate = findCandidate.get();
+            if (candidate == null || isChannelName(videoId, candidate)
+                    || !requestCandidateTitle(videoId, texts, candidate)) {
+                return false;
+            }
+            addPendingTitleTexts(texts, videoId, component);
+            return markTitle(textNodes, candidate, Collections.emptySet(), videoId);
+        }
+        if (isChannelName(videoId, title)) {
             return false;
         }
         if (onTitleVerified != null) {
@@ -1539,17 +1582,119 @@ public final class RestoreOriginalTitlesPatch {
     }
 
     /**
+     * Starts fetching the other titles that the text found as the title can be, if no text of the
+     * element is the original title or the title in the language of the app, which are fetched first:
+     * the title shown in the lists, and then the title in the language of the text.
+     * The titles of each text found as the title of the video are fetched once, or again if they
+     * failed to fetch because of network errors.
+     *
+     * @param texts Texts of the element.
+     * @return If the other titles of the text are being fetched.
+     */
+    private static boolean requestCandidateTitle(String videoId, Set<String> texts, String candidate) {
+        Map<String, CompletableFuture<String>> requests = candidateTitleRequests.computeIfAbsent(
+                candidateKey(videoId),
+                key -> Collections.synchronizedMap(
+                        Utils.createSizeRestrictedMap(MAX_CANDIDATE_REQUESTS_PER_VIDEO)));
+        CompletableFuture<String> request;
+        synchronized (requests) {
+            request = requests.get(candidate);
+            if (request != null) {
+                return !request.isDone();
+            }
+            request = new CompletableFuture<>();
+            requests.put(candidate, request);
+        }
+
+        final CompletableFuture<String> candidateRequest = request;
+        List<String> elementTexts = new ArrayList<>(texts);
+        OriginalTitleRequest.fetch(videoId).thenComposeAsync(titles -> {
+            OriginalTitleRequest.OriginalVideo originalVideo = OriginalTitleRequest.getOriginalIfFetched(videoId);
+            if (originalVideo != null && findTitle(videoId, elementTexts,
+                    Collections.singletonList(originalVideo.title())) != null) {
+                return CompletableFuture.completedFuture(false);
+            }
+            // The title in the language of the app is already fetched or being fetched.
+            return LocalizedTitleRequest.fetch(videoId).thenCompose(localizedTitle -> {
+                if (localizedTitle != null && findTitle(videoId, elementTexts,
+                        Collections.singletonList(localizedTitle)) != null) {
+                    return CompletableFuture.completedFuture(false);
+                }
+                return LocalizedTitleRequest.fetchListTitle(videoId).thenCompose(listTitle -> {
+                    if (listTitle != null && findTitle(videoId, elementTexts,
+                            Collections.singletonList(listTitle)) != null) {
+                        Logger.printDebug(() -> "Title shown in the lists of: " + videoId + " is: " + listTitle);
+                        candidateRequest.complete(listTitle);
+                        return CompletableFuture.completedFuture(true);
+                    }
+                    return LocalizedTitleRequest.fetchInLanguageOf(videoId, candidate).thenApply(title -> {
+                        candidateRequest.complete(title);
+                        return true;
+                    });
+                });
+            });
+        }, Utils::runOnBackgroundThread).whenComplete((fetched, ex) -> {
+            if (ex == null) {
+                if (!fetched) {
+                    // The element shows the original title or the title in the language of the app,
+                    // so other elements of the video can still show the title in another language.
+                    requests.remove(candidate, candidateRequest);
+                    candidateRequest.complete(null);
+                }
+                return;
+            }
+            Throwable cause = ex instanceof CompletionException && ex.getCause() != null ? ex.getCause() : ex;
+            if (cause instanceof IOException ioException) {
+                Logger.printInfo(() -> "Could not fetch other titles of: " + videoId, ioException);
+                Utils.runOnMainThreadDelayed(() -> requests.remove(candidate, candidateRequest),
+                        CANDIDATE_RETRY_MILLISECONDS);
+            } else {
+                Logger.printException(() -> "requestCandidateTitle failure", cause);
+            }
+            candidateRequest.complete(null);
+        });
+
+        if (candidateRequest.isDone()) {
+            return false;
+        }
+        relayoutWhenFetched(candidateRequest);
+        return true;
+    }
+
+    private static String candidateKey(String videoId) {
+        return videoId + ' ' + Locale.getDefault().toLanguageTag();
+    }
+
+    /**
      * @return The titles that a text can be if it's the title of the video: the original title,
-     *         and the title in the language of the app if it was fetched. Null if the titles are
-     *         being fetched.
+     *         the title in the language of the app if it was fetched, and the other titles of the texts
+     *         found as the title that were fetched. Null if the titles are being fetched.
      */
     @Nullable
     private static List<String> verifiedTitles(String videoId) {
         if (OriginalTitleRequest.isPending(videoId) || LocalizedTitleRequest.isPending(videoId)) {
             return null;
         }
+        List<String> candidateTitles = null;
+        Map<String, CompletableFuture<String>> candidateRequests = candidateTitleRequests.get(candidateKey(videoId));
+        if (candidateRequests != null) {
+            synchronized (candidateRequests) {
+                for (CompletableFuture<String> request : candidateRequests.values()) {
+                    if (!request.isDone()) {
+                        return null;
+                    }
+                    String title = request.getNow(null);
+                    if (title != null) {
+                        if (candidateTitles == null) {
+                            candidateTitles = new ArrayList<>(1);
+                        }
+                        candidateTitles.add(title);
+                    }
+                }
+            }
+        }
 
-        List<String> titles = new ArrayList<>(2);
+        List<String> titles = new ArrayList<>(3);
         OriginalTitleRequest.OriginalVideo originalVideo = OriginalTitleRequest.getOriginalIfFetched(videoId);
         if (originalVideo != null) {
             titles.add(originalVideo.title());
@@ -1558,6 +1703,9 @@ public final class RestoreOriginalTitlesPatch {
         String localizedTitle = localizedRequest == null ? null : localizedRequest.getNow(null);
         if (localizedTitle != null) {
             titles.add(localizedTitle);
+        }
+        if (candidateTitles != null) {
+            titles.addAll(candidateTitles);
         }
         return titles;
     }
@@ -1972,7 +2120,7 @@ public final class RestoreOriginalTitlesPatch {
      * @return If the text is the start of the title followed by an ellipsis.
      */
     private static boolean isTruncatedTitle(String text, String title) {
-        final int ellipsisLength = text.endsWith("\u2026") ? 1 : text.endsWith("...") ? 3 : 0;
+        final int ellipsisLength = text.endsWith("…") ? 1 : text.endsWith("...") ? 3 : 0;
         if (ellipsisLength == 0) {
             return false;
         }

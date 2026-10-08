@@ -108,10 +108,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"กดต่อไปเพื่อลงชื่อเข้าใช้ใน Android VR เพื่อแก้ปัญหาการเล่นกลับบางครั้ง
 
 กดดำเนินการต่อเพื่อลงชื่อเข้าใช้"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">ดำเนินการต่อ</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">ออกจากระบบ</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">คำแนะนำ</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"รหัสเข้าสู่ระบบ: %s
 
 1. กด 'เปิดเว็บไซต์' ด้านล่างเพื่อเปิดเข้าสู่เว็บไซต์ 'ที่เชื่อมต่ออุปกรณ์'
@@ -119,7 +118,6 @@ Second \"item\" text"</string>
 3. หากต้องเข้าสู่ระบบ Google ให้ดำเนินการทันที ถ้ามีหลายบัญชีให้เลือกบัญชีนี้ของ YouTube
 4. กด 'Metadata API'
 5. กลับมาที่แอปนี้หลังจากเห็นข้อความ 'อุปกรณ์ได้เชื่อมต่อแล้ว'"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">เปิดเว็บไซต์</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">ไม่สามารถออกรหัสเปิดใช้งานได้</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">ไม่สามารถออกโทเค็นการตรวจสอบสิทธิ์ได้</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">เข้าสู่ระบบสำเร็จ</string>
@@ -198,7 +196,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_screen_title">ตัวกรองแบบกำหนดเอง</string>
   <string name="morphe_custom_filter_screen_summary">กำหนดค่าตัวกรองแบบกำหนดเองเพื่อซ่อนส่วนประกอบใดๆ</string>
   <string name="morphe_custom_filter_title">เปิดใช้งานตัวกรองแบบกำหนดเอง</string>
-  <string name="morphe_custom_filter_strings_title">ตัวกรองแบบกำหนดเอง</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">รายการสตริงตัวสร้างเส้นทางส่วนประกอบที่จะกรอง คั่นด้วยบรรทัดใหม่</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">ตัวกรองแบบกำหนดเองไม่ถูกต้อง: %s</string>

@@ -70,7 +70,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
                     ),
                     TextPreference(
                         key = "morphe_music_custom_filter_strings",
-                        titleKey = "morphe_custom_filter_strings_title",
+                        titleKey = "morphe_custom_filter_screen_title",
                         summaryKey = "morphe_custom_filter_strings_summary",
                         inputType = InputType.TEXT_MULTI_LINE
                     )

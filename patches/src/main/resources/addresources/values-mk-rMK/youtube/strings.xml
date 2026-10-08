@@ -220,6 +220,7 @@ Second \"item\" text"</string>
   <!-- interaction.channelsearch.channelSearchPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
   <string name="morphe_copy_video_link_with_timestamp_button_title">Копирајте го временскиот печат стандардно</string>
+  <!-- interaction.copytext.copyTextPatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Исклучи прозорче за најава на ТВ</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
@@ -378,18 +379,12 @@ Second \"item\" text"</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_save_button_title">Прикријте го копчето за Save</string>
   <string name="morphe_fullscreen_buttons">Копчиња за полноекрански режим</string>
-  <string name="morphe_hide_quick_actions_title">Прикриј лента со брзи постапки</string>
-  <string name="morphe_hide_quick_actions_ask_button_title">Прикријте го копчето за Ask</string>
-  <string name="morphe_hide_quick_actions_comments_button_title">Прикријте го копчето за Коментари</string>
   <string name="morphe_hide_quick_actions_dislike_button_title">Прикријте го копчето за Dislike</string>
   <string name="morphe_hide_quick_actions_like_button_title">Прикријте го копчето за Like</string>
   <string name="morphe_hide_quick_actions_live_chat_button_title">Прикријте го копчето \'Live chat\'</string>
   <string name="morphe_hide_quick_actions_mix_button_title">Прикријте го копчето за Mix</string>
-  <string name="morphe_hide_quick_actions_more_button_title">Прикријте го копчето за More</string>
   <string name="morphe_hide_quick_actions_more_videos_button_title">Прикријте го копчето \'More videos\'</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">Прикријте го копчето за Playlist</string>
-  <string name="morphe_hide_quick_actions_save_button_title">Прикријте го копчето за Save</string>
-  <string name="morphe_hide_quick_actions_share_button_title">Прикријте го копчето за Share</string>
   <string name="morphe_quick_actions_top_margin_title">Горни маргин за брзи постапки</string>
   <string name="morphe_quick_actions_top_margin_summary">Поставете го горниот маргин на лентата за брзи постапки (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
@@ -449,13 +444,8 @@ Second \"item\" text"</string>
   <string name="morphe_toolbar_screen_title">Toolbar</string>
   <string name="morphe_toolbar_screen_summary">Изберете кои компоненти да се појавуваат во лентата со алатки</string>
   <string name="morphe_hide_toolbar_cast_button_title">Прикријте го копчето Cast</string>
-  <string name="morphe_hide_toolbar_create_button_title">Прикријте го копчето Create</string>
   <string name="morphe_hide_toolbar_microphone_button_title">Прикријте го копчето Microphone</string>
-  <string name="morphe_hide_toolbar_notification_button_title">Прикријте го копчето Notifications</string>
   <string name="morphe_hide_toolbar_search_button_title">Прикријте го копчето Search</string>
-  <string name="morphe_show_toolbar_settings_button_title">Прикажи копче Settings</string>
-  <string name="morphe_show_toolbar_settings_button_index_title">Позиција на копчето Settings</string>
-  <string name="morphe_show_toolbar_settings_button_type_title">Акција на копчето за поставки за Toolbar</string>
   <string name="morphe_show_toolbar_settings_button_type_summary">Кога е овозможено, допир го отвора Morphe поставените параметри, а долго притискање го отвора YouTube поставените параметри</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Паѓачки мени</string>
@@ -715,21 +705,12 @@ Second \"item\" text"</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_home_title">За почетна страница</string>
-  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_subscription_title">За Претплати</string>
-  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_library_title">За Вие</string>
-  <string name="morphe_dearrow_thumbnail_player_title">За плеер плеери и препораки</string>
-  <string name="morphe_dearrow_thumbnail_search_title">За резултати од пребарување</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Оригинални слики</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Оригинални слики</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Снимки од екранот</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Снимки од екранот</string>
   <string name="morphe_dearrow_connection_toast_title">Прикажи известувања за грешка во поврзувањето</string>
   <string name="morphe_dearrow_connection_toast_summary">Прикажува известување кога серверот DeArrow не е достапен</string>
-  <string name="morphe_dearrow_api_url_title">Конечно место на DeArrow API</string>
   <string name="morphe_dearrow_api_url_summary">URL-адреса на крајната точка за кешот на сликите на DeArrow</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Снимки од екранот од видеа</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Снимките од екранот се преземаат од почетокот / средината / крајот на секое видео. Овие слики се вградени во YouTube и не се користи надворешен API</string>

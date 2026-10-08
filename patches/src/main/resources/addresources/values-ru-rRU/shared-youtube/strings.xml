@@ -108,10 +108,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Вход в Android VR может решать проблемы с воспроизведением для некоторых пользователей
 
 Чтобы войти, нажмите кнопку \"Продолжить\" ниже"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Продолжить</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Выйти</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Инструкции</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"Код активации: %s
 
 1. Нажмите \"Открыть вебсайт\" ниже, чтобы открыть вебсайт \"Подключить устройство\"
@@ -119,7 +118,6 @@ Second \"item\" text"</string>
 3. Войдите в Google при необходимости. Если у вас есть несколько аккаунтов, выберите этот аккаунт YouTube
 4. Нажмите \"Разрешить доступ к YouTube VR\"
 5. Вернитесь в приложение после того, как вы увидите сообщение \"Устройство подключено\""</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">Открыть вебсайт</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">Не удалось выдать код активации</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">Не удалось выдать токен аутентификации</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">Вход выполнен успешно</string>
@@ -198,7 +196,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_screen_title">Пользовательский фильтр</string>
   <string name="morphe_custom_filter_screen_summary">Настройте пользовательские фильтры, чтобы скрыть любой компонент</string>
   <string name="morphe_custom_filter_title">Включить кастомный фильтр</string>
-  <string name="morphe_custom_filter_strings_title">Кастомный фильтр</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">Список строк конструктора путей компонентов для фильтрации, разделенных новой строкой</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Недопустимый кастомный фильтр: %s</string>

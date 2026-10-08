@@ -105,7 +105,6 @@ Second \"item\" text"</string>
 आप अप्रत्याशित घटनाओं से सूचित नहीं किए जाएंगे।"</string>
   <string name="morphe_debug_export_logs_title">डीबग लॉग एक्सपोर्ट करें</string>
   <string name="morphe_debug_export_logs_summary">Morphe डिबग लॉग्स एक्सपोर्ट करें</string>
-  <string name="morphe_debug_export_logs_file">फ़ाइल में एक्सपोर्ट करें</string>
   <string name="morphe_debug_export_logs_success">डिबग लॉग्स सफलतापूर्वक एक्सपोर्ट किए गए</string>
   <string name="morphe_debug_export_logs_failed">डिबग लॉग्स एक्सपोर्ट करने में विफल।</string>
   <string name="morphe_debug_logs_search_hint">डिबग लॉग खोजें…</string>
@@ -230,6 +229,6 @@ Second \"item\" text"</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ मुझे प्रायोगिक चाहिए</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ मुझे स्थिर चाहिए</string>
   <!-- misc.crashlog.crashLogPatch -->
-  <string name="morphe_crash_log_saved_documents">क्रैश लॉग उपयोगकर्ता दस्तावेज़ों में सहेजा गया: %s</string>
-  <string name="morphe_crash_log_saved">क्रैश लॉग सहेजा गया: %s</string>
+  <string name="morphe_crash_log_saved_documents">क्रैश लॉग दस्तावेज़ों फ़ोल्डर में सेव हुआ: %s</string>
+  <string name="morphe_crash_log_saved">क्रैश लॉग सेव हुआ: %s</string>
 </resources>

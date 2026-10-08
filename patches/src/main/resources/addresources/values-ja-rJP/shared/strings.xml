@@ -105,7 +105,6 @@ Second \"item\" text"</string>
 予期しないイベントが発生した場合でも通知されません。"</string>
   <string name="morphe_debug_export_logs_title">デバッグログのエクスポート</string>
   <string name="morphe_debug_export_logs_summary">Morphe のデバッグログをエクスポートします</string>
-  <string name="morphe_debug_export_logs_file">ファイル出力</string>
   <string name="morphe_debug_export_logs_success">デバッグログのエクスポートに成功しました</string>
   <string name="morphe_debug_export_logs_failed">デバッグログのエクスポートに失敗しました</string>
   <string name="morphe_debug_logs_search_hint">デバッグログを検索</string>
@@ -230,6 +229,6 @@ MicroG に対して電池の最適化を無効にしても、バッテリー消�
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ 実験版にします</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ 安定版にします</string>
   <!-- misc.crashlog.crashLogPatch -->
-  <string name="morphe_crash_log_saved_documents">クラッシュログがユーザードキュメントに保存されました: %s</string>
-  <string name="morphe_crash_log_saved">クラッシュログが保存されました: %s</string>
+  <string name="morphe_crash_log_saved_documents">クラッシュログを Documents フォルダに保存しました: %s</string>
+  <string name="morphe_crash_log_saved">クラッシュログを保存しました: %s</string>
 </resources>

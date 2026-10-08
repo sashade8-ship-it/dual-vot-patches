@@ -396,7 +396,6 @@ YouTube Music 8.x — การเฟดข้ามจะทำงานบน 
   <string name="morphe_music_hide_navigation_bar_title">ซ่อนแถบนำทาง</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">ซ่อนป้ายกำกับปุ่มนำทาง</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">ตั้งค่าการทำงานร่วมกับ Last.fm และ ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">ยังไม่ได้เข้าสู่ระบบ แตะเพื่อตั้งค่า</string>
   <string name="morphe_music_scrobbling_log_out">ออกจากระบบ</string>
   <string name="morphe_music_scrobbling_logged_out_toast">ออกจากระบบแล้ว</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — การเฟดข้ามจะทำงานบน 
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">ป้อนโทเค็นผู้ใช้ ListenBrainz ของคุณเพื่อเปิดใช้งานการบันทึกเพลง</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">โทเค็น</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">รับโทเค็น</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">ตรวจสอบ</string>
   <string name="morphe_music_listenbrainz_token_status_empty">กรุณาป้อนโทเค็น</string>
   <string name="morphe_music_listenbrainz_token_status_validating">กำลังตรวจสอบ…</string>
@@ -552,8 +550,11 @@ YouTube Music 8.x — การเฟดข้ามจะทำงานบน 
   <string name="morphe_music_lyrics_credit_line_regex_summary">หากเนื้อเพลงถูกกรองไปไว้ด้านล่างอย่างไม่ถูกต้อง ให้ปรับหรือล้างค่าตรงนี้ คำกำกับที่คั่นด้วยเครื่องหมายจุลภาค: บรรทัดที่มีคำกำกับตามด้วยเครื่องหมายทวิภาคจะแสดงเป็นข้อมูลเครดิตที่ด้านล่าง เว้นว่างเพื่อปิดใช้</string>
   <string name="morphe_music_lyrics_text_size_title">ขนาดข้อความ</string>
   <string name="morphe_music_lyrics_text_size_summary">ขนาดของข้อความเนื้อเพลง</string>
-  <string name="morphe_music_lyrics_offset_ms_title">การชดเชยเวลา</string>
+  <string name="morphe_music_lyrics_offset_ms_title">ออฟเซ็ตเวลาโดยรวม</string>
   <string name="morphe_music_lyrics_offset_ms_summary">เนื้อเพลงแบบซิงก์จะติดตามการเล่น หากคลาดเคลื่อน ให้ปรับค่าชดเชยเวลา เลื่อนเนื้อเพลงแบบซิงก์ไปข้างหน้าหรือข้างหลัง ใช้ค่าเป็นบวกหากเนื้อเพลงเร็วกว่าเพลง</string>
+  <string name="morphe_music_lyrics_sb_matching_title">หรอยแรง</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">จับคู่โดยไม่รวมเซกเมนต์ที่ SponsorBlock ข้าม และเลื่อนเนื้อเพลงไปยังเสียงที่เผยแพร่ การปิดจะไม่ใช้ SponsorBlock เลย</string>
+  <string name="morphe_music_lyrics_sb_no_video">เพลงนี้ไม่มี video id ที่จะส่ง</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">แหล่งที่มา: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">แปลโดย Google</string>
@@ -574,6 +575,7 @@ YouTube Music 8.x — การเฟดข้ามจะทำงานบน 
   <string name="morphe_music_lyrics_refreshing">กำลังรีเฟรช</string>
   <string name="morphe_music_lyrics_refreshed">รีเฟรชแล้ว</string>
   <string name="morphe_music_lyrics_about_summary">"เนื้อเพลงจะจับคู่ตามชื่อเพลงและศิลปิน ข้อมูลเมตาที่ผิดปกติอาจไม่พบอะไรเลยหรือพบเวอร์ชันที่ผิด ใช้การรีเฟรชเพื่อสลับเวอร์ชัน ผู้ให้บริการที่ทำเครื่องหมาย * ต้องใช้โทเค็น ผู้ให้บริการที่เปิดใช้งานทั้งหมดไม่ได้ถูกเรียกใช้ตามลำดับที่คุณตั้งค่าเสมอไป แต่จะตอบสนองตามความเร็วของพวกเขา"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">เปิดใช้เฉพาะผู้ให้บริการที่คุณใช้ หรือคงค่าเริ่มต้นไว้ — การร้องขออย่างต่อเนื่องอาจทำให้เว็บไซต์เนื้อเพลงของชุมชนเล็กๆ ทำงานหนักเกินไป</string>
   <string name="morphe_music_lyrics_hide_info_title">ซ่อนบรรทัดเครดิต</string>
   <string name="morphe_music_lyrics_hide_info_summary">ซ่อนบรรทัดเครดิตที่แสดงใต้เนื้อเพลง</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">สลับคำแปลและการโรมาไนซ์</string>

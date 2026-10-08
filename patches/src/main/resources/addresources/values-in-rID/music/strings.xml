@@ -396,7 +396,6 @@ YouTube Music 8.x — pudar silang hanya berfungsi pada versi 9.x dan yang lebih
   <string name="morphe_music_hide_navigation_bar_title">Sembunyikan bilah navigasi</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Sembunyikan label tombol navigasi</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurasikan integrasi Last.fm dan ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Belum masuk. Ketuk untuk mengonfigurasi</string>
   <string name="morphe_music_scrobbling_log_out">Keluar</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Telah keluar</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — pudar silang hanya berfungsi pada versi 9.x dan yang lebih
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Masukkan Token Pengguna ListenBrainz Anda untuk mengaktifkan scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Dapatkan token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verifikasi</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Mohon masukkan token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Memvalidasi…</string>
@@ -557,8 +555,11 @@ Cookie yang diperlukan: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1P
   <string name="morphe_music_lyrics_credit_line_regex_summary">Jika lirik salah disaring ke bagian bawah, sesuaikan atau hapus ini. Penanda yang dipisahkan dengan koma: baris yang berisi penanda diikuti dengan titik dua akan ditampilkan sebagai info kredit di bagian bawah. Biarkan kosong untuk menonaktifkan</string>
   <string name="morphe_music_lyrics_text_size_title">Ukuran teks</string>
   <string name="morphe_music_lyrics_text_size_summary">Ukuran teks lirik</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Pergeseran waktu</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Offset waktu global</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Lirik yang disinkronkan mengikuti pemutaran. Jika tidak selaras, sesuaikan pergeseran waktu. Geser lirik yang disinkronkan ke depan atau ke belakang. Gunakan nilai positif jika lirik mendahului lagu</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Gunakan segmen SponsorBlock untuk offset lirik</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Cocokkan tanpa segmen yang dilewati SponsorBlock dan geser lirik ke audio yang dirilis. Nonaktif mengabaikan SponsorBlock sepenuhnya</string>
+  <string name="morphe_music_lyrics_sb_no_video">Lagu ini tidak memiliki id video untuk dikirim</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Sumber: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Diterjemahkan oleh Google</string>
@@ -579,6 +580,7 @@ Cookie yang diperlukan: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1P
   <string name="morphe_music_lyrics_refreshing">MediaSession</string>
   <string name="morphe_music_lyrics_refreshed">Segarkan</string>
   <string name="morphe_music_lyrics_about_summary">"Lirik dicocokkan berdasarkan judul dan artis, metadata yang tidak biasa mungkin tidak menemukan apa pun atau versi yang salah. Gunakan refresh untuk mengganti versi. Penyedia yang ditandai * memerlukan token. Semua penyedia yang diaktifkan tidak selalu diminta sesuai urutan Anda, tetapi merespons berdasarkan kecepatannya."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Hanya aktifkan penyedia yang Anda gunakan, atau pertahankan default — permintaan terus-menerus dapat membebani situs lirik komunitas kecil</string>
   <string name="morphe_music_lyrics_hide_info_title">Sembunyikan baris kredit</string>
   <string name="morphe_music_lyrics_hide_info_summary">Sembunyikan baris kredit yang ditampilkan di bawah lirik</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Tukar terjemahan dan romanisasi</string>

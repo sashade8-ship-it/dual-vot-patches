@@ -279,10 +279,10 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <string name="morphe_music_disable_dislike_redirection_title">Désactiver la redirection des \'Je n\'aime pas\'</string>
   <string name="morphe_music_disable_dislike_redirection_summary">Empêche de passer au morceau suivant lorsque le bouton \'Je n\'aime pas\' est appuyé</string>
   <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
-  <string name="morphe_music_playlist_track_tap_action_title">Action au toucher d’une piste de la playlist</string>
+  <string name="morphe_music_playlist_track_tap_action_title">Action lors de l\'appui sur un morceau de la playlist</string>
   <string name="morphe_music_playlist_track_tap_action_entry_default">Lire la playlist</string>
   <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">Lire uniquement la piste sélectionnée</string>
-  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Ajouter la piste sélectionnée à la file d’attente</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">Ajouter le morceau sélectionné à la file d\'attente</string>
   <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
   <string name="morphe_music_playlist_track_tap_added_to_queue">Ajouté à la file d\'attente</string>
   <!-- layout.buttons.hideButtonsPatch -->
@@ -396,7 +396,6 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <string name="morphe_music_hide_navigation_bar_title">Masquer la barre de navigation</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Masquer les libellés des boutons de navigation</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Configurer l\'intégration Last.fm et ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Non connecté. Appuyez pour configurer</string>
   <string name="morphe_music_scrobbling_log_out">Se déconnecter</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Déconnecté</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Entrez votre jeton utilisateur ListenBrainz pour activer le scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Jeton</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Obtenir un jeton</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Vérifier</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Veuillez entrer un jeton</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Validation…</string>
@@ -557,8 +555,11 @@ Cookies nécessaires : SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_credit_line_regex_summary">Si certaines paroles sont incorrectement filtrées vers le bas, ajustez ou effacez ceci. Marqueurs séparés par des virgules : les lignes contenant un marqueur suivi de deux-points sont affichées comme informations de crédit en bas. Laissez vide pour désactiver</string>
   <string name="morphe_music_lyrics_text_size_title">Taille du texte</string>
   <string name="morphe_music_lyrics_text_size_summary">Taille du texte des paroles</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Décalage de synchronisation</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Décalage de synchronisation global</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Les paroles synchronisées suivent la lecture. Si elles sont décalées, ajustez le décalage de synchronisation. Décalez les paroles synchronisées vers l\'avant ou vers l\'arrière. Utilisez une valeur positive si les paroles sont en avance sur la chanson</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Utiliser les segments SponsorBlock pour le décalage des paroles</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Faire correspondre sans les segments que SponsorBlock saute et décaler les paroles sur l\'audio publié. Désactivé ignore entièrement SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Cette piste n\'a pas d\'identifiant vidéo à soumettre</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Source: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Traduit par Google</string>
@@ -579,6 +580,7 @@ Cookies nécessaires : SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_refreshing">Actualisation</string>
   <string name="morphe_music_lyrics_refreshed">Actualisé</string>
   <string name="morphe_music_lyrics_about_summary">"Les paroles sont associées au titre et à l'artiste, des métadonnées inhabituelles peuvent ne rien trouver ou trouver la mauvaise version. Utilisez 'Actualiser' pour changer de version. Les fournisseurs marqués d'un \* nécessitent un jeton. Tous les fournisseurs activés ne sont pas toujours interrogés dans votre ordre, mais répondent en fonction de leur vitesse"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Activez uniquement les fournisseurs que vous utilisez, ou conservez la valeur par défaut — des requêtes constantes peuvent submerger les petits sites de paroles communautaires</string>
   <string name="morphe_music_lyrics_hide_info_title">Masquer la ligne de crédit</string>
   <string name="morphe_music_lyrics_hide_info_summary">Masquer la ligne de crédit affichée sous les paroles</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Inverser la traduction et la romanisation</string>

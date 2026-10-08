@@ -219,9 +219,9 @@ public final class PlayerFlyoutMenuComponentsFilter extends Filter {
 
             // Shorts also use this player flyout panel
             if (ShortsPlayerState.isOpen()) {
-                return (Settings.HIDE_PLAYER_FLYOUT_CAPTIONS.get()
+                return (Settings.HIDE_SHORTS_FLYOUT_CAPTIONS.get()
                         && shortsPlayerSettingsCaptionsButton.check(buffer).isFiltered())
-                        || (Settings.HIDE_PLAYER_FLYOUT_AUDIO_TRACK.get()
+                        || (Settings.HIDE_SHORTS_FLYOUT_AUDIO_TRACK.get()
                         && shortsPlayerSettingsAudioTrackButton.check(buffer).isFiltered());
             }
 

@@ -396,7 +396,6 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <string name="morphe_music_hide_navigation_bar_title">إخفاء شريط التنقل</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">إخفاء تسميات أزرار التنقل</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">تكوين تكامل Last.fm و ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">تسجيل خروج. اضغط للتكوين</string>
   <string name="morphe_music_scrobbling_log_out">تسجيل خروج</string>
   <string name="morphe_music_scrobbling_logged_out_toast">تم تسجيل الخروج</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">أدخل رمز مستخدم ListenBrainz الخاص بك لتمكين scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">رمز</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">الحصول على رمز</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">تحقق</string>
   <string name="morphe_music_listenbrainz_token_status_empty">الرجاء إدخال رمز</string>
   <string name="morphe_music_listenbrainz_token_status_validating">جاري التحقق...</string>
@@ -542,8 +540,11 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <string name="morphe_music_lyrics_credit_line_regex_summary">إذا تمت تصفية الكلمات بشكل غير صحيح إلى الأسفل، فاضبط هذا أو امسحه. […] اتركه فارغًا لتعطيله.</string>
   <string name="morphe_music_lyrics_text_size_title">حجم النص</string>
   <string name="morphe_music_lyrics_text_size_summary">حجم نص كلمات الأغنية</string>
-  <string name="morphe_music_lyrics_offset_ms_title">إزاحة التوقيت</string>
+  <string name="morphe_music_lyrics_offset_ms_title">إزاحة التوقيت العامة</string>
   <string name="morphe_music_lyrics_offset_ms_summary">تتبع الكلمات المتزامنة التشغيل. إذا انحرفت، فاضبط إزاحة التوقيت. […] استخدم قيمة موجبة إذا كانت الكلمات تسبق الأغنية.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">استخدم مقاطع SponsorBlock لإزاحة كلمات الأغنية</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">المطابقة بدون المقاطع التي يتخطاها SponsorBlock ونقل الكلمات إلى الصوت الصادر. عند إيقاف التشغيل، يتم تجاهل SponsorBlock تمامًا</string>
+  <string name="morphe_music_lyrics_sb_no_video">لا يحتوي هذا المقطع على معرّف فيديو لإرساله</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">المصدر: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">تمت الترجمة بواسطة Google</string>
@@ -564,6 +565,7 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <string name="morphe_music_lyrics_refreshing">جارٍ التحديث</string>
   <string name="morphe_music_lyrics_refreshed">تم التحديث</string>
   <string name="morphe_music_lyrics_about_summary">"تتم مطابقة كلمات الأغاني حسب العنوان والفنان، وقد تؤدي البيانات الوصفية غير المعتادة إلى عدم العثور على شيء أو العثور على الإصدار الخاطئ. استخدم التحديث لتبديل الإصدارات. مقدمو الخدمة المعلمون بـ * يتطلبون رمزًا. لا يتم دائمًا طلب جميع مقدمي الخدمة المفعلين حسب ترتيبك، بل يستجيبون بناءً على سرعتهم."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">فعّل فقط الموفرين الذين تستخدمهم، أو أبقِ الإعداد الافتراضي — فالطلبات المستمرة قد تُثقل كاهل مواقع كلمات الأغاني المجتمعية الصغيرة</string>
   <string name="morphe_music_lyrics_hide_info_title">إخفاء سطر الإسناد</string>
   <string name="morphe_music_lyrics_hide_info_summary">إخفاء سطر الإسناد الظاهر أسفل الكلمات.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">تبديل موضع الترجمة والرومنة</string>

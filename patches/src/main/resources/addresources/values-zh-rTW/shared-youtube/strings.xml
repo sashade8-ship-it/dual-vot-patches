@@ -108,10 +108,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"登入 Android VR 可解決部分使用者的播放問題
 
 如要登入，請按下下方的「繼續」按鈕"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">繼續</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">登出</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">說明</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"啟動碼：%s
 
 1. 輕觸下方「開啟網站」以開啟「連線裝置」網站
@@ -119,7 +118,6 @@ Second \"item\" text"</string>
 3. 如果系統提示，請登入 Google 帳戶。如果你有多個帳戶， 請選擇這個 YouTube 帳戶
 4. 輕觸「允許 YouTube VR」存取權
 5. 看到「裝置已連結」訊息後，請返回這個應用程式"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">開啟網站</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">無法發出啟動碼</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">無法頒發驗證權杖</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">成功登入</string>
@@ -198,7 +196,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_screen_title">自訂篩選器</string>
   <string name="morphe_custom_filter_screen_summary">設定自訂篩選器以隱藏任何元件</string>
   <string name="morphe_custom_filter_title">啟用自訂篩選器</string>
-  <string name="morphe_custom_filter_strings_title">自訂篩選器</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">以換行符號分隔的元件路徑建構器字串清單，用於篩選</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">無效的自訂篩選器：%s</string>

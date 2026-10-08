@@ -395,7 +395,6 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <string name="morphe_music_hide_navigation_bar_title">Sakrij traku za navigaciju</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Sakrij oznake dugmadi za navigaciju</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurišite integraciju Last.fm i ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Niste prijavljeni. Dodirnite za konfigurisanje</string>
   <string name="morphe_music_scrobbling_log_out">Odjavite se</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Odjavljeni</string>
@@ -418,7 +417,6 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Unesite svoj ListenBrainz korisnički token da biste omogućili scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Dohvati token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Proveri</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Molimo unesite token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Validacija…</string>
@@ -547,8 +545,11 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_credit_line_regex_summary">Ako se stihovi pogrešno filtriraju na dno, prilagodite ovo ili obrišite. […] Ostavite prazno da biste onemogućili.</string>
   <string name="morphe_music_lyrics_text_size_title">Veličina teksta</string>
   <string name="morphe_music_lyrics_text_size_summary">Veličina teksta stihova</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Pomak vremena</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globalni vremenski pomak</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Sinhronizovani stihovi prate reprodukciju. Ako odstupaju, prilagodite vremenski pomak. […] Koristite pozitivnu vrednost ako stihovi idu ispred pesme.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Koristi SponsorBlock segmente za pomeranje teksta pesme</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Uskladi tekst bez segmenata koje SponsorBlock preskače i pomeri ga na objavljeni audio. Kada je isključeno, SponsorBlock se u potpunosti ignoriše</string>
+  <string name="morphe_music_lyrics_sb_no_video">Ova numera nema id videa za slanje</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Izvor: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Preveo Google</string>
@@ -569,6 +570,7 @@ Potrebni kolačići: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_refreshing">Osvežavanje</string>
   <string name="morphe_music_lyrics_refreshed">Osveženo</string>
   <string name="morphe_music_lyrics_about_summary">"Tekstovi pesama se uparuju prema naslovu i izvođaču. Neuobičajeni metapodaci mogu dovesti do toga da se ne pronađe ništa ili pogrešna verzija. Koristite osvežavanje da biste promenili verzije. Provajderi označeni * zahtevaju token. Svi omogućeni provajderi se ne pozivaju uvek po vašem redosledu, već odgovaraju na osnovu svoje brzine."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Omogući samo izvore koje koristiš ili zadrži podrazumevano — stalni zahtevi mogu preopteretiti male sajtove sa tekstovima pesama koje održava zajednica</string>
   <string name="morphe_music_lyrics_hide_info_title">Sakrij red s informacijama</string>
   <string name="morphe_music_lyrics_hide_info_summary">Sakrij red s informacijama prikazan ispod stihova.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Promeni redosled prikaza izvođača i naslova</string>

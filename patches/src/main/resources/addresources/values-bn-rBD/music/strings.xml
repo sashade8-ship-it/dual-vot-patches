@@ -396,7 +396,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_navigation_bar_title">নেভিগেশন বার লুকান</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">নেভিগেশন বোতামের লেবেলগুলি লুকান</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Last.fm এবং ListenBrainz ইন্টিগ্রেশন কনফিগার করুন</string>
   <string name="morphe_music_scrobbling_summary_logged_out">লগ ইন করা হয়নি। কনফিগার করতে ট্যাপ করুন</string>
   <string name="morphe_music_scrobbling_log_out">লগ আউট করুন</string>
   <string name="morphe_music_scrobbling_logged_out_toast">লগ আউট করা হয়েছে</string>
@@ -419,7 +418,6 @@ Second \"item\" text"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">স্ক্রবলিং সক্ষম করতে আপনার ListenBrainz ব্যবহারকারী টোকেন লিখুন</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">টোকেন</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">টোকেন পান</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">যাচাই করুন</string>
   <string name="morphe_music_listenbrainz_token_status_empty">অনুগ্রহ করে একটি টোকেন লিখুন</string>
   <string name="morphe_music_listenbrainz_token_status_validating">বৈধতা যাচাই করা হচ্ছে…</string>
@@ -552,8 +550,11 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_credit_line_regex_summary">যদি লিরিক্স ভুলভাবে নিচে ফিল্টার করা হয়, তবে এটি সামঞ্জস্য করুন বা মুছে ফেলুন। কমা-বিভাজিত মার্কার: একটি মার্কারের পরে কোলন থাকে এমন লাইনগুলো নিচে ক্রেডিট তথ্য হিসেবে দেখানো হয়। খালি রাখলে এটি নিষ্ক্রিয় থাকবে।</string>
   <string name="morphe_music_lyrics_text_size_title">টেক্সট আকার</string>
   <string name="morphe_music_lyrics_text_size_summary">লিরিক্স টেক্সটের আকার</string>
-  <string name="morphe_music_lyrics_offset_ms_title">সময় অফসেট</string>
+  <string name="morphe_music_lyrics_offset_ms_title">বৈশ্বিক সময় অফসেট</string>
   <string name="morphe_music_lyrics_offset_ms_summary">সিংক করা লিরিক্স প্লেব্যাক অনুসরণ করে। যদি সেগুলো সামনে-পিছনে সরে যায়, টাইমিং অফসেট সামঞ্জস্য করুন। সিংক করা লিরিক্স সামনে বা পিছনে সরান। লিরিক্স গানের চেয়ে এগিয়ে থাকলে একটি ধনাত্মক মান ব্যবহার করুন।</string>
+  <string name="morphe_music_lyrics_sb_matching_title">গানের কথার অফসেটের জন্য SponsorBlock সেগমেন্ট ব্যবহার করুন</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">SponsorBlock যে সেগমেন্টগুলো স্কিপ করে সেগুলো বাদ দিয়ে ম্যাচ করুন এবং গানের কথা প্রকাশিত অডিওর সাথে সমন্বয় করুন। বন্ধ করলে SponsorBlock সম্পূর্ণ উপেক্ষা করা হয়</string>
+  <string name="morphe_music_lyrics_sb_no_video">এই ট্র্যাকে জমা দেওয়ার জন্য কোনো ভিডিও আইডি নেই</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">উৎস: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Google দ্বারা অনুবাদিত</string>
@@ -574,6 +575,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_refreshing">লিরিক্স খোঁজার সময় শিরোনাম, শিল্পী এবং অ্যালবাম অনুসারে একটি ট্র্যাক খুঁজে পাওয়া যায় না, অথবা ভুল সংস্করণ পাওয়া যায়। আপনি ম্যানুয়ালি সঠিক সংস্করণটি নির্বাচন করতে পারেন, অথবা অনুসন্ধানটি আবার চেষ্টা করতে পারেন।</string>
   <string name="morphe_music_lyrics_refreshed">ক্রেডিট লাইন লুকান</string>
   <string name="morphe_music_lyrics_about_summary">"গানের কথা শিরোনাম এবং শিল্পীর নাম দ্বারা মেলানো হয়; অস্বাভাবিক মেটাডেটা কিছুই খুঁজে নাও পেতে পারে বা ভুল সংস্করণ খুঁজে পেতে পারে। সংস্করণ পরিবর্তন করতে রিফ্রেশ ব্যবহার করুন। * চিহ্নিত প্রদানকারীদের একটি টোকেন প্রয়োজন। সক্রিয় করা সমস্ত প্রদানকারী সবসময় আপনার ক্রমে অনুরোধ করা হয় না, বরং তাদের গতির ভিত্তিতে সাড়া দেয়।"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">শুধুমাত্র আপনি যে প্রোভাইডারগুলো ব্যবহার করেন সেগুলো সক্রিয় করুন, অথবা ডিফল্ট রাখুন — অবিরাম অনুরোধ ছোট কমিউনিটি গানের কথা সাইটগুলোকে ওভারলোড করতে পারে</string>
   <string name="morphe_music_lyrics_hide_info_title">অনুবাদ এবং রোমানাইজেশন অদলবদল করুন</string>
   <string name="morphe_music_lyrics_hide_info_summary">ON রোমানাইজেশনকে লিরিক্সের নিচে এবং অনুবাদকে উপরে রাখে; OFF রোমানাইজেশনকে উপরে এবং অনুবাদকে নিচে রাখে</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">অনুবাদ এবং রোমানাইজেশন অদলবদল করুন</string>

@@ -396,7 +396,6 @@ YouTube Music 8.x – a keresztátmenet csak a 9.x és újabb verziókon fut."</
   <string name="morphe_music_hide_navigation_bar_title">Navigációs sáv elrejtése</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Navigációs gombok feliratainak elrejtése</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurálja a Last.fm és a ListenBrainz integrációt</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Nem jelentkezett be. A konfiguráláshoz koppintson ide.</string>
   <string name="morphe_music_scrobbling_log_out">Kijelentkezés</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Kijelentkezett</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x – a keresztátmenet csak a 9.x és újabb verziókon fut."</
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Adja meg a ListenBrainz felhasználói azonosítóját a scrobbling engedélyezéséhez</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Azonosító</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Azonosító beszerzése</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Ellenőrzés</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Kérjük, adjon meg egy azonosítót</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Érvényesítés…</string>
@@ -557,8 +555,11 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_credit_line_regex_summary">Ha a dalszövegek hibásan az aljára szűrődnek, módosítsd vagy töröld ezt a mezőt. Vesszővel elválasztott jelölők: azok a sorok, amelyek egy, kettősponttal követett jelölőt tartalmaznak, alul forrásmegjelölésként jelennek meg. A letiltáshoz hagyd üresen.</string>
   <string name="morphe_music_lyrics_text_size_title">Betűméret</string>
   <string name="morphe_music_lyrics_text_size_summary">A dalszöveg betűmérete</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Időeltolódás</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globális időzítési eltolás</string>
   <string name="morphe_music_lyrics_offset_ms_summary">A szinkronizált dalszövegek a lejátszást követik. Ha elcsúsznak, módosítsd az időeltolást. A szinkronizált dalszövegeket told előre vagy hátra. Használj pozitív értéket, ha a dalszöveg a szám előtt jár.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">SponsorBlock-szegmensek használata a dalszöveg-eltoláshoz</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">A SponsorBlock által kihagyott szegmensek nélkül illeszti össze a dalszöveget, és a megjelent hanganyagra igazítja. Kikapcsolva teljesen figyelmen kívül hagyja a SponsorBlockot</string>
+  <string name="morphe_music_lyrics_sb_no_video">Ennek a számnak nincs beküldhető videóazonosítója</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Forrás: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Fordította a Google</string>
@@ -579,6 +580,7 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_refreshing">Frissítés</string>
   <string name="morphe_music_lyrics_refreshed">Frissítve</string>
   <string name="morphe_music_lyrics_about_summary">"A dalszövegek cím és előadó alapján kerülnek párosításra; a szokatlan metaadatok miatt előfordulhat, hogy semmi nem található, vagy rossz verzió jelenik meg. A frissítés segítségével válthatsz a verziók között. A *-gal jelölt szolgáltatók tokent igényelnek. Az összes engedélyezett szolgáltató nem mindig a kérésed szerinti sorrendben kerül lekérdezésre, hanem sebességük alapján válaszolnak."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Csak az általad használt szolgáltatókat engedélyezd, vagy hagyd meg az alapértelmezettet — a folyamatos kérések túlterhelhetik a kis közösségi dalszövegoldalakat</string>
   <string name="morphe_music_lyrics_hide_info_title">Forrásmegjelölés elrejtése</string>
   <string name="morphe_music_lyrics_hide_info_summary">A dalszöveg alatt látható forrásmegjelölés elrejtése</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">A fordítás és a romanizáció felcserélése</string>

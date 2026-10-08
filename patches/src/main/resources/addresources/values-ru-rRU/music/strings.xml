@@ -394,7 +394,6 @@ YouTube Music версии 8.x — плавный переход работае�
   <string name="morphe_music_hide_navigation_bar_title">Скрыть панель навигации</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Скрыть подписи кнопок навигации</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Настройте интеграцию с Last.fm и ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Вы не вошли в систему. Нажмите, чтобы настроить</string>
   <string name="morphe_music_scrobbling_log_out">Выйти</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Выход выполнен</string>
@@ -417,7 +416,6 @@ YouTube Music версии 8.x — плавный переход работае�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Введите токен пользователя ListenBrainz, чтобы включить scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Токен</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Получить токен</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Подтвердить</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Пожалуйста, введите токен</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Проверка…</string>
@@ -550,8 +548,11 @@ YouTube Music версии 8.x — плавный переход работае�
   <string name="morphe_music_lyrics_credit_line_regex_summary">Если строки текста неправильно определяются как информационные строки, настройте эти маркеры</string>
   <string name="morphe_music_lyrics_text_size_title">Размер текста</string>
   <string name="morphe_music_lyrics_text_size_summary">Размер текста песни</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Смещение по времени</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Глобальное смещение тайминга</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Синхронизированный текст следует временному смещению. Используйте положительное значение, если текст опережает песню</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Использовать сегменты SponsorBlock для смещения тайминга текста песни</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Сопоставлять без сегментов, которые пропускает SponsorBlock, и сдвигать текст песни на опубликованное аудио. В режиме «Выкл.» SponsorBlock полностью игнорируется</string>
+  <string name="morphe_music_lyrics_sb_no_video">У этого трека нет идентификатора видео для отправки</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Источник: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Переведено Google</string>
@@ -572,6 +573,7 @@ YouTube Music версии 8.x — плавный переход работае�
   <string name="morphe_music_lyrics_refreshing">Обновление</string>
   <string name="morphe_music_lyrics_refreshed">Обновлено</string>
   <string name="morphe_music_lyrics_about_summary">"Тексты песен подбираются по названию и исполнителю; нестандартные метаданные могут не найти ничего или найти неправильную версию. Используйте обновление для переключения версий. Провайдеры, отмеченные *, требуют токен. Все включенные провайдеры запрашиваются не всегда в указанном вами порядке, а отвечают в зависимости от их скорости."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Включайте только те провайдеры, которыми пользуетесь, или оставьте значение по умолчанию — постоянные запросы могут перегружать небольшие сайты текстов песен, поддерживаемые сообществом</string>
   <string name="morphe_music_lyrics_hide_info_title">Скрыть строку с указанием авторства</string>
   <string name="morphe_music_lyrics_hide_info_summary">Скрывать строку с указанием авторства под текстом</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Поменять местами перевод и романизацию</string>

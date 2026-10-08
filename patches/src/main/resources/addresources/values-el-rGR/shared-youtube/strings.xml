@@ -108,10 +108,9 @@ Second \"item\" text"</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Η είσοδος στο Android VR μπορεί να επιλύσει τα προβλήματα αναπαραγωγής για ορισμένους χρήστες
 
 Για να εισέλθετε, πατήστε \"Συνέχεια\" παρακάτω"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Συνέχεια</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Αποσύνδεση</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Οδηγίες</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"Κωδικός ενεργοποίησης: %s
 
 1. Πατήστε 'Άνοιγμα ιστοσελίδας' παρακάτω για να ανοίξετε την ιστοσελίδα 'Σύνδεση συσκευής'
@@ -119,7 +118,6 @@ Second \"item\" text"</string>
 3. Εισέλθετε στο Google εάν σας ζητηθεί. Εάν έχετε πολλαπλούς λογαριασμούς τότε επιλέξτε \"YouTube account\"
 4. Πατήστε 'Allow YouTube VR' access
 5. Επιστρέψτε σε αυτήν την εφαρμογή αφού φτάσετε στο μήνυμα 'Συσκευή συνδεδεμένη'"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">Άνοιγμα ιστοσελίδας</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">Αποτυχία έκδοσης κωδικού ενεργοποίησης</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">Αποτυχία έκδοσης κλειδιού ταυτοποίησης</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">Η είσοδος ολοκληρώθηκε με επιτυχία</string>
@@ -198,7 +196,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_filter_screen_title">Προσαρμοσμένο φίλτρο</string>
   <string name="morphe_custom_filter_screen_summary">Διαμόρφωση προσαρμοσμένων φίλτρων για απόκρυψη οποιουδήποτε στοιχείου</string>
   <string name="morphe_custom_filter_title">Χρήση προσαρμοσμένου φίλτρου</string>
-  <string name="morphe_custom_filter_strings_title">Προσαρμοσμένο φίλτρο</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">Λίστα συμβολοσειρών στοιχείων δημιουργού διαδρομής για φιλτράρισμα, διαχωρισμένες με νέες γραμμές</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Μη έγκυρο προσαρμοσμένο φίλτρο: %s</string>

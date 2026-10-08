@@ -396,7 +396,6 @@ YouTube Music 8.x – prehod deluje samo v 9.x in novejših različicah."</strin
   <string name="morphe_music_hide_navigation_bar_title">Skrij navigacijsko vrstico</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Skrij oznake navigacijske vrstice</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurirajte integracijo Last.fm in ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Niste prijavljeni. Tapnite za konfiguracijo</string>
   <string name="morphe_music_scrobbling_log_out">Odjava</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Odjavljeni</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x – prehod deluje samo v 9.x in novejših različicah."</strin
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Vnesite svoj ListenBrainz uporabniški žeton za omogočenje scrobblinga</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Žeton</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Pridobi žeton</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Preveri</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vnesite žeton</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Preverjanje…</string>
@@ -545,8 +543,11 @@ Zahtevani piškotki: SID, HSID, SSID, SAPISID, __Secure-3APISID, __Secure-1APISI
   <string name="morphe_music_lyrics_credit_line_regex_summary">Če so vrstice besedila nepravilno filtrirane na dno, prilagodite ali počistite to. […] Pustite prazno, da onemogočite.</string>
   <string name="morphe_music_lyrics_text_size_title">Velikost besedila</string>
   <string name="morphe_music_lyrics_text_size_summary">Velikost besedila besedil.</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Časovni zamik</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globalni časovni odmik</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Sinhronizirano besedilo sledi predvajanju. Če se razhaja, prilagodite časovni zamik. […] Uporabite pozitivno vrednost, če besedilo teče pred skladbo.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Uporabite segmente SponsorBlock za časovni odmik besedila</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Uskladite brez segmentov, ki jih SponsorBlock preskoči, in premaknite besedilo na izdani zvok. Izklopljeno v celoti prezre SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Ta skladba nima id-ja videa za oddajo</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Vir: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Prevedeno z Googlom.</string>
@@ -567,6 +568,7 @@ Zahtevani piškotki: SID, HSID, SSID, SAPISID, __Secure-3APISID, __Secure-1APISI
   <string name="morphe_music_lyrics_refreshing">Osveževanje</string>
   <string name="morphe_music_lyrics_refreshed">Osveženo</string>
   <string name="morphe_music_lyrics_about_summary">"Besedila pesmi se ujemajo po naslovu in izvajalcu; nenavadni metapodatki lahko ne najdejo ničesar ali napačno različico. Uporabite osvežitev za preklop različic. Ponudniki, označeni z *, zahtevajo žeton. Vsi omogočeni ponudniki niso vedno zaprošeni v vašem vrstnem redu, ampak odgovarjajo glede na svojo hitrost."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Omogočite samo ponudnike, ki jih uporabljate, ali obdržite privzeti izbor — nenehne zahteve lahko preobremenijo majhna skupnostna spletišča z besedili</string>
   <string name="morphe_music_lyrics_hide_info_title">Skrijte vrstico z avtorstvom</string>
   <string name="morphe_music_lyrics_hide_info_summary">Skrijte vrstico z avtorstvom, prikazano pod besedilom.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Zamenjajte prevod in romanizacijo.</string>

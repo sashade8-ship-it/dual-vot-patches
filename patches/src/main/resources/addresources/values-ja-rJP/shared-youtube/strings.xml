@@ -108,10 +108,9 @@ YouTube Premium を利用している場合、この設定は必要ない場合�
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Android VR にログインすると、動画の再生が止まる問題が一部のユーザーで解決する場合があります。
 
 ログインするには、[続行] をタップしてください"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">続行</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">ログアウト</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">操作手順</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"アクティベーション コード: %s
 
 1. 下記の [ウェブサイトを開く] をタップして「デバイスの接続」と表示されるウェブサイトを開く
@@ -119,7 +118,6 @@ YouTube Premium を利用している場合、この設定は必要ない場合�
 3. Google にログイン (未ログインの場合)。複数のアカウントがある場合は、YouTube で使用するアカウントを選択する
 4. [許可] をタップして YouTube VR へのアクセスを許可する
 5. 「デバイスを接続しました」というメッセージが表示された後にこのアプリに戻る"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">ウェブサイトを開く</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">アクティベーション コードの発行に失敗しました</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">認証トークンの発行に失敗しました</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">ログインに成功しました</string>
@@ -198,7 +196,6 @@ YouTube Premium を利用している場合、この設定は必要ない場合�
   <string name="morphe_custom_filter_screen_title">カスタム フィルタ</string>
   <string name="morphe_custom_filter_screen_summary">任意のコンポーネントを非表示にするフィルタであるカスタム フィルタの設定をします</string>
   <string name="morphe_custom_filter_title">カスタム フィルタを有効化</string>
-  <string name="morphe_custom_filter_strings_title">カスタム フィルタ</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">非表示にするコンポーネントの path builder string のリスト (改行区切り)</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">無効なカスタム フィルタ: %s</string>

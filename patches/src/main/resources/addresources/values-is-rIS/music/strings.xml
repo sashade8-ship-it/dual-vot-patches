@@ -114,6 +114,8 @@ Second \"item\" text"</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
   <string name="morphe_music_play_album_songs_summary">Spila eingöngu hljóðlög úr albúmi í stað tónlistarmyndbands. Krefst \'Blekkja myndbandastreymi\'</string>
   <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">Virkja hljóð-/myndskipti</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Reyna að skipta á milli hljóðútgáfu og opinbers tónlistarmyndbands</string>
   <!-- interaction.downloads.downloadsPatch -->
   <string name="morphe_external_downloader_screen_summary">Sæktu niður tónlistarmyndbönd, þætti eða lög með þriðja aðila niðurhal forrit</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
@@ -394,7 +396,6 @@ YouTube Music 8.x — crossfade virkar bara á 9.x og nýrri útgáfum"</string>
   <string name="morphe_music_hide_navigation_bar_title">Fela stjórnband</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Fela lýsingar stjórnbandshnappa</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Stilltu Last.fm og ListenBrainz samþættingu</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Ekki innskráður. Ýttu hér til að stilla</string>
   <string name="morphe_music_scrobbling_log_out">Rýma</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Rýmt</string>
@@ -417,7 +418,6 @@ YouTube Music 8.x — crossfade virkar bara á 9.x og nýrri útgáfum"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Sláðu inn ListenBrainz notendatakkann þinn til að virkja spilun</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Takkinn</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Skaffa Takkann</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Staðfestu</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vinsamlegast sláðu inn takkann</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Staðfesting…</string>
@@ -553,8 +553,11 @@ Nauðsynlegar vafrakökur: SID, HSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_credit_line_regex_summary">Ef textar eru ranglega síaðir, stilltu eða hreinsaðu þetta. Skilið eftir tómt til að slökkva á</string>
   <string name="morphe_music_lyrics_text_size_title">Leturstærð</string>
   <string name="morphe_music_lyrics_text_size_summary">Stærð textans.</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Tímaleiðrétting</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Altæk tímafærsla</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Samstilltir textar fylgja spilun. Ef þeir fara úr takti, stilltu tímahliðrunina. Færðu samstilta texta fram eða aftur. Notaðu jákvætt gildi ef textinn er á undan laginu.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Nota hluti úr SponsorBlock fyrir tímafærslu lagatexta</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Samræma án þeirra hluta sem SponsorBlock sleppir og færa lagatextann á útgefna hljóðið. Slökkt þýðir að SponsorBlock er alfarið hunsað</string>
+  <string name="morphe_music_lyrics_sb_no_video">Þetta lag hefur ekkert myndbandsauðkenni til að senda inn</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Uppspretta: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Þýtt af Google</string>
@@ -575,6 +578,7 @@ Nauðsynlegar vafrakökur: SID, HSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_refreshing">Endurnýjun</string>
   <string name="morphe_music_lyrics_refreshed">Endurnýjað</string>
   <string name="morphe_music_lyrics_about_summary">"Lagatextar eru passaðir við titil og flytjanda, en óvenjuleg lýsigögn geta fundið ekkert eða ranga útgáfu. Notaðu endurnýjun til að skipta um útgáfu. Veitendur merktir með * þurfa aðgangstákn. Ekki er alltaf óskað eftir öllum virkum veitendum í þinni röð, heldur svara þeir eftir hraða sínum."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Virkjaðu aðeins þá veitendur sem þú notar, eða haltu sjálfgefna gildinu — stöðugar beiðnir geta ofhlaðið lítlar samfélagslegar lagatextasíður</string>
   <string name="morphe_music_lyrics_hide_info_title">Fela upplýsingalínu</string>
   <string name="morphe_music_lyrics_hide_info_summary">Fela upplýsingalínuna sem sýnd er fyrir neðan textann</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Víxla þýðingu og rómönskun</string>

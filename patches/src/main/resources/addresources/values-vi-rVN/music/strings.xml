@@ -396,7 +396,6 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <string name="morphe_music_hide_navigation_bar_title">Ẩn thanh điều hướng</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Ẩn tên nút điều hướng</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Cấu hình tích hợp Last.fm và ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Chưa đăng nhập. Chạm để cấu hình</string>
   <string name="morphe_music_scrobbling_log_out">Đăng xuất</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Đã đăng xuất</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Nhập mã thông báo người dùng ListenBrainz để bật scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Mã thông báo</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Lấy mã thông báo</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Xác minh</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vui lòng nhập mã thông báo</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Đang xác thực…</string>
@@ -548,8 +546,11 @@ Các bước:
   <string name="morphe_music_lyrics_credit_line_regex_summary">Nếu lời bài hát bị lọc sai xuống cuối, hãy điều chỉnh hoặc xóa mục này. Các dấu hiệu phân tách bằng dấu phẩy: các dòng chứa dấu hiệu theo sau bởi dấu hai chấm sẽ được hiển thị dưới dạng thông tin ghi công ở cuối. Để trống để vô hiệu hóa</string>
   <string name="morphe_music_lyrics_text_size_title">Cỡ chữ</string>
   <string name="morphe_music_lyrics_text_size_summary">Kích thước chữ của lời bài hát</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Độ trễ thời gian</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Độ lệch thời gian toàn cục</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Lời bài hát đồng bộ theo phát lại. Nếu chúng lệch, hãy điều chỉnh độ lệch thời gian. Dịch chuyển lời bài hát đồng bộ về trước hoặc sau. Sử dụng giá trị dương nếu lời bài hát chạy trước bài hát</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Sử dụng các phân đoạn SponsorBlock cho độ lệch lời bài hát</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Khớp lời bài hát mà không dùng các phân đoạn mà SponsorBlock bỏ qua, đồng thời chuyển lời bài hát sang bản âm thanh đã phát hành. Tắt sẽ bỏ qua hoàn toàn SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Bài hát này không có id video để gửi</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Nguồn: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Được dịch bởi Google</string>
@@ -570,6 +571,7 @@ Các bước:
   <string name="morphe_music_lyrics_refreshing">Đang làm mới</string>
   <string name="morphe_music_lyrics_refreshed">Đã làm mới</string>
   <string name="morphe_music_lyrics_about_summary">"Lời bài hát được khớp theo tiêu đề và nghệ sĩ; siêu dữ liệu bất thường có thể không tìm thấy gì hoặc tìm nhầm phiên bản. Dùng nút Làm mới để chuyển phiên bản. Các nhà cung cấp được đánh dấu * yêu cầu token. Không phải tất cả các nhà cung cấp đã bật đều luôn được yêu cầu theo thứ tự bạn đặt, mà họ phản hồi dựa trên tốc độ của họ."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Chỉ bật những nhà cung cấp bạn sử dụng, hoặc giữ nguyên mặc định — các yêu cầu liên tục có thể làm quá tải các trang web lời bài hát cộng đồng nhỏ</string>
   <string name="morphe_music_lyrics_hide_info_title">Ẩn dòng ghi công</string>
   <string name="morphe_music_lyrics_hide_info_summary">Ẩn dòng ghi công hiển thị bên dưới lời bài hát</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Hoán đổi bản dịch và chuyển tự</string>

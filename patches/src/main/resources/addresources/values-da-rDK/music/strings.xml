@@ -395,7 +395,6 @@ YouTube Music 8.x – crossfade kører kun på 9.x og nyere"</string>
   <string name="morphe_music_hide_navigation_bar_title">Skjul navigationslinje</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Skjul navigationsknappers tekst</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurer Last.fm og ListenBrainz-integration</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Ikke logget ind. Tryk for at konfigurere</string>
   <string name="morphe_music_scrobbling_log_out">Log ud</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Logget ud</string>
@@ -418,7 +417,6 @@ YouTube Music 8.x – crossfade kører kun på 9.x og nyere"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Indtast dit ListenBrainz-brugertoken for at aktivere scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Hent token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Bekræft</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Angiv venligst et token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Validerer…</string>
@@ -551,8 +549,11 @@ Krævede cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID"</string>
   <string name="morphe_music_lyrics_credit_line_regex_summary">Hvis teksterne fejlagtigt filtreres til bunden, skal du justere eller rydde dette. […] Lad feltet være tomt for at deaktivere.</string>
   <string name="morphe_music_lyrics_text_size_title">Tekststørrelse</string>
   <string name="morphe_music_lyrics_text_size_summary">Størrelse på sangteksten</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Timingforskel</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Global tidsforskydning</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Synkroniserede tekster følger afspilningen. Hvis de driver fra, skal du justere tidsforskydningen. […] Brug en positiv værdi, hvis teksterne løber foran sangen.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Brug SponsorBlock-segmenter til forskydning af sangtekster</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Match uden de segmenter, SponsorBlock springer over, og flyt sangteksterne til det udgivne lydspor. Fra ignorerer SponsorBlock helt</string>
+  <string name="morphe_music_lyrics_sb_no_video">Dette nummer har intet video-id at indsende</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Kilde: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Oversat af Google</string>
@@ -573,6 +574,7 @@ Krævede cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID"</string>
   <string name="morphe_music_lyrics_refreshing">Opdaterer</string>
   <string name="morphe_music_lyrics_refreshed">Opdateret</string>
   <string name="morphe_music_lyrics_about_summary">"Sangtekster matcheres ud fra titel og kunstner; usædvanlige metadata kan resultere i ingen resultater eller den forkerte version. Brug Opdater til at skifte versioner. Udbydere markeret med * kræver et token. Alle aktiverede udbydere forespørges ikke altid i din rækkefølge, men svarer baseret på deres hastighed."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Aktivér kun de udbydere, du bruger, eller behold standarden — konstante forespørgsler kan overbelaste små community-sangtekstsider</string>
   <string name="morphe_music_lyrics_hide_info_title">Skjul kreditlinje</string>
   <string name="morphe_music_lyrics_hide_info_summary">Skjul kreditlinjen, der vises under teksterne</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Byt om på oversættelse og romanisering</string>

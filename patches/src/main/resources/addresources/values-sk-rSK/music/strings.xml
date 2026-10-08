@@ -396,7 +396,6 @@ YouTube Music 8.x – crossfade funguje iba vo verzii 9.x a novších"</string>
   <string name="morphe_music_hide_navigation_bar_title">Skryť navigačný panel</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Skryť označenia tlačidiel navigačného panela</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurácia integrácie Last.fm a ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Neprihlásený. Klepnite na tlačidlo na konfiguráciu</string>
   <string name="morphe_music_scrobbling_log_out">Odhlásiť sa</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Odhlásený</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x – crossfade funguje iba vo verzii 9.x a novších"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Zadajte svoj používateľský token ListenBrainz na povolenie scrobovania</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Získať token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Overiť</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Prosím, zadajte token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Overovanie…</string>
@@ -552,8 +550,11 @@ Vyžadované cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_credit_line_regex_summary">Skryť pôvodný text piesne</string>
   <string name="morphe_music_lyrics_text_size_title">Veľkosť textu</string>
   <string name="morphe_music_lyrics_text_size_summary">Veľkosť textu piesne</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Posun časovania</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globálny časový posun</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Zobraziť preklad</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Použiť segmenty SponsorBlock na posun textu piesne</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Synchronizovať bez segmentov, ktoré SponsorBlock preskakuje, a posunúť text piesne na vydaný zvuk. Vypnuté úplne ignoruje SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Táto skladba nemá id videa na odoslanie</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Zdroj: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Skryť preklad</string>
@@ -574,6 +575,7 @@ Vyžadované cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_refreshing">Skryť prepis</string>
   <string name="morphe_music_lyrics_refreshed">Prepis</string>
   <string name="morphe_music_lyrics_about_summary">"Texty piesní sa priraďujú podľa názvu a interpreta, nezvyčajné metadáta môžu nenájsť nič alebo nesprávnu verziu. Pomocou obnovenia prepínajte verzie. Poskytovatelia označení * vyžadujú token. Nie všetci povolení poskytovatelia sú vždy vyžiadaní v nastavenom poradí, ale odpovedajú podľa svojej rýchlosti."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Povoľte iba poskytovateľov, ktorých používate, alebo ponechajte predvolené nastavenie — neustále požiadavky môžu zahltiť malé komunitné stránky s textami piesní</string>
   <string name="morphe_music_lyrics_hide_info_title">Nahlásiť problém s prekladom</string>
   <string name="morphe_music_lyrics_hide_info_summary">Nahlásiť problém s textom piesne</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Problém bol nahlásený</string>

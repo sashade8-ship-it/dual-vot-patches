@@ -108,10 +108,9 @@ As jy 'n YouTube Premium-gebruiker is, is hierdie instelling dalk nie vereis nie
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Om by Android VR aan te meld, kan speelprobleme vir sommige gebruikers oplos.
 
 Om aan te meld, druk voort hieronder"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Gaan voort</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Uitlog</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Instruksies</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"Aktiveringskode: %s
 
 1. Tik 'Webwerf oopmaak' hieronder om die 'Toestel verbind'-webwerf oop te maak.
@@ -119,7 +118,6 @@ Om aan te meld, druk voort hieronder"</string>
 3. Teken aan by Google indien gevra. Indien u verskeie rekeninge het, kies u YouTube-rekening.
 4. Tik 'YouTube VR toestemming verleen'.
 5. Keer na hierdie app terug nadat u die boodskap 'Toestel verbind' bereik het."</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">Webwerf oopmaak</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">Mislukte poging om \'n aktiveringskode uit te reik</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">Kon nie \'n verifikasietokken genereer nie</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">Suksesvol annteken</string>
@@ -198,7 +196,6 @@ Let wel, deur dit in te skakel, sal ook sekere gebruikerdata soos jou IP-adres g
   <string name="morphe_custom_filter_screen_title">Pasgestelde filter</string>
   <string name="morphe_custom_filter_screen_summary">Konfigureer pasgestelde filters om enige komponent te verberg</string>
   <string name="morphe_custom_filter_title">Aktiveer pasgestelde filter</string>
-  <string name="morphe_custom_filter_strings_title">Pasgestelde filter</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">Lys van komponentpaadbouerstringe om te filter, geskei deur nuwe reëls</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Ongeldige pasgestelde filter: %s</string>

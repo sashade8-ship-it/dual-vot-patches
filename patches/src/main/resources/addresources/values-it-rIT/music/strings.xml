@@ -395,7 +395,6 @@ YouTube Music 8.x: il crossfade funziona solo su 9.x e versioni successive"</str
   <string name="morphe_music_hide_navigation_bar_title">Nascondi la barra di navigazione</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Nascondi le etichette dei pulsanti di navigazione</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Configura l\'integrazione con Last.fm e ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Non effettuato l\'accesso. Tocca per configurare</string>
   <string name="morphe_music_scrobbling_log_out">Esci</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Disconnesso</string>
@@ -418,7 +417,6 @@ YouTube Music 8.x: il crossfade funziona solo su 9.x e versioni successive"</str
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Inserisci il token utente ListenBrainz per abilitare lo scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Ottieni token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verifica</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Inserisci un token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">In convalida…</string>
@@ -551,8 +549,11 @@ Cookie richiesti: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_credit_line_regex_summary">Sincronizza i testi con la musica</string>
   <string name="morphe_music_lyrics_text_size_title">Dimensione del testo</string>
   <string name="morphe_music_lyrics_text_size_summary">Dimensione del testo dei brani</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Offset temporale</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Offset temporale globale</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Regola la sincronizzazione dei testi</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Usa i segmenti di SponsorBlock per l\'offset dei testi</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Abbina senza i segmenti che SponsorBlock salta e sposta i testi sull\'audio pubblicato. Se disattivato, SponsorBlock viene completamente ignorato</string>
+  <string name="morphe_music_lyrics_sb_no_video">Questa traccia non ha alcun id video da inviare</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Fonte: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Tradotto da Google</string>
@@ -573,6 +574,7 @@ Cookie richiesti: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_refreshing">Aggiornamento in corso</string>
   <string name="morphe_music_lyrics_refreshed">Aggiornato</string>
   <string name="morphe_music_lyrics_about_summary">"I testi vengono abbinati in base al titolo e all'artista; metadati insoliti potrebbero non trovare nulla o la versione sbagliata. Usa Aggiorna per cambiare versione. I provider contrassegnati con * richiedono un token. Non tutti i provider abilitati vengono sempre interrogati nell'ordine che hai impostato, ma rispondono in base alla loro velocità."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Abilita solo i provider che usi, o mantieni l\'impostazione predefinita — le richieste costanti possono sovraccaricare i piccoli siti di testi della community</string>
   <string name="morphe_music_lyrics_hide_info_title">Nascondi la riga dei crediti</string>
   <string name="morphe_music_lyrics_hide_info_summary">Caricamento testi...</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Scambia traduzione e romanizzazione</string>

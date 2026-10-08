@@ -396,7 +396,6 @@ YouTube Music 8.x – plynulé přecházení funguje pouze ve verzích 9.x a vy�
   <string name="morphe_music_hide_navigation_bar_title">Skrýt navigační panel</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Skrýt štítky navigačních tlačítek</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurace integrace Last.fm a ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Není přihlášen. Klepnutím nakonfigurujete</string>
   <string name="morphe_music_scrobbling_log_out">Odhlásit se</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Odhlášeno</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x – plynulé přecházení funguje pouze ve verzích 9.x a vy�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Zadejte svůj uživatelský token ListenBrainz pro povolení scrobblingu</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Získat token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Ověřit</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vložte, prosím, token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Ověřuji…</string>
@@ -552,8 +550,11 @@ Požadované cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_credit_line_regex_summary">Pokud jsou texty nesprávně odfiltrovány dolů, upravte nebo vymažte toto pole. Značky oddělené čárkami: řádky obsahující značku následovanou dvojtečkou se zobrazují dole jako informace o autorství. Nechte prázdné pro vypnutí.</string>
   <string name="morphe_music_lyrics_text_size_title">Velikost textu</string>
   <string name="morphe_music_lyrics_text_size_summary">Velikost textu písně</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Posun načasování</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globální časový posun</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Synchronizované texty sledují přehrávání. Pokud se rozcházejí, upravte posun načasování. Posuňte synchronizované texty dopředu nebo dozadu. Použijte kladnou hodnotu, pokud texty předbíhají skladbu.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Použít segmenty SponsorBlock pro posun textů písně</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Párovat bez segmentů, které SponsorBlock přeskakuje, a posunout texty na vydanou nahrávku. Vypnuto znamená, že se SponsorBlock zcela ignoruje</string>
+  <string name="morphe_music_lyrics_sb_no_video">Tato skladba nemá id videa k odeslání</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Zdroj: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Přeloženo službou Google</string>
@@ -574,6 +575,7 @@ Požadované cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_refreshing">Obnovování</string>
   <string name="morphe_music_lyrics_refreshed">Obnoveno</string>
   <string name="morphe_music_lyrics_about_summary">"Texty písní se párují podle názvu a interpreta; neobvyklá metadata nemusí najít nic nebo špatnou verzi. Obnovením přepnete verze. Poskytovatelé označení * vyžadují token. Všichni povolení poskytovatelé nejsou vždy dotazováni v pořadí, ale reagují podle své rychlosti."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Povolte pouze poskytovatele, které používáte, nebo ponechte výchozí nastavení — neustálé požadavky mohou zahltit malé komunitní weby s texty písní</string>
   <string name="morphe_music_lyrics_hide_info_title">Skrýt řádek s uvedením zdroje</string>
   <string name="morphe_music_lyrics_hide_info_summary">Skrýt řádek s uvedením zdroje zobrazený pod textem písně.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Prohodit překlad a romanizaci</string>

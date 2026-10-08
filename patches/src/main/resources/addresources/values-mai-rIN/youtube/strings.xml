@@ -164,6 +164,7 @@ Second \"item\" text"</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
+  <!-- interaction.copytext.copyTextPatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">\'टीव्ही में साइन इन करी\' पॉपअप अक्षम करी</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
@@ -258,7 +259,6 @@ Second \"item\" text"</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_fullscreen_buttons">फुलस्क्रीन बटनहरू</string>
-  <string name="morphe_hide_quick_actions_title">कारबाही बार लुकाउनुहोस्</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">क्याप्शनहरू</string>
   <!-- layout.captions.autoCaptionsPatch -->
@@ -294,7 +294,6 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_title">नेभिगेशन बार एनिमेसनहरू सक्षम गर्नुहोस्</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">स्वचालित रूपमा लुकाउने नेभिगेसन बारलाई अक्षम गर्नुहोस्</string>
   <string name="morphe_toolbar_screen_title">टूलबार</string>
-  <string name="morphe_show_toolbar_settings_button_type_title">सेटिङ बटन कार्य</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">फ्लाईआउट मेनु</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -474,14 +473,10 @@ Second \"item\" text"</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_options_entry_1">मूल थंबनेल</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow र मौलिक थम्बनेलहरू</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow र स्थिर क्याप्चरहरू</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">अभी के कैप्चर</string>
-  <string name="morphe_dearrow_api_url_title">DeArrow API अन्त बिन्दु</string>
   <string name="morphe_dearrow_api_url_summary">DeArrow थम्बनेल क्याशे endpoint क URL</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">स्टिल वीडियो कैप्चर</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">स्टिल कैप्चर प्रत्येक वीडियो क शुरुआत / बीच / अंत स लेल जाइत अछि। एहि इमेजेस YouTube में बनेल अछि आ बाहरी API क उपयोग नहि कएल जाईत अछि।</string>

@@ -32,10 +32,11 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.zip.GZIPInputStream;
 
-import app.morphe.extension.music.patches.lyrics.Lyrics;
-import app.morphe.extension.music.patches.lyrics.LyricsLine;
-import app.morphe.extension.music.patches.lyrics.TrackInfo;
-import app.morphe.extension.music.patches.lyrics.Word;
+import app.morphe.extension.music.patches.lyrics.model.Lyrics;
+import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
+import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
+import app.morphe.extension.music.patches.lyrics.model.Word;
+import app.morphe.extension.music.patches.lyrics.parsers.CharactersConverter;
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
@@ -50,7 +51,17 @@ public final class LyricsRequests {
     private static final int CONNECT_TIMEOUT_MILLISECONDS = 5 * 1000;
     private static final int READ_TIMEOUT_MILLISECONDS = 5 * 1000;
 
+    private static volatile boolean customMatchMode;
+
     private LyricsRequests() {
+    }
+
+    public static void setCustomMatchMode(boolean on) {
+        customMatchMode = on;
+    }
+
+    public static boolean isCustomMatchMode() {
+        return customMatchMode;
     }
 
     static String userAgent() {
@@ -232,6 +243,24 @@ public final class LyricsRequests {
         }
         final String value = object.optString(key, "");
         return value.trim().isEmpty() ? null : value;
+    }
+
+    static List<String> stringList(JSONArray array) {
+        if (array == null) {
+            return List.of();
+        }
+        final List<String> out = new ArrayList<>(array.length());
+        for (int i = 0; i < array.length(); i++) {
+            final String value = array.optString(i, "").trim();
+            if (!value.isEmpty()) {
+                out.add(value);
+            }
+        }
+        return out;
+    }
+
+    static List<String> stringList(JSONObject object, String key) {
+        return stringList(object.optJSONArray(key));
     }
 
     static String parseGzipString(HttpURLConnection connection) throws IOException {
@@ -705,6 +734,9 @@ public final class LyricsRequests {
      * Artist mismatch is a hard veto.
      */
     public static boolean isHighMatch(MatchVerdict v) {
+        if (customMatchMode) {
+            return true;
+        }
         if (v.title() == Evidence.NONE || v.title() == Evidence.MISSING) {
             return false;
         }
@@ -737,7 +769,17 @@ public final class LyricsRequests {
         // Reject counter-evidence before adapters replace candidate metadata with the
         // query metadata in FetchResult.of(lyrics, track).
         MatchVerdict verdict = prepare(track).evaluate(title, artist, durationSec, album);
+        if (customMatchMode) {
+            return rankScore(verdict);
+        }
         return isHighMatch(verdict) ? verdict.score() : -1;
+    }
+
+    static int rankScore(MatchVerdict v) {
+        if (v.artist() == Evidence.MISMATCH) {
+            return 2;
+        }
+        return Math.max(v.score(), 5);
     }
 
     public static int syncRank(Lyrics lyrics) {

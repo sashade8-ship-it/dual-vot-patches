@@ -396,7 +396,6 @@ YouTube Music 8.x — vervaag loop slegs op 9.x en nuwer"</string>
   <string name="morphe_music_hide_navigation_bar_title">Versteek navigasiebalk</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Versteek navigasieknoppie-etikette</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigureer Last.fm en ListenBrainz integrasie</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Nie aangemeld nie. Tik om te konfigureer</string>
   <string name="morphe_music_scrobbling_log_out">Uitlog</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Uitgevoer</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — vervaag loop slegs op 9.x en nuwer"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Voer jou ListenBrainz Gebruikers Token in om scrobbling te aktiveer</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Kry token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verifieer</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Voer asseblief \'n token in</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Besig met validering…</string>
@@ -552,8 +550,11 @@ Vereiste koekies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_credit_line_regex_summary">Romaniseer lirieke met verskaffer-romanisering of Google Translate […] knoppie</string>
   <string name="morphe_music_lyrics_text_size_title">Teks grootte</string>
   <string name="morphe_music_lyrics_text_size_summary">Grootte van die lirieke teks</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Tydverskuiwing</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globale tydverskuiwing</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Raak om na die volgende liriekkandidaat te wissel; […] :\"Gestoor\"</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Gebruik SponsorBlock-segmente vir die lirieke-tydverskuiwing</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Pas sonder die segmente wat SponsorBlock oorslaan en skuif lirieke na die vrygestelde audio. Af ignoreer SponsorBlock heeltemal</string>
+  <string name="morphe_music_lyrics_sb_no_video">Hierdie snit het geen video-id om in te dien nie</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Bron: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Gereedskapsafdelings?</string>
@@ -574,6 +575,7 @@ Vereiste koekies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_refreshing">Besig om te verfris</string>
   <string name="morphe_music_lyrics_refreshed">Lirieke-bron?</string>
   <string name="morphe_music_lyrics_about_summary">"Lirieke word volgens titel en kunstenaar gekoppel, ongewone metadata mag niks of die verkeerde weergawe vind nie. Gebruik verfris om van weergawe te wissel. Verskaffers wat met * gemerk is, vereis 'n token. Nie alle geaktiveerde verskaffers word altyd in jou volgorde aangevra nie, maar hulle reageer op grond van hul spoed."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Aktiveer slegs die verskaffers wat jy gebruik, of behou die verstek — konstante versoeke kan klein gemeenskaps-lirieke-webwerwe oorweldig</string>
   <string name="morphe_music_lyrics_hide_info_title">Lirieke-bron?</string>
   <string name="morphe_music_lyrics_hide_info_summary">Lirieke word gesoek volgens kunstenaar en titel, […] Jy kan ook die verfris-knoppie probeer om handmatig van weergawe te wissel. […] Alle verskaffers word nie altyd in die bestelling versoek nie, maar reageer op grond van hul spoed</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Lirieke-bron?</string>

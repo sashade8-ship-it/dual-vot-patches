@@ -947,7 +947,7 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
             fileButtonsContainer.setLayoutParams(fbParams);
 
             Button buttonExport = CustomDialog.createButton(context, dialogPair.first,
-                    str("morphe_debug_export_logs_file"),
+                    str("morphe_settings_export_file"),
                     () -> exportToFile(allLogs),
                     false, true);
 

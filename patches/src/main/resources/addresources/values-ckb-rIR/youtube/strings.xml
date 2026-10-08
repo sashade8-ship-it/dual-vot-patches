@@ -166,6 +166,7 @@ Second \"item\" text"</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
+  <!-- interaction.copytext.copyTextPatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
   <!-- interaction.downloads.downloadsPatch -->
@@ -248,11 +249,6 @@ Second \"item\" text"</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_save_button_title">محفض دمودي</string>
-  <string name="morphe_hide_quick_actions_title">شاردنەوەی باری کردار</string>
-  <string name="morphe_hide_quick_actions_ask_button_title">دۆزینەوەی پەیامگە دەربخۆ</string>
-  <string name="morphe_hide_quick_actions_comments_button_title">شاردنەوەی دوگمەی کۆمێنتە</string>
-  <string name="morphe_hide_quick_actions_save_button_title">إقحيد إنبجون إلق قيمود</string>
-  <string name="morphe_hide_quick_actions_share_button_title">جفيء دسته بتونه</string>
   <!-- layout.captions.captionsPatch -->
   <string name="morphe_captions_screen_title">زیرەکان</string>
   <!-- layout.captions.autoCaptionsPatch -->
@@ -288,9 +284,6 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_title">ئەنیمەیشنی پەڕەکانی گەشتکردن چالاک بکە</string>
   <string name="morphe_toolbar_screen_title">بەڵتە</string>
   <string name="morphe_hide_toolbar_cast_button_title">دوگمەی پەخشکردن بشارەوە</string>
-  <string name="morphe_hide_toolbar_create_button_title">خۆزگەیەکی دروستکردن فشیۆڕە</string>
-  <string name="morphe_hide_toolbar_notification_button_title">دوگمەی ئاگاداری بشارەوە</string>
-  <string name="morphe_show_toolbar_settings_button_type_title">کرداری دوگمەی ڕێکخستنەکان</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">خەڵەتە ڕیزكارییەكە</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -476,14 +469,6 @@ Second \"item\" text"</string>
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_titles_home_title">For Home tab</string>
-  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_titles_subscription_title">For Subscriptions tab</string>
-  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_titles_library_title">For You tab</string>
-  <string name="morphe_dearrow_titles_player_title">For player playlists &amp; recommendations</string>
-  <string name="morphe_dearrow_titles_search_title">For search results</string>
-  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_thumbnail_options_entry_1">ثومب‌نەییلە سەرەکیەکان</string>
@@ -491,7 +476,6 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; پێگه‌شبونه‌وه‌کانی ثومب‌نەییل</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">پێگه‌شبونه‌وه‌کانی ثومب‌نەییل</string>
   <string name="morphe_dearrow_connection_toast_title">Show connection error alerts</string>
-  <string name="morphe_dearrow_api_url_title">بڕی سه‌رێزه‌که‌ی کۆیله‌ی DeArrow</string>
   <string name="morphe_dearrow_api_url_summary">URLی کۆیله‌کانی DeArrow ڕه‌هه‌ه‌ه‌</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">پێگه‌شبونه‌وه‌کانی ڤیدۆ</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">ئەگەرە قجەرەکان لێ دەخرێن لە سەرەتا / نێوەڕاستی / کۆتایەکی هەر ڤیدۆیە‌ک. ئەو وێنە دەچنە یوتوب و هیچ API دەرایە‌تیش بەکارنابێت</string>

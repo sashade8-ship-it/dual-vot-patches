@@ -396,7 +396,6 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <string name="morphe_music_hide_navigation_bar_title">ナビゲーション バーを非表示</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">ボタンをアイコンのみで表示</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Last.fm および ListenBrainz との連携を設定します</string>
   <string name="morphe_music_scrobbling_summary_logged_out">ログインしていません。タップして設定してください</string>
   <string name="morphe_music_scrobbling_log_out">ログアウト</string>
   <string name="morphe_music_scrobbling_logged_out_toast">ログアウトしました</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Scrobble を有効にするには、ListenBrainz のユーザー トークンを入力してください</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">トークン</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">トークンを取得</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">確認</string>
   <string name="morphe_music_listenbrainz_token_status_empty">トークンを入力してください</string>
   <string name="morphe_music_listenbrainz_token_status_validating">検証中…</string>
@@ -550,8 +548,11 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <string name="morphe_music_lyrics_credit_line_regex_summary">歌詞フィルターの正規表現</string>
   <string name="morphe_music_lyrics_text_size_title">文字サイズ</string>
   <string name="morphe_music_lyrics_text_size_summary">歌詞の文字サイズ</string>
-  <string name="morphe_music_lyrics_offset_ms_title">歌詞の遅延</string>
+  <string name="morphe_music_lyrics_offset_ms_title">全体のタイミングオフセット</string>
   <string name="morphe_music_lyrics_offset_ms_summary">再生中に現在の行をハイライトする</string>
+  <string name="morphe_music_lyrics_sb_matching_title">歌詞オフセットにSponsorBlockのセグメントを使用</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">SponsorBlockがスキップするセグメントを除いてマッチングし、歌詞をリリース版のオーディオに合わせます。オフにするとSponsorBlockを完全に無視します</string>
+  <string name="morphe_music_lyrics_sb_no_video">このトラックには送信する動画IDがありません</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">提供: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">保存済み</string>
@@ -572,6 +573,7 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <string name="morphe_music_lyrics_refreshing">更新中</string>
   <string name="morphe_music_lyrics_refreshed">更新済み</string>
   <string name="morphe_music_lyrics_about_summary">"歌詞はタイトルとアーティストで照合されます。通常とは異なるメタデータでは、何も見つからないか、間違ったバージョンが見つかる可能性があります。更新を使用してバージョンを切り替えてください。* が付いているプロバイダーはトークンが必要です。有効なすべてのプロバイダーが常に指定された順序で要求されるわけではなく、応答速度に基づいて応答します。"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">使用するプロバイダーのみを有効にするか、デフォルトのままにしてください。常時リクエストは小規模なコミュニティ歌詞サイトに過負荷をかける可能性があります</string>
   <string name="morphe_music_lyrics_hide_info_title">この歌詞を編集</string>
   <string name="morphe_music_lyrics_hide_info_summary">この歌詞を編集</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">この歌詞を編集</string>

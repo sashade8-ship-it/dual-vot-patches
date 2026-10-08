@@ -396,7 +396,6 @@ YouTube Music 8.x — estomparea încrucișată funcționează doar pe 9.x și v
   <string name="morphe_music_hide_navigation_bar_title">Ascundeți bara de navigare</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Ascundeți etichetele butoanelor de navigare</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Configurare integrarea Last.fm și ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Nu sunteți conectat. Atingeți pentru a configura</string>
   <string name="morphe_music_scrobbling_log_out">Deconectare</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Deconectat</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — estomparea încrucișată funcționează doar pe 9.x și v
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Introdu token-ul tău de utilizator ListenBrainz pentru a activa scrobbling-ul</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Obține token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verificare</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vă rugăm să introduceți un token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Se validează…</string>
@@ -540,8 +538,11 @@ Cookie-uri necesare: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_credit_line_regex_summary">Afișați butonul de căutare.</string>
   <string name="morphe_music_lyrics_text_size_title">Dimensiune text</string>
   <string name="morphe_music_lyrics_text_size_summary">Dimensiunea textului versurilor</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Decalaj sincronizare</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Decalaj global de sincronizare</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Afișați butonul de închidere.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Folosește segmentele SponsorBlock pentru decalajul versurilor</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Potrivește fără segmentele peste care sare SponsorBlock și mută versurile pe materialul audio lansat. Oprit ignoră complet SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Această piesă nu are niciun id video de trimis</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Sursă: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Redare întreruptă.</string>
@@ -562,6 +563,7 @@ Cookie-uri necesare: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_refreshing">Se încarcă…</string>
   <string name="morphe_music_lyrics_refreshed">Reîmprospătat</string>
   <string name="morphe_music_lyrics_about_summary">"Versurile sunt potrivite după titlu și artist, metadatele neobișnuite pot să nu găsească nimic sau versiunea greșită. Folosiți reîmprospătarea pentru a comuta versiunile. Furnizorii marcați cu * necesită un token. Furnizorii activați nu sunt solicitați întotdeauna în ordinea ta, ci răspund în funcție de viteza lor."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Activează doar furnizorii pe care îi folosești, sau păstrează setarea implicită — solicitările constante pot supraîncărca site-urile mici de versuri ale comunității</string>
   <string name="morphe_music_lyrics_hide_info_title">Redare în curs pe acest dispozitiv.</string>
   <string name="morphe_music_lyrics_hide_info_summary">Redare în curs pe un alt dispozitiv.</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Redare în curs pe acest dispozitiv.</string>

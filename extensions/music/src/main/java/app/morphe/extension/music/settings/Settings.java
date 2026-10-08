@@ -15,7 +15,7 @@ import app.morphe.extension.music.patches.ChangeStartPagePatch.StartPage;
 import app.morphe.extension.music.patches.CrossfadeManager.CrossFadeDuration;
 import app.morphe.extension.music.patches.CrossfadeManager.FadeCurve;
 import app.morphe.extension.music.patches.PlaylistTrackTapPatch.TapAction;
-import app.morphe.extension.music.patches.lyrics.OpenAIClient;
+import app.morphe.extension.music.patches.lyrics.translate.OpenAIClient;
 import app.morphe.extension.music.sponsorblock.MusicSponsorBlockConfig;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.settings.BooleanSetting;
@@ -191,42 +191,43 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting SCROBBLING_GUESS_ALBUM = new BooleanSetting("morphe_music_scrobbling_guess_album", FALSE, true, parentsAny(LISTENBRAINZ_SCROBBLING, LASTFM_SCROBBLING));
 
     // Lyrics
-    public static final BooleanSetting LYRICS_ENABLED = new BooleanSetting("morphe_music_lyrics_enabled", TRUE, true);
-    public static final BooleanSetting LYRICS_KEEP_SCREEN_ON = new BooleanSetting("morphe_music_lyrics_keep_screen_on", FALSE, true, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_ENABLED = new BooleanSetting("morphe_music_lyrics_enabled", TRUE, false);
+    public static final BooleanSetting LYRICS_KEEP_SCREEN_ON = new BooleanSetting("morphe_music_lyrics_keep_screen_on", FALSE, false, parent(LYRICS_ENABLED));
     public static final String DEFAULT_LYRICS_ORDER =
             "YTMusic,-Captions,Apple,LRCLIB,QQ,NetEase,KuGou,Luna,-PetitLyrics,-bLyrics,-BiniLyrics,-Unison,-SimpMusic,-AMLL,-LunaBeat,-Lyricify,-Musixmatch,-Spotify,-Deezer,";
-    public static final StringSetting LYRICS_SOURCE = new StringSetting("morphe_music_lyrics_source", DEFAULT_LYRICS_ORDER, true, parent(LYRICS_ENABLED));
-    public static final StringSetting APPLE_MUSIC_TOKEN = new StringSetting("morphe_music_apple_music_token", "", true, parent(LYRICS_ENABLED));
-    public static final StringSetting SPOTIFY_TOKEN = new StringSetting("morphe_music_spotify_token", "", true, parent(LYRICS_ENABLED));
-    public static final StringSetting DEEZER_ARL = new StringSetting("morphe_music_deezer_arl", "", true, parent(LYRICS_ENABLED));
-    public static final StringSetting MUSIXMATCH_TOKEN = new StringSetting("morphe_music_musixmatch_token", "", true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_TRANSLATE = new BooleanSetting("morphe_music_lyrics_translate", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_TRANSLATE_ONLY = new BooleanSetting("morphe_music_lyrics_translate_only", FALSE, true, parent(LYRICS_ENABLED));
-    public static final StringSetting LYRICS_TRANSLATION_LANGUAGE = new StringSetting("morphe_music_lyrics_translation_language", "DEFAULT", true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_TAP_TO_SEEK = new BooleanSetting("morphe_music_lyrics_tap_to_seek", TRUE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_SHOW_COPY_BUTTON = new BooleanSetting("morphe_music_lyrics_show_copy_button", TRUE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_SHOW_TRANSLATE_BUTTON = new BooleanSetting("morphe_music_lyrics_show_translate_button", TRUE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_USE_AI_TRANSLATION = new BooleanSetting("morphe_music_lyrics_use_ai_translation", FALSE, true, parent(LYRICS_ENABLED));
-    public static final StringSetting LYRICS_AI_BASE_URL = new StringSetting("morphe_music_lyrics_ai_base_url", "https://text.pollinations.ai/openai", true, parent(LYRICS_USE_AI_TRANSLATION));
-    public static final StringSetting LYRICS_AI_API_TOKEN = new StringSetting("morphe_music_lyrics_ai_api_token", "", true, parent(LYRICS_USE_AI_TRANSLATION));
-    public static final StringSetting LYRICS_AI_MODEL = new StringSetting("morphe_music_lyrics_ai_model", "openai-fast", true, parent(LYRICS_USE_AI_TRANSLATION));
-    public static final StringSetting LYRICS_AI_PROMPT = new StringSetting("morphe_music_lyrics_ai_prompt", OpenAIClient.DEFAULT_PROMPT, true, parent(LYRICS_USE_AI_TRANSLATION));
-    public static final BooleanSetting LYRICS_SHOW_ROMANIZE_BUTTON = new BooleanSetting("morphe_music_lyrics_show_romanize_button", TRUE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_SHOW_REFRESH_BUTTON = new BooleanSetting("morphe_music_lyrics_show_refresh_button", TRUE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_HIDE_INFO = new BooleanSetting("morphe_music_lyrics_hide_info", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_SWAP_TRANS_ROMA = new BooleanSetting("morphe_music_lyrics_swap_trans_roma", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_ROMANIZE = new BooleanSetting("morphe_music_lyrics_romanize", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_ROMANIZE_ONLY = new BooleanSetting("morphe_music_lyrics_romanize_only", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_WORD_SYNC = new BooleanSetting("morphe_music_lyrics_word_sync", TRUE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_HIDE_PLAYED = new BooleanSetting("morphe_music_lyrics_hide_played", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_HIDE_UNPLAYED = new BooleanSetting("morphe_music_lyrics_hide_unplayed", FALSE, true, parent(LYRICS_ENABLED));
-    public static final IntegerSetting LYRICS_TEXT_SIZE = new IntegerSetting("morphe_music_lyrics_text_size", 24, true, parent(LYRICS_ENABLED));
-    public static final IntegerSetting LYRICS_OFFSET_MS = new IntegerSetting("morphe_music_lyrics_offset_ms", 0, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_MEDIASESSION = new BooleanSetting("morphe_music_lyrics_mediasession", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_MINIPLAYER = new BooleanSetting("morphe_music_lyrics_miniplayer", FALSE, true, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_DISPLAY_ARTIST_FIRST = new BooleanSetting("morphe_music_lyrics_display_artist_first", FALSE, true, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_SOURCE = new StringSetting("morphe_music_lyrics_source", DEFAULT_LYRICS_ORDER, false, parent(LYRICS_ENABLED));
+    public static final StringSetting APPLE_MUSIC_TOKEN = new StringSetting("morphe_music_apple_music_token", "", false, parent(LYRICS_ENABLED));
+    public static final StringSetting SPOTIFY_TOKEN = new StringSetting("morphe_music_spotify_token", "", false, parent(LYRICS_ENABLED));
+    public static final StringSetting DEEZER_ARL = new StringSetting("morphe_music_deezer_arl", "", false, parent(LYRICS_ENABLED));
+    public static final StringSetting MUSIXMATCH_TOKEN = new StringSetting("morphe_music_musixmatch_token", "", false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_TRANSLATE = new BooleanSetting("morphe_music_lyrics_translate", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_TRANSLATE_ONLY = new BooleanSetting("morphe_music_lyrics_translate_only", FALSE, false, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_TRANSLATION_LANGUAGE = new StringSetting("morphe_music_lyrics_translation_language", "DEFAULT", false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_TAP_TO_SEEK = new BooleanSetting("morphe_music_lyrics_tap_to_seek", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_SHOW_COPY_BUTTON = new BooleanSetting("morphe_music_lyrics_show_copy_button", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_SHOW_TRANSLATE_BUTTON = new BooleanSetting("morphe_music_lyrics_show_translate_button", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_USE_AI_TRANSLATION = new BooleanSetting("morphe_music_lyrics_use_ai_translation", FALSE, false, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_AI_BASE_URL = new StringSetting("morphe_music_lyrics_ai_base_url", "https://text.pollinations.ai/openai", false, parent(LYRICS_USE_AI_TRANSLATION));
+    public static final StringSetting LYRICS_AI_API_TOKEN = new StringSetting("morphe_music_lyrics_ai_api_token", "", false, parent(LYRICS_USE_AI_TRANSLATION));
+    public static final StringSetting LYRICS_AI_MODEL = new StringSetting("morphe_music_lyrics_ai_model", "openai-fast", false, parent(LYRICS_USE_AI_TRANSLATION));
+    public static final StringSetting LYRICS_AI_PROMPT = new StringSetting("morphe_music_lyrics_ai_prompt", OpenAIClient.DEFAULT_PROMPT, false, parent(LYRICS_USE_AI_TRANSLATION));
+    public static final BooleanSetting LYRICS_SHOW_ROMANIZE_BUTTON = new BooleanSetting("morphe_music_lyrics_show_romanize_button", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_SHOW_REFRESH_BUTTON = new BooleanSetting("morphe_music_lyrics_show_refresh_button", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_HIDE_INFO = new BooleanSetting("morphe_music_lyrics_hide_info", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_SWAP_TRANS_ROMA = new BooleanSetting("morphe_music_lyrics_swap_trans_roma", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_ROMANIZE = new BooleanSetting("morphe_music_lyrics_romanize", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_ROMANIZE_ONLY = new BooleanSetting("morphe_music_lyrics_romanize_only", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_WORD_SYNC = new BooleanSetting("morphe_music_lyrics_word_sync", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_HIDE_PLAYED = new BooleanSetting("morphe_music_lyrics_hide_played", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_HIDE_UNPLAYED = new BooleanSetting("morphe_music_lyrics_hide_unplayed", FALSE, false, parent(LYRICS_ENABLED));
+    public static final IntegerSetting LYRICS_TEXT_SIZE = new IntegerSetting("morphe_music_lyrics_text_size", 24, false, parent(LYRICS_ENABLED));
+    public static final IntegerSetting LYRICS_OFFSET_MS = new IntegerSetting("morphe_music_lyrics_offset_ms", 0, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_SB_MATCHING = new BooleanSetting("morphe_music_lyrics_sb_matching", TRUE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_MEDIASESSION = new BooleanSetting("morphe_music_lyrics_mediasession", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_MINIPLAYER = new BooleanSetting("morphe_music_lyrics_miniplayer", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_DISPLAY_ARTIST_FIRST = new BooleanSetting("morphe_music_lyrics_display_artist_first", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_USE_EMBEDDED = new BooleanSetting("morphe_music_lyrics_use_embedded", TRUE, true, parent(LYRICS_ENABLED));
-    public static final StringSetting LYRICS_CAPTION_COOKIES = new StringSetting("morphe_music_lyrics_caption_cookies", "", true, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_CAPTION_COOKIES = new StringSetting("morphe_music_lyrics_caption_cookies", "", false, parent(LYRICS_ENABLED));
     public static final String DEFAULT_LYRICS_REGEX =
             "(?i)\\s*[（(\\[【][^）)\\]】]*?(?:official\\s+)?(?:video|audio|music\\s+video|lyrics?\\s+video|visualizer|mv)[^）)\\]】]*[）)\\]】]"
             + "|(?i)\\s*[（(\\[【][^）)\\]】]*?remaster(?:ed)?(?:\\s+\\d{4})?[^）)\\]】]*[）)\\]】]"
@@ -234,7 +235,7 @@ public class Settings extends SharedYouTubeSettings {
             + "|[（(\\[【][^）)\\]】]*(?:主题曲|片尾曲|插曲|片头曲|广告曲|推广曲)[^）)\\]】]*[）)\\]】]"
             + "|[（(\\[【][^）)\\]】]*[\\uff1a:][^）)\\]】]*[）)\\]】]"
             + "|(?i)\\s*-\\s*topic$";
-    public static final StringSetting LYRICS_CUSTOM_REGEX = new StringSetting("morphe_music_lyrics_custom_regex", DEFAULT_LYRICS_REGEX, true, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_CUSTOM_REGEX = new StringSetting("morphe_music_lyrics_custom_regex", DEFAULT_LYRICS_REGEX, false, parent(LYRICS_ENABLED));
     public static final String DEFAULT_LYRICS_TEXT_FILTER =
             ".*?(?:"
             + "未经.*?(?:不得|禁止)"
@@ -260,7 +261,7 @@ public class Settings extends SharedYouTubeSettings {
             + "|版权所有\\s*未经\\s*许可\\s*请勿\\s*使用"
             + "|想听的歌在评\\s*论区"
             + ").*";
-    public static final StringSetting LYRICS_TEXT_FILTER = new StringSetting("morphe_music_lyrics_text_filter", DEFAULT_LYRICS_TEXT_FILTER, true, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_TEXT_FILTER = new StringSetting("morphe_music_lyrics_text_filter", DEFAULT_LYRICS_TEXT_FILTER, false, parent(LYRICS_ENABLED));
     public static final String DEFAULT_LYRICS_CREDIT_LINE_REGEX =
            "1st Violin,2nd Violin,A&R,A.Guita,AU,Additional Drums Engineering,Administer,Administered,Administered By,Administering,Administers,"
             + "Agency,Album,All Instruments,Arranged,Arranged By,Arranger,Arrangers,Arranging,"
@@ -308,13 +309,15 @@ public class Settings extends SharedYouTubeSettings {
             + "键盘手,长号,长笛,队长,附加,音乐,音乐人,音准调校,音响,音效,音编,音频,项目企划,项目协力,"
             + "项目总企划,项目总监,项目统筹,项目营销,顾问,领唱,领舞,题字,题记,飓风计划商务合作,马头琴,鸣谢,"
             + "鼓,鼓手,鼓录音,鼓录音室,鼓录制,鼓机,鼓组编程Drums Arrangement,鼓组音频编辑,运营";
-    public static final StringSetting LYRICS_CREDIT_LINE_REGEX = new StringSetting("morphe_music_lyrics_credit_line_regex", DEFAULT_LYRICS_CREDIT_LINE_REGEX, true, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_CREDIT_LINE_REGEX = new StringSetting("morphe_music_lyrics_credit_line_regex", DEFAULT_LYRICS_CREDIT_LINE_REGEX, false, parent(LYRICS_ENABLED));
 
     // SponsorBlock
     public static final BooleanSetting SB_ENABLED = new BooleanSetting("morphe_sb_enabled", TRUE);
     public static final BooleanSetting SB_TOAST_ON_SKIP = new BooleanSetting("morphe_sb_toast_on_skip", TRUE, parent(SB_ENABLED));
     public static final BooleanSetting SB_TOAST_ON_CONNECTION_ERROR = new BooleanSetting("morphe_sb_toast_on_connection_error", TRUE, parent(SB_ENABLED));
     public static final StringSetting SB_API_URL = new StringSetting("morphe_sb_api_url", "https://sponsor.ajay.app", parent(SB_ENABLED));
+    /** Generated on the first segment submission. Not shown in the settings. */
+    public static final StringSetting SB_PRIVATE_USER_ID = new StringSetting("morphe_sb_private_user_id_Do_Not_Share", "");
     public static final StringSetting SB_CATEGORY_SPONSOR = new StringSetting("morphe_sb_sponsor", SKIP_AUTOMATICALLY.morpheKeyValue, parent(SB_ENABLED));
     public static final StringSetting SB_CATEGORY_SPONSOR_COLOR = new StringSetting("morphe_sb_sponsor_color", "#FF00D400", parent(SB_ENABLED));
     public static final StringSetting SB_CATEGORY_SELF_PROMO = new StringSetting("morphe_sb_selfpromo", SKIP_AUTOMATICALLY.morpheKeyValue, parent(SB_ENABLED));

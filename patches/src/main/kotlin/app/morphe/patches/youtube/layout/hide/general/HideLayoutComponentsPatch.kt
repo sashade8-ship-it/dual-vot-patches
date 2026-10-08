@@ -387,7 +387,11 @@ val hideLayoutComponentsPatch = bytecodePatch(
                 sorting = Sorting.UNSORTED,
                 preferences = setOf(
                     SwitchPreference("morphe_custom_filter"),
-                    TextPreference("morphe_custom_filter_strings", inputType = InputType.TEXT_MULTI_LINE)
+                    TextPreference(
+                        "morphe_custom_filter_strings",
+                        titleKey = "morphe_custom_filter_screen_title",
+                        inputType = InputType.TEXT_MULTI_LINE
+                    )
                 )
             )
         )

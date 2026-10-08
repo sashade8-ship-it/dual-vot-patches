@@ -108,10 +108,9 @@ Ha YouTube Premium-felhasználó vagy, ez a beállítás nem feltétlenül szük
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Android VR-ba belépéssel megoldhatók a lejátszás problémái
 
 Belépéshez nyomd meg a folytatást alul"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">Folytatás</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">Kijelentkezés</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">Utasítások</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"Engedélykód: %s
 
 1. Nyomja meg az \"Open website\" (Webhely megnyitása) lehetőséget a fenti weboldal megnyitásához, hogy a \"Connect a device\" (Eszköz kapcsolása) weboldalt nyissa meg
@@ -119,7 +118,6 @@ Belépéshez nyomd meg a folytatást alul"</string>
 3. Ha a promptot (leütöttékbirod) kérdés feltételezi, jelentkezzen be a Google be. Ha több fiókját használja, válassza ki ezt a YouTube fiókot
 4. Válaszoljon \"Allow YouTube VR\" (Engedélyezés a YouTube VR számára)
 5. A \"Device connected\" (Eszköz kapcsolva) üzenettel való visszatérés után térjen vissza ez az alkalmazás"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">Webhely megnyitása</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">Sikertelen volt az engedélykód kiállítása</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">Sikertelen volt az elérési jogkivonat kiállítása</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">Sikeresen bejelentkezett</string>
@@ -198,7 +196,6 @@ Belépéshez nyomd meg a folytatást alul"</string>
   <string name="morphe_custom_filter_screen_title">Egyedi szűrő</string>
   <string name="morphe_custom_filter_screen_summary">Konfigurálja az egyedi szűrőket a komponensek elrejtéséhez</string>
   <string name="morphe_custom_filter_title">Egyéni szűrő engedélyezése</string>
-  <string name="morphe_custom_filter_strings_title">Egyedi szűrő</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">Szűrendő elemek útvonal-karakterláncainak listája, új sorokkal elválasztva</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">Érvénytelen egyedi szűrő: %s</string>

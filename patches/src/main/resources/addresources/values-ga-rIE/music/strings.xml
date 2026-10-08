@@ -396,7 +396,6 @@ YouTube Music 8.x — ní ritheann an traschéimniú ach ar 9.x agus níos nuaí
   <string name="morphe_music_hide_navigation_bar_title">Folaigh barra nascleanúna</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Folaigh lipéid cnaipí nascleanúna</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Cumraigh comhtháthú Last.fm agus ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Níl tú logáilte isteach. Tapáil chun cumrú.</string>
   <string name="morphe_music_scrobbling_log_out">Logáil amach</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Logáilte amach</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x — ní ritheann an traschéimniú ach ar 9.x agus níos nuaí
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Cuir isteach do Chomhartha Úsáideora ListenBrainz chun scrobbling a chumasú</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Comhartha</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Faigh comhartha</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Fíoraigh</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Cuir isteach comhartha le do thoil</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Ag bailíochtú…</string>
@@ -557,8 +555,11 @@ Fianáin riachtanacha: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_credit_line_regex_summary">Má dhéantar na liricí a scagadh go mícheart go dtí an bun, déan é seo a choigeartú nó a ghlanadh. Marcóirí scartha le camóga: taispeántar línte ina bhfuil marcóir agus ansin idirponc mar eolas creidmheasa ag bun an leathanaigh.. Fág folamh é chun an ghné seo a dhíchumasú</string>
   <string name="morphe_music_lyrics_text_size_title">Méid an téacs</string>
   <string name="morphe_music_lyrics_text_size_summary">Méid téacs na liricí</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Fritháireamh ama</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Aistriú ama domhanda</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Leanann na liricí sioncronaithe an t-athsheinm. Má bhíonn siad as sioncronú, déan an t-easaontas ama a choigeartú. Bog na liricí sioncronaithe ar aghaidh nó ar ais. Bain úsáid as luach dearfach má bhíonn na liricí chun tosaigh ar an amhrán.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Úsáid deighleoga SponsorBlock chun na liricí a aistriú</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Meaitseáil gan na deighleoga a scipeálann SponsorBlock agus aistrigh na liricí go dtí an fhuaim eisithe. Má tá sé múchta, déanann sé neamhaird iomlán de SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Níl aon id físeáin ag an rian seo le cur isteach</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Foinse: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Aistrithe ag Google</string>
@@ -579,6 +580,7 @@ Fianáin riachtanacha: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_refreshing">Athnuachanach</string>
   <string name="morphe_music_lyrics_refreshed">Athnuachana</string>
   <string name="morphe_music_lyrics_about_summary">"Meaitseáiltear liricí de réir teidil agus ealaíontóra; b’fhéidir nach bhfaighidh meiteashonraí neamhghnácha aon rud, nó go bhfaighidh siad an leagan mícheart. Bain úsáid as athnuachan chun leaganacha a athrú. Teastaíonn comhartha ó sholáthraithe atá marcáilte le *. Ní i gcónaí a iarrtar na soláthraithe cumasaithe go léir san ord atá agat, ach freagraíonn siad de réir a luais."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Ná cumasaigh ach na soláthraithe a úsáideann tú, nó coinnigh an réamhshocrú — is féidir le hiarratais leanúnacha an iomarca brú a chur ar shuímh bheaga liricí pobail</string>
   <string name="morphe_music_lyrics_hide_info_title">Folaigh an líne chreidmheasa</string>
   <string name="morphe_music_lyrics_hide_info_summary">Folaigh an líne aitheantais a thaispeántar faoi na liricí</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Malartaigh an t-aistriúchán agus an rómánú</string>

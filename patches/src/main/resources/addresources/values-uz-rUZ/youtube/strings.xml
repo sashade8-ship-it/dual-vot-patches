@@ -344,6 +344,7 @@ Batafsil ma'lumot olish uchun AiSlopList.com ni oching"</string>
   <string name="morphe_copy_video_link_button_summary">Havolani quvvatlantirish uchun teging, vaqt muhrini quvvatlantirish uchun bosib ushlab turing</string>
   <string name="morphe_copy_video_link_with_timestamp_button_title">Vaqtni nusxalash tugmasini sudrish</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">\'Video havolasini nuqul qilish\' tugmasining harakatlarini teskari tartibda o\'zgartiradi</string>
+  <!-- interaction.copytext.copyTextPatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">“Televizorga kirish”ni o\'chirish</string>
   <string name="morphe_disable_connect_your_devices_popup_title">\'Connect your devices\' oynatish xabarini o\'chirish</string>
@@ -360,7 +361,6 @@ Batafsil ma'lumot olish uchun AiSlopList.com ni oching"</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Ovozli tarjima</string>
   <string name="morphe_vot_screen_summary">O\'ynayotganda matnni ovozga aylantirish orqali video sarlavhalarini o\'qish, o\'ynatish bilan sinxronlashtirilgan</string>
-  <string name="morphe_vot_enabled_title">Ovozli tarjima</string>
   <string name="morphe_vot_caption_language_title">Til</string>
   <string name="morphe_vot_translation_service_title">Tarjima provayderi</string>
   <string name="morphe_vot_original_audio_volume_title">Asosiy audio balandligi</string>
@@ -604,18 +604,12 @@ Ma'lumot: Jonli efirlarda ishlamasligi mumkin"</string>
   <string name="morphe_hide_save_button_title">\'Dislike tugmasini\' yashirish</string>
   <string name="morphe_hide_more_button_title">Ko\'proq tugmasini yashirish</string>
   <string name="morphe_fullscreen_buttons">Toʻliq ekran rejimida tugmalar</string>
-  <string name="morphe_hide_quick_actions_title">Harakatlar panelini yashirish</string>
-  <string name="morphe_hide_quick_actions_ask_button_title">\'Live chat\' tugmasini yashirish</string>
-  <string name="morphe_hide_quick_actions_comments_button_title">\'Miks tugmasini\' yashirish</string>
   <string name="morphe_hide_quick_actions_dislike_button_title">\'Koʻproq tugmasini\' yashirish</string>
   <string name="morphe_hide_quick_actions_like_button_title">\'Koʻproq videolar\' tugmasini yashirish</string>
   <string name="morphe_hide_quick_actions_live_chat_button_title">\'Pleylista tugmasini\' yashirish</string>
   <string name="morphe_hide_quick_actions_mix_button_title">\'Saqlash\' tugmasini yashirish</string>
-  <string name="morphe_hide_quick_actions_more_button_title">\'Baham koʻrish tugmasini\' yashirish</string>
   <string name="morphe_hide_quick_actions_more_videos_button_title">\'Soʻrov tugmasini\' yashirish</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">\'Izohlarni yashirish\' tugmasini yashirish</string>
-  <string name="morphe_hide_quick_actions_save_button_title">\'Dislike tugmasini\' yashirish</string>
-  <string name="morphe_hide_quick_actions_share_button_title">\'Live chat\' tugmasini yashirish</string>
   <string name="morphe_quick_actions_top_margin_title">Tez harakatlar yuqori marginasi</string>
   <string name="morphe_quick_actions_top_margin_summary">Tez harakatlar panelining tepa marginini belgilang (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
@@ -682,13 +676,8 @@ Sozlamalarga kirish uchun Umumiy → Asboblar → Sozlamalarni koʻrsatish orqal
   <string name="morphe_toolbar_screen_summary">Pleerdagi paydo boʻladigan tugmalarni tanlang</string>
   <string name="morphe_hide_toolbar_cast_button_title">\'Audio Track\' menyusini yashirish</string>
   <string name="morphe_hide_toolbar_chat_button_title">Chat tugmasini yashirish</string>
-  <string name="morphe_hide_toolbar_create_button_title">\'Audio Track\' menyusining pastki qismini yashirish</string>
   <string name="morphe_hide_toolbar_microphone_button_title">\'Captions\' menyusini yashirish</string>
-  <string name="morphe_hide_toolbar_notification_button_title">\'Captions\' menyusining pastki qismini yashirish</string>
   <string name="morphe_hide_toolbar_search_button_title">\'Captions\' menyusining tepa qismini yashirish</string>
-  <string name="morphe_show_toolbar_settings_button_title">\'Qoʻshimcha sozlamalar / Koʻproq\' menyusini yashirish</string>
-  <string name="morphe_show_toolbar_settings_button_index_title">\'Uyqu timer\' menyusini yashirish</string>
-  <string name="morphe_show_toolbar_settings_button_type_title">Asosiy menyu sozlamalar tugmasining harakati</string>
   <string name="morphe_show_toolbar_settings_button_type_summary">\'Takrorlash video\' menyusini yashirish</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Pleyer menyusi</string>
@@ -1006,21 +995,12 @@ Cheklov: Agar 'Eski video harakatlar panelini tiklash' o'chirilgan bo'lsa, 'Ko'p
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_home_title">Bosh sahifa uchun</string>
-  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_subscription_title">Obunalar sahifasi uchun</string>
-  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_library_title">Siz uchun sahifasi uchun</string>
-  <string name="morphe_dearrow_thumbnail_player_title">Pleyer pleyistlari va tavsiyalari uchun</string>
-  <string name="morphe_dearrow_thumbnail_search_title">Qidiruv natijalari uchun</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Asl tasvirchalar</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow va original rasmlar</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow va statik rasmlar</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Statik rasmlar</string>
   <string name="morphe_dearrow_connection_toast_title">Ulanish xatoligi haqida ogohlantirishlarni ko\'rsatish</string>
   <string name="morphe_dearrow_connection_toast_summary">DeArrow server mavjud bo\'lmaganda bildirishnoma ko\'rsatadi</string>
-  <string name="morphe_dearrow_api_url_title">DeArrow API uchlik manzili</string>
   <string name="morphe_dearrow_api_url_summary">DeArrow rasmlar keshini olish manzil</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">Statik video rasmlar</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">Statik rasmlar YouTube ichida yaratilgan va tashqi API ishlatilmaydi</string>

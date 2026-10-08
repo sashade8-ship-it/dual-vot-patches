@@ -402,7 +402,7 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
   <string name="morphe_channel_search_title">チャンネル内を検索</string>
-  <string name="morphe_channel_search_summary">チャンネルを開いた状態での検索は、そのチャンネルだけが検索対象になります</string>
+  <string name="morphe_channel_search_summary">チャンネルページに、そのチャンネルだけを検索する別の検索ボタンを追加します</string>
   <string name="morphe_channel_search_hint">チャンネル内を検索</string>
   <string name="morphe_channel_search_results">チャンネル内の検索結果</string>
   <string name="morphe_channel_search_no_results">このチャンネルでは見つかりませんでした</string>
@@ -421,6 +421,13 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <string name="morphe_copy_video_link_button_summary">タップすると動画のリンクを、長押しするとタイムスタンプ付きリンクをそれぞれコピーします</string>
   <string name="morphe_copy_video_link_with_timestamp_button_title">タップ時にタイムスタンプ付きをコピー</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">「動画のリンクをコピー」ボタンのタップと長押しの動作を入れ替えます</string>
+  <!-- interaction.copytext.copyTextPatch -->
+  <string name="morphe_copy_video_title_title">動画タイトルをコピー</string>
+  <string name="morphe_copy_video_title_summary">動画のタイトルを長押しするとコピーできます</string>
+  <string name="morphe_copy_video_title_success">動画タイトルをクリップボードにコピーしました</string>
+  <string name="morphe_copy_comments_title">コメントをコピー</string>
+  <string name="morphe_copy_comments_summary">コメントを長押しするとコピーできます</string>
+  <string name="morphe_copy_comments_success">コメントをクリップボードにコピーしました</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">「テレビでログイン」ポップアップを無効化</string>
   <string name="morphe_disable_connect_your_devices_popup_title">「デバイスの接続」ポップアップを無効化</string>
@@ -437,7 +444,6 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">吹き替え翻訳</string>
   <string name="morphe_vot_screen_summary">動画字幕を翻訳し、デバイス上のテキスト読み上げ機能で字幕の翻訳を字幕に同期しながら読み上げます</string>
-  <string name="morphe_vot_enabled_title">吹き替え翻訳</string>
   <string name="morphe_vot_enabled_summary">プレーヤー オーバーレイにボタンを表示します。タップするとオン / オフを切り替えます。長押しすると簡易設定メニューを表示します</string>
   <string name="morphe_vot_caption_language_title">言語</string>
   <string name="morphe_vot_translation_service_title">翻訳サービス</string>
@@ -717,18 +723,12 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_hide_save_button_title">保存ボタンを非表示</string>
   <string name="morphe_hide_more_button_title">3 点ボタンを非表示</string>
   <string name="morphe_fullscreen_buttons">全画面表示モードのボタン</string>
-  <string name="morphe_hide_quick_actions_title">アクションバーを非表示</string>
-  <string name="morphe_hide_quick_actions_ask_button_title">「質問する」ボタンを非表示</string>
-  <string name="morphe_hide_quick_actions_comments_button_title">コメントボタンを非表示</string>
   <string name="morphe_hide_quick_actions_dislike_button_title">低評価ボタンを非表示</string>
   <string name="morphe_hide_quick_actions_like_button_title">高評価ボタンを非表示</string>
   <string name="morphe_hide_quick_actions_live_chat_button_title">チャットボタンを非表示</string>
   <string name="morphe_hide_quick_actions_mix_button_title">ミックスボタンを非表示</string>
-  <string name="morphe_hide_quick_actions_more_button_title">3 点ボタンを非表示</string>
   <string name="morphe_hide_quick_actions_more_videos_button_title">「その他動画」ボタンを非表示</string>
   <string name="morphe_hide_quick_actions_playlist_button_title">プレイリスト ボタンを非表示</string>
-  <string name="morphe_hide_quick_actions_save_button_title">保存ボタンを非表示</string>
-  <string name="morphe_hide_quick_actions_share_button_title">共有ボタンを非表示</string>
   <string name="morphe_quick_actions_top_margin_title">クイック アクション上部の余白</string>
   <string name="morphe_quick_actions_top_margin_summary">クイック アクション領域上部の余白を設定します (0-32 dp) 。この領域および余白は、クイック アクションを非表示にした場合でも表示されるため、非表示にしたときのシークバーの位置を調整するのに利用できます</string>
   <!-- layout.captions.captionsPatch -->
@@ -797,13 +797,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_toolbar_screen_summary">ツールバーに表示するコンポーネントを設定します</string>
   <string name="morphe_hide_toolbar_cast_button_title">キャストボタンを非表示</string>
   <string name="morphe_hide_toolbar_chat_button_title">チャットボタンを非表示</string>
-  <string name="morphe_hide_toolbar_create_button_title">作成ボタンを非表示</string>
   <string name="morphe_hide_toolbar_microphone_button_title">検索の音声入力ボタンを非表示</string>
-  <string name="morphe_hide_toolbar_notification_button_title">通知ボタンを非表示</string>
   <string name="morphe_hide_toolbar_search_button_title">検索ボタンを非表示</string>
-  <string name="morphe_show_toolbar_settings_button_title">設定ボタンを表示</string>
-  <string name="morphe_show_toolbar_settings_button_index_title">設定ボタンの表示位置</string>
-  <string name="morphe_show_toolbar_settings_button_type_title">設定ボタンの動作</string>
   <string name="morphe_show_toolbar_settings_button_type_summary">この設定がオンの場合、タップすると Morphe の設定を、長押しすると YouTube の設定を開きます。オフの場合は動作が入れ替わります</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">フライアウト メニュー</string>
@@ -1171,14 +1166,6 @@ Automotive レイアウト
   <string name="morphe_dearrow_titles_icon_title">DeArrow アイコンを表示</string>
   <string name="morphe_dearrow_titles_icon_summary">クラウドソースされた動画タイトルに DeArrow アイコンを表示します</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow サムネイル</string>
-  <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_home_title">ホームタブ</string>
-  <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_subscription_title">登録チャンネルタブ</string>
-  <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_thumbnail_library_title">マイページタブ</string>
-  <string name="morphe_dearrow_thumbnail_player_title">プレーヤーのプレイリスト &amp; 関連動画</string>
-  <string name="morphe_dearrow_thumbnail_search_title">検索結果</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">デフォルトのサムネイル</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; デフォルト</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; 静止画</string>
@@ -1190,7 +1177,7 @@ Automotive レイアウト
 ここをタップしてDeArrow.ajay.appを開きます"</string>
   <string name="morphe_dearrow_connection_toast_title">接続エラーの通知を表示</string>
   <string name="morphe_dearrow_connection_toast_summary">DeArrow サーバーが利用できない場合に通知を表示します</string>
-  <string name="morphe_dearrow_api_url_title">DeArrow API のエンドポイント</string>
+  <string name="morphe_dearrow_api_url_title">APIエンドポイント</string>
   <string name="morphe_dearrow_api_url_summary">DeArrow がサムネイルのキャッシュを取得するエンドポイントの URL</string>
   <string name="morphe_dearrow_thumbnail_stills_about_title">静止画サムネイル</string>
   <string name="morphe_dearrow_thumbnail_stills_about_summary">静止画は各動画の序盤 / 中盤 / 終盤から取得されます。これらの画像は YouTube に組み込まれており、外部 API は使用されません</string>

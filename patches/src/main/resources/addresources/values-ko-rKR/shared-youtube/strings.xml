@@ -108,10 +108,9 @@ YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Android VR에 로그인하면 일부 사용자의 재생 문제가 해결될 수 있습니다
 
 로그인하려면 아래에 있는 '계속' 버튼을 탭하세요"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_continue">계속</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">로그아웃</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">설명서</string>
-  <!-- "Open website" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website -->
+  <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
   <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"활성화 코드: %s
 
 1. 아래에 있는 '웹사이트 열기'를 탭하여 '기기 연결' 웹사이트를 엽니다
@@ -119,7 +118,6 @@ YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"
 3. 로그인이 요청되면 Google에 로그인합니다. 계정이 여러 개인 경우에는 Morphe에서 사용하는 YouTube 계정을 선택합니다
 4. YouTube VR 액세스를 허용합니다
 5. '기기에 연결됨' 메시지가 표시되면 이 앱으로 돌아옵니다"</string>
-  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_open_website">웹사이트 열기</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">활성화 코드를 발급할 수 없습니다</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">인증 토큰을 발급할 수 없습니다</string>
   <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">로그인 성공</string>
@@ -198,7 +196,6 @@ YouTube Premium 사용자는 이 설정이 필요하지 않을 수 있습니다"
   <string name="morphe_custom_filter_screen_title">사용자 정의 필터</string>
   <string name="morphe_custom_filter_screen_summary">원하는 구성 요소를 숨기기 위한 사용자 정의 필터를 설정합니다</string>
   <string name="morphe_custom_filter_title">사용자 정의 필터 활성화하기</string>
-  <string name="morphe_custom_filter_strings_title">사용자 정의 필터</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
   <string name="morphe_custom_filter_strings_summary">필터링할 컴포넌트 패스 빌더 문자열을 줄바꿈으로 구분하여 설정하세요</string>
   <string name="morphe_custom_filter_toast_invalid_syntax">잘못된 사용자 정의 필터 값입니다: %s</string>

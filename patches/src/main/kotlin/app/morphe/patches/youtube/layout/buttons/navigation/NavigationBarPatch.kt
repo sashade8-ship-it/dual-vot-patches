@@ -514,13 +514,13 @@ val navigationBarPatch = bytecodePatch(
         val toolbarPreferences = mutableSetOf(
             SwitchPreference("morphe_hide_toolbar_cast_button"),
             SwitchPreference("morphe_hide_toolbar_chat_button"),
-            SwitchPreference("morphe_hide_toolbar_create_button"),
+            SwitchPreference("morphe_hide_toolbar_create_button", titleKey = "morphe_hide_create_button_title"),
             SwitchPreference("morphe_hide_toolbar_microphone_button"),
-            SwitchPreference("morphe_hide_toolbar_notification_button"),
+            SwitchPreference("morphe_hide_toolbar_notification_button", titleKey = "morphe_hide_notifications_button_title"),
             SwitchPreference("morphe_hide_toolbar_search_button"),
-            SwitchPreference("morphe_show_toolbar_settings_button"),
-            ListPreference("morphe_show_toolbar_settings_button_index"),
-            SwitchPreference("morphe_show_toolbar_settings_button_type", summary = true)
+            SwitchPreference("morphe_show_toolbar_settings_button", titleKey = "morphe_show_settings_button_title"),
+            ListPreference("morphe_show_toolbar_settings_button_index", titleKey = "morphe_show_settings_button_index_title"),
+            SwitchPreference("morphe_show_toolbar_settings_button_type", titleKey = "morphe_show_settings_button_type_title", summary = true)
         )
 
         PreferenceScreen.GENERAL.addPreferences(
@@ -704,6 +704,37 @@ val navigationBarPatch = bytecodePatch(
                 val protoListFreeRegister = freeRegisters.getFreeRegister()
                 val byteRegister = freeRegisters.getFreeRegister()
 
+                // The commands of the buttons are extensions, which are parsed only with the extension registry.
+                val parseByteArrayMethod = parseByteArrayMethodRef.get()!!
+                mutableClassDefBy(parseByteArrayMethod.definingClass).methods.firstOrNull { method ->
+                    method.name == "parseFrom" && method.parameterTypes.map { type -> type.toString() } == listOf(
+                        parseByteArrayMethod.parameterTypes.first().toString(),
+                        "[B",
+                        "Lcom/google/protobuf/ExtensionRegistryLite;"
+                    )
+                }?.let { parseWithRegistryMethod ->
+                    val messageType = parseWithRegistryMethod.parameterTypes.first()
+                    val extensionMethods = mutableClassDefBy(EXTENSION_CLASS).methods
+                    extensionMethods.first { method -> method.name == "getGeneratedRegistry" }.addInstructions(
+                        0,
+                        """
+                            invoke-static { }, Lcom/google/protobuf/ExtensionRegistryLite;->getGeneratedRegistry()Lcom/google/protobuf/ExtensionRegistryLite;
+                            move-result-object v0
+                            return-object v0
+                        """
+                    )
+                    extensionMethods.first { method -> method.name == "parseWithRegistry" }.addInstructions(
+                        0,
+                        """
+                            check-cast p0, $messageType
+                            invoke-static { p0, p1, p2 }, $parseWithRegistryMethod
+                            move-result-object p0
+                            check-cast p0, Lcom/google/protobuf/MessageLite;
+                            return-object p0
+                        """
+                    )
+                }
+
                 addInstructionsWithLabels(
                     protoListIndex,
                     """
@@ -716,6 +747,9 @@ val navigationBarPatch = bytecodePatch(
                         # If mutable, copy the ProtoList.
                         invoke-static { v$protoListRegister }, ${mutableCopyMethodRef.get()}
                         move-result-object v$protoListRegister
+                        
+                        # Replace the create button whose video button has an endpoint the app does not handle.
+                        invoke-static { v$protoListRegister }, $EXTENSION_CLASS->fixToolbarCreateButtonUpload(Ljava/util/List;)V
                         
                         # Generate Settings Button Bytes (BEFORE modifying list)
                         invoke-static { v$protoListRegister }, $EXTENSION_CLASS->createToolbarSettingsButton(Ljava/util/List;)[B

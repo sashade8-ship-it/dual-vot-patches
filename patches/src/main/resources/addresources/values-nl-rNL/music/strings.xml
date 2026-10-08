@@ -396,7 +396,6 @@ YouTube Music 8.x - crossfade werkt alleen op 9.x en nieuwer"</string>
   <string name="morphe_music_hide_navigation_bar_title">Navigatiebalk verbergen</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Labels van navigatieknoppen verbergen</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Configure Last.fm en ListenBrainz integratie</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Niet ingelogd. Tik om te configureren</string>
   <string name="morphe_music_scrobbling_log_out">Afmelden</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Uitgelogd</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x - crossfade werkt alleen op 9.x en nieuwer"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Voer uw ListenBrainz-gebruikerstoken in om scrobbling in te schakelen</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Token ophalen</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verifiëren</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Voer een token in</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Bezig met valideren…</string>
@@ -547,8 +545,11 @@ Vereiste cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_credit_line_regex_summary">Als songteksten onterecht naar de onderkant worden gefilterd, pas dit dan aan of wis dit. […] Leeg laten om uit te schakelen.</string>
   <string name="morphe_music_lyrics_text_size_title">Tekstgrootte</string>
   <string name="morphe_music_lyrics_text_size_summary">Grootte van de songtekst</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Timing offset</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Globale timing-offset</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Gesynchroniseerde songteksten volgen de weergave. Als ze afwijken, pas dan de timing-offset aan. […] Gebruik een positieve waarde als de songteksten voorlopen op het nummer.</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Gebruik SponsorBlock-segmenten voor de songtekst-offset</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Afstemmen zonder de segmenten die SponsorBlock overslaat en verschuif songteksten naar de uitgebrachte audio. Uit negeert SponsorBlock volledig</string>
+  <string name="morphe_music_lyrics_sb_no_video">Dit nummer heeft geen video-id om in te dienen</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Bron: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Vertaald door Google</string>
@@ -569,6 +570,7 @@ Vereiste cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_refreshing">Vernieuwen</string>
   <string name="morphe_music_lyrics_refreshed">Vernieuwd</string>
   <string name="morphe_music_lyrics_about_summary">"Songteksten worden op titel en artiest gematched; ongebruikelijke metadata kunnen niets of de verkeerde versie opleveren. Gebruik verversen om van versie te wisselen. Providers gemarkeerd met * vereisen een token. Niet alle ingeschakelde providers worden altijd in uw volgorde opgevraagd, maar reageren op basis van hun snelheid."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Schakel alleen de providers in die je gebruikt, of behoud de standaardinstelling — constante verzoeken kunnen kleine community-songtekstsites overweldigen</string>
   <string name="morphe_music_lyrics_hide_info_title">Verberg creditregel</string>
   <string name="morphe_music_lyrics_hide_info_summary">Verberg de creditregel die onder de songteksten wordt weergegeven</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Wissel vertaling en romanisatie om</string>

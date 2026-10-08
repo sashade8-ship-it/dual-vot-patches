@@ -58,7 +58,7 @@ public final class VoiceOverTranslationButton {
                     });
             overlayButtonRef = button != null ? new WeakReference<>(button) : null;
             if (button != null) {
-                button.setContentDescription(ResourceUtils.getString("morphe_vot_enabled_title"));
+                button.setContentDescription(ResourceUtils.getString("morphe_vot_screen_title"));
                 setToggleAccessibilityDelegate(button);
             }
             refreshActivatedState();

@@ -244,7 +244,6 @@ YouTube Music 8.x — crossfade tenê li 9.x û nûjenertirîn de dimeşe"</stri
   <string name="morphe_music_hide_navigation_bar_title">Barê navigasyonê veşêre</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Etîketên barê navigasyonê veşêre</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfîgkirina entegrasyona Last.fm û ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Ne têkeve. Têke da ku konfîg bike</string>
   <string name="morphe_music_scrobbling_log_out">Derkeve</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Derketin</string>
@@ -267,7 +266,6 @@ YouTube Music 8.x — crossfade tenê li 9.x û nûjenertirîn de dimeşe"</stri
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Tokena bikarînerê ListenBrainz-ê têkevin da ku lêkirinê çalak bike</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Token bistîne</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Verastkirin</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Ji kerem tokenê têkevin</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Dagirxistîne…</string>
@@ -315,7 +313,6 @@ Ji bo ku bêyî astengiyê scrobbling li ser lîstikên paşnavê were hevdengki
   <string name="morphe_music_lyrics_show_translate_button_title">Nîşanê wergerandinê bibîne</string>
   <string name="morphe_music_lyrics_text_size_title">Mezinahiyê nivîsê</string>
   <string name="morphe_music_lyrics_text_size_summary">Mezinahiyê nivîsa stranê</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Veguhêztina demê</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Çavkanî: %s</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->

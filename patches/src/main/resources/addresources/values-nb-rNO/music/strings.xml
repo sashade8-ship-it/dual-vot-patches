@@ -396,7 +396,6 @@ YouTube Music 8.x – crossfade kjører bare på 9.x og nyere"</string>
   <string name="morphe_music_hide_navigation_bar_title">Skjul navigasjonslinjen</string>
   <string name="morphe_music_hide_navigation_bar_labels_title">Skjul navigasjonsknappetiketter</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
-  <string name="morphe_music_scrobbling_summary">Konfigurer integrasjon med Last.fm og ListenBrainz</string>
   <string name="morphe_music_scrobbling_summary_logged_out">Ikke logget inn. Trykk for å konfigurere</string>
   <string name="morphe_music_scrobbling_log_out">Logg ut</string>
   <string name="morphe_music_scrobbling_logged_out_toast">Logget ut</string>
@@ -419,7 +418,6 @@ YouTube Music 8.x – crossfade kjører bare på 9.x og nyere"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_dialog_instruction">Skriv inn din ListenBrainz-brukertoken for å aktivere scrobbling</string>
   <string name="morphe_music_listenbrainz_token_dialog_hint">Token</string>
-  <string name="morphe_music_listenbrainz_token_dialog_get_token">Hent token</string>
   <string name="morphe_music_listenbrainz_token_dialog_verify">Bekreft</string>
   <string name="morphe_music_listenbrainz_token_status_empty">Vennligst skriv inn en token</string>
   <string name="morphe_music_listenbrainz_token_status_validating">Validerer…</string>
@@ -557,8 +555,11 @@ Nødvendige informasjonskapsler: SID, HSID, SSID, SAPISID, __Secure-1PAPISID, __
   <string name="morphe_music_lyrics_credit_line_regex_summary">Hvis tekster blir feilaktig filtrert til bunnen, justerer eller tømmer du dette. Kommaseparerte markører: linjer som inneholder en markør etterfulgt av kolon, vises som kredittinformasjon nederst. La feltet stå tomt for å deaktivere</string>
   <string name="morphe_music_lyrics_text_size_title">Tekststørrelse</string>
   <string name="morphe_music_lyrics_text_size_summary">Størrelse på sangteksten</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Tidsforskyvning</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Global tidsforskyvning</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Synkroniserte tekster følger avspillingen. Hvis de sklider, juster tidsforskyvningen. Flytt synkroniserte tekster forover eller bakover. Bruk en positiv verdi hvis teksten ligger foran sangen</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Bruk SponsorBlock-segmenter for sangtekstforskyvning</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Match uten segmentene SponsorBlock hopper over, og forskyv sangteksten til den utgitte lyden. Av ignorerer SponsorBlock fullstendig</string>
+  <string name="morphe_music_lyrics_sb_no_video">Dette sporet har ingen video-id å sende inn</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Kilde: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Oversatt av Google</string>
@@ -579,6 +580,7 @@ Nødvendige informasjonskapsler: SID, HSID, SSID, SAPISID, __Secure-1PAPISID, __
   <string name="morphe_music_lyrics_refreshing">Oppdaterer</string>
   <string name="morphe_music_lyrics_refreshed">Oppdatert</string>
   <string name="morphe_music_lyrics_about_summary">"Sangtekster matches etter tittel og artist, uvanlig metadata kan finne ingenting eller feil versjon. Bruk oppdater for å bytte versjoner. Tilbydere merket * krever en token. Ikke alle aktiverte tilbydere blir alltid spurt i din rekkefølge, men svarer basert på hastigheten deres."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Aktiver bare leverandørene du bruker, eller behold standarden — konstante forespørsler kan overvelde små fellesskapsdrevne sangtekstnettsteder</string>
   <string name="morphe_music_lyrics_hide_info_title">Skjul krediteringslinjen</string>
   <string name="morphe_music_lyrics_hide_info_summary">Skjul krediteringslinjen som vises under teksten</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Bytt om oversettelse og romanisering</string>
