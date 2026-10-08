@@ -1,3 +1,13 @@
+## 1.47.0-dev.4-dualvot.8.5.3 (2026-10-08)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.4](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.4).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.1-dualvot.8.5.3 (2026-10-07)
 
 ### Automated Morphe update
@@ -386,6 +396,34 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.3...v1.47.0-dev.4) (2026-10-08)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Spoof video streams:** Stream spoofing can show "Failed to obtain poToken" error ([c04605b](https://github.com/MorpheApp/morphe-patches/commit/c04605b743a1cd5a9de9d17a86abcfdcef359431))
+
+## [1.47.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.2...v1.47.0-dev.3) (2026-10-08)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Spoof video streams:** Legacy app targets may not work correctly ([ddfd5e0](https://github.com/MorpheApp/morphe-patches/commit/ddfd5e0921faae04161cfbe8833f60be74f3ac11))
+
+## [1.47.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.1...v1.47.0-dev.2) (2026-10-08)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Background playback:** Respect server value of automatic pause and resume flags ([2fa79ef](https://github.com/MorpheApp/morphe-patches/commit/2fa79efa841870b13e18c61e0a54fad057e16b9c))
+* **YouTube - Hide player flyout menu components:** Add separate Shorts settings for the Captions and Audio Track menus ([963982d](https://github.com/MorpheApp/morphe-patches/commit/963982d54af7c0a10d840e7e940dca29438423d3))
+* **YouTube - Miniplayer:** Fixed incorrect check to prevent title/channel name overwriting ([#3576](https://github.com/MorpheApp/morphe-patches/issues/3576)) ([1671904](https://github.com/MorpheApp/morphe-patches/commit/1671904e728a69c3545c2b6e73ea077b8a67d8d4))
+* **YouTube - Restore original titles:** Titles of videos searched in different languages ​​were not restored ([41eee25](https://github.com/MorpheApp/morphe-patches/commit/41eee25b9ee9863ba0aed5762f802c91aeb0a6c5))
+* **YouTube:** Allow video upload/live with toolbar create button ([a8fb76a](https://github.com/MorpheApp/morphe-patches/commit/a8fb76ae2162bfab09af383013ee4e2717c3ef38))
+
+### ✨ New Features
+
+* **YouTube - Channel search:** Add a separate channel page button to search within channels ([#3572](https://github.com/MorpheApp/morphe-patches/issues/3572)) ([639908f](https://github.com/MorpheApp/morphe-patches/commit/639908fd12eb8126171b7a275eb63a3f564c8239))
+* **YouTube Music - Third-party lyrics:** SponsorBlock segments as lyrics offset ([#3575](https://github.com/MorpheApp/morphe-patches/issues/3575)) ([a900dfa](https://github.com/MorpheApp/morphe-patches/commit/a900dfa93b330f5a6c4ecc81a47fe2e09fa378fe))
+* **YouTube:** Add `Copy text` patch ([#3592](https://github.com/MorpheApp/morphe-patches/issues/3592)) ([f5312eb](https://github.com/MorpheApp/morphe-patches/commit/f5312eb35e275bddddd49696ae277f09d11efbeb))
 
 ## [1.47.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.46.0...v1.47.0-dev.1) (2026-10-06)
 
