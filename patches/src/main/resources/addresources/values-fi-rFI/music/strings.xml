@@ -182,7 +182,10 @@ Ladatut kappaleet näkyvät tässä"</string>
   <string name="morphe_music_hide_video_ads_title">Piilota videomainokset</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Piilota äänen/videon vaihtokytkin</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Piilota latauspainike</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Piilottaa latauspainikkeen podcast-ohjelmassa</string>
   <string name="morphe_music_hide_explore_shelf_title">Piilota Tutustu-hylly</string>
+  <string name="morphe_music_hide_filter_bar_title">Piilota suodatinpalkki</string>
   <string name="morphe_music_hide_grid_shelves_title">Piilota ruudukkohyllyt</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Piilota vaakasuuntaiset hyllyt</string>
   <string name="morphe_music_hide_list_shelves_title">Piilota luettelohyllyt</string>
@@ -191,7 +194,6 @@ Ladatut kappaleet näkyvät tässä"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Piilota Käännä-painike</string>
   <string name="morphe_music_hide_new_from_shelf_title">Piilota \"Uutta\"-hylly</string>
   <string name="morphe_music_hide_playlist_shelves_title">Piilota soittolistahyllyt</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Piilota podcast-jakson latauspainike</string>
   <string name="morphe_music_hide_repeat_button_title">Piilota toistopainike</string>
   <string name="morphe_music_hide_shuffle_button_title">Piilota sekoituspainike</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Piilota \"Pikavalinta\"-hylly</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x – crossfade toimii vain versiossa 9.x ja uudemmissa."</strin
   <string name="morphe_change_start_page_entry_playlists">Soittolistat</string>
   <string name="morphe_change_start_page_entry_search">Haku</string>
   <string name="morphe_change_start_page_entry_subscriptions">Tilaukset</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Piilota suodatinpalkki</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Pakota pystysuunta</string>
   <string name="morphe_music_force_portrait_orientation_summary">Pitää sovelluksen pystyasennossa, kun laitetta käännetään</string>

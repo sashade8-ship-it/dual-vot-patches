@@ -182,7 +182,10 @@ tظهر المسارات التي تم تنزيلها هنا"</string>
   <string name="morphe_music_hide_video_ads_title">إخفاء إعلانات الفيديو</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">إخفاء زر تبديل الصوت/الفيديو</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">إخفاء زر التنزيل</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">يخفي زر التنزيل في عرض البودكاست</string>
   <string name="morphe_music_hide_explore_shelf_title">إخفاء رف الاستكشاف</string>
+  <string name="morphe_music_hide_filter_bar_title">إخفاء شريط التصفية</string>
   <string name="morphe_music_hide_grid_shelves_title">إخفاء رفوف الشبكة</string>
   <string name="morphe_music_hide_horizontal_shelves_title">إخفاء الرفوف الأفقية</string>
   <string name="morphe_music_hide_list_shelves_title">إخفاء رفوف القائمة</string>
@@ -191,7 +194,6 @@ tظهر المسارات التي تم تنزيلها هنا"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">إخفاء زر الترجمة</string>
   <string name="morphe_music_hide_new_from_shelf_title">إخفاء رف \'جديد من\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">إخفاء رفوف قوائم التشغيل</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">إخفاء زر تنزيل حلقة البودكاست</string>
   <string name="morphe_music_hide_repeat_button_title">إخفاء زر التكرار</string>
   <string name="morphe_music_hide_shuffle_button_title">إخفاء زر التشغيل العشوائي</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">إخفاء رف \'الاتصال السريع\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x - يعمل الانتقال التدريجي فقط على ا�
   <string name="morphe_change_start_page_entry_playlists">قوائم التشغيل</string>
   <string name="morphe_change_start_page_entry_search">البحث</string>
   <string name="morphe_change_start_page_entry_subscriptions">الاشتراكات</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">إخفاء شريط التصفية</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">فرض الاتجاه العمودي</string>
   <string name="morphe_music_force_portrait_orientation_summary">يحافظ على التطبيق في الاتجاه العمودي عند تدوير الجهاز</string>

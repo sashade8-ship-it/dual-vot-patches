@@ -161,8 +161,8 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_timed_reactions_title">Fela tímabilsbundnar viðbrögð</string>
   <string name="morphe_hide_timed_reactions_summary">Felur eiginleikann sem gerir notendum kleift að bregðast við með emojis í athugasmdum og lifandi streymi</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Fela \'Hjálp &amp; endurgjöf\' í valmyndum</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Felur \'Hjálp &amp; endurgjöf\' í þriggja punkta valmyndum verkstikunnar, eins og leitarniðurstöðuvalmyndinni</string>
+  <string name="morphe_hide_help_feedback_menu_title">Fela valmyndina \'Hjálp &amp; ábendingar\'</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Felur valmyndina \'Hjálp &amp; ábendingar\' þegar þrípunktahnappurinn er notaður, eins og í leitarniðurstöðum</string>
   <string name="morphe_hide_handle_title">Fela handfang</string>
   <string name="morphe_hide_handle_summary">Felur rásarhandfangið þitt í flipanum \'Þú\'</string>
   <string name="morphe_hide_video_title_title">Fela myndbandsheiti</string>
@@ -510,9 +510,9 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_loop_video_range_clear">Hreinsa</string>
   <string name="morphe_loop_video_range_toast_on">Hliðun %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ógilt tímabil</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Sýna mynd-í-mynd yfirlagshnapp</string>
-  <string name="morphe_pip_button_flyout_title">Sýna mynd-í-mynd sprettigluggahnapp</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Sýna mynd-í-mynd-hnapp</string>
+  <string name="morphe_pip_button_flyout_title">Sýna mynd-í-mynd-valmynd</string>
   <string name="morphe_pip_button_flyout_name">Skipta yfir í mynd-í-mynd</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Sýnir Spila allt hnappinn</string>
@@ -739,6 +739,10 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <string name="morphe_auto_captions_style_entry_4">Sýna þegar hljóðlát</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Sýna sjálfvirka undirtitla</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Fela sjálfvirka undirtitla</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Æskilegt skjátextamál</string>
+  <string name="morphe_preferred_caption_language_summary">Velur skjátexta frá veitanda fyrst, þýðir síðan sjálfkrafa á æskilegt tungumál</string>
+  <string name="morphe_preferred_caption_language_entry_off">Slökkt</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Stilltu kökkurnar sem þurfa að vera stilltar á Timed Text API (Gögn kökkurdreifur)</string>
   <string name="morphe_set_caption_cookies_summary">"Lagfærir innbyggða YouTube villu þar sem sjálfvirku þýðingartextarnir gætu ekki verið tiltækir vegna vantaðra smákaka
@@ -943,6 +947,8 @@ Stillingar → Spilun (eða Sjálfvædd spilun) → Sjálfvædd næsta myndband"
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Óvirkja sjálfvirka spilun á spilunarlista</string>
   <string name="morphe_disable_playlist_autoplay_summary">Kemur í veg fyrir að spilunarlistar fari sjálfkrafa á næsta myndband</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Slökkva á \"Halda áfram að horfa?\" tilkynningunni</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Hættir fullskjástillingu á lok vídeós</string>
   <string name="morphe_exit_fullscreen_entry_1">Gerðu óvirkt </string>

@@ -60,28 +60,32 @@ public final class LyricsTranslator {
             if (lines == null || lines.size() != lineCount || !LyricsMerge.hasText(lines)) {
                 continue;
             }
-            List<String> out = new ArrayList<>(lines.size());
-            for (LyricsLine line : lines) {
-                String text = line.text();
-                out.add(text == null ? "" : text);
-            }
-            List<LyricsLine> allLines = lyrics.lines();
-            for (int i = 0; i < out.size() && i < allLines.size(); i++) {
-                if (allLines.get(i).isBG()) {
-                    for (int j = i - 1; j >= 0; j--) {
-                        if (!allLines.get(j).isBG() && j < out.size()) {
-                            String parentTrans = out.get(j);
-                            if (parentTrans != null && !parentTrans.isEmpty()) {
-                                out.set(i, parentTrans);
-                            }
-                            break;
+            return embeddedTranslationLines(lyrics, lines);
+        }
+        return null;
+    }
+
+    private static List<String> embeddedTranslationLines(Lyrics lyrics, List<LyricsLine> lines) {
+        List<String> out = new ArrayList<>(lines.size());
+        for (LyricsLine line : lines) {
+            String text = line.text();
+            out.add(text == null ? "" : text);
+        }
+        List<LyricsLine> allLines = lyrics.lines();
+        for (int i = 0; i < out.size() && i < allLines.size(); i++) {
+            if (allLines.get(i).isBG()) {
+                for (int j = i - 1; j >= 0; j--) {
+                    if (!allLines.get(j).isBG() && j < out.size()) {
+                        String parentTrans = out.get(j);
+                        if (parentTrans != null && !parentTrans.isEmpty()) {
+                            out.set(i, parentTrans);
                         }
+                        break;
                     }
                 }
             }
-            return out;
         }
-        return null;
+        return out;
     }
 
     private static String primarySubtag(String lang) {
@@ -156,7 +160,7 @@ public final class LyricsTranslator {
             String title, String artist, String baseUrl, String apiToken, String model) {
         String prompt = OpenAIClient.renderPrompt(Settings.LYRICS_AI_PROMPT.get(),
                 "translation", language, title, artist, lines);
-        return OpenAIClient.mapLines(baseUrl, apiToken, model, prompt, null, lines);
+        return OpenAIClient.mapLines(baseUrl, apiToken, model, prompt, lines);
     }
 
     @Nullable

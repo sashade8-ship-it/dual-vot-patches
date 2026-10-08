@@ -161,8 +161,8 @@ As mudanças incluem:
   <string name="morphe_hide_timed_reactions_title">Esconder reações cronometradas</string>
   <string name="morphe_hide_timed_reactions_summary">Oculta o recurso que permite aos usuários reagir com emojis na seção de comentários e no chat ao vivo</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Ocultar \'Ajuda &amp; feedback\' nos menus</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Oculta \'Ajuda &amp; feedback\' nos menus de três pontos da barra de aplicativos, como o menu de resultados de pesquisa</string>
+  <string name="morphe_hide_help_feedback_menu_title">Ocultar o menu \'Ajuda &amp; feedback\'</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Oculta o menu \'Ajuda &amp; feedback\' ao usar o botão de três pontos, como nos resultados de pesquisa</string>
   <string name="morphe_hide_handle_title">Ocultar identificador</string>
   <string name="morphe_hide_handle_summary">Oculta o identificador do seu canal na aba \'Você\'</string>
   <string name="morphe_hide_video_title_title">Ocultar título do vídeo</string>
@@ -510,10 +510,10 @@ Sua chave de API nunca deve ser compartilhada. Qualquer pessoa com acesso a ela 
   <string name="morphe_loop_video_range_clear">Limpar</string>
   <string name="morphe_loop_video_range_toast_on">Repetindo %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Data inválida</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Mostrar botão de sobreposição do Picture-in-picture</string>
-  <string name="morphe_pip_button_flyout_title">Mostrar botão do menu flutuante do Picture-in-picture</string>
-  <string name="morphe_pip_button_flyout_name">Alternar para o Picture-in-picture</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Mostrar botão Picture-in-Picture</string>
+  <string name="morphe_pip_button_flyout_title">Mostrar menu Picture-in-Picture</string>
+  <string name="morphe_pip_button_flyout_name">Alternar para Picture-in-Picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Mostrar botão \'Reproduzir tudo\'</string>
   <string name="morphe_play_all_button_summary">"Toque para gerar uma playlist de todos os vídeos do canal, toque e segure para desfazer
@@ -741,6 +741,10 @@ Para corrigir isso, ative 'Falsificar streams de vídeo' e altere o 'Cliente pad
   <string name="morphe_auto_captions_style_entry_4">Exibir quando silenciado</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Exibir legendas automáticas</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Ocultar legendas automáticas</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Idioma preferido das legendas</string>
+  <string name="morphe_preferred_caption_language_summary">Seleciona primeiro as legendas do provedor e depois traduz automaticamente para o idioma preferido</string>
+  <string name="morphe_preferred_caption_language_entry_off">Desativado</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Definir cookies de legenda</string>
   <string name="morphe_set_caption_cookies_summary">"Corrige um bug do YouTube padrão em que as legendas de tradução automática podem não estar disponíveis devido à falta de cookies
@@ -947,6 +951,8 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Desativar reprodução automática de playlists</string>
   <string name="morphe_disable_playlist_autoplay_summary">Impede que as playlists avancem automaticamente para o próximo vídeo</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Desativar o prompt \'Continuar assistindo?\'</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Sai do modo de tela cheia no final do vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desativado</string>

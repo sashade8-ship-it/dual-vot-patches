@@ -182,7 +182,10 @@ Prenesene skladbe se prikažejo tukaj"</string>
   <string name="morphe_music_hide_video_ads_title">Skrij video oglase</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Skrij Avdio / Video gumb za vklop/izklop</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Skrij gumb Prenesi</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Skrije gumb Prenesi v podkastni oddaji</string>
   <string name="morphe_music_hide_explore_shelf_title">Skrij polico Razišči</string>
+  <string name="morphe_music_hide_filter_bar_title">Skrij pas filtrov</string>
   <string name="morphe_music_hide_grid_shelves_title">Skrij mrežaste police</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Skrij horizontalne police</string>
   <string name="morphe_music_hide_list_shelves_title">Skrij police s seznami</string>
@@ -191,7 +194,6 @@ Prenesene skladbe se prikažejo tukaj"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Skrij gumb za prevod</string>
   <string name="morphe_music_hide_new_from_shelf_title">Skrij polico \'Novo od\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Skrij police s seznami predvajanja</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Skrij gumb za prenos epizode podkasta</string>
   <string name="morphe_music_hide_repeat_button_title">Skrij gumb Ponovi</string>
   <string name="morphe_music_hide_shuffle_button_title">Skrij gumb Naključno</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Skrij polico \'Hitra izbira\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x – prehod deluje samo v 9.x in novejših različicah."</strin
   <string name="morphe_change_start_page_entry_playlists">Seznami predvajanja</string>
   <string name="morphe_change_start_page_entry_search">Iskanje</string>
   <string name="morphe_change_start_page_entry_subscriptions">Naročnine</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Skrij pas filtrov</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Vsili pokončno usmerjenost</string>
   <string name="morphe_music_force_portrait_orientation_summary">Ohranja aplikacijo v pokončni usmerjenosti, ko je naprava zasukana</string>

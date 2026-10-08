@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">ভিডিও বিজ্ঞাপন লুকান</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">অডিও / ভিডিও toggle লুকান</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">ডাউনলোড বোতাম লুকান</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">পডকাস্ট শোতে ডাউনলোড বোতামটি লুকিয়ে রাখে</string>
   <string name="morphe_music_hide_explore_shelf_title">এক্সপ্লোর শেল্ফ লুকান</string>
+  <string name="morphe_music_hide_filter_bar_title">ফিল্টার বার লুকান</string>
   <string name="morphe_music_hide_grid_shelves_title">গ্রিড শেল্ফগুলো লুকান</string>
   <string name="morphe_music_hide_horizontal_shelves_title">অনুভূমিক শেল্ফ লুকান</string>
   <string name="morphe_music_hide_list_shelves_title">তালিকা শেল্ফগুলো লুকান</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">অনুবাদ বোতামটি লুকান</string>
   <string name="morphe_music_hide_new_from_shelf_title">\'নতুন\' শেল্ফ লুকান</string>
   <string name="morphe_music_hide_playlist_shelves_title">প্লেলিস্ট শেল্ফগুলো লুকান</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">পডকাস্ট পর্বের ডাউনলোড বোতাম লুকান</string>
   <string name="morphe_music_hide_repeat_button_title">রিপিট বোতাম লুকান</string>
   <string name="morphe_music_hide_shuffle_button_title">শাফল বোতাম লুকান</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">\'স্পীড ডায়াল\' শেল্ফ লুকান</string>
@@ -361,8 +363,6 @@ Second \"item\" text"</string>
   <string name="morphe_change_start_page_entry_playlists">চ্লাস ন৊টিস্য়াসেগ</string>
   <string name="morphe_change_start_page_entry_search">অনুসন্ধান</string>
   <string name="morphe_change_start_page_entry_subscriptions">সদস্যতা</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">ফিল্টার বার লুকান</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">পোর্ট্রেট ওরিয়েন্টেশন বাধ্যতামূলক করুন</string>
   <string name="morphe_music_force_portrait_orientation_summary">ডিভাইসটি ঘোরানো হলে অ্যাপটিকে পোর্ট্রেট ওরিয়েন্টেশনে রাখে</string>

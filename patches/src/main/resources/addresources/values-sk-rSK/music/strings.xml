@@ -182,7 +182,10 @@ Stiahnuté skladby sa zobrazia tu"</string>
   <string name="morphe_music_hide_video_ads_title">Skryť videoreklamy</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Skryť prepínač zvuku/videa</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Skryť tlačidlo Stiahnuť</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Skryje tlačidlo Stiahnuť v podcaste</string>
   <string name="morphe_music_hide_explore_shelf_title">Skryť poličku Preskúmať</string>
+  <string name="morphe_music_hide_filter_bar_title">Skryť filterový panel</string>
   <string name="morphe_music_hide_grid_shelves_title">Skryť mriežkové poličky</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Skryť horizontálne poličky</string>
   <string name="morphe_music_hide_list_shelves_title">Skryť zoznamové poličky</string>
@@ -191,7 +194,6 @@ Stiahnuté skladby sa zobrazia tu"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Skryť tlačidlo Preložiť</string>
   <string name="morphe_music_hide_new_from_shelf_title">Skryť poličku \'Novinky od\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Skryť poličky zoznamov skladieb</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Skryť tlačidlo na stiahnutie epizódy podcastu</string>
   <string name="morphe_music_hide_repeat_button_title">Skryť tlačidlo Opakovať</string>
   <string name="morphe_music_hide_shuffle_button_title">Skryť tlačidlo Náhodné prehrávanie</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Skryť poličku \'Rýchla voľba\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x – crossfade funguje iba vo verzii 9.x a novších"</string>
   <string name="morphe_change_start_page_entry_playlists">Zoznamy</string>
   <string name="morphe_change_start_page_entry_search">Hľadať</string>
   <string name="morphe_change_start_page_entry_subscriptions">Odbery</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Skryť filterový panel</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Vynútiť orientáciu na výšku</string>
   <string name="morphe_music_force_portrait_orientation_summary">Ponechá aplikáciu v orientácii na výšku, keď je zariadenie otočené</string>

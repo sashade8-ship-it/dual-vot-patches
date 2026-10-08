@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">隱藏影片廣告</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">隱藏音訊/影片切換按鈕</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">隱藏下載按鈕</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">隱藏 Podcast 節目中的下載按鈕</string>
   <string name="morphe_music_hide_explore_shelf_title">隱藏「探索」區塊</string>
+  <string name="morphe_music_hide_filter_bar_title">隱藏篩選列</string>
   <string name="morphe_music_hide_grid_shelves_title">隱藏格狀區塊</string>
   <string name="morphe_music_hide_horizontal_shelves_title">隱藏橫向區塊</string>
   <string name="morphe_music_hide_list_shelves_title">隱藏列表區塊</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">隱藏「翻譯」按鈕</string>
   <string name="morphe_music_hide_new_from_shelf_title">隱藏「來自」區塊</string>
   <string name="morphe_music_hide_playlist_shelves_title">隱藏歌單區塊</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">隱藏 Podcast 單集的下載按鈕</string>
   <string name="morphe_music_hide_repeat_button_title">隱藏重複按鈕</string>
   <string name="morphe_music_hide_shuffle_button_title">隱藏隨機播放按鈕</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">隱藏「快速撥號」區塊</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_change_start_page_entry_playlists">播放清單</string>
   <string name="morphe_change_start_page_entry_search">搜尋</string>
   <string name="morphe_change_start_page_entry_subscriptions">訂閱內容</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">隱藏篩選列</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">強制直向顯示</string>
   <string name="morphe_music_force_portrait_orientation_summary">當裝置旋轉時，讓應用程式保持直向顯示</string>
@@ -559,7 +559,7 @@ YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
   <string name="morphe_music_lyrics_offset_ms_summary">同步歌詞跟隨播放。如果它們漂移，請調整定時偏移。向前或向後移動同步歌詞。如果歌詞在歌曲前面，則使用正值</string>
   <string name="morphe_music_lyrics_sb_matching_title">使用 SponsorBlock 區段調整歌詞偏移</string>
   <string name="morphe_music_lyrics_sb_matching_summary">比對時略過 SponsorBlock 跳過的區段，讓歌詞對齊正式發行的音訊。關閉則完全忽略 SponsorBlock</string>
-  <string name="morphe_music_lyrics_sb_no_video">此曲目沒有可提交的影片 id</string>
+  <string name="morphe_music_lyrics_sb_no_video">此曲目沒有可提交的影片ID</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">來源：%s</string>
   <string name="morphe_music_lyrics_translated_by_google">由 Google 翻譯</string>

@@ -182,7 +182,10 @@ Niðurhlaðin lög birtast hér"</string>
   <string name="morphe_music_hide_video_ads_title">Fela myndbandsaug lýsingar</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Taktu aftur Audio / Video ákveða</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Fela niðurhalshnapp</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Felur niðurhalshnappinn í podcastþætti</string>
   <string name="morphe_music_hide_explore_shelf_title">Fela Explore shelf</string>
+  <string name="morphe_music_hide_filter_bar_title">Fela síubjálka</string>
   <string name="morphe_music_hide_grid_shelves_title">Fela grid shelves</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Fela láréttar raðir</string>
   <string name="morphe_music_hide_list_shelves_title">Fela list shelves</string>
@@ -191,7 +194,6 @@ Niðurhlaðin lög birtast hér"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Fela Þýðingarhnappinn</string>
   <string name="morphe_music_hide_new_from_shelf_title">Fela \'New from\' shelf</string>
   <string name="morphe_music_hide_playlist_shelves_title">Fela playlist shelves</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Fela niðurhalshnapp hlaðvarpsþátta</string>
   <string name="morphe_music_hide_repeat_button_title">Fela Repeat button</string>
   <string name="morphe_music_hide_shuffle_button_title">Fela Shuffle button</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Fela \'Speed dial\' shelf</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — crossfade virkar bara á 9.x og nýrri útgáfum"</string>
   <string name="morphe_change_start_page_entry_playlists">Spilalistar</string>
   <string name="morphe_change_start_page_entry_search">Leit</string>
   <string name="morphe_change_start_page_entry_subscriptions">Áskrifanir</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Fela síubjálka</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Þvinga lóðrétta stefnu</string>
   <string name="morphe_music_force_portrait_orientation_summary">Heldur forritinu í lóðréttri stefnu þegar tækinu er snúið</string>

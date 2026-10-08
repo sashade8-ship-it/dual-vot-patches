@@ -95,6 +95,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">خاوێن کردنەوەی ڕێنمایەکانی ئەندامەکانی</string>
   <string name="morphe_hide_timed_reactions_title">واپاسدان بۆ بەرەبەرەکانی کات‌بڕكراو</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_help_feedback_menu_title">Hide \'Help &amp; feedback\' menu</string>
   <string name="morphe_hide_video_title_title">سەرنیشانی ڤیدۆ دەبێتە قایم</string>
   <string name="morphe_hide_description_components_screen_title"> پێشكەشەى وتە</string>
   <string name="morphe_hide_hype_points_title">خۆپاراستن بۆ خاڵە نیكەكان</string>
@@ -183,7 +184,7 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_button_toast_off">وەڵا پێكردنەوەی ڤیدۆ نا ساراوە</string>
   <string name="morphe_loop_video_range_label_start">دەستپێکردن</string>
   <string name="morphe_loop_video_range_label_end">كۆتایـی</string>
-  <!-- interaction.pip.pipButtonPatch -->
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
   <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
@@ -257,6 +258,8 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_4">هنگێو سڕکرێتەوە نیشانە</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">نیشاندانی ژێرنووسی خۆکار</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">به‌کارھێنانی زیروکان قایم بگرە</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_entry_off">کوژاوە</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_caption_cookies_title">کێکەکان</string>
   <string name="morphe_get_caption_cookies_title">کێکەکانی ناوی سەره‌نگ</string>
@@ -372,6 +375,7 @@ Second \"item\" text"</string>
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <string name="morphe_disable_player_popup_panels_title">خه‌مه‌كانی ڕێخه‌ڵه‌ت خه‌مه‌كان ڕه‌نگ ده‌كه‌ن.</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_entry_1">نه‌كردوه‌</string>
   <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->

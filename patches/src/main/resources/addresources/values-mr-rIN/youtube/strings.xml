@@ -413,7 +413,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_loop_video_range_clear">क्लिअर करा</string>
   <string name="morphe_loop_video_range_toast_on">%1$s ते %2$s दरम्यान लूपिंग</string>
   <string name="morphe_loop_video_range_invalid_time">अवैध वेळ श्रेणी</string>
-  <!-- interaction.pip.pipButtonPatch -->
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">\'प्ले ऑल\' बटण दर्शवा</string>
   <string name="morphe_play_all_button_summary">"चॅनेलवरील सर्व व्हिडिओंची प्लेलिस्ट तयार करण्यासाठी टॅप करा, पूर्ववत करण्यासाठी टॅप आणि होल्ड करा
@@ -601,6 +601,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_auto_captions_style_entry_4">शांत असताना दाखवा</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">ऑटो कॅप्शन दाखवा</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">ऑटो कॅप्शन लपवा</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">कॅपशन कुकीज सेट करा</string>
   <string name="morphe_set_caption_cookies_summary">"स्टॉक YouTube बग दुरुस्त करते जिथे स्वयंचलित भाषांतर मथळे कुकीजच्या कमतरतेमुळे उपलब्ध नसू शकतात
@@ -794,6 +795,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_disable_player_popup_panels_title">प्लेअर पॉपअप पॅनेल अक्षम करा</string>
   <string name="morphe_disable_player_popup_panels_summary">स्वयंचलितपणे उघडणाऱ्या प्लेलिस्ट आणि लाइव्ह चॅट पॅनेल अक्षम करते</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">व्हिडिओ समाप्त झाल्यावर फुलस्क्रीन मोडमधून बाहेर पडा</string>
   <string name="morphe_exit_fullscreen_entry_1">अक्षम</string>

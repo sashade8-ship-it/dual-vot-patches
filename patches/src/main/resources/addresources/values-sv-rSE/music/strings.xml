@@ -182,7 +182,10 @@ Nedladdade spår visas här"</string>
   <string name="morphe_music_hide_video_ads_title">Dölj videoannonser</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Dölj ljud-/video-omkopplaren</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Dölj knappen Ladda ned</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Döljer nedladdningsknappen i poddprogrammet</string>
   <string name="morphe_music_hide_explore_shelf_title">Dölj avsnittet Utforska</string>
+  <string name="morphe_music_hide_filter_bar_title">Dölj filterfält</string>
   <string name="morphe_music_hide_grid_shelves_title">Dölj rutnätshyllor</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Dölj horisontella hyllor</string>
   <string name="morphe_music_hide_list_shelves_title">Dölj listhyllor</string>
@@ -191,7 +194,6 @@ Nedladdade spår visas här"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Dölj knappen Översätt</string>
   <string name="morphe_music_hide_new_from_shelf_title">Dölj hyllan \'Nytt från\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Dölj spellisthyllor</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Dölj nedladdningsknappen för poddavsnitt</string>
   <string name="morphe_music_hide_repeat_button_title">Dölj repeat-knappen</string>
   <string name="morphe_music_hide_shuffle_button_title">Dölj shuffle-knappen</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Dölj hyllan \'Snabbval\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — crossfade fungerar endast på 9.x och nyare"</string>
   <string name="morphe_change_start_page_entry_playlists">Spellistor</string>
   <string name="morphe_change_start_page_entry_search">Sök</string>
   <string name="morphe_change_start_page_entry_subscriptions">Prenumerationer</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Dölj filterfält</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Tvinga stående orientering</string>
   <string name="morphe_music_force_portrait_orientation_summary">Håller appen i stående orientering när enheten roteras</string>

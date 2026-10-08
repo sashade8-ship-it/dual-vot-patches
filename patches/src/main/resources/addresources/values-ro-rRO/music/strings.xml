@@ -182,7 +182,10 @@ Melodiile descărcate apar aici"</string>
   <string name="morphe_music_hide_video_ads_title">Ascunde anunțurile video</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Ascunde comutatorul Audio / Video</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Ascunde butonul de descărcare</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Ascunde butonul de descărcare din emisiunea de podcast</string>
   <string name="morphe_music_hide_explore_shelf_title">Ascunde raftul Explore</string>
+  <string name="morphe_music_hide_filter_bar_title">Ascunde bara de filtre</string>
   <string name="morphe_music_hide_grid_shelves_title">Ascunde rafturile tip grilă</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Ascunde rafturile orizontale</string>
   <string name="morphe_music_hide_list_shelves_title">Ascunde rafturile tip listă</string>
@@ -191,7 +194,6 @@ Melodiile descărcate apar aici"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Ascunde butonul Traducere</string>
   <string name="morphe_music_hide_new_from_shelf_title">Ascunde raftul „New from”</string>
   <string name="morphe_music_hide_playlist_shelves_title">Ascunde rafturile listelor de redare</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Ascunde butonul de descărcare pentru episodul de podcast</string>
   <string name="morphe_music_hide_repeat_button_title">Ascunde butonul Repetare</string>
   <string name="morphe_music_hide_shuffle_button_title">Ascunde butonul Aleatoriu</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Ascunde raftul „Speed dial”</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — estomparea încrucișată funcționează doar pe 9.x și v
   <string name="morphe_change_start_page_entry_playlists">Liste de redare</string>
   <string name="morphe_change_start_page_entry_search">Caută</string>
   <string name="morphe_change_start_page_entry_subscriptions">Abonamente</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Ascunde bara de filtre</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Forțează orientarea portret</string>
   <string name="morphe_music_force_portrait_orientation_summary">Menține aplicația în orientarea portret atunci când dispozitivul este rotit</string>

@@ -182,7 +182,10 @@ Afgelaaide snitte verskyn hier"</string>
   <string name="morphe_music_hide_video_ads_title">Versteek video-advertensies</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Verberg Klank/Video-wisselknoppie</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Versteek die aflaaiknoppie</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Versteek die aflaaiknoppie in die potgooiprogram</string>
   <string name="morphe_music_hide_explore_shelf_title">Verberg Verken-rak</string>
+  <string name="morphe_music_hide_filter_bar_title">Versteek filterbalk</string>
   <string name="morphe_music_hide_grid_shelves_title">Verberg rooster-rakke</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Verberg horisontale rakke</string>
   <string name="morphe_music_hide_list_shelves_title">Verberg lys-rakke</string>
@@ -191,7 +194,6 @@ Afgelaaide snitte verskyn hier"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Verberg Vertaal-knoppie</string>
   <string name="morphe_music_hide_new_from_shelf_title">Verberg \'Nuut van\'-rak</string>
   <string name="morphe_music_hide_playlist_shelves_title">Verberg playlist-rakke</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Verberg aflaaiknoppie vir podcast-episode</string>
   <string name="morphe_music_hide_repeat_button_title">Verberg Herhaal-knoppie</string>
   <string name="morphe_music_hide_shuffle_button_title">Verberg Lukrake volgorde-knoppie</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Verberg \'Spoedskakelaar\'-rak</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — vervaag loop slegs op 9.x en nuwer"</string>
   <string name="morphe_change_start_page_entry_playlists">Speellyste</string>
   <string name="morphe_change_start_page_entry_search">Soek</string>
   <string name="morphe_change_start_page_entry_subscriptions">Inskrywings</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Versteek filterbalk</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Dwing portretoriëntasie</string>
   <string name="morphe_music_force_portrait_orientation_summary">Hou die toep in portretoriëntasie wanneer die toestel gedraai word</string>

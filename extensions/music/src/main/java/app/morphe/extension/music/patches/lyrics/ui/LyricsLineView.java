@@ -10,6 +10,7 @@ package app.morphe.extension.music.patches.lyrics.ui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -59,6 +60,7 @@ final class LyricsLineView extends TextView {
     private CharSequence cachedText;
     private String cachedTextStr;
 
+    @SuppressWarnings("ConstantValue")
     @Override
     public void setText(CharSequence text, BufferType type) {
         super.setText(text, type);
@@ -241,6 +243,7 @@ final class LyricsLineView extends TextView {
         return null;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -400,21 +403,21 @@ final class LyricsLineView extends TextView {
         canvas.restore();
     }
 
-    private void drawBaseText(Canvas canvas) {
+    /**
+     * @return False if nothing was drawn and the default text drawing should be used.
+     */
+    private boolean drawBaseText(Canvas canvas) {
         final Layout layout = getLayout();
         if (layout == null) {
-            super.onDraw(canvas);
-            return;
+            return false;
         }
         if (getWidth() <= 0 || getHeight() <= 0) {
-            super.onDraw(canvas);
-            return;
+            return false;
         }
 
         final int lineCount = layout.getLineCount();
         if (lineCount <= 0) {
-            super.onDraw(canvas);
-            return;
+            return false;
         }
 
         final float contentNow = contentReveal;
@@ -438,7 +441,7 @@ final class LyricsLineView extends TextView {
         final boolean regionRevealing = transReveal < 1f || romaReveal < 1f;
         if (!hasSecondary || (secondaryAlpha == mainAlpha && !regionRevealing)) {
             drawTextRun(canvas, layout, 0, lineCount - 1, mainAlpha);
-            return;
+            return true;
         }
 
         final int romaFirst = rangeLine(layout, romaStart, romaEnd, true);
@@ -466,6 +469,7 @@ final class LyricsLineView extends TextView {
                 }
             }
         }
+        return true;
     }
 
     private static int rangeLine(Layout layout, int start, int end, boolean first) {
@@ -475,6 +479,7 @@ final class LyricsLineView extends TextView {
         return layout.getLineForOffset(first ? start : end - 1);
     }
 
+    @SuppressWarnings("SizeReplaceableByIsEmpty")
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -493,9 +498,13 @@ final class LyricsLineView extends TextView {
         }
     }
 
+    @SuppressLint("DrawAllocation")
+    @SuppressWarnings("SizeReplaceableByIsEmpty")
     @Override
     protected void onDraw(Canvas canvas) {
-        drawBaseText(canvas);
+        if (!drawBaseText(canvas)) {
+            super.onDraw(canvas);
+        }
         try {
             if (contentReveal <= 0f
                     || unsungColor == 0 || (wordTimings.isEmpty() && !allSung)) {

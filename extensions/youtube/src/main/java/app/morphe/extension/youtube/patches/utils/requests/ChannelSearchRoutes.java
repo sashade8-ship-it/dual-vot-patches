@@ -77,9 +77,10 @@ public final class ChannelSearchRoutes {
             "contents.sectionListRenderer.contents.itemSectionRenderer.contents.videoWithContextRenderer";
 
     /**
-     * The search results of a video id, which include the video with its title as shown in the lists
-     * in the language of the request. Titles that are not translated by the uploader can be
-     * auto-translated in the lists, but not in the title of {@link #GET_LOCALIZED_VIDEO_TITLE}.
+     * The search results of a video id or of a title, which include the video with its title as shown
+     * in the lists in the language of the request, or in the language of the searched title.
+     * Titles that are not translated by the uploader can be auto-translated in the lists,
+     * but not in the title of {@link #GET_LOCALIZED_VIDEO_TITLE}.
      */
     public static final Route.CompiledRoute GET_LIST_VIDEO_TITLE = new Route(
             Route.Method.POST,
@@ -111,13 +112,13 @@ public final class ChannelSearchRoutes {
     }
 
     /**
-     * Same as {@link #createVideoBody(String, Locale)}, for the search of a video id.
+     * Same as {@link #createVideoBody(String, Locale)}, for the search of a video id or of a title.
      */
-    public static byte[] createVideoSearchBody(String videoId, Locale locale) {
+    public static byte[] createVideoSearchBody(String query, Locale locale) {
         try {
             JSONObject body = new JSONObject();
             body.put("context", createVideoContext(locale));
-            body.put("query", videoId);
+            body.put("query", query);
 
             return body.toString().getBytes(StandardCharsets.UTF_8);
         } catch (JSONException ex) {

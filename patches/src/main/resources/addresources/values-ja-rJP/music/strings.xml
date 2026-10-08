@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">動画広告を非表示</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">音声と動画の切り替えスイッチを非表示</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">「オフラインに一時保存」ボタンを非表示</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">ポッドキャスト番組内のダウンロードボタンを非表示にします</string>
   <string name="morphe_music_hide_explore_shelf_title">探索欄を非表示</string>
+  <string name="morphe_music_hide_filter_bar_title">フィルタバーを非表示</string>
   <string name="morphe_music_hide_grid_shelves_title">グリッド表示欄を非表示</string>
   <string name="morphe_music_hide_horizontal_shelves_title">横スクロール欄を非表示</string>
   <string name="morphe_music_hide_list_shelves_title">リスト表示欄を非表示</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">翻訳ボタンを非表示</string>
   <string name="morphe_music_hide_new_from_shelf_title">「\"アーティスト名\" の新作」欄を非表示</string>
   <string name="morphe_music_hide_playlist_shelves_title">プレイリスト欄を非表示</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">ポッドキャストのエピソード ダウンロード ボタンを非表示</string>
   <string name="morphe_music_hide_repeat_button_title">リピートボタンを非表示</string>
   <string name="morphe_music_hide_shuffle_button_title">シャッフル ボタンを非表示</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">「クイック アクセス」欄を非表示</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — クロスフェードは9.x以降でのみ実行されま�
   <string name="morphe_change_start_page_entry_playlists">再生リスト</string>
   <string name="morphe_change_start_page_entry_search">検索</string>
   <string name="morphe_change_start_page_entry_subscriptions">登録チャンネル</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">フィルタバーを非表示</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">縦向きを強制</string>
   <string name="morphe_music_force_portrait_orientation_summary">端末を回転させても、アプリを縦向きのままにします</string>

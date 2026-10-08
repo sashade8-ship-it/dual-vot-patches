@@ -161,8 +161,8 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_timed_reactions_title">Itago ang mga nakatakdang reaksyon</string>
   <string name="morphe_hide_timed_reactions_summary">Itinatago ang feature na nagbibigay-daan sa mga user na mag-react gamit ang mga emoji sa seksyon ng mga komento at live chat</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Itago ang \'Tulong at feedback\' sa mga menu</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Itinatago ang \'Tulong at feedback\' sa mga menu na may tatlong tuldok ng app bar, tulad ng menu ng mga resulta ng paghahanap</string>
+  <string name="morphe_hide_help_feedback_menu_title">Itago ang menu na \'Help &amp; feedback\'</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Itinatago ang menu na \'Help &amp; feedback\' kapag ginagamit ang button na may tatlong tuldok, tulad ng sa mga resulta ng paghahanap</string>
   <string name="morphe_hide_handle_title">Itago ang handle</string>
   <string name="morphe_hide_handle_summary">Itinatago ang iyong channel handle sa tab na \'Ikaw\'</string>
   <string name="morphe_hide_video_title_title">Itago ang pamagat ng video</string>
@@ -510,10 +510,10 @@ Hindi dapat ibahagi ang iyong API key. Sinumang may access dito ay maaaring guma
   <string name="morphe_loop_video_range_clear">Alisin</string>
   <string name="morphe_loop_video_range_toast_on">Pag-uulit %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Hindi balido ang saklaw ng oras</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Ipakita ang button ng overlay ng Picture-in-picture</string>
-  <string name="morphe_pip_button_flyout_title">Ipakita ang button ng flyout ng Picture-in-picture</string>
-  <string name="morphe_pip_button_flyout_name">Lumipat sa Picture-in-picture</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Ipakita ang button na Picture-in-Picture</string>
+  <string name="morphe_pip_button_flyout_title">Ipakita ang menu ng Picture-in-Picture</string>
+  <string name="morphe_pip_button_flyout_name">Lumipat sa Picture-in-Picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Ipakita ang button na magpatugtog ng lahat</string>
   <string name="morphe_play_all_button_summary">"I-tap upang makabuo ng playlist ng lahat ng mga video mula sa channel, i-tap at hawakan upang i-undo
@@ -741,6 +741,10 @@ Para ayusin ito, i-on ang 'I-spoof ang mga video stream' at baguhin ang 'Default
   <string name="morphe_auto_captions_style_entry_4">Ipakita kapag naka-mute</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Ipakita ang auto captions</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Itago ang auto captions</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Ginustong wika ng caption</string>
+  <string name="morphe_preferred_caption_language_summary">Pinipili muna ang mga subtitle mula sa provider, pagkatapos ay awtomatikong isinasalin ang mga ito sa ginustong wika</string>
+  <string name="morphe_preferred_caption_language_entry_off">Naka-off</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Magtakda ng mga caption cookies</string>
   <string name="morphe_set_caption_cookies_summary">"Inaayos ang isang stock YouTube bug kung saan ang mga awtomatikong isinalin na caption ay maaaring hindi available dahil sa nawawalang cookies
@@ -945,6 +949,8 @@ Mga Setting → Playback (o Autoplay) → Autoplay ng susunod na video."</string
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">I-disable ang autoplay ng playlist</string>
   <string name="morphe_disable_playlist_autoplay_summary">Pinipigilan ang mga playlist na awtomatikong sumulong sa susunod na video</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">I-disable ang prompt na \'Patuloy na panoorin\'</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Lumabas sa fullscreen mode sa pagtatapos ng video</string>
   <string name="morphe_exit_fullscreen_entry_1">Nakapatay</string>

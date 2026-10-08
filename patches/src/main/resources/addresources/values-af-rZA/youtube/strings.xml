@@ -161,8 +161,8 @@ Veranderings sluit in:
   <string name="morphe_hide_timed_reactions_title">Verberg tydelike reaksies</string>
   <string name="morphe_hide_timed_reactions_summary">Verberg die funksie wat gebruikers toelaat om met emojis in die kommentaar afdeling en lewendige klets te reageer</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Versteek \'Hulp en terugvoer\' in kieslyste</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Versteek \'Hulp en terugvoer\' in die drie-punt kieslyste van die toepbalk, soos die soekresultate-kieslys</string>
+  <string name="morphe_hide_help_feedback_menu_title">Verberg die \'Help &amp; terugvoer\'-kieslys</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Verberg die \'Help &amp; terugvoer\'-kieslys wanneer die drie-kolletjie-knoppie gebruik word, soos op die soekresultate</string>
   <string name="morphe_hide_handle_title">Versteek handvatsel</string>
   <string name="morphe_hide_handle_summary">Versteek jou kanaalhandvatsel in die \'You\'-oortjie</string>
   <string name="morphe_hide_video_title_title">Versteek video-titel</string>
@@ -510,10 +510,10 @@ Jou API-sleutel moet nooit gedeel word nie. Enigeen met toegang daartoe kan jou 
   <string name="morphe_loop_video_range_clear">Klar</string>
   <string name="morphe_loop_video_range_toast_on">Herhalende %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ongeldige tydperk</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Wys beeld-in-beeld-oorlegknoppie</string>
-  <string name="morphe_pip_button_flyout_title">Wys beeld-in-beeld-uitspringknoppie</string>
-  <string name="morphe_pip_button_flyout_name">Skakel oor na beeld-in-beeld</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Wys die Picture-in-Picture-knoppie</string>
+  <string name="morphe_pip_button_flyout_title">Wys die Picture-in-Picture-kieslys</string>
+  <string name="morphe_pip_button_flyout_name">Skakel na Picture-in-Picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Laai Speel alle knoppie</string>
   <string name="morphe_play_all_button_summary">"Tik om 'n sn lys van alle video's van kanaal te genereer, tik en hou om ongedaan te maak
@@ -741,6 +741,10 @@ Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkli
   <string name="morphe_auto_captions_style_entry_4">Wys wanneer gedemp</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Wys outo-onderskrifte</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Verberg outo-onderskrifte</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Voorkeur-onderskriftaal</string>
+  <string name="morphe_preferred_caption_language_summary">Kies eers verskaffer-onderskrifte, en vertaal hulle dan outomaties na die voorkeurtaal</string>
+  <string name="morphe_preferred_caption_language_entry_off">Af</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Stel onderskrifkoekies in</string>
   <string name="morphe_set_caption_cookies_summary">"Los 'n standaard YouTube-fout op waar die outomaties vertaalde onderskrifte dalk nie beskikbaar is nie weens ontbrekende koekies
@@ -947,6 +951,8 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Deaktiveer speellys-outoafspeel</string>
   <string name="morphe_disable_playlist_autoplay_summary">Voorkom dat speellyste outomaties na die volgende video oorgaan</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Deaktiveer die \'Wil jy aanhou kyk?\'-vraag</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Verlaat volskermmodus aan die einde van die video</string>
   <string name="morphe_exit_fullscreen_entry_1">Deaktiveer</string>

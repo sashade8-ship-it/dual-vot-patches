@@ -161,8 +161,8 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_timed_reactions_title">Piilota ajoitetut reaktiot</string>
   <string name="morphe_hide_timed_reactions_summary">Piilottaa ominaisuuden, jonka avulla käyttäjät voivat reagoida emoji-hymiöillä kommenttiosiossa ja suoratoistossa</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Piilota \'Ohje &amp; palaute\' valikoista</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Piilottaa \'Ohje &amp; palaute\' -kohdan sovelluspalkin kolmen pisteen valikoista, kuten hakutuosten valikosta</string>
+  <string name="morphe_hide_help_feedback_menu_title">Piilota \'Ohje &amp; palaute\' -valikko</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Piilottaa \'Ohje &amp; palaute\' -valikon, kun käytetään kolmen pisteen painiketta, kuten hakutuloksissa</string>
   <string name="morphe_hide_handle_title">Piilota kanavatunnus</string>
   <string name="morphe_hide_handle_summary">Piilottaa kanavatunnuksesi \"Sinä\"-välilehdessä.</string>
   <string name="morphe_hide_video_title_title">Piilota videon otsikko</string>
@@ -510,9 +510,9 @@ API-avaintasi ei saa koskaan jakaa. Kuka tahansa, jolla on pääsy siihen, voi k
   <string name="morphe_loop_video_range_clear">Tyhjennä</string>
   <string name="morphe_loop_video_range_toast_on">Toisto %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Annettu aika on virheellinen</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Näytä kuva kuvassa -päällekkäispainike</string>
-  <string name="morphe_pip_button_flyout_title">Näytä kuva kuvassa -ponnahduspainike</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Näytä kuva kuvassa -painike</string>
+  <string name="morphe_pip_button_flyout_title">Näytä kuva kuvassa -valikko</string>
   <string name="morphe_pip_button_flyout_name">Vaihda kuva kuvassa -tilaan</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Näytä Soita kaikki -painike</string>
@@ -741,6 +741,10 @@ Korjaa tämä ottamalla käyttöön 'Väärennä videovirrat' ja vaihtamalla 'Ol
   <string name="morphe_auto_captions_style_entry_4">Näytä, kun mykistetty</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Näytä automaattiset tekstitykset</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Piilota automaattiset tekstitykset</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Ensisijainen tekstityskieli</string>
+  <string name="morphe_preferred_caption_language_summary">Valitsee ensin tarjoajan tekstitykset ja kääntää ne sitten automaattisesti ensisijaiselle kielelle</string>
+  <string name="morphe_preferred_caption_language_entry_off">Ei käytössä</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Aseta tekstitysevästeet</string>
   <string name="morphe_set_caption_cookies_summary">"Korjaa YouTuben oletusvirheen, jossa automaattisesti käännetyt tekstitykset eivät välttämättä ole saatavilla puuttuvien evästeiden vuoksi
@@ -947,6 +951,8 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Poista soittolistan automaattinen toisto käytöstä</string>
   <string name="morphe_disable_playlist_autoplay_summary">Estää soittolistoja siirtymästä automaattisesti seuraavaan videoon</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Poista \'Jatketaanko katsomista?\' -kehote käytöstä</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Poistuu koko näytön tilasta videon lopussa</string>
   <string name="morphe_exit_fullscreen_entry_1">Pois käytöstä</string>

@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">隐藏视频广告</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">隐藏音视频切换开关</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">隐藏下载按钮</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">隐藏播客节目中的下载按钮</string>
   <string name="morphe_music_hide_explore_shelf_title">隐藏探索区域</string>
+  <string name="morphe_music_hide_filter_bar_title">隐藏过滤栏</string>
   <string name="morphe_music_hide_grid_shelves_title">隐藏网格展示区域</string>
   <string name="morphe_music_hide_horizontal_shelves_title">隐藏横向展示区域</string>
   <string name="morphe_music_hide_list_shelves_title">隐藏列表展示区域</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">隐藏翻译按钮</string>
   <string name="morphe_music_hide_new_from_shelf_title">隐藏“最新”区域</string>
   <string name="morphe_music_hide_playlist_shelves_title">隐藏歌单展示区域</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">隐藏播客单集下载按钮</string>
   <string name="morphe_music_hide_repeat_button_title">隐藏重复播放按钮</string>
   <string name="morphe_music_hide_shuffle_button_title">隐藏随机播放按钮</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">隐藏“快速拨号”区域</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x —— 交叉淡入仅在 9.x 及更高版本上运行"</strin
   <string name="morphe_change_start_page_entry_playlists">播放列表</string>
   <string name="morphe_change_start_page_entry_search">搜索</string>
   <string name="morphe_change_start_page_entry_subscriptions">订阅</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">隐藏过滤栏</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">强制竖屏方向</string>
   <string name="morphe_music_force_portrait_orientation_summary">当设备旋转时，保持应用为竖屏方向</string>

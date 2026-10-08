@@ -182,7 +182,10 @@ Các bài hát đã tải sẽ xuất hiện ở đây"</string>
   <string name="morphe_music_hide_video_ads_title">Ẩn video quảng cáo</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Ẩn nút chuyển đổi Bài hát/Video</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Ẩn nút tải xuống</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Ẩn nút tải xuống trong chương trình podcast</string>
   <string name="morphe_music_hide_explore_shelf_title">Ẩn kệ Khám phá</string>
+  <string name="morphe_music_hide_filter_bar_title">Ẩn thanh bộ lọc</string>
   <string name="morphe_music_hide_grid_shelves_title">Ẩn kệ dạng lưới</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Ẩn kệ cá nhân hoá</string>
   <string name="morphe_music_hide_list_shelves_title">Ẩn kệ dạng danh sách</string>
@@ -191,7 +194,6 @@ Các bài hát đã tải sẽ xuất hiện ở đây"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Ẩn nút Dịch lời nhạc</string>
   <string name="morphe_music_hide_new_from_shelf_title">Ẩn kệ \'Mới từ\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Ẩn các kệ danh sách phát</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Ẩn nút Tải xuống của tập podcast</string>
   <string name="morphe_music_hide_repeat_button_title">Ẩn nút Lặp lại</string>
   <string name="morphe_music_hide_shuffle_button_title">Ẩn nút Trộn bài</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Ẩn kệ \'Phát nhanh\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở 
   <string name="morphe_change_start_page_entry_playlists">Danh sách phát</string>
   <string name="morphe_change_start_page_entry_search">Tìm kiếm</string>
   <string name="morphe_change_start_page_entry_subscriptions">Kênh đăng ký</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Ẩn thanh bộ lọc</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Luôn giữ hướng dọc</string>
   <string name="morphe_music_force_portrait_orientation_summary">Giữ ứng dụng ở hướng dọc khi thiết bị được xoay</string>

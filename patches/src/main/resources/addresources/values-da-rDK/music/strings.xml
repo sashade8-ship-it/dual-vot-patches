@@ -181,7 +181,10 @@ Mens dette er slået til, viser fanen Downloads disse numre i stedet for Music P
   <string name="morphe_music_hide_video_ads_title">Skjul videoannoncer</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Skjul lyd/video-skift</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Skjul Download-knappen</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Skjuler Download-knappen i podcastshowet</string>
   <string name="morphe_music_hide_explore_shelf_title">Skjul Udforsk-hylden</string>
+  <string name="morphe_music_hide_filter_bar_title">Skjul filterlinje</string>
   <string name="morphe_music_hide_grid_shelves_title">Skjul gitterhylder</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Skjul vandrette hylder</string>
   <string name="morphe_music_hide_list_shelves_title">Skjul listevisning hylder</string>
@@ -190,7 +193,6 @@ Mens dette er slået til, viser fanen Downloads disse numre i stedet for Music P
   <string name="morphe_music_hide_lyrics_translate_button_title">Skjul Oversæt-knappen</string>
   <string name="morphe_music_hide_new_from_shelf_title">Skjul \'Fra\' hylden</string>
   <string name="morphe_music_hide_playlist_shelves_title">Skjul playlistehylder</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Skjul download-knap for podcastafsnit</string>
   <string name="morphe_music_hide_repeat_button_title">Skjul gentagelsesknap</string>
   <string name="morphe_music_hide_shuffle_button_title">Skjul blandingsknap</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Skjul \'Hurtigvalg\'-hylden</string>
@@ -360,8 +362,6 @@ YouTube Music 8.x – crossfade kører kun på 9.x og nyere"</string>
   <string name="morphe_change_start_page_entry_playlists">Playlister</string>
   <string name="morphe_change_start_page_entry_search">Søg</string>
   <string name="morphe_change_start_page_entry_subscriptions">Abonnementer</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Skjul filterlinje</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Tving portrætorientering</string>
   <string name="morphe_music_force_portrait_orientation_summary">Bevarer appen i portrætorientering, når enheden roteres</string>

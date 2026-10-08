@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">Сакриј видео огласе</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Сакриј преклопну функцију Аудио / Видео</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Сакриј дугме за преузимање</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Сакрива дугме за преузимање у подкаст емисији</string>
   <string name="morphe_music_hide_explore_shelf_title">Сакриј полицу „Прегледај“</string>
+  <string name="morphe_music_hide_filter_bar_title">Сакриј филтер траку</string>
   <string name="morphe_music_hide_grid_shelves_title">Сакриј полице у мрежи</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Сакриј хоризонталне полице</string>
   <string name="morphe_music_hide_list_shelves_title">Сакриј полице са листом</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Сакриј дугме „Преведи”</string>
   <string name="morphe_music_hide_new_from_shelf_title">Сакриј полицу „Ново“</string>
   <string name="morphe_music_hide_playlist_shelves_title">Сакриј полице плејлиста</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Сакриј дугме за преузимање епизоде подкаста</string>
   <string name="morphe_music_hide_repeat_button_title">Сакриј дугме „Понови“</string>
   <string name="morphe_music_hide_shuffle_button_title">Сакриј дугме „Насумично“</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Сакриј полицу „Брзи бирач“</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — прелазак ради само на 9.x и новиј�
   <string name="morphe_change_start_page_entry_playlists">Плејлисте</string>
   <string name="morphe_change_start_page_entry_search">Претрага</string>
   <string name="morphe_change_start_page_entry_subscriptions">Праћења</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Сакриј филтер траку</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Присили портретну оријентацију</string>
   <string name="morphe_music_force_portrait_orientation_summary">Задржава апликацију у портретној оријентацији када се уређај ротира</string>

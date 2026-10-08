@@ -180,7 +180,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">Скрыть видеорекламу</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Скрыть переключатель \"аудио/видео\"</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Скрыть кнопку загрузки</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Скрывает кнопку загрузки в подкасте</string>
   <string name="morphe_music_hide_explore_shelf_title">Скрыть секцию \"Обзор\"</string>
+  <string name="morphe_music_hide_filter_bar_title">Скрыть панель фильтров</string>
   <string name="morphe_music_hide_grid_shelves_title">Скрыть секции-сетки</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Скрыть горизонтальные секции</string>
   <string name="morphe_music_hide_list_shelves_title">Скрыть секции-списки</string>
@@ -189,7 +192,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Скрыть кнопку \"Перевести\"</string>
   <string name="morphe_music_hide_new_from_shelf_title">Скрыть секцию \"Новое от\"</string>
   <string name="morphe_music_hide_playlist_shelves_title">Скрыть секции плейлистов</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Скрыть кнопку скачивания эпизода подкаста</string>
   <string name="morphe_music_hide_repeat_button_title">Скрыть кнопку \"Повтор\"</string>
   <string name="morphe_music_hide_shuffle_button_title">Скрыть кнопку \"Перемешать\"</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Скрыть секцию \"Быстрый набор\"</string>
@@ -359,8 +361,6 @@ YouTube Music версии 8.x — плавный переход работае�
   <string name="morphe_change_start_page_entry_playlists">Плейлисты</string>
   <string name="morphe_change_start_page_entry_search">Поиск</string>
   <string name="morphe_change_start_page_entry_subscriptions">Подписки</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Скрыть панель фильтров</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Принудительная книжная ориентация</string>
   <string name="morphe_music_force_portrait_orientation_summary">Сохраняет приложение в книжной ориентации при повороте устройства</string>

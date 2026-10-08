@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">Приховати відеорекламу</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Приховати перемикач \"Пісня | Відео\"</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Приховати кнопку \"Завантажити\"</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Приховує кнопку «Завантажити» у подкасті</string>
   <string name="morphe_music_hide_explore_shelf_title">Приховати панель \"Навігація\"</string>
+  <string name="morphe_music_hide_filter_bar_title">Приховати панель фільтрів</string>
   <string name="morphe_music_hide_grid_shelves_title">Приховати панелі сіток</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Приховати горизонтальні панелі</string>
   <string name="morphe_music_hide_list_shelves_title">Приховати панелі-списки</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Приховати кнопку \"Переклад\"</string>
   <string name="morphe_music_hide_new_from_shelf_title">Приховати панель \"Нове від\"</string>
   <string name="morphe_music_hide_playlist_shelves_title">Приховати панелі списків відтворення</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Приховати кнопку \"Завантажити\" епізоду подкасту</string>
   <string name="morphe_music_hide_repeat_button_title">Приховати кнопку \"Повторювати\"</string>
   <string name="morphe_music_hide_shuffle_button_title">Приховати кнопку \"Перемішати\"</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Приховати панель \"Швидкий вибір\"</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_change_start_page_entry_playlists">Списки відтворення</string>
   <string name="morphe_change_start_page_entry_search">Пошук</string>
   <string name="morphe_change_start_page_entry_subscriptions">Підписки</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Приховати панель фільтрів</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Примусова портретна орієнтація</string>
   <string name="morphe_music_force_portrait_orientation_summary">Утримує застосунок у портретній орієнтації під час обертання пристрою</string>
@@ -555,11 +555,11 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_music_lyrics_credit_line_regex_summary">Якщо тексти пісень неправильно відфільтровано вниз, налаштуйте або очистіть це. Маркери, розділені комами: рядки, що містять маркер, за яким іде двокрапка, показуються як інформація про авторів унизу. Залиште порожнім, щоб вимкнути</string>
   <string name="morphe_music_lyrics_text_size_title">Розмір тексту</string>
   <string name="morphe_music_lyrics_text_size_summary">Розмір тексту пісні</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Глобальне зміщення синхронізації</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Глобальний зсув часу</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Синхронізовані тексти пісень слідують за відтворенням. Якщо вони збиваються, налаштуйте зсув часу. Зсуває синхронізовані тексти пісень уперед або назад. Використовуйте позитивне значення, якщо текст випереджає пісню</string>
   <string name="morphe_music_lyrics_sb_matching_title">Використовувати сегменти SponsorBlock для зсуву тексту пісні</string>
-  <string name="morphe_music_lyrics_sb_matching_summary">Зіставляти без сегментів, які пропускає SponsorBlock, і зміщувати текст пісні на опубліковане аудіо. Вимкнено — повністю ігнорує SponsorBlock</string>
-  <string name="morphe_music_lyrics_sb_no_video">Цей трек не має ідентифікатора відео для надсилання</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Зіставляє без сегментів, які пропускає SponsorBlock, і зсуває текст пісні на випущене аудіо. Якщо вимкнено, SponsorBlock повністю ігнорується</string>
+  <string name="morphe_music_lyrics_sb_no_video">У цього треку немає ідентифікатора відео для надсилання</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Джерело: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Перекладено Google</string>
@@ -580,7 +580,7 @@ YouTube Music 8.x - плавний перехід працює лише на в�
   <string name="morphe_music_lyrics_refreshing">Оновлення</string>
   <string name="morphe_music_lyrics_refreshed">Оновлено</string>
   <string name="morphe_music_lyrics_about_summary">"Текст пісні шукається за назвою та виконавцем, нетипові метадані можуть не знайти нічого або знайти неправильну версію. Скористайтесь оновленням, щоб змінити версію. Постачальники, позначені *, потребують токен. Не всі увімкнені постачальники завжди запитуються у вашому порядку, вони відповідають залежно від швидкості"</string>
-  <string name="morphe_music_lyrics_source_advice_summary">Увімкніть лише ті джерела, які використовуєте, або залиште за замовчуванням — постійні запити можуть перевантажити невеликі спільнотні сайти з текстами пісень</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Вмикайте лише тих постачальників, якими користуєтеся, або залиште типові налаштування, бо постійні запити можуть перевантажити невеликі спільнотні сайти з текстами пісень</string>
   <string name="morphe_music_lyrics_hide_info_title">Приховати рядок з інформацією про авторів</string>
   <string name="morphe_music_lyrics_hide_info_summary">Приховати рядок з інформацією про авторів, що показується під текстом пісні</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Поміняти місцями переклад і романізацію</string>

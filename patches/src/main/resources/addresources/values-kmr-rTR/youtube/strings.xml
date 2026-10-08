@@ -436,7 +436,7 @@ Divê anahtara we ne were parve kirin. Kesê ku bigihe wê dikare bikar bîne kr
   <string name="morphe_loop_video_range_clear">Paqij bike</string>
   <string name="morphe_loop_video_range_toast_on">Deryîne %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Hêmana demê ne derust e</string>
-  <!-- interaction.pip.pipButtonPatch -->
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Butona hemûyan lîstik bike nîşan bide</string>
   <string name="morphe_play_all_button_summary">"Tap to generate a playlist of all videos from channel, tap and hold to undo
@@ -633,6 +633,8 @@ Info: May not work on live streams"</string>
   <string name="morphe_auto_captions_style_entry_4">Dibe ku darvekirin</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Nîşanê otomatîk</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Qefalê otomatîk</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_entry_off">Dabe</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Set caption cookies</string>
   <string name="morphe_set_caption_cookies_summary">"Pirsgirêka YouTube ya standard rast dike ku jêrnivîsên wergerandina otomatîk dibe ku ji ber kêmasiya kukiyan ne berdest bin
@@ -832,6 +834,7 @@ Settings → Playback (an Autoplay) → Autoplay next video"</string>
   <string name="morphe_disable_player_popup_panels_title">Panelên popup-a lîstikvanê quteyî bike</string>
   <string name="morphe_disable_player_popup_panels_summary">Panelên lîstikên navnîşanê û sohbeta zindî nekarin bi xweber vekirin</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Moda tam ekran li benda dawiya vîdeoyê derbeve</string>
   <string name="morphe_exit_fullscreen_entry_1">Birçîbûn.</string>

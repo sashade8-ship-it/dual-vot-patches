@@ -161,8 +161,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timed_reactions_title">সময় অনুযায়ী প্রতিক্রিয়া লুকান</string>
   <string name="morphe_hide_timed_reactions_summary">মন্তব্য এবং লাইভ চ্যাট বিভাগে ইমোজি দিয়ে প্রতিক্রিয়া জানানোর বৈশিষ্ট্যটি লুকায়</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">মেনুতে \'সাহায্য &amp; মতামত\' লুকান</string>
-  <string name="morphe_hide_help_feedback_menu_summary">অ্যাপ বারের তিন-বিন্দু মেনুগুলোতে \'সাহায্য &amp; মতামত\' লুকিয়ে রাখে, যেমন অনুসন্ধান ফলাফল মেনুতে</string>
+  <string name="morphe_hide_help_feedback_menu_title">\'সাহায্য &amp; মতামত\' মেনু লুকান</string>
+  <string name="morphe_hide_help_feedback_menu_summary">\'সাহায্য &amp; মতামত\' মেনুটি তিন-বিন্দু বোতাম ব্যবহার করার সময় লুকায়, যেমন অনুসন্ধান ফলাফলে</string>
   <string name="morphe_hide_handle_title">হ্যান্ডেল লুকান</string>
   <string name="morphe_hide_handle_summary">আপনার চ্যানেল হ্যান্ডেল \'You\' ট্যাবে লুকিয়ে রাখে</string>
   <string name="morphe_hide_video_title_title">ভিডিওর শিরোনাম লুকান</string>
@@ -510,9 +510,9 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_loop_video_range_clear">পরিষ্কার করুন</string>
   <string name="morphe_loop_video_range_toast_on">%1$s - %2$s লুপ হচ্ছে</string>
   <string name="morphe_loop_video_range_invalid_time">ভুল সময় দেয়া হয়েছে</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">পিকচার-ইন-পিকচার ওভারলে বোতাম দেখান</string>
-  <string name="morphe_pip_button_flyout_title">পিকচার-ইন-পিকচার ফ্লাইআউট বোতাম দেখান</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">পিকচার-ইন-পিকচার বোতাম দেখান</string>
+  <string name="morphe_pip_button_flyout_title">পিকচার-ইন-পিকচার মেনু দেখান</string>
   <string name="morphe_pip_button_flyout_name">পিকচার-ইন-পিকচারে স্যুইচ করুন</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">প্লে অল বোতাম দেখান</string>
@@ -741,6 +741,10 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_auto_captions_style_entry_4">মুটি অবস্থায় দেখান</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">স্বয়ংক্রিয় ক্যাপশন দেখান</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">স্বয়ংক্রিয় ক্যাপশন লুকান</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">পছন্দের ক্যাপশন ভাষা</string>
+  <string name="morphe_preferred_caption_language_summary">প্রথমে প্রদানকারীর সাবটাইটেল নির্বাচন করে, তারপর স্বয়ংক্রিয়ভাবে পছন্দের ভাষায় অনুবাদ করে</string>
+  <string name="morphe_preferred_caption_language_entry_off">বন্ধ</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">ক্যাপশন কুকি সেট করুন।</string>
   <string name="morphe_set_caption_cookies_summary">"স্টক ইউটিউবের একটি বাগ ঠিক করে যেখানে মিসিং কুকিজের কারণে অটো-অনুবাদ ক্যাপশন উপলব্ধ নাও হতে পারে
@@ -947,6 +951,8 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">প্লেলিস্ট অটোপ্লে নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_playlist_autoplay_summary">প্লেলিস্টগুলিকে স্বয়ংক্রিয়ভাবে পরবর্তী ভিডিওতে অগ্রসর হতে বাধা দেয়</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">\'চালিয়ে দেখুন?\' প্রম্পট নিষ্ক্রিয় করুন</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">ভিডিও শেষ হওয়ার পরে ফুলস্ক্রিন মোড থেকে বের হন</string>
   <string name="morphe_exit_fullscreen_entry_1">নিষ্ক্রিয়</string>

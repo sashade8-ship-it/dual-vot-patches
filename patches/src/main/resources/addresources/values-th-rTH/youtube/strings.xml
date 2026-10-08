@@ -161,8 +161,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timed_reactions_title">ซ่อนปฏิกิริยาตามเวลา</string>
   <string name="morphe_hide_timed_reactions_summary">ซ่อนคุณสมบัติที่ช่วยให้ผู้ใช้แสดงความรู้สึกด้วยอิโมจิในส่วนความคิดเห็นและแชทสด</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">ซ่อน \'ความช่วยเหลือ &amp; ข้อเสนอแนะ\' ในเมนู</string>
-  <string name="morphe_hide_help_feedback_menu_summary">ซ่อน \'ความช่วยเหลือ &amp; ข้อเสนอแนะ\' ในเมนูสามจุดของแถบแอป เช่น เมนูผลการค้นหา</string>
+  <string name="morphe_hide_help_feedback_menu_title">ซ่อนเมนู \'ความช่วยเหลือและความคิดเห็น\'</string>
+  <string name="morphe_hide_help_feedback_menu_summary">ซ่อนเมนู \'ความช่วยเหลือ &amp; ความคิดเห็น\' เมื่อใช้ปุ่มสามจุด เช่น ในหน้าผลการค้นหา</string>
   <string name="morphe_hide_handle_title">ซ่อนแฮนเดิล</string>
   <string name="morphe_hide_handle_summary">ซ่อนแฮนเดิลช่องของคุณในแท็บ \'คุณ\'</string>
   <string name="morphe_hide_video_title_title">ซ่อนชื่อวิดีโอ</string>
@@ -510,10 +510,10 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">ล้าง</string>
   <string name="morphe_loop_video_range_toast_on">กำลังทำซ้ำ %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">ช่วงเวลาไม่ถูกต้อง</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">แสดงปุ่มซ้อนทับของภาพซ้อนภาพ</string>
-  <string name="morphe_pip_button_flyout_title">แสดงปุ่มภาพซ้อนภาพในเมนูแบบเลื่อนออก</string>
-  <string name="morphe_pip_button_flyout_name">สลับไปยังภาพซ้อนภาพ</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">แสดงปุ่มรูปซ้อนรูป</string>
+  <string name="morphe_pip_button_flyout_title">แสดงเมนูรูปซ้อนรูป</string>
+  <string name="morphe_pip_button_flyout_name">สลับไปยังรูปซ้อนรูป</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">แสดงปุ่มเล่นทั้งหมด</string>
   <string name="morphe_play_all_button_summary">"แตะเพื่อสร้างเพลย์ลิสต์ของวิดีโอทั้งหมดจากช่อง แตะค้างเพื่อยกเลิก
@@ -741,6 +741,10 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_4">แสดงเมื่อเงียบเสียง</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">แสดงคำบรรยายอัตโนมัติ</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">ซ่อนคำบรรยายอัตโนมัติ</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">ภาษาคำบรรยายที่ต้องการ</string>
+  <string name="morphe_preferred_caption_language_summary">เลือกคำบรรยายที่ผู้ให้บริการจัดเตรียมไว้ก่อน จากนั้นจึงแปลเป็นภาษาที่ต้องการโดยอัตโนมัติ</string>
+  <string name="morphe_preferred_caption_language_entry_off">ปิด</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">ตั้งค่าคุกกี้คำบรรยาย</string>
   <string name="morphe_set_caption_cookies_summary">"แก้ไขบั๊ก YouTube เริ่มต้นที่คำบรรยายแปลอัตโนมัติอาจไม่พร้อมใช้งานเนื่องจากคุกกี้ที่ขาดหายไป
@@ -947,6 +951,8 @@ Second \"item\" text"</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">ปิดการเล่นอัตโนมัติของเพลย์ลิสต์</string>
   <string name="morphe_disable_playlist_autoplay_summary">ป้องกันไม่ให้เพลย์ลิสต์เลื่อนไปที่วิดีโอถัดไปโดยอัตโนมัติ</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">ปิดข้อความแจ้งเตือน \'ดูต่อไหม?\'</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">ออกจากโหมดเต็มหน้าจอเมื่อวิดีโอจบ</string>
   <string name="morphe_exit_fullscreen_entry_1">ปิดใช้งาน</string>

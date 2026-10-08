@@ -161,8 +161,8 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_timed_reactions_title">Süreli tepkileri gizle</string>
   <string name="morphe_hide_timed_reactions_summary">Kullanıcıların yorum bölümünde ve canlı sohbette emojilerle tepki vermesini sağlayan özelliği gizler</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Menülerde \'Yardım &amp; geri bildirim\' seçeneğini gizle</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Arama sonuçları menüsü gibi uygulama çubuğundaki üç nokta menülerinde “Yardım &amp; geri bildirim” seçeneğini gizler</string>
+  <string name="morphe_hide_help_feedback_menu_title">\'Yardım ve geri bildirim\' menüsünü gizle</string>
+  <string name="morphe_hide_help_feedback_menu_summary">‘Yardım &amp; geri bildirim’ menüsünü, üç nokta düğmesini kullanırken, örneğin arama sonuçlarında gizler</string>
   <string name="morphe_hide_handle_title">Kullanıcı adını gizle</string>
   <string name="morphe_hide_handle_summary">Kanal kullanıcı adınızı \'Sen\' sekmesinde gizler</string>
   <string name="morphe_hide_video_title_title">Video başlığını gizle</string>
@@ -510,10 +510,10 @@ API anahtarınız asla paylaşılmamalıdır. Ona erişimi olan herkes OpenRoute
   <string name="morphe_loop_video_range_clear">Temizle</string>
   <string name="morphe_loop_video_range_toast_on">%1$s - %2$s arasında döngü</string>
   <string name="morphe_loop_video_range_invalid_time">Geçersiz zaman aralığı</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Resim içinde resim katman düğmesini göster</string>
-  <string name="morphe_pip_button_flyout_title">Resim içinde resim açılır düğmesini göster</string>
-  <string name="morphe_pip_button_flyout_name">Resim içinde resim moduna geç</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Resim içinde resim düğmesini göster</string>
+  <string name="morphe_pip_button_flyout_title">Resim içinde resim menüsünü göster</string>
+  <string name="morphe_pip_button_flyout_name">Resim içinde resme geç</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Tümünü oynat düğmesini göster</string>
   <string name="morphe_play_all_button_summary">"Kanaldaki tüm videoların oynatma listesini oluşturmak için dokunun, geri almak için basılı tutun
@@ -741,6 +741,10 @@ Bunu düzeltmek için 'Video akışlarını taklit et' seçeneğini etkinleştir
   <string name="morphe_auto_captions_style_entry_4">Ses kapatıldığında göster</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Otomatik altyazıları göster</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Otomatik altyazıları gizle</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Tercih edilen altyazı dili</string>
+  <string name="morphe_preferred_caption_language_summary">Önce sağlayıcı altyazılarını seçer, ardından otomatik olarak tercih edilen dile çevirir</string>
+  <string name="morphe_preferred_caption_language_entry_off">Kapalı</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Altyazı çerezlerini ayarla</string>
   <string name="morphe_set_caption_cookies_summary">"YouTube'un yerleşik bir hatasını düzeltir; eksik çerezler nedeniyle otomatik çeviri altyazıları kullanılamayabilir
@@ -947,6 +951,8 @@ Ayarlar → Oynatma (veya Otomatik Oynatma) → Sonraki videoyu otomatik oynat"<
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Çalma listelerinin otomatik olarak sonraki videoya geçmesini engeller</string>
   <string name="morphe_disable_playlist_autoplay_summary">Çalma listelerinin otomatik olarak bir sonraki videoya geçmesini engeller</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">‘İzlemeye devam etmek istiyor musun?’ istemini devre dışı bırak</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video bittiğinde tam ekran modundan çıkar</string>
   <string name="morphe_exit_fullscreen_entry_1">Devre dışı</string>

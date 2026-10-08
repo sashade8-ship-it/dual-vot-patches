@@ -161,8 +161,8 @@ Promene uključuju:
   <string name="morphe_hide_timed_reactions_title">Сакриј временске реакције</string>
   <string name="morphe_hide_timed_reactions_summary">Саскрива функцију која корисницима омогућава да реагују емотиконима у одељку за коментаре и чату уживо</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Сакриј \'Помоћ &amp; повратне информације\' у менијима</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Сакрива \'Помоћ &amp; повратне информације\' у менијима са три тачке траке апликације, као што је мени резултата претраге</string>
+  <string name="morphe_hide_help_feedback_menu_title">Сакриј мени \'Помоћ &amp; повратне информације\'</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Сакрива мени \'Помоћ &amp; повратне информације\' када користите дугме са три тачке, на пример на резултатима претраге</string>
   <string name="morphe_hide_handle_title">Сакриј хендл</string>
   <string name="morphe_hide_handle_summary">Сакрива хендл вашег канала у картици \'Ти\'</string>
   <string name="morphe_hide_video_title_title">Сакриј наслов Shorts видеа</string>
@@ -510,10 +510,10 @@ Promene uključuju:
   <string name="morphe_loop_video_range_clear">Обриши</string>
   <string name="morphe_loop_video_range_toast_on">Поновно пуштање %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Дато је неважеће време</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Прикажи преклопно дугме слике у слици</string>
-  <string name="morphe_pip_button_flyout_title">Прикажи искачуће дугме слике у слици</string>
-  <string name="morphe_pip_button_flyout_name">Пребаци на слику у слици</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Прикажи дугме за слику у слици</string>
+  <string name="morphe_pip_button_flyout_title">Прикажи мени за слику у слици</string>
+  <string name="morphe_pip_button_flyout_name">Пређи на слику у слици</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Прикажи дугме „Пусти све”</string>
   <string name="morphe_play_all_button_summary">"Додините да бисте генерисали листу свих видео снимака са канала, додините и задржите да бисте поништили
@@ -741,6 +741,10 @@ Promene uključuju:
   <string name="morphe_auto_captions_style_entry_4">Прикажи када је утишано</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Прикажи аутоматске титлове</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Сакриј аутоматске титлове</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Омиљени језик титлова</string>
+  <string name="morphe_preferred_caption_language_summary">Прво бира провајдерске титлове, затим аутоматски преводи на омиљени језик</string>
+  <string name="morphe_preferred_caption_language_entry_off">Искључено</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Подесите колачиће за титлове</string>
   <string name="morphe_set_caption_cookies_summary">"Поправља грешку у стандардном YouTube-у када аутоматски преведени титлови можда нису доступни због недостајућих колачића\n\n'Колачићи за титлове' морају бити обезбеђени"</string>
@@ -945,6 +949,8 @@ Promene uključuju:
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Онемогући аутоматску репродукцију плејлисте</string>
   <string name="morphe_disable_playlist_autoplay_summary">Спречава да плејлисте аутоматски прелазе на следећи видео</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Онемогући упит „Настави гледање?“</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Излази из режима целог екрана на крају видеа</string>
   <string name="morphe_exit_fullscreen_entry_1">Онемогућено</string>

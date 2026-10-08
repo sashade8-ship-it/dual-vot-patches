@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">Скриване на видео рекламите</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Скрий превключвател за аудио/видео</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Скриване на бутона за изтегляне</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Скрива бутона за изтегляне в подкаст предаването</string>
   <string name="morphe_music_hide_explore_shelf_title">Скрий рафт \'Разгледай\'</string>
+  <string name="morphe_music_hide_filter_bar_title">Скриване на филтър лентата</string>
   <string name="morphe_music_hide_grid_shelves_title">Скрий рафтове с мрежа</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Скрий хоризонтални рафтове</string>
   <string name="morphe_music_hide_list_shelves_title">Скрий списъчни рафтове</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Скрий бутона за превод</string>
   <string name="morphe_music_hide_new_from_shelf_title">Скрий рафт \'Нови от\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Скрий плейлист рафтове</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Скриване на бутона за изтегляне на епизод от подкаст</string>
   <string name="morphe_music_hide_repeat_button_title">Скрий бутон \'Повтори\'</string>
   <string name="morphe_music_hide_shuffle_button_title">Скрий бутон \'Разбъркване\'</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Скрий рафт \'Бързи контакти\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — кросфейдът работи само в 9.x и по-
   <string name="morphe_change_start_page_entry_playlists">Списъци</string>
   <string name="morphe_change_start_page_entry_search">Търсене</string>
   <string name="morphe_change_start_page_entry_subscriptions">Абонаменти</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Скриване на филтър лентата</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Принудителна портретна ориентация</string>
   <string name="morphe_music_force_portrait_orientation_summary">Запазва приложението в портретна ориентация при завъртане на устройството</string>

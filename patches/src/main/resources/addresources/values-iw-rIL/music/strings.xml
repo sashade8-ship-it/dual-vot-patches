@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">הסתר מודעות וידאו</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">הסתר החלפת שמע/וידאו</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">הסתר כפתור הורדה</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">מסתיר את כפתור ההורדה במסך הפודקאסט</string>
   <string name="morphe_music_hide_explore_shelf_title">הסתר מדף \'explore\'</string>
+  <string name="morphe_music_hide_filter_bar_title">הסתר סרגל סינון</string>
   <string name="morphe_music_hide_grid_shelves_title">הסתר מדפים ברשת</string>
   <string name="morphe_music_hide_horizontal_shelves_title">הסתר מדפים אופקיים</string>
   <string name="morphe_music_hide_list_shelves_title">הסתר מדפים ברשימה</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">הסתר לחצן תרגום</string>
   <string name="morphe_music_hide_new_from_shelf_title">הסתר מדף \'חדש מ...\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">הסתר מדפי פלייליסט</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">הסתר כפתור הורדה לפרק פודקאסט</string>
   <string name="morphe_music_hide_repeat_button_title">הסתר לחצן חזרה</string>
   <string name="morphe_music_hide_shuffle_button_title">הסתר לחצן ערבוב</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">הסתר מדף \'חיוג מהיר\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x - מעבר הצלילים פועל רק בגרסה 9.x ומע�
   <string name="morphe_change_start_page_entry_playlists">פלייליסטים</string>
   <string name="morphe_change_start_page_entry_search">חיפוש</string>
   <string name="morphe_change_start_page_entry_subscriptions">מינויים</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">הסתר סרגל סינון</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">אלץ כיוון לאורך</string>
   <string name="morphe_music_force_portrait_orientation_summary">שומר על כיוון האפליקציה לאורך כשהמכשיר מסובב</string>

@@ -182,7 +182,10 @@ Las pistas descargadas aparecen aquí"</string>
   <string name="morphe_music_hide_video_ads_title">Ocultar anuncios de vídeo</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Ocultar selector Audio / Vídeo</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Ocultar botón Descargar</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Oculta el botón de descarga en el programa del pódcast</string>
   <string name="morphe_music_hide_explore_shelf_title">Ocultar estantería Explorar</string>
+  <string name="morphe_music_hide_filter_bar_title">Ocultar barra de filtro</string>
   <string name="morphe_music_hide_grid_shelves_title">Ocultar estanterías en cuadrícula</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Ocultar estanterías horizontales</string>
   <string name="morphe_music_hide_list_shelves_title">Ocultar estanterías en lista</string>
@@ -191,7 +194,6 @@ Las pistas descargadas aparecen aquí"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Ocultar botón Traducir</string>
   <string name="morphe_music_hide_new_from_shelf_title">Ocultar estantería \'Novedades de\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Ocultar estanterías de listas de reproducción</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Ocultar botón Descargar de episodios de podcast</string>
   <string name="morphe_music_hide_repeat_button_title">Ocultar botón Repetir</string>
   <string name="morphe_music_hide_shuffle_button_title">Ocultar botón Aleatorio</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Ocultar estantería \'Acceso rápido\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x: el fundido entre canciones solo funciona en la versión 9.x y
   <string name="morphe_change_start_page_entry_playlists">Listas de reproducción</string>
   <string name="morphe_change_start_page_entry_search">Búsqueda</string>
   <string name="morphe_change_start_page_entry_subscriptions">Suscripciones</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Ocultar barra de filtro</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Forzar orientación vertical</string>
   <string name="morphe_music_force_portrait_orientation_summary">Mantiene la aplicación en orientación vertical cuando se gira el dispositivo</string>
@@ -580,7 +580,7 @@ Cookies requeridas: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_refreshing">Actualizando</string>
   <string name="morphe_music_lyrics_refreshed">Actualizado</string>
   <string name="morphe_music_lyrics_about_summary">"Las letras se buscan por título y artista; unos metadatos inusuales pueden no encontrar nada o encontrar la versión incorrecta. Usa Actualizar para cambiar de versión. Los proveedores marcados con * requieren un token. No siempre se consultan todos los proveedores activados en el orden que establezcas, sino que responden según su velocidad"</string>
-  <string name="morphe_music_lyrics_source_advice_summary">Solo habilita los proveedores que uses, o mantén el valor predeterminado — las solicitudes constantes pueden sobrecargar a los sitios pequeños de letras de la comunidad</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Activa solo los proveedores que uses, o mantén el predeterminado: las peticiones constantes pueden saturar los pequeños sitios de letras comunitarios</string>
   <string name="morphe_music_lyrics_hide_info_title">Ocultar línea de créditos</string>
   <string name="morphe_music_lyrics_hide_info_summary">Oculta la línea de créditos que se muestra debajo de las letras</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Intercambiar traducción y romanización</string>

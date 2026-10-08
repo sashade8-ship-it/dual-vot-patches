@@ -154,6 +154,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_timed_reactions_title">پنهان‌کردن واکنش‌های زمان‌دار</string>
   <string name="morphe_hide_timed_reactions_summary">ویژگی امکان واکنش‌دادن کاربران با ایموجی در بخش دیدگاه‌ها و گفت‌وگوی زنده را پنهان می‌کند</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_help_feedback_menu_title">پنهان‌کردن منوی «راهنما و بازخورد»</string>
   <string name="morphe_hide_video_title_title">پنهان‌کردن عنوان ویدئو</string>
   <string name="morphe_hide_video_title_summary">عنوان ویدئو را در حالت تمام‌صفحه پنهان می‌کند</string>
   <string name="morphe_sanitize_video_subtitle_title">پاک‌سازی زیرنویس ویدئو</string>
@@ -477,7 +478,7 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_clear">پاک‌کردن</string>
   <string name="morphe_loop_video_range_toast_on">تکرار %1$s تا %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">محدودهٔ زمانی نامعتبر</string>
-  <!-- interaction.pip.pipButtonPatch -->
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">نمایش دکمهٔ پخش همه</string>
   <string name="morphe_play_all_button_summary">"برای ساخت فهرست پخش همهٔ ویدئوهای کانال ضربه بزنید؛ برای لغو، لمس طولانی کنید
@@ -696,6 +697,8 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_4">هنگام بی‌صدا بودن نمایش بده</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">نمایش زیرنویس خودکار</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">پنهان‌کردن زیرنویس خودکار</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_entry_off">خاموش</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">تنظیم کوکی‌های زیرنویس</string>
   <string name="morphe_set_caption_cookies_summary">"یک باگ اصلی YouTube را رفع می‌کند که ممکن است به‌دلیل نبود کوکی‌ها، زیرنویس‌های ترجمهٔ خودکار در دسترس نباشند
@@ -901,6 +904,7 @@ Second \"item\" text"</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">غیرفعال‌کردن پخش خودکار فهرست پخش</string>
   <string name="morphe_disable_playlist_autoplay_summary">از رفتن خودکار فهرست‌های پخش به ویدئوی بعدی جلوگیری می‌کند</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">خروج از حالت تمام‌صفحه هنگام پایان ویدئو</string>
   <string name="morphe_exit_fullscreen_entry_1">غیرفعال</string>

@@ -22,7 +22,7 @@ import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch;
 import app.morphe.extension.youtube.patches.voiceovertranslation.VoiceOverTranslationPatch;
-import app.morphe.extension.youtube.patches.voiceovertranslation.VotBottomSheet;
+import app.morphe.extension.youtube.patches.voiceovertranslation.VOTBottomSheet;
 import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
@@ -53,7 +53,7 @@ public final class VoiceOverTranslationButton {
                         refreshActivatedState();
                     },
                     view -> {
-                        VotBottomSheet.show(view.getContext());
+                        VOTBottomSheet.show(view.getContext());
                         return true;
                     });
             overlayButtonRef = button != null ? new WeakReference<>(button) : null;
@@ -87,7 +87,7 @@ public final class VoiceOverTranslationButton {
                         refreshActivatedState();
                     },
                     view -> {
-                        VotBottomSheet.show(view.getContext());
+                        VOTBottomSheet.show(view.getContext());
                         return true;
                     });
             View legacyButton = Utils.getChildViewByResourceName(controlsView, "morphe_vot_button");

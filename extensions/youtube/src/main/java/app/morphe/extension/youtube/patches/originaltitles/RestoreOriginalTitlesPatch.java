@@ -1627,9 +1627,22 @@ public final class RestoreOriginalTitlesPatch {
                         candidateRequest.complete(listTitle);
                         return CompletableFuture.completedFuture(true);
                     }
-                    return LocalizedTitleRequest.fetchInLanguageOf(videoId, candidate).thenApply(title -> {
-                        candidateRequest.complete(title);
-                        return true;
+                    return LocalizedTitleRequest.fetchInLanguageOf(videoId, candidate).thenCompose(title -> {
+                        if (title != null && findTitle(videoId, elementTexts,
+                                Collections.singletonList(title)) != null) {
+                            candidateRequest.complete(title);
+                            return CompletableFuture.completedFuture(true);
+                        }
+                        // The language of the text is not always detected on the device, and the title
+                        // can be auto-translated to the language of a search, so the title is searched.
+                        return LocalizedTitleRequest.fetchSearchTitle(videoId, candidate).thenApply(searchTitle -> {
+                            if (searchTitle != null) {
+                                Logger.printDebug(() -> "Title shown in the search of the text of: " + videoId
+                                        + " is: " + searchTitle);
+                            }
+                            candidateRequest.complete(searchTitle);
+                            return true;
+                        });
                     });
                 });
             });

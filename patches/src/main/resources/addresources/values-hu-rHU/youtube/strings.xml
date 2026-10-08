@@ -161,8 +161,8 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_timed_reactions_title">Időzített reakciók elrejtése</string>
   <string name="morphe_hide_timed_reactions_summary">Kikapcsolja az emojikkal való reagálást a kommenteknél és az élő chaten</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">„Súgó &amp; visszajelzés” elrejtése a menükben</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Elrejti a „Súgó &amp; visszajelzés” elemet az alkalmazássáv hárompontos menüiben, például a keresési találatok menüjében</string>
+  <string name="morphe_hide_help_feedback_menu_title">\'Súgó &amp; visszajelzés\' menü elrejtése</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Elrejti a \'Súgó &amp; visszajelzés\' menüt a hárompontos gomb használatakor, például a keresési találatoknál</string>
   <string name="morphe_hide_handle_title">Handle elrejtése</string>
   <string name="morphe_hide_handle_summary">Elrejti a csatornád handle-jét a „Neked” lapon</string>
   <string name="morphe_hide_video_title_title">Videócímek elrejtése</string>
@@ -510,9 +510,9 @@ A API kulcsodat soha nem szabad megosztani. Bárki, akinek hozzáférése van ho
   <string name="morphe_loop_video_range_clear">Törlés</string>
   <string name="morphe_loop_video_range_toast_on">%1$s - %2$s ciklusban</string>
   <string name="morphe_loop_video_range_invalid_time">Érvénytelen idő van megadva</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Kép a képben átfedő gomb megjelenítése</string>
-  <string name="morphe_pip_button_flyout_title">Kép a képben kinyíló gomb megjelenítése</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Kép a képben gomb megjelenítése</string>
+  <string name="morphe_pip_button_flyout_title">Kép a képben menü megjelenítése</string>
   <string name="morphe_pip_button_flyout_name">Váltás kép a képben módra</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Mind lejátszási gomb megjelenítése</string>
@@ -741,6 +741,10 @@ A javításhoz kapcsolja be a „Videostreamek meghamisítása” beállítást,
   <string name="morphe_auto_captions_style_entry_4">Mutoltáskor mutat</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Mutatja az automatikus feliratokat</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Rejtje az automatikus feliratokat</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Feliratok előnyben részesített nyelve</string>
+  <string name="morphe_preferred_caption_language_summary">Először a szolgáltató feliratait választja ki, majd automatikusan lefordítja az előnyben részesített nyelvre</string>
+  <string name="morphe_preferred_caption_language_entry_off">Ki</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Állítsa be a feliratok sütijeit</string>
   <string name="morphe_set_caption_cookies_summary">"Javítja a YouTube egyik alapértelmezett hibáját, ahol az automatikus feliratok nem biztos, hogy elérhetők a hiányzó cookie-k miatt
@@ -947,6 +951,8 @@ Beállítások → Lejátszás (vagy Automatikus lejátszás) → Következő vi
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Lejátszási lista automatikus lejátszásának kikapcsolása</string>
   <string name="morphe_disable_playlist_autoplay_summary">Megakadályozza, hogy a lejátszási listák automatikusan továbblépjenek a következő videóra</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">„Folytatod a nézést?” kérdés letiltása</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Kilép a teljes képernyős módból a videó befejezésekor</string>
   <string name="morphe_exit_fullscreen_entry_1">Letiltva</string>

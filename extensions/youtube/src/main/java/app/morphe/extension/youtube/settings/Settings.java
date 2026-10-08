@@ -48,7 +48,7 @@ import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerOverlayOpa
 import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType;
 import app.morphe.extension.youtube.patches.OpenShortsInRegularPlayerPatch.ShortsPlayerType;
 import app.morphe.extension.youtube.patches.OpenVideosFullscreenHookPatch.OpenFullscreenMode;
-import app.morphe.extension.youtube.patches.PipButtonPatch.PipButtonPatchAvailability;
+import app.morphe.extension.youtube.patches.PictureinPictureButtonPatch.PipButtonPatchAvailability;
 import app.morphe.extension.youtube.patches.PlaybackBufferPatch.PlaybackBufferSize;
 import app.morphe.extension.youtube.patches.PlaybackInFeedsPatch;
 import app.morphe.extension.youtube.patches.VersionCheckPatch;
@@ -243,6 +243,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting DISABLE_HAPTIC_FEEDBACK_ZOOM = new BooleanSetting("morphe_disable_haptic_feedback_zoom", FALSE);
     public static final BooleanSetting DISABLE_PLAYER_POPUP_PANELS = new BooleanSetting("morphe_disable_player_popup_panels", FALSE);
     public static final BooleanSetting DISABLE_PLAYLIST_AUTOPLAY = new BooleanSetting("morphe_disable_playlist_autoplay", FALSE);
+    public static final BooleanSetting DISABLE_CONTINUE_WATCHING_PROMPT = new BooleanSetting("morphe_disable_continue_watching_prompt", FALSE);
     public static final BooleanSetting DISABLE_FULLSCREEN_PULLED_UP_GESTURE = new BooleanSetting("morphe_disable_fullscreen_pulled_up_gesture", FALSE);
     public static final BooleanSetting DISABLE_FULLSCREEN_SLIDING_GESTURE = new BooleanSetting("morphe_disable_fullscreen_sliding_down_gesture", FALSE);
     public static final BooleanSetting DISABLE_FULLSCREEN_DRAGGED_DOWN_GESTURE = new BooleanSetting("morphe_disable_fullscreen_dragged_down_gesture", FALSE);
@@ -296,8 +297,8 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting LOOP_VIDEO = new BooleanSetting("morphe_loop_video", FALSE);
     public static final BooleanSetting DO_NOT_REMEMBER_LOOP_VIDEO = new BooleanSetting("morphe_do_not_remember_loop_video", FALSE, parent(LOOP_VIDEO_BUTTON));
     public static final BooleanSetting MUTE_VIDEO_BUTTON = new BooleanSetting("morphe_mute_video_button", FALSE, true);
-    public static final BooleanSetting PIP_BUTTON_OVERLAY = new BooleanSetting("morphe_pip_button_overlay", FALSE, new PipButtonPatchAvailability());
-    public static final BooleanSetting PIP_BUTTON_FLYOUT = new BooleanSetting("morphe_pip_button_flyout", FALSE, new PipButtonPatchAvailability());
+    public static final BooleanSetting PIP_OVERLAY_BUTTON = new BooleanSetting("morphe_pip_button_overlay", FALSE, new PipButtonPatchAvailability());
+    public static final BooleanSetting PIP_FLYOUT_BUTTON = new BooleanSetting("morphe_pip_button_flyout", FALSE, new PipButtonPatchAvailability());
     public static final BooleanSetting PLAY_ALL_BUTTON = new BooleanSetting("morphe_play_all_button", FALSE);
     public static final EnumSetting<PlaylistIDPrefix> PLAY_ALL_BUTTON_TYPE = new EnumSetting<>("morphe_play_all_button_type", PlaylistIDPrefix.ALL_CONTENTS_WITH_TIME_DESCENDING,  parent(PLAY_ALL_BUTTON));
     public static final BooleanSetting PLAYBACK_SPEED_DIALOG_BUTTON = new BooleanSetting("morphe_playback_speed_dialog_button", FALSE, true);
@@ -343,6 +344,7 @@ public class Settings extends SharedYouTubeSettings {
 
     // Captions
     public static final EnumSetting<AutoCaptionsStyle> AUTO_CAPTIONS_STYLE = new EnumSetting<>("morphe_auto_captions_style", AutoCaptionsStyle.BOTH_ENABLED, false);
+    public static final StringSetting PREFERRED_CAPTION_LANGUAGE = new StringSetting("morphe_preferred_caption_language", "off", true);
     public static final BooleanSetting SET_CAPTION_COOKIES = new BooleanSetting("morphe_set_caption_cookies", FALSE, true);
     public static final StringSetting CAPTION_COOKIES = new StringSetting("morphe_caption_cookies", "", true, parent(SET_CAPTION_COOKIES));
     public static final BooleanSetting FIX_TRANSCRIPT = new BooleanSetting("morphe_fix_transcript", TRUE, true);

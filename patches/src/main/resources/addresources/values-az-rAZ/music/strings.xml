@@ -182,7 +182,9 @@ Yüklənilmiş treklər burada görünür"</string>
   <string name="morphe_music_hide_video_ads_title">Video reklamlarını gizlət</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Səs / Video keçiricisini gizlət</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Endirin düyməsini gizlət</string>
   <string name="morphe_music_hide_explore_shelf_title">Kəşf et bölməsini gizlət</string>
+  <string name="morphe_music_hide_filter_bar_title">Filtr cərgəsini gizlət</string>
   <string name="morphe_music_hide_grid_shelves_title">Şəbəkə bölmələrini gizlət</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Üfüqi hissələri gizlət</string>
   <string name="morphe_music_hide_list_shelves_title">Siyahı bölmələrini gizlət</string>
@@ -191,7 +193,6 @@ Yüklənilmiş treklər burada görünür"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Tərcümə et düyməsini gizlət</string>
   <string name="morphe_music_hide_new_from_shelf_title">\'Kanalından yeni\' bölməsini gizlət</string>
   <string name="morphe_music_hide_playlist_shelves_title">Pleylist bölmələrini gizlət</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Podkast epizodunun Endirmə düyməsini gizlət</string>
   <string name="morphe_music_hide_repeat_button_title">Təkrarlama düyməsini gizlət</string>
   <string name="morphe_music_hide_shuffle_button_title">Qarışdır düyməsini gizlət</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">\'Sürətli yığım\' bölməsini gizlət</string>
@@ -361,8 +362,6 @@ YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir
   <string name="morphe_change_start_page_entry_playlists">Pleylistlər</string>
   <string name="morphe_change_start_page_entry_search">Axtarış</string>
   <string name="morphe_change_start_page_entry_subscriptions">Abunəliklər</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Filtr cərgəsini gizlət</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Portret istiqamətinə məcbur et</string>
   <string name="morphe_music_force_portrait_orientation_summary">Cihaz fırladıldıqda tətbiqi portret istiqamətində saxlayır</string>

@@ -161,8 +161,8 @@ Změny zahrnují:
   <string name="morphe_hide_timed_reactions_title">Skrýt reakce v konkrétním čase</string>
   <string name="morphe_hide_timed_reactions_summary">Skryje funkci, která umožňuje uživatelům reagovat emotikony v komentářích a živém chatu</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Skrýt \'Nápověda &amp; zpětná vazba\' v nabídkách</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Skryje \'Nápověda a zpětná vazba\' v nabídkách se třemi tečkami v panelu aplikace, jako je nabídka výsledků vyhledávání</string>
+  <string name="morphe_hide_help_feedback_menu_title">Skrýt \"Nápověda a zpětná vazba\" menu</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Skryje nabídku „Nápověda &amp; zpětná vazba“ při použití tlačítka se třemi tečkami, například ve výsledcích vyhledávání</string>
   <string name="morphe_hide_handle_title">Skrýt handle</string>
   <string name="morphe_hide_handle_summary">Skryje handle vašeho kanálu v záložce \'You\'</string>
   <string name="morphe_hide_video_title_title">Skrýt název videa</string>
@@ -510,9 +510,9 @@ API klíč by se nikdy neměl sdílet. Kdokoli s přístupem k němu může pou�
   <string name="morphe_loop_video_range_clear">Vymazat</string>
   <string name="morphe_loop_video_range_toast_on">Opakování %1$s – %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Zadán neplatný čas</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Zobrazit překryvné tlačítko pro obraz v obraze</string>
-  <string name="morphe_pip_button_flyout_title">Zobrazit vyskakovací tlačítko pro obraz v obraze</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Zobrazit tlačítko pro obraz v obraze</string>
+  <string name="morphe_pip_button_flyout_title">Zobrazit nabídku pro obraz v obraze</string>
   <string name="morphe_pip_button_flyout_name">Přepnout na obraz v obraze</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Zobrazit tlačítko Přehrát vše</string>
@@ -741,6 +741,10 @@ Chcete-li to opravit, zapněte 'Spoof video streams' a změňte 'Default client'
   <string name="morphe_auto_captions_style_entry_4">Zobrazit při tichém</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Zobrazit automatické titulky</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Skrýt automatické titulky</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Preferovaný jazyk titulků</string>
+  <string name="morphe_preferred_caption_language_summary">Nejprve vybere titulky poskytovatele a poté je automaticky přeloží do preferovaného jazyka</string>
+  <string name="morphe_preferred_caption_language_entry_off">Vypnuto</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Nastavit soubory cookie s titulky</string>
   <string name="morphe_set_caption_cookies_summary">"Opravuje chybu YouTube, kdy automaticky přeložené titulky nemusí být dostupné kvůli chybějícím cookies\n\n'Cookies pro titulky' musí být poskytnuty"</string>
@@ -945,6 +949,8 @@ Nastavení → Přehrávání (nebo Automatické přehrávání) → Automaticky
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Zakázat automatické přehrávání seznamu videí</string>
   <string name="morphe_disable_playlist_autoplay_summary">Zabraňuje automatickému přechodu seznamu skladeb k dalšímu videu</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Zakázat výzvu „Pokračovat ve sledování?“</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Opustit režim celé obrazovky na konci videa</string>
   <string name="morphe_exit_fullscreen_entry_1">Vypnuto</string>

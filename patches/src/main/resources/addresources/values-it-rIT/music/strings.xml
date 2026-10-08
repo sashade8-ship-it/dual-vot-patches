@@ -181,7 +181,10 @@ Mentre questa opzione è attiva, la scheda Download elenca questi brani invece d
   <string name="morphe_music_hide_video_ads_title">Nascondi annunci video</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Nascondi attivatore Audio / Video</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Nascondi il pulsante Download</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Nasconde il pulsante di download nel programma podcast</string>
   <string name="morphe_music_hide_explore_shelf_title">Nascondi sezione Esplora</string>
+  <string name="morphe_music_hide_filter_bar_title">Nascondi barra dei filtri</string>
   <string name="morphe_music_hide_grid_shelves_title">Nascondi sezioni a griglia</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Nascondi sezioni orizzontali</string>
   <string name="morphe_music_hide_list_shelves_title">Nascondi sezioni a elenco</string>
@@ -190,7 +193,6 @@ Mentre questa opzione è attiva, la scheda Download elenca questi brani invece d
   <string name="morphe_music_hide_lyrics_translate_button_title">Nascondi il pulsante Traduci</string>
   <string name="morphe_music_hide_new_from_shelf_title">Nascondi sezione \"Nuovi da...\"</string>
   <string name="morphe_music_hide_playlist_shelves_title">Nascondi sezioni playlist</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Nascondi il pulsante di download dell\'episodio del podcast</string>
   <string name="morphe_music_hide_repeat_button_title">Nascondi pulsante Ripeti</string>
   <string name="morphe_music_hide_shuffle_button_title">Nascondi pulsante Shuffle</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Nascondi sezione \"Componi velocemente\"</string>
@@ -360,8 +362,6 @@ YouTube Music 8.x: il crossfade funziona solo su 9.x e versioni successive"</str
   <string name="morphe_change_start_page_entry_playlists">Playlist</string>
   <string name="morphe_change_start_page_entry_search">Cerca</string>
   <string name="morphe_change_start_page_entry_subscriptions">Iscrizioni</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Nascondi barra dei filtri</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Forza orientamento verticale</string>
   <string name="morphe_music_force_portrait_orientation_summary">Mantiene l\'app in orientamento verticale quando il dispositivo viene ruotato</string>

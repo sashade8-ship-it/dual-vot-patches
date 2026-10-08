@@ -42,7 +42,7 @@ import app.morphe.extension.youtube.patches.utils.requests.ChannelSearchRoutes;
  * Titles that are not translated by the uploader can be auto-translated in the lists, such as the
  * search results, so the title can also be fetched as shown in the lists. Elements can also show
  * the title in another language, such as a search result shown in the language of the search,
- * so the title can also be fetched in the language of a text.
+ * so the title can also be fetched in the language of a text, or as shown in the search results of a text.
  */
 final class LocalizedTitleRequest {
 
@@ -59,7 +59,7 @@ final class LocalizedTitleRequest {
     private static final String[] SEARCH_SECTIONS_PATH = {"contents", "sectionListRenderer"};
 
     /**
-     * Video id and language, and if the title is the title shown in the lists -> localized title.
+     * Video id, language, and the search of the title shown in the lists, if any -> localized title.
      * A null title means the video has no title, or the title failed to fetch.
      * Requests that fail because of network errors are removed, so they are fetched again later.
      */
@@ -81,27 +81,34 @@ final class LocalizedTitleRequest {
     }
 
     private static String key(String videoId) {
-        return key(videoId, Locale.getDefault(), false);
+        return key(videoId, Locale.getDefault(), null);
     }
 
-    private static String key(String videoId, Locale locale, boolean listTitle) {
-        return videoId + ' ' + locale.toLanguageTag() + (listTitle ? " list" : "");
+    /**
+     * @param searchQuery Search of the title shown in the lists, or null for the title of the video.
+     */
+    private static String key(String videoId, Locale locale, @Nullable String searchQuery) {
+        String key = videoId + ' ' + locale.toLanguageTag();
+        if (searchQuery == null) {
+            return key;
+        }
+        return searchQuery.equals(videoId) ? key + " list" : key + " search " + searchQuery;
     }
 
     /**
      * Starts fetching the title in the current language, if not yet fetched.
      */
     static CompletableFuture<String> fetch(String videoId) {
-        return fetch(videoId, Locale.getDefault(), false);
+        return fetch(videoId, Locale.getDefault(), null);
     }
 
     /**
-     * @param listTitle If the title is the title shown in the lists.
+     * @param searchQuery Search of the title shown in the lists, or null for the title of the video.
      */
-    private static CompletableFuture<String> fetch(String videoId, Locale locale, boolean listTitle) {
-        String key = key(videoId, locale, listTitle);
+    private static CompletableFuture<String> fetch(String videoId, Locale locale, @Nullable String searchQuery) {
+        String key = key(videoId, locale, searchQuery);
         return cache.computeIfAbsent(key, k -> CompletableFuture.supplyAsync(
-                () -> fetchTitle(key, videoId, locale, listTitle), Utils::runOnBackgroundThread));
+                () -> fetchTitle(key, videoId, locale, searchQuery), Utils::runOnBackgroundThread));
     }
 
     /**
@@ -112,7 +119,26 @@ final class LocalizedTitleRequest {
      *         could not be fetched because of network errors, so it can be fetched again later.
      */
     static CompletableFuture<String> fetchListTitle(String videoId) {
-        return fetchFailingOnNetworkError(videoId, Locale.getDefault(), true);
+        return fetchFailingOnNetworkError(videoId, Locale.getDefault(), videoId);
+    }
+
+    /**
+     * Starts fetching the title in the current language as shown in the search results of the text,
+     * if not yet fetched. The search results are shown in the language of the search, so the server
+     * finds the language of a text in another language, which the device does not always detect,
+     * such as on devices without the language detection of the text classifier.
+     *
+     * @return The request of the title, or a request of a null title if the search results
+     *         do not include the video. The request fails with an {@link IOException} if the title
+     *         could not be fetched because of network errors, so it can be fetched again later.
+     */
+    static CompletableFuture<String> fetchSearchTitle(String videoId, String text) {
+        // Elements can show the title truncated, such as 'Start of the title...'.
+        String query = text.replaceFirst("(\\.\\.\\.|…)$", "").trim();
+        if (query.isEmpty()) {
+            return CompletableFuture.completedFuture(null);
+        }
+        return fetchFailingOnNetworkError(videoId, Locale.getDefault(), query);
     }
 
     /**
@@ -133,7 +159,7 @@ final class LocalizedTitleRequest {
         }
         Logger.printDebug(() -> "Fetching title of: " + videoId
                 + " in language of the text: " + locale.toLanguageTag());
-        return fetchFailingOnNetworkError(videoId, locale, false);
+        return fetchFailingOnNetworkError(videoId, locale, null);
     }
 
     /**
@@ -143,9 +169,9 @@ final class LocalizedTitleRequest {
      *         if the title could not be fetched because of network errors.
      */
     private static CompletableFuture<String> fetchFailingOnNetworkError(String videoId, Locale locale,
-                                                                        boolean listTitle) {
-        CompletableFuture<String> request = fetch(videoId, locale, listTitle);
-        String key = key(videoId, locale, listTitle);
+                                                                        @Nullable String searchQuery) {
+        CompletableFuture<String> request = fetch(videoId, locale, searchQuery);
+        String key = key(videoId, locale, searchQuery);
         return request.thenApply(title -> {
             // Requests that fail because of network errors are removed from the cache.
             if (title == null && cache.get(key) != request) {
@@ -174,17 +200,19 @@ final class LocalizedTitleRequest {
     }
 
     /**
-     * @param listTitle If the title is the title shown in the lists.
+     * @param searchQuery Search of the title shown in the lists, or null for the title of the video.
      */
+    @SuppressWarnings("deprecation")
     @Nullable
-    private static String fetchTitle(String key, String videoId, Locale locale, boolean listTitle) {
+    private static String fetchTitle(String key, String videoId, Locale locale, @Nullable String searchQuery) {
+        final boolean listTitle = searchQuery != null;
         String language = locale.toLanguageTag();
         Locale requestLocale = unsupportedRegionLanguages.contains(language)
                 ? new Locale(locale.getLanguage())
                 : locale;
         try {
             byte[] requestBody = listTitle
-                    ? ChannelSearchRoutes.createVideoSearchBody(videoId, requestLocale)
+                    ? ChannelSearchRoutes.createVideoSearchBody(searchQuery, requestLocale)
                     : ChannelSearchRoutes.createVideoBody(videoId, requestLocale);
             HttpURLConnection connection = ChannelSearchRoutes.getConnection(listTitle
                     ? ChannelSearchRoutes.GET_LIST_VIDEO_TITLE
@@ -217,7 +245,7 @@ final class LocalizedTitleRequest {
             if (responseCode == HTTP_STATUS_CODE_BAD_REQUEST && !requestLocale.getCountry().isEmpty()) {
                 Logger.printDebug(() -> "Language not supported: " + language + ", using: " + locale.getLanguage());
                 unsupportedRegionLanguages.add(language);
-                return fetchTitle(key, videoId, locale, listTitle);
+                return fetchTitle(key, videoId, locale, searchQuery);
             }
             Logger.printDebug(() -> "Localized title request failed for: " + videoId
                     + " code: " + responseCode);

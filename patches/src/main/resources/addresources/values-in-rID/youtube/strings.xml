@@ -161,8 +161,8 @@ Perubahan termasuk:
   <string name="morphe_hide_timed_reactions_title">Sembunyikan reaksi terjadwal</string>
   <string name="morphe_hide_timed_reactions_summary">Menyembunyikan fitur yang memungkinkan pengguna memberikan reaksi dengan emoji di bagian komentar dan live chat</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Sembunyikan \'Bantuan &amp; saran\' di menu</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Menyembunyikan \'Bantuan &amp; saran\' di menu tiga titik pada bilah aplikasi, seperti menu hasil penelusuran</string>
+  <string name="morphe_hide_help_feedback_menu_title">Sembunyikan menu \'Bantuan &amp; masukan\'</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Menyembunyikan menu \'Bantuan &amp; masukan\' saat menggunakan tombol tiga titik, misalnya pada hasil penelusuran</string>
   <string name="morphe_hide_handle_title">Sembunyikan handle</string>
   <string name="morphe_hide_handle_summary">Menyembunyikan handle saluran di tab \'Anda\'</string>
   <string name="morphe_hide_video_title_title">Sembunyikan judul video</string>
@@ -510,10 +510,10 @@ Kunci API Anda tidak boleh dibagikan. Siapa pun yang memiliki akses ke kunci ter
   <string name="morphe_loop_video_range_clear">Hapus</string>
   <string name="morphe_loop_video_range_toast_on">Melakukan perulangan %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Rentang waktu tidak sah</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Tampilkan tombol overlay Picture-in-picture</string>
-  <string name="morphe_pip_button_flyout_title">Tampilkan tombol flyout Picture-in-picture</string>
-  <string name="morphe_pip_button_flyout_name">Beralih ke Picture-in-picture</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Tampilkan tombol Picture-in-Picture</string>
+  <string name="morphe_pip_button_flyout_title">Tampilkan menu Picture-in-Picture</string>
+  <string name="morphe_pip_button_flyout_name">Beralih ke Picture-in-Picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Tampilkan tombol Putar semua</string>
   <string name="morphe_play_all_button_summary">"Ketuk untuk membuat daftar putar dari semua video dari saluran, ketuk dan tahan untuk membatalkan
@@ -741,6 +741,10 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
   <string name="morphe_auto_captions_style_entry_4">Tampilkan saat audio dibisukan</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Tampilkan teks otomatis</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Sembunyikan teks otomatis</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Bahasa teks pilihan</string>
+  <string name="morphe_preferred_caption_language_summary">Memilih subtitle dari penyedia terlebih dahulu, lalu menerjemahkan secara otomatis ke bahasa pilihan</string>
+  <string name="morphe_preferred_caption_language_entry_off">Nonaktif</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Atur cookie teks</string>
   <string name="morphe_set_caption_cookies_summary">"Memperbaiki bug bawaan YouTube di mana teks terjemahan otomatis mungkin tidak tersedia karena cookie yang hilang
@@ -947,6 +951,8 @@ Setelan → Pemutaran (atau Pemutaran Otomatis) → Putar video berikutnya secar
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Nonaktifkan pemutaran otomatis daftar putar</string>
   <string name="morphe_disable_playlist_autoplay_summary">Mencegah daftar putar beralih secara otomatis ke video berikutnya</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Nonaktifkan dialog \'Lanjut menonton?\' yang muncul</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Keluar dari mode layar penuh di akhir video</string>
   <string name="morphe_exit_fullscreen_entry_1">Dinonaktifkan</string>
@@ -1033,7 +1039,7 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <!-- layout.startpage.changeStartPagePatch -->
   <string name="morphe_change_start_page_title">Halaman mulai</string>
   <string name="morphe_change_start_page_entry_default">Bawaan</string>
-  <string name="morphe_change_start_page_entry_all_subscriptions">Semua subscriptions</string>
+  <string name="morphe_change_start_page_entry_all_subscriptions">Semua subscription</string>
   <string name="morphe_change_start_page_entry_browse">Jelajahi saluran</string>
   <string name="morphe_change_start_page_entry_courses">Kursus / Pembelajaran</string>
   <string name="morphe_change_start_page_entry_explore">Jelajahi</string>
@@ -1052,7 +1058,7 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_change_start_page_entry_shopping">Belanja</string>
   <string name="morphe_change_start_page_entry_shorts">Shorts</string>
   <string name="morphe_change_start_page_entry_sports">Olahraga</string>
-  <string name="morphe_change_start_page_entry_subscriptions">Subscriptions</string>
+  <string name="morphe_change_start_page_entry_subscriptions">Subscription</string>
   <string name="morphe_change_start_page_entry_trending">Sedang tren</string>
   <string name="morphe_change_start_page_entry_virtual_reality">Realitas Virtual</string>
   <string name="morphe_change_start_page_entry_watch_later">Tonton nanti</string>
@@ -1156,7 +1162,7 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_titles_home_title">Tab Beranda</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
-  <string name="morphe_dearrow_titles_subscription_title">Tab Langganan</string>
+  <string name="morphe_dearrow_titles_subscription_title">Tab Subscription</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_dearrow_titles_library_title">Tab Anda</string>
   <string name="morphe_dearrow_titles_player_title">Daftar putar &amp; rekomendasi pemutar</string>

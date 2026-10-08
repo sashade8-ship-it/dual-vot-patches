@@ -182,7 +182,10 @@ Preuzete numere se pojavljuju ovde"</string>
   <string name="morphe_music_hide_video_ads_title">Sakrij video oglase</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Sakrij audio / video prekidač</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Sakrij dugme za preuzimanje</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Sakriva dugme za preuzimanje u podkast emisiji</string>
   <string name="morphe_music_hide_explore_shelf_title">Sakrij policu sa otkrićima</string>
+  <string name="morphe_music_hide_filter_bar_title">Sakrij traku filtera</string>
   <string name="morphe_music_hide_grid_shelves_title">Sakrij police</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Sakrij horizontalne police</string>
   <string name="morphe_music_hide_list_shelves_title">Sakrij police sa listom</string>
@@ -191,7 +194,6 @@ Preuzete numere se pojavljuju ovde"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Sakrij dugme „Prevedi”</string>
   <string name="morphe_music_hide_new_from_shelf_title">Sakrij policu „Novi od”</string>
   <string name="morphe_music_hide_playlist_shelves_title">Sakrij police sa plejliztama</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Sakrij dugme za preuzimanje epizode podkasta</string>
   <string name="morphe_music_hide_repeat_button_title">Sakrij dugme za ponavljanje</string>
   <string name="morphe_music_hide_shuffle_button_title">Sakrij dugme za nasumičan red</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Sakrij policu „Brzi broj”</string>
@@ -360,8 +362,6 @@ YouTube Music 8.x — prelazni efekat radi samo na 9.x i novijim verzijama"</str
   <string name="morphe_change_start_page_entry_playlists">Plejliste</string>
   <string name="morphe_change_start_page_entry_search">Pretraga</string>
   <string name="morphe_change_start_page_entry_subscriptions">Praćenja</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Sakrij traku filtera</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Forsiraj portretnu orijentaciju</string>
   <string name="morphe_music_force_portrait_orientation_summary">Zadržava aplikaciju u portretnoj orijentaciji kada se uređaj rotira</string>

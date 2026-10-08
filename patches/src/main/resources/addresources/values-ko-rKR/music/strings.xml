@@ -182,7 +182,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">동영상 광고 숨기기</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">노래 / 동영상 토글 숨기기</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">오프라인 저장 버튼 숨기기</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">팟캐스트 쇼에서 오프라인 저장 버튼을 숨깁니다 </string>
   <string name="morphe_music_hide_explore_shelf_title">\'둘러보기\' 선반 숨기기</string>
+  <string name="morphe_music_hide_filter_bar_title">필터 바 숨기기</string>
   <string name="morphe_music_hide_grid_shelves_title">그리드 선반 숨기기</string>
   <string name="morphe_music_hide_horizontal_shelves_title">좌우 슬라이드 선반 숨기기</string>
   <string name="morphe_music_hide_list_shelves_title">리스트 선반 숨기기</string>
@@ -191,7 +194,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">번역 버튼 숨기기</string>
   <string name="morphe_music_hide_new_from_shelf_title">\'(아티스트)의 새로운 음악\' 선반 숨기기</string>
   <string name="morphe_music_hide_playlist_shelves_title">재생목록 선반 숨기기</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">팟캐스트 에피소드 오프라인 저장 버튼 숨기기</string>
   <string name="morphe_music_hide_repeat_button_title">반복 버튼 숨기기</string>
   <string name="morphe_music_hide_shuffle_button_title">셔플 버튼 숨기기</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">빠른 선곡 선반 숨기기</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x에서는 크로스페이드가 작동하지 않습니다. 크�
   <string name="morphe_change_start_page_entry_playlists">재생목록</string>
   <string name="morphe_change_start_page_entry_search">검색</string>
   <string name="morphe_change_start_page_entry_subscriptions">구독</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">필터 바 숨기기</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">세로 방향 강제 활성화하기</string>
   <string name="morphe_music_force_portrait_orientation_summary">기기를 회전해도 앱이 세로 방향을 유지합니다</string>

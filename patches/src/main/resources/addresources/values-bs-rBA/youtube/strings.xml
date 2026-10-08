@@ -71,7 +71,7 @@ Second \"item\" text"</string>
   <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
   <!-- interaction.loop.loopVideoPatch -->
   <!-- interaction.loop.loopVideoButtonPatch -->
-  <!-- interaction.pip.pipButtonPatch -->
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
   <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
@@ -106,6 +106,7 @@ Second \"item\" text"</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
   <!-- layout.captions.captionsPatch -->
   <!-- layout.captions.autoCaptionsPatch -->
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
   <!-- layout.captions.captionCookiesPatch -->
   <!-- layout.captions.transcriptPatch -->
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
@@ -153,6 +154,7 @@ Second \"item\" text"</string>
   <!-- layout.hide.time.hideTimestampPatch -->
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->

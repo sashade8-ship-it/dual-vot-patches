@@ -182,7 +182,10 @@ Les morceaux téléchargés apparaîtront ici"</string>
   <string name="morphe_music_hide_video_ads_title">Masquer les publicités vidéo</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Masquer le sélecteur \'Audio / Vidéo\'</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Masquer le bouton \'Télécharger\'</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Masque le bouton \'Télécharger\' dans les épisodes de podcast</string>
   <string name="morphe_music_hide_explore_shelf_title">Masquer l\'étagère \'Explorer\'</string>
+  <string name="morphe_music_hide_filter_bar_title">Masquer la barre de filtres</string>
   <string name="morphe_music_hide_grid_shelves_title">Masquer les étagères en grille</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Masquer les étagères horizontales</string>
   <string name="morphe_music_hide_list_shelves_title">Masquer les étagères de listes</string>
@@ -191,7 +194,6 @@ Les morceaux téléchargés apparaîtront ici"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Masquer le bouton \'Traduire\'</string>
   <string name="morphe_music_hide_new_from_shelf_title">Masquer l\'étagère \'Nouveauté de\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Masquer les étagères de playlists</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Masquer le bouton \'Télécharger\' des épisodes du podcast</string>
   <string name="morphe_music_hide_repeat_button_title">Masquer le bouton \'Répéter\'</string>
   <string name="morphe_music_hide_shuffle_button_title">Masquer le bouton \'Aléatoire\'</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Masquer l\'étagère \'Accès rapide\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — le fondu enchaîné ne fonctionne que sur les versions 9.x
   <string name="morphe_change_start_page_entry_playlists">Playlists</string>
   <string name="morphe_change_start_page_entry_search">Rechercher</string>
   <string name="morphe_change_start_page_entry_subscriptions">Abonnements</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Masquer la barre de filtres</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Forcer l\'orientation portrait</string>
   <string name="morphe_music_force_portrait_orientation_summary">Maintient l\'application en orientation portrait lorsque l\'appareil est tourné</string>
@@ -555,11 +555,11 @@ Cookies nécessaires : SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_credit_line_regex_summary">Si certaines paroles sont incorrectement filtrées vers le bas, ajustez ou effacez ceci. Marqueurs séparés par des virgules : les lignes contenant un marqueur suivi de deux-points sont affichées comme informations de crédit en bas. Laissez vide pour désactiver</string>
   <string name="morphe_music_lyrics_text_size_title">Taille du texte</string>
   <string name="morphe_music_lyrics_text_size_summary">Taille du texte des paroles</string>
-  <string name="morphe_music_lyrics_offset_ms_title">Décalage de synchronisation global</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Décalage temporel global</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Les paroles synchronisées suivent la lecture. Si elles sont décalées, ajustez le décalage de synchronisation. Décalez les paroles synchronisées vers l\'avant ou vers l\'arrière. Utilisez une valeur positive si les paroles sont en avance sur la chanson</string>
   <string name="morphe_music_lyrics_sb_matching_title">Utiliser les segments SponsorBlock pour le décalage des paroles</string>
-  <string name="morphe_music_lyrics_sb_matching_summary">Faire correspondre sans les segments que SponsorBlock saute et décaler les paroles sur l\'audio publié. Désactivé ignore entièrement SponsorBlock</string>
-  <string name="morphe_music_lyrics_sb_no_video">Cette piste n\'a pas d\'identifiant vidéo à soumettre</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">Faire correspondre sans les segments que SponsorBlock passe et décaler les paroles sur l\'audio publié. Désactivé ignore entièrement SponsorBlock</string>
+  <string name="morphe_music_lyrics_sb_no_video">Ce morceau n\'a pas d\'identifiant vidéo à soumettre</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Source: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Traduit par Google</string>
@@ -580,7 +580,7 @@ Cookies nécessaires : SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PA
   <string name="morphe_music_lyrics_refreshing">Actualisation</string>
   <string name="morphe_music_lyrics_refreshed">Actualisé</string>
   <string name="morphe_music_lyrics_about_summary">"Les paroles sont associées au titre et à l'artiste, des métadonnées inhabituelles peuvent ne rien trouver ou trouver la mauvaise version. Utilisez 'Actualiser' pour changer de version. Les fournisseurs marqués d'un \* nécessitent un jeton. Tous les fournisseurs activés ne sont pas toujours interrogés dans votre ordre, mais répondent en fonction de leur vitesse"</string>
-  <string name="morphe_music_lyrics_source_advice_summary">Activez uniquement les fournisseurs que vous utilisez, ou conservez la valeur par défaut — des requêtes constantes peuvent submerger les petits sites de paroles communautaires</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Activez uniquement les fournisseurs que vous utilisez, ou conservez les paramètres par défaut — des requêtes constantes peuvent submerger les petits sites communautaires de paroles</string>
   <string name="morphe_music_lyrics_hide_info_title">Masquer la ligne de crédit</string>
   <string name="morphe_music_lyrics_hide_info_summary">Masquer la ligne de crédit affichée sous les paroles</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Inverser la traduction et la romanisation</string>

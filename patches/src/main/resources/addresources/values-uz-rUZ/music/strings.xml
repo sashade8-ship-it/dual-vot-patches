@@ -49,7 +49,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_hide_video_ads_title">Reklamalarni yashirish</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Audio / Video ni yashirish tugmasini ko‘rsatish/yashirish</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Yuklab olish tugmasini yashirish</string>
   <string name="morphe_music_hide_explore_shelf_title">Kashf qilish javoni ni yashirish</string>
+  <string name="morphe_music_hide_filter_bar_title">Filtr panelini yashirish</string>
   <string name="morphe_music_hide_grid_shelves_title">Tarmoq javonlarini yashirish</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Gorizontal javonlarni yashirish</string>
   <string name="morphe_music_hide_list_shelves_title">Ro‘yxat javonlarini yashirish</string>
@@ -215,8 +217,6 @@ Krosfeyd YouTube Music'ning 8.x va 9.x undan yuqori versiyalarda ishlaydi"</stri
   <string name="morphe_change_start_page_entry_playlists">Pleylistlar</string>
   <string name="morphe_change_start_page_entry_search">Qidiruv</string>
   <string name="morphe_change_start_page_entry_subscriptions">Obunalar</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Filtr panelini yashirish</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
   <string name="morphe_music_change_miniplayer_color_title">Miniplayerning rangini o\'zgartirish</string>

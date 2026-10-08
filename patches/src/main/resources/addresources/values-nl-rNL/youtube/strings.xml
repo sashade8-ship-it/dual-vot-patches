@@ -161,8 +161,8 @@ Wijzigingen zijn:
   <string name="morphe_hide_timed_reactions_title">Verberg getimede reacties</string>
   <string name="morphe_hide_timed_reactions_summary">Verbergt de functie waarmee gebruikers kunnen reageren met emoji\'s in de commentaarsectie en livechat</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_help_feedback_menu_title">Verberg \'Help &amp; feedback\' in menu\'s</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Verbergt \'Help &amp; feedback\' in de driepuntsmenu\'s van de appbalk, zoals het menu met zoekresultaten</string>
+  <string name="morphe_hide_help_feedback_menu_title">Verberg het menu \'Help &amp; feedback\'</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Verbergt het menu \'Help &amp; feedback\' bij gebruik van de knop met drie puntjes, zoals bij de zoekresultaten</string>
   <string name="morphe_hide_handle_title">Verberg handle</string>
   <string name="morphe_hide_handle_summary">Verbergt je kanaalhandle in het tabblad \'Jij\'</string>
   <string name="morphe_hide_video_title_title">Verberg de videotitel</string>
@@ -510,10 +510,10 @@ Uw API-sleutel mag nooit worden gedeeld. Iedereen met toegang tot deze sleutel k
   <string name="morphe_loop_video_range_clear">Wissen</string>
   <string name="morphe_loop_video_range_toast_on">Herhalen %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Ongeldige tijd opgegeven</string>
-  <!-- interaction.pip.pipButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Toon de overlayknop voor beeld-in-beeld</string>
-  <string name="morphe_pip_button_flyout_title">Toon de flyoutknop voor beeld-in-beeld</string>
-  <string name="morphe_pip_button_flyout_name">Overschakelen naar beeld-in-beeld</string>
+  <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Toon Picture-in-Picture-knop</string>
+  <string name="morphe_pip_button_flyout_title">Toon Picture-in-Picture-menu</string>
+  <string name="morphe_pip_button_flyout_name">Overschakelen naar Picture-in-Picture</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Toon Speel alles-knop</string>
   <string name="morphe_play_all_button_summary">"Tik om een afspeellijst van alle video's van het kanaal te genereren, houd ingedrukt om ongedaan te maken
@@ -741,6 +741,10 @@ Om dit op te lossen, schakel 'Videostreams vervalsen' in en wijzig de 'Standaard
   <string name="morphe_auto_captions_style_entry_4">Toon als gemuteerd</string>
   <string name="morphe_auto_captions_style_legacy_entry_1">Toon automatisch ondertitels</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Verberg automatisch ondertitels</string>
+  <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">Voorkeurstaal voor ondertiteling</string>
+  <string name="morphe_preferred_caption_language_summary">Selecteert eerst de ondertiteling van de provider en vertaalt deze vervolgens automatisch naar de voorkeurstaal</string>
+  <string name="morphe_preferred_caption_language_entry_off">Uit</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Stel ondertitelcookies in</string>
   <string name="morphe_set_caption_cookies_summary">"Verhelpt een standaard YouTube-probleem waarbij de automatisch vertaalde ondertitels mogelijk niet beschikbaar zijn vanwege ontbrekende cookies\n\n'Ondertitel-cookies' moeten worden verstrekt"</string>
@@ -945,6 +949,8 @@ Instellingen → Weergave (of automatisch afspelen) → Volgende video automatis
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
   <string name="morphe_disable_playlist_autoplay_title">Schakel automatisch afspelen van afspeellijsten uit</string>
   <string name="morphe_disable_playlist_autoplay_summary">Voorkomt dat afspeellijsten automatisch doorgaan naar de volgende video</string>
+  <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">Prompt \'Verder kijken?\' uitschakelen</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Verlaat de volledige schermmodus aan het einde van de video</string>
   <string name="morphe_exit_fullscreen_entry_1">Uitgeschakeld</string>

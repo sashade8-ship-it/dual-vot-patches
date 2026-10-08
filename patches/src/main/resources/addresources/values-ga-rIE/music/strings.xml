@@ -182,7 +182,10 @@ Feictear rianta íoslódáilte anseo"</string>
   <string name="morphe_music_hide_video_ads_title">Folaigh fógraí físe</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Folaigh an lascán Fuaime/Físe</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">Folaigh an cnaipe Íoslódála</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Folaíonn an cnaipe Íoslódáil i seó podchraolta</string>
   <string name="morphe_music_hide_explore_shelf_title">Folaigh an seilf Iniúchta</string>
+  <string name="morphe_music_hide_filter_bar_title">Folaigh barra scagaire</string>
   <string name="morphe_music_hide_grid_shelves_title">Folaigh seilfeanna greille</string>
   <string name="morphe_music_hide_horizontal_shelves_title">Folaigh seilfeanna cothrománacha</string>
   <string name="morphe_music_hide_list_shelves_title">Folaigh seilfeanna liosta</string>
@@ -191,7 +194,6 @@ Feictear rianta íoslódáilte anseo"</string>
   <string name="morphe_music_hide_lyrics_translate_button_title">Folaigh an cnaipe Aistrigh</string>
   <string name="morphe_music_hide_new_from_shelf_title">Folaigh seilf \'Nua ó\'</string>
   <string name="morphe_music_hide_playlist_shelves_title">Folaigh seilfeanna seinmliosta</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_title">Folaigh an cnaipe íoslódála d\'eipeasóid phodchraolta</string>
   <string name="morphe_music_hide_repeat_button_title">Folaigh an cnaipe Athdhéanamh</string>
   <string name="morphe_music_hide_shuffle_button_title">Folaigh an cnaipe Suaitheadh</string>
   <string name="morphe_music_hide_speed_dial_shelf_title">Folaigh an seilf \'Diailigh luas\'</string>
@@ -361,8 +363,6 @@ YouTube Music 8.x — ní ritheann an traschéimniú ach ar 9.x agus níos nuaí
   <string name="morphe_change_start_page_entry_playlists">Seinmliostaí</string>
   <string name="morphe_change_start_page_entry_search">Cuardaigh</string>
   <string name="morphe_change_start_page_entry_subscriptions">Síntiúis</string>
-  <!-- layout.compactheader.hideFilterBarPatch -->
-  <string name="morphe_music_hide_filter_bar_title">Folaigh barra scagaire</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
   <string name="morphe_music_force_portrait_orientation_title">Cuir treoshuíomh portráide i bhfeidhm</string>
   <string name="morphe_music_force_portrait_orientation_summary">Coinníonn an aip i dtreoshuíomh portráide nuair a rothlaítear an gléas</string>

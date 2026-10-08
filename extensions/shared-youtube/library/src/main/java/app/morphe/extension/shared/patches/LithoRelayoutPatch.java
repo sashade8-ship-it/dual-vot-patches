@@ -199,9 +199,10 @@ public final class LithoRelayoutPatch {
                         view = parent;
                     }
                     if (view instanceof LithoViewInterface lithoView) {
+                        // The drawable is kept, as Litho can update the text of the mounted drawable
+                        // without mounting it again, such as with a text that is loading again.
+                        // It's removed by a later relayout once it no longer shows a loading text.
                         relayoutViews.add(lithoView);
-                        // Texts that are still outdated after the relayout are mounted again.
-                        relayoutTextDrawables.remove(textDrawable);
                     }
                 }
             }
