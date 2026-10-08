@@ -1,3 +1,13 @@
+## 1.47.0-dev.5-dualvot.8.5.3 (2026-10-08)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.5](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.5).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.4-dualvot.8.5.3 (2026-10-08)
 
 ### Automated Morphe update
@@ -396,6 +406,19 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.4...v1.47.0-dev.5) (2026-10-08)
+
+### 🐛 Bug Fixes
+
+* **YouTube - FlyoutUtils:** Correctly resize feed flyout ([c129aa2](https://github.com/MorpheApp/morphe-patches/commit/c129aa293203a676461016a9bd4ad13e237d9add))
+* **YouTube - Litho relayout:** Keep tracking texts after the relayout ([0ee99ca](https://github.com/MorpheApp/morphe-patches/commit/0ee99ca69059ce0648aec12c8a72aba8ae482d0f))
+* **YouTube - Restore video titles:** Do not depend on the TextClassifier to restore titles ([1bbfc37](https://github.com/MorpheApp/morphe-patches/commit/1bbfc370cb407e68303c13368217c2f01cf81b95))
+
+### ✨ New Features
+
+* **YouTube - Captions:** Add an option to select preferred caption language ([#3566](https://github.com/MorpheApp/morphe-patches/issues/3566)) ([435aa17](https://github.com/MorpheApp/morphe-patches/commit/435aa171aa30942530efae48159e9a61a94ccc8f))
+* **YouTube:** Add `Disable continue watching prompt` patch ([#3580](https://github.com/MorpheApp/morphe-patches/issues/3580)) ([255d917](https://github.com/MorpheApp/morphe-patches/commit/255d917abc874f12382943edff0340425053ef83))
 
 ## [1.47.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.3...v1.47.0-dev.4) (2026-10-08)
 
