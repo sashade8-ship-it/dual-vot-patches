@@ -1,3 +1,13 @@
+## 1.47.0-dev.10-dualvot.8.5.3 (2026-10-09)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.10](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.10).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.6-dualvot.8.5.3 (2026-10-09)
 
 ### Automated Morphe update
@@ -416,6 +426,30 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.9...v1.47.0-dev.10) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Horizontal shelves show again after entering fullscreen ([#3618](https://github.com/MorpheApp/morphe-patches/issues/3618)) ([be4fffa](https://github.com/MorpheApp/morphe-patches/commit/be4fffa02de9d1d9258e148aae4617735c0c244e))
+
+## [1.47.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.8...v1.47.0-dev.9) (2026-10-09)
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add support for `21.20.405` ([4cb3bd8](https://github.com/MorpheApp/morphe-patches/commit/4cb3bd872d57f036dce22692dcfb76f80df5ec20))
+
+## [1.47.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.7...v1.47.0-dev.8) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Playback speed:** Fix patching old experimental targets ([99a9851](https://github.com/MorpheApp/morphe-patches/commit/99a9851bf853f4d350e5411381c49a7340b42022))
+
+## [1.47.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.6...v1.47.0-dev.7) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube:** Fix crash when exiting fullscreen with the new player UI ([5651020](https://github.com/MorpheApp/morphe-patches/commit/56510203e25b8dc4619670a756e65c9439fdf66b))
 
 ## [1.47.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.5...v1.47.0-dev.6) (2026-10-09)
 
