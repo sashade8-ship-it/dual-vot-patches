@@ -107,32 +107,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">Krosfeyd ushbu seans davomida pauza qilindi</string>
   <string name="morphe_music_crossfade_resumed_toast">Krosfeyd tiklandi</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Krosfeyd yoqilganda video rejimidan foydalanib bo‘lmaydi</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Audio uzatilayotganda yoki ekranga aks ettirilayotganda krosfeydda xatolik bo‘lishi sababli pauza qilinadi.</string>
   <string name="morphe_music_crossfade_about_title">Biz haqimizda</string>
-  <string name="morphe_music_crossfade_about_summary">Krosfeyd qanday ishlaydi va qachon ishlamaydi?</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Qanday ishlaydi</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Krosfeyd bir qo‘shiqning oxirini keyingi qo‘shiqning boshlanishi bilan ustma-ust qo‘yadi va tanlangan davomiylik hamda egri chiziq asosida biri pasayib, ikkinchisi asta-sekin kuchayib boradi.
-
-U avtomatik o‘tishda (qo‘shiq o‘z-o‘zidan tugaganda) va qo‘lda o‘tkazishda ishlaydi — har biri uchun yuqorida alohida yoqish/o‘chirish sozlamasi mavjud. Avtomatik o‘tishda krosfeyd qo‘shiq tugashidan bir necha soniya oldin boshlanadi.
-
-YouTube Music 9.x yoki undan yangiroq versiya talab etiladi."</string>
-  <string name="morphe_music_crossfade_about_best_title">Muammosiz ishlash uchun</string>
-  <string name="morphe_music_crossfade_about_best_summary">Oddiy qo‘shiqlar almashinuvi va avtomatik o‘tish, bitta qo‘shiqni takroriy ijro etish (qo‘shiq o‘ziga o‘zi krossfeyd bilan o‘tadi), shuningdek mahalliy audio — telefon karnayi, simli quloqchinlar, Bluetooth yoki USB orqali ishlaydi.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Kutilganidek ishlamaydi</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Krosfeyd yoqilganda musiqiy videolar faqat audio rejimida ijro etiladi. Videoni ko‘rish uchun Tasodifiy tugmasini uzoq bosib krosfeydni pauza qiling
-
-So‘nish davomiyligidan qisqaroq qo‘shiqlar krosfeydni o‘tkazib yuborishi mumkin
-
-Qulflangan ekran yoki bildirishnoma chiqish vaqtida qisqa muddat noto‘g‘ri  holatni ko‘rsatishi mumkin"</string>
-  <string name="morphe_music_crossfade_about_known_title">Muayyan muammolar</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Joriy navbatdan tashqaridan boshlangan yoki birinchi qo‘shiq sifatida ijro etilgan musiqiy video audio-only rejimi yoqilishidan oldin qisqa vaqt video ko‘rinishida ko‘rinishi mumkin.
-
-Musiqiy videoni tomosha qilish uchun krosfeyd funksiyasini ijro paytida o‘chirib qo‘ysangiz, ayrim videolar qora ekran bo‘lib qolishi mumkin (ayniqsa audiosi videoning o‘zidan olinadigan videolar). Buning oldini olish uchun crossfade funksiyasini qo‘shiqni tanlashdan oldin o‘chirib qo‘ying."</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Mutlaqo ishlamaydi</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Audio uzatish yoki aks ettirish (Chromecast, ekran yoki audio mirroring) — bu holatda krosfeyd beqaror ishlagani sababli vaqtincha to‘xtatiladi va bu muammo hech qachon tuzatilmasligi mumkin.
-
-Krosfeyd YouTube Music'ning 8.x va 9.x undan yuqori versiyalarda ishlaydi"</string>
   <string name="morphe_music_crossfade_about_credit_title">Mualliflar</string>
   <string name="morphe_music_crossfade_about_credit_summary">Krosfeyd funksiyasi VazerOG tomonidan yaratilgan</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

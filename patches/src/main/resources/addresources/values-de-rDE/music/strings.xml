@@ -241,32 +241,29 @@ Heruntergeladene Titel erscheinen hier"</string>
   <string name="morphe_music_crossfade_paused_toast">Nahtloser Übergang für diese Sitzung pausiert</string>
   <string name="morphe_music_crossfade_resumed_toast">Nahtlose Wiedergabe fortgesetzt</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Der Videomodus ist nicht verfügbar, während die nahtlose Wiedergabe aktiviert ist</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Nahtlose Wiedergabe ist während der Audioausgabe auf anderen Geräten pausiert. Nahtlose Wiedergabe über Miracast/Audio-Broadcast ist instabil und möglicherweise nicht umsetzbar.</string>
+  <string name="morphe_music_crossfade_sabr_toast">Bei SABR-Wiedergabe ist Crossfade deaktiviert</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Beim Casten ist Crossfade deaktiviert</string>
   <string name="morphe_music_crossfade_about_title">Über</string>
-  <string name="morphe_music_crossfade_about_summary">Wie nahtlose Wiedergabe funktioniert – und wann es nicht klappt</string>
+  <string name="morphe_music_crossfade_about_summary">Wie Crossfade funktioniert und wo nicht</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Wie es funktioniert</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Nahtlose Wiedergabe überlappt das Ende des aktuellen Songs mit dem Anfang des nächsten entsprechend des von dir gewählten Überblendungsmodus über die eingestellte Dauer. In der Fachsprache nennt man dies auch Crossfade.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade überblendet das Ende eines Songs mit dem Anfang des nächsten, entsprechend deiner Dauer und Kurve.
 
-Die Funktion lässt sich sowohl bei der normalen Wiedergabe (wenn ein Song von selbst zu Ende geht) als auch beim manuellen Überspringen mit den jeweiligen Schaltern separat aktivieren. Bei automatischem Titelwechsel beginnt die Überblendung gemäß der Einstellung schon vor dem Ende des Titels.
+Es wird beim automatischen Titelwechsel und beim manuellen Überspringen angewendet, jeweils mit einem eigenen Schalter oben. Beim automatischen Titelwechsel beginnt die Überblendung einige Sekunden bevor der Song endet."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Einschränkungen</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Bei aktivem Crossfade werden Musikvideos nur als Audio abgespielt. Halte die Zufallswiedergabe lange gedrückt, um Crossfade zu pausieren und das Video anzusehen.
 
-Nahtlose Wiedergabe benötigt YouTube Music 9.x oder neuer."</string>
-  <string name="morphe_music_crossfade_about_best_title">Was am besten funktioniert</string>
-  <string name="morphe_music_crossfade_about_best_summary">Normale Song-zu-Song-Wiedergabe und automatischer Titelwechsel, Wiederholung eines Songs (dabei blendet der Song in sich selbst über) und lokale Audioausgabe über Smartphone-Lautsprecher, kabelgebundene Kopfhörer, Bluetooth oder USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Was nicht richtig funktioniert</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Bei Musikvideos wird während aktivierter nahtloser Wiedergabe nur der Ton wiedergegeben. Über langes Drücken der Shuffle-Taste lässt sich die Funktion pausieren, falls man das Video sehen möchte.
+Startet die Wiedergabe mit einem Musikvideo, bleibt es bis zum nächsten Song im Videomodus.
 
-Titel, die kürzer sind als die eingestellte Überblendungsdauer werden möglicherweise nicht überblendet.
+Songs, die kürzer als die Überblendungsdauer sind, werden nicht überblendet.
 
-Sperrbildschirm und Wiedergabebenachrichtigung kann während der Überblendung kurzzeitig einen veralteten Zustand anzeigen."</string>
-  <string name="morphe_music_crossfade_about_known_title">Bekannte Probleme</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Ist der erste Titel einer Wiedergabe (oder außerhalb der aktuellen Warteschlange gestartet) ein Musikvideo, kann dieses kurz als Video angezeigt werden, bevor der Audio-only-Modus aktiviert wird.
+Der Sperrbildschirm oder die Benachrichtigung kann mitten im Übergang kurzzeitig einen veralteten Zustand anzeigen.
 
-Das Anhalten der nahtlosen Wiedergabe zum Ansehen eines Musikvideos kann dazu führen, dass einige Videos schwarz bleiben (solche, deren Audio aus dem Video selbst stammt). Dies lässt sich vermeiden, indem die nahtlose Wiedergabe pausiert wird, bevor ein Song ausgewählt wird."</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Was überhaupt nicht funktioniert</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Übertragung oder Spiegelung von Audio (Chromecast, Bildschirm- oder Audiospiegelung) – nahtlose Wiedergabe wird währenddessen wegen Instabilität pausiert und wird möglicherweise nie funktionieren.
+Wenn du Crossfade pausierst, um ein Musikvideo anzusehen, kann das dazu führen, dass einige Videos schwarz bleiben. Wenn du Crossfade pausierst, bevor du den Song auswählst, vermeidest du das"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Nicht unterstützt</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Casten oder Spiegeln von Audio (Chromecast, Bildschirm- oder Audiospiegelung)
 
-YouTube Music 8.x – Nahtlose Wiedergabe funktioniert erst ab Version 9.x."</string>
+SABR-Wiedergabe (Spoofing von Videostreams deaktiviert)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Credits</string>
   <string name="morphe_music_crossfade_about_credit_summary">Crossfade-Funktion von VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

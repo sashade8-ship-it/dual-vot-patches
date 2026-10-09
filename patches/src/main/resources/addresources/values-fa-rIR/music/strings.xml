@@ -128,32 +128,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">محو متقاطع برای این جلسه متوقف شد</string>
   <string name="morphe_music_crossfade_resumed_toast">محو متقاطع ادامه یافت</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">وقتی محو متقاطع فعال است، حالت ویدئو در دسترس نیست</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">هنگام ارسال یا آینه‌کردن صدا، محو متقاطع متوقف می‌شود. محو متقاطع روی ارسال/آینه‌کردن ناپایدار است و شاید هرگز قابل اصلاح نباشد</string>
   <string name="morphe_music_crossfade_about_title">درباره</string>
-  <string name="morphe_music_crossfade_about_summary">محو متقاطع چگونه کار می‌کند — و چه وقت کار نمی‌کند</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">نحوهٔ کار</string>
-  <string name="morphe_music_crossfade_about_how_summary">"محو متقاطع پایان یک آهنگ را با شروع آهنگ بعدی هم‌پوشان می‌کند؛ یکی را در مدت و منحنی انتخابی شما کم‌کم محو می‌کند و دیگری را بالا می‌آورد.
-
-این ویژگی هنگام رفتن خودکار (وقتی آهنگ خودبه‌خود تمام می‌شود) و هنگام ردکردن دستی اجرا می‌شود — هرکدام کلید جداگانهٔ خود را در بالا دارد. هنگام رفتن خودکار، ترکیب صدا چند ثانیه پیش از پایان آهنگ شروع می‌شود.
-
-به YouTube Music نسخهٔ ۹.x یا جدیدتر نیاز دارد."</string>
-  <string name="morphe_music_crossfade_about_best_title">بهترین عملکرد با</string>
-  <string name="morphe_music_crossfade_about_best_summary">پخش معمول آهنگ‌به‌آهنگ و رفتن خودکار، تکرار یک آهنگ (آهنگ با خودش محو متقاطع می‌شود) و صدای محلی — بلندگوی تلفن، هدفون سیمی، Bluetooth یا USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">کاملاً درست کار نمی‌کند</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"وقتی محو متقاطع روشن است، موزیک‌ویدئوها فقط به‌صورت صوتی پخش می‌شوند (اگر ویدئو را می‌خواهید، پخش تصادفی را لمس طولانی کنید تا مکث شود)
-
-آهنگ‌هایی که از مدت محو شما کوتاه‌ترند ممکن است محو نشوند
-
-صفحهٔ قفل یا اعلان ممکن است در میانهٔ انتقال، برای مدت کوتاهی وضعیت قدیمی را نشان دهد"</string>
-  <string name="morphe_music_crossfade_about_known_title">مشکلات شناخته‌شده</string>
-  <string name="morphe_music_crossfade_about_known_summary">"موزیک‌ویدئویی که آهنگ اول تنظیم شده باشد — یا از خارج صف فعلی شروع شده باشد — ممکن است پیش از فعال‌شدن حالت فقط‌صوتی، برای مدت کوتاهی به‌صورت ویدئو نمایش داده شود
-
-مکث‌کردن محو متقاطع برای تماشای موزیک‌ویدئو ممکن است بعضی ویدئوها را سیاه کند (ویدئوهایی که صدایشان از خود ویدئو می‌آید). پیش از انتخاب آهنگ، محو متقاطع را متوقف کنید تا این مشکل پیش نیاید"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">اصلاً کار نمی‌کند</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"ارسال یا آینه‌کردن صدا (Chromecast، آینه‌کردن صفحه یا صدا) — محو متقاطع چون در این حالت ناپایدار است متوقف می‌شود و شاید هرگز قابل اصلاح نباشد.
-
-YouTube Music نسخهٔ ۸.x — محو متقاطع فقط در نسخهٔ ۹.x و جدیدتر اجرا می‌شود"</string>
   <string name="morphe_music_crossfade_about_credit_title">اعتبار</string>
   <string name="morphe_music_crossfade_about_credit_summary">ویژگی محو متقاطع از VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

@@ -183,7 +183,7 @@ Las pistas descargadas aparecen aquí"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Ocultar selector Audio / Vídeo</string>
   <string name="morphe_music_hide_podcast_episode_download_button_title">Ocultar botón Descargar</string>
-  <string name="morphe_music_hide_podcast_episode_download_button_summary">Oculta el botón de descarga en el programa del pódcast</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Oculta el botón Descargar en la página del podcast</string>
   <string name="morphe_music_hide_explore_shelf_title">Ocultar estantería Explorar</string>
   <string name="morphe_music_hide_filter_bar_title">Ocultar barra de filtro</string>
   <string name="morphe_music_hide_grid_shelves_title">Ocultar estanterías en cuadrícula</string>
@@ -241,32 +241,29 @@ Las pistas descargadas aparecen aquí"</string>
   <string name="morphe_music_crossfade_paused_toast">Fundido entre canciones pausado para esta sesión</string>
   <string name="morphe_music_crossfade_resumed_toast">Fundido entre canciones reanudado</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">El modo de vídeo no está disponible mientras el fundido entre canciones está activado</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">El fundido entre canciones se pausa mientras se transmite o duplica el audio. El fundido entre canciones durante la transmisión o duplicación de audio es inestable y es posible que nunca pueda corregirse</string>
+  <string name="morphe_music_crossfade_sabr_toast">El crossfade está desactivado con la reproducción SABR</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">El crossfade está desactivado mientras se transmite</string>
   <string name="morphe_music_crossfade_about_title">Acerca de</string>
-  <string name="morphe_music_crossfade_about_summary">Cómo funciona el fundido entre canciones, y cuándo no</string>
+  <string name="morphe_music_crossfade_about_summary">Cómo funciona el crossfade y dónde no</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Cómo funciona</string>
-  <string name="morphe_music_crossfade_about_how_summary">"El fundido entre canciones superpone el final de una canción con el comienzo de la siguiente, reduciendo el volumen de una mientras aumenta el volumen de la otra durante la duración y la curva que hayas elegido.
+  <string name="morphe_music_crossfade_about_how_summary">"El crossfade superpone el final de una canción con el comienzo de la siguiente, usando la duración y la curva que hayas configurado.
 
-Funciona con el avance automático (cuando una canción termina por sí sola) y con los cambios manuales, cada uno tiene su propio botón de activación. Con el avance automático, la mezcla comienza unos segundos antes de que termine la canción.
+Funciona con el avance automático y con el salto manual, y cada uno tiene su propio interruptor arriba. En el avance automático, la mezcla comienza unos segundos antes de que termine la canción."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Limitaciones</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Los videos musicales se reproducen solo como audio mientras el crossfade esté activado. Mantén pulsado el botón de reproducción aleatoria para pausar el crossfade y ver el video
 
-Requiere YouTube Music 9.x o posterior."</string>
-  <string name="morphe_music_crossfade_about_best_title">Funciona mejor con</string>
-  <string name="morphe_music_crossfade_about_best_summary">La reproducción normal de canción a canción y el avance automático, la repetición de una canción (la canción se funde consigo misma) y el audio local (altavoz del teléfono, auriculares con cable, Bluetooth o USB).</string>
-  <string name="morphe_music_crossfade_about_quirks_title">No funciona del todo bien</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Los vídeos musicales se reproducen solo con audio cuando el fundido entre canciones está activado (mantén pulsado el botón de reproducción aleatoria para pausarlo si quieres ver el vídeo)
+Un video musical que comienza a reproducirse permanece en modo de video hasta la siguiente canción
 
-Las canciones más cortas que la duración del fundido pueden omitir el efecto
+Las canciones de duración inferior a la del fundido no reciben crossfade
 
-La pantalla de bloqueo o la notificación pueden mostrar brevemente un estado desactualizado durante la transición"</string>
-  <string name="morphe_music_crossfade_about_known_title">Problemas conocidos</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Un vídeo musical establecido como primera canción, o iniciado fuera de la cola actual, puede mostrarse brevemente como vídeo antes de cambiar al modo solo audio
+La pantalla de bloqueo o la notificación pueden mostrar brevemente un estado obsoleto a mitad de la transición
 
-Pausar el fundido para ver un vídeo musical puede dejar algunos vídeos en negro (los que usan el audio del propio vídeo). Pausa el fundido antes de elegir la canción para evitarlo"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">No funciona en absoluto</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Transmisión o duplicación de audio (Chromecast, duplicación de pantalla o de audio): el fundido entre canciones se pausa porque es inestable en estos casos y puede que nunca pueda corregirse.
+Pausar el crossfade para ver un video musical puede dejar algunos videos en negro. Pausar el crossfade antes de elegir la canción evita este problema"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">No compatible</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Transmisión o duplicación de audio (Chromecast, duplicación de pantalla o de audio)
 
-YouTube Music 8.x: el fundido entre canciones solo funciona en la versión 9.x y posteriores"</string>
+Reproducción SABR (suplantación de flujos de video desactivada)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Créditos</string>
   <string name="morphe_music_crossfade_about_credit_summary">Característica de fundido entre canciones por VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

@@ -241,32 +241,29 @@ Stažené skladby se zobrazí zde"</string>
   <string name="morphe_music_crossfade_paused_toast">Přechod mezi skladbami pozastaven pro tuto relaci</string>
   <string name="morphe_music_crossfade_resumed_toast">Přechod mezi skladbami obnoven</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Režim videa není dostupný při zapnutém přechodu mezi skladbami</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Přehrávání s prolínáním je pozastaveno během vysílání nebo zrcadlení zvuku. Prolínání během vysílání/zrcadlení je nestabilní a nemusí být nikdy opraveno.</string>
+  <string name="morphe_music_crossfade_sabr_toast">Crossfade je vypnutý při přehrávání SABR</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade je vypnutý při castingu</string>
   <string name="morphe_music_crossfade_about_title">O aplikaci</string>
-  <string name="morphe_music_crossfade_about_summary">Jak funguje prolínání – a kdy ne.</string>
+  <string name="morphe_music_crossfade_about_summary">Jak crossfade funguje a kde nefunguje</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Jak to funguje</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Prolínání překrývá konec jedné skladby se začátkem další, postupně jednu skladbu zeslabuje, zatímco druhá se zesiluje, a to po dobu a křivku, které si zvolíte.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade překrývá konec jedné skladby se začátkem další, s použitím vámi nastavené délky a křivky.
 
-Funguje s automatickým přechodem (když skladba skončí sama) a s ručním přeskakováním – každé má své vlastní přepnutí výše. U automatického přechodu začíná prolínání o několik sekund před koncem skladby.
+Funguje při automatickém přehrávání další skladby a při ručním přeskakování, každé s vlastním přepínačem výše. Při automatickém přehrávání začíná prolínání několik sekund před koncem skladby."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Omezení</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Hudební videa se při zapnutém crossfade přehrávají pouze jako zvuk. Dlouhým stisknutím tlačítka náhodného přehrávání pozastavíte crossfade a podíváte se na video
 
-Vyžaduje YouTube Music verze 9.x nebo novější."</string>
-  <string name="morphe_music_crossfade_about_best_title">Funguje nejlépe s</string>
-  <string name="morphe_music_crossfade_about_best_summary">Normálním přehráváním skladby po skladbě a automatickým přechodem, opakováním jedné skladby (skladba prolíná sama do sebe) a s lokálním zvukem – reproduktor telefonu, kabelová sluchátka, Bluetooth nebo USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Nefunguje úplně správně</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Hudební videa se přehrávají pouze se zvukem, když je zapnuté plynulé přecházení (dlouhým stisknutím tlačítka přehrávání/pozastavení můžete zvuk vypnout)
+Hudební video, které se začne přehrávat, zůstane v režimu videa až do další skladby
 
-Skladby kratší než doba plynulého přecházení mohou plynulé přecházení přeskočit
+Skladby kratší než doba prolínání se neprolínají
 
-Na zamknuté obrazovce nebo v oznámeních se může krátce zobrazit neaktuální stav během přechodu"</string>
-  <string name="morphe_music_crossfade_about_known_title">Známé problémy</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Hudební video nastavené jako první skladba – nebo přehrávané zvenčí aktuální fronty – se může krátce zobrazit jako video, než se přepne do režimu pouze se zvukem
+Zamykací obrazovka nebo notifikace mohou během přechodu krátce zobrazit zastaralý stav
 
-Přerušení plynulého přecházení pro sledování hudebního videa může způsobit, že některá videa zčernají (zvláště ta, u kterých je zvuk přímo z videa). Přerušení plynulého přecházení před výběrem skladby se tomu vyhne"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Nefunguje vůbec</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Přenos nebo zrcadlení zvuku (Chromecast, zrcadlení obrazovky nebo zvuku) – plynulé přecházení se pozastaví, protože je tam nestabilní a nemusí být nikdy opraveno.
+Pozastavení crossfade kvůli sledování hudebního videa může zanechat některá videa černá. Pozastavení crossfade před výběrem skladby tomu zabrání"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Nepodporováno</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Casting nebo zrcadlení zvuku (Chromecast, zrcadlení obrazovky nebo zvuku)
 
-YouTube Music 8.x – plynulé přecházení funguje pouze ve verzích 9.x a vyšších"</string>
+Přehrávání SABR (předstírání video streamů je vypnuté)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Autorství</string>
   <string name="morphe_music_crossfade_about_credit_summary">Funkce plynulého přecházení od VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

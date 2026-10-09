@@ -241,32 +241,29 @@ Ovdje se prikazuju preuzete pjesme"</string>
   <string name="morphe_music_crossfade_paused_toast">Crossfade je pauziran za ovu sesiju</string>
   <string name="morphe_music_crossfade_resumed_toast">Crossfade nastavljen</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Video mod nije dostupan dok je omogućeno preklapanje</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade je pauziran tijekom emitiranja ili zrcaljenja zvuka. Crossfade putem emitiranja/zrcaljenja je nestabilan i možda se nikad neće popraviti</string>
+  <string name="morphe_music_crossfade_sabr_toast">Crossfade je isključen kod SABR reprodukcije</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade je isključen tijekom emitiranja</string>
   <string name="morphe_music_crossfade_about_title">O aplikaciji</string>
-  <string name="morphe_music_crossfade_about_summary">Kako crossfade radi — a kada ne radi</string>
+  <string name="morphe_music_crossfade_about_summary">Kako crossfade radi i gdje ne radi</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Kako radi</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade preklapa kraj jedne pjesme s početkom sljedeće, pri čemu se jedna stišava dok se druga pojačava prema odabranom trajanju i krivulji.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade preklapa kraj jedne pjesme s početkom sljedeće, koristeći vaše postavke trajanja i krivulje.
 
-Radi pri automatskom prijelazu (kada pjesma završi sama) i kod ručnog preskakanja — svako ima svoju skretnicu iznad. Kod automatskog prijelaza miješanje počinje nekoliko sekundi prije nego pjesma završi.
+Radi kod automatskog prijelaza i ručnog preskakanja, a svaka opcija ima svoj prekidač iznad. Kod automatskog prijelaza stapanje počinje nekoliko sekundi prije kraja pjesme."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Ograničenja</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Glazbeni videozapisi reproduciraju se samo kao zvuk dok je crossfade uključen. Dugim pritiskom na gumb za nasumičnu reprodukciju pauzirajte crossfade i pogledajte videozapis
 
-Zahtijeva YouTube Music 9.x ili noviju inačicu."</string>
-  <string name="morphe_music_crossfade_about_best_title">Najbolje radi s</string>
-  <string name="morphe_music_crossfade_about_best_summary">Normalno reproduciranje pjesme i automatski prijelaz, ponavljanje jedne (pjesma se preslikava na samu sebe) i lokalni zvuk — zvučnik telefona, žičane slušalice, Bluetooth ili USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Ne radi baš kako treba</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Glazbeni videozapisi reproduciraju se samo kao zvuk dok je crossfade uključen (dugo pritisnite nasumično reproduciranje za pauziranje ako želite videozapis)
+Glazbeni videozapis koji započne reprodukciju ostaje u video načinu do sljedeće pjesme
 
-Pjesme kraće od trajanja fadea mogu preskočiti fade
+Pjesme kraće od trajanja stapanja ne koriste crossfade
 
-Zaključani zaslon ili obavijest mogu nakratko prikazati zastarjelo stanje usred prijelaza"</string>
-  <string name="morphe_music_crossfade_about_known_title">Poznati problemi</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Glazbeni videozapis postavljen kao prva pjesma — ili onaj pokrenut izvan trenutnog reda čekanja — može se nakratko prikazati kao videozapis prije nego što se uključi način samo sa zvukom
+Zaključani zaslon ili obavijest mogu nakratko prikazati zastarjelo stanje usred prijelaza
 
-Ako pauzirate crossfade za gledanje glazbenog videozapisa, neki videozapisi mogu ostati crni (oni čiji zvuk dolazi iz samog videozapisa). Pauziranje crossfadea prije odabira pjesme to izbjegava"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Uopće ne radi</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Emitiranje ili zrcaljenje zvuka (Chromecast, zrcaljenje zaslona ili zvuka) — crossfade se pauzira jer je tamo nestabilan i možda se nikad neće popraviti.
+Pauziranje crossfadea radi gledanja glazbenog videozapisa može ostaviti neke videozapise crnima. Pauziranje crossfadea prije odabira pjesme to izbjegava"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Nije podržano</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Emitiranje ili zrcaljenje zvuka (Chromecast, zrcaljenje zaslona ili zvuka)
 
-YouTube Music 8.x — crossfade radi samo na 9.x i novijim inačicama"</string>
+SABR reprodukcija (imitiranje video streamova je isključeno)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Zasluge</string>
   <string name="morphe_music_crossfade_about_credit_summary">Crossfade značajka od VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

@@ -72,32 +72,9 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">क्रॉसफ़ेड इस सत्र के लिए रोका गया</string>
   <string name="morphe_music_crossfade_resumed_toast">क्रॉसफ़ेड फिर से शुरू हुआ</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">क्रॉसफ़ेड सक्षम होने पर वीडियो मोड उपलब्ध नहीं है</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">ऑडियो कास्टिंग या मिररिंग क दौरान क्रॉसफेड रुकि जाइत छै। कास्ट/मिरर पर क्रॉसफेड अस्थिर छै आ शायद कखनो ठीक नहि भ सकय</string>
   <string name="morphe_music_crossfade_about_title">सेशन नियंत्रण अक्षम है</string>
-  <string name="morphe_music_crossfade_about_summary">क्रॉसफेड कोना काम करइत छै — आ जखन नहि करइत छै</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">ई कोना काम करइत छै</string>
-  <string name="morphe_music_crossfade_about_how_summary">"क्रॉसफेड एक गाना क अंत के अगिला गाना क शुरुआत सँ मिलाइत छै, अहाँक चुनल अवधि आ कर्व के अनुसार एकरा कम आ दोसररा बढेत छै।
-
-ई ऑटो-एडवांस (जखन गाना अपने समाप्त होइत छै) आ मैन्युअल स्किप पर चलइत छै — दूनू क अपन टॉगल ऊपर छै। ऑटो-एडवांस पर ब्लेंड गाना समाप्त होय सँ किछ सेकेन्ड पहिले शुरू भइत छै।
-
-YouTube Music 9.x या नय वर्जनक आवश्यकता छै।"</string>
-  <string name="morphe_music_crossfade_about_best_title">सबसँ नीक काम करइत छै</string>
-  <string name="morphe_music_crossfade_about_best_summary">सामान्य गाना-सँ-गाना प्लेबैक आ ऑटो-एडवांस, रिपीट-वन (गाना अपने में क्रॉसफेड होइत छै), आ लोकल ऑडियो — फोन स्पीकर, वायर्ड हेडफ़ोन, ब्लूटूथ, या USB।</string>
-  <string name="morphe_music_crossfade_about_quirks_title">पूरी तरह ठीक सँ काम नहि करइत छै</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"जखन क्रॉसफेड चालू छै तँ म्यूजिक वीडियो केवल ऑडियो के रूप में चलइत छै (जौ अहाँ वीडियो चाहैत छी तँ रोकय लेल शफल के देर सँ दबाऊ)
-
-अहाँक फेड अवधि सँ छोट गाना फेड के छोड़ि सकैत छै
-
-लॉक स्क्रीन या नोटिफिकेशन ट्रांज़िशन क बीच में थोड़ समय लेल पुराना स्थिति देखा सकैत छै"</string>
-  <string name="morphe_music_crossfade_about_known_title">जानल समस्या सभ</string>
-  <string name="morphe_music_crossfade_about_known_summary">"पहल गाना के रूप में सेट संगीत वीडियो — या वर्तमान कतार सँ बाहर शुरू कएल गाना — ऑडियो-ओनली मोड शुरू होय सँ पहिले थोड़ समय लेल वीडियो के रूप में देखा सकैत छै
-
-संगीत वीडियो देखय लेल क्रॉसफेड के रोकय सँ किछ वीडियो काला भ सकैत छै (ओ वीडियो जेकर ऑडियो वीडियो सँ आबय छै)। गाना चुनय सँ पहिलै क्रॉसफेड के रोकला सँ ई समस्या नहि होइत छै"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">बिल्कुल काम नहि करइत छै</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"ऑडियो कास्टिंग या मिररिंग (Chromecast, स्क्रीन या ऑडियो मिररिंग) — क्रॉसफेड रुकि जाइत छै कारण ई ओतय अस्थिर छै आ शायद कखनो ठीक नहि भ सकय।
-
-YouTube Music 8.x — क्रॉसफेड केवल 9.x आ नय वर्जन पर चलइत छै"</string>
   <string name="morphe_music_crossfade_about_credit_title">क्रेडिट</string>
   <string name="morphe_music_crossfade_about_credit_summary">VazerOG द्वारा क्रॉसफेड फीचर</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

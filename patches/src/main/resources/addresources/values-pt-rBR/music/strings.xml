@@ -241,32 +241,29 @@ As faixas baixadas aparecem aqui"</string>
   <string name="morphe_music_crossfade_paused_toast">Crossfade pausado para esta sessão</string>
   <string name="morphe_music_crossfade_resumed_toast">Crossfade retomado</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">O modo de vídeo não está disponível enquanto o crossfade estiver habilitado</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">O crossfade é pausado durante a transmissão ou espelhamento de áudio. O crossfade em transmissão/espelhamento é instável e pode nunca ser corrigido.</string>
+  <string name="morphe_music_crossfade_sabr_toast">O crossfade fica desativado com a reprodução SABR</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">O crossfade fica desativado durante a transmissão</string>
   <string name="morphe_music_crossfade_about_title">Sobre</string>
-  <string name="morphe_music_crossfade_about_summary">Como o crossfade funciona — e quando não funciona</string>
+  <string name="morphe_music_crossfade_about_summary">Como o crossfade funciona e onde ele não funciona</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Como funciona</string>
-  <string name="morphe_music_crossfade_about_how_summary">"O Crossfade sobrepõe o final de uma música ao início da próxima, diminuindo gradualmente o volume de uma enquanto aumenta o da outra, durante a duração e a curva de transição que você escolher.
+  <string name="morphe_music_crossfade_about_how_summary">"O crossfade sobrepõe o final de uma música ao início da próxima, usando a duração e a curva definidas por você.
 
-Ele funciona tanto no avanço automático (quando a música termina naturalmente) e ao pular músicas manualmente — cada modo possui seu próprio botão de ativação acima. No avanço automático, a transição começa alguns segundos antes do fim da música.
+Ele funciona no avanço automático e na troca manual, cada um com seu próprio interruptor acima. No avanço automático, a mescla começa alguns segundos antes de a música terminar."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Limitações</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Videoclipes são reproduzidos somente como áudio enquanto o crossfade estiver ativado. Mantenha pressionado o botão Aleatório para pausar o crossfade e assistir ao vídeo
 
-Requer o YouTube Music 9.x ou mais recente."</string>
-  <string name="morphe_music_crossfade_about_best_title">Funciona melhor com</string>
-  <string name="morphe_music_crossfade_about_best_summary">Reprodução normal entre músicas com avanço automático, repetição de uma única música (a música faz uma transição suave para ela mesma) e reprodução de áudio local — alto-falante do celular, fones de ouvido com fio, Bluetooth ou USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Não funciona muito bem</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Os videoclipes serão reproduzidos apenas como áudio enquanto o Crossfade estiver ativado (mantenha o botão de embaralhar pressionado para pausar se quiser assistir ao vídeo).
+Um videoclipe que inicia a reprodução permanece no modo de vídeo até a próxima música
 
-Músicas com duração menor que o tempo de transição configurado podem não aplicar o Crossfade.
+Músicas mais curtas do que a duração do crossfade não são mescladas
 
-A tela de bloqueio ou a notificação podem exibir temporariamente informações desatualizadas durante a transição entre músicas."</string>
-  <string name="morphe_music_crossfade_about_known_title">Problemas conhecidos</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Um videoclipe definido como a primeira música — ou iniciado fora da fila de reprodução atual — pode ser exibido brevemente como vídeo antes de alternar para o modo somente áudio.
+A tela de bloqueio ou a notificação pode mostrar brevemente um estado desatualizado no meio da transição
 
-Pausar o Crossfade para assistir a um videoclipe pode fazer com que alguns vídeos fiquem com a tela preta (aqueles cujo áudio é reproduzido diretamente do próprio vídeo). Para evitar isso, pause o Crossfade antes de selecionar a música."</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Não funciona</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Transmissão ou espelhamento de áudio (Chromecast, espelhamento de tela ou de áudio) — o Crossfade é pausado, pois é instável nesses modos e talvez nunca seja possível corrigir essa limitação.
+Pausar o crossfade para assistir a um videoclipe pode deixar alguns vídeos pretos. Pausar o crossfade antes de escolher a música evita isso"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Não suportado</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Transmissão ou espelhamento de áudio (Chromecast, espelhamento de tela ou de áudio)
 
-YouTube Music 8.x — o Crossfade funciona apenas no YouTube Music 9.x ou mais recente."</string>
+Reprodução SABR (spoof de streams de vídeo desativado)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Créditos</string>
   <string name="morphe_music_crossfade_about_credit_summary">Recurso de crossfade por VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

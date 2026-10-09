@@ -169,13 +169,15 @@ public final class ChannelSearchPatch {
     private static String lastQuery = "";
     private static long lastQueryTime;
 
+    private static WeakReference<SearchController> activeControllerRef = new WeakReference<>(null);
+
     /**
      * Injection point.
      * Called on main thread.
      */
     public static void setBrowseId(@Nullable String browseId) {
         String nextBrowseId = browseId == null ? "" : browseId;
-        if (isChannelId(nextBrowseId) && !nextBrowseId.equals(currentBrowseId)) {
+        if (!nextBrowseId.equals(currentBrowseId)) {
             pendingChannelSearchBrowseId = "";
         }
         currentBrowseId = nextBrowseId;
@@ -411,7 +413,6 @@ public final class ChannelSearchPatch {
             }
 
             String channelId = pendingChannelSearchBrowseId;
-            pendingChannelSearchBrowseId = "";
             if (!isChannelId(channelId)) {
                 return false;
             }
@@ -430,7 +431,16 @@ public final class ChannelSearchPatch {
 
             Logger.printDebug(() -> "Searching channel: " + channelId + " for: " + query);
 
+            SearchController previousController = activeControllerRef.get();
+            if (previousController != null) {
+                previousController.cancel();
+                if (previousController.dialog != null && previousController.dialog.isShowing()) {
+                    previousController.dialog.dismiss();
+                }
+            }
+
             SearchController controller = new SearchController(activity, query);
+            activeControllerRef = new WeakReference<>(controller);
             ChannelSearchRequest.fetchProgressive(channelId, query, controller);
 
             return true;
@@ -540,14 +550,6 @@ public final class ChannelSearchPatch {
         sortBarLayout.addView(sortButton);
 
         return sortBarLayout;
-    }
-
-    private static void sortAndRefreshList(List<ChannelSearchResult> results, SortOption sortOption,
-                                           Activity activity, LinearLayout listContainer,
-                                           ScrollView scrollView, SheetBottomDialog.SlideDialog dialog) {
-        List<ChannelSearchResult> sorted = sortOption.sort(new ArrayList<>(results));
-        populateList(activity, sorted, listContainer, dialog);
-        scrollView.scrollTo(0, 0);
     }
 
     private static void populateList(Activity activity, List<ChannelSearchResult> results,

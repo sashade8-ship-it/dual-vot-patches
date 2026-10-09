@@ -158,7 +158,7 @@ Los cambios incluyen:
   <string name="morphe_hide_snackbar_title">Ocultar notificaciones emergentes</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Ocultar normas para suscriptores</string>
   <string name="morphe_hide_sync_button_title">Ocultar botón \'Sincronizar con vídeo\'</string>
-  <string name="morphe_hide_tap_and_hold_gradient_title">Ocultar degradado de tocar y mantener pulsado</string>
+  <string name="morphe_hide_tap_and_hold_gradient_title">Ocultar degradado al tocar y mantener pulsado</string>
   <string name="morphe_hide_tap_and_hold_gradient_summary">Oculta el degradado de los controles del reproductor al deslizar el dedo mientras se mantiene pulsado para acelerar</string>
   <string name="morphe_hide_timed_reactions_title">Ocultar reacciones sincronizadas</string>
   <string name="morphe_hide_timed_reactions_summary">Oculta la función que permite a los usuarios reaccionar con emojis en la sección de comentarios y el chat en directo</string>
@@ -513,8 +513,8 @@ Tu clave API nunca debe compartirse. Cualquiera que tenga acceso a ella puede us
   <string name="morphe_loop_video_range_toast_on">Repetición de %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Tiempo no válido</string>
   <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Mostrar botón Imagen en imagen</string>
-  <string name="morphe_pip_button_flyout_title">Mostrar menú Imagen en imagen</string>
+  <string name="morphe_pip_button_overlay_title">Mostrar botón de imagen en imagen</string>
+  <string name="morphe_pip_button_flyout_title">Mostrar menú de imagen en imagen</string>
   <string name="morphe_pip_button_flyout_name">Cambiar a imagen en imagen</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Mostrar botón \'Reproducir todo\'</string>
@@ -954,7 +954,7 @@ Configuración → Reproducción (o Reproducción automática) → Reproducción
   <string name="morphe_disable_playlist_autoplay_title">Desactivar reproducción automática de listas de reproducción</string>
   <string name="morphe_disable_playlist_autoplay_summary">Evita que las listas de reproducción pasen automáticamente al siguiente vídeo</string>
   <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
-  <string name="morphe_disable_continue_watching_prompt_title">Desactivar mensaje \'¿Seguir viendo?\'</string>
+  <string name="morphe_disable_continue_watching_prompt_title">Desactivar diálogo \'¿Seguir viendo?\'</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Salir del modo de pantalla completa al finalizar el vídeo</string>
   <string name="morphe_exit_fullscreen_entry_1">Desactivado</string>

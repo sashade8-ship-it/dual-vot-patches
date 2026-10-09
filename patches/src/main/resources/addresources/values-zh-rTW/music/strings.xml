@@ -241,32 +241,29 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">已暫停此工作階段的淡入淡出效果</string>
   <string name="morphe_music_crossfade_resumed_toast">已復原淡入淡出效果</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">啟用淡入淡出效果時，視訊模式不可用</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">投射或鏡像音訊時，淡入淡出效果會暫停。投射／鏡像時的淡入淡出效果不穩定，且可能永遠無法得到修正。</string>
+  <string name="morphe_music_crossfade_sabr_toast">SABR 播放時交叉淡化已關閉</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">投放時交叉淡化已關閉</string>
   <string name="morphe_music_crossfade_about_title">關於</string>
-  <string name="morphe_music_crossfade_about_summary">淡入淡出功能如何運作 — 以及何時無法運作</string>
+  <string name="morphe_music_crossfade_about_summary">交叉淡化如何運作及不適用的情況</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">運作方式</string>
-  <string name="morphe_music_crossfade_about_how_summary">"淡入淡出功能會將一首歌的結尾與下一首歌的開頭重疊，在您選擇的時長和曲線之上，逐漸降低一首歌的音量，同時逐漸提高另一首歌的音量。
+  <string name="morphe_music_crossfade_about_how_summary">"交叉淡化會根據你設定的時間長度和曲線，讓一首歌曲的結尾與下一首歌曲的開頭重疊。
 
-它在自動進階（歌曲自行結束時）和手動跳過時運作 — 上方各有自己的切換開關。在自動進階時，淡入淡出效果會在歌曲結束前幾秒開始。
+自動播放下一首和手動跳過時都會執行，兩者在上方各有自己的開關。自動播放下一首時，混合會在歌曲結束前幾秒開始。"</string>
+  <string name="morphe_music_crossfade_about_quirks_title">限制</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"開啟交叉淡化時，音樂影片只會以音訊形式播放。長按隨機播放可暫停交叉淡化並觀看影片
 
-需要 YouTube Music 9.x 或更新版本。"</string>
-  <string name="morphe_music_crossfade_about_best_title">最適合</string>
-  <string name="morphe_music_crossfade_about_best_summary">正常的歌曲播放和自動進階、單曲循環（歌曲會淡入淡出自身）、以及本機音訊 — 手機揚聲器、有線耳機、藍牙或 USB。</string>
-  <string name="morphe_music_crossfade_about_quirks_title">運作不太順暢</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"播放音樂影片時，僅播放音訊（如果您想暫停影片，請長按隨機播放按鈕）
+開始播放的音樂影片會維持影片模式，直到下一首歌
 
-低於淡出時長的歌曲可能會跳過淡出效果
+比淡化時間短的歌曲不會進行交叉淡化
 
-鎖定畫面或通知可能會短暫顯示過時的狀態，尤其是在轉換過程中"</string>
-  <string name="morphe_music_crossfade_about_known_title">已知問題</string>
-  <string name="morphe_music_crossfade_about_known_summary">"將音樂影片設定為第一首歌曲，或從目前佇列外部啟動的音樂影片，可能會在僅播放音訊模式開始前短暫顯示影片
+鎖定畫面或通知在過渡期間可能會短暫顯示過時狀態
 
-暫停淡出效果以觀看音樂影片可能會導致部分影片畫面變黑（那些音訊來自影片本身的影片）。在選擇歌曲之前暫停淡出效果可以避免此情況"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">完全無法運作</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"串流或鏡像音訊（Chromecast、螢幕或音訊鏡像）—淡出效果會暫停，因為在那裡並不穩定，而且可能無法修正。
+暫停交叉淡化以觀看音樂影片時，部分影片可能會變成黑畫面。在選擇歌曲前暫停交叉淡化即可避免此情況"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">不支援</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"投放或鏡像音訊（Chromecast、螢幕鏡像或音訊鏡像）
 
-YouTube Music 8.x — 淡出效果僅在 9.x 及更高版本中運行"</string>
+SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_crossfade_about_credit_title">鳴謝</string>
   <string name="morphe_music_crossfade_about_credit_summary">Crossfade 功能由 VazerOG 提供</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

@@ -241,32 +241,9 @@ Yüklənilmiş treklər burada görünür"</string>
   <string name="morphe_music_crossfade_paused_toast">Bu sessiya üçün Çarpaz Solma dayandırıldı</string>
   <string name="morphe_music_crossfade_resumed_toast">Çarpaz Soldurma yenidən başladı</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Çarpaz Soldurma işlək olduqda video rejimi əlçatan deyil</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Səs verilərkən yaxud əks etdirilərkən çarpaz soldurma dayandırılır. Veriliş/əksetmə üzərindən çarpaz soldurma sabit deyil və heç vaxt düzəldilməyə bilər</string>
   <string name="morphe_music_crossfade_about_title">Haqqında</string>
-  <string name="morphe_music_crossfade_about_summary">Çarpaz soldurma necə işləyir — və hansı hallarda işləmir</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Bu necə işləyir</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Çarpaz soldurma, seçdiyiniz müddət və əyri boyunca digəri yuxarı qalxdıqca o biri aşağı solarkən, bir mahnının sonunu növbətinin əvvəli ilə üst-üstə salır.
-
-​O, birbaşa irəliləmə (mahnı öz-özünə bitdikdə) və əl ilə keçidlərdə işləyir — hər birinin yuxarıda öz keçid açarı var. Birbaşa irəliləmədə qarışma mahnının bitməsindən bir neçə saniyə əvvəl başlayır.
-
-​YouTube Music 9.x yaxud daha yenisi tələb olunur."</string>
-  <string name="morphe_music_crossfade_about_best_title">Ən yaxşı şəkildə işləyir</string>
-  <string name="morphe_music_crossfade_about_best_summary">Normal mahnıdan mahnıya səsləndirmə və birbaşa irəliləmə, təkrarlama (mahnı öz-özünə çarpaz solur) və yerli səs — telefon dinamiki, simli qulaqlıqlar, Bluetooth və ya USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Tamamilə düzgün işləmir</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Musiqi videoları çarpaz soldurma işlək olduqda yalnız səs kimi səsləndirilir ( videonu istəyirsinizsə, dayandırmaq üçün qarışdırmaya uzun basın)
-
-Soldurma müddətinizdən qısa olan mahnılar soldurmanı keçə bilər
-
-Kilid ekranı və ya bildiriş qısa müddətdə keçidin ortasında köhnəlmiş vəziyyət göstərə bilər"</string>
-  <string name="morphe_music_crossfade_about_known_title">Məlum problemlər</string>
-  <string name="morphe_music_crossfade_about_known_summary">"İlk mahnı kimi təyin edilən və ya hazırkı növbədən kənarda başlayan musiqi videosu yalnız səs rejimi işə düşməzdən əvvəl qısa müddətdə video kimi görünə bilər
-
-Musiqi videosuna baxmaq üçün çarpaz soldurmanı dayandırmaq bəzi videoları (səsi videonun özündən gələn videoları) qara edə bilər. Siz mahnını seçməzdən əvvəl çarpaz soldurmanı dayandırmaq bunun qarşısını alır"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Heç işləmir</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Səsin verilməsi və ya əks etdirilməsi (Chromecast, ekran və ya səs əks etdirmə) — çarpaz soldurma dayandırılır, çünki orada qeyri-sabitdir və heç vaxt düzəldilməyə bilər.
-
-YouTube Music 8.x — çarpaz soldurma yalnız 9.x və daha yenisində işləyir"</string>
   <string name="morphe_music_crossfade_about_credit_title">Hazırladı</string>
   <string name="morphe_music_crossfade_about_credit_summary">VazerOG tərəfindən Çarpaz soldurma xüsusiyyəti</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

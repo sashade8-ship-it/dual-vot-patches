@@ -158,13 +158,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_snackbar_title">スナックバー通知を非表示</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">チャンネル登録者のガイドラインを非表示</string>
   <string name="morphe_hide_sync_button_title">「動画に同期」ボタンを非表示</string>
-  <string name="morphe_hide_tap_and_hold_gradient_title">タップ長押しのグラデーションを非表示にする</string>
-  <string name="morphe_hide_tap_and_hold_gradient_summary">速度を上げるために長押ししたまま指をスライドすると表示されるプレーヤーコントロールのグラデーションを非表示にします</string>
+  <string name="morphe_hide_tap_and_hold_gradient_title">長押し倍速再生の表示の不具合を修正</string>
+  <string name="morphe_hide_tap_and_hold_gradient_summary">長押し倍速再生中に指を縦にスライドするとプレーヤー画面の上下が暗くなる不具合を修正します</string>
   <string name="morphe_hide_timed_reactions_title">Timed Reaction を非表示</string>
   <string name="morphe_hide_timed_reactions_summary">コメント欄やライブ配信のチャット欄で絵文字を使ってリアクションする機能 (ハート アイコン ボタン) を非表示にします</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">「ヘルプとフィードバック」を非表示</string>
-  <string name="morphe_hide_help_feedback_menu_summary">検索結果などで三点リーダーボタンを使用する際に、「ヘルプ &amp; フィードバック」メニューを非表示にします</string>
+  <string name="morphe_hide_help_feedback_menu_summary">検索結果などのツールバーに表示される 3 点ボタンから呼び出されるメニューの「ヘルプとフィードバック」を非表示にします</string>
   <string name="morphe_hide_handle_title">ハンドルを非表示</string>
   <string name="morphe_hide_handle_summary">「You」タブでチャンネルハンドルを非表示にします</string>
   <string name="morphe_hide_video_title_title">動画のタイトルを非表示</string>
@@ -515,8 +515,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_loop_video_range_invalid_time">無効なリピート区間です</string>
   <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
   <string name="morphe_pip_button_overlay_title">ピクチャー イン ピクチャー ボタンを表示</string>
-  <string name="morphe_pip_button_flyout_title">ピクチャー イン ピクチャー メニューを表示</string>
-  <string name="morphe_pip_button_flyout_name">ピクチャー イン ピクチャーに切り替え</string>
+  <string name="morphe_pip_button_flyout_title">「ピクチャー イン ピクチャーで再生」を表示</string>
+  <string name="morphe_pip_button_flyout_name">ピクチャー イン ピクチャーで再生</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">「すべて再生」ボタンを表示</string>
   <string name="morphe_play_all_button_summary">"タップするとチャンネルのすべての動画から成るプレイリストを生成します。長押しすると元の状態に戻ります
@@ -956,7 +956,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_disable_playlist_autoplay_title">プレイリストの自動再生を無効化</string>
   <string name="morphe_disable_playlist_autoplay_summary">プレイリストの次の動画を自動的に再生する機能を無効にします</string>
   <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
-  <string name="morphe_disable_continue_watching_prompt_title">「続きを見ますか？」プロンプトを無効にする</string>
+  <string name="morphe_disable_continue_watching_prompt_title">「続きを視聴しますか？」ポップアップを無効化</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">再生終了時に全画面表示を解除</string>
   <string name="morphe_exit_fullscreen_entry_1">無効</string>

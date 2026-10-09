@@ -241,32 +241,29 @@ A letöltött számok itt jelennek meg"</string>
   <string name="morphe_music_crossfade_paused_toast">Az áttűnés szünetel ebben a munkamenetben</string>
   <string name="morphe_music_crossfade_resumed_toast">Áttűnés folytatva</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Bekapcsolt áttűnés mellett a videómód nem használható</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">A hangolás szünetel a hang vagy a képmegosztás közben. A hangolás közbeni vagy képmegosztás közbeni átmenet instabil, és előfordulhat, hogy soha nem javítható ki.</string>
+  <string name="morphe_music_crossfade_sabr_toast">A crossfade ki van kapcsolva SABR lejátszásnál</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">A crossfade ki van kapcsolva casting közben</string>
   <string name="morphe_music_crossfade_about_title">Névjegy</string>
-  <string name="morphe_music_crossfade_about_summary">A hangolás működése – és mikor nem működik</string>
+  <string name="morphe_music_crossfade_about_summary">Hogyan működik a crossfade, és hol nem működik</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">A működése</string>
-  <string name="morphe_music_crossfade_about_how_summary">"A hangolás a következő szám elején átfedésben kezeli az egyik szám végét, enyhítve az egyiket, miközben a másik a kiválasztott időtartamon és görbén hangzik. 
+  <string name="morphe_music_crossfade_about_how_summary">"A crossfade átfedi az egyik szám végét a következő szám elejével, a beállított időtartamot és görbét használva.
 
-Automatikus lejátszás esetén (amikor egy szám magától befejez) és manuális átlépés esetén is működik – mindkettőnek van egy saját kapcsolója fent. Az automatikus lejátszásnál az átmenet néhány másodperccel a dal vége előtt kezdődik.
+Automatikus továbblépésnél és kézi váltásnál is működik, mindkettőhöz külön kapcsoló található fent. Automatikus továbblépésnél az átkeverés néhány másodperccel a szám vége előtt kezdődik."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Korlátok</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Ha a crossfade be van kapcsolva, a zenei videók csak hangként játszódnak le. Tartsd lenyomva a shuffle gombot a crossfade szüneteltetéséhez és a videó megtekintéséhez.
 
-Szükséges a YouTube Music 9.x vagy újabb verzió."</string>
-  <string name="morphe_music_crossfade_about_best_title">Legjobban illik hozzá</string>
-  <string name="morphe_music_crossfade_about_best_summary">Normál számok közötti lejátszás és automatikus lejátszás, egy szám ismétlése (a szám önmagába hangol), és helyi hang – telefonhangszóró, vezetékes fülhallgató, Bluetooth vagy USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Nem igazán működik megfelelően</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"A zenevideók csak hangként játszódnak le, ha a keresztátmenet be van kapcsolva (nyomja meg hosszan a keverés gombot a szüneteltetéshez, ha szeretné a videót).
+Amelyik zenei videó elindítja a lejátszást, videó módban marad a következő számig.
 
-A keresztátmenet időtartamánál rövidebb számok esetében kihagyhatja a keresztátmenetet.
+A fade időtartamnál rövidebb számok nem lesznek átkeverve.
 
-A zárlácon vagy az értesítésben pillanatnyilag régi állapot látható lehet átmenet közben."</string>
-  <string name="morphe_music_crossfade_about_known_title">Ismert problémák</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Ha egy zenevideó van beállítva első számként – vagy egy másik forrásból indítva – előfordulhat, hogy rövid ideig videóként jelenik meg, mielőtt elindul a hangtörténeti mód.
+Az átmenet közben a zárképernyő vagy az értesítés röviden elavult állapotot mutathat.
 
-A keresztátmenet szüneteltetése zenevideó nézéséhez fekete képernyőt eredményezhet egyes videóknál (azoknál, amelyek hangja a videóból származik). A keresztátmenet szüneteltetése a szám kiválasztása előtt elkerüli ezt."</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Egyáltalán nem működik</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"A hangvetítés vagy tükrözés (Chromecast, képernyő vagy hangtükrözés) esetén a keresztátmenet szünetel, mert ott instabil, és a probléma nem feltétlenül javítható.
+A crossfade szüneteltetése a zenei videó megtekintéséhez néhány videót feketén hagyhat. Ha a crossfade-et a szám kiválasztása előtt szünetelteted, ez elkerülhető"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Nem támogatott</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Casting vagy hangtükrözés (Chromecast, képernyő- vagy hangtükrözés)
 
-YouTube Music 8.x – a keresztátmenet csak a 9.x és újabb verziókon fut."</string>
+SABR lejátszás (a videostreamek spoofolása kikapcsolva)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Közreműködők</string>
   <string name="morphe_music_crossfade_about_credit_summary">A keresztátmenet funkciót VazerOG készítette</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

@@ -241,32 +241,29 @@ Các bài hát đã tải sẽ xuất hiện ở đây"</string>
   <string name="morphe_music_crossfade_paused_toast">Hiệu ứng chuyển bài đã tạm dừng cho phiên phát này</string>
   <string name="morphe_music_crossfade_resumed_toast">Hiệu ứng chuyển bài đã được bật lại</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Không thể dùng chế độ video khi đang bật hiệu ứng chuyển bài</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Hiệu ứng chuyển bài sẽ tạm dừng khi truyền hoặc chiếu âm thanh. Trong trường hợp này, tính năng có thể không bao giờ được khắc phục hoàn toàn</string>
+  <string name="morphe_music_crossfade_sabr_toast">Crossfade bị tắt khi phát SABR</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade bị tắt khi đang phát lên thiết bị khác</string>
   <string name="morphe_music_crossfade_about_title">Giới thiệu</string>
-  <string name="morphe_music_crossfade_about_summary">Bấm vào đây để biết khi nào hiệu ứng chuyển bài hoạt động và khi nào không</string>
+  <string name="morphe_music_crossfade_about_summary">Cách crossfade hoạt động và những trường hợp không hoạt động</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Cơ chế hoạt động</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Hiệu ứng chuyển bài sẽ giảm âm lượng đoạn cuối bài hát hiện tại, sau đó ghép với đoạn đầu bài hát tiếp theo được tăng âm lượng lên, tùy theo thời lượng và hiệu ứng chuyển mà bạn đã chọn.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade chồng phần cuối của bài hát này với phần đầu của bài hát tiếp theo, sử dụng thời lượng và đường cong của bạn.
 
-Tính năng này hoạt động khi tự động chuyển bài (lúc nghe hết bài hát) và khi bạn tự chuyển bài khác - mỗi chế độ đều có một cài đặt riêng phía trên. Khi tự động chuyển bài, hiệu ứng sẽ bắt đầu vài giây trước khi bài hát kết thúc.
+Nó chạy khi tự động chuyển bài và khi chuyển bài thủ công, mỗi chế độ có công tắc riêng ở phía trên. Khi tự động chuyển bài, phần hòa trộn bắt đầu vài giây trước khi bài hát kết thúc."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Hạn chế</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Video ca nhạc chỉ phát dưới dạng âm thanh khi bật crossfade. Nhấn giữ nút phát ngẫu nhiên để tạm dừng crossfade và xem video
 
-Yêu cầu YT Music 9.x hoặc mới hơn."</string>
-  <string name="morphe_music_crossfade_about_best_title">Hiệu quả nhất khi</string>
-  <string name="morphe_music_crossfade_about_best_summary">Nghe nhạc thông thường, khi tự động chuyển bài, hay đang lặp một bài hát (phát đi phát lại một bài) và nghe trực tiếp từ loa điện thoại, tai nghe có dây, Bluetooth hoặc USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Chưa thực sự tốt</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Video nhạc sẽ chỉ phát nhạc khi bật hiệu ứng chuyển bài (bấm giữ nút trộn bài để tạm dừng nếu bạn muốn xem video)
+Video ca nhạc bắt đầu phát sẽ tiếp tục ở chế độ video cho đến bài hát tiếp theo
 
-Các bài hát ngắn hơn thời lượng chuyển bài có thể bỏ qua hiệu ứng chuyển bài
+Các bài hát ngắn hơn thời lượng crossfade sẽ không được áp dụng crossfade
 
-Màn hình khóa hoặc thông báo có thể hiển thị trạng thái cũ trong quá trình chuyển bài"</string>
-  <string name="morphe_music_crossfade_about_known_title">Lỗi đã biết</string>
-  <string name="morphe_music_crossfade_about_known_summary">"Video nhạc ở đầu hàng chờ - hoặc không phát từ hàng chờ có thể xuất hiện dưới dạng video trong chốt lát trước khi chuyển sang chế độ âm thanh
+Màn hình khóa hoặc thông báo có thể hiển thị trạng thái cũ trong giây lát giữa quá trình chuyển tiếp
 
-Tạm dừng hiệu ứng chuyển bài để xem video âm nhạc có thể khiến một số video hiển thị màn hình đen (đặc biệt là những video lấy âm thanh trực tiếp từ chính luồng video). Để tránh lỗi này, hãy dừng hiệu ứng chuyển bài trước khi phát bài hát"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Không hoạt động chút nào</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Truyền hoặc chiếu âm thanh (Chromecast, chiếu màn hình hoặc âm thanh) – hiệu ứng chuyển tiếp sẽ tạm dừng vì nó không ổn định trong trường hợp này và có thể không bao giờ được khắc phục hoàn toàn.
+Tạm dừng crossfade để xem video ca nhạc có thể khiến một số video bị màn hình đen. Tạm dừng crossfade trước khi chọn bài hát sẽ tránh được điều này"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Không hỗ trợ</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Truyền hoặc phản chiếu âm thanh (Chromecast, phản chiếu màn hình hoặc âm thanh)
 
-YouTube Music 8.x – hiệu ứng chuyển tiếp chỉ chạy trên 9.x trở lên"</string>
+Phát SABR (đã tắt giả lập luồng video)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Đóng góp</string>
   <string name="morphe_music_crossfade_about_credit_summary">Hiệu ứng chuyển bài do VazerOG phát triển</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

@@ -241,32 +241,29 @@ Nedladdade spår visas här"</string>
   <string name="morphe_music_crossfade_paused_toast">Övertoningar pausades för den här sessionen</string>
   <string name="morphe_music_crossfade_resumed_toast">Övertoningar återupptogs</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videoläge är inte tillgängligt när övertoningar är aktiverade</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade pausas vid casting eller spegling av ljud. Crossfade över cast/spegling är instabilt och kanske aldrig går att åtgärda</string>
+  <string name="morphe_music_crossfade_sabr_toast">Crossfade är avstängt vid SABR-uppspelning</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade är avstängt under casting</string>
   <string name="morphe_music_crossfade_about_title">Om</string>
-  <string name="morphe_music_crossfade_about_summary">Hur crossfade fungerar — och när det inte gör det</string>
+  <string name="morphe_music_crossfade_about_summary">Hur crossfade fungerar och var det inte fungerar</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Hur det fungerar</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade överlappar slutet av en låt med början av nästa, tonar ner en medan den andra kommer upp under vald varaktighet och kurva.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade överlappar slutet av en låt med början av nästa, med din varaktighet och kurva.
 
-Det fungerar vid automatisk övergång (när en låt slutar av sig själv) och vid manuella hopp — var och en har sin egen växel ovan. Vid automatisk övergång startar blandningen några sekunder innan låten slutar.
+Det körs vid automatisk vidarekoppling och vid manuell överhoppning, var och en med sitt eget reglage ovanför. Vid automatisk vidarekoppling börjar övergången några sekunder innan låten slutar."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Begränsningar</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Musikvideor spelas bara som ljud medan crossfade är på. Håll nedtryckt på slumpvis för att pausa crossfade och titta på videon
 
-Kräver YouTube Music 9.x eller nyare."</string>
-  <string name="morphe_music_crossfade_about_best_title">Fungerar bäst med</string>
-  <string name="morphe_music_crossfade_about_best_summary">Vanlig låt-till-låt-uppspelning och automatisk övergång, repeat-ett (låten korsfasar in i sig själv) och lokalt ljud — telefonhögtalare, trådbundna hörlurar, Bluetooth eller USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Fungerar inte riktigt som det ska</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Musikvideor spelas endast som ljud när crossfade är på (håll ned shuffle-knappen för att pausa om du vill ha videon)
+En musikvideo som börjar spelas förblir i videoläge tills nästa låt
 
-Låtar kortare än din toningsvaraktighet kan hoppa över toningen
+Låtar som är kortare än övergångstiden crossfadas inte
 
-Låsskärmen eller aviseringen kan tillfälligt visa ett inaktuellt tillstånd mitt i övergången"</string>
-  <string name="morphe_music_crossfade_about_known_title">Kända problem</string>
-  <string name="morphe_music_crossfade_about_known_summary">"En musikvideo som är inställd som första låt — eller en som startats utanför den aktuella kön — kan tillfälligt visas som video innan läget för enbart ljud aktiveras
+Låsskärmen eller aviseringen kan tillfälligt visa ett inaktuellt tillstånd mitt i övergången
 
-Att pausa crossfade för att titta på en musikvideo kan göra vissa videor svarta (de vars ljud kommer från själva videon). Att pausa crossfade innan du väljer låten undviker det"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Fungerar inte alls</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Casting eller spegling av ljud (Chromecast, skärm- eller ljudspegling) — crossfade pausas eftersom det är instabilt där och kanske aldrig går att åtgärda.
+Att pausa crossfade för att titta på en musikvideo kan lämna vissa videor svarta. Att pausa crossfade innan du väljer låten undviker det"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Stöds inte</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Casting eller spegling av ljud (Chromecast, skärmspegling eller ljudspegling)
 
-YouTube Music 8.x — crossfade fungerar endast på 9.x och nyare"</string>
+SABR-uppspelning (spoofing av videoströmmar avstängd)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Kredit</string>
   <string name="morphe_music_crossfade_about_credit_summary">Crossfade-funktion av VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

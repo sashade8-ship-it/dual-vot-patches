@@ -241,32 +241,29 @@ Bu açıkken, İndirilenler sekmesi bu parçaları Music Premium çevrimdışı 
   <string name="morphe_music_crossfade_paused_toast">Geçiş bu oturum için duraklatıldı</string>
   <string name="morphe_music_crossfade_resumed_toast">Geçiş devam ettirildi</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Geçiş etkinken video modu kullanılamaz</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">Ses yayınlama veya yansıtma sırasında geçiş duraklatılır. Geçiş yayın/yansıtma\'da kararsızdır ve asla düzeltilemeyebilir</string>
+  <string name="morphe_music_crossfade_sabr_toast">SABR oynatmada çapraz geçiş kapalı</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Yayınlama sırasında çapraz geçiş kapalı</string>
   <string name="morphe_music_crossfade_about_title">Hakkında</string>
-  <string name="morphe_music_crossfade_about_summary">Geçişin nasıl çalıştığı — ve ne zaman çalışmadığı</string>
+  <string name="morphe_music_crossfade_about_summary">Çapraz geçiş nasıl çalışır ve nerede çalışmaz</string>
   <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Nasıl çalışır</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Geçiş, bir şarkının sonunu bir sonraki şarkının başlangıcıyla örtüştürür, seçtiğiniz süre ve eğri boyunca biri kısılırken diğeri yükselir.
+  <string name="morphe_music_crossfade_about_how_summary">"Çapraz geçiş, belirlediğiniz süreyi ve eğriyi kullanarak bir şarkının sonunu bir sonrakinin başlangıcıyla üst üste bindirir.
 
-Otomatik ilerleme (bir şarkı kendi kendine bittiğinde) ve manuel atlamalarda çalışır — her birinin yukarıda kendi ayarı bulunur. Otomatik ilerlemede, karıştırma şarkı bitiminden birkaç saniye önce başlar.
+Hem otomatik ilerlemede hem de elle atlamada çalışır; her biri için yukarıda ayrı bir anahtar bulunur. Otomatik ilerlemede geçiş, şarkı bitmeden birkaç saniye önce başlar."</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Sınırlamalar</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Çapraz geçiş açıkken müzik videoları yalnızca ses olarak oynatılır. Çapraz geçişi duraklatmak ve videoyu izlemek için karıştır düğmesine uzun basın
 
-YouTube Music 9.x veya daha yenisi gerekir."</string>
-  <string name="morphe_music_crossfade_about_best_title">En iyi şekilde çalışır</string>
-  <string name="morphe_music_crossfade_about_best_summary">Normal şarkıdan şarkıya çalma ve otomatik ilerleme, tek tekrar (şarkı kendisiyle geçiş yapar) ve yerel ses — telefon hoparlörü, kablolu kulaklıklar, Bluetooth veya USB.</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Tam olarak çalışmıyor</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Müzik videoları, geçiş açıkken yalnızca ses olarak çalınır (video için karıştırmaya uzun basarak durdurabilirsiniz)
+Oynatması başlayan bir müzik videosu, sonraki şarkıya kadar video modunda kalır
 
-Solma süresinden daha kısa olan şarkılar solmayı atlayabilir
+Geçiş süresinden daha kısa şarkılar çapraz geçişe dahil edilmez
 
-Kilit ekranı veya bildirim, geçiş sırasında kısa süre eski bir durumu gösterebilir"</string>
-  <string name="morphe_music_crossfade_about_known_title">Bilinen sorunlar</string>
-  <string name="morphe_music_crossfade_about_known_summary">"İlk şarkı olarak ayarlanan — veya mevcut kuyruğun dışından başlatılan — müzik videosu yalnızca ses modu devreye girmeden önce kısa bir süre video olarak görünebilir
+Kilit ekranı veya bildirim, geçiş sırasında kısa bir süre güncel olmayan bir durum gösterebilir
 
-Bir müzik videosunu izlemek için geçişi duraklatmak bazı videoların siyah kalmasına neden olabilir (sesi videonun kendisinden gelenlerin). Şarkıyı seçmeden önce çapraz geçişi duraklatmak bunu önler"</string>
-  <string name="morphe_music_crossfade_about_unsupported_title">Hiç çalışmıyor</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Ses yayınlama veya yansıtma (Chromecast, ekran veya ses yansıtma) — geçiş orada kararsız olduğu ve düzeltilemeyebileceği için duraklatılır.
+Müzik videosu izlemek için çapraz geçişi duraklatmak bazı videoların siyah görünmesine neden olabilir. Şarkıyı seçmeden önce çapraz geçişi duraklatmak bunu önler"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Desteklenmiyor</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Ses yayınlama veya yansıtma (Chromecast, ekran veya ses yansıtma)
 
-YouTube Music 8.x — geçiş yalnızca 9.x ve sonraki sürümlerde çalışır"</string>
+SABR oynatma (video akışlarını taklit etme kapalı)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Takdir</string>
   <string name="morphe_music_crossfade_about_credit_summary">Geçiş özelliği VazerOG tarafından geliştirilmiştir</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
