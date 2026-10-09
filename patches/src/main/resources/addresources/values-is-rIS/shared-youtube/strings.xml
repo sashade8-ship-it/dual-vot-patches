@@ -258,9 +258,9 @@ Ef þú slökkvir þetta síðar er mælt með því að eyða gögnum appsins t
   <string name="morphe_ryd_estimated_like_summary">Sýnir álíkaðan like fjölda á myndböndum þar sem búðandi hefur slökkt á likes</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Sýna tengingu villuskilaboð</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Sýnir tilkynningu þegar Return YouTube Dislike netþjónninn er óskár</string>
-  <string name="morphe_ryd_attribution_summary">"Gögn eru veitt af Return YouTube Dislike API
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike endurheimtir fjölda mislíka sem YouTube faldi árið 2021. Tölurnar koma frá gögnum sem safnað var fyrir fjarlæginguna og eru áætlaðar fyrir nýrri myndbönd út frá atkvæðum notenda þess, svo þær eru ekki nákvæmar og uppfærast á nokkurra daga fresti
 
-Tappaðu hér til að opna ReturnYouTubeDislike.com"</string>
+Auðkenni myndbandsins sem þú horfir á er sent til Return YouTube Dislike API, og líkar og mislíkar þínar eru sendar nafnlaust til að bæta áætlanirnar"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike API tölfræði þessa tækis</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Svarstími API, meðaltal</string>

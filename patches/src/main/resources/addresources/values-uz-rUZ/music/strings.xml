@@ -107,8 +107,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">Krosfeyd ushbu seans davomida pauza qilindi</string>
   <string name="morphe_music_crossfade_resumed_toast">Krosfeyd tiklandi</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Krosfeyd yoqilganda video rejimidan foydalanib bo‘lmaydi</string>
-  <string name="morphe_music_crossfade_about_title">Biz haqimizda</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Qanday ishlaydi</string>
   <string name="morphe_music_crossfade_about_credit_title">Mualliflar</string>
   <string name="morphe_music_crossfade_about_credit_summary">Krosfeyd funksiyasi VazerOG tomonidan yaratilgan</string>
@@ -279,15 +277,12 @@ Second \"item\" text"</string>
   <string name="morphe_music_scrobbling_parse_title_title">Ijroni titrdan ajratish</string>
   <string name="morphe_music_scrobbling_parse_title_summary">Qo\'shiq titri, ijrochi nomini ajratib olish uchun \" - \" ajratuvchisidan foydalanish. Qo\'shilgan kontent uchun ijrochi nomi kanal nomi sifatida ishlatilsa foydali bo\'ladi.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Scrobbling haqida</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"\"Scrobbling\" sizning YouTube Music foydalanish ma'lumotlaringizni avtomatik ravishda sizning Last.fm yoki ListenBrainz profilingiz bilan sinxronlashtiradi.
 
 Foydalanish ma'lumotlari fon tartibda ham sinxronlashini ta'minlash uchun, YouTube Music ilovasining batareya sozlamalarini \"Cheklanmagan\" ga o'rnating."</string>
   <!-- layout.lyrics.lyricsPatch -->
   <string name="morphe_music_lyrics_enabled_title">Uchinchi tomon matnlaridan foydalanish</string>
   <string name="morphe_music_lyrics_enabled_summary">Uchinchi tomon xizmatidan matnlar ko‘rsatiladi, agar topilmasa, o‘rnatilgan matnlarga qaytadi</string>
-  <string name="morphe_music_lyrics_section_about_title">Biz haqimizda</string>
   <string name="morphe_music_token_dialog_get_token">Tokenni olish</string>
   <string name="morphe_music_lyrics_tap_to_seek_title">Satrga teginib, o‘tkazish</string>
   <string name="morphe_music_lyrics_tap_to_seek_summary">Satrga tegish, qo‘shiqda shu lahzaga o‘tadi</string>

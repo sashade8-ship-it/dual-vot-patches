@@ -30,6 +30,7 @@ import app.morphe.patches.shared.misc.settings.preference.PreferenceCategory
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
+import app.morphe.patches.shared.misc.settings.preference.screenInfoPreferenceCategory
 import app.morphe.util.ResourceGroup
 import app.morphe.util.copyResources
 import app.morphe.util.getReference
@@ -165,9 +166,8 @@ val lyricsPatch = bytecodePatch(
                     SwitchPreference("morphe_music_lyrics_display_artist_first", summary = true)
                 )
             ),
-            PreferenceCategory(
+            screenInfoPreferenceCategory(
                 key = "morphe_music_lyrics_section_about",
-                sorting = Sorting.UNSORTED,
                 preferences = setOf(
                     NonInteractivePreference(
                         key = "morphe_music_lyrics_about",

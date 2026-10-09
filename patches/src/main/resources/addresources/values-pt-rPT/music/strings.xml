@@ -243,13 +243,10 @@ As faixas baixadas aparecem aqui"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">O modo de vídeo não está disponível enquanto o crossfade estiver ativado</string>
   <string name="morphe_music_crossfade_sabr_toast">O crossfade fica desativado na reprodução SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">O crossfade fica desativado ao transmitir</string>
-  <string name="morphe_music_crossfade_about_title">Sobre</string>
-  <string name="morphe_music_crossfade_about_summary">Como o crossfade funciona e onde ele não funciona</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Como funciona</string>
-  <string name="morphe_music_crossfade_about_how_summary">"O crossfade sobrepõe o final de uma música com o início da próxima, usando a duração e a curva definidas.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade sobrepõe o final de uma música com o início da próxima, usando sua duração e curva
 
-Ele é aplicado no avanço automático e na troca manual, cada um com a própria opção acima. No avanço automático, a mistura começa alguns segundos antes de a música terminar."</string>
+Ele roda em avanço automático e em pulo manual, cada um com seu próprio interruptor. No avanço automático, o crossfade começa alguns segundos antes do final da música.},"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Limitações</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Os videoclipes são reproduzidos apenas como áudio enquanto o crossfade estiver ativado. Mantenha pressionado o botão Aleatório para pausar o crossfade e assistir ao vídeo
 
@@ -449,8 +446,6 @@ Reprodução SABR (falsificação de streams de vídeo desativada)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Preencher álbum em falta</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Quando a música não inclui um álbum, procure-o no Last.fm para que o seu scrobble fique completo.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Sobre o envio</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"O scrobbling sincroniza automaticamente o uso do YouTube Music com seu perfil Last.fm ou ListenBrainz
 
 Para garantir que o scrobbling seja sincronizado durante a reprodução em segundo plano, certifique-se de que o uso da bateria do aplicativo YouTube Music esteja definido como \"Sem restrições\""</string>
@@ -462,7 +457,6 @@ Para garantir que o scrobbling seja sincronizado durante a reprodução em segun
   <string name="morphe_music_lyrics_section_service_title">Serviço de Letras</string>
   <string name="morphe_music_lyrics_section_overlay_title">Sobreposição</string>
   <string name="morphe_music_lyrics_section_sync_title">Sincronização</string>
-  <string name="morphe_music_lyrics_section_about_title">Acerca de</string>
   <string name="morphe_music_lyrics_source_all_disabled">Todos os provedores desativados — letras integradas e letras incorporadas</string>
   <string name="morphe_music_lyrics_source_reset_title">Redefinir ordem dos provedores?</string>
   <string name="morphe_music_lyrics_source_reset_message">Restaurar os provedores para a ordem de prioridade padrão</string>

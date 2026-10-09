@@ -258,9 +258,9 @@ Second \"item\" text"</string>
   <string name="morphe_ryd_estimated_like_summary">מציג ספירת לייקים משוערת בסרטונים שהיוצר השבית את הלייקים בהם</string>
   <string name="morphe_ryd_toast_on_connection_error_title">הצג התראות שגיאת חיבור</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">מציג התראה כאשר שרת Return YouTube Dislike אינו זמין</string>
-  <string name="morphe_ryd_attribution_summary">"הנתונים מסופקים על ידי ה-Return YouTube Dislike API
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike משחזר את מספרי הדיסלייקים ש-YouTube הסתיר ב-2021. המספרים מגיעים מנתונים שנשמרו בארכיון לפני ההסרה והם מוערכים עבור סרטונים חדשים יותר מההצבעות של משתמשיה, לכן הם מקורבים ומתעדכנים כל כמה ימים
 
-הקש כאן כדי לפתוח את ReturnYouTubeDislike.com"</string>
+מזהה הסרטון שאתה צופה בו נשלח ל-API של Return YouTube Dislike, והלייקים והדיסלייקים שלך נשלחים באופן אנונימי כדי לשפר את ההערכות"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">סטטיסטיקות API של Return YouTube Dislike במכשיר זה</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">זמן תגובת API, ממוצע</string>

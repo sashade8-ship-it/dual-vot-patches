@@ -258,9 +258,9 @@ YouTube Premium を利用している場合、この設定は必要ない可能�
   <string name="morphe_ryd_estimated_like_summary">動画投稿者が高評価数を非公開に設定している動画で、高評価の推定値を表示します</string>
   <string name="morphe_ryd_toast_on_connection_error_title">接続エラーの通知を表示</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Return YouTube Dislike サーバーが利用できない場合に通知を表示します</string>
-  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike API を使用してデータを取得しています
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike は、2021年にYouTubeが非表示にした低評価の数を復元します。カウントは削除前にアーカイブされたデータから取得され、新しい動画についてはユーザーの投票から推定されるため、おおよその値であり、数日ごとに更新されます
 
-ここをタップすると ReturnYouTubeDislike.com を開きます"</string>
+視聴している動画のIDはReturn YouTube Dislike APIに送信され、あなたの高評価と低評価は匿名で送信され、推定の精度向上に役立てられます"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">このデバイスの Return YouTube Dislike API 統計情報</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API 応答時間 (平均)</string>

@@ -63,7 +63,6 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_album_cards_summary">Döljer albumkorten under artistbeskrivningen</string>
   <string name="morphe_hide_artist_cards_title">Dölj artistkort</string>
   <string name="morphe_hide_artist_cards_summary">Döljer artistkortet högst upp i sökresultaten</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Dölj etiketten Automatiskt dubbad</string>
   <string name="morphe_hide_channel_buttons_title">Dölj kanalknappar</string>
   <string name="morphe_hide_channel_buttons_summary">Döljer knappar som Prenumerera, Visa kanal, Community och YouTube Music från kanalprofiler i sökresultat</string>
   <string name="morphe_hide_community_posts_title">Dölj community-inlägg</string>
@@ -79,7 +78,6 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_history_shelf_title">Dölj historikhyllan</string>
   <string name="morphe_hide_horizontal_shelves_title">Dölj horisontella hyllor</string>
   <string name="morphe_hide_horizontal_shelves_summary">Döljer horisontella hyllor som Senaste nytt, Community-inlägg du kanske gillar, Fortsätt titta, Utforska fler kanaler, Utforska fler ämnen, För dig, Senaste videorna, Mest relevanta, Inlägg från kreatörs community, Shopping och Titta igen</string>
-  <string name="morphe_hide_hyped_label_title">Dölj hajpetikett</string>
   <string name="morphe_hide_image_shelf_title">Dölj bildhylla</string>
   <string name="morphe_hide_image_shelf_summary">Döljer bildhyllor i sökresultat</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Vissa layouter på serversidan kanske inte återställs.
 • Shorts-hyllor, kanalsidor och sökresultat kan fortfarande visa uppladdningstider
 • Fungerar inte med billayouten"</string>
   <string name="morphe_hide_video_thumbnail_title">Dölj videominiatyr</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Dölj etiketter för videorekommendationer</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Döljer \"Andra har även tittat på\"- och \"Du kanske även gillar\"-etiketter i sökresultaten</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Dölj videoetiketter</string>
+  <string name="morphe_hide_video_labels_summary">Döljer etiketter som \'Automatiskt dubbad\' / \'Dubbad\', \'Tjänar provision\', \'Hypad\', \'Andra tittade också på\', \'produkt(er)\' och \'Du kanske också gillar\'</string>
   <string name="morphe_hide_view_count_title">Dölj antal visningar</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Begränsningar:
@@ -170,7 +168,7 @@ Vissa layouter på serversidan kanske inte återställs.
   <string name="morphe_hide_video_title_title">Dölj videotitel</string>
   <string name="morphe_hide_video_title_summary">Döljer videotiteln i helskärm</string>
   <string name="morphe_sanitize_video_subtitle_title">Rensa videoundertitel</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Rensar fraser som \"#\", \"Fundraiser\", \"Shop\" och \"products\" från videoundertiteln</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Sanerar fraser som \'#\', \'Insamling\', \'produkt(er)\' och \'Shop\' från videoundertext</string>
   <string name="morphe_hide_description_components_screen_title">Videobeskrivning</string>
   <string name="morphe_hide_description_components_screen_summary">Välj vilka komponenter som visas i videobeskrivningen</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Dölj avsnittet AI-genererad videoöversikt</string>
@@ -329,7 +327,6 @@ Begränsningar:
   <string name="morphe_hide_stats_hidden_all_title">Dolda videor, alla tider</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Återställ räknaren för senaste 24 timmarna?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Återställ räknaren för alla tider?</string>
-  <string name="morphe_hide_about_category_title">Om</string>
   <string name="morphe_hide_aislist_screen_title">AI-kanalfilter</string>
   <string name="morphe_hide_aislist_screen_summary">Dölj videor från kanaler som har flaggats som AI-genererat innehåll av AiSList-communitylistan</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Blockeringslista: Hög tillförlitlighet</string>
@@ -348,9 +345,9 @@ Begränsningar:
 Begränsningar:
 • Filtrerade AI-Shorts-videor kan visas som ett tomt utrymme
 • Vissa AI-videor kan fortfarande visas"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Data tillhandahålls av AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList är en öppen källkod-lista över YouTube-kanaler som publicerar AI-genererat innehåll, underhålls av volontärer. Kanaler rapporteras av användare och granskas innan de läggs till
 
-Tryck här för att öppna AiSlopList.com och se nedladdningar för andra plattformar"</string>
+Listan laddas ner från GitHub och videor filtreras på din enhet"</string>
   <string name="morphe_aislist_submit_category_title">Rapportera AI-kanaler</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Lägg till rapportpost i videomenyn</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Lägg till en post i videomenyn som rapporterar videons kanal till AiSList</string>
@@ -1176,11 +1173,9 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow och ursprungliga miniatyrer</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow och stillbilder</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Stillbilder</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow tillhandahåller crowdsourcade titlar och miniatyrer för YouTube-videor. Dessa är ofta mer relevanta än de som tillhandahålls av YouTube
+  <string name="morphe_dearrow_about_summary">"DeArrow ersätter klickbete-titlar och miniatyrer med crowdsourcade sådana som är mer exakta och mindre sensationella. Titlar skrivs och röstas på av communityn, och miniatyrer är bildrutor tagna från videon
 
-Om funktionen är aktiverad skickas video-URL:er till API-servern och inga andra data skickas. Om en video inte har några DeArrow-miniatyrer visas original eller stillbilder
-
-Tryck här för att öppna DeArrow.ajay.app"</string>
+Videor begärs med ett kort prefix av den hashade videons ID, så servern kan inte exakt avgöra vilken video du tittar på. Om en video inte har någon DeArrow-miniatyr, visas originalbilden eller en stillbild."</string>
   <string name="morphe_dearrow_connection_toast_title">Visa meddelanden om anslutningsfel</string>
   <string name="morphe_dearrow_connection_toast_summary">Visar ett meddelande när DeArrow-servern inte är tillgänglig</string>
   <string name="morphe_dearrow_api_url_title">API-slutpunkt</string>

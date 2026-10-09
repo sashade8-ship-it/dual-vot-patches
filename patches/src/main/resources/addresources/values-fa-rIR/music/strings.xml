@@ -128,8 +128,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">محو متقاطع برای این جلسه متوقف شد</string>
   <string name="morphe_music_crossfade_resumed_toast">محو متقاطع ادامه یافت</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">وقتی محو متقاطع فعال است، حالت ویدئو در دسترس نیست</string>
-  <string name="morphe_music_crossfade_about_title">درباره</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">نحوهٔ کار</string>
   <string name="morphe_music_crossfade_about_credit_title">اعتبار</string>
   <string name="morphe_music_crossfade_about_credit_summary">ویژگی محو متقاطع از VazerOG</string>
@@ -303,8 +301,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_scrobbling_guess_album_title">تکمیل آلبوم گمشده</string>
   <string name="morphe_music_scrobbling_guess_album_summary">وقتی موسیقی آلبوم ندارد، آن را در Last.fm جست‌وجو می‌کند تا اسکروبل شما کامل باشد</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">دربارهٔ اسکروبلینگ</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"اسکروبلینگ استفادهٔ شما از YouTube Music را به‌طور خودکار با نمایهٔ Last.fm یا ListenBrainz همگام می‌کند
 
 برای اطمینان از همگام‌شدن اسکروبلینگ هنگام پخش در پس‌زمینه، مصرف باتری برنامهٔ YouTube Music را روی «بدون محدودیت» تنظیم کنید"</string>
@@ -312,7 +308,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_enabled_title">استفاده از متن آهنگ شخص ثالث</string>
   <string name="morphe_music_lyrics_enabled_summary">متن آهنگ را از سرویس شخص ثالث نشان می‌دهد و اگر چیزی پیدا نشود به متن داخلی برمی‌گردد</string>
   <string name="morphe_music_lyrics_section_service_title">سرویس متن آهنگ</string>
-  <string name="morphe_music_lyrics_section_about_title">درباره</string>
   <string name="morphe_music_token_dialog_get_token">دریافت توکن</string>
   <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: توکن کاربر پاک شد</string>
   <string name="morphe_music_musixmatch_token_toast_invalid">Musixmatch: توکن کاربر نامعتبر است — لطفا بررسی و دوباره تلاش کنید</string>

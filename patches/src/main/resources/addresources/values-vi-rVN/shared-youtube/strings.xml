@@ -258,9 +258,9 @@ Nếu muốn tắt tính năng này sau đó, bạn nên xóa dữ liệu ứng 
   <string name="morphe_ryd_estimated_like_summary">Hiển thị số lượt thích ước tính trên các video mà nhà sáng tạo đã ẩn lượt thích</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Hiện cảnh báo lỗi kết nối</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Hiển thị thông báo khi máy chủ Return YouTube Dislike không khả dụng</string>
-  <string name="morphe_ryd_attribution_summary">"Dữ liệu được cung cấp bởi API Return YouTube Dislike
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike khôi phục số lượt không thích mà YouTube đã ẩn vào năm 2021. Số liệu đến từ dữ liệu được lưu trữ trước khi gỡ bỏ và được ước tính cho các video mới hơn dựa trên phiếu bầu của người dùng, vì vậy chúng chỉ là gần đúng và được cập nhật sau mỗi vài ngày
 
-Bấm vào đây để mở ReturnYouTubeDislike.com"</string>
+ID của video bạn xem được gửi đến API Return YouTube Dislike, và lượt thích và không thích của bạn được gửi ẩn danh để cải thiện các ước tính"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Thống kê API Return YouTube Dislike của thiết bị này</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Thời gian phản hồi API trung bình</string>

@@ -243,13 +243,10 @@ Gedownloade nummers verschijnen hier"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videomodus is niet beschikbaar wanneer crossfade is ingeschakeld</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade staat uit bij SABR-weergave</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade staat uit tijdens het casten</string>
-  <string name="morphe_music_crossfade_about_title">Over</string>
-  <string name="morphe_music_crossfade_about_summary">Hoe crossfade werkt en waar het niet werkt</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Hoe het werkt</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade laat het einde van het ene nummer overlappen met het begin van het volgende, op basis van jouw duur en curve.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade overlapt het einde van het ene nummer met het begin van het volgende, met gebruik van jouw duur en curve
 
-Het werkt bij automatisch doorgaan en bij handmatig overslaan, elk met een eigen schakelaar hierboven. Bij automatisch doorgaan begint de overgang een paar seconden voordat het nummer eindigt."</string>
+Het werkt bij automatisch doorgaan en bij handmatig overslaan, elk met eigen schakelaar. Bij automatisch doorgaan begint de overgang een paar seconden voordat het nummer eindigt"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Beperkingen</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Muziekvideo's worden alleen als audio afgespeeld terwijl crossfade aan staat. Houd shuffle ingedrukt om crossfade te pauzeren en de video te bekijken
 
@@ -449,8 +446,6 @@ SABR-weergave (vervalsen van videostreams uitgeschakeld)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Vul ontbrekend album in</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Wanneer de muziek geen album bevat, zoek het op op Last.fm zodat je scrobble volledig is</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Over scrobbelen</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling synchroniseert automatisch jouw YouTube Music gebruik met je Last.fm of ListenBrainz profiel
 
 Om ervoor te zorgen dat scrobbling tijdens het afspelen op de achtergrond wordt gesynchroniseerd, zorg er dan voor dat de batterijgebruik van YouTube Music is ingesteld op \"Onbeperkt\""</string>
@@ -462,7 +457,6 @@ Om ervoor te zorgen dat scrobbling tijdens het afspelen op de achtergrond wordt 
   <string name="morphe_music_lyrics_section_service_title">Songtekstenservice</string>
   <string name="morphe_music_lyrics_section_overlay_title">Overlay</string>
   <string name="morphe_music_lyrics_section_sync_title">Synchronisatie</string>
-  <string name="morphe_music_lyrics_section_about_title">Over</string>
   <string name="morphe_music_lyrics_source_all_disabled">Alle providers uitgeschakeld — ingebouwde songteksten en ingesloten songteksten</string>
   <string name="morphe_music_lyrics_source_reset_title">Providerorder resetten?</string>
   <string name="morphe_music_lyrics_source_reset_message">Providers terugzetten naar de standaardprioriteitsvolgorde</string>

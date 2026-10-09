@@ -243,13 +243,10 @@ Heruntergeladene Titel erscheinen hier"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Der Videomodus ist nicht verfügbar, während die nahtlose Wiedergabe aktiviert ist</string>
   <string name="morphe_music_crossfade_sabr_toast">Bei SABR-Wiedergabe ist Crossfade deaktiviert</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Beim Casten ist Crossfade deaktiviert</string>
-  <string name="morphe_music_crossfade_about_title">Über</string>
-  <string name="morphe_music_crossfade_about_summary">Wie Crossfade funktioniert und wo nicht</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Wie es funktioniert</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade überblendet das Ende eines Songs mit dem Anfang des nächsten, entsprechend deiner Dauer und Kurve.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade überlappt das Ende eines Songs mit dem Anfang des nächsten, unter Verwendung deiner Dauer und Kurve
 
-Es wird beim automatischen Titelwechsel und beim manuellen Überspringen angewendet, jeweils mit einem eigenen Schalter oben. Beim automatischen Titelwechsel beginnt die Überblendung einige Sekunden bevor der Song endet."</string>
+Es läuft bei automatischem Weiterspringen und bei manuellem Überspringen, jeweils mit eigenem Schalter. Beim automatischen Weiterspringen beginnt die Überblendung einige Sekunden vor dem Ende des Songs.‚"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Einschränkungen</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Bei aktivem Crossfade werden Musikvideos nur als Audio abgespielt. Halte die Zufallswiedergabe lange gedrückt, um Crossfade zu pausieren und das Video anzusehen.
 
@@ -449,8 +446,6 @@ SABR-Wiedergabe (Spoofing von Videostreams deaktiviert)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Fehlendes Album ergänzen</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Wenn die Musik kein Album enthält, schlage es auf Last.fm nach, damit dein Scrobble vollständig ist.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Info zu Scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling synchronisiert automatisch deine YouTube Music-Nutzung mit deinem Last.fm- oder ListenBrainz-Profil.
 
 Um sicherzustellen, dass Scrobbling während der Wiedergabe im Hintergrund synchronisiert wird, stelle sicher, dass die App-Akku-Nutzung von YouTube Music auf \"Uneingeschränkt\" eingestellt ist."</string>
@@ -462,7 +457,6 @@ Um sicherzustellen, dass Scrobbling während der Wiedergabe im Hintergrund synch
   <string name="morphe_music_lyrics_section_service_title">Songtext-Dienst</string>
   <string name="morphe_music_lyrics_section_overlay_title">Overlay</string>
   <string name="morphe_music_lyrics_section_sync_title">Synchronisation</string>
-  <string name="morphe_music_lyrics_section_about_title">Über</string>
   <string name="morphe_music_lyrics_source_all_disabled">Alle Anbieter deaktiviert – integrierte Songtexte und eingebettete Songtexte.</string>
   <string name="morphe_music_lyrics_source_reset_title">Anbieterreihenfolge zurücksetzen?</string>
   <string name="morphe_music_lyrics_source_reset_message">Anbieter auf die Standard-Prioritätsreihenfolge zurücksetzen.</string>

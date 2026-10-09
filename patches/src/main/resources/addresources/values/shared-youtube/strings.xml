@@ -285,10 +285,9 @@ If later turned off, it is recommended to clear the app data to prevent UI bugs.
     <string name="morphe_ryd_estimated_like_summary">Shows an estimated like count on videos where the creator has disabled likes</string>
     <string name="morphe_ryd_toast_on_connection_error_title">Show connection error alerts</string>
     <string name="morphe_ryd_toast_on_connection_error_summary">Shows a notification when the Return YouTube Dislike server is unavailable</string>
-    <string name="morphe_ryd_attribution_title" translatable="false">ReturnYouTubeDislike</string>
-    <string name="morphe_ryd_attribution_summary">"Data is provided by the Return YouTube Dislike API
+    <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike restores the dislike counts YouTube hid in 2021. Counts come from data archived before the removal and are estimated for newer videos from the votes of its users, so they are approximate and update every few days
 
-Tap here to open ReturnYouTubeDislike.com"</string>
+The ID of the video you watch is sent to the Return YouTube Dislike API, and your likes and dislikes are sent anonymously to improve the estimates"</string>
     <string name="morphe_ryd_screen_title" translatable="false">Return YouTube Dislike</string>
     <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
     <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike API statistics of this device</string>

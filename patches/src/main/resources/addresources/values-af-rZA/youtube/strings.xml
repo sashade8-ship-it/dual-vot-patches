@@ -63,7 +63,6 @@ Veranderings sluit in:
   <string name="morphe_hide_album_cards_summary">Verberg die albumkaarte onder die kunstenaar se beskrywing</string>
   <string name="morphe_hide_artist_cards_title">Verberg kunstenaarskaarte</string>
   <string name="morphe_hide_artist_cards_summary">Verberg die kunstenaarskaart bo-aan die soekresultate</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Versteek \'Outomaties naspraak\' etiket</string>
   <string name="morphe_hide_channel_buttons_title">Versteek kanaalknoppies</string>
   <string name="morphe_hide_channel_buttons_summary">Versteek knoppies soos Teken in, Bekyk kanaal, Gemeenskap, en YouTube Musiek van kanaalprofiele in soekresultate</string>
   <string name="morphe_hide_community_posts_title">Verberg gemeenskapboodskappe</string>
@@ -79,7 +78,6 @@ Veranderings sluit in:
   <string name="morphe_hide_history_shelf_title">Versteek geskiedenisrak</string>
   <string name="morphe_hide_horizontal_shelves_title">Verberg horisontale rakke</string>
   <string name="morphe_hide_horizontal_shelves_summary">Verberg horisontale rakke soos Breaking news, Gemeenskapinskrywings wat jy dalk wil hê, Gaan voort om te kyk, Verken meer kanale, Verken meer onderwerpe, Vir jou, Nuutste video\'s, Mees relevante, Inskrywings van Skepper se Gemeenskap, Winkels en Kyk dit weer</string>
-  <string name="morphe_hide_hyped_label_title">Versteek Hip-etiket</string>
   <string name="morphe_hide_image_shelf_title">Verberg prentrak</string>
   <string name="morphe_hide_image_shelf_summary">Verberg beeldrakke in soekresultate</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Veranderings sluit in:
 • Kort video-plankies, kanaalblaaie en soekresultate kan steeds oplaadtye wys
 • Werk nie met motorvoertuig-uitleg nie."</string>
   <string name="morphe_hide_video_thumbnail_title">Versteek video-duimnael</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Versteek video aanbevelingsetikette</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Verberg \'People also watched\' en \'You might also like\' etikette in soekresultate</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Versteek video-etikette</string>
+  <string name="morphe_hide_video_labels_summary">Versteek etikette soos \'Outomaties nagesynchroniseer\' / \'Nagesynchroniseer\', \'Verdien kommissie\', \'Gewild\', \'Mense het ook gekyk\', \'produk(te)\' en \'Jy mag ook hiervan hou\'</string>
   <string name="morphe_hide_view_count_title">Verberg bekykingsaantal</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Beperkings:
@@ -170,7 +168,7 @@ Veranderings sluit in:
   <string name="morphe_hide_video_title_title">Versteek video-titel</string>
   <string name="morphe_hide_video_title_summary">Verberg die video-titel in die volskermmodus</string>
   <string name="morphe_sanitize_video_subtitle_title">Maak video-onderskrifte skoon</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Maak frases soos \'#\', \'Fundraiser\', \'Shop\' en \'produkte\' skoon uit video-onderskrifte</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Suiwer die video-subtitel van frases soos \'#\', \'Fondsinsameling\', \'produk(te)\' en \'Winkel\'</string>
   <string name="morphe_hide_description_components_screen_title">Video beskrywing</string>
   <string name="morphe_hide_description_components_screen_summary">Kies watter komponente in die video-beskrywing verskyn</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Verberg \'AI-gegenereerde video-opsomming\' afdeling</string>
@@ -329,7 +327,6 @@ Beperkings:
   <string name="morphe_hide_stats_hidden_all_title">Video\'s versteek, altyd</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Laaste 24 uur teller terugstel?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Tydslyn alle tydtellers?</string>
-  <string name="morphe_hide_about_category_title">Oor</string>
   <string name="morphe_hide_aislist_screen_title">AI kanaal filter</string>
   <string name="morphe_hide_aislist_screen_summary">Wys nie video\'s van kanale wat deur die AiSList gemeenskap as AI-gegenereerde inhoud gemerk is nie</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Bloklys: Hoë selfvertroue</string>
@@ -348,9 +345,9 @@ Beperkings:
 Beperkings:
 • Gefilterde AI Shorts kan as 'n leë spasie vertoon
 • Sommige AI video's kan steeds wys"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Data word verskaf deur AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList is 'n oopbronlys van YouTube-kanale wat KI-gegenereerde inhoud publiseer en word deur vrywilligers onderhou. Kanale word deur gebruikers gerapporteer en beoordeel voordat hulle bygevoeg word
 
-Tik hier om AiSlopList.com oop te maak en laai aflaai vir ander platforms"</string>
+Die lys word van GitHub afgelaai en video's word op jou toestel gefiltreer"</string>
   <string name="morphe_aislist_submit_category_title">Rapporteer KI-kanale</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Voeg \'n rapporteer-inskrywing by die videokieslys</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Voeg \'n inskrywing by die videokieslys wat die kanaal van \'n video aan AiSList rapporteer</string>
@@ -1176,11 +1173,9 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Oorspronklike foto\'s</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Stil vasleggings</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Stil vasleggings</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow verskaf skare-gebaseerde titels en duimnaels vir YouTube-video's. Hierdie is dikwels meer relevant as dié wat deur YouTube verskaf word
+  <string name="morphe_dearrow_about_summary">"DeArrow vervang klikbait-titels en -duimnaels met gemeenskapsgedrewe weergawes wat meer akkuraat en minder sensasioneel is. Titels word deur die gemeenskap geskryf en daaroor gestem, en duimnaels is rame wat uit die video geneem is
 
-As dit geaktiveer is, sal video-URL's na die API-bediener gestuur word en geen ander data word gestuur nie. As 'n video nie DeArrow-duimnaels het nie, word die oorspronklike of stilstaande beelde gewys
-
-Tik hier om DeArrow.ajay.app oop te maak"</string>
+Video's word met 'n kort voorvoegsel van die gehashte video-ID aangevra, sodat die bediener nie presies kan weet na watter video jy kyk nie. As 'n video geen DeArrow-duimnael het nie, word die oorspronklike duimnael of 'n stilstaande beeld gewys"</string>
   <string name="morphe_dearrow_connection_toast_title">Wys konneksiefoutwaarskuwings</string>
   <string name="morphe_dearrow_connection_toast_summary">Wys \'n kennisgewing wanneer die DeArrow-bediener nie beskikbaar is nie</string>
   <string name="morphe_dearrow_api_url_title">API-eindpunt</string>

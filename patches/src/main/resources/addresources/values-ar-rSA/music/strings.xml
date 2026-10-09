@@ -243,13 +243,10 @@ tظهر المسارات التي تم تنزيلها هنا"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">وضع الفيديو غير متاح أثناء تمكين التلاشي التدريجي</string>
   <string name="morphe_music_crossfade_sabr_toast">التلاشي المتقاطع متوقف عند تشغيل SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">التلاشي المتقاطع متوقف أثناء الإرسال</string>
-  <string name="morphe_music_crossfade_about_title">لمحة</string>
-  <string name="morphe_music_crossfade_about_summary">كيف يعمل التلاشي المتقاطع وأين لا يعمل</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">كيف يعمل</string>
-  <string name="morphe_music_crossfade_about_how_summary">"يدمج التلاشي المتقاطع نهاية الأغنية الحالية مع بداية الأغنية التالية، باستخدام المدة والمنحنى اللذين تحددهما.
+  <string name="morphe_music_crossfade_about_how_summary">"التلاشي المتقاطع يدمج نهاية أغنية مع بداية الأغنية التالية، باستخدام المدة والمنحنى اللذين تحددهما
 
-يعمل عند الانتقال التلقائي إلى الأغنية التالية وعند التخطي اليدوي، ولكل منهما مفتاح تبديل خاص به في الأعلى. عند الانتقال التلقائي، يبدأ الدمج قبل ثوانٍ قليلة من نهاية الأغنية."</string>
+يعمل عند الانتقال التلقائي والتخطي اليدوي، ولكل منهما مفتاح تبديل خاص به. عند الانتقال التلقائي، يبدأ المزج قبل ثوانٍ قليلة من نهاية الأغنية"</string>
   <string name="morphe_music_crossfade_about_quirks_title">القيود</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"تُشغَّل الفيديوهات الموسيقية كصوت فقط أثناء تفعيل التلاشي المتقاطع. اضغط مطولًا على زر الخلط لإيقاف التلاشي المتقاطع مؤقتًا ومشاهدة الفيديو
 
@@ -449,8 +446,6 @@ tظهر المسارات التي تم تنزيلها هنا"</string>
   <string name="morphe_music_scrobbling_guess_album_title">املأ الألبوم المفقود</string>
   <string name="morphe_music_scrobbling_guess_album_summary">عندما لا تحتوي الموسيقى على ألبوم، ابحث عنه على Last.fm حتى يكتمل scrobble الخاص بك</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">حول scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"يقوم التتبع التلقائي بمزامنة استخدامك لـ YouTube Music مع ملف تعريف Last.fm أو ListenBrainz الخاص بك.
 
 لضمان مزامنة التتبع أثناء التشغيل في الخلفية، تأكد من تعيين استخدام تطبيق YouTube Music للبطارية على \"غير مقيد\"."</string>
@@ -462,7 +457,6 @@ tظهر المسارات التي تم تنزيلها هنا"</string>
   <string name="morphe_music_lyrics_section_service_title">خدمة الكلمات</string>
   <string name="morphe_music_lyrics_section_overlay_title">التراكب</string>
   <string name="morphe_music_lyrics_section_sync_title">المزامنة</string>
-  <string name="morphe_music_lyrics_section_about_title">لمحة</string>
   <string name="morphe_music_lyrics_source_all_disabled">إخفاء السطر الجاري تشغيله.</string>
   <string name="morphe_music_lyrics_source_reset_title">إعادة تعيين ترتيب المزوّدين؟</string>
   <string name="morphe_music_lyrics_source_reset_message">استعادة الطلب الافتراضي للمزوّدين.</string>

@@ -243,13 +243,10 @@ Ladatut kappaleet näkyvät tässä"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videon toimitila ei ole käytettävissä, kun crossfade on käytössä</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade on pois päältä SABR-toiston aikana</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade on pois päältä heiton aikana</string>
-  <string name="morphe_music_crossfade_about_title">Tietoja</string>
-  <string name="morphe_music_crossfade_about_summary">Näin crossfade toimii ja missä se ei toimi</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Miten se toimii</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade limittää yhden kappaleen lopun seuraavan kappaleen alun kanssa käyttäen valitsemaasi kestoa ja käyrää.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade limittyy yhden kappaleen lopun seuraavan alkuun käyttäen kestoasi ja käyrääsi
 
-Se toimii automaattisen siirtymisen ja manuaalisen ohituksen yhteydessä, ja kummallekin on oma kytkin yllä. Automaattisessa siirtymisessä limitys alkaa muutama sekunti ennen kappaleen loppua."</string>
+Se toimii automaattisessa jatkossa ja manuaalisessa ohituksessa, kummallakin on oma kytkin. Automaattisessa jatkossa sekoitus alkaa muutaman sekunnin ennen kappaleen loppua"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Rajoitukset</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Kun crossfade on päällä, musiikkivideot toistetaan vain äänenä. Pidä satunnaistoistoa painettuna keskeyttääksesi crossfaden ja katsoaksesi videon.
 
@@ -449,8 +446,6 @@ SABR-toisto (videovirtojen huijaus pois päältä)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Täytä puuttuva albumi</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Kun musiikki ei sisällä albumia, hae se Last.fm:stä, jotta scrobble on täydellinen.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Tietoa toistamisesta</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling synkronoi YouTube Music -käyttösi automaattisesti Last.fm- tai ListenBrainz-profiiliisi.
 
 Varmistaaksesi, että scrobbling synkronoidaan taustatoiston aikana, varmista, että YouTube Musiikin sovelluksen akun käyttö on asetettu arvoon \"Rajoittamaton\"."</string>
@@ -462,7 +457,6 @@ Varmistaaksesi, että scrobbling synkronoidaan taustatoiston aikana, varmista, e
   <string name="morphe_music_lyrics_section_service_title">Sanoituspalvelu</string>
   <string name="morphe_music_lyrics_section_overlay_title">Päällekkäisnäyttö</string>
   <string name="morphe_music_lyrics_section_sync_title">Synkronointi.</string>
-  <string name="morphe_music_lyrics_section_about_title">Tietoja</string>
   <string name="morphe_music_lyrics_source_all_disabled">Kaikki palveluntarjoajat poistettu käytöstä — sisäänrakennetut ja upotetut sanoitukset.</string>
   <string name="morphe_music_lyrics_source_reset_title">Palautetaanko palveluntarjoajien järjestys?</string>
   <string name="morphe_music_lyrics_source_reset_message">Palauta palveluntarjoajat oletusarvoiseen prioriteettijärjestykseen.</string>

@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">מסתיר את כרטיסי האלבומים מתחת לתיאור האמן</string>
   <string name="morphe_hide_artist_cards_title">הסתר כרטיסי אמן</string>
   <string name="morphe_hide_artist_cards_summary">מסתיר את כרטיס האמן בחלק העליון של תוצאות החיפוש</string>
-  <string name="morphe_hide_auto_dubbed_label_title">הסתר תווית \'דיבוב אוטומטי\'</string>
   <string name="morphe_hide_channel_buttons_title">הסתר כפתורי ערוץ</string>
   <string name="morphe_hide_channel_buttons_summary">מסתיר כפתורים כגון הירשם, מעבר לערוץ, קהילה ו-YouTube Music מפרופילי ערוצים בתוצאות החיפוש</string>
   <string name="morphe_hide_community_posts_title">הסתר פוסטים קהילתיים</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">הסתר את מדף ההיסטוריה</string>
   <string name="morphe_hide_horizontal_shelves_title">הסתר מדפים אופקיים</string>
   <string name="morphe_hide_horizontal_shelves_summary">מסתיר מדפים אופקיים כגון חדשות דחופות, פוסטים קהילתיים שאולי תרצה, המשך צפייה, גלה ערוצים נוספים, גלה נושאים נוספים, בשבילך, סרטונים אחרונים, הרלוונטיים ביותר, פוסטים מקהילת היוצרים, קניות וצפה שוב</string>
-  <string name="morphe_hide_hyped_label_title">הסתר תווית \'ויראלי\'</string>
   <string name="morphe_hide_image_shelf_title">הסתר מדף תמונות</string>
   <string name="morphe_hide_image_shelf_summary">מסתיר מדפי תמונות בתוצאות החיפוש</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Second \"item\" text"</string>
 • מדפי Shorts, דפי ערוץ ותוצאות חיפוש עדיין עשויים להציג זמני העלאה
 • לא עובד עם פריסות לרכב"</string>
   <string name="morphe_hide_video_thumbnail_title">הסתר תמונה ממוזערת של סרטון</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">הסתר תוויות המלצות סרטונים</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">מסתיר את התוויות \'אנשים גם צפו\' ו\'אולי תאהב גם\' בתוצאות החיפוש</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">הסתר תוויות וידאו</string>
+  <string name="morphe_hide_video_labels_summary">מסתיר תוויות כמו \'מדובב אוטומטית\' / \'מדובב\', \'מרוויח עמלה\', \'הייפ\', \'אנשים צפו גם\', \'מוצר(ים)\' ו\'אולי תאהב גם\'</string>
   <string name="morphe_hide_view_count_title">הסתר ספירת צפיות</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"מגבלות:
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">הסתר כותרת סרטון</string>
   <string name="morphe_hide_video_title_summary">מסתיר את כותרת הסרטון במצב מסך מלא</string>
   <string name="morphe_sanitize_video_subtitle_title">ניקוי כתובית וידאו</string>
-  <string name="morphe_sanitize_video_subtitle_summary">מנקה ביטויים כמו \'#\' , \'גיוס כספים\', \'חנות\' ו-\'מוצרים\' מכתובית הווידאו</string>
+  <string name="morphe_sanitize_video_subtitle_summary">מנקה ביטויים כמו \'#\', \'גיוס כספים\', \'מוצר(ים)\' ו\'חנות\' מכתוביות הסרטון</string>
   <string name="morphe_hide_description_components_screen_title">תיאור סרטון</string>
   <string name="morphe_hide_description_components_screen_summary">בחר אילו רכיבים יופיעו בתיאור הסרטון</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">הסתר את סעיף \'סיכום וידאו שנוצר על ידי בינה מלאכותית\'</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">סרטונים מוסתרים, בכל הזמנים</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">לאפס את מונה 24 השעות האחרונות?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">לאפס את כל מונה הזמן?</string>
-  <string name="morphe_hide_about_category_title">אודות</string>
   <string name="morphe_hide_aislist_screen_title">מסנן ערוצי בינה מלאכותית</string>
   <string name="morphe_hide_aislist_screen_summary">הסתר סרטונים מערוצים שסומנו כתוכן שנוצר על ידי בינה מלאכותית על ידי רשימת AiSList</string>
   <string name="morphe_hide_aislist_blocklist_category_title">רשימה חסומה: ביטחון גבוה</string>
@@ -348,9 +345,9 @@ Second \"item\" text"</string>
 מגבלות:
 • Shorts מסוננים עשויים להופיע כשטח ריק
 • חלק מסרטוני הבינה המלאכותית עדיין עשויים להופיע"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"הנתונים מסופקים על ידי AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList הוא רשימה בקוד פתוח של ערוצי YouTube שמפרסמים תוכן שנוצר באמצעות בינה מלאכותית, המתוחזקת על ידי מתנדבים. ערוצים מדווחים על ידי משתמשים ונבדקים לפני שהם מתווספים
 
-הקש כאן כדי לפתוח את AiSlopList.com ולראות הורדות עבור פלטפורמות אחרות"</string>
+הרשימה מורדת מ-GitHub וסרטונים מסוננים במכשיר שלך"</string>
   <string name="morphe_aislist_submit_category_title">דווח על ערוצי AI</string>
   <string name="morphe_aislist_submit_flyout_menu_title">הוסף פריט דיווח לתפריט הסרטון</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">הוסף פריט לתפריט הסרטון שמדווח על הערוץ של סרטון ל-AiSList</string>
@@ -1176,11 +1173,9 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">תמונות ממוזערות מקוריות &amp; DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">לכידות דוממות &amp; DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">לכידות דוממות</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow מספק כותרות ותמונות ממוזערות שיתופיות עבור סרטוני YouTube. לעתים קרובות הן רלוונטיות יותר מאלה של YouTube
+  <string name="morphe_dearrow_about_summary">"DeArrow מחליף כותרות ומיניאטורות קליקבייט בכאלה שמגיעות מהקהל, שהן מדויקות יותר ופחות סנסציוניות. הכותרות נכתבות ומוצבעות על ידי הקהילה, והמיניאטורות הן פריימים שנלקחו מהסרטון
 
-אם מופעל, כתובות URL של סרטונים יישלחו לשרת ה-API ולא יישלחו נתונים אחרים. אם לסרטון אין תמונות ממוזערות של DeArrow, יוצגו התמונות המקוריות או תמונות סטילס
-
-הקש כאן לפתיחת DeArrow.ajay.app"</string>
+הסרטונים מתבקשים באמצעות קידומת קצרה של מזהה הווידאו המגובב, כך שהשרת לא יכול לדעת בדיוק איזה סרטון אתה מסתכל. אם לסרטון אין מיניאטורה של DeArrow, מוצגת התמונה המקורית או תמונת סטילס"</string>
   <string name="morphe_dearrow_connection_toast_title">הצג התראות שגיאת חיבור</string>
   <string name="morphe_dearrow_connection_toast_summary">מציג התראה כאשר שרת DeArrow אינו זמין</string>
   <string name="morphe_dearrow_api_url_title">נקודת קצה API</string>

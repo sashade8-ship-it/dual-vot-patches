@@ -63,7 +63,6 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_album_cards_summary">Nasconde le schede degli album sotto la descrizione dell\'artista</string>
   <string name="morphe_hide_artist_cards_title">Nascondi le schede artista</string>
   <string name="morphe_hide_artist_cards_summary">Nasconde la scheda dell\'artista in cima ai risultati di ricerca</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Nascondi l\'etichetta \'Doppiato automaticamente\'</string>
   <string name="morphe_hide_channel_buttons_title">Nascondi i pulsanti del canale</string>
   <string name="morphe_hide_channel_buttons_summary">Nasconde pulsanti come Iscriviti, Visualizza canale, Community e YouTube Music dai profili dei canali nei risultati di ricerca</string>
   <string name="morphe_hide_community_posts_title">Nascondi i post della community</string>
@@ -79,7 +78,6 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_history_shelf_title">Nascondi la sezione Cronologia</string>
   <string name="morphe_hide_horizontal_shelves_title">Nascondi sezioni orizzontali</string>
   <string name="morphe_hide_horizontal_shelves_summary">Nasconde gli scaffali orizzontali come Notizie dell\'ultima ora, Post della community che potrebbero piacerti, Continua a guardare, Esplora altri canali, Esplora altri argomenti, Per te, Video più recenti, Più rilevanti, Post dalla community del creatore, Shopping e Guarda di nuovo</string>
-  <string name="morphe_hide_hyped_label_title">Nascondi etichetta Hype</string>
   <string name="morphe_hide_image_shelf_title">Nascondi sezione immagini</string>
   <string name="morphe_hide_image_shelf_summary">Nasconde gli scaffali di immagini nei risultati della ricerca</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ I cambiamenti riguarderanno:
 • Le sezioni Shorts, le pagine del canale e i risultati di ricerca potrebbero ancora mostrare gli orari di caricamento.
 • Questa funzione non funziona con il fattore di forma automotive."</string>
   <string name="morphe_hide_video_thumbnail_title">Nascondi miniatura video</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Nascondi etichette di video consigliati</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Nasconde le etichette \'Persone che hanno guardato questo video\' e \'Potrebbe piacerti anche\' nei risultati di ricerca</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Nascondi etichette video</string>
+  <string name="morphe_hide_video_labels_summary">Nasconde etichette come \'Doppiato automaticamente\' / \'Doppiato\', \'Guadagna commissioni\', \'In evidenza\', \'Guardati anche da altri\', \'prodotto(i)\' e \'Potrebbero piacerti\'</string>
   <string name="morphe_hide_view_count_title">Nascondi il numero di visualizzazioni</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Limitazioni:
@@ -170,7 +168,7 @@ I cambiamenti riguarderanno:
   <string name="morphe_hide_video_title_title">Nascondi il titolo del video</string>
   <string name="morphe_hide_video_title_summary">Nasconde il titolo del video in modalità a schermo intero</string>
   <string name="morphe_sanitize_video_subtitle_title">Sanitizza i sottotitoli video</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Sanitizza frasi come \'#\', \'Raccolta fondi\', \'Negozio\' e \'prodotti\' dai sottotitoli video</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Rimuove frasi come \'#\', \'Raccolta fondi\', \'prodotto(i)\' e \'Negozio\' dai sottotitoli dei video</string>
   <string name="morphe_hide_description_components_screen_title">Descrizione del video</string>
   <string name="morphe_hide_description_components_screen_summary">Scegli quali componenti mostrare nella descrizione del video</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Nascondi la sezione \'Riepilogo video generato dall\'IA\'</string>
@@ -329,7 +327,6 @@ Limitazioni:
   <string name="morphe_hide_stats_hidden_all_title">Video nascosti, totale</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Resettare il contatore delle ultime 24 ore?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Resettare tutti i contatori di tempo?</string>
-  <string name="morphe_hide_about_category_title">A proposito di</string>
   <string name="morphe_hide_aislist_screen_title">Filtro canali IA</string>
   <string name="morphe_hide_aislist_screen_summary">Nascondi i video provenienti da canali contrassegnati come contenuti generati dall\'IA dalla lista AiSList</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Blocklist: Alta affidabilità</string>
@@ -348,9 +345,9 @@ Limitazioni:
 Limitazioni:
 • Gli Shorts IA filtrati potrebbero apparire come uno spazio vuoto
 • Alcuni video IA potrebbero comunque essere visualizzati"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"I dati sono forniti da AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList è un elenco open source di canali YouTube che pubblicano contenuti generati dall'IA, gestito da volontari. I canali vengono segnalati dagli utenti e controllati prima di essere aggiunti
 
-Tocca qui per aprire AiSlopList.com e visualizzare i download per altre piattaforme"</string>
+L'elenco viene scaricato da GitHub e i video vengono filtrati sul tuo dispositivo"</string>
   <string name="morphe_aislist_submit_category_title">Segnala canali AI</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Aggiungi una voce di segnalazione al menu dei video</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Aggiungi una voce al menu dei video che segnala il canale di un video ad AiSList</string>
@@ -1176,11 +1173,9 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow e miniature originali</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow e Istantanee</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Istantanee</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow fornisce titoli e miniature creati dalla community per i video di YouTube. Questi sono spesso più pertinenti di quelli forniti da YouTube
+  <string name="morphe_dearrow_about_summary">"DeArrow sostituisce i titoli e le miniature clickbait con quelli forniti dalla community, più accurati e meno sensazionalistici. I titoli sono scritti e votati dalla community, e le miniature sono fotogrammi tratti dal video
 
-Se abilitata, gli URL dei video verranno inviati al server API e nessun altro dato viene inviato. Se un video non ha miniature DeArrow, vengono mostrate quelle originali o i fotogrammi
-
-Tocca qui per aprire DeArrow.ajay.app"</string>
+I video vengono richiesti tramite un breve prefisso dell'ID video con hash, quindi il server non può sapere esattamente quale video stai guardando. Se un video non ha una miniatura DeArrow, viene mostrata quella originale o un fotogramma"</string>
   <string name="morphe_dearrow_connection_toast_title">Mostra avvisi di errore di connessione</string>
   <string name="morphe_dearrow_connection_toast_summary">Mostra una notifica quando il server DeArrow non è disponibile</string>
   <string name="morphe_dearrow_api_url_title">Endpoint API</string>

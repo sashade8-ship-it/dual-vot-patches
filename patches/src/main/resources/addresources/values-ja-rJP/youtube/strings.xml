@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">アーティストの概要欄の下のアルバムカードを非表示にします</string>
   <string name="morphe_hide_artist_cards_title">アーティスト カードを非表示</string>
   <string name="morphe_hide_artist_cards_summary">検索結果の最上部に表示されるアーティストカードを非表示にします</string>
-  <string name="morphe_hide_auto_dubbed_label_title">「オートダビング」ラベルを非表示</string>
   <string name="morphe_hide_channel_buttons_title">チャンネルボタンを非表示</string>
   <string name="morphe_hide_channel_buttons_summary">検索結果のチャンネルプロフィールから「登録」「チャンネルを見る」「コミュニティ」「YouTube Music」などのボタンを非表示にします</string>
   <string name="morphe_hide_community_posts_title">コミュニティ投稿を非表示</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">履歴欄を非表示</string>
   <string name="morphe_hide_horizontal_shelves_title">横スクロール欄を非表示</string>
   <string name="morphe_hide_horizontal_shelves_summary">ニュース速報、おすすめのコミュニティ投稿、続きを見る、他のチャンネルを探す、その他のトピック、おすすめ、新着動画、関連が強い、\"チャンネル名\" のコミュニティの投稿、ショッピング、もう一度見る、などの横スクロール欄を非表示にします</string>
-  <string name="morphe_hide_hyped_label_title">「大盛り上がり」ラベルを非表示</string>
   <string name="morphe_hide_image_shelf_title">画像欄を非表示</string>
   <string name="morphe_hide_image_shelf_summary">検索結果の画像欄を非表示にします</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Second \"item\" text"</string>
 • ショート欄、チャンネル ページ、検索結果では、引き続き公開からの経過時間 / 予定時間が表示される場合がある
 • Automotive レイアウトでは動作しない"</string>
   <string name="morphe_hide_video_thumbnail_title">動画のサムネイルを非表示</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">おすすめ動画のラベルを非表示</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">検索結果に表示される「他の人はこの動画も視聴しています」ラベルと「あなたへのおすすめ」ラベルを非表示にします</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">動画ラベルを非表示</string>
+  <string name="morphe_hide_video_labels_summary">次のようなラベルを非表示にします: \'自動吹き替え\' / \'吹き替え\', \'コミッションを獲得\', \'話題\', \'ほかの人が見た動画\', \'商品(s)\', \'おすすめの動画\'</string>
   <string name="morphe_hide_view_count_title">視聴回数を非表示</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"制限事項:
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">動画のタイトルを非表示</string>
   <string name="morphe_hide_video_title_summary">全画面表示モードでの動画のタイトルを非表示にします</string>
   <string name="morphe_sanitize_video_subtitle_title">動画のタグを非表示</string>
-  <string name="morphe_sanitize_video_subtitle_summary">動画タイトル下に表示される、「#\"タグ名\"」「募金活動」「購入」「x 個の商品」などのタグを非表示にします</string>
+  <string name="morphe_sanitize_video_subtitle_summary">\'#\'、\'募金\'、\'商品(s)\'、\'ショップ\' などのフレーズを動画の字幕から除去します</string>
   <string name="morphe_hide_description_components_screen_title">概要欄</string>
   <string name="morphe_hide_description_components_screen_summary">動画の概要欄に表示するコンポーネントを設定します</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">「AI 生成による動画の要約」セクションを非表示</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">全期間の除外動画数</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">直近 24 時間の除外動画数をリセットしますか？</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">全期間の除外動画数をリセットしますか？</string>
-  <string name="morphe_hide_about_category_title">このフィルタについて</string>
   <string name="morphe_hide_aislist_screen_title">AI チャンネル フィルタ</string>
   <string name="morphe_hide_aislist_screen_summary">AiSList のユーザー コミュニティが AI 生成コンテンツを投稿していると判断してリストに登録したチャンネルの動画を除外します</string>
   <string name="morphe_hide_aislist_blocklist_category_title">ブロックリスト (信頼度: 高)</string>
@@ -348,9 +345,9 @@ Second \"item\" text"</string>
 制限事項:
 • AI 生成のショート動画を除外したときに空白が残る場合がある
 • 一部の AI 生成動画が除外されずに残ってしまう場合がある"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"AiSList からデータを取得しています
+  <string name="morphe_hide_aislist_attribution_summary">"AiSListは、AI生成コンテンツを公開するYouTubeチャンネルのオープンソースリストで、ボランティアによって維持されています。チャンネルはユーザーが報告し、追加前にレビューされます
 
-ここをタップすると AiSlopList.com を開きます。詳細の確認や、他のプラットフォーム版のダウンロードが可能です"</string>
+このリストはGitHubからダウンロードされ、動画はお使いのデバイス上でフィルタリングされます"</string>
   <string name="morphe_aislist_submit_category_title">AI チャンネルを報告</string>
   <string name="morphe_aislist_submit_flyout_menu_title">動画のメニューに報告項目を追加</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">動画を投稿したチャンネルを AiSList に報告する項目を、動画のフライアウト メニューに追加します</string>
@@ -1178,11 +1175,9 @@ Automotive レイアウト
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; デフォルト</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; 静止画</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">静止画サムネイル</string>
-  <string name="morphe_dearrow_about_summary">"DeArrowは、YouTube動画にクラウドソーシングによるタイトルとサムネイルを提供します。これらは、YouTubeが提供するものよりも関連性が高いことがよくあります。
+  <string name="morphe_dearrow_about_summary">"DeArrowは、クリックベイトのタイトルとサムネイルを、より正確で扇動的でないクラウドソースのものに置き換えます。タイトルはコミュニティによって書かれ投票され、サムネイルは動画から取られたフレームです
 
-有効にすると、動画URLがAPIサーバーに送信され、他のデータは送信されません。動画にDeArrowのサムネイルがない場合は、元のサムネイルまたは静止画が表示されます。
-
-ここをタップしてDeArrow.ajay.appを開きます"</string>
+動画はハッシュ化された動画IDの短いプレフィックスによってリクエストされるため、サーバーはあなたが見ている動画を正確に特定できません。動画にDeArrowのサムネイルがない場合、オリジナルまたは静止画が表示されます"</string>
   <string name="morphe_dearrow_connection_toast_title">接続エラーの通知を表示</string>
   <string name="morphe_dearrow_connection_toast_summary">DeArrow サーバーが利用できない場合に通知を表示します</string>
   <string name="morphe_dearrow_api_url_title">APIエンドポイント</string>

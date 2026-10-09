@@ -243,13 +243,8 @@ Nedlastede spor vises her"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videomodus er ikke tilgjengelig når overgang er aktivert</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade er av ved SABR-avspilling</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade er av under casting</string>
-  <string name="morphe_music_crossfade_about_title">Sesjonskontroll er deaktivert</string>
-  <string name="morphe_music_crossfade_about_summary">Hvordan crossfade fungerer og hvor det ikke gjør det</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Hvordan det fungerer</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade overlapper slutten av én sang med starten på den neste, ved hjelp av varigheten og kurven din.
-
-Den gjelder ved automatisk videreavspilling og manuelt hopp, hver med sin egen bryter ovenfor. Ved automatisk videreavspilling starter blandingen noen sekunder før sangen slutter."</string>
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade overlapper slutten av én sang med starten av den neste, ved å bruke varigheten og kurven\n\nDen kjører på automatisk avspilling og på manuelt hopp, hver med egen bryter. Ved automatisk avspilling starter blandingen noen sekunder før sangen slutter"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Begrensninger</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Musikkvideoer spilles bare som lyd mens crossfade er på. Trykk lenge på shuffle-knappen for å pause crossfade og se videoen.
 
@@ -449,8 +444,6 @@ SABR-avspilling (etterligning av videostrømmer er av)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Fyll inn manglende album</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Når musikken ikke inneholder et album, slå det opp på Last.fm slik at scrobbelen din er komplett</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Om scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling synkroniserer automatisk din YouTube Music-bruk med din Last.fm- eller ListenBrainz-profil.
 
 For å sikre at scrobbling synkroniseres under avspilling i bakgrunnen, må du sørge for at YouTube Music sin app-batteribruk er satt til \"Ubegrenset\"."</string>
@@ -462,7 +455,6 @@ For å sikre at scrobbling synkroniseres under avspilling i bakgrunnen, må du s
   <string name="morphe_music_lyrics_section_service_title">Sangteksttjeneste</string>
   <string name="morphe_music_lyrics_section_overlay_title">Overlegg</string>
   <string name="morphe_music_lyrics_section_sync_title">Synkronisering</string>
-  <string name="morphe_music_lyrics_section_about_title">Om</string>
   <string name="morphe_music_lyrics_source_all_disabled">Alle leverandører deaktivert – innebygde tekster og innebygde tekster</string>
   <string name="morphe_music_lyrics_source_reset_title">Tilbakestill leverandørrekkefølgen?</string>
   <string name="morphe_music_lyrics_source_reset_message">Tilbakestill leverandørene til standard prioritetsrekkefølge</string>

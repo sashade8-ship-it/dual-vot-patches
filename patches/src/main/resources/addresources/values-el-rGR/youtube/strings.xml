@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">Απόκρυψη των καρτών άλμπουμ κάτω από την περιγραφή του καλλιτέχνη</string>
   <string name="morphe_hide_artist_cards_title">Απόκρυψη καρτών καλλιτεχνών</string>
   <string name="morphe_hide_artist_cards_summary">Απόκρυψη της κάρτας του καλλιτέχνη στο πάνω μέρος των αποτελεσμάτων αναζήτησης</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Απόκρυψη ετικέτας \'Αυτόματης μεταγλώττισης\'</string>
   <string name="morphe_hide_channel_buttons_title">Απόκρυψη κουμπιών καναλιών</string>
   <string name="morphe_hide_channel_buttons_summary">Αποκρύπτει κουμπιά όπως Εγγραφή, Προβολή καναλιού, Κοινότητα και YouTube Music από τα προφίλ καναλιών στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_community_posts_title">Απόκρυψη \"Δημοσιεύσεων Κοινότητας\"</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">Απόκρυψη ραφιού Ιστορικού</string>
   <string name="morphe_hide_horizontal_shelves_title">Απόκρυψη \"Οριζοντίων Ραφιών\"</string>
   <string name="morphe_hide_horizontal_shelves_summary">Κρύβει οριζόντια ράφια όπως Επικαιρότητα, Δημοσιεύσεις κοινότητας που μπορεί να σας αρέσουν, Συνέχεια παρακολούθησης, Εξερεύνηση περισσότερων καναλιών, Εξερεύνηση περισσότερων θεμάτων, Για εσάς, Πιο πρόσφατα βίντεο, Πιο σχετικά, Δημοσιεύσεις από την κοινότητα του δημιουργού, Αγορές και Παρακολουθήστε ξανά</string>
-  <string name="morphe_hide_hyped_label_title">Απόκρυψη ετικέτας \"Δημοφιλή\"</string>
   <string name="morphe_hide_image_shelf_title">Απόκρυψη ραφιού \"Εικόνες\" στα αποτελέσματα αναζήτησης</string>
   <string name="morphe_hide_image_shelf_summary">Απόκρυψη ραφιών εικόνων στα αποτελέσματα αναζήτησης</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Second \"item\" text"</string>
 • Οι ενότητες Shorts, οι σελίδες καναλιών και τα αποτελέσματα αναζήτησης ενδέχεται να εξακολουθούν να εμφανίζουν τον χρόνο μεταφόρτωσης
 • Αυτή η λειτουργία δεν λειτουργεί με τη διάταξη αυτοκινήτου"</string>
   <string name="morphe_hide_video_thumbnail_title">Απόκρυψη μικρογραφίας βίντεο</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Ετικέτες προτάσεων βίντεο</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Απόκρυψη των ετικετών \"Άνθρωποι παρακολούθησαν επίσης\" και \"Ενδέχεται επίσης να σας αρέσει\" στα αποτελέσματα αναζήτησης</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Απόκρυψη ετικετών βίντεο</string>
+  <string name="morphe_hide_video_labels_summary">Κρύβει ετικέτες όπως «Αυτόματη μεταγλώττιση» / «Μεταγλωττισμένο», «Κερδίζει προμήθεια», «Πολυσυζητημένο», «Παρακολούθησαν επίσης», «προϊόν(τα)» και «Μπορεί να σας αρέσουν επίσης»</string>
   <string name="morphe_hide_view_count_title">Αριθμός προβολών στη ροή και στα αποτελέσματα αναζήτησης</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Περιορισμοί:
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">Τίτλος του βίντεο</string>
   <string name="morphe_hide_video_title_summary">Απόκρυψη του τίτλου του βίντεο στην οθόνη πλήρους προβολής</string>
   <string name="morphe_sanitize_video_subtitle_title">Καθαρισμός υπότιτλων βίντεο</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Καθαρίζει φράσεις όπως \'#\', \'Fundraiser\', \'Shop\' και \'products\' από τους υπότιτλους του βίντεο</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Αφαιρεί φράσεις όπως «#», «Έρανος», «προϊόν(τα)» και «Κατάστημα» από τον υπότιτλο βίντεο</string>
   <string name="morphe_hide_description_components_screen_title">Περιγραφή βίντεο</string>
   <string name="morphe_hide_description_components_screen_summary">Επιλέξτε ποια στοιχεία εμφανίζονται στην περιγραφή του βίντεο</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Απόκρυψη τμήματος \"Σύνοψη βίντεο που δημιουργήθηκε από AI\"</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">Βίντεο αποκρυμμένα, συνολικά</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Επαναφορά μετρητή τελευταίων 24 ωρών;</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Επαναφορά όλων των χρονομετρητών;</string>
-  <string name="morphe_hide_about_category_title">Πληροφορίες</string>
   <string name="morphe_hide_aislist_screen_title">Φίλτρο καναλιών AI</string>
   <string name="morphe_hide_aislist_screen_summary">Απόκρυψη βίντεο από κανάλια που έχουν επισημανθεί ως περιεχόμενο που δημιουργήθηκε από AI από τη λίστα AiSList</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Μαύρη λίστα: Υψηλή βεβαιότητα</string>
@@ -348,9 +345,9 @@ Second \"item\" text"</string>
 Περιορισμοί:
 • Τα φιλτραρισμένα AI Shorts ενδέχεται να εμφανίζονται ως κενός χώρος
 • Ορισμένα βίντεο AI ενδέχεται να εξακολουθούν να εμφανίζονται"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Τα δεδομένα παρέχονται από το AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"Το AiSList είναι μια λίστα ανοιχτού κώδικα, συντηρούμενη από εθελοντές, με κανάλια YouTube που δημοσιεύουν περιεχόμενο που δημιουργείται από τεχνητή νοημοσύνη. Τα κανάλια αναφέρονται από χρήστες και εξετάζονται πριν προστεθούν
 
-Πατήστε εδώ για να ανοίξετε το AiSlopList.com και να δείτε λήψεις για άλλες πλατφόρμες"</string>
+Η λίστα λαμβάνεται από το GitHub και τα βίντεο φιλτράρονται στη συσκευή σας"</string>
   <string name="morphe_aislist_submit_category_title">Αναφορά καναλιών AI</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Προσθήκη καταχώρισης αναφοράς στο μενού βίντεο</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Προσθήκη καταχώρισης στο μενού βίντεο που αναφέρει το κανάλι ενός βίντεο στο AiSList</string>
@@ -1161,11 +1158,9 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Αρχικές μικρογραφίες</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Ακίνητα καρέ</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Ακίνητα καρέ</string>
-  <string name="morphe_dearrow_about_summary">"Το DeArrow παρέχει τίτλους και μικρογραφίες από το πλήθος για βίντεο του YouTube. Αυτά τα στοιχεία είναι συχνά πιο σχετικά από εκείνα που παρέχει το YouTube
+  <string name="morphe_dearrow_about_summary">"Το DeArrow αντικαθιστά τους παραπλανητικούς τίτλους και τις μικρογραφίες clickbait με αυτές που παρέχονται από το κοινό, οι οποίες είναι πιο ακριβείς και λιγότερο εντυπωσιακές. Οι τίτλοι γράφονται και ψηφίζονται από την κοινότητα, και οι μικρογραφίες είναι καρέ που λαμβάνονται από το βίντεο
 
-Αν είναι ενεργοποιημένο, οι διευθύνσεις URL των βίντεο αποστέλλονται στον διακομιστή API και δεν αποστέλλονται άλλα δεδομένα. Αν ένα βίντεο δεν έχει μικρογραφίες DeArrow, τότε εμφανίζονται οι αρχικές μικρογραφίες ή τα στατικά στιγμιότυπα
-
-Πατήστε εδώ για να ανοίξετε το DeArrow.ajay.app"</string>
+Τα βίντεο ζητούνται με ένα σύντομο πρόθεμα του κατακερματισμένου αναγνωριστικού βίντεο, έτσι ο διακομιστής δεν μπορεί να γνωρίζει ακριβώς ποιο βίντεο βλέπετε. Εάν ένα βίντεο δεν έχει μικρογραφία DeArrow, εμφανίζεται το πρωτότυπο ή ένα στατικό στιγμιότυπο."</string>
   <string name="morphe_dearrow_connection_toast_title">Εμφάνιση ειδοποιήσεων σφάλματος σύνδεσης</string>
   <string name="morphe_dearrow_connection_toast_summary">Εμφανίζει μια ειδοποίηση όταν ο διακομιστής DeArrow δεν είναι διαθέσιμος</string>
   <string name="morphe_dearrow_api_url_title">Τελικό σημείο API</string>

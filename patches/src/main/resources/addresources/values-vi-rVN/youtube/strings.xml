@@ -62,7 +62,6 @@ Ví dụ:
   <string name="morphe_hide_album_cards_summary">Ẩn các thẻ album bên dưới phần mô tả nghệ sĩ</string>
   <string name="morphe_hide_artist_cards_title">Ẩn thẻ nghệ sĩ</string>
   <string name="morphe_hide_artist_cards_summary">Ẩn thẻ nghệ sĩ ở đầu kết quả tìm kiếm</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Ẩn nhãn \"Bản lồng tiếng\"</string>
   <string name="morphe_hide_channel_buttons_title">Ẩn các nút kênh</string>
   <string name="morphe_hide_channel_buttons_summary">Ẩn các nút như Đăng ký, Xem kênh, Cộng đồng và YouTube Music khỏi hồ sơ kênh trong kết quả tìm kiếm</string>
   <string name="morphe_hide_community_posts_title">Ẩn bài đăng cộng đồng</string>
@@ -78,7 +77,6 @@ Ví dụ:
   <string name="morphe_hide_history_shelf_title">Ẩn ngăn Lịch sử</string>
   <string name="morphe_hide_horizontal_shelves_title">Ẩn kệ cá nhân hoá</string>
   <string name="morphe_hide_horizontal_shelves_summary">Ẩn các kệ ngang như Tin nổi bật, Bài đăng bạn có thể thích, Tiếp tục xem, Khám phá các kênh khác, Khám phá các chủ đề khác, Dành cho bạn, Mới nhất, Phù hợp nhất, Bài đăng từ cộng đồng của nhà sáng tạo, Mua sắm, và Xem lại</string>
-  <string name="morphe_hide_hyped_label_title">Ẩn nhãn nổi bật</string>
   <string name="morphe_hide_image_shelf_title">Ẩn kệ hình ảnh</string>
   <string name="morphe_hide_image_shelf_summary">Ẩn các kệ hình ảnh trong kết quả tìm kiếm</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -120,9 +118,9 @@ Ví dụ:
 • Kệ Shorts, trang kênh và kết quả tìm kiếm có thể vẫn hiển thị thời gian tải lên
 • Không hoạt động với bố cục màn hình ô tô"</string>
   <string name="morphe_hide_video_thumbnail_title">Ẩn hình thu nhỏ video</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Ẩn nhãn video đề xuất</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Ẩn nhãn \"Mọi người cũng xem video này\" và \"Có thể bạn cũng thích nội dung này\" trong kết quả tìm kiếm</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Ẩn nhãn video</string>
+  <string name="morphe_hide_video_labels_summary">Ẩn các nhãn như \'Tự động lồng tiếng\' / \'Lồng tiếng\', \'Kiếm hoa hồng\', \'Thịnh hành\', \'Mọi người cũng xem\', \'sản phẩm(s)\' và \'Có thể bạn cũng sẽ thích\'</string>
   <string name="morphe_hide_view_count_title">Ẩn số lượt xem</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Hạn chế:
@@ -169,7 +167,7 @@ Ví dụ:
   <string name="morphe_hide_video_title_title">Ẩn tiêu đề video</string>
   <string name="morphe_hide_video_title_summary">Ẩn tiêu đề video ở chế độ toàn màn hình</string>
   <string name="morphe_sanitize_video_subtitle_title">Lọc nội dung phụ đề video</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Lọc các cụm từ như \"#\", \"Hoạt động gây quỹ\", \"Cửa hàng\" và \"sản phẩm\" ra khỏi phụ đề video</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Xóa các cụm từ như \'#\', \'Gây quỹ\', \'sản phẩm(s)\' và \'Cửa hàng\' khỏi phụ đề video</string>
   <string name="morphe_hide_description_components_screen_title">Mô tả video</string>
   <string name="morphe_hide_description_components_screen_summary">Chọn những thành phần sẽ hiển thị trong phần mô tả video</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Ẩn phần \"Bản tóm tắt video do AI tạo\"</string>
@@ -328,7 +326,6 @@ Hạn chế:
   <string name="morphe_hide_stats_hidden_all_title">Số video đã ẩn từ trước đến nay</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Đặt lại bộ đếm 24 giờ?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Đặt lại tất cả bộ đếm thời gian?</string>
-  <string name="morphe_hide_about_category_title">Giới thiệu</string>
   <string name="morphe_hide_aislist_screen_title">Bộ lọc kênh AI</string>
   <string name="morphe_hide_aislist_screen_summary">Ẩn các video từ các kênh được cộng đồng AiSList đánh dấu là sử dụng nội dung AI</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Danh sách chặn: Độ tin cậy cao</string>
@@ -347,9 +344,9 @@ Hạn chế:
 Hạn chế:
 • Short sử dụng AI sau khi lọc có thể để lại một màn hình trống
 • Một số video AI có thể vẫn hiển thị"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Dữ liệu được cung cấp bởi AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList là danh sách mã nguồn mở các kênh YouTube đăng nội dung do AI tạo ra, được duy trì bởi các tình nguyện viên. Các kênh được người dùng báo cáo và được xem xét trước khi được thêm vào
 
-Bấm vào đây để mở AiSlopList.com và xem các phiên bản cho các nền tảng khác"</string>
+Danh sách được tải xuống từ GitHub và video được lọc trên thiết bị của bạn"</string>
   <string name="morphe_aislist_submit_category_title">Báo cáo các kênh AI</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Thêm mục báo cáo vào menu video</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Thêm một mục vào menu video để báo cáo kênh của video lên AiSList</string>
@@ -1175,11 +1172,9 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Hình thu nhỏ gốc</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Chụp tĩnh</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Chụp tĩnh</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow cung cấp các tiêu đề và hình thu nhỏ do cộng đồng đóng góp cho video YouTube. Chúng thường phù hợp hơn những gì do YouTube cung cấp
+  <string name="morphe_dearrow_about_summary">"DeArrow thay thế các tiêu đề và hình thu nhỏ giật gân bằng những cái do cộng đồng đóng góp, chính xác hơn và ít giật gân hơn. Tiêu đề được viết và bình chọn bởi cộng đồng, và hình thu nhỏ là các khung hình lấy từ video
 
-Nếu được bật, URL video sẽ được gửi đến máy chủ API và không có dữ liệu nào khác được gửi. Nếu video không có hình thu nhỏ DeArrow, thì hình ảnh gốc hoặc ảnh tĩnh sẽ được hiển thị
-
-Nhấn vào đây để mở DeArrow.ajay.app"</string>
+Video được yêu cầu bằng một tiền tố ngắn của ID video đã băm, vì vậy máy chủ không thể biết chính xác bạn đang xem video nào. Nếu video không có hình thu nhỏ DeArrow, sẽ hiển thị bản gốc hoặc khung hình tĩnh"</string>
   <string name="morphe_dearrow_connection_toast_title">Hiện cảnh báo lỗi kết nối</string>
   <string name="morphe_dearrow_connection_toast_summary">Hiển thị thông báo khi máy chủ DeArrow không khả dụng</string>
   <string name="morphe_dearrow_api_url_title">Điểm cuối API</string>

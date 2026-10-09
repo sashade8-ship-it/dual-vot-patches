@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Режим видео режима није доступан када је прелазак омогућен</string>
   <string name="morphe_music_crossfade_sabr_toast">Кросфејд је искључен при SABR репродукцији</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Кросфејд је искључен током емитовања</string>
-  <string name="morphe_music_crossfade_about_title">О програму</string>
-  <string name="morphe_music_crossfade_about_summary">Како кросфејд ради и где не ради</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Како то ради</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Кросфејд преклапа крај једне песме са почетком следеће песме, користећи подешено трајање и криву.
+  <string name="morphe_music_crossfade_about_how_summary">"Кросфејд преклапа крај једне песме са почетком следеће, користећи ваше трајање и криву
 
-Ради при аутоматском преласку и ручном прескакању, сваки са сопственим прекидачем изнад. При аутоматском преласку спајање почиње неколико секунди пре краја песме."</string>
+Ради на аутоматском напредовању и на ручном прескакању, свако са сопственим прекидачем. При аутоматском напредовању, преклапање почиње неколико секунди пре него што се песма заврши.}"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Ограничења</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Музички спотови се репродукују само као аудио док је кросфејд укључен. Дуго притисните дугме Промешај да бисте паузирали кросфејд и гледали спот
 
@@ -449,8 +446,6 @@ SABR репродукција (када је лажирање видео стр�
   <string name="morphe_music_scrobbling_guess_album_title">Попуни недостајући албум</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Када музика не садржи албум, потражи га на Last.fm да би твој scrobble био потпун</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">О scrobbling-у</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling automatski sinhronizuje vašu upotrebu YouTube Music-a sa vašim Last.fm ili ListenBrainz profilom
 
 Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, pobrinite se da je korišćenje aplikacije YouTube Music baterije postavljeno na \"Neograničeno\""</string>
@@ -462,7 +457,6 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_section_service_title">Сервис за текстове песама</string>
   <string name="morphe_music_lyrics_section_overlay_title">Преклапање</string>
   <string name="morphe_music_lyrics_section_sync_title">Синхронизација</string>
-  <string name="morphe_music_lyrics_section_about_title">O programu</string>
   <string name="morphe_music_lyrics_source_all_disabled">Сви провајдери су искључени — уграђени текстови и уметнути текстови песама.</string>
   <string name="morphe_music_lyrics_source_reset_title">Ресетовати редослед провајдера?</string>
   <string name="morphe_music_lyrics_source_reset_message">Врати провајдере на подразумевани редослед приоритета.</string>

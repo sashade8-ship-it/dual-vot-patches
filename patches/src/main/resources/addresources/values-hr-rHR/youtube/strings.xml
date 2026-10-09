@@ -65,7 +65,6 @@ Promjene uključuju:
   <string name="morphe_hide_album_cards_summary">Skriva kartice albuma ispod opisa izvođača</string>
   <string name="morphe_hide_artist_cards_title">Sakrij kartice izvođača</string>
   <string name="morphe_hide_artist_cards_summary">Skriva karticu izvođača na vrhu rezultata pretrage</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Sakrij oznaku \'Automatski prevedeno\'</string>
   <string name="morphe_hide_channel_buttons_title">Sakrij gumbe kanala</string>
   <string name="morphe_hide_channel_buttons_summary">Skriva gumbe poput Pretplati se, Prikaži kanal, Zajednica i YouTube Music s profila kanala u rezultatima pretraživanja</string>
   <string name="morphe_hide_community_posts_title">Sakrij postove zajednice</string>
@@ -81,7 +80,6 @@ Promjene uključuju:
   <string name="morphe_hide_history_shelf_title">Sakrij policu povijesti</string>
   <string name="morphe_hide_horizontal_shelves_title">Sakrij vodoravne kartice</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skriva horizontalne police poput Vijesti u živo, Objava iz zajednice koje možda volite, Nastavak gledanja, Istražite više kanala, Istražite više tema, Za vas, Najnoviji videozapisi, Najrelevantnije, Objava iz zajednice kreatora, Kupovina i Ponovno gledajte</string>
-  <string name="morphe_hide_hyped_label_title">Sakrij  Hype oznaku</string>
   <string name="morphe_hide_image_shelf_title">Sakrij policu slika</string>
   <string name="morphe_hide_image_shelf_summary">Skriva police sa slikama u rezultatima pretrage</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -123,9 +121,9 @@ Promjene uključuju:
 • Shorts police, stranice kanala i rezultati pretraživanja možda će i dalje prikazivati vrijeme učitavanja
 • Ne radi s automobilskim izgledom"</string>
   <string name="morphe_hide_video_thumbnail_title">Sakrij sličicu videozapisa</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Sakrij \'Oglasi na ekranu\'</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Skriva oznake \"Osobe su također gledale\" i \"Moglo bi vam se također svidjeti\" u rezultatima pretraživanja</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Sakrij oznake na videozapisima</string>
+  <string name="morphe_hide_video_labels_summary">Sakriva oznake poput \'Automatski sinkronizirano\' / \'Sinkronizirano\', \'Zarađuje proviziju\', \'Razvikano\', \'Ljudi su gledali i ovo\', \'proizvod(i)\' i \'Možda će vam se svidjeti i ovo\'</string>
   <string name="morphe_hide_view_count_title">Dodajte navlake za koristiti ključ: %s</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Ograničenja:
@@ -172,7 +170,7 @@ Promjene uključuju:
   <string name="morphe_hide_video_title_title">Sakrij naslov videa</string>
   <string name="morphe_hide_video_title_summary">Skriva naslov videozapisa u načinu rada preko cijelog zaslona</string>
   <string name="morphe_sanitize_video_subtitle_title">Očisti titlove videozapisa</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Čisti fraze poput \'#\', \'Prikupljanje\', \'Trgovina\' i \'proizvodi\' iz titlova videozapisa</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Čisti izraze poput \'#\', \'Prikupljanje sredstava\', \'proizvod(i)\' i \'Trgovina\' iz podnaslova videozapisa</string>
   <string name="morphe_hide_description_components_screen_title">Video opis</string>
   <string name="morphe_hide_description_components_screen_summary">Odaberite koje komponente trebaju se pojaviti u opisu videa</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Sakrij odjeljak \"Videosažetak generiran umjetnom inteligencijom\".</string>
@@ -331,7 +329,6 @@ Ograničenja:
   <string name="morphe_hide_stats_hidden_all_title">Sakriveni videozapisi, ukupno</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Resetiraj brojač za zadnjih 24 sata?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Resetiraj ukupni brojač?</string>
-  <string name="morphe_hide_about_category_title">O aplikaciji</string>
   <string name="morphe_hide_aislist_screen_title">AI filter kanala</string>
   <string name="morphe_hide_aislist_screen_summary">Sakrij videozapise s kanala označenih kao AI-generirani sadržaj prema AiSList zajedničkom popisu</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Lista blokiranja: Visoko povjerenje</string>
@@ -350,9 +347,9 @@ Ograničenja:
 Ograničenja:
 • Filtrirani AI Shorts mogu se prikazati kao prazan prostor
 • Neki AI videozapisi se možda i dalje prikazuju"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Podatke pruža AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList je popis otvorenog koda YouTube kanala koji objavljuju sadržaj generiran umjetnom inteligencijom, a održavaju ga volonteri. Korisnici prijavljuju kanale koji se zatim pregledavaju prije nego što se dodaju
 
-Dodirnite ovdje za otvaranje AiSlopList.com i pregled preuzimanja za druge platforme"</string>
+Popis se preuzima s GitHuba, a videozapisi se filtriraju na vašem uređaju"</string>
   <string name="morphe_aislist_submit_category_title">Prijava AI kanala</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Dodaj stavku za prijavu u izbornik videa</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Dodaje stavku u izbornik videa koja prijavljuje kanal videozapisa u AiSList</string>
@@ -1178,11 +1175,9 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Originalne minijature</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Still captures</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Still captures</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow pruža naslove i minijature iz zajednice za YouTube videozapise. Oni su često relevantniji od onih koje pruža YouTube
+  <string name="morphe_dearrow_about_summary">"DeArrow zamjenjuje clickbait naslove i sličice inačicama iz zajednice koje su točnije i manje senzacionalističke. Naslove piše zajednica i o njima glasa, a sličice su kadrovi preuzeti iz videozapisa
 
-Ako je omogućeno, URL-ovi videozapisa šalju se API poslužitelju i nikakvi drugi podaci se ne šalju. Ako videozapis nema DeArrow minijature, prikazuju se originalne ili statične snimke
-
-Dodirnite ovdje za otvaranje DeArrow.ajay.app"</string>
+Videozapisi se zahtijevaju kratkim prefiksom hashiranog ID-a videozapisa, pa poslužitelj ne može točno odrediti koji videozapis gledate. Ako videozapis nema DeArrow sličice, prikazuje se izvorna sličica ili nepokretni kadar"</string>
   <string name="morphe_dearrow_connection_toast_title">Prikaži upozorenja o pogrešci u povezivanju</string>
   <string name="morphe_dearrow_connection_toast_summary">Prikazuje obavijest kada DeArrow poslužitelj nije dostupan</string>
   <string name="morphe_dearrow_api_url_title">API krajnja točka</string>

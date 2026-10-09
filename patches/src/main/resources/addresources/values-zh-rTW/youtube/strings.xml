@@ -43,7 +43,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_layout_updates_summary">防止伺服器更新應用程式版面配置</string>
   <string name="morphe_disable_layout_updates_user_dialog_message">"應用程式版面回復至首次安裝時的版面配置。
 
-部分伺服器端的版面可能不會回復。
+部份伺服器端的版面可能不會回復。
 
 變更內容包括：
 • 播放器彈出式選單中的元件（或相關設定）可能無法運作。
@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">隱藏藝術家描述下方的專輯卡片</string>
   <string name="morphe_hide_artist_cards_title">隱藏藝人資訊卡</string>
   <string name="morphe_hide_artist_cards_summary">隱藏搜尋結果頂部的藝術家卡片</string>
-  <string name="morphe_hide_auto_dubbed_label_title">隱藏「自動配音」標籤</string>
   <string name="morphe_hide_channel_buttons_title">隱藏頻道按鈕</string>
   <string name="morphe_hide_channel_buttons_summary">隱藏搜尋結果中頻道個人檔案中的訂閱、查看頻道、社群和 YouTube Music 等按鈕</string>
   <string name="morphe_hide_community_posts_title">隱藏社群貼文</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">隱藏觀看記錄欄</string>
   <string name="morphe_hide_horizontal_shelves_title">隱藏橫向區塊</string>
   <string name="morphe_hide_horizontal_shelves_summary">已隱藏橫向專區，例如：• 即時新聞• 你可能喜歡的社群貼文• 繼續觀看• 探索更多頻道• 探索更多主題• 為你推薦• 最新影片• 最相關• 來自創作者社群的貼文• 購物• 再次觀看</string>
-  <string name="morphe_hide_hyped_label_title">隱藏熱門標籤</string>
   <string name="morphe_hide_image_shelf_title">隱藏圖庫</string>
   <string name="morphe_hide_image_shelf_summary">隱藏搜尋結果中的圖片專區</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -115,15 +113,15 @@ Second \"item\" text"</string>
   <string name="morphe_hide_surveys_title">隱藏問卷調查</string>
   <string name="morphe_hide_surveys_summary">隱藏關於資訊流推薦準確度的調查和提示</string>
   <string name="morphe_hide_ticket_shelf_title">隱藏票券架</string>
-  <string name="morphe_hide_upload_time_title">隱藏「上傳時間」</string>
+  <string name="morphe_hide_upload_time_title">隱藏「上載時間」</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"限制：
-• Shorts 專區、頻道頁面和搜尋結果可能仍會顯示上傳時間
+• Shorts 專區、頻道頁面和搜尋結果可能仍會顯示上載時間
 • 此功能不適用於汽車版面配置"</string>
   <string name="morphe_hide_video_thumbnail_title">隱藏影片縮圖</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">隱藏影片推薦標籤</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">隱藏搜尋結果中的「其他人也觀看」和「你可能也喜歡」標籤</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">隱藏影片標籤</string>
+  <string name="morphe_hide_video_labels_summary">隱藏像是「自動配音」/「已配音」、「賺取佣金」、「熱門」、「其他人也觀看」、「產品(s)」和「您可能也喜歡」等標籤</string>
   <string name="morphe_hide_view_count_title">隱藏觀看次數</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"限制：
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">隱藏影片標題</string>
   <string name="morphe_hide_video_title_summary">隱藏全螢幕模式下的影片標題</string>
   <string name="morphe_sanitize_video_subtitle_title">清理影片字幕</string>
-  <string name="morphe_sanitize_video_subtitle_summary">清除影片字幕中的字詞，例如「#」、「募款活動」、「商店」和「產品」</string>
+  <string name="morphe_sanitize_video_subtitle_summary">從影片字幕中清除像是「#」、「募款」、「產品(s)」和「商店」等短語</string>
   <string name="morphe_hide_description_components_screen_title">影片說明</string>
   <string name="morphe_hide_description_components_screen_summary">選擇要在影片描述中顯示哪些元件</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">隱藏「AI 產生的影片摘要」區段</string>
@@ -190,7 +188,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_playlists_section_title">隱藏精選歌單區段</string>
   <string name="morphe_hide_featured_videos_section_title">隱藏精選影片區段</string>
   <string name="morphe_hide_hashtag_section_title">隱藏主題標籤區段</string>
-  <string name="morphe_hide_how_this_was_made_section_title">隱藏「此部分的製作方式」區段</string>
+  <string name="morphe_hide_how_this_was_made_section_title">隱藏「此部份的製作方式」區段</string>
   <string name="morphe_hide_hype_points_title">隱藏Hype點數</string>
   <string name="morphe_hide_info_cards_section_title">隱藏資訊卡片區段</string>
   <string name="morphe_hide_key_concepts_section_title">隱藏「重點概念」區段</string>
@@ -308,11 +306,11 @@ Second \"item\" text"</string>
 
 限制：
 • 無法依頻道名稱隱藏 Shorts
-• 部分 UI 元件可能無法隱藏
+• 部份 UI 元件可能無法隱藏
 • 搜尋關鍵字可能無法顯示結果"</string>
   <string name="morphe_hide_keyword_content_about_whole_words_title">比對整個字詞</string>
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
-  <string name="morphe_hide_keyword_content_about_whole_words_summary">將關鍵字或詞組用雙引號括起來，可以防止影片標題和頻道名稱的部分相符&lt;br&gt;&lt;br&gt;例如：&lt;br&gt;&lt;b&gt;\"ai\"&lt;/b&gt; 會隱藏影片：&lt;b&gt;How does AI work?&lt;/b&gt;&lt;br&gt;但不會隱藏：&lt;b&gt;What does fair use mean?&lt;/b&gt;</string>
+  <string name="morphe_hide_keyword_content_about_whole_words_summary">將關鍵字或詞組用雙引號括起來，可以防止影片標題和頻道名稱的部份相符&lt;br&gt;&lt;br&gt;例如：&lt;br&gt;&lt;b&gt;\"ai\"&lt;/b&gt; 會隱藏影片：&lt;b&gt;How does AI work?&lt;/b&gt;&lt;br&gt;但不會隱藏：&lt;b&gt;What does fair use mean?&lt;/b&gt;</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_hide_keyword_toast_invalid_common">無法使用關鍵字：%s</string>
   <string name="morphe_hide_keyword_toast_invalid_common_whole_word_required">請加上引號來使用關鍵字：%s</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">已隱藏影片，所有時間</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">重設過去 24 小時的計數器？</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">要重置所有時間計數器嗎？</string>
-  <string name="morphe_hide_about_category_title">關於</string>
   <string name="morphe_hide_aislist_screen_title">AI頻道篩選器</string>
   <string name="morphe_hide_aislist_screen_summary">隱藏來自 AiSList 社群標記為 AI 生成內容的頻道影片</string>
   <string name="morphe_hide_aislist_blocklist_category_title">封鎖清單：高信度</string>
@@ -347,10 +344,10 @@ Second \"item\" text"</string>
 
 限制：
 • 篩選後的 AI Shorts 可能會顯示為空白空間
-• 部分 AI 影片仍可能顯示出來"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"資料由 AiSList 提供。
+• 部份 AI 影片仍可能顯示出來"</string>
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList 是一個開源的 YouTube 頻道清單，收錄發布 AI 生成內容的頻道，由志願者維護。頻道由用戶舉報，並在加入前經過審查
 
-點擊這裡打開 AiSlopList.com，以查看其他平台下載内容"</string>
+清單從 GitHub 下載，影片會在您的裝置上進行過濾"</string>
   <string name="morphe_aislist_submit_category_title">檢舉 AI 頻道</string>
   <string name="morphe_aislist_submit_flyout_menu_title">在影片選單中新增檢舉項目</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">在影片選單中新增一個項目，以向 AiSList 檢舉影片的頻道</string>
@@ -363,7 +360,7 @@ Second \"item\" text"</string>
 • 以 AI 語音、視覺效果、腳本或音樂為主要內容
 • 使用 AI 工具大量製作內容，且幾乎沒有真人投入
 
-請勿檢舉僅討論 AI，或僅在影片某些部分使用 AI 的頻道。
+請勿檢舉僅討論 AI，或僅在影片某些部份使用 AI 的頻道。
 
 檢舉內容是公開的，且在頻道加入清單前會經過審查。若要移除，只能透過在 GitHub 上提出請求"</string>
   <string name="morphe_aislist_submit_already_blocklisted">此頻道已在 AiSList 封鎖清單中</string>
@@ -1176,11 +1173,9 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; 原版縮圖</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; 靜止捕獲</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">靜態截圖</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow 為 YouTube 影片提供群眾提交的標題與縮圖。這些通常比 YouTube 提供的更為相關。
+  <string name="morphe_dearrow_about_summary">"DeArrow 以更準確且不那麼誇大的社群提交內容取代點擊誘餌標題和縮圖。標題由社群撰寫和投票，縮圖則取自影片的畫面
 
-若啟用，影片網址會傳送至 API 伺服器，且不會傳送其他資料。如果影片沒有 DeArrow 縮圖，則會顯示原始或靜止擷取畫面。
-
-輕觸此處以開啟 DeArrow.ajay.app"</string>
+影片是透過雜湊影片 ID 的短前綴來請求，因此伺服器無法確切知道您正在查看哪部影片。如果影片沒有 DeArrow 縮圖，則會顯示原始影片或靜態擷取畫面"</string>
   <string name="morphe_dearrow_connection_toast_title">在 DeArrow 伺服器無法使用時顯示通知</string>
   <string name="morphe_dearrow_connection_toast_summary">當 DeArrow 伺服器無法使用時顯示通知</string>
   <string name="morphe_dearrow_api_url_title">API 端點</string>
@@ -1297,9 +1292,9 @@ Second \"item\" text"</string>
 
 限制：
 • 最大解析度為 1080p
-• 影片播放將比 VP9 或 AV1 消耗更多網路資料
+• 影片播放將比 VP9 或 AV1 消耗更多網路數據量
 • HDR 影片將不會使用 AVC
-• 部分裝置無法強制使用 AVC"</string>
+• 部份裝置無法強制使用 AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">若要使用此功能，請將「偽造視訊串流」設定為「Android VR」或「Android Studio」</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->

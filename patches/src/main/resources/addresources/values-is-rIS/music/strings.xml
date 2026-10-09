@@ -243,13 +243,10 @@ Niðurhlaðin lög birtast hér"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Myndbandsstilling er ekki í boði þegar crossfade er virkt</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade er óvirkt við SABR spilun</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade er óvirkt meðan streymt er</string>
-  <string name="morphe_music_crossfade_about_title">Um</string>
-  <string name="morphe_music_crossfade_about_summary">Hvernig crossfade virkar og hvar það virkar ekki</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Hvernig það virkar</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade lætur endann á einu lagi skarast við upphaf þess næsta, samkvæmt þinni tímalengd og ferli.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade lætur enda eins lags skarast við upphaf þess næsta, með þinni lengd og ferli
 
-Það virkar við sjálfvirka áframspilun og handvirkt stökk, hvor með sinn rofa hér fyrir ofan. Við sjálfvirka áframspilun hefst blöndunin nokkrum sekúndum áður en lagið endar."</string>
+Það keyrir á sjálfvirkri framvindu og við handvirka sleppingu, hvor með sinn rofa. Á sjálfvirkri framvindu byrjar blendingurinn nokkrum sekúndum áður en lagið endar"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Takmarkanir</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Tónlistarmyndbönd spilast aðeins sem hljóð meðan crossfade er virkt. Haltu inni á blöndunarhnappinum til að gera hlé á crossfade og horfa á myndbandið.
 
@@ -449,8 +446,6 @@ SABR spilun (slökkt á spoofun myndbandsstrauma)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Fylltu inn albúm sem vantar.</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Þegar tónlistin inniheldur ekki albúm skaltu fletta því upp á Last.fm svo að scrobble þitt sé fullgert.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Um spilun</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling samstilla sjálfkranlega notkun þína á YouTube Music með prófílinu þínu á Last.fm eða ListenBrainz
 
 Til þess að tryggja að scrobbling sé samstilla á meðan spilað er í bakgrunni, vertu viss um að notkunarstilling YouTube Music rafmagns sé stillt á \"Ótakmarkað\""</string>
@@ -462,7 +457,6 @@ Til þess að tryggja að scrobbling sé samstilla á meðan spilað er í bakgr
   <string name="morphe_music_lyrics_section_service_title">Textaþjónusta</string>
   <string name="morphe_music_lyrics_section_overlay_title">Yfirlag</string>
   <string name="morphe_music_lyrics_section_sync_title">Samstilling</string>
-  <string name="morphe_music_lyrics_section_about_title">Um</string>
   <string name="morphe_music_lyrics_source_all_disabled">Allar veitur óvirkjar — innbyggðir textar og innfelldir textar</string>
   <string name="morphe_music_lyrics_source_reset_title">Endurstilla forgangsröð?</string>
   <string name="morphe_music_lyrics_source_reset_message">Endurheimta veitur í sjálfgefna forgangsröð</string>

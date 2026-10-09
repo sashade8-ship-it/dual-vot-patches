@@ -243,13 +243,10 @@ Tutaj pojawią się pobrane utwory"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Tryb teledysku niedostępny podczas przenikania</string>
   <string name="morphe_music_crossfade_sabr_toast">Przenikanie wyłączone przy odtwarzaniu SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Przenikanie wyłączone podczas przesyłania</string>
-  <string name="morphe_music_crossfade_about_title">Informacje</string>
-  <string name="morphe_music_crossfade_about_summary">Jak działa przenikanie i kiedy jest niedostępne</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Jak to działa</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Przenikanie nakłada koniec jednego utworu na początek następnego, zgodnie z ustawionym czasem i krzywą.
+  <string name="morphe_music_crossfade_about_how_summary">"Przenikanie nakłada koniec jednego utworu na początek następnego, zgodnie z ustawionym czasem i krzywą
 
-Działa przy automatycznym odtwarzaniu oraz ręcznym pomijaniu, obie opcje mają własne przełączniki powyżej. Przy automatycznym odtwarzaniu łączenie zaczyna się kilka sekund przed końcem utworu."</string>
+Działa przy automatycznym odtwarzaniu oraz ręcznym pomijaniu, obie opcje mają własne przełączniki. Przy automatycznym odtwarzaniu łączenie zaczyna się kilka sekund przed końcem utworu"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Ograniczenia</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Teledyski są odtwarzane tylko jako utwory, gdy przenikanie jest włączone. Przytrzymaj przycisk losowego odtwarzania, aby wstrzymać przenikanie i obejrzeć teledysk
 
@@ -449,8 +446,6 @@ Wstrzymanie przenikania, aby obejrzeć teledysk, może skutkować czarnym ekrane
   <string name="morphe_music_scrobbling_guess_album_title">Uzupełnij brakujący album</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Gdy utwór nie zawiera informacji o albumie, wyszukaj go w Last.fm, aby scrobble był kompletny</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">O scrobblowaniu</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobblowanie automatycznie synchronizuje Twoją aktywność w YouTube Music z profilem Last.fm lub ListenBrainz
 
 Aby zapewnić ciągłość synchronizacji podczas odtwarzania w tle, upewnij się, że zużycie baterii dla aplikacji YouTube Music jest ustawione na \"Bez ograniczeń\""</string>
@@ -462,7 +457,6 @@ Aby zapewnić ciągłość synchronizacji podczas odtwarzania w tle, upewnij si�
   <string name="morphe_music_lyrics_section_service_title">Usługa tekstów</string>
   <string name="morphe_music_lyrics_section_overlay_title">Nakładka</string>
   <string name="morphe_music_lyrics_section_sync_title">Synchronizacja</string>
-  <string name="morphe_music_lyrics_section_about_title">Informacje</string>
   <string name="morphe_music_lyrics_source_all_disabled">Wszyscy dostawcy wyłączeni - teksty wbudowane i osadzone</string>
   <string name="morphe_music_lyrics_source_reset_title">Zresetować kolejność dostawców?</string>
   <string name="morphe_music_lyrics_source_reset_message">Przywróć domyślną kolejność priorytetów dla dostawców</string>

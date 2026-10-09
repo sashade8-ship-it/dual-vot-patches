@@ -243,13 +243,10 @@ A letöltött számok itt jelennek meg"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Bekapcsolt áttűnés mellett a videómód nem használható</string>
   <string name="morphe_music_crossfade_sabr_toast">A crossfade ki van kapcsolva SABR lejátszásnál</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">A crossfade ki van kapcsolva casting közben</string>
-  <string name="morphe_music_crossfade_about_title">Névjegy</string>
-  <string name="morphe_music_crossfade_about_summary">Hogyan működik a crossfade, és hol nem működik</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">A működése</string>
-  <string name="morphe_music_crossfade_about_how_summary">"A crossfade átfedi az egyik szám végét a következő szám elejével, a beállított időtartamot és görbét használva.
+  <string name="morphe_music_crossfade_about_how_summary">"Átúszás átfedi az egyik dal végét a következő elejével, a beállított időtartam és görbe segítségével
 
-Automatikus továbblépésnél és kézi váltásnál is működik, mindkettőhöz külön kapcsoló található fent. Automatikus továbblépésnél az átkeverés néhány másodperccel a szám vége előtt kezdődik."</string>
+Automatikus továbblépésnél és kézi ugrásnál is működik, mindegyikhez külön kapcsoló tartozik. Automatikus továbblépésnél az átkeverés néhány másodperccel a dal vége előtt kezdődik"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Korlátok</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Ha a crossfade be van kapcsolva, a zenei videók csak hangként játszódnak le. Tartsd lenyomva a shuffle gombot a crossfade szüneteltetéséhez és a videó megtekintéséhez.
 
@@ -449,8 +446,6 @@ SABR lejátszás (a videostreamek spoofolása kikapcsolva)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Hiányzó album megadása</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Ha a zeneszám nem tartalmaz albumot, keresd meg a Last.fm-en, hogy a scrobble teljes legyen.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">A scrobblingről</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"A scrobbling automatikusan szinkronizálja a YouTube Music használatát a Last.fm vagy a ListenBrainz profiljával.
 
 A háttérlejátszás közbeni szinkronizálás biztosításához győződjön meg róla, hogy a YouTube Music alkalmazás akkumulátorhasználata \"Korlátozatlan\" értékre van állítva."</string>
@@ -462,7 +457,6 @@ A háttérlejátszás közbeni szinkronizálás biztosításához győződjön m
   <string name="morphe_music_lyrics_section_service_title">Dalszöveg-szolgáltatás</string>
   <string name="morphe_music_lyrics_section_overlay_title">Átfedés</string>
   <string name="morphe_music_lyrics_section_sync_title">Szinkronizálás</string>
-  <string name="morphe_music_lyrics_section_about_title">Névjegy</string>
   <string name="morphe_music_lyrics_source_all_disabled">Minden szolgáltató le van tiltva – a beépített és a beágyazott dalszövegek is.</string>
   <string name="morphe_music_lyrics_source_reset_title">Visszaállítja a szolgáltatók sorrendjét?</string>
   <string name="morphe_music_lyrics_source_reset_message">Szolgáltatók visszaállítása az alapértelmezett prioritási sorrendre.</string>

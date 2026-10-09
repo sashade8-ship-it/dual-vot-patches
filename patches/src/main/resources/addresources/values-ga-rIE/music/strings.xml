@@ -243,13 +243,10 @@ Feictear rianta íoslódáilte anseo"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Níl mód físe ar fáil agus traschéimniú cumasaithe</string>
   <string name="morphe_music_crossfade_sabr_toast">Tá croschéimniú as le hathsheinm SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Tá croschéimniú as le linn craolta</string>
-  <string name="morphe_music_crossfade_about_title">Maidir</string>
-  <string name="morphe_music_crossfade_about_summary">Conas a oibríonn croschéimniú agus cá nach n-oibríonn sé</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Conas a oibríonn sé</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Le croschéimniú, bíonn deireadh amhráin forluite le tús an chéad amhráin eile, ag baint úsáide as an ré agus as an gcuar atá roghnaithe agat.
+  <string name="morphe_music_crossfade_about_how_summary">"Forluíonn an crosfhádlú deireadh amhráin amháin le tús an chéad cheann eile, ag úsáid do ré agus do chuar
 
-Bíonn sé ar siúl le huathsheinm agus le scipeáil láimhe, gach ceann acu lena lasc féin thuas. I gcás uathsheinm, tosaíonn an cumasc cúpla soicind sula dtagann deireadh leis an amhrán."</string>
+Ritheann sé ar uathchur chun cinn agus ar scipeáil láimhe, le lasc ar leith do gach ceann. Ar uathchur chun cinn tosaíonn an meascán cúpla soicind sula gcríochnaíonn an t-amhrán"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Teorainneacha</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Seinntear físeáin cheoil mar fhuaim amháin nuair a bhíonn croschéimniú ar siúl. Brúigh fada ar an gcnaipe randamach chun croschéimniú a chur ar sos agus an físeán a fheiceáil
 
@@ -449,8 +446,6 @@ Athsheinm SABR (sruthanna físeáin bréagaithe as)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Líon isteach an t-albam atá ar iarraidh</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Mura bhfuil albam sa cheol, féach air ar Last.fm ionas go mbeidh do scrobble críochnaithe.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Maidir le scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Sincronóireann scrobbling do úsáid YouTube Music le do phróifíl Last.fm or ListenBrainz go huathoimatic
 
 Chun a chinntiú go bhfuil scrobbling i gcóir le linn imirt san chúlra, déan cinnte go bhfuil úsáid batáire aipe YouTube Music socraithe go \"Gan teorainn\""</string>
@@ -462,7 +457,6 @@ Chun a chinntiú go bhfuil scrobbling i gcóir le linn imirt san chúlra, déan 
   <string name="morphe_music_lyrics_section_service_title">Seirbhís liricí</string>
   <string name="morphe_music_lyrics_section_overlay_title">Forleagan</string>
   <string name="morphe_music_lyrics_section_sync_title">Sioncrónú</string>
-  <string name="morphe_music_lyrics_section_about_title">Maidir</string>
   <string name="morphe_music_lyrics_source_all_disabled">Gach soláthraí díchumasaithe — liricí ionsuite agus liricí leabaithe</string>
   <string name="morphe_music_lyrics_source_reset_title">Athshocraigh ord an tsoláthraí?</string>
   <string name="morphe_music_lyrics_source_reset_message">Athchóirigh soláthraithe chuig an ord tosaíochta réamhshocraithe</string>

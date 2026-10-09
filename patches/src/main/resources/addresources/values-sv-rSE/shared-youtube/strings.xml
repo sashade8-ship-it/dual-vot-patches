@@ -258,9 +258,9 @@ Om du senare inaktiverar det rekommenderar vi att rensa appens data för att fö
   <string name="morphe_ryd_estimated_like_summary">Visar ett uppskattat antal gilla-markeringar för videor där kreatören har inaktiverat gilla-markeringar</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Visa meddelanden om anslutningsfel</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Visar ett meddelande när Return YouTube Dislike-servern inte är tillgänglig</string>
-  <string name="morphe_ryd_attribution_summary">"Data tillhandahålls av Return YouTube Dislike API
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike återställer antalet ogilla-markeringar som YouTube dolde 2021. Antalen kommer från data som arkiverades före borttagningen och uppskattas för nyare videor från användarnas röster, så de är ungefärliga och uppdateras med några dagars mellanrum
 
-Tryck här för att öppna ReturnYouTubeDislike.com"</string>
+ID för videon du tittar på skickas till Return YouTube Dislike API, och dina gilla- och ogilla-markeringar skickas anonymt för att förbättra uppskattningarna"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike API-statistik för den här enheten</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API-svarstid, genomsnitt</string>

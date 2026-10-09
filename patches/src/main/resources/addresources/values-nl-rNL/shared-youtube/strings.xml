@@ -252,9 +252,9 @@ Als het later wordt uitgeschakeld, wordt aanbevolen om de app-gegevens te wissen
   <string name="morphe_ryd_estimated_like_summary">Toont een geschat aantal likes op video\'s waarbij de maker likes heeft uitgeschakeld</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Toon verbindingsfoutmeldingen</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Toont een melding wanneer de Return YouTube Dislike-server niet beschikbaar is</string>
-  <string name="morphe_ryd_attribution_summary">"Data wordt geleverd door de Return YouTube Dislike API
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike herstelt de dislike-aantallen die YouTube in 2021 verborgen heeft. De aantallen komen uit gegevens die vóór de verwijdering zijn gearchiveerd en worden voor nieuwere video's geschat op basis van de stemmen van gebruikers, dus ze zijn bij benadering en worden om de paar dagen bijgewerkt
 
-Tik hier om ReturnYouTubeDislike.com te openen"</string>
+De ID van de video die je bekijkt wordt naar de Return YouTube Dislike API gestuurd, en je likes en dislikes worden anoniem verzonden om de schattingen te verbeteren"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike API-statistieken van dit apparaat</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API-responstijd, gemiddelde</string>

@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">Скрива картите на албумите под описанието на изпълнителя</string>
   <string name="morphe_hide_artist_cards_title">Скриване на картите на изпълнителите</string>
   <string name="morphe_hide_artist_cards_summary">Скрива картата на изпълнителя в горната част на резултатите от търсенето</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Скрий надпис \"Автоматично озвучени\"</string>
   <string name="morphe_hide_channel_buttons_title">Скриване на бутоните на канала</string>
   <string name="morphe_hide_channel_buttons_summary">Скрива бутони като Абониране, Преглед на канала, Общност и YouTube Music от профилите на каналите в резултатите от търсенето</string>
   <string name="morphe_hide_community_posts_title">Скриване на публикациите от общността</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">Скриване на рафта „История“</string>
   <string name="morphe_hide_horizontal_shelves_title">Хоризонтални секции</string>
   <string name="morphe_hide_horizontal_shelves_summary">Скрива хоризонтални рафтове като Актуални новини, Публикации от общността, които може да ви харесат, Продължете да гледате, Разгледайте повече канали, Разгледайте повече теми, За вас, Последни видеа, Най-подходящи, Публикации от общността на автора, Пазаруване и Гледайте отново</string>
-  <string name="morphe_hide_hyped_label_title">Скриване на етикета \"Популярно\"</string>
   <string name="morphe_hide_image_shelf_title">Скр. рафтовете със снимки</string>
   <string name="morphe_hide_image_shelf_summary">Скрива рафтовете с изображения в резултатите от търсенето</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Second \"item\" text"</string>
 • Рафтовете със Shorts, страниците на каналите и резултатите от търсенето все още могат да показват времето на качване
 • Не работи с автомобилен режим"</string>
   <string name="morphe_hide_video_thumbnail_title">Скриване на видео миниатюрата</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Скриване на етикетите с видео препоръки</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Скрива етикетите „Хора, които също са гледали“ и „Може да ви хареса“ в резултатите от търсенето</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Скриване на етикетите на видеоклиповете</string>
+  <string name="morphe_hide_video_labels_summary">Скрива етикети като „Автоматично дублиран“ / „Дублиран“, „Печели комисиона“, „Хайп“, „Хората гледат още“, „продукт(и)“ и „Може също да харесате“</string>
   <string name="morphe_hide_view_count_title">Добавете кавички за да използвате ключовото: %s</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Ограничения:
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">Скриване на заглавието на видеото</string>
   <string name="morphe_hide_video_title_summary">Скрива заглавието на видеото в режим на цял екран</string>
   <string name="morphe_sanitize_video_subtitle_title">Почистване на субтитрите на видео</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Почиства фрази като \'#\', \'Кампания за набиране на средства\', \'Магазин\' и \'продукти\' от субтитрите на видеото</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Премахва фрази като „#“, „Набиране на средства“, „продукт(и)“ и „Пазаруване“ от подзаглавието на видеоклипа</string>
   <string name="morphe_hide_description_components_screen_title">Видеоописание</string>
   <string name="morphe_hide_description_components_screen_summary">Изберете кои компоненти да се показват в описанието на видеото</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Скрий секцията „Видео резюме, генерирано от AI“</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">Скрити видеа, за цялото време</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Нулиране на брояча за последните 24 часа?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Възстановяване на всички броячи на време?</string>
-  <string name="morphe_hide_about_category_title">Отношение</string>
   <string name="morphe_hide_aislist_screen_title">Филтър за AI канали</string>
   <string name="morphe_hide_aislist_screen_summary">Скриване на видеа от канали, маркирани като генерирано от AI съдържание от общността AiSList</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Черен списък: Висока увереност</string>
@@ -348,9 +345,9 @@ Second \"item\" text"</string>
 Ограничения:
 • Филтрираните AI Shorts може да се показват като празно място
 • Някои AI видеа все още може да се показват"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Данните са предоставени от AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList е списък с отворен код на YouTube канали, които публикуват AI-генерирано съдържание, поддържан от доброволци. Каналите се докладват от потребители и се преглеждат, преди да бъдат добавени
 
-Докоснете тук, за да отворите AiSlopList.com и да видите изтеглянията за други платформи"</string>
+Списъкът се изтегля от GitHub и видеоклиповете се филтрират на вашето устройство"</string>
   <string name="morphe_aislist_submit_category_title">Докладване на AI канали</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Добавяне на елемент за докладване в менюто на видеото</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Добавяне на елемент в менюто на видеото, който докладва канала на дадено видео в AiSList</string>
@@ -1176,11 +1173,9 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">Still video captures</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">Включете бързо still captures</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Неподвижни кадри</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow предоставя краудсорснати заглавия и миниатюри за YouTube видеоклипове. Те често са по-подходящи от тези, предоставени от YouTube
+  <string name="morphe_dearrow_about_summary">"DeArrow заменя кликбейт заглавията и миниатюрите с такива, създадени от общността, които са по-точни и по-малко сензационни. Заглавията се пишат и гласуват от общността, а миниатюрите са кадри, взети от видеоклипа
 
-Ако е активирано, URL адресите на видеоклиповете ще бъдат изпращани до API сървъра и не се изпращат никакви други данни. Ако даден видеоклип няма DeArrow миниатюри, тогава се показват оригиналните или неподвижните кадри
-
-Докоснете тук, за да отворите DeArrow.ajay.app"</string>
+Видеоклиповете се заявяват с кратък префикс на хеширания ID на видеоклипа, така че сървърът не може да разбере точно кой видеоклип гледате. Ако даден видеоклип няма DeArrow миниатюра, се показва оригиналната миниатюра или неподвижен кадър"</string>
   <string name="morphe_dearrow_connection_toast_title">Показвай предупреждения за грешки в връзката</string>
   <string name="morphe_dearrow_connection_toast_summary">Показва известие, когато сървърът на DeArrow не е достъпен</string>
   <string name="morphe_dearrow_api_url_title">API крайна точка</string>

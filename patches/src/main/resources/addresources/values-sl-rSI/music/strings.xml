@@ -243,13 +243,8 @@ Prenesene skladbe se prikažejo tukaj"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Video način ni na voljo, ko je prehod omogočen</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade je izklopljen pri predvajanju SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade je izklopljen med oddajanjem</string>
-  <string name="morphe_music_crossfade_about_title">O nas</string>
-  <string name="morphe_music_crossfade_about_summary">Kako deluje crossfade in kje ne deluje</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Kako to deluje</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade prekriva konec ene pesmi z začetkom naslednje, pri čemer uporabi vaše trajanje in krivuljo.
-
-Deluje pri samodejnem napredovanju in ročnem preskoku, pri čemer ima vsak svoje stikalo zgoraj. Pri samodejnem napredovanju se preplet začne nekaj sekund pred koncem pesmi."</string>
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade prekriva konec ene skladbe z začetkom naslednje, z uporabo vaše dolžine in krivulje\n\nDeluje pri samodejnem napredovanju in ročnem preskoku, vsak s svojim preklopom. Pri samodejnem napredovanju se mešanje začne nekaj sekund pred koncem skladbe"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Omejitve</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Glasbeni videoposnetki se med vklopljenim crossfadeom predvajajo samo kot zvok. Dolgo pritisnite nadzor naključnega predvajanja, da začasno ustavite crossfade in si ogledate videoposnetek
 
@@ -449,8 +444,6 @@ Predvajanje SABR (emulacija video tokov je izklopljena)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Izpolni manjkajoči album</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Ko skladba nima albuma, ga poišči na Last.fm, da bo tvoj scrobble popoln.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">O scrobblingu</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Samodejno sinhroniziranje pesmi (scrobbling) samodejno sinhronizira vašo uporabo YouTube Music z vašim profilom Last.fm ali ListenBrainz.
 
 Za zagotovitev sinhronizacije med predvajanjem v ozadju poskrbite, da je uporaba baterije za YouTube Music nastavljena na \"Neomejeno\"."</string>
@@ -462,7 +455,6 @@ Za zagotovitev sinhronizacije med predvajanjem v ozadju poskrbite, da je uporaba
   <string name="morphe_music_lyrics_section_service_title">Storitev za besedila</string>
   <string name="morphe_music_lyrics_section_overlay_title">Prekrivanje</string>
   <string name="morphe_music_lyrics_section_sync_title">Sinhronizacija</string>
-  <string name="morphe_music_lyrics_section_about_title">O nas</string>
   <string name="morphe_music_lyrics_source_all_disabled">Vsi ponudniki so onemogočeni – vgrajena in vdelana besedila.</string>
   <string name="morphe_music_lyrics_source_reset_title">Ponastavitev vrstnega reda ponudnikov?</string>
   <string name="morphe_music_lyrics_source_reset_message">Ponastavi ponudnike na privzeti vrstni red.</string>

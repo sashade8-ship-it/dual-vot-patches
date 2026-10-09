@@ -258,9 +258,9 @@ Kung patayin ito sa kalaunan, inirerekomenda na i-clear ang data ng app upang ma
   <string name="morphe_ryd_estimated_like_summary">Ipinapakita ang tinantyang bilang ng mga like sa mga video kung saan hindi pinagana ng tagalikha ang mga like</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Ipakita ang mga alerto ng error sa koneksyon</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Ipinapakita ang isang notification kapag ang Return YouTube Dislike server ay hindi magagamit</string>
-  <string name="morphe_ryd_attribution_summary">"Ang datos ay ibinibigay ng Return YouTube Dislike API
+  <string name="morphe_ryd_attribution_summary">"Ang Return YouTube Dislike ay nagpapanumbalik ng mga bilang ng dislike na itinago ng YouTube noong 2021. Ang mga bilang ay nagmumula sa data na naka-archive bago ang pag-alis at tinatantya para sa mga mas bagong video mula sa mga boto ng mga gumagamit nito, kaya ang mga ito ay tinatayang at ina-update tuwing ilang araw
 
-I-tap dito upang buksan ang ReturnYouTubeDislike.com"</string>
+Ang ID ng video na iyong pinapanood ay ipinapadala sa Return YouTube Dislike API, at ang iyong mga like at dislike ay ipinapadala nang hindi nagpapakilala upang mapabuti ang mga pagtatantya"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Mga istatistika ng Return YouTube Dislike API ng aparatong ito</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Oras ng pagtugon ng API, average</string>

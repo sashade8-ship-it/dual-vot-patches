@@ -226,9 +226,6 @@ Keyinchalik o'chirilganda, UI xatolarini oldini olish uchun ilova ma'lumotlarini
   <string name="morphe_ryd_estimated_like_summary">Yaratuvchi Like funksiyasini o\'chirgan videolar uchun taxminiy Like sonini ko\'rsatadi</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Ulanish xatoligi haqida bildirishnomalar ko\'rsatish</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Return YouTube Dislike serveri mavjud bo\'lmaganda bildirishnoma ko\'rsatadi</string>
-  <string name="morphe_ryd_attribution_summary">"Ma'lumot Return YouTube Dislike API tomonidan taqdim etiladi
-
-Batafsil ma'lumot olish uchun ReturnYouTubeDislike.com saytiga tashrif buyuring"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike API statistikasi (ushbu qurilma)</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API javob vaqti, o\'rtacha</string>

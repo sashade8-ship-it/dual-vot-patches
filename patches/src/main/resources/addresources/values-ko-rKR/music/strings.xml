@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">크로스페이드가 활성화된 동안에는 동영상 모드를 사용할 수 없습니다</string>
   <string name="morphe_music_crossfade_sabr_toast">SABR 재생 시 크로스페이드가 꺼져 있습니다</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">캐스팅 중에는 크로스페이드가 꺼져 있습니다</string>
-  <string name="morphe_music_crossfade_about_title">정보</string>
-  <string name="morphe_music_crossfade_about_summary">크로스페이드가 작동하는 방식과 작동하지 않는 경우</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">작동 방식</string>
   <string name="morphe_music_crossfade_about_how_summary">"크로스페이드는 사용자가 설정한 지속 시간과 곡선을 사용하여 한 곡의 끝과 다음 곡의 시작을 겹칩니다.
 
-자동 재생과 수동 건너뛰기에서 실행되며 각각 위의 토글을 사용해 설정할 수 있습니다. 자동 재생에서는 노래가 끝나기 몇 초 전에 혼합이 시작됩니다."</string>
+자동 진행 및 수동 건너뛰기에서 각각 자체 토글로 실행됩니다. 자동 진행에서는 노래가 끝나기 몇 초 전에 크로스페이드가 시작됩니다.  "</string>
   <string name="morphe_music_crossfade_about_quirks_title">제한 사항</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"크로스페이드가 켜져 있으면 뮤직 비디오가 오디오로만 재생됩니다. 셔플을 길게 눌러 크로스페이드를 일시 중지하고 비디오를 시청하세요.
 
@@ -449,8 +446,6 @@ SABR 재생(비디오 스트림 스푸핑이 꺼져 있는 경우)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">누락된 앨범 채우기</string>
   <string name="morphe_music_scrobbling_guess_album_summary">음악에 앨범이 포함되어 있지 않는 경우에 Last.fm에서 검색하여 스크로블을 완료하세요</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">스크로블링에 대한 정보</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"스크로블링은 YouTube Music의 사용 기록을 Last.fm 또는 ListenBrainz 프로필과 자동으로 동기화합니다
 
 백그라운드 재생 중에도 스크로블링이 동기화되도록 하려면 YouTube Music의 앱 배터리 사용 설정을 '제한 없음'으로 설정하세요"</string>
@@ -462,7 +457,6 @@ SABR 재생(비디오 스트림 스푸핑이 꺼져 있는 경우)"</string>
   <string name="morphe_music_lyrics_section_service_title">가사 서비스</string>
   <string name="morphe_music_lyrics_section_overlay_title">오버레이</string>
   <string name="morphe_music_lyrics_section_sync_title">동기화</string>
-  <string name="morphe_music_lyrics_section_about_title">정보</string>
   <string name="morphe_music_lyrics_source_all_disabled">모든 제공자가 비활성화됨 - 내장 가사 및 삽입 가사</string>
   <string name="morphe_music_lyrics_source_reset_title">제공자 순서를 초기화하시겠습니까?</string>
   <string name="morphe_music_lyrics_source_reset_message">제공자를 기본 우선순위 순서로 복원합니다</string>

@@ -258,9 +258,9 @@ Ak ju neskôr vypnete, odporúda sa vymazať dáta aplikácie, aby ste predišli
   <string name="morphe_ryd_estimated_like_summary">Zobrazuje odhadovaný počet \'Páči sa mi\' na videách, kde autor zakázal hodnotenie</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Zobrazovať upozornenia o chybách pripojenia</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Zobrazuje upozornenie, keď server Return YouTube Dislike nie je k dispozícii</string>
-  <string name="morphe_ryd_attribution_summary">"Údaje poskytuje API Return YouTube Dislike
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike obnovuje počty dislikov, ktoré YouTube skryl v roku 2021. Počty pochádzajú z údajov archivovaných pred odstránením a pre novšie videá sú odhadované na základe hlasov používateľov, takže sú približné a aktualizujú sa každých pár dní
 
-Ťuknite sem a otvorte ReturnYouTubeDislike.com"</string>
+ID videa, ktoré sledujete, sa posiela do Return YouTube Dislike API a vaše lajky a disliky sa odosielajú anonymne na zlepšenie odhadov"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Štatistiky API Return YouTube Dislike pre toto zariadenie</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Čas odozvy API, priemerný</string>

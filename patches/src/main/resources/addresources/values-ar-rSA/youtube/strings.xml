@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">يخفي بطاقات الألبوم أسفل وصف الفنان</string>
   <string name="morphe_hide_artist_cards_title">إخفاء بطاقات الفنان</string>
   <string name="morphe_hide_artist_cards_summary">يخفي بطاقة الفنان في أعلى نتائج البحث</string>
-  <string name="morphe_hide_auto_dubbed_label_title">إخفاء علامة \'مُدبلج تلقائيًا\'</string>
   <string name="morphe_hide_channel_buttons_title">إخفاء أزرار القناة</string>
   <string name="morphe_hide_channel_buttons_summary">يخفي الأزرار مثل الاشتراك، الاطّلاع على القناة، المنتدى، و YouTube Music من ملفات القناة في نتائج البحث</string>
   <string name="morphe_hide_community_posts_title">إخفاء مشاركات المجتمع</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">إخفاء شريط السجلّ</string>
   <string name="morphe_hide_horizontal_shelves_title">إخفاء الرفوف الأفقية</string>
   <string name="morphe_hide_horizontal_shelves_summary">يخفي الرفوف الأفقية مثل أخبار عاجلة، منشورات المجتمع التي قد تعجبك، متابعة المشاهدة، استكشاف المزيد من القنوات، استكشاف المزيد من المواضيع، من أجلك، أحدث الفيديوهات، الأكثر صلة، منشورات من مجتمع صنّاع المحتوى، التسوّق وشاهدها مرة أخرى</string>
-  <string name="morphe_hide_hyped_label_title">إخفاء علامة أكبر تشجيع</string>
   <string name="morphe_hide_image_shelf_title">إخفاء رف الصور</string>
   <string name="morphe_hide_image_shelf_summary">يخفي رفوف الصور في نتائج البحث</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Second \"item\" text"</string>
 • قد تظل أرفف Shorts، صفحات القناة، ونتائج البحث تُظهر أوقات التحميل
 • لا تعمل مع تخطيط Automotive"</string>
   <string name="morphe_hide_video_thumbnail_title">إخفاء صورة الفيديو المصغرة</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">إخفاء تسميات توصيات الفيديو</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">يخفي علامات \'شاهد المستخدمون أيضًا\' و \'قد يعجبك أيضًا\' في نتائج البحث</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">إخفاء علامات الفيديو</string>
+  <string name="morphe_hide_video_labels_summary">يُخفي العلامات مثل \'مُدبلج تلقائيًا\' / \'مدبلج\', \'يكسب عمولة\', \'أكبر تشجيع\', \'شاهد المستخدمون أيضًا\', \'المنتج (المنتجات)\' و\'قد يعجبك أيضًا\'</string>
   <string name="morphe_hide_view_count_title">إخفاء عدد المشاهدات</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"القيود:
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">إخفاء عنوان الفيديو</string>
   <string name="morphe_hide_video_title_summary">يخفي عنوان الفيديو في وضع ملء الشاشة</string>
   <string name="morphe_sanitize_video_subtitle_title">تنظيف النص الفرعي للفيديو</string>
-  <string name="morphe_sanitize_video_subtitle_summary">يزيل عبارات مثل \'#\'، \'حملة تبرعات\'، \'المتجر\'، و \'المنتجات\' من النص الفرعي للفيديو</string>
+  <string name="morphe_sanitize_video_subtitle_summary">يزيل عبارات مثل \'#\'، \'حملة تبرعات\'، \'المنتج (المنتجات)\'، و \'المتجر\' من النص الفرعي للفيديو</string>
   <string name="morphe_hide_description_components_screen_title">وصف الفيديو</string>
   <string name="morphe_hide_description_components_screen_summary">اختر المكونات التي تظهر في وصف الفيديو</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">إخفاء قسم \'ملخّص فيديو من إنشاء الذكاء الاصطناعي\'</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">الفيديوهات المخفية، طوال الوقت</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">إعادة تعيين عداد آخر 24 ساعة؟</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">هل تريد إعادة تعيين عداد الوقت بالكامل؟</string>
-  <string name="morphe_hide_about_category_title">لمحة</string>
   <string name="morphe_hide_aislist_screen_title">تصفية قنوات الذكاء الاصطناعي</string>
   <string name="morphe_hide_aislist_screen_summary">إخفاء الفيديوهات من القنوات التي تم تصنيفها على أنها محتوى تم إنشاؤه بواسطة الذكاء الاصطناعي بواسطة قائمة مجتمع AiSList</string>
   <string name="morphe_hide_aislist_blocklist_category_title">القائمة السوداء: ثقة عالية</string>
@@ -348,9 +345,9 @@ Second \"item\" text"</string>
 القيود:
 • قد تظهر فيديوهات Shorts التي تم تصفيتها كمساحة فارغة
 • قد يستمر عرض بعض الفيديوهات التي تم إنشاؤها بواسطة الذكاء الاصطناعي"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"يتم توفير البيانات بواسطة AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList هي قائمة مفتوحة المصدر لقنوات YouTube التي تنشر محتوى تم إنشاؤه بواسطة الذكاء الاصطناعي، ويتم صيانتها بواسطة متطوعين. يتم الإبلاغ عن القنوات من قبل المستخدمين ومراجعتها قبل إضافتها
 
-انقر هنا لفتح AiSlopList.com والاطلاع على التنزيلات للمنصات الأخرى"</string>
+يتم تنزيل القائمة من GitHub ويتم تصفية الفيديوهات على جهازك"</string>
   <string name="morphe_aislist_submit_category_title">الإبلاغ عن قنوات الذكاء الاصطناعي</string>
   <string name="morphe_aislist_submit_flyout_menu_title">إضافة إدخال إبلاغ إلى قائمة الفيديو</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">إضافة إدخال إلى قائمة الفيديو للإبلاغ عن قناة الفيديو إلى AiSList</string>
@@ -959,7 +956,7 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_disable_playlist_autoplay_title">تعطيل تشغيل قوائم التشغيل تلقائيًا</string>
   <string name="morphe_disable_playlist_autoplay_summary">يمنع قوائم التشغيل من الانتقال التلقائي إلى الفيديو التالي</string>
   <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
-  <string name="morphe_disable_continue_watching_prompt_title">تعطيل الرسالة المنبثقة \'هل ترغب في متابعة المشاهدة؟\'</string>
+  <string name="morphe_disable_continue_watching_prompt_title">تعطيل الرسالة المنبثقة \'متابعة المشاهدة؟\'</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">الخروج من وضع ملء الشاشة عند انتهاء الفيديو</string>
   <string name="morphe_exit_fullscreen_entry_1">معطل</string>
@@ -1181,11 +1178,9 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; المصغرات الأصلية</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; اللقطات الثابتة</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">اللقطات الثابتة</string>
-  <string name="morphe_dearrow_about_summary">"يوفر DeArrow عناوين ومصغّرات مقدّمة من المجتمع لفيديوهات YouTube. وغالبًا ما تكون أكثر صلة بتلك التي يوفرها YouTube
+  <string name="morphe_dearrow_about_summary">"يستبدل DeArrow العناوين والصور المصغّرة التي تعتمد على clickbait بتلك المقدَّمة من المجتمع، والتي تكون أكثر دقةً وأقل إثارة. تُكتب العناوين ويصوِّت عليها المجتمع، والصور المصغّرة هي إطارات مأخوذة من الفيديو.
 
-إذا تم التمكين، سيتم إرسال روابط الفيديو إلى خادم API ولن يتم إرسال أي بيانات أخرى. إذا لم يكن الفيديو يحتوي على مصغّرات DeArrow، فسيتم عرض اللقطات الأصلية أو الثابتة
-
-انقر هنا لفتح DeArrow.ajay.app"</string>
+تُطلب الفيديوهات ببادئة قصيرة من معرّف الفيديو المجزّأ، لذا لا يمكن للخادم معرفة الفيديو الذي تشاهده بالضبط. إذا لم يكن للفيديو صورة مصغّرة من DeArrow، فتُعرض الصورة الأصلية أو لقطة ثابتة."</string>
   <string name="morphe_dearrow_connection_toast_title">عرض تنبيهات خطأ الاتصال</string>
   <string name="morphe_dearrow_connection_toast_summary">يعرض إشعارًا عند تعذر توفر خادم DeArrow</string>
   <string name="morphe_dearrow_api_url_title">نقطة نهاية API</string>

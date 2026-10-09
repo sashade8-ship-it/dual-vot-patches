@@ -72,8 +72,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">क्रॉसफ़ेड इस सत्र के लिए रोका गया</string>
   <string name="morphe_music_crossfade_resumed_toast">क्रॉसफ़ेड फिर से शुरू हुआ</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">क्रॉसफ़ेड सक्षम होने पर वीडियो मोड उपलब्ध नहीं है</string>
-  <string name="morphe_music_crossfade_about_title">सेशन नियंत्रण अक्षम है</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">ई कोना काम करइत छै</string>
   <string name="morphe_music_crossfade_about_credit_title">क्रेडिट</string>
   <string name="morphe_music_crossfade_about_credit_summary">VazerOG द्वारा क्रॉसफेड फीचर</string>
@@ -182,13 +180,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_scrobbling_custom_regex_title">कस्टम regex सफाई</string>
   <string name="morphe_music_scrobbling_custom_regex_summary">गानाक शीर्षक, कलाकार, या एल्बम सँ अतिरिक्त टेक्स्ट हटाब लेल एक कस्टम नियमित अभिव्यक्ति दर्ज करू। उदाहरण: (?i)\\s*\\((clean|explicit)\\)</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Scrobbling के बारे मे</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling स्वचालित रूप सँ अहाँक YouTube Music उपयोग के अहाँक Last.fm या ListenBrainz प्रोफाइल सँ सिंक करैत छै
 
 ई सुनिश्चित करय लेल जे बैकग्राउंड प्लेबैक क दौरान scrobbling सिंक होय, ई सुनिश्चित करू जे YouTube Music क ऐप बैटरी उपयोग \"Unrestricted\" पर सेट छै"</string>
   <!-- layout.lyrics.lyricsPatch -->
-  <string name="morphe_music_lyrics_section_about_title">के बारे में</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <!-- Tappable label under the lyrics that turns the translation on. -->
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->

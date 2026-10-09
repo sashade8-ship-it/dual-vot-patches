@@ -193,11 +193,8 @@ public class PlaylistPatch {
         row.setClickable(true);
         row.setFocusable(true);
 
-        TypedValue ripple = new TypedValue();
-        if (context.getTheme().resolveAttribute(
-                android.R.attr.selectableItemBackground, ripple, true)) {
-            row.setBackgroundResource(ripple.resourceId);
-        }
+        row.setBackgroundResource(ThemeUtils.getThemeResourceId(
+                context, android.R.attr.selectableItemBackground));
         return row;
     }
 

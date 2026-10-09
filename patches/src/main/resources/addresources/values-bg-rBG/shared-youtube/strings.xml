@@ -250,9 +250,9 @@ Second \"item\" text"</string>
   <string name="morphe_ryd_estimated_like_summary">Показва приблизителен брой харесвания на видеа, където създателят е деактивирал харесванията</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Показване на съобщения за грешка при връзката</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Показва известие, когато сървърът на Return YouTube Dislike не е достъпен</string>
-  <string name="morphe_ryd_attribution_summary">"Данните са предоставени от Return YouTube Dislike API
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike възстановява броячите на нехаресвания, които YouTube скри през 2021 г. Броячите идват от данни, архивирани преди премахването, и за по-нови видеоклипове се оценяват по гласовете на потребителите, така че са приблизителни и се актуализират на всеки няколко дни
 
-Натиснете тук, за да отворите ReturnYouTubeDislike.com"</string>
+Идентификаторът на видеоклипа, който гледате, се изпраща до API на Return YouTube Dislike, а вашите харесвания и нехаресвания се изпращат анонимно, за да се подобрят оценките"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Статистика на Return YouTube Dislike API за това устройство</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Време за отговор на API, средно</string>

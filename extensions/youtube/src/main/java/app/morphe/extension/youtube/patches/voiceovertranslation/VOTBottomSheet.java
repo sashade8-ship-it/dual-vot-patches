@@ -8,12 +8,10 @@
 package app.morphe.extension.youtube.patches.voiceovertranslation;
 
 import static app.morphe.extension.shared.StringRef.str;
-import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.DRAWABLE_CHECKMARK;
-import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.DRAWABLE_CHECKMARK_BOLD;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_CHECK_ICON;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_CHECK_ICON_PLACEHOLDER;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_ITEM_TEXT;
-import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.LAYOUT_MORPHE_CUSTOM_LIST_ITEM_CHECKED;
+import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.createCheckedListItem;
 import static app.morphe.extension.youtube.patches.voiceovertranslation.TranscriptTranslator.TRANSLATION_SERVICE_GOOGLE;
 import static app.morphe.extension.youtube.patches.voiceovertranslation.TranscriptTranslator.TRANSLATION_SERVICE_MY_MEMORY;
 import static app.morphe.extension.youtube.patches.voiceovertranslation.TranscriptTranslator.TRANSLATION_SERVICE_OPENROUTER;
@@ -33,7 +31,6 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.util.Pair;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -233,8 +230,6 @@ public final class VOTBottomSheet {
         final int fg = ThemeUtils.getAppForegroundColor();
         pickerRoot.addView(makeTitle(context, str("morphe_vot_translation_service_title"), fg));
 
-        LayoutInflater inflater = LayoutInflater.from(context);
-        int checkmarkRes = Utils.appIsUsingBoldIcons() ? DRAWABLE_CHECKMARK_BOLD : DRAWABLE_CHECKMARK;
         String selectedService = Settings.VOT_TRANSLATION_SERVICE.get();
 
         SheetBottomDialog.SlideDialog pickerDialog =
@@ -247,10 +242,9 @@ public final class VOTBottomSheet {
             final String value = values[i];
             final boolean isOpenRouter = TRANSLATION_SERVICE_OPENROUTER.equals(value);
 
-            View row = inflater.inflate(LAYOUT_MORPHE_CUSTOM_LIST_ITEM_CHECKED, listLayout, false);
+            LinearLayout row = createCheckedListItem(context);
 
             ImageView check = row.findViewById(ID_MORPHE_CHECK_ICON);
-            check.setImageResource(checkmarkRes);
             check.setColorFilter(fg);
             boolean isSelected = value.equals(selectedService);
             check.setVisibility(isSelected ? View.VISIBLE : View.GONE);
@@ -271,9 +265,8 @@ public final class VOTBottomSheet {
                 itemText.setLayoutParams(new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
-                LinearLayout rowLayout = (LinearLayout) row;
-                int idx = rowLayout.indexOfChild(itemText);
-                rowLayout.removeView(itemText);
+                int idx = row.indexOfChild(itemText);
+                row.removeView(itemText);
                 textContainer.addView(itemText);
 
                 TextView costView = new TextView(context);
@@ -281,7 +274,7 @@ public final class VOTBottomSheet {
                 costView.setTextSize(12);
                 textContainer.addView(costView);
 
-                rowLayout.addView(textContainer, idx);
+                row.addView(textContainer, idx);
 
                 VoiceOverTranslationPatch.fetchOpenRouterModelCost(Settings.VOT_OPENROUTER_MODEL.get(),
                         cost -> costView.setText(cost != null
@@ -355,8 +348,6 @@ public final class VOTBottomSheet {
         listLayout.setOrientation(LinearLayout.VERTICAL);
         scroll.addView(listLayout);
 
-        LayoutInflater inflater = LayoutInflater.from(context);
-        int checkmarkRes = Utils.appIsUsingBoldIcons() ? DRAWABLE_CHECKMARK_BOLD : DRAWABLE_CHECKMARK;
         int speakerRes = Utils.appIsUsingBoldIcons() ? DRAWABLE_SPEAKER_BOLD : DRAWABLE_SPEAKER;
         final int rippleColor = Color.argb(60, Color.red(fg), Color.green(fg), Color.blue(fg));
 
@@ -369,8 +360,8 @@ public final class VOTBottomSheet {
         boolean maleHeaderAdded = false;
         boolean femaleHeaderAdded = false;
 
-        addVoiceRow(context, inflater, listLayout, TTS_ENGINE_SYSTEM, str("morphe_vot_tts_system"), true,
-                selectedValue, fg, rippleColor, checkmarkRes, speakerRes, pickerDialog);
+        addVoiceRow(context, listLayout, TTS_ENGINE_SYSTEM, str("morphe_vot_tts_system"), true,
+                selectedValue, fg, rippleColor, speakerRes, pickerDialog);
 
         for (VoiceCatalog.Voice voice : nativeVoices) {
             if (!maleHeaderAdded && voice.isMale && maleCount > 1) {
@@ -380,8 +371,8 @@ public final class VOTBottomSheet {
                 listLayout.addView(makeSectionHeader(context, str("morphe_vot_voice_gender_female"), fg));
                 femaleHeaderAdded = true;
             }
-            addVoiceRow(context, inflater, listLayout, voice.id, voice.dialogDisplayName, false,
-                    selectedValue, fg, rippleColor, checkmarkRes, speakerRes, pickerDialog);
+            addVoiceRow(context, listLayout, voice.id, voice.dialogDisplayName, false,
+                    selectedValue, fg, rippleColor, speakerRes, pickerDialog);
         }
 
         if (!multilingualVoices.isEmpty()) {
@@ -398,8 +389,8 @@ public final class VOTBottomSheet {
                             str("morphe_vot_voice_gender_female_multilingual"), fg));
                     multiFemaleHeaderAdded = true;
                 }
-                addVoiceRow(context, inflater, listLayout, voice.id, voice.dialogDisplayName, false,
-                        selectedValue, fg, rippleColor, checkmarkRes, speakerRes, pickerDialog);
+                addVoiceRow(context, listLayout, voice.id, voice.dialogDisplayName, false,
+                        selectedValue, fg, rippleColor, speakerRes, pickerDialog);
             }
         }
 
@@ -410,15 +401,14 @@ public final class VOTBottomSheet {
         pickerDialog.show();
     }
 
-    private static void addVoiceRow(Context context, LayoutInflater inflater, LinearLayout listLayout,
+    private static void addVoiceRow(Context context, LinearLayout listLayout,
                                     String value, String label, boolean isSystem,
                                     String selectedValue, int fg, int rippleColor,
-                                    int checkmarkRes, int speakerRes,
+                                    int speakerRes,
                                     SheetBottomDialog.SlideDialog pickerDialog) {
-        View row = inflater.inflate(LAYOUT_MORPHE_CUSTOM_LIST_ITEM_CHECKED, listLayout, false);
+        LinearLayout row = createCheckedListItem(context);
 
         ImageView check = row.findViewById(ID_MORPHE_CHECK_ICON);
-        check.setImageResource(checkmarkRes);
         check.setColorFilter(fg);
         boolean isSelected = value.equals(selectedValue);
         check.setVisibility(isSelected ? View.VISIBLE : View.GONE);
@@ -445,7 +435,7 @@ public final class VOTBottomSheet {
         speaker.setLayoutParams(new FrameLayout.LayoutParams(Dim.dp24, Dim.dp24, Gravity.CENTER));
         speakerButton.addView(speaker);
         speakerButton.setOnClickListener(v -> VoiceOverTranslationPatch.testSpeak(value));
-        ((LinearLayout) row).addView(speakerButton);
+        row.addView(speakerButton);
 
         row.setOnClickListener(v -> {
             if (isSystem) {
@@ -553,7 +543,7 @@ public final class VOTBottomSheet {
 
         CustomDialogListPreference.ListPreferenceArrayAdapter adapter =
                 new CustomDialogListPreference.ListPreferenceArrayAdapter(
-                        context, LAYOUT_MORPHE_CUSTOM_LIST_ITEM_CHECKED,
+                        context,
                         langEntries, langValues, Settings.VOT_CAPTION_LANGUAGE.get());
         listView.setAdapter(adapter);
 

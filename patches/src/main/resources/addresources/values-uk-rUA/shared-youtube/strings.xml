@@ -258,9 +258,9 @@ Second \"item\" text"</string>
   <string name="morphe_ryd_estimated_like_summary">Показує приблизну кількість лайків на відео, де автор вимкнув лайки</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Показувати сповіщення про помилки з’єднання</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Показує сповіщення, коли сервер Return YouTube Dislike недоступний</string>
-  <string name="morphe_ryd_attribution_summary">"Дані надаються API Return YouTube Dislike
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike повертає кількість дизлайків, яку YouTube приховав у 2021 році. Дані беруться з архіву, створеного до видалення, а для новіших відео оцінюються за голосами користувачів розширення, тож вони приблизні й оновлюються кожні кілька днів
 
-Торкніться тут, щоб відкрити ReturnYouTubeDislike.com"</string>
+Ідентифікатор відео, яке ви дивитеся, надсилається до API Return YouTube Dislike, а ваші лайки та дизлайки надсилаються анонімно для покращення оцінок"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Статистика Return YouTube Dislike для цього пристрою</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Час відповіді API, середній</string>

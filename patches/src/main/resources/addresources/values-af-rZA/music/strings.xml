@@ -243,13 +243,10 @@ Afgelaaide snitte verskyn hier"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Videoweergave is nie beskikbaar terwyl oorgangsvervaging geaktiveer is nie</string>
   <string name="morphe_music_crossfade_sabr_toast">Kruisvervaag is af tydens SABR-afspeel</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Kruisvervaag is af terwyl jy cast</string>
-  <string name="morphe_music_crossfade_about_title">Inligting</string>
-  <string name="morphe_music_crossfade_about_summary">Hoe kruisvervaag werk en waar dit nie werk nie</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Hoe dit werk</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Kruisvervaag oorvleuel die einde van een liedjie met die begin van die volgende, volgens jou duur en kurwe.
+  <string name="morphe_music_crossfade_about_how_summary">"Kruisvervaging laat die einde van een liedjie oorvleuel met die begin van die volgende, deur jou duur en kromme te gebruik
 
-Dit werk met outo-aanvordering en met handmatige oorslaan, elk met sy eie skakelaar hierbo. Met outo-aanvordering begin die vermenging ’n paar sekondes voordat die liedjie eindig."</string>
+Dit werk by outomatiese vooruitgang en by handmatige oorslaan, elk met sy eie skakelaar. By outomatiese vooruitgang begin die vermenging 'n paar sekondes voordat die liedjie eindig"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Beperkings</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Musiekvideo’s speel slegs as klank terwyl kruisvervaag aan is. Druk en hou die skommelknoppie om kruisvervaag te onderbreek en die video te kyk
 
@@ -449,8 +446,6 @@ SABR-afspeel (met nabootsing van videostrome afgeskakel)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Vul ontbrekende album in</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Wanneer die musiek nie \'n album bevat nie, slaan dit op Last.fm na sodat jou scrobble volledig is</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Oor scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling sinkroniseer outomaties jou YouTube Music gebruik met jou Last.fm of ListenBrainz profiel
 
 Om te verseker dat scrobbling tydens agtergrondweergawe gesinkroniseer word, verseker dat YouTube Music se app-batterygebruik op \"Onbeperk\" gestel is."</string>
@@ -462,7 +457,6 @@ Om te verseker dat scrobbling tydens agtergrondweergawe gesinkroniseer word, ver
   <string name="morphe_music_lyrics_section_service_title">Lirieke-diens</string>
   <string name="morphe_music_lyrics_section_overlay_title">Oorleg</string>
   <string name="morphe_music_lyrics_section_sync_title">Sinchronisasie</string>
-  <string name="morphe_music_lyrics_section_about_title">Oor</string>
   <string name="morphe_music_lyrics_source_all_disabled">Alle verskaffers is gedeaktiveer — ingeboude en ingebedde lirieke</string>
   <string name="morphe_music_lyrics_source_reset_title">Verskaffervolgorde terugstel?</string>
   <string name="morphe_music_lyrics_source_reset_message">Herstel verskaffers na die standaardprioriteitsorde</string>

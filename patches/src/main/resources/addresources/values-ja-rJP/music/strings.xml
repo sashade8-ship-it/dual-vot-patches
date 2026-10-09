@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">クロスフェードが有効になっている間は、動画モードは利用できません</string>
   <string name="morphe_music_crossfade_sabr_toast">SABR再生中はクロスフェードがオフになります</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">キャスト中はクロスフェードがオフになります</string>
-  <string name="morphe_music_crossfade_about_title">クロスフェードについて</string>
-  <string name="morphe_music_crossfade_about_summary">クロスフェードの仕組みと対応しない場合</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">仕組み</string>
-  <string name="morphe_music_crossfade_about_how_summary">"クロスフェードは、設定した時間とカーブに従って、ある曲の終わりと次の曲の始まりを重ねます。
+  <string name="morphe_music_crossfade_about_how_summary">"クロスフェードは、指定した時間とカーブを使用して、一曲の終わりと次の曲の始まりを重ねます。
 
-これは、自動送りと手動スキップの両方で動作し、それぞれに上記の切り替えがあります。自動送りでは、曲が終わる数秒前にフェードが始まります。"</string>
+自動再生と手動スキップで動作し、それぞれに独自のトグルがあります。自動再生では、曲が終了する数秒前にブレンドが始まります"</string>
   <string name="morphe_music_crossfade_about_quirks_title">制限事項</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"クロスフェードがオンの間、ミュージックビデオは音声のみで再生されます。シャッフルを長押しするとクロスフェードが一時停止され、ビデオを視聴できます。
 
@@ -449,8 +446,6 @@ SABR再生（動画ストリームのスプーフがオフ）"</string>
   <string name="morphe_music_scrobbling_guess_album_title">アルバム名を補完</string>
   <string name="morphe_music_scrobbling_guess_album_summary">楽曲からアルバム名を取得できない場合に、Last.fm で検索して Scrobble に登録します</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Scrobble について</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobble は、YouTube Music で再生した楽曲を Last.fm または ListenBrainz のプロフィールに記録する機能です
 
 バックグラウンドで再生した楽曲を Scrobble するには、デバイスの設定で YouTube Music を「バックグラウンド実行時に電池を使用可能」にしてください"</string>
@@ -462,7 +457,6 @@ SABR再生（動画ストリームのスプーフがオフ）"</string>
   <string name="morphe_music_lyrics_section_service_title">歌詞配信サービス</string>
   <string name="morphe_music_lyrics_section_overlay_title">オーバーレイ</string>
   <string name="morphe_music_lyrics_section_sync_title">同期</string>
-  <string name="morphe_music_lyrics_section_about_title">このフィルタについて</string>
   <string name="morphe_music_lyrics_source_all_disabled">すべてのプロバイダーが無効です — 内蔵歌詞と埋め込み歌詞</string>
   <string name="morphe_music_lyrics_source_reset_title">プロバイダーの順序をリセットしますか？</string>
   <string name="morphe_music_lyrics_source_reset_message">プロバイダーを既定の優先順位に戻します</string>

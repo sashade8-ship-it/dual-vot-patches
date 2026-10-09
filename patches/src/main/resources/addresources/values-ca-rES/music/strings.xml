@@ -34,8 +34,6 @@ Second \"item\" text"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <!-- interaction.crossfade.crossfadePatch -->
   <!-- Empty string because custom preference handles the title itself -->
-  <string name="morphe_music_crossfade_about_title">Quant a</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
   <!-- video.speed.playbackSpeedPatch -->
@@ -75,9 +73,7 @@ Second \"item\" text"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">desconegut</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <!-- 'scrobbling' must be kept untranslated -->
   <!-- layout.lyrics.lyricsPatch -->
-  <string name="morphe_music_lyrics_section_about_title">Quant a</string>
   <string name="morphe_music_lyrics_search_title_hint">Títol de la cançó</string>
   <string name="morphe_music_lyrics_search_artist_hint">Artista</string>
   <string name="morphe_music_lyrics_search_empty">Introdueix un títol de la cançó i un artista</string>

@@ -241,9 +241,23 @@ Yüklənilmiş treklər burada görünür"</string>
   <string name="morphe_music_crossfade_paused_toast">Bu sessiya üçün Çarpaz Solma dayandırıldı</string>
   <string name="morphe_music_crossfade_resumed_toast">Çarpaz Soldurma yenidən başladı</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Çarpaz Soldurma işlək olduqda video rejimi əlçatan deyil</string>
-  <string name="morphe_music_crossfade_about_title">Haqqında</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
+  <string name="morphe_music_crossfade_sabr_toast">SABR oynatma ilə çarpaz soldurma qapadılır</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Yayımlanarkən çarpaz soldurma qapadılır</string>
   <string name="morphe_music_crossfade_about_how_title">Bu necə işləyir</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Məhdudiyyətlər</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Çarpaz soldurma aktiv olduqda musiqi videoları yalnız səs rejimində səsləndirilir. Çarpaz soldurmanı dayandırmaq və videoya baxmaq üçün Qarışdıra basıb saxla
+
+​Səsləndirilməyə başlayan musiqi videosu növbəti mahnıya qədər video rejimində qalır
+
+​Soldurma müddətindən daha qısa olan mahnılarda çarpaz soldurma olmur
+
+​Kilid ekranı və ya bildiriş paneli keçid anında qısa müddətlik köhnəlmiş vəziyyəti göstərə bilər
+
+​Musiqi videosuna baxmaq üçün çarpaz soldurmanı dayandırmaq bəzi videoların qara qalmasına səbəb ola bilər. Mahnını seçməzdən əvvəl çarpaz soldurmanı dayandırmaq bunun qarşısını alır"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">Dəstəklənmir</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Səs yayımlama və ya əksetdirmə (Chromecast, ekran və ya səs əksetdirmə)
+
+​SABR oynatma (Video yayımların saxtalaşdırma qapalıdır)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Hazırladı</string>
   <string name="morphe_music_crossfade_about_credit_summary">VazerOG tərəfindən Çarpaz soldurma xüsusiyyəti</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
@@ -429,8 +443,6 @@ Yüklənilmiş treklər burada görünür"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Çatışmayan albomu doldur</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Musiqidə albom göstərilmədikdə, scrobble-un tamamlanması üçün onu Last.fm-də axtarın</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Scrobbling haqqında</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Analiz avtomatik şəkildə YouTube Music istifadənizi Last.fm və ya ListenBrainz profilinizlə sinxronlaşdırır
 
 Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün YouTube Music tətbiqinin batareya istifadəsini \"Məhdudiyyətsiz\" olaraq təyin etdiyinizə əmin olun"</string>
@@ -442,7 +454,6 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_lyrics_section_service_title">Mahnı sözləri xidməti</string>
   <string name="morphe_music_lyrics_section_overlay_title">Örtük</string>
   <string name="morphe_music_lyrics_section_sync_title">Sinxronizasiya</string>
-  <string name="morphe_music_lyrics_section_about_title">Haqqında</string>
   <string name="morphe_music_lyrics_source_all_disabled">Bütün təminatçılar qapadılıb — daxili mahnı sözləri və yerləşdirilən mahnı sözləri</string>
   <string name="morphe_music_lyrics_source_reset_title">Təminatçı sırası sıfırlansın?</string>
   <string name="morphe_music_lyrics_source_reset_message">Təminatçıları ilkin prioritet sırasına qaytar</string>

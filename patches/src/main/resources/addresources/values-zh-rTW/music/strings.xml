@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">啟用淡入淡出效果時，視訊模式不可用</string>
   <string name="morphe_music_crossfade_sabr_toast">SABR 播放時交叉淡化已關閉</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">投放時交叉淡化已關閉</string>
-  <string name="morphe_music_crossfade_about_title">關於</string>
-  <string name="morphe_music_crossfade_about_summary">交叉淡化如何運作及不適用的情況</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">運作方式</string>
-  <string name="morphe_music_crossfade_about_how_summary">"交叉淡化會根據你設定的時間長度和曲線，讓一首歌曲的結尾與下一首歌曲的開頭重疊。
+  <string name="morphe_music_crossfade_about_how_summary">"交叉淡化會將一首歌曲的結尾與下一首的開頭重疊，並使用您設定的持續時間和曲線
 
-自動播放下一首和手動跳過時都會執行，兩者在上方各有自己的開關。自動播放下一首時，混合會在歌曲結束前幾秒開始。"</string>
+它會在自動播放和手動跳過時運作，兩者各有獨立的開關。在自動播放時，混音會在歌曲結束前幾秒開始"</string>
   <string name="morphe_music_crossfade_about_quirks_title">限制</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"開啟交叉淡化時，音樂影片只會以音訊形式播放。長按隨機播放可暫停交叉淡化並觀看影片
 
@@ -259,7 +256,7 @@ Second \"item\" text"</string>
 
 鎖定畫面或通知在過渡期間可能會短暫顯示過時狀態
 
-暫停交叉淡化以觀看音樂影片時，部分影片可能會變成黑畫面。在選擇歌曲前暫停交叉淡化即可避免此情況"</string>
+暫停交叉淡化以觀看音樂影片時，部份影片可能會變成黑畫面。在選擇歌曲前暫停交叉淡化即可避免此情況"</string>
   <string name="morphe_music_crossfade_about_unsupported_title">不支援</string>
   <string name="morphe_music_crossfade_about_unsupported_summary">"投放或鏡像音訊（Chromecast、螢幕鏡像或音訊鏡像）
 
@@ -445,11 +442,9 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_scrobbling_custom_regex_title">自訂正規表示式清理</string>
   <string name="morphe_music_scrobbling_custom_regex_summary">輸入自訂正規表示式以移除歌曲標題、藝人或專輯中的額外文字。例如：(?i)\\s*\\((clean|explicit)\\)</string>
   <string name="morphe_music_scrobbling_parse_title_title">解析標題中的藝人和歌曲</string>
-  <string name="morphe_music_scrobbling_parse_title_summary">使用 \" - \" 分隔符從影片標題中提取藝人和歌曲名稱。對於重新上傳的內容，頻道名稱可用作藝人，此功能很有用。</string>
+  <string name="morphe_music_scrobbling_parse_title_summary">使用 \" - \" 分隔符從影片標題中提取藝人和歌曲名稱。對於重新上載的內容，頻道名稱可用作藝人，此功能很有用。</string>
   <string name="morphe_music_scrobbling_guess_album_title">填入缺少的專輯</string>
   <string name="morphe_music_scrobbling_guess_album_summary">當音樂未包含專輯時，在 Last.fm 上查詢，讓你的聆聽記錄完整</string>
-  <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">關於聆聽記錄</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"聆聽記錄會自動將您的 YouTube Music 使用情況與您的 Last.fm 或 ListenBrainz 個人資料同步
 
@@ -462,7 +457,6 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_lyrics_section_service_title">歌詞服務</string>
   <string name="morphe_music_lyrics_section_overlay_title">疊加層</string>
   <string name="morphe_music_lyrics_section_sync_title">同步</string>
-  <string name="morphe_music_lyrics_section_about_title">關於</string>
   <string name="morphe_music_lyrics_source_all_disabled">所有提供者均已停用 — 內建歌詞與嵌入歌詞</string>
   <string name="morphe_music_lyrics_source_reset_title">重設提供者順序？</string>
   <string name="morphe_music_lyrics_source_reset_message">將提供者還原為預設優先順序</string>

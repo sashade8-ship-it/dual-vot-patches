@@ -258,9 +258,9 @@ Ako se kasnije isključi, preporučuje se obrisati podatke aplikacije kako bi se
   <string name="morphe_ryd_estimated_like_summary">Prikaže procijenjeni broj likeova na videozapisima gdje je kreator onemogućio likeove</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Prikaži upozorenja o pogrešci pri povezivanju</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Prikaže obavijest kada Return YouTube Dislike poslužitelj nije dostupan</string>
-  <string name="morphe_ryd_attribution_summary">"Podatke dostavlja Return YouTube Dislike API
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike vraća broj nesviđanja koje je YouTube sakrio 2021. Brojevi dolaze iz podataka arhiviranih prije uklanjanja, a za novije videozapise procjenjuju se na temelju glasova korisnika, pa su približni i ažuriraju se svakih nekoliko dana
 
-Dodirnite ovdje za otvaranje ReturnYouTubeDislike.com"</string>
+ID videozapisa koji gledate šalje se u Return YouTube Dislike API, a vaša sviđanja i nesviđanja šalju se anonimno kako bi se poboljšale procjene"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Statistika Return YouTube Dislike API-ja za ovaj uređaj</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Prosječno vrijeme odziva API-ja</string>

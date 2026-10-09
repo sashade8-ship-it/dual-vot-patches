@@ -258,9 +258,9 @@ PotHelper를 다운로드하려면 여기를 탭하세요"</string>
   <string name="morphe_ryd_estimated_like_summary">좋아요 수가 숨겨진 동영상에서 추정되는 좋아요 수를 표시합니다</string>
   <string name="morphe_ryd_toast_on_connection_error_title">연결 오류 알림 표시하기</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Return YouTube Dislike 서버를 사용할 수 없을 경우에 알림을 표시합니다</string>
-  <string name="morphe_ryd_attribution_summary">"데이터는 Return YouTube Dislike API에 의해 제공됩니다
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike는 2021년에 YouTube가 숨긴 싫어요 수를 복원합니다. 개수는 제거 전에 보관된 데이터에서 가져오며, 최신 동영상은 사용자 투표를 기반으로 추정되므로 근사치이며 며칠마다 업데이트됩니다.
 
-자세한 정보를 보려면 여기를 탭하여 'ReturnYouTubeDislike.com'으로 이동하세요"</string>
+시청 중인 동영상의 ID는 Return YouTube Dislike API로 전송되며, 좋아요와 싫어요는 추정치를 개선하기 위해 익명으로 전송됩니다. \"}],\"action\":\"translate\"},"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">이 기기에 대한 Return YouTube Dislike API 통계 반환</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API 응답 시간, 평균</string>

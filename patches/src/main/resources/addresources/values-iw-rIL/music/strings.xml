@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">מצב וידאו אינו זמין כאשר מעבר בין השירים מופעל</string>
   <string name="morphe_music_crossfade_sabr_toast">קרוספייד כבוי בזמן השמעת SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">קרוספייד כבוי בזמן שידור</string>
-  <string name="morphe_music_crossfade_about_title">אודות</string>
-  <string name="morphe_music_crossfade_about_summary">איך קרוספייד עובד ואיפה הוא לא עובד</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">איך זה עובד</string>
-  <string name="morphe_music_crossfade_about_how_summary">"קרוספייד חופף בין סופו של שיר אחד לתחילתו של השיר הבא, באמצעות משך הזמן והעקומה שבחרת.
+  <string name="morphe_music_crossfade_about_how_summary">"קרוספייד חופף את סוף השיר אחד עם תחילת השיר הבא, תוך שימוש במשך ובעקומה שלך
 
-הוא פועל במעבר אוטומטי ובדילוג ידני, ולכל אחד מהם יש מתג משלו למעלה. במעבר אוטומטי, המיקס מתחיל כמה שניות לפני שהשיר מסתיים."</string>
+הוא פועל על מעבר אוטומטי ועל דילוג ידני, כל אחד עם מתג משלו. במעבר אוטומטי, התערובת מתחילה כמה שניות לפני שהשיר מסתיים"</string>
   <string name="morphe_music_crossfade_about_quirks_title">מגבלות</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"קליפים מתנגנים כאודיו בלבד כשקרוספייד פועל. לחץ לחיצה ארוכה על ערבול כדי להשהות את הקרוספייד ולצפות בקליפ
 
@@ -449,8 +446,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_scrobbling_guess_album_title">השלם אלבום חסר</string>
   <string name="morphe_music_scrobbling_guess_album_summary">כאשר המוזיקה אינה כוללת אלבום, חפש אותו ב-Last.fm כדי שה-scrobble שלך יהיה שלם</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">אודות מעקב</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling מסנכרן באופן אוטומטי את השימוש שלך ב-YouTube Music עם פרופיל ה-Last.fm או ListenBrainz שלך.
 
 כדי להבטיח שה-scrobbling יסונכרן במהלך הפעלה ברקע, ודא ששימוש הסוללה של אפליקציית YouTube Music מוגדר ל\"ללא הגבלה\""</string>
@@ -462,7 +457,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_section_service_title">שירות מילות שירים</string>
   <string name="morphe_music_lyrics_section_overlay_title">שכבת-על</string>
   <string name="morphe_music_lyrics_section_sync_title">סנכרון</string>
-  <string name="morphe_music_lyrics_section_about_title">אודות</string>
   <string name="morphe_music_lyrics_source_all_disabled">כל הספקים מושבתים — מילות שיר מובנות ומילות שיר משובצות</string>
   <string name="morphe_music_lyrics_source_reset_title">לאפס את סדר הספקים?</string>
   <string name="morphe_music_lyrics_source_reset_message">שחזר את הספקים לסדר העדיפות המוגדר כברירת מחדל</string>

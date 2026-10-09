@@ -243,13 +243,10 @@ Stiahnuté skladby sa zobrazia tu"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Režim videa nie je dostupný, keď je zapnuté prechodové zmiznutie zvuku</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade je vypnutý pri prehrávaní SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade je vypnutý počas castovania</string>
-  <string name="morphe_music_crossfade_about_title">O aplikácii</string>
-  <string name="morphe_music_crossfade_about_summary">Ako crossfade funguje a kde nefunguje</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Ako to funguje</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade prekrýva koniec jednej skladby so začiatkom nasledujúcej, pričom používa vašu dĺžku prelínania a krivku.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade prekrýva koniec jednej skladby so začiatkom ďalšej, pričom používa vašu dĺžku a krivku
 
-Funguje pri automatickom prechode aj pri manuálnom preskakovaní, pričom každá z nich má vyššie vlastný prepínač. Pri automatickom prechode sa prelínanie začína niekoľko sekúnd pred koncom skladby."</string>
+Funguje pri automatickom prechode aj pri manuálnom preskočení, každý s vlastným prepínačom. Pri automatickom prechode sa prelínanie začína niekoľko sekúnd pred koncom skladby"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Obmedzenia</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Keď je crossfade zapnutý, hudobné videá sa prehrávajú iba ako zvuk. Dlhým stlačením tlačidla náhodného prehrávania pozastavíte crossfade a budete môcť sledovať video
 
@@ -449,8 +446,6 @@ Prehrávanie SABR (spoofovanie video streamov vypnuté)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Doplniť chýbajúci album</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Keď skladba neobsahuje album, vyhľadajte ju na Last.fm, aby bol váš scrobble úplný.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">O scrobovaní</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling automaticky synchronizuje vaše používanie YouTube Music s vaším profilom Last.fm alebo ListenBrainz.
 
 Na zabezpečenie synchronizácie scrobblingu počas prehrievania na pozadí sa uistite, že používanie aplikácie YouTube Music v batérii je nastavené na \"Nekontrolované\""</string>
@@ -462,7 +457,6 @@ Na zabezpečenie synchronizácie scrobblingu počas prehrievania na pozadí sa u
   <string name="morphe_music_lyrics_section_service_title">Služba textov piesní</string>
   <string name="morphe_music_lyrics_section_overlay_title">Prekrytie</string>
   <string name="morphe_music_lyrics_section_sync_title">Synchronizácia</string>
-  <string name="morphe_music_lyrics_section_about_title">O aplikácii</string>
   <string name="morphe_music_lyrics_source_all_disabled">Všetci poskytovatelia sú vypnutí – vstavané texty a vložené texty.</string>
   <string name="morphe_music_lyrics_source_reset_title">Obnoviť poradie poskytovateľov?</string>
   <string name="morphe_music_lyrics_source_reset_message">Obnoviť poskytovateľov do predvoleného poradia priority.</string>

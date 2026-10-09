@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Η λειτουργία βίντεο δεν είναι διαθέσιμη όταν είναι ενεργοποιημένη η σταδιακή μετάβαση ήχου</string>
   <string name="morphe_music_crossfade_sabr_toast">Το Crossfade είναι απενεργοποιημένο κατά την αναπαραγωγή SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Το Crossfade είναι απενεργοποιημένο κατά τη μετάδοση</string>
-  <string name="morphe_music_crossfade_about_title">Πληροφορίες</string>
-  <string name="morphe_music_crossfade_about_summary">Πώς λειτουργεί το crossfade και πού δεν λειτουργεί</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Πώς λειτουργεί</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Το Crossfade επικαλύπτει το τέλος ενός τραγουδιού με την αρχή του επόμενου, χρησιμοποιώντας τη διάρκεια και την καμπύλη σου.
+  <string name="morphe_music_crossfade_about_how_summary">"Το crossfade επικαλύπτει το τέλος ενός τραγουδιού με την αρχή του επόμενου, χρησιμοποιώντας τη διάρκεια και την καμπύλη σας
 
-Λειτουργεί στην αυτόματη εναλλαγή και στη χειροκίνητη εναλλαγή, με ξεχωριστό διακόπτη παραπάνω για το καθένα. Στην αυτόματη εναλλαγή, η ανάμειξη ξεκινά λίγα δευτερόλεπτα πριν τελειώσει το τραγούδι."</string>
+Λειτουργεί με αυτόματη προώθηση και με χειροκίνητη παράλειψη, το καθένα με τη δική του εναλλαγή. Στην αυτόματη προώθηση, η ανάμειξη ξεκινά λίγα δευτερόλεπτα πριν τελειώσει το τραγούδι"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Περιορισμοί</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Τα μουσικά βίντεο παίζουν μόνο ως ήχος όταν το crossfade είναι ενεργοποιημένο. Κάνε παρατεταμένο πάτημα στην τυχαία αναπαραγωγή για να διακόψεις το crossfade και να δεις το βίντεο
 
@@ -449,8 +446,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Συμπληρώστε το άλμπουμ που λείπει</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Όταν η μουσική δεν περιλαμβάνει άλμπουμ, αναζητήστε το στο Last.fm για να ολοκληρωθεί το scrobble σας</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Σχετικά με την αναφορά</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Το scrobbling συγχρονίζει αυτόματα τη χρήση του YouTube Music με το προφίλ σας στο Last.fm ή ListenBrainz.
 
 Για να διασφαλίσετε ότι το scrobbling συγχρονίζεται κατά την αναπαραγωγή στο παρασκήνιο, βεβαιωθείτε ότι η χρήση μπαταρίας της εφαρμογής YouTube Music έχει ρυθμιστεί σε \"Μη περιορισμένη\"."</string>
@@ -462,7 +457,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_section_service_title">Υπηρεσία στίχων</string>
   <string name="morphe_music_lyrics_section_overlay_title">Επικάλυψη</string>
   <string name="morphe_music_lyrics_section_sync_title">Συγχρονισμός</string>
-  <string name="morphe_music_lyrics_section_about_title">Πληροφορίες</string>
   <string name="morphe_music_lyrics_source_all_disabled">Όλοι οι πάροχοι είναι απενεργοποιημένοι — στίχοι της εφαρμογής και στίχοι ενσωματωμένοι στα αρχεία</string>
   <string name="morphe_music_lyrics_source_reset_title">Επαναφορά σειράς παρόχων;</string>
   <string name="morphe_music_lyrics_source_reset_message">Επαναφορά των παρόχων στην προεπιλεγμένη σειρά προτεραιότητας</string>

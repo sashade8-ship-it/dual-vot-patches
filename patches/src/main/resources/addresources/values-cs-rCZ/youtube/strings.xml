@@ -63,7 +63,6 @@ Změny zahrnují:
   <string name="morphe_hide_album_cards_summary">Skryje karty alb pod popisem interpreta</string>
   <string name="morphe_hide_artist_cards_title">Skrýt karty interpretů</string>
   <string name="morphe_hide_artist_cards_summary">Skryje kartu interpreta v horní části výsledků vyhledávání</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Skrýt popisek „Automatický dabing“</string>
   <string name="morphe_hide_channel_buttons_title">Skrýt tlačítka kanálů</string>
   <string name="morphe_hide_channel_buttons_summary">Skryje tlačítka jako Odebírat, Zobrazit kanál, Komunita a YouTube Music z profilů kanálů ve výsledcích vyhledávání</string>
   <string name="morphe_hide_community_posts_title">Skrýt příspěvky komunity</string>
@@ -79,7 +78,6 @@ Změny zahrnují:
   <string name="morphe_hide_history_shelf_title">Skrýt polici Historie</string>
   <string name="morphe_hide_horizontal_shelves_title">Skrýt horizontální sekce</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skryje horizontální sekce, jako jsou Mimořádné zprávy, Příspěvky komunity, které by se vám mohly líbit, Pokračovat ve sledování, Prozkoumat další kanály, Prozkoumat další témata, Pro vás, Nejnovější videa, Nejrelevantnější, Příspěvky z komunity autora, Nakupování a Sledovat znovu</string>
-  <string name="morphe_hide_hyped_label_title">Skrýt štítek Hype</string>
   <string name="morphe_hide_image_shelf_title">Skrýt obrázkovou sekci</string>
   <string name="morphe_hide_image_shelf_summary">Skryje sekci s obrázky ve výsledcích vyhledávání</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Změny zahrnují:
 • V sekci Shorts, na stránkách kanálů a ve výsledcích vyhledávání se mohou časy nahrání stále zobrazovat
 • Nefunguje v rozvržení pro auta"</string>
   <string name="morphe_hide_video_thumbnail_title">Skrýt miniaturu videí</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Skrýt štítky doporučených videí</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Skryje ve výsledcích vyhledávání štítky „Lidé také sledovali“ a „Mohlo by se vám líbit“</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Skrýt štítky videa</string>
+  <string name="morphe_hide_video_labels_summary">Skrývá štítky jako \'Automaticky dabováno\' / \'Dabováno\', \'Vydělává provizi\', \'Přeháněné\', \'Lidé se také dívali\', \'produkt(y)\' a \'Mohlo by se vám líbit\'</string>
   <string name="morphe_hide_view_count_title">Skrýt počet zhlédnutí</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Omezení:
@@ -170,7 +168,7 @@ Změny zahrnují:
   <string name="morphe_hide_video_title_title">Skrýt název videa</string>
   <string name="morphe_hide_video_title_summary">Skryje název videa v režimu na celou obrazovku</string>
   <string name="morphe_sanitize_video_subtitle_title">Vyčistit podtitul videa</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Vyčistí z podtitulu videa fráze jako „#“, „Sbírka“, „Obchod“ a „produkty“</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Odstraňuje fráze jako \'#\', \'Fundraiser\', \'produkt(y)\' a \'Shop\' z titulků videa</string>
   <string name="morphe_hide_description_components_screen_title">Popis videa</string>
   <string name="morphe_hide_description_components_screen_summary">Vyberte, které prvky se mají zobrazovat v popisu videa</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Skrýt sekci „Shrnutí videa generované pomocí AI“</string>
@@ -329,7 +327,6 @@ Omezení:
   <string name="morphe_hide_stats_hidden_all_title">Skrytá videa, celkem</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Resetovat čítač posledních 24 hodin?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Resetovat počítadlo celkového času?</string>
-  <string name="morphe_hide_about_category_title">O aplikaci</string>
   <string name="morphe_hide_aislist_screen_title">Filtr kanálů s umělou inteligencí</string>
   <string name="morphe_hide_aislist_screen_summary">Skrýt videa z kanálů označených jako obsah generovaný umělou inteligencí komunitním seznamem AiSList</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Blocklist: Vysoká spolehlivost</string>
@@ -348,9 +345,9 @@ Omezení:
 Omezení:
 » Filtrovaný AI Shorts se mohou zobrazovat jako prázdný místo
 » Některý AI videa se mohou počád zobrazovat"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Data poskytuje AiSList.
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList je open source seznam YouTube kanálů, které publikují obsah generovaný umělou inteligencí, spravovaný dobrovolníky. Kanály jsou hlášeny uživateli a před přidáním jsou zkontrolovány
 
-Klepnutím sem a otevřete AiSlopList.com a zobrazte si soubory ke stažení pro další platformy"</string>
+Seznam se stahuje z GitHubu a videa jsou filtrována na vašem zařízení"</string>
   <string name="morphe_aislist_submit_category_title">Nahlásit AI kanály</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Přidat položku pro hlášení do nabídky videa</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Přidat do nabídky videa položku, která nahlásí kanál videa do AiSList</string>
@@ -1174,11 +1171,9 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow a Původní náhledy</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow a Zachycení snímků</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Zachycení snímků</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow poskytuje crowdsourcované názvy a miniatury pro videa na YouTube. Ty jsou často relevantnější než ty poskytované YouTube.
+  <string name="morphe_dearrow_about_summary">"DeArrow nahrazuje clickbaitové titulky a miniatury komunitními, které jsou přesnější a méně senzační. Titulky jsou psány a hodnoceny komunitou a miniatury jsou snímky z videa
 
-Pokud je povoleno, adresy URL videí budou odeslány na server API a žádná další data se neodesílají. Pokud video nemá miniatury DeArrow, zobrazí se původní nebo statické snímky.
-
-Klepnutím sem otevřete DeArrow.ajay.app"</string>
+Videa jsou vyžádána krátkou předponou hashovaného ID videa, takže server nemůže přesně určit, na které video se díváte. Pokud video nemá miniaturu DeArrow, zobrazí se originální nebo statický snímek"</string>
   <string name="morphe_dearrow_connection_toast_title">Zobrazit upozornění na chyby připojení</string>
   <string name="morphe_dearrow_connection_toast_summary">Zobrazí se upozornění, když server DeArrow není k dispozici</string>
   <string name="morphe_dearrow_api_url_title">Koncový bod API</string>

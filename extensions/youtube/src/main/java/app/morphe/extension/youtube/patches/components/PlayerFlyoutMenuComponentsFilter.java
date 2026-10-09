@@ -38,15 +38,28 @@ public final class PlayerFlyoutMenuComponentsFilter extends Filter {
         topFlyoutMenuVisible = false;
     }
 
-    public static final class HideAudioFlyoutMenuAvailability implements Setting.Availability {
+    public static final class HideAmbientModeFlyoutMenuAvailability implements Setting.Availability {
         @Override
         public boolean isAvailable() {
-            return !SpoofVideoStreamsPatch.spoofingToClientWithNoMultiAudioStreams();
+            return !Settings.DISABLE_AMBIENT_MODE.get() && !Settings.HIDE_SETTINGS_BUTTON.get();
         }
 
         @Override
         public List<Setting<?>> getParentSettings() {
-            return List.of(SharedYouTubeSettings.SPOOF_VIDEO_STREAMS);
+            return List.of(Settings.DISABLE_AMBIENT_MODE, Settings.HIDE_SETTINGS_BUTTON);
+        }
+    }
+
+    public static final class HideAudioTrackFlyoutMenuAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return !SpoofVideoStreamsPatch.spoofingToClientWithNoMultiAudioStreams()
+                    && !Settings.HIDE_SETTINGS_BUTTON.get();
+        }
+
+        @Override
+        public List<Setting<?>> getParentSettings() {
+            return List.of(SharedYouTubeSettings.SPOOF_VIDEO_STREAMS, Settings.HIDE_SETTINGS_BUTTON);
         }
     }
 

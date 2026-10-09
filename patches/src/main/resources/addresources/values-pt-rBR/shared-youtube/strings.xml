@@ -258,9 +258,9 @@ Se esta opção for desativada posteriormente, é recomendável limpar os dados 
   <string name="morphe_ryd_estimated_like_summary">Mostra uma contagem de \'Gostei\' estimada em vídeos onde o criador os desativou</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Mostrar alertas de erro de conexão</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Mostra uma notificação quando o servidor do Return YouTube Dislike estiver indisponível</string>
-  <string name="morphe_ryd_attribution_summary">"Dados fornecidos pela API do Return YouTube Dislike
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike restaura as contagens de dislikes que o YouTube escondeu em 2021. As contagens vêm de dados arquivados antes da remoção e são estimadas para vídeos mais novos a partir dos votos dos seus usuários, por isso são aproximadas e atualizadas a cada poucos dias
 
-Toque aqui para abrir ReturnYouTubeDislike.com"</string>
+O ID do vídeo que você assiste é enviado para a API do Return YouTube Dislike, e seus likes e dislikes são enviados anonimamente para melhorar as estimativas"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Estatísticas da API do Return YouTube Dislike deste dispositivo</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Tempo de resposta da API, média</string>

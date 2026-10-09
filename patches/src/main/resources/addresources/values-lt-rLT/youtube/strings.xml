@@ -19,16 +19,16 @@ Second \"item\" text"</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <string name="morphe_settings_screen_00_about_title">Apie</string>
-  <string name="morphe_settings_screen_01_ads_title">Reklamos</string>
-  <string name="morphe_settings_screen_03_feed_title">Tiekimas</string>
-  <string name="morphe_settings_screen_04_general_title">Bendras</string>
-  <string name="morphe_settings_screen_05_player_title">Leistuvas</string>
-  <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
-  <string name="morphe_settings_screen_07_seekbar_title">Paieškos juosta</string>
+  <string name="morphe_settings_screen_01_ads_title">Skelbimai</string>
+  <string name="morphe_settings_screen_03_feed_title">Srautas</string>
+  <string name="morphe_settings_screen_04_general_title">Bendra</string>
+  <string name="morphe_settings_screen_05_player_title">Leistuvė</string>
+  <string name="morphe_settings_screen_06_shorts_title">„Shorts“</string>
+  <string name="morphe_settings_screen_07_seekbar_title">Prasukimo juosta</string>
   <string name="morphe_settings_screen_08_swipe_controls_title">Braukimo valdikliai</string>
   <string name="morphe_settings_screen_11_misc_title">Įvairūs</string>
   <string name="morphe_settings_screen_12_video_title">Vaizdo įrašai</string>
-  <string name="morphe_restore_old_settings_menus_title">Sugrąžinti senąjį YouTube nustatymų ekraną</string>
+  <string name="morphe_restore_old_settings_menus_title">Atkurti senąjį „YouTube“ nustatymų ekraną</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
   <string name="morphe_remove_background_playback_restrictions_title">Panaikinti foninio grojimo varžymą</string>
   <string name="morphe_shorts_disable_background_playback_title">Išjungti foninį grojimą</string>
@@ -51,7 +51,7 @@ Second \"item\" text"</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
@@ -70,7 +70,6 @@ Second \"item\" text"</string>
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
-  <string name="morphe_hide_about_category_title">Apie</string>
   <!-- ad.hideAdsPatch -->
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_remove">Pašalinti</string>

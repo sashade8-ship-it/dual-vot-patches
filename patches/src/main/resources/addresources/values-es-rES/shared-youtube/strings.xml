@@ -258,9 +258,9 @@ Si se desactiva posteriormente, se recomienda borrar los datos de la aplicación
   <string name="morphe_ryd_estimated_like_summary">Muestra una estimación del número de \'Me gusta\' en los vídeos donde el creador ha desactivado los \'Me gusta\'</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Mostrar alertas de error de conexión</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Muestra una notificación cuando el servidor de Return YouTube Dislike no está disponible</string>
-  <string name="morphe_ryd_attribution_summary">"Los datos son proporcionados por la API de Return YouTube Dislike.
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike restaura los contadores de no me gusta que YouTube ocultó en 2021. Los contadores provienen de datos archivados antes de la eliminación y se estiman para videos más nuevos a partir de los votos de sus usuarios, por lo que son aproximados y se actualizan cada pocos días
 
-Pulsa aquí para abrir ReturnYouTubeDislike.com"</string>
+El ID del video que ves se envía a la API de Return YouTube Dislike, y tus me gusta y no me gusta se envían de forma anónima para mejorar las estimaciones"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Estadísticas de la API de Return YouTube Dislike de este dispositivo</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Tiempo de respuesta de la API, promedio</string>

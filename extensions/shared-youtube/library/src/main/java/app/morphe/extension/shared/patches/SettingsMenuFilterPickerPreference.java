@@ -8,12 +8,10 @@
 package app.morphe.extension.shared.patches;
 
 import static app.morphe.extension.shared.StringRef.str;
-import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.DRAWABLE_CHECKMARK;
-import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.DRAWABLE_CHECKMARK_BOLD;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_CHECK_ICON;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_CHECK_ICON_PLACEHOLDER;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_ITEM_TEXT;
-import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.LAYOUT_MORPHE_CUSTOM_LIST_ITEM_CHECKED;
+import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.createCheckedListItem;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -22,7 +20,6 @@ import android.preference.Preference;
 import android.util.AttributeSet;
 import android.util.Pair;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -42,7 +39,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.preference.AbstractPreferenceFragment;
 import app.morphe.extension.shared.theme.ThemeUtils;
 import app.morphe.extension.shared.ui.CustomDialog;
@@ -210,7 +206,6 @@ public class SettingsMenuFilterPickerPreference extends Preference {
         private final Context context;
         private final List<Row> rows;
         private final Set<String> selectedLower;
-        private final int checkDrawable;
         private final int childIndentPx;
         private final int foregroundColor;
 
@@ -218,7 +213,6 @@ public class SettingsMenuFilterPickerPreference extends Preference {
             this.context = context;
             this.rows = rows;
             this.selectedLower = selectedLower;
-            this.checkDrawable = Utils.appIsUsingBoldIcons() ? DRAWABLE_CHECKMARK_BOLD : DRAWABLE_CHECKMARK;
             this.childIndentPx = (int) (CHILD_INDENT_DP * context.getResources().getDisplayMetrics().density);
             this.foregroundColor = ThemeUtils.getAppForegroundColor();
         }
@@ -238,13 +232,11 @@ public class SettingsMenuFilterPickerPreference extends Preference {
             View view = convertView;
             Holder holder;
             if (view == null) {
-                view = LayoutInflater.from(context)
-                        .inflate(LAYOUT_MORPHE_CUSTOM_LIST_ITEM_CHECKED, parent, false);
+                view = createCheckedListItem(context);
                 holder = new Holder();
                 holder.placeholder = view.findViewById(ID_MORPHE_CHECK_ICON_PLACEHOLDER);
                 holder.itemText = view.findViewById(ID_MORPHE_ITEM_TEXT);
                 holder.checkIcon = view.findViewById(ID_MORPHE_CHECK_ICON);
-                holder.checkIcon.setImageResource(checkDrawable);
                 holder.defaultPaddingLeft = holder.itemText.getPaddingLeft();
                 view.setTag(holder);
             } else {

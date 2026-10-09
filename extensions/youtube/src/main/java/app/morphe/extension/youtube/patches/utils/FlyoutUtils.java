@@ -20,7 +20,6 @@ import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Pair;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -882,10 +881,9 @@ public final class FlyoutUtils {
             }
         }
 
-        TypedValue ripple = new TypedValue();
-        if (context.getTheme().resolveAttribute(
-                android.R.attr.selectableItemBackground, ripple, true)) {
-            customButton.setForeground(context.getDrawable(ripple.resourceId));
+        final int ripple = ThemeUtils.getThemeResourceId(context, android.R.attr.selectableItemBackground);
+        if (ripple != 0) {
+            customButton.setForeground(context.getDrawable(ripple));
         }
 
         customButton.setOnClickListener(clickListener);

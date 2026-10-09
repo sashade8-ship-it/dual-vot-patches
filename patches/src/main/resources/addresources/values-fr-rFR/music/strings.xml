@@ -241,29 +241,24 @@ Les morceaux téléchargés apparaîtront ici"</string>
   <string name="morphe_music_crossfade_paused_toast">Fondu enchaîné mis en pause pour cette session</string>
   <string name="morphe_music_crossfade_resumed_toast">Fondu enchaîné repris</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Le mode vidéo n\'est pas disponible lorsque le fondu enchaîné est activé</string>
-  <string name="morphe_music_crossfade_sabr_toast">Le fondu enchaîné est désactivé lors de la lecture SABR</string>
+  <string name="morphe_music_crossfade_sabr_toast">Le fondu enchaîné est désactivé avec la lecture SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Le fondu enchaîné est désactivé pendant la diffusion</string>
-  <string name="morphe_music_crossfade_about_title">À propos</string>
-  <string name="morphe_music_crossfade_about_summary">Comment fonctionne le fondu enchaîné et où il ne s\'applique pas</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Comment ça marche</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Le fondu enchaîné fait chevaucher la fin d'une chanson et le début de la suivante, en fonction de la durée et de la courbe que vous avez définies.
+  <string name="morphe_music_crossfade_about_how_summary">"Le fondu enchaîné chevauche la fin d'une chanson avec le début de la suivante, en utilisant votre durée et votre courbe\n\nIl fonctionne en avance automatique et en saut manuel, chacun avec son propre interrupteur. En avance automatique, le fondu commence quelques secondes avant la fin de la chanson"</string>
+  <string name="morphe_music_crossfade_about_quirks_title">Limitations</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Les clips musicaux sont lus uniquement en audio lorsque le fondu enchaîné est activé. Appuyez longuement sur le bouton 'Aléatoire' pour mettre le fondu enchaîné en pause et regarder la vidéo
 
-Il s'applique lors du passage automatique et du saut manuel, chacun avec son propre interrupteur ci-dessus. En passage automatique, le fondu commence quelques secondes avant la fin de la chanson."</string>
-  <string name="morphe_music_crossfade_about_quirks_title">Limites</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"Les clips musicaux ne sont lus qu'en audio lorsque le fondu enchaîné est activé. Appuyez longuement sur Lecture aléatoire pour mettre le fondu enchaîné en pause et regarder la vidéo
+Un clip musical qui démarre reste en mode vidéo jusqu'au morceau suivant
 
-Un clip musical qui démarre sa lecture reste en mode vidéo jusqu'à la chanson suivante
-
-Les chansons plus courtes que la durée du fondu ne sont pas lues avec un fondu enchaîné
+Les chansons plus courtes que la durée du fondu ne bénéficient pas du fondu enchaîné
 
 L'écran de verrouillage ou la notification peut brièvement afficher un état obsolète au milieu d'une transition
 
-Mettre le fondu enchaîné en pause pour regarder un clip musical peut laisser certaines vidéos noires. Mettre le fondu enchaîné en pause avant de choisir la chanson évite ce problème"</string>
+Mettre le fondu enchaîné en pause pour regarder un clip musical peut entraîner l'affichage d'un écran noir sur certaines vidéos. Mettre le fondu enchaîné en pause avant de sélectionner la chanson permet d'éviter ce problème"</string>
   <string name="morphe_music_crossfade_about_unsupported_title">Non pris en charge</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"Diffusion ou miroir audio (Chromecast, miroir d'écran ou miroir audio)
+  <string name="morphe_music_crossfade_about_unsupported_summary">"Diffusion ou duplication audio (Chromecast, duplication de l'écran ou audio)
 
-Lecture SABR (simulation des flux vidéo désactivée)"</string>
+Lecture SABR (Falsifier les flux vidéo désactivés)"</string>
   <string name="morphe_music_crossfade_about_credit_title">Crédit</string>
   <string name="morphe_music_crossfade_about_credit_summary">Fonctionnalité de fondu enchaîné par VazerOG</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
@@ -449,8 +444,6 @@ Lecture SABR (simulation des flux vidéo désactivée)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Renseigner l\'album manquant</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Lorsque la musique ne contient pas d\'album, recherchez-la sur Last.fm pour compléter votre scrobble</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">À propos du scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Le scrobbling synchronise automatiquement votre activité sur YouTube Music avec votre profil Last.fm ou ListenBrainz.
 
 Pour que le scrobbling continue à se synchroniser pendant la lecture en arrière-plan, assurez-vous que l'utilisation de la batterie par l'application YouTube Music est définie sur \"Non restreint\""</string>
@@ -462,7 +455,6 @@ Pour que le scrobbling continue à se synchroniser pendant la lecture en arrièr
   <string name="morphe_music_lyrics_section_service_title">Service de paroles</string>
   <string name="morphe_music_lyrics_section_overlay_title">Overlay</string>
   <string name="morphe_music_lyrics_section_sync_title">Synchronisation</string>
-  <string name="morphe_music_lyrics_section_about_title">À propos</string>
   <string name="morphe_music_lyrics_source_all_disabled">Tous les fournisseurs sont désactivés — paroles intégrées et paroles incorporées</string>
   <string name="morphe_music_lyrics_source_reset_title">Réinitialiser l\'ordre des fournisseurs ?</string>
   <string name="morphe_music_lyrics_source_reset_message">Rétablir les fournisseurs dans l\'ordre de priorité par défaut</string>

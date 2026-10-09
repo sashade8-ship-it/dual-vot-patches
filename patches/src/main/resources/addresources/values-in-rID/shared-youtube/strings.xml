@@ -258,9 +258,9 @@ Jika kemudian dimatikan, disarankan untuk menghapus data aplikasi untuk mencegah
   <string name="morphe_ryd_estimated_like_summary">Menampilkan perkiraan jumlah suka pada video di mana pembuatnya telah menonaktifkan fitur suka</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Tampilkan peringatan kesalahan sambungan</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Menampilkan notifikasi saat server Return YouTube Dislike tidak tersedia</string>
-  <string name="morphe_ryd_attribution_summary">"Data disediakan oleh API Return YouTube Dislike
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike mengembalikan jumlah dislike yang disembunyikan YouTube pada tahun 2021. Jumlah tersebut berasal dari data yang diarsipkan sebelum penghapusan dan diperkirakan untuk video yang lebih baru dari suara penggunanya, sehingga bersifat perkiraan dan diperbarui setiap beberapa hari
 
-Ketuk di sini untuk membuka ReturnYouTubeDislike.com"</string>
+ID video yang Anda tonton dikirim ke API Return YouTube Dislike, dan suka dan tidak suka Anda dikirim secara anonim untuk meningkatkan perkiraan.}"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Statistik API Return YouTube Dislike untuk perangkat ini</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Waktu respons API, rata-rata</string>

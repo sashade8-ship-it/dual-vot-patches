@@ -69,7 +69,6 @@ Changes include:
     <string name="morphe_hide_album_cards_summary">Hides the album cards under the artist description</string>
     <string name="morphe_hide_artist_cards_title">Hide artist cards</string>
     <string name="morphe_hide_artist_cards_summary">Hides the artist card at the top of the search results</string>
-    <string name="morphe_hide_auto_dubbed_label_title">Hide \'Auto-dubbed\' label</string>
     <string name="morphe_hide_channel_buttons_title">Hide channel buttons</string>
     <string name="morphe_hide_channel_buttons_summary">Hides buttons such as Subscribe, View Channel, Community, and YouTube Music from channel profiles in search results</string>
     <string name="morphe_hide_community_posts_title">Hide community posts</string>
@@ -85,7 +84,6 @@ Changes include:
     <string name="morphe_hide_history_shelf_title">Hide History shelf</string>
     <string name="morphe_hide_horizontal_shelves_title">Hide horizontal shelves</string>
     <string name="morphe_hide_horizontal_shelves_summary">Hides horizontal shelves such as Breaking news, Community posts you may like, Continue watching, Explore more channels, Explore more topics, For You, Latest videos, Most relevant, Posts from Creator\'s Community, Shopping, and Watch it again</string>
-    <string name="morphe_hide_hyped_label_title">Hide Hyped label</string>
     <string name="morphe_hide_image_shelf_title">Hide image shelf</string>
     <string name="morphe_hide_image_shelf_summary">Hides image shelves in search results</string>
     <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -127,9 +125,9 @@ Changes include:
 • Shorts shelves, channel pages, and search results may still show upload times
 • Does not work with automotive layout"</string>
     <string name="morphe_hide_video_thumbnail_title">Hide video thumbnail</string>
-    <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-    <string name="morphe_hide_video_recommendation_labels_title">Hide video recommendation labels</string>
-    <string name="morphe_hide_video_recommendation_labels_summary">Hides \'People also watched\' and \'You might also like\' labels in search results</string>
+    <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+    <string name="morphe_hide_video_labels_title">Hide video labels</string>
+    <string name="morphe_hide_video_labels_summary">Hides labels like \'Auto-dubbed\' / \'Dubbed\', \'Earns commission\', \'Hyped\', \'People also watched\', \'product(s)\' and \'You might also like\'</string>
     <string name="morphe_hide_view_count_title">Hide view count</string>
     <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
     <string name="morphe_hide_view_count_summary">"Limitations:
@@ -177,7 +175,7 @@ Changes include:
     <string name="morphe_hide_video_title_title">Hide video title</string>
     <string name="morphe_hide_video_title_summary">Hides the video title in the fullscreen mode</string>
     <string name="morphe_sanitize_video_subtitle_title">Sanitize video subtitle</string>
-    <string name="morphe_sanitize_video_subtitle_summary">Sanitizes phrases like \'#\', \'Fundraiser\', \'Shop\', and \'products\' from video subtitle</string>
+    <string name="morphe_sanitize_video_subtitle_summary">Sanitizes phrases like \'#\', \'Fundraiser\', \'product(s)\', and \'Shop\' from video subtitle</string>
 
     <string name="morphe_hide_description_components_screen_title">Video description</string>
     <string name="morphe_hide_description_components_screen_summary">Choose which components appear in the video description</string>
@@ -343,7 +341,6 @@ Limitations:
     <string name="morphe_hide_stats_hidden_all_title">Videos hidden, all time</string>
     <string name="morphe_hide_stats_hidden_24h_reset_title">Reset last 24 hours counter?</string>
     <string name="morphe_hide_stats_hidden_all_reset_title">Reset all time counter?</string>
-    <string name="morphe_hide_about_category_title">About</string>
 
     <string name="morphe_hide_aislist_screen_title">AI channel filter</string>
     <string name="morphe_hide_aislist_screen_summary">Hide videos from channels flagged as AI-generated content by the AiSList community list</string>
@@ -363,10 +360,9 @@ Limitations:
 Limitations:
 • Filtered AI Shorts may show as an empty space
 • Some AI videos may still show"</string>
-    <string name="morphe_hide_aislist_attribution_title" translatable="false">AiSList</string>
-    <string name="morphe_hide_aislist_attribution_summary">"Data is provided by AiSList
+    <string name="morphe_hide_aislist_attribution_summary">"AiSList is an open source list of YouTube channels that publish AI-generated content, maintained by volunteers. Channels are reported by users and reviewed before they are added
 
-Tap here to open AiSlopList.com and see downloads for other platforms"</string>
+The list is downloaded from GitHub and videos are filtered on your device"</string>
     <string name="morphe_aislist_submit_category_title">Report AI channels</string>
     <string name="morphe_aislist_submit_flyout_menu_title">Add report entry to video menu</string>
     <string name="morphe_aislist_submit_flyout_menu_summary">Add an entry to the video menu that reports the channel of a video to AiSList</string>
@@ -1291,12 +1287,9 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Original thumbnails</string>
     <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Still captures</string>
     <string name="morphe_dearrow_thumbnail_options_entry_4">Still captures</string>
-    <string name="morphe_dearrow_about_title" translatable="false">DeArrow</string>
-    <string name="morphe_dearrow_about_summary">"DeArrow provides crowdsourced titles and thumbnails for YouTube videos. These are often more relevant than those provided by YouTube
+    <string name="morphe_dearrow_about_summary">"DeArrow replaces clickbait titles and thumbnails with crowdsourced ones that are more accurate and less sensational. Titles are written and voted on by the community, and thumbnails are frames taken from the video
 
-If enabled, video URLs will be sent to the API server and no other data is sent. If a video does not have DeArrow thumbnails, then the original or still captures are shown
-
-Tap here to open DeArrow.ajay.app"</string>
+Videos are requested by a short prefix of the hashed video ID, so the server cannot tell exactly which video you are looking at. If a video has no DeArrow thumbnail, the original or a still capture is shown"</string>
     <string name="morphe_dearrow_connection_toast_title">Show connection error alerts</string>
     <string name="morphe_dearrow_connection_toast_summary">Shows a notification when the DeArrow server is unavailable</string>
     <string name="morphe_dearrow_api_url_title">API endpoint</string>

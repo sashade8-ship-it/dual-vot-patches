@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">โหมดวิดีโอไม่สามารถใช้ได้ขณะเปิดใช้งานการเปลี่ยนเพลงแบบค่อยๆ จางหาย</string>
   <string name="morphe_music_crossfade_sabr_toast">ครอสเฟดถูกปิดเมื่อเล่น SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">ครอสเฟดถูกปิดขณะแคสต์</string>
-  <string name="morphe_music_crossfade_about_title">เกี่ยวกับ</string>
-  <string name="morphe_music_crossfade_about_summary">ครอสเฟดทำงานอย่างไรและในกรณีใดบ้างที่ไม่ทำงาน</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">วิธีการทำงาน</string>
-  <string name="morphe_music_crossfade_about_how_summary">"ครอสเฟดจะซ้อนทับช่วงท้ายของเพลงหนึ่งกับช่วงต้นของเพลงถัดไป โดยใช้ระยะเวลาและเส้นโค้งที่คุณตั้งไว้
+  <string name="morphe_music_crossfade_about_how_summary">"ครอสเฟดจะซ้อนทับจุดสิ้นสุดของเพลงหนึ่งกับจุดเริ่มต้นของเพลงถัดไป โดยใช้ระยะเวลาและเส้นโค้งของคุณ
 
-ครอสเฟดทำงานทั้งเมื่อเล่นถัดไปอัตโนมัติและเมื่อข้ามเพลงด้วยตนเอง โดยแต่ละแบบมีสวิตช์เปิด/ปิดด้านบน เมื่อเล่นถัดไปอัตโนมัติ การผสมเสียงจะเริ่มไม่กี่วินาทีก่อนเพลงจะจบ"</string>
+มันทำงานบนการเล่นอัตโนมัติต่อเนื่องและการข้ามด้วยตนเอง โดยแต่ละแบบมีการเปิด/ปิดของตัวเอง ในการเล่นอัตโนมัติต่อเนื่อง การผสมจะเริ่มไม่กี่วินาทีก่อนที่เพลงจะจบ"</string>
   <string name="morphe_music_crossfade_about_quirks_title">ข้อจำกัด</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"เมื่อเปิดครอสเฟด มิวสิกวิดีโอจะเล่นเป็นเสียงเท่านั้น กดปุ่มสุ่มค้างไว้เพื่อหยุดครอสเฟดชั่วคราวและดูวิดีโอ
 
@@ -449,8 +446,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_scrobbling_guess_album_title">กรอกอัลบั้มที่ขาดหายไป</string>
   <string name="morphe_music_scrobbling_guess_album_summary">เมื่อเพลงไม่มีอัลบั้ม ให้ค้นหาบน Last.fm เพื่อให้ scrobble ของคุณสมบูรณ์</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">เกี่ยวกับ scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"การ scrobbling จะซิงค์การใช้งาน YouTube Music ของคุณกับโปรไฟล์ Last.fm หรือ ListenBrainz โดยอัตโนมัติ
 
 เพื่อให้แน่ใจว่าการ scrobbling จะซิงค์ระหว่างการเล่นในเบื้องหลัง ตรวจสอบให้แน่ใจว่าการใช้แบตเตอรี่ของแอป YouTube Music ถูกตั้งค่าเป็น \"ไม่จำกัด\""</string>
@@ -462,7 +457,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_section_service_title">บริการเนื้อเพลง</string>
   <string name="morphe_music_lyrics_section_overlay_title">โอเวอร์เลย์</string>
   <string name="morphe_music_lyrics_section_sync_title">การซิงโครไนซ์</string>
-  <string name="morphe_music_lyrics_section_about_title">เกี่ยวกับ</string>
   <string name="morphe_music_lyrics_source_all_disabled">ผู้ให้บริการทั้งหมดถูกปิดใช้งาน — เนื้อเพลงในตัวและเนื้อเพลงแบบฝัง</string>
   <string name="morphe_music_lyrics_source_reset_title">รีเซ็ตผู้ให้บริการทั้งหมดหรือไม่</string>
   <string name="morphe_music_lyrics_source_reset_message">คืนค่าผู้ให้บริการกลับไปเป็นลำดับความสำคัญเริ่มต้น</string>

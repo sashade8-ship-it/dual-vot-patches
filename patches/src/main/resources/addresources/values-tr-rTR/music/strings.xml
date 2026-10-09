@@ -243,13 +243,10 @@ Bu açıkken, İndirilenler sekmesi bu parçaları Music Premium çevrimdışı 
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Geçiş etkinken video modu kullanılamaz</string>
   <string name="morphe_music_crossfade_sabr_toast">SABR oynatmada çapraz geçiş kapalı</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Yayınlama sırasında çapraz geçiş kapalı</string>
-  <string name="morphe_music_crossfade_about_title">Hakkında</string>
-  <string name="morphe_music_crossfade_about_summary">Çapraz geçiş nasıl çalışır ve nerede çalışmaz</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Nasıl çalışır</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Çapraz geçiş, belirlediğiniz süreyi ve eğriyi kullanarak bir şarkının sonunu bir sonrakinin başlangıcıyla üst üste bindirir.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade, bir şarkının sonunu sonrakinin başlangıcıyla üst üste bindirir, sürenizi ve eğrinizi kullanır.
 
-Hem otomatik ilerlemede hem de elle atlamada çalışır; her biri için yukarıda ayrı bir anahtar bulunur. Otomatik ilerlemede geçiş, şarkı bitmeden birkaç saniye önce başlar."</string>
+Otomatik ilerleme ve manuel atlama üzerinde çalışır, her birinin kendi anahtarı vardır. Otomatik ilerlemede, karışım şarkı bitmeden birkaç saniye önce başlar.″,"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Sınırlamalar</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Çapraz geçiş açıkken müzik videoları yalnızca ses olarak oynatılır. Çapraz geçişi duraklatmak ve videoyu izlemek için karıştır düğmesine uzun basın
 
@@ -449,8 +446,6 @@ SABR oynatma (video akışlarını taklit etme kapalı)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Eksik albümü tamamla</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Müzik bir albüm içermiyorsa, scrobble\'ınızın tamamlanması için Last.fm\'de arayın.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Scrobbling hakkında</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling, YouTube Music kullanımınızı Last.fm veya ListenBrainz profilinizle otomatik olarak senkronize eder
 
 Scrobbling'in arka planda çalma sırasında senkronize olduğundan emin olmak için, YouTube Music'in uygulama pil kullanımının \"Kısıtlanmamış\" olarak ayarlandığından emin olun"</string>
@@ -462,7 +457,6 @@ Scrobbling'in arka planda çalma sırasında senkronize olduğundan emin olmak i
   <string name="morphe_music_lyrics_section_service_title">Şarkı sözü servisi</string>
   <string name="morphe_music_lyrics_section_overlay_title">Yer paylaşımı</string>
   <string name="morphe_music_lyrics_section_sync_title">Senkronizasyon</string>
-  <string name="morphe_music_lyrics_section_about_title">Hakkında</string>
   <string name="morphe_music_lyrics_source_all_disabled">Tüm sağlayıcılar devre dışı — yerleşik şarkı sözleri ve gömülü şarkı sözleri</string>
   <string name="morphe_music_lyrics_source_reset_title">Sağlayıcı sırası sıfırlansın mı?</string>
   <string name="morphe_music_lyrics_source_reset_message">Sağlayıcıları varsayılan öncelik sırasına geri yükle</string>

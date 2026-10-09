@@ -63,7 +63,6 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_album_cards_summary">Felur albúmspjöld undir lýsingu listamannsins</string>
   <string name="morphe_hide_artist_cards_title">Fela listamannaspjöld</string>
   <string name="morphe_hide_artist_cards_summary">Felur listamannaspjaldið efst í leitarniðurstöðum</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Fela merkið „Sjálfvirkt talsett“</string>
   <string name="morphe_hide_channel_buttons_title">Fela rásahnappa</string>
   <string name="morphe_hide_channel_buttons_summary">Felur hnappa eins og Gerast áskrifandi, Skoða rás, Samfélag og YouTube Music úr rásasniðum í leitarniðurstöðum</string>
   <string name="morphe_hide_community_posts_title">Fela samfélagsfærslur</string>
@@ -79,7 +78,6 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_history_shelf_title">Fela spilunarsöguhilluna</string>
   <string name="morphe_hide_horizontal_shelves_title">Fela láréttar raðir</string>
   <string name="morphe_hide_horizontal_shelves_summary">Felur láréttar raðir eins og Fréttir, Samfélagsfærslur sem þú gætir haft áhuga á, Halda áfram að horfa, Fleiri rásir, Fleiri efni, Fyrir þig, Nýjustu myndbönd, Mest viðeigandi, Samfélagsfærslur höfunda, Verslun og Horfa aftur</string>
-  <string name="morphe_hide_hyped_label_title">Fela „Hyped“ merkið</string>
   <string name="morphe_hide_image_shelf_title">Fela myndaröð</string>
   <string name="morphe_hide_image_shelf_summary">Felur myndaraðir í leitarniðurstöðum</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Breytingarnar fela í sér:
 • Stuttar hillir, síður rásanna og leitarniðurstöður sýna enn þráhyggjuleiki uppladingartíma.
 • Virkar ekki með bílalagningum."</string>
   <string name="morphe_hide_video_thumbnail_title">Fela mynd af myndbandi</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Fela vídeóráðanímir</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Felur af fólki horfðu líka á</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Fela merkimiða myndbanda</string>
+  <string name="morphe_hide_video_labels_summary">Felur merkimiða eins og \'Sjálfvirkt talsett\' / \'Talsett\', \'Fær þóknun\', \'Vinsælt\', \'Fólk horfði einnig á\', \'vöru(r)\' og \'Þér gæti einnig líkað við\'</string>
   <string name="morphe_hide_view_count_title">Fela skoðunartölu</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Takmarkanir:
@@ -170,7 +168,7 @@ Breytingarnar fela í sér:
   <string name="morphe_hide_video_title_title">Fela myndbandsheiti</string>
   <string name="morphe_hide_video_title_summary">Felur vídeótitilinn í fullskjástillingu</string>
   <string name="morphe_sanitize_video_subtitle_title">Hreinsa undirtitla myndbands</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Hreinsar orðasambönd eins og \'#\', \'Söfnun\', \'Verslun\' og \'vörur\' úr undirtitlum myndbands</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Hreinsar frasa eins og \'#\', \'Fjáröflun\', \'vöru(r)\' og \'Verslun\' úr myndbandstexta</string>
   <string name="morphe_hide_description_components_screen_title">Vídeó lýsing</string>
   <string name="morphe_hide_description_components_screen_summary">Veldu hvaða þættir birtast í vídeó lýsingunni</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Felur \'AI-myndað vídeó samantekningu\' hluta</string>
@@ -329,7 +327,6 @@ Takmörk:
   <string name="morphe_hide_stats_hidden_all_title">Vídeó falin, alls</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Núllstilla síðasta sólarhrings teljar?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Endurstilla allan tímamælinn?</string>
-  <string name="morphe_hide_about_category_title">Um</string>
   <string name="morphe_hide_aislist_screen_title">AI rannfiltrun</string>
   <string name="morphe_hide_aislist_screen_summary">Fela myndbönd frá rásum sem AiSList samfélagið hefur merkt sem AI-búin efni</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Bannlisti: Há áreiðanleiki</string>
@@ -348,9 +345,9 @@ Takmörk:
 Takmarkanir:
 • Síðar AI Shorts gæti sýnt sem tómt svæði.
 • Sum myndbönd AI gæti enn sýnt"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Gagnin eru veitt af AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList er opinn listi yfir YouTube rásir sem birta AI-búið efni, viðhaldið af sjálfboðaliðum. Rásir eru tilkynntar af notendum og skoðaðar áður en þær eru bættar við
 
-Bankaðu hér til að opna AiSlopList.com og skoða niðurhal fyrir önnur kerfi"</string>
+Listinn er sóttur af GitHub og myndbönd eru síuð á tækinu þínu"</string>
   <string name="morphe_aislist_submit_category_title">Tilkynna gervigreindarrásir</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Bæta tilkynningarfærslu við myndbandsvalmynd</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Bæta færslu við myndbandsvalmyndina sem tilkynnir rás myndbandsins til AiSList</string>
@@ -1171,11 +1168,9 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Upprunalegar smámyndir</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Stillmyndir</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Stillmyndir</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow veitir titla og smámyndir sem eru hópunnin fyrir YouTube myndbönd. Þetta er oft viðeigandi en það sem YouTube veitir
+  <string name="morphe_dearrow_about_summary">"DeArrow skiptir út smelluöngrum titlum og smámyndum með notendafengnum sem eru nákvæmari og minna tilfinningaþrungnir. Titlar eru skrifaðir og kosið um af samfélaginu, og smámyndir eru rammar úr myndbandinu
 
-Ef það er virkt, verða slóðir myndbanda sendar til API-þjónsins og engin önnur gögn verða send. Ef myndband hefur engar DeArrow-smámyndir, þá eru upprunalegu myndirnar eða kyrrmyndirnar sýndar
-
-Snertið hér til að opna DeArrow.ajay.app"</string>
+Myndbönd eru beðin um með stuttu forskeyti af dulkóðaða myndbandskenni, svo þjónninn getur ekki sagt nákvæmlega hvaða myndband þú ert að horfa á. Ef myndband hefur enga DeArrow smámynd, er upprunalega myndin eða kyrrmynd sýnd"</string>
   <string name="morphe_dearrow_connection_toast_title">Sýnir tilkynningum um tengslatruflanir</string>
   <string name="morphe_dearrow_connection_toast_summary">Sýnir tilkynningu þegar DeArrow netþjónninn er óskár</string>
   <string name="morphe_dearrow_api_url_title">API-endapunktur</string>

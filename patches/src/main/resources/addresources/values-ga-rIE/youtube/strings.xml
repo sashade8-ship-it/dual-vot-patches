@@ -63,7 +63,6 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_album_cards_summary">Folaíonn sé na cártaí albaim faoin tuairisc ar an ealaíontóir</string>
   <string name="morphe_hide_artist_cards_title">Folaigh cártaí ealaíontóra</string>
   <string name="morphe_hide_artist_cards_summary">Folaíonn sé cárta an ealaíontóra ag barr thorthaí an chuardaigh</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Folaigh an lipéad \'Uath-dhubáilte\'</string>
   <string name="morphe_hide_channel_buttons_title">Folaigh cnaipí cainéal</string>
   <string name="morphe_hide_channel_buttons_summary">Folaíonn sé cnaipí ar nós Liostáil, Féach ar an gcainéal, Pobal, agus YouTube Music ó phróifílí cainéal i dtorthaí cuardaigh</string>
   <string name="morphe_hide_community_posts_title">Folaigh poist phobail</string>
@@ -79,7 +78,6 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_history_shelf_title">Folaigh an tseilf staire</string>
   <string name="morphe_hide_horizontal_shelves_title">Folaigh seilfeanna cothrománacha</string>
   <string name="morphe_hide_horizontal_shelves_summary">Folaíonn sé seilfeanna cothrománacha amhail Nuacht Briste, Poist Pobail a d’fhéadfadh a bheith spéisiúil duit, Lean ort ag breathnú, Iniúchadh a dhéanamh ar níos mó bealaí, Iniúchadh a dhéanamh ar níos mó topaicí, Duitse, Físeáin is déanaí, Is ábhartha, Poist ó Phobal an Chruthaitheora, Siopadóireacht, agus Féach air arís</string>
-  <string name="morphe_hide_hyped_label_title">Folaigh an lipéad \'hype\'</string>
   <string name="morphe_hide_image_shelf_title">Folaigh seilf íomhá</string>
   <string name="morphe_hide_image_shelf_summary">Folaíonn sé seilfeanna íomhánna i dtorthaí cuardaigh</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ I measc na n-athruithe tá:
 • D’fhéadfadh amanna uaslódála a bheith le feiceáil fós ar sheilfeanna gearrscannán, leathanaigh chainéil, agus torthaí cuardaigh
 • Ní oibríonn sé le leagan amach feithicleach"</string>
   <string name="morphe_hide_video_thumbnail_title">Folaigh mionsamhail an fhíseáin</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Folaigh lipéid mholtaí físeáin</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Folaíonn sé lipéid \'Daoine a d\'fhéach freisin\' agus \'B\'fhéidir go mbeadh suim agat iontu freisin\' i dtorthaí cuardaigh</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Folaigh lipéid físeáin</string>
+  <string name="morphe_hide_video_labels_summary">Folaíonn sé lipéid cosúil le \'Guthaíthe go huathoibríoch\' / \'Guthaíthe\', \'Tuilleann coimisiún\', \'Poiblíocht mhór\', \'Chonaic daoine freisin\', \'táirge(í)\' agus \'B\'fhéidir go dtaitneoidh sé seo leat\'</string>
   <string name="morphe_hide_view_count_title">Folaigh líon na radharcanna</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Teorainneacha:
@@ -170,7 +168,7 @@ I measc na n-athruithe tá:
   <string name="morphe_hide_video_title_title">Folaigh teideal an fhíseáin</string>
   <string name="morphe_hide_video_title_summary">Folaíonn sé teideal an fhíseáin sa mhodh lánscáileáin</string>
   <string name="morphe_sanitize_video_subtitle_title">Glanadh fotheideal físe</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Glanann sé frásaí cosúil le \'#\', \'Bailitheoir Airgid\', \'Siopa\', agus \'táirgí\' ó fhotheideal an fhíseáin</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Glanann sé frásaí cosúil le \'#\', \'Tiomsú airgid\', \'táirge(í)\' agus \'Siopa\' ó fhotheideal físeáin</string>
   <string name="morphe_hide_description_components_screen_title">Cur síos ar an bhfíseán</string>
   <string name="morphe_hide_description_components_screen_summary">Roghnaigh cé na comhpháirteanna a thaispeántar i dtuairisc an fhíseáin</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Folaigh an chuid \'Achoimre ar fhíseán a ghintear le hintleacht shaorga\'</string>
@@ -329,7 +327,6 @@ Teorainneacha:
   <string name="morphe_hide_stats_hidden_all_title">Físeáin i bhfolach, i gcónaí</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Athshocraigh an cuntar 24 uair an chloig seo caite?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Athshocraigh an cuntar ama ar fad?</string>
-  <string name="morphe_hide_about_category_title">Maidir</string>
   <string name="morphe_hide_aislist_screen_title">Scagaire cainéal AI</string>
   <string name="morphe_hide_aislist_screen_summary">Folaigh físeáin ó chainéil atá brataithe mar ábhar a ghintear ag AI ag liosta pobail AiSList</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Liosta blocála: Ardmhuinín</string>
@@ -348,9 +345,9 @@ Teorainneacha:
 Teorainneacha:
 • D’fhéadfadh Gearrscannáin AI scagtha a bheith le feiceáil mar spás folamh
 • D’fhéadfadh roinnt físeáin AI a bheith le feiceáil fós"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Soláthraíonn AiSList na sonraí
+  <string name="morphe_hide_aislist_attribution_summary">"Is liosta foinse oscailte é AiSList de chainéil YouTube a fhoilsíonn ábhar ginte ag AI, á chothabháil ag oibrithe deonacha. Tuairiscíonn úsáideoirí cainéil agus déantar iad a athbhreithniú sula gcuirtear iad leo
 
-Tapáil anseo chun AiSlopList.com a oscailt agus íoslódálacha d'ardáin eile a fheiceáil"</string>
+Íoslódáiltear an liosta ó GitHub agus scagtar físeáin ar do ghléas"</string>
   <string name="morphe_aislist_submit_category_title">Tuairiscigh bealaí AI</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Cuir iontráil tuairisce leis an roghchlár físe</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Cuir iontráil leis an roghchlár físe a thuairiscíonn cainéal físe chuig AiSList</string>
@@ -1176,11 +1173,9 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Mionsamhlacha bunaidh</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Gabhálacha fós</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Gabhann fós</string>
-  <string name="morphe_dearrow_about_summary">"Soláthraíonn DeArrow teidil agus mionsamhlacha atá sluafhoinsithe d'fhíseáin YouTube. Is minic a bhíonn siad níos ábhartha ná na cinn a sholáthraíonn YouTube
+  <string name="morphe_dearrow_about_summary">"Cuireann DeArrow teidil agus mionsamhlacha cliceáil-bhaoite in ionad cinn a fhaightear ón slua, atá níos cruinne agus níos lú spreagthach. Scríobhann an pobal teidil agus vótálann siad orthu, agus is frámaí ón bhfíseán iad na mionsamhlacha
 
-Má tá an ghné seo cumasaithe, seolfar URLanna físeán chuig freastalaí an API agus ní sheolfar sonraí eile ar bith. Mura mbíonn mionsamhlacha DeArrow ag físeán, taispeánfar na híomhánna bunaidh nó na gabhálacha statacha
-
-Tapáil anseo chun DeArrow.ajay.app a oscailt"</string>
+Iarrtar físeáin le réimír ghearr den aitheantóir físeáin hasáilte, mar sin ní féidir leis an bhfreastalaí a rá go díreach cén físeán atá á fhéachaint agat. Mura bhfuil mionsamhail DeArrow ag físeán, taispeántar an bunaidh nó gabháil stadach"</string>
   <string name="morphe_dearrow_connection_toast_title">Taispeáin foláirimh earráide nasc</string>
   <string name="morphe_dearrow_connection_toast_summary">Taispeánann sé fógra nuair nach bhfuil freastalaí DeArrow ar fáil</string>
   <string name="morphe_dearrow_api_url_title">Ceannphointe API</string>

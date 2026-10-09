@@ -63,7 +63,6 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_album_cards_summary">Sanatçı açıklamasının altındaki albüm kartlarını gizler</string>
   <string name="morphe_hide_artist_cards_title">Sanatçı kartlarını gizle</string>
   <string name="morphe_hide_artist_cards_summary">Arama sonuçlarının en üstündeki sanatçı kartını gizler</string>
-  <string name="morphe_hide_auto_dubbed_label_title">\'Dublajlı\' etiketini gizle</string>
   <string name="morphe_hide_channel_buttons_title">Kanal düğmelerini gizle</string>
   <string name="morphe_hide_channel_buttons_summary">Arama sonuçlarında kanal profillerindeki Abone Ol, Kanalı Görüntüle, Topluluk ve YouTube Music gibi düğmeleri gizler</string>
   <string name="morphe_hide_community_posts_title">Topluluk gönderilerini gizle</string>
@@ -79,7 +78,6 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_history_shelf_title">Geçmiş rafını gizle</string>
   <string name="morphe_hide_horizontal_shelves_title">Yatay rafları gizle</string>
   <string name="morphe_hide_horizontal_shelves_summary">Son dakika haberleri, Beğenebileceğiniz topluluk gönderileri, İzlemeye devam et, Daha fazla kanal keşfet, Daha fazla konu keşfet, Senin için, En yeni videolar, En alakalı, İçerik Üreticisi Topluluğu\'ndan gönderiler, Alışveriş ve Tekrar izle gibi yatay rafları gizler</string>
-  <string name="morphe_hide_hyped_label_title">Hyped etiketini gizle</string>
   <string name="morphe_hide_image_shelf_title">Resim rafını gizle</string>
   <string name="morphe_hide_image_shelf_summary">Arama sonuçlarındaki resim raflarını gizler</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Değişiklikler şunları içerir:
 • Shorts rafları, kanal sayfaları ve arama sonuçları yine de yüklenme zamanını gösterebilir
 • Otomotiv düzeniyle çalışmaz"</string>
   <string name="morphe_hide_video_thumbnail_title">Video ön izlemesini gizle</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Video öneri etiketlerini gizle</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Arama sonuçlarındaki \'İnsanların izlediği diğer videolar\' ve \'Şunlar da hoşunuza gidebilir\' etiketlerini gizler</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Video etiketlerini gizle</string>
+  <string name="morphe_hide_video_labels_summary">\'Otomatik dublajlı\' / \'Dublajlı\', \'Komisyon kazanır\', \'Abartılı\', \'Bunları da izledi\', \'ürün(ler)\' ve \'Bunlar da ilginizi çekebilir\' gibi etiketleri gizler</string>
   <string name="morphe_hide_view_count_title">İzlenme sayısını gizle</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Sınırlamalar:
@@ -170,7 +168,7 @@ Değişiklikler şunları içerir:
   <string name="morphe_hide_video_title_title">Video başlığını gizle</string>
   <string name="morphe_hide_video_title_summary">Tam ekran modunda video başlığını gizler</string>
   <string name="morphe_sanitize_video_subtitle_title">Video altyazısını temizle</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Video altyazısından \'#\', \'Bağış toplama\', \'Mağaza\' ve \'ürünler\' gibi ifadeleri temizler</string>
+  <string name="morphe_sanitize_video_subtitle_summary">#, \'Bağış toplama\', \'ürün(ler)\' ve \'Mağaza\' gibi ifadeleri video alt yazısından temizler</string>
   <string name="morphe_hide_description_components_screen_title">Video açıklaması</string>
   <string name="morphe_hide_description_components_screen_summary">Video açıklamasında hangi bileşenlerin görüneceğini seçin</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">\'Yapay zeka tarafından oluşturulmuş video özeti\' bölümünü gizle</string>
@@ -329,7 +327,6 @@ Sınırlamalar:
   <string name="morphe_hide_stats_hidden_all_title">Tüm zamanlarda gizlenen videolar</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Son 24 saat sayacını sıfırla?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Tüm zamanlayıcıyı sıfırla?</string>
-  <string name="morphe_hide_about_category_title">Hakkında</string>
   <string name="morphe_hide_aislist_screen_title">Yapay zeka kanalı filtresi</string>
   <string name="morphe_hide_aislist_screen_summary">AiSList topluluğu tarafından yapay zeka tarafından oluşturulan içerik olarak işaretlenen kanallardan videoları gizle</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Engelleme Listesi: Yüksek güven</string>
@@ -348,9 +345,9 @@ Sınırlamalar:
 Sınırlamalar:
 • Filtrelenmiş AI Shorts boş bir alan olarak görünebilir
 • Bazı yapay zeka videoları hala gösterilebilir"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Veriler AiSList tarafından sağlanır
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList, gönüllüler tarafından bakımı yapılan, AI tarafından üretilen içerik yayınlayan YouTube kanallarının açık kaynaklı bir listesidir. Kanallar kullanıcılar tarafından bildirilir ve eklenmeden önce incelenir
 
-AiSlopList.com'u açmak ve diğer platformlar için indirmeleri görmek için buraya dokunun"</string>
+Liste GitHub'dan indirilir ve videolar cihazınızda filtrelenir"</string>
   <string name="morphe_aislist_submit_category_title">Yapay zekâ kanallarını bildir</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Video menüsüne rapor öğesi ekle</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Video menüsüne, bir videonun kanalını AiSList\'e bildiren bir öğe ekle</string>
@@ -1176,11 +1173,9 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Orijinal kapak resimleri</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Hareketsiz yakalamalar</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Hareketsiz yakalamalar</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow, YouTube videoları için topluluk tarafından oluşturulan başlıklar ve küçük resimler sunar. Bunlar genellikle YouTube'un sağladıklarından daha ilgi çekicidir.
+  <string name="morphe_dearrow_about_summary">"DeArrow, tıklama tuzağı başlıkları ve küçük resimleri, daha doğru ve daha az sansasyonel olan topluluk kaynaklı olanlarla değiştirir. Başlıklar topluluk tarafından yazılır ve oylanır, küçük resimler ise videodan alınan karelerdir
 
-Özellik etkinleştirildiğinde, yalnızca video URL'leri API sunucusuna gönderilir; başka hiçbir veri iletilmez. Bir videonun DeArrow küçük resmi bulunmuyorsa, orijinal küçük resim veya videodan alınan kareler gösterilir.
-
-DeArrow.ajay.app adresini açmak için buraya dokunun."</string>
+Videolar, karma video kimliğinin kısa bir önekiyle istenir; bu nedenle sunucu tam olarak hangi videoya baktığınızı söyleyemez. Bir videoda DeArrow küçük resmi yoksa, orijinal veya sabit bir kare gösterilir"</string>
   <string name="morphe_dearrow_connection_toast_title">Bağlantı hatası uyarılarını göster</string>
   <string name="morphe_dearrow_connection_toast_summary">DeArrow sunucusu kullanılamadığında bir bildirim gösterir</string>
   <string name="morphe_dearrow_api_url_title">API uç noktası</string>

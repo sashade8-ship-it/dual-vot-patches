@@ -63,7 +63,6 @@ Spremembe vključujejo:
   <string name="morphe_hide_album_cards_summary">Skrije kartice albumov pod opisom izvajalca</string>
   <string name="morphe_hide_artist_cards_title">Skrij kartice izvajalcev</string>
   <string name="morphe_hide_artist_cards_summary">Skrije kartico izvajalca na vrhu rezultatov iskanja</string>
-  <string name="morphe_hide_auto_dubbed_label_title">Skrij oznako \'Samodejno sinhronizirano\'</string>
   <string name="morphe_hide_channel_buttons_title">Skrij gumbe kanalov</string>
   <string name="morphe_hide_channel_buttons_summary">Skrije gumbe, kot so Naroči se, Prikaži kanal, Skupnost in YouTube Music, iz profilov kanalov v rezultatih iskanja</string>
   <string name="morphe_hide_community_posts_title">Skrij objave skupnosti</string>
@@ -79,7 +78,6 @@ Spremembe vključujejo:
   <string name="morphe_hide_history_shelf_title">Skrij polico Zgodovina</string>
   <string name="morphe_hide_horizontal_shelves_title">Skrij vodoravne police</string>
   <string name="morphe_hide_horizontal_shelves_summary">Skrije horizontalne police, kot so Aktualne novice, objave skupnosti, ki so morda zanimive za vas, Nadaljujte z gledanjem, raziščite več kanalov, raziščite več tem, za vas, najnovejši videoposnetki, najbolj relevantni, objave iz skupnosti ustvarjalca, nakupovanje in ponovno oglejte si</string>
-  <string name="morphe_hide_hyped_label_title">Skrij oznako \'Hype\'</string>
   <string name="morphe_hide_image_shelf_title">Skrij police s slikami</string>
   <string name="morphe_hide_image_shelf_summary">Skrije police s slikami v rezultatih iskanja</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Spremembe vključujejo:
 • Poličice s kratkimi videoposnetki, strani kanalov in rezultati iskanja lahko še vedno prikazujejo čas nalaganja
 • Ne deluje s postavitvijo za avtomobilski zaslon"</string>
   <string name="morphe_hide_video_thumbnail_title">Skrij sličico videoposnetka</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Skrij oznake priporočenih videoposnetkov</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Skrije oznake \'Ljudje so si ogledali tudi\' in \'Morda vam je všeč\' v rezultatih iskanja</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Skrij oznake videoposnetkov</string>
+  <string name="morphe_hide_video_labels_summary">Skrije oznake, kot so \'Samodejno sinhronizirano\' / \'Sinhronizirano\', \'Zasluži provizijo\', \'Odmevno\', \'Ljudje so gledali tudi\', \'izdelek (izdelki)\' in \'Morda vam bo všeč tudi\'</string>
   <string name="morphe_hide_view_count_title">Skrij prikazovalec</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Omejitve:
@@ -170,7 +168,7 @@ Spremembe vključujejo:
   <string name="morphe_hide_video_title_title">Skrij naslov videa</string>
   <string name="morphe_hide_video_title_summary">Skrije naslov videoposnetka v celozaslonskem načinu</string>
   <string name="morphe_sanitize_video_subtitle_title">Očisti podnapise videoposnetka</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Odstrani izraze, kot so \'#\', \'Zbiranje sredstev\', \'Trgovina\' in \'izdelki\' iz podnapisov videoposnetka</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Odstrani fraze, kot so \'#\', \'Fundraiser\', \'izdelek (izdelki)\' in \'Shop\' iz videopodnapisov</string>
   <string name="morphe_hide_description_components_screen_title">Opis videa</string>
   <string name="morphe_hide_description_components_screen_summary">Izberite, kateri elementi se pojavljajo v opisu videoposnetka</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Skrij odsek \'AI-generirano povzetek videoposnetka\'</string>
@@ -329,7 +327,6 @@ Omejitve:
   <string name="morphe_hide_stats_hidden_all_title">Skriti videoposnetki, vsi časi</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Ponastaviti števec zadnjih 24 ur?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Ponastaviti vse časovnike?</string>
-  <string name="morphe_hide_about_category_title">O nas</string>
   <string name="morphe_hide_aislist_screen_title">Filtr AI kanalov</string>
   <string name="morphe_hide_aislist_screen_summary">Skrij videoposnetke iz kanalov, ki so jih uporabniki na seznamu AiSList označili kot ustvarjene z umetno inteligenco</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Blokirni seznam: visoka zanesljivost</string>
@@ -348,9 +345,9 @@ Omejitve:
 Omejitve:
 • Filtrirani AI Shorti se lahko prikažejo kot prazen prostor
 • Nekateri videoposnetki z umetno inteligenco se še vedno lahko prikažejo"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Podatke zagotavlja AiSList
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList je odprtokodni seznam YouTube kanalov, ki objavljajo vsebine, ustvarjene z umetno inteligenco, ki ga vzdržujejo prostovoljci. Kanale prijavijo uporabniki in jih pregledajo, preden so dodani
 
-Tapnite tukaj, da odprete AiSlopList.com in si oglejte prenose za druge platforme"</string>
+Seznam se prenese iz GitHub-a, videoposnetki pa se filtrirajo na vaši napravi"</string>
   <string name="morphe_aislist_submit_category_title">Prijavi kanale z umetno inteligenco</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Dodaj vnos za prijavo v meni videa</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Dodaj vnos v meni videa, ki prijavi kanal videoposnetka v AiSList</string>
@@ -1176,11 +1173,9 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow in izvirne predoglede</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow in zajeti posnetki zaslona</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Zajeti slike</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow ponuja naslove in sličice, ki so jih prispevali uporabniki, za videoposnetke na YouTubu. Ti so pogosto bolj ustrezni od tistih, ki jih ponuja YouTube.
+  <string name="morphe_dearrow_about_summary">"DeArrow zamenja zavajajoče naslove in sličice s tistimi, ki jih prispeva skupnost in so natančnejši ter manj senzacionalni. Naslove napiše in zanje glasuje skupnost, sličice pa so slike, posnete iz videoposnetka
 
-Če je omogočeno, bodo URL-ji videoposnetkov poslani strežniku API, drugi podatki pa ne bodo poslani. Če videoposnetek nima DeArrow sličic, se prikažejo izvirne ali mirujoče slike.
-
-Dotaknite se tukaj, da odprete DeArrow.ajay.app"</string>
+Videoposnetki so zahtevani s kratko predpono zgoščenega ID-ja videoposnetka, tako da strežnik ne more natančno ugotoviti, kateri videoposnetek gledate. Če videoposnetek nima sličice DeArrow, se prikaže izvirna sličica ali statični posnetek"</string>
   <string name="morphe_dearrow_connection_toast_title">Pokaži opozorila o napaki povezave</string>
   <string name="morphe_dearrow_connection_toast_summary">Pokaže obvestilo, ko je strežnik DeArrow nedostopen</string>
   <string name="morphe_dearrow_api_url_title">Končna točka API-ja</string>

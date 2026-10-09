@@ -77,8 +77,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">Kryžminis išnykimas pristabdytas šiai sesijai</string>
   <string name="morphe_music_crossfade_resumed_toast">Kryžminis išnykimas atnaujintas</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Vaizdo režimas neprieinamas, kai įjungtas kryžminis išnykimas</string>
-  <string name="morphe_music_crossfade_about_title">Apie</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Kaip tai veikia</string>
   <string name="morphe_music_crossfade_about_credit_title">Kūrėjas</string>
   <string name="morphe_music_crossfade_about_credit_summary">Crossfade funkcija sukūrė VazerOG</string>
@@ -156,9 +154,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lastfm_token_dialog_username_hint">Vartotojo vardas</string>
   <string name="morphe_music_lastfm_token_dialog_password_hint">Slaptažodis</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <!-- 'scrobbling' must be kept untranslated -->
   <!-- layout.lyrics.lyricsPatch -->
-  <string name="morphe_music_lyrics_section_about_title">Apie</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <!-- Tappable label under the lyrics that turns the translation on. -->
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->

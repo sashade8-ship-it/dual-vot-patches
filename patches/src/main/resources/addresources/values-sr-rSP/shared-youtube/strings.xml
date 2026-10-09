@@ -258,9 +258,9 @@ Da bi se prijavili, pritisnite nastavak ispod"</string>
   <string name="morphe_ryd_estimated_like_summary">Приказује процењену прегледаност на видео снимцима на којем је креатор искључио прегледаност</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Приказуј упозорења о грешци у вези са повезивањем</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Приказује обавештење када је сервер Return YouTube Dislike недоступан</string>
-  <string name="morphe_ryd_attribution_summary">"Подаци су пружени од стране Return YouTube Dislike API-ја
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike vraća broj dislajkova koji je YouTube sakrio 2021. Brojevi dolaze iz podataka arhiviranih pre uklanjanja i procenjeni su za novije video snimke na osnovu glasova korisnika, pa su približni i ažuriraju se svakih nekoliko dana.
 
-Додирните овде да бисте отворили ReturnYouTubeDislike.com"</string>
+ID video snimka koji gledate šalje se Return YouTube Dislike API-ju, a vaši lajkovi i dislajkovi se šalju anonimno kako bi se poboljšale procene.}],"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Статистика Return YouTube Dislike API-ја за овај уређај</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Време одговора API-ја, просек</string>

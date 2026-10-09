@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">क्रॉसफ़ेड सक्षम होने पर वीडियो मोड उपलब्ध नहीं है</string>
   <string name="morphe_music_crossfade_sabr_toast">SABR प्लेबैक के साथ क्रॉसफ़ेड बंद है</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">कास्टिंग करते समय क्रॉसफ़ेड बंद है</string>
-  <string name="morphe_music_crossfade_about_title">इसके बारे में</string>
-  <string name="morphe_music_crossfade_about_summary">क्रॉसफ़ेड कैसे काम करता है और यह कहाँ काम नहीं करता</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">यह कैसे काम करता है</string>
-  <string name="morphe_music_crossfade_about_how_summary">"क्रॉसफ़ेड आपकी अवधि और वक्र का उपयोग करते हुए, एक गाने के अंत को अगले गाने की शुरुआत के साथ ओवरलैप करता है।
+  <string name="morphe_music_crossfade_about_how_summary">"क्रॉसफेड आपकी अवधि और वक्र का उपयोग करते हुए, एक गाने के अंत को अगले गाने की शुरुआत के साथ ओवरलैप करता है
 
-यह ऑटो-एडवांस और मैन्युअल स्किप पर चलता है, प्रत्येक के लिए ऊपर अपना टॉगल है। ऑटो-एडवांस पर, गाना समाप्त होने से कुछ सेकंड पहले ब्लेंड शुरू होता है।"</string>
+यह ऑटो-एडवांस और मैनुअल स्किप पर चलता है, प्रत्येक का अपना टॉगल होता है। ऑटो-एडवांस पर, ब्लेंड गाने के समाप्त होने से कुछ सेकंड पहले शुरू होता है"</string>
   <string name="morphe_music_crossfade_about_quirks_title">सीमाएँ</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"जब क्रॉसफ़ेड चालू होता है, तो म्यूज़िक वीडियो केवल ऑडियो के रूप में चलते हैं। क्रॉसफ़ेड को रोकने और वीडियो देखने के लिए शफ़ल को लॉन्ग-प्रेस करें
 
@@ -449,8 +446,6 @@ SABR प्लेबैक (स्पूफ वीडियो स्ट्र�
   <string name="morphe_music_scrobbling_guess_album_title">लापता एल्बम भरें</string>
   <string name="morphe_music_scrobbling_guess_album_summary">जब संगीत में एल्बम शामिल न हो, तो उसे Last.fm पर खोजें ताकि आपका scrobble पूरा हो जाए</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">स्क्रबिंग के बारे में</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"स्क्रोबलिंग स्वचालित रूप से आपके YouTube Music उपयोग को आपके Last.fm या ListenBrainz प्रोफ़ाइल के साथ सिंक करता है
 
 यह सुनिश्चित करने के लिए कि बैकग्राउंड प्लेबैक के दौरान स्क्रोबलिंग सिंक हो, सुनिश्चित करें कि YouTube Music के ऐप बैटरी उपयोग को \"अनियंत्रित\" पर सेट किया गया है।"</string>
@@ -462,7 +457,6 @@ SABR प्लेबैक (स्पूफ वीडियो स्ट्र�
   <string name="morphe_music_lyrics_section_service_title">गीत बोल सेवा</string>
   <string name="morphe_music_lyrics_section_overlay_title">ओवरले</string>
   <string name="morphe_music_lyrics_section_sync_title">सिंक्रनाइज़ेशन</string>
-  <string name="morphe_music_lyrics_section_about_title">इसके बारे में</string>
   <string name="morphe_music_lyrics_source_all_disabled">सभी प्रदाता अक्षम हैं — अंतर्निहित गीत और एम्बेडेड गीत।</string>
   <string name="morphe_music_lyrics_source_reset_title">प्रदाता क्रम रीसेट करें?</string>
   <string name="morphe_music_lyrics_source_reset_message">प्रदाताओं को डिफ़ॉल्ट प्राथमिकता क्रम पर पुनर्स्थापित करें।</string>

@@ -256,9 +256,9 @@ To bo spremenilo videz in funkcije aplikacije, vendar lahko pride do neznanih st
   <string name="morphe_ryd_estimated_like_summary">Prikaže ocenjeno število všečnosti na videih, kjer je ustvarjalec onemogočil všečke</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Prikaži opozorila o napaki povezave</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Prikaže obvestilo, ko strežnik Return YouTube Dislike ni na voljo</string>
-  <string name="morphe_ryd_attribution_summary">"Podatke zagotavlja API za Return YouTube Dislike
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike obnovi število nevšečnosti, ki jih je YouTube skril leta 2021. Števila izhajajo iz podatkov, arhiviranih pred odstranitvijo, in so ocenjena za novejše videoposnetke na podlagi glasov uporabnikov, zato so približna in se posodabljajo vsakih nekaj dni
 
-Tapnite tukaj, da odprete ReturnYouTubeDislike.com"</string>
+ID videoposnetka, ki ga gledate, se pošlje API-ju Return YouTube Dislike, vaši všečki in nevšečki pa se pošljejo anonimno za izboljšanje ocen.}],"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Statistika API-ja Return YouTube Dislike te naprave</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Čas odziva API-ja, povprečje</string>

@@ -78,8 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">Pudar silang dijedakan untuk sesi ini</string>
   <string name="morphe_music_crossfade_resumed_toast">Pudar silang disambung semula</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Mod video tidak tersedia semasa pudar silang didayakan</string>
-  <string name="morphe_music_crossfade_about_title">Mengenai</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Bagaimana pudar silang berfungsi</string>
   <string name="morphe_music_crossfade_about_credit_title">Kredit</string>
   <string name="morphe_music_crossfade_about_credit_summary">Ciri pudar silang oleh VazerOG</string>
@@ -150,9 +148,7 @@ Second \"item\" text"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">tidak diketahui</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <!-- 'scrobbling' must be kept untranslated -->
   <!-- layout.lyrics.lyricsPatch -->
-  <string name="morphe_music_lyrics_section_about_title">Mengenai</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <!-- Tappable label under the lyrics that turns the translation on. -->
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->

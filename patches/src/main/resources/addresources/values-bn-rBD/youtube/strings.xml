@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">শিল্পীর বিবরণের নীচে অ্যালবাম কার্ডগুলি লুকিয়ে রাখে</string>
   <string name="morphe_hide_artist_cards_title">আর্টিস্ট কার্ড লুকান</string>
   <string name="morphe_hide_artist_cards_summary">অনুসন্ধান ফলাফলের শীর্ষে শিল্পীর কার্ডটি লুকিয়ে রাখে</string>
-  <string name="morphe_hide_auto_dubbed_label_title">\'অটো-ডাবড\' লেবেল লুকান</string>
   <string name="morphe_hide_channel_buttons_title">চ্যানেল বাটন লুকান</string>
   <string name="morphe_hide_channel_buttons_summary">সাবস্ক্রাইব, ভিউ চ্যানেল, কমিউনিটি এবং YouTube Music এর মতো বাটনগুলো সার্চ ফলাফলে চ্যানেল প্রোফাইল থেকে লুকিয়ে রাখে</string>
   <string name="morphe_hide_community_posts_title">সম্প্রদায় পোস্ট লুকান</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">ইতিহাস শেলফ লুকান</string>
   <string name="morphe_hide_horizontal_shelves_title">আনুভূমিক শেলফ লুকান</string>
   <string name="morphe_hide_horizontal_shelves_summary">ব্রেকিং নিউজ, কমিউনিটি পোস্ট যা আপনার ভালো লাগতে পারে, দেখা চালিয়ে যান, আরও চ্যানেল দেখুন, আরও বিষয় দেখুন, আপনার জন্য, নতুন ভিডিও, সবচেয়ে প্রাসঙ্গিক, নির্মাতার কমিউনিটি থেকে পোস্ট, শপিং এবং আবার দেখুন—এর মতো অনুভূমিক শেলফগুলি লুকায়।</string>
-  <string name="morphe_hide_hyped_label_title">হাইপড লেবেল লুকান</string>
   <string name="morphe_hide_image_shelf_title">ছবি শেল্ফ লুকান</string>
   <string name="morphe_hide_image_shelf_summary">অনুসন্ধান ফলাফলে ছবির শেল্ভগুলি লুকিয়ে রাখে</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Second \"item\" text"</string>
 • Shorts শেলফ, চ্যানেল পেজ এবং সার্চ ফলাফলে এখনও আপলোডের সময় দেখানো হতে পারে
 • এই বৈশিষ্ট্যটি অটোমোটিভ লেআউটের সাথে কাজ করে না"</string>
   <string name="morphe_hide_video_thumbnail_title">ভিডিও থাম্বনেইল লুকান</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">ভিডিও সুপারিশ লেবেল লুকান</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">অনুসন্ধান ফলাফলে \'অন্যান্যরা দেখেছেন\' এবং \'আপনার পছন্দ হতে পারে\' লেবেলগুলি লুকায়</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">ভিডিও লেবেল লুকান</string>
+  <string name="morphe_hide_video_labels_summary">\'স্বয়ংক্রিয় ডাব\' / \'ডাব করা\', \'কমিশন অর্জন করে\', \'হাইপড\', \'লোকেরা আরও দেখেছেন\', \'পণ্য(সমূহ)\' এবং \'আপনি আরও পছন্দ করতে পারেন\'-এর মতো লেবেলগুলো লুকিয়ে দেয়</string>
   <string name="morphe_hide_view_count_title">দেখার সংখ্যা লুকান</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"সীমাবদ্ধতা:
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">ভিডিওর শিরোনাম লুকান</string>
   <string name="morphe_hide_video_title_summary">ফুলস্ক্রিন মোডে ভিডিওর শিরোনাম লুকায়</string>
   <string name="morphe_sanitize_video_subtitle_title">ভিডিও সাবটাইটেল স্যানিটাইজ করুন</string>
-  <string name="morphe_sanitize_video_subtitle_summary">ভিডিও সাবটাইটেল থেকে \'#\', \'Fundraiser\', \'Shop\', এবং \'products\'-এর মতো শব্দগুচ্ছ স্যানিটাইজ করে।</string>
+  <string name="morphe_sanitize_video_subtitle_summary">ভিডিওর সাবটাইটেল থেকে \'#\', \'ফান্ডরেজার\', \'পণ্য(সমূহ)\' এবং \'শপ\'-এর মতো বাক্যাংশ স্যানিটাইজ করে</string>
   <string name="morphe_hide_description_components_screen_title">ভিডিওর বিবরণ</string>
   <string name="morphe_hide_description_components_screen_summary">ভিডিওর বিবরণে কোন উপাদানগুলি প্রদর্শিত হবে তা নির্বাচন করুন</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">\'AI-জেনারেটেড ভিডিও সারসংক্ষেপ\' বিভাগটি লুকান</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">مقاطع الفيديو المخفية، على الإطلاق</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">إعادة تعيين عداد آخر 24 ساعة؟</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">সময়ের কাউন্টার রিসেট করবেন?</string>
-  <string name="morphe_hide_about_category_title">মর্ফ সম্পর্কে</string>
   <string name="morphe_hide_aislist_screen_title">এআই চ্যানেল ফিল্টার</string>
   <string name="morphe_hide_aislist_screen_summary">এআইএসলিস্ট কমিউনিটি লিস্ট দ্বারা এআই-উৎপাদিত কন্টেন্ট হিসেবে চিহ্নিত চ্যানেল থেকে ভিডিও লুকান</string>
   <string name="morphe_hide_aislist_blocklist_category_title">ব্লক লিস্ট: উচ্চ আত্মবিশ্বাস</string>
@@ -348,9 +345,9 @@ Second \"item\" text"</string>
 সীমাবদ্ধতা:
 • ফিল্টার করা এআই শর্টস একটি খালি স্থান হিসেবে দেখাতে পারে
 • কিছু এআই ভিডিও এখনও দেখাতে পারে"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"ডেটা এআইএসলিস্ট দ্বারা সরবরাহ করা হয়েছে।
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList হলো AI-জেনারেটেড বিষয়বস্তু প্রকাশ করে এমন YouTube চ্যানেলগুলির একটি ওপেন সোর্স তালিকা, যা স্বেচ্ছাসেবকদের দ্বারা রক্ষণাবেক্ষণ করা হয়। চ্যানেলগুলি ব্যবহারকারীদের দ্বারা রিপোর্ট করা হয় এবং যোগ করার আগে সেগুলি পর্যালোচনা করা হয়
 
-এআইএসলিস্ট ডট কম খুলতে এখানে ট্যাপ করুন এবং অন্যান্য প্ল্যাটফর্মের জন্য ডাউনলোড দেখুন"</string>
+তালিকাটি GitHub থেকে ডাউনলোড করা হয় এবং ভিডিওগুলি আপনার ডিভাইসে ফিল্টার করা হয়"</string>
   <string name="morphe_aislist_submit_category_title">AI চ্যানেল রিপোর্ট করুন</string>
   <string name="morphe_aislist_submit_flyout_menu_title">ভিডিও মেনুতে রিপোর্ট বিকল্প যোগ করুন</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">ভিডিও মেনুতে একটি বিকল্প যোগ করুন যা একটি ভিডিওর চ্যানেলকে AiSList-এ রিপোর্ট করে</string>
@@ -1161,11 +1158,9 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; আসল থাম্বনেইল</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; স্থির ক্যাপচার</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">স্থির ছবি</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow YouTube ভিডিওগুলির জন্য ক্রাউডসোর্সড শিরোনাম এবং থাম্বনেইল সরবরাহ করে। এগুলি প্রায়শই YouTube-এর দেওয়া শিরোনামগুলির চেয়ে বেশি প্রাসঙ্গিক।
+  <string name="morphe_dearrow_about_summary">"DeArrow ক্লিকবেইট শিরোনাম এবং থাম্বনেইলগুলিকে ক্রাউডসোর্সড, আরও নির্ভুল এবং কম চাঞ্চল্যকর শিরোনাম ও থাম্বনেইল দিয়ে প্রতিস্থাপন করে। শিরোনামগুলি কমিউনিটি দ্বারা লেখা হয় এবং ভোট দেওয়া হয়, আর থাম্বনেইলগুলি ভিডিও থেকে নেওয়া ফ্রেম
 
-সক্রিয় করা থাকলে, ভিডিওর URL-গুলো API সার্ভারে পাঠানো হবে এবং অন্য কোনো ডেটা পাঠানো হয় না। কোনো ভিডিওতে DeArrow থাম্বনেইল না থাকলে, মূল বা স্থির ক্যাপচার দেখানো হয়।
-
-DeArrow.ajay.app খুলতে এখানে আলতো চাপুন"</string>
+হ্যাশ করা ভিডিও আইডির একটি ছোট প্রিফিক্স দিয়ে ভিডিওগুলির অনুরোধ করা হয়, তাই সার্ভার ঠিক বলতে পারে না যে আপনি কোন ভিডিওটি দেখছেন। কোনো ভিডিওতে DeArrow থাম্বনেইল না থাকলে, আসল বা একটি স্থির চিত্র দেখানো হয়"</string>
   <string name="morphe_dearrow_connection_toast_title">সংযোগ ত্রুটি সতর্কতা দেখান</string>
   <string name="morphe_dearrow_connection_toast_summary">DeArrow সার্ভার উপলব্ধ না থাকলে একটি বিজ্ঞপ্তি দেখায়</string>
   <string name="morphe_dearrow_api_url_title">API এন্ডপয়েন্ট</string>

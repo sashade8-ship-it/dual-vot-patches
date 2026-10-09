@@ -258,9 +258,9 @@ Jos tämä poistetaan myöhemmin käytöstä, on suositeltavaa tyhjentää sovel
   <string name="morphe_ryd_estimated_like_summary">Näyttää arvioidun tykkäysmäärän videoissa, joissa luoja on poistanut tykkäykset käytöstä</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Näytä yhteysvirheilmoitukset</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Näyttää ilmoituksen, kun Return YouTube Dislike -palvelin ei ole käytettävissä</string>
-  <string name="morphe_ryd_attribution_summary">"Data on tarjotaan Return YouTube Dislike API:n avulla
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike palauttaa dislike-laskurit, jotka YouTube piilotti vuonna 2021. Laskurit perustuvat ennen poistoa arkistoituihin tietoihin, ja uudempien videoiden osalta ne arvioidaan käyttäjien äänistä, joten ne ovat likimääräisiä ja päivittyvät muutaman päivän välein
 
-Napauta tästä avataksesi ReturnYouTubeDislike.com"</string>
+Katsomasi videon tunnus lähetetään Return YouTube Dislike -rajapintaan, ja tykkäyksesi ja dislike-tykkäyksesi lähetetään nimettömästi arvioiden parantamiseksi"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Return YouTube Dislike -sovelluksen API-tilastot tällä laitteella</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API-vastausajan keskiarvo</string>

@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">启用交叉淡入时，视频模式不可用</string>
   <string name="morphe_music_crossfade_sabr_toast">使用 SABR 播放时交叉淡化已关闭</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">投射时交叉淡化已关闭</string>
-  <string name="morphe_music_crossfade_about_title">关于</string>
-  <string name="morphe_music_crossfade_about_summary">交叉淡化如何运作及其不适用场景</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">它的工作原理</string>
-  <string name="morphe_music_crossfade_about_how_summary">"交叉淡化会按照你设置的时长和曲线，将一首歌曲的结尾与下一首歌曲的开头重叠。
+  <string name="morphe_music_crossfade_about_how_summary">"交叉淡化会将一首歌曲的结尾与下一首歌曲的开头重叠，并使用您设置的时长和曲线
 
-它会在自动播放下一首和手动跳过时生效，两者在上方各有对应的开关。自动播放下一首时，混合会在歌曲结束前几秒开始。"</string>
+它可在自动播放和手动跳过时运行，两者各有独立开关。在自动播放时，交叉淡化会在歌曲结束前几秒开始"</string>
   <string name="morphe_music_crossfade_about_quirks_title">限制</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"开启交叉淡化时，音乐视频将仅作为音频播放。长按随机播放按钮可暂停交叉淡化并观看视频
 
@@ -449,8 +446,6 @@ SABR 播放（模拟视频流已关闭）"</string>
   <string name="morphe_music_scrobbling_guess_album_title">补全缺失的专辑</string>
   <string name="morphe_music_scrobbling_guess_album_summary">当音乐不包含专辑时，请在 Last.fm 上查询，以便你的 scrobble 完整。</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">关于播放记录</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling 会自动将您的 YouTube Music 使用情况同步到您的 Last.fm 或 ListenBrainz 个人资料。
 
 为了确保在后台播放期间同步 scrobbling，请确保 YouTube Music 的应用电池使用量设置为“无限制”。"</string>
@@ -462,7 +457,6 @@ SABR 播放（模拟视频流已关闭）"</string>
   <string name="morphe_music_lyrics_section_service_title">歌词服务</string>
   <string name="morphe_music_lyrics_section_overlay_title">叠加层</string>
   <string name="morphe_music_lyrics_section_sync_title">同步</string>
-  <string name="morphe_music_lyrics_section_about_title">关于</string>
   <string name="morphe_music_lyrics_source_all_disabled">所有提供程序均已禁用 — 内置歌词与内嵌歌词</string>
   <string name="morphe_music_lyrics_source_reset_title">重置提供程序顺序？</string>
   <string name="morphe_music_lyrics_source_reset_message">将提供程序恢复为默认优先级顺序</string>

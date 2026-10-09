@@ -258,9 +258,9 @@ Dacă este dezactivat ulterior, se recomandă să ștergeți datele aplicației 
   <string name="morphe_ryd_estimated_like_summary">Afișează un număr estimativ de like-uri pe videoclipurile unde creatorul a dezactivat like-urile</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Afișează alerte de eroare de conexiune</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Afișează o notificare atunci când serverul Return YouTube Dislike este indisponibil</string>
-  <string name="morphe_ryd_attribution_summary">"Datele sunt furnizate de API-ul Return YouTube Dislike
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike restabilește numărul de dislike-uri pe care YouTube le-a ascuns în 2021. Numerele provin din date arhivate înainte de eliminare și sunt estimate pentru videoclipurile mai noi pe baza voturilor utilizatorilor săi, deci sunt aproximative și se actualizează la fiecare câteva zile
 
-Atinge aici pentru a deschide ReturnYouTubeDislike.com"</string>
+ID-ul videoclipului pe care îl urmărești este trimis către API-ul Return YouTube Dislike, iar like-urile și dislike-urile tale sunt trimise anonim pentru a îmbunătăți estimările."</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Statisticile API Return YouTube Dislike pentru acest dispozitiv</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Timpul de răspuns al API-ului, medie</string>

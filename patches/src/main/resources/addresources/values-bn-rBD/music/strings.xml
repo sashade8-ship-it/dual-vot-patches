@@ -243,13 +243,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">ক্রসফেড চালু থাকা অবস্থায় ভিডিও মোড উপলব্ধ নয়</string>
   <string name="morphe_music_crossfade_sabr_toast">SABR প্লেব্যাকের সময় ক্রসফেড বন্ধ থাকে</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">কাস্টিংয়ের সময় ক্রসফেড বন্ধ থাকে</string>
-  <string name="morphe_music_crossfade_about_title">মর্ফ সম্পর্কে</string>
-  <string name="morphe_music_crossfade_about_summary">ক্রসফেড কীভাবে কাজ করে এবং কোথায় কাজ করে না</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">এটি যেভাবে কাজ করে</string>
-  <string name="morphe_music_crossfade_about_how_summary">"ক্রসফেড আপনার নির্ধারিত সময়কাল এবং কার্ভ ব্যবহার করে একটি গানের শেষ অংশ ও পরের গানের শুরুর অংশকে ওভারল্যাপ করে।
+  <string name="morphe_music_crossfade_about_how_summary">"ক্রসফেড একটি গানের শেষ অংশের সাথে পরের গানের শুরুর অংশ ওভারল্যাপ করে, আপনার নির্ধারিত সময়কাল এবং কার্ভ ব্যবহার করে।
 
-এটি অটো-অ্যাডভান্স এবং ম্যানুয়াল স্কিপে কাজ করে, প্রতিটির জন্য উপরে নিজস্ব টগল রয়েছে। অটো-অ্যাডভান্সে গান শেষ হওয়ার কয়েক সেকেন্ড আগে মিশ্রণ শুরু হয়।"</string>
+এটি অটো-অ্যাডভান্স এবং ম্যানুয়াল স্কিপ উভয় ক্ষেত্রেই কাজ করে, প্রতিটির জন্য আলাদা টগল রয়েছে। অটো-অ্যাডভান্সে, গান শেষ হওয়ার কয়েক সেকেন্ড আগে ব্লেন্ড শুরু হয়"</string>
   <string name="morphe_music_crossfade_about_quirks_title">সীমাবদ্ধতা</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"ক্রসফেড চালু থাকলে মিউজিক ভিডিওগুলো শুধুমাত্র অডিও হিসেবে চলে। ক্রসফেড বিরাম দিতে এবং ভিডিওটি দেখতে শাফলে দীর্ঘ চাপ দিন।
 
@@ -449,8 +446,6 @@ SABR প্লেব্যাক (ভিডিও স্ট্রিম স্�
   <string name="morphe_music_scrobbling_guess_album_title">অনুপস্থিত অ্যালবাম পূরণ করুন</string>
   <string name="morphe_music_scrobbling_guess_album_summary">যখন সংগীতে অ্যালবাম থাকে না, তখন Last.fm-এ এটি খুঁজে দেখুন যাতে আপনার scrobble সম্পূর্ণ হয়।</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">স্ক্রবলিং সম্পর্কে</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"স্ক্রবিং স্বয়ংক্রিয়ভাবে আপনার YouTube Music ব্যবহার আপনার Last.fm বা ListenBrainz প্রোফাইলের সাথে সিঙ্ক করে।
 
 ব্যাকগ্রাউন্ড প্লেব্যাকের সময় স্ক্রবিং সিঙ্ক করা হয়েছে কিনা তা নিশ্চিত করতে, নিশ্চিত করুন যে YouTube Music-এর অ্যাপ ব্যাটারি ব্যবহার \"Unrestricted\" তে সেট করা আছে।"</string>
@@ -462,7 +457,6 @@ SABR প্লেব্যাক (ভিডিও স্ট্রিম স্�
   <string name="morphe_music_lyrics_section_service_title">লিরিক্স পরিষেবা</string>
   <string name="morphe_music_lyrics_section_overlay_title">ওভারলে</string>
   <string name="morphe_music_lyrics_section_sync_title">সিঙ্ক্রোনাইজেশন</string>
-  <string name="morphe_music_lyrics_section_about_title">মর্ফ সম্পর্কে</string>
   <string name="morphe_music_lyrics_source_all_disabled">সব প্রদানকারী অক্ষম — বিল্ট-ইন লিরিক্স এবং এমবেড করা লিরিক্স</string>
   <string name="morphe_music_lyrics_source_reset_title">প্রদানকারীর ক্রম পুনরায় সেট করবেন?</string>
   <string name="morphe_music_lyrics_source_reset_message">প্রদানকারীদের ডিফল্ট অগ্রাধিকার ক্রমে পুনরুদ্ধার করুন</string>

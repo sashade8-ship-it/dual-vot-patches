@@ -18,9 +18,6 @@ import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.opcode
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
-import app.morphe.util.ResourceGroup
-import app.morphe.util.copyResources
 import app.morphe.patcher.util.proxy.mutableTypes.MutableClass
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patches.music.misc.extension.sharedExtensionPatch
@@ -33,6 +30,7 @@ import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.NonInteractivePreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
+import app.morphe.patches.shared.misc.settings.preference.screenInfoPreferenceCategory
 import app.morphe.util.getReference
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
@@ -79,7 +77,7 @@ private fun MutableClass.addBridge(
     parameters: List<String>,
     returnType: String,
     registers: Int,
-    smali: String,
+    smali: String
 ) {
     methods.add(
         ImmutableMethod(
@@ -107,19 +105,6 @@ private fun MutableClass.addFieldSetter(methodName: String, fieldRef: FieldRefer
     addBridge(methodName, listOf("Ljava/lang/Object;"), "V", 2, "check-cast p1, ${fieldRef.type}\n$write\nreturn-void")
 }
 
-/**
- * A separate resource patch because copyResources needs the resource patch context.
- */
-private val crossfadeBannerResourcePatch = resourcePatch {
-    execute {
-        copyResources(
-            "crossfade",
-            ResourceGroup("drawable-nodpi", "morphe_crossfade_about_banner.webp"),
-            ResourceGroup("layout", "morphe_crossfade_about_banner.xml"),
-        )
-    }
-}
-
 @Suppress("unused")
 val crossfadePatch = bytecodePatch(
     name = "Crossfade",
@@ -128,8 +113,7 @@ val crossfadePatch = bytecodePatch(
     dependsOn(
         sharedExtensionPatch,
         settingsPatch,
-        versionCheckPatch,
-        crossfadeBannerResourcePatch,
+        versionCheckPatch
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE_MUSIC)
@@ -189,20 +173,13 @@ val crossfadePatch = bytecodePatch(
                     SwitchPreference("morphe_music_crossfade_on_skip", summary = true),
                     SwitchPreference("morphe_music_crossfade_on_auto_advance", summary = true),
                     SwitchPreference("morphe_music_crossfade_session_control", summary = true),
-                    PreferenceScreenPreference(
+                    screenInfoPreferenceCategory(
                         key = "morphe_music_crossfade_about",
-                        sorting = PreferenceScreenPreference.Sorting.UNSORTED,
                         preferences = setOf(
-                            NonInteractivePreference(
-                                key = "morphe_music_crossfade_about_banner",
-                                titleKey = "morphe_music_crossfade_about_banner_title",
-                                summaryKey = null,
-                                layout = "@layout/morphe_crossfade_about_banner",
-                            ),
                             NonInteractivePreference("morphe_music_crossfade_about_how"),
                             NonInteractivePreference("morphe_music_crossfade_about_quirks"),
                             NonInteractivePreference("morphe_music_crossfade_about_unsupported"),
-                            NonInteractivePreference("morphe_music_crossfade_about_credit"),
+                            NonInteractivePreference("morphe_music_crossfade_about_credit")
                         )
                     )
                 )

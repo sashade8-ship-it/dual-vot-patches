@@ -243,13 +243,10 @@ Lagu yang diunduh akan muncul di sini"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Mode video tidak tersedia saat pudar silang diaktifkan</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade nonaktif saat pemutaran SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade nonaktif saat casting</string>
-  <string name="morphe_music_crossfade_about_title">Tentang</string>
-  <string name="morphe_music_crossfade_about_summary">Cara kerja crossfade dan di mana fitur ini tidak berfungsi</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Cara kerjanya</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade menumpangtindihkan akhir satu lagu dengan awal lagu berikutnya, menggunakan durasi dan kurva yang Anda atur.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade menumpangtindihkan akhir satu lagu dengan awal lagu berikutnya, menggunakan durasi dan kurva Anda
 
-Fitur ini berjalan pada mode auto-advance dan skip manual, masing-masing dengan sakelarnya sendiri di atas. Pada mode auto-advance, perpaduan dimulai beberapa detik sebelum lagu berakhir."</string>
+Ini berjalan pada lanjut otomatis dan lewati manual, masing-masing dengan sakelarnya sendiri. Pada lanjut otomatis, perpaduan dimulai beberapa detik sebelum lagu berakhir.    guna"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Keterbatasan</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Video musik diputar hanya sebagai audio saat crossfade aktif. Tekan lama tombol acak untuk menjeda crossfade dan menonton videonya
 
@@ -449,8 +446,6 @@ Pemutaran SABR (Spoof aliran video dimatikan)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Isi album yang hilang</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Jika musik tidak menyertakan album, cari di Last.fm agar scrobble Anda lengkap</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Tentang scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling secara otomatis menyinkronkan penggunaan YouTube Music Anda dengan profil Last.fm atau ListenBrainz Anda.
 
 Untuk memastikan scrobbling disinkronkan selama pemutaran latar belakang, pastikan penggunaan baterai aplikasi YouTube Music diatur ke \"Tidak Dibatasi\""</string>
@@ -462,7 +457,6 @@ Untuk memastikan scrobbling disinkronkan selama pemutaran latar belakang, pastik
   <string name="morphe_music_lyrics_section_service_title">Layanan lirik</string>
   <string name="morphe_music_lyrics_section_overlay_title">Hamparan</string>
   <string name="morphe_music_lyrics_section_sync_title">Sinkronisasi</string>
-  <string name="morphe_music_lyrics_section_about_title">Tentang</string>
   <string name="morphe_music_lyrics_source_all_disabled">Semua penyedia dinonaktifkan — lirik bawaan dan lirik tersemat</string>
   <string name="morphe_music_lyrics_source_reset_title">Setel ulang urutan penyedia?</string>
   <string name="morphe_music_lyrics_source_reset_message">Kembalikan penyedia ke urutan prioritas bawaan</string>

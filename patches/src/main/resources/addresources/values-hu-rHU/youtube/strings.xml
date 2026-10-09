@@ -63,7 +63,6 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_album_cards_summary">Elrejti az albumkártyákat az előadó leírása alatt</string>
   <string name="morphe_hide_artist_cards_title">Előadó kártyák elrejtése</string>
   <string name="morphe_hide_artist_cards_summary">Elrejti az előadói kártyát a keresési találatok tetején</string>
-  <string name="morphe_hide_auto_dubbed_label_title">​„Automatikus szinkron” címke elrejtése</string>
   <string name="morphe_hide_channel_buttons_title">Csatornagombok elrejtése</string>
   <string name="morphe_hide_channel_buttons_summary">Elrejti az olyan gombokat, mint a Feliratkozás, Csatorna megtekintése, Közösség és a YouTube Music a csatornaprofilokon a keresési találatokban</string>
   <string name="morphe_hide_community_posts_title">Közösségi posztok elrejtése</string>
@@ -79,7 +78,6 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_history_shelf_title">Előzmények polc elrejtése</string>
   <string name="morphe_hide_horizontal_shelves_title">Vízszintes polcok elrejtése</string>
   <string name="morphe_hide_horizontal_shelves_summary">Olyan vízszintes polcok elrejtése, mint a Friss hírek, Közösségi bejegyzések, amik érdekelhetnek, Megtekintés folytatása, További csatornák felfedezése, További témák felfedezése, Neked, Legújabb videók, Legrelevánsabb, Bejegyzések az alkotói közösségtől, Vásárlás és Megtekintés újra</string>
-  <string name="morphe_hide_hyped_label_title">Hájpolt címke elrejtése</string>
   <string name="morphe_hide_image_shelf_title">Képpolc elrejtése</string>
   <string name="morphe_hide_image_shelf_summary">Képpolcok elrejtése a keresési találatok között</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ A változások a következőket tartalmazzák:
 • A Shorts-polcok, a csatornaoldalak és a keresési találatok továbbra is megjeleníthetik a feltöltési időket.
 • Ez a funkció nem működik az autós elrendezéssel."</string>
   <string name="morphe_hide_video_thumbnail_title">Videó bélyegkép elrejtése</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">Videóajánlások címkéinek elrejtése</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">Keresési ajánlások címkéinek elrejtése</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Videócímkék elrejtése</string>
+  <string name="morphe_hide_video_labels_summary">Elrejti az olyan címkéket, mint az \"Automatikusan szinkronizálva\" / \"Szinkronizált\", \"Jutalékot keres\", \"Felkapott\", \"Ezt mások is nézték\", \"termék(ek)\" és \"Ez is érdekelhet\"</string>
   <string name="morphe_hide_view_count_title">Megtekintések számának elrejtése</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Korlátozások:
@@ -170,7 +168,7 @@ A változások a következőket tartalmazzák:
   <string name="morphe_hide_video_title_title">Videócímek elrejtése</string>
   <string name="morphe_hide_video_title_summary">Elrejti a videó címét teljes képernyős módban</string>
   <string name="morphe_sanitize_video_subtitle_title">Videofeliratok ellenőrzése</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Eltávolítja a \'#\' jel, a \'Gyűjtés\', a \'Bolt\' és a \'termékek\' kifejezéseket a videofeliratból.</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Eltávolítja a videó feliratából az olyan kifejezéseket, mint a \'#\', \'Adománygyűjtés\', \'termék(ek)\' és \'Bolt\'</string>
   <string name="morphe_hide_description_components_screen_title">Videóleírás</string>
   <string name="morphe_hide_description_components_screen_summary">Válassza ki, mely komponensek jelenjenek meg a videó leírásában</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Az „AI-al készített videó-összefoglaló” szekció elrejtése</string>
@@ -329,7 +327,6 @@ Korlátozások:
   <string name="morphe_hide_stats_hidden_all_title">Elrejtett videók, összességében</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Visszaállítsam az elmúlt 24 óra számlálóját?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Visszaállít minden időmérőt?</string>
-  <string name="morphe_hide_about_category_title">Névjegy</string>
   <string name="morphe_hide_aislist_screen_title">AI csatornaszűrő</string>
   <string name="morphe_hide_aislist_screen_summary">Rejtse el a csatornákból származó videókat, amelyeket az AiSList közösség AI-generált tartalomként jelölt meg</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Tiltólista: Magas megbízhatóság</string>
@@ -348,9 +345,9 @@ Korlátozások:
 Korlátozások:
 • A szűrt AI Rövid videók üres helyként jelenhetnek meg
 • Néhány AI videó még megjelenhet"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"Az adatokat az AiSList biztosítja
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList egy nyílt forráskódú lista YouTube-csatornákról, amelyek AI-generált tartalmat tesznek közzé, önkéntesek karbantartják. A csatornákat a felhasználók jelentik, és a hozzáadás előtt felülvizsgálják azokat.
 
-Érintse meg ide az AiSlopList.com megnyitásához, és tekintse meg a letöltéseket más platformokra"</string>
+A lista a GitHubról töltődik le, és a videók az eszközödön kerülnek szűrésre.}{"</string>
   <string name="morphe_aislist_submit_category_title">AI-csatornák jelentése</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Jelentés menüpont hozzáadása a videómenühöz</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Menüpont hozzáadása a videómenühöz, amely a videó csatornáját jelenti az AiSListnek.</string>
@@ -1176,11 +1173,9 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow és eredeti indexképek</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Állóképek</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Pillanatképek</string>
-  <string name="morphe_dearrow_about_summary">"A DeArrow közösségi címeket és bélyegképeket biztosít a YouTube-videókhoz. Ezek gyakran relevánsabbak, mint a YouTube által biztosítottak.
+  <string name="morphe_dearrow_about_summary">"A DeArrow a kattintásvadász címeket és miniatűröket közösségi forrásból származó, pontosabb és kevésbé szenzációhajhász tartalmakra cseréli. A címeket a közösség írja és szavazza meg, a miniatűrök pedig a videóból készült képkockák.
 
-Ha engedélyezve van, a videók URL-jei elküldésre kerülnek az API-kiszolgálóra, és semmilyen más adat nem kerül elküldésre. Ha egy videónak nincs DeArrow-bélyegképe, akkor az eredeti vagy kimerevített képkockák jelennek meg.
-
-Koppintson ide a DeArrow.ajay.app megnyitásához"</string>
+A videókat a hash-elt videóazonosító rövid előtagjával kérik le, így a szerver nem tudja pontosan, hogy melyik videót nézed. Ha egy videóhoz nincs DeArrow miniatűr, akkor az eredeti vagy egy állókép jelenik meg"</string>
   <string name="morphe_dearrow_connection_toast_title">Kapcsolati hibaüzenetek megjelenítése</string>
   <string name="morphe_dearrow_connection_toast_summary">Értesítést jelenít meg, ha a DeArrow szerver nem érhető el</string>
   <string name="morphe_dearrow_api_url_title">API végpont</string>

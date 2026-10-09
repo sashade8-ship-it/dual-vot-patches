@@ -241,13 +241,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Видеорежим недоступен при включенном плавном переходе</string>
   <string name="morphe_music_crossfade_sabr_toast">Кроссфейд отключён при SABR-воспроизведении</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Кроссфейд отключён во время трансляции</string>
-  <string name="morphe_music_crossfade_about_title">Информация</string>
-  <string name="morphe_music_crossfade_about_summary">Как работает кроссфейд и где он не работает</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Как это работает</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Кроссфейд накладывает конец одной песни на начало следующей, используя выбранную вами длительность и кривую.
+  <string name="morphe_music_crossfade_about_how_summary">"Кроссфейд накладывает конец одной песни на начало следующей, используя выбранные длительность и кривую
 
-Он работает при автопереходе и при ручном переключении; для каждого из режимов выше есть свой переключатель. При автопереходе наложение начинается за несколько секунд до конца песни."</string>
+Он работает при автопереходе и при ручном переключении, для каждого есть свой переключатель. При автопереходе микширование начинается за несколько секунд до окончания песни"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Ограничения</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"При включённом кроссфейде музыкальные клипы воспроизводятся только как аудио. Нажмите и удерживайте «Перемешать», чтобы приостановить кроссфейд и посмотреть видео.
 
@@ -447,8 +444,6 @@ SABR-воспроизведение (подмена видеопотоков о�
   <string name="morphe_music_scrobbling_guess_album_title">Заполнить отсутствующий альбом</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Когда в музыке нет альбома, найдите его на Last.fm, чтобы ваш scrobble был завершён</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">О scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling автоматически синхронизирует использование YouTube Music с вашим профилем Last.fm или ListenBrainz
 
 Чтобы обеспечить синхронизацию scrobbling во время воспроизведения в фоновом режиме, убедитесь, что использование батареи приложения YouTube Music установлено в значение \"Неограниченно\""</string>
@@ -460,7 +455,6 @@ SABR-воспроизведение (подмена видеопотоков о�
   <string name="morphe_music_lyrics_section_service_title">Сервис текстов песен</string>
   <string name="morphe_music_lyrics_section_overlay_title">Оверлей</string>
   <string name="morphe_music_lyrics_section_sync_title">Синхронизация</string>
-  <string name="morphe_music_lyrics_section_about_title">О приложении</string>
   <string name="morphe_music_lyrics_source_all_disabled">Все сервисы отключены — встроенные тексты и тексты из метаданных</string>
   <string name="morphe_music_lyrics_source_reset_title">Сбросить порядок сервисов?</string>
   <string name="morphe_music_lyrics_source_reset_message">Восстановить сервисы в порядке приоритета по умолчанию</string>

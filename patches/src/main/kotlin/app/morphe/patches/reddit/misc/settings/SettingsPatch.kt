@@ -88,9 +88,6 @@ val settingsPatch = bytecodePatch(
                         "morphe_ic_dialog_alert.xml",
                         "morphe_settings_custom_checkmark.xml",
                         "morphe_settings_custom_checkmark_bold.xml"
-                    ),
-                    ResourceGroup("layout",
-                        "morphe_custom_list_item_checked.xml"
                     )
                 )
             }

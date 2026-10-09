@@ -48,12 +48,10 @@ Second \"item\" text"</string>
   <string name="morphe_hide_feed_flyout_menu_filter_strings_title">फिड फ्लाईआउट मेनु फिल्टर</string>
   <string name="morphe_hide_album_cards_title">एल्बम कार्ड छिपाएं</string>
   <string name="morphe_hide_artist_cards_title">कलाकार कार्ड छिपाएं</string>
-  <string name="morphe_hide_auto_dubbed_label_title">\'स्वचालित रूपमा डब गरिएको\' लेबल लुकाउनुहोस्</string>
   <string name="morphe_hide_community_posts_title">सामुदायिक पोस्ट छिपाएं</string>
   <string name="morphe_hide_compact_banner_title">कॉम्पैक्ट बैनर छिपाएं</string>
   <string name="morphe_hide_floating_microphone_button_title">फ़्लोटिंग माइक्रोफ़ोन बटन छिपाएं</string>
   <string name="morphe_hide_horizontal_shelves_title">क्षैतिज शेल्फ छिपाएं</string>
-  <string name="morphe_hide_hyped_label_title">हाइप्ड लेबल लुकाउनुहोस्</string>
   <string name="morphe_hide_image_shelf_title">छवि शेल्फ छिपाएं</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
           for the card in the Messages section at the top of the Notifications tab. -->
@@ -76,8 +74,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_ticket_shelf_title">टिकट शेल्फ छिपाएं</string>
   <string name="morphe_hide_upload_time_title">खोज परिणाम कीवर्ड द्वारा फ़िल्टर नहीं किए गए हैं</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">वीडियो अनुशंसा लेबल छिपाएं</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_view_count_title">होम टैब में वीडियो कीवर्ड द्वारा फ़िल्टर किए गए हैं</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_web_search_results_title">वेब खोज परिणाम छिपाएं</string>
@@ -149,7 +146,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_keyword_toast_invalid_length">कीवर्ड बहुत छोटा है और उद्धरण की आवश्यकता है: %s</string>
   <string name="morphe_hide_keyword_toast_invalid_broad">कीवर्ड सभी वीडियो छिपा देगा: %s</string>
   <string name="morphe_hide_stats_category_title">सांख्यिकी</string>
-  <string name="morphe_hide_about_category_title">के बारे में</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_hide_creator_store_shelf_title">क्रिएटर स्टोर शेल्फ छिपाएं</string>
   <string name="morphe_hide_end_screen_store_banner_title">एंड स्क्रीन स्टोर बैनर छिपाएं</string>

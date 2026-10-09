@@ -243,13 +243,10 @@ Melodiile descărcate apar aici"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Modul video nu este disponibil când estomparea încrucișată este activată</string>
   <string name="morphe_music_crossfade_sabr_toast">Crossfade-ul este dezactivat în timpul redării SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Crossfade-ul este dezactivat în timpul difuzării</string>
-  <string name="morphe_music_crossfade_about_title">Despre</string>
-  <string name="morphe_music_crossfade_about_summary">Cum funcționează crossfade-ul și unde nu funcționează</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Cum funcționează</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Crossfade-ul suprapune sfârșitul unei melodii cu începutul următoarei, folosind durata și curba configurate de tine.
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade-ul suprapune sfârșitul unei melodii cu începutul următoarei, folosind durata și curba ta
 
-Funcționează la avansarea automată și la trecerea manuală, fiecare având propriul comutator de mai sus. La avansarea automată, îmbinarea începe cu câteva secunde înainte ca melodia să se termine."</string>
+Funcționează pe avans automat și pe trecere manuală, fiecare cu propriul comutator. La avans automat, amestecul începe cu câteva secunde înainte ca melodia să se termine"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Limitări</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Videoclipurile muzicale se redau doar ca audio cât timp crossfade-ul este activat. Ține apăsat pe butonul de redare aleatorie pentru a întrerupe crossfade-ul și a viziona videoclipul
 
@@ -449,8 +446,6 @@ Redarea SABR (fluxurile video simulate dezactivate)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Completează albumul lipsă</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Când melodia nu include un album, caută-l pe Last.fm, pentru ca scrobble-ul tău să fie complet.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Despre scrobbling</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Scrobbling sincronizează automat utilizarea YouTube Music cu profilul tău Last.fm sau ListenBrainz.
 
 Pentru a te asigura că scrobbling-ul este sincronizat în timpul redării în fundal, asigură-te că utilizarea bateriei aplicației YouTube Music este setată la \"Nerestrictivă\"."</string>
@@ -462,7 +457,6 @@ Pentru a te asigura că scrobbling-ul este sincronizat în timpul redării în f
   <string name="morphe_music_lyrics_section_service_title">Serviciul de versuri</string>
   <string name="morphe_music_lyrics_section_overlay_title">Suprapunere</string>
   <string name="morphe_music_lyrics_section_sync_title">Sincronizare</string>
-  <string name="morphe_music_lyrics_section_about_title">Despre</string>
   <string name="morphe_music_lyrics_source_all_disabled">Toți furnizorii dezactivați — versuri integrate și versuri încorporate.</string>
   <string name="morphe_music_lyrics_source_reset_title">Resetați ordinea furnizorilor?</string>
   <string name="morphe_music_lyrics_source_reset_message">Restabiliți ordinea implicită de prioritate a furnizorilor.</string>

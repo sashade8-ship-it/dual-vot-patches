@@ -63,7 +63,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_album_cards_summary">隐藏艺术家描述下方的专辑卡片</string>
   <string name="morphe_hide_artist_cards_title">隐藏艺人卡片</string>
   <string name="morphe_hide_artist_cards_summary">隐藏搜索结果顶部处的艺术家卡片</string>
-  <string name="morphe_hide_auto_dubbed_label_title">隐藏“自动配音”标签</string>
   <string name="morphe_hide_channel_buttons_title">隐藏频道按钮</string>
   <string name="morphe_hide_channel_buttons_summary">隐藏搜索结果中频道资料上的订阅、查看频道、社区和 YouTube Music 等按钮</string>
   <string name="morphe_hide_community_posts_title">隐藏社区帖子</string>
@@ -79,7 +78,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_history_shelf_title">隐藏历史记录板块</string>
   <string name="morphe_hide_horizontal_shelves_title">隐藏横排展示架</string>
   <string name="morphe_hide_horizontal_shelves_summary">隐藏诸如“突发新闻”、“你可能喜欢的社区帖子”、“继续观看”、“探索更多频道”、“探索更多话题”、“为你推荐”、“最新视频”、“最相关”、“创作者社区帖子”、“购物”和“再次观看”等横向内容架</string>
-  <string name="morphe_hide_hyped_label_title">隐藏热门标签</string>
   <string name="morphe_hide_image_shelf_title">隐藏图片专区</string>
   <string name="morphe_hide_image_shelf_summary">隐藏搜索结果中的图片架</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
@@ -121,9 +119,9 @@ Second \"item\" text"</string>
 • Shorts 专区、频道页面和搜索结果可能仍会显示上传时间
 • 此功能不适用于车载设备"</string>
   <string name="morphe_hide_video_thumbnail_title">隐藏视频缩略图</string>
-  <!-- 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_recommendation_labels_title">隐藏视频推荐标签</string>
-  <string name="morphe_hide_video_recommendation_labels_summary">隐藏搜索结果中的“其他人也观看”和“你可能也喜欢”标签</string>
+  <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">隐藏视频标签</string>
+  <string name="morphe_hide_video_labels_summary">隐藏“自动配音”/“配音”、“赚取佣金”、“热门”、“大家还看了”、“商品<b>(</b>s)”和“你可能还喜欢”等标签</string>
   <string name="morphe_hide_view_count_title">隐藏观看次数</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"限制：
@@ -170,7 +168,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_title_title">隐藏视频标题</string>
   <string name="morphe_hide_video_title_summary">隐藏全屏模式下的视频标题</string>
   <string name="morphe_sanitize_video_subtitle_title">清理视频字幕</string>
-  <string name="morphe_sanitize_video_subtitle_summary">清除视频字幕中的“#”、“筹款”、“商店”和“产品”等字词</string>
+  <string name="morphe_sanitize_video_subtitle_summary">清除视频副标题中的“#”、“筹款活动”、“商品<b>(</b>s)”和“商店”等短语</string>
   <string name="morphe_hide_description_components_screen_title">视频说明</string>
   <string name="morphe_hide_description_components_screen_summary">选择要在视频描述中显示哪些组件</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">隐藏“AI 生成的视频摘要”部分</string>
@@ -329,7 +327,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">所有时间隐藏的视频</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">重置过去 24 小时计数？</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">重置所有计时器？</string>
-  <string name="morphe_hide_about_category_title">关于</string>
   <string name="morphe_hide_aislist_screen_title">AI频道过滤</string>
   <string name="morphe_hide_aislist_screen_summary">隐藏来自AiSList社区列表标记为AI生成内容的频道视频</string>
   <string name="morphe_hide_aislist_blocklist_category_title">阻止列表：高置信度</string>
@@ -348,9 +345,9 @@ Second \"item\" text"</string>
 限制：
 • 过滤后的AI Shorts可能显示为空白
 • 某些AI视频可能仍然显示"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"数据由AiSList提供
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList 是一个由志愿者维护的开源 YouTube 频道列表，其中收录的是发布 AI 生成内容的频道。频道由用户举报，审核通过后才会被添加
 
-点击此处打开AiSlopList.com，查看其他平台的下载内容"</string>
+该列表从 GitHub 下载，视频在您的设备上进行过滤"</string>
   <string name="morphe_aislist_submit_category_title">举报 AI 频道</string>
   <string name="morphe_aislist_submit_flyout_menu_title">将举报条目添加到视频菜单</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">向视频菜单添加一个可将视频频道举报到 AiSList 的条目</string>
@@ -1176,11 +1173,9 @@ Second \"item\" text"</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; 原始封面</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; 视频截图</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">静止截图</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow 为 YouTube 视频提供众包标题和缩略图。这些内容通常比 YouTube 提供的更具相关性。
+  <string name="morphe_dearrow_about_summary">"DeArrow 会用更准确、更不耸人听闻的众包标题和缩略图来替换点击诱饵标题和缩略图。标题由社区撰写并投票决定，缩略图则是从视频中截取的帧
 
-如果启用，视频 URL 将发送到 API 服务器，且不会发送其他数据。如果视频没有 DeArrow 缩略图，则显示原始缩略图或静态截图。
-
-点按此处打开 DeArrow.ajay.app"</string>
+视频通过视频 ID 哈希值的一小段前缀来请求，因此服务器无法确切知道您正在观看的是哪个视频。如果某个视频没有 DeArrow 缩略图，则会显示原始缩略图或静态帧"</string>
   <string name="morphe_dearrow_connection_toast_title">显示连接错误提醒</string>
   <string name="morphe_dearrow_connection_toast_summary">当 DeArrow 服务器不可用时显示通知</string>
   <string name="morphe_dearrow_api_url_title">API 端点</string>

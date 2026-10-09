@@ -243,13 +243,10 @@ Lalabas dito ang mga na-download na track"</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">Hindi magagamit ang video mode habang naka-enable ang crossfade</string>
   <string name="morphe_music_crossfade_sabr_toast">Naka-off ang crossfade sa pag-playback ng SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Naka-off ang crossfade habang nag-ca-cast</string>
-  <string name="morphe_music_crossfade_about_title">Tungkol</string>
-  <string name="morphe_music_crossfade_about_summary">Paano gumagana ang crossfade at kung saan ito hindi gumagana</string>
-  <!-- Banner row has no text; it shows a full-width graphic via a custom layout. -->
   <string name="morphe_music_crossfade_about_how_title">Paano ito gumagana</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Pinagpapatong ng crossfade ang dulo ng isang kanta sa simula ng susunod, gamit ang iyong tagal at kurba.
+  <string name="morphe_music_crossfade_about_how_summary">"Ang crossfade ay nagsasapawan sa pagtatapos ng isang kanta sa simula ng susunod, gamit ang iyong tagal at kurba
 
-Gumagana ito sa auto-advance at sa manual skip, bawat isa ay may sariling toggle sa itaas. Sa auto-advance, nagsisimula ang paghahalo ilang segundo bago matapos ang kanta."</string>
+Ito ay tumatakbo sa auto-advance at sa manu-manong paglaktaw, bawat isa ay may sariling toggle. Sa auto-advance, nagsisimula ang blend ilang segundo bago matapos ang kanta"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Mga Limitasyon</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Ang mga music video ay pina-play bilang audio lamang habang naka-on ang crossfade. Pindutin nang matagal ang shuffle upang i-pause ang crossfade at panoorin ang video
 
@@ -449,8 +446,6 @@ Pag-playback ng SABR (Naka-off ang pag-spoof ng mga video stream)"</string>
   <string name="morphe_music_scrobbling_guess_album_title">Punan ang nawawalang album</string>
   <string name="morphe_music_scrobbling_guess_album_summary">Kapag ang musika ay walang album, hanapin ito sa Last.fm upang kumpleto ang iyong scrobble.</string>
   <!-- 'scrobbling' must be kept untranslated -->
-  <string name="morphe_music_scrobbling_about_title">Tungkol sa pag-scrobble</string>
-  <!-- 'scrobbling' must be kept untranslated -->
   <string name="morphe_music_scrobbling_about_summary">"Awtomatikong sini-sync ng Scrobbling ang iyong paggamit ng YouTube Music sa iyong profile ng Last.fm o ListenBrainz.
 
 Para matiyak na naka-sync ang scrobbling habang nagpe-play sa background, siguraduhing ang paggamit ng baterya ng app ng YouTube Music ay nakatakda sa \"Walang Pagbabawal\"."</string>
@@ -462,7 +457,6 @@ Para matiyak na naka-sync ang scrobbling habang nagpe-play sa background, sigura
   <string name="morphe_music_lyrics_section_service_title">Serbisyo ng liriko</string>
   <string name="morphe_music_lyrics_section_overlay_title">Overlay</string>
   <string name="morphe_music_lyrics_section_sync_title">Synchronisasyon</string>
-  <string name="morphe_music_lyrics_section_about_title">Tungkol</string>
   <string name="morphe_music_lyrics_source_all_disabled">Naka-disable ang lahat ng provider — ang built-in na lyrics at naka-embed na lyrics.</string>
   <string name="morphe_music_lyrics_source_reset_title">I-reset ang pagkakasunud-sunod ng provider?</string>
   <string name="morphe_music_lyrics_source_reset_message">Ibalik ang mga provider sa default na pagkakasunud-sunod ng priyoridad.</string>

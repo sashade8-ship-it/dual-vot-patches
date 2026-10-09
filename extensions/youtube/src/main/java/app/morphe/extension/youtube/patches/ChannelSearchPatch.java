@@ -660,11 +660,8 @@ public final class ChannelSearchPatch {
         row.setClickable(true);
         row.setFocusable(true);
 
-        TypedValue ripple = new TypedValue();
-        if (activity.getTheme().resolveAttribute(
-                android.R.attr.selectableItemBackground, ripple, true)) {
-            row.setBackgroundResource(ripple.resourceId);
-        }
+        row.setBackgroundResource(ThemeUtils.getThemeResourceId(
+                activity, android.R.attr.selectableItemBackground));
 
         return row;
     }
