@@ -1,3 +1,13 @@
+## 1.47.0-dev.13-dualvot.8.5.3 (2026-10-09)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.13](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.13).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.12-dualvot.8.5.3 (2026-10-09)
 
 ### Automated Morphe update
@@ -436,6 +446,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.12...v1.47.0-dev.13) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** Hide new type of video labels ([#3641](https://github.com/MorpheApp/morphe-patches/issues/3641)) ([4a7efd1](https://github.com/MorpheApp/morphe-patches/commit/4a7efd1c124c86cc169eb38fd50c311cdec923c7))
+* **YouTube - Settings:** Disable player flyout menu toggles when "Hide Settings button" is enabled ([e67af2e](https://github.com/MorpheApp/morphe-patches/commit/e67af2e19555cdc119c2d3ae5692313145b14fed))
+* **YouTube:** 'Minimal' miniplayer video area is empty in Arabic (RTL) ([c4f7eb9](https://github.com/MorpheApp/morphe-patches/commit/c4f7eb925e51c6cd91337ae9d4f9c23b7c95d4f2))
+
+### ✨ New Features
+
+* **Settings:** Show screen descriptions in a dialog from the toolbar info button ([a62ecc7](https://github.com/MorpheApp/morphe-patches/commit/a62ecc7dd3551a0b0954256a0797723d661bc32a))
 
 ## [1.47.0-dev.12](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.11...v1.47.0-dev.12) (2026-10-09)
 
