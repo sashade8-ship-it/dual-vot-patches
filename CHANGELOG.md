@@ -1,3 +1,13 @@
+## 1.47.0-dev.6-dualvot.8.5.3 (2026-10-09)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.5-dualvot.8.5.3 (2026-10-08)
 
 ### Automated Morphe update
@@ -406,6 +416,20 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.5...v1.47.0-dev.6) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **Custom branding:** Use the branded notification icon for playback notifications of mounted installs ([90210ad](https://github.com/MorpheApp/morphe-patches/commit/90210ade0028c1c410c021ba350911cbc212efc4))
+* **YouTube - Minimal miniplayer:** Collapse straight into the bar after the keyboard closed under the expanded player ([3e62423](https://github.com/MorpheApp/morphe-patches/commit/3e62423d0c889714cae97da64270b8d7d04586ee))
+* **YouTube - Miniplayer:** Improved check to prevent title/channel name overwriting ([ce2e1c5](https://github.com/MorpheApp/morphe-patches/commit/ce2e1c5484d96a769684cb6062364619b542ef2a))
+* **YouTube - Restore original titles:** Find the description by its body instead of the longest text ([3f72696](https://github.com/MorpheApp/morphe-patches/commit/3f726964b9896c12711f578469bc6e522d84474e))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide tap and hold gradient" setting ([#3586](https://github.com/MorpheApp/morphe-patches/issues/3586)) ([bf43c38](https://github.com/MorpheApp/morphe-patches/commit/bf43c38ab1bcc2c0966f3cbd12411313ce2f2323))
+* **YouTube - Restore original titles:** Added original titles fetching retries ([c1543f0](https://github.com/MorpheApp/morphe-patches/commit/c1543f0b9d3b9982d2c132afbf5609ba34699ff2))
 
 ## [1.47.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.4...v1.47.0-dev.5) (2026-10-08)
 
