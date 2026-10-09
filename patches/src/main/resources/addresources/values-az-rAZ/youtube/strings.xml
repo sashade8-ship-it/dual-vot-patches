@@ -158,10 +158,13 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_snackbar_title">Ani bildiriş zolağını gizlət</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Abunəçi təlimatlarını gizlət</string>
   <string name="morphe_hide_sync_button_title">\'Videoya sinxronlaşdırın\' düyməsin gizlət</string>
+  <string name="morphe_hide_tap_and_hold_gradient_title">Basıb saxladıqda kölgəliyi gizlət</string>
+  <string name="morphe_hide_tap_and_hold_gradient_summary">Sürətləndirmək üçün barmağınızı basıb saxlayaraq sürüşdürərkən oynadıcı idarəetmələrinin kölgəliyini gizlədir</string>
   <string name="morphe_hide_timed_reactions_title">Vaxtlı reaksiyaları gizlət</string>
   <string name="morphe_hide_timed_reactions_summary">İstifadəçilərə şərh bölməsində və canlı söhbətdə emojilərlə qarşılıq verməyə imkan verən xüsusiyyəti gizlədir</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">\'Yardım və geri əlaqə\' seçimin gizlət</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Axtarış nəticələrindəki kimi, üç nöqtə düyməsin istifadə edərkən \'Yardım &amp; geri əlaqə\' menyusunu gizlədir</string>
   <string name="morphe_hide_handle_title">Dəstəyi gizlət</string>
   <string name="morphe_hide_handle_summary">\'Siz\' bölməsində kanal dəstəyinizi gizlədir</string>
   <string name="morphe_hide_video_title_title">Video başlığını gizlət</string>
@@ -420,6 +423,12 @@ AiSlopList.com 'u açmaq və digər platformalar üçün yükləmələri görmə
   <string name="morphe_copy_video_link_with_timestamp_button_title">Vaxt möhürünü birbaşa köçür</string>
   <string name="morphe_copy_video_link_with_timestamp_button_summary">​\"Video linkini köçür\" düyməsinin toxunma və basıb saxlama fəaliyyətlərini əksinə dəyiş</string>
   <!-- interaction.copytext.copyTextPatch -->
+  <string name="morphe_copy_video_title_title">Video başlığını köçür</string>
+  <string name="morphe_copy_video_title_summary">Videonun başlığını köçürmək üçün üzərinə toxunub saxla</string>
+  <string name="morphe_copy_video_title_success">Video başlığı buferə köçürüldü</string>
+  <string name="morphe_copy_comments_title">Şərhləri köçür</string>
+  <string name="morphe_copy_comments_summary">Şərhi köçürmək üçün toxunub saxla</string>
+  <string name="morphe_copy_comments_success">Şərh buferə köçürüldü</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">\"TV-yə daxil ol\" ani pəncərəsini qapat</string>
   <string name="morphe_disable_connect_your_devices_popup_title">\"Cihazlarınızı qoşun\" açılan pəncərəsini qapat</string>
@@ -504,6 +513,9 @@ API açarınız heç vaxt paylaşılmamalıdır. Buna girişi olan hər bir kəs
   <string name="morphe_loop_video_range_toast_on">%1$s - %2$s arası təkrarlama</string>
   <string name="morphe_loop_video_range_invalid_time">Etibarsız vaxt aralığı</string>
   <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Şəkil içində şəkil düyməsini göstər</string>
+  <string name="morphe_pip_button_flyout_title">Şəkil içində şəkil menyusunu göstər</string>
+  <string name="morphe_pip_button_flyout_name">Şəkil İçində Şəkilə Keç</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Hamısını oynat düyməsini göstər</string>
   <string name="morphe_play_all_button_summary">"Kanaldan bütün videoların pleylistini yaratmaq üçün toxun, geri almaq üçün toxun və saxla
@@ -732,7 +744,9 @@ Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir 
   <string name="morphe_auto_captions_style_legacy_entry_1">Avtomatik titrləri göstər</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Avtomatik titrləri gizlət</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
-  <string name="morphe_preferred_caption_language_entry_off">Deaktiv</string>
+  <string name="morphe_preferred_caption_language_title">Üstünlük verilmiş titr dili</string>
+  <string name="morphe_preferred_caption_language_summary">Əvvəlcə təminatçının altyazılarını seçir, sonra avtomatik üstünlük verilən dilə tərcümə edir</string>
+  <string name="morphe_preferred_caption_language_entry_off">Qapalı</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Titr məlumatlarını yerləşdir</string>
   <string name="morphe_set_caption_cookies_summary">"Çatışmayan kukilərə görə avtomatik tərcümə titrlərinin əlçatan olmaya bildiyi anda rəsmi YouTube səhvini düzəldir
@@ -940,6 +954,7 @@ Ayarlar→ Oxunuş (və ya Avtomatik oxunuş) → Növbəti videonu avtomatik ox
   <string name="morphe_disable_playlist_autoplay_title">Pleylist avtomatik oynatmasını qapat</string>
   <string name="morphe_disable_playlist_autoplay_summary">Pleylistlərin növbəti videoya avtomatik keçməsinin qarşısını alır</string>
   <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">\"İzləməyə davam edilsin?\" sorğusunu qapat</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Video bitdikdə tam ekran rejimini sonlandır</string>
   <string name="morphe_exit_fullscreen_entry_1">Qapalı</string>

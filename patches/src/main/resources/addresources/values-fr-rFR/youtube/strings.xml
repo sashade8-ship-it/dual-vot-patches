@@ -158,11 +158,13 @@ Les changements incluent :
   <string name="morphe_hide_snackbar_title">Masquer la barre de notification</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Masquer le règlement de la communauté</string>
   <string name="morphe_hide_sync_button_title">Masquer le bouton \'Synchroniser avec la vidéo\'</string>
+  <string name="morphe_hide_tap_and_hold_gradient_title">Masquer le dégradé en appuyant longuement</string>
+  <string name="morphe_hide_tap_and_hold_gradient_summary">Masque le dégradé des commandes du lecteur lorsque vous faites glisser votre doigt tout en maintenant la pression pour accélérer</string>
   <string name="morphe_hide_timed_reactions_title">Masquer les réactions en temps réel</string>
   <string name="morphe_hide_timed_reactions_summary">Masque la fonctionnalité permettant aux utilisateurs de réagir avec des émojis dans la section des commentaires et le chat en direct</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Masquer le menu \'Aide et commentaires\'</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Masque le menu \'Aide &amp; commentaires\' lors de l\'utilisation du bouton à trois points, par exemple dans les résultats de recherche</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Masque le menu \'Aide et commentaires\' lorsque vous utilisez le bouton à trois points, par exemple dans les résultats de recherche</string>
   <string name="morphe_hide_handle_title">Masquer le pseudo</string>
   <string name="morphe_hide_handle_summary">Masque le pseudo de votre chaîne dans l\'onglet \'Vous\'</string>
   <string name="morphe_hide_video_title_title">Masquer le titre de la vidéo</string>
@@ -511,9 +513,9 @@ Votre clé API ne doit jamais être partagée. Toute personne ayant accès à ce
   <string name="morphe_loop_video_range_toast_on">Lecture en boucle de %1$s à %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Plage horaire invalide</string>
   <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Afficher le bouton Picture-in-Picture</string>
-  <string name="morphe_pip_button_flyout_title">Afficher le menu Picture-in-Picture</string>
-  <string name="morphe_pip_button_flyout_name">Passer en Picture-in-Picture</string>
+  <string name="morphe_pip_button_overlay_title">Afficher un bouton \'Image dans l\'image\'</string>
+  <string name="morphe_pip_button_flyout_title">Afficher un menu \'Image dans l\'image\'</string>
+  <string name="morphe_pip_button_flyout_name">Passer en Image dans l\'image</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Afficher un bouton \'Lire tout\'</string>
   <string name="morphe_play_all_button_summary">"Appuyez pour générer une playlist de toutes les vidéos d'une chaîne, appuyez longuement pour annuler

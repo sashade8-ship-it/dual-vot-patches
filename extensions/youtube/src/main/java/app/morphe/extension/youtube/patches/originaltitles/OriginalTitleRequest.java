@@ -24,6 +24,7 @@ import java.util.concurrent.CompletableFuture;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.patches.LithoRelayoutPatch;
 import app.morphe.extension.shared.requests.Requester;
 import app.morphe.extension.youtube.patches.dearrow.DeArrowBrandingRequest;
 import app.morphe.extension.youtube.patches.dearrow.DeArrowPatch;
@@ -48,9 +49,15 @@ final class OriginalTitleRequest {
 
     /**
      * Time before a title that failed to fetch because of network errors is fetched again.
-     * The translated title is shown meanwhile, so a failing network does not keep loading.
      */
     private static final long FAILED_FETCH_RETRY_MILLISECONDS = 30_000;
+
+    /**
+     * Maximum number of times an original title that failed to fetch because of network errors or temporary
+     * errors of the server is fetched again while the title is shown as loading. After that, the translated
+     * title is shown, so a failing network does not keep loading, and the title is fetched again when loaded again.
+     */
+    private static final int MAX_FAILED_FETCH_RETRIES = 3;
 
     /**
      * Titles that can replace the title of a video.
@@ -109,6 +116,13 @@ final class OriginalTitleRequest {
     private static final Map<String, Long> retryTimes =
             Collections.synchronizedMap(Utils.createSizeRestrictedMap(1000));
 
+    /**
+     * Video id -> number of times the original title failed to fetch in a row
+     * because of network errors or temporary errors of the server.
+     */
+    private static final Map<String, Integer> failedFetchCounts =
+            Collections.synchronizedMap(Utils.createSizeRestrictedMap(1000));
+
     static CompletableFuture<Titles> fetch(String videoId) {
         synchronized (cache) {
             CompletableFuture<Titles> future = cache.get(videoId);
@@ -146,12 +160,39 @@ final class OriginalTitleRequest {
     }
 
     /**
-     * @return If the title is not yet fetched. Titles that failed to fetch
-     *         are not pending until they are fetched again.
+     * @return If the title is not yet fetched, or the original title failed to fetch and is fetched again
+     *         until the maximum number of retries, so the title is shown as loading meanwhile.
      */
     static boolean isPending(String videoId) {
         CompletableFuture<Titles> future = cache.get(videoId);
-        return future == null || !future.isDone();
+        if (future == null || !future.isDone()) {
+            return true;
+        }
+        Integer failures = failedFetchCounts.get(videoId);
+        Long retryTime = retryTimes.get(videoId);
+        return failures != null && failures <= MAX_FAILED_FETCH_RETRIES
+                && retryTime != null && System.currentTimeMillis() < retryTime;
+    }
+
+    /**
+     * @return Time until the title that failed to fetch can be fetched again, or 0 if it can be fetched.
+     */
+    static long retryRemainingMilliseconds(String videoId) {
+        Long retryTime = retryTimes.get(videoId);
+        return retryTime == null ? 0 : Math.max(0, retryTime - System.currentTimeMillis());
+    }
+
+    /**
+     * The original title is fetched again after the requests to the server are no longer paused.
+     * The loading texts are laid out again then, which fetches the title again only for the texts
+     * that are still loaded, such as the elements that are not scrolled away.
+     */
+    private static void originalTitleFailed(String videoId) {
+        final long delay = Math.max(FAILED_FETCH_RETRY_MILLISECONDS, RequestBackoff.pauseRemainingMilliseconds());
+        retryTimes.put(videoId, System.currentTimeMillis() + delay);
+        if (failedFetchCounts.merge(videoId, 1, Integer::sum) <= MAX_FAILED_FETCH_RETRIES) {
+            Utils.runOnMainThreadDelayed(LithoRelayoutPatch::relayoutOutdatedTexts, delay);
+        }
     }
 
     private static Titles fetchTitles(String videoId) {
@@ -197,7 +238,7 @@ final class OriginalTitleRequest {
             return fetchPlayerTitle(videoId);
         } catch (IOException ex) {
             Logger.printInfo(() -> "Could not fetch original title of: " + videoId, ex);
-            retryTimes.put(videoId, System.currentTimeMillis() + FAILED_FETCH_RETRY_MILLISECONDS);
+            originalTitleFailed(videoId);
         } catch (Exception ex) {
             Logger.printException(() -> "fetchOriginalTitle failure", ex);
         }
@@ -210,6 +251,10 @@ final class OriginalTitleRequest {
      */
     @Nullable
     private static String fetchPlayerTitle(String videoId) throws IOException, JSONException {
+        if (RequestBackoff.isPaused()) {
+            originalTitleFailed(videoId);
+            return null;
+        }
         byte[] requestBody = ChannelIdRoutes.createBody(videoId);
         HttpURLConnection connection = ChannelIdRoutes.getConnection(ChannelIdRoutes.GET_TITLE);
         connection.setFixedLengthStreamingMode(requestBody.length);
@@ -219,6 +264,12 @@ final class OriginalTitleRequest {
 
         final int responseCode = connection.getResponseCode();
         if (responseCode != Requester.HTTP_STATUS_CODE_SUCCESS) {
+            if (RequestBackoff.isTemporaryError(responseCode)) {
+                // Fetched again later, as the server limits the requests or is unavailable.
+                RequestBackoff.onTemporaryError(connection, responseCode);
+                originalTitleFailed(videoId);
+                return null;
+            }
             Logger.printDebug(() -> "Player title request failed for: " + videoId + " code: " + responseCode);
             return null;
         }
@@ -233,6 +284,7 @@ final class OriginalTitleRequest {
     }
 
     private static String originalTitleFetched(String videoId, String title, String channelName) {
+        failedFetchCounts.remove(videoId);
         originalVideos.put(videoId, new OriginalVideo(title, channelName.trim()));
         TitleLayouts.originalTitleFetched(videoId, title);
         return title;

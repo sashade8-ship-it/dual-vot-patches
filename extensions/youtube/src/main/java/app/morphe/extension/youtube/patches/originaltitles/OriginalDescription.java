@@ -43,6 +43,11 @@ final class OriginalDescription {
     private static final int RANGE_START_FIELD = 1;
     private static final int RANGE_LENGTH_FIELD = 2;
 
+    /**
+     * State id of the description body of the description element.
+     */
+    private static final String BODY_STATE_ID = "structured-description-body-state-id";
+
     private OriginalDescription() {
     }
 
@@ -68,11 +73,10 @@ final class OriginalDescription {
      * @return If the description was replaced.
      */
     static boolean restore(List<ProtoNode> root, String originalDescription) {
-        // The segments are listed by the message whose segments include the most text.
-        List<ProtoNode> segments = new ArrayList<>();
-        findSegments(root, segments, new int[]{0});
-        if (segments.isEmpty()) {
-            Logger.printDebug(() -> "Description segments not found");
+        // The segments are listed by the description body, which is marked with its state id.
+        List<ProtoNode> segments = findBodySegments(root);
+        if (segments == null) {
+            Logger.printDebug(() -> "Description body not found");
             return false;
         }
         List<String> originalTexts = splitAtAttachments(segments, originalDescription);
@@ -119,27 +123,38 @@ final class OriginalDescription {
     }
 
     /**
-     * Finds the segments of the description, the fields of the message whose segments include the most text.
+     * The description body is the message whose state id is {@link #BODY_STATE_ID}, and its segments
+     * are its fields. Other messages of the element can include the state id, such as the state
+     * of the element, but do not have segments with a text.
+     *
+     * @return The segments of the description body, or null if the body is not found.
      */
-    private static void findSegments(List<ProtoNode> message, List<ProtoNode> segments, int[] segmentsTextLength) {
-        List<ProtoNode> candidates = new ArrayList<>();
-        int textLength = 0;
+    @Nullable
+    private static List<ProtoNode> findBodySegments(List<ProtoNode> message) {
+        boolean isBody = false;
+        List<ProtoNode> segments = new ArrayList<>();
+        boolean hasText = false;
         for (ProtoNode field : message) {
-            List<ProtoNode> children = field.children;
-            if (children == null) {
-                continue;
+            if (field.isText() && BODY_STATE_ID.equals(field.getText())) {
+                isBody = true;
+            } else if (field.getFieldNumber() == SEGMENT_FIELD && field.children != null) {
+                segments.add(field);
+                hasText |= segmentTextLength(field.children) > 0;
             }
-            if (field.getFieldNumber() == SEGMENT_FIELD) {
-                candidates.add(field);
-                textLength += segmentTextLength(children);
+        }
+        if (isBody && hasText) {
+            return segments;
+        }
+
+        for (ProtoNode field : message) {
+            if (field.children != null) {
+                List<ProtoNode> bodySegments = findBodySegments(field.children);
+                if (bodySegments != null) {
+                    return bodySegments;
+                }
             }
-            findSegments(children, segments, segmentsTextLength);
         }
-        if (textLength > segmentsTextLength[0]) {
-            segments.clear();
-            segments.addAll(candidates);
-            segmentsTextLength[0] = textLength;
-        }
+        return null;
     }
 
     /**

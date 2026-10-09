@@ -40,12 +40,11 @@ import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
-import app.morphe.patches.youtube.shared.hookVideoIntent
-import app.morphe.patches.youtube.shared.hookVideoStarted
 import app.morphe.patches.youtube.shared.openVideoIntentPatch
 import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.patches.youtube.video.format.hookAdaptiveFormat
 import app.morphe.patches.youtube.video.format.videoFormatPatch
+import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.cloneParameters
 import app.morphe.util.findFreeRegister
@@ -85,7 +84,8 @@ val miniplayerPatch = bytecodePatch(
         versionCheckPatch,
         playerOverlayButtonsHookPatch,
         videoFormatPatch,
-        openVideoIntentPatch
+        openVideoIntentPatch,
+        videoInformationPatch,
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -681,13 +681,6 @@ val miniplayerPatch = bytecodePatch(
         )
 
         // endregion
-
-        // Region Update video details
-
-        hookVideoIntent(MINIMAL_EXTENSION_CLASS, detectVideo = true, detectShorts = false)
-        hookVideoStarted("$MINIMAL_EXTENSION_CLASS->updateVideoDetails()V")
-
-        // end region
 
         hookAdaptiveFormat("$MINIMAL_EXTENSION_CLASS->setVideoAspectRatio")
     }

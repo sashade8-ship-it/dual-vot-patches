@@ -183,6 +183,7 @@ Yüklənilmiş treklər burada görünür"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
   <string name="morphe_music_hide_audio_video_toggle_title">Səs / Video keçiricisini gizlət</string>
   <string name="morphe_music_hide_podcast_episode_download_button_title">Endirin düyməsini gizlət</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">Podkastda göstərilən Yükləmə düyməsini gizlədir</string>
   <string name="morphe_music_hide_explore_shelf_title">Kəşf et bölməsini gizlət</string>
   <string name="morphe_music_hide_filter_bar_title">Filtr cərgəsini gizlət</string>
   <string name="morphe_music_hide_grid_shelves_title">Şəbəkə bölmələrini gizlət</string>
@@ -554,7 +555,11 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_lyrics_credit_line_regex_summary">Mahnı sözləri yanlışlıqla aşağıya filtrlənərsə, bunu tənzimləyin və ya təmizləyin. Vergüllə ayrılmış nişanlayıcılar: tərkibində nişanlayıcı ardınca iki nöqtə olan sətirlər aşağıda müəllif məlumatı kimi göstərilir. Qapatmaq üçün boş qoy</string>
   <string name="morphe_music_lyrics_text_size_title">Mətn ölçüsü</string>
   <string name="morphe_music_lyrics_text_size_summary">Mahnı sözlərinin mətn ölçüsü</string>
+  <string name="morphe_music_lyrics_offset_ms_title">Ümumi vaxt sürüşməsi</string>
   <string name="morphe_music_lyrics_offset_ms_summary">Sinxronlaşdırılmış mahnı sözləri səsləndirməni izləyir. Uyğunsuzluq yarandıqda, zamanlama sürüşməsini tənzimlə. Sinxronlaşdırılmış sözləri irəli və ya geri çək. Mahnı sözləri mahnını qabaqlayırsa, müsbət dəyəri istifadə et</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Mahnı sözlərinin sürüşməsi üçün SponsorBlock bölümlərin istifadə et</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">SponsorBlock-un ötürdüyü bölümlər olmadan uyğunlaşdır və mahnı sözlərini buraxılmış səsə sürüşdür. \'Qapalı\' seçimi SponsorBlock-u tamamilə nəzərə almır</string>
+  <string name="morphe_music_lyrics_sb_no_video">Bu trekin təqdim edilməsi üçün video id yoxdur</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Mənbə: %s</string>
   <string name="morphe_music_lyrics_translated_by_google">Google tərəfindən tərcümə edilib</string>
@@ -575,6 +580,7 @@ Fon səsləndirmə zamanı analiz sinxronlaşdırılmasına əmin olmaq üçün 
   <string name="morphe_music_lyrics_refreshing">Yenilənir</string>
   <string name="morphe_music_lyrics_refreshed">Yeniləndi</string>
   <string name="morphe_music_lyrics_about_summary">"Mahnı sözləri başlığa və ifaçıya görə uyğunlaşır; qeyri-adi şərhi məlumatlar heç nə tapmaya və ya yanlış versiyanı tapa bilər. Versiyaları dəyişmək üçün yenilə düyməsin istifadə et. * işarəsi olan provayderlər token tələb edir. İşlək bütün provayderlər həmişə sizin təyin etdiyiniz ardıcıllıqla sorğulanmır, öz sürətlərinə görə cavab verirlər"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">Yalnız istifadə etdiyiniz təminatçıları aktivləşdirin və ya standartı saxlayın — fasiləsiz sorğular kiçik icma mahnı sözləri saytlarını həddindən artıq yükləyə bilər</string>
   <string name="morphe_music_lyrics_hide_info_title">Müəllif sətrini gizlət</string>
   <string name="morphe_music_lyrics_hide_info_summary">Mahnı sözlərinin altında göstərilən müəllif sətrini gizlət</string>
   <string name="morphe_music_lyrics_swap_trans_roma_title">Tərcümə və transkripsiyanın yerini dəyiş</string>

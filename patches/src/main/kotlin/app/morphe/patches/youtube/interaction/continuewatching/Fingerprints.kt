@@ -37,7 +37,7 @@ internal object AutoplayInactivityLimitFingerprint : Fingerprint(
             opcode = Opcode.INVOKE_VIRTUAL,
             definingClass = "Ljava/util/concurrent/TimeUnit;",
             name = "toMillis",
-            location = MatchAfterImmediately()
+            location = MatchAfterWithin(5)
         ),
         opcode(Opcode.CMP_LONG, location = MatchAfterWithin(2)),
         anyInstruction(

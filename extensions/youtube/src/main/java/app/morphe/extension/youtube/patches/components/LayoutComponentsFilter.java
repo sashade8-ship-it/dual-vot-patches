@@ -1447,4 +1447,32 @@ public final class LayoutComponentsFilter extends Filter {
     public static void hideSyncButton(View view) {
         Utils.hideViewBy0dpUnderCondition(Settings.HIDE_SYNC_BUTTON, view);
     }
+
+    /**
+     * Touch and playback speed callbacks all run on the main thread.
+     */
+    private static boolean tapAndHoldActive;
+
+    /**
+     * Injection point.
+     */
+    public static void onTapAndHoldStart() {
+        tapAndHoldActive = true;
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void onTapAndHoldEnd() {
+        tapAndHoldActive = false;
+    }
+
+    /**
+     * Injection point.
+     *
+     * @return If the player controls should not be shown by a vertical drag.
+     */
+    public static boolean hideTapAndHoldGradient() {
+        return tapAndHoldActive && Settings.HIDE_TAP_AND_HOLD_GRADIENT.get();
+    }
 }

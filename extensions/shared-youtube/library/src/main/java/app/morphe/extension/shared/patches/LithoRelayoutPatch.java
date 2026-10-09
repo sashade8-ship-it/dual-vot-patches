@@ -18,6 +18,7 @@ import com.facebook.litho.TextContent;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -88,6 +89,13 @@ public final class LithoRelayoutPatch {
 
     private static volatile boolean relayoutScheduled;
 
+    /**
+     * Called on the main thread when a Litho view is measured, such as when a list item is scrolled
+     * on screen, or null if none. Not called while the app is idle, so it does not keep the app busy.
+     */
+    @Nullable
+    private static volatile Runnable lithoViewMeasuredListener;
+
     private static volatile boolean remountListViewsRequested;
 
     private LithoRelayoutPatch() {
@@ -112,6 +120,29 @@ public final class LithoRelayoutPatch {
         scheduleRelayout();
     }
 
+    /**
+     * Must be called on the main thread.
+     *
+     * @return The {@link RelayoutSpan} of the class of the shown Litho texts,
+     *         such as the texts that are on screen and not scrolled off-screen.
+     */
+    public static <T extends RelayoutSpan> Set<T> findShownSpans(Class<T> spanClass) {
+        Set<T> shownSpans = new HashSet<>();
+        for (Drawable textDrawable : new ArrayList<>(relayoutTextDrawables)) {
+            // The callback is the host, or null if the text was unmounted.
+            if (!(textDrawable.getCallback() instanceof View host) || !host.isShown()
+                    || !(textDrawable instanceof TextContent textContent)) {
+                continue;
+            }
+            for (CharSequence text : textContent.getTextItems()) {
+                if (text instanceof Spanned spanned) {
+                    Collections.addAll(shownSpans, spanned.getSpans(0, spanned.length(), spanClass));
+                }
+            }
+        }
+        return shownSpans;
+    }
+
     private static void scheduleRelayout() {
         if (!relayoutScheduled) {
             relayoutScheduled = true;
@@ -127,6 +158,18 @@ public final class LithoRelayoutPatch {
      */
     public static void onLithoViewMeasured(View lithoView) {
         lithoViews.add(lithoView);
+        Runnable listener = lithoViewMeasuredListener;
+        if (listener != null) {
+            listener.run();
+        }
+    }
+
+    /**
+     * Sets the listener called on the main thread when a Litho view is measured, or null to remove it.
+     * The listener must be fast, as Litho views are measured while scrolling.
+     */
+    public static void setLithoViewMeasuredListener(@Nullable Runnable listener) {
+        lithoViewMeasuredListener = listener;
     }
 
     /**

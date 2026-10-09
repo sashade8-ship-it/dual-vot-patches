@@ -158,11 +158,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_snackbar_title">Приховати спливаюче повідомлення</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">Приховати правила спільноти підписок</string>
   <string name="morphe_hide_sync_button_title">Приховати кнопку \"Синхронізувати з відео\"</string>
+  <string name="morphe_hide_tap_and_hold_gradient_title">Приховати градієнт при утриманні</string>
+  <string name="morphe_hide_tap_and_hold_gradient_summary">Приховує градієнт елементів керування плеєром, коли ви ведете пальцем, утримуючи для прискорення</string>
   <string name="morphe_hide_timed_reactions_title">Приховати тимчасові реакції</string>
   <string name="morphe_hide_timed_reactions_summary">Приховує функцію реакцій емодзі в секції коментарів і чаті трансляцій</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_help_feedback_menu_title">Приховати меню \"Довідка й відгуки\"</string>
-  <string name="morphe_hide_help_feedback_menu_summary">Приховує меню «Довідка &amp; зворотний зв\'язок» при використанні кнопки з трьома крапками, наприклад, у результатах пошуку</string>
+  <string name="morphe_hide_help_feedback_menu_summary">Приховує меню \"Довідка й відгук\" при використанні кнопки з трьома крапками, наприклад у результатах пошуку</string>
   <string name="morphe_hide_handle_title">Приховати ідентифікатор</string>
   <string name="morphe_hide_handle_summary">Приховує ідентифікатор вашого каналу на вкладці \"Ви\"</string>
   <string name="morphe_hide_video_title_title">Приховати назву відео</string>
@@ -511,9 +513,9 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_range_toast_on">Повтор %1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">Недійсний діапазон часу</string>
   <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">Показати кнопку «Картинка в картинці»</string>
-  <string name="morphe_pip_button_flyout_title">Показати меню «Картинка в картинці»</string>
-  <string name="morphe_pip_button_flyout_name">Перемкнутися на «Картинку в картинці»</string>
+  <string name="morphe_pip_button_overlay_title">Показувати кнопку «Картинка в картинці»</string>
+  <string name="morphe_pip_button_flyout_title">Показувати меню «Картинка в картинці»</string>
+  <string name="morphe_pip_button_flyout_name">Перейти в режим «Картинка в картинці»</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">Показати кнопку \"Відтворити все\"</string>
   <string name="morphe_play_all_button_summary">"Натисніть, щоб створити список відтворення з усіх відео каналу, утримуйте, щоб скасувати
@@ -743,7 +745,7 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_legacy_entry_2">Приховати автоматичні субтитри</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Бажана мова субтитрів</string>
-  <string name="morphe_preferred_caption_language_summary">Спочатку вибирає субтитри постачальника, а потім автоматично перекладає на бажану мову</string>
+  <string name="morphe_preferred_caption_language_summary">Спочатку вибирає субтитри постачальника, потім автоматично перекладає їх на бажану мову</string>
   <string name="morphe_preferred_caption_language_entry_off">Вимк.</string>
   <!-- layout.captions.captionCookiesPatch -->
   <string name="morphe_set_caption_cookies_title">Встановити файли cookie субтитрів</string>
@@ -951,7 +953,7 @@ Second \"item\" text"</string>
   <string name="morphe_disable_playlist_autoplay_title">Вимкнути автовідтворення списку відтворення</string>
   <string name="morphe_disable_playlist_autoplay_summary">Запобігає автоматичному переходу списку відтворення до наступного відео</string>
   <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
-  <string name="morphe_disable_continue_watching_prompt_title">Вимкнути запит «Продовжити перегляд»</string>
+  <string name="morphe_disable_continue_watching_prompt_title">Вимкнути запит \"Продовжити перегляд?\"</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">Вийти з повноекранного режиму в кінці відео</string>
   <string name="morphe_exit_fullscreen_entry_1">Вимкнено</string>

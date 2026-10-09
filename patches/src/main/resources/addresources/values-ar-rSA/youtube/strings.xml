@@ -158,6 +158,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_snackbar_title">إخفاء شريط التنبيهات السريعة</string>
   <string name="morphe_hide_subscribers_community_guidelines_title">إخفاء إرشادات المشتركين</string>
   <string name="morphe_hide_sync_button_title">إخفاء زر \'مزامنة مع الفيديو\'</string>
+  <string name="morphe_hide_tap_and_hold_gradient_title">إخفاء التدرج عند الضغط مع الاستمرار</string>
+  <string name="morphe_hide_tap_and_hold_gradient_summary">يخفي تدرج عناصر تحكم المشغل عند تحريك إصبعك أثناء الضغط للتسريع</string>
   <string name="morphe_hide_timed_reactions_title">إخفاء ردود الفعل المؤقتة</string>
   <string name="morphe_hide_timed_reactions_summary">يخفي الميزة التي تسمح للمستخدمين بالتفاعل باستخدام الرموز التعبيرية في قسم التعليقات والمحادثة المباشرة</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
@@ -514,9 +516,9 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_loop_video_range_toast_on">تكرار ‎%1$s - %2$s</string>
   <string name="morphe_loop_video_range_invalid_time">الوقت المحدد غير صحيح</string>
   <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
-  <string name="morphe_pip_button_overlay_title">إظهار زر الصورة داخل الصورة</string>
-  <string name="morphe_pip_button_flyout_title">إظهار قائمة الصورة داخل الصورة</string>
-  <string name="morphe_pip_button_flyout_name">التبديل إلى الصورة داخل الصورة</string>
+  <string name="morphe_pip_button_overlay_title">عرض زر صورة داخل صورة</string>
+  <string name="morphe_pip_button_flyout_title">عرض قائمة صورة داخل صورة</string>
+  <string name="morphe_pip_button_flyout_name">التبديل إلى صورة داخل صورة</string>
   <!-- interaction.playall.playAllButtonPatch -->
   <string name="morphe_play_all_button_title">عرض زر تشغيل الكل</string>
   <string name="morphe_play_all_button_summary">"انقر لإنشاء قائمة تشغيل لجميع فيديوهات القناة
@@ -957,7 +959,7 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_disable_playlist_autoplay_title">تعطيل تشغيل قوائم التشغيل تلقائيًا</string>
   <string name="morphe_disable_playlist_autoplay_summary">يمنع قوائم التشغيل من الانتقال التلقائي إلى الفيديو التالي</string>
   <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
-  <string name="morphe_disable_continue_watching_prompt_title">تعطيل المطالبة \'متابعة المشاهدة؟\' التي تظهر</string>
+  <string name="morphe_disable_continue_watching_prompt_title">تعطيل الرسالة المنبثقة \'هل ترغب في متابعة المشاهدة؟\'</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
   <string name="morphe_exit_fullscreen_title">الخروج من وضع ملء الشاشة عند انتهاء الفيديو</string>
   <string name="morphe_exit_fullscreen_entry_1">معطل</string>

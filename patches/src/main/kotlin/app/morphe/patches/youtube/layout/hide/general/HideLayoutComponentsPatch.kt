@@ -10,6 +10,7 @@
 
 package app.morphe.patches.youtube.layout.hide.general
 
+import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -61,6 +62,7 @@ import app.morphe.patches.youtube.shared.ModernRelateVideoOverlayFingerprint
 import app.morphe.patches.youtube.shared.RelateVideoOverlayLayoutParamFingerprint
 import app.morphe.patches.youtube.shared.hookVideoIntent
 import app.morphe.patches.youtube.shared.openVideoIntentPatch
+import app.morphe.patches.youtube.video.speed.custom.TapAndHoldSpeedFingerprint
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.findFreeRegister
 import app.morphe.util.findInstructionIndicesReversedOrThrow
@@ -206,6 +208,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
             SwitchPreference("morphe_hide_snackbar"),
             SwitchPreference("morphe_hide_subscribers_community_guidelines"),
             SwitchPreference("morphe_hide_sync_button"),
+            SwitchPreference("morphe_hide_tap_and_hold_gradient", summary = true),
             SwitchPreference("morphe_hide_timed_reactions", summary = true),
             SwitchPreference("morphe_hide_video_title", summary = true),
             SwitchPreference("morphe_sanitize_video_subtitle", summary = true)
@@ -1216,6 +1219,50 @@ val hideLayoutComponentsPatch = bytecodePatch(
                 "hideSyncButton"
             )
         }
+
+        // endregion
+
+        // region hide tap and hold gradient
+
+        // Track when tap and hold starts. Other patches change this method too,
+        // so match it again before and after changing it.
+        TapAndHoldSpeedFingerprint.let {
+            it.clearMatch()
+            // The class that overrides the speed, and restores it when tap and hold ends.
+            var speedControllerType = it.instructionMatches[6].getFieldAccessed().type
+
+            // Right after the "already speeding up" check.
+            it.method.addInstructionsAtControlFlowLabel(
+                it.instructionMatches[5].index + 1,
+                "invoke-static { }, $LAYOUT_COMPONENTS_FILTER->onTapAndHoldStart()V"
+            )
+
+            // Track when tap and hold ends.
+            Fingerprint(
+                definingClass = speedControllerType,
+                accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+                returnType = "V",
+                parameters = listOf()
+            ).method.addInstruction(
+                0,
+                "invoke-static { }, $LAYOUT_COMPONENTS_FILTER->onTapAndHoldEnd()V"
+            )
+        }
+
+        // Sliding up in fullscreen drags the "More videos" panel, which also shows the
+        // player controls. While holding, the controls stay hidden but their top and
+        // bottom gradients still fade in.
+        ShowControlsOnRelatedPanelDragFingerprint.method.addInstructionsWithLabels(
+            0,
+            """
+                invoke-static { }, $LAYOUT_COMPONENTS_FILTER->hideTapAndHoldGradient()Z
+                move-result v0
+                if-eqz v0, :show
+                return-void
+                :show
+                nop
+            """
+        )
 
         // endregion
 

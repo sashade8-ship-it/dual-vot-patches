@@ -30,6 +30,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.IdentityHashMap;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
@@ -197,6 +198,20 @@ public final class RestoreOriginalTitlesPatch {
     }
 
     /**
+     * Marks the Litho loading texts found as the title of a video whose other titles failed to fetch
+     * because of network errors or temporary errors of the server, which are shown as loading until
+     * the title is verified or the titles are no longer fetched again.
+     * The texts are laid out again when the titles are fetched again, when they are no longer fetched again,
+     * and when the text is verified meanwhile, such as by another element of the video.
+     */
+    private record RetryTitleSpan(CandidateRetry retry) implements LithoRelayoutPatch.RelayoutSpan {
+        @Override
+        public boolean isOutdated() {
+            return retry.started || retry.done.isDone() || retry.isVerified();
+        }
+    }
+
+    /**
      * Different videos can have the same title, such as a video and its reupload, and the Litho
      * texts do not include the video id. So the titles that are not yet fetched when the elements
      * are parsed are marked with the video id, and the text hook removes the marker.
@@ -289,6 +304,106 @@ public final class RestoreOriginalTitlesPatch {
      * are fetched again. The text is shown meanwhile, so a failing network does not keep loading.
      */
     private static final long CANDIDATE_RETRY_MILLISECONDS = 30_000;
+
+    /**
+     * Time after the time when an original title that failed to fetch can be fetched again,
+     * before a view that shows it as loading fetches it again.
+     */
+    private static final long VIEW_TITLE_RETRY_MARGIN_MILLISECONDS = 100;
+
+    /**
+     * Maximum number of times the other titles of a text that failed to fetch are fetched again
+     * without waiting for the element to be loaded again, such as by scrolling.
+     */
+    private static final int MAX_CANDIDATE_RETRIES = 3;
+
+    /**
+     * Time after a Litho view is measured, such as while scrolling, before the texts whose other titles
+     * are fetched again when shown are checked, so the views measured at the same time are checked once.
+     */
+    private static final long HIDDEN_RETRY_CHECK_DELAY_MILLISECONDS = 300;
+
+    /**
+     * Maximum number of texts whose other titles are waiting to be fetched again, or to be shown again,
+     * such as the elements scrolled while the requests are paused. The oldest are no longer fetched again.
+     */
+    private static final int MAX_PENDING_RETRIES = 100;
+
+    /**
+     * Fetching again of the other titles of a text found as the title, after they failed to fetch.
+     */
+    private static final class CandidateRetry {
+        final String videoId;
+        final Set<String> texts;
+        final String candidate;
+        final int retries;
+        final Map<String, CompletableFuture<String>> requests;
+        final CompletableFuture<String> failedRequest;
+
+        /**
+         * Done when the titles fetched again are fetched, or when they are no longer fetched again.
+         */
+        final CompletableFuture<Void> done = new CompletableFuture<>();
+
+        /**
+         * If the titles are being fetched again.
+         */
+        volatile boolean started;
+
+        /**
+         * Time when the titles can be fetched again. Accessed only on the main thread.
+         */
+        long retryTime;
+
+        CandidateRetry(String videoId, Set<String> texts, String candidate, int retries,
+                       Map<String, CompletableFuture<String>> requests, CompletableFuture<String> failedRequest) {
+            this.videoId = videoId;
+            this.texts = texts;
+            this.candidate = candidate;
+            this.retries = retries;
+            this.requests = requests;
+            this.failedRequest = failedRequest;
+        }
+
+        /**
+         * @return If the text is verified to be the title meanwhile, such as by another element of the video,
+         *         so the titles are no longer fetched again.
+         */
+        boolean isVerified() {
+            List<String> titles = verifiedTitles(videoId);
+            return titles != null && findTitle(videoId, Collections.singleton(candidate), titles) != null;
+        }
+    }
+
+    /**
+     * Video id and language of the app -> last fetching again of the other titles of a text of the video.
+     */
+    private static final Map<String, CandidateRetry> candidateRetries =
+            Collections.synchronizedMap(Utils.createSizeRestrictedMap(1000));
+
+    /**
+     * Texts whose other titles are waiting to be fetched again, in the order they failed to fetch.
+     * Accessed only on the main thread.
+     */
+    private static final List<CandidateRetry> pendingRetries = new ArrayList<>();
+
+    /**
+     * Texts whose other titles were not fetched again as they were not shown, such as the elements
+     * scrolled off-screen. They are fetched again when shown again, which is checked only when Litho views
+     * are measured, as Litho does not load again the texts of the elements scrolled on screen again
+     * from the cache of the list. Nothing is done meanwhile. Accessed only on the main thread.
+     */
+    private static final List<CandidateRetry> hiddenRetries = new ArrayList<>();
+
+    /**
+     * Time of the next check of the pending retries, or 0 if none. Accessed only on the main thread.
+     */
+    private static long retryCheckTime;
+
+    /**
+     * If the hidden retries are checked. Accessed only on the main thread.
+     */
+    private static boolean hiddenRetryCheckScheduled;
 
     /**
      * Length of the longest translated title, so longer texts are ignored without copying them.
@@ -560,6 +675,12 @@ public final class RestoreOriginalTitlesPatch {
                     return spannedText(translatedText, LOADING_TITLE.toString(), new PendingTitleSpan(pendingVideoId));
                 }
                 videoId = findVerifiedVideoId(videoIds, trimmedText);
+                if (videoId == null) {
+                    CandidateRetry retry = findCandidateRetry(videoIds);
+                    if (retry != null) {
+                        return spannedText(translatedText, LOADING_TITLE.toString(), new RetryTitleSpan(retry));
+                    }
+                }
             }
             if (videoId == null && length >= MIN_TITLE_LENGTH && length <= maxTranslatedTitleLength.get()) {
                 // Texts without the marker can be any text, such as a comment or a user name.
@@ -750,25 +871,40 @@ public final class RestoreOriginalTitlesPatch {
                 view.setText(LOADING_TITLE.toString());
             }
 
-            // The title is null if the video has no available title, or if it failed to fetch.
-            WeakReference<TextView> viewRef = new WeakReference<>(view);
-            OriginalTitleRequest.fetch(videoId).thenAccept(titles -> Utils.runOnMainThreadNowOrLater(() -> {
-                TextView titleView = viewRef.get();
-                if (titleView == null || !titleViewVideoIds.remove(titleView, videoId)) {
-                    return;
-                }
-                String originalTitle = titles.replacement(useDeArrow);
-                CharSequence title = originalTitle == null
-                        ? translatedTitle
-                        : titleText(translatedTitle, originalTitle, null);
-                // Setting the same text again would notify the text listeners again.
-                if (!TextUtils.equals(title, titleView.getText())) {
-                    titleView.setText(title);
-                }
-            }));
+            setViewTitleWhenFetched(new WeakReference<>(view), videoId, useDeArrow, translatedTitle);
         } catch (Exception ex) {
             Logger.printException(() -> "restoreOriginalTitle failure", ex);
         }
+    }
+
+    /**
+     * Sets the title of the view when it's fetched. The view shows the loading title meanwhile,
+     * also while the original title that failed to fetch is fetched again, until the maximum number of retries.
+     * The title is null if the video has no available title, or if it failed to fetch.
+     */
+    private static void setViewTitleWhenFetched(WeakReference<TextView> viewRef, String videoId,
+                                                boolean useDeArrow, CharSequence translatedTitle) {
+        OriginalTitleRequest.fetch(videoId).thenAccept(titles -> Utils.runOnMainThreadNowOrLater(() -> {
+            TextView titleView = viewRef.get();
+            if (titleView == null || !videoId.equals(titleViewVideoIds.get(titleView))) {
+                return;
+            }
+            String originalTitle = titles.replacement(useDeArrow);
+            if (originalTitle == null && titleView.isShown() && OriginalTitleRequest.isPending(videoId)) {
+                Utils.runOnMainThreadDelayed(
+                        () -> setViewTitleWhenFetched(viewRef, videoId, useDeArrow, translatedTitle),
+                        OriginalTitleRequest.retryRemainingMilliseconds(videoId) + VIEW_TITLE_RETRY_MARGIN_MILLISECONDS);
+                return;
+            }
+            titleViewVideoIds.remove(titleView, videoId);
+            CharSequence title = originalTitle == null
+                    ? translatedTitle
+                    : titleText(translatedTitle, originalTitle, null);
+            // Setting the same text again would notify the text listeners again.
+            if (!TextUtils.equals(title, titleView.getText())) {
+                titleView.setText(title);
+            }
+        }));
     }
 
     /**
@@ -1566,6 +1702,11 @@ public final class RestoreOriginalTitlesPatch {
             return;
         }
 
+        if (RequestBackoff.isPaused()) {
+            // Not fetched while paused, so the elements loaded meanwhile do not lay out the texts again,
+            // such as when scrolling a feed. The texts found as the title are fetched again later.
+            return;
+        }
         CompletableFuture<String> request = LocalizedTitleRequest.fetch(videoId);
         if (!localizedTitleRequests.add(request)) {
             return;
@@ -1592,6 +1733,14 @@ public final class RestoreOriginalTitlesPatch {
      * @return If the other titles of the text are being fetched.
      */
     private static boolean requestCandidateTitle(String videoId, Set<String> texts, String candidate) {
+        return requestCandidateTitle(videoId, texts, candidate, 0);
+    }
+
+    /**
+     * @param retries Number of times the titles were fetched again after failing to fetch.
+     */
+    private static boolean requestCandidateTitle(String videoId, Set<String> texts, String candidate,
+                                                 int retries) {
         Map<String, CompletableFuture<String>> requests = candidateTitleRequests.computeIfAbsent(
                 candidateKey(videoId),
                 key -> Collections.synchronizedMap(
@@ -1659,8 +1808,7 @@ public final class RestoreOriginalTitlesPatch {
             Throwable cause = ex instanceof CompletionException && ex.getCause() != null ? ex.getCause() : ex;
             if (cause instanceof IOException ioException) {
                 Logger.printInfo(() -> "Could not fetch other titles of: " + videoId, ioException);
-                Utils.runOnMainThreadDelayed(() -> requests.remove(candidate, candidateRequest),
-                        CANDIDATE_RETRY_MILLISECONDS);
+                retryCandidateTitle(videoId, texts, candidate, retries, requests, candidateRequest);
             } else {
                 Logger.printException(() -> "requestCandidateTitle failure", cause);
             }
@@ -1676,6 +1824,253 @@ public final class RestoreOriginalTitlesPatch {
 
     private static String candidateKey(String videoId) {
         return videoId + ' ' + Locale.getDefault().toLanguageTag();
+    }
+
+    /**
+     * Fetches again the other titles of a text that failed to fetch, after the requests to the server
+     * are no longer paused and only if the text is shown, so the elements scrolled off-screen do not
+     * fetch at the same time. The text is shown as loading until the title is verified.
+     * After the maximum number of retries, the text shows the title of the app, and the titles are
+     * fetched again only when the element is loaded again.
+     */
+    private static void retryCandidateTitle(String videoId, Set<String> texts, String candidate, int retries,
+                                            Map<String, CompletableFuture<String>> requests,
+                                            CompletableFuture<String> failedRequest) {
+        final long delay = Math.max(CANDIDATE_RETRY_MILLISECONDS, RequestBackoff.pauseRemainingMilliseconds());
+        if (retries >= MAX_CANDIDATE_RETRIES) {
+            Utils.runOnMainThreadDelayed(() -> requests.remove(candidate, failedRequest), delay);
+            return;
+        }
+
+        CandidateRetry retry = new CandidateRetry(videoId, texts, candidate, retries, requests, failedRequest);
+        // Saved before the failed request is done, so the texts laid out again find the retry.
+        candidateRetries.put(candidateKey(videoId), retry);
+        final long retryTime = System.currentTimeMillis() + delay;
+        Utils.runOnMainThreadNowOrLater(() -> {
+            retry.retryTime = retryTime;
+            pendingRetries.add(retry);
+            if (pendingRetries.size() > MAX_PENDING_RETRIES) {
+                cancelRetry(pendingRetries.remove(0));
+            }
+            scheduleRetryCheck();
+        });
+    }
+
+    /**
+     * Checks the pending retries when the next one can be fetched again.
+     * Must be called on the main thread.
+     */
+    private static void scheduleRetryCheck() {
+        long checkTime = Long.MAX_VALUE;
+        for (CandidateRetry retry : pendingRetries) {
+            checkTime = Math.min(checkTime, retry.retryTime);
+        }
+        if (checkTime == Long.MAX_VALUE) {
+            return;
+        }
+        checkTime = Math.max(checkTime, System.currentTimeMillis() + RequestBackoff.pauseRemainingMilliseconds());
+        if (retryCheckTime != 0 && retryCheckTime <= checkTime) {
+            return;
+        }
+        retryCheckTime = checkTime;
+        Utils.runOnMainThreadDelayed(RestoreOriginalTitlesPatch::checkPendingRetries,
+                Math.max(0, checkTime - System.currentTimeMillis()));
+    }
+
+    /**
+     * Fetches again the other titles of the texts that can be fetched again and are shown,
+     * and keeps the others until they are shown again.
+     * Must be called on the main thread.
+     */
+    private static void checkPendingRetries() {
+        retryCheckTime = 0;
+        try {
+            if (RequestBackoff.isPaused()) {
+                return;
+            }
+            final long now = System.currentTimeMillis();
+            List<CandidateRetry> readyRetries = new ArrayList<>();
+            Iterator<CandidateRetry> iterator = pendingRetries.iterator();
+            while (iterator.hasNext()) {
+                CandidateRetry retry = iterator.next();
+                if (now >= retry.retryTime) {
+                    iterator.remove();
+                    // Loading the element again also fetches the titles again, such as after it's no longer shown.
+                    retry.requests.remove(retry.candidate, retry.failedRequest);
+                    readyRetries.add(retry);
+                }
+            }
+            if (!readyRetries.isEmpty()) {
+                startShownRetries(readyRetries, true);
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "checkPendingRetries failure", ex);
+        } finally {
+            scheduleRetryCheck();
+        }
+    }
+
+    /**
+     * Fetches again the other titles of the texts that are shown, together with the other waiting texts
+     * of the same videos, as the title of a video is shown as loading until the other titles of all the
+     * texts of the video are fetched. The texts that are not shown are kept until they are shown again.
+     * The shown texts are found once for all the retries, so the check does not slow down the app.
+     * Must be called on the main thread.
+     *
+     * @param hideNotShown If the retries that are not shown are kept until they are shown again.
+     */
+    private static void startShownRetries(List<CandidateRetry> retries, boolean hideNotShown) {
+        // The texts show the span of the last retry of the video.
+        Set<String> shownVideoIds = new HashSet<>();
+        for (RetryTitleSpan span : LithoRelayoutPatch.findShownSpans(RetryTitleSpan.class)) {
+            shownVideoIds.add(span.retry().videoId);
+        }
+
+        Set<String> startedVideoIds = new HashSet<>();
+        for (CandidateRetry retry : retries) {
+            if (retry.isVerified()) {
+                // Verified meanwhile, so the text shows the title without fetching again.
+                retry.done.complete(null);
+            } else if (shownVideoIds.contains(retry.videoId)) {
+                startedVideoIds.add(retry.videoId);
+                startRetry(retry);
+            } else if (hideNotShown) {
+                Logger.printDebug(() -> "Title of: " + retry.videoId + " is not shown, fetched again when shown");
+                hideRetry(retry);
+            }
+        }
+        if (startedVideoIds.isEmpty()) {
+            return;
+        }
+        for (List<CandidateRetry> waitingRetries : Arrays.asList(pendingRetries, hiddenRetries)) {
+            Iterator<CandidateRetry> iterator = waitingRetries.iterator();
+            while (iterator.hasNext()) {
+                CandidateRetry retry = iterator.next();
+                if (startedVideoIds.contains(retry.videoId)) {
+                    iterator.remove();
+                    retry.requests.remove(retry.candidate, retry.failedRequest);
+                    startRetry(retry);
+                }
+            }
+        }
+        if (hiddenRetries.isEmpty()) {
+            LithoRelayoutPatch.setLithoViewMeasuredListener(null);
+        }
+    }
+
+    /**
+     * Must be called on the main thread.
+     */
+    private static void hideRetry(CandidateRetry retry) {
+        hiddenRetries.add(retry);
+        if (hiddenRetries.size() > MAX_PENDING_RETRIES) {
+            cancelRetry(hiddenRetries.remove(0));
+        }
+        LithoRelayoutPatch.setLithoViewMeasuredListener(RestoreOriginalTitlesPatch::onLithoViewMeasured);
+    }
+
+    /**
+     * The titles are no longer fetched again, so the text shows the title of the app,
+     * and the titles are fetched again only when the element is loaded again.
+     */
+    private static void cancelRetry(CandidateRetry retry) {
+        retry.requests.remove(retry.candidate, retry.failedRequest);
+        retry.done.complete(null);
+    }
+
+    /**
+     * Called on the main thread when a Litho view is measured, while any retry is hidden.
+     */
+    private static void onLithoViewMeasured() {
+        if (!hiddenRetryCheckScheduled) {
+            hiddenRetryCheckScheduled = true;
+            Utils.runOnMainThreadDelayed(RestoreOriginalTitlesPatch::checkHiddenRetries,
+                    HIDDEN_RETRY_CHECK_DELAY_MILLISECONDS);
+        }
+    }
+
+    /**
+     * Fetches again the other titles of the hidden texts that are shown again.
+     * While the requests are paused, they are fetched again when no longer paused.
+     * Must be called on the main thread.
+     */
+    private static void checkHiddenRetries() {
+        hiddenRetryCheckScheduled = false;
+        try {
+            if (hiddenRetries.isEmpty()) {
+                LithoRelayoutPatch.setLithoViewMeasuredListener(null);
+                return;
+            }
+            Set<String> shownVideoIds = new HashSet<>();
+            for (RetryTitleSpan span : LithoRelayoutPatch.findShownSpans(RetryTitleSpan.class)) {
+                shownVideoIds.add(span.retry().videoId);
+            }
+            List<CandidateRetry> shownRetries = new ArrayList<>();
+            Iterator<CandidateRetry> iterator = hiddenRetries.iterator();
+            while (iterator.hasNext()) {
+                CandidateRetry retry = iterator.next();
+                if (shownVideoIds.contains(retry.videoId)) {
+                    iterator.remove();
+                    shownRetries.add(retry);
+                }
+            }
+            if (shownRetries.isEmpty()) {
+                return;
+            }
+            if (RequestBackoff.isPaused()) {
+                final long retryTime = System.currentTimeMillis() + RequestBackoff.pauseRemainingMilliseconds();
+                for (CandidateRetry retry : shownRetries) {
+                    retry.retryTime = retryTime;
+                    pendingRetries.add(retry);
+                }
+                scheduleRetryCheck();
+            } else {
+                for (CandidateRetry retry : shownRetries) {
+                    Logger.printDebug(() -> "Title of: " + retry.videoId + " is shown again, fetching again");
+                }
+                startShownRetries(shownRetries, false);
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "checkHiddenRetries failure", ex);
+        } finally {
+            if (hiddenRetries.isEmpty()) {
+                LithoRelayoutPatch.setLithoViewMeasuredListener(null);
+            }
+        }
+    }
+
+    /**
+     * Must be called on the main thread.
+     */
+    private static void startRetry(CandidateRetry retry) {
+        retry.started = true;
+        Utils.runOnBackgroundThread(() -> {
+            requestCandidateTitle(retry.videoId, retry.texts, retry.candidate, retry.retries + 1);
+            Map<String, CompletableFuture<String>> requests = candidateTitleRequests.get(candidateKey(retry.videoId));
+            CompletableFuture<String> request = requests == null ? null : requests.get(retry.candidate);
+            if (request == null) {
+                retry.done.complete(null);
+            } else {
+                request.whenComplete((title, ex) -> retry.done.complete(null));
+            }
+            // The text shows the loading text until the title is verified.
+            LithoRelayoutPatch.relayoutOutdatedTexts();
+        });
+    }
+
+    /**
+     * @return The fetching again of the other titles of a text of the videos that is not yet started,
+     *         or null if none.
+     */
+    @Nullable
+    private static CandidateRetry findCandidateRetry(Set<String> videoIds) {
+        for (String videoId : videoIds) {
+            CandidateRetry retry = candidateRetries.get(candidateKey(videoId));
+            if (retry != null && !retry.started && !retry.done.isDone()) {
+                return retry;
+            }
+        }
+        return null;
     }
 
     /**

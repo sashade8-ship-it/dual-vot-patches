@@ -61,7 +61,8 @@ final class LocalizedTitleRequest {
     /**
      * Video id, language, and the search of the title shown in the lists, if any -> localized title.
      * A null title means the video has no title, or the title failed to fetch.
-     * Requests that fail because of network errors are removed, so they are fetched again later.
+     * Requests that fail because of network errors or temporary errors of the server are removed,
+     * so they are fetched again later.
      */
     private static final Map<String, CompletableFuture<String>> cache =
             Collections.synchronizedMap(Utils.createSizeRestrictedMap(1000));
@@ -76,6 +77,7 @@ final class LocalizedTitleRequest {
      * so the titles are fetched in the language without the region, such as 'ar'.
      */
     private static final Set<String> unsupportedRegionLanguages = ConcurrentHashMap.newKeySet();
+
 
     private LocalizedTitleRequest() {
     }
@@ -107,6 +109,11 @@ final class LocalizedTitleRequest {
      */
     private static CompletableFuture<String> fetch(String videoId, Locale locale, @Nullable String searchQuery) {
         String key = key(videoId, locale, searchQuery);
+        if (RequestBackoff.isPaused()) {
+            CompletableFuture<String> request = cache.get(key);
+            // Not cached, so the title is fetched again after the pause.
+            return request != null ? request : CompletableFuture.completedFuture(null);
+        }
         return cache.computeIfAbsent(key, k -> CompletableFuture.supplyAsync(
                 () -> fetchTitle(key, videoId, locale, searchQuery), Utils::runOnBackgroundThread));
     }
@@ -246,6 +253,12 @@ final class LocalizedTitleRequest {
                 Logger.printDebug(() -> "Language not supported: " + language + ", using: " + locale.getLanguage());
                 unsupportedRegionLanguages.add(language);
                 return fetchTitle(key, videoId, locale, searchQuery);
+            }
+            if (RequestBackoff.isTemporaryError(responseCode)) {
+                // Fetched again later, as the server limits the requests or is unavailable.
+                RequestBackoff.onTemporaryError(connection, responseCode);
+                cache.remove(key);
+                return null;
             }
             Logger.printDebug(() -> "Localized title request failed for: " + videoId
                     + " code: " + responseCode);

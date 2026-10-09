@@ -26,6 +26,7 @@ import app.morphe.patcher.parametersMatch
 import app.morphe.patcher.resource.ResourceType
 import app.morphe.patcher.resourceLiteral
 import app.morphe.patcher.string
+import app.morphe.patches.youtube.layout.player.overlay.CreatePlayerOverviewFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
@@ -844,5 +845,26 @@ internal object CommentReplyPaddingFeatureFlagFingerprint : Fingerprint(
 internal object IncognitoSearchPaddingFeatureFlagFingerprint : Fingerprint(
     filters = listOf(
         literal(45724388)
+    )
+)
+
+/**
+ * Called while the fullscreen "More videos" panel is dragged.
+ * Shows the player controls when the drag goes up while the panel is peeking.
+ */
+internal object ShowControlsOnRelatedPanelDragFingerprint : Fingerprint(
+    classFingerprint = CreatePlayerOverviewFingerprint,
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("F"),
+    filters = listOf(
+        opcode(Opcode.IF_GEZ),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            definingClass = "this",
+            parameters = listOf(),
+            returnType = "V"
+        ),
+        opcode(Opcode.RETURN_VOID, MatchAfterImmediately())
     )
 )
