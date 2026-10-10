@@ -186,6 +186,12 @@ val settingsPatch = bytecodePatch(
             ListPreference(
                 key = "morphe_language",
                 tag = "app.morphe.extension.shared.settings.preference.SortedListPreference"
+            ),
+            NonInteractivePreference(
+                key = "morphe_music_app_language",
+                summaryKey = null,
+                tag = "app.morphe.extension.music.settings.preference.AppLanguagePreference",
+                selectable = true
             )
         )
 
