@@ -1151,6 +1151,10 @@ Promene uključuju:
   <string name="morphe_dearrow_titles_search_title">Резултати претраге</string>
   <string name="morphe_dearrow_titles_icon_title">Прикажи DeArrow икону</string>
   <string name="morphe_dearrow_titles_icon_summary">Приказује DeArrow икону на краудсорсованим насловима видео записа</string>
+  <string name="morphe_dearrow_casual_mode_title">Опуштени режим</string>
+  <string name="morphe_dearrow_casual_mode_summary">Приказује оригинални наслов уместо DeArrow наслова ако су DeArrow корисници гласали да им се свиђа оригинални наслов</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Минимални број опуштених гласова за приказ оригиналног наслова</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Број опуштених гласова у једној категорији, као што су смешна или креативна, потребан да би се приказао оригинални наслов</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow минијатуре</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Оригиналне сличице</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow и оригиналне сличице</string>

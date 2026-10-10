@@ -1168,6 +1168,10 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_dearrow_titles_search_title">Rezultati pretrage</string>
   <string name="morphe_dearrow_titles_icon_title">Prikaži DeArrow ikonu</string>
   <string name="morphe_dearrow_titles_icon_summary">Prikazuje DeArrow ikonu na naslovima videa koje su dodali korisnici</string>
+  <string name="morphe_dearrow_casual_mode_title">Opušteni režim</string>
+  <string name="morphe_dearrow_casual_mode_summary">Prikazuje originalni naslov umesto DeArrow naslova ako su DeArrow korisnici glasali da im se sviđa originalni naslov</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Minimalni broj neobaveznih glasova za prikaz originalnog naslova</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Broj neobaveznih glasova u jednoj kategoriji, kao što su „smešno“ ili „kreativno“, potreban za prikaz originalnog naslova</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow sličice</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Originalne sličice</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow i originalne minijature</string>

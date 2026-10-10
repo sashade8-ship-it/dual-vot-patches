@@ -120,8 +120,8 @@ Les changements incluent :
 • Ne fonctionne pas avec la disposition automobile"</string>
   <string name="morphe_hide_video_thumbnail_title">Masquer la miniature de la vidéo</string>
   <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
-  <string name="morphe_hide_video_labels_title">Masquer les libellés vidéo</string>
-  <string name="morphe_hide_video_labels_summary">Masque les libellés comme \'Doublage automatique\' / \'Doublé\', \'Gagne une commission\', \'Tendance\', \'Les gens ont aussi regardé\', \'produit(s)\' et \'Vous aimerez aussi\'</string>
+  <string name="morphe_hide_video_labels_title">Masquer les libellés des vidéos</string>
+  <string name="morphe_hide_video_labels_summary">Masque les libellés tels que \'Doublée automatiquement\' / \'Doublée\', \'Gagne une commission\', \'Boostée\', \'Les gens ont également regardé\', \'produit(s)\' et \'Vous aimerez peut-être aussi\'</string>
   <string name="morphe_hide_view_count_title">Masquer le nombre de vues</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Limitations :
@@ -168,7 +168,7 @@ Les changements incluent :
   <string name="morphe_hide_video_title_title">Masquer le titre de la vidéo</string>
   <string name="morphe_hide_video_title_summary">Masque le titre de la vidéo en mode plein écran</string>
   <string name="morphe_sanitize_video_subtitle_title">Nettoyer les sous-titres de la vidéo</string>
-  <string name="morphe_sanitize_video_subtitle_summary">Nettoie les phrases comme \'#\', \'Fundraiser\', \'product(s)\' et \'Shop\' du sous-titre vidéo</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Nettoie les expressions comme \'#\', \'Collecte de fonds\', \'produit(s)\' et \'Magasin\' des sous-titres vidéo</string>
   <string name="morphe_hide_description_components_screen_title">Description vidéo</string>
   <string name="morphe_hide_description_components_screen_summary">Choisissez les composants qui apparaissent dans la description de la vidéo</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">Masquer la section \'Résumé de la vidéo généré par IA\'</string>
@@ -345,7 +345,7 @@ Limitations :
 Limitations :
 Les Shorts IA filtrés peuvent apparaître sous la forme d'un espace vide
 Certaines vidéos générées peuvent encore apparaître"</string>
-  <string name="morphe_hide_aislist_attribution_summary">"AiSList est une liste open source de chaînes YouTube qui publient du contenu généré par IA, maintenue par des bénévoles. Les chaînes sont signalées par les utilisateurs et examinées avant d'être ajoutées
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList est une liste open source de chaînes YouTube qui publient du contenu généré par IA, gérée par des bénévoles. Les chaînes sont signalées par les utilisateurs puis vérifiées avant d'être ajoutées à la liste
 
 La liste est téléchargée depuis GitHub et les vidéos sont filtrées sur votre appareil"</string>
   <string name="morphe_aislist_submit_category_title">Signaler les chaînes IA</string>
@@ -1169,14 +1169,18 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_dearrow_titles_search_title">Résultats de recherche</string>
   <string name="morphe_dearrow_titles_icon_title">Afficher l\'icône DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Affiche l\'icône DeArrow sur les titres des vidéos proposés par la communauté</string>
+  <string name="morphe_dearrow_casual_mode_title">Mode décontracté</string>
+  <string name="morphe_dearrow_casual_mode_summary">Affiche le titre d\'origine à la place du titre DeArrow si les utilisateurs de DeArrow ont voté en faveur du titre d\'origine</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Nombre minimum de votes occasionnels pour afficher le titre original</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Le nombre de votes occasionnels dans une seule catégorie, comme drôle ou créatif, nécessaire pour afficher le titre original</string>
   <string name="morphe_dearrow_thumbnails_title">Miniatures DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Miniatures originales</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; miniatures originales</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; captures d\'écran</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Captures d\'écran</string>
-  <string name="morphe_dearrow_about_summary">"DeArrow remplace les titres et miniatures putaclic par des versions participatives plus précises et moins sensationnalistes. Les titres sont écrits et votés par la communauté, et les miniatures sont des images extraites de la vidéo
+  <string name="morphe_dearrow_about_summary">"DeArrow remplace les titres et les miniatures racoleurs par des versions proposées par la communauté, plus fidèles au contenu et moins sensationnalistes. Les titres sont rédigés et soumis au vote de la communauté, tandis que les miniatures sont des images extraites de la vidéo
 
-Les vidéos sont demandées par un court préfixe de l'identifiant haché de la vidéo, de sorte que le serveur ne peut pas savoir exactement quelle vidéo vous regardez. Si une vidéo n'a pas de miniature DeArrow, l'originale ou une capture fixe est affichée"</string>
+Les vidéos sont recherchées à l'aide d'un court préfixe de l'identifiant vidéo haché, ce qui empêche le serveur de savoir précisément quelle vidéo vous regardez. Si aucune miniature DeArrow n'est disponible pour une vidéo, la miniature originale ou une capture d'écran de la vidéo est affichée"</string>
   <string name="morphe_dearrow_connection_toast_title">Afficher les alertes d\'erreur de connexion</string>
   <string name="morphe_dearrow_connection_toast_summary">Affiche une notification lorsque le serveur DeArrow est indisponible</string>
   <string name="morphe_dearrow_api_url_title">Point de terminaison de l\'API</string>

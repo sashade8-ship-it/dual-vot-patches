@@ -1167,6 +1167,10 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_dearrow_titles_search_title">Wyniki wyszukiwania</string>
   <string name="morphe_dearrow_titles_icon_title">Pokaż ikonę DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Wyświetla ikonę DeArrow przy społecznościowych tytułach filmów</string>
+  <string name="morphe_dearrow_casual_mode_title">Tryb swobodny</string>
+  <string name="morphe_dearrow_casual_mode_summary">Pokazuje oryginalny tytuł zamiast tytułu DeArrow, jeśli użytkownicy DeArrow zagłosowali, że podoba im się oryginalny tytuł</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Minimalna liczba zwykłych głosów, aby pokazać oryginalny tytuł</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Liczba zwykłych głosów w jednej kategorii, takiej jak zabawna lub kreatywna, potrzebna do pokazania oryginalnego tytułu</string>
   <string name="morphe_dearrow_thumbnails_title">Miniaturki DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Oryginalne miniaturki</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow i oryginalne miniaturki</string>

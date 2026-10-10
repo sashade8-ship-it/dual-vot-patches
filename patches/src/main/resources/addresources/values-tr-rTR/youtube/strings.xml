@@ -1168,6 +1168,10 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_dearrow_titles_search_title">Arama sonuçları</string>
   <string name="morphe_dearrow_titles_icon_title">DeArrow simgesini göster</string>
   <string name="morphe_dearrow_titles_icon_summary">Kitle kaynaklı video başlıklarında DeArrow simgesini gösterir</string>
+  <string name="morphe_dearrow_casual_mode_title">Gündelik mod</string>
+  <string name="morphe_dearrow_casual_mode_summary">DeArrow kullanıcıları orijinal başlığı beğendikleri yönünde oy kullandıysa, DeArrow başlığı yerine orijinal başlığı gösterir</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Orijinal başlığı göstermek için minimum gündelik oy sayısı</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Orijinal başlığı göstermek için komik veya yaratıcı gibi tek bir kategoride gereken gündelik oy sayısı</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow küçük resimleri</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Orijinal kapak resimleri</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Orijinal kapak resimleri</string>

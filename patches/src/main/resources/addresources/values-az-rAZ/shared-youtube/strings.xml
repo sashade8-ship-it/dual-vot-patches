@@ -258,6 +258,9 @@ Sonradan qapadılarsa, UI səhvlərin önləmək üçün tətbiq məlumatların 
   <string name="morphe_ryd_estimated_like_summary">Müəllif bəyənmələri qapatdığı videolarda təxmini bəyənmə sayını göstərir</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Bağlantı xətası xəbərdarlıqlarını göstər</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Return YouTube Dislike serveri əlçatmaz olduqda bildiriş göstərir</string>
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike YouTube-un 2021-ci ildə gizlətdiyi bəyənməmə saylarını bərpa edir. Saylar silinmədən əvvəl arxivləşdirilmiş məlumatlardan götürülür, daha yeni videolar üçün isə istifadəçilərin səsverməsi əsasında təxmin edilir, buna görə də onlar təxmini xarakter daşıyır və hər bir neçə gündən bir yenilənir
+
+​Baxdığınız videonun ID-si Return YouTube Dislike API-yə göndərilir, bəyənmə və bəyənməmələriniz isə təxminləri təkmilləşdirmək üçün gizli şəkildə göndərilir"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Bu cihazın Return YouTube Dislike API statistikası</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Orta hesabla API cavab müddəti</string>

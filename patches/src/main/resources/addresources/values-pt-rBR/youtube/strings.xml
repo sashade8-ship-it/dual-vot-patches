@@ -1167,6 +1167,10 @@ Limitação: Se 'Restaurar barra de ações de vídeo antiga' estiver desativado
   <string name="morphe_dearrow_titles_search_title">Resultado da busca</string>
   <string name="morphe_dearrow_titles_icon_title">Mostrar ícone do DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Mostra o ícone do DeArrow em títulos de vídeo colaborativos</string>
+  <string name="morphe_dearrow_casual_mode_title">Modo casual</string>
+  <string name="morphe_dearrow_casual_mode_summary">Mostra o título original em vez do título DeArrow se os usuários do DeArrow votaram que gostam do título original</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Votos casuais mínimos para mostrar o título original</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">O número de votos casuais em uma única categoria, como engraçada ou criativa, necessário para mostrar o título original</string>
   <string name="morphe_dearrow_thumbnails_title">Miniaturas do DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Thumbnails originais</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow e Thumbnails originais</string>

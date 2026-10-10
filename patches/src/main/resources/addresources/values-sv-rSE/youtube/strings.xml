@@ -1168,6 +1168,10 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_dearrow_titles_search_title">Sökresultat</string>
   <string name="morphe_dearrow_titles_icon_title">Visa DeArrow-ikonen</string>
   <string name="morphe_dearrow_titles_icon_summary">Visar DeArrow-ikonen på crowdsourcade videotitlar</string>
+  <string name="morphe_dearrow_casual_mode_title">Casual-läge</string>
+  <string name="morphe_dearrow_casual_mode_summary">Visar originaltiteln istället för DeArrow-titeln om DeArrow-användare har röstat att de gillar originaltiteln</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Minsta antal casual-röster för att visa originaltiteln</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Antalet casual-röster som krävs i en enda kategori, till exempel rolig eller kreativ, för att visa originaltiteln</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow-miniatyrbilder</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Ursprungliga miniatyrer</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow och ursprungliga miniatyrer</string>

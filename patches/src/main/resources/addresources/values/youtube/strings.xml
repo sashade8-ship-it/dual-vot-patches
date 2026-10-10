@@ -1223,6 +1223,10 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_back_button_always_exits_feed_title">Back button exits the feed</string>
     <string name="morphe_back_button_always_exits_feed_summary">Pressing back always exits the app instead of scrolling to the top of the feed</string>
 
+    <!-- layout.font.forceSystemFontPatch -->
+    <string name="morphe_force_system_font_title">Force system font</string>
+    <string name="morphe_force_system_font_summary">Shows the app with the device font instead of YouTube Sans</string>
+
     <!-- layout.statusbar.hideStatusBarPatch -->
     <string name="morphe_hide_status_bar_title">Hide status bar</string>
     <string name="morphe_hide_status_bar_summary">Hides the system status bar. Swipe down from the top edge to show it for a moment</string>
@@ -1282,6 +1286,10 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_dearrow_titles_search_title">Search results</string>
     <string name="morphe_dearrow_titles_icon_title">Show DeArrow icon</string>
     <string name="morphe_dearrow_titles_icon_summary">Shows the DeArrow icon on crowdsourced video titles</string>
+    <string name="morphe_dearrow_casual_mode_title">Casual mode</string>
+    <string name="morphe_dearrow_casual_mode_summary">Shows the original title instead of the DeArrow title if DeArrow users voted they like the original title</string>
+    <string name="morphe_dearrow_casual_mode_min_votes_title">Minimum casual votes to show original title</string>
+    <string name="morphe_dearrow_casual_mode_min_votes_summary">The number of casual votes in a single category, such as funny or creative, needed to show the original title</string>
     <string name="morphe_dearrow_thumbnails_title">DeArrow thumbnails</string>
     <string name="morphe_dearrow_thumbnail_options_entry_1">Original thumbnails</string>
     <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Original thumbnails</string>

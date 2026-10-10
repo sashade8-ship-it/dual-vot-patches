@@ -194,6 +194,8 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting DEARROW_TITLES_PLAYER = new BooleanSetting("morphe_dearrow_titles_player", FALSE, true);
     public static final BooleanSetting DEARROW_TITLES_SEARCH = new BooleanSetting("morphe_dearrow_titles_search", FALSE, true);
     public static final BooleanSetting DEARROW_TITLES_ICON = new BooleanSetting("morphe_dearrow_titles_icon", TRUE, true, new DeArrowTitlesAvailability());
+    public static final BooleanSetting DEARROW_CASUAL_MODE = new BooleanSetting("morphe_dearrow_casual_mode", FALSE, true, new DeArrowTitlesAvailability());
+    public static final IntegerSetting DEARROW_CASUAL_MODE_MIN_VOTES = new IntegerSetting("morphe_dearrow_casual_mode_min_votes", 2, true, parentsAll(new DeArrowTitlesAvailability(), parent(DEARROW_CASUAL_MODE)));
     public static final EnumSetting<ThumbnailOption> DEARROW_THUMBNAIL_HOME = new EnumSetting<>("morphe_dearrow_thumbnail_home", ThumbnailOption.ORIGINAL);
     public static final EnumSetting<ThumbnailOption> DEARROW_THUMBNAIL_SUBSCRIPTIONS = new EnumSetting<>("morphe_dearrow_thumbnail_subscription", ThumbnailOption.ORIGINAL);
     public static final EnumSetting<ThumbnailOption> DEARROW_THUMBNAIL_LIBRARY = new EnumSetting<>("morphe_dearrow_thumbnail_library", ThumbnailOption.ORIGINAL);
@@ -504,6 +506,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final StringSetting CUSTOM_MUSIC_PACKAGE_NAME = new StringSetting("morphe_custom_music_package_name", "", true, parent(OVERRIDE_YOUTUBE_MUSIC_BUTTONS));
     public static final EnumSetting<StartPage> CHANGE_START_PAGE = new EnumSetting<>("morphe_change_start_page", StartPage.DEFAULT, true);
     public static final BooleanSetting HIDE_STATUS_BAR = new BooleanSetting("morphe_hide_status_bar", FALSE, true);
+    public static final BooleanSetting FORCE_SYSTEM_FONT = new BooleanSetting("morphe_force_system_font", FALSE, true);
 
     // Custom filter
     public static final BooleanSetting CUSTOM_FILTER = new BooleanSetting("morphe_custom_filter", FALSE);

@@ -1167,6 +1167,10 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_dearrow_titles_search_title">Výsledky vyhľadávania</string>
   <string name="morphe_dearrow_titles_icon_title">Zobraziť ikonu DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Zobrazuje ikonu DeArrow pri crowdsourcovaných názvoch videí</string>
+  <string name="morphe_dearrow_casual_mode_title">Bežný režim</string>
+  <string name="morphe_dearrow_casual_mode_summary">Zobrazí pôvodný názov namiesto názvu DeArrow, ak používatelia DeArrow hlasovali, že sa im páči pôvodný názov</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Minimálny počet bežných hlasov na zobrazenie pôvodného názvu</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Počet bežných hlasov v jednej kategórii, napríklad zábavnej alebo kreatívnej, potrebných na zobrazenie pôvodného názvu</string>
   <string name="morphe_dearrow_thumbnails_title">Miniatúry DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Pôvodné náhľady</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow a pôvodné náhľady</string>

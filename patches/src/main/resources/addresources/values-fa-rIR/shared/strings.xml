@@ -32,12 +32,14 @@ Second \"item\" text"</string>
   <string name="morphe_settings_import_reset">تنظیمات Morphe به پیش‌فرض بازنشانی شد</string>
   <string name="morphe_settings_import_success">%d تنظیم وارد شد</string>
   <string name="morphe_settings_import_failure_parse">واردکردن ناموفق بود: %s</string>
+  <string name="morphe_settings_navigate_up">بازگشت به بالا</string>
   <string name="morphe_settings_search_hint">جست‌وجوی تنظیمات</string>
   <string name="morphe_settings_screen_info_title">درباره</string>
   <string name="morphe_settings_search_no_results_title">نتیجه‌ای برای «%s» پیدا نشد</string>
   <string name="morphe_settings_search_no_results_summary">کلیدواژهٔ دیگری را امتحان کنید</string>
   <string name="morphe_settings_search_recent_searches">جست‌وجوهای اخیر</string>
   <string name="morphe_settings_search_remove_message">از سابقهٔ جست‌وجو حذف شود؟</string>
+  <string name="morphe_settings_search_remove">حذف از تاریخچه جستجو</string>
   <string name="morphe_settings_search_clear_history">پاک‌کردن سابقهٔ جست‌وجو</string>
   <string name="morphe_settings_search_clear_history_message">آیا مطمئنید می‌خواهید همهٔ سابقهٔ جست‌وجو را پاک کنید؟</string>
   <string name="morphe_settings_search_tips_title">نکات جست‌وجو</string>
@@ -228,4 +230,6 @@ Second \"item\" text"</string>
   <string name="morphe_experimental_app_version_dialog_confirm">⚠️ نسخهٔ آزمایشی را می‌خواهم</string>
   <string name="morphe_experimental_app_version_dialog_open_homepage">✅ نسخهٔ پایدار را می‌خواهم</string>
   <!-- misc.crashlog.crashLogPatch -->
+  <string name="morphe_crash_log_saved_documents">گزارش خطا در اسناد کاربر ذخیره شد: %s</string>
+  <string name="morphe_crash_log_saved">گزارش خطا ذخیره شد: %s</string>
 </resources>

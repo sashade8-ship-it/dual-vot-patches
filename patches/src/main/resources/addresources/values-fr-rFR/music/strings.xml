@@ -176,6 +176,9 @@ Les morceaux téléchargés apparaîtront ici"</string>
   <string name="morphe_settings_music_screen_4_player_title">Lecteur</string>
   <string name="morphe_settings_music_screen_5_lyrics_title">Paroles</string>
   <string name="morphe_settings_music_screen_9_misc_title">Divers</string>
+  <string name="morphe_music_app_language_title">Langue de YouTube Music</string>
+  <string name="morphe_music_app_language_summary_default">Langue du système</string>
+  <string name="morphe_music_app_language_summary_unsupported">Nécessite Android 13 ou version ultérieure</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">Masquer le libellé \'S\'abonner à Music Premium\'</string>
   <string name="morphe_music_hide_music_premium_promotions_title">Masquer les promotions Music Premium</string>
@@ -244,7 +247,9 @@ Les morceaux téléchargés apparaîtront ici"</string>
   <string name="morphe_music_crossfade_sabr_toast">Le fondu enchaîné est désactivé avec la lecture SABR</string>
   <string name="morphe_music_crossfade_cast_unstable_toast">Le fondu enchaîné est désactivé pendant la diffusion</string>
   <string name="morphe_music_crossfade_about_how_title">Comment ça marche</string>
-  <string name="morphe_music_crossfade_about_how_summary">"Le fondu enchaîné chevauche la fin d'une chanson avec le début de la suivante, en utilisant votre durée et votre courbe\n\nIl fonctionne en avance automatique et en saut manuel, chacun avec son propre interrupteur. En avance automatique, le fondu commence quelques secondes avant la fin de la chanson"</string>
+  <string name="morphe_music_crossfade_about_how_summary">"Le fondu enchaîné superpose la fin d'une chanson au début de la suivante, en utilisant la durée et la courbe que vous avez définies
+
+Il fonctionne lors du passage automatique et lors du passage manuel, avec une option d'activation ou de désactivation distincte pour chacun, située ci-dessus. Lors du passage automatique, le fondu commence quelques secondes avant la fin de la chanson"</string>
   <string name="morphe_music_crossfade_about_quirks_title">Limitations</string>
   <string name="morphe_music_crossfade_about_quirks_summary">"Les clips musicaux sont lus uniquement en audio lorsque le fondu enchaîné est activé. Appuyez longuement sur le bouton 'Aléatoire' pour mettre le fondu enchaîné en pause et regarder la vidéo
 

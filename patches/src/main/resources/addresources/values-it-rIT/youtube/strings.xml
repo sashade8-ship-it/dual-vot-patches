@@ -1168,6 +1168,10 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_dearrow_titles_search_title">Risultati della ricerca</string>
   <string name="morphe_dearrow_titles_icon_title">Mostra l\'icona DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Mostra l\'icona DeArrow sui titoli video in crowdsourcing</string>
+  <string name="morphe_dearrow_casual_mode_title">Modalità casuale</string>
+  <string name="morphe_dearrow_casual_mode_summary">Mostra il titolo originale invece del titolo DeArrow se gli utenti DeArrow hanno votato che preferiscono il titolo originale.</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Voti casuali minimi per mostrare il titolo originale</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Il numero di voti casuali in una singola categoria, come divertente o creativa, necessario per mostrare il titolo originale.</string>
   <string name="morphe_dearrow_thumbnails_title">Miniature DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Miniature originali</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow e miniature originali</string>

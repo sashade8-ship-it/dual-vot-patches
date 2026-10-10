@@ -1168,6 +1168,10 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_dearrow_titles_search_title">Hasil pencarian</string>
   <string name="morphe_dearrow_titles_icon_title">Tampilkan ikon DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Menampilkan ikon DeArrow pada judul video kontribusi pengguna</string>
+  <string name="morphe_dearrow_casual_mode_title">Mode kasual</string>
+  <string name="morphe_dearrow_casual_mode_summary">Menampilkan judul asli, bukan judul DeArrow, jika pengguna DeArrow memberikan suara bahwa mereka menyukai judul asli</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Jumlah minimum suara kasual untuk menampilkan judul asli</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Jumlah suara kasual dalam satu kategori, seperti lucu atau kreatif, yang diperlukan untuk menampilkan judul asli</string>
   <string name="morphe_dearrow_thumbnails_title">Thumbnail DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Thumbnail asli</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Thumbnail asli</string>

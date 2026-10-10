@@ -1164,6 +1164,10 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_dearrow_titles_search_title">Søgeresultater</string>
   <string name="morphe_dearrow_titles_icon_title">Vis DeArrow-ikon</string>
   <string name="morphe_dearrow_titles_icon_summary">Viser DeArrow-ikonet på crowdsourcede videotitler</string>
+  <string name="morphe_dearrow_casual_mode_title">Casual-tilstand</string>
+  <string name="morphe_dearrow_casual_mode_summary">Viser den originale titel i stedet for DeArrow-titlen, hvis DeArrow-brugere har stemt, at de kan lide den originale titel</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Minimum antal casual-stemmer for at vise den originale titel</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Antallet af casual-stemmer i en enkelt kategori, såsom sjov eller kreativ, der kræves for at vise den originale titel</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow-miniaturebilleder</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Originale miniaturebilleder</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Originale miniaturer</string>

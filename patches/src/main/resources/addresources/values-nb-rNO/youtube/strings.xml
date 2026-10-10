@@ -1168,6 +1168,10 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_dearrow_titles_search_title">Søkeresultater</string>
   <string name="morphe_dearrow_titles_icon_title">Vis DeArrow-ikonet</string>
   <string name="morphe_dearrow_titles_icon_summary">Viser DeArrow-ikonet på videotitler fra fellesskapet</string>
+  <string name="morphe_dearrow_casual_mode_title">Uformell modus</string>
+  <string name="morphe_dearrow_casual_mode_summary">Viser originaltittelen i stedet for DeArrow-tittelen hvis DeArrow-brukere har stemt at de liker originaltittelen</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Minimum antall uformelle stemmer for å vise originaltittel</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Antallet uformelle stemmer i en enkelt kategori, for eksempel morsom eller kreativ, som kreves for å vise originaltittelen</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow-miniatyrbilder</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Originale miniatyrbilder</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Originale miniatyrbilder</string>

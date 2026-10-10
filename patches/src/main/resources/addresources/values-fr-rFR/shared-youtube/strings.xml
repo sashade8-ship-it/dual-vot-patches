@@ -258,9 +258,9 @@ Si vous désactivez cette option par la suite, il est recommandé d'effacer les 
   <string name="morphe_ryd_estimated_like_summary">Affiche un nombre estimé de \'J\'aime\' sur les vidéos où le créateur a désactivé les \'J\'aime\'</string>
   <string name="morphe_ryd_toast_on_connection_error_title">Afficher les alertes d\'erreur de connexion</string>
   <string name="morphe_ryd_toast_on_connection_error_summary">Affiche une notification lorsque le serveur Return YouTube Dislike est indisponible</string>
-  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike rétablit les compteurs de dislikes que YouTube a masqués en 2021. Les compteurs proviennent de données archivées avant la suppression et sont estimés pour les vidéos plus récentes à partir des votes de ses utilisateurs, ils sont donc approximatifs et sont mis à jour tous les quelques jours.
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike rétablit le nombre de 'Je n'aime pas' que YouTube a masqué en 2021. Les chiffres proviennent de données archivées avant la suppression et sont estimés pour les vidéos plus récentes à partir des votes de ses utilisateurs. Ils sont donc approximatifs et sont mis à jour tous les quelques jours
 
-L'identifiant de la vidéo que vous regardez est envoyé à l'API Return YouTube Dislike, et vos likes et dislikes sont envoyés anonymement pour améliorer les estimations.}],\"action\":\"translate\",\"metadata\":{}}"</string>
+L'identifiant de la vidéo que vous regardez est envoyé à l'API de Return YouTube Dislike, et vos 'J'aime' et 'Je n'aime pas' sont également transmises de manière anonyme afin d'améliorer les estimations"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
   <string name="morphe_ryd_statistics_category_title">Statistiques de l\'API Return YouTube Dislike de cet appareil</string>
   <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">Temps de réponse de l\'API, moyen</string>

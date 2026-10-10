@@ -120,6 +120,8 @@ Dəyişikliklər ehtiva edir:
 • Avtomobil tərtibatı ilə işləmir"</string>
   <string name="morphe_hide_video_thumbnail_title">Video miniatürün gizlət</string>
   <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">Video etiketlərini gizlət</string>
+  <string name="morphe_hide_video_labels_summary">\'Avtomatik dublyaj edilmiş\' / \'Dublyaj edilmiş\', \'Komissiya qazanır\', \'Hayp edilib\', \'İnsanlar həmçinin izləyiblər\', \'məhsul(lar)\' və \'Bunu da bəyənə bilərsiniz\' kimi etiketləri gizlədir</string>
   <string name="morphe_hide_view_count_title">Baxış sayını gizlət</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Məhdudiyyətlər:
@@ -166,6 +168,7 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_video_title_title">Video başlığını gizlət</string>
   <string name="morphe_hide_video_title_summary">Tam ekran rejimindəki video başlığı gizlədilir</string>
   <string name="morphe_sanitize_video_subtitle_title">Video titrin təmizlə</string>
+  <string name="morphe_sanitize_video_subtitle_summary">Video titrdən \"#\", \"İanə toplayan\", \"məhsul(lar)\" və \"Mağaza\" kimi ifadələri təmizləyir</string>
   <string name="morphe_hide_description_components_screen_title">Video təsviri</string>
   <string name="morphe_hide_description_components_screen_summary">Video təsvirində hansı elementlər görünür seç</string>
   <string name="morphe_hide_ai_generated_video_summary_section_title">\"AI tərəfindən yaradılan video xülasəsi\" bölməsini gizlət</string>
@@ -342,6 +345,9 @@ Məhdudiyyətlər:
 Məhdudiyyətlər:
 • Filtrlənmiş süni intellekt Shorts-ları boş yer kimi görünə bilər
 • Bəzi süni intellekt videoları hələ də görünə bilər"</string>
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList — könüllülər tərəfindən idarə olunan, süni intellektlə yaradılmış məzmun hazırlayan YouTube kanallarının açıq mənbəli siyahısıdır. Kanallar istifadəçilər tərəfindən bildirilir və əlavə edilməzdən əvvəl nəzərdən keçirilir
+
+​Siyahı GitHub-dan yüklənir və videolar cihazınızda filtrdən keçirilir"</string>
   <string name="morphe_aislist_submit_category_title">Süni intellekt kanallarını bildir</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Video menyusuna bildir bəndini əlavə et</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Video kanalını AiSList-ə bildirmək üçün video menyusuna bənd əlavə et</string>
@@ -395,7 +401,7 @@ Məhdudiyyətlər:
   <!-- interaction.channelsearch.channelSearchPatch -->
   <string name="morphe_channel_search_title">Kanal daxilində axtar</string>
   <string name="morphe_channel_search_summary">Yalnız həmin kanalı axtarmaq üçün kanal səhifələrində ikinci axtarış düyməsini əlavə edir</string>
-  <string name="morphe_channel_search_hint">Kanal axtar</string>
+  <string name="morphe_channel_search_hint">Kanalı axtar</string>
   <string name="morphe_channel_search_results">Kanal axtarış nəticələri</string>
   <string name="morphe_channel_search_no_results">Bu kanalda heç nə tapılmadı</string>
   <string name="morphe_channel_search_failed">Bu kanalda axtarış etmək olmadı</string>
@@ -1167,6 +1173,9 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Orijinal miniatürlər</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Durğun kadr çəkilişləri</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">Durğun kadr çəkilişləri</string>
+  <string name="morphe_dearrow_about_summary">"DeArrow diqqətçəkən başlıqları və miniatürləri daha dəqiq və daha az sensasiyalı olan kütləvi variantlarla əvəzləyir. Başlıqlar icma tərəfindən yazılır və səsverməyə qoyulur, miniatürlər isə videodan götürülmüş kadrlar olur
+
+​Videolar parçalanmış video ID-sinin qısa prefiksi vasitəsilə sorğulanır, beləliklə server tam olaraq hansı videoya baxdığınızı bilə bilmir. Əgər videonun DeArrow miniatürü yoxdursa, orijinal və ya kadr çəkilişi göstərilir"</string>
   <string name="morphe_dearrow_connection_toast_title">Bağlantı xətası xəbərdarlıqlarını göstər</string>
   <string name="morphe_dearrow_connection_toast_summary">DeArrow serveri əlçatmaz olduqda bildiriş göstərir</string>
   <string name="morphe_dearrow_api_url_title">API son nöqtəsi</string>

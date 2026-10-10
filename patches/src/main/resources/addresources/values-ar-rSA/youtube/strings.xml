@@ -1173,14 +1173,18 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_dearrow_titles_search_title">نتائج البحث</string>
   <string name="morphe_dearrow_titles_icon_title">عرض أيقونة DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">يُظهر أيقونة DeArrow على عناوين الفيديو المُقدَّمة من المجتمع</string>
+  <string name="morphe_dearrow_casual_mode_title">الوضع العادي</string>
+  <string name="morphe_dearrow_casual_mode_summary">DeArrow</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">الحد الأدنى من الأصوات العادية لإظهار العنوان الأصلي</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">عدد الأصوات العادية في فئة واحدة، مثل مضحكة أو إبداعية، المطلوب لإظهار العنوان الأصلي</string>
   <string name="morphe_dearrow_thumbnails_title">صور DeArrow المصغرة</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">المصغرات الأصلية</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; المصغرات الأصلية</string>
   <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; اللقطات الثابتة</string>
   <string name="morphe_dearrow_thumbnail_options_entry_4">اللقطات الثابتة</string>
-  <string name="morphe_dearrow_about_summary">"يستبدل DeArrow العناوين والصور المصغّرة التي تعتمد على clickbait بتلك المقدَّمة من المجتمع، والتي تكون أكثر دقةً وأقل إثارة. تُكتب العناوين ويصوِّت عليها المجتمع، والصور المصغّرة هي إطارات مأخوذة من الفيديو.
+  <string name="morphe_dearrow_about_summary">"يستبدل DeArrow العناوين والصور المصغّرة التي تعتمد على طُعم النقر بتلك المقدَّمة من المجتمع، والتي تكون أكثر دقةً وأقل إثارة. تُكتب العناوين ويصوِّت عليها المجتمع، والصور المصغّرة هي إطارات مأخوذة من الفيديو
 
-تُطلب الفيديوهات ببادئة قصيرة من معرّف الفيديو المجزّأ، لذا لا يمكن للخادم معرفة الفيديو الذي تشاهده بالضبط. إذا لم يكن للفيديو صورة مصغّرة من DeArrow، فتُعرض الصورة الأصلية أو لقطة ثابتة."</string>
+تُطلب الفيديوهات ببادئة قصيرة من معرّف الفيديو المجزّأ، لذا لا يمكن للخادم معرفة الفيديو الذي تشاهده بالضبط. إذا لم يكن للفيديو صورة مصغّرة من DeArrow، فتُعرض الصورة الأصلية أو لقطة ثابتة"</string>
   <string name="morphe_dearrow_connection_toast_title">عرض تنبيهات خطأ الاتصال</string>
   <string name="morphe_dearrow_connection_toast_summary">يعرض إشعارًا عند تعذر توفر خادم DeArrow</string>
   <string name="morphe_dearrow_api_url_title">نقطة نهاية API</string>

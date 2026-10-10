@@ -1168,6 +1168,10 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_dearrow_titles_search_title">Hakutulokset</string>
   <string name="morphe_dearrow_titles_icon_title">Näytä DeArrow-kuvake</string>
   <string name="morphe_dearrow_titles_icon_summary">Näyttää DeArrow-kuvakkeen yhteisön tuottamissa video-otsikoissa</string>
+  <string name="morphe_dearrow_casual_mode_title">Rento tila</string>
+  <string name="morphe_dearrow_casual_mode_summary">Näyttää alkuperäisen otsikon DeArrow-otsikon sijaan, jos DeArrow-käyttäjät äänestivät pitävänsä alkuperäisestä otsikosta</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Vähimmäismäärä casual-ääniä alkuperäisen otsikon näyttämiseen</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Alkuperäisen otsikon näyttämiseen tarvittava määrä casual-ääniä yhdessä kategoriassa, kuten hauska tai luova</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow-pikkukuvat</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Alkuperäiset pikkukuvat</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Alkuperäiset pikkukuvat</string>

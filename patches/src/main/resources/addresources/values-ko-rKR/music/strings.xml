@@ -17,7 +17,7 @@ Second \"item\" text"</string>
 -->
 <resources>
   <!-- app.morphe.patches.music.interaction.jam -->
-  <string name="morphe_music_jam_update_host_controls">호스트의 잼 패치를 일시 정지 및 재개 기능을 사용하도록 업데이트하세요</string>
+  <string name="morphe_music_jam_update_host_controls">호스트의 잼 패치를 일시정지 및 재개 기능을 사용하도록 업데이트하세요</string>
   <string name="morphe_music_jam_probe_title">잼 재생목록 공유</string>
   <string name="morphe_music_jam_probe_summary">근처 잼을 호스트하거나 참여하여 잼 레이어를 통해 재생목록을 편집하세요</string>
   <string name="morphe_music_jam_enabled_title">잼 재생목록 공유 활성화하기</string>
@@ -176,6 +176,9 @@ Second \"item\" text"</string>
   <string name="morphe_settings_music_screen_4_player_title">플레이어</string>
   <string name="morphe_settings_music_screen_5_lyrics_title">가사</string>
   <string name="morphe_settings_music_screen_9_misc_title">기타</string>
+  <string name="morphe_music_app_language_title">YouTube Music 언어</string>
+  <string name="morphe_music_app_language_summary_default">시스템 언어</string>
+  <string name="morphe_music_app_language_summary_unsupported">Android 13 이상 필요</string>
   <!-- ad.hideAdsPatch -->
   <string name="morphe_music_hide_get_premium_label_title">Music Premium 가입 라벨 숨기기</string>
   <string name="morphe_music_hide_music_premium_promotions_title">Music Premium 프로모션 숨기기</string>
@@ -241,26 +244,26 @@ Second \"item\" text"</string>
   <string name="morphe_music_crossfade_paused_toast">이 세션에서 크로스페이드를 일시 중지하였습니다</string>
   <string name="morphe_music_crossfade_resumed_toast">크로스페이드를 다시 시작하였습니다</string>
   <string name="morphe_music_crossfade_video_mode_disabled_toast">크로스페이드가 활성화된 동안에는 동영상 모드를 사용할 수 없습니다</string>
-  <string name="morphe_music_crossfade_sabr_toast">SABR 재생 시 크로스페이드가 꺼져 있습니다</string>
-  <string name="morphe_music_crossfade_cast_unstable_toast">캐스팅 중에는 크로스페이드가 꺼져 있습니다</string>
+  <string name="morphe_music_crossfade_sabr_toast">SABR 재생 시 크로스페이드가 비활성화됩니다</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">캐스팅 중에는 크로스페이드가 비활성화됩니다</string>
   <string name="morphe_music_crossfade_about_how_title">작동 방식</string>
-  <string name="morphe_music_crossfade_about_how_summary">"크로스페이드는 사용자가 설정한 지속 시간과 곡선을 사용하여 한 곡의 끝과 다음 곡의 시작을 겹칩니다.
+  <string name="morphe_music_crossfade_about_how_summary">"크로스페이드는 한 곡의 끝부분과 다음 곡의 시작 부분을 겹쳐 재생하는 기능으로, 설정한 지속 시간과 곡선에 따라 크로스페이드를 적용합니다
 
-자동 진행 및 수동 건너뛰기에서 각각 자체 토글로 실행됩니다. 자동 진행에서는 노래가 끝나기 몇 초 전에 크로스페이드가 시작됩니다.  "</string>
+이 기능은 자동 다음 곡 재생과 수동으로 곡을 건너뛸 때 작동하며, 각각 별도로 활성화하거나 비활성화할 수 있습니다. 자동 다음 곡 재생에서는 곡이 끝나기 몇 초 전부터 크로스페이드가 시작됩니다"</string>
   <string name="morphe_music_crossfade_about_quirks_title">제한 사항</string>
-  <string name="morphe_music_crossfade_about_quirks_summary">"크로스페이드가 켜져 있으면 뮤직 비디오가 오디오로만 재생됩니다. 셔플을 길게 눌러 크로스페이드를 일시 중지하고 비디오를 시청하세요.
+  <string name="morphe_music_crossfade_about_quirks_summary">"크로스페이드가 활성화되어 있으면 뮤직비디오는 오디오만 재생됩니다. 셔플 버튼을 길게 탭하여 크로스페이드를 일시 중지하면 동영상을 시청할 수 있습니다
 
-재생을 시작한 뮤직 비디오는 다음 노래가 나올 때까지 비디오 모드로 유지됩니다.
+재생이 시작된 뮤직비디오는 다음 곡이 재생될 때까지 동영상 모드로 유지됩니다
 
-페이드 시간보다 짧은 노래는 크로스페이드되지 않습니다.
+페이드 지속 시간보다 재생 시간이 짧은 곡에는 크로스페이드가 적용되지 않습니다
 
-전환 중에 잠금 화면이나 알림이 잠시 이전 상태를 표시할 수 있습니다.
+전환 중에는 잠금 화면이나 알림에 이전 상태가 일시적으로 표시될 수 있습니다
 
-크로스페이드를 일시 중지하고 뮤직 비디오를 시청하면 일부 비디오가 검게 표시될 수 있습니다. 노래를 선택하기 전에 크로스페이드를 일시 중지하면 이를 피할 수 있습니다"</string>
+뮤직비디오를 시청하기 위해 크로스페이드를 일시 중지하면 일부 동영상 화면이 검게 표시될 수 있습니다. 이를 방지하려면 곡을 선택하기 전에 크로스페이드를 일시 중지하세요"</string>
   <string name="morphe_music_crossfade_about_unsupported_title">지원되지 않음</string>
-  <string name="morphe_music_crossfade_about_unsupported_summary">"오디오 캐스팅 또는 미러링(Chromecast, 화면 또는 오디오 미러링)
+  <string name="morphe_music_crossfade_about_unsupported_summary">"오디오 캐스팅 또는 미러링 (Chromecast, 화면 또는 오디오 미러링)
 
-SABR 재생(비디오 스트림 스푸핑이 꺼져 있는 경우)"</string>
+SABR 재생 (동영상 스트림 속이기가 비활성화된 경우)"</string>
   <string name="morphe_music_crossfade_about_credit_title">크레딧</string>
   <string name="morphe_music_crossfade_about_credit_summary">VazerOG의 크로스페이드 기능</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->

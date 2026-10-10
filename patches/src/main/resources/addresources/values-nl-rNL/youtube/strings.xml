@@ -1166,6 +1166,10 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_dearrow_titles_search_title">Zoekresultaten</string>
   <string name="morphe_dearrow_titles_icon_title">DeArrow-pictogram weergeven</string>
   <string name="morphe_dearrow_titles_icon_summary">Geeft het DeArrow-pictogram weer op crowdsourced videotitels</string>
+  <string name="morphe_dearrow_casual_mode_title">Casuele modus</string>
+  <string name="morphe_dearrow_casual_mode_summary">Toont de originele titel in plaats van de DeArrow-titel als DeArrow-gebruikers hebben gestemd dat ze de originele titel leuk vinden</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Minimum aantal casual stemmen om de originele titel te tonen</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Het aantal casual stemmen in een enkele categorie, zoals grappig of creatief, dat nodig is om de originele titel te tonen</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow-miniaturen</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Oorspronkelijke miniaturen</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow en oorspronkelijke miniaturen</string>

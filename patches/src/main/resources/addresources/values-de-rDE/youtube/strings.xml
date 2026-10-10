@@ -1169,6 +1169,10 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_dearrow_titles_search_title">Suchergebnisse</string>
   <string name="morphe_dearrow_titles_icon_title">DeArrow-Symbol anzeigen</string>
   <string name="morphe_dearrow_titles_icon_summary">Zeigt das DeArrow-Symbol bei crowdsourcierten Videotiteln an</string>
+  <string name="morphe_dearrow_casual_mode_title">Gelegenheitsmodus</string>
+  <string name="morphe_dearrow_casual_mode_summary">Zeigt den ursprünglichen Titel anstelle des DeArrow-Titels, wenn DeArrow-Benutzer abgestimmt haben, dass ihnen der ursprüngliche Titel gefällt</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Mindestanzahl an Gelegenheitsstimmen, um den Originaltitel anzuzeigen</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Die Anzahl der Gelegenheitsstimmen in einer einzelnen Kategorie, wie zum Beispiel lustig oder kreativ, die erforderlich ist, um den Originaltitel anzuzeigen</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow-Thumbnails</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Original-Vorschaubilder</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Original-Thumbnails</string>

@@ -1168,6 +1168,10 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_dearrow_titles_search_title">Rezultatele căutării</string>
   <string name="morphe_dearrow_titles_icon_title">Afișează pictograma DeArrow</string>
   <string name="morphe_dearrow_titles_icon_summary">Afișează pictograma DeArrow pe titlurile video de la comunitate</string>
+  <string name="morphe_dearrow_casual_mode_title">Modul casual</string>
+  <string name="morphe_dearrow_casual_mode_summary">Afișează titlul original în locul titlului DeArrow dacă utilizatorii DeArrow au votat că le place titlul original</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Voturi casual minime pentru afișarea titlului original</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Numărul de voturi casual dintr-o singură categorie, cum ar fi amuzant sau creativ, necesar pentru a afișa titlul original</string>
   <string name="morphe_dearrow_thumbnails_title">Miniaturi DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Miniaturi originale</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">Săgeată &amp; Miniaturi originale</string>
