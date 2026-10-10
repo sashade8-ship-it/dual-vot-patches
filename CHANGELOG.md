@@ -1,3 +1,13 @@
+## 1.47.0-dev.22-dualvot.8.5.3 (2026-10-10)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.22](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.22).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.19-dualvot.8.5.3 (2026-10-10)
 
 ### Automated Morphe update
@@ -476,6 +486,28 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.22](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.21...v1.47.0-dev.22) (2026-10-10)
+
+### ✨ New Features
+
+* **YouTube:** Add `Force system font` patch ([#3579](https://github.com/MorpheApp/morphe-patches/issues/3579)) ([3968284](https://github.com/MorpheApp/morphe-patches/commit/3968284900ab15a9d04575b359272759891d19c8))
+
+## [1.47.0-dev.21](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.20...v1.47.0-dev.21) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **Spoof video streams:** PoToken generation can stall and show "Failed to generate PoToken" ([#3663](https://github.com/MorpheApp/morphe-patches/issues/3663)) ([32fec71](https://github.com/MorpheApp/morphe-patches/commit/32fec713a9e7e555150b75078d476ddb6a6ba238))
+
+### ✨ New Features
+
+* **YouTube - DeArrow:** Add "Casual mode" setting ([#3668](https://github.com/MorpheApp/morphe-patches/issues/3668)) ([a13c11b](https://github.com/MorpheApp/morphe-patches/commit/a13c11b26b5a2b264d3fe4d0937e5814f18d2488))
+
+## [1.47.0-dev.20](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.19...v1.47.0-dev.20) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Skip silence:** Adapt the silence threshold to the audio level ([672830e](https://github.com/MorpheApp/morphe-patches/commit/672830e18c8fe47aedd6079bd8eb7b3441e0939d))
 
 ## [1.47.0-dev.19](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.18...v1.47.0-dev.19) (2026-10-10)
 
