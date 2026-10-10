@@ -1,3 +1,13 @@
+## 1.47.0-dev.14-dualvot.8.5.3 (2026-10-10)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.14](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.14).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.13-dualvot.8.5.3 (2026-10-09)
 
 ### Automated Morphe update
@@ -446,6 +456,18 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.13...v1.47.0-dev.14) (2026-10-09)
+
+### 🐛 Bug Fixes
+
+* **Settings:** Search hint and tips ignore the Morphe language override ([a532649](https://github.com/MorpheApp/morphe-patches/commit/a5326492f7bd7ae8b1228a1f6603716c002b2433))
+* **YouTube - Force AVC:** Removed VP9 formats with enabled setting ([bb3e3ff](https://github.com/MorpheApp/morphe-patches/commit/bb3e3ff01dc2fcdf7debc4969fb6037b18eefc94))
+
+### ✨ New Features
+
+* **YouTube - Restore original titles:** Added support for media notification ([#3640](https://github.com/MorpheApp/morphe-patches/issues/3640)) ([a9ebf92](https://github.com/MorpheApp/morphe-patches/commit/a9ebf92c985e09fb551f9921c403478fd712ddf0))
+* **YouTube Music - Settings:** Add a shortcut to change the app language on Android 13+ ([b3b5c11](https://github.com/MorpheApp/morphe-patches/commit/b3b5c11b85e2ddc15e18da2b3e27f1e35b70dfd5))
 
 ## [1.47.0-dev.13](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.12...v1.47.0-dev.13) (2026-10-09)
 
