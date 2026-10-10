@@ -1,3 +1,13 @@
+## 1.47.0-dev.18-dualvot.8.5.3 (2026-10-10)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.18](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.18).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.14-dualvot.8.5.3 (2026-10-10)
 
 ### Automated Morphe update
@@ -456,6 +466,34 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.18](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.17...v1.47.0-dev.18) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **Spoof video streams:** Widgets may not play correctly ([#3656](https://github.com/MorpheApp/morphe-patches/issues/3656)) ([a60a3b6](https://github.com/MorpheApp/morphe-patches/commit/a60a3b6725ac8c984e2aa68bd50b3c9358df299f))
+
+### ✨ New Features
+
+* **Spoof video streams:** Add Wii U TV client as a fallback for TV ([#3655](https://github.com/MorpheApp/morphe-patches/issues/3655)) ([28ea7f9](https://github.com/MorpheApp/morphe-patches/commit/28ea7f9fe44d45a1869603086ce6e6adb89e4f48))
+
+## [1.47.0-dev.17](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.16...v1.47.0-dev.17) (2026-10-10)
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.41.0` ([4e56069](https://github.com/MorpheApp/morphe-patches/commit/4e56069f64125347959f7a8b1efeffa3e8fac1d6))
+
+## [1.47.0-dev.16](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.15...v1.47.0-dev.16) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Legacy player controls:** Autoplay end screen is broken in the miniplayer on 21.36+ ([#3649](https://github.com/MorpheApp/morphe-patches/issues/3649)) ([c3431a3](https://github.com/MorpheApp/morphe-patches/commit/c3431a3476c7d2508308c18d4f7ee8cfdde687ca))
+
+## [1.47.0-dev.15](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.14...v1.47.0-dev.15) (2026-10-10)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Restore original titles:** Replace the title in the fullscreen swipe-up panel ([9a966a9](https://github.com/MorpheApp/morphe-patches/commit/9a966a9d2c2f5fb0519218fd408d74653f2e89c7))
 
 ## [1.47.0-dev.14](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.13...v1.47.0-dev.14) (2026-10-09)
 
