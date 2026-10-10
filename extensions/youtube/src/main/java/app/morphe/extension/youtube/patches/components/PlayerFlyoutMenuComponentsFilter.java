@@ -63,6 +63,48 @@ public final class PlayerFlyoutMenuComponentsFilter extends Filter {
         }
     }
 
+    public static final class HideAudioTrackFlyoutMenuFooterAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return !Settings.HIDE_PLAYER_FLYOUT_AUDIO_TRACK.get()
+                    && !Settings.HIDE_SETTINGS_BUTTON.get()
+                    && !SpoofVideoStreamsPatch.spoofingToClientWithNoMultiAudioStreams();
+        }
+
+        @Override
+        public List<Setting<?>> getParentSettings() {
+            return List.of(
+                    Settings.HIDE_PLAYER_FLYOUT_AUDIO_TRACK,
+                    Settings.HIDE_SETTINGS_BUTTON,
+                    SharedYouTubeSettings.SPOOF_VIDEO_STREAMS
+            );
+        }
+    }
+
+    public static final class HideCaptionsFlyoutMenuHeaderFooterAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return !Settings.HIDE_PLAYER_FLYOUT_CAPTIONS.get() && !Settings.HIDE_SETTINGS_BUTTON.get();
+        }
+
+        @Override
+        public List<Setting<?>> getParentSettings() {
+            return List.of(Settings.HIDE_PLAYER_FLYOUT_CAPTIONS, Settings.HIDE_SETTINGS_BUTTON);
+        }
+    }
+
+    public static final class HideQualityFlyoutMenuHeaderFooterAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return !Settings.HIDE_PLAYER_FLYOUT_QUALITY.get() && !Settings.HIDE_SETTINGS_BUTTON.get();
+        }
+
+        @Override
+        public List<Setting<?>> getParentSettings() {
+            return List.of(Settings.HIDE_PLAYER_FLYOUT_QUALITY, Settings.HIDE_SETTINGS_BUTTON);
+        }
+    }
+
     private final ByteArrayFilterGroup videoPlayerSettingsQualityButton = new ByteArrayFilterGroup(
             null,
             "quality_sheet_header.e"

@@ -1011,6 +1011,60 @@ public final class RestoreOriginalTitlesPatch {
     }
 
     /**
+     * Injection point.
+     * <p>
+     * Replaces the translated title of the fullscreen engagement overlay,
+     * shown by swiping up in fullscreen.
+     */
+    public static void restorePlayerTitle(TextView view) {
+        if (view == null) {
+            return;
+        }
+
+        view.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
+                if (!REPLACE_TITLES || DeArrowTitleIcon.hasIcon(text)
+                        || text.toString().equals(LOADING_TITLE.toString())) {
+                    return;
+                }
+
+                // The text cannot be changed while the listeners are notified.
+                view.post(() -> setPlayerTitle(view, text));
+            }
+
+            @Override
+            public void afterTextChanged(Editable text) {
+            }
+        });
+    }
+
+    private static void setPlayerTitle(TextView view, CharSequence text) {
+        try {
+            String replacement = playerTitle(text.toString(), () -> {
+                // The view is set again only if it still shows the loading title of this text.
+                if (view.getText().toString().equals(LOADING_TITLE.toString())) {
+                    setPlayerTitle(view, text);
+                }
+            });
+            if (replacement == null) {
+                return;
+            }
+
+            CharSequence title = titleText(text, replacement, null);
+            if (!TextUtils.equals(title, view.getText())) {
+                view.setText(title);
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "setPlayerTitle failure", ex);
+        }
+    }
+
+    /**
      * The title is shown as loading until it's fetched, or until the fetch is no longer retried.
      */
     private static MediaMetadata replaceMediaMetadataTitle(MediaMetadata metadata) {
@@ -1019,34 +1073,48 @@ public final class RestoreOriginalTitlesPatch {
             return metadata;
         }
 
-        // The media notification is of the opened video, unless the title is of another video.
+        String replacement = playerTitle(title, () -> setMediaMetadataAgain(metadata));
+        if (replacement == null) {
+            return metadata;
+        }
+
+        if (!replacement.equals(LOADING_TITLE.toString())) {
+            Logger.printDebug(() -> "Restored media notification title: " + replacement);
+        }
+        return withMediaMetadataTitle(metadata, replacement);
+    }
+
+    /**
+     * The title shown by the player, from any navigation, for a title of the opened video
+     * shown outside the player, such as the media notification.
+     *
+     * @param onFetched Called on the main thread when the title is fetched, if the loading title is returned.
+     * @return The title that replaces the title, the loading title until it's fetched
+     *         or until the fetch is no longer retried, or null if the title is not replaced.
+     */
+    @Nullable
+    private static String playerTitle(String title, Runnable onFetched) {
+        // The title is of the opened video, unless the title is of another video.
         String titleVideoId = findVideoIdOfTitle(title.trim(), openedVideoId);
         String videoId = titleVideoId == null ? openedVideoId : titleVideoId;
         if (videoId == null) {
-            return metadata;
+            return null;
         }
 
         CompletableFuture<OriginalTitleRequest.Titles> future = OriginalTitleRequest.fetch(videoId);
         OriginalTitleRequest.Titles titles = future.getNow(null);
         if (!future.isDone()) {
-            future.whenComplete((result, ex) -> Utils.runOnMainThread(() -> setMediaMetadataAgain(metadata)));
-            return withMediaMetadataTitle(metadata, LOADING_TITLE.toString());
+            future.whenComplete((result, ex) -> Utils.runOnMainThread(onFetched));
+            return LOADING_TITLE.toString();
         }
         if (OriginalTitleRequest.isPending(videoId)) {
             // The title is fetched again after the retry time.
-            Utils.runOnMainThreadDelayed(() -> setMediaMetadataAgain(metadata),
-                    OriginalTitleRequest.retryRemainingMilliseconds(videoId));
-            return withMediaMetadataTitle(metadata, LOADING_TITLE.toString());
+            Utils.runOnMainThreadDelayed(onFetched, OriginalTitleRequest.retryRemainingMilliseconds(videoId));
+            return LOADING_TITLE.toString();
         }
 
-        // The media notification shows the same title as the player, from any navigation.
         String replacement = titles == null ? null : titles.replacement(Settings.DEARROW_TITLES_PLAYER.get());
-        if (replacement == null || replacement.equals(title)) {
-            return metadata;
-        }
-
-        Logger.printDebug(() -> "Restored media notification title: " + replacement);
-        return withMediaMetadataTitle(metadata, replacement);
+        return replacement == null || replacement.equals(title) ? null : replacement;
     }
 
     private static MediaMetadata withMediaMetadataTitle(MediaMetadata metadata, String title) {
