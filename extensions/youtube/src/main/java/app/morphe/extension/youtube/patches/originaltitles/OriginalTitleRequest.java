@@ -129,6 +129,30 @@ final class OriginalTitleRequest {
             Long retryTime = retryTimes.get(videoId);
             if (future == null || (retryTime != null && System.currentTimeMillis() >= retryTime)) {
                 retryTimes.remove(videoId);
+                Titles fetchedTitles = future != null && future.isDone() && !future.isCompletedExceptionally()
+                        ? future.getNow(null)
+                        : null;
+                // Only the DeArrow title failed to fetch if the original title did not fail,
+                // and was fetched or is not restored. The DeArrow title is fetched again, and the titles
+                // fetched before are kept meanwhile, so the title is not shown as loading again
+                // and the original title is not fetched again.
+                if (fetchedTitles != null && !failedFetchCounts.containsKey(videoId)
+                        && (!RestoreOriginalTitlesPatch.RESTORE_ORIGINAL || fetchedTitles.originalTitle() != null)) {
+                    CompletableFuture<Titles> fetchedFuture = future;
+                    Utils.runOnBackgroundThread(() -> {
+                        try {
+                            String deArrowTitle = DeArrowBrandingRequest.fetchTitle(videoId);
+                            // Not replaced if the titles were fetched again meanwhile.
+                            cache.replace(videoId, fetchedFuture, CompletableFuture.completedFuture(
+                                    new Titles(deArrowTitle, fetchedTitles.originalTitle())));
+                        } catch (DeArrowBrandingRequest.DeArrowException ex) {
+                            // The DeArrow title is fetched again later,
+                            // and the titles fetched before are used meanwhile.
+                            retryTimes.put(videoId, System.currentTimeMillis() + FAILED_FETCH_RETRY_MILLISECONDS);
+                        }
+                    });
+                    return future;
+                }
                 future = CompletableFuture.supplyAsync(() -> {
                     String deArrowTitle = null;
                     if (RestoreOriginalTitlesPatch.USE_DEARROW) {

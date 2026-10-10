@@ -23,6 +23,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.WeakHashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
@@ -87,7 +88,11 @@ public final class LithoRelayoutPatch {
      */
     private static final Set<View> lithoViews = Collections.newSetFromMap(new WeakHashMap<>());
 
-    private static volatile boolean relayoutScheduled;
+    /**
+     * If a relayout is scheduled. Requests can be made on different threads at the same time,
+     * such as titles fetched at the same time, so it's set atomically and a single relayout is scheduled.
+     */
+    private static final AtomicBoolean relayoutScheduled = new AtomicBoolean();
 
     /**
      * Called on the main thread when a Litho view is measured, such as when a list item is scrolled
@@ -96,7 +101,11 @@ public final class LithoRelayoutPatch {
     @Nullable
     private static volatile Runnable lithoViewMeasuredListener;
 
-    private static volatile boolean remountListViewsRequested;
+    /**
+     * If the shown Litho views of lists are mounted again by the next relayout. Requested on any thread,
+     * such as the network threads, so it's read and cleared atomically and no request is lost.
+     */
+    private static final AtomicBoolean remountListViewsRequested = new AtomicBoolean();
 
     private LithoRelayoutPatch() {
     }
@@ -116,7 +125,7 @@ public final class LithoRelayoutPatch {
      * Can be called on any thread.
      */
     public static void remountListViews() {
-        remountListViewsRequested = true;
+        remountListViewsRequested.set(true);
         scheduleRelayout();
     }
 
@@ -144,8 +153,7 @@ public final class LithoRelayoutPatch {
     }
 
     private static void scheduleRelayout() {
-        if (!relayoutScheduled) {
-            relayoutScheduled = true;
+        if (relayoutScheduled.compareAndSet(false, true)) {
             // Delayed, so the layouts calculated in the current frame are mounted.
             Utils.runOnMainThreadDelayed(LithoRelayoutPatch::relayoutOutdatedViews, RELAYOUT_DELAY_MILLISECONDS);
         }
@@ -193,26 +201,13 @@ public final class LithoRelayoutPatch {
     }
 
     private static void relayoutOutdatedViews() {
-        relayoutScheduled = false;
-        final boolean remountListViews = remountListViewsRequested;
-        remountListViewsRequested = false;
+        relayoutScheduled.set(false);
+        final boolean remountListViews = remountListViewsRequested.getAndSet(false);
 
         try {
-            if (remountListViews) {
-                // Unmounting a Litho view also unmounts its nested Litho views,
-                // so the views are found before any is unmounted.
-                List<LithoViewInterface> remountViews = new ArrayList<>(lithoViews.size());
-                for (View view : new ArrayList<>(lithoViews)) {
-                    if (view.isShown() && view instanceof LithoViewInterface lithoView) {
-                        remountViews.add(lithoView);
-                    }
-                }
-                for (LithoViewInterface lithoView : remountViews) {
-                    lithoView.patch_forceRemount();
-                }
-                Logger.printDebug(() -> "Remounted Litho views: " + remountViews.size());
-            }
-
+            // Found before the views are mounted again, as unmounting a Litho view unmounts its texts.
+            // The outdated views mounted again are then laid out again by this relayout,
+            // instead of a later relayout requested when their outdated texts are mounted again.
             Set<LithoViewInterface> relayoutViews = new LinkedHashSet<>();
             for (Drawable textDrawable : new ArrayList<>(relayoutTextDrawables)) {
                 // The callback is the host, or null if the text was unmounted.
@@ -248,6 +243,21 @@ public final class LithoRelayoutPatch {
                         relayoutViews.add(lithoView);
                     }
                 }
+            }
+
+            if (remountListViews) {
+                // Unmounting a Litho view also unmounts its nested Litho views,
+                // so the views are found before any is unmounted.
+                List<LithoViewInterface> remountViews = new ArrayList<>(lithoViews.size());
+                for (View view : new ArrayList<>(lithoViews)) {
+                    if (view.isShown() && view instanceof LithoViewInterface lithoView) {
+                        remountViews.add(lithoView);
+                    }
+                }
+                for (LithoViewInterface lithoView : remountViews) {
+                    lithoView.patch_forceRemount();
+                }
+                Logger.printDebug(() -> "Remounted Litho views: " + remountViews.size());
             }
 
             for (LithoViewInterface lithoView : relayoutViews) {

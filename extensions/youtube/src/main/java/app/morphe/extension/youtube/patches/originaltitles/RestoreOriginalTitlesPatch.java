@@ -541,7 +541,21 @@ public final class RestoreOriginalTitlesPatch {
             if (!REPLACE_TITLES || !elementSearch.matches(bytes) || !replacesTitlesForCurrentNavigation()) {
                 return bytes;
             }
-            clearIfLanguageChanged();
+            // Clears the translated titles and descriptions found in another language.
+            // The original titles and descriptions do not depend on the language, and are kept.
+            String language = Locale.getDefault().toLanguageTag();
+            String previousLanguage = titlesLanguage;
+            titlesLanguage = language;
+            if (previousLanguage != null && !previousLanguage.equals(language)) {
+                Logger.printDebug(() -> "Language changed from: " + previousLanguage + " to: " + language);
+                translatedTitles.clear();
+                maxTranslatedTitleLength.set(0);
+                pendingTitleTexts.clear();
+                translatedChannelPreviews.clear();
+                maxTranslatedChannelPreviewLength.set(0);
+                openedChannelPreview = null;
+                TitleLayouts.clearCandidates();
+            }
 
             List<ProtoNode> root = ProtoNode.parse(bytes);
             if (root == null) {
@@ -622,28 +636,6 @@ public final class RestoreOriginalTitlesPatch {
         }
 
         return bytes;
-    }
-
-    /**
-     * Clears the translated titles and descriptions found in another language.
-     * The original titles and descriptions do not depend on the language, and are kept.
-     */
-    private static void clearIfLanguageChanged() {
-        String language = Locale.getDefault().toLanguageTag();
-        String previousLanguage = titlesLanguage;
-        titlesLanguage = language;
-        if (previousLanguage == null || previousLanguage.equals(language)) {
-            return;
-        }
-
-        Logger.printDebug(() -> "Language changed from: " + previousLanguage + " to: " + language);
-        translatedTitles.clear();
-        maxTranslatedTitleLength.set(0);
-        pendingTitleTexts.clear();
-        translatedChannelPreviews.clear();
-        maxTranslatedChannelPreviewLength.set(0);
-        openedChannelPreview = null;
-        TitleLayouts.clearCandidates();
     }
 
     /**
@@ -1073,7 +1065,18 @@ public final class RestoreOriginalTitlesPatch {
             return metadata;
         }
 
-        String replacement = playerTitle(title, () -> setMediaMetadataAgain(metadata));
+        String replacement = playerTitle(title, () -> {
+            try {
+                MediaSession session = mediaSessionRef.get();
+                if (session == null || mediaMetadata != metadata) {
+                    return; // The metadata was changed meanwhile.
+                }
+
+                session.setMetadata(replaceMediaMetadataTitle(metadata));
+            } catch (Exception ex) {
+                Logger.printException(() -> "replaceMediaMetadataTitle failure", ex);
+            }
+        });
         if (replacement == null) {
             return metadata;
         }
@@ -1081,7 +1084,14 @@ public final class RestoreOriginalTitlesPatch {
         if (!replacement.equals(LOADING_TITLE.toString())) {
             Logger.printDebug(() -> "Restored media notification title: " + replacement);
         }
-        return withMediaMetadataTitle(metadata, replacement);
+        MediaMetadata.Builder builder = new MediaMetadata.Builder(metadata)
+                .putString(MediaMetadata.METADATA_KEY_TITLE, replacement);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            // The images are not scaled again, as scaling some images fails, such as on YouTube 20.21.
+            // The media session scales them when the metadata is set.
+            builder.setBitmapDimensionLimit(Integer.MAX_VALUE);
+        }
+        return builder.build();
     }
 
     /**
@@ -1115,30 +1125,6 @@ public final class RestoreOriginalTitlesPatch {
 
         String replacement = titles == null ? null : titles.replacement(Settings.DEARROW_TITLES_PLAYER.get());
         return replacement == null || replacement.equals(title) ? null : replacement;
-    }
-
-    private static MediaMetadata withMediaMetadataTitle(MediaMetadata metadata, String title) {
-        MediaMetadata.Builder builder = new MediaMetadata.Builder(metadata)
-                .putString(MediaMetadata.METADATA_KEY_TITLE, title);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            // The images are not scaled again, as scaling some images fails, such as on YouTube 20.21.
-            // The media session scales them when the metadata is set.
-            builder.setBitmapDimensionLimit(Integer.MAX_VALUE);
-        }
-        return builder.build();
-    }
-
-    private static void setMediaMetadataAgain(MediaMetadata metadata) {
-        try {
-            MediaSession session = mediaSessionRef.get();
-            if (session == null || mediaMetadata != metadata) {
-                return; // The metadata was changed meanwhile.
-            }
-
-            session.setMetadata(replaceMediaMetadataTitle(metadata));
-        } catch (Exception ex) {
-            Logger.printException(() -> "setMediaMetadataAgain failure", ex);
-        }
     }
 
     /**
@@ -1880,7 +1866,31 @@ public final class RestoreOriginalTitlesPatch {
         String[] labelAndTitle = findLabeledTitle(texts);
         String labeledLabel = labelAndTitle == null ? null : labelAndTitle[0];
         String labeledTitle = labelAndTitle == null ? null : labelAndTitle[1];
-        if (labeledTitle == null || !isLabelOfTitle(textNodes, labeledLabel, labeledTitle)) {
+        if (labeledTitle == null) {
+            return null;
+        }
+        // The accessibility label of a video is a field of the component that includes the title,
+        // such as the lockup of the video. Other components shown with the video can have their own
+        // label and title, such as a product: their label is not a field of a component that
+        // includes the title of the video.
+        List<ProtoNode> titleNodes = new ArrayList<>();
+        List<ProtoNode> labelMessages = new ArrayList<>();
+        for (ProtoNode node : textNodes) {
+            String text = removeTitleMarker(node.getText()).trim();
+            if (text.equals(labeledTitle)) {
+                titleNodes.add(node);
+            } else if (text.equals(labeledLabel) && node.getParent() != null) {
+                labelMessages.add(node.getParent());
+            }
+        }
+        boolean labelOfTitle = false;
+        for (ProtoNode titleNode : titleNodes) {
+            for (ProtoNode parent = titleNode.getParent(); parent != null && !labelOfTitle;
+                 parent = parent.getParent()) {
+                labelOfTitle = labelMessages.contains(parent);
+            }
+        }
+        if (!labelOfTitle) {
             return null;
         }
         // The label of a long title can include the title truncated, and the element the entire title.
@@ -2587,35 +2597,6 @@ public final class RestoreOriginalTitlesPatch {
             }
         }
         return label;
-    }
-
-    /**
-     * The accessibility label of a video is a field of the component that includes the title,
-     * such as the lockup of the video. Other components shown with the video can have their own
-     * label and title, such as a product: their label is not a field of a component that
-     * includes the title of the video.
-     *
-     * @return If the label is a field of a message that includes the title.
-     */
-    private static boolean isLabelOfTitle(List<ProtoNode> textNodes, String label, String title) {
-        List<ProtoNode> titleNodes = new ArrayList<>();
-        List<ProtoNode> labelMessages = new ArrayList<>();
-        for (ProtoNode node : textNodes) {
-            String text = removeTitleMarker(node.getText()).trim();
-            if (text.equals(title)) {
-                titleNodes.add(node);
-            } else if (text.equals(label) && node.getParent() != null) {
-                labelMessages.add(node.getParent());
-            }
-        }
-        for (ProtoNode titleNode : titleNodes) {
-            for (ProtoNode parent = titleNode.getParent(); parent != null; parent = parent.getParent()) {
-                if (labelMessages.contains(parent)) {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 
     /**
