@@ -786,6 +786,8 @@ Promene uključuju:
 Да бисте приступили Подешавањима, омогућите дугме Подешавања преко Опште → Трака алатки → Покажи Подешавања."</string>
   <string name="morphe_narrow_navigation_buttons_title">Omogući uske dugmad za navigaciju</string>
   <string name="morphe_narrow_navigation_buttons_summary">Смањује хоризонтални размак између дугмади.</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Онемогући навигационе дугмиће без натписа</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">Приказује навигационе дугмиће са натписима, ако их YouTube шаље без натписа</string>
   <string name="morphe_navigation_bar_animations_title">Омогући анимације траке за навигацију</string>
   <string name="morphe_navigation_bar_animations_summary">Анимира прелазе приликом пребацивања између картица.</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Онемогућите аутоматско скривање траке навигације</string>
@@ -1103,6 +1105,9 @@ Promene uključuju:
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Дугме назад излази из фида</string>
   <string name="morphe_back_button_always_exits_feed_summary">Притискање назад увек излази из апликације уместо да се помера на врх фида</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">Принуди системски фонт</string>
+  <string name="morphe_force_system_font_summary">Приказује апликацију са системским фонтом уместо YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Сакриј статусну траку</string>
   <string name="morphe_hide_status_bar_summary">Сакрива системску статусну траку. Превуците прстом надоле са горње ивице да бисте је накратко приказали</string>

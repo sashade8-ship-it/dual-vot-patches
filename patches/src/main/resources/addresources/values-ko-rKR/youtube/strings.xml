@@ -790,6 +790,8 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
 설정 페이지에 접근하려면 '일반 → 툴바 → 설정 표시하기'를 사용하여 설정 버튼을 활성화하세요."</string>
   <string name="morphe_narrow_navigation_buttons_title">좁은 하단바 버튼 활성화하기</string>
   <string name="morphe_narrow_navigation_buttons_summary">하단바 버튼 사이의 간격을 줄입니다</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">라벨이 없는 하단바 버튼 비활성화하기</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">YouTube에서 라벨 없이 하단바 버튼을 보내는 경우 라벨이 있는 하단바 버튼을 표시합니다</string>
   <string name="morphe_navigation_bar_animations_title">하단바 애니메이션 활성화하기</string>
   <string name="morphe_navigation_bar_animations_summary">하단바에서 탭 전환 시 애니메이션을 표시합니다</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">하단바 자동 숨기기 비활성화하기</string>
@@ -1122,6 +1124,9 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">뒤로가기 버튼으로 피드 나가기</string>
   <string name="morphe_back_button_always_exits_feed_summary">뒤로가기 버튼을 탭하면 피드 상단으로 이동하지 않고 항상 앱이 종료됩니다</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">시스템 글꼴 강제로 활성화하기 </string>
+  <string name="morphe_force_system_font_summary">YouTube Sans 대신 기기 글꼴로 앱을 표시합니다</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">상태바 숨기기</string>
   <string name="morphe_hide_status_bar_summary">시스템 상태바를 숨깁니다. 상단 가장자리에서 아래로 스와이프하면 잠시 표시됩니다</string>
@@ -1171,9 +1176,9 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_dearrow_titles_icon_title">DeArrow 아이콘 표시하기</string>
   <string name="morphe_dearrow_titles_icon_summary">크라우드소싱된 동영상 제목에 DeArrow 아이콘을 표시합니다</string>
   <string name="morphe_dearrow_casual_mode_title">캐주얼 모드</string>
-  <string name="morphe_dearrow_casual_mode_summary">DeArrow 사용자들이 원래 제목을 더 선호한다고 투표한 경우, DeArrow 제목 대신 원본 제목을 표시합니다</string>
+  <string name="morphe_dearrow_casual_mode_summary">DeArrow 사용자들이 원본 제목을 더 좋아한다고 투표한 경우, DeArrow 제목 대신 원본 제목을 표시합니다</string>
   <string name="morphe_dearrow_casual_mode_min_votes_title">원본 제목을 표시하기 위한 최소 캐주얼 투표 수</string>
-  <string name="morphe_dearrow_casual_mode_min_votes_summary">원본 제목을 표시하는 데 필요한 캐주얼 투표 수입니다. 여기서 투표 수는 재미있음 또는 창의적임과 같은 하나의 항목에 대한 투표를 의미합니다</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">원본 제목을 표시하는 데 필요한 캐주얼 투표 수입니다. 여기서 투표 수는 \'Funny\' 또는 \'Creative\'과 같은 단일 카테고리에 대한 투표를 의미합니다</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow 썸네일</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">원본 썸네일</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; 원본 썸네일</string>

@@ -788,6 +788,8 @@ Second \"item\" text"</string>
 หากต้องการเข้าถึงการตั้งค่า ให้เปิดใช้งานปุ่มการตั้งค่าผ่านทาง ทั่วไป → แถบเครื่องมือ → แสดงการตั้งค่า"</string>
   <string name="morphe_narrow_navigation_buttons_title">เปิดใช้งานปุ่มนำทางที่แคบ</string>
   <string name="morphe_narrow_navigation_buttons_summary">ทำให้แถบนำทางทึบแสงอย่างสมบูรณ์ในโหมดสว่าง</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">ปิดใช้งานปุ่มนำทางที่ไม่มีป้ายกำกับ</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">แสดงปุ่มนำทางพร้อมป้ายกำกับ หาก YouTube ส่งมาโดยไม่มีป้ายกำกับ</string>
   <string name="morphe_navigation_bar_animations_title">เปิดใช้งานภาพเคลื่อนไหวแถบนำทาง</string>
   <string name="morphe_navigation_bar_animations_summary">เคลื่อนไหวการเปลี่ยนภาพเมื่อสลับระหว่างแท็บ</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">ปิดใช้งานการซ่อนแถบนำทางอัตโนมัติ</string>
@@ -1120,6 +1122,9 @@ Second \"item\" text"</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">ปุ่มกลับออกจากฟีด</string>
   <string name="morphe_back_button_always_exits_feed_summary">การกดปุ่มกลับจะออกจากแอปเสมอ แทนที่จะเลื่อนไปที่ด้านบนของฟีด</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">บังคับใช้ฟอนต์ระบบ</string>
+  <string name="morphe_force_system_font_summary">แสดงแอปด้วยฟอนต์ของอุปกรณ์แทน YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">ซ่อนแถบสถานะ</string>
   <string name="morphe_hide_status_bar_summary">ซ่อนแถบสถานะของระบบ ปัดลงจากขอบด้านบนเพื่อแสดงชั่วครู่</string>

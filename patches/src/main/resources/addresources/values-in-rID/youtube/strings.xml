@@ -788,6 +788,8 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
 Untuk mengakses Setelan, aktifkan tombol Setelan melalui Umum → Bilah Alat → Tampilkan Setelan."</string>
   <string name="morphe_narrow_navigation_buttons_title">Aktifkan tombol navigasi sempit</string>
   <string name="morphe_narrow_navigation_buttons_summary">Mengurangi jarak horizontal antara tombol</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Nonaktifkan tombol navigasi tanpa label</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">Menampilkan tombol navigasi dengan label, jika YouTube mengirimkannya tanpa label</string>
   <string name="morphe_navigation_bar_animations_title">Aktifkan animasi bilah navigasi</string>
   <string name="morphe_navigation_bar_animations_summary">Menganimasikan transisi saat beralih antar tab</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Nonaktifkan otomatis menyembunyikan bilah navigasi</string>
@@ -1120,6 +1122,9 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tombol kembali menutup feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali akan selalu menutup aplikasi bukannya menggulir feed ke atas</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">Paksa font sistem</string>
+  <string name="morphe_force_system_font_summary">Menampilkan aplikasi dengan font perangkat, bukan YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Sembunyikan bilah status</string>
   <string name="morphe_hide_status_bar_summary">Menyembunyikan bilah status sistem. Geser ke bawah dari tepi atas untuk menampilkannya sesaat</string>

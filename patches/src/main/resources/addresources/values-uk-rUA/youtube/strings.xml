@@ -788,6 +788,8 @@ Second \"item\" text"</string>
 Щоб отримати доступ до налаштувань, увімкніть \"Налаштування\" в розділі \"Загальні\" → \"Панель інструментів\" → Показати \"Налаштування\"."</string>
   <string name="morphe_narrow_navigation_buttons_title">Увімкнути вузькі кнопки навігації</string>
   <string name="morphe_narrow_navigation_buttons_summary">Зменшує горизонтальні відступи між кнопками</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Вимкнути навігаційні кнопки без підписів</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">Показує навігаційні кнопки з підписами, якщо YouTube надсилає їх без підписів</string>
   <string name="morphe_navigation_bar_animations_title">Увімкнути анімації панелі навігації</string>
   <string name="morphe_navigation_bar_animations_summary">Анімує переходи між вкладками</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Вимкнути автоприховування панелі навігації</string>
@@ -1119,6 +1121,9 @@ Second \"item\" text"</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Кнопка \"Назад\" виходить зі стрічки</string>
   <string name="morphe_back_button_always_exits_feed_summary">Натискання кнопки \"Назад\" завжди закриває застосунок замість прокручування до початку стрічки</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">Використовувати системний шрифт</string>
+  <string name="morphe_force_system_font_summary">Показує застосунок зі шрифтом пристрою замість YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Приховати панель стану</string>
   <string name="morphe_hide_status_bar_summary">Приховує системну панель стану. Проведіть донизу від верхнього краю, щоб показати її на мить</string>

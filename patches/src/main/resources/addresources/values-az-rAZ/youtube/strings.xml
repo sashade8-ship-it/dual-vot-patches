@@ -788,6 +788,8 @@ Bunu düzəltmək üçün 'Video yayımlarını saxtalaşdır'-ı aktivləşdir 
 Tənzimləmələrə daxil olmaq üçün Ümumi → Alət Cərgəsi→ Tənzimləmələri Göstər vasitəsilə Ayarlar düyməsini aktivləşdir."</string>
   <string name="morphe_narrow_navigation_buttons_title">Sıx fəaliyyət düymələrini aktivləşdir</string>
   <string name="morphe_narrow_navigation_buttons_summary">Düymələr arasında üfüqi boşluğu azaldır</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Etiketsiz fəaliyyət düymələrini qapat</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">YouTube etiketsiz göndərirsə, fəaliyyət düymələrini etiketlərlə göstərir</string>
   <string name="morphe_navigation_bar_animations_title">Fəaliyyət cərgəsi animasiyalarını aktivləşdir</string>
   <string name="morphe_navigation_bar_animations_summary">Tabellər arasında keçərkən keçidləri canlandırır</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Fəaliyyət cərgəsin avtomatik gizlətməsini qapat</string>
@@ -1120,6 +1122,9 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Geri düyməsi axından çıxarır</string>
   <string name="morphe_back_button_always_exits_feed_summary">Geriyə basmaq, axının yuxarısına sürüşdürmək əvəzinə, həmişə tətbiqdən çıxır</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">Sistem şriftinə zorla</string>
+  <string name="morphe_force_system_font_summary">Tətbiqi YouTube Sans əvəzinə cihaz şrifti ilə göstərir</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Status panelini gizlət</string>
   <string name="morphe_hide_status_bar_summary">Sistem status panelini gizlədir. Onu bir anlıq göstərmək üçün yuxarı kənardan aşağı sürüşdür</string>
@@ -1168,6 +1173,10 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_dearrow_titles_search_title">Axtarış nəticələri</string>
   <string name="morphe_dearrow_titles_icon_title">DeArrow işarəsini göstər</string>
   <string name="morphe_dearrow_titles_icon_summary">Kütləvi mənbəli video başlıqlarında DeArrow işarəsini göstərir</string>
+  <string name="morphe_dearrow_casual_mode_title">Təsadüfi rejim</string>
+  <string name="morphe_dearrow_casual_mode_summary">DeArrow istifadəçiləri orijinal başlığı bəyəndikləri təqdirdə DeArrow başlığı əvəzinə orijinal başlığı göstərir</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Orijinal başlığı göstərmək üçün ən az adi səslər</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">Orijinal başlığı göstərmək üçün \'gülməli\' və ya \'yaradıcı\' kimi tək kateqoriyada adi səs sayı</string>
   <string name="morphe_dearrow_thumbnails_title">DeArrow miniatürləri</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Orijinal miniatürlər</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Orijinal miniatürlər</string>

@@ -851,6 +851,8 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
 To access Settings, enable the Settings button via General → Toolbar → Show Settings."</string>
     <string name="morphe_narrow_navigation_buttons_title">Enable narrow navigation buttons</string>
     <string name="morphe_narrow_navigation_buttons_summary">Reduces the horizontal spacing between buttons</string>
+    <string name="morphe_disable_icon_only_navigation_buttons_title">Disable navigation buttons without labels</string>
+    <string name="morphe_disable_icon_only_navigation_buttons_summary">Shows the navigation buttons with labels, if YouTube sends them without labels</string>
     <string name="morphe_navigation_bar_animations_title">Enable navigation bar animations</string>
     <string name="morphe_navigation_bar_animations_summary">Animates transitions when switching between tabs</string>
     <string name="morphe_disable_auto_hide_navigation_bar_title">Disable auto-hiding navigation bar</string>

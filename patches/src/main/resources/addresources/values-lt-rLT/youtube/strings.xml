@@ -788,6 +788,8 @@ Turi būti pateikti „Subtitrų slapukai“"</string>
 Norėdami pasiekti nustatymus, įjunkite nustatymų mygtuką: Bendrieji → Įrankių juosta → Rodyti nustatymus."</string>
   <string name="morphe_narrow_navigation_buttons_title">Įjungti siaurus naršymo mygtukus</string>
   <string name="morphe_narrow_navigation_buttons_summary">Sumažina horizontalų tarpą tarp mygtukų</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Išjungti navigacijos mygtukus be etikečių</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">Rodo navigacijos mygtukus su etiketėmis, jei YouTube juos atsiunčia be etikečių</string>
   <string name="morphe_navigation_bar_animations_title">Įjungti naršymo juostos animacijas</string>
   <string name="morphe_navigation_bar_animations_summary">Animuoja perėjimus keičiant skirtukus</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Išjungti automatinį naršymo juostos slėpimą</string>
@@ -1120,6 +1122,9 @@ Apribojimas: jei parinktis „Atkurti senąją vaizdo įrašo veiksmų juostą�
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Grįžimo mygtukas išeina iš sklaidos kanalo</string>
   <string name="morphe_back_button_always_exits_feed_summary">Paspaudus grįžimo mygtuką programa visada uždaroma, o ne slenkama į sklaidos kanalo viršų</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">Priverstinai naudoti sistemos šriftą</string>
+  <string name="morphe_force_system_font_summary">Rodo programėlę su įrenginio šriftu vietoj YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Slėpti būsenos juostą</string>
   <string name="morphe_hide_status_bar_summary">Paslepia sistemos būsenos juostą. Braukite žemyn nuo viršutinio krašto, kad ją trumpam parodytumėte</string>

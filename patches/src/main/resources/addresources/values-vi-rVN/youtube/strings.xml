@@ -787,6 +787,8 @@ Cần thiết lập \"Cookie phụ đề\""</string>
 Để vào Cài đặt, hãy bật nút Cài đặt trong Chung → Thanh công cụ → Hiện Cài đặt."</string>
   <string name="morphe_narrow_navigation_buttons_title">Thu hẹp nút điều hướng</string>
   <string name="morphe_narrow_navigation_buttons_summary">Giảm khoảng cách ngang giữa các nút</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Tắt các nút điều hướng không có nhãn</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">Hiển thị các nút điều hướng có nhãn, nếu YouTube gửi chúng không có nhãn</string>
   <string name="morphe_navigation_bar_animations_title">Bật hiệu ứng thanh điều hướng</string>
   <string name="morphe_navigation_bar_animations_summary">Tạo hoạt ảnh khi chuyển tab</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Tắt tự động ẩn thanh điều hướng</string>
@@ -1119,6 +1121,9 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Bấm quay lại để thoát trang video</string>
   <string name="morphe_back_button_always_exits_feed_summary">Bấm nút quay lại sẽ luôn luôn thoát ứng dụng thay vì lướt lên đầu trang video</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">Luôn dùng phông chữ hệ thống</string>
+  <string name="morphe_force_system_font_summary">Hiển thị ứng dụng với phông chữ của thiết bị thay vì YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Ẩn thanh trạng thái</string>
   <string name="morphe_hide_status_bar_summary">Ẩn thanh trạng thái hệ thống. Vuốt xuống từ mép trên để hiện thanh trạng thái trong giây lát</string>

@@ -788,6 +788,8 @@ Second \"item\" text"</string>
 برای دسترسی به تنظیمات، دکمهٔ تنظیمات را از مسیر کلی > نوار ابزار > نمایش تنظیمات فعال کنید."</string>
   <string name="morphe_narrow_navigation_buttons_title">فعال‌کردن دکمه‌های پیمایش باریک</string>
   <string name="morphe_narrow_navigation_buttons_summary">فاصلهٔ افقی بین دکمه‌ها را کاهش می‌دهد</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">غیرفعال کردن دکمه‌های ناوبری بدون برچسب</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">اگر YouTube دکمه‌های ناوبری را بدون برچسب ارسال کند، آن‌ها را با برچسب نشان می‌دهد</string>
   <string name="morphe_navigation_bar_animations_title">فعال‌کردن انیمیشن‌های نوار پیمایش</string>
   <string name="morphe_navigation_bar_animations_summary">هنگام جابه‌جایی بین برگه‌ها، انتقال‌ها را متحرک می‌کند</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">غیرفعال‌کردن پنهان‌شدن خودکار نوار پیمایش</string>
@@ -1120,6 +1122,9 @@ Second \"item\" text"</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">دکمهٔ برگشت از خوراک خارج می‌شود</string>
   <string name="morphe_back_button_always_exits_feed_summary">فشردن دکمهٔ برگشت همیشه از برنامه خارج می‌شود، نه اینکه به بالای خوراک پیمایش کند</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">اجبار قلم سیستم</string>
+  <string name="morphe_force_system_font_summary">برنامه را با فونت دستگاه به جای YouTube Sans نشان میدهد</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">پنهان کردن نوار وضعیت</string>
   <string name="morphe_hide_status_bar_summary">نوار وضعیت سیستم را پنهان می‌کند. برای نمایش لحظه‌ای آن، از لبه بالایی به پایین بکشید</string>

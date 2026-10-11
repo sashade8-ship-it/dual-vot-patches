@@ -788,6 +788,8 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
 Za dostop do Nastavitev omogočite gumb Nastavitve prek Splošno → Vrstica → Pokaži Nastavitve."</string>
   <string name="morphe_narrow_navigation_buttons_title">Omogoči ozka gumba za navigacijo.</string>
   <string name="morphe_narrow_navigation_buttons_summary">Naredi vrstico stanja popolnoma neprozorno</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Onemogoči navigacijske gumbe brez oznak</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">Prikaže navigacijske gumbe z oznakami, če jih YouTube pošlje brez oznak</string>
   <string name="morphe_navigation_bar_animations_title">Omogoči animacije navigacijske vrstice</string>
   <string name="morphe_navigation_bar_animations_summary">Naredi vrstico za navigacijo popolnoma neprozorno v svetlem načinu</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Onemogoči samodejno skrivanje navigacijske vrstice</string>
@@ -1120,6 +1122,9 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Gumb za nazaj zapre vir</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pritisk na gumb za nazaj vedno zapre aplikacijo namesto, da bi se pomaknila na vrh vira</string>
+  <!-- layout.font.forceSystemFontPatch -->
+  <string name="morphe_force_system_font_title">Prisili sistemsko pisavo</string>
+  <string name="morphe_force_system_font_summary">Prikaže aplikacijo s pisavo naprave namesto YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Skrij statusno vrstico</string>
   <string name="morphe_hide_status_bar_summary">Skrije sistemsko statusno vrstico. Povlecite navzdol z zgornjega roba, da se za trenutek prikaže</string>
