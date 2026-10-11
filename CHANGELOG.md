@@ -1,3 +1,13 @@
+## 1.47.0-dev.24-dualvot.8.5.3 (2026-10-11)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.47.0-dev.24](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.47.0-dev.24).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.47.0-dev.23-dualvot.8.5.3 (2026-10-11)
 
 ### Automated Morphe update
@@ -496,6 +506,16 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.47.0-dev.24](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.23...v1.47.0-dev.24) (2026-10-11)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide layout components:** History shelf hidden after fullscreen on You tab ([91d9b2d](https://github.com/MorpheApp/morphe-patches/commit/91d9b2daccb9242a02f4fbaa7dcd408a09c5a28a))
+
+### ✨ New Features
+
+* **YouTube - Hide layout components:** Add "Hide 'Ask Gemini' button" setting  ([#3662](https://github.com/MorpheApp/morphe-patches/issues/3662)) ([3da93d5](https://github.com/MorpheApp/morphe-patches/commit/3da93d5ac7d4abb22712f4725fe12cb8be5f1454))
 
 ## [1.47.0-dev.23](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0-dev.22...v1.47.0-dev.23) (2026-10-11)
 
