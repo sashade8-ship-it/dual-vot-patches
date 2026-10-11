@@ -176,6 +176,8 @@ Changes include:
     <string name="morphe_hide_video_title_summary">Hides the video title in the fullscreen mode</string>
     <string name="morphe_sanitize_video_subtitle_title">Sanitize video subtitle</string>
     <string name="morphe_sanitize_video_subtitle_summary">Sanitizes phrases like \'#\', \'Fundraiser\', \'product(s)\', and \'Shop\' from video subtitle</string>
+    <string name="morphe_hide_ask_gemini_button_title">Hide \'Ask Gemini\' button</string>
+    <string name="morphe_hide_ask_gemini_button_summary">Hides the \'Ask Gemini\' button at the bottom of the \'Ask about this video\' panel</string>
 
     <string name="morphe_hide_description_components_screen_title">Video description</string>
     <string name="morphe_hide_description_components_screen_summary">Choose which components appear in the video description</string>
