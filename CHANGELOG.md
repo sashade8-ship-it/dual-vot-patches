@@ -1,3 +1,13 @@
+## 1.48.0-dev.4-dualvot.8.5.3 (2026-10-12)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.48.0-dev.4](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.4).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.48.0-dev.3-dualvot.8.5.3 (2026-10-12)
 
 ### Automated Morphe update
@@ -396,6 +406,17 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.48.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.3...v1.48.0-dev.4) (2026-10-12)
+
+### ✨ New Features
+
+* **Spoof video streams:** Offer to fix playback when PotHelper no longer works or the default client keeps failing ([#3659](https://github.com/MorpheApp/morphe-patches/issues/3659)) ([f996510](https://github.com/MorpheApp/morphe-patches/commit/f996510cfdc71a78c5c9579efcf7d604e70ae1ea))
+* **YouTube - Add to queue:** Add Premium-style queue setting ([#3582](https://github.com/MorpheApp/morphe-patches/issues/3582)) ([1b1b2bc](https://github.com/MorpheApp/morphe-patches/commit/1b1b2bc74bb49c0553225fc7b691c55fbc961a69))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.41.52` ([003a445](https://github.com/MorpheApp/morphe-patches/commit/003a445df12a25f0970a6060853d12ccfbcae7b1))
 
 ## [1.48.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.2...v1.48.0-dev.3) (2026-10-12)
 
