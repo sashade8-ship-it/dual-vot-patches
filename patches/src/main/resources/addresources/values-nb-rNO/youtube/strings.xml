@@ -560,6 +560,22 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Åpner Morphe-køen i stedet for YouTube-køen</string>
   <string name="morphe_queue_add_flyout_menu_title">Legg til menyelement for kø i feed-undermeny</string>
   <string name="morphe_queue_add_flyout_menu_summary">Legger til et ekstra flyout-element. Aktiver dette hvis «Legg til i kø» ikke vises</string>
+  <string name="morphe_local_queue_title">Kø i Premium-stil</string>
+  <string name="morphe_local_queue_summary">"Erstatter Morphe-køen med en kø som ligger lokalt på enheten, spiller gjennom av seg selv og kan omorganiseres ved å dra
+
+Info: Den neste videoen i køen starter bare mens YouTube er på skjermen"</string>
+  <string name="morphe_local_queue_sheet_title">Kø</string>
+  <string name="morphe_local_queue_open">Kø (%d)</string>
+  <string name="morphe_local_queue_clear">Tøm alle</string>
+  <string name="morphe_local_queue_empty">Ingenting i kø</string>
+  <string name="morphe_local_queue_empty_hint">Bruk Spill neste i kø på en hvilken som helst video</string>
+  <string name="morphe_local_queue_now_playing">Spilles nå</string>
+  <string name="morphe_local_queue_play_next">Spill neste i kø</string>
+  <string name="morphe_local_queue_reorder">Endre rekkefølge</string>
+  <string name="morphe_local_queue_remove">Fjern</string>
+  <string name="morphe_local_queue_added">Lagt til i kø</string>
+  <string name="morphe_local_queue_full">Køen er full</string>
+  <string name="morphe_local_queue_play_failed">Kunne ikke starte videoen</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Annonsehviteliste i flyout-menyen</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Legger til et flyout-element som lar annonser spille på kanalen til den videoen</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_custom_font_file_title">Egendefinert skriftfil</string>
   <string name="morphe_custom_font_file_summary">Velg en TTF- eller OTF-skriftfil</string>
   <string name="morphe_custom_font_file_invalid">Den valgte filen er ikke en TTF- eller OTF-skrift</string>
-  <string name="morphe_custom_font_pick_file_first">Velg en skriftfil først</string>
   <string name="morphe_custom_font_failed_to_load">Egendefinert skrift kunne ikke lastes inn og er slått av</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

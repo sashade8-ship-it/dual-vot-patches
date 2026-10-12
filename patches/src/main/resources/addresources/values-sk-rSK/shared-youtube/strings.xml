@@ -93,6 +93,12 @@ Ak chcete zmeniť ikonu všade, znova aplikujte záplatu a zmeňte možnosť zá
 
 Ak ste používateľ YouTube Premium, toto nastavenie nemusí byť potrebné."</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Nebolo možné načítať žiadne toky klientov</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Predvolený klient nefunguje</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s niekoľkokrát po sebe nefungoval, ale %2$s áno.
+
+Urobiť %2$s predvoleným klientom?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Prepnúť</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Vypnutie tohto nastavenia môže spôsobiť problémy s prehrávaním.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Ak chcete túto funkciu použiť, vypnite „Spoofovať video streamy“"</strin
   <string name="morphe_external_potoken_provider_about_summary">"Táto funkcia je momentálne vo vývoji a nemusí fungovať
 
 Klepnite sem na stiahnutie PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper už nefunguje</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Token vstavaný do tejto verzie PotHelper už nefunguje
+
+Zapnite 'Napodobňovať video streamy' na opravu prehrávania"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Zapnúť</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falošovať verziu aplikácie</string>
   <string name="morphe_spoof_app_version_summary">Oklame server, aby si myslel, žoužívaš staršiu verziu aplikácie na obnovenie staršieho vzhľadu.</string>

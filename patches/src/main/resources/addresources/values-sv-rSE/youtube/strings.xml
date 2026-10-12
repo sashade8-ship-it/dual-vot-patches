@@ -560,6 +560,22 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Öppnar Morphe-kön istället för YouTube-kön</string>
   <string name="morphe_queue_add_flyout_menu_title">Lägg till menyalternativ för kö i flödernas flyout-meny</string>
   <string name="morphe_queue_add_flyout_menu_summary">Lägger till ett extra flyout-objekt. Aktivera detta om \"Lägg till i kön\" inte visas</string>
+  <string name="morphe_local_queue_title">Kö i Premiumstil</string>
+  <string name="morphe_local_queue_summary">"Ersätter Morphe-kön med en som finns på enheten, spelas upp automatiskt och kan sorteras om genom att dra
+
+Info: Nästa video i kön startar bara medan YouTube är på skärmen"</string>
+  <string name="morphe_local_queue_sheet_title">Kö</string>
+  <string name="morphe_local_queue_open">Kö (%d)</string>
+  <string name="morphe_local_queue_clear">Rensa alla</string>
+  <string name="morphe_local_queue_empty">Inget i kön</string>
+  <string name="morphe_local_queue_empty_hint">Använd Spela nästa i kön på valfri video</string>
+  <string name="morphe_local_queue_now_playing">Spelas nu</string>
+  <string name="morphe_local_queue_play_next">Spela nästa i kön</string>
+  <string name="morphe_local_queue_reorder">Ändra ordning</string>
+  <string name="morphe_local_queue_remove">Ta bort</string>
+  <string name="morphe_local_queue_added">Tillagd i kön</string>
+  <string name="morphe_local_queue_full">Kön är full</string>
+  <string name="morphe_local_queue_play_failed">Det gick inte att starta videon</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Annonsvitlista i snabbmenyn</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Lägger till ett snabbmenyalternativ som låter annonser spelas upp på kanalen för den videon</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan öv
   <string name="morphe_custom_font_file_title">Egen typsnittsfil</string>
   <string name="morphe_custom_font_file_summary">Välj en TTF- eller OTF-teckensnittsfil</string>
   <string name="morphe_custom_font_file_invalid">Den valda filen är inte ett TTF- eller OTF-teckensnitt</string>
-  <string name="morphe_custom_font_pick_file_first">Välj en teckensnittsfil först</string>
   <string name="morphe_custom_font_failed_to_load">Det anpassade teckensnittet kunde inte laddas och är avstängt</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

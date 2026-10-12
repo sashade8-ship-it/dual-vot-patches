@@ -562,6 +562,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Открывает очередь Morphe вместо очереди YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Добавить пункт меню очереди во всплывающее меню ленты</string>
   <string name="morphe_queue_add_flyout_menu_summary">Добавляет дополнительный элемент всплывающего меню. Включите это, если пункт \"Добавить в очередь\" не отображается.</string>
+  <string name="morphe_local_queue_title">Очередь в стиле Premium</string>
+  <string name="morphe_local_queue_summary">"Заменяет очередь Morphe на очередь, которая хранится на устройстве, воспроизводится сама и может быть переупорядочена перетаскиванием
+
+Информация: следующее видео из очереди запускается только тогда, когда YouTube находится на экране"</string>
+  <string name="morphe_local_queue_sheet_title">Очередь</string>
+  <string name="morphe_local_queue_open">Очередь (%d)</string>
+  <string name="morphe_local_queue_clear">Очистить всё</string>
+  <string name="morphe_local_queue_empty">В очереди ничего нет</string>
+  <string name="morphe_local_queue_empty_hint">Используйте «Воспроизвести следующим в очереди» на любом видео</string>
+  <string name="morphe_local_queue_now_playing">Сейчас воспроизводится</string>
+  <string name="morphe_local_queue_play_next">Воспроизвести следующим в очереди</string>
+  <string name="morphe_local_queue_reorder">Изменить порядок</string>
+  <string name="morphe_local_queue_remove">Удалить</string>
+  <string name="morphe_local_queue_added">Добавлено в очередь</string>
+  <string name="morphe_local_queue_full">Очередь заполнена</string>
+  <string name="morphe_local_queue_play_failed">Не удалось запустить видео</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Белый список рекламы в выпадающем меню</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Добавляет пункт в выпадающем меню, который разрешает показ рекламы на канале этого видео</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1159,7 +1175,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">Пользовательский файл шрифта</string>
   <string name="morphe_custom_font_file_summary">Выберите файл шрифта TTF или OTF</string>
   <string name="morphe_custom_font_file_invalid">Выбранный файл не является шрифтом TTF или OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Сначала выберите файл шрифта</string>
   <string name="morphe_custom_font_failed_to_load">Не удалось загрузить пользовательский шрифт, и он отключен</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

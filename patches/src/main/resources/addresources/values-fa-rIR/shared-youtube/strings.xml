@@ -93,6 +93,12 @@ Second \"item\" text"</string>
 
 اگر کاربر YouTube Premium هستید، ممکن است به این تنظیم نیاز نداشته باشید"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">نتوانست هیچ جریان کلاینتی دریافت کند</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">کلاینت پیش‌فرض کار نمی‌کند</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s چند بار پیاپی کار نکرد، اما %2$s کار کرد.
+
+%2$s را کلاینت پیش‌فرض کنیم؟"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">تعویض</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">خاموش‌کردن این تنظیم ممکن است باعث مشکلات پخش شود.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Second \"item\" text"</string>
   <string name="morphe_external_potoken_provider_about_summary">"این قابلیت در حال حاضر در دست توسعه است و ممکن است کار نکند
 
 برای دانلود PotHelper، اینجا ضربه بزنید"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper دیگر کار نمی‌کند</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"توکن تعبیه‌شده در این نسخه از PotHelper دیگر کار نمی‌کند
+
+برای رفع مشکل پخش، «جعل جریان‌های ویدیو» را فعال کنید"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">فعال کنید</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">جعل نسخهٔ برنامه</string>
   <string name="morphe_spoof_app_version_summary">سرور را فریب می‌دهد تا تصور کند از نسخهٔ قدیمی‌تری از برنامه استفاده می‌کنید و قابلیت‌های قدیمی رابط کاربری را بازیابی می‌کند</string>

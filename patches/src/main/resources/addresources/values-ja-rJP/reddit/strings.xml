@@ -70,11 +70,11 @@ Second \"item\" text"</string>
   <string name="morphe_sanitize_sharing_links_summary">共有リンクからトラッキング用のパラメータを削除します</string>
   <string name="morphe_open_links_directly_title">リンクを直接開く</string>
   <string name="morphe_open_links_directly_summary">リダイレクト URL を経由せずに外部リンクを直接開きます</string>
-  <string name="morphe_full_width_feed_media_title">フィードメディアを全幅で表示</string>
-  <string name="morphe_full_width_feed_media_summary">フィードと投稿の詳細では、画像と動画を左右の余白や角丸なしで端から端まで表示します</string>
+  <string name="morphe_full_width_feed_media_title">フィードのメディアを横幅いっぱいに表示</string>
+  <string name="morphe_full_width_feed_media_summary">フィードおよび投稿の詳細ページで、左右の余白をなくし、角を丸める処理を無効にし、画像や動画を画面の端から端まで表示します。</string>
   <string name="morphe_media_viewer_fade_title">メディアビューアーのフェード強度</string>
-  <string name="morphe_media_viewer_fade_summary">画像や動画を表示する際にキャプションの背後に表示される暗いフェードの強さ（0（フェードなし）から1（Redditのデフォルト）までの範囲）</string>
-  <string name="morphe_keep_feed_position_title">フィードの位置を保持</string>
+  <string name="morphe_media_viewer_fade_summary">メディアビューアーで画像や動画を表示した際にキャプションやボタンの背後に表示される、ふちどりのための影の濃さを設定します。0 (影なし) から 1 (Reddit のデフォルト) の範囲で指定できます。</string>
+  <string name="morphe_keep_feed_position_title">フィードのスクロール位置を維持</string>
   <string name="morphe_keep_feed_position_summary">投稿、画像、または動画を閉じた後、開いた投稿を上部に移動する代わりに、フィードを同じ位置に維持します</string>
   <string name="morphe_feed_media_max_height_title">フィードメディアの最大高さ</string>
   <string name="morphe_feed_media_max_height_summary">フィード内の画像、動画、ギャラリーの最大の高さを、幅に対する倍数で指定します。これより高いメディアは切り抜かれます。1.33はRedditのデフォルトです</string>
@@ -86,7 +86,7 @@ Second \"item\" text"</string>
   <string name="morphe_media_viewer_black_background_summary">メディアビューアーで、画像や動画の背景にテーマの背景色の代わりに黒を使用します</string>
   <string name="morphe_open_links_externally_title">外部ブラウザでリンクを開く</string>
   <string name="morphe_open_links_externally_summary">リンクをアプリ内ブラウザではなく外部ブラウザで開きます</string>
-  <string name="morphe_remember_collapsed_comments_title">折りたたんだコメントを記憶する</string>
+  <string name="morphe_remember_collapsed_comments_title">閉じたコメントを記憶</string>
   <string name="morphe_remember_collapsed_comments_summary">折りたたんだコメントは、投稿を再度開いたときも折りたたまれたままになります</string>
   <string name="morphe_app_icon_title">アプリアイコン</string>
   <string name="morphe_app_icon_choose_title">アプリアイコンを選択</string>

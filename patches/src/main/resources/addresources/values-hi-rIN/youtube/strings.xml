@@ -560,6 +560,22 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_queue_override_flyout_menu_summary">Morphe कतार को YouTube कतार के बजाय खोलता है</string>
   <string name="morphe_queue_add_flyout_menu_title">फ़ीड फ़्लाईआउट कतार मेनू आइटम जोड़ें</string>
   <string name="morphe_queue_add_flyout_menu_summary">एक अतिरिक्त फ़्लाईआउट आइटम जोड़ता है। यदि \"कतार में जोड़ें\" नहीं दिखाया गया है तो इसे सक्षम करें।</string>
+  <string name="morphe_local_queue_title">प्रीमियम-शैली कतार</string>
+  <string name="morphe_local_queue_summary">"Morphe कतार को एक ऐसी कतार से बदलता है जो डिवाइस पर रहती है, अपने आप चलती रहती है, और जिसे खींचकर पुनः क्रमबद्ध किया जा सकता है
+
+जानकारी: कतार में अगला वीडियो केवल तभी शुरू होता है जब YouTube स्क्रीन पर होता है"</string>
+  <string name="morphe_local_queue_sheet_title">कतार</string>
+  <string name="morphe_local_queue_open">कतार (%d)</string>
+  <string name="morphe_local_queue_clear">सभी साफ़ करें</string>
+  <string name="morphe_local_queue_empty">कतार में कुछ नहीं है</string>
+  <string name="morphe_local_queue_empty_hint">किसी भी वीडियो पर कतार में अगला चलाएं का उपयोग करें</string>
+  <string name="morphe_local_queue_now_playing">अभी चल रहा है</string>
+  <string name="morphe_local_queue_play_next">कतार में अगला चलाएं</string>
+  <string name="morphe_local_queue_reorder">क्रम बदलें</string>
+  <string name="morphe_local_queue_remove">हटाएँ</string>
+  <string name="morphe_local_queue_added">कतार में जोड़ा गया</string>
+  <string name="morphe_local_queue_full">कतार भरी हुई है</string>
+  <string name="morphe_local_queue_play_failed">वीडियो शुरू नहीं हो सका</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">फ़्लाईआउट मेनू में विज्ञापन श्वेतसूची</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">एक फ़्लाईआउट आइटम जोड़ता है जो उस वीडियो के चैनल पर विज्ञापन चलाने की अनुमति देता है</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_custom_font_file_title">कस्टम फ़ॉन्ट फ़ाइल</string>
   <string name="morphe_custom_font_file_summary">TTF या OTF फ़ॉन्ट फ़ाइल चुनें</string>
   <string name="morphe_custom_font_file_invalid">चुनी गई फ़ाइल TTF या OTF फ़ॉन्ट नहीं है</string>
-  <string name="morphe_custom_font_pick_file_first">पहले फ़ॉन्ट फ़ाइल चुनें</string>
   <string name="morphe_custom_font_failed_to_load">कस्टम फ़ॉन्ट लोड नहीं हो सका और इसे बंद कर दिया गया है</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

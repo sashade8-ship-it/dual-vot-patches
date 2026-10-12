@@ -93,6 +93,12 @@ Pour changer l'icône partout, Patchez à nouveau et changez l'option de patch '
 
 Si vous êtes un utilisateur YouTube Premium, ce paramètre peut ne pas être nécessaire"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Impossible de récupérer les flux du client</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Le client par défaut ne fonctionne pas</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s n'a pas fonctionné plusieurs fois d'affilée, contrairement à %2$s.
+
+Définir %2$s comme client par défaut ?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Changer</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">La désactivation de ce paramètre peut entraîner des problèmes de lecture.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Pour utiliser cette fonctionnalité, désactivez 'Falsifier les flux vidéo'"</s
   <string name="morphe_external_potoken_provider_about_summary">"Cette fonctionnalité est actuellement en cours de développement et peut ne pas fonctionner
 
 Appuyez ici pour télécharger PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper ne fonctionne plus</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Le jeton intégré à cette version de PotHelper ne fonctionne plus
+
+Activez 'Falsifier les flux vidéo' pour résoudre le problème de lecture"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Activer</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Falsifier la version de l\'application</string>
   <string name="morphe_spoof_app_version_summary">Fait croire au serveur que vous utilisez une ancienne version de l\'application afin de restaurer des fonctionnalités d\'interface héritées</string>

@@ -560,6 +560,22 @@ Tieto: Ei välttämättä toimi suoratoistoissa"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Avaa Morphe-jono YouTuben jonon sijaan</string>
   <string name="morphe_queue_add_flyout_menu_title">Lisää valikkokohta syötejonon ponnahdusvalikkoon</string>
   <string name="morphe_queue_add_flyout_menu_summary">Lisää lisäponnahdusvalikkokohdan. Ota tämä käyttöön, jos \"Lisää jonoon\" ei näy.</string>
+  <string name="morphe_local_queue_title">Premium-tyylinen jono</string>
+  <string name="morphe_local_queue_summary">"Korvaa Morphe-jonon laitteessa olevalla jonolla, joka toistaa itsestään ja jonka järjestystä voi muuttaa vetämällä
+
+Info: Seuraava jonossa oleva video käynnistyy vain silloin, kun YouTube on näytöllä"</string>
+  <string name="morphe_local_queue_sheet_title">Jono</string>
+  <string name="morphe_local_queue_open">Jono (%d)</string>
+  <string name="morphe_local_queue_clear">Tyhjennä kaikki</string>
+  <string name="morphe_local_queue_empty">Jonossa ei ole mitään</string>
+  <string name="morphe_local_queue_empty_hint">Käytä Toista seuraavaksi jonossa -toimintoa missä tahansa videossa</string>
+  <string name="morphe_local_queue_now_playing">Nyt toistetaan</string>
+  <string name="morphe_local_queue_play_next">Toista seuraavaksi jonossa</string>
+  <string name="morphe_local_queue_reorder">Järjestä uudelleen</string>
+  <string name="morphe_local_queue_remove">Poista</string>
+  <string name="morphe_local_queue_added">Lisätty jonoon</string>
+  <string name="morphe_local_queue_full">Jono on täynnä</string>
+  <string name="morphe_local_queue_play_failed">Videota ei voitu käynnistää</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Mainosten sallittujen luettelo ponnahdusvalikossa</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Lisää ponnahdusvalikkoon kohde, joka sallii mainosten toiston kyseisen videon kanavalla</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_custom_font_file_title">Mukautettu fonttitiedosto</string>
   <string name="morphe_custom_font_file_summary">Valitse TTF- tai OTF-fonttitiedosto</string>
   <string name="morphe_custom_font_file_invalid">Valittu tiedosto ei ole TTF- tai OTF-fontti</string>
-  <string name="morphe_custom_font_pick_file_first">Valitse ensin fonttitiedosto</string>
   <string name="morphe_custom_font_failed_to_load">Mukautettua fonttia ei voitu ladata, ja se on poistettu käytöstä</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

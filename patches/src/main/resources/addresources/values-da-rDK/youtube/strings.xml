@@ -558,6 +558,22 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Åbner Morphe-køen i stedet for YouTube-køen</string>
   <string name="morphe_queue_add_flyout_menu_title">Tilføj feed-flyout-kø-menupunkt</string>
   <string name="morphe_queue_add_flyout_menu_summary">Tilføjer et ekstra flyout-element. Aktiver dette, hvis \"Tilføj til kø\" ikke vises.</string>
+  <string name="morphe_local_queue_title">Kø i premium-stil</string>
+  <string name="morphe_local_queue_summary">"Erstatter Morphe-køen med en, der findes på enheden, spiller automatisk videre, og kan omarrangeres ved at trække
+
+Info: Den næste video i køen starter kun, mens YouTube er på skærmen"</string>
+  <string name="morphe_local_queue_sheet_title">Kø</string>
+  <string name="morphe_local_queue_open">Kø (%d)</string>
+  <string name="morphe_local_queue_clear">Ryd alt</string>
+  <string name="morphe_local_queue_empty">Intet i køen</string>
+  <string name="morphe_local_queue_empty_hint">Brug \"Afspil næste i køen\" på en vilkårlig video</string>
+  <string name="morphe_local_queue_now_playing">Spiller nu</string>
+  <string name="morphe_local_queue_play_next">Afspil næste i køen</string>
+  <string name="morphe_local_queue_reorder">Omarranger</string>
+  <string name="morphe_local_queue_remove">Fjern</string>
+  <string name="morphe_local_queue_added">Tilføjet til køen</string>
+  <string name="morphe_local_queue_full">Køen er fuld</string>
+  <string name="morphe_local_queue_play_failed">Kunne ikke starte videoen</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Annoncehvidliste i flyout-menu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Tilføjer et flyout-element, der lader annoncer afspille på kanalen for den video</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1153,7 +1169,6 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_custom_font_file_title">Brugerdefineret skrifttypefil</string>
   <string name="morphe_custom_font_file_summary">Vælg en TTF- eller OTF-skrifttypefil</string>
   <string name="morphe_custom_font_file_invalid">Den valgte fil er ikke en TTF- eller OTF-skrifttype</string>
-  <string name="morphe_custom_font_pick_file_first">Vælg først en skrifttypefil</string>
   <string name="morphe_custom_font_failed_to_load">Den brugerdefinerede skrifttype kunne ikke indlæses og er slået fra</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

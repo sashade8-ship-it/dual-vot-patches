@@ -560,6 +560,22 @@ Información: Puede que no funcione en transmisiones en directo"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Abre la cola de Morphe en lugar de la cola de YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Añadir Cola al menú flotante del feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Añade un elemento adicional al menú flotante. Actívalo si no se muestra \'Añadir a la cola\'</string>
+  <string name="morphe_local_queue_title">Cola de estilo premium</string>
+  <string name="morphe_local_queue_summary">"Reemplaza la cola de Morphe por una que reside en el dispositivo, se reproduce sola y se puede reordenar arrastrando
+
+Información: el siguiente video en la cola solo se inicia mientras YouTube está en pantalla"</string>
+  <string name="morphe_local_queue_sheet_title">Cola</string>
+  <string name="morphe_local_queue_open">Cola (%d)</string>
+  <string name="morphe_local_queue_clear">Borrar todo</string>
+  <string name="morphe_local_queue_empty">Nada en la cola</string>
+  <string name="morphe_local_queue_empty_hint">Usa «Reproducir a continuación en la cola» en cualquier video</string>
+  <string name="morphe_local_queue_now_playing">Reproduciendo ahora</string>
+  <string name="morphe_local_queue_play_next">Reproducir a continuación en la cola</string>
+  <string name="morphe_local_queue_reorder">Reordenar</string>
+  <string name="morphe_local_queue_remove">Quitar</string>
+  <string name="morphe_local_queue_added">Añadido a la cola</string>
+  <string name="morphe_local_queue_full">La cola está llena</string>
+  <string name="morphe_local_queue_play_failed">No se pudo iniciar el video</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Lista de excepción para anuncios en el menú flotante</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Añade un elemento en el menú flotante que permite los anuncios en el canal de ese vídeo</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Limitación: si la opción 'Restaurar antigua barra de acciones de vídeo' está
   <string name="morphe_custom_font_file_title">Archivo de fuente personalizada</string>
   <string name="morphe_custom_font_file_summary">Elige un archivo de fuente TTF u OTF</string>
   <string name="morphe_custom_font_file_invalid">El archivo seleccionado no es una fuente TTF ni OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Primero elige un archivo de fuente</string>
   <string name="morphe_custom_font_failed_to_load">La fuente personalizada no se pudo cargar y está desactivada</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

@@ -560,6 +560,22 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otvára rad Morphe namiesto radu YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Pridať položku ponuky do rozbaľovacej ponuky fronty informačného kanála</string>
   <string name="morphe_queue_add_flyout_menu_summary">Pridá ďalšiu položku do rozbaľovacej ponuky. Povoľte, ak sa \"Pridať do frontu\" nezobrazuje</string>
+  <string name="morphe_local_queue_title">Fronta v štýle Premium</string>
+  <string name="morphe_local_queue_summary">"Nahrádza frontu Morphe frontou uloženou v zariadení, ktorá sa prehráva sama a dá sa pretiahnutím preusporiadať
+
+Informácia: Ďalšie video vo fronte sa spustí iba vtedy, keď je YouTube na obrazovke"</string>
+  <string name="morphe_local_queue_sheet_title">Fronta</string>
+  <string name="morphe_local_queue_open">Fronta (%d)</string>
+  <string name="morphe_local_queue_clear">Vyčistiť všetko</string>
+  <string name="morphe_local_queue_empty">Vo fronte nie je nič</string>
+  <string name="morphe_local_queue_empty_hint">Na ľubovoľnom videu použite možnosť Prehrať ako ďalšie vo fronte</string>
+  <string name="morphe_local_queue_now_playing">Práve sa prehráva</string>
+  <string name="morphe_local_queue_play_next">Prehrať ako ďalšie vo fronte</string>
+  <string name="morphe_local_queue_reorder">Preusporiadať</string>
+  <string name="morphe_local_queue_remove">Vymazať</string>
+  <string name="morphe_local_queue_added">Pridané do frontu</string>
+  <string name="morphe_local_queue_full">Front je plný</string>
+  <string name="morphe_local_queue_play_failed">Nepodarilo sa spustiť video</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Zoznam povolených reklám v rozbaľovacej ponuke</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Pridá položku do rozbaľovacej ponuky, ktorá umožní prehrávanie reklám na kanáli tohto videa.</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1156,7 +1172,6 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_custom_font_file_title">Vlastný súbor písma</string>
   <string name="morphe_custom_font_file_summary">Vyberte súbor písma TTF alebo OTF</string>
   <string name="morphe_custom_font_file_invalid">Vybraný súbor nie je písmo TTF alebo OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Najprv vyberte súbor písma</string>
   <string name="morphe_custom_font_failed_to_load">Vlastné písmo sa nepodarilo načítať a je vypnuté</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

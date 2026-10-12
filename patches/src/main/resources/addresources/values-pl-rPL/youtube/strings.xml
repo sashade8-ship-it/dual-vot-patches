@@ -560,6 +560,22 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otwiera kolejkę Morphe zamiast kolejki YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj opcję dodawania do kolejki w wysuwanym menu</string>
   <string name="morphe_queue_add_flyout_menu_summary">Dodaje dodatkową pozycję w wysuwanym menu. Włącz tę opcję, jeśli \"Dodaj do kolejki\" nie jest wyświetlane</string>
+  <string name="morphe_local_queue_title">Kolejka w stylu Premium</string>
+  <string name="morphe_local_queue_summary">"Zastępuje kolejkę Morphe taką, która działa na urządzeniu, odtwarza się samodzielnie i pozwala na zmianę kolejności przez przeciąganie
+
+Uwaga: Następny film w kolejce uruchamia się tylko wtedy, gdy YouTube jest widoczny na ekranie"</string>
+  <string name="morphe_local_queue_sheet_title">Kolejka</string>
+  <string name="morphe_local_queue_open">Kolejka (%d)</string>
+  <string name="morphe_local_queue_clear">Wyczyść wszystko</string>
+  <string name="morphe_local_queue_empty">Kolejka jest pusta</string>
+  <string name="morphe_local_queue_empty_hint">Użyj opcji \"Odtwórz jako następny w kolejce\" na dowolnym filmie</string>
+  <string name="morphe_local_queue_now_playing">Teraz odtwarzane</string>
+  <string name="morphe_local_queue_play_next">Odtwórz jako następny w kolejce</string>
+  <string name="morphe_local_queue_reorder">Zmień kolejność</string>
+  <string name="morphe_local_queue_remove">Usuń</string>
+  <string name="morphe_local_queue_added">Dodano do kolejki</string>
+  <string name="morphe_local_queue_full">Kolejka jest pełna</string>
+  <string name="morphe_local_queue_play_failed">Nie udało się uruchomić filmu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Biała lista reklam w menu filmu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Dodaje do menu opcję, która pozwala na wyświetlanie reklam na kanale danego filmu</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1156,7 +1172,6 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_custom_font_file_title">Plik własnej czcionki</string>
   <string name="morphe_custom_font_file_summary">Wybierz plik czcionki TTF lub OTF</string>
   <string name="morphe_custom_font_file_invalid">Wybrany plik nie jest czcionką TTF ani OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Najpierw wybierz plik czcionki</string>
   <string name="morphe_custom_font_failed_to_load">Nie udało się wczytać własnej czcionki i została ona wyłączona</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

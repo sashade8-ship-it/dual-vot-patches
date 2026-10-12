@@ -93,6 +93,12 @@ Til að breyta tákninu alls staðar skaltu keyra plástra aftur og breyta plás
 
 Ef þú ert YouTube Premium notandi gæti þessi stilling verið óþarf"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Ekki tókst að sækja klientastreymi</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Sjálfgefinn biðlari virkar ekki</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s virkaði ekki nokkrum sinnum í röð, en %2$s gerði það.
+
+Gera %2$s að sjálfgefnum biðlara?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Skipta</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Ef þú slökkvir á þessari stillingu gæti það valdið vandræðum við spilun.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Til að nota þessa eiginleika, slökktu á 'Falsun myndbandsstrauma'"</string>
   <string name="morphe_external_potoken_provider_about_summary">"Þessi eiginleiki er nú í þróun og gæti ekki virkað
 
 Snertu hér til að hlaða niður PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper virkar ekki lengur</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Táknið sem er innbyggt í þessa útgáfu af PotHelper virkar ekki lengur
+
+Kveiktu á 'Spoofa myndstrauma' til að laga spilun"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Kveikja</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Gerðu app útgáfuna að breytast</string>
   <string name="morphe_spoof_app_version_summary">Blekkur netþjóninn til að láta það virðast eins og þú ert að nota eldri app útgáfu til að endurheimta eldri UI eiginleika</string>

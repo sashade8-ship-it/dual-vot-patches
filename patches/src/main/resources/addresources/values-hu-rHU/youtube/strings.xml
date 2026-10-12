@@ -560,6 +560,22 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_queue_override_flyout_menu_summary">A Morphe sorbanálítást nyit meg a YouTube sor helyett.</string>
   <string name="morphe_queue_add_flyout_menu_title">Sor menüelem hozzáadása a hírfolyam felugró menühöz</string>
   <string name="morphe_queue_add_flyout_menu_summary">Hozzáad egy további felugró menüelemet. Engedélyezze, ha a \"Hozzáadás a sorhoz\" nem jelenik meg.</string>
+  <string name="morphe_local_queue_title">Prémium stílusú várólista</string>
+  <string name="morphe_local_queue_summary">"A Morphe-várólistát egy olyan várólistára cseréli, amely az eszközön tárolódik, magától végigjátssza a listát, és húzással átrendezhető
+
+Információ: A várólista következő videója csak akkor indul el, ha a YouTube éppen a képernyőn van"</string>
+  <string name="morphe_local_queue_sheet_title">Várólista</string>
+  <string name="morphe_local_queue_open">Várólista (%d)</string>
+  <string name="morphe_local_queue_clear">Összes törlése</string>
+  <string name="morphe_local_queue_empty">Nincs semmi a sorban</string>
+  <string name="morphe_local_queue_empty_hint">Bármelyik videón használd a „Lejátszás a sorban következőként” lehetőséget</string>
+  <string name="morphe_local_queue_now_playing">Lejátszás alatt</string>
+  <string name="morphe_local_queue_play_next">Lejátszás a sorban következőként</string>
+  <string name="morphe_local_queue_reorder">Átrendezés</string>
+  <string name="morphe_local_queue_remove">Eltávolítás</string>
+  <string name="morphe_local_queue_added">Hozzáadva a sorhoz</string>
+  <string name="morphe_local_queue_full">A sor tele van</string>
+  <string name="morphe_local_queue_play_failed">Nem sikerült elindítani a videót</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Hirdetési fehérlista a felugró menüben</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Felugró menüelemet ad hozzá, amely lehetővé teszi, hogy hirdetések jelenjenek meg az adott videó csatornáján</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_custom_font_file_title">Egyéni betűtípusfájl</string>
   <string name="morphe_custom_font_file_summary">Válasszon ki egy TTF vagy OTF betűtípusfájlt</string>
   <string name="morphe_custom_font_file_invalid">A kiválasztott fájl nem TTF vagy OTF betűtípus</string>
-  <string name="morphe_custom_font_pick_file_first">Először válasszon ki egy betűtípusfájlt</string>
   <string name="morphe_custom_font_failed_to_load">Az egyéni betűtípus betöltése nem sikerült, ezért ki van kapcsolva</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

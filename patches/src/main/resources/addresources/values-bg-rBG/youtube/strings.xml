@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Отваря опашката на Morphe вместо опашката на YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Добавяне на елемент от менюто за излитащ прозорец на емисията</string>
   <string name="morphe_queue_add_flyout_menu_summary">Добавя допълнителен елемент в излитащия прозорец. Активирайте това, ако „Добавяне към опашката“ не се показва</string>
+  <string name="morphe_local_queue_title">Опашка в стил Premium</string>
+  <string name="morphe_local_queue_summary">"Заменя опашката на Morphe с такава, която се съхранява на устройството, възпроизвежда се самостоятелно и може да бъде пренареждана чрез плъзгане
+
+Информация: Следващото видео от опашката стартира само когато YouTube е на екрана"</string>
+  <string name="morphe_local_queue_sheet_title">Опашка</string>
+  <string name="morphe_local_queue_open">Опашка (%d)</string>
+  <string name="morphe_local_queue_clear">Изчисти всичко</string>
+  <string name="morphe_local_queue_empty">Няма нищо в опашката</string>
+  <string name="morphe_local_queue_empty_hint">Използвайте „Пусни след това в опашката“ за произволен видеоклип</string>
+  <string name="morphe_local_queue_now_playing">В момента се възпроизвежда</string>
+  <string name="morphe_local_queue_play_next">Пусни след това в опашката</string>
+  <string name="morphe_local_queue_reorder">Пренареждане</string>
+  <string name="morphe_local_queue_remove">Премахване</string>
+  <string name="morphe_local_queue_added">Добавено в опашката</string>
+  <string name="morphe_local_queue_full">Опашката е пълна</string>
+  <string name="morphe_local_queue_play_failed">Видеото не може да се пусне</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Бял списък за реклами в изскачащото меню</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Добавя елемент в изскачащото меню, който позволява рекламите да се пускат в канала на това видео</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">Персонализиран файл с шрифт</string>
   <string name="morphe_custom_font_file_summary">Изберете TTF или OTF файл с шрифт</string>
   <string name="morphe_custom_font_file_invalid">Избраният файл не е TTF или OTF шрифт</string>
-  <string name="morphe_custom_font_pick_file_first">Първо изберете файл с шрифт</string>
   <string name="morphe_custom_font_failed_to_load">Персонализираният шрифт не можа да се зареди и е изключен</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

@@ -561,6 +561,22 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_queue_override_flyout_menu_summary">YouTube のキューの代わりに Morphe のキューを開きます</string>
   <string name="morphe_queue_add_flyout_menu_title">フィードのフライアウト メニューにキューの項目を追加</string>
   <string name="morphe_queue_add_flyout_menu_summary">フィードのフライアウト メニューにキューの項目を追加します。「キューに追加」が表示されない場合に、この機能を有効にしてください</string>
+  <string name="morphe_local_queue_title">Premium風キュー</string>
+  <string name="morphe_local_queue_summary">"Morpheキューを、端末上に存在し、自動的に再生が進み、ドラッグで並べ替え可能なキューに置き換えます。
+
+情報: 次のキュー動画が再生を開始するのは、YouTubeが画面に表示されている間だけです"</string>
+  <string name="morphe_local_queue_sheet_title">キュー</string>
+  <string name="morphe_local_queue_open">キュー (%d)</string>
+  <string name="morphe_local_queue_clear">すべて消去</string>
+  <string name="morphe_local_queue_empty">キューに入っている動画はありません</string>
+  <string name="morphe_local_queue_empty_hint">任意の動画で「キューで次に再生」を使用してください</string>
+  <string name="morphe_local_queue_now_playing">再生中</string>
+  <string name="morphe_local_queue_play_next">キューの最初に追加</string>
+  <string name="morphe_local_queue_reorder">並べ替え</string>
+  <string name="morphe_local_queue_remove">削除</string>
+  <string name="morphe_local_queue_added">キューに追加しました</string>
+  <string name="morphe_local_queue_full">キューがいっぱいです</string>
+  <string name="morphe_local_queue_play_failed">動画を再生できませんでした</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">フライアウトメニュー内の広告ホワイトリスト</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">その動画のチャンネルで広告を再生できるフライアウト項目を追加します</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1154,12 +1170,11 @@ Automotive レイアウト
   <!-- layout.font.customFontPatch -->
   <string name="morphe_custom_font_type_title">フォント</string>
   <string name="morphe_custom_font_type_entry_default">デフォルト</string>
-  <string name="morphe_custom_font_type_entry_system">端末のシステムフォント</string>
+  <string name="morphe_custom_font_type_entry_system">端末のシステム フォント</string>
   <string name="morphe_custom_font_type_entry_custom">カスタム フォント ファイル</string>
   <string name="morphe_custom_font_file_title">カスタム フォント ファイル</string>
   <string name="morphe_custom_font_file_summary">TTFまたはOTFフォントファイルを選択してください</string>
   <string name="morphe_custom_font_file_invalid">選択したファイルはTTFまたはOTFフォントではありません</string>
-  <string name="morphe_custom_font_pick_file_first">先にフォントファイルを選択してください</string>
   <string name="morphe_custom_font_failed_to_load">カスタムフォントを読み込めなかったため、オフになっています</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

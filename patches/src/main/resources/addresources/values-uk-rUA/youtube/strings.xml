@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Відкриває чергу Morphe замість черги YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Додати пункт меню черги у висувне меню стрічки</string>
   <string name="morphe_queue_add_flyout_menu_summary">Додає додатковий пункт у висувне меню. Увімкніть цю опцію, якщо пункт \"Додати до черги\" не показується</string>
+  <string name="morphe_local_queue_title">Черга в стилі Premium</string>
+  <string name="morphe_local_queue_summary">"Замінює чергу Morphe на ту, що зберігається на пристрої, відтворюється сама, і порядок якої можна змінювати перетягуванням
+
+Інформація: наступне відео з черги запускається лише тоді, коли YouTube на екрані"</string>
+  <string name="morphe_local_queue_sheet_title">Черга</string>
+  <string name="morphe_local_queue_open">Черга (%d)</string>
+  <string name="morphe_local_queue_clear">Очистити все</string>
+  <string name="morphe_local_queue_empty">У черзі нічого немає</string>
+  <string name="morphe_local_queue_empty_hint">Скористайтеся пунктом «Відтворити наступним у черзі» на будь-якому відео</string>
+  <string name="morphe_local_queue_now_playing">Зараз відтворюється</string>
+  <string name="morphe_local_queue_play_next">Відтворити наступним у черзі</string>
+  <string name="morphe_local_queue_reorder">Змінити порядок</string>
+  <string name="morphe_local_queue_remove">Видалити</string>
+  <string name="morphe_local_queue_added">Додано до черги</string>
+  <string name="morphe_local_queue_full">Черга заповнена</string>
+  <string name="morphe_local_queue_play_failed">Не вдалося запустити відео</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Білий список реклами у спливному меню</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Додає пункт спливного меню, що дозволяє відтворення реклами на каналі цього відео</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1156,7 +1172,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">Файл власного шрифту</string>
   <string name="morphe_custom_font_file_summary">Виберіть файл шрифту TTF або OTF</string>
   <string name="morphe_custom_font_file_invalid">Вибраний файл не є шрифтом TTF або OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Спочатку виберіть файл шрифту</string>
   <string name="morphe_custom_font_failed_to_load">Не вдалося завантажити користувацький шрифт, тому його вимкнено</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

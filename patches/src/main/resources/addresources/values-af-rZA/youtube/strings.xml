@@ -560,6 +560,22 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Oop die Morphe-ry vir die YouTube-ry</string>
   <string name="morphe_queue_add_flyout_menu_title">Voeg voer flyout-tou-menu-item by</string>
   <string name="morphe_queue_add_flyout_menu_summary">Voeg \'n bykomende flyout-item by. Skakel dit aan as \"Voeg by tou\" nie gewys word nie</string>
+  <string name="morphe_local_queue_title">Premium-styl-tou</string>
+  <string name="morphe_local_queue_summary">"Vervang die Morphe-tou met een wat op die toestel bly, vanself deurspeel, en deur te sleep herrangskik kan word
+
+Inligting: Die volgende video in die tou begin eers wanneer YouTube op die skerm is"</string>
+  <string name="morphe_local_queue_sheet_title">Tou</string>
+  <string name="morphe_local_queue_open">Tou (%d)</string>
+  <string name="morphe_local_queue_clear">Wis alles</string>
+  <string name="morphe_local_queue_empty">Niks in tou nie</string>
+  <string name="morphe_local_queue_empty_hint">Gebruik \'Speel volgende in tou\' op enige video</string>
+  <string name="morphe_local_queue_now_playing">Speel nou</string>
+  <string name="morphe_local_queue_play_next">Speel volgende in tou</string>
+  <string name="morphe_local_queue_reorder">Herrangskik</string>
+  <string name="morphe_local_queue_remove">Verwyder</string>
+  <string name="morphe_local_queue_added">Bygevoeg tot tou</string>
+  <string name="morphe_local_queue_full">Die tou is vol</string>
+  <string name="morphe_local_queue_play_failed">Kon nie die video begin nie</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Advertensiewitlys in die glykieslys</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Voeg \'n glykieslys-item by wat advertensies op die kanaal van daardie video laat speel</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_custom_font_file_title">Aangepaste fontlêer</string>
   <string name="morphe_custom_font_file_summary">Kies \'n TTF- of OTF-fontlêer</string>
   <string name="morphe_custom_font_file_invalid">Die gekose lêer is nie \'n TTF- of OTF-font nie</string>
-  <string name="morphe_custom_font_pick_file_first">Kies eers \'n fontlêer</string>
   <string name="morphe_custom_font_failed_to_load">Die aangepaste font kon nie gelaai word nie en is afgeskakel</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

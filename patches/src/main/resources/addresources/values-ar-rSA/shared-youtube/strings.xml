@@ -93,6 +93,12 @@ Second \"item\" text"</string>
 
 إذا كنت من مستخدمي YouTube Premium، فقد لا تحتاج إلى هذا الإعداد"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">تعذر جلب أي تدفقات عميل</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">العميل الافتراضي لا يعمل</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"فشل %1$s في العمل عدة مرات متتالية، بينما نجح %2$s في ذلك.
+
+هل ترغب في جعل %2$s هو العميل الافتراضي؟"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">تبديل</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">قد يؤدي إيقاف تشغيل هذا الإعداد إلى مشكلات في التشغيل.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Second \"item\" text"</string>
   <string name="morphe_external_potoken_provider_about_summary">"هذه الميزة قيد التطوير حاليًا وقد لا تعمل
 
 انقر هنا لتنزيل PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper لم يعد يعمل</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"الرمز المدمج في هذا الإصدار من PotHelper لم يعد يعمل
+
+شغّل 'Spoof Video Streams' لإصلاح التشغيل"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">تشغيل</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">إصدار تطبيق وهمي</string>
   <string name="morphe_spoof_app_version_summary">يجعل الخادم يعتقد أنك تستخدم إصدارًا أقدم من التطبيق لاستعادة ميزات الواجهة القديمة</string>

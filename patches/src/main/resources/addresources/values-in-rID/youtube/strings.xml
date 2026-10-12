@@ -560,6 +560,22 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Membuka antrean Morphe daripada antrean YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Tambahkan item menu antrean feed flyout</string>
   <string name="morphe_queue_add_flyout_menu_summary">Menambahkan item flyout tambahan. Aktifkan ini jika \"Tambahkan ke antrean\" tidak ditampilkan</string>
+  <string name="morphe_local_queue_title">Antrean gaya Premium</string>
+  <string name="morphe_local_queue_summary">"Menggantikan antrean Morphe dengan antrean yang berada di perangkat, dapat diputar sendiri, dan dapat diurutkan ulang dengan menyeret
+
+Info: Video berikutnya dalam antrean hanya mulai diputar saat YouTube sedang berada di layar"</string>
+  <string name="morphe_local_queue_sheet_title">Antrean</string>
+  <string name="morphe_local_queue_open">Antrean (%d)</string>
+  <string name="morphe_local_queue_clear">Bersihkan semua</string>
+  <string name="morphe_local_queue_empty">Tidak ada yang diantrekan</string>
+  <string name="morphe_local_queue_empty_hint">Gunakan Putar berikutnya dalam antrean pada video apa pun</string>
+  <string name="morphe_local_queue_now_playing">Sedang diputar</string>
+  <string name="morphe_local_queue_play_next">Putar berikutnya dalam antrean</string>
+  <string name="morphe_local_queue_reorder">Urutkan ulang</string>
+  <string name="morphe_local_queue_remove">Hapus</string>
+  <string name="morphe_local_queue_added">Ditambahkan ke antrean</string>
+  <string name="morphe_local_queue_full">Antrean penuh</string>
+  <string name="morphe_local_queue_play_failed">Tidak dapat memulai video</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Daftar putih iklan di menu flyout</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Menambahkan item menu flyout yang memungkinkan iklan diputar di saluran video tersebut</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_custom_font_file_title">File font kustom</string>
   <string name="morphe_custom_font_file_summary">Pilih file font TTF atau OTF</string>
   <string name="morphe_custom_font_file_invalid">File yang dipilih bukan font TTF atau OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Pilih file font terlebih dahulu</string>
   <string name="morphe_custom_font_failed_to_load">Font kustom tidak dapat dimuat dan dinonaktifkan</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

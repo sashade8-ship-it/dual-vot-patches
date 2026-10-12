@@ -560,6 +560,22 @@ Informacija: gali neveikti tiesioginių transliacijų atveju"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Atidaro Morphe eilę, o ne „YouTube“ eilę</string>
   <string name="morphe_queue_add_flyout_menu_title">Pridėti meniu elementą „Eilė“ prie sklaidos kanalo išskleidžiamojo meniu</string>
   <string name="morphe_queue_add_flyout_menu_summary">Prideda papildomą išskleidžiamojo meniu elementą. Įgalinkite, jei „Pridėti į eilę“ nerodomas</string>
+  <string name="morphe_local_queue_title">Premium stiliaus eilė</string>
+  <string name="morphe_local_queue_summary">"Pakeičia Morphe eilę tokia, kuri yra įrenginyje, groja automatiškai ir kurią galima pertvarkyti vilkiant
+
+Info: kitas eilėje esantis vaizdo įrašas paleidžiamas tik tada, kai YouTube yra ekrane"</string>
+  <string name="morphe_local_queue_sheet_title">Eilė</string>
+  <string name="morphe_local_queue_open">Eilė (%d)</string>
+  <string name="morphe_local_queue_clear">Išvalyti viską</string>
+  <string name="morphe_local_queue_empty">Eilėje nieko nėra</string>
+  <string name="morphe_local_queue_empty_hint">Bet kuriame vaizdo įraše naudokite parinktį „Leisti toliau eilėje“</string>
+  <string name="morphe_local_queue_now_playing">Dabar grojama</string>
+  <string name="morphe_local_queue_play_next">Leisti toliau eilėje</string>
+  <string name="morphe_local_queue_reorder">Pertvarkyti</string>
+  <string name="morphe_local_queue_remove">Šalinti</string>
+  <string name="morphe_local_queue_added">Įtraukta į eilę</string>
+  <string name="morphe_local_queue_full">Eilė pilna</string>
+  <string name="morphe_local_queue_play_failed">Nepavyko paleisti vaizdo įrašo</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Skelbimų baltasis sąrašas iškylančiajame meniu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Prideda iškylančiojo meniu elementą, leidžiantį rodyti skelbimus to vaizdo įrašo kanale</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Apribojimas: jei parinktis „Atkurti senąją vaizdo įrašo veiksmų juostą�
   <string name="morphe_custom_font_file_title">Pasirinktinis šrifto failas</string>
   <string name="morphe_custom_font_file_summary">Pasirinkite TTF arba OTF šrifto failą</string>
   <string name="morphe_custom_font_file_invalid">Pasirinktas failas nėra TTF arba OTF šriftas</string>
-  <string name="morphe_custom_font_pick_file_first">Pirmiausia pasirinkite šrifto failą</string>
   <string name="morphe_custom_font_failed_to_load">Nepavyko įkelti pasirinktinio šrifto, todėl jis išjungtas</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

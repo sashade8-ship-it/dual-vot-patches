@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Ανοίγει την ουρά Morphe αντί για την ουρά YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Προσθήκη στοιχείου μενού αναδυόμενου παραθύρου ροής</string>
   <string name="morphe_queue_add_flyout_menu_summary">Προσθέτει ένα επιπλέον στοιχείο αναδυόμενου παραθύρου. Ενεργοποιήστε αυτό εάν δεν εμφανίζεται η \"Προσθήκη στην ουρά\"</string>
+  <string name="morphe_local_queue_title">Ουρά τύπου Premium</string>
+  <string name="morphe_local_queue_summary">"Αντικαθιστά την ουρά του Morphe με μία που βρίσκεται στη συσκευή, αναπαράγεται από μόνη της και μπορεί να αναδιαταχθεί με σύρσιμο
+
+Πληροφορίες: Το επόμενο βίντεο στην ουρά ξεκινά μόνο όταν το YouTube είναι στην οθόνη"</string>
+  <string name="morphe_local_queue_sheet_title">Ουρά</string>
+  <string name="morphe_local_queue_open">Ουρά (%d)</string>
+  <string name="morphe_local_queue_clear">Εκκαθάριση όλων</string>
+  <string name="morphe_local_queue_empty">Δεν υπάρχει τίποτα στην ουρά</string>
+  <string name="morphe_local_queue_empty_hint">Χρησιμοποιήστε την επιλογή «Αναπαραγωγή επόμενου στην ουρά» σε οποιοδήποτε βίντεο</string>
+  <string name="morphe_local_queue_now_playing">Τώρα αναπαραγωγή</string>
+  <string name="morphe_local_queue_play_next">Αναπαραγωγή επόμενου στην ουρά</string>
+  <string name="morphe_local_queue_reorder">Αναδιάταξη</string>
+  <string name="morphe_local_queue_remove">Αφαίρεση</string>
+  <string name="morphe_local_queue_added">Προστέθηκε στην ουρά</string>
+  <string name="morphe_local_queue_full">Η ουρά είναι γεμάτη</string>
+  <string name="morphe_local_queue_play_failed">Δεν ήταν δυνατή η εκκίνηση του βίντεο</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Λίστα επιτρεπόμενων διαφημίσεων στο αναδυόμενο μενού</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Προσθέτει ένα στοιχείο αναδυόμενου μενού που επιτρέπει την αναπαραγωγή διαφημίσεων στο κανάλι αυτού του βίντεο</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1142,7 +1158,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">Αρχείο προσαρμοσμένης γραμματοσειράς</string>
   <string name="morphe_custom_font_file_summary">Επιλέξτε ένα αρχείο γραμματοσειράς TTF ή OTF</string>
   <string name="morphe_custom_font_file_invalid">Το επιλεγμένο αρχείο δεν είναι γραμματοσειρά TTF ή OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Επιλέξτε πρώτα ένα αρχείο γραμματοσειράς</string>
   <string name="morphe_custom_font_failed_to_load">Δεν ήταν δυνατή η φόρτωση της προσαρμοσμένης γραμματοσειράς και είναι απενεργοποιημένη</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">打开 Morphe 队列，而不是 YouTube 队列</string>
   <string name="morphe_queue_add_flyout_menu_title">添加信息流弹出菜单项</string>
   <string name="morphe_queue_add_flyout_menu_summary">添加额外的弹出菜单项。如果未显示“添加到队列”，请启用此选项</string>
+  <string name="morphe_local_queue_title">Premium 样式队列</string>
+  <string name="morphe_local_queue_summary">"将 Morphe 队列替换为设备本地队列，可自行连续播放，并可通过拖动重新排序
+
+提示：仅当 YouTube 在屏幕上时，下一个队列视频才会开始播放"</string>
+  <string name="morphe_local_queue_sheet_title">队列</string>
+  <string name="morphe_local_queue_open">队列（%d）</string>
+  <string name="morphe_local_queue_clear">全部清除</string>
+  <string name="morphe_local_queue_empty">队列中无内容</string>
+  <string name="morphe_local_queue_empty_hint">在任何视频上使用“在队列中播放下一项”</string>
+  <string name="morphe_local_queue_now_playing">正在播放</string>
+  <string name="morphe_local_queue_play_next">在队列中播放下一项</string>
+  <string name="morphe_local_queue_reorder">重新排序</string>
+  <string name="morphe_local_queue_remove">移除</string>
+  <string name="morphe_local_queue_added">已添加到队列</string>
+  <string name="morphe_local_queue_full">队列已满</string>
+  <string name="morphe_local_queue_play_failed">无法启动视频</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">弹出菜单中的广告白名单</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">添加一个弹出菜单项，让广告可以在该视频所属的频道上播放</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">自定义字体文件</string>
   <string name="morphe_custom_font_file_summary">选择 TTF 或 OTF 字体文件</string>
   <string name="morphe_custom_font_file_invalid">所选文件不是 TTF 或 OTF 字体</string>
-  <string name="morphe_custom_font_pick_file_first">请先选择字体文件</string>
   <string name="morphe_custom_font_failed_to_load">无法加载自定义字体，已将其关闭</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

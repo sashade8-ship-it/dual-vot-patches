@@ -93,6 +93,11 @@ Aby zmienić ikonę wszędzie, zmodyfikuj ponownie i zmień opcję modyfikacji \
 
 Jeśli masz YouTube Premium, to ustawienie może nie być wymagane"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Nie można przechwycić żadnego ze strumieni klienta</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Domyślny klient nie działa</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s nie zadziałał(o) kilka razy z rzędu, ale %2$s już tak.
+Ustawić %2$s jako domyślnego klienta?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Przełącz</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Wyłączenie tego ustawienia może spowodować problemy z odtwarzaniem.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +228,12 @@ Aby użyć tej funkcji, wyłącz \"Fałszuj strumienie filmów\""</string>
   <string name="morphe_external_potoken_provider_about_summary">"Ta funkcja jest obecnie w fazie rozwoju i może nie działać
 
 Dotknij tutaj, aby pobrać PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper już nie działa</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Token wbudowany w tę wersję PotHelpera już nie działa
+
+Włącz \"Fałszowanie strumieni filmów\", aby naprawić odtwarzanie"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Włącz</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Fałszuj wersję aplikacji</string>
   <string name="morphe_spoof_app_version_summary">Oszukuje serwer, że używasz starszej wersji aplikacji, aby przywrócić klasyczne elementy interfejsu</string>

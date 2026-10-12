@@ -560,6 +560,22 @@ Promene uključuju:
   <string name="morphe_queue_override_flyout_menu_summary">Отвара се редица са Морфе уместо YouTube редице</string>
   <string name="morphe_queue_add_flyout_menu_title">Додај ставку менија за искачући ред фида</string>
   <string name="morphe_queue_add_flyout_menu_summary">Додаје додатну искачућу ставку. Омогућите ово ако се \"Додај у ред\" не приказује.</string>
+  <string name="morphe_local_queue_title">Ред у премијум стилу</string>
+  <string name="morphe_local_queue_summary">"Замењује Morphe ред оним који се налази на уређају, сам се пушта и може да се преуређује превлачењем
+
+Инфо: Следећи видео у реду се покреће само док је YouTube на екрану"</string>
+  <string name="morphe_local_queue_sheet_title">Ред</string>
+  <string name="morphe_local_queue_open">Ред (%d)</string>
+  <string name="morphe_local_queue_clear">Очисти све</string>
+  <string name="morphe_local_queue_empty">Нема ставки у реду</string>
+  <string name="morphe_local_queue_empty_hint">Користи опцију „Пусти следеће у реду“ на било ком видео-снимку</string>
+  <string name="morphe_local_queue_now_playing">Тренутно се репродукује</string>
+  <string name="morphe_local_queue_play_next">Пусти следеће у реду</string>
+  <string name="morphe_local_queue_reorder">Преуреди</string>
+  <string name="morphe_local_queue_remove">Уклони</string>
+  <string name="morphe_local_queue_added">Додато у ред</string>
+  <string name="morphe_local_queue_full">Ред је пун</string>
+  <string name="morphe_local_queue_play_failed">Није могуће покренути видео-снимак</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Бела листа за огласе у искачућем менију</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Додаје ставку у искачући мени која омогућава да се огласи репродукују на каналу тог видеа</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1140,7 +1156,6 @@ Promene uključuju:
   <string name="morphe_custom_font_file_title">Датотека прилагођеног фонта</string>
   <string name="morphe_custom_font_file_summary">Изаберите TTF или OTF датотеку фонта</string>
   <string name="morphe_custom_font_file_invalid">Изабрана датотека није TTF или OTF фонт</string>
-  <string name="morphe_custom_font_pick_file_first">Прво изаберите датотеку фонта</string>
   <string name="morphe_custom_font_failed_to_load">Прилагођени фонт није могао да се учита, па је искључен</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

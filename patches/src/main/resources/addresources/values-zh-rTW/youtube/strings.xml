@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">開啟 Morphe 佇列，而非 YouTube 佇列</string>
   <string name="morphe_queue_add_flyout_menu_title">新增動態消息彈出式佇列選單項目</string>
   <string name="morphe_queue_add_flyout_menu_summary">新增額外的彈出式項目。若未顯示「加入佇列」，請啟用此選項</string>
+  <string name="morphe_local_queue_title">Premium 風格佇列</string>
+  <string name="morphe_local_queue_summary">"以存在於裝置上、可自行播放且可拖曳重新排序的佇列取代 Morphe 佇列
+
+資訊：下一個佇列中的影片只會在 YouTube 位於畫面上時開始播放"</string>
+  <string name="morphe_local_queue_sheet_title">佇列</string>
+  <string name="morphe_local_queue_open">佇列 (%d)</string>
+  <string name="morphe_local_queue_clear">全部清除</string>
+  <string name="morphe_local_queue_empty">佇列為空</string>
+  <string name="morphe_local_queue_empty_hint">在任何影片上使用「播放佇列中的下一個」</string>
+  <string name="morphe_local_queue_now_playing">現正播放</string>
+  <string name="morphe_local_queue_play_next">播放佇列中的下一個</string>
+  <string name="morphe_local_queue_reorder">重新排序</string>
+  <string name="morphe_local_queue_remove">刪除</string>
+  <string name="morphe_local_queue_added">已新增至佇列</string>
+  <string name="morphe_local_queue_full">佇列已滿</string>
+  <string name="morphe_local_queue_play_failed">無法開始播放影片</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">彈出式選單中的廣告白名單</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">新增一個彈出式選單項目，讓廣告可以在該影片的頻道上播放。</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">自訂字型檔案</string>
   <string name="morphe_custom_font_file_summary">選擇 TTF 或 OTF 字型檔案</string>
   <string name="morphe_custom_font_file_invalid">所選取的檔案不是 TTF 或 OTF 字型</string>
-  <string name="morphe_custom_font_pick_file_first">請先選擇字型檔案</string>
   <string name="morphe_custom_font_failed_to_load">自訂字型無法載入，因此已關閉</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

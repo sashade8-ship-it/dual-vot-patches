@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">פותח את תור ה-Morphe במקום את התור של YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">הוסף הזנה לתור</string>
   <string name="morphe_queue_add_flyout_menu_summary">מוסיף פריט תפריט מוקפץ נוסף. הפעל זאת אם \'הוסף לתור\' אינו מוצג</string>
+  <string name="morphe_local_queue_title">תור בסגנון פרימיום</string>
+  <string name="morphe_local_queue_summary">"מחליף את התור של Morphe בתור שמאוחסן במכשיר, מתנגן מעצמו, וניתן לסדר אותו מחדש על ידי גרירה
+
+מידע: הסרטון הבא בתור מתחיל להתנגן רק בזמן ש-YouTube מוצג על המסך"</string>
+  <string name="morphe_local_queue_sheet_title">תור</string>
+  <string name="morphe_local_queue_open">תור (%d)</string>
+  <string name="morphe_local_queue_clear">נקה הכל</string>
+  <string name="morphe_local_queue_empty">אין פריטים בתור</string>
+  <string name="morphe_local_queue_empty_hint">השתמש באפשרות \"נגן הבא בתור\" בכל סרטון</string>
+  <string name="morphe_local_queue_now_playing">מתנגן עכשיו</string>
+  <string name="morphe_local_queue_play_next">נגן הבא בתור</string>
+  <string name="morphe_local_queue_reorder">סדר מחדש</string>
+  <string name="morphe_local_queue_remove">הסר</string>
+  <string name="morphe_local_queue_added">נוסף לתור</string>
+  <string name="morphe_local_queue_full">התור מלא</string>
+  <string name="morphe_local_queue_play_failed">לא ניתן היה להפעיל את הסרטון</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">רשימת היתרים למודעות בתפריט נשלף</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">מוסיף פריט בתפריט נשלף שמאפשר למודעות להתנגן בערוץ של אותו סרטון</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">קובץ גופן מותאם אישית</string>
   <string name="morphe_custom_font_file_summary">בחר קובץ גופן TTF או OTF</string>
   <string name="morphe_custom_font_file_invalid">הקובץ שנבחר אינו קובץ גופן TTF או OTF</string>
-  <string name="morphe_custom_font_pick_file_first">בחר תחילה קובץ גופן</string>
   <string name="morphe_custom_font_failed_to_load">לא ניתן היה לטעון את הגופן המותאם אישית ולכן הוא כובה</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

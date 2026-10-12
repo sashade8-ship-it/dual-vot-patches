@@ -93,6 +93,12 @@ Para alterar o ícone em todos os locais, aplique o patch novamente e altere a o
 
 Se você for um usuário do YouTube Premium, esta configuração pode não ser necessária"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Não foi possível obter nenhum stream de cliente.</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Cliente padrão não funciona</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s não funcionou várias vezes seguidas, mas %2$s funcionou.
+
+Definir %2$s como cliente padrão?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Mudar</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Desativar esta configuração pode causar problemas de reprodução.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Para usar este recurso, desative a opção \"Simular streams de vídeo\""</strin
   <string name="morphe_external_potoken_provider_about_summary">"Este recurso está em desenvolvimento e pode não funcionar
 
 Toque aqui para baixar o PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper não funciona mais</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"O token embutido nesta versão do PotHelper não funciona mais
+
+Ative 'Disfarçar streams de vídeo' para corrigir a reprodução"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Ativar</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Simular versão do aplicativo</string>
   <string name="morphe_spoof_app_version_summary">Simula para o servidor que você está usando uma versão mais antiga do aplicativo para restaurar recursos de interface antigos</string>

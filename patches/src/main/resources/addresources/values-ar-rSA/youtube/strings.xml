@@ -564,6 +564,22 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_queue_override_flyout_menu_summary">يفتح قائمة انتظار Morphe بدلًا من قائمة انتظار YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">إضافة خيار قائمة الانتظار إلى قائمة الخلاصة المنبثقة</string>
   <string name="morphe_queue_add_flyout_menu_summary">يضيف خيارًا إضافيًا إلى القائمة المنبثقة. فعّل هذا الخيار إذا لم تظهر \"إضافة إلى قائمة الانتظار\"</string>
+  <string name="morphe_local_queue_title">قائمة انتظار بأسلوب Premium</string>
+  <string name="morphe_local_queue_summary">"يستبدل قائمة انتظار Morphe بقائمة موجودة على الجهاز، وتُشغَّل من تلقاء نفسها، ويمكن إعادة ترتيبها بالسحب
+
+ملاحظة: لا يبدأ الفيديو التالي في قائمة الانتظار إلا عندما يكون YouTube معروضًا على الشاشة"</string>
+  <string name="morphe_local_queue_sheet_title">قائمة الانتظار</string>
+  <string name="morphe_local_queue_open">قائمة الانتظار (%d)</string>
+  <string name="morphe_local_queue_clear">مسح الكل</string>
+  <string name="morphe_local_queue_empty">لا يوجد شيء في قائمة الانتظار</string>
+  <string name="morphe_local_queue_empty_hint">استخدم خيار تشغيل التالي في قائمة الانتظار على أي فيديو</string>
+  <string name="morphe_local_queue_now_playing">قيد التشغيل الآن</string>
+  <string name="morphe_local_queue_play_next">تشغيل التالي في قائمة الانتظار</string>
+  <string name="morphe_local_queue_reorder">إعادة ترتيب</string>
+  <string name="morphe_local_queue_remove">إزالة</string>
+  <string name="morphe_local_queue_added">تمت الإضافة إلى قائمة الانتظار</string>
+  <string name="morphe_local_queue_full">قائمة الانتظار ممتلئة</string>
+  <string name="morphe_local_queue_play_failed">تعذر تشغيل الفيديو</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">القائمة المسموح بها للإعلانات في القائمة المنبثقة</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">يضيف عنصرًا في القائمة المنبثقة يتيح تشغيل الإعلانات على قناة ذلك الفيديو</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1162,7 +1178,6 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_custom_font_file_title">ملف خط مخصص</string>
   <string name="morphe_custom_font_file_summary">اختر ملف خط TTF أو OTF</string>
   <string name="morphe_custom_font_file_invalid">الملف المحدد ليس خط بصيغة TTF أو OTF</string>
-  <string name="morphe_custom_font_pick_file_first">اختر ملف الخط أولًا</string>
   <string name="morphe_custom_font_failed_to_load">تعذر تحميل الخط المخصص وتم إيقاف تشغيله</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

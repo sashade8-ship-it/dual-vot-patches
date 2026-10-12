@@ -560,6 +560,22 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_queue_override_flyout_menu_summary">YouTube সারির পরিবর্তে Morphe সারি খোলে</string>
   <string name="morphe_queue_add_flyout_menu_title">ফিড ফ্লাইআউট কিউ মেনু আইটেম যুক্ত করুন</string>
   <string name="morphe_queue_add_flyout_menu_summary">একটি অতিরিক্ত ফ্লাইআউট আইটেম যোগ করে। যদি \"কিউতে যোগ করুন\" দেখানো না হয় তবে এটি সক্ষম করুন।</string>
+  <string name="morphe_local_queue_title">প্রিমিয়াম-স্টাইলের সারি</string>
+  <string name="morphe_local_queue_summary">"Morphe সারির বদলে ডিভাইসে থাকা একটি সারি ব্যবহার করে, যা নিজে নিজে চলতে থাকে এবং টেনে পুনর্বিন্যাস করা যায়
+
+তথ্য: পরবর্তী সারিবদ্ধ ভিডিওটি শুধুমাত্র YouTube স্ক্রিনে থাকাকালীন শুরু হয়"</string>
+  <string name="morphe_local_queue_sheet_title">সারি</string>
+  <string name="morphe_local_queue_open">সারি (%d)</string>
+  <string name="morphe_local_queue_clear">সব মুছুন</string>
+  <string name="morphe_local_queue_empty">কিউতে কিছু নেই</string>
+  <string name="morphe_local_queue_empty_hint">যেকোনো ভিডিওতে \'কিউতে পরবর্তী চালান\' ব্যবহার করুন</string>
+  <string name="morphe_local_queue_now_playing">এখন চলছে</string>
+  <string name="morphe_local_queue_play_next">কিউতে পরবর্তী চালান</string>
+  <string name="morphe_local_queue_reorder">পুনর্বিন্যাস করুন</string>
+  <string name="morphe_local_queue_remove">সরান</string>
+  <string name="morphe_local_queue_added">ভিডিও তালিকায় যুক্ত করা হয়েছে</string>
+  <string name="morphe_local_queue_full">কিউ পূর্ণ</string>
+  <string name="morphe_local_queue_play_failed">ভিডিওটি শুরু করা যায়নি</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">ফ্লাইআউট মেনুতে বিজ্ঞাপনের সাদা তালিকা</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">এমন একটি ফ্লাইআউট আইটেম যোগ করে যা সেই ভিডিওর চ্যানেলে বিজ্ঞাপন চালানোর অনুমতি দেয়</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1142,7 +1158,6 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_custom_font_file_title">কাস্টম ফন্ট ফাইল</string>
   <string name="morphe_custom_font_file_summary">একটি TTF বা OTF ফন্ট ফাইল নির্বাচন করুন</string>
   <string name="morphe_custom_font_file_invalid">নির্বাচিত ফাইলটি TTF বা OTF ফন্ট নয়</string>
-  <string name="morphe_custom_font_pick_file_first">আগে একটি ফন্ট ফাইল নির্বাচন করুন</string>
   <string name="morphe_custom_font_failed_to_load">কাস্টম ফন্ট লোড করা যায়নি এবং এটি বন্ধ করা হয়েছে</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

@@ -560,6 +560,22 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Abre a fila do Morphe em vez da fila do YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Adicionar item de menu de fila de feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Adiciona um item adicional de menu flutuante. Ative isso se \"Adicionar à fila\" não for exibido.</string>
+  <string name="morphe_local_queue_title">Fila estilo premium</string>
+  <string name="morphe_local_queue_summary">"Substitui a fila do Morphe por uma que fica no dispositivo, reproduz sozinha e pode ser reordenada arrastando
+
+Informação: o próximo vídeo da fila só começa enquanto o YouTube estiver na tela"</string>
+  <string name="morphe_local_queue_sheet_title">Fila</string>
+  <string name="morphe_local_queue_open">Fila (%d)</string>
+  <string name="morphe_local_queue_clear">Limpar tudo</string>
+  <string name="morphe_local_queue_empty">Nada na fila</string>
+  <string name="morphe_local_queue_empty_hint">Use Reproduzir a seguir na fila em qualquer vídeo</string>
+  <string name="morphe_local_queue_now_playing">Reproduzindo agora</string>
+  <string name="morphe_local_queue_play_next">Reproduzir a seguir na fila</string>
+  <string name="morphe_local_queue_reorder">Reordenar</string>
+  <string name="morphe_local_queue_remove">Remover</string>
+  <string name="morphe_local_queue_added">Adicionado à fila</string>
+  <string name="morphe_local_queue_full">A fila está cheia</string>
+  <string name="morphe_local_queue_play_failed">Não foi possível iniciar o vídeo</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Lista de permissões de anúncios no menu flutuante</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Adiciona um item de menu flutuante que permite que anúncios sejam reproduzidos no canal desse vídeo</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Limitação: Se 'Restaurar a barra de ação de vídeo antiga' estiver desativad
   <string name="morphe_custom_font_file_title">Arquivo de fonte personalizada</string>
   <string name="morphe_custom_font_file_summary">Escolha um arquivo de fonte TTF ou OTF</string>
   <string name="morphe_custom_font_file_invalid">O arquivo escolhido não é uma fonte TTF ou OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Escolha um arquivo de fonte primeiro</string>
   <string name="morphe_custom_font_failed_to_load">Não foi possível carregar a fonte personalizada e ela foi desativada</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

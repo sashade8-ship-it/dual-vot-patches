@@ -560,6 +560,22 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Apre la coda di Morphe invece della coda di YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Aggiungi voce di menu a comparsa per la coda del feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Aggiunge un elemento aggiuntivo al menu a comparsa. Attiva questa opzione se \"Aggiungi alla coda\" non viene mostrato</string>
+  <string name="morphe_local_queue_title">Coda in stile Premium</string>
+  <string name="morphe_local_queue_summary">"Sostituisce la coda di Morphe con una che risiede sul dispositivo, procede da sola e può essere riordinata tramite trascinamento
+
+Info: il video successivo in coda viene avviato solo mentre YouTube è sullo schermo"</string>
+  <string name="morphe_local_queue_sheet_title">Coda</string>
+  <string name="morphe_local_queue_open">Coda (%d)</string>
+  <string name="morphe_local_queue_clear">Cancella tutto</string>
+  <string name="morphe_local_queue_empty">Nessun video in coda</string>
+  <string name="morphe_local_queue_empty_hint">Usa l\'opzione Riproduci dopo nella coda su qualsiasi video</string>
+  <string name="morphe_local_queue_now_playing">In riproduzione</string>
+  <string name="morphe_local_queue_play_next">Riproduci dopo nella coda</string>
+  <string name="morphe_local_queue_reorder">Riordina</string>
+  <string name="morphe_local_queue_remove">Rimuovi</string>
+  <string name="morphe_local_queue_added">Aggiunto alla coda</string>
+  <string name="morphe_local_queue_full">La coda è piena</string>
+  <string name="morphe_local_queue_play_failed">Impossibile avviare il video</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Whitelist degli annunci nel menu a comparsa</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Aggiunge una voce al menu a comparsa che consente la riproduzione degli annunci sul canale di quel video</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_custom_font_file_title">File del carattere personalizzato</string>
   <string name="morphe_custom_font_file_summary">Scegli un file di font TTF o OTF</string>
   <string name="morphe_custom_font_file_invalid">Il file selezionato non è un font TTF o OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Scegli prima un file di font</string>
   <string name="morphe_custom_font_failed_to_load">Impossibile caricare il font personalizzato; è stato disattivato</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

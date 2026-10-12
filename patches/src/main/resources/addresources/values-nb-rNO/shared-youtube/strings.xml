@@ -93,6 +93,12 @@ For å endre ikonet overalt, må du patche på nytt og endre patch-alternativet 
 
 Hvis du er en YouTube Premium-bruker, er kanskje ikke denne innstillingen nødvendig."</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Kunne ikke hente noen klientstrømmer</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Standardklient fungerer ikke</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s fungerte ikke flere ganger på rad, men %2$s fungerte.
+
+Gjør %2$s til standardklient?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Bytt</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Hvis du slår av denne innstillingen, kan det oppstå avspillingsproblemer.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ For å bruke denne funksjonen, slå av 'Forfalsk videostrømmer'"</string>
   <string name="morphe_external_potoken_provider_about_summary">"Denne funksjonen er for tiden under utvikling og fungerer kanskje ikke
 
 Trykk her for å laste ned PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper fungerer ikke lenger</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Tokenet innebygd i denne versjonen av PotHelper fungerer ikke lenger
+
+Slå på «Forfalsk videostrømmer» for å fikse avspilling"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Slå på</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Forfalske app-versjon</string>
   <string name="morphe_spoof_app_version_summary">Lurer serveren til å tro at du bruker en eldre app-versjon for å gjenopprette gamle brukergrensesnittfunksjoner</string>

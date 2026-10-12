@@ -561,6 +561,22 @@ Info: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Öffnet die Morphe-Warteschlange anstelle der YouTube-Warteschlange</string>
   <string name="morphe_queue_add_flyout_menu_title">Menüpunkt für Flyout-Warteschlange im Feed hinzufügen</string>
   <string name="morphe_queue_add_flyout_menu_summary">Fügt einen zusätzlichen Flyout-Eintrag hinzu. Aktivieren Sie diese Option, wenn \"Zur Warteschlange hinzufügen\" nicht angezeigt wird</string>
+  <string name="morphe_local_queue_title">Warteschlange im Premium-Stil</string>
+  <string name="morphe_local_queue_summary">"Ersetzt die Morphe-Warteschlange durch eine, die auf dem Gerät gespeichert ist, automatisch weiter abspielt und durch Ziehen neu angeordnet werden kann.
+
+Info: Das nächste Video in der Warteschlange startet nur, solange YouTube auf dem Bildschirm angezeigt wird"</string>
+  <string name="morphe_local_queue_sheet_title">Warteschlange</string>
+  <string name="morphe_local_queue_open">Warteschlange (%d)</string>
+  <string name="morphe_local_queue_clear">Alle löschen</string>
+  <string name="morphe_local_queue_empty">Nichts in der Warteschlange</string>
+  <string name="morphe_local_queue_empty_hint">Verwende bei einem beliebigen Video „Als Nächstes in der Warteschlange abspielen“</string>
+  <string name="morphe_local_queue_now_playing">Jetzt läuft</string>
+  <string name="morphe_local_queue_play_next">Als Nächstes in der Warteschlange abspielen</string>
+  <string name="morphe_local_queue_reorder">Neu anordnen</string>
+  <string name="morphe_local_queue_remove">Entfernen</string>
+  <string name="morphe_local_queue_added">Zur Warteschlange hinzugefügt</string>
+  <string name="morphe_local_queue_full">Die Warteschlange ist voll</string>
+  <string name="morphe_local_queue_play_failed">Das Video konnte nicht gestartet werden</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Anzeigen-Whitelist im Flyout-Menü</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Fügt ein Flyout-Element hin zu, das Anzeigen auf dem Kanal dieses Videos abspielen lässst.</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1158,7 +1174,6 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_custom_font_file_title">Benutzerdefinierte Schriftdatei</string>
   <string name="morphe_custom_font_file_summary">TTF- oder OTF-Schriftdatei auswählen</string>
   <string name="morphe_custom_font_file_invalid">Die ausgewählte Datei ist keine TTF- oder OTF-Schriftdatei</string>
-  <string name="morphe_custom_font_pick_file_first">Zuerst eine Schriftdatei auswählen</string>
   <string name="morphe_custom_font_failed_to_load">Die benutzerdefinierte Schriftart konnte nicht geladen werden und wurde deaktiviert</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

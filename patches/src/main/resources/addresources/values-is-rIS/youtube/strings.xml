@@ -558,6 +558,22 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_queue_override_flyout_menu_summary">Opnar Morphe biðröðina í stað YouTube biðröðarinnar</string>
   <string name="morphe_queue_add_flyout_menu_title">Bæta við flugvalsatriði fyrir fréttastraum</string>
   <string name="morphe_queue_add_flyout_menu_summary">Bætir við auka flugvalsatriði. Virkjaðu þetta ef \"Bæta í biðröð\" er ekki sýnt</string>
+  <string name="morphe_local_queue_title">Biðröð í Premium-stíl</string>
+  <string name="morphe_local_queue_summary">"Skiptir út Morphe-biðröðinni fyrir biðröð sem er geymd á tækinu, spilast af sjálfu sér og er hægt að endurraða með því að draga
+
+Upplýsingar: Næsta myndband í biðröðinni byrjar aðeins meðan YouTube er á skjánum"</string>
+  <string name="morphe_local_queue_sheet_title">Biðröð</string>
+  <string name="morphe_local_queue_open">Biðröð (%d)</string>
+  <string name="morphe_local_queue_clear">Hreinsa allt</string>
+  <string name="morphe_local_queue_empty">Ekkert í biðröð</string>
+  <string name="morphe_local_queue_empty_hint">Notaðu Spila næst í biðröð á hvaða myndbandi sem er</string>
+  <string name="morphe_local_queue_now_playing">Nú í spilun</string>
+  <string name="morphe_local_queue_play_next">Spila næst í biðröð</string>
+  <string name="morphe_local_queue_reorder">Endurraða</string>
+  <string name="morphe_local_queue_remove">Fjarlægja</string>
+  <string name="morphe_local_queue_added">Bætt í biðröð</string>
+  <string name="morphe_local_queue_full">Biðröðin er full</string>
+  <string name="morphe_local_queue_play_failed">Ekki tókst að ræsa myndbandið</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Auglýsingahvítlisti í sprettivalmynd</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Bætir við sprettivalmyndaratriði sem leyfir auglýsingum að spilast á rás þess myndbands</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1152,7 +1168,6 @@ Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleir
   <string name="morphe_custom_font_file_title">Sérsniðin leturskrá</string>
   <string name="morphe_custom_font_file_summary">Veldu TTF- eða OTF-leturskrá</string>
   <string name="morphe_custom_font_file_invalid">Valda skráin er ekki TTF- eða OTF-leturskrá</string>
-  <string name="morphe_custom_font_pick_file_first">Veldu fyrst leturskrá</string>
   <string name="morphe_custom_font_failed_to_load">Ekki tókst að hlaða inn sérsniðnu leturskrána og hún er því óvirk</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

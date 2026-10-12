@@ -560,6 +560,22 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Ouvre la file d\'attente Morphe au lieu de la file d\'attente YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Ajouter l\'élément file d\'attente au menu déroulant du flux</string>
   <string name="morphe_queue_add_flyout_menu_summary">Ajoute un élément supplémentaire au menu déroulant. Activez cette option si \'Ajouter à la file d’attente\' n\'est pas affiché</string>
+  <string name="morphe_local_queue_title">File d\'attente de type Premium </string>
+  <string name="morphe_local_queue_summary">"Remplace la file d'attente Morphe par une file d'attente stockée sur l'appareil, qui se lit automatiquement jusqu'au bout et dont l'ordre peut être modifié par glisser-déposer
+
+Info : La vidéo suivante dans la file d'attente ne démarre que lorsque YouTube est à l'écran"</string>
+  <string name="morphe_local_queue_sheet_title">File d\'attente</string>
+  <string name="morphe_local_queue_open">File d\'attente (%d)</string>
+  <string name="morphe_local_queue_clear">Tout effacer</string>
+  <string name="morphe_local_queue_empty">Aucune vidéo dans la file d\'attente</string>
+  <string name="morphe_local_queue_empty_hint">Utilisez \'Lire ensuite dans la file d’attente\' sur n\'importe quelle vidéo</string>
+  <string name="morphe_local_queue_now_playing">En cours de lecture</string>
+  <string name="morphe_local_queue_play_next">Lire ensuite dans la file d\'attente</string>
+  <string name="morphe_local_queue_reorder">Réorganiser</string>
+  <string name="morphe_local_queue_remove">Retirer</string>
+  <string name="morphe_local_queue_added">Ajouté à la file d\'attente</string>
+  <string name="morphe_local_queue_full">La file d\'attente est pleine</string>
+  <string name="morphe_local_queue_play_failed">Impossible de lancer la vidéo</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Liste blanche des publicités dans le menu déroulant</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Ajoute un élément au menu déroulant qui permet aux publicités d\'être diffusées sur la chaîne de cette vidéo</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1158,7 +1174,6 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_custom_font_file_title">Fichier de police personnalisé</string>
   <string name="morphe_custom_font_file_summary">Choisissez un fichier de police au format TTF ou OTF</string>
   <string name="morphe_custom_font_file_invalid">Le fichier sélectionné n\'est pas une police au format TTF ou OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Choisissez d\'abord un fichier de police</string>
   <string name="morphe_custom_font_failed_to_load">La police personnalisée n\'a pas pu être chargée et a été désactivée</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

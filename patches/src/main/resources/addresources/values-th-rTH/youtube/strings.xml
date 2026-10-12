@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">เปิดคิว Morphe แทนคิว YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">เพิ่มรายการคิวในเมนูแบบเลื่อนออกของฟีด</string>
   <string name="morphe_queue_add_flyout_menu_summary">เพิ่มรายการเมนูแบบเลื่อนออกเพิ่มเติม เปิดใช้งานนี้หาก \"เพิ่มในคิว\" ไม่แสดง</string>
+  <string name="morphe_local_queue_title">คิวแบบพรีเมียม</string>
+  <string name="morphe_local_queue_summary">"แทนที่คิว Morphe ด้วยคิวที่ถูกเก็บในอุปกรณ์ เล่นต่อเนื่องได้เอง และจัดลำดับใหม่ได้ด้วยการลาก
+
+ข้อมูล: วิดีโอถัดไปในคิวจะเริ่มเล่นเฉพาะเมื่อ YouTube อยู่บนหน้าจอเท่านั้น"</string>
+  <string name="morphe_local_queue_sheet_title">คิว</string>
+  <string name="morphe_local_queue_open">คิว (%d)</string>
+  <string name="morphe_local_queue_clear">ล้างทั้งหมด</string>
+  <string name="morphe_local_queue_empty">ไม่มีรายการในคิว</string>
+  <string name="morphe_local_queue_empty_hint">ใช้เล่นถัดไปในคิวบนวิดีโอใดก็ได้</string>
+  <string name="morphe_local_queue_now_playing">กำลังเล่น</string>
+  <string name="morphe_local_queue_play_next">เล่นถัดไปในคิว</string>
+  <string name="morphe_local_queue_reorder">จัดลำดับใหม่</string>
+  <string name="morphe_local_queue_remove">นำออก</string>
+  <string name="morphe_local_queue_added">เพิ่มลงในคิวแล้ว</string>
+  <string name="morphe_local_queue_full">คิวเต็มแล้ว</string>
+  <string name="morphe_local_queue_play_failed">ไม่สามารถเริ่มเล่นวิดีโอได้</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">ไวต์ลิสต์โฆษณาในเมนูแบบเลื่อนออก</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">เพิ่มรายการในเมนูแบบเลื่อนออกที่อนุญาตให้โฆษณาเล่นบนช่องของวิดีโอนั้น</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">ไฟล์ฟอนต์ที่กำหนดเอง</string>
   <string name="morphe_custom_font_file_summary">เลือกไฟล์ฟอนต์ TTF หรือ OTF</string>
   <string name="morphe_custom_font_file_invalid">ไฟล์ที่เลือกไม่ใช่ฟอนต์ TTF หรือ OTF</string>
-  <string name="morphe_custom_font_pick_file_first">เลือกไฟล์ฟอนต์ก่อน</string>
   <string name="morphe_custom_font_failed_to_load">ไม่สามารถโหลดฟอนต์ที่กำหนดเองได้ และถูกปิดใช้งาน</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

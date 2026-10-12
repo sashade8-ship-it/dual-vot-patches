@@ -560,6 +560,22 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Osclaíonn sé an scuaine Morphe in ionad scuaine YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Cuir mír roghchláir scuaine amach beatha leis</string>
   <string name="morphe_queue_add_flyout_menu_summary">Cuireann sé mír bhreise ar an leathanach leis. Cumasaigh é seo mura bhfuil \"Cuir leis an scuaine\" le feiceáil.</string>
+  <string name="morphe_local_queue_title">Ciú ar stíl Premium</string>
+  <string name="morphe_local_queue_summary">"Cuirtear in ionad an chiú Morphe ceann a fhanann ar an ngléas, a sheinneann ar aghaidh leis féin agus is féidir é a atheagrú trí tharraingt
+
+Eolas: Ní thosaíonn an chéad fhíseán eile atá sa chiú ach amháin fad is atá YouTube ar an scáileán"</string>
+  <string name="morphe_local_queue_sheet_title">Scuaine</string>
+  <string name="morphe_local_queue_open">Scuaine (%d)</string>
+  <string name="morphe_local_queue_clear">Glan gach rud</string>
+  <string name="morphe_local_queue_empty">Níl aon rud sa scuaine</string>
+  <string name="morphe_local_queue_empty_hint">Úsáid \'Seinn ina dhiaidh sin sa scuaine\' ar aon fhíseán</string>
+  <string name="morphe_local_queue_now_playing">Ag seinm anois</string>
+  <string name="morphe_local_queue_play_next">Seinn an chéad cheann eile sa scuaine</string>
+  <string name="morphe_local_queue_reorder">Athordú</string>
+  <string name="morphe_local_queue_remove">Bain</string>
+  <string name="morphe_local_queue_added">Cuireadh leis an scuaine</string>
+  <string name="morphe_local_queue_full">Tá an scuaine lán</string>
+  <string name="morphe_local_queue_play_failed">Níorbh fhéidir an físeán a thosú</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Liosta bán fógraí sa roghchlár sleamhnáin</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Cuireann sé mír fillte leis a ligeann do fhógraí seinm ar chainéal an fhíseáin sin</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -790,7 +806,7 @@ Ní mór 'fianáin fotheidil' a sholáthar."</string>
 Chun rochtain a fháil ar Socruithe, cumasaigh an cnaipe Socruithe trí Ghinearálta → Barra Uirlisí → Taispeáin Socruithe."</string>
   <string name="morphe_narrow_navigation_buttons_title">Cumasaigh cnaipí nascleanúna caola</string>
   <string name="morphe_narrow_navigation_buttons_summary">Laghdaíonn an spásáil chothrománach idir cnaipí</string>
-  <string name="morphe_disable_icon_only_navigation_buttons_title">Díchumasaigh na cnaipí nascleanúna gan lipéid</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">Díchumasaigh cnaipí nascleanúna gan lipéid</string>
   <string name="morphe_disable_icon_only_navigation_buttons_summary">Taispeánann sé na cnaipí nascleanúna le lipéid, má sheolann YouTube iad gan lipéid</string>
   <string name="morphe_navigation_bar_animations_title">Cumasaigh beochana barra nascleanúna</string>
   <string name="morphe_navigation_bar_animations_summary">Beochan aistrithe agus tú ag aistriú idir cluaisíní</string>
@@ -1157,7 +1173,6 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_custom_font_file_title">Comhad cló saincheaptha</string>
   <string name="morphe_custom_font_file_summary">Roghnaigh comhad cló TTF nó OTF</string>
   <string name="morphe_custom_font_file_invalid">Ní cló TTF ná OTF é an comhad roghnaithe</string>
-  <string name="morphe_custom_font_pick_file_first">Roghnaigh comhad cló ar dtús</string>
   <string name="morphe_custom_font_failed_to_load">Níorbh fhéidir an cló saincheaptha a lódáil agus tá sé múchta</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
@@ -1184,8 +1199,8 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_dearrow_titles_icon_summary">Taispeánann sé deilbhín DeArrow ar theidil físeán slua-fhoinsithe</string>
   <string name="morphe_dearrow_casual_mode_title">Mód ócáideach</string>
   <string name="morphe_dearrow_casual_mode_summary">Taispeánann sé an teideal bunaidh in ionad an teidil DeArrow má vótáil úsáideoirí DeArrow gur maith leo an teideal bunaidh</string>
-  <string name="morphe_dearrow_casual_mode_min_votes_title">Íoslíon vótaí ócáideacha chun an teideal bunaidh a thaispeáint.</string>
-  <string name="morphe_dearrow_casual_mode_min_votes_summary">An líon vótaí ócáideacha in aon chatagóir amháin, ar nós greannmhar nó cruthaitheach, a theastaíonn chun an teideal bunaidh a thaispeáint.</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">Íonlíon vótaí ó úsáideoirí ócáideacha chun an buntheideal a thaispeáint</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">An líon vótaí ócáideacha in aon chatagóir amháin, ar nós greannmhar nó cruthaitheach, a theastaíonn chun an teideal bunaidh a thaispeáint</string>
   <string name="morphe_dearrow_thumbnails_title">Mionsamhlacha DeArrow</string>
   <string name="morphe_dearrow_thumbnail_options_entry_1">Mionsamhlacha bunaidh</string>
   <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; Mionsamhlacha bunaidh</string>

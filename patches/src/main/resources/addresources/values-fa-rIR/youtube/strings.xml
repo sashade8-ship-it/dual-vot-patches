@@ -560,6 +560,22 @@ Second \"item\" text"</string>
   <string name="morphe_queue_override_flyout_menu_summary">به‌جای صف YouTube، صف Morphe را باز می‌کند</string>
   <string name="morphe_queue_add_flyout_menu_title">افزودن مورد منوی صف به منوی بازشوی خوراک</string>
   <string name="morphe_queue_add_flyout_menu_summary">یک مورد بازشوی اضافی اضافه می‌کند. اگر «افزودن به صف» نمایش داده نمی‌شود، این گزینه را فعال کنید</string>
+  <string name="morphe_local_queue_title">صف به سبک پریمیوم</string>
+  <string name="morphe_local_queue_summary">"صف Morphe را با صفی جایگزین میکند که روی دستگاه قرار دارد، خودبهخود پخش میشود و میتوان با کشیدن، ترتیب آن را تغییر داد
+
+اطلاعات: ویدیوی بعدی در صف فقط وقتی شروع میشود که YouTube روی صفحه باشد"</string>
+  <string name="morphe_local_queue_sheet_title">صف</string>
+  <string name="morphe_local_queue_open">صف (%d)</string>
+  <string name="morphe_local_queue_clear">پاک کردن همه</string>
+  <string name="morphe_local_queue_empty">هیچ چیزی در صف نیست</string>
+  <string name="morphe_local_queue_empty_hint">در هر ویدیویی از «پخش بعدی در صف» استفاده کنید</string>
+  <string name="morphe_local_queue_now_playing">در حال پخش</string>
+  <string name="morphe_local_queue_play_next">پخش بعدی در صف</string>
+  <string name="morphe_local_queue_reorder">تغییر ترتیب</string>
+  <string name="morphe_local_queue_remove">حذف</string>
+  <string name="morphe_local_queue_added">به صف اضافه شد</string>
+  <string name="morphe_local_queue_full">صف پر است</string>
+  <string name="morphe_local_queue_play_failed">امکان شروع ویدیو وجود نداشت</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">فهرست مجاز تبلیغات در منوی بازشو</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">موردی به منوی بازشو اضافه می‌کند که اجازه می‌دهد تبلیغات در کانال آن ویدئو پخش شوند</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Second \"item\" text"</string>
   <string name="morphe_custom_font_file_title">فایل قلم سفارشی</string>
   <string name="morphe_custom_font_file_summary">یک فایل فونت TTF یا OTF انتخاب کنید</string>
   <string name="morphe_custom_font_file_invalid">فایل انتخاب‌شده یک فونت TTF یا OTF نیست</string>
-  <string name="morphe_custom_font_pick_file_first">ابتدا یک فایل فونت انتخاب کنید</string>
   <string name="morphe_custom_font_failed_to_load">فونت سفارشی بارگذاری نشد و غیرفعال شده است</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

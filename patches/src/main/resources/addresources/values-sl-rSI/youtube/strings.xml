@@ -560,6 +560,22 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Odpre vrsto Morphe namesto vrste YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj element menija v čakalno vrsto</string>
   <string name="morphe_queue_add_flyout_menu_summary">Doda dodaten element menija. Omogočite to, če \"Dodaj v čakalno vrsto\" ni prikazano</string>
+  <string name="morphe_local_queue_title">Čakalna vrsta v slogu Premium</string>
+  <string name="morphe_local_queue_summary">"Nadomesti čakalno vrsto Morphe z vrsto, ki je na napravi, se predvaja samodejno in jo je mogoče preurediti s povlekom
+
+Info: Naslednji videoposnetek v čakalni vrsti se začne le, ko je YouTube na zaslonu"</string>
+  <string name="morphe_local_queue_sheet_title">Čakalna vrsta</string>
+  <string name="morphe_local_queue_open">Čakalna vrsta (%d)</string>
+  <string name="morphe_local_queue_clear">Počisti vse</string>
+  <string name="morphe_local_queue_empty">Nič ni v čakalni vrsti</string>
+  <string name="morphe_local_queue_empty_hint">Na katerem koli videoposnetku uporabi možnost »Predvajaj naslednje v čakalni vrsti«</string>
+  <string name="morphe_local_queue_now_playing">Trenutno predvajano</string>
+  <string name="morphe_local_queue_play_next">Predvajaj naslednje v čakalni vrsti</string>
+  <string name="morphe_local_queue_reorder">Preuredi</string>
+  <string name="morphe_local_queue_remove">Odstrani</string>
+  <string name="morphe_local_queue_added">Dodano v čakalno vrsto</string>
+  <string name="morphe_local_queue_full">Čakalna vrsta je polna</string>
+  <string name="morphe_local_queue_play_failed">Videoposnetka ni bilo mogoče zagnati</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Beli seznam oglasov v pojavnem meniju</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Doda element v pojavni meni, ki omogoča, da se oglasi predvajajo na kanalu tega videoposnetka.</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_custom_font_file_title">Datoteka s pisavo po meri</string>
   <string name="morphe_custom_font_file_summary">Izberite datoteko pisave v formatu TTF ali OTF</string>
   <string name="morphe_custom_font_file_invalid">Izbrana datoteka ni pisava v formatu TTF ali OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Najprej izberite datoteko pisave</string>
   <string name="morphe_custom_font_failed_to_load">Pisave po meri ni bilo mogoče naložiti, zato je izklopljena</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

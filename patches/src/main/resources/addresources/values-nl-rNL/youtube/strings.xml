@@ -560,6 +560,22 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Opent de Morphe-wachtrij in plaats van de YouTube-wachtrij</string>
   <string name="morphe_queue_add_flyout_menu_title">Feed-flyoutmenu-item toevoegen</string>
   <string name="morphe_queue_add_flyout_menu_summary">Voegt een extra flyout-item toe. Schakel dit in als \"Toevoegen aan wachtrij\" niet wordt weergegeven</string>
+  <string name="morphe_local_queue_title">Premium-stijlwachtrij</string>
+  <string name="morphe_local_queue_summary">"Vervangt de Morphe-wachtrij door een wachtrij die op het apparaat staat, vanzelf afspeelt en door te slepen opnieuw kan worden gerangschikt
+
+Info: De volgende video in de wachtrij start alleen terwijl YouTube op het scherm staat"</string>
+  <string name="morphe_local_queue_sheet_title">Wachtrij</string>
+  <string name="morphe_local_queue_open">Wachtrij (%d)</string>
+  <string name="morphe_local_queue_clear">Alles wissen</string>
+  <string name="morphe_local_queue_empty">Niets in wachtrij</string>
+  <string name="morphe_local_queue_empty_hint">Gebruik \'Volgende in wachtrij afspelen\' op elke video</string>
+  <string name="morphe_local_queue_now_playing">Nu afspelen</string>
+  <string name="morphe_local_queue_play_next">Volgende in wachtrij afspelen</string>
+  <string name="morphe_local_queue_reorder">Herschikken</string>
+  <string name="morphe_local_queue_remove">Verwijderen</string>
+  <string name="morphe_local_queue_added">Toegevoegd aan wachtrij</string>
+  <string name="morphe_local_queue_full">Wachtrij is vol</string>
+  <string name="morphe_local_queue_play_failed">Kan de video niet starten</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Advertentie-whitelist in flyoutmenu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Voegt een flyoutitem toe waarmee advertenties op het kanaal van die video kunnen worden afgespeeld</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1155,7 +1171,6 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_custom_font_file_title">Eigen lettertypebestand</string>
   <string name="morphe_custom_font_file_summary">Kies een TTF- of OTF-lettertypebestand</string>
   <string name="morphe_custom_font_file_invalid">Het gekozen bestand is geen TTF- of OTF-lettertypebestand</string>
-  <string name="morphe_custom_font_pick_file_first">Kies eerst een lettertypebestand</string>
   <string name="morphe_custom_font_failed_to_load">Het eigen lettertype kon niet worden geladen en is uitgeschakeld</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

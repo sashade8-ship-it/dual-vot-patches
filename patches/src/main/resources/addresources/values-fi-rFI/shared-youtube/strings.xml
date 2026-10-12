@@ -93,6 +93,12 @@ Vaihtaaksesi kuvakkeen kaikkialla, paikkaa uudelleen ja muuta 'Sovelluskuvake'-p
 
 Jos olet YouTube Premium -käyttäjä, tämä asetus ei välttämättä ole tarpeen."</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Asiakasvirtoja ei voitu hakea</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Oletusasiakas ei toimi</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s ei toiminut useita kertoja peräkkäin, mutta %2$s toimi.
+
+Asetetaanko %2$s oletusasiakkaaksi?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Vaihda</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Tämän asetuksen poistaminen käytöstä voi aiheuttaa toisto-ongelmia.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Jos haluat käyttää tätä ominaisuutta, ota pois käytöstä 'Spoof video str
   <string name="morphe_external_potoken_provider_about_summary">"Tämä ominaisuus on tällä hetkellä kehitteillä eikä se välttämättä toimi
 
 Napauta tästä ladataksesi PotHelperin"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper ei enää toimi</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Tähän PotHelper-versioon sisäänrakennettu tunnus ei enää toimi
+
+Ota 'Videovirtojen huijaus' käyttöön korjataksesi toiston"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Ota käyttöön</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Sovellusversio naamioidaan</string>
   <string name="morphe_spoof_app_version_summary">Huijaa palvelinta luulemaan, että käytät vanhempaa sovellusversiota palauttaaksesi vanhat käyttöliittymäelementit.</string>

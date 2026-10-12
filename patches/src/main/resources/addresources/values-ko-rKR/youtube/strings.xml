@@ -562,6 +562,22 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_queue_override_flyout_menu_summary">\'현재 재생목록에서 다음 순서로 재생\' 메뉴를 탭하면 YouTube 현재 재생목록 대신 Morphe 현재 재생목록이 실행됩니다</string>
   <string name="morphe_queue_add_flyout_menu_title">\'현재 재생목록\' 메뉴 항목 추가하기</string>
   <string name="morphe_queue_add_flyout_menu_summary">추가적인 메뉴 구성요소 항목을 추가합니다. \'현재 재생목록에서 다음 순서로 재생\' 메뉴가 표시되지 않는 경우에 이 옵션을 활성화하세요</string>
+  <string name="morphe_local_queue_title">Premium 스타일 현재 재생목록</string>
+  <string name="morphe_local_queue_summary">"Morphe 현재 재생목록을 기기에 저장되고 자동으로 재생되며, 드래그하여 순서를 변경할 수 있는 현재 재생목록으로 대체합니다
+
+알림: 현재 재생목록에 있는 다음 동영상은 YouTube가 화면에 표시되어 있을 때만 재생이 시작됩니다"</string>
+  <string name="morphe_local_queue_sheet_title">현재 재생목록</string>
+  <string name="morphe_local_queue_open">현재 재생목록 (%d)</string>
+  <string name="morphe_local_queue_clear">모두 지우기</string>
+  <string name="morphe_local_queue_empty">현재 재생목록이 비어 있습니다</string>
+  <string name="morphe_local_queue_empty_hint">아무 동영상에서 ‘현재 재생목록에서 다음 순서로 재생’ 기능을 사용하세요.</string>
+  <string name="morphe_local_queue_now_playing">현재 재생 중</string>
+  <string name="morphe_local_queue_play_next">현재 재생목록에서 다음 순서로 재생</string>
+  <string name="morphe_local_queue_reorder">다시 정렬</string>
+  <string name="morphe_local_queue_remove">제거</string>
+  <string name="morphe_local_queue_added">현재 재생목록에 추가하였습니다</string>
+  <string name="morphe_local_queue_full">현재 재생목록이 가득 찼습니다</string>
+  <string name="morphe_local_queue_play_failed">동영상을 시작할 수 없습니다</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">\'광고 화이트리스트\' 메뉴 항목 추가하기</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">해당 동영상의 채널에서 광고가 재생되도록 하는 메뉴 구성요소 항목을 추가합니다</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1159,7 +1175,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_custom_font_file_title">사용자 정의 글꼴 파일</string>
   <string name="morphe_custom_font_file_summary">TTF 또는 OTF 글꼴 파일 선택할 수 있습니다</string>
   <string name="morphe_custom_font_file_invalid">선택한 파일은 TTF 또는 OTF 글꼴이 아닙니다</string>
-  <string name="morphe_custom_font_pick_file_first">먼저 글꼴 파일을 선택하세요</string>
   <string name="morphe_custom_font_failed_to_load">사용자 정의 글꼴을 불러올 수 없어 사용 중지되었습니다</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

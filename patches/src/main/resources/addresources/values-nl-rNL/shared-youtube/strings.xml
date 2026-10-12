@@ -93,6 +93,12 @@ Om het pictogram overal te wijzigen, moet je opnieuw patchen en de patchoptie 'A
 
 Als u een YouTube Premium-gebruiker bent, is deze instelling mogelijk niet vereist."</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Kon geen client-streams opvragen</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Standaardclient werkt niet</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s werkte meerdere keren achter elkaar niet, maar %2$s wel.
+
+Wil je %2$s als standaardclient instellen?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Overschakelen</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Het uitschakelen van deze instelling kan afspeelproblemen veroorzaken.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -217,6 +223,12 @@ Om deze functie te gebruiken, zet 'Spoof videostreams' uit. ','maxLength':null,"
   <string name="morphe_external_potoken_provider_about_summary">"Deze functie is momenteel in ontwikkeling en werkt mogelijk niet
 
 Tik hier om PoToken te downloaden"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper werkt niet meer</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Het token dat in deze versie van PotHelper is ingebouwd, werkt niet meer
+
+Schakel 'Videostreams nabootsen' in om het afspelen te herstellen"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Inschakelen</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Vervalst de app-versie</string>
   <string name="morphe_spoof_app_version_summary">Misleidt de server om te denken dat je een oudere app-versie gebruikt om oude UI-functies te herstellen</string>

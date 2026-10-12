@@ -560,6 +560,22 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Otvara Morphe red čekanja umesto YouTube reda čekanja</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj stavku menija za leteći red za feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Dodaje dodatnu stavku letećeg menija. Omogući ovo ako se \"Dodaj u red\" ne prikazuje.</string>
+  <string name="morphe_local_queue_title">Red čekanja u Premium stilu</string>
+  <string name="morphe_local_queue_summary">"Zamenjuje red čekanja u Morpheu onim koji se nalazi na uređaju, sam se reprodukuje i može da se preuredi prevlačenjem
+
+Info: Sledeći video iz reda čekanja počinje samo dok je YouTube na ekranu"</string>
+  <string name="morphe_local_queue_sheet_title">Red čekanja</string>
+  <string name="morphe_local_queue_open">Red čekanja (%d)</string>
+  <string name="morphe_local_queue_clear">Očisti sve</string>
+  <string name="morphe_local_queue_empty">Nema ničega u redu čekanja</string>
+  <string name="morphe_local_queue_empty_hint">Koristi opciju „Reprodukuj sledeće u redu čekanja” na bilo kom videu</string>
+  <string name="morphe_local_queue_now_playing">Trenutno se reprodukuje</string>
+  <string name="morphe_local_queue_play_next">Reprodukuj sledeće u redu čekanja</string>
+  <string name="morphe_local_queue_reorder">Preuredi</string>
+  <string name="morphe_local_queue_remove">Ukloni</string>
+  <string name="morphe_local_queue_added">Dodato u red čekanja</string>
+  <string name="morphe_local_queue_full">Red čekanja je pun</string>
+  <string name="morphe_local_queue_play_failed">Nije moguće pokrenuti video</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Bela lista oglasa u meniju</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Dodaje stavku u meni koja omogućava prikazivanje oglasa na kanalu tog video snimka</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_custom_font_file_title">Датотека прилагођеног фонта</string>
   <string name="morphe_custom_font_file_summary">Izaberite TTF ili OTF datoteku fonta</string>
   <string name="morphe_custom_font_file_invalid">Izabrana datoteka nije TTF ili OTF font</string>
-  <string name="morphe_custom_font_pick_file_first">Prvo izaberite datoteku fonta</string>
   <string name="morphe_custom_font_failed_to_load">Prilagođeni font nije mogao da se učita i isključen je</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

@@ -560,6 +560,22 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_queue_override_flyout_menu_summary">YouTube sırası yerine Morphe sırasını açar</string>
   <string name="morphe_queue_add_flyout_menu_title">Akış açılır menüsüne kuyruk menü öğesi ekle</string>
   <string name="morphe_queue_add_flyout_menu_summary">Ek bir açılır menü öğesi ekler. \"Kuyruğa ekle\" gösterilmiyorsa bunu etkinleştirin.</string>
+  <string name="morphe_local_queue_title">Premium tarzı kuyruk</string>
+  <string name="morphe_local_queue_summary">"Morphe kuyruğunu cihazda bulunan, kendi kendine oynayan ve sürükleyerek yeniden sıralanabilen bir kuyrukla değiştirir
+
+Bilgi: Sıradaki video yalnızca YouTube ekrandayken başlar"</string>
+  <string name="morphe_local_queue_sheet_title">Kuyruk</string>
+  <string name="morphe_local_queue_open">Kuyruk (%d)</string>
+  <string name="morphe_local_queue_clear">Tümünü temizle</string>
+  <string name="morphe_local_queue_empty">Sırada hiçbir şey yok</string>
+  <string name="morphe_local_queue_empty_hint">Herhangi bir videoda Sıradakini Oynat\'ı kullanın</string>
+  <string name="morphe_local_queue_now_playing">Şimdi oynatılıyor</string>
+  <string name="morphe_local_queue_play_next">Sıradakini Oynat</string>
+  <string name="morphe_local_queue_reorder">Yeniden sırala</string>
+  <string name="morphe_local_queue_remove">Kaldır</string>
+  <string name="morphe_local_queue_added">Sıraya eklendi</string>
+  <string name="morphe_local_queue_full">Sıra dolu</string>
+  <string name="morphe_local_queue_play_failed">Video başlatılamadı</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Açılır menüde reklam beyaz listesi</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Bu videonun kanalında reklamların oynatılmasına izin veren bir açılır menü öğesi ekler.</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_custom_font_file_title">Özel yazı tipi dosyası</string>
   <string name="morphe_custom_font_file_summary">Bir TTF veya OTF yazı tipi dosyası seçin</string>
   <string name="morphe_custom_font_file_invalid">Seçilen dosya bir TTF veya OTF yazı tipi değil</string>
-  <string name="morphe_custom_font_pick_file_first">Önce bir yazı tipi dosyası seçin</string>
   <string name="morphe_custom_font_failed_to_load">Özel yazı tipi yüklenemedi ve kapatıldı</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

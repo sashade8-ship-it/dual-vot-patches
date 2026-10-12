@@ -93,6 +93,12 @@ Da biste promijenili ikonu svugdje, ponovno primijenite zakrpu i promijenite opc
 
 Ako ste korisnik YouTube Premiuma, ova postavka možda nije potrebna"</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Nije moguće dohvatiti niti jedan klijentski tok</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Zadani klijent ne radi</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s nije radio nekoliko puta zaredom, ali %2$s jest.
+
+Postavi %2$s kao zadani klijent?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Prebaci</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Isključivanje ove postavke može uzrokovati probleme pri reprodukciji.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ Da biste koristili ovu značajku, isključite 'Spoof video streamova'"</string>
   <string name="morphe_external_potoken_provider_about_summary">"Ova je značajka trenutačno u razvoju i možda neće raditi
 
 Dodirnite ovdje za preuzimanje PotHelpera"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper više ne radi</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Token ugrađen u ovu verziju PotHelpera više ne radi
+
+Uključi „Maskiraj video streamove“ da popraviš reprodukciju"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Uključi</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Lažiraj verziju aplikacije</string>
   <string name="morphe_spoof_app_version_summary">Obmanjuje poslužitelj kako bi pomislio da koristite stariju verziju aplikacije radi vraćanja zastarjelih značajki sučelja</string>

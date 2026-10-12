@@ -560,6 +560,22 @@ Impormasyon: Maaaring hindi gumana sa mga live stream"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Binubuksan ang pila ng Morphe sa halip na ang pila ng YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Idagdag ang feed flyout queue na menu item</string>
   <string name="morphe_queue_add_flyout_menu_summary">Nagdaragdag ng karagdagang flyout item. I-enable ito kung hindi ipinapakita ang \"Idagdag sa queue\".</string>
+  <string name="morphe_local_queue_title">Pilang istilong Premium</string>
+  <string name="morphe_local_queue_summary">"Pinapalitan nito ang pila ng Morphe ng isang pila na nasa device, kusang nagpe-play, at maaaring muling ayusin sa pamamagitan ng pag-drag
+
+Impormasyon: Magsisimula lang ang susunod na naka-pilang video habang nasa screen ang YouTube"</string>
+  <string name="morphe_local_queue_sheet_title">Pila</string>
+  <string name="morphe_local_queue_open">Pila (%d)</string>
+  <string name="morphe_local_queue_clear">I-clear lahat</string>
+  <string name="morphe_local_queue_empty">Walang nakapila</string>
+  <string name="morphe_local_queue_empty_hint">Gamitin ang I-play sa susunod sa pila sa anumang video</string>
+  <string name="morphe_local_queue_now_playing">Kasalukuyang pinapatugtog</string>
+  <string name="morphe_local_queue_play_next">I-play sa susunod sa pila</string>
+  <string name="morphe_local_queue_reorder">Muling ayusin</string>
+  <string name="morphe_local_queue_remove">Alisin</string>
+  <string name="morphe_local_queue_added">Idinagdag sa pila</string>
+  <string name="morphe_local_queue_full">Puno na ang pila</string>
+  <string name="morphe_local_queue_play_failed">Hindi masimulan ang video</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Ad whitelist sa flyout menu</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Nagdaragdag ng flyout item na nagpapahintulot sa mga ad na mag-play sa channel ng video na iyon</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1155,7 +1171,6 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <string name="morphe_custom_font_file_title">Custom na file ng font</string>
   <string name="morphe_custom_font_file_summary">Pumili ng TTF o OTF na file ng font</string>
   <string name="morphe_custom_font_file_invalid">Ang napiling file ay hindi isang TTF o OTF na font</string>
-  <string name="morphe_custom_font_pick_file_first">Pumili muna ng file ng font</string>
   <string name="morphe_custom_font_failed_to_load">Hindi ma-load ang custom na font at naka-off ito</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

@@ -93,6 +93,12 @@ For at ændre ikonet overalt skal du patche igen og ændre patchindstillingen �
 
 Hvis du er en YouTube Premium-bruger, er denne indstilling muligvis ikke nødvendig."</string>
   <string name="morphe_spoof_video_streams_no_clients_toast">Kunne ikke hente nogen klient streams</string>
+  <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Standardklienten virker ikke</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s virkede ikke flere gange i træk, men %2$s gjorde.
+
+Skal %2$s gøres til standardklient?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">Skift</string>
   <string name="morphe_spoof_video_streams_user_dialog_message">Deaktivering af denne indstilling kan forårsage afspilningsproblemer.</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
@@ -223,6 +229,12 @@ For at bruge denne funktion skal du slå 'Spoof video streams' fra"</string>
   <string name="morphe_external_potoken_provider_about_summary">"Denne funktion er i øjeblikket under udvikling og virker muligvis ikke
 
 Tryk her for at downloade PotHelper"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper virker ikke længere</string>
+  <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"Tokenet indbygget i denne version af PotHelper virker ikke længere
+
+Aktivér 'Forfalsk videostreams' for at rette afspilningen"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">Slå til</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_title">Spoof app-version</string>
   <string name="morphe_spoof_app_version_summary">Snyder serveren til at tro, at du bruger en ældre app-version for at gendanne tidligere brugergrænsefladefunktioner.</string>

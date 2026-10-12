@@ -559,6 +559,22 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_queue_override_flyout_menu_summary">Mở hàng chờ Morphe thay vì hàng chờ YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Thêm menu hàng chờ trên trang video</string>
   <string name="morphe_queue_add_flyout_menu_summary">Thêm tùy chọn vào menu bổ sung. Bật tùy chọn này nếu không thấy \"Thêm vào hàng chờ\"</string>
+  <string name="morphe_local_queue_title">Hàng đợi kiểu Premium</string>
+  <string name="morphe_local_queue_summary">"Thay thế hàng đợi Morphe bằng hàng đợi được lưu trên thiết bị, tự động phát liên tục và có thể sắp xếp lại bằng cách kéo
+
+Thông tin: Video tiếp theo trong hàng đợi chỉ bắt đầu phát khi YouTube đang hiển thị trên màn hình"</string>
+  <string name="morphe_local_queue_sheet_title">Hàng đợi</string>
+  <string name="morphe_local_queue_open">Hàng đợi (%d)</string>
+  <string name="morphe_local_queue_clear">Xóa tất cả</string>
+  <string name="morphe_local_queue_empty">Không có gì trong hàng đợi</string>
+  <string name="morphe_local_queue_empty_hint">Sử dụng Phát tiếp theo trong hàng đợi trên bất kỳ video nào</string>
+  <string name="morphe_local_queue_now_playing">Đang phát</string>
+  <string name="morphe_local_queue_play_next">Phát tiếp theo trong hàng đợi</string>
+  <string name="morphe_local_queue_reorder">Sắp xếp lại</string>
+  <string name="morphe_local_queue_remove">Xóa</string>
+  <string name="morphe_local_queue_added">Đã thêm vào hàng đợi</string>
+  <string name="morphe_local_queue_full">Hàng đợi đã đầy</string>
+  <string name="morphe_local_queue_play_failed">Không thể phát video</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Danh sách trắng quảng cáo trong menu bật lên</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Thêm một mục trong menu bật lên cho phép quảng cáo phát trên kênh của video đó</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1156,7 +1172,6 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_custom_font_file_title">Tệp phông chữ tùy chỉnh</string>
   <string name="morphe_custom_font_file_summary">Chọn tệp phông chữ TTF hoặc OTF</string>
   <string name="morphe_custom_font_file_invalid">Tệp đã chọn không phải là phông chữ TTF hoặc OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Hãy chọn tệp phông chữ trước</string>
   <string name="morphe_custom_font_failed_to_load">Không thể tải phông chữ tùy chỉnh và nó đã bị tắt</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->

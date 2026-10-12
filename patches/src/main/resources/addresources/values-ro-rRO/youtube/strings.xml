@@ -560,6 +560,22 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_queue_override_flyout_menu_summary">Deschide coada Morphe în loc de coada YouTube</string>
   <string name="morphe_queue_add_flyout_menu_title">Adaugă element de meniu pentru coada flyout de feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Adaugă un element suplimentar de flyout. Activează această opțiune dacă \"Adaugă în coadă\" nu este afișat.</string>
+  <string name="morphe_local_queue_title">Coadă în stil Premium</string>
+  <string name="morphe_local_queue_summary">"Înlocuiește coada Morphe cu una care este stocată pe dispozitiv, se redă singură și poate fi reordonată prin glisare
+
+Informații: Următorul videoclip din coadă pornește doar cât timp YouTube este afișat pe ecran"</string>
+  <string name="morphe_local_queue_sheet_title">Coadă</string>
+  <string name="morphe_local_queue_open">Coadă (%d)</string>
+  <string name="morphe_local_queue_clear">Șterge tot</string>
+  <string name="morphe_local_queue_empty">Nimic în coadă</string>
+  <string name="morphe_local_queue_empty_hint">Folosește „Redare în continuare în coadă” pe orice videoclip</string>
+  <string name="morphe_local_queue_now_playing">Se redă acum</string>
+  <string name="morphe_local_queue_play_next">Redare în continuare în coadă</string>
+  <string name="morphe_local_queue_reorder">Reordonare</string>
+  <string name="morphe_local_queue_remove">Elimină</string>
+  <string name="morphe_local_queue_added">Adăugat în coadă</string>
+  <string name="morphe_local_queue_full">Coada este plină</string>
+  <string name="morphe_local_queue_play_failed">Nu s-a putut porni videoclipul</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_title">Lista albă pentru anunțuri din meniul pop-up</string>
   <string name="morphe_ads_channel_whitelist_flyout_menu_summary">Adaugă un element în meniul pop-up care permite redarea anunțurilor pe canalul acelui videoclip</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
@@ -1157,7 +1173,6 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_custom_font_file_title">Fișier de font personalizat</string>
   <string name="morphe_custom_font_file_summary">Alegeți un fișier de font TTF sau OTF</string>
   <string name="morphe_custom_font_file_invalid">Fișierul selectat nu este un font TTF sau OTF</string>
-  <string name="morphe_custom_font_pick_file_first">Alegeți mai întâi un fișier de font</string>
   <string name="morphe_custom_font_failed_to_load">Fontul personalizat nu a putut fi încărcat și este dezactivat</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
