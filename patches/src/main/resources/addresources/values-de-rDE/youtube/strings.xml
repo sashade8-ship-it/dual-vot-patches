@@ -1125,9 +1125,6 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Zurück-Taste verlässt den Feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Durch Drücken der Zurück-Taste wird die App immer beendet, anstatt zum Anfang des Feeds zu scrollen.</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Systemschriftart erzwingen</string>
-  <string name="morphe_force_system_font_summary">Zeigt die App mit der Geräteschriftart anstelle von YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Statusleiste ausblenden</string>
   <string name="morphe_hide_status_bar_summary">Blendet die Systemstatusleiste aus. Wischen Sie vom oberen Bildschirmrand nach unten, um sie kurz einzublenden</string>
@@ -1153,6 +1150,16 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_seekbar_custom_color_accent_title">Akzentfarbe der Fortschrittsanzeige</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Die Sekundärfarbe des Videofortschrittsbalkens</string>
   <string name="morphe_seekbar_custom_color_invalid">Ungültiger Farbwert</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Schriftart</string>
+  <string name="morphe_custom_font_type_entry_default">Standard</string>
+  <string name="morphe_custom_font_type_entry_system">Systemschriftart des Geräts</string>
+  <string name="morphe_custom_font_type_entry_custom">Benutzerdefinierte Schriftdatei</string>
+  <string name="morphe_custom_font_file_title">Benutzerdefinierte Schriftdatei</string>
+  <string name="morphe_custom_font_file_summary">TTF- oder OTF-Schriftdatei auswählen</string>
+  <string name="morphe_custom_font_file_invalid">Die ausgewählte Datei ist keine TTF- oder OTF-Schriftdatei</string>
+  <string name="morphe_custom_font_pick_file_first">Zuerst eine Schriftdatei auswählen</string>
+  <string name="morphe_custom_font_failed_to_load">Die benutzerdefinierte Schriftart konnte nicht geladen werden und wurde deaktiviert</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Header-Logo</string>

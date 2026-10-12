@@ -1126,9 +1126,6 @@ Second \"item\" text"</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Кнопка «Назад» выходит из ленты</string>
   <string name="morphe_back_button_always_exits_feed_summary">Нажатие кнопки «Назад» всегда выходит из приложения вместо прокрутки к началу ленты</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Принудительно использовать системный шрифт</string>
-  <string name="morphe_force_system_font_summary">Показывает приложение системным шрифтом вместо YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Скрыть строку состояния</string>
   <string name="morphe_hide_status_bar_summary">Скрывает системную строку состояния. Проведите вниз от верхнего края, чтобы на мгновение показать её</string>
@@ -1154,6 +1151,16 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_title">Вторичный цвет полосы прогресса</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Установите вторичный цвет полосы прогресса видео</string>
   <string name="morphe_seekbar_custom_color_invalid">Неверное значение цвета полосы прогресса</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Шрифт</string>
+  <string name="morphe_custom_font_type_entry_default">По умолчанию</string>
+  <string name="morphe_custom_font_type_entry_system">Системный шрифт устройства</string>
+  <string name="morphe_custom_font_type_entry_custom">Пользовательский файл шрифта</string>
+  <string name="morphe_custom_font_file_title">Пользовательский файл шрифта</string>
+  <string name="morphe_custom_font_file_summary">Выберите файл шрифта TTF или OTF</string>
+  <string name="morphe_custom_font_file_invalid">Выбранный файл не является шрифтом TTF или OTF</string>
+  <string name="morphe_custom_font_pick_file_first">Сначала выберите файл шрифта</string>
+  <string name="morphe_custom_font_failed_to_load">Не удалось загрузить пользовательский шрифт, и он отключен</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Логотип заголовка</string>

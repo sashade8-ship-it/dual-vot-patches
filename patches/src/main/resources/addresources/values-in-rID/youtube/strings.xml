@@ -1124,9 +1124,6 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tombol kembali menutup feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali akan selalu menutup aplikasi bukannya menggulir feed ke atas</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Paksa font sistem</string>
-  <string name="morphe_force_system_font_summary">Menampilkan aplikasi dengan font perangkat, bukan YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Sembunyikan bilah status</string>
   <string name="morphe_hide_status_bar_summary">Menyembunyikan bilah status sistem. Geser ke bawah dari tepi atas untuk menampilkannya sesaat</string>
@@ -1152,6 +1149,16 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_seekbar_custom_color_accent_title">Warna aksen bilah pencarian</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Atur warna sekunder bilah kemajuan video</string>
   <string name="morphe_seekbar_custom_color_invalid">Nilai warna bilah geser tidak sah</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Huruf</string>
+  <string name="morphe_custom_font_type_entry_default">Bawaan</string>
+  <string name="morphe_custom_font_type_entry_system">Font sistem perangkat</string>
+  <string name="morphe_custom_font_type_entry_custom">File font kustom</string>
+  <string name="morphe_custom_font_file_title">File font kustom</string>
+  <string name="morphe_custom_font_file_summary">Pilih file font TTF atau OTF</string>
+  <string name="morphe_custom_font_file_invalid">File yang dipilih bukan font TTF atau OTF</string>
+  <string name="morphe_custom_font_pick_file_first">Pilih file font terlebih dahulu</string>
+  <string name="morphe_custom_font_failed_to_load">Font kustom tidak dapat dimuat dan dinonaktifkan</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo Header</string>

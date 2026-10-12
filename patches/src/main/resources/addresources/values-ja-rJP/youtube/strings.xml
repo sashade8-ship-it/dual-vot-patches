@@ -1126,9 +1126,6 @@ Automotive レイアウト
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">「戻る」ボタンでアプリを終了</string>
   <string name="morphe_back_button_always_exits_feed_summary">ホームタブで「戻る」ボタンをタップしたときに、ホームフィードのスクロール位置が最上部ではない場合でも、最上部にスクロールせずに常にアプリを終了します</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">システムフォントを使用</string>
-  <string name="morphe_force_system_font_summary">YouTube Sansの代わりに端末のフォントでアプリを表示します</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">ステータスバーを非表示</string>
   <string name="morphe_hide_status_bar_summary">システムのステータスバーを非表示にします。上端から下にスワイプすると、一時的に表示できます</string>
@@ -1154,6 +1151,16 @@ Automotive レイアウト
   <string name="morphe_seekbar_custom_color_accent_title">シークバーのアクセント カラー</string>
   <string name="morphe_seekbar_custom_color_accent_summary">動画の現在の再生位置を示すプログレスバーのセカンドカラーを設定します</string>
   <string name="morphe_seekbar_custom_color_invalid">シークバーの色の値が無効です</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">フォント</string>
+  <string name="morphe_custom_font_type_entry_default">デフォルト</string>
+  <string name="morphe_custom_font_type_entry_system">端末のシステムフォント</string>
+  <string name="morphe_custom_font_type_entry_custom">カスタム フォント ファイル</string>
+  <string name="morphe_custom_font_file_title">カスタム フォント ファイル</string>
+  <string name="morphe_custom_font_file_summary">TTFまたはOTFフォントファイルを選択してください</string>
+  <string name="morphe_custom_font_file_invalid">選択したファイルはTTFまたはOTFフォントではありません</string>
+  <string name="morphe_custom_font_pick_file_first">先にフォントファイルを選択してください</string>
+  <string name="morphe_custom_font_failed_to_load">カスタムフォントを読み込めなかったため、オフになっています</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">ヘッダーロゴ</string>

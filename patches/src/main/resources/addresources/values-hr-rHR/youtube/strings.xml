@@ -1126,9 +1126,6 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Gumb natrag izlazi iz feeda</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pritiskanje gumba natrag uvijek izlazi iz aplikacije umjesto pomicanja na vrh feeda</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Prisili korištenje fonta sustava</string>
-  <string name="morphe_force_system_font_summary">Prikazuje aplikaciju s fontom uređaja umjesto YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Sakrij statusnu traku</string>
   <string name="morphe_hide_status_bar_summary">Skriva statusnu traku sustava. Povucite prstom prema dolje s gornjeg ruba da biste je na trenutak prikazali.</string>
@@ -1154,6 +1151,16 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_seekbar_custom_color_accent_title">Akcentna boja trake za traženje</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Postavite sekundarnu boju trake napretka videozapisa</string>
   <string name="morphe_seekbar_custom_color_invalid">Nevažeća vrijednost obojskog seekbara</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Vrsta slova</string>
+  <string name="morphe_custom_font_type_entry_default">Zadano</string>
+  <string name="morphe_custom_font_type_entry_system">Sustavni font uređaja</string>
+  <string name="morphe_custom_font_type_entry_custom">Datoteka prilagođenog fonta</string>
+  <string name="morphe_custom_font_file_title">Datoteka prilagođenog fonta</string>
+  <string name="morphe_custom_font_file_summary">Odaberite TTF ili OTF datoteku fonta</string>
+  <string name="morphe_custom_font_file_invalid">Odabrana datoteka nije TTF ili OTF font</string>
+  <string name="morphe_custom_font_pick_file_first">Prvo odaberite datoteku fonta</string>
+  <string name="morphe_custom_font_failed_to_load">Prilagođeni font se nije mogao učitati pa je isključen</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Zastavica</string>

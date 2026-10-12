@@ -1124,9 +1124,6 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Takaisin-painike sulkee syötteen</string>
   <string name="morphe_back_button_always_exits_feed_summary">Takaisin-painikkeen painaminen sulkee aina sovelluksen sen sijaan, että se vierittäisi syötteen alkuun</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Pakota järjestelmän fontti</string>
-  <string name="morphe_force_system_font_summary">Näyttää sovelluksen laitteen fontilla YouTube Sansin sijaan</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Piilota tilapalkki</string>
   <string name="morphe_hide_status_bar_summary">Piilottaa järjestelmän tilapalkin. Pyyhkäise yläreunasta alaspäin, niin se näkyy hetkeksi</string>
@@ -1152,6 +1149,16 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_seekbar_custom_color_accent_title">Etenemispalkin korostusväri</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Aseta videon etenemispalkin toissijainen väri</string>
   <string name="morphe_seekbar_custom_color_invalid">Virheellinen etenemispalkin väriarvo</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Fontti</string>
+  <string name="morphe_custom_font_type_entry_default">Oletus</string>
+  <string name="morphe_custom_font_type_entry_system">Laitteen järjestelmäfontti</string>
+  <string name="morphe_custom_font_type_entry_custom">Mukautettu fonttitiedosto</string>
+  <string name="morphe_custom_font_file_title">Mukautettu fonttitiedosto</string>
+  <string name="morphe_custom_font_file_summary">Valitse TTF- tai OTF-fonttitiedosto</string>
+  <string name="morphe_custom_font_file_invalid">Valittu tiedosto ei ole TTF- tai OTF-fontti</string>
+  <string name="morphe_custom_font_pick_file_first">Valitse ensin fonttitiedosto</string>
+  <string name="morphe_custom_font_failed_to_load">Mukautettua fonttia ei voitu ladata, ja se on poistettu käytöstä</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Ylätunnisteen logo</string>

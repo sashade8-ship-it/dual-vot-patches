@@ -1129,9 +1129,6 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">زر الرجوع يخرج من الخلاصة</string>
   <string name="morphe_back_button_always_exits_feed_summary">الضغط على زر الرجوع يؤدي دائمًا إلى الخروج من التطبيق بدلًا من التمرير إلى أعلى الخلاصة</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">فرض خط النظام</string>
-  <string name="morphe_force_system_font_summary">يعرض التطبيق بخط الجهاز بدلًا من خط YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">إخفاء شريط الحالة</string>
   <string name="morphe_hide_status_bar_summary">يخفي شريط حالة النظام. اسحب لأسفل من الحافة العلوية لإظهاره للحظة</string>
@@ -1157,6 +1154,16 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_seekbar_custom_color_accent_title">لون تمييز شريط التقدم</string>
   <string name="morphe_seekbar_custom_color_accent_summary">تعيين اللون الثانوي لشريط تقدم الفيديو</string>
   <string name="morphe_seekbar_custom_color_invalid">لون شريط التقدم غير صالح</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">الخط</string>
+  <string name="morphe_custom_font_type_entry_default">الوضع الافتراضي</string>
+  <string name="morphe_custom_font_type_entry_system">خط نظام الجهاز</string>
+  <string name="morphe_custom_font_type_entry_custom">ملف خط مخصص</string>
+  <string name="morphe_custom_font_file_title">ملف خط مخصص</string>
+  <string name="morphe_custom_font_file_summary">اختر ملف خط TTF أو OTF</string>
+  <string name="morphe_custom_font_file_invalid">الملف المحدد ليس خط بصيغة TTF أو OTF</string>
+  <string name="morphe_custom_font_pick_file_first">اختر ملف الخط أولًا</string>
+  <string name="morphe_custom_font_failed_to_load">تعذر تحميل الخط المخصص وتم إيقاف تشغيله</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">علامة الشعار</string>

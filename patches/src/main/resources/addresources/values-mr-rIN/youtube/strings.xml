@@ -906,7 +906,6 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_miniplayer_opacity_title">ओव्हरले अपारदर्शकता</string>
   <string name="morphe_miniplayer_opacity_summary">ओव्हरले (Overlay) पातळी समायोजित (Adjust) करा (0 म्हणजे पारदर्शक, 100 म्हणजे अपारदर्शक)</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
-  <!-- layout.font.forceSystemFontPatch -->
   <!-- layout.statusbar.hideStatusBarPatch -->
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">लाइट थीम पार्श्वभूमी</string>
@@ -928,6 +927,7 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_seekbar_custom_color_accent_title">SeekBar चा Accent रंग</string>
   <string name="morphe_seekbar_custom_color_accent_summary">व्हिडिओ प्रगती बारचा दुय्यम रंग सेट करा</string>
   <string name="morphe_seekbar_custom_color_invalid">अवैध seekbar रंग मूल्य</string>
+  <!-- layout.font.customFontPatch -->
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">हेडर लोगो</string>

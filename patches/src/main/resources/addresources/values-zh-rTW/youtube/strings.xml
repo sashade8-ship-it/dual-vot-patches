@@ -1124,9 +1124,6 @@ Second \"item\" text"</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">返回按鈕會結束動態消息</string>
   <string name="morphe_back_button_always_exits_feed_summary">按返回鍵一律結束應用程式，而不是捲動到動態消息頂端</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">強制系統字型</string>
-  <string name="morphe_force_system_font_summary">以系統字型顯示應用程式，而非 YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">隱藏狀態列</string>
   <string name="morphe_hide_status_bar_summary">隱藏系統狀態列。從頂端邊緣向下滑動可暫時顯示狀態列</string>
@@ -1152,6 +1149,16 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_title">尋找列輔色</string>
   <string name="morphe_seekbar_custom_color_accent_summary">設定影片進度條的次要顏色</string>
   <string name="morphe_seekbar_custom_color_invalid">跳轉列色彩值無效</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">字型</string>
+  <string name="morphe_custom_font_type_entry_default">預設</string>
+  <string name="morphe_custom_font_type_entry_system">裝置系統字型</string>
+  <string name="morphe_custom_font_type_entry_custom">自訂字型檔案</string>
+  <string name="morphe_custom_font_file_title">自訂字型檔案</string>
+  <string name="morphe_custom_font_file_summary">選擇 TTF 或 OTF 字型檔案</string>
+  <string name="morphe_custom_font_file_invalid">所選取的檔案不是 TTF 或 OTF 字型</string>
+  <string name="morphe_custom_font_pick_file_first">請先選擇字型檔案</string>
+  <string name="morphe_custom_font_failed_to_load">自訂字型無法載入，因此已關閉</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">標題標誌</string>

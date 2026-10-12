@@ -1124,9 +1124,6 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Geri düyməsi axından çıxarır</string>
   <string name="morphe_back_button_always_exits_feed_summary">Geriyə basmaq, axının yuxarısına sürüşdürmək əvəzinə, həmişə tətbiqdən çıxır</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Sistem şriftinə zorla</string>
-  <string name="morphe_force_system_font_summary">Tətbiqi YouTube Sans əvəzinə cihaz şrifti ilə göstərir</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Status panelini gizlət</string>
   <string name="morphe_hide_status_bar_summary">Sistem status panelini gizlədir. Onu bir anlıq göstərmək üçün yuxarı kənardan aşağı sürüşdür</string>
@@ -1152,6 +1149,16 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_seekbar_custom_color_accent_title">İrəliləyiş cizgisi cila rəngi</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Videonun çəkmə cizgisinin ikinci dərəcəli rəngini təyin et</string>
   <string name="morphe_seekbar_custom_color_invalid">Etibarsız çevirmə cizgisi rəng dəyəri</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Şrift</string>
+  <string name="morphe_custom_font_type_entry_default">İlkin</string>
+  <string name="morphe_custom_font_type_entry_system">Cihaz sistem şrifti</string>
+  <string name="morphe_custom_font_type_entry_custom">Fərdi şrift faylı</string>
+  <string name="morphe_custom_font_file_title">Fərdi şrift faylı</string>
+  <string name="morphe_custom_font_file_summary">TTF və ya OTF şrift faylı seç</string>
+  <string name="morphe_custom_font_file_invalid">Seçilmiş fayl TTF və ya OTF şrifti deyil</string>
+  <string name="morphe_custom_font_pick_file_first">Əvvəlcə şrift faylı seç</string>
+  <string name="morphe_custom_font_failed_to_load">Fərdi şrift yüklənilə bilmədi və qapalıdır</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Sərlövhə simvolu</string>

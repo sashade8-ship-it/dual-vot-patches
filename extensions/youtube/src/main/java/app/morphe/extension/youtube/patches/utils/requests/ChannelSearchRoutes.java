@@ -73,6 +73,21 @@ public final class ChannelSearchRoutes {
                     "&fields=playerOverlays.playerOverlayRenderer.videoDetails.playerOverlayVideoDetailsRenderer.title"
     ).compile();
 
+    /**
+     * The exact publish date and view count of a video, for search results that are not in
+     * the listed uploads of the channel. The search only shows these rounded, such as
+     * "3 years ago" or "1.2M views", which is not enough to sort by them.
+     * The description and tags tell whether a video matches a search by more than its title.
+     */
+    public static final Route.CompiledRoute GET_VIDEO_DETAILS = new Route(
+            Route.Method.POST,
+            "player" +
+                    "?prettyPrint=false" +
+                    "&fields=microformat.playerMicroformatRenderer.publishDate" +
+                    ",videoDetails.viewCount" +
+                    ",videoDetails.shortDescription,videoDetails.keywords"
+    ).compile();
+
     private static final String SEARCH_RESULT_VIDEO_FIELD =
             "contents.sectionListRenderer.contents.itemSectionRenderer.contents.videoWithContextRenderer";
 

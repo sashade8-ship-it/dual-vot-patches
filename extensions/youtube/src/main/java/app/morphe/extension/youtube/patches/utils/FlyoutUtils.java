@@ -490,33 +490,35 @@ public final class FlyoutUtils {
                                 isDialogClosed && isPopupWindowClosed;
 
                         if (blockFlyoutIdsResetHandler) {
-                            // Give a delay to wait for the system sharing panel to be called.
-                            Utils.runOnMainThreadDelayed(
-                                    () -> {
-                                        visibleFlyoutButtons.clear();
-                                        currentButtonIndex = 0;
-                                        flyoutVideoId = "";
-                                        flyoutPlaylistId = "";
-                                        flyoutPostId = "";
-                                        flyoutChannelId = "";
-                                        flyoutChannelName = "";
-                                        isMyTabHistoryFlyout = false;
-                                        isShortFlyout = false;
+                            resetFlyoutIds();
 
-                                        flyoutVisibilityHandlerRunning = false;
-                                        flyoutIdsResetHandlerRunning = false;
-                                    },
-                                    // The delay used to prevent the system share sheet from failing to
-                                    // display, sometimes causes the injected buttons to appear in the
-                                    // YouTube share sheet. For this reason, the delay is set to zero
-                                    // when the setting to display the system share sheet is disabled.
-                                    Settings.OPEN_SYSTEM_SHARE_SHEET.get() ? 100 : 0
-                            );
+                            flyoutVisibilityHandlerRunning = false;
+                            flyoutIdsResetHandlerRunning = false;
                         } else {
                             flyoutIdsResetHandler.postDelayed(this, 10);
                         }
                     }
                 }
+        );
+    }
+
+    private static void resetFlyoutIds() {
+        // Give a delay to wait for the system sharing panel to be called.
+        Utils.runOnMainThreadDelayed(
+                () -> {
+                    visibleFlyoutButtons.clear();
+                    currentButtonIndex = 0;
+                    flyoutVideoId = "";
+                    flyoutPlaylistId = "";
+                    flyoutPostId = "";
+                    flyoutChannelId = "";
+                    flyoutChannelName = "";
+                },
+                // The delay used to prevent the system share sheet from failing to
+                // display, sometimes causes the injected buttons to appear in the
+                // YouTube share sheet. For this reason, the delay is set to zero
+                // when the setting to display the system share sheet is disabled.
+                Settings.OPEN_SYSTEM_SHARE_SHEET.get() ? 100 : 0
         );
     }
 
@@ -937,16 +939,7 @@ public final class FlyoutUtils {
                             HEADER_DESCRIPTION_PLAYLIST_ID_PREFIX_BYTES,
                             false
                     );
-                    // Reset the ids after the share button is pressed, to prevent unintended usage.
-                    Utils.runOnMainThreadDelayed(() -> {
-                        if ((flyoutDialog == null || !flyoutDialog.isShowing())
-                                && (flyoutPopupWindow == null || !flyoutPopupWindow.isShowing())) {
-                            flyoutPostId = "";
-                            flyoutPlaylistId = "";
-                            isMyTabHistoryFlyout = false;
-                            isShortFlyout = false;
-                        }
-                    }, 500);
+                    resetFlyoutIds();
                 }
             }
         } catch (Exception ex) {
@@ -1007,18 +1000,14 @@ public final class FlyoutUtils {
         }
 
         List<Integer> horizontalShelfHistoryBytesIndexes = byteIndexesOf(flyoutBuffer, HORIZONTAL_SHELF_HISTORY_BYTES);
-        if (!horizontalShelfHistoryBytesIndexes.isEmpty() &&
-                horizontalShelfHistoryBytesIndexes.size() == HORIZONTAL_SHELF_HISTORY_BYTES.size()) {
-            if (byteIndexInStartRange(horizontalShelfHistoryBytesIndexes.get(0))) {
-                isMyTabHistoryFlyout = true;
-            }
-        }
+        isMyTabHistoryFlyout =
+                !horizontalShelfHistoryBytesIndexes.isEmpty() &&
+                        horizontalShelfHistoryBytesIndexes.size() == HORIZONTAL_SHELF_HISTORY_BYTES.size() &&
+                        byteIndexInStartRange(horizontalShelfHistoryBytesIndexes.get(0));
 
         // Check if Shorts flyout is triggered only in the feed or on channels.
         List<Integer> shortsVideoElementsBytesIndexes = byteIndexesOf(flyoutBuffer, SHORTS_VIDEO_ELEMENT_BYTES);
-        if (shortsVideoElementsBytesIndexes.size() == 1) {
-            isShortFlyout = true;
-        }
+        isShortFlyout = shortsVideoElementsBytesIndexes.size() == 1;
 
         setCommunityPostId(flyoutBuffer);
 

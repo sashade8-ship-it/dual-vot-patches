@@ -14,6 +14,7 @@ import static app.morphe.extension.shared.StringRef.str;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Outline;
@@ -34,6 +35,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -47,8 +49,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceUtils;
@@ -60,8 +64,10 @@ import app.morphe.extension.shared.ui.SheetBottomDialog;
 import app.morphe.extension.youtube.patches.dearrow.DeArrowPatch;
 import app.morphe.extension.youtube.patches.originaltitles.RestoreOriginalTitlesPatch;
 import app.morphe.extension.youtube.patches.utils.requests.ChannelSearchRequest;
+import app.morphe.extension.youtube.patches.utils.requests.ChannelUploadsRequest;
 import app.morphe.extension.youtube.patches.utils.requests.ChannelSearchRequest.ChannelSearchResponse;
 import app.morphe.extension.youtube.patches.utils.requests.ChannelSearchRequest.ChannelSearchResult;
+import app.morphe.extension.youtube.patches.utils.requests.VideoDetailsRequest;
 import app.morphe.extension.youtube.settings.Settings;
 
 @SuppressWarnings("unused")
@@ -82,53 +88,77 @@ public final class ChannelSearchPatch {
             this.sortName = sf(sortName).toString();
         }
 
-        public List<ChannelSearchResult> sort(List<ChannelSearchResult> results) {
-            switch (this) {
-                case RELEVANCE -> results.sort(Comparator.comparingInt(a -> a.originalIndex));
-                case NEWEST -> results.sort((a, b) -> {
-                    if (a.publishedTimeSeconds == Long.MAX_VALUE && b.publishedTimeSeconds == Long.MAX_VALUE) {
-                        return Integer.compare(a.originalIndex, b.originalIndex);
-                    }
-                    if (a.publishedTimeSeconds == Long.MAX_VALUE) return 1;
-                    if (b.publishedTimeSeconds == Long.MAX_VALUE) return -1;
-                    final int cmp = Long.compare(a.publishedTimeSeconds, b.publishedTimeSeconds);
-                    return cmp != 0 ? cmp : Integer.compare(a.originalIndex, b.originalIndex);
-                });
-                case OLDEST -> results.sort((a, b) -> {
-                    if (a.publishedTimeSeconds == Long.MAX_VALUE && b.publishedTimeSeconds == Long.MAX_VALUE) {
-                        return Integer.compare(a.originalIndex, b.originalIndex);
-                    }
-                    if (a.publishedTimeSeconds == Long.MAX_VALUE) return 1;
-                    if (b.publishedTimeSeconds == Long.MAX_VALUE) return -1;
-                    final int cmp = Long.compare(b.publishedTimeSeconds, a.publishedTimeSeconds);
-                    return cmp != 0 ? cmp : Integer.compare(a.originalIndex, b.originalIndex);
-                });
-                case MOST_VIEWED -> results.sort((a, b) -> {
-                    final int cmp = Long.compare(b.viewCount, a.viewCount);
-                    return cmp != 0 ? cmp : Integer.compare(a.originalIndex, b.originalIndex);
-                });
-                case LEAST_VIEWED -> results.sort(Comparator.comparingLong((ChannelSearchResult a)
-                        -> a.viewCount).thenComparingInt(a -> a.originalIndex));
-                case SHORTEST -> results.sort((a, b) -> {
-                    if (a.lengthSeconds == 0 && b.lengthSeconds == 0) {
-                        return Integer.compare(a.originalIndex, b.originalIndex);
-                    }
-                    if (a.lengthSeconds == 0) return 1;
-                    if (b.lengthSeconds == 0) return -1;
-                    final int cmp = Long.compare(a.lengthSeconds, b.lengthSeconds);
-                    return cmp != 0 ? cmp : Integer.compare(a.originalIndex, b.originalIndex);
-                });
-                case LONGEST -> results.sort((a, b) -> {
-                    if (a.lengthSeconds == 0 && b.lengthSeconds == 0) {
-                        return Integer.compare(a.originalIndex, b.originalIndex);
-                    }
-                    if (a.lengthSeconds == 0) return 1;
-                    if (b.lengthSeconds == 0) return -1;
-                    final int cmp = Long.compare(b.lengthSeconds, a.lengthSeconds);
-                    return cmp != 0 ? cmp : Integer.compare(a.originalIndex, b.originalIndex);
-                });
+        /**
+         * @return Whether this sort needs the exact view count of every result.
+         */
+        boolean usesViewCount() {
+            return this == MOST_VIEWED || this == LEAST_VIEWED;
+        }
+
+        /**
+         * @param uploads Uploads of the channel, which tell the age of most results exactly.
+         */
+        public List<ChannelSearchResult> sort(List<ChannelSearchResult> results,
+                                              ChannelUploadsRequest.Uploads uploads) {
+            if (this == RELEVANCE) {
+                results.sort(Comparator.comparingInt(a -> a.originalIndex));
+                return results;
             }
+
+            // Each result gets its key once, so the order stays consistent while details arrive.
+            final long now = System.currentTimeMillis() / 1000;
+            Map<String, Long> keys = new HashMap<>(2 * results.size());
+            for (ChannelSearchResult result : results) {
+                keys.put(result.videoId, sortKey(result, uploads, now));
+            }
+
+            final boolean ascending = this == NEWEST || this == LEAST_VIEWED || this == SHORTEST;
+            results.sort((a, b) -> {
+                Long keyA = keys.get(a.videoId);
+                Long keyB = keys.get(b.videoId);
+                // Results with an unknown value go last, in any sort.
+                if (keyA == null || keyB == null) {
+                    if (keyA != keyB) return keyA == null ? 1 : -1;
+                } else {
+                    final int cmp = ascending ? Long.compare(keyA, keyB) : Long.compare(keyB, keyA);
+                    if (cmp != 0) return cmp;
+                }
+                final int cmp = Integer.compare(a.originalIndex, b.originalIndex);
+                return cmp != 0 ? cmp : a.videoId.compareTo(b.videoId);
+            });
             return results;
+        }
+
+        /**
+         * @return The value to sort by, or null if it is not known. The age of an upload is
+         *         its place in the uploads, and uploads that are not listed are older than
+         *         all listed ones, so they come after them by the age shown in the search.
+         */
+        @Nullable
+        private Long sortKey(ChannelSearchResult result, ChannelUploadsRequest.Uploads uploads, long now) {
+            switch (this) {
+                case NEWEST, OLDEST -> {
+                    Integer position = uploads.positions.get(result.videoId);
+                    if (position != null) return (long) position;
+
+                    VideoDetailsRequest.VideoDetails details = VideoDetailsRequest.get(result.videoId);
+                    final long ageSeconds = details != null
+                            ? now - details.publishTimeSeconds
+                            : result.publishedTimeSeconds;
+                    if (ageSeconds == Long.MAX_VALUE) return null;
+                    return uploads.positions.size() + Math.max(0, ageSeconds);
+                }
+                case MOST_VIEWED, LEAST_VIEWED -> {
+                    VideoDetailsRequest.VideoDetails details = VideoDetailsRequest.get(result.videoId);
+                    if (details != null) return details.viewCount;
+                    return result.viewCount < 0 ? null : result.viewCount;
+                }
+                case SHORTEST, LONGEST -> {
+                    // Every upload shows its length, and search results do except for Shorts.
+                    return result.lengthSeconds > 0 ? result.lengthSeconds : null;
+                }
+            }
+            return null;
         }
     }
 
@@ -320,16 +350,29 @@ public final class ChannelSearchPatch {
 
     private static final class SearchController implements ChannelSearchRequest.ChannelSearchCallback {
         private final Activity activity;
+        private final String channelId;
         private final String query;
         private SheetBottomDialog.SlideDialog dialog;
         private LinearLayout listContainer;
         private ScrollView scrollView;
+        private View loadingView;
         private ChannelSearchResponse lastResponse;
+        private boolean isSearchComplete;
         private SortOption activeSort = SortOption.RELEVANCE;
         private volatile boolean isCancelled;
 
-        private SearchController(Activity activity, String query) {
+        /**
+         * Uploads of the channel, whose matches are the results of every sort but relevance.
+         * The search itself leaves out different videos every time.
+         */
+        private ChannelUploadsRequest.Uploads uploads = new ChannelUploadsRequest.Uploads();
+        private boolean uploadsRequested;
+        private boolean uploadsComplete;
+        private int pendingDetailFetches;
+
+        private SearchController(Activity activity, String channelId, String query) {
             this.activity = activity;
+            this.channelId = channelId;
             this.query = query;
         }
 
@@ -342,10 +385,13 @@ public final class ChannelSearchPatch {
             isCancelled = true;
         }
 
-        public void bindUI(SheetBottomDialog.SlideDialog dialog, LinearLayout listContainer, ScrollView scrollView) {
+        public void bindUI(SheetBottomDialog.SlideDialog dialog, LinearLayout listContainer,
+                           ScrollView scrollView, View loadingView) {
             this.dialog = dialog;
             this.listContainer = listContainer;
             this.scrollView = scrollView;
+            this.loadingView = loadingView;
+            updateLoadingView();
         }
 
         @Override
@@ -371,9 +417,11 @@ public final class ChannelSearchPatch {
                 }
 
                 lastResponse = response;
+                isSearchComplete = isComplete;
                 if (dialog == null) {
                     showResultsDialog(activity, query, response, this);
                 } else if (dialog.isShowing()) {
+                    completeResults();
                     refreshResults();
                 }
             });
@@ -381,7 +429,109 @@ public final class ChannelSearchPatch {
 
         public void setSort(SortOption selectedOption) {
             this.activeSort = selectedOption;
+            completeResults();
             refreshResults();
+        }
+
+        /**
+         * Sorts other than relevance need every matching upload, and the view count sorts
+         * their exact view count. Called on main thread.
+         */
+        private void completeResults() {
+            if (activeSort == SortOption.RELEVANCE || lastResponse == null || isCancelled()) {
+                return;
+            }
+
+            if (!uploadsRequested) {
+                uploadsRequested = true;
+                ChannelUploadsRequest.fetch(channelId, query, this::isCancelled,
+                        (fetchedUploads, isComplete) -> Utils.runOnMainThread(() -> {
+                            if (isCancelled()) return;
+                            uploads = fetchedUploads;
+                            uploadsComplete = isComplete;
+                            completeResults();
+                            refreshResults();
+                        })
+                );
+            }
+
+            // Each video needs a request of its own, so these are only made for the search
+            // results whose description is searched, and whose exact view count is not known.
+            final boolean searchesDescriptions = uploadsComplete && titleMatches().isEmpty();
+            List<String> videoIds = new ArrayList<>();
+            for (ChannelSearchResult result : searchesDescriptions ? lastResponse.results : allResults()) {
+                if (searchesDescriptions || (activeSort.usesViewCount() && result.viewCount < 0)) {
+                    videoIds.add(result.videoId);
+                }
+            }
+            if (videoIds.isEmpty()) {
+                return;
+            }
+
+            pendingDetailFetches++;
+            VideoDetailsRequest.fetch(videoIds, this::isCancelled, isComplete ->
+                    Utils.runOnMainThread(() -> {
+                        if (isComplete) pendingDetailFetches--;
+                        refreshResults();
+                    })
+            );
+            updateLoadingView();
+        }
+
+        /**
+         * The search finds a different part of the matching videos every time, and pads them
+         * with other videos of the channel. So sorts other than relevance show the uploads whose
+         * title has the search, and only fall back to the search results whose description
+         * or tags have it if no title does.
+         *
+         * @return The results to sort.
+         */
+        private List<ChannelSearchResult> allResults() {
+            if (activeSort == SortOption.RELEVANCE) {
+                return new ArrayList<>(lastResponse.results);
+            }
+
+            List<ChannelSearchResult> results = titleMatches();
+            if (results.isEmpty() && uploadsComplete) {
+                for (ChannelSearchResult result : lastResponse.results) {
+                    if (descriptionMatches(result)) {
+                        results.add(result);
+                    }
+                }
+            }
+            return results;
+        }
+
+        private List<ChannelSearchResult> titleMatches() {
+            List<ChannelSearchResult> results = new ArrayList<>(uploads.matches);
+            Set<String> videoIds = new HashSet<>(2 * results.size());
+            for (ChannelSearchResult result : results) {
+                videoIds.add(result.videoId);
+            }
+            // The uploads of the largest channels are only partly listed.
+            for (ChannelSearchResult result : lastResponse.results) {
+                if (ChannelUploadsRequest.matches(result.title, query) && videoIds.add(result.videoId)) {
+                    results.add(result);
+                }
+            }
+            return results;
+        }
+
+        private boolean descriptionMatches(ChannelSearchResult result) {
+            VideoDetailsRequest.VideoDetails details = VideoDetailsRequest.get(result.videoId);
+            if (details == null) {
+                // Kept until the details tell, unless they could not be fetched.
+                return pendingDetailFetches > 0;
+            }
+            return ChannelUploadsRequest.matches(details.text, query);
+        }
+
+        private void updateLoadingView() {
+            if (loadingView == null) return;
+
+            final boolean loading = activeSort != SortOption.RELEVANCE
+                    && (!isSearchComplete || !uploadsComplete || pendingDetailFetches > 0);
+            loadingView.setVisibility(loading ? View.VISIBLE : View.INVISIBLE);
         }
 
         public SortOption getActiveSort() {
@@ -389,9 +539,11 @@ public final class ChannelSearchPatch {
         }
 
         public void refreshResults() {
+            updateLoadingView();
             if (lastResponse != null && listContainer != null) {
                 int scrollY = scrollView != null ? scrollView.getScrollY() : 0;
-                List<ChannelSearchResult> sorted = activeSort.sort(new ArrayList<>(lastResponse.results));
+                List<ChannelSearchResult> sorted = activeSort.sort(allResults(), uploads);
+                if (loadingView != null && loadingView.getVisibility() != View.VISIBLE) { StringBuilder dbg = new StringBuilder(); for (ChannelSearchResult r : sorted) dbg.append(r.videoId).append(','); Logger.printInfo(() -> "DBGSORT " + activeSort + " n=" + sorted.size() + " " + dbg); } // DBG
                 populateList(activity, sorted, listContainer, dialog);
                 if (scrollY > 0 && scrollView != null) {
                     scrollView.scrollTo(0, scrollY);
@@ -439,7 +591,7 @@ public final class ChannelSearchPatch {
                 }
             }
 
-            SearchController controller = new SearchController(activity, query);
+            SearchController controller = new SearchController(activity, channelId, query);
             activeControllerRef = new WeakReference<>(controller);
             ChannelSearchRequest.fetchProgressive(channelId, query, controller);
 
@@ -473,10 +625,12 @@ public final class ChannelSearchPatch {
             SheetBottomDialog.SlideDialog dialog = SheetBottomDialog
                     .createSlideDialog(activity, mainLayout, DIALOG_ANIMATION_DURATION_MILLISECONDS);
 
-            controller.bindUI(dialog, listContainer, scrollView);
+            ProgressBar loadingView = new ProgressBar(activity);
+            loadingView.setIndeterminate(true);
+            loadingView.setIndeterminateTintList(ColorStateList.valueOf(ThemeUtils.getAppForegroundColor()));
 
-            View sortBar = createSortBar(activity, controller);
-            mainLayout.addView(sortBar);
+            mainLayout.addView(createSortBar(activity, controller, loadingView));
+            controller.bindUI(dialog, listContainer, scrollView, loadingView);
 
             controller.refreshResults();
 
@@ -492,7 +646,7 @@ public final class ChannelSearchPatch {
         }
     }
 
-    private static View createSortBar(Activity activity, SearchController controller) {
+    private static View createSortBar(Activity activity, SearchController controller, View loadingView) {
         LinearLayout sortBarLayout = new LinearLayout(activity);
         sortBarLayout.setOrientation(LinearLayout.HORIZONTAL);
         sortBarLayout.setGravity(Gravity.CENTER_VERTICAL);
@@ -548,6 +702,10 @@ public final class ChannelSearchPatch {
             }
         });
         sortBarLayout.addView(sortButton);
+
+        LinearLayout.LayoutParams loadingParams = new LinearLayout.LayoutParams(Dim.dp20, Dim.dp20);
+        loadingParams.setMarginStart(Dim.dp12);
+        sortBarLayout.addView(loadingView, loadingParams);
 
         return sortBarLayout;
     }

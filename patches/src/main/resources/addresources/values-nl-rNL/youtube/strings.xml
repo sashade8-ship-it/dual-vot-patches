@@ -1122,9 +1122,6 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">De terugknop verlaat de feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">De terugknop sluit altijd de app af in plaats van naar de bovenkant van de feed te scrollen</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Systeemlettertype forceren</string>
-  <string name="morphe_force_system_font_summary">Toont de app met het apparaatlettertype in plaats van YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Statusbalk verbergen</string>
   <string name="morphe_hide_status_bar_summary">Verbergt de systeemstatusbalk. Veeg omlaag vanaf de bovenrand om hem even weer te tonen</string>
@@ -1150,6 +1147,16 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_seekbar_custom_color_accent_title">Accentkleur voortgangsbalk</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Stel de secundaire kleur van de video voortgangsbalk in</string>
   <string name="morphe_seekbar_custom_color_invalid">Ongeldige waarde voor de kleur van de schuifregelaar</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Lettertype</string>
+  <string name="morphe_custom_font_type_entry_default">Standaard</string>
+  <string name="morphe_custom_font_type_entry_system">Systeemlettertype van het apparaat</string>
+  <string name="morphe_custom_font_type_entry_custom">Eigen lettertypebestand</string>
+  <string name="morphe_custom_font_file_title">Eigen lettertypebestand</string>
+  <string name="morphe_custom_font_file_summary">Kies een TTF- of OTF-lettertypebestand</string>
+  <string name="morphe_custom_font_file_invalid">Het gekozen bestand is geen TTF- of OTF-lettertypebestand</string>
+  <string name="morphe_custom_font_pick_file_first">Kies eerst een lettertypebestand</string>
+  <string name="morphe_custom_font_failed_to_load">Het eigen lettertype kon niet worden geladen en is uitgeschakeld</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Headerlogo</string>

@@ -1122,9 +1122,6 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Back button exits the feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Pressing back always exits the app instead of scrolling to the top of the feed</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Pilitin ang system font</string>
-  <string name="morphe_force_system_font_summary">Ipinapakita ang app gamit ang font ng device sa halip na YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Itago ang status bar</string>
   <string name="morphe_hide_status_bar_summary">Itinatago ang system status bar. Mag-swipe pababa mula sa tuktok na gilid upang maipakita ito sandali</string>
@@ -1150,6 +1147,16 @@ Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring 
   <string name="morphe_seekbar_custom_color_accent_title">Seekbar accent color</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Itakda ang pangalawang kulay ng video progress bar</string>
   <string name="morphe_seekbar_custom_color_invalid">Hindi wastong halaga ng seekbar color</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Tipo ng letra</string>
+  <string name="morphe_custom_font_type_entry_default">Awtomatiko</string>
+  <string name="morphe_custom_font_type_entry_system">System font ng device</string>
+  <string name="morphe_custom_font_type_entry_custom">Custom na file ng font</string>
+  <string name="morphe_custom_font_file_title">Custom na file ng font</string>
+  <string name="morphe_custom_font_file_summary">Pumili ng TTF o OTF na file ng font</string>
+  <string name="morphe_custom_font_file_invalid">Ang napiling file ay hindi isang TTF o OTF na font</string>
+  <string name="morphe_custom_font_pick_file_first">Pumili muna ng file ng font</string>
+  <string name="morphe_custom_font_failed_to_load">Hindi ma-load ang custom na font at naka-off ito</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Header logo</string>

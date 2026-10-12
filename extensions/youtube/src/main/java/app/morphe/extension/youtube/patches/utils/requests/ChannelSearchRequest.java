@@ -44,6 +44,7 @@ public final class ChannelSearchRequest {
         public final String metadata;
         public final String thumbnailUrl;
         public final long publishedTimeSeconds;
+        /** Negative if not known. */
         public final long viewCount;
         public final long lengthSeconds;
         public final int originalIndex;
@@ -73,8 +74,12 @@ public final class ChannelSearchRequest {
     }
 
     private static final int MAX_MILLISECONDS_TO_WAIT_FOR_FETCH = 15 * 1000;
-    private static final int MAX_SEARCH_RESULTS = 200;
-    private static final int MAX_CONTINUATION_PAGES = 7;
+    /**
+     * The search stops by itself after a different number of pages every time,
+     * so these only bound searches of the largest channels.
+     */
+    private static final int MAX_SEARCH_RESULTS = 1000;
+    private static final int MAX_CONTINUATION_PAGES = 50;
 
     public static final Pattern PATTERN_VIEW_COUNT = Pattern.compile("(\\d+([.,]\\d+)?)");
 
@@ -128,7 +133,8 @@ public final class ChannelSearchRequest {
 
         Utils.runOnBackgroundThread(() -> {
             ChannelSearchResponse finalResponse = fetch(channelId, query, callback);
-            if (finalResponse != null) {
+            // A search cancelled before its last page is not complete, so it is not reused.
+            if (finalResponse != null && !callback.isCancelled()) {
                 cache.put(channelId + "\n" + query, new ChannelSearchRequest(
                         Utils.submitOnBackgroundThread(() -> finalResponse)
                 ));
@@ -453,6 +459,26 @@ public final class ChannelSearchRequest {
         return channel == null ? "" : channel.optString("title");
     }
 
+    /**
+     * An upload of the channel, which is not a search result. It comes after
+     * the search results that are equal to it in a sort.
+     *
+     * @param details   Localized view count and age of the upload, as shown under the title.
+     * @param viewCount Exact view count, or -1 if it is not known.
+     */
+    static ChannelSearchResult createResult(String videoId, String title, String thumbnailUrl,
+                                            String lengthText, List<String> details, long viewCount) {
+        StringBuilder metadata = new StringBuilder();
+        appendMetadata(metadata, lengthText);
+        for (String detail : details) {
+            appendMetadata(metadata, detail);
+        }
+
+        // The age is localized and rounded, and the place in the uploads is used instead.
+        return new ChannelSearchResult(videoId, title, metadata.toString(), thumbnailUrl,
+                Long.MAX_VALUE, viewCount, parseLengthSeconds(lengthText), Integer.MAX_VALUE);
+    }
+
     @Nullable
     private static ChannelSearchResult parseVideo(JSONObject video, int index, boolean isEnglish) {
         String videoId = video.optString("videoId");
@@ -642,11 +668,13 @@ public final class ChannelSearchRequest {
      */
     private static String parseThumbnail(JSONObject video) {
         JSONObject thumbnail = video.optJSONObject("thumbnail");
-        if (thumbnail == null) {
-            return "";
-        }
+        return thumbnail == null ? "" : widestThumbnail(thumbnail.optJSONArray("thumbnails"));
+    }
 
-        JSONArray thumbnails = thumbnail.optJSONArray("thumbnails");
+    /**
+     * @param thumbnails Thumbnails of different sizes, each with its url and width.
+     */
+    static String widestThumbnail(@Nullable JSONArray thumbnails) {
         if (thumbnails == null) {
             return "";
         }

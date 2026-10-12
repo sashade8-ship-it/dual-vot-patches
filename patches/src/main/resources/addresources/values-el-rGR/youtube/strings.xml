@@ -1109,9 +1109,6 @@ Second \"item\" text"</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Το κουμπί πίσω βγαίνει από τη ροή</string>
   <string name="morphe_back_button_always_exits_feed_summary">Πατώντας πίσω βγαίνετε πάντα από την εφαρμογή αντί να μεταφέρεστε στην κορυφή της ροής.</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Υποχρεωτική γραμματοσειρά συστήματος</string>
-  <string name="morphe_force_system_font_summary">Εμφανίζει την εφαρμογή με τη γραμματοσειρά της συσκευής αντί για το YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Απόκρυψη γραμμής κατάστασης</string>
   <string name="morphe_hide_status_bar_summary">Αποκρύπτει τη γραμμή κατάστασης του συστήματος. Σύρετε προς τα κάτω από το πάνω άκρο για να εμφανιστεί για μια στιγμή</string>
@@ -1137,6 +1134,16 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_title">Απόχρωση χρώματος γραμμής προόδου</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Ορίστε το δευτερεύον χρώμα της γραμμής προόδου του βίντεο</string>
   <string name="morphe_seekbar_custom_color_invalid">Μη έγκυρη τιμή χρώματος γραμμής προόδου</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Γραμματοσειρά</string>
+  <string name="morphe_custom_font_type_entry_default">Προεπιλογή</string>
+  <string name="morphe_custom_font_type_entry_system">Γραμματοσειρά συστήματος συσκευής</string>
+  <string name="morphe_custom_font_type_entry_custom">Αρχείο προσαρμοσμένης γραμματοσειράς</string>
+  <string name="morphe_custom_font_file_title">Αρχείο προσαρμοσμένης γραμματοσειράς</string>
+  <string name="morphe_custom_font_file_summary">Επιλέξτε ένα αρχείο γραμματοσειράς TTF ή OTF</string>
+  <string name="morphe_custom_font_file_invalid">Το επιλεγμένο αρχείο δεν είναι γραμματοσειρά TTF ή OTF</string>
+  <string name="morphe_custom_font_pick_file_first">Επιλέξτε πρώτα ένα αρχείο γραμματοσειράς</string>
+  <string name="morphe_custom_font_failed_to_load">Δεν ήταν δυνατή η φόρτωση της προσαρμοσμένης γραμματοσειράς και είναι απενεργοποιημένη</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Λογότυπο επικεφαλίδας</string>

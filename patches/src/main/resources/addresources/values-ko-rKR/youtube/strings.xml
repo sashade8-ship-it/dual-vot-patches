@@ -1126,9 +1126,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">뒤로가기 버튼으로 피드 나가기</string>
   <string name="morphe_back_button_always_exits_feed_summary">뒤로가기 버튼을 탭하면 피드 상단으로 이동하지 않고 항상 앱이 종료됩니다</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">시스템 글꼴 강제로 활성화하기 </string>
-  <string name="morphe_force_system_font_summary">YouTube Sans 대신 기기 글꼴로 앱을 표시합니다</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">상태바 숨기기</string>
   <string name="morphe_hide_status_bar_summary">시스템 상태바를 숨깁니다. 상단 가장자리에서 아래로 스와이프하면 잠시 표시됩니다</string>
@@ -1154,6 +1151,16 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_seekbar_custom_color_accent_title">재생바 강조 색상</string>
   <string name="morphe_seekbar_custom_color_accent_summary">동영상 진행률의 보조 색상을 설정할 수 있습니다</string>
   <string name="morphe_seekbar_custom_color_invalid">잘못된 재생바 색상입니다</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">글꼴</string>
+  <string name="morphe_custom_font_type_entry_default">기본값</string>
+  <string name="morphe_custom_font_type_entry_system">기기 시스템 글꼴</string>
+  <string name="morphe_custom_font_type_entry_custom">사용자 정의 글꼴 파일</string>
+  <string name="morphe_custom_font_file_title">사용자 정의 글꼴 파일</string>
+  <string name="morphe_custom_font_file_summary">TTF 또는 OTF 글꼴 파일 선택할 수 있습니다</string>
+  <string name="morphe_custom_font_file_invalid">선택한 파일은 TTF 또는 OTF 글꼴이 아닙니다</string>
+  <string name="morphe_custom_font_pick_file_first">먼저 글꼴 파일을 선택하세요</string>
+  <string name="morphe_custom_font_failed_to_load">사용자 정의 글꼴을 불러올 수 없어 사용 중지되었습니다</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">헤더 로고</string>

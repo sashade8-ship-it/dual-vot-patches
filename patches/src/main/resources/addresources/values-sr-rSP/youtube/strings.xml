@@ -1107,9 +1107,6 @@ Promene uključuju:
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Дугме назад излази из фида</string>
   <string name="morphe_back_button_always_exits_feed_summary">Притискање назад увек излази из апликације уместо да се помера на врх фида</string>
-  <!-- layout.font.forceSystemFontPatch -->
-  <string name="morphe_force_system_font_title">Принуди системски фонт</string>
-  <string name="morphe_force_system_font_summary">Приказује апликацију са системским фонтом уместо YouTube Sans</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Сакриј статусну траку</string>
   <string name="morphe_hide_status_bar_summary">Сакрива системску статусну траку. Превуците прстом надоле са горње ивице да бисте је накратко приказали</string>
@@ -1135,6 +1132,16 @@ Promene uključuju:
   <string name="morphe_seekbar_custom_color_accent_title">Боја наглашавања траке за премотавање</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Подесите секундарну боју траке за напредак видеа</string>
   <string name="morphe_seekbar_custom_color_invalid">Неважећа вредност боје траке за премотавање</string>
+  <!-- layout.font.customFontPatch -->
+  <string name="morphe_custom_font_type_title">Фонт</string>
+  <string name="morphe_custom_font_type_entry_default">Подразумевано</string>
+  <string name="morphe_custom_font_type_entry_system">Системски фонт уређаја</string>
+  <string name="morphe_custom_font_type_entry_custom">Датотека прилагођеног фонта</string>
+  <string name="morphe_custom_font_file_title">Датотека прилагођеног фонта</string>
+  <string name="morphe_custom_font_file_summary">Изаберите TTF или OTF датотеку фонта</string>
+  <string name="morphe_custom_font_file_invalid">Изабрана датотека није TTF или OTF фонт</string>
+  <string name="morphe_custom_font_pick_file_first">Прво изаберите датотеку фонта</string>
+  <string name="morphe_custom_font_failed_to_load">Прилагођени фонт није могао да се учита, па је искључен</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Логотип у заглављу</string>
