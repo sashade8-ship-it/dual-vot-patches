@@ -1170,15 +1170,6 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_seekbar_custom_color_accent_title">لون تمييز شريط التقدم</string>
   <string name="morphe_seekbar_custom_color_accent_summary">تعيين اللون الثانوي لشريط تقدم الفيديو</string>
   <string name="morphe_seekbar_custom_color_invalid">لون شريط التقدم غير صالح</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">الخط</string>
-  <string name="morphe_custom_font_type_entry_default">الوضع الافتراضي</string>
-  <string name="morphe_custom_font_type_entry_system">خط نظام الجهاز</string>
-  <string name="morphe_custom_font_type_entry_custom">ملف خط مخصص</string>
-  <string name="morphe_custom_font_file_title">ملف خط مخصص</string>
-  <string name="morphe_custom_font_file_summary">اختر ملف خط TTF أو OTF</string>
-  <string name="morphe_custom_font_file_invalid">الملف المحدد ليس خط بصيغة TTF أو OTF</string>
-  <string name="morphe_custom_font_failed_to_load">تعذر تحميل الخط المخصص وتم إيقاف تشغيله</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">علامة الشعار</string>

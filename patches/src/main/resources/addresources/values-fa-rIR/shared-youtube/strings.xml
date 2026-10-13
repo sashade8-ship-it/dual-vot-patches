@@ -253,6 +253,15 @@ Second \"item\" text"</string>
   <string name="morphe_app_refresh_rate_type_entry_2">پخش عمودی</string>
   <string name="morphe_app_refresh_rate_type_entry_3">پخش تمام‌صفحه</string>
   <string name="morphe_app_refresh_rate_type_entry_4">پخش عمودی و تمام‌صفحه</string>
+  <!-- layout.font.baseCustomFontPatch -->
+  <string name="morphe_custom_font_type_title">قلم</string>
+  <string name="morphe_custom_font_type_entry_default">پیش‌فرض</string>
+  <string name="morphe_custom_font_type_entry_system">فونت سیستم دستگاه</string>
+  <string name="morphe_custom_font_type_entry_custom">فایل قلم سفارشی</string>
+  <string name="morphe_custom_font_file_title">فایل قلم سفارشی</string>
+  <string name="morphe_custom_font_file_summary">یک فایل فونت TTF یا OTF انتخاب کنید</string>
+  <string name="morphe_custom_font_file_invalid">فایل انتخاب‌شده فونت TTF یا OTF نیست</string>
+  <string name="morphe_custom_font_failed_to_load">فونت سفارشی بارگذاری نشد و غیرفعال است</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="morphe_ryd_failure_connection_timeout">نپسندیدن‌ها موقتاً در دسترس نیستند (مهلت API تمام شد)</string>

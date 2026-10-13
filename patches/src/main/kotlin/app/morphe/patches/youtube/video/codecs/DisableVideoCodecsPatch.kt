@@ -29,7 +29,7 @@ private const val EXTENSION_CLASS =
 @Suppress("unused")
 val disableVideoCodecsPatch = bytecodePatch(
     name = "Disable video codecs",
-    description = "Adds options to disable or force HDR, and to disable VP9 codecs.",
+    description = "Adds options to disable or force HDR, and to disable VP9 or AV1 codecs.",
 ) {
     dependsOn(
         sharedExtensionPatch,
@@ -47,7 +47,8 @@ val disableVideoCodecsPatch = bytecodePatch(
             SwitchPreference(
                 key = "morphe_force_avc_codec",
                 tag = "app.morphe.extension.youtube.settings.preference.ForceAVCSwitchPreference"
-            )
+            ),
+            SwitchPreference("morphe_force_vp9_codec", summary = true)
         )
 
         Vp9CapabilityFingerprint.method.addInstructionsWithLabels(
@@ -62,13 +63,26 @@ val disableVideoCodecsPatch = bytecodePatch(
             """
         )
 
+        CodecSupportCheckFingerprint.method.addInstructionsWithLabels(
+            0,
+            """
+                invoke-static { p2 }, $EXTENSION_CLASS->allowCodec(Ljava/lang/String;)Z
+                move-result v0
+                if-nez v0, :default
+                return v0
+                :default
+                nop
+            """
+        )
+
         HDRCapabilityFingerprint.matchAllMethodIndicesForEach { index ->
             val instruction = getInstruction<FiveRegisterInstruction>(index)
             val register = instruction.registerC
 
             replaceInstruction(
                 index,
-                "invoke-static/range { v$register .. v$register }, $EXTENSION_CLASS->overrideSupportedHdrTypes(Landroid/view/Display\$HdrCapabilities;)[I"
+                "invoke-static/range { v$register .. v$register }, $EXTENSION_CLASS->" +
+                        "overrideSupportedHdrTypes(Landroid/view/Display\$HdrCapabilities;)[I"
             )
         }
     }

@@ -1165,15 +1165,6 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_seekbar_custom_color_accent_title">Poudarjena barva vrstice za napredovanje</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Nastavite sekundarno barvo vrstice za napredovanje videa</string>
   <string name="morphe_seekbar_custom_color_invalid">Neveljavna vrednost barvnega drsnika</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Pisava</string>
-  <string name="morphe_custom_font_type_entry_default">Privzeto</string>
-  <string name="morphe_custom_font_type_entry_system">Sistemska pisava naprave</string>
-  <string name="morphe_custom_font_type_entry_custom">Datoteka s pisavo po meri</string>
-  <string name="morphe_custom_font_file_title">Datoteka s pisavo po meri</string>
-  <string name="morphe_custom_font_file_summary">Izberite datoteko pisave v formatu TTF ali OTF</string>
-  <string name="morphe_custom_font_file_invalid">Izbrana datoteka ni pisava v formatu TTF ali OTF</string>
-  <string name="morphe_custom_font_failed_to_load">Pisave po meri ni bilo mogoče naložiti, zato je izklopljena</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logotip naslova</string>

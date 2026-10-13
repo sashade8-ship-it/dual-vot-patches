@@ -570,7 +570,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_local_queue_open">현재 재생목록 (%d)</string>
   <string name="morphe_local_queue_clear">모두 지우기</string>
   <string name="morphe_local_queue_empty">현재 재생목록이 비어 있습니다</string>
-  <string name="morphe_local_queue_empty_hint">아무 동영상에서 ‘현재 재생목록에서 다음 순서로 재생’ 기능을 사용하세요.</string>
+  <string name="morphe_local_queue_empty_hint">모든 동영상에서 ‘현재 재생목록에서 다음 순서로 재생’을 사용하세요</string>
   <string name="morphe_local_queue_now_playing">현재 재생 중</string>
   <string name="morphe_local_queue_play_next">현재 재생목록에서 다음 순서로 재생</string>
   <string name="morphe_local_queue_reorder">다시 정렬</string>
@@ -1167,15 +1167,6 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_seekbar_custom_color_accent_title">재생바 강조 색상</string>
   <string name="morphe_seekbar_custom_color_accent_summary">동영상 진행률의 보조 색상을 설정할 수 있습니다</string>
   <string name="morphe_seekbar_custom_color_invalid">잘못된 재생바 색상입니다</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">글꼴</string>
-  <string name="morphe_custom_font_type_entry_default">기본값</string>
-  <string name="morphe_custom_font_type_entry_system">기기 시스템 글꼴</string>
-  <string name="morphe_custom_font_type_entry_custom">사용자 정의 글꼴 파일</string>
-  <string name="morphe_custom_font_file_title">사용자 정의 글꼴 파일</string>
-  <string name="morphe_custom_font_file_summary">TTF 또는 OTF 글꼴 파일 선택할 수 있습니다</string>
-  <string name="morphe_custom_font_file_invalid">선택한 파일은 TTF 또는 OTF 글꼴이 아닙니다</string>
-  <string name="morphe_custom_font_failed_to_load">사용자 정의 글꼴을 불러올 수 없어 사용 중지되었습니다</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">헤더 로고</string>

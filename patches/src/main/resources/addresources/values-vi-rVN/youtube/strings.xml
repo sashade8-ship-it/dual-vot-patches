@@ -1164,15 +1164,6 @@ Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị t
   <string name="morphe_seekbar_custom_color_accent_title">Màu nổi bật của thanh tiến trình</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Đặt màu phụ cho thanh tiến trình video</string>
   <string name="morphe_seekbar_custom_color_invalid">Giá trị màu của thanh tiến trình không hợp lệ</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Phông chữ</string>
-  <string name="morphe_custom_font_type_entry_default">Mặc định</string>
-  <string name="morphe_custom_font_type_entry_system">Phông chữ hệ thống của thiết bị</string>
-  <string name="morphe_custom_font_type_entry_custom">Tệp phông chữ tùy chỉnh</string>
-  <string name="morphe_custom_font_file_title">Tệp phông chữ tùy chỉnh</string>
-  <string name="morphe_custom_font_file_summary">Chọn tệp phông chữ TTF hoặc OTF</string>
-  <string name="morphe_custom_font_file_invalid">Tệp đã chọn không phải là phông chữ TTF hoặc OTF</string>
-  <string name="morphe_custom_font_failed_to_load">Không thể tải phông chữ tùy chỉnh và nó đã bị tắt</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo đầu trang</string>

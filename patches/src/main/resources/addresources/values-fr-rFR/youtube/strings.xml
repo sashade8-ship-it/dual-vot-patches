@@ -1166,15 +1166,6 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_seekbar_custom_color_accent_title">Couleur d\'accentuation de la barre de progression</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Définir la couleur secondaire de la barre de progression de la vidéo</string>
   <string name="morphe_seekbar_custom_color_invalid">Valeur invalide pour la couleur de la barre de progression</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Police</string>
-  <string name="morphe_custom_font_type_entry_default">Par défaut</string>
-  <string name="morphe_custom_font_type_entry_system">Police système de l\'appareil</string>
-  <string name="morphe_custom_font_type_entry_custom">Fichier de police personnalisé</string>
-  <string name="morphe_custom_font_file_title">Fichier de police personnalisé</string>
-  <string name="morphe_custom_font_file_summary">Choisissez un fichier de police au format TTF ou OTF</string>
-  <string name="morphe_custom_font_file_invalid">Le fichier sélectionné n\'est pas une police au format TTF ou OTF</string>
-  <string name="morphe_custom_font_failed_to_load">La police personnalisée n\'a pas pu être chargée et a été désactivée</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo d\'en-tête</string>

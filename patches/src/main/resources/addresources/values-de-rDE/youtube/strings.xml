@@ -1166,15 +1166,6 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_seekbar_custom_color_accent_title">Akzentfarbe der Fortschrittsanzeige</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Die Sekundärfarbe des Videofortschrittsbalkens</string>
   <string name="morphe_seekbar_custom_color_invalid">Ungültiger Farbwert</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Schriftart</string>
-  <string name="morphe_custom_font_type_entry_default">Standard</string>
-  <string name="morphe_custom_font_type_entry_system">Systemschriftart des Geräts</string>
-  <string name="morphe_custom_font_type_entry_custom">Benutzerdefinierte Schriftdatei</string>
-  <string name="morphe_custom_font_file_title">Benutzerdefinierte Schriftdatei</string>
-  <string name="morphe_custom_font_file_summary">TTF- oder OTF-Schriftdatei auswählen</string>
-  <string name="morphe_custom_font_file_invalid">Die ausgewählte Datei ist keine TTF- oder OTF-Schriftdatei</string>
-  <string name="morphe_custom_font_failed_to_load">Die benutzerdefinierte Schriftart konnte nicht geladen werden und wurde deaktiviert</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Header-Logo</string>

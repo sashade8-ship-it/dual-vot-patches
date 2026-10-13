@@ -1161,15 +1161,6 @@ Begrænsning: Hvis 'Gendan gammel video-handlingslinje' er slået fra, er 'Flere
   <string name="morphe_seekbar_custom_color_accent_title">Søgelinje accentfarve</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Indstil andenfarven på videofremdriftlinjen</string>
   <string name="morphe_seekbar_custom_color_invalid">Ugyldig søgelinje farveværdi</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Skrifttype</string>
-  <string name="morphe_custom_font_type_entry_default">Standard</string>
-  <string name="morphe_custom_font_type_entry_system">Enhedens systemskrifttype</string>
-  <string name="morphe_custom_font_type_entry_custom">Brugerdefineret skrifttypefil</string>
-  <string name="morphe_custom_font_file_title">Brugerdefineret skrifttypefil</string>
-  <string name="morphe_custom_font_file_summary">Vælg en TTF- eller OTF-skrifttypefil</string>
-  <string name="morphe_custom_font_file_invalid">Den valgte fil er ikke en TTF- eller OTF-skrifttype</string>
-  <string name="morphe_custom_font_failed_to_load">Den brugerdefinerede skrifttype kunne ikke indlæses og er slået fra</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Sidehovedlogo</string>

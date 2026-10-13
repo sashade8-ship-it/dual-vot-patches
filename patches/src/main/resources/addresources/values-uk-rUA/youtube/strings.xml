@@ -1164,15 +1164,6 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_title">Додатковий колір смуги відтворення</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Встановлює додатковий колір смуги прогресу відтворення відео</string>
   <string name="morphe_seekbar_custom_color_invalid">Недійсне значення кольору смуги відтворення</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Шрифт</string>
-  <string name="morphe_custom_font_type_entry_default">Типова</string>
-  <string name="morphe_custom_font_type_entry_system">Системний шрифт пристрою</string>
-  <string name="morphe_custom_font_type_entry_custom">Файл власного шрифту</string>
-  <string name="morphe_custom_font_file_title">Файл власного шрифту</string>
-  <string name="morphe_custom_font_file_summary">Виберіть файл шрифту TTF або OTF</string>
-  <string name="morphe_custom_font_file_invalid">Вибраний файл не є шрифтом TTF або OTF</string>
-  <string name="morphe_custom_font_failed_to_load">Не вдалося завантажити користувацький шрифт, тому його вимкнено</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Логотип заголовка</string>

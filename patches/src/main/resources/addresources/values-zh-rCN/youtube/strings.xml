@@ -1165,15 +1165,6 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_title">进度条强调色</string>
   <string name="morphe_seekbar_custom_color_accent_summary">设置视频进度条的第二颜色</string>
   <string name="morphe_seekbar_custom_color_invalid">无效的进度条颜色值</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">字体</string>
-  <string name="morphe_custom_font_type_entry_default">默认</string>
-  <string name="morphe_custom_font_type_entry_system">设备系统字体</string>
-  <string name="morphe_custom_font_type_entry_custom">自定义字体文件</string>
-  <string name="morphe_custom_font_file_title">自定义字体文件</string>
-  <string name="morphe_custom_font_file_summary">选择 TTF 或 OTF 字体文件</string>
-  <string name="morphe_custom_font_file_invalid">所选文件不是 TTF 或 OTF 字体</string>
-  <string name="morphe_custom_font_failed_to_load">无法加载自定义字体，已将其关闭</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">标题logo</string>

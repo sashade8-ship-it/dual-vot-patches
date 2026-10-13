@@ -1163,15 +1163,6 @@ Omezení: Pokud je vypnutá možnost 'Obnovit starou lištu akcí videa', překr
   <string name="morphe_seekbar_custom_color_accent_title">Barva akcentu posuvníku</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Nastavte sekundární barvu indikátoru průběhu videa</string>
   <string name="morphe_seekbar_custom_color_invalid">Neplatná hodnota barvy posuvníku</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Písmo</string>
-  <string name="morphe_custom_font_type_entry_default">Výchozí</string>
-  <string name="morphe_custom_font_type_entry_system">Systémové písmo zařízení</string>
-  <string name="morphe_custom_font_type_entry_custom">Soubor vlastního písma</string>
-  <string name="morphe_custom_font_file_title">Soubor vlastního písma</string>
-  <string name="morphe_custom_font_file_summary">Vyberte soubor písma TTF nebo OTF</string>
-  <string name="morphe_custom_font_file_invalid">Vybraný soubor není písmo TTF nebo OTF</string>
-  <string name="morphe_custom_font_failed_to_load">Vlastní písmo se nepodařilo načíst a je vypnuto</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo záhlaví</string>

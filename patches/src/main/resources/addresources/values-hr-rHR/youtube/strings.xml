@@ -1167,15 +1167,6 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <string name="morphe_seekbar_custom_color_accent_title">Akcentna boja trake za traženje</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Postavite sekundarnu boju trake napretka videozapisa</string>
   <string name="morphe_seekbar_custom_color_invalid">Nevažeća vrijednost obojskog seekbara</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Vrsta slova</string>
-  <string name="morphe_custom_font_type_entry_default">Zadano</string>
-  <string name="morphe_custom_font_type_entry_system">Sustavni font uređaja</string>
-  <string name="morphe_custom_font_type_entry_custom">Datoteka prilagođenog fonta</string>
-  <string name="morphe_custom_font_file_title">Datoteka prilagođenog fonta</string>
-  <string name="morphe_custom_font_file_summary">Odaberite TTF ili OTF datoteku fonta</string>
-  <string name="morphe_custom_font_file_invalid">Odabrana datoteka nije TTF ili OTF font</string>
-  <string name="morphe_custom_font_failed_to_load">Prilagođeni font se nije mogao učitati pa je isključen</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Zastavica</string>

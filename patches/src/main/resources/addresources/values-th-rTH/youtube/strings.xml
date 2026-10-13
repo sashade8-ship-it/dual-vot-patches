@@ -1165,15 +1165,6 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_title">สีเน้นแถบความคืบหน้า</string>
   <string name="morphe_seekbar_custom_color_accent_summary">ตั้งค่าสีรองของแถบความคืบหน้าของวิดีโอ</string>
   <string name="morphe_seekbar_custom_color_invalid">ค่าสีแถบเลื่อนไม่ถูกต้อง</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">แบบอักษร</string>
-  <string name="morphe_custom_font_type_entry_default">ค่าเริ่มต้นThe</string>
-  <string name="morphe_custom_font_type_entry_system">ฟอนต์ระบบของอุปกรณ์</string>
-  <string name="morphe_custom_font_type_entry_custom">ไฟล์ฟอนต์ที่กำหนดเอง</string>
-  <string name="morphe_custom_font_file_title">ไฟล์ฟอนต์ที่กำหนดเอง</string>
-  <string name="morphe_custom_font_file_summary">เลือกไฟล์ฟอนต์ TTF หรือ OTF</string>
-  <string name="morphe_custom_font_file_invalid">ไฟล์ที่เลือกไม่ใช่ฟอนต์ TTF หรือ OTF</string>
-  <string name="morphe_custom_font_failed_to_load">ไม่สามารถโหลดฟอนต์ที่กำหนดเองได้ และถูกปิดใช้งาน</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">โลโก้ส่วนหัว</string>

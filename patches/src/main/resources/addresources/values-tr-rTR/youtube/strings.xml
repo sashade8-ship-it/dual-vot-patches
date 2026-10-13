@@ -1165,15 +1165,6 @@ Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha f
   <string name="morphe_seekbar_custom_color_accent_title">İlerleme çubuğu vurgu rengi</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Video ilerleme çubuğunun ikincil rengini ayarlayın</string>
   <string name="morphe_seekbar_custom_color_invalid">İlerleme çubuğu renk değeri geçersiz</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Yazı tipi</string>
-  <string name="morphe_custom_font_type_entry_default">Varsayılan</string>
-  <string name="morphe_custom_font_type_entry_system">Cihaz sistem yazı tipi</string>
-  <string name="morphe_custom_font_type_entry_custom">Özel yazı tipi dosyası</string>
-  <string name="morphe_custom_font_file_title">Özel yazı tipi dosyası</string>
-  <string name="morphe_custom_font_file_summary">Bir TTF veya OTF yazı tipi dosyası seçin</string>
-  <string name="morphe_custom_font_file_invalid">Seçilen dosya bir TTF veya OTF yazı tipi değil</string>
-  <string name="morphe_custom_font_failed_to_load">Özel yazı tipi yüklenemedi ve kapatıldı</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Başlık logosu</string>

@@ -1148,15 +1148,6 @@ Promene uključuju:
   <string name="morphe_seekbar_custom_color_accent_title">Боја наглашавања траке за премотавање</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Подесите секундарну боју траке за напредак видеа</string>
   <string name="morphe_seekbar_custom_color_invalid">Неважећа вредност боје траке за премотавање</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Фонт</string>
-  <string name="morphe_custom_font_type_entry_default">Подразумевано</string>
-  <string name="morphe_custom_font_type_entry_system">Системски фонт уређаја</string>
-  <string name="morphe_custom_font_type_entry_custom">Датотека прилагођеног фонта</string>
-  <string name="morphe_custom_font_file_title">Датотека прилагођеног фонта</string>
-  <string name="morphe_custom_font_file_summary">Изаберите TTF или OTF датотеку фонта</string>
-  <string name="morphe_custom_font_file_invalid">Изабрана датотека није TTF или OTF фонт</string>
-  <string name="morphe_custom_font_failed_to_load">Прилагођени фонт није могао да се учита, па је искључен</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Логотип у заглављу</string>

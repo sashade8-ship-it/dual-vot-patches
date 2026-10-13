@@ -1165,15 +1165,6 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_title">Допълнителен цвят на лентата за търсене</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Задайте вторичния цвят на лентата за напредък на видеото</string>
   <string name="morphe_seekbar_custom_color_invalid">Редовно</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Шрифт</string>
-  <string name="morphe_custom_font_type_entry_default">По подразбиране</string>
-  <string name="morphe_custom_font_type_entry_system">Системен шрифт на устройството</string>
-  <string name="morphe_custom_font_type_entry_custom">Персонализиран файл с шрифт</string>
-  <string name="morphe_custom_font_file_title">Персонализиран файл с шрифт</string>
-  <string name="morphe_custom_font_file_summary">Изберете TTF или OTF файл с шрифт</string>
-  <string name="morphe_custom_font_file_invalid">Избраният файл не е TTF или OTF шрифт</string>
-  <string name="morphe_custom_font_failed_to_load">Персонализираният шрифт не можа да се зареди и е изключен</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Табло за Home</string>

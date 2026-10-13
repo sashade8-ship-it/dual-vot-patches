@@ -1165,15 +1165,6 @@ Korlátozás: Ha a „Régi videós eszköztár visszaállítása” ki van kapc
   <string name="morphe_seekbar_custom_color_accent_title">Keresősáv kiemelő színe</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Állítsa be a videó lejátszás jelzője másodlagos színét</string>
   <string name="morphe_seekbar_custom_color_invalid">Érvénytelen keresősáv színértéke</string>
-  <!-- layout.font.customFontPatch -->
-  <string name="morphe_custom_font_type_title">Betűtípus</string>
-  <string name="morphe_custom_font_type_entry_default">Alapértelmezett</string>
-  <string name="morphe_custom_font_type_entry_system">Eszköz rendszerbetűtípusa</string>
-  <string name="morphe_custom_font_type_entry_custom">Egyéni betűtípusfájl</string>
-  <string name="morphe_custom_font_file_title">Egyéni betűtípusfájl</string>
-  <string name="morphe_custom_font_file_summary">Válasszon ki egy TTF vagy OTF betűtípusfájlt</string>
-  <string name="morphe_custom_font_file_invalid">A kiválasztott fájl nem TTF vagy OTF betűtípus</string>
-  <string name="morphe_custom_font_failed_to_load">Az egyéni betűtípus betöltése nem sikerült, ezért ki van kapcsolva</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Fejléclogó</string>
