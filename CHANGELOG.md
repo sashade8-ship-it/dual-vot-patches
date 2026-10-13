@@ -1,3 +1,13 @@
+## 1.48.0-dev.6-dualvot.8.5.3 (2026-10-13)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.48.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.48.0-dev.4-dualvot.8.5.3 (2026-10-12)
 
 ### Automated Morphe update
@@ -406,6 +416,20 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.48.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.5...v1.48.0-dev.6) (2026-10-13)
+
+### ✨ New Features
+
+* **YouTube - Disable video codecs:** Add "Force VP9 codec" setting ([#3578](https://github.com/MorpheApp/morphe-patches/issues/3578)) ([e1398ca](https://github.com/MorpheApp/morphe-patches/commit/e1398ca7da9dc7829aa8e9d2f798206fff26c1f6))
+
+## [1.48.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.4...v1.48.0-dev.5) (2026-10-13)
+
+### ✨ New Features
+
+* **Reddit - Full width feed media:** Make embedded video players full width ([#3696](https://github.com/MorpheApp/morphe-patches/issues/3696)) ([53b6448](https://github.com/MorpheApp/morphe-patches/commit/53b64487109e05f13d8e0bc581f86e581cd4662b))
+* **Reddit:** Add `Copy text` patch ([#3665](https://github.com/MorpheApp/morphe-patches/issues/3665)) ([3068f23](https://github.com/MorpheApp/morphe-patches/commit/3068f23e357825a77f6d67760f427634e3baee0c))
+* **YouTube Music:** Add `Custom font` patch ([#3718](https://github.com/MorpheApp/morphe-patches/issues/3718)) ([30a4b85](https://github.com/MorpheApp/morphe-patches/commit/30a4b85885e96aa8216f2b9fb26ed0ba4951e8fe))
 
 ## [1.48.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.3...v1.48.0-dev.4) (2026-10-12)
 
