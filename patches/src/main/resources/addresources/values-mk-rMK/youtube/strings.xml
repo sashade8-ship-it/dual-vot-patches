@@ -783,9 +783,7 @@ Second \"item\" text"</string>
   <!-- video.livestream.rememberLiveStreamPositionPatch -->
   <!-- video.codecs.disableVideoCodecsPatch -->
   <string name="morphe_disable_hdr_video_title">Исклучи HDR видео</string>
-  <string name="morphe_force_avc_codec_title">Принуден кодек AVC (H.264)</string>
-  <string name="morphe_force_avc_codec_user_dialog_message">"Користете подобар живот на батеријата
-• Може да го врати недостижниот квалитет на видео за постари уреди"</string>
+  <string name="morphe_video_codec_entry_default">Стандардно</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <!-- video.quality.hidePremiumVideoQualityPatch -->

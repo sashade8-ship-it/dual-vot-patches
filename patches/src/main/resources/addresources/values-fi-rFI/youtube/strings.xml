@@ -1310,18 +1310,21 @@ Rajoitukset:
 • Värit voivat näyttää vääriltä, jos näyttö ei oikeasti pysty näyttämään HDR:ää
 • Toisto voi epäonnistua, jos dekooderi ei pysty käsittelemään HDR:ää
 • HDR riippuu edelleen videovirtoja huijaavasta asiakasohjelmasta"</string>
-  <string name="morphe_force_avc_codec_title">Pakota AVC (H.264) -koodekki</string>
-  <string name="morphe_force_avc_codec_user_dialog_message">"Hyödyt:
-• Voi parantaa akunkestoa
-• Voi palauttaa puuttuvia videoresoluutioita vanhemmilla laitteilla
-
-Rajoitukset:
-• Suurin resoluutio on 1080p
-• Videon toisto kuluttaa enemmän mobiilidataa kuin VP9 tai AV1
-• HDR-videot eivät käytä AVC:tä
-• Jotkin laitteet eivät voi pakottaa AVC:tä"</string>
+  <string name="morphe_video_codec_title">Videokoodekki</string>
+  <string name="morphe_video_codec_entry_default">Oletus</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Käyttääksesi tätä ominaisuutta, aseta \'Naamioi videovirrat\' arvoksi \'Android VR\' tai \'Android Studio\'</string>
+  <string name="morphe_video_codec_avc_not_available">Pakottaaksesi AVC:n, muuta \'Videovirtojen emulointi\' arvoksi \'Android Studio\', \'Android VR\' tai \'visionOS\'</string>
+  <string name="morphe_video_codec_user_dialog_message">"VP9
+• Voi parantaa akun kestoa ja korjata toiston pätkimisen
+• Käyttää enemmän internet-dataa kuin AV1
+
+AVC (H.264)
+• Vaatii videovirtojen emulointiasiakkaan, jona on 'Android Studio', 'Android VR' tai 'visionOS'
+• Voi parantaa akun kestoa entisestään
+• Voi palauttaa puuttuvat videotarkkuudet vanhemmissa laitteissa
+• Maksimitarkkuus on 1080p
+• HDR-videot eivät välttämättä käytä AVC:tä
+• Jotkin laitteet eivät voi pakottaa AVC:tä"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Avaa parannetun laadun valikko</string>
   <string name="morphe_advanced_video_quality_menu_summary">Ohittaa laadunvalintavalikon ja avaa Laatu-valikon lisääsetukset suoraan</string>
@@ -1338,6 +1341,7 @@ Rajoitukset:
 
 AV1-videon toisto saattaa pätkiä."</string>
   <string name="morphe_spoof_video_streams_about_title">Naamioimisen sivuvaikutukset</string>
+  <string name="morphe_spoof_video_streams_about_failure">• Toisto voi epäonnistua 1 minuutin kohdalla</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• \'Ääniraitavalikko\' puuttuu</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Ei AV1-videokoodekkia</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR-immersiivinen tila ei ole käytettävissä</string>

@@ -14,6 +14,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLa
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
@@ -44,11 +45,10 @@ val disableVideoCodecsPatch = bytecodePatch(
                 SwitchPreference("morphe_disable_hdr_video"),
                 SwitchPreference("morphe_force_hdr_video", summary = true),
             ),
-            SwitchPreference(
-                key = "morphe_force_avc_codec",
-                tag = "app.morphe.extension.youtube.settings.preference.ForceAVCSwitchPreference"
-            ),
-            SwitchPreference("morphe_force_vp9_codec", summary = true)
+            ListPreference(
+                key = "morphe_video_codec",
+                tag = "app.morphe.extension.youtube.settings.preference.VideoCodecListPreference"
+            )
         )
 
         Vp9CapabilityFingerprint.method.addInstructionsWithLabels(

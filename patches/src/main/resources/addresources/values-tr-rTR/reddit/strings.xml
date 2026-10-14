@@ -36,7 +36,7 @@ Second \"item\" text"</string>
   <string name="morphe_screen_layout_title">Düzen</string>
   <string name="morphe_copy_text_title">Metni kopyala</string>
   <string name="morphe_copy_text_summary">Gönderilerde ve yorumlarda metin seçme ve kopyalama olanağı sağlar. Yorumların daraltılmasını devre dışı bırakır.</string>
-  <string name="morphe_copy_text_user_dialog_message">Metin kopyalama etkinleştirildiğinde yorumları daraltma özelliği çalışmayacaktır.\n\nDevam etmek istiyor musunuz?</string>
+  <string name="morphe_copy_text_user_dialog_message">Metin kopyalama etkinken yorumları daraltma çalışmayacaktır.</string>
   <string name="morphe_custom_font_title">Özel yazı tipi</string>
   <string name="morphe_custom_font_summary">Aşağıdaki yoldan özel bir TTF veya OTF font dosyası yükleyin. Bunu etkinleştirmek aynı zamanda zorunlu sistem fontunu da kapatır.</string>
   <string name="morphe_custom_font_file_path_title">Özel yazı tipi dosyası</string>

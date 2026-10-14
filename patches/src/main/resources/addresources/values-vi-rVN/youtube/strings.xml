@@ -1309,18 +1309,21 @@ Hạn chế:
 • Màu sắc có thể hiển thị sai nếu màn hình không thực sự hỗ trợ HDR
 • Phát lại có thể thất bại nếu bộ giải mã không xử lý được HDR
 • HDR vẫn phụ thuộc vào ứng dụng khách giả lập luồng video"</string>
-  <string name="morphe_force_avc_codec_title">Buộc codec AVC (H.264)</string>
-  <string name="morphe_force_avc_codec_user_dialog_message">"Lợi ích:
-• Có thể cải thiện thời lượng pin
-• Có thể khôi phục độ phân giải video bị thiếu trên thiết bị cũ
-
-Hạn chế:
-• Độ phân giải tối đa là 1080p
-• Phát video sẽ sử dụng nhiều dữ liệu internet hơn VP9 hoặc AV1
-• Video HDR sẽ không sử dụng AVC
-• Một số thiết bị không thể buộc sử dụng AVC"</string>
+  <string name="morphe_video_codec_title">Codec video</string>
+  <string name="morphe_video_codec_entry_default">Mặc định</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Để dùng tính năng này, hãy đặt \'Giả mạo luồng phát video\' thành \'Android VR\' hoặc \'Android Studio\'</string>
+  <string name="morphe_video_codec_avc_not_available">Để buộc dùng AVC, hãy đổi \'Giả mạo luồng video\' thành \'Android Studio\', \'Android VR\' hoặc \'visionOS\'</string>
+  <string name="morphe_video_codec_user_dialog_message">"VP9
+• Có thể cải thiện thời lượng pin và khắc phục tình trạng phát lại bị giật
+• Sử dụng nhiều dữ liệu internet hơn AV1
+
+AVC (H.264)
+• Yêu cầu máy khách giả mạo luồng video phải là 'Android Studio', 'Android VR' hoặc 'visionOS'
+• Có thể cải thiện thời lượng pin nhiều hơn nữa
+• Có thể khôi phục các độ phân giải video bị thiếu trên các thiết bị cũ
+• Độ phân giải tối đa là 1080p
+• Video HDR có thể không sử dụng AVC
+• Một số thiết bị không thể buộc dùng AVC"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Mở menu Chất lượng nâng cao</string>
   <string name="morphe_advanced_video_quality_menu_summary">Bỏ qua menu chọn chất lượng và mở trực tiếp menu chất lượng nâng cao</string>
@@ -1337,6 +1340,7 @@ Hạn chế:
 
 Phát video bằng AV1 có thể bị giật hoặc tụt khung hình."</string>
   <string name="morphe_spoof_video_streams_about_title">Hạn chế khi giả mạo</string>
+  <string name="morphe_spoof_video_streams_about_failure">• Phát lại có thể bị lỗi sau 1 phút</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Thiếu menu \"Bản âm thanh\"</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Không có codec video AV1</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• Không hỗ trợ chế độ trải nhiệm VR 360°</string>

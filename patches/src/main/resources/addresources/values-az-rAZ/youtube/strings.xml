@@ -1310,18 +1310,8 @@ Məhdudiyyətlər:
 • Ekran faktiki olaraq HDR göstərə bilmirsə, rənglər problemli görünə bilər
 • Dekoder HDR-i emal edə bilməsə, oynatma uğursuz ola bilər
 • HDR hələ də video yayımları saxtalaşdır qəbuledicisindən asılıdır"</string>
-  <string name="morphe_force_avc_codec_title">AVC (H.264) kodlayıcıya zorla</string>
-  <string name="morphe_force_avc_codec_user_dialog_message">"Faydalar:
-• Batareya ömrünü uzada bilər
-• Köhnə cihazlarda çatışmayan video ayırdetmələrin bərpa edə bilər
-
-Məhdudiyyətlər:
-• Ən yüksək ayırdetmə 1080p-dir
-• Video oynatma VP9 və ya AV1-dən daha çox internet məlumatı işlədəcək
-• HDR videoları AVC istifadə etməyəcək
-• Bəzi cihazlar AVC-ni zorlaya bilməz"</string>
+  <string name="morphe_video_codec_entry_default">Varsayılan</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Bu xüsusiyyəti istifadə etmək üçün \"Video yayımların saxtalaşdır\"-ı \'Android VR\'-a və ya \'Android Studio\'-ya təyin et</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Təkmil keyfiyyət menyusunu aç</string>
   <string name="morphe_advanced_video_quality_menu_summary">Keyfiyyət seçimi menyusunu ötürür və birbaşa Təkmil keyfiyyət menyusunu açır</string>

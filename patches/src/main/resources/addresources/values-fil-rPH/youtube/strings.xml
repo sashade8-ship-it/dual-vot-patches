@@ -1308,18 +1308,21 @@ Mga Limitasyon:
 • Maaaring mali ang mga kulay kung hindi kayang ipakita ng display ang HDR
 • Maaaring mabigo ang playback kung hindi kayang hawakan ng decoder ang HDR
 • Nakadepende pa rin ang HDR sa client na nagpapanggap ng video streams"</string>
-  <string name="morphe_force_avc_codec_title">Puwersahin ang AVC (H.264) codec</string>
-  <string name="morphe_force_avc_codec_user_dialog_message">"Mga benepisyo:
-• Maaaring mapabuti ang buhay ng baterya
-• Maaaring ibalik ang nawawalang mga resolution ng video sa mas lumang device
-
-Mga limitasyon:
-• Ang maximum na resolution ay 1080p
-• Ang pag-playback ng video ay gumagamit ng mas maraming data sa internet kaysa sa VP9 o AV1
-• Ang HDR video ay hindi gagamit ng AVC
-• Ang ilang device ay hindi mapipilitan ng AVC"</string>
+  <string name="morphe_video_codec_title">Codec ng video</string>
+  <string name="morphe_video_codec_entry_default">Awtomatiko</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Upang gamitin ang tampok na ito, itakda ang \'Gayahin ang mga video stream\' sa \'Android VR\' o \'Android Studio\'.</string>
+  <string name="morphe_video_codec_avc_not_available">Para pilitin ang AVC, palitan ang \'I-spoof ang mga video stream\' ng \'Android Studio\', \'Android VR\' o \'visionOS\'</string>
+  <string name="morphe_video_codec_user_dialog_message">"VP9
+• Maaaring mapahaba ang buhay ng baterya at ayusin ang pag-stutter ng playback
+• Gumagamit ng mas maraming data sa internet kaysa sa AV1
+
+AVC (H.264)
+• Nangangailangan ng client para sa pag-i-spoof ng video stream: 'Android Studio', 'Android VR', o 'visionOS'
+• Maaaring mas mapahaba pa ang buhay ng baterya
+• Maaaring maibalik ang mga nawawalang resolusyon ng video sa mga mas lumang device
+• Ang pinakamataas na resolusyon ay 1080p
+• Maaaring hindi gumamit ng AVC ang mga HDR video
+• Hindi kayang pilitin ng ilang device ang AVC"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Buksan ang menu ng kalidad na advanced</string>
   <string name="morphe_advanced_video_quality_menu_summary">Nilalaktawan ang menu ng pagpili ng kalidad at direktang binubuksan ang Advanced na menu ng kalidad</string>
@@ -1336,6 +1339,7 @@ Mga limitasyon:
 
 Ang pag-playback ng video gamit ang AV1 ay maaaring mag-stutter o mag-drop ng mga frame."</string>
   <string name="morphe_spoof_video_streams_about_title">Mga epekto ng spoofing</string>
+  <string name="morphe_spoof_video_streams_about_failure">• Maaaring mabigo ang playback pagkatapos ng 1 minuto</string>
   <string name="morphe_spoof_video_streams_about_no_audio_tracks">• Ang menu na \'Audio Track\' ay nawawala.</string>
   <string name="morphe_spoof_video_streams_about_no_av1">• Walang codec ng video AV1</string>
   <string name="morphe_spoof_video_streams_about_no_immersive_mode">• Ang 360° VR na immersive mode ay hindi magagamit</string>
