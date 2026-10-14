@@ -143,7 +143,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.48.0-dev.6-dualvot.8.5.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.48.0-dev.6-dualvot.8.5.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;180 patches total
+> **[v1.48.0-dev.7-dualvot.8.5.3](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.48.0-dev.7-dualvot.8.5.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;180 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;98 patches</summary>
 <br>
@@ -315,7 +315,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Spoof app version](#spoof-app-version) | Adds an option to trick the app into thinking you are running an older version. |  |
 | [Spoof video streams](#spoof-video-streams) | Adds options to spoof the client video streams to fix playback. |  |
 | [Theme](#theme) | Adds options for theming, and settings to change the app foreground and background colors. | • Dark theme color |
-| [Third-party lyrics](#third-party-lyrics) | Adds an option to show synced lyrics with experience enhancement from 16+ providers in the lyrics panel. |  |
+| [Third-party lyrics](#third-party-lyrics) | Adds an option to show synced lyrics with experience enhancement from 18+ providers in the lyrics panel. |  |
 
 </details>
 
