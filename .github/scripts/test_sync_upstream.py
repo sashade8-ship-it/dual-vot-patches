@@ -308,7 +308,7 @@ class SyncUpstreamTests(unittest.TestCase):
 
         with self.assertRaises(sync_upstream.SyncError):
             sync_upstream.merge_dev148_series_tracker_settings(
-                ours, theirs.replace("SERIES_TRACKER = ", "SERIES_TRACKER_CHANGED = ")
+                ours, theirs.replace("morphe_hide_general_ads", "morphe_hide_general_ads_changed", 1)
             )
         with self.assertRaises(sync_upstream.SyncError):
             sync_upstream.merge_dev148_series_tracker_settings(
