@@ -271,6 +271,60 @@ class SyncUpstreamTests(unittest.TestCase):
                 "class StreamingDataRequest {}"
             )
 
+    def test_known_dev148_settings_merge_preserves_both_engines(self):
+        root = MODULE_PATH.parents[2]
+        path = root / sync_upstream.DEV148_SETTINGS_PATH
+        ours = path.read_text(encoding="utf-8")
+        # A deterministic synthetic upstream projection exercises the same
+        # identity/volume changes as Morphe dev.8.
+        dual = sync_upstream._single_settings_block(
+            ours,
+            "    // Dual VoT - Yandex engine. Keep every key independent from the official",
+            "    public static final StringSetting DUAL_VOT_YANDEX_OAUTH_TOKEN = ",
+        )
+        series = (
+            "    // Series tracking. Consent is account-bound and excluded from settings import/export.\n"
+            '    public static final BooleanSetting SERIES_TRACKER = new BooleanSetting("morphe_series_tracker", FALSE, true);\n'
+            '    public static final IntegerSetting SERIES_TRACKER_COMPLETION_SECONDS = new IntegerSetting("morphe_series_tracker_completion_seconds", 30, parent(SERIES_TRACKER));\n'
+        )
+        theirs = ours.replace(dual, series, 1)
+        for name in ("VOT_ORIGINAL_AUDIO_VOLUME", "VOT_TRANSLATION_VOLUME"):
+            theirs = theirs.replace(
+                f'SeekBarConfig({name},\n                0, 100, 5, "%"));',
+                f'SeekBarConfig({name},\n                0, 100, 10, "%"));',
+                1,
+            )
+        dual_controls = sync_upstream._single_settings_block(
+            theirs,
+            "        SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME,",
+            '                1, 6, 1, "dp"));',
+        )
+        theirs = theirs.replace(dual_controls, "", 1)
+        merged = sync_upstream.merge_dev148_series_tracker_settings(ours, theirs)
+        self.assertIn(dual, merged)
+        self.assertIn(series, merged)
+        self.assertEqual(merged.count("SERIES_TRACKER_COMPLETION_SECONDS"), 1)
+        self.assertIn("public static final BooleanSetting DUAL_VOT_YANDEX_ENABLED =", merged)
+
+        with self.assertRaises(sync_upstream.SyncError):
+            sync_upstream.merge_dev148_series_tracker_settings(
+                ours, theirs.replace("morphe_hide_general_ads", "morphe_hide_general_ads_changed", 1)
+            )
+        with self.assertRaises(sync_upstream.SyncError):
+            sync_upstream.merge_dev148_series_tracker_settings(
+                ours, theirs.replace('0, 100, 10, "%"));', '0, 100, 12, "%"));', 1)
+            )
+
+    def test_dev148_unknown_blobs_must_fail_closed(self):
+        path = sync_upstream.DEV148_SETTINGS_PATH
+        with (
+            mock.patch.object(sync_upstream, "unresolved_paths", return_value=[path]),
+            mock.patch.object(sync_upstream, "output_of", side_effect=("unknown-base", "unknown-upstream")),
+            mock.patch.object(sync_upstream, "run") as git_run,
+        ):
+            sync_upstream.resolve_dev148_settings_conflict()
+            git_run.assert_not_called()
+
     def test_dispatcher_has_staggered_two_hour_schedules(self):
         workflow = (
             MODULE_PATH.parents[1] / "workflows" / "upstream_sync.yml"

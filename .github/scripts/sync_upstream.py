@@ -131,6 +131,16 @@ STREAMING_DATA_REQUEST_STABLE_CLIENT_ORDER_CONFLICT_BLOBS = (
     "e3b9f5eebb00b69212c17ac4bc213fc1d9fa4c7b",
 )
 
+# One-time, fail-closed merge of Morphe 1.48.0-dev.8 Series Tracker with
+# Dual VoT's Yandex settings. Any different source versions require review.
+DEV148_SETTINGS_PATH = (
+    "extensions/youtube/src/main/java/app/morphe/extension/youtube/settings/Settings.java"
+)
+DEV148_SETTINGS_CONFLICT_BLOBS = (
+    "9814038e99517f8394e9d19c8e79bc032bd98320",  # current Dual VoT dev
+    "71ce61c76347ac65a65a247ab00013359f86aaef",  # Morphe v1.48.0-dev.8
+)
+
 DUAL_YANDEX_STRINGS_PATH = re.compile(
     r"^patches/src/main/resources/addresources/values(?:-[^/]+)?/youtube/strings\.xml$"
 )
@@ -839,6 +849,84 @@ def resolve_streaming_data_request_conflict() -> None:
     run("git", "add", "--", STREAMING_DATA_REQUEST_PATH)
 
 
+def _single_settings_block(source: str, start: str, last_line: str) -> str:
+    """Extract one known contiguous settings block, including its last newline."""
+    if source.count(start) != 1 or source.count(last_line) != 1:
+        raise SyncError("Unexpected Settings.java block layout")
+    start_at = source.index(start)
+    end_at = source.index(last_line, start_at)
+    end_at = source.find("\n", end_at)
+    if end_at < 0:
+        raise SyncError("Settings.java block does not end in a newline")
+    return source[start_at : end_at + 1]
+
+
+def merge_dev148_series_tracker_settings(ours: str, theirs: str) -> str:
+    """Retain every Dual VoT setting and all newly introduced Series Tracker settings.
+
+    The full-file equality check below proves that ONLY the specified Dual block
+    and the three custom slider controls distinguish this known Dual source
+    from the published upstream source. Nothing else is silently discarded.
+    """
+    dual = _single_settings_block(
+        ours,
+        "    // Dual VoT - Yandex engine. Keep every key independent from the official",
+        "    public static final StringSetting DUAL_VOT_YANDEX_OAUTH_TOKEN = ",
+    )
+    series = _single_settings_block(
+        theirs,
+        "    // Series tracking. Consent is account-bound and excluded from settings import/export.",
+        "    public static final IntegerSetting SERIES_TRACKER_COMPLETION_SECONDS = ",
+    )
+    if "    // Series tracking." in ours or "    // Dual VoT - Yandex engine." in theirs:
+        raise SyncError("Morphe/Dual settings already overlap unexpectedly")
+
+    projected_upstream = ours.replace(dual, series, 1)
+    for setting in ("VOT_ORIGINAL_AUDIO_VOLUME", "VOT_TRANSLATION_VOLUME"):
+        old = f'SeekBarConfig({setting},\n                0, 100, 5, "%"));'
+        new = f'SeekBarConfig({setting},\n                0, 100, 10, "%"));'
+        if projected_upstream.count(old) != 1:
+            raise SyncError(f"Unexpected Dual volume control: {setting}")
+        projected_upstream = projected_upstream.replace(old, new, 1)
+
+    dual_controls = _single_settings_block(
+        projected_upstream,
+        "        SeekBarPreference.register(new SeekBarConfig(DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME,",
+        '                1, 6, 1, "dp"));',
+    )
+    if (
+        dual_controls.count("DUAL_VOT_YANDEX_ORIGINAL_AUDIO_VOLUME") != 1
+        or dual_controls.count("DUAL_VOT_YANDEX_TRANSLATION_VOLUME") != 1
+        or dual_controls.count("DUAL_VOT_YANDEX_PROGRESS_RING_THICKNESS") != 1
+        or dual_controls.count("SeekBarPreference.register(") != 3
+    ):
+        raise SyncError("Unexpected Dual slider controls")
+    projected_upstream = projected_upstream.replace(dual_controls, "", 1)
+    if projected_upstream != theirs:
+        raise SyncError("Settings.java contains unreviewed upstream/Dual changes")
+
+    merged = ours.replace(dual, dual + "\n" + series, 1)
+    if merged.count("SERIES_TRACKER_COMPLETION_SECONDS") != 1:
+        raise SyncError("Series Tracker was not preserved exactly once")
+    return merged
+
+
+def resolve_dev148_settings_conflict() -> None:
+    path = DEV148_SETTINGS_PATH
+    if path not in unresolved_paths():
+        return
+
+    blobs = tuple(output_of("git", "rev-parse", f":{stage}:{path}") for stage in (2, 3))
+    if blobs != DEV148_SETTINGS_CONFLICT_BLOBS:
+        return  # Unknown source: leave conflict unresolved for manual review.
+
+    ours = run("git", "show", f":2:{path}", capture=True).stdout
+    theirs = run("git", "show", f":3:{path}", capture=True).stdout
+    merged = merge_dev148_series_tracker_settings(ours, theirs)
+    (ROOT / path).write_text(merged, encoding="utf-8", newline="")
+    run("git", "add", "--", path)
+
+
 def merge_ref(
     ref: str,
     project_preference: str,
@@ -879,6 +967,7 @@ def merge_ref(
     resolve_dual_yandex_arrays_conflict()
     resolve_addon_compatibility_conflicts()
     resolve_streaming_data_request_conflict()
+    resolve_dev148_settings_conflict()
 
     remaining = unresolved_paths()
     if remaining:
