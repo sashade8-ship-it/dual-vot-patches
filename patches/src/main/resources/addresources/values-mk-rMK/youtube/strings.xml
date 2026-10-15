@@ -142,7 +142,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_featured_videos_section_title">Прикриј дел „Препорачани видеа“</string>
   <string name="morphe_hide_hype_points_title">Скриј ги поените за поттик</string>
   <string name="morphe_hide_info_cards_section_title">Прикриј дел „Информациски картички“</string>
-  <string name="morphe_hide_key_concepts_section_title">Прикриј дел „Клучни концепти“</string>
   <string name="morphe_hide_quizzes_section_title">Прикриј дел „Квизови“</string>
   <string name="morphe_hide_subscribe_button_title">Скриј копче за претплатување</string>
   <string name="morphe_hide_transcript_section_title">Прикриј дел „Транскрипт“</string>
@@ -807,4 +806,7 @@ Second \"item\" text"</string>
   <string name="morphe_player_icon_style_entry_auto">Автоматски</string>
   <string name="morphe_player_icon_style_entry_default">Стандардно</string>
   <string name="morphe_player_icon_style_entry_custom">По нарачка</string>
+  <!-- video.series.seriesTrackerPatch -->
+  <string name="morphe_series_tracker_ui_cancel">Откажи</string>
+  <string name="morphe_series_tracker_undo">Врати</string>
 </resources>

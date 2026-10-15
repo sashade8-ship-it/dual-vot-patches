@@ -40,11 +40,11 @@ Second \"item\" text"</string>
   <string name="morphe_music_jam_enable_layer_first">Najpierw włącz Jam Layer</string>
   <string name="morphe_music_jam_enable_patch_first">Włącz udostępnianie kolejki Jam w ustawieniach, a następnie uruchom ponownie YouTube Music</string>
   <string name="morphe_music_jam_install_layer_first">Najpierw zainstaluj wybrany pakiet Jam Layer</string>
-  <string name="morphe_music_jam_join_hint">Wpisz kod widoczny u gospodarza. Wi-Fi Aware może połączyć pobliskie urządzenia nawet w różnych sieciach LAN</string>
+  <string name="morphe_music_jam_join_hint">Wprowadź kod widoczny u gospodarza. Wi-Fi Aware może połączyć pobliskie urządzenia nawet w różnych sieciach LAN</string>
   <string name="morphe_music_jam_join_with_code">Dołącz za pomocą kodu</string>
   <string name="morphe_music_jam_join">Dołącz</string>
   <string name="morphe_music_jam_scan_qr">Zeskanuj kod QR</string>
-  <string name="morphe_music_jam_invalid_invite">Wpisz ośmioznakowy kod lub wklej zaproszenie</string>
+  <string name="morphe_music_jam_invalid_invite">Wprowadź ośmioznakowy kod lub wklej zaproszenie</string>
   <string name="morphe_music_jam_join_your_jam">Dołącz do swojego Jam</string>
   <string name="morphe_music_jam_copy_code">Skopiuj kod</string>
   <string name="morphe_music_jam_code_clip">Kod Jam</string>
@@ -66,7 +66,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_jam_waiting_people">Oczekiwanie na uczestników</string>
   <string name="morphe_music_jam_one_connected">%d połączona osoba</string>
   <string name="morphe_music_jam_many_connected">Połączone osoby: %d</string>
-  <string name="morphe_music_jam_code_expires">Wpisz ten kod na pobliskim urządzeniu. Wi-Fi Aware działa w różnych sieciach LAN, jeśli jest obsługiwane. Wygasa za %d min.</string>
+  <string name="morphe_music_jam_code_expires">Wprowadź ten kod na pobliskim urządzeniu. Wi-Fi Aware działa w różnych sieciach LAN, jeśli jest obsługiwane. Wygasa za %d min.</string>
   <string name="morphe_music_jam_seek_to">Przewinąć do %s?</string>
   <string name="morphe_music_jam_edits_open">Edycja odblokowana</string>
   <string name="morphe_music_jam_edits_locked">Edycja zablokowana</string>
@@ -529,7 +529,7 @@ Wymagane ciasteczka: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_search_dialog_title">Wyszukaj tekst</string>
   <string name="morphe_music_lyrics_search_title_hint">Tytuł utworu</string>
   <string name="morphe_music_lyrics_search_artist_hint">Wykonawca</string>
-  <string name="morphe_music_lyrics_search_empty">Wpisz tytuł utworu i wykonawcę</string>
+  <string name="morphe_music_lyrics_search_empty">Wprowadź tytuł utworu i wykonawcę</string>
   <string name="morphe_music_lyrics_search_no_providers">Żaden z włączonych dostawców nie obsługuje wyszukiwania innych utworów</string>
   <string name="morphe_music_lyrics_saved">Zapisano</string>
   <string name="morphe_music_lyrics_word_sync_title">Podświetlaj zsynchronizowane słowa lub sylaby</string>

@@ -169,7 +169,6 @@ Oʻzgarishlar:
   <string name="morphe_hide_how_this_was_made_section_title">Bu qanday yaratilgan bo\'limini yashirish</string>
   <string name="morphe_hide_hype_points_title">Hype ballarini yashirish</string>
   <string name="morphe_hide_info_cards_section_title">Maʼlumot kartalari boʻlimini yashiring</string>
-  <string name="morphe_hide_key_concepts_section_title">\'Asosiy tushunchalar\' boʻlimini yashiring</string>
   <string name="morphe_hide_quizzes_section_title">\'Savollar\' boʻlimini yashiring</string>
   <string name="morphe_hide_search_inside_this_video_section_title">\'Ushbu videodagi qidiruv\' bo\'limini yashirish</string>
   <string name="morphe_hide_subscribe_button_title">Obuna tugmasini yashirish</string>
@@ -1118,4 +1117,7 @@ AV1 bilan video o'ynashda lag yoki to'silishlar yuzaga kelishi mumkin."</string>
   <!-- layout.player.icons.playerIconStylePatch -->
   <string name="morphe_player_icon_style_entry_default">Standart</string>
   <string name="morphe_player_icon_style_entry_custom">Maxsus</string>
+  <!-- video.series.seriesTrackerPatch -->
+  <string name="morphe_series_tracker_ui_history">Tarix</string>
+  <string name="morphe_series_tracker_ui_subscriptions">Obunalar</string>
 </resources>
