@@ -274,7 +274,24 @@ class SyncUpstreamTests(unittest.TestCase):
     def test_known_dev148_settings_merge_preserves_both_engines(self):
         root = MODULE_PATH.parents[2]
         path = root / sync_upstream.DEV148_SETTINGS_PATH
-        ours = path.read_text(encoding="utf-8")
+        source = path.read_text(encoding="utf-8")
+        ours = source
+        # On dev the published file already includes upstream Series Tracker.
+        # Reconstruct the pre-merge Dual source for this isolated resolver test.
+        # This keeps the same test meaningful before AND after publication.
+        series_start = (
+            "    // Series tracking. Consent is account-bound and excluded "
+            "from settings import/export."
+        )
+        if series_start in ours:
+            original_series = sync_upstream._single_settings_block(
+                ours,
+                series_start,
+                "    public static final IntegerSetting SERIES_TRACKER_COMPLETION_SECONDS = ",
+            )
+            self.assertIn(original_series + "\n", ours)
+            ours = ours.replace(original_series + "\n", "", 1)
+            self.assertNotIn(series_start, ours)
         # A deterministic synthetic upstream projection exercises the same
         # identity/volume changes as Morphe dev.8.
         dual = sync_upstream._single_settings_block(
