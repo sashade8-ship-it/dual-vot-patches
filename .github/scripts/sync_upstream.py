@@ -927,6 +927,22 @@ def resolve_dev148_settings_conflict() -> None:
     run("git", "add", "--", path)
 
 
+def resolve_youtube_junit_conflict() -> None:
+    """Accept only the verified dev.9 switch to the same JUnit catalog dependency."""
+    path = "extensions/youtube/build.gradle.kts"
+    if path not in unresolved_paths():
+        return
+    blobs = tuple(output_of("git", "rev-parse", f":{stage}:{path}") for stage in (1, 2, 3))
+    if blobs != (
+        "dd3e9be7c0e4daf6445c595c6db854c45abb38ab",
+        "74a7e52d1138e3fbc43b152f80811f59ac2718be",
+        "26b9505eb5571ffcaff0551d44e2292a8a2291e6",
+    ):
+        return  # Any other edits still require manual review.
+    run("git", "checkout", "--theirs", "--", path)
+    run("git", "add", "--", path)
+
+
 def merge_ref(
     ref: str,
     project_preference: str,
@@ -968,6 +984,7 @@ def merge_ref(
     resolve_addon_compatibility_conflicts()
     resolve_streaming_data_request_conflict()
     resolve_dev148_settings_conflict()
+    resolve_youtube_junit_conflict()
 
     remaining = unresolved_paths()
     if remaining:
