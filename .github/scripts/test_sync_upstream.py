@@ -14,6 +14,42 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_youtube_junit_conflict_accepts_only_verified_blobs(self):
+        path = "extensions/youtube/build.gradle.kts"
+        known = (
+            "dd3e9be7c0e4daf6445c595c6db854c45abb38ab",
+            "74a7e52d1138e3fbc43b152f80811f59ac2718be",
+            "26b9505eb5571ffcaff0551d44e2292a8a2291e6",
+        )
+        for changed_stage in (None, 0, 1, 2):
+            blobs = list(known)
+            if changed_stage is not None:
+                blobs[changed_stage] = "unknown"
+            with (
+                self.subTest(changed_stage=changed_stage),
+                mock.patch.object(sync_upstream, "unresolved_paths", return_value=[path]),
+                mock.patch.object(sync_upstream, "output_of", side_effect=blobs),
+                mock.patch.object(sync_upstream, "run") as run,
+            ):
+                sync_upstream.resolve_youtube_junit_conflict()
+                if changed_stage is None:
+                    self.assertEqual(run.call_args_list, [
+                        mock.call("git", "checkout", "--theirs", "--", path),
+                        mock.call("git", "add", "--", path),
+                    ])
+                else:
+                    run.assert_not_called()
+
+    def test_youtube_junit_resolver_ignores_unrelated_conflicts(self):
+        with (
+            mock.patch.object(sync_upstream, "unresolved_paths", return_value=["other.gradle.kts"]),
+            mock.patch.object(sync_upstream, "output_of") as output,
+            mock.patch.object(sync_upstream, "run") as run,
+        ):
+            sync_upstream.resolve_youtube_junit_conflict()
+            output.assert_not_called()
+            run.assert_not_called()
+
     def test_dev20_arrays_keep_yandex_and_custom_icon_choices(self):
         from xml.etree import ElementTree
 
