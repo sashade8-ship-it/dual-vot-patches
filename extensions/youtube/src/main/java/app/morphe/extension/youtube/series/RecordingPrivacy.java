@@ -16,7 +16,6 @@ import java.util.UUID;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
-import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.youtube.settings.Settings;
 
 /** Reads the native current-account provider; never reads names, tokens or request headers. */
@@ -122,7 +121,7 @@ public final class RecordingPrivacy {
                 .commit()) return false;
         consentAccount = account;
         policy.invalidate();
-        ((Setting<Boolean>) Settings.SERIES_TRACKER_RECORD_PROGRESS).save(true);
+        Settings.SERIES_TRACKER_RECORD_PROGRESS.save(true);
         refresh();
         return policy.allows(consentAccount);
     }

@@ -12,10 +12,13 @@ import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import app.morphe.extension.shared.ui.SheetBottomDialog;
 
@@ -51,28 +54,28 @@ final class NativeSheet {
         if (owner != null) {
             dialog.setOwnerActivity(owner);
             Application.ActivityLifecycleCallbacks lifecycle = new Application.ActivityLifecycleCallbacks() {
-                public void onActivityDestroyed(android.app.Activity a) {
+                public void onActivityDestroyed(@NonNull Activity a) {
                     if (a == owner) dialog.dismiss();
                 }
 
                 public void onActivityCreated(
-                        android.app.Activity a, android.os.Bundle b) {
+                        @NonNull Activity a, Bundle b) {
                 }
 
-                public void onActivityStarted(android.app.Activity a) {
+                public void onActivityStarted(@NonNull Activity a) {
                 }
 
-                public void onActivityResumed(android.app.Activity a) {
+                public void onActivityResumed(@NonNull Activity a) {
                 }
 
-                public void onActivityPaused(android.app.Activity a) {
+                public void onActivityPaused(@NonNull Activity a) {
                 }
 
-                public void onActivityStopped(android.app.Activity a) {
+                public void onActivityStopped(@NonNull Activity a) {
                 }
 
                 public void onActivitySaveInstanceState(
-                        android.app.Activity a, android.os.Bundle b) {
+                        @NonNull Activity a, @NonNull Bundle b) {
                 }
             };
             dialog.setOnShowListener(d ->

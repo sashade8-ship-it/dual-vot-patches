@@ -59,12 +59,12 @@ final class PlayerSeriesAction {
                         java.util.List<PlaylistDiscovery.Match> saved =
                                 new java.util.ArrayList<>();
                         for (TrackerModels.Series series : rows) {
-                            if (series.bookmarkId.equals(video)
-                                    || series.episodes.stream()
+                            if (series.bookmarkId().equals(video)
+                                    || series.episodes().stream()
                                     .anyMatch(e -> e.videoId.equals(video)))
                                 saved.add(
                                         new PlaylistDiscovery.Match(
-                                                series.id, series.name, "", video));
+                                                series.id(), series.name(), "", video));
                         }
                         if (saved.size() > 1)
                             PlaylistDiscoverySheet.saved(activity, video, done, saved);
@@ -82,21 +82,21 @@ final class PlayerSeriesAction {
             java.util.List<TrackerModels.Series> rows, String playlist, String video) {
         if (!playlist.isEmpty()) {
             for (TrackerModels.Series series : rows) {
-                if (series.id.equals(playlist)) {
-                    return series.id;
+                if (series.id().equals(playlist)) {
+                    return series.id();
                 }
             }
             return "";
         }
         String match = "";
         for (TrackerModels.Series series : rows) {
-            if (series.bookmarkId.equals(video)
-                    || series.episodes.stream().anyMatch(e -> e.videoId.equals(video))) {
+            if (series.bookmarkId().equals(video)
+                    || series.episodes().stream().anyMatch(e -> e.videoId.equals(video))) {
                 // Do not arbitrarily pick between two saved playlists containing the same video.
                 if (!match.isEmpty()) {
                     return "";
                 }
-                match = series.id;
+                match = series.id();
             }
         }
         return match;

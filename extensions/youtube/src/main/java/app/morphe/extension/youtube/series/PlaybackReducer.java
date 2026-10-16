@@ -14,27 +14,14 @@ import java.util.function.IntSupplier;
 public final class PlaybackReducer {
     private static final long CHECKPOINT_MS = 5000;
 
-    public static final class Snapshot {
-        public final String videoId;
-        public final long generation, sequence, positionMs, durationMs, playedAt;
-        public final boolean completed;
-
-        Snapshot(
-                String id,
-                long generation,
-                long sequence,
-                long position,
-                long duration,
-                boolean completed,
-                long playedAt) {
-            videoId = id;
-            this.generation = generation;
-            this.sequence = sequence;
-            positionMs = position;
-            durationMs = duration;
-            this.completed = completed;
-            this.playedAt = playedAt;
-        }
+    public record Snapshot(
+            String videoId,
+            long generation,
+            long sequence,
+            long positionMs,
+            long durationMs,
+            boolean completed,
+            long playedAt) {
     }
 
     private final Consumer<Snapshot> output;
@@ -50,13 +37,6 @@ public final class PlaybackReducer {
             queuedAt;
     private long stableDurationAt, previousCandidatePosition = -1;
     private boolean valid, dirty, completed, growingDuration;
-
-    public PlaybackReducer(Consumer<Snapshot> output) {
-        this(
-                output,
-                () -> CompletionPolicy.DEFAULT_PERCENT,
-                () -> CompletionPolicy.DEFAULT_SECONDS);
-    }
 
     public PlaybackReducer(Consumer<Snapshot> output, IntSupplier percentage, IntSupplier seconds) {
         this.output = output;

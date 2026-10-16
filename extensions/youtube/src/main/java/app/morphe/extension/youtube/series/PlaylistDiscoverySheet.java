@@ -68,11 +68,11 @@ final class PlaylistDiscoverySheet {
                                 ignored -> results(java.util.Collections.emptyList()));
     }
 
-    private boolean active() {
-        return !finished
-                && !activity.isFinishing()
-                && !activity.isDestroyed()
-                && video.equals(PlayerSeriesAction.activeVideo());
+    private boolean inactive() {
+        return finished
+                || activity.isFinishing()
+                || activity.isDestroyed()
+                || !video.equals(PlayerSeriesAction.activeVideo());
     }
 
     private void dismiss() {
@@ -82,7 +82,7 @@ final class PlaylistDiscoverySheet {
     }
 
     private void choose(String playlist) {
-        if (!active()) {
+        if (inactive()) {
             dismiss();
             return;
         }
@@ -91,7 +91,7 @@ final class PlaylistDiscoverySheet {
     }
 
     private void results(List<PlaylistDiscovery.Match> matches) {
-        if (!active()) {
+        if (inactive()) {
             dismiss();
             return;
         }

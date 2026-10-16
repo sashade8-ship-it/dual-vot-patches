@@ -19,8 +19,8 @@ public final class ResumeLauncher {
                 .scheme("https")
                 .authority("www.youtube.com")
                 .path("watch")
-                .appendQueryParameter("v", request.videoId);
-        if (!request.playlistId.isEmpty()) uri.appendQueryParameter("list", request.playlistId);
+                .appendQueryParameter("v", request.videoId());
+        if (!request.playlistId().isEmpty()) uri.appendQueryParameter("list", request.playlistId());
         // Include zero explicitly: omitting it can restore YouTube's own remembered position.
         uri.appendQueryParameter("t", request.seconds() + "s");
         return new Intent(Intent.ACTION_VIEW, uri.build())
@@ -33,7 +33,7 @@ public final class ResumeLauncher {
         TrackerRuntime.prepareLaunch();
         TrackerRuntime.awaitLaunch(request);
         try {
-            if (request.videoId.equals(PlaybackBridge.videoId())) {
+            if (request.videoId().equals(PlaybackBridge.videoId())) {
                 // Measured on 21.13.164: an ordinary watch intent leaves a paused
                 // same-video player at its old timestamp. Recreate it via the host.
                 LoadVideoPatch.openVideoIntent(launch.getDataString(), true);

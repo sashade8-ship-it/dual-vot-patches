@@ -18,6 +18,7 @@ import org.json.JSONObject;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -70,10 +71,11 @@ final class EpisodeInfo {
     static double views(String part) {
         Matcher match = VIEWS.matcher(part.trim());
         if (!match.matches()) return -1;
-        if (match.group(1).equalsIgnoreCase("no")) return 0;
+        String count = Objects.requireNonNull(match.group(1));
+        if (count.equalsIgnoreCase("no")) return 0;
         try {
-            double number = Double.parseDouble(match.group(1).replace(",", ""));
-            String suffix = match.group(2).toUpperCase(Locale.ROOT);
+            double number = Double.parseDouble(count.replace(",", ""));
+            String suffix = Objects.requireNonNull(match.group(2)).toUpperCase(Locale.ROOT);
             number *=
                     suffix.equals("K")
                             ? 1000
@@ -89,16 +91,17 @@ final class EpisodeInfo {
         Matcher match = AGE.matcher(part.trim());
         if (!match.matches()) return "";
         try {
-            final long quantity = Long.parseLong(match.group(1));
+            final long quantity = Long.parseLong(Objects.requireNonNull(match.group(1)));
             if (quantity > 1000000) return "";
-            int unit = Arrays.asList(UNITS).indexOf(match.group(2).toLowerCase(Locale.ROOT));
+            int unit = Arrays.asList(UNITS).indexOf(
+                    Objects.requireNonNull(match.group(2)).toLowerCase(Locale.ROOT));
             final long elapsed = fetchedAt > 0 && now > fetchedAt ? (now - fetchedAt) / 1000 : 0;
             final long seconds = quantity * SECONDS[unit] + elapsed;
             // The source age is rounded, not an exact publication timestamp.
             while (unit < SECONDS.length - 1
                     && seconds >= (unit == 3 ? 2 * SECONDS[unit + 1] : SECONDS[unit + 1])) unit++;
             return RelativeDateTimeFormatter.getInstance(locale).format(
-                    seconds / SECONDS[unit],
+                    (double) (seconds / SECONDS[unit]),
                     RelativeDateTimeFormatter.Direction.LAST,
                     RELATIVE[unit]);
         } catch (NumberFormatException ex) {
@@ -135,9 +138,7 @@ final class EpisodeInfo {
                 formatter.setMaximumSignificantDigits(3);
                 views = UiText.format(count == 1
                                 ? "morphe_series_tracker_view_count_one"
-                                : count >= 1000000
-                                  ? "morphe_series_tracker_view_count_large"
-                                  : "morphe_series_tracker_view_count",
+                                : "morphe_series_tracker_view_count",
                         formatter.format(count));
             }
             String relative = age(part, locale, fetchedAt, System.currentTimeMillis());

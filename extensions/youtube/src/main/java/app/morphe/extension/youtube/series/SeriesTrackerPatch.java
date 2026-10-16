@@ -13,6 +13,7 @@ import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.VideoState;
 
 /** Direct targets of Morphe's playback hooks. */
+@SuppressWarnings("unused")
 public final class SeriesTrackerPatch {
     /**
      * Changing the setting requires an app restart. When disabled, every hook returns

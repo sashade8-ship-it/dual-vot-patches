@@ -39,15 +39,13 @@ public final class CatalogClient {
             MAX_PAGES = 100,
             MAX_ENTRIES = 5000;
 
-    public static final class Catalog {
-        public final String title;
-        public final List<Episode> episodes;
-
-        public Catalog(String title, List<Episode> episodes) {
+    public record Catalog(String title, List<Episode> episodes) {
+        public Catalog {
             if (episodes.size() > MAX_ENTRIES)
                 throw new IllegalArgumentException("Catalog exceeds entry limit");
-            this.title = title;
-            this.episodes = Collections.unmodifiableList(new ArrayList<>(episodes));
+            // List.copyOf is API 30 and crashes lint's API check inside a compact constructor.
+            //noinspection Java9CollectionFactory
+            episodes = Collections.unmodifiableList(new ArrayList<>(episodes));
         }
     }
 
@@ -64,18 +62,7 @@ public final class CatalogClient {
         Reply request(String body, int remainingMs, int maxBytes) throws IOException;
     }
 
-    static final class Reply {
-        final int status, bytes;
-        final String body;
-        final long retryAfterMs;
-
-        Reply(int status, String body, int bytes, long retry) {
-            this.status = status;
-            this.body = body;
-            this.bytes = bytes;
-            retryAfterMs = retry;
-        }
-    }
+    record Reply(int status, String body, int bytes, long retryAfterMs) {}
 
     private final Transport transport;
     private final LongSupplier clock;
@@ -121,19 +108,19 @@ public final class CatalogClient {
                                 body.toString(),
                                 remaining,
                                 Math.min(PAGE_BYTES, TOTAL_BYTES - bytes));
-                bytes += reply.bytes;
-                if (reply.status != 200)
+                bytes += reply.bytes();
+                if (reply.status() != 200)
                     throw new Failure(
                             "Catalog unavailable (HTTP "
-                                    + reply.status
+                                    + reply.status()
                                     + "). Cached episodes were kept.",
-                            Math.max(30000, reply.retryAfterMs));
+                            Math.max(30000, reply.retryAfterMs()));
                 if (bytes > TOTAL_BYTES
-                        || reply.bytes > PAGE_BYTES
+                        || reply.bytes() > PAGE_BYTES
                         || clock.getAsLong() >= deadline)
                     throw limited(episodes.size(), "download limit");
                 CatalogParser.Page parsed =
-                        CatalogParser.parse(reply.body, episodes.size(), page > 0);
+                        CatalogParser.parse(reply.body(), episodes.size(), page > 0);
                 if (!parsed.title.isEmpty()) title = parsed.title;
                 if (!parsed.visitorData.isEmpty()) visitor = parsed.visitorData;
                 episodes.addAll(parsed.episodes);
@@ -143,7 +130,7 @@ public final class CatalogClient {
                 if (!seen.add(token))
                     throw new Failure(
                             "Catalog continuation repeated. Cached episodes were kept.", 30000);
-                if (bytes >= TOTAL_BYTES) throw limited(episodes.size(), "download limit");
+                if (bytes == TOTAL_BYTES) throw limited(episodes.size(), "download limit");
             }
             throw limited(episodes.size(), "page limit");
         } catch (JSONException failure) {
@@ -238,9 +225,10 @@ public final class CatalogClient {
                     bytes.write(chunk, 0, size);
                 }
             }
+            //noinspection CharsetObjectCanBeUsed
             return new Reply(
                     status,
-                    new String(bytes.toByteArray(), StandardCharsets.UTF_8),
+                    bytes.toString(StandardCharsets.UTF_8.name()),
                     bytes.size(),
                     retry);
         } finally {

@@ -16,17 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 /** The explicit starting point of a newly followed playlist. */
-final class FollowStart {
-    final String video;
-    final long positionMs;
-    final boolean reverse, watchedBefore;
-
-    FollowStart(String video, long positionMs, boolean reverse, boolean watchedBefore) {
-        this.video = video;
-        this.positionMs = positionMs;
-        this.reverse = reverse;
-        this.watchedBefore = watchedBefore;
-    }
+record FollowStart(String video, long positionMs, boolean reverse, boolean watchedBefore) {
 
     static long position(@Nullable PlaybackBridge.Source source, String video) {
         if (video.isEmpty() || !video.equals(PlaybackBridge.videoId(source))) return -1;
@@ -41,7 +31,7 @@ final class FollowStart {
         Set<String> ids = new LinkedHashSet<>();
         for (TrackerModels.Episode e : ordered) {
             if (e.available && e.videoId.equals(video)) return ids;
-            if (e.available && !e.videoId.equals(video)) ids.add(e.videoId);
+            if (e.available) ids.add(e.videoId);
         }
         throw new IllegalArgumentException("morphe_series_tracker_video_not_in_playlist");
     }

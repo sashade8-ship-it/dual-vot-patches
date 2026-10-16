@@ -28,12 +28,12 @@ final class ContinueRequest {
         generation++;
     }
 
-    boolean current(int token) {
-        return generation == token;
+    boolean stale(int token) {
+        return generation != token;
     }
 
     boolean claim(int token) {
-        if (!waiting || !current(token)) return false;
+        if (!waiting || stale(token)) return false;
         waiting = false;
         return true;
     }

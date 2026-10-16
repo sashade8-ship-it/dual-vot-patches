@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    testImplementation("junit:junit:4.13.2")
+    testImplementation(libs.junit)
 
     compileOnly(libs.annotation)
     compileOnly(libs.morphe.extensions.library)

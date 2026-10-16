@@ -49,6 +49,7 @@ import app.morphe.extension.shared.patches.components.BufferAsciiStrings;
 import app.morphe.extension.shared.theme.ThemeUtils;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.youtube.patches.AddToQueuePatch;
+import app.morphe.extension.youtube.patches.LocalQueuePatch;
 import app.morphe.extension.youtube.patches.PictureinPictureButtonPatch;
 import app.morphe.extension.youtube.patches.SaveToWatchLaterPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
@@ -487,11 +488,13 @@ public final class FlyoutUtils {
         }
 
         if (!allButtonsVideoId.isEmpty()) {
-            nextButtonIndex = AddToQueuePatch.addFlyoutButton(
-                    flyoutPanel,
-                    nextButtonIndex,
-                    allButtonsVideoId
-            );
+            if (!(isMyTabHistoryFlyout && LocalQueuePatch.isEnabled())) {
+                nextButtonIndex = AddToQueuePatch.addFlyoutButton(
+                        flyoutPanel,
+                        nextButtonIndex,
+                        allButtonsVideoId
+                );
+            }
 
             nextButtonIndex = AiSListSubmitDialog.addFlyoutButton(
                     flyoutPanel,
@@ -879,6 +882,7 @@ public final class FlyoutUtils {
                 ? null : bufferObject.getClass()));
 
         if (bufferObject instanceof FlyoutMenuVideoIdInterface videoIdInterface) {
+            isMyTabHistoryFlyout = false;
             String videoId = videoIdInterface.patch_getVideoId();
             if (videoId != null) {
                 flyoutVideoId = videoId;

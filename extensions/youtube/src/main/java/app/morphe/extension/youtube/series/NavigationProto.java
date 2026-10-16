@@ -21,16 +21,7 @@ import java.util.Locale;
 final class NavigationProto {
     static final int ITEM = 117501096, BROWSE = 48687626;
 
-    static final class Field {
-        final int number, wire;
-        final byte[] value;
-
-        Field(int number, int wire, byte[] value) {
-            this.number = number;
-            this.wire = wire;
-            this.value = value;
-        }
-    }
+    record Field(int number, int wire, byte[] value) {}
 
     static List<Field> read(byte[] data) {
         return read(data, 1_048_576);
@@ -90,20 +81,21 @@ final class NavigationProto {
     static byte[] encode(List<Field> fields) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         for (Field f : fields) {
-            writeVarint(out, ((long) f.number << 3) | f.wire);
-            if (f.wire == 2) writeVarint(out, f.value.length);
-            out.write(f.value, 0, f.value.length);
+            writeVarint(out, ((long) f.number() << 3) | f.wire());
+            if (f.wire() == 2) writeVarint(out, f.value().length);
+            out.write(f.value(), 0, f.value().length);
         }
         return out.toByteArray();
     }
 
     static byte[] get(byte[] data, int number) {
-        for (Field f : read(data)) if (f.number == number && f.wire == 2) return f.value;
+        for (Field f : read(data)) if (f.number() == number && f.wire() == 2) return f.value();
         return new byte[0];
     }
 
-    static String string(byte[] data, int number) {
-        return new String(get(data, number), StandardCharsets.UTF_8);
+    /** Every caller reads the identifier string in field 1. */
+    static String string(byte[] data) {
+        return new String(get(data, 1), StandardCharsets.UTF_8);
     }
 
     static byte[] field(int number, byte[] value) {
@@ -116,7 +108,7 @@ final class NavigationProto {
 
     static byte[] replace(byte[] data, int number, byte[] value) {
         List<Field> fields = read(data);
-        fields.removeIf(f -> f.number == number);
+        fields.removeIf(f -> f.number() == number);
         fields.add(new Field(number, 2, value));
         return encode(fields);
     }
@@ -124,12 +116,12 @@ final class NavigationProto {
     static int icon(byte[] item) {
         byte[] icon = get(item, 5);
         for (Field f : read(icon))
-            if (f.number == 1 && f.wire == 0) return (int) varint(f.value, new int[] {0});
+            if (f.number() == 1 && f.wire() == 0) return (int) varint(f.value(), new int[] {0});
         return 0;
     }
 
     static String kind(byte[] item) {
-        String id = string(item, 1).toLowerCase(Locale.ROOT);
+        String id = string(item).toLowerCase(Locale.ROOT);
         int icon = icon(item);
         if (id.contains("history")) return "history";
         if (icon == 406 || icon == 1154) return "home";
@@ -158,7 +150,7 @@ final class NavigationProto {
                 encode(Collections.singletonList(new Field(1, 0, value.toByteArray()))));
         // Tracking and target IDs belong to the original Home tab and must not be copied.
         List<Field> fields = read(item);
-        fields.removeIf(f -> f.number == 10);
+        fields.removeIf(f -> f.number() == 10);
         return field(ITEM, encode(fields));
     }
 

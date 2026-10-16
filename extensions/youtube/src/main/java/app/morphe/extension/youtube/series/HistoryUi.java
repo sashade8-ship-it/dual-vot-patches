@@ -26,6 +26,7 @@ import android.view.WindowInsets;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
 import java.lang.ref.WeakReference;
@@ -188,14 +189,14 @@ public final class HistoryUi extends LinearLayout {
         }
         addOnAttachStateChangeListener(
                 new OnAttachStateChangeListener() {
-                    public void onViewAttachedToWindow(View v) {
+                    public void onViewAttachedToWindow(@NonNull View v) {
                         current = new WeakReference<>(HistoryUi.this);
                         observer = getViewTreeObserver();
                         observer.addOnPreDrawListener(layout);
                         updateLayout();
                     }
 
-                    public void onViewDetachedFromWindow(View v) {
+                    public void onViewDetachedFromWindow(@NonNull View v) {
                         if (observer != null && observer.isAlive())
                             observer.removeOnPreDrawListener(layout);
                         observer = null;
@@ -330,11 +331,10 @@ public final class HistoryUi extends LinearLayout {
 
     @Override
     protected void onRestoreInstanceState(android.os.Parcelable state) {
-        if (!(state instanceof Saved)) {
+        if (!(state instanceof Saved saved)) {
             super.onRestoreInstanceState(state);
             return;
         }
-        Saved saved = (Saved) state;
         super.onRestoreInstanceState(saved.getSuperState());
         if (saved.series || !saved.selected.isEmpty()) {
             select(true);
@@ -373,7 +373,7 @@ public final class HistoryUi extends LinearLayout {
         }
 
         public static final android.os.Parcelable.Creator<Saved> CREATOR =
-                new android.os.Parcelable.Creator<Saved>() {
+                new android.os.Parcelable.Creator<>() {
                     public Saved createFromParcel(android.os.Parcel in) {
                         return new Saved(in);
                     }

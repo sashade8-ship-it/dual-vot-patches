@@ -24,6 +24,7 @@ import app.morphe.extension.youtube.settings.Settings;
  * Native pivot construction is supplied by the patch, so endpoints and selection remain
  * YouTube-owned.
  */
+@SuppressWarnings("unused")
 public final class HistoryNavigation {
     private static final Map<Object, String> kinds =
             Collections.synchronizedMap(new WeakHashMap<>());

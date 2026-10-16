@@ -48,25 +48,9 @@ public final class NativeHistoryTransport {
         }
     }
 
-    private static final class Observed {
-        final Ticket ticket;
-        final Future<?> future;
+    private record Observed(Ticket ticket, Future<?> future) {}
 
-        Observed(Ticket ticket, Future<?> future) {
-            this.ticket = ticket;
-            this.future = future;
-        }
-    }
-
-    static final class Page {
-        final NativeHistoryPage value;
-        final long startedAt;
-
-        Page(NativeHistoryPage value, long startedAt) {
-            this.value = value;
-            this.startedAt = startedAt;
-        }
-    }
+    record Page(NativeHistoryPage value, long startedAt) {}
 
     private static volatile Source source;
     private static Observed recent;
@@ -103,7 +87,7 @@ public final class NativeHistoryTransport {
             if (observed.size() >= 4) observed.remove(observed.keySet().iterator().next());
             observed.put(future, value);
             if ("FEhistory".equals(ticket.request.patch_seriesTrackerRoute())
-                    && (recent == null || ticket.elapsed >= recent.ticket.elapsed)) {
+                    && (recent == null || ticket.elapsed >= recent.ticket().elapsed)) {
                 recent = value;
             }
         } catch (Exception ex) {
@@ -119,9 +103,9 @@ public final class NativeHistoryTransport {
             value = recent;
             if (!continuation.isEmpty()
                     || value == null
-                    || value.ticket.generation != generation
-                    || android.os.SystemClock.elapsedRealtime() - value.ticket.elapsed > maxAgeMs
-                    || value.future.isCancelled()) value = null;
+                    || value.ticket().generation != generation
+                    || android.os.SystemClock.elapsedRealtime() - value.ticket().elapsed > maxAgeMs
+                    || value.future().isCancelled()) value = null;
         }
         boolean owned = value == null;
         if (owned) {
@@ -132,7 +116,7 @@ public final class NativeHistoryTransport {
             synchronized (NativeHistoryTransport.class) {
                 value = observed.get(future);
             }
-            if (value == null || value.ticket.generation != generation) {
+            if (value == null || value.ticket().generation != generation) {
                 if (future != null && !future.isDone()) future.cancel(true);
                 throw new CancellationException("Native History request identity unavailable");
             }
@@ -140,19 +124,18 @@ public final class NativeHistoryTransport {
         try {
             Observed selected = value;
             byte[] bytes = await(
-                    value.ticket.source,
-                    value.future,
+                    value.ticket().source,
+                    value.future(),
                     () -> RecordingPrivacy.acceptsSync(generation)
                             && RecordingPrivacy.requestGeneration(
-                            selected.ticket.request.patch_seriesTrackerRequestIdentity()) == generation,
+                            selected.ticket().request.patch_seriesTrackerRequestIdentity()) == generation,
                     timeoutNanos,
-                    TimeUnit.NANOSECONDS,
                     owned);
-            return new Page(NativeHistoryPage.parse(bytes), value.ticket.startedAt);
+            return new Page(NativeHistoryPage.parse(bytes), value.ticket().startedAt);
         } catch (Exception error) {
             synchronized (NativeHistoryTransport.class) {
                 if (recent == value) recent = null;
-                observed.remove(value.future);
+                observed.remove(value.future());
             }
             if (error instanceof InterruptedException) Thread.currentThread().interrupt();
             throw error;
@@ -171,14 +154,13 @@ public final class NativeHistoryTransport {
             Source current,
             Future<?> request,
             BooleanSupplier authorized,
-            long timeout,
-            TimeUnit unit,
+            long timeoutNanos,
             boolean owned)
             throws Exception {
         if (request == null) throw new IllegalStateException("Native history request unavailable");
         try {
             if (!authorized.getAsBoolean()) throw new CancellationException("Account changed");
-            Object response = request.get(timeout, unit);
+            Object response = request.get(timeoutNanos, TimeUnit.NANOSECONDS);
             if (!authorized.getAsBoolean()) throw new CancellationException("Account changed");
             return bytes(current, response);
         } catch (InterruptedException interrupted) {

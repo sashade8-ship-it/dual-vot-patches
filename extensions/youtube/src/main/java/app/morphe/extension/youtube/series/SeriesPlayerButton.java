@@ -13,19 +13,18 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton;
 
+@SuppressWarnings("unused")
 public final class SeriesPlayerButton {
     static {
         if (SeriesTrackerPatch.ENABLED && Settings.SERIES_TRACKER_BUTTON.get())
             LegacyPlayerControlButton.incrementUpperButtonCount();
     }
 
-    private static LegacyPlayerControlButton legacy;
-
     // The shared top-control hook supports both modern and legacy player styles.
     public static void initializeLegacyButton(View view) {
         if (!SeriesTrackerPatch.ENABLED) return;
         try {
-            legacy = new LegacyPlayerControlButton(
+            new LegacyPlayerControlButton(
                     view,
                     "morphe_series_tracker_button",
                     null,

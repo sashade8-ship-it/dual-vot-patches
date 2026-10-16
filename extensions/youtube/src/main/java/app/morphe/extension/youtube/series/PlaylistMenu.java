@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import androidx.annotation.NonNull;
+
 import java.lang.ref.WeakReference;
 
 import app.morphe.extension.shared.ResourceUtils;
@@ -38,7 +40,7 @@ public final class PlaylistMenu {
                         if (page.get() == view) update();
                     };
 
-            public void onViewAttachedToWindow(View v) {
+            public void onViewAttachedToWindow(@NonNull View v) {
                 page = new WeakReference<>(v);
                 playlist = id;
                 update();
@@ -46,7 +48,7 @@ public final class PlaylistMenu {
                 observer.addOnGlobalLayoutListener(layout);
             }
 
-            public void onViewDetachedFromWindow(View v) {
+            public void onViewDetachedFromWindow(@NonNull View v) {
                 if (observer != null && observer.isAlive())
                     observer.removeOnGlobalLayoutListener(layout);
                 observer = null;
@@ -102,7 +104,7 @@ public final class PlaylistMenu {
                             || menu.get() != target
                             || target.findItem(ITEM_ID) != item) return;
                     for (TrackerModels.Series s : rows)
-                        if (s.id.equals(id)) {
+                        if (s.id().equals(id)) {
                             item.setTitle(
                                     UiText.get("morphe_series_tracker_view_series"));
                             item.setOnMenuItemClickListener(

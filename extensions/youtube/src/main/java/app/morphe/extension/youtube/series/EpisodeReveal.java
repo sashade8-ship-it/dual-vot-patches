@@ -40,7 +40,7 @@ final class EpisodeReveal {
         }
         for (int i = 0; i < visible.size(); i++) {
             TrackerModels.Episode episode = visible.get(i);
-            if (episode.ordinal == plan.ordinal && episode.videoId.equals(plan.videoId)) return i;
+            if (episode.ordinal == plan.ordinal() && episode.videoId.equals(plan.videoId())) return i;
         }
         // A filtered, unavailable or ambiguous episode must not trigger a later surprise jump.
         requested = false;

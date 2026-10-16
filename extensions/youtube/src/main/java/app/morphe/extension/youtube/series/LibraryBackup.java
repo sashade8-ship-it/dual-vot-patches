@@ -33,11 +33,9 @@ final class LibraryBackup {
     static final int MAX_CHARS = 8 * 1024 * 1024;
     static final int MAX_SERIES = 500, MAX_EPISODES = 50_000;
 
-    static final class Data {
-        final List<Series> series;
-
-        Data(List<Series> series) {
-            this.series = Collections.unmodifiableList(series);
+    record Data(List<Series> series) {
+        Data {
+            series = Collections.unmodifiableList(series);
         }
     }
 
@@ -45,7 +43,7 @@ final class LibraryBackup {
         try {
             if (library.size() > MAX_SERIES) throw invalid();
             int episodeCount = 0;
-            for (Series s : library) episodeCount += s.episodes.size();
+            for (Series s : library) episodeCount += s.episodes().size();
             if (episodeCount > MAX_EPISODES) throw invalid();
             JSONObject document = new JSONObject().put("format", "series-tracker")
                     .put("version", 1);
@@ -53,21 +51,21 @@ final class LibraryBackup {
             JSONObject progress = new JSONObject();
             for (Series s : library) {
                 JSONObject row = new JSONObject()
-                        .put("id", s.id)
-                        .put("name", s.name)
+                        .put("id", s.id())
+                        .put("name", s.name())
                         .put("complete", s.complete())
-                        .put("reverse", s.reverseOrder)
-                        .put("hideWatched", s.hideWatched)
-                        .put("cursor", s.cursorId)
-                        .put("ordinal", s.cursorOrdinal)
-                        .put("cursorValid", s.cursorRevision == s.revision)
-                        .put("bookmark", s.bookmarkId)
-                        .put("startHere", s.startHere)
-                        .put("fetchedAt", s.fetchedAt)
-                        .put("activity", s.activity)
-                        .put("recovery", s.recoveryId);
+                        .put("reverse", s.reverseOrder())
+                        .put("hideWatched", s.hideWatched())
+                        .put("cursor", s.cursorId())
+                        .put("ordinal", s.cursorOrdinal())
+                        .put("cursorValid", s.cursorRevision() == s.revision())
+                        .put("bookmark", s.bookmarkId())
+                        .put("startHere", s.startHere())
+                        .put("fetchedAt", s.fetchedAt())
+                        .put("activity", s.activity())
+                        .put("recovery", s.recoveryId());
                 JSONArray episodes = new JSONArray();
-                List<Episode> ordered = new ArrayList<>(s.episodes);
+                List<Episode> ordered = new ArrayList<>(s.episodes());
                 ordered.sort(Comparator.comparingInt(e -> e.ordinal));
                 for (Episode e : ordered) {
                     episodes.put(new JSONObject()
@@ -80,14 +78,14 @@ final class LibraryBackup {
                 }
                 row.put("episodes", episodes);
                 series.put(row);
-                for (Progress p : s.progress.values()) {
-                    progress.put(p.videoId,
+                for (Progress p : s.progress().values()) {
+                    progress.put(p.videoId(),
                             new JSONObject()
-                                    .put("position", p.positionMs)
-                                    .put("duration", p.durationMs)
-                                    .put("completed", p.autoCompleted)
-                                    .put("override", p.override.name())
-                                    .put("playedAt", p.playedAt));
+                                    .put("position", p.positionMs())
+                                    .put("duration", p.durationMs())
+                                    .put("completed", p.autoCompleted())
+                                    .put("override", p.override().name())
+                                    .put("playedAt", p.playedAt()));
                 }
             }
             String text = document.put("series", series).put("progress", progress).toString();

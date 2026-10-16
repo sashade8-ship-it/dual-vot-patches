@@ -21,29 +21,14 @@ public final class TrackerModels {
         UNWATCHED
     }
 
-    public static final class Progress {
-        public final String videoId;
-        public final long positionMs, durationMs, playedAt, editRevision;
-        public final boolean autoCompleted;
-        public final Override override;
-
-        public Progress(
-                String id,
-                long position,
-                long duration,
-                boolean completed,
-                Override override,
-                long playedAt,
-                long revision) {
-            videoId = id;
-            positionMs = position;
-            durationMs = duration;
-            autoCompleted = completed;
-            this.override = override;
-            this.playedAt = playedAt;
-            editRevision = revision;
-        }
-
+    public record Progress(
+            String videoId,
+            long positionMs,
+            long durationMs,
+            boolean autoCompleted,
+            Override override,
+            long playedAt,
+            long editRevision) {
         public boolean watched() {
             return override == Override.WATCHED || (override == Override.AUTO && autoCompleted);
         }
@@ -81,59 +66,34 @@ public final class TrackerModels {
         }
     }
 
-    public static final class Series {
-        public final String id, name, epoch, cursorId, bookmarkId, status, error;
-        public final long revision, cursorRevision, fetchedAt, activity;
-        public final int cursorOrdinal, newEpisodeCount;
-        public final boolean startHere, reverseOrder, hideWatched;
-        /**
-         * Video to continue with if the saved episode was removed from the playlist, or empty.
-         */
-        public final String recoveryId;
-        public final List<Episode> episodes;
-        public final Map<String, Progress> progress;
-
-        public Series(
-                String id,
-                String name,
-                String epoch,
-                long revision,
-                String cursorId,
-                int cursorOrdinal,
-                long cursorRevision,
-                String bookmarkId,
-                String status,
-                String error,
-                long fetchedAt,
-                long activity,
-                List<Episode> episodes,
-                Map<String, Progress> progress,
-                boolean startHere,
-                int newEpisodeCount,
-                boolean reverseOrder,
-                boolean hideWatched,
-                String recoveryId) {
-            this.recoveryId = recoveryId;
-            this.reverseOrder = reverseOrder;
-            this.hideWatched = hideWatched;
-            this.startHere = startHere;
-            this.newEpisodeCount = newEpisodeCount;
-            this.id = id;
-            this.name = name;
-            this.epoch = epoch;
-            this.revision = revision;
-            this.cursorId = cursorId;
-            this.cursorOrdinal = cursorOrdinal;
-            this.cursorRevision = cursorRevision;
-            this.bookmarkId = bookmarkId;
-            this.status = status;
-            this.error = error;
-            this.fetchedAt = fetchedAt;
-            this.activity = activity;
+    public record Series(
+            String id,
+            String name,
+            String epoch,
+            long revision,
+            String cursorId,
+            int cursorOrdinal,
+            long cursorRevision,
+            String bookmarkId,
+            String status,
+            String error,
+            long fetchedAt,
+            long activity,
+            List<Episode> episodes,
+            Map<String, Progress> progress,
+            boolean startHere,
+            int newEpisodeCount,
+            boolean reverseOrder,
+            boolean hideWatched,
+            // Video to continue with if the saved episode was removed from the playlist, or empty.
+            String recoveryId) {
+        public Series {
             List<Episode> ordered = new ArrayList<>(episodes);
             if (reverseOrder) Collections.reverse(ordered);
-            this.episodes = Collections.unmodifiableList(ordered);
-            this.progress = Collections.unmodifiableMap(new HashMap<>(progress));
+            episodes = Collections.unmodifiableList(ordered);
+            // Map.copyOf is API 30 and crashes lint's API check inside a compact constructor.
+            //noinspection Java9CollectionFactory
+            progress = Collections.unmodifiableMap(new HashMap<>(progress));
         }
 
         public List<Episode> visibleEpisodes() {

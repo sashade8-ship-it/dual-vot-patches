@@ -36,6 +36,7 @@ import app.morphe.extension.youtube.patches.ChangeHeaderPatch.HeaderLogo;
 import app.morphe.extension.youtube.patches.ChangeStartPagePatch.StartPage;
 import app.morphe.extension.youtube.patches.DisableVideoCodecsPatch.VideoCodec;
 import app.morphe.extension.youtube.patches.ExitFullscreenPatch.FullscreenMode;
+import app.morphe.extension.youtube.patches.FeedCardLayoutPatch.FeedCardLayout;
 import app.morphe.extension.youtube.patches.ForceFullscreenLandscapePatch.LargeScreenAvailability;
 import app.morphe.extension.youtube.patches.FullscreenVideoScalePatch.VideoScaleMode;
 import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RestoreOldPlayerButtonsAvailability;
@@ -174,6 +175,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final IntegerSetting PLAYBACK_IN_FEEDS = new IntegerSetting("morphe_playback_in_feeds", PlaybackInFeedsPatch.MODE_ALWAYS_ON, true);
     public static final BooleanSetting RESTORE_ORIGINAL_TITLES = new BooleanSetting("morphe_restore_original_titles", FALSE, true);
     public static final BooleanSetting DISABLE_AUTO_FEED_REFRESH = new BooleanSetting("morphe_disable_auto_feed_refresh", FALSE);
+    public static final EnumSetting<FeedCardLayout> FEED_CARD_LAYOUT = new EnumSetting<>("morphe_feed_card_layout", FeedCardLayout.CLASSIC, true);
 
     // AiSList
     public static final BooleanSetting HIDE_AISLIST_BLOCKLIST_HOME = new BooleanSetting("morphe_hide_aislist_blocklist_home", FALSE);
@@ -355,6 +357,7 @@ public class Settings extends SharedYouTubeSettings {
     // Captions
     public static final EnumSetting<AutoCaptionsStyle> AUTO_CAPTIONS_STYLE = new EnumSetting<>("morphe_auto_captions_style", AutoCaptionsStyle.BOTH_ENABLED, false);
     public static final StringSetting PREFERRED_CAPTION_LANGUAGE = new StringSetting("morphe_preferred_caption_language", "off", true);
+    public static final BooleanSetting AUTO_TRANSLATE_ADDITIONAL_LANGUAGES = new BooleanSetting("morphe_auto_translate_additional_languages", TRUE);
     public static final BooleanSetting SET_CAPTION_COOKIES = new BooleanSetting("morphe_set_caption_cookies", FALSE, true);
     public static final StringSetting CAPTION_COOKIES = new StringSetting("morphe_caption_cookies", "", true, parent(SET_CAPTION_COOKIES));
     public static final BooleanSetting FIX_TRANSCRIPT = new BooleanSetting("morphe_fix_transcript", TRUE, true);

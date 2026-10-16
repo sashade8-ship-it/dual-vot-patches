@@ -68,7 +68,7 @@ final class TrackerRuntime {
         if (waiting) {
             if (pending == null
                     || SystemClock.elapsedRealtime() - requestedAt < 600
-                    || !pending.videoId.equals(before)
+                    || !pending.videoId().equals(before)
                     || Math.abs(position - pending.seconds() * 1000) > 3000
                     || !PlaybackSession.play()) return;
 
@@ -155,7 +155,7 @@ final class TrackerRuntime {
     }
 
     private static void reducerAck(PlaybackReducer.Snapshot snapshot) {
-        reducer.acknowledge(snapshot.generation, snapshot.sequence);
+        reducer.acknowledge(snapshot.generation(), snapshot.sequence());
     }
 
     private TrackerRuntime() {}

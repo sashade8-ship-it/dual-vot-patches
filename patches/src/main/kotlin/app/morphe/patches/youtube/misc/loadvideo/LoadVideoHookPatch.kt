@@ -29,6 +29,9 @@ private const val EXTENSION_CLASS =
 private const val EXTENSION_PLAYER_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/LoadVideoPatch$PlayerInterface;"
 
+private const val EXTENSION_INLINE_PLAYBACK_INTERFACE =
+    $$"Lapp/morphe/extension/youtube/patches/LoadVideoPatch$InlinePlaybackInterface;"
+
 internal val loadVideoHookPatch = bytecodePatch(
     description = "Hooks the player so the extension can dismiss it and open videos."
 ) {
@@ -96,6 +99,52 @@ internal val loadVideoHookPatch = bytecodePatch(
                 addInstruction(
                     index,
                     "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->initialize($EXTENSION_PLAYER_INTERFACE)V"
+                )
+            }
+        }
+
+        // Once the player is dismissed, a video in the feed below it can start playing
+        // and take the place of the video opened next, so the extension blocks it.
+        val blockInlinePlaybackMethod = BlockInlinePlaybackFingerprint.method
+        mutableClassDefBy(blockInlinePlaybackMethod.definingClass).apply {
+            val unblockInlinePlaybackMethod = UnblockInlinePlaybackFingerprint.match(this).method
+
+            interfaces.add(EXTENSION_INLINE_PLAYBACK_INTERFACE)
+            mapOf(
+                "patch_blockInlinePlayback" to blockInlinePlaybackMethod,
+                "patch_unblockInlinePlayback" to unblockInlinePlaybackMethod
+            ).forEach { (name, method) ->
+                methods.add(
+                    ImmutableMethod(
+                        type,
+                        name,
+                        listOf(ImmutableMethodParameter("I", null, "reason")),
+                        "V",
+                        AccessFlags.PUBLIC.value or AccessFlags.FINAL.value,
+                        null,
+                        null,
+                        MutableMethodImplementation(2),
+                    ).toMutable().apply {
+                        addInstructions(
+                            0,
+                            """
+                                invoke-virtual { p0, p1 }, $method
+                                return-void
+                            """
+                        )
+                    }
+                )
+            }
+
+            methods.single { method ->
+                MethodUtil.isConstructor(method)
+            }.apply {
+                val index = indexOfFirstInstructionReversedOrThrow(Opcode.RETURN_VOID)
+
+                addInstruction(
+                    index,
+                    "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->" +
+                            "initializeInlinePlayback($EXTENSION_INLINE_PLAYBACK_INTERFACE)V"
                 )
             }
         }

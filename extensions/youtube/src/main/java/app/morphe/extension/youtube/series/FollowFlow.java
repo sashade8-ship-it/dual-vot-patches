@@ -119,7 +119,7 @@ final class FollowFlow {
                 rows -> {
                     if (!active()) return;
                     for (TrackerModels.Series s : rows)
-                        if (s.id.equals(id)) {
+                        if (s.id().equals(id)) {
                             if (startVideo.isEmpty()) complete();
                             else {
                                 sheet.dialog.dismiss();
@@ -134,17 +134,17 @@ final class FollowFlow {
                                     catalog = value;
                                     if (!orderChosen)
                                         reverse =
-                                                EpisodeOrder.infer(value.episodes)
+                                                EpisodeOrder.infer(value.episodes())
                                                         == EpisodeOrder.Direction.REVERSE;
                                     if (startVideo.isEmpty()) save();
-                                    else if (value.episodes.stream()
+                                    else if (value.episodes().stream()
                                             .noneMatch(e -> e.videoId.equals(startVideo))) {
                                         failure("morphe_series_tracker_video_not_in_playlist");
                                     } else {
                                         busy = false;
                                         startingOptions();
                                         status.setText(
-                                                value.title.isEmpty() ? id : value.title);
+                                                value.title().isEmpty() ? id : value.title());
                                         follow.setEnabled(true);
                                         follow.setOnClickListener(
                                                 v -> {
@@ -185,7 +185,7 @@ final class FollowFlow {
             failure("morphe_series_tracker_identity_unavailable");
             return;
         }
-        String name = catalog != null && !catalog.title.isEmpty() ? catalog.title : id;
+        String name = catalog != null && !catalog.title().isEmpty() ? catalog.title() : id;
         final long generation = RecordingPrivacy.generation();
         PlaybackBridge.Source source = PlaybackBridge.source();
         Runnable saved = () -> {
@@ -199,7 +199,7 @@ final class FollowFlow {
                     if (source == PlaybackBridge.source()
                             && startVideo.equals(PlaybackBridge.videoId(source))
                             && RecordingPrivacy.acceptsManualPosition(generation)) {
-                        SeriesPlayback.activate(series, startVideo, series.cursorOrdinal);
+                        SeriesPlayback.activate(series, startVideo, series.cursorOrdinal());
                     }
                 }, message -> {});
             }
@@ -275,10 +275,10 @@ final class FollowFlow {
     }
 
     private void updateOrder() {
-        TrackerModels.Episode first = EpisodeOrder.first(catalog.episodes, reverse);
+        TrackerModels.Episode first = EpisodeOrder.first(catalog.episodes(), reverse);
         order.setText(UiText.format("morphe_series_tracker_order_starts_with",
                 first == null ? "" : UiText.episodeTitle(first)));
-        final boolean previous = !FollowStart.previous(catalog.episodes, startVideo, reverse).isEmpty();
+        final boolean previous = !FollowStart.previous(catalog.episodes(), startVideo, reverse).isEmpty();
         watchedBefore.setVisibility(previous ? android.view.View.VISIBLE : android.view.View.GONE);
         if (!previous) watchedBefore.setChecked(false);
     }
@@ -292,7 +292,7 @@ final class FollowFlow {
         for (int i = 0, length = labels.length; i < length; i++) {
             final boolean selected = i == 1;
             RadioButton option = new RadioButton(activity);
-            TrackerModels.Episode first = EpisodeOrder.first(catalog.episodes, selected);
+            TrackerModels.Episode first = EpisodeOrder.first(catalog.episodes(), selected);
             option.setText(UiText.get(labels[i])
                     + (first == null ? "" : "\n" + UiText.episodeTitle(first)));
             option.setMaxLines(3);

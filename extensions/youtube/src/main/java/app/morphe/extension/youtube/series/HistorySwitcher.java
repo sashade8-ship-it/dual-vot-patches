@@ -23,6 +23,8 @@ import android.view.animation.PathInterpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import app.morphe.extension.shared.Utils;
+
 /** One moving selection surface, with native text, focus, and touch semantics. */
 @SuppressLint("ViewConstructor")
 final class HistorySwitcher extends LinearLayout {
@@ -177,7 +179,7 @@ final class HistorySwitcher extends LinearLayout {
             super.onDraw(canvas);
             android.text.Layout text = getLayout();
             if (text == null) return;
-            boolean rtl = getLayoutDirection() == LAYOUT_DIRECTION_RTL;
+            boolean rtl = Utils.isRightToLeftLocale();
             float edge = rtl ? 0 : getWidth();
             for (int line = 0; line < text.getLineCount(); line++) {
                 edge =

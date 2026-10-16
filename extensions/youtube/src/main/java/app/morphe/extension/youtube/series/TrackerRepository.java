@@ -201,13 +201,13 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         return Collections.unmodifiableSet(ids);
     }
 
-    private boolean isTracked(String id) {
+    private boolean isUntracked(String id) {
         try (Cursor c = getReadableDatabase().rawQuery(
                 "SELECT 1 FROM catalog_entry WHERE video_id=? AND available=1 UNION"
                         + " ALL SELECT 1 FROM series WHERE bookmark_id=? OR cursor_id=?"
                         + " LIMIT 1",
                 new String[]{id, id, id})) {
-            return c.moveToFirst();
+            return !c.moveToFirst();
         }
     }
 
@@ -216,9 +216,9 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         db.beginTransaction();
         try {
             if (!historyEpoch().equals(historyEpoch)
-                    || !isTracked(snapshot.videoId)
-                    || progress(snapshot.videoId).playedAt > snapshot.playedAt) return false;
-            ensureProgress(snapshot.videoId);
+                    || isUntracked(snapshot.videoId())
+                    || progress(snapshot.videoId()).playedAt() > snapshot.playedAt()) return false;
+            ensureProgress(snapshot.videoId());
             // Update only playback columns; a delayed checkpoint cannot overwrite a manual
             // override.
             db.execSQL(
@@ -227,12 +227,12 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                             + " END,auto_completed=MAX(auto_completed,?),played_at=MAX(played_at,?)"
                             + " WHERE video_id=?",
                     new Object[] {
-                        snapshot.positionMs,
-                        snapshot.durationMs,
-                        snapshot.durationMs,
-                        snapshot.completed ? 1 : 0,
-                        snapshot.playedAt,
-                        snapshot.videoId
+                        snapshot.positionMs(),
+                        snapshot.durationMs(),
+                        snapshot.durationMs(),
+                        snapshot.completed() ? 1 : 0,
+                        snapshot.playedAt(),
+                        snapshot.videoId()
                     });
             try (Cursor c = db.rawQuery(
                     "SELECT"
@@ -240,10 +240,10 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                             + " FROM series s JOIN catalog_entry e ON"
                             + " s.playlist_id=e.playlist_id WHERE e.video_id=? AND"
                             + " e.available=1 GROUP BY s.playlist_id HAVING COUNT(*)=1",
-                    new String[]{snapshot.videoId})) {
+                    new String[]{snapshot.videoId()})) {
                 while (c.moveToNext()) {
                     String pending = meta("start_here", c.getString(0));
-                    if (pending.equals(snapshot.videoId)) meta("start_here", c.getString(0), "");
+                    if (pending.equals(snapshot.videoId())) meta("start_here", c.getString(0), "");
                     else if (!pending.isEmpty()) continue;
                     if (c.getString(2).isEmpty()
                             || (c.getInt(3) > 0
@@ -253,11 +253,11 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                                 "UPDATE series SET"
                                     + " cursor_id=?,cursor_ordinal=?,cursor_revision=catalog_revision"
                                     + " WHERE playlist_id=?",
-                                new Object[] {snapshot.videoId, c.getInt(1), c.getString(0)});
+                                new Object[] {snapshot.videoId(), c.getInt(1), c.getString(0)});
                     }
                     db.execSQL(
                             "UPDATE series SET activity=MAX(activity,?) WHERE playlist_id=?",
-                            new Object[] {snapshot.playedAt, c.getString(0)});
+                            new Object[] {snapshot.playedAt(), c.getString(0)});
                 }
             }
             db.setTransactionSuccessful();
@@ -271,7 +271,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         return Long.parseLong(scalar("SELECT value FROM meta WHERE key='manual_revision'"));
     }
 
-    int mergeRemote(
+    void mergeRemote(
             String expectedEpoch,
             long expectedRevision,
             List<Series> before,
@@ -279,19 +279,18 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             long now) {
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
-        int changed = 0;
         try {
             if (!historyEpoch().equals(expectedEpoch) || manualRevision() != expectedRevision)
-                return 0;
+                return;
             Set<String> accepted = new HashSet<>(), changedSnapshots = new HashSet<>();
             for (NativeHistoryPage.Row row : result.rows.values()) {
-                if (!isTracked(row.id)) continue;
-                Progress local = progress(row.id);
-                long observedAt = result.observedAt.getOrDefault(row.id, 0L);
+                if (isUntracked(row.id())) continue;
+                Progress local = progress(row.id());
+                long observedAt = valueOrZero(result.observedAt, row.id());
                 if (observedAt <= 0
                         || observedAt > now + 120_000
-                        || result.durations.getOrDefault(row.id, 0L) <= 0) continue;
-                String[] stored = meta("native_seen", row.id).split("\\|", -1);
+                        || valueOrZero(result.durations, row.id()) <= 0) continue;
+                String[] stored = meta("native_seen", row.id()).split("\\|", -1);
                 HistoryMergePolicy.Baseline previous = null;
                 if (stored.length == 3 && stored[0].equals(result.account)) {
                     try {
@@ -303,13 +302,13 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                         Logger.printException(() -> "Invalid History baseline", ex);
                     }
                 }
-                if (previous != null && observedAt <= previous.seenAt) continue;
+                if (previous != null && observedAt <= previous.seenAt()) continue;
                 boolean changedSnapshot =
-                        previous != null && !previous.signature.equals(row.signature());
-                if (changedSnapshot) changedSnapshots.add(row.id);
+                        previous != null && !previous.signature().equals(row.signature());
+                if (changedSnapshot) changedSnapshots.add(row.id());
                 // Keep baselines across a local clear so an unchanged native response cannot
                 // restore it.
-                boolean clearedSeed = previous == null && !meta("native_clear", row.id).isEmpty();
+                boolean clearedSeed = previous == null && !meta("native_clear", row.id()).isEmpty();
                 Progress merged = clearedSeed
                         ? local
                         : HistoryMergePolicy.merge(
@@ -317,45 +316,44 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                         row,
                         previous,
                         observedAt,
-                        result.durations.getOrDefault(row.id, 0L),
+                        valueOrZero(result.durations, row.id()),
                         result.percent,
                         result.seconds);
                 meta(
                         "native_seen",
-                        row.id,
+                        row.id(),
                         result.account + "|" + row.signature() + "|" + observedAt);
-                meta("native_clear", row.id, "");
+                meta("native_clear", row.id(), "");
                 if (merged == local) continue;
-                ensureProgress(row.id);
+                ensureProgress(row.id());
                 db.execSQL(
                         "UPDATE video_progress SET"
                             + " position_ms=?,duration_ms=?,auto_completed=?,played_at=? WHERE"
                             + " video_id=?",
                         new Object[] {
-                            merged.positionMs,
-                            merged.durationMs,
-                            merged.autoCompleted ? 1 : 0,
-                            merged.playedAt,
-                            row.id
+                            merged.positionMs(),
+                            merged.durationMs(),
+                            merged.autoCompleted() ? 1 : 0,
+                            merged.playedAt(),
+                            row.id()
                         });
-                accepted.add(row.id);
-                changed++;
+                accepted.add(row.id());
             }
             Map<String, Series> currentLibrary = new HashMap<>();
-            for (Series current : library()) currentLibrary.put(current.id, current);
+            for (Series current : library()) currentLibrary.put(current.id(), current);
             for (Series previous : before) {
-                Series current = currentLibrary.get(previous.id);
+                Series current = currentLibrary.get(previous.id());
                 if (current == null
-                        || current.startHere
-                        || current.revision != previous.revision
-                        || !current.cursorId.equals(previous.cursorId)
-                        || current.cursorOrdinal != previous.cursorOrdinal) continue;
+                        || current.startHere()
+                        || current.revision() != previous.revision()
+                        || !current.cursorId().equals(previous.cursorId())
+                        || current.cursorOrdinal() != previous.cursorOrdinal()) continue;
                 Episode latest = null;
                 // Native History order is relative recency. Do not stamp every old row as "just
                 // watched".
                 for (String id : result.rows.keySet()) {
                     List<Episode> matches = new ArrayList<>();
-                    for (Episode ep : current.episodes)
+                    for (Episode ep : current.episodes())
                         if (ep.available && ep.videoId.equals(id)) matches.add(ep);
                     if (!matches.isEmpty()) {
                         if (matches.size() == 1) latest = matches.get(0);
@@ -363,16 +361,16 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                     }
                 }
                 if (latest == null || !accepted.contains(latest.videoId)) continue;
-                long observedAt = result.observedAt.getOrDefault(latest.videoId, 0L);
-                Progress cursor = previous.progress(previous.cursorId);
-                if (cursor.playedAt >= observedAt) continue;
-                if (!previous.cursorId.isEmpty()
-                        && !result.rows.containsKey(previous.cursorId)
+                long observedAt = valueOrZero(result.observedAt, latest.videoId);
+                Progress cursor = previous.progress(previous.cursorId());
+                if (cursor.playedAt() >= observedAt) continue;
+                if (!previous.cursorId().isEmpty()
+                        && !result.rows.containsKey(previous.cursorId())
                         && !changedSnapshots.contains(latest.videoId)) {
                     int from = -1, to = -1;
-                    for (int i = 0; i < current.episodes.size(); i++) {
-                        if (current.episodes.get(i).videoId.equals(previous.cursorId)) from = i;
-                        if (current.episodes.get(i).videoId.equals(latest.videoId)) to = i;
+                    for (int i = 0; i < current.episodes().size(); i++) {
+                        if (current.episodes().get(i).videoId.equals(previous.cursorId())) from = i;
+                        if (current.episodes().get(i).videoId.equals(latest.videoId)) to = i;
                     }
                     if (from >= 0 && to < from) continue;
                 }
@@ -380,10 +378,9 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                         "UPDATE series SET"
                             + " cursor_id=?,cursor_ordinal=?,cursor_revision=catalog_revision,activity=MAX(activity,?)"
                             + " WHERE playlist_id=?",
-                        new Object[] {latest.videoId, latest.ordinal, observedAt, current.id});
+                        new Object[] {latest.videoId, latest.ordinal, observedAt, current.id()});
             }
             db.setTransactionSuccessful();
-            return changed;
         } finally {
             db.endTransaction();
         }
@@ -459,10 +456,10 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                     episodes,
                     progress,
                     !c.getString(3).isEmpty() && c.getString(3).equals(meta("start_here", id)),
-                    (int) newEpisodes(id).stream().filter(
-                                    video -> !progress.getOrDefault(
-                                                    video, Progress.empty(video))
-                                            .watched())
+                    (int) newEpisodes(id).stream().filter(video -> {
+                                Progress p = progress.get(video);
+                                return p == null || !p.watched();
+                            })
                             .count(),
                     "true".equals(meta("reverse_order", id)),
                     "true".equals(meta("hide_watched", id)),
@@ -492,14 +489,14 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             CatalogClient.Catalog catalog,
             FollowStart selection,
             long now) {
-        String startVideo = selection.video;
+        String startVideo = selection.video();
         Episode start = null;
         if (!startVideo.isEmpty()) {
             if (catalog != null)
-                for (Episode e : catalog.episodes) {
+                for (Episode e : catalog.episodes()) {
                     if (e.videoId.equals(startVideo) && e.available) {
                         start = e;
-                        if (!selection.reverse) break;
+                        if (!selection.reverse()) break;
                     }
                 }
             if (start == null)
@@ -516,14 +513,14 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             row.put("activity", now);
             db.insertOrThrow("series", null, row);
             if (catalog != null) replaceCatalog(id, catalog, now);
-            meta("reverse_order", id, selection.reverse ? "true" : "");
+            meta("reverse_order", id, selection.reverse() ? "true" : "");
             if (start != null) {
-                if (selection.watchedBefore) {
+                if (selection.watchedBefore()) {
                     Set<String> previous =
-                            FollowStart.previous(catalog.episodes, startVideo, selection.reverse);
+                            FollowStart.previous(catalog.episodes(), startVideo, selection.reverse());
                     if (!previous.isEmpty()) markIds(previous, TrackerModels.Override.WATCHED, now);
                 }
-                if (selection.positionMs >= 0) {
+                if (selection.positionMs() >= 0) {
                     // Following from the player explicitly starts another watch of this video.
                     markIds(Collections.singleton(startVideo), TrackerModels.Override.AUTO, now);
                     db.execSQL(
@@ -532,14 +529,14 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                                 + " video_id=?",
                             new Object[] {
                                 start.durationMs > 0
-                                        ? Math.min(selection.positionMs, start.durationMs)
-                                        : selection.positionMs,
+                                        ? Math.min(selection.positionMs(), start.durationMs)
+                                        : selection.positionMs(),
                                 start.durationMs,
                                 now,
                                 startVideo
                             });
                 }
-                startHere(id, series(id).revision, start.ordinal, start.videoId, now);
+                startHere(id, series(id).revision(), start.ordinal, start.videoId, now);
             }
             db.setTransactionSuccessful();
         } finally {
@@ -564,7 +561,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                 "UPDATE series SET request_token=?,status='loading',error='' WHERE"
                         + " playlist_id=?",
                 new Object[]{token, id});
-        return new FetchTicket(id, series.epoch, token);
+        return new FetchTicket(id, series.epoch(), token);
     }
 
     private boolean current(FetchTicket ticket) {
@@ -601,15 +598,15 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         Set<String> previous = new HashSet<>(),
                 available = new LinkedHashSet<>(),
                 unseen = newEpisodes(id);
-        for (Episode e : old.episodes) if (e.available) previous.add(e.videoId);
-        for (Episode e : catalog.episodes) if (e.available) available.add(e.videoId);
+        for (Episode e : old.episodes()) if (e.available) previous.add(e.videoId);
+        for (Episode e : catalog.episodes()) if (e.available) available.add(e.videoId);
         if (old.complete())
             for (String video : available) if (!previous.contains(video)) unseen.add(video);
         unseen.retainAll(available);
         meta("new_episodes", id, String.join(",", unseen));
-        meta("episode_info", id, EpisodeInfo.encode(catalog.episodes));
+        meta("episode_info", id, EpisodeInfo.encode(catalog.episodes()));
         db.delete("catalog_entry", "playlist_id=?", new String[] {id});
-        for (Episode e : catalog.episodes) {
+        for (Episode e : catalog.episodes()) {
             ContentValues v = new ContentValues();
             v.put("playlist_id", id);
             v.put("ordinal", e.ordinal);
@@ -619,11 +616,11 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             v.put("available", e.available ? 1 : 0);
             db.insertOrThrow("catalog_entry", null, v);
         }
-        long revision = old.revision + 1;
-        String cursor = old.cursorId.isEmpty() ? old.bookmarkId : old.cursorId;
+        long revision = old.revision() + 1;
+        String cursor = old.cursorId().isEmpty() ? old.bookmarkId() : old.cursorId();
         int ordinal = -1, matches = 0;
         if (!cursor.isEmpty())
-            for (Episode e : catalog.episodes)
+            for (Episode e : catalog.episodes())
                 if (e.videoId.equals(cursor)) {
                     ordinal = e.ordinal;
                     matches++;
@@ -633,19 +630,19 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         if (matches == 0 && !cursor.isEmpty()) {
             // Recover with the first later episode that is still in the playlist exactly once.
             boolean after = false;
-            for (Episode previousEpisode : old.episodes) {
+            for (Episode previousEpisode : old.episodes()) {
                 if (after && previousEpisode.available) {
-                    long copies = catalog.episodes.stream().filter(e ->
+                    long copies = catalog.episodes().stream().filter(e ->
                             e.available && e.videoId.equals(previousEpisode.videoId)).count();
                     if (copies == 1) {
                         recovery = previousEpisode.videoId;
                         break;
                     }
                 }
-                if (previousEpisode.ordinal == old.cursorOrdinal
+                if (previousEpisode.ordinal == old.cursorOrdinal()
                         && previousEpisode.videoId.equals(cursor)) after = true;
             }
-            if (recovery.isEmpty() && available.contains(old.recoveryId)) recovery = old.recoveryId;
+            if (recovery.isEmpty() && available.contains(old.recoveryId())) recovery = old.recoveryId();
         }
         meta("recovery_next", id, recovery);
         db.execSQL(
@@ -655,7 +652,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                 new Object[] {
                     revision,
                     cursor,
-                    cursor.isEmpty() ? old.bookmarkId : cursor,
+                    cursor.isEmpty() ? old.bookmarkId() : cursor,
                     ordinal,
                     revision,
                     now,
@@ -668,9 +665,9 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         db.beginTransaction();
         try {
             Series s = series(id);
-            if (s.revision != revision)
+            if (s.revision() != revision)
                 throw new IllegalStateException("morphe_series_tracker_error_playlist_changed");
-            if (ordinal > 0 && s.episodes.stream().noneMatch(
+            if (ordinal > 0 && s.episodes().stream().noneMatch(
                     e -> e.ordinal == ordinal
                             && e.videoId.equals(videoId)
                             && e.available))
@@ -735,11 +732,11 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         db.beginTransaction();
         try {
             Series series = series(playlist);
-            if (!series.complete() || series.revision != revision)
+            if (!series.complete() || series.revision() != revision)
                 throw new IllegalStateException("morphe_series_tracker_error_playlist_changed");
             Set<String> ids = new LinkedHashSet<>();
             boolean found = false;
-            for (Episode e : series.episodes) {
+            for (Episode e : series.episodes()) {
                 if (e.available && !e.videoId.isEmpty()) ids.add(e.videoId);
                 if (e.ordinal == ordinal) {
                     found = true;
@@ -767,7 +764,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                             null)) {
                 while (starts.moveToNext()) {
                     Series candidate = series(starts.getString(0));
-                    if (candidate.startHere && ids.contains(candidate.cursorId))
+                    if (candidate.startHere() && ids.contains(candidate.cursorId()))
                         navigationBefore.add(candidate);
                 }
             }
@@ -775,7 +772,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             Map<String, TrackerModels.Override> before = new LinkedHashMap<>();
             for (String id : ids) {
                 if (id.isEmpty()) continue;
-                before.put(id, progress(id).override);
+                before.put(id, progress(id).override());
                 ensureProgress(id);
                 if (override == TrackerModels.Override.WATCHED)
                     db.delete("meta", "key LIKE 'start_here:%' AND value=?", new String[] {id});
@@ -789,7 +786,7 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             undo.navigationBefore = navigationBefore;
             undo.navigationAfter = new ArrayList<>();
             for (Series beforeSeries : navigationBefore)
-                undo.navigationAfter.add(series(beforeSeries.id));
+                undo.navigationAfter.add(series(beforeSeries.id()));
             return undo;
         } finally {
             db.endTransaction();
@@ -806,26 +803,26 @@ public final class TrackerRepository extends SQLiteOpenHelper {
             if (undo.removed != null) restoreMissing(undo.removed, now);
             if (navigationUntouched) {
                 Map<String, Series> after = new HashMap<>();
-                for (Series value : undo.navigationAfter) after.put(value.id, value);
+                for (Series value : undo.navigationAfter) after.put(value.id(), value);
                 Map<String, Series> current = new HashMap<>();
-                for (Series value : library()) current.put(value.id, value);
+                for (Series value : library()) current.put(value.id(), value);
                 for (Series before : undo.navigationBefore) {
-                    Series expected = after.get(before.id), actual = current.get(before.id);
+                    Series expected = after.get(before.id()), actual = current.get(before.id());
                     if (expected == null || actual == null || !sameNavigation(expected, actual))
                         continue;
                     db.execSQL(
                             "UPDATE series SET cursor_id=?,cursor_ordinal=?,cursor_revision=?,"
                                     + "bookmark_id=?,activity=? WHERE playlist_id=?",
                             new Object[] {
-                                before.cursorId,
-                                before.cursorOrdinal,
-                                before.cursorRevision,
-                                before.bookmarkId,
-                                before.activity,
-                                before.id
+                                before.cursorId(),
+                                before.cursorOrdinal(),
+                                before.cursorRevision(),
+                                before.bookmarkId(),
+                                before.activity(),
+                                before.id()
                             });
-                    meta("start_here", before.id, before.startHere ? before.cursorId : "");
-                    meta("recovery_next", before.id, before.recoveryId);
+                    meta("start_here", before.id(), before.startHere() ? before.cursorId() : "");
+                    meta("recovery_next", before.id(), before.recoveryId());
                 }
             }
             for (Map.Entry<String, TrackerModels.Override> entry : undo.previous.entrySet())
@@ -843,22 +840,22 @@ public final class TrackerRepository extends SQLiteOpenHelper {
     }
 
     private static boolean sameNavigation(Series a, Series b) {
-        return a.epoch.equals(b.epoch)
-                && a.revision == b.revision
-                && a.cursorId.equals(b.cursorId)
-                && a.cursorOrdinal == b.cursorOrdinal
-                && a.cursorRevision == b.cursorRevision
-                && a.bookmarkId.equals(b.bookmarkId)
-                && a.startHere == b.startHere
-                && a.activity == b.activity;
+        return a.epoch().equals(b.epoch())
+                && a.revision() == b.revision()
+                && a.cursorId().equals(b.cursorId())
+                && a.cursorOrdinal() == b.cursorOrdinal()
+                && a.cursorRevision() == b.cursorRevision()
+                && a.bookmarkId().equals(b.bookmarkId())
+                && a.startHere() == b.startHere()
+                && a.activity() == b.activity();
     }
 
     Undo startHereWithUndo(Series series, Episode episode, long now) {
-        Series before = series(series.id);
-        startHere(series.id, series.revision, episode.ordinal, episode.videoId, now);
+        Series before = series(series.id());
+        startHere(series.id(), series.revision(), episode.ordinal, episode.videoId, now);
         Undo undo = new Undo(Collections.emptyMap(), manualRevision(), historyEpoch());
         undo.navigationBefore = Collections.singletonList(before);
-        undo.navigationAfter = Collections.singletonList(series(series.id));
+        undo.navigationAfter = Collections.singletonList(series(series.id()));
         return undo;
     }
 
@@ -879,11 +876,11 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         db.beginTransaction();
         try {
             Series old = series(id);
-            if (old.revision != revision)
+            if (old.revision() != revision)
                 throw new IllegalStateException("morphe_series_tracker_error_playlist_changed");
             meta("reverse_order", id, reverse ? "true" : "");
             meta("hide_watched", id, hideWatched ? "true" : "");
-            if (old.reverseOrder != reverse && old.complete())
+            if (old.reverseOrder() != reverse && old.complete())
                 db.execSQL(
                         "UPDATE series SET catalog_revision=catalog_revision+1,cursor_revision=CASE"
                             + " WHEN cursor_revision=catalog_revision THEN catalog_revision+1 ELSE"
@@ -918,9 +915,9 @@ public final class TrackerRepository extends SQLiteOpenHelper {
 
     int missingSeries(LibraryBackup.Data backup) {
         Set<String> existing = new HashSet<>();
-        for (Series s : library()) existing.add(s.id);
+        for (Series s : library()) existing.add(s.id());
         int count = 0;
-        for (Series s : backup.series) if (!existing.contains(s.id)) count++;
+        for (Series s : backup.series()) if (!existing.contains(s.id())) count++;
         return count;
     }
 
@@ -931,46 +928,46 @@ public final class TrackerRepository extends SQLiteOpenHelper {
         int added = 0;
         try {
             Set<String> existing = new HashSet<>();
-            for (Series s : library()) existing.add(s.id);
+            for (Series s : library()) existing.add(s.id());
             long revision = nextEditRevision();
-            for (Series s : backup.series) {
-                if (existing.contains(s.id)) continue;
-                List<Episode> episodes = new ArrayList<>(s.episodes);
+            for (Series s : backup.series()) {
+                if (existing.contains(s.id())) continue;
+                List<Episode> episodes = new ArrayList<>(s.episodes());
                 episodes.sort(Comparator.comparingInt(e -> e.ordinal));
                 saveSeries(
-                        s.id,
-                        s.name,
-                        s.bookmarkId,
-                        s.complete() ? new CatalogClient.Catalog(s.name, episodes) : null,
+                        s.id(),
+                        s.name(),
+                        s.bookmarkId(),
+                        s.complete() ? new CatalogClient.Catalog(s.name(), episodes) : null,
                         now);
                 db.execSQL(
                         "UPDATE series SET cursor_id=?,cursor_ordinal=?,cursor_revision=?,"
                                 + "activity=?,fetched_at=? WHERE playlist_id=?",
                         new Object[] {
-                            s.cursorId,
-                            s.cursorOrdinal,
-                            s.cursorRevision == s.revision ? (s.complete() ? 1 : 0) : -1,
-                            Math.min(s.activity, now),
-                            Math.min(s.fetchedAt, now),
-                            s.id
+                            s.cursorId(),
+                            s.cursorOrdinal(),
+                            s.cursorRevision() == s.revision() ? (s.complete() ? 1 : 0) : -1,
+                            Math.min(s.activity(), now),
+                            Math.min(s.fetchedAt(), now),
+                            s.id()
                         });
-                meta("reverse_order", s.id, s.reverseOrder ? "true" : "");
-                meta("hide_watched", s.id, s.hideWatched ? "true" : "");
-                meta("start_here", s.id, s.startHere ? s.cursorId : "");
-                meta("recovery_next", s.id, s.recoveryId);
-                for (Progress p : s.progress.values()) {
+                meta("reverse_order", s.id(), s.reverseOrder() ? "true" : "");
+                meta("hide_watched", s.id(), s.hideWatched() ? "true" : "");
+                meta("start_here", s.id(), s.startHere() ? s.cursorId() : "");
+                meta("recovery_next", s.id(), s.recoveryId());
+                for (Progress p : s.progress().values()) {
                     ContentValues values = new ContentValues();
-                    values.put("video_id", p.videoId);
-                    values.put("position_ms", p.positionMs);
-                    values.put("duration_ms", p.durationMs);
-                    values.put("auto_completed", p.autoCompleted ? 1 : 0);
-                    values.put("completion_override", p.override.name());
-                    values.put("played_at", Math.min(p.playedAt, now));
+                    values.put("video_id", p.videoId());
+                    values.put("position_ms", p.positionMs());
+                    values.put("duration_ms", p.durationMs());
+                    values.put("auto_completed", p.autoCompleted() ? 1 : 0);
+                    values.put("completion_override", p.override().name());
+                    values.put("played_at", Math.min(p.playedAt(), now));
                     values.put("edit_revision", revision);
                     values.put("edited_at", now);
                     if (db.insertWithOnConflict(
                                     "video_progress", null, values, SQLiteDatabase.CONFLICT_IGNORE)
-                            != -1) meta("native_clear", p.videoId, "");
+                            != -1) meta("native_clear", p.videoId(), "");
                 }
                 added++;
             }
@@ -1042,7 +1039,12 @@ public final class TrackerRepository extends SQLiteOpenHelper {
                     });
     }
 
-    public void prune(long now) {
+    private static long valueOrZero(Map<String, Long> values, String key) {
+        Long value = values.get(key);
+        return value == null ? 0 : value;
+    }
+
+    public void prune() {
         getWritableDatabase().execSQL("DELETE FROM video_progress WHERE " + UNREFERENCED);
         pruneNativeBaselines();
     }

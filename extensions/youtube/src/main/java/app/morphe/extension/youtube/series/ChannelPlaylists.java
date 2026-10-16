@@ -112,13 +112,11 @@ final class ChannelPlaylists {
 
         void collect(Object node, int depth) throws JSONException {
             if (depth > 16 || visits++ >= 4000 || rows.length() >= MAX_ITEMS) return;
-            if (node instanceof JSONArray) {
-                JSONArray array = (JSONArray) node;
+            if (node instanceof JSONArray array) {
                 for (int i = 0; i < array.length(); i++) collect(array.opt(i), depth + 1);
                 return;
             }
-            if (!(node instanceof JSONObject)) return;
-            JSONObject object = (JSONObject) node;
+            if (!(node instanceof JSONObject object)) return;
             JSONObject lockup = object.optJSONObject("lockupViewModel");
             if (lockup != null
                     && "LOCKUP_CONTENT_TYPE_PLAYLIST".equals(lockup.optString("contentType"))) {

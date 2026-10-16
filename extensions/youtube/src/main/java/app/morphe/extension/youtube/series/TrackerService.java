@@ -34,6 +34,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -71,21 +72,13 @@ public final class TrackerService {
     private final ArrayDeque<String> quietQueue = new ArrayDeque<>();
     private volatile String epoch, storageError = "";
     private volatile TrackerRepository.Undo lastUndo;
-    private volatile long undoUntil, undoSerial;
+    private volatile long undoUntil;
+    private final AtomicLong undoSerial = new AtomicLong();
     private volatile String undoMessage = "";
     private long lastPrune;
     private volatile Set<String> trackedVideos = Collections.emptySet();
 
-    private static final class Mutation {
-        final Runnable work, success;
-        final Consumer<String> error;
-
-        Mutation(Runnable work, Runnable success, Consumer<String> error) {
-            this.work = work;
-            this.success = success;
-            this.error = error;
-        }
-    }
+    private record Mutation(Runnable work, Runnable success, Consumer<String> error) {}
 
     private TrackerService(Context context) {
         this(
@@ -171,7 +164,7 @@ public final class TrackerService {
         if (!storageError.isEmpty()) {
             // Network completions are already accepted work, bounded by the network pool.
             if (completion || pending.size() < 256) pending.add(command);
-            else main.post(() -> command.error.accept("morphe_series_tracker_error_pending_full"));
+            else main.post(() -> command.error().accept("morphe_series_tracker_error_pending_full"));
             return;
         }
         execute(command);
@@ -184,23 +177,23 @@ public final class TrackerService {
 
     private boolean execute(Mutation command) {
         try {
-            command.work.run();
-            main.post(command.success);
+            command.work().run();
+            main.post(command.success());
             changed();
             return true;
         } catch (SQLiteConstraintException failure) {
             Logger.printDebug(() -> "Series already saved or changed", failure);
-            main.post(() -> command.error.accept("morphe_series_tracker_error_conflict"));
+            main.post(() -> command.error().accept("morphe_series_tracker_error_conflict"));
             return true;
         } catch (SQLiteException failure) {
             storageError = "morphe_series_tracker_error_storage_save";
             Logger.printException(() -> storageError, failure);
             pending.addFirst(command);
-            main.post(() -> command.error.accept(storageError));
+            main.post(() -> command.error().accept(storageError));
             changed();
             return false;
         } catch (RuntimeException failure) {
-            main.post(() -> command.error.accept(message(failure)));
+            main.post(() -> command.error().accept(message(failure)));
             return true;
         }
     }
@@ -233,7 +226,7 @@ public final class TrackerService {
     }
 
     private void updateTrackedVideos() {
-        repository.prune(System.currentTimeMillis());
+        repository.prune();
         trackedVideos = repository.trackedVideoIds();
     }
 
@@ -246,17 +239,17 @@ public final class TrackerService {
     }
 
     long undoSerial() {
-        return undoSerial;
+        return undoSerial.get();
     }
 
     private void rememberUndo(TrackerRepository.Undo value, String message) {
         lastUndo = value;
-        long serial = ++undoSerial;
+        long serial = undoSerial.incrementAndGet();
         undoMessage = message;
         long duration = undoDuration();
         undoUntil = SystemClock.uptimeMillis() + duration;
         main.postDelayed(() -> {
-            if (undoSerial == serial) {
+            if (undoSerial.get() == serial) {
                 // Removed progress is kept in memory only while Undo is available.
                 lastUndo = null;
                 changed();
@@ -272,6 +265,7 @@ public final class TrackerService {
         AccessibilityManager manager = (AccessibilityManager)
                 Utils.getContext().getSystemService(Context.ACCESSIBILITY_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            //noinspection WrongConstant
             return manager.getRecommendedTimeoutMillis((int) defaultDuration,
                     AccessibilityManager.FLAG_CONTENT_TEXT | AccessibilityManager.FLAG_CONTENT_CONTROLS);
         }
@@ -405,7 +399,7 @@ public final class TrackerService {
                             && repository.checkpoint(
                             snapshot, capturedEpoch == null ? epoch : capturedEpoch)) {
                         if (System.currentTimeMillis() - lastPrune > 3600000) {
-                            repository.prune(System.currentTimeMillis());
+                            repository.prune();
                             lastPrune = System.currentTimeMillis();
                         }
                     }
@@ -415,7 +409,7 @@ public final class TrackerService {
                 });
     }
 
-    public Future<?> discover(
+    Future<?> discover(
             String video, Consumer<List<PlaylistDiscovery.Match>> done, Consumer<String> error) {
         try {
             return network.submit(() -> {
@@ -489,7 +483,7 @@ public final class TrackerService {
             Consumer<String> error) {
         mutation(
                 () -> {
-                    if (selection.positionMs >= 0
+                    if (selection.positionMs() >= 0
                             && !RecordingPrivacy.acceptsManualPosition(privacyGeneration))
                         throw new IllegalStateException("morphe_series_tracker_identity_unavailable");
                     repository.saveSeries(
@@ -507,13 +501,13 @@ public final class TrackerService {
             try {
                 final long now = System.currentTimeMillis();
                 for (Series s : repository.library())
-                    if (!refreshing.containsKey(s.id)
-                            && !quietQueue.contains(s.id)
+                    if (!refreshing.containsKey(s.id())
+                            && !quietQueue.contains(s.id())
                             && CatalogRefreshPolicy.due(
-                            repository.hasEpisodeInfo(s.id) ? s.fetchedAt : 0,
-                            repository.lastRefreshAttempt(s.id),
-                            repository.refreshRetryAt(s.id),
-                            now)) quietQueue.add(s.id);
+                            repository.hasEpisodeInfo(s.id()) ? s.fetchedAt() : 0,
+                            repository.lastRefreshAttempt(s.id()),
+                            repository.refreshRetryAt(s.id()),
+                            now)) quietQueue.add(s.id());
                 pumpQuiet();
             } catch (RuntimeException failure) {
                 Logger.printException(() -> "Could not check catalog freshness", failure);
@@ -565,10 +559,11 @@ public final class TrackerService {
 
     private void fetchAndPublish(
             TrackerRepository.FetchTicket ticket, boolean quiet, Consumer<String> error) {
+        String id = ticket.id;
         CatalogClient.Catalog result = null;
         Exception failure = null;
         try {
-            result = catalogs.fetch(ticket.id);
+            result = catalogs.fetch(id);
         } catch (Exception e) {
             failure = e;
         }
@@ -624,7 +619,7 @@ public final class TrackerService {
     }
 
     private void requireCurrent(Series s) {
-        if (!repository.series(s.id).epoch.equals(s.epoch))
+        if (!repository.series(s.id()).epoch().equals(s.epoch()))
             throw new IllegalStateException("morphe_series_tracker_error_series_changed");
     }
 
@@ -638,7 +633,7 @@ public final class TrackerService {
         mutation(
                 () -> {
                     requireCurrent(s);
-                    repository.select(s.id, s.revision, ordinal, videoId, restart);
+                    repository.select(s.id(), s.revision(), ordinal, videoId, restart);
                     updateTrackedVideos();
                 },
                 done,
@@ -659,7 +654,7 @@ public final class TrackerService {
                     requireCurrent(s);
                     rememberUndo(
                             repository.markThrough(
-                                    s.id, s.revision, ordinal, System.currentTimeMillis()),
+                                    s.id(), s.revision(), ordinal, System.currentTimeMillis()),
                             "morphe_series_tracker_marked");
                 },
                 done,
@@ -682,7 +677,7 @@ public final class TrackerService {
             Series s, boolean reverse, boolean hideWatched, Runnable done, Consumer<String> error) {
         mutation(() -> {
                     requireCurrent(s);
-                    repository.seriesOptions(s.id, s.revision, reverse, hideWatched);
+                    repository.seriesOptions(s.id(), s.revision(), reverse, hideWatched);
                 },
                 done,
                 error);

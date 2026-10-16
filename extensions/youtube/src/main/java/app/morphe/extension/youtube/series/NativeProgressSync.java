@@ -51,24 +51,24 @@ final class NativeProgressSync {
         result.seconds = seconds;
         if (!selectedSeries.isEmpty()) {
             List<Series> focused = new ArrayList<>();
-            for (Series series : library) if (series.id.equals(selectedSeries)) focused.add(series);
+            for (Series series : library) if (series.id().equals(selectedSeries)) focused.add(series);
             library = focused;
         }
         Set<String> scope = new HashSet<>();
         for (Series series : library) {
-            for (Episode ep : series.episodes)
+            for (Episode ep : series.episodes())
                 if (ep.available) {
                     scope.add(ep.videoId);
                     long duration = ep.durationMs > 0
                             ? ep.durationMs
-                            : series.progress(ep.videoId).durationMs;
+                            : series.progress(ep.videoId).durationMs();
                     result.durations.merge(ep.videoId, duration, Math::max);
                 }
-            if (!series.bookmarkId.isEmpty()) {
-                scope.add(series.bookmarkId);
+            if (!series.bookmarkId().isEmpty()) {
+                scope.add(series.bookmarkId());
                 result.durations.merge(
-                        series.bookmarkId,
-                        series.progress(series.bookmarkId).durationMs,
+                        series.bookmarkId(),
+                        series.progress(series.bookmarkId()).durationMs(),
                         Math::max);
             }
         }
@@ -85,19 +85,19 @@ final class NativeProgressSync {
             }
             NativeHistoryTransport.Page response = NativeHistoryTransport.page(
                     continuation, generation, force ? 10_000 : 30_000, remaining);
-            for (NativeHistoryPage.Row row : response.value.rows.values()) {
-                if (!scope.contains(row.id) || result.rows.containsKey(row.id)) continue;
-                result.rows.put(row.id, row);
-                result.observedAt.put(row.id, response.startedAt);
+            for (NativeHistoryPage.Row row : response.value().rows.values()) {
+                if (!scope.contains(row.id()) || result.rows.containsKey(row.id())) continue;
+                result.rows.put(row.id(), row);
+                result.observedAt.put(row.id(), response.startedAt());
             }
-            continuation = response.value.continuation;
+            continuation = response.value().continuation;
             if (continuation.isEmpty() || !tokens.add(continuation)) break;
             // Continue needs deeper pages only when some followed series is absent from recent
             // History.
             boolean missing = false;
             for (Series series : library) {
-                boolean found = result.rows.containsKey(series.bookmarkId);
-                for (Episode ep : series.episodes)
+                boolean found = result.rows.containsKey(series.bookmarkId());
+                for (Episode ep : series.episodes())
                     if (result.rows.containsKey(ep.videoId)) {
                         found = true;
                         break;

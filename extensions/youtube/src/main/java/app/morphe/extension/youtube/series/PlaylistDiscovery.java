@@ -52,29 +52,13 @@ final class PlaylistDiscovery {
         }
     }
 
-    private static final class Cached {
-        final long until;
-        final List<Match> matches;
-
-        Cached(long until, List<Match> matches) {
-            this.until = until;
-            this.matches = matches;
-        }
-    }
+    private record Cached(long until, List<Match> matches) {}
 
     private final Transport transport;
     private final LongSupplier clock;
     private final java.util.function.Consumer<Exception> errors;
     private final LinkedHashMap<String, Cached> cache = new LinkedHashMap<>(32, .75f, true);
     private volatile long retryUntil;
-
-    PlaylistDiscovery() {
-        this(CatalogClient::request, () -> System.nanoTime() / 1000000);
-    }
-
-    PlaylistDiscovery(Transport transport, LongSupplier clock) {
-        this(transport, clock, ignored -> {});
-    }
 
     PlaylistDiscovery(
             Transport transport,
@@ -90,7 +74,7 @@ final class PlaylistDiscovery {
         if (!video.matches("[A-Za-z0-9_-]{11}")) return Collections.emptyList();
         synchronized (cache) {
             Cached saved = cache.get(video);
-            if (saved != null && clock.getAsLong() < saved.until) return saved.matches;
+            if (saved != null && clock.getAsLong() < saved.until()) return saved.matches();
         }
         if (clock.getAsLong() < retryUntil) return Collections.emptyList();
         Budget budget = new Budget();
@@ -211,11 +195,11 @@ final class PlaylistDiscovery {
                                 budget.request("browse", body, bytes),
                         clock)
                         .fetch(candidate.id);
-                if (catalog.episodes.stream().noneMatch(e ->
+                if (catalog.episodes().stream().noneMatch(e ->
                         e.available && e.videoId.equals(video))) {
                     continue;
                 }
-                String image = catalog.episodes.stream()
+                String image = catalog.episodes().stream()
                         .filter(e -> e.available)
                         .map(e -> e.videoId)
                         .findFirst()
@@ -223,7 +207,7 @@ final class PlaylistDiscovery {
                 found.add(
                         new Match(
                                 candidate.id,
-                                catalog.title.isEmpty() ? candidate.title : catalog.title,
+                                catalog.title().isEmpty() ? candidate.title : catalog.title(),
                                 candidate.owner,
                                 image));
             } catch (InterruptedIOException e) {
@@ -253,15 +237,15 @@ final class PlaylistDiscovery {
             int allowed = Math.min(Math.min(CatalogClient.PAGE_BYTES, MAX_BYTES - bytes), limit);
             CatalogClient.Reply reply = transport.request(
                     endpoint, body, (int) Math.min(remaining, 12000), allowed);
-            bytes += reply.bytes;
-            if (reply.bytes > allowed || clock.getAsLong() >= deadline) {
+            bytes += reply.bytes();
+            if (reply.bytes() > allowed || clock.getAsLong() >= deadline) {
                 throw new InterruptedIOException("Discovery limit reached");
             }
-            if (reply.status == 429 || reply.status == 503) {
-                retryUntil = clock.getAsLong() + Math.max(30000, Math.min(3600000, reply.retryAfterMs));
+            if (reply.status() == 429 || reply.status() == 503) {
+                retryUntil = clock.getAsLong() + Math.max(30000, Math.min(3600000, reply.retryAfterMs()));
             }
-            if (reply.status != 200) {
-                throw new IOException("Discovery request failed: " + endpoint + " HTTP " + reply.status);
+            if (reply.status() != 200) {
+                throw new IOException("Discovery request failed: " + endpoint + " HTTP " + reply.status());
             }
             return reply;
         }
@@ -277,7 +261,7 @@ final class PlaylistDiscovery {
                                     .put("hl", "en")
                                     .put("gl", "US")));
             return new JSONObject(
-                    request("browse", payload.toString(), CatalogClient.PAGE_BYTES).body);
+                    request("browse", payload.toString(), CatalogClient.PAGE_BYTES).body());
         }
 
         JSONObject json(String endpoint, JSONObject payload) throws IOException, JSONException {
@@ -292,7 +276,7 @@ final class PlaylistDiscovery {
                                     .put("hl", "en")
                                     .put("gl", "US")));
             return new JSONObject(
-                    request(endpoint, payload.toString(), CatalogClient.PAGE_BYTES).body);
+                    request(endpoint, payload.toString(), CatalogClient.PAGE_BYTES).body());
         }
     }
 
@@ -319,25 +303,7 @@ final class PlaylistDiscovery {
     }
 
     static List<String> queries(String title, String author) {
-        // Season identity is more useful than an episode subtitle or a format suffix.
-        Matcher season = SEASON.matcher(title);
-        String series;
-        if (season.find()) {
-            series = title.substring(0, season.end()).replaceAll("[|｜]", " ").trim();
-        } else {
-            String[] parts = title.split("[|｜]");
-            series = "";
-            for (int i = parts.length - 1; i >= 0 && series.isEmpty(); i--) {
-                String part = parts[i].trim();
-                if (!part.matches("(?i)(?:full\\s+episodes?|official\\s+video|4k|hd)"))
-                    series = part;
-            }
-            series = series.replaceAll(
-                            "\\[[^\\]]*\\]|(?i)\\b(?:episode|ep|part)\\s*#?\\s*\\d+|#\\d+",
-                            " ")
-                    .replaceAll("\\s+", " ")
-                    .trim();
-        }
+        String series = seriesName(title);
         String primary = series.toLowerCase(Locale.ROOT).contains(author.toLowerCase(Locale.ROOT))
                 ? series
                 : author + " " + series;
@@ -347,6 +313,26 @@ final class PlaylistDiscovery {
             if (!value.isEmpty()) queries.add(value.substring(0, Math.min(180, value.length())));
         }
         return new ArrayList<>(queries);
+    }
+
+    private static String seriesName(String title) {
+        // Season identity is more useful than an episode subtitle or a format suffix.
+        Matcher season = SEASON.matcher(title);
+        if (season.find()) return title.substring(0, season.end()).replaceAll("[|｜]", " ").trim();
+        String[] parts = title.split("[|｜]");
+        String series = "";
+        for (int i = parts.length - 1; i >= 0 && series.isEmpty(); i--) {
+            String part = parts[i].trim();
+            if (!part.matches("(?i)(?:full\\s+episodes?|official\\s+video|4k|hd)"))
+                series = part;
+        }
+        // Android regex is ICU, so ] stays escaped inside the character class.
+        //noinspection RegExpRedundantEscape
+        return series.replaceAll(
+                        "\\[[^\\]]*]|(?i)\\b(?:episode|ep|part)\\s*#?\\s*\\d+|#\\d+",
+                        " ")
+                .replaceAll("\\s+", " ")
+                .trim();
     }
 
     private record Candidate(Match match, int score) {

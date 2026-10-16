@@ -91,7 +91,7 @@ final class SeriesPlayback {
         navigating = true;
         final long request = ++token;
         TrackerRuntime.flush();
-        service.series(active.series.id, current -> {
+        service.series(active.series.id(), current -> {
             if (!valid(active, source, request)) return;
             int ordinal = ResumePlanner.occurrence(active.series, active.video, active.ordinal, current);
             if (ordinal < 0) {
@@ -114,7 +114,7 @@ final class SeriesPlayback {
                 activate(current, next.videoId, next.ordinal);
                 try {
                     ResumeLauncher.launch(Utils.getContext(), new LaunchRequest(
-                            next.videoId, current.id, watched ? 0 : progress.positionMs));
+                            next.videoId, current.id(), watched ? 0 : progress.positionMs()));
                 } catch (RuntimeException ex) {
                     Logger.printException(() -> "Could not open episode", ex);
                     fail("morphe_series_tracker_open_failed");

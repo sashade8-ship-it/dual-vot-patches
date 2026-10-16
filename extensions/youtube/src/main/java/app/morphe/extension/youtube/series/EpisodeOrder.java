@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -89,23 +90,26 @@ final class EpisodeOrder {
     private static long[] number(String title) {
         Matcher compact = COMPACT.matcher(title);
         if (compact.find()) {
-            long[] value = {Long.parseLong(compact.group(1)), Long.parseLong(compact.group(2))};
+            long[] value = {
+                    Long.parseLong(Objects.requireNonNull(compact.group(1))),
+                    Long.parseLong(Objects.requireNonNull(compact.group(2)))
+            };
             return compact.find() ? null : value;
         }
         Matcher episode = EPISODE.matcher(title);
         if (!episode.find()) return null;
-        final long n = Long.parseLong(episode.group(1));
+        final long n = Long.parseLong(Objects.requireNonNull(episode.group(1)));
         if (episode.find()) return null; // Episode ranges and compilations are ambiguous.
         Matcher season = SEASON.matcher(title);
-        return new long[] {season.find() ? Long.parseLong(season.group(1)) : -1, n};
+        return new long[] {season.find() ? Long.parseLong(Objects.requireNonNull(season.group(1))) : -1, n};
     }
 
     private static long[] age(String metadata) {
         for (String part : metadata.split("[•·]")) {
             Matcher match = AGE.matcher(part.trim());
             if (!match.matches()) continue;
-            long count = Long.parseLong(match.group(1));
-            String unit = match.group(2).toLowerCase(Locale.ROOT);
+            long count = Long.parseLong(Objects.requireNonNull(match.group(1)));
+            String unit = Objects.requireNonNull(match.group(2)).toLowerCase(Locale.ROOT);
             long low, high;
             switch (unit) {
                 case "second":
