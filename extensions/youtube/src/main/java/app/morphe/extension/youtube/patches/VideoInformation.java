@@ -71,12 +71,6 @@ public final class VideoInformation {
         // Methods are added during patching.
         String patch_getQualityName();
         int patch_getResolution();
-
-        /**
-         * @return The resolution set by YouTube, without the fix of {@link #fixVideoQualityResolution(String, int)}.
-         *         The player only uses this resolution, and different qualities can have the same value.
-         */
-        int patch_getYouTubeResolution();
     }
 
     /**
@@ -234,10 +228,6 @@ public final class VideoInformation {
         return isPlaybackAudioPitchEnabled() && !Settings.PLAYBACK_AUDIO_TIME_STRETCHING.get();
     }
 
-    private static int desiredVideoResolution = AUTOMATIC_VIDEO_QUALITY_VALUE;
-
-    private static boolean qualityNeedsUpdating;
-
     @GuardedBy("itself")
     private static final NumberFormat speedFormatter = NumberFormat.getNumberInstance();
 
@@ -273,21 +263,10 @@ public final class VideoInformation {
     private static VideoQualityMenuInterface currentQualityMenuInterface;
 
     /**
-     * Maximum number of quality changes done by {@link #setVideoQuality} for the same video.
-     * Normally the quality is changed at most 3 times while the video loads.
-     */
-    private static final int MAX_QUALITY_CHANGES_PER_VIDEO = 5;
-
-    /**
-     * Video ID of the quality changes done by {@link #setVideoQuality}.
+     * ID of the video whose quality was selected by the user.
      * The video ID is used, because a player restart starts the same video again.
      */
-    private static String qualityChangeVideoId = "";
-
-    private static int qualityChangeCount;
-
-    @Nullable
-    private static VideoQualityInterface lastChangedQuality;
+    private static String userSelectedQualityVideoId = "";
 
     /**
      * Callback for when the current quality changes.
@@ -344,7 +323,6 @@ public final class VideoInformation {
                 playbackAudioPitchNeedsApplying = true;
             }
             playbackAudioPitchFormattedString = "";
-            desiredVideoResolution = AUTOMATIC_VIDEO_QUALITY_VALUE;
             currentQualities = null;
             currentQualityMenuInterface = null;
             setCurrentQuality(null);
@@ -1109,13 +1087,19 @@ public final class VideoInformation {
     }
 
     /**
-     * @param resolution The desired video quality resolution to use.
+     * The quality selected by the user is kept when the player reloads the current video.
      */
-    public static void setDesiredVideoResolution(int resolution) {
+    public static void userSelectedQuality() {
         Utils.verifyOnMainThread();
-        Logger.printDebug(() -> "Setting desired video resolution: " + resolution);
-        desiredVideoResolution = resolution;
-        qualityNeedsUpdating = true;
+        userSelectedQualityVideoId = getVideoId();
+    }
+
+    /**
+     * @return If the user selected the quality of the current video.
+     */
+    public static boolean isQualitySelectedByUser() {
+        String videoId = getVideoId();
+        return !videoId.isEmpty() && videoId.equals(userSelectedQualityVideoId);
     }
 
     private static void setCurrentQuality(@Nullable VideoQualityInterface quality) {
@@ -1168,6 +1152,9 @@ public final class VideoInformation {
 
     /**
      * Injection point.
+     * <p>
+     * The default quality is used as the initial quality of the video, so the quality
+     * chosen by YouTube is always used and this only keeps the current qualities.
      *
      * @param qualities Video qualities available, ordered from largest to smallest, with index 0 being the 'automatic' value of -2
      * @param originalQualityIndex quality index to use, as chosen by YouTube
@@ -1177,144 +1164,20 @@ public final class VideoInformation {
             Utils.verifyOnMainThread();
             currentQualityMenuInterface = menu;
 
-            final boolean availableQualitiesChanged = (currentQualities == null)
-                    || !Arrays.equals(currentQualities, qualities);
-            if (availableQualitiesChanged) {
+            if (currentQualities == null || !Arrays.equals(currentQualities, qualities)) {
                 currentQualities = qualities;
                 Logger.printDebug(() -> "VideoQualities: " + Arrays.toString(currentQualities));
             }
 
             // On extremely slow internet connections the index can initially be -1
-            originalQualityIndex = Math.max(0, originalQualityIndex);
-
-            VideoQualityInterface updatedCurrentQuality = qualities[originalQualityIndex];
-            if (updatedCurrentQuality.patch_getResolution() != AUTOMATIC_VIDEO_QUALITY_VALUE
-                    && (currentQuality == null || currentQuality != updatedCurrentQuality)) {
+            VideoQualityInterface updatedCurrentQuality = qualities[Math.max(0, originalQualityIndex)];
+            if (updatedCurrentQuality.patch_getResolution() != AUTOMATIC_VIDEO_QUALITY_VALUE) {
                 setCurrentQuality(updatedCurrentQuality);
-            }
-
-            final int preferredQuality = desiredVideoResolution;
-            if (preferredQuality == AUTOMATIC_VIDEO_QUALITY_VALUE) {
-                return originalQualityIndex; // Nothing to do.
-            }
-
-            // After changing videos the qualities can initially be for the prior video.
-            // If the qualities have changed and the default is not auto then an update is needed.
-            if (qualityNeedsUpdating) {
-                qualityNeedsUpdating = false;
-            } else if (!availableQualitiesChanged) {
-                return originalQualityIndex;
-            }
-
-            // Find the highest quality that is equal to or less than the preferred.
-            int i = 0;
-            final int lastQualityIndex = qualities.length - 1;
-            for (VideoQualityInterface quality : qualities) {
-                final int qualityResolution = quality.patch_getResolution();
-                if ((qualityResolution != AUTOMATIC_VIDEO_QUALITY_VALUE && qualityResolution <= preferredQuality)
-                        // Use the lowest video quality if the default is lower than all available.
-                        || i == lastQualityIndex) {
-                    // Qualities with the same YouTube resolution are the same quality for the player.
-                    // Otherwise the quality is changed on every update, as YouTube keeps choosing the first one.
-                    final boolean qualityNeedsChange = (i != originalQualityIndex)
-                            && quality.patch_getYouTubeResolution() != updatedCurrentQuality.patch_getYouTubeResolution();
-                    Logger.printDebug(() -> qualityNeedsChange
-                            ? "Changing video quality from: " + updatedCurrentQuality + " to: " + quality
-                            : "Video is already the preferred quality: " + quality
-                    );
-
-                    // On first load of a new regular video, if the video is already the desired
-                    // quality then the quality flyout will show 'Auto' (ie: Auto (720p)).
-                    //
-                    // To prevent user confusion, set the video index even if the quality is already
-                    // correct so the UI picker will not display "Auto".
-                    //
-                    // Only change Shorts quality if the quality actually needs to change, because
-                    // the "Auto" option is not shown in the flyout and setting the same quality
-                    // again can cause the Short to restart.
-                    //
-                    // If a regular video is opened via a link inside a Short, the Shorts UI fragment
-                    // remains open during the transition. Forcing a changeQuality() restart during
-                    // this specific overlapping state causes an ExoPlayer codec deadlock.
-                    if (ShortsPlayerState.isOpen() && !PlayerType.getCurrent().isNoneOrHidden()) {
-                        return i;
-                    }
-
-                    if ((qualityNeedsChange || !ShortsPlayerState.isOpen())
-                            && shouldChangeQuality(quality, qualityNeedsChange, preferredQuality)) {
-                        changeQuality(quality);
-                        return i;
-                    }
-
-                    return originalQualityIndex;
-                }
-                i++;
             }
         } catch (Exception ex) {
             Logger.printException(() -> "setVideoQuality failure", ex);
         }
         return originalQualityIndex;
-    }
-
-    /**
-     * Setting a quality can restart the player, and the restart updates the qualities again.
-     * If the restart is caused by setting the quality, changing it again on every update
-     * restarts the video in a loop.
-     *
-     * @param qualityNeedsChange If the quality differs from the quality chosen by YouTube.
-     * @param preferredQuality   The desired video resolution.
-     */
-    private static boolean shouldChangeQuality(VideoQualityInterface quality, boolean qualityNeedsChange,
-                                               int preferredQuality) {
-        String videoId = updateQualityChangeVideoId();
-
-        // The quality chosen by YouTube was already set, and setting it again only refreshes the quality flyout.
-        // YouTube can update the same quality with another YouTube resolution (such as 480p with 480 and 720),
-        // and setting each of them switches the resolution used by the player back and forth.
-        // The quality is set again only if its YouTube resolution is closer to the preferred quality.
-        if (!qualityNeedsChange && lastChangedQuality != null
-                && Objects.equals(quality.patch_getQualityName(), lastChangedQuality.patch_getQualityName())
-                && !isCloserResolution(quality.patch_getYouTubeResolution(),
-                        lastChangedQuality.patch_getYouTubeResolution(), preferredQuality)) {
-            Logger.printDebug(() -> "Quality was already set: " + quality);
-            return false;
-        }
-
-        if (qualityChangeCount >= MAX_QUALITY_CHANGES_PER_VIDEO) {
-            Logger.printInfo(() -> "Not changing quality to: " + quality + ", the quality was already changed "
-                    + qualityChangeCount + " times for video: " + videoId + " (possible restart loop)");
-            return false;
-        }
-
-        qualityChangeCount++;
-        lastChangedQuality = quality;
-        return true;
-    }
-
-    /**
-     * Resets the quality changes when the video changes.
-     *
-     * @return The current video ID.
-     */
-    private static String updateQualityChangeVideoId() {
-        String videoId = getVideoId();
-        if (!videoId.equals(qualityChangeVideoId)) {
-            qualityChangeVideoId = videoId;
-            qualityChangeCount = 0;
-            lastChangedQuality = null;
-        }
-        return videoId;
-    }
-
-    /**
-     * @return If the resolution is closer to the preferred resolution than the current resolution.
-     *         A resolution not above the preferred resolution is always closer than one above it.
-     */
-    private static boolean isCloserResolution(int resolution, int currentResolution, int preferredResolution) {
-        if (resolution <= preferredResolution) {
-            return currentResolution > preferredResolution || resolution > currentResolution;
-        }
-        return currentResolution > preferredResolution && resolution < currentResolution;
     }
 
     public static boolean isPremiumVideoQuality(VideoQualityInterface quality) {
