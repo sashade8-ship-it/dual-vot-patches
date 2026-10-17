@@ -49,6 +49,7 @@ import app.morphe.extension.shared.patches.components.BufferAsciiStrings;
 import app.morphe.extension.shared.theme.ThemeUtils;
 import app.morphe.extension.shared.ui.Dim;
 import app.morphe.extension.youtube.patches.AddToQueuePatch;
+import app.morphe.extension.youtube.patches.FeedVideoActionsPatch;
 import app.morphe.extension.youtube.patches.LocalQueuePatch;
 import app.morphe.extension.youtube.patches.PictureinPictureButtonPatch;
 import app.morphe.extension.youtube.patches.SaveToWatchLaterPatch;
@@ -357,6 +358,7 @@ public final class FlyoutUtils {
         if (dialog == null) {
             return;
         }
+        FeedVideoActionsPatch.onBottomSheetFlyout(dialog);
         flyoutDialog = dialog;
 
         runFlyoutVisibilityHandler();
@@ -369,6 +371,7 @@ public final class FlyoutUtils {
         if (popupWindow == null) {
             return;
         }
+        FeedVideoActionsPatch.onPopupWindowFlyout(popupWindow);
         flyoutPopupWindow = popupWindow;
 
         runFlyoutVisibilityHandler();
@@ -557,6 +560,7 @@ public final class FlyoutUtils {
 
             copyListItemTypeface(itemList);
             AddToQueuePatch.onListBound(itemList);
+            FeedVideoActionsPatch.onFlyoutListBound(itemList);
 
         } catch (Exception ex) {
             Logger.printException(() -> "onFlyoutListBound failure", ex);
@@ -869,6 +873,7 @@ public final class FlyoutUtils {
             extractFlyoutIdFromObject(
                     map.get("com.google.android.libraries.youtube.innertube.endpoint.tag")
             );
+            FeedVideoActionsPatch.onFlyoutSender(senderViewRef.get());
         } catch (Exception ex) {
             Logger.printException(() -> "extractFlyoutIdFromMap failure", ex);
         }

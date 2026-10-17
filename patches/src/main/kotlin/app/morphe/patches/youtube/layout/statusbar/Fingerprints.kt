@@ -10,20 +10,9 @@ package app.morphe.patches.youtube.layout.statusbar
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.fieldAccess
-import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
-
-/**
- * Draws the top bars behind the status bar. 21.29 and older read it with a single
- * accessor method, newer targets read it inline in every class that uses it.
- */
-internal object EdgeToEdgeTopBarFeatureFlagFingerprint : Fingerprint(
-    filters = listOf(
-        literal(45400535L)
-    )
-)
 
 /**
  * Shows the view drawn behind the status bar and sets its color.

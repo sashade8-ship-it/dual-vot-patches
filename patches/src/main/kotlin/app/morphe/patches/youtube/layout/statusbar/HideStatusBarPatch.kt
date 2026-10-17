@@ -16,7 +16,6 @@ import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.shared.YouTubeActivityOnCreateFingerprint
-import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
@@ -38,18 +37,6 @@ val hideStatusBarPatch = bytecodePatch(
         PreferenceScreen.GENERAL.addPreferences(
             SwitchPreference("morphe_hide_status_bar", summary = true)
         )
-
-        // https://github.com/MorpheApp/morphe-patches/issues/2969
-        // The flag is read by many classes, and on some devices they do not end up with the same value.
-        // The window is then drawn behind the status bar, but the top bars are not given the status bar inset,
-        // so the status bar and its background view cover them. With the flag off, every class lays out
-        // the top bars below the status bar.
-        EdgeToEdgeTopBarFeatureFlagFingerprint.matchAll().forEach {
-            it.method.insertLiteralOverride(
-                it.instructionMatches.first().index,
-                false
-            )
-        }
 
         YouTubeActivityOnCreateFingerprint.method.addInstruction(
             0,

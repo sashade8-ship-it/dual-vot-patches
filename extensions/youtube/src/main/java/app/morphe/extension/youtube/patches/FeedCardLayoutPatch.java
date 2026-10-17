@@ -603,6 +603,7 @@ public class FeedCardLayoutPatch {
                     try {
                         RecyclerView current = listRef.get();
                         if (current != null) {
+                            updateLateCardOutlines(current);
                             updateShortsCellOutlines(current);
                         }
                     } catch (Exception ex) {
@@ -735,6 +736,19 @@ public class FeedCardLayoutPatch {
         final float x = firstRow.getX();
         canvas.drawRoundRect(x + left, top, x + right, bottom,
                 CARD_CORNER_RADIUS, CARD_CORNER_RADIUS, getShelfPaint(list.getContext()));
+    }
+
+    /**
+     * The label of a recycled card can be set after the card is laid out, so the card keeps the outline
+     * of the item it replaced, without the spacing of the cards.
+     */
+    private static void updateLateCardOutlines(RecyclerView list) {
+        for (int i = 0, count = list.getChildCount(); i < count; i++) {
+            View item = list.getChildAt(i);
+            if (item.getOutlineProvider() != CARD_OUTLINE && isCardLabel(item.getContentDescription())) {
+                setCardOutline(item, CARD_OUTLINE);
+            }
+        }
     }
 
     /**
