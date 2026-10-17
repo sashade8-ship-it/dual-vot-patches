@@ -1,3 +1,13 @@
+## 1.48.0-dev.11-dualvot.8.5.3 (2026-10-17)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.48.0-dev.11](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.48.0-dev.11).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.48.0-dev.10-dualvot.8.5.3 (2026-10-17)
 
 ### Automated Morphe update
@@ -456,6 +466,17 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.48.0-dev.11](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.10...v1.48.0-dev.11) (2026-10-17)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Captions:** Restore translations from original caption sources ([#3794](https://github.com/MorpheApp/morphe-patches/issues/3794)) ([46ab900](https://github.com/MorpheApp/morphe-patches/commit/46ab900bd9daa990a4d741a6e7f3dc5611173cdb))
+* **YouTube - Feed cards layout:** Cards sometimes lose spacing ([0658f00](https://github.com/MorpheApp/morphe-patches/commit/0658f0083bc5d143b379097b706d4114a845a08f))
+
+### ✨ New Features
+
+* **YouTube:** Add `Feed video actions` patch ([#3758](https://github.com/MorpheApp/morphe-patches/issues/3758)) ([b263c08](https://github.com/MorpheApp/morphe-patches/commit/b263c08af15eb0a72f6ea707bd49597d95209d29))
 
 ## [1.48.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0-dev.9...v1.48.0-dev.10) (2026-10-17)
 
