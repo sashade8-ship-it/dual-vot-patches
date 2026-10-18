@@ -1161,6 +1161,8 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Masquer la barre d\'état</string>
   <string name="morphe_hide_status_bar_summary">Masque la barre d\'état du système. Balayez vers le bas depuis le bord supérieur pour l\'afficher momentanément</string>
+  <string name="morphe_fix_status_bar_layout_title">Corriger la barre d\'état qui recouvre les barres supérieures</string>
+  <string name="morphe_fix_status_bar_layout_summary">Maintient une mise en page cohérente de la barre d\'état, afin qu\'elle ne masque pas les barres supérieures et ne laisse aucun espace vide au-dessus du lecteur. Désactivez cette option si l\'application plante ou si les barres supérieures s\'affichent incorrectement</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Arrière-plan du thème clair</string>
   <string name="morphe_theme_color_light_entry_2">Blanc</string>

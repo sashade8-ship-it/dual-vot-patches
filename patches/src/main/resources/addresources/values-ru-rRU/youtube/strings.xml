@@ -1162,6 +1162,8 @@ Second \"item\" text"</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Скрыть строку состояния</string>
   <string name="morphe_hide_status_bar_summary">Скрывает системную строку состояния. Проведите вниз от верхнего края, чтобы на мгновение показать её</string>
+  <string name="morphe_fix_status_bar_layout_title">Исправлена строка состояния, закрывающая верхние панели</string>
+  <string name="morphe_fix_status_bar_layout_summary">Сохраняет неизменным расположение строки состояния, поэтому она не закрывает верхние панели и не оставляет пустого пространства над проигрывателем. Отключите, если приложение выходит из строя или верхние панели выглядят неправильно.</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Фон светлой темы</string>
   <string name="morphe_theme_color_light_entry_2">Белый</string>

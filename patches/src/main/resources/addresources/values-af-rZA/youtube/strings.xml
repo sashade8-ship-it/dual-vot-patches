@@ -1160,6 +1160,8 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Versteek statusbalk</string>
   <string name="morphe_hide_status_bar_summary">Versteek die stelselstatusbalk. Vee af van die boonste rand om dit vir \'n oomblik te wys</string>
+  <string name="morphe_fix_status_bar_layout_title">Verander die statusbalk sodat dit nie die boonste barkies bedek nie</string>
+  <string name="morphe_fix_status_bar_layout_summary">Hou die uitleg van die statusbalk konsekwent, sodat dit nie die boonste barkies bedek en geen spasie bo die speler los nie. Skakel dit af as die app ineenstort of die boonste barkies verkeerd lyk</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Ligte tema-agtergrond</string>
   <string name="morphe_theme_color_light_entry_2">Wit</string>

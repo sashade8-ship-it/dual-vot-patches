@@ -1161,6 +1161,8 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Statusleiste ausblenden</string>
   <string name="morphe_hide_status_bar_summary">Blendet die Systemstatusleiste aus. Wischen Sie vom oberen Bildschirmrand nach unten, um sie kurz einzublenden</string>
+  <string name="morphe_fix_status_bar_layout_title">Statusleiste verhindert nicht das Überdecken der oberen Leisten</string>
+  <string name="morphe_fix_status_bar_layout_summary">Behält das Layout der Statusleiste bei, sodass sie die oberen Leisten nicht überdeckt und über dem Player kein leerer Raum entsteht. Schalten Sie diese Option aus, wenn die App abstürzt oder die oberen Leisten falsch aussehen</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Hintergrund des hellen Designs</string>
   <string name="morphe_theme_color_light_entry_2">Weiß</string>

@@ -1160,6 +1160,8 @@ Apribojimas: jei parinktis „Atkurti senąją vaizdo įrašo veiksmų juostą�
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Slėpti būsenos juostą</string>
   <string name="morphe_hide_status_bar_summary">Paslepia sistemos būsenos juostą. Braukite žemyn nuo viršutinio krašto, kad ją trumpam parodytumėte</string>
+  <string name="morphe_fix_status_bar_layout_title">Ištaisyti būsenos juostą, dengiančią viršutines juostas</string>
+  <string name="morphe_fix_status_bar_layout_summary">Laiko būsenos juostos išdėstymą nuoseklų, kad ji nengeltų viršutinių juostų ir nepaliktų tuščios vietos virš grojimo įrenginio. Išjunkite šią parinktį, jei programėlė žlunga arba viršutinės juostos atrodo netinkamai</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Šviesios temos fonas</string>
   <string name="morphe_theme_color_light_entry_2">Balta</string>

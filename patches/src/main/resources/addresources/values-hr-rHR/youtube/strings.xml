@@ -1148,6 +1148,8 @@ Ograničenje: Ako je 'Vrati staru traku s radnjama za videozapise' isključeno, 
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Sakrij statusnu traku</string>
   <string name="morphe_hide_status_bar_summary">Skriva statusnu traku sustava. Povucite prstom prema dolje s gornjeg ruba da biste je na trenutak prikazali.</string>
+  <string name="morphe_fix_status_bar_layout_title">Ispravi statusnu traku koja prekriva gornje trake</string>
+  <string name="morphe_fix_status_bar_layout_summary">Održava dosljednost rasporeda statusne trake, tako da ne prekriva gornje trake i ne ostavlja prazan prostor iznad playera. Isključite ovo ako aplikacija zapne ili gornje trake izgledaju pogrešno</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Boja pozadine u svijetloj temi</string>
   <string name="morphe_theme_color_light_entry_2">Bijela</string>

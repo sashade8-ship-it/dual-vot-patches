@@ -1160,6 +1160,8 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Nascondi barra di stato</string>
   <string name="morphe_hide_status_bar_summary">Nasconde la barra di stato di sistema. Scorri verso il basso dal bordo superiore per mostrarla per un attimo</string>
+  <string name="morphe_fix_status_bar_layout_title">Correggi la barra di stato che copre le barre superiori</string>
+  <string name="morphe_fix_status_bar_layout_summary">Mantiene coerente il layout della barra di stato, in modo che non copra le barre superiori e non lasci spazio vuoto sopra il player. Disattiva questa opzione se l\'app si arresta in modo anomalo o se le barre superiori appaiono errate</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Sfondo del tema chiaro</string>
   <string name="morphe_theme_color_light_entry_2">Bianco</string>

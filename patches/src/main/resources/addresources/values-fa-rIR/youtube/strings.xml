@@ -1160,6 +1160,8 @@ Second \"item\" text"</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">پنهان کردن نوار وضعیت</string>
   <string name="morphe_hide_status_bar_summary">نوار وضعیت سیستم را پنهان می‌کند. برای نمایش لحظه‌ای آن، از لبه بالایی به پایین بکشید</string>
+  <string name="morphe_fix_status_bar_layout_title">رفع مشکل پوشیدن نوار وضعیت بر روی نوارهای بالایی</string>
+  <string name="morphe_fix_status_bar_layout_summary">چیدمان نوار وضعیت را یکپارچه نگه می‌دارد، بنابراین بر نوارهای بالایی پوشانده نمی‌شود و فضای خالی در بالای پخش‌کننده باقی نمی‌گذارد. اگر برنامه کرش کرد یا نوارهای بالایی به درستی نمایش داده نشدند، این گزینه را غیرفعال کنید</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">پس‌زمینهٔ طرح روشن</string>
   <string name="morphe_theme_color_light_entry_2">سفید</string>

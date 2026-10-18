@@ -1160,6 +1160,8 @@ Second \"item\" text"</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">הסתר את שורת הסטטוס</string>
   <string name="morphe_hide_status_bar_summary">מסתיר את שורת הסטטוס של המערכת. החלק מטה מהקצה העליון כדי להציג אותה לרגע</string>
+  <string name="morphe_fix_status_bar_layout_title">תיקון מסך החיווי שמכסה את הפסים העליונים</string>
+  <string name="morphe_fix_status_bar_layout_summary">שומר על עקביות תצורת מסך החיווי, כך שהוא לא יכסה את הפסים העליונים ולא יישאר רווח ריק מעל הנגן. כבה אפשרות זו אם האפליקציה קורסת או שהפסים העליונים נראים לא תקין</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">רקע של ערכת נושא בהירה</string>
   <string name="morphe_theme_color_light_entry_2">לבן</string>
