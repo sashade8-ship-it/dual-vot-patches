@@ -16,6 +16,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Outline;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
@@ -350,6 +351,10 @@ public class FeedCardLayoutPatch {
      */
     private static final Map<View, Boolean> videoShelfRows = new WeakHashMap<>();
     /**
+     * Backgrounds of the items of the feed that were not mounted yet when their color was looked up.
+     */
+    private static final Map<Drawable, Boolean> unmountedItemBackgrounds = new WeakHashMap<>();
+    /**
      * Edges of the last Shorts shelf card, for the header of a shelf whose Shorts are not in the list yet.
      */
     private static int shortsCardLeft;
@@ -628,12 +633,18 @@ public class FeedCardLayoutPatch {
         return card;
     }
 
-    private static boolean isInCard(Drawable drawable) {
+    @Nullable
+    private static View getDrawableView(Drawable drawable) {
         Drawable.Callback callback = drawable.getCallback();
         while (callback instanceof Drawable parent) {
             callback = parent.getCallback();
         }
-        if (!(callback instanceof View view)) {
+        return callback instanceof View view ? view : null;
+    }
+
+    private static boolean isInCard(Drawable drawable) {
+        View view = getDrawableView(drawable);
+        if (view == null) {
             return false;
         }
 
@@ -646,7 +657,15 @@ public class FeedCardLayoutPatch {
             }
             ViewParent parent = view.getParent();
             if (parent instanceof RecyclerView recyclerView) {
-                return recyclerView.getId() == getFeedId();
+                if (recyclerView.getId() != getFeedId()) {
+                    return false;
+                }
+                // The background is mounted before the content of the item,
+                // so a bar of chips is found only after the item is mounted.
+                if (view instanceof ViewGroup group && group.getChildCount() == 0) {
+                    unmountedItemBackgrounds.put(drawable, Boolean.TRUE);
+                }
+                return !isChipBar(view);
             }
             if (!(parent instanceof View parentView)) {
                 return false;
@@ -659,10 +678,51 @@ public class FeedCardLayoutPatch {
         CardOutlineProvider outline = getCardOutline(child.getContentDescription());
         // The items of the feed are cards, also the ones that YouTube sends as cards and are not converted.
         if (outline == null && child.getParent() instanceof RecyclerView recyclerView
-                && recyclerView.getId() == getFeedId()) {
+                && recyclerView.getId() == getFeedId() && !isChipBar(child)) {
             outline = FEED_ITEM_OUTLINE;
         }
         setCardOutline(child, outline);
+    }
+
+    /**
+     * The bar of chips of the feed, such as the sort buttons of the channel tabs, is an item of the feed
+     * with the chips in a nested list, and it's not a card. The horizontal shelves also have a nested list,
+     * but they are cards with a shelf header.
+     */
+    private static boolean isChipBar(View item) {
+        return hasNestedList(item, 0) && !isShelfHeader(item);
+    }
+
+    /**
+     * The color of the backgrounds of the items that were not mounted yet is looked up again
+     * once the item is mounted, if the item is a bar of chips.
+     */
+    private static void updateUnmountedItemBackgrounds() {
+        if (unmountedItemBackgrounds.isEmpty()) {
+            return;
+        }
+        for (Drawable background : new ArrayList<>(unmountedItemBackgrounds.keySet())) {
+            View view = getDrawableView(background);
+            while (view != null && !(view.getParent() instanceof RecyclerView)) {
+                view = view.getParent() instanceof View parent ? parent : null;
+            }
+            if (!(view instanceof ViewGroup item)) {
+                unmountedItemBackgrounds.remove(background);
+                continue;
+            }
+            if (item.getChildCount() == 0) {
+                continue;
+            }
+            unmountedItemBackgrounds.remove(background);
+            if (isChipBar(item)) {
+                // The color is looked up when the bounds change.
+                Rect bounds = background.copyBounds();
+                background.setBounds(0, 0, 0, 0);
+                background.setBounds(bounds);
+                background.invalidateSelf();
+                updateCardOutline(item);
+            }
+        }
     }
 
     private static void setCardOutline(View view, @Nullable CardOutlineProvider outline) {
@@ -715,6 +775,7 @@ public class FeedCardLayoutPatch {
                     try {
                         RecyclerView current = listRef.get();
                         if (current != null) {
+                            updateUnmountedItemBackgrounds();
                             updateLateCardOutlines(current);
                             updateShortsCellOutlines(current);
                         }

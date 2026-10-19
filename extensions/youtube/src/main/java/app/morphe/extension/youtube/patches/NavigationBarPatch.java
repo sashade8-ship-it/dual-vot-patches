@@ -202,20 +202,23 @@ public final class NavigationBarPatch {
      * the window is drawn behind them. That comes from the edge to edge top bar feature flag,
      * so without it the room is added twice: the navigation bar is raised and an empty bar is left
      * at the bottom (https://github.com/MorpheApp/morphe-patches/issues/3825).
+     * <p>
+     * The app draws the window behind the system navigation buttons only on Android 12 and later,
+     * so on older versions the flags are always turned off, or the room is added twice
+     * (https://github.com/MorpheApp/morphe-patches/issues/3864).
      */
     public static boolean useTranslucentNavigationBar(boolean original) {
         try {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
+                return false;
+            }
+
             Boolean edgeToEdge = HideStatusBarPatch.isEdgeToEdgeTopBar();
             if (edgeToEdge == null) {
                 // Not read yet, or the Hide status bar patch is not included.
                 return original;
             }
-            if (!edgeToEdge) {
-                return false;
-            }
-
-            // Forcing it on Android 11 and lower can hang the app.
-            return original || Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
+            return edgeToEdge;
         } catch (Exception ex) {
             Logger.printException(() -> "useTranslucentNavigationBar failure", ex);
             return original;

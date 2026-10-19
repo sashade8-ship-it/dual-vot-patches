@@ -461,7 +461,7 @@ SABR възпроизвеждане (имитирането на видео по
   <string name="morphe_music_lyrics_section_overlay_title">Наслагване</string>
   <string name="morphe_music_lyrics_section_sync_title">Синхронизация</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">AI крайна точка</string>
-  <string name="morphe_music_lyrics_source_all_disabled">Всички доставчици са деактивирани — вградени текстове и вградени текстове</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Всички доставчици са деактивирани - вградени текстовки и вградени текстове на песни</string>
   <string name="morphe_music_lyrics_source_reset_title">Да се нулира редът на доставчиците?</string>
   <string name="morphe_music_lyrics_source_reset_message">Възстановяване на реда по подразбиране на доставчиците.</string>
   <string name="morphe_music_token_dialog_get_token">Вземи токен</string>
@@ -512,11 +512,10 @@ SABR възпроизвеждане (имитирането на видео по
   <string name="morphe_music_lyrics_show_romanize_button_title">Показване на бутона за романизиране</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Докоснете, за да превключите романизацията; задръжте натиснато за само романизация. Използва романизация от доставчика, Google Translate или API, съвместим с OpenAI.</string>
   <string name="morphe_music_lyrics_local_romanization_title">Локална транслитерация</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">Ромънизирай на устройството, когато доставчикът, OpenAI-съвместима крайна точка и Google Translate са се провалили. Само за китайски, японски и корейски (CJK), около 80 MB текст за изтегляне.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">Транслитерирай на устройството, когато доставчикът, краят на OpenAI-съвместимия интерфейс и Google Translate са се провалили. Само CJK, около 80 MB за изтегляне</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Четене %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Готови четения (%1$d думи CJK)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Изтеглянето не бе успешно — изключете и включете отново, за да опитате пак</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Изтеглянето бе неуспешно – изключете и включете отново, за да опитате повторно</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Показване на бутона за опресняване</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Докоснете, за да превключите към следващия вариант на текста; задръжте натиснато, за да търсите текст по заглавие на песен и изпълнител</string>
   <string name="morphe_music_lyrics_search_dialog_title">Търсене на текст</string>
@@ -553,7 +552,7 @@ SABR възпроизвеждане (имитирането на видео по
   <string name="morphe_music_lyrics_sb_no_video">Тази песен няма id на видеото за изпращане</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Източник: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Натиснете копие за копиране дълго, за да запазите този LRC; ако можете да финализирате таймингите и да ги споделите с общността, бихме ви били благодарни.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Натиснете и задръжте бутона за копиране, за да запазите този LRC; ако можете да фини настройите таймингите и да ги споделите с общността на доставчиците, бихме били благодарни</string>
   <string name="morphe_music_lyrics_translated_by_google">Преведено от Google</string>
   <string name="morphe_music_lyrics_romanized_by_google">Романизирано от Google</string>
   <string name="morphe_music_lyrics_translated_by_ai">Преведено от %s</string>
@@ -576,12 +575,12 @@ SABR възпроизвеждане (имитирането на видео по
   <string name="morphe_music_lyrics_refreshing">Опресняване</string>
   <string name="morphe_music_lyrics_refreshed">Опреснено</string>
   <string name="morphe_music_lyrics_transcribe_key_title">API ключ за QuickLRC</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC транскрибира или синхронизира времевите кодове на текстовете за текущата песен. Отделна услуга, неразconnected с горния съвместим с OpenAI ендпойнт.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC ключът е запазен. Използвайте бутона за синхронизиране в диалоговия прозорец за търсене на текстове или подсказката в панела, когато една песен няма текстове.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC транскрибира или времево синхронизира лирика на текущата песен. Отделна услуга, нереалатична към OpenAI-съвместимия интерфейс по-горе</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">Ключът QuickLRC е запазен. Използвайте бутона за синхронизиране в диалоговия прозорец за търсене на лирика или подсказката на панела, когато песен няма лирика</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">QuickLRC API ключът е запазен</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC не приема този ключ</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">QuickLRC API ключът е изчистен</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC времееви текстове, които нямат такива, или ги транскрибира от песента, срещу кредити. При зададен ключ, песните без текстове предлагат транскрипция и диалоговият прозорец за търсение получава бутон за синхронизиране.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC времеево маркира лирики, които нямат такива, или ги транскрибира от песента, срещу кредити. С зададен ключ, песни без лирика предлагат транскрипция и диалоговият прозорец за търсение получава бутон за синхронизиране</string>
   <string name="morphe_music_lyrics_transcribe_align">Заявка за синхронизиране от QuickLRC</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Синхронизиране</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Приложи синхронизиране</string>
@@ -589,7 +588,7 @@ SABR възпроизвеждане (имитирането на видео по
   <string name="morphe_music_lyrics_transcribe_working">Транскрибиране</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Транскрипцията е прекратена</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Само песни, пуснати от YouTube, могат да бъдат транскрибирани</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">Няма текстове за синхронизиране — вместо това се транскрибира</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">Няма лирика за синхронизиране – вместо това транскрибираме</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC не мога да обработи тази песен</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">Кредитите за QuickLRC са изчерпани за тази песен</string>
   <string name="morphe_music_lyrics_about_summary">"Текстовете се съпоставят по заглавие и изпълнител. Необичайни метаданни може да не намерят нищо или да намерят грешната версия. Използвайте опресняване, за да превключите версиите. Доставчиците, отбелязани с *, изискват токен. Не всички активирани доставчици винаги се запитват в реда, който сте задали, но отговарят според скоростта си."</string>
@@ -606,14 +605,14 @@ SABR възпроизвеждане (имитирането на видео по
   <string name="morphe_music_lyrics_use_ai_section_title">AI секция</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Използва се само когато доставчикът не предоставя етикети за секции като Припев или Куплет, които след това се откриват от вашия OpenAI-съвместим модел</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">AI настройки</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Конфигурирайте съвместимия с OpenAI API ендпойнт за AI-подпомогнат превод, транслитерация и секциониране на текстове.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Конфигурирайте API края на OpenAI-съвместимия интерфейс за AI-задвижван превод, транслитерация и секциониране на лирика</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">URL на крайната точка на API (напр. https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API ключ (оставете празно за анонимен достъп)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Име на модела (напр. openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Шаблон за подкана</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Запълнители: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Подканата е запазена</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Подсказката е запазена, но ендпойнтът за AI все още не е използваем. Конфигурирайте го първо в Настройки за AI.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Подканването е запазено, но AI крайният接口 все още не е годен. Конфигурирайте го първо в Настройки на AI</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Подканата е нулирана</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">AI настройките са запазени</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Не може да се установи връзка с AI крайната точка. Моля проверете настройките си</string>

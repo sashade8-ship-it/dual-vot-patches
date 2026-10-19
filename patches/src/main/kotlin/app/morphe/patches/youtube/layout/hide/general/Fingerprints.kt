@@ -630,6 +630,20 @@ internal object InlineExtraButtonsContainerFingerprint : Fingerprint(
     )
 )
 
+internal object MoreCommentsIconFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Landroid/view/View;",
+    parameters = listOf(),
+    filters = listOf(
+        resourceLiteral(ResourceType.ID, "more_comments_icon"),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            name = "findViewById"
+        ),
+        opcode(Opcode.MOVE_RESULT_OBJECT, location = MatchAfterImmediately())
+    )
+)
+
 internal object AccountListParentFingerprint : Fingerprint(
     filters = listOf(
         resourceLiteral(ResourceType.LAYOUT, "compact_list_item")

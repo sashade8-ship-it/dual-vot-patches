@@ -461,7 +461,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_section_overlay_title">Επικάλυψη</string>
   <string name="morphe_music_lyrics_section_sync_title">Συγχρονισμός</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">Τερματικό σημείο AI</string>
-  <string name="morphe_music_lyrics_source_all_disabled">Όλοι οι πάροχοι απενεργοποιημένοι — ενσωματωμένα στίχοι και εντοιχισμένοι στίχοι</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Όλοι οι πάροχοι απενεργοποιήθηκαν - ενσωματωμένες και εντοιχισμένες στίχοι</string>
   <string name="morphe_music_lyrics_source_reset_title">Επαναφορά σειράς παρόχων;</string>
   <string name="morphe_music_lyrics_source_reset_message">Επαναφορά των παρόχων στην προεπιλεγμένη σειρά προτεραιότητας</string>
   <string name="morphe_music_token_dialog_get_token">Λήψη token</string>
@@ -521,11 +521,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">Εμφάνιση κουμπιού μεταγραφής.</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Πατήστε για εναλλαγή λατινοποίησης· παρατεταμένο πάτημα για λατινοποίηση μόνο. Χρησιμοποιεί λατινοποίηση παρόχου, Google Translate ή ένα API συμβατό με OpenAI.</string>
   <string name="morphe_music_lyrics_local_romanization_title">Τοπική ρωμαιοποίηση</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">Ρωμαιοποιήστε στη συσκευή όταν αποτύχουν ο πάροχος, μια συμβατή με OpenAI διεπαφή και το Google Translate. Μόνο για CJK, περίπου 80 MB αναγνώσεων για λήψη.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">Romanize on the device when the provider, an OpenAI-compatible endpoint and Google Translate have all failed. CJK only, about 80 MB of readings to download</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Ανάγνωση %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Οι αναγνώσεις είναι έτοιμες (%1$d λέξεις CJK)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Η λήψη απέτυχε — απενεργοποιήστε και ενεργοποιήστε ξανά αυτή τη λειτουργία για επανάληψη</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Η λήψη απέτυχε - απενεργοποιήστε και επανεκτελέστε για επανάληψη</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Εμφάνιση κουμπιού ανανέωσης</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Πατήστε για εναλλαγή στην επόμενη υποψήφια επιλογή στίχων· παρατεταμένο πάτημα για αναζήτηση στίχων με βάση τον τίτλο τραγουδιού και τον καλλιτέχνη</string>
   <string name="morphe_music_lyrics_search_dialog_title">Αναζήτηση στίχων</string>
@@ -562,7 +561,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_sb_no_video">Αυτό το κομμάτι δεν έχει αναγνωριστικό βίντεο για υποβολή</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Πηγή: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Πατήστε παρατεταμένα το κουμπί αντιγραφής για να αποθηκεύσετε αυτό το LRC· αν μπορέσετε να κάνετε λεπτομερή ρύθμιση των χρονικοποιήσεων και να τις κοινοποιήσετε στους παρόχους της κοινότητας, θα εκτιμηθούμε.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Πατήστε παρατεταμένα το κουμπί αντιγραφής για να αποθηκεύσετε αυτό το αρχείο LRC· αν μπορείτε να βελτιστοποιήσετε τους χρόνους και να τους μοιραστείτε με τους παρόχους της κοινότητας, θα ήμασταν ευγνώμονες</string>
   <string name="morphe_music_lyrics_translated_by_google">Μετάφραση από Google</string>
   <string name="morphe_music_lyrics_romanized_by_google">Μεταγραφή από Google</string>
   <string name="morphe_music_lyrics_translated_by_ai">Μεταφράστηκε από %s</string>
@@ -585,12 +584,12 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_refreshing">Ανανέωση</string>
   <string name="morphe_music_lyrics_refreshed">Ανανεώθηκε</string>
   <string name="morphe_music_lyrics_transcribe_key_title">API κλειδί QuickLRC</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">Το QuickLRC μεταγράφει ή χρονικοποιεί τους στίχους για το τρέχον κομμάτι. Μια ανεξάρτητη υπηρεσία, χωρίς σχέση με την παραπάνω συμβατή με OpenAI διεπαφή.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">Το κλειδί QuickLRC έχει αποθηκευτεί. Χρησιμοποιήστε το κουμπί ευθυγράμμισης στον διάλογο αναζήτησης στίχων, ή την πρόταση στο πάνελ όταν ένα κομμάτι δεν έχει στίχους.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">Το QuickLRC μεταγράφει ή χρονολογεί στίχους για το τρέχον κομμάτι. Ανεξάρτητη υπηρεσία, μη σχετική με το παραπάνω τελικό σημείο συμβατό με το OpenAI</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">Το κλειδί του QuickLRC αποθηκεύτηκε. Χρησιμοποιήστε το κουμπί ευθυγράμμισης στον διάλογο αναζήτησης στίχων, ή την ειδοποίηση στο πάνελ όταν ένα κομμάτι δεν διαθέτει στίχους</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">Το API κλειδί QuickLRC έχει αποθηκευτεί</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">Το QuickLRC δεν δέχτηκε αυτό το κλειδί</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">Το API κλειδί QuickLRC διαγράφηκε</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">Το QuickLRC χρονικοποιεί στίχους που δεν έχουν κανένα, ή τους μεταγράφει από το κομμάτι, με κόστος πιστωτικών μονάδων. Με καθορισμένο κλειδί, τα κομμάτια χωρίς στίχους προσφέρουν μεταγραφή και ο διάλογος αναζήτησης αποκτά κουμπί ευθυγράμμισης.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">Το QuickLRC προσθέτει χρονολόγηση σε στίχους που δεν την έχουν, ή τους μεταγράφει από το κομμάτι, με κόστος πιστωτικών μονάδων. Με ρυθμισμένο κλειδί, τα κομμάτια χωρίς στίχους προσφέρουν μεταγραφή και ο διάλογος αναζήτησης αποκτά κουμπί ευθυγράμμισης</string>
   <string name="morphe_music_lyrics_transcribe_align">Αίτηση ευθυγράμμισης QuickLRC</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Γίνεται ευθυγράμμιση</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Εφαρμογή ευθυγράμμισης</string>
@@ -598,7 +597,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_transcribe_working">Γίνεται μεταγραφή</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Η μεταγραφή ακυρώθηκε</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Μόνο τα κομμάτια που αναπαράγονται από YouTube μπορούν να μεταγραφούν</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">Κανέναν στίχο προς ευθυγράμμιση — γίνεται μεταγραφή αντί αυτού</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">Δεν υπάρχουν στίχοι προς ευθυγράμμιση - γίνεται μεταγραφή αντίθετα</string>
   <string name="morphe_music_lyrics_transcribe_failed">Το QuickLRC δεν μπόρεσε να επεξεργαστεί αυτό το κομμάτι</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">Τα πιστωτικά μονάδες QuickLRC εξαντλήθηκαν για αυτό το κομμάτι</string>
   <string name="morphe_music_lyrics_about_summary">"Οι στίχοι αντιστοιχίζονται με βάση τον τίτλο και τον καλλιτέχνη· ασυνήθιστα μεταδεδομένα μπορεί να μην βρουν τίποτα ή τη λάθος έκδοση. Χρησιμοποιήστε την ανανέωση για να αλλάξετε εκδόσεις. Οι πάροχοι που επισημαίνονται με * απαιτούν διακριτικό (token). Δεν ζητούνται πάντα όλοι οι ενεργοποιημένοι πάροχοι με τη σειρά που έχετε ορίσει, αλλά αποκρίνονται με βάση την ταχύτητά τους."</string>
@@ -615,14 +614,14 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_use_ai_section_title">Ενότητα AI</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Χρησιμοποιείται μόνο όταν ο πάροχος δεν παρέχει ετικέτες ενοτήτων, όπως Ρεφρέν ή Στροφή, τις οποίες στη συνέχεια ανιχνεύει το μοντέλο συμβατό με το OpenAI</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">Ρυθμίσεις AI</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Ρυθμίστε τη συμβατή με OpenAI διεπαφή API για μετάφραση, ρωμαιοποίηση και εντοπισμό τμημάτων στίχων με υποστήριξη AI.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Ρυθμίστε το τελικό σημείο της API συμβατής με το OpenAI για μετάφραση στίχων, αποδοχή σε λατινικούς χαρακτήρες και τμηματοποίηση με τεχνητή νοημοσύνη</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">URL τελικού σημείου API (π.χ. https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">Κλειδί API (αφήστε κενό για ανώνυμη πρόσβαση)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Όνομα μοντέλου (π.χ. openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Πρότυπο Prompt</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Υποκαταστάτες: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Το prompt αποθηκεύτηκε</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Η πρόσκληση αποθηκεύτηκε, αλλά η διεπαφή AI δεν είναι ακόμη διαθέσιμη. Ρυθμίστε την πρώτα στις Ρυθμίσεις AI.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Η εκκίνηση αποθηκεύτηκε, αλλά το τελικό σημείο AI δεν είναι ακόμα διαθέσιμο. Πριν το χρησιμοποιήσετε, ρυθμίστε το στις Ρυθμίσεις AI</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Το prompt επαναφέρθηκε</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">Οι ρυθμίσεις AI αποθηκεύτηκαν</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Αδυναμία σύνδεσης στο σημείο τελείας AI. Ελέγξτε τις ρυθμίσεις σας</string>

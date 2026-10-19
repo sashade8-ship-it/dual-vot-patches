@@ -7,6 +7,9 @@
 
 package app.morphe.extension.youtube.patches;
 
+import android.content.res.Resources;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -174,6 +177,42 @@ public class LegacyPlayerControlsPatch {
             return MetapanelTextColorFilter.getLightThemeTextColor(color);
         } catch (Exception ex) {
             Logger.printException(() -> "getImageTintColor failure", ex);
+            return color;
+        }
+    }
+
+    /**
+     * Max height of the dots of a page indicator.
+     */
+    private static final float PAGE_INDICATOR_MAX_HEIGHT_DP = 8;
+
+    /**
+     * Injection point.
+     * <p>
+     * The page indicator of the comments button of the video metadata panel can have the dark theme colors,
+     * as the text ({@link #fixMetapanelTextColors()}). The selected dot is the lightest one with the dark theme,
+     * and the darkest one with the light theme, so the colors are inverted and keep their alpha.
+     *
+     * @return The color of a Litho background drawable.
+     */
+    public static int getBackgroundColor(Drawable drawable, int color) {
+        try {
+            if (color == 0 || !MetapanelTextColorFilter.isLightColor(color) || !fixMetapanelTextColors()) {
+                return color;
+            }
+
+            // The dots of the indicator are circles, and the selected dot can be a pill.
+            Rect bounds = drawable.getBounds();
+            final int height = bounds.height();
+            if (height == 0 || height > PAGE_INDICATOR_MAX_HEIGHT_DP
+                    * Resources.getSystem().getDisplayMetrics().density
+                    || bounds.width() > 3 * height) {
+                return color;
+            }
+
+            return (color & 0xFF000000) | (~color & 0x00FFFFFF);
+        } catch (Exception ex) {
+            Logger.printException(() -> "getBackgroundColor failure", ex);
             return color;
         }
     }

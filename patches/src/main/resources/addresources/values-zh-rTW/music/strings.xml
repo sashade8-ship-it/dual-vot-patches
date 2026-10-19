@@ -461,7 +461,7 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_lyrics_section_overlay_title">疊加層</string>
   <string name="morphe_music_lyrics_section_sync_title">同步</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">AI端點</string>
-  <string name="morphe_music_lyrics_source_all_disabled">所有提供者已停用 — 內建歌詞和嵌入式歌詞</string>
+  <string name="morphe_music_lyrics_source_all_disabled">所有提供程序已停用 - 內建歌詞和嵌入式歌詞</string>
   <string name="morphe_music_lyrics_source_reset_title">重設提供者順序？</string>
   <string name="morphe_music_lyrics_source_reset_message">將提供者還原為預設優先順序</string>
   <string name="morphe_music_token_dialog_get_token">取得權杖</string>
@@ -526,11 +526,10 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">顯示羅馬拼音按鈕</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">輕觸以切換羅馬拼音；長按則僅顯示羅馬拼音。使用提供者提供的羅馬拼音、Google 翻譯或 OpenAI 相容的 API。</string>
   <string name="morphe_music_lyrics_local_romanization_title">本地羅馬拼音</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">當提供方、OpenAI 相容端點和 Google 翻譯皆失敗時，在裝置上進行羅馬拼音。僅限中日韓文字（CJK），需下載約 80 MB 的讀音資料。</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s：%2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">當提供程式、OpenAI 相容端點和 Google 翻譯都失效時，在裝置上進行羅馬拼音。僅限中日韓文字，約需下載 80 MB 的閱讀內容</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">正在建立讀音 %1$s：%2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">讀音就緒（%1$d 個 CJK 單詞）</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">下載失敗——請關閉並重新開啟此選項以重試</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">下載失敗 - 關閉並重新開啟此選項以重試</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">顯示重新整理按鈕</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">輕觸後切換至下一則歌詞候選；長按後依歌曲標題及藝人搜尋歌詞</string>
   <string name="morphe_music_lyrics_search_dialog_title">搜尋歌詞</string>
@@ -567,7 +566,7 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_lyrics_sb_no_video">此曲目沒有可提交的影片ID</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">來源：%s</string>
-  <string name="morphe_music_lyrics_contribute_credit">長按複製按鈕以保存此 LRC；如果您能微調時間並與社群提供者分享，我們將不勝感激。</string>
+  <string name="morphe_music_lyrics_contribute_credit">長按複製按鈕以儲存此 LRC；如果您能微調時間軸並與社群提供者分享，我們將不勝感激</string>
   <string name="morphe_music_lyrics_translated_by_google">由 Google 翻譯</string>
   <string name="morphe_music_lyrics_romanized_by_google">由 Google 轉寫</string>
   <string name="morphe_music_lyrics_translated_by_ai">由 %s 進行翻譯</string>
@@ -590,12 +589,12 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_lyrics_refreshing">正在重新整理</string>
   <string name="morphe_music_lyrics_refreshed">已重新整理</string>
   <string name="morphe_music_lyrics_transcribe_key_title">QuickLRC API 金鑰</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC 會為當前曲目轉錄或對齊歌詞。這是一項獨立服務，與上述 OpenAI 相容端點無關。</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC 金鑰已儲存。使用歌詞搜尋對話方塊中的對齊按鈕，或在曲目無歌詞時使用面板提示。</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC 會為目前曲目轉錄或對齊歌詞。這是一個獨立的服務，與上述 OpenAI 相容端點無關</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">已儲存 QuickLRC 金鑰。在歌詞搜尋對話方塊中使用對齊按鈕，或在曲目無歌詞時使用面板提示</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">QuickLRC API 金鑰已儲存</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC 不接受該金鑰</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">QuickLRC API 金鑰已清除</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC 會為缺少時間標記的歌詞添加時間標記，或從曲目中轉錄歌詞，這需要消耗積分。設定金鑰後，無歌詞的曲目將提供轉錄功能，且搜尋對話方塊會新增一個對齊按鈕。</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC 會為無歌詞的曲目產生時間軸，或從曲目進行轉錄，這會消耗信用點數。設定金鑰後，無歌詞的曲目將提供轉錄功能，搜尋對話方塊也會增加對齊按鈕</string>
   <string name="morphe_music_lyrics_transcribe_align">請求 QuickLRC 對齊</string>
   <string name="morphe_music_lyrics_transcribe_aligning">正在對齊</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">套用對齊</string>
@@ -603,7 +602,7 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_lyrics_transcribe_working">正在轉錄</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">轉錄已取消</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">僅可從 YouTube 播放的曲目才能進行轉錄</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">無歌詞可對齊——改為進行轉錄</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">無歌詞可對齊 - 改為進行轉錄</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC 無法處理此曲目</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">此曲目的 QuickLRC 積分已用完</string>
   <string name="morphe_music_lyrics_about_summary">"歌詞會以標題和藝人進行比對，非標準的中繼資料可能找不到任何結果或找到錯誤的版本。使用重新整理來切換版本。標示 * 的提供者需要權杖。所有已啟用的提供者不一定是按照您的順序被要求，而是根據其速度回應。"</string>
@@ -620,14 +619,14 @@ SABR 播放（影片串流模擬已關閉）"</string>
   <string name="morphe_music_lyrics_use_ai_section_title">AI 段落</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">僅在供應商未提供如副歌或主歌等段落標記，而由你的 OpenAI 相容模型偵測時使用</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">AI 設定</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">配置用於 AI 驅動的歌詞翻譯、羅馬拼音和段落標記的 OpenAI 相容 API 端點。</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">配置 OpenAI 相容 API 端點，用於 AI 驅動的歌詞翻譯、羅馬拼音和段落標記</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">API 端點 URL（例如 https://text.pollinations.ai/openai）</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API 金鑰（留空以匿名存取）</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">模型名稱（例如 openai-fast、gpt-4o-mini）</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">提示詞範本</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">佔位符：{language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">已儲存提示詞</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">提示已儲存，但 AI 端點尚不可用。請先在 AI 設定中進行配置。</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">已儲存提示，但 AI 端點尚無法使用。請先在「AI 設定」中進行配置</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">已重設提示詞</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">已儲存 AI 設定</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">無法連線至 AI 端點。請檢查您的設定</string>

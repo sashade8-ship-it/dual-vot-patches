@@ -461,7 +461,7 @@ Kad scrobbling būtų sinchronizuojamas foninio atkūrimo metu, įsitikinkite, k
   <string name="morphe_music_lyrics_section_overlay_title">Perdanga</string>
   <string name="morphe_music_lyrics_section_sync_title">Sinchronizacija</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">AI pabaiga</string>
-  <string name="morphe_music_lyrics_source_all_disabled">Visi teikėjai išjungti – integruotas tekstas ir įterptas tekstas</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Visi teikėjai išjungti – integruoti žodžiai ir įterpti žodžiai</string>
   <string name="morphe_music_lyrics_source_reset_title">Atstatyti tiekėjų eilę?</string>
   <string name="morphe_music_lyrics_source_reset_message">Grąžinti tiekėjus į numatytąją prioriteto eilę</string>
   <string name="morphe_music_token_dialog_get_token">Gauti prieigos raktą</string>
@@ -526,11 +526,10 @@ Reikalingi slapukai: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_show_romanize_button_title">Rodyti romanizavimo mygtuką</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Bakstelėkite, kad įjungtumėte / išjungtumėte romanizaciją; ilgai paspauskite, kad gautumėte tik romanizaciją. Naudoja tiekėjų romanizaciją, „Google“ vertėją arba su „OpenAI“ suderinamą API</string>
   <string name="morphe_music_lyrics_local_romanization_title">Vietinė romanizacija</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">Romanizuoti įrenginyje, kai nepavyksta tiek teikėjas, tiek OpenAI suderinamas galinis taškas, tiek Google Translate. Tinka tik kinų, japonų ir korėjiečių kalboms, norint atsisiųsti reikės apie 80 MB duomenų.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">Romanizuokite įrenginyje, kai nepavyksta tiek tiekėjo, atvirųjų AI suderinamojo galinio taško, tiek Google „Translate\". Tik kinų, japonų ir korėjiečių kalbomis, apie 80 MB tekstų atsisiuntimui</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Skaitmenų %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Skaitmenys paruošti (%1$d CJK žodžiai)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Atsisiuntimas nepavyko — bandykite iš naujo išjungę ir vėl įjungę šią funkciją</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Atsisiuntimas nepavyko. Perkraukite nustatymą ir bandykite dar kartą</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Rodyti atnaujinimo mygtuką</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Bakstelėkite, kad perjungtumėte į kitą dainų tekstų variantą; ilgai paspauskite, kad ieškotumėte dainų tekstų pagal dainos pavadinimą ir atlikėją</string>
   <string name="morphe_music_lyrics_search_dialog_title">Ieškoti dainų tekstų</string>
@@ -567,7 +566,7 @@ Reikalingi slapukai: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_sb_no_video">Šis kūrinys neturi vaizdo įrašo id, kurį būtų galima pateikti</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Šaltinis: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Ilgai paspauskite kopijavimo mygtuką, kad išsaugotumėte šį LRC failą; jei galite sureguliuoti laiko žymes ir pasidalinti jomis su bendruomenės teikėjais, būsite mums labai dėkingi.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Ilgai paspauskite kopijavimo mygtuką, kad išsaugotumėte šią LRC; jei jums pavyktų sukalibruoti laiko žymėjimus ir pasidalinti jais su bendruomenės teikėjais, būtume dėkingi</string>
   <string name="morphe_music_lyrics_translated_by_google">Išvertė „Google“</string>
   <string name="morphe_music_lyrics_romanized_by_google">Romanizavo „Google“</string>
   <string name="morphe_music_lyrics_translated_by_ai">Išvertė %s</string>
@@ -590,12 +589,12 @@ Reikalingi slapukai: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_refreshing">Atnaujinama</string>
   <string name="morphe_music_lyrics_refreshed">Atnaujinta</string>
   <string name="morphe_music_lyrics_transcribe_key_title">QuickLRC API raktas</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC transkribuoja arba sinchronizuoja dabartinio kūrinio tekstus. Tai atskiras paslaugų teikėjas, nesusijęs su aukščiau minėtu OpenAI suderinamu galiniu tašku.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC raktas išsaugotas. Naudokite sinchronizavimo mygtuką ieškant teksto arba naudokite skydelio patarimą, jei kūriniui nėra tekstų.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">„QuickLRC</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC raktas išsaugotas. Naudokite sutapatinimo mygtuką dainų žodžių paieškos dialoge arba skydelio užklausą, kai takelyje nėra dainų žodžių</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">QuickLRC API raktas išsaugotas</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC priėmė tą raktą</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">QuickLRC API raktas išvalytas</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC priskiria laiko žymes tiems kūriniams, kurių jų nėra, arba juos transkribuoja, už tai skaitmenys. Jei nustatote raktą, kūriniams be tekstų bus siūloma transkripcija, o paieškos langelyje pasirodys sinchronizavimo mygtukas.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC suderina laikus dainų žodžiams, kurių jų nėra, arba transkribuoja juos iš takelio, naudojantis kreditais. Turint nustatytą raktą, takeliai be dainų žodžių siūlo transkripciją, o paieškos dialoge atsiranda sutapatinimo mygtukas</string>
   <string name="morphe_music_lyrics_transcribe_align">Prašyti QuickLRC sinchronizuoti</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Sinchronizuojama</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Taikyti sinchronizavimą</string>
@@ -603,7 +602,7 @@ Reikalingi slapukai: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_transcribe_working">Transkribuojama</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Transkripcija atšaukta</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Transkribuoti galima tik tuos kūrinius, kurie grojami iš YouTube</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">Nėra teksto sinchronizuoti – vietoj to transkribuojama</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">Nėra dainų žodžių sutapatinimui - transkribuojama vietoj to</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC negalėjo apdoroti šio kūrinio</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">Šiam kūriniui QuickLRC skaitmenys baigėsi</string>
   <string name="morphe_music_lyrics_about_summary">"Dainų tekstai atrenkami pagal pavadinimą ir atlikėją; neįprasti metaduomenys gali nieko nerasti arba rasti netinkamą versiją. Naudokite atnaujinimą, kad perjungtumėte versijas. Tiekėjai, pažymėti *, reikalauja prieigos rakto. Įjungti tiekėjai ne visada apklausiami jūsų nurodyta tvarka, o atsako pagal savo greitį"</string>
@@ -620,14 +619,14 @@ Reikalingi slapukai: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_use_ai_section_title">AI skiltys</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Naudojama tik tada, kai teikėjas nepateikia jokių skilčių žymių, pavyzdžiui, Priedainio arba Strofos, kurias tada aptinka jūsų su OpenAI suderinamas modelis</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">AI nustatymai</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Konfigūruokite OpenAI suderinamą API galinį tašką dirbtinio intelekto pagalba verčiant, romanizuojant ir analizuojant tekstus.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Nustatyti OpenAI suderinamumo API galinę tašką AI galingoms dainų žodžių vertimams, romanizacijai ir sekcijoms</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">API pabaigos taško URL (pvz., https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API raktas (palikite tuščią, kad prisijungtumėte anonimiškai)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Modelio pavadinimas (pvz., openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Uždaužo šablonas</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Vietiniai kintamieji: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Uždauža išsaugota</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Užklausa išsaugota, bet dar negalite naudoti dirbtinio intelekto galinio taško. Pirmiausia jį sukonfigūruokite Dirbtinio intelekto nustatymuose.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Užklausa išsaugota, bet AI galinė taškolis dar naudojamasi. Pirmiausia ją nustatykite AI nustatymuose</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Uždauža nustatyta iš naujo</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">AI nustatymai išsaugoti</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Nepavyko prisijungti prie AI galinės taško punkto. Prašom patikrinti savo nustatymus</string>

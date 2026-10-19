@@ -526,11 +526,10 @@ Cookies requeridas: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_show_romanize_button_title">Mostrar botón Romanizar</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Pulsa para activar o desactivar la romanización; mantén pulsado para solo romanización. Usa la romanización del proveedor, Google Translate o una API compatible con OpenAI</string>
   <string name="morphe_music_lyrics_local_romanization_title">Romanización local</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">Romaniza en el dispositivo cuando el proveedor, un punto final compatible con OpenAI y Google Translate han fallado. Solo CJK, alrededor de 80 MB de lecturas para descargar.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">Romaniza en el dispositivo cuando el proveedor, un punto final compatible con OpenAI y Google Translate hayan fallado todos. Solo CJK, unos 80 MB de lecturas para descargar</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Lectura %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Lecturas listas (%1$d palabras CJK)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Descarga fallida — apágalo y vuélvelo a encender para reintentar</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Descarga fallida: desactiva y activa esto para reintentar</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Mostrar botón Actualizar</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Pulsa para cambiar a la siguiente letra candidata; mantén pulsado para buscar letras por título de la canción y artista</string>
   <string name="morphe_music_lyrics_search_dialog_title">Buscar letras</string>
@@ -567,7 +566,7 @@ Cookies requeridas: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_sb_no_video">Esta pista no tiene ID de vídeo que enviar</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Fuente: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Mantén pulsado el botón de copia para guardar este LRC; si puedes ajustar los tiempos y compartirlos con los proveedores de la comunidad, estaremos agradecidos.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Mantén presionado el botón copiar para guardar este LRC; si puedes ajustar los tiempos y compartirlos con los proveedores de la comunidad, estaríamos agradecidos</string>
   <string name="morphe_music_lyrics_translated_by_google">Traducido por Google</string>
   <string name="morphe_music_lyrics_romanized_by_google">Romanizado por Google</string>
   <string name="morphe_music_lyrics_translated_by_ai">Traducido por %s</string>
@@ -590,12 +589,12 @@ Cookies requeridas: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_refreshing">Actualizando</string>
   <string name="morphe_music_lyrics_refreshed">Actualizado</string>
   <string name="morphe_music_lyrics_transcribe_key_title">Clave API de QuickLRC</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC transcribe o alinea temporalmente las letras de la canción actual. Un servicio separado, sin relación con el punto final compatible con OpenAI mencionado anteriormente.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">Clave QuickLRC guardada. Usa el botón de alineación en el diálogo de búsqueda de letras o el aviso del panel cuando una canción no tenga letras.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC transcribe o ajusta temporalmente las letras de la pista actual. Un servicio separado, no relacionado con el punto final compatible con OpenAI anterior</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">Clave de QuickLRC guardada. Usa el botón alinear en el diálogo de búsqueda de letras, o el aviso del panel cuando una pista no tenga letras</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">Clave API de QuickLRC guardada</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC no aceptó esa clave</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">Clave API de QuickLRC borrada</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC añade tiempos a las letras que no los tienen, o las transcribe desde la pista, al costo de créditos. Con una clave configurada, las pistas sin letras ofrecen transcripción y el diálogo de búsqueda gana un botón de alineación.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC genera tiempos para letras que no los tienen, o las transcribe desde la pista, con un costo de créditos. Con una clave configurada, las pistas sin letras ofrecen transcripción y el diálogo de búsqueda obtiene un botón de alineación</string>
   <string name="morphe_music_lyrics_transcribe_align">Solicitar alineación de QuickLRC</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Alineando</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Aplicar alineación</string>
@@ -603,7 +602,7 @@ Cookies requeridas: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_transcribe_working">Transcribiendo</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Transcripción cancelada</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Solo se pueden transcribir canciones reproducidas desde YouTube</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">No hay letras para alinear — transcribiendo en su lugar</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">No hay letras para alinear - transcribiendo en su lugar</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC no pudo procesar esta pista</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">Los créditos de QuickLRC se han agotado para esta pista</string>
   <string name="morphe_music_lyrics_about_summary">"Las letras se buscan por título y artista; unos metadatos inusuales pueden no encontrar nada o encontrar la versión incorrecta. Usa Actualizar para cambiar de versión. Los proveedores marcados con * requieren un token. No siempre se consultan todos los proveedores activados en el orden que establezcas, sino que responden según su velocidad"</string>
@@ -620,14 +619,14 @@ Cookies requeridas: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPIS
   <string name="morphe_music_lyrics_use_ai_section_title">Sección con IA</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Solo se utiliza cuando el proveedor no envía etiquetas de sección, como «Estribillo» o «Verso», que tu modelo compatible con OpenAI detecta a continuación</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">Ajustes de IA</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Configura el endpoint de la API compatible con OpenAI para la traducción de letras, la romanización y las secciones mediante IA</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Configura el punto final de la API compatible con OpenAI para la traducción de letras, la romanización y las secciones mediante IA</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">URL del punto de conexión de la API (p. ej., https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">Clave API (dejar en blanco para acceso anónimo)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Nombre del modelo (p. ej., openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Plantilla de Prompt</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Marcadores de posición: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Prompt guardado</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Prompt guardado, pero el endpoint de IA aún no es utilizable. Configúralo primero en Configuración de IA.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Aviso guardado, pero el punto final de IA aún no es utilizable. Configúralo primero en Ajustes de IA</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Prompt restablecido</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">Ajustes de IA guardados</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">No se pudo conectar con el punto de conexión de la IA. Comprueba tus ajustes</string>

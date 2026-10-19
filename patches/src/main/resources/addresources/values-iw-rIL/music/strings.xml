@@ -461,7 +461,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_section_overlay_title">שכבת-על</string>
   <string name="morphe_music_lyrics_section_sync_title">סנכרון</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">נקודת קצה של בינה מלאכותית</string>
-  <string name="morphe_music_lyrics_source_all_disabled">כל הספקים מושבתים – שירים מובנים ושירים מוטמעים</string>
+  <string name="morphe_music_lyrics_source_all_disabled">כל הספקים מבוטלים - שירים מובנים ושירים מוטבעים</string>
   <string name="morphe_music_lyrics_source_reset_title">לאפס את סדר הספקים?</string>
   <string name="morphe_music_lyrics_source_reset_message">שחזר את הספקים לסדר העדיפות המוגדר כברירת מחדל</string>
   <string name="morphe_music_token_dialog_get_token">קבל טוקן</string>
@@ -526,11 +526,10 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_show_romanize_button_title">הצג את כפתור הרומניזציה</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">הקש כדי להפעיל או לכבות רומניזציה; לחיצה ארוכה לרומניזציה בלבד. משתמש ברומניזציה של הספק, ב-Google Translate או ב-API תואם OpenAI.</string>
   <string name="morphe_music_lyrics_local_romanization_title">רומניזציה מקומית</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">לרנום על ההתקן כאשר הספק, נקודת קצה התואמת ל-OpenAI וגוגל תרגום כשלו כולם. רק CJK, כ-80 MB של קריאות להורדה.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">רומניזציה במכשיר כאשר הספק, נקודת קצה תואמת OpenAI ו-Google Translate כללה נכשלו. רק לשוניות CJK, כ-80 MB של קריאות להורדה</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">קריאה %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">קריאות מוכנות (%1$d מילים ב-CJK)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">ההורדה נכשלה — כבה והדלק שוב כדי לנסות שוב</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">ההורדה נכשלה - כבה הדלק מחדש כדי לנסות שוב</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">הצג את כפתור הרענון</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">הקש כדי לעבור למועמד המילים הבא; לחץ והחזק כדי לחפש מילים לפי שם השיר והאמן</string>
   <string name="morphe_music_lyrics_search_dialog_title">חפש מילים</string>
@@ -567,7 +566,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_sb_no_video">לרצועה זו אין מזהה וידאו לשליחה</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">מקור: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">לחיצה ארוכה על כפתור ההעתקה לשמירת LRC זה; אם תוכל לכוונן את הזמנים ולשתף אותם עם ספקי הקהילה, נודה לך מאוד.</string>
+  <string name="morphe_music_lyrics_contribute_credit">לחץ לחיצה ארוכה על כפתור ההעתקה כדי לשמור את ה-LRC הזה; אם תוכל לעדן את הזמנים ולשתף אותם עם ספקי הקהילה, נודה לך</string>
   <string name="morphe_music_lyrics_translated_by_google">תורגם על ידי Google</string>
   <string name="morphe_music_lyrics_romanized_by_google">רומניזציה על ידי Google</string>
   <string name="morphe_music_lyrics_translated_by_ai">תורגם על ידי %s</string>
@@ -590,12 +589,12 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_refreshing">מרענן</string>
   <string name="morphe_music_lyrics_refreshed">רוענן</string>
   <string name="morphe_music_lyrics_transcribe_key_title">מפתח API של QuickLRC</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC מקריא או ממסגר זמן עבור המילים לשיר הנוכחי. שירות נפרד, שאינו קשור לנקודת הקצה התואמת ל-OpenAI לעיל.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">מפתח QuickLRC נשמר. השתמש בכפתור היישור בתיבת החיפוש במילים, או בהתראת הפאנל כאשר לשיר אין מילים.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC מתרגם או מסתנכרן את המילים לרצועה הנוכחית. שירות נפרד, שאינו קשור לנקודת הקצה התואמת OpenAI הנ\"ל</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">מפתח QuickLRC נשמר. השתמש בכפתור הסנכרון בדיאלוג חיפוש המילים, או בהודעת הפאנל כאשר רצועה אין לה מילים</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">מפתח API של QuickLRC נשמר</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC לא קיבל את המפתח הזה</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">מפתח API של QuickLRC נוקה</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC מוסר טיימינג למילים שלא יש להן כלל, או מקריא אותן מהשיר, בעלות של קרדיטים. עם הגדרת מפתח, שירים ללא מילים מציעים הערות והתיבות לחיפוש מתווסף כפתור יישור.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC מזמן מילים שאין להן זמן, או מתרגם אותן מהרצועה, בתשלום נקודות זכות. עם מפתח שהוגדר, רצועות ללא מילים מציעות תרגום והדיאלוג של חיפוש מקבל כפתור סינchronization</string>
   <string name="morphe_music_lyrics_transcribe_align">בקשת יישור QuickLRC</string>
   <string name="morphe_music_lyrics_transcribe_aligning">מיישר</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">יישור יישומים</string>
@@ -603,7 +602,7 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_transcribe_working">מערך הערות</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">הערות בוטלו</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">רק שירים המופעלים מ-Youtube ניתן להערותם</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">אין מילים ליישור — מערכת הערות במקום</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">אין מילים לסנchronize - מתרגם במקום</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC לא הצפה לעבד את השיר הזה</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">קרדיטים של QuickLRC אזלו עבור השיר הזה</string>
   <string name="morphe_music_lyrics_about_summary">"מילות השיר מותאמות לפי שם השיר והאמן. מטא-דאטה חריג עלול לא למצוא דבר או למצוא גרסה שגויה. השתמש ברענון כדי לעבור בין גרסאות. ספקים המסומנים ב-* דורשים טוקן. לא כל הספקים המופעלים מתבקשים תמיד לפי הסדר שבחרת, אלא מגיבים לפי המהירות שלהם."</string>
@@ -620,14 +619,14 @@ Second \"item\" text"</string>
   <string name="morphe_music_lyrics_use_ai_section_title">חלק AI</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">משמש רק כאשר הספק אינו מספק תוויות חלקים כגון פזמון או בית, אותן המודל התואם ל-OpenAI שלך יזהה</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">הגדרות AI</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">הגדר את נקודת הקצה של ה-API התואם ל-OpenAI לתרגום, רומניזציה וחלקים באמצעות בינה מלאכותית.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">הגדר את נקודת הקצה של API התואמת OpenAI לתרגום AI, רומניזציה וחלקים של מילים</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">כתובת URL של נקודת קצה API (לדוגמה https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">מפתח API (השאר ריק לגישה אנונימית)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">שם המודל (לדוגמה openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">תבנית הנחיה</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">ממלאי מקום: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">ההנחיה נשמרה</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">ההודעה נשמרה, אך נקודת הקצה של הבינה המלאכותית אינה ניתנת לשימוש עדיין. הגדר אותה תחת הגדרות AI ראשון.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">ההנחיה נשמרה, אך נקודת הקצה של AI אינה ניתנת לשימוש עדיין. הגדר אותה תחת הגדרות AI ראשון</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">ההנחיה אופסה</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">הגדרות ה-AI נשמרו</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">לא הצלחתי להתחבר לנקודת הקצה של הבינה המלאכותית. אנא בדוק את ההגדרות שלך</string>

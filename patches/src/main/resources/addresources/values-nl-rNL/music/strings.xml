@@ -461,7 +461,7 @@ Om ervoor te zorgen dat scrobbling tijdens het afspelen op de achtergrond wordt 
   <string name="morphe_music_lyrics_section_overlay_title">Overlay</string>
   <string name="morphe_music_lyrics_section_sync_title">Synchronisatie</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">AI-eindpunt</string>
-  <string name="morphe_music_lyrics_source_all_disabled">Alle providers uitgeschakeld — ingebouwde teksten en ingesloten teksten</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Alle providers uitgeschakeld - ingebouwde songteksten en ingesloten songteksten</string>
   <string name="morphe_music_lyrics_source_reset_title">Providerorder resetten?</string>
   <string name="morphe_music_lyrics_source_reset_message">Providers terugzetten naar de standaardprioriteitsvolgorde</string>
   <string name="morphe_music_token_dialog_get_token">Token ophalen</string>
@@ -516,11 +516,10 @@ Vereiste cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_show_romanize_button_title">Toon romaniseerknop</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Tik om romanisatie in of uit te schakelen; lang indrukken voor alleen romanisatie. Gebruikt romanisatie van de provider, Google Translate of een OpenAI-compatibele API.</string>
   <string name="morphe_music_lyrics_local_romanization_title">Lokale transliteratie</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">Translitereer op het apparaat wanneer de provider, een OpenAI-compatible endpoint en Google Translate allemaal zijn mislukt. Alleen voor CJK, ongeveer 80 MB aan uitspraken om te downloaden.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">Romaniseer op het apparaat als de provider, een OpenAI-compatible endpoint en Google Translate allemaal zijn mislukt. Alleen voor CJK, ongeveer 80 MB aan te downloaden lezen</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Uitspraak %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Uitspraken klaar (%1$d CJK-woorden)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Downloaden is mislukt — zet dit uit en weer aan om opnieuw te proberen</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Downloaden mislukt - zet dit uit en weer aan om opnieuw te proberen</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Vernieuwknop weergeven</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Tik om naar de volgende songtekstkandidaat te schakelen; houd lang ingedrukt om songteksten te zoeken op songtitel en artiest</string>
   <string name="morphe_music_lyrics_search_dialog_title">Zoek songteksten</string>
@@ -557,7 +556,7 @@ Vereiste cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_sb_no_video">Dit nummer heeft geen video-id om in te dienen</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Bron: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Druk lang op de knop Kopiëren om deze LRC op te slaan; als je de tijden kunt fine-tunen en delen met de providers van de gemeenschap, zouden we dankbaar zijn.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Druk lang op de knop Kopiëren om deze LRC op te slaan; als je de tijden kunt finetunen en ze met de community providers kunt delen, zouden we dat erg waarderen</string>
   <string name="morphe_music_lyrics_translated_by_google">Vertaald door Google</string>
   <string name="morphe_music_lyrics_romanized_by_google">Geromaniseerd door Google</string>
   <string name="morphe_music_lyrics_translated_by_ai">Vertaald door %s</string>
@@ -580,12 +579,12 @@ Vereiste cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_refreshing">Vernieuwen</string>
   <string name="morphe_music_lyrics_refreshed">Vernieuwd</string>
   <string name="morphe_music_lyrics_transcribe_key_title">QuickLRC API-sleutel</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC transcripteert of tijdlijn-aligneert de teksten voor het huidige nummer. Een aparte service, niets te maken met het bovenstaande OpenAI-compatible endpoint.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC-sleutel opgeslagen. Gebruik de aligneer-knop in het zoekvenster voor teksten, of de prompt in het paneel wanneer een nummer geen teksten heeft.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC transcribeert of time-aligns de teksten voor het huidige nummer. Een aparte service, niet gerelateerd aan de OpenAI-compatible endpoint hierboven</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC-sleutel opgeslagen. Gebruik de uitlijningsknop in het zoekdialoogvenster voor teksten, of de paneelaanwijzing wanneer een nummer geen teksten heeft</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">QuickLRC API-sleutel opgeslagen</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC accepteerde die sleutel niet</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">QuickLRC API-sleutel gewist</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC time-aligneert teksten die er nog niet hebben, of transcribeert ze vanuit het nummer, tegen betaling van credits. Met een ingestelde sleutel bieden nummers zonder teksten transcriptie en krijgt het zoekvenster een uitlijningsknop.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC times teksten die er geen hebben, of transcribeert ze van het nummer, tegen een kosten van credits. Met een ingestelde sleutel bieden nummers zonder teksten transcriptie en krijgt het zoekdialoogvenster een uitlijningsknop</string>
   <string name="morphe_music_lyrics_transcribe_align">QuickLRC-uitlijning aanvragen</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Bezig met uitlijnen</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Uitlijning toepassen</string>
@@ -593,7 +592,7 @@ Vereiste cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_transcribe_working">Bezig met transcriptie</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Transcriptie geannuleerd</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Alleen nummers afgespeeld via YouTube kunnen worden getranscribeerd</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">Geen teksten om uit te lijnen — in plaats daarvan transcriberen</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">Geen teksten om uit te lijnen - in plaats daarvan transcriberen</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC kon dit nummer niet verwerken</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">QuickLRC-credits zijn op voor dit nummer</string>
   <string name="morphe_music_lyrics_about_summary">"Songteksten worden op titel en artiest gematched; ongebruikelijke metadata kunnen niets of de verkeerde versie opleveren. Gebruik verversen om van versie te wisselen. Providers gemarkeerd met * vereisen een token. Niet alle ingeschakelde providers worden altijd in uw volgorde opgevraagd, maar reageren op basis van hun snelheid."</string>
@@ -610,14 +609,14 @@ Vereiste cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
   <string name="morphe_music_lyrics_use_ai_section_title">AI-sectie</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Wordt alleen gebruikt wanneer de provider geen sectielabels zoals Refrein of Couplet levert, die vervolgens door je OpenAI-compatibele model worden gedetecteerd</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">AI-instellingen</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Configureer het OpenAI-compatible API-endpoint voor AI-gestuurde vertaling, transliteratie en sectiesanalyse van teksten.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Configureer het OpenAI-compatible API-endpoint voor AI-gestuurde vertaling, romanisatie en sectie van teksten</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">API-eindpunt-URL (bijv. https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API-sleutel (leeg laten voor anonieme toegang)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Modelnaam (bijv. openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Prompt-sjabloon</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Placeholders: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Prompt opgeslagen</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Prompt opgeslagen, maar het AI-endpoint is nog niet bruikbaar. Configureer het eerst onder AI-instellingen.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Prompt opgeslagen, maar het AI-endpoint is nog niet bruikbaar. Configureer het eerst onder AI-instellingen</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Prompt gereset</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">AI-instellingen opgeslagen</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Kon geen verbinding maken met het AI-eindpunt. Controleer je instellingen</string>

@@ -23,6 +23,8 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
 import app.morphe.patcher.util.Document
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
+import app.morphe.patches.shared.layout.theme.lithoColorHookPatch
+import app.morphe.patches.shared.layout.theme.lithoDrawableColorHook
 import app.morphe.patches.shared.misc.litho.context.conversionContextClassDef
 import app.morphe.patches.shared.misc.litho.context.conversionContextPatch
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
@@ -40,6 +42,7 @@ import app.morphe.patches.youtube.misc.playservice.is_21_05_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_08_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_15_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_29_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_30_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_36_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_38_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_41_or_greater
@@ -304,7 +307,8 @@ val legacyPlayerControlsPatch = bytecodePatch(
         versionCheckPatch,
         settingsPatch,
         inclusiveSpanPatch,
-        conversionContextPatch
+        conversionContextPatch,
+        lithoColorHookPatch { is_21_30_or_greater }
     )
 
     execute {
@@ -389,6 +393,9 @@ val legacyPlayerControlsPatch = bytecodePatch(
                         "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->setTintImage(Ljava/lang/Object;)V"
                     )
                 }
+
+            // The page indicator of the comments button can also have the dark theme colors.
+            lithoDrawableColorHook("$EXTENSION_CLASS->getBackgroundColor(Landroid/graphics/drawable/Drawable;I)I")
 
             // The elevated player shows the video metadata without a background over the
             // ambient mode colors, so the light theme text can not be read.

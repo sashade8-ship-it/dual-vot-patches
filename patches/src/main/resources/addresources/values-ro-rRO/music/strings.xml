@@ -461,7 +461,7 @@ Pentru a te asigura că scrobbling-ul este sincronizat în timpul redării în f
   <string name="morphe_music_lyrics_section_overlay_title">Suprapunere</string>
   <string name="morphe_music_lyrics_section_sync_title">Sincronizare</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">Endpoint AI</string>
-  <string name="morphe_music_lyrics_source_all_disabled">Toți furnizorii dezactivați — versuri integrate și versuri încorporate</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Toți furnizorii sunt dezactivați - versuri încorporate și versuri încapsulate</string>
   <string name="morphe_music_lyrics_source_reset_title">Resetați ordinea furnizorilor?</string>
   <string name="morphe_music_lyrics_source_reset_message">Restabiliți ordinea implicită de prioritate a furnizorilor.</string>
   <string name="morphe_music_token_dialog_get_token">Obțineți tokenul</string>
@@ -509,11 +509,10 @@ Cookie-uri necesare: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_show_romanize_button_title">Afișați butonul Romanize.</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Atingeți pentru a comuta romanizarea; apăsați lung pentru doar romanizare. Utilizează romanizarea furnizorului, Google Translate sau un API compatibil cu OpenAI.</string>
   <string name="morphe_music_lyrics_local_romanization_title">Romanizare locală</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">Romani pe dispozitiv când furnizorul, un endpoint compatibil OpenAI și Google Translate au eșuat toate. Doar CJK, aproximativ 80 MB de citiri de descărcat.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">Romanizează pe dispozitiv când furnizorul, un endpoint compatibil OpenAI și Google Translate au eșuat toate. Doar pentru CJK, aproximativ 80 MB de date descărcate</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Citire %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Citiri pregătite (%1$d cuvinte CJK)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Descărcare eșuată — dezactivați și activați din nou pentru a reîncerca</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Descărcare eșuată - dezactivează și activează din nou pentru a reîncerca</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Afișați butonul Reîmprospătare.</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Atingeți pentru a trece la următorul candidat de versuri; apăsați lung pentru a căuta versuri după titlul melodiei și artist.</string>
   <string name="morphe_music_lyrics_search_dialog_title">Căutare versuri</string>
@@ -550,7 +549,7 @@ Cookie-uri necesare: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_sb_no_video">Această piesă nu are niciun id video de trimis</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Sursă: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Apăsarea lungă a butonului de copiere salvează acest LRC; dacă puteți ajusta timpii și le partajați cu furnizorii comunității, vă vom fi recunoscători.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Apasă lung butonul de copiere pentru a salva acest LRC; dacă poți rafina timing-urile și să le împarți cu comunitatea de furnizori, am fi recunoscători</string>
   <string name="morphe_music_lyrics_translated_by_google">Redare întreruptă.</string>
   <string name="morphe_music_lyrics_romanized_by_google">Redare în curs.</string>
   <string name="morphe_music_lyrics_translated_by_ai">Tradus de %s</string>
@@ -573,12 +572,12 @@ Cookie-uri necesare: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_refreshing">Se încarcă…</string>
   <string name="morphe_music_lyrics_refreshed">Reîmprospătat</string>
   <string name="morphe_music_lyrics_transcribe_key_title">Cheie API QuickLRC</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC transcrie sau aliniază temporal versurile pentru piesa curentă. Un serviciu separat, neconectat la endpoint-ul compatibil OpenAI de mai sus.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">Cheie QuickLRC salvată. Folosiți butonul de aliniere din dialogul de căutare a versurilor, sau mesajul din panou când o piesă nu are versuri.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC transcrie sau aliniază temporal versurile pentru piesa curentă. Un serviciu separat, neîn legătură cu endpoint-ul compatibil OpenAI de mai sus</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">Cheia QuickLRC salvată. Folosește butonul de aliniere în dialogul de căutare versuri, sau promptul panoului când o piesă nu are versuri</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">Cheie API QuickLRC salvată</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC nu a acceptat acea cheie</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">Cheie API QuickLRC ștearsă</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC atribuie timpi versurilor care nu au astfel, sau le transcrie din piesă, cu costul de credite. Cu o cheie setată, piesele fără versuri oferă transcriere, iar dialogul de căutare primește un buton de aliniere.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC creează timing pentru versurile care nu au niciunul, sau le transcrie din piesă, cu cost de credite. Cu cheia setată, piesele fără versuri oferă transcriere și dialogul de căutare câștigă un buton de aliniere</string>
   <string name="morphe_music_lyrics_transcribe_align">Solicitare aliniere QuickLRC</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Aliniere</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Aplicare aliniere</string>
@@ -586,7 +585,7 @@ Cookie-uri necesare: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_transcribe_working">Transcriere</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Transcriere anulată</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Doar piesele redate de pe YouTube pot fi transcrise</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">Nu există versuri de aliniat — se transcrie în schimb</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">Niciun vers de aliniat - se face transcriere în schimb</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC nu a putut procesa această piesă</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">Creditele QuickLRC au epuizat pentru această piesă</string>
   <string name="morphe_music_lyrics_about_summary">"Versurile sunt potrivite după titlu și artist, metadatele neobișnuite pot să nu găsească nimic sau versiunea greșită. Folosiți reîmprospătarea pentru a comuta versiunile. Furnizorii marcați cu * necesită un token. Furnizorii activați nu sunt solicitați întotdeauna în ordinea ta, ci răspund în funcție de viteza lor."</string>
@@ -603,14 +602,14 @@ Cookie-uri necesare: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPI
   <string name="morphe_music_lyrics_use_ai_section_title">Secțiune AI</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Utilizat doar atunci când furnizorul nu trimite etichete de secțiune, cum ar fi Refren sau Strofă, pe care modelul tău compatibil cu OpenAI le detectează ulterior</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">Setări AI</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Configurați endpoint-ul API compatibil OpenAI pentru traducerea AI a versurilor, romanizarea și secționarea.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Configurează endpoint-ul API compatibil OpenAI pentru traducerea, romanizarea și secționarea versurilor bazate pe AI</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">URL endpoint API (de ex. https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">Cheie API (lasă gol pentru acces anonim)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Nume model (de ex. openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Șablon de Prompt</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Placeholder-e: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Prompt salvat</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Prompt salvat, dar endpoint-ul AI nu este utilizabil încă. Configurați-l mai întâi în Setări AI.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Prompt salvat, dar endpoint-ul AI nu este încă utilizabil. Configurează-l mai întâi la Setări AI</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Prompt resetat</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">Setările AI salvate</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Nu s-a putut stabili conexiunea cu punctul final AI. Te rugăm să verifici setările tale</string>

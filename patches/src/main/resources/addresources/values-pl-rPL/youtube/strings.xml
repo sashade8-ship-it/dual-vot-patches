@@ -275,6 +275,7 @@ Zmiany obejmują:
   <string name="morphe_hide_comments_gift_button_title">Ukryj przycisk Prezent</string>
   <string name="morphe_hide_comments_info_button_title">Ukryj przycisk Informacje</string>
   <string name="morphe_hide_comments_live_chat_donators_bar_title">Ukryj pasek wspierających w czacie</string>
+  <string name="morphe_hide_comments_live_chat_scroll_to_bottom_button_title">Ukryj przycisk przewijania czatu na żywo do dołu</string>
   <string name="morphe_hide_comments_live_chat_tooltips_title">Ukryj podpowiedzi czatu na żywo</string>
   <string name="morphe_hide_comments_live_chat_tooltips_summary">Ukrywa dymki z podpowiedziami wyświetlane obok pola wprowadzania czatu, takie jak powiadomienie o czacie tylko dla subskrybentów</string>
   <string name="morphe_hide_comments_menu_button_title">Ukryj przycisk Menu</string>
@@ -288,6 +289,7 @@ Zmiany obejmują:
   <string name="morphe_hide_comments_timestamp_button_title">Ukryj przycisk Znacznik czasu</string>
   <string name="morphe_hide_comments_top_fans_button_title">Ukryj przycisk \"Najlepsi odbiorcy\"</string>
   <string name="morphe_hide_comments_translate_button_title">Ukryj przycisk Przetłumacz</string>
+  <string name="morphe_hide_comments_zero_state_title">Ukryj komunikat „Brak komentarzy”</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_title">Oczyść wyróżnione frazy wyszukiwania</string>
   <string name="morphe_sanitize_comments_highlighted_search_links_summary">Oczyszcza linkowanie z wyróżnionych fraz wyszukiwania, zostawiając tylko oryginalny, zwykły tekst</string>
   <string name="morphe_hide_keyword_content_screen_title">Filtry słów</string>
@@ -433,6 +435,12 @@ Zgłoszenia są publiczne i podlegają weryfikacji przed dodaniem kanału do lis
   <string name="morphe_feed_long_press_menu_summary">Przytrzymanie filmu w dowolnym miejscu na liście otwiera jego menu</string>
   <string name="morphe_feed_watch_later_button_title">Pokazuj przycisk \"Do obejrzenia\" na miniaturkach</string>
   <string name="morphe_feed_watch_later_button_summary">Na miniaturkach filmów na liście wyświetlany jest przycisk \"Do obejrzenia\". Przytrzymanie go otwiera opcję \"Zapisz na playliście\"</string>
+  <!-- layout.feedviews.feedViewCountPatch -->
+  <string name="morphe_feed_view_count_title">Pokaż liczbę wyświetleń na miniaturach</string>
+  <string name="morphe_feed_view_count_summary">Liczba wyświetleń filmów z kanału jest wyświetlana w lewym dolnym rogu ich miniatur zamiast poniżej tytułu. Niektóre filmy, takie jak w półkach, mogą nie wyświetlać liczby wyświetleń</string>
+  <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
+  <string name="morphe_ryd_feed_like_count_title">Pokaż liczbę polubień na miniaturze w kanale</string>
+  <string name="morphe_ryd_feed_like_ratio_title">Pokaż procent polubień na miniaturze w kanale</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">Wyłącz komunikat o zalogowaniu się do TV</string>
   <string name="morphe_disable_connect_your_devices_popup_title">Wyłącz wyskakujące okienko \"Połącz swoje urządzenia\"</string>
@@ -477,6 +485,17 @@ Zgłoszenia są publiczne i podlegają weryfikacji przed dodaniem kanału do lis
   <string name="morphe_vot_cost_per_hour">%s za 100 godzin filmu</string>
   <string name="morphe_vot_tts_voice_type">Głos</string>
   <string name="morphe_vot_tts_system">Systemowy</string>
+  <string name="morphe_vot_catalog_refreshing">Odświeżanie...</string>
+  <string name="morphe_vot_catalog_updated">Ostatnia aktualizacja: %s</string>
+  <string name="morphe_vot_catalog_refresh">Odśwież listę głosów</string>
+  <string name="morphe_vot_catalog_unchanged">Lista głosów jest aktualna</string>
+  <string name="morphe_vot_catalog_changed">Zaktualizowano listę głosów: +%1$d / -%2$d</string>
+  <string name="morphe_vot_catalog_refresh_failed">Nie udało się odświeżyć listy głosów</string>
+  <string name="morphe_vot_catalog_source_online">Online</string>
+  <string name="morphe_vot_catalog_source_cache">Z pamięci podręcznej</string>
+  <string name="morphe_vot_catalog_source_fallback">Wbudowany</string>
+  <string name="morphe_vot_catalog_status">%1$s · %2$d głosów · +%3$d / -%4$d</string>
+  <string name="morphe_vot_catalog_error">Aktualizacja nie powiodła się: %s</string>
   <string name="morphe_vot_voice_gender_male_multilingual">Męski wielojęzyczny</string>
   <string name="morphe_vot_voice_gender_female_multilingual">Żeński wielojęzyczny</string>
   <string name="morphe_vot_voice_gender_male">Męski</string>
@@ -1156,11 +1175,16 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Przycisk wstecz zamyka kanał</string>
   <string name="morphe_back_button_always_exits_feed_summary">Naciśnięcie wstecz zawsze zamyka aplikację, zamiast przewijać na górę kanału</string>
+  <!-- layout.animations.forceAnimationsPatch -->
+  <string name="morphe_force_animations_title">Wymuś animacje</string>
+  <string name="morphe_force_animations_entry_default">Domyślna</string>
+  <string name="morphe_force_animations_entry_always_on">Zawsze włączone</string>
+  <string name="morphe_force_animations_entry_always_off">Zawsze wyłączone</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Ukryj pasek stanu</string>
   <string name="morphe_hide_status_bar_summary">Ukrywa systemowy pasek stanu. Przesuń w dół od górnej krawędzi, aby na chwilę go wyświetlić</string>
-  <string name="morphe_fix_status_bar_layout_title">Fix status bar covering the top bars</string>
-  <string name="morphe_fix_status_bar_layout_summary">Keeps the layout of the status bar consistent, so it does not cover the top bars and leaves no empty space above the player. Turn this off if the app crashes or the top bars look wrong</string>
+  <string name="morphe_fix_status_bar_layout_title">Napraw pasek stanu zasłaniający górne paski</string>
+  <string name="morphe_fix_status_bar_layout_summary">Utrzymuje spójny układ paska stanu, dzięki czemu nie zasłania on górnych pasków ani nie zostawia pustego miejsca nad odtwarzaczem. Wyłącz tę opcję, jeśli aplikacja ulega awarii lub górne paski wyświetlają się nieprawidłowo</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_theme_color_light_title">Tło jasnego motywu</string>
   <string name="morphe_theme_color_light_entry_2">Białe</string>
@@ -1391,12 +1415,11 @@ Ograniczenie: Przywraca stary wygląd nakładki \"Więcej filmów\""</string>
   <string name="morphe_series_tracker_screen_summary">Obserwuj playlisty jako serie i zapamiętuj miejsce, w którym skończono</string>
   <string name="morphe_series_tracker_title">Włącz śledzenie serii</string>
   <string name="morphe_series_tracker_summary">Dodaje kartę \"Serie\" w Historii oraz opcję \"Obserwuj serię\" do playlist</string>
+  <string name="morphe_series_tracker_show_navigation_button_title">Pokaż przycisk Serie na pasku nawigacji</string>
   <string name="morphe_series_tracker_show_button_title">Pokaż przycisk \"Śledzenie serii\"</string>
   <string name="morphe_series_tracker_show_button_summary">Dodaje w odtwarzaczu przycisk pozwalający obserwować lub otworzyć serię bieżącego filmu</string>
   <string name="morphe_series_tracker_record_followed_progress_title">Zapisuj postęp obserwowanych serii</string>
   <string name="morphe_series_tracker_record_followed_progress_summary">Zapisuje postęp odtwarzania na tym urządzeniu dla zapisanych serii i zakładek</string>
-  <string name="morphe_series_tracker_show_history_tab_title">Pokaż historię na pasku nawigacji</string>
-  <string name="morphe_series_tracker_show_history_tab_summary">Główna, Subskrypcje, Powiadomienia, Historia oraz Ty</string>
   <string name="morphe_series_tracker_ui_cancel">Anuluj</string>
   <string name="morphe_series_tracker_ui_save">Zapisz</string>
   <string name="morphe_series_tracker_ui_save_bookmark">Zapisz zakładkę</string>
@@ -1426,9 +1449,6 @@ Ograniczenie: Przywraca stary wygląd nakładki \"Więcej filmów\""</string>
   <string name="morphe_series_tracker_ui_open_history_from_you_to_view_your_series">Otwórz Historię w zakładce \"Ty\", aby wyświetlić swoje serie</string>
   <string name="morphe_series_tracker_ui_watch_history">Historia oglądania</string>
   <string name="morphe_series_tracker_ui_series">Serie</string>
-  <string name="morphe_series_tracker_ui_history">Historia</string>
-  <string name="morphe_series_tracker_ui_subscriptions">Subskrypcje</string>
-  <string name="morphe_series_tracker_ui_notifications">Powiadomienia</string>
   <string name="morphe_series_tracker_ui_loading_saved_series">Wczytywanie zapisanych serii…</string>
   <string name="morphe_series_tracker_empty_library">Zaobserwuj playlistę, aby śledzić jej odcinki</string>
   <string name="morphe_series_tracker_ui_playlist_bookmark">Zakładka playlisty</string>

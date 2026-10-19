@@ -461,7 +461,7 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_section_overlay_title">Преклапање</string>
   <string name="morphe_music_lyrics_section_sync_title">Синхронизација</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">AI крајња тачка</string>
-  <string name="morphe_music_lyrics_source_all_disabled">Сви пружатељи онемогућени — уграђене текстове и интеграције текст</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Сви пружаоци су онемогућени - уграђене речи песама и уклопљене речи песама</string>
   <string name="morphe_music_lyrics_source_reset_title">Ресетовати редослед провајдера?</string>
   <string name="morphe_music_lyrics_source_reset_message">Врати провајдере на подразумевани редослед приоритета.</string>
   <string name="morphe_music_token_dialog_get_token">Преузми токен</string>
@@ -521,11 +521,10 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_show_romanize_button_title">Прикажи дугме за романизацију</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Додирните да бисте пребацили романизацију; дуги притисак за само романизацију. Користи романизацију добављача, Google Translate или OpenAI-компатибилни API.</string>
   <string name="morphe_music_lyrics_local_romanization_title">Локална романизација</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">Романизује се на уређају када провајдер, OpenAI-компатибилна Endpoint услуга и Google Превод нису успели. Само за кинески, јапански и корејски језик (CJK), око 80 MB податотека за преузимање.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">Ромујзи на уређају када пружалац, крајња тачка компатибилна са OpenAI-јем и Google Translate нису успели. Само за кинеско-јапанске корејске језике, око 80 MB материјала за преузимање</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Читање %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Припремљена читања (%1$d CJK речи)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Преузимање није успело — искључите и поново укључите да бисте покушали</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Преузимање није успело - искључите и поново укључите да бисте покушали поново</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Прикажите дугме за освежавање</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Додирните да бисте прешли на следећи кандидат за текст; дуго притисните да бисте претражили текст по наслову песме и извођачу</string>
   <string name="morphe_music_lyrics_search_dialog_title">Претрага текстова</string>
@@ -562,7 +561,7 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_sb_no_video">Ова нумера нема id видео записа за слање</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Извор: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Дуго притисните дугме за копирање да сачувате овај LRC; ако можете фино да прилагодите временске ознаке и поделисте их са провајдерима у заједници, били бисмо захвални.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Дугим притиском на дугме за копирање сачувајте овај LRC; ако можете фино подесити временске ознаке и поделити их са заједницом пружалаца, били бismo захвални</string>
   <string name="morphe_music_lyrics_translated_by_google">Превео Google</string>
   <string name="morphe_music_lyrics_romanized_by_google">Романизовао Google</string>
   <string name="morphe_music_lyrics_translated_by_ai">Превод: %s</string>
@@ -585,12 +584,12 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_refreshing">Освежавање</string>
   <string name="morphe_music_lyrics_refreshed">Освежено.</string>
   <string name="morphe_music_lyrics_transcribe_key_title">Кључ QuickLRC API-ја</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC транскрибује или временски поравнава текстове песама за тренутну нумеру. Ово је одвојена услуга, неповезана са горњом OpenAI-компатибилном Endpoint услугом.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">Кључ QuickLRC-a сачуван. Користите дугме за поравнавање у дијалогу за претрагу текстова или упутство на панелу када нумера нема текстуалне одговоре.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC транскрибује или време усклађује текстове песама за тренутну композицију. Двојана услуга, нериелана са горњом крајњом тачком компатибилном са OpenAI-јем</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">Кључ QuickLRC је сачуван. Користите дугме за усклађивање у дијалогу за претрагу текстова или упутство на панелу када композиција нема текстове</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">Кључ QuickLRC API-ја је сачуван</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC није прихватио тај кључ</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">Кључ QuickLRC API-ја је очишћен</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC времески поравнава текстуалне одговоре који их немају, или их транскрибује из нумере, уз трошковне кредитe. Када је кључ постављен, нумере без текстова нуде транскрипцију, а дијалог за претрагу добија дугме за поравнање.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC времески усклађује текстове који немају временске ознаке, или их транскрибује из композиције, уз трошак кредита. Када је кључ подешен, композиције без текстова понуде транскрипцију, а дијалог за претрагу добија дугме за усклађивање</string>
   <string name="morphe_music_lyrics_transcribe_align">Захтев за QuickLRC поравнање</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Поравнавање</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Примени поравнање</string>
@@ -598,7 +597,7 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_transcribe_working">Транскрипција у току</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Транскрипција је отказана</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Само нумере које су пуштене са YouTube-а могу се транскрибовати</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">Нема текста за поравнање — уместо тога врши се транскрипција</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">Нема текстова за усклађивање - уместо тога транскрибује</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC није могао да обради ову нумеру</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">Кредити за QuickLRC су потрошени за ову нумеру</string>
   <string name="morphe_music_lyrics_about_summary">"Текстови се подударају према наслову и извођачу, понекада се може десити да се не пронађе ништа или прикаже погрешну верзију. Користите опцију освежи да бисте променили верзију. Добављачи означени * захтевају токен. Сви доступни извођачи не могу увек да одговоре у вашем упиту, али одазивају се у зависности од брзине"</string>
@@ -615,14 +614,14 @@ Da biste osigurali sinhronizaciju scrobbling-a tokom reprodukcije u pozadini, po
   <string name="morphe_music_lyrics_use_ai_section_title">AI секција</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Користи се само када провајдер не испоручује ознаке секција као што су Рефрен или Строфа, које затим детектује ваш OpenAI-компатибилни модел</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">AI подешавања</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Подесите OpenAI-компатибилну Endpoint услугу вештачке интелигенције за AI-погонски превод текстова, романизацију и дељење на секције.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Подесите крајњу тачку OpenAI-компатибилног API-ја за AI вођен превод и романизацију текстова</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">API крајња тачка URL (нпр. https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API кључ (оставите празно за анониман приступ)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Назив модела (нпр. openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Шаблон промпта</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Заменичи: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Промпт је сачуван</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Упутство је сачувано, али AI endpoint још увек није употребљив. Подесите га прво у Поставкама AI-ja.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Упутство је сачувано, али AI крајња тачка још увек није доступна. Подесите је прво у подешавањима AI-ја</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Промпт је ресетован</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">AI подешавања су сачувана</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Не могу да се повезем на AI крајњу тачку. Молим вас проверите подешавања</string>

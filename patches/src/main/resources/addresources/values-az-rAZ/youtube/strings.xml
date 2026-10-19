@@ -433,6 +433,8 @@ Məhdudiyyətlər:
   <string name="morphe_feed_long_press_menu_summary">Axında videonun istənilən yerinə toxunub saxlamaq onun menyusunu açır</string>
   <string name="morphe_feed_watch_later_button_title">Miniatürlərdə Daha sonra izlə düyməsini göstər</string>
   <string name="morphe_feed_watch_later_button_summary">Daha sonra izlə düyməsi axın videolarının miniatürlərində göstərilir. Ona toxunub saxlamaq Pleylistdə saxlanı açır</string>
+  <!-- layout.feedviews.feedViewCountPatch -->
+  <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
   <string name="morphe_disable_sign_in_to_tv_popup_title">\"TV-yə daxil ol\" ani pəncərəsini qapat</string>
   <string name="morphe_disable_connect_your_devices_popup_title">\"Cihazlarınızı qoşun\" açılan pəncərəsini qapat</string>
@@ -477,6 +479,9 @@ OpenRouter.ai-ı açmaq üçün buraya toxunun"</string>
   <string name="morphe_vot_cost_per_hour">Hər 100 video saatına %s</string>
   <string name="morphe_vot_tts_voice_type">Səs</string>
   <string name="morphe_vot_tts_system">Sistem</string>
+  <string name="morphe_vot_catalog_refreshing">Yenilənir...</string>
+  <string name="morphe_vot_catalog_source_cache">Keşlənib</string>
+  <string name="morphe_vot_catalog_source_fallback">Daxili</string>
   <string name="morphe_vot_voice_gender_male_multilingual">Çoxdilli kişi</string>
   <string name="morphe_vot_voice_gender_female_multilingual">Çoxdilli qadın</string>
   <string name="morphe_vot_voice_gender_male">Kişi</string>
@@ -1157,6 +1162,9 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Geri düyməsi axından çıxarır</string>
   <string name="morphe_back_button_always_exits_feed_summary">Geriyə basmaq, axının yuxarısına sürüşdürmək əvəzinə, həmişə tətbiqdən çıxır</string>
+  <!-- layout.animations.forceAnimationsPatch -->
+  <string name="morphe_force_animations_entry_default">Varsayılan</string>
+  <string name="morphe_force_animations_entry_always_on">Həmişə aktiv</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
   <string name="morphe_hide_status_bar_title">Status panelini gizlət</string>
   <string name="morphe_hide_status_bar_summary">Sistem status panelini gizlədir. Onu bir anlıq göstərmək üçün yuxarı kənardan aşağı sürüşdür</string>
@@ -1396,8 +1404,6 @@ Məhdudiyyət: Köhnə üslub üçün \"Daha çox video\" örtüyünə qayıdır
   <string name="morphe_series_tracker_show_button_summary">Cari videonun seriyasını izləmək və ya açmaq üçün oynadıcı düyməsi əlavə edir</string>
   <string name="morphe_series_tracker_record_followed_progress_title">İzlənilən seriyaların gedişatını qeydə al</string>
   <string name="morphe_series_tracker_record_followed_progress_summary">Bu telefonda saxlanılan seriyalar və əlfəcinlər üçün oynatmanı qeydə al</string>
-  <string name="morphe_series_tracker_show_history_tab_title">Fəaliyyət cərgəsində Tarixçəni göstər</string>
-  <string name="morphe_series_tracker_show_history_tab_summary">Ev, Abunəliklər, Bildirişlər, Tarixçə və Siz</string>
   <string name="morphe_series_tracker_ui_cancel">Ləğv et</string>
   <string name="morphe_series_tracker_ui_save">Saxla</string>
   <string name="morphe_series_tracker_ui_save_bookmark">Əlfəcini saxla</string>
@@ -1427,9 +1433,6 @@ Məhdudiyyət: Köhnə üslub üçün \"Daha çox video\" örtüyünə qayıdır
   <string name="morphe_series_tracker_ui_open_history_from_you_to_view_your_series">Seriyanıza baxmaq üçün \"Siz\"-dən Tarixçəni açın</string>
   <string name="morphe_series_tracker_ui_watch_history">Baxış tarixçəsi</string>
   <string name="morphe_series_tracker_ui_series">Seriyalar</string>
-  <string name="morphe_series_tracker_ui_history">Tarixçə</string>
-  <string name="morphe_series_tracker_ui_subscriptions">Abunəliklər</string>
-  <string name="morphe_series_tracker_ui_notifications">Bildirişlər</string>
   <string name="morphe_series_tracker_ui_loading_saved_series">Saxlanılan seriyalar yüklənilir…</string>
   <string name="morphe_series_tracker_empty_library">Epizodu izləmək üçün pleylisti izlə</string>
   <string name="morphe_series_tracker_ui_playlist_bookmark">Pleylist əlfəcini</string>

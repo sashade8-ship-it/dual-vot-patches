@@ -461,7 +461,7 @@ A háttérlejátszás közbeni szinkronizálás biztosításához győződjön m
   <string name="morphe_music_lyrics_section_overlay_title">Átfedés</string>
   <string name="morphe_music_lyrics_section_sync_title">Szinkronizálás</string>
   <string name="morphe_music_lyrics_section_ai_endpoint_title">AI végpont</string>
-  <string name="morphe_music_lyrics_source_all_disabled">Minden szolgáltató letiltva – beépített és beágyazott szövegek</string>
+  <string name="morphe_music_lyrics_source_all_disabled">Az összes szolgáltató letiltva – beépített és beágyazott dalszövegek</string>
   <string name="morphe_music_lyrics_source_reset_title">Visszaállítja a szolgáltatók sorrendjét?</string>
   <string name="morphe_music_lyrics_source_reset_message">Szolgáltatók visszaállítása az alapértelmezett prioritási sorrendre.</string>
   <string name="morphe_music_token_dialog_get_token">Token lekérése</string>
@@ -526,11 +526,10 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_show_romanize_button_title">Romanizálás gomb megjelenítése</string>
   <string name="morphe_music_lyrics_show_romanize_button_summary">Koppintson a romanizálás be-/kikapcsolásához; hosszú megnyomással csak a romanizálás jelenik meg. Szolgáltatói romanizálást, Google Fordítót vagy OpenAI-kompatibilis API-t használ.</string>
   <string name="morphe_music_lyrics_local_romanization_title">Helyi romanizálás</string>
-  <string name="morphe_music_lyrics_local_romanization_summary">A szolgáltató, az OpenAI-kompatible végpont és a Google Fordító használata során fellépő hiba esetén eszközhöz kapcsolódó helyi romanizálást használ. Csak CJK, kb. 80 MB olvasandó letölteni.</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_downloading">%1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">A helyi romanizálás, ha a szolgáltató, egy OpenAI-kompatibilis végpont és a Google Fordítás is kudarcot vall. Csak CJK nyelvekhez, kb. 80 MB adatletöltés szükséges</string>
   <string name="morphe_music_lyrics_local_romanization_dict_building">Olvasás %1$s: %2$d%%</string>
   <string name="morphe_music_lyrics_local_romanization_dict_ready">Olvasások készen állnak (%1$d CJK szó)</string>
-  <string name="morphe_music_lyrics_local_romanization_dict_failed">Letöltés sikertelen — állítsa le és be újra a próbálkozáshoz</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">Letöltés sikertelen - próbálja újra ezt a funkcióki/bekapcsolással</string>
   <string name="morphe_music_lyrics_show_refresh_button_title">Frissítés gomb megjelenítése</string>
   <string name="morphe_music_lyrics_show_refresh_button_summary">Koppintson a következő dalszövegjelöltre váltáshoz; hosszú megnyomással dalszöveget kereshet cím és előadó alapján</string>
   <string name="morphe_music_lyrics_search_dialog_title">Dalszöveg keresése</string>
@@ -567,7 +566,7 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_sb_no_video">Ennek a számnak nincs beküldhető videóazonosítója</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <string name="morphe_music_lyrics_source_label">Forrás: %s</string>
-  <string name="morphe_music_lyrics_contribute_credit">Nyomja meg hosszan a másolás gombot az LRC mentéséhez; ha tudja finoman hangolni a időzítést és megosztani őket a közösségi szolgáltatókkal, hálásak lennénk.</string>
+  <string name="morphe_music_lyrics_contribute_credit">Hosszan nyomva tartás a másolás gombon az LRC mentéséhez; ha finomhangolja az időzítéseket és megosztja azokat a közösségi szolgáltatókkal, hálásak leszünk érte</string>
   <string name="morphe_music_lyrics_translated_by_google">Fordította a Google</string>
   <string name="morphe_music_lyrics_romanized_by_google">A Google romanizálta</string>
   <string name="morphe_music_lyrics_translated_by_ai">Fordította: %s</string>
@@ -590,12 +589,12 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_refreshing">Frissítés</string>
   <string name="morphe_music_lyrics_refreshed">Frissítve</string>
   <string name="morphe_music_lyrics_transcribe_key_title">QuickLRC API kulcs</string>
-  <string name="morphe_music_lyrics_transcribe_key_summary">A QuickLRC átírja vagy időre igazítja a jelenlegi számhoz tartozó dalszöveget. Egy elkülönített szolgáltatás, amely nem kapcsolódik a fenti OpenAI-kompatibilis végpontihoz.</string>
-  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC kulcs megtörténik. Használja az igazítás gombot a dalszöveg keresés párbeszédablakban, vagy a panel feliratát akkor, ha nincs dalszöveg a számhoz.</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">A QuickLRC leírja vagy időzíti az aktuális dal dalszövegét. Ez egy különálló szolgáltatás, amely nem kapcsolódik a fenti OpenAI-kompatibilis végponthoz</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC kulcs elmentve. Használja az illesztés gombot a dalszövegkereső párbeszédablakban, vagy a képernyő feliratát, ha egy számnak nincs dalszövege</string>
   <string name="morphe_music_lyrics_transcribe_key_saved">QuickLRC API kulcs megtartott</string>
   <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC nem fogadta el azt a kulcsot</string>
   <string name="morphe_music_lyrics_transcribe_key_cleared">QuickLRC API kulcs törölve</string>
-  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC időbe állítja azoknak a számoknak a dalszövegét, amelyeknek nincs, vagy az átírásból történő dalszöveget ad, hitelköltséggel. A kulcs beállítása után a dalszöveg nélküli számkor az átírási funkció elérhetővé válik és a keresési párbeszédablak igazítás gombot kap.</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">A QuickLRC időzíti a dalszöveget hiány esetén, vagy átiratja azt a zenéből kreditek felhasználásával. Beállított kulccsal a dalszöveg nélküli számoknál transzkripciót végez, és a kereső ablakhoz megjelenik az illesztés gomb</string>
   <string name="morphe_music_lyrics_transcribe_align">QuickLRC igazálási kérelem</string>
   <string name="morphe_music_lyrics_transcribe_aligning">Igazítás folyamatban</string>
   <string name="morphe_music_lyrics_transcribe_apply_align">Igazítás alkalmazása</string>
@@ -603,7 +602,7 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_transcribe_working">Átírás folyamatban</string>
   <string name="morphe_music_lyrics_transcribe_cancelled">Átírás megszakítva</string>
   <string name="morphe_music_lyrics_transcribe_local_unsupported">Csak YouTube-ról játszott számszöveg átírható</string>
-  <string name="morphe_music_lyrics_transcribe_no_text">Nincs igazi dalszöveg — az átírás lesz a következő lépés</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">Nincs dalszöveg az illesztéshez - inkább transzkribálunk</string>
   <string name="morphe_music_lyrics_transcribe_failed">QuickLRC nem tudta ezt a számot feldolgozni</string>
   <string name="morphe_music_lyrics_transcribe_out_of_credits">QuickLRC hiteltények elfogytak erre a számra</string>
   <string name="morphe_music_lyrics_about_summary">"A dalszövegek cím és előadó alapján kerülnek párosításra; a szokatlan metaadatok miatt előfordulhat, hogy semmi nem található, vagy rossz verzió jelenik meg. A frissítés segítségével válthatsz a verziók között. A *-gal jelölt szolgáltatók tokent igényelnek. Az összes engedélyezett szolgáltató nem mindig a kérésed szerinti sorrendben kerül lekérdezésre, hanem sebességük alapján válaszolnak."</string>
@@ -620,14 +619,14 @@ Szükséges cookie-k: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAP
   <string name="morphe_music_lyrics_use_ai_section_title">AI szakasz</string>
   <string name="morphe_music_lyrics_use_ai_section_summary">Csak akkor használja, ha a szolgáltató nem küld szakaszcímkéket, mint például Korus vagy Vers, amelyeket ezután az OpenAI-kompatibilis modell érzékel</string>
   <string name="morphe_music_lyrics_ai_config_dialog_title">AI Beállítások</string>
-  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Konfigurálja az OpenAI-kompatibilis API végpontot mesterséges intelligencia alapú dalszöveg fordításhoz, romanizáláshoz és szakaszolózáshoz.</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">Konfigurálja az OpenAI-kompatibilis API végpontot az AI-alapú dalszövegfordításhoz, romanizáláshoz és szekciónáláshoz</string>
   <string name="morphe_music_lyrics_ai_config_base_url_hint">API-végpont URL-címe (pl. https://text.pollinations.ai/openai)</string>
   <string name="morphe_music_lyrics_ai_config_api_token_hint">API-kulcs (hagyja üresen anonim hozzáféréshez)</string>
   <string name="morphe_music_lyrics_ai_config_model_hint">Modellnév (pl. openai-fast, gpt-4o-mini)</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_title">Prompt sablon</string>
   <string name="morphe_music_lyrics_ai_prompt_dialog_hint">Helyőrzők: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_saved">Prompt mentve</string>
-  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Befogadás megtörtént, de még nem használható a AI végpont. Konfigurálja először az AI Beállításokban.</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Bejegyzés elmentve, de az AI végpont még nem használható. Először konfigurálja az AI beállításokban</string>
   <string name="morphe_music_lyrics_ai_prompt_toast_reset">Prompt alapértékekre visszaállítva</string>
   <string name="morphe_music_lyrics_ai_config_toast_saved">AI beállítások mentve</string>
   <string name="morphe_music_lyrics_ai_config_toast_invalid">Nem lehetett csatlakozni az AI végponthoz. Kérjük, ellenőrizze a beállításait</string>
