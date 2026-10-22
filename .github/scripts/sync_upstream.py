@@ -911,11 +911,56 @@ def merge_dev148_series_tracker_settings(ours: str, theirs: str) -> str:
     return merged
 
 
+STABLE148_SETTINGS_CONFLICT_BLOBS = (
+    "6f307b960fc93376e3330d60aafce839911de230",
+    "369682164e6382f5ee35584f9a432fe5d8b5b5e7",
+    "9a1cf5e95be0ed9d818cc3c96c83b9fb0bb324ee",
+)
+
+
+def merge_stable148_settings_conflict(merged: str, ours: str, theirs: str) -> str:
+    """Join the one verified adjacent settings insertion, retaining Git's other merges."""
+    dual = _single_settings_block(
+        ours,
+        "    // Dual VoT - Yandex engine. Keep every key independent from the official",
+        "    public static final StringSetting DUAL_VOT_YANDEX_OAUTH_TOKEN = ",
+    )
+    series = _single_settings_block(
+        theirs,
+        "    // Series tracking. Consent is account-bound and excluded from settings import/export.",
+        "    public static final IntegerSetting SERIES_TRACKER_COMPLETION_SECONDS = ",
+    )
+    pattern = (
+        r"(?m)^<<<<<<< [^\n]+\n" + re.escape(dual)
+        + r"=======\n" + re.escape(series) + r">>>>>>> [^\n]+\n"
+    )
+    result, count = re.subn(pattern, lambda _: dual + "\n" + series, merged)
+    if count != 1 or re.search(r"(?m)^(<<<<<<<|=======|>>>>>>>)(?: |$)", result):
+        raise SyncError("Unexpected stable 1.48 Settings.java conflict")
+    return result
+
+
+def resolve_stable148_settings_conflict() -> None:
+    path = DEV148_SETTINGS_PATH
+    if path not in unresolved_paths():
+        return
+    stable_blobs = tuple(output_of("git", "rev-parse", f":{stage}:{path}") for stage in (1, 2, 3))
+    if stable_blobs == STABLE148_SETTINGS_CONFLICT_BLOBS:
+        ours = run("git", "show", f":2:{path}", capture=True).stdout
+        theirs = run("git", "show", f":3:{path}", capture=True).stdout
+        destination = ROOT / path
+        merged = merge_stable148_settings_conflict(
+            destination.read_text(encoding="utf-8"), ours, theirs
+        )
+        destination.write_text(merged, encoding="utf-8", newline="")
+        run("git", "add", "--", path)
+        return
+
+
 def resolve_dev148_settings_conflict() -> None:
     path = DEV148_SETTINGS_PATH
     if path not in unresolved_paths():
         return
-
     blobs = tuple(output_of("git", "rev-parse", f":{stage}:{path}") for stage in (2, 3))
     if blobs != DEV148_SETTINGS_CONFLICT_BLOBS:
         return  # Unknown source: leave conflict unresolved for manual review.
@@ -984,6 +1029,7 @@ def merge_ref(
     resolve_addon_compatibility_conflicts()
     resolve_streaming_data_request_conflict()
     resolve_dev148_settings_conflict()
+    resolve_stable148_settings_conflict()
     resolve_youtube_junit_conflict()
 
     remaining = unresolved_paths()

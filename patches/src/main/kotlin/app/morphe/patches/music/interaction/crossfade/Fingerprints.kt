@@ -60,7 +60,9 @@ internal object ExoPlayerImplFingerprint : Fingerprint(
 internal object LoadVideoFingerprint : Fingerprint(
     classFingerprint = StopVideoFingerprint,
     returnType = "V",
-    strings = listOf("MedialibPlayer.loadVideo(")
+    filters = listOf(
+        string("MedialibPlayer.loadVideo(", StringComparisonType.STARTS_WITH)
+    )
 )
 
 /**
@@ -70,7 +72,9 @@ internal object LoadVideoFingerprint : Fingerprint(
 internal object LoopStateAdapterFingerprint : Fingerprint(
     returnType = "V",
     parameters = listOf("Ljava/lang/Object;"),
-    strings = listOf("attempted to update repeat mode but media session was null")
+    filters = listOf(
+        string("attempted to update repeat mode but media session was null", StringComparisonType.STARTS_WITH)
+    )
 )
 
 /**

@@ -14,6 +14,38 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_stable148_settings_keep_both_insertions_and_other_merged_changes(self):
+        dual = (
+            "    // Dual VoT - Yandex engine. Keep every key independent from the official\n"
+            '    public static final BooleanSetting DUAL_VOT_YANDEX_ENABLED = enabled;\n'
+            '    public static final StringSetting DUAL_VOT_YANDEX_OAUTH_TOKEN = token;\n'
+        )
+        series = (
+            "    // Series tracking. Consent is account-bound and excluded from settings import/export.\n"
+            '    public static final BooleanSetting SERIES_TRACKER_NAVIGATION_BUTTON = button;\n'
+            '    public static final IntegerSetting SERIES_TRACKER_COMPLETION_SECONDS = seconds;\n'
+        )
+        conflict = "<<<<<<< HEAD\n" + dual + "=======\n" + series + ">>>>>>> v1.48.0\n"
+        before, after = "new upstream settings\n", "Dual volume sliders and upstream video delay\n"
+        result = sync_upstream.merge_stable148_settings_conflict(before + conflict + after, dual, series)
+        self.assertEqual(result, before + dual + "\n" + series + after)
+        for invalid in (conflict + conflict, conflict + "<<<<<<< extra\n", conflict.replace("= token", "= changed")):
+            with self.subTest(invalid=invalid), self.assertRaises(sync_upstream.SyncError):
+                sync_upstream.merge_stable148_settings_conflict(invalid, dual, series)
+
+    def test_stable148_settings_unknown_blobs_remain_unresolved(self):
+        for stage in range(3):
+            blobs = list(sync_upstream.STABLE148_SETTINGS_CONFLICT_BLOBS)
+            blobs[stage] = "unknown"
+            with (
+                self.subTest(stage=stage),
+                mock.patch.object(sync_upstream, "unresolved_paths", return_value=[sync_upstream.DEV148_SETTINGS_PATH]),
+                mock.patch.object(sync_upstream, "output_of", side_effect=blobs),
+                mock.patch.object(sync_upstream, "run") as run,
+            ):
+                sync_upstream.resolve_stable148_settings_conflict()
+                run.assert_not_called()
+
     def test_youtube_junit_conflict_accepts_only_verified_blobs(self):
         path = "extensions/youtube/build.gradle.kts"
         known = (
