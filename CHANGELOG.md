@@ -1,3 +1,13 @@
+## 1.49.0-dev.1-dualvot.8.5.3 (2026-10-23)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.49.0-dev.1](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.1).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.48.0-dualvot.8.5.3 (2026-10-22)
 
 ### Automated Morphe update
@@ -396,6 +406,24 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.49.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0...v1.49.0-dev.1) (2026-10-23)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Hide status bar:** Video player is moved below the display cutout in portrait ([f80398e](https://github.com/MorpheApp/morphe-patches/commit/f80398e107587c7fb9f995f508a65ad1953b2734))
+* **YouTube - Navigation bar:** Translucent navigation bar is not shown without the edge to edge layout ([b8e1fdd](https://github.com/MorpheApp/morphe-patches/commit/b8e1fddd8a9d7146f2ccc4d1522a86b134cfe7a6))
+* **YouTube:** Miniplayer covered by the keyboard and empty band above the navigation bar ([0345136](https://github.com/MorpheApp/morphe-patches/commit/0345136b552c49b70c01fcc19a18762f57d3b7ad))
+* **YouTube:** Morphe flyout menu items are missing on tablets ([7127541](https://github.com/MorpheApp/morphe-patches/commit/71275419c5e6b8bd6a0a108e3d7815c8ef11a88e))
+
+### ✨ New Features
+
+* **YouTube - Navigation bar:** Add "Disable toolbar navigation tabs" setting ([01e767c](https://github.com/MorpheApp/morphe-patches/commit/01e767c4c3a386e4b7881ce7fc867a516082db23))
+* **YouTube:** Add `Search comments` patch ([#3942](https://github.com/MorpheApp/morphe-patches/issues/3942)) ([fbb628b](https://github.com/MorpheApp/morphe-patches/commit/fbb628ba23ecdcabd00b3bdfbf94aff60f58ac68))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add support for `21.23.492` ([4599204](https://github.com/MorpheApp/morphe-patches/commit/45992041db85e4fb51900cc5a773380732dc1fda))
 
 ## [1.48.0](https://github.com/MorpheApp/morphe-patches/compare/v1.47.0...v1.48.0) (2026-10-22)
 
