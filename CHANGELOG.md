@@ -1,3 +1,13 @@
+## 1.49.0-dev.4-dualvot.8.5.3 (2026-10-24)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.49.0-dev.4](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.4).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.49.0-dev.3-dualvot.8.5.3 (2026-10-24)
 
 ### Automated Morphe update
@@ -416,6 +426,16 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.49.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.3...v1.49.0-dev.4) (2026-10-24)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Ambient mode:** Ambient mode is not disabled with 21.43 ([aeb3012](https://github.com/MorpheApp/morphe-patches/commit/aeb3012a1d4fc42e9cb0e80e1cc139f24d445fb7))
+* **YouTube - Feed card layout:** Shorts shelves change width and corners when only a last row with one Short is in the list ([97f1f2d](https://github.com/MorpheApp/morphe-patches/commit/97f1f2df9a2ce61384df4327f6743953c1ae598e))
+* **YouTube - Hide status bar:** Status bar scroll color and translucent navigation bar do not follow the hidden status bar before the edge to edge flag is read ([a9e6562](https://github.com/MorpheApp/morphe-patches/commit/a9e6562b2a4dbc5d57f8cf65a205206a800d192a))
+* **YouTube - Miniplayer:** "Disable resuming miniplayer" may not work with latest experimental app target ([8554412](https://github.com/MorpheApp/morphe-patches/commit/85544128284a29522310d43ed6bfb3e99706e9d4))
+* **YouTube:** Fingerprints are not found on some targets between 21.04 and 21.35 ([52fa134](https://github.com/MorpheApp/morphe-patches/commit/52fa13489d6a97172d29cf5ff639d958506251ca))
 
 ## [1.49.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.2...v1.49.0-dev.3) (2026-10-24)
 
