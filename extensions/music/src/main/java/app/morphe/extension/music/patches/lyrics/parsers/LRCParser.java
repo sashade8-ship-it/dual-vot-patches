@@ -672,7 +672,8 @@ public final class LRCParser {
         for (int i = 0; i < raw.length; i++) {
             String trimmed = raw[i].trim();
             if (isSectionHeader(trimmed)) {
-                pendingPart = sectionLabel(trimmed);
+                // The heading text without its brackets, with runs of whitespace collapsed.
+                pendingPart = collapseSpaces(trimmed.substring(1, trimmed.length() - 1));
                 continue;
             }
             if (trimmed.isEmpty()) {
@@ -702,11 +703,6 @@ public final class LRCParser {
     private static boolean isSectionHeader(String trimmed) {
         return trimmed.length() > 2 && trimmed.charAt(0) == '['
                 && trimmed.charAt(trimmed.length() - 1) == ']';
-    }
-
-    /** The heading text without its brackets, with runs of whitespace collapsed. */
-    private static String sectionLabel(String trimmed) {
-        return collapseSpaces(trimmed.substring(1, trimmed.length() - 1));
     }
 
     private static String collapseSpaces(String text) {

@@ -130,7 +130,9 @@ public final class LyricsCache {
     }
 
     private static void writeEmbedded(String key, Lyrics lyrics) {
-        writeEmbeddedRomanization(key, lyrics.romanization());
+        if (LyricsMerge.hasText(lyrics.romanization())) {
+            writeLyricsLineList(embeddedRomanizationFile(key), lyrics.romanization());
+        }
         writeEmbeddedTranslations(key, lyrics.translations());
     }
 
@@ -722,13 +724,6 @@ public final class LyricsCache {
             Logger.printDebug(() -> "Could not read embedded romanization from cache", ex);
             return null;
         }
-    }
-
-    private static void writeEmbeddedRomanization(String key, @Nullable List<LyricsLine> romanization) {
-        if (!LyricsMerge.hasText(romanization)) {
-            return;
-        }
-        writeLyricsLineList(embeddedRomanizationFile(key), romanization);
     }
 
     /**

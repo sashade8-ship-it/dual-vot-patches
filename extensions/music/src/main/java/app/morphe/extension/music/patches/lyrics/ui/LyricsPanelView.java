@@ -2109,14 +2109,10 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
                 || perWordRomaji;
     }
 
-    private void resetOnlyModeKaraokeState() {
-        karaokeState.resetContent();
-        karaokeState.syncEnabled(Settings.LYRICS_WORD_SYNC.get());
-    }
-
     private void applyOnlyModeState() {
         captureOnlyModeScrollAnchor();
-        resetOnlyModeKaraokeState();
+        karaokeState.resetContent();
+        karaokeState.syncEnabled(Settings.LYRICS_WORD_SYNC.get());
         clearActiveLineState();
     }
 
@@ -2526,7 +2522,10 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
     }
 
     private void onRefreshLongPressed() {
-        showSearchDialog();
+        try {
+            openSearchDialog();
+        } catch (Throwable ignored) {
+        }
     }
 
     /**
@@ -2698,13 +2697,6 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
                     : running
                             ? str("morphe_music_lyrics_transcribe_aligning")
                             : str("morphe_music_lyrics_transcribe_align"));
-        }
-    }
-
-    private void showSearchDialog() {
-        try {
-            openSearchDialog();
-        } catch (Throwable ignored) {
         }
     }
 

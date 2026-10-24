@@ -128,7 +128,7 @@ public record LyricsLine(long startTimeMs, long endTimeMs, String text, List<Wor
         }
         if (words.size() == 1) {
             Word single = words.get(0);
-            if (isWholeLineWord(single.text(), text)) {
+            if (compactText(single.text()).equalsIgnoreCase(compactText(text))) {
                 return false;
             }
             if (single.endMs() <= single.startMs()) {
@@ -136,10 +136,6 @@ public record LyricsLine(long startTimeMs, long endTimeMs, String text, List<Wor
             }
         }
         return true;
-    }
-
-    private static boolean isWholeLineWord(String wordText, String lineText) {
-        return compactText(wordText).equalsIgnoreCase(compactText(lineText));
     }
 
     private static String compactText(String value) {

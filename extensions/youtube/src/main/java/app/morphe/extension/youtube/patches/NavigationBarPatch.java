@@ -227,7 +227,7 @@ public final class NavigationBarPatch {
                 translucent = false;
             } else {
                 Boolean edgeToEdge = HideStatusBarPatch.isEdgeToEdgeTopBar();
-                // Null if not read yet, or the Hide status bar patch is not included.
+                // Null if not known yet, or the Hide status bar patch is not included.
                 if (edgeToEdge != null) {
                     translucent = edgeToEdge;
                 }

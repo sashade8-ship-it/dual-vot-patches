@@ -93,7 +93,8 @@ public final class DeezerProvider extends ScoredSongProvider {
                 Lyrics lyrics = fetchLyricsByTrackId(trackId, arl);
                 if (lyrics != null) {
                     String title = item.optString("title", "");
-                    String artist = artistName(item);
+                    JSONObject artistObj = item.optJSONObject("artist");
+                    String artist = artistObj != null ? artistObj.optString("name", "") : "";
                     long durationSec = item.optInt("duration", 0);
                     int score = LyricsRequests.scoreLyricsCandidate(
                             title, artist, durationSec, lyrics, track);
@@ -106,11 +107,6 @@ public final class DeezerProvider extends ScoredSongProvider {
 
         scored.sort((a, b) -> Integer.compare(b.score(), a.score()));
         return scored;
-    }
-
-    private static String artistName(JSONObject item) {
-        JSONObject artistObj = item.optJSONObject("artist");
-        return artistObj != null ? artistObj.optString("name", "") : "";
     }
 
     private static int scoreCandidate(JSONObject item, TrackInfo track) {

@@ -134,12 +134,32 @@ public final class HideStatusBarPatch {
     private static volatile Boolean edgeToEdgeTopBarUsed;
 
     /**
+     * Changed during patching since this class is also
+     * used by {@link NavigationBarPatch}.
+     */
+    private static boolean isPatchIncluded() {
+        return false;  // Modified during patching.
+    }
+
+    /**
+     * @return If the edge to edge top bar feature flag is turned off for the whole session
+     *         even if it is not read yet: with the status bar layout fix and the status bar hidden.
+     */
+    private static boolean isEdgeToEdgeTopBarTurnedOff() {
+        return Settings.FIX_STATUS_BAR_LAYOUT.get() && Settings.HIDE_STATUS_BAR.get();
+    }
+
+    /**
      * @return If the window is drawn behind the system bars, or null if the app did not read
-     *         the edge to edge top bar feature flag yet.
+     *         the edge to edge top bar feature flag yet and its value is not known.
      */
     @Nullable
     static Boolean isEdgeToEdgeTopBar() {
-        return edgeToEdgeTopBarUsed;
+        Boolean edgeToEdge = edgeToEdgeTopBarUsed;
+        if (edgeToEdge == null && isPatchIncluded() && isEdgeToEdgeTopBarTurnedOff()) {
+            return false;
+        }
+        return edgeToEdge;
     }
 
     /**
@@ -187,6 +207,8 @@ public final class HideStatusBarPatch {
      * The status bar color that follows the scrolling top bar only exists with the edge to edge
      * top bar. Without it the status bar view is never set up, and the first scroll of the
      * top bar crashes the app (https://github.com/MorpheApp/morphe-patches/issues/3805).
+     * This flag can be read before the edge to edge top bar flag, which is then turned off later
+     * if the status bar is hidden.
      */
     public static boolean useStatusBarScrollColor(boolean original) {
         if (!Settings.FIX_STATUS_BAR_LAYOUT.get()) {
@@ -194,7 +216,10 @@ public final class HideStatusBarPatch {
         }
 
         Boolean edgeToEdge = edgeToEdgeTopBar;
-        return original && (edgeToEdge == null || edgeToEdge);
+        if (edgeToEdge == null) {
+            edgeToEdge = !isEdgeToEdgeTopBarTurnedOff();
+        }
+        return original && edgeToEdge;
     }
 
     /**

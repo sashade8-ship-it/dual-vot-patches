@@ -225,8 +225,15 @@ val ambientModePatch = bytecodePatch(
                         const/4 v0, 0x1
                         invoke-static { v0 }, $EXTENSION_IS_AMBIENT_MODE_ENABLED
                         move-result v0
-                        if-eqz v0, :keep
+                        if-nez v0, :enabled
 
+                        # Ambient mode is disabled, so the renderer of the server is not used either.
+                        # 21.43+ has no feature flags that turn ambient mode off.
+                        invoke-static { }, $optionalType->empty()$optionalType
+                        move-result-object p1
+                        return-object p1
+
+                        :enabled
                         # No /next response yet.
                         sget-object v0, $waitingStateField
                         if-eq p0, v0, :keep

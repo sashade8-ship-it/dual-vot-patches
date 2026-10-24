@@ -249,7 +249,7 @@ record WordTiming(int start, int end, long startMs, long endMs,
     static List<WordTiming> computeWordTimings(List<LyricsLine> lines, int index,
             boolean splitWordlessLine) {
         final LyricsLine line = lines.get(index);
-        if (isSingleWord(line.text())) {
+        if (countWords(line.text()) == 1) {
             long rangeStart = line.startTimeMs();
             if (rangeStart < 0 && line.hasWords()) {
                 rangeStart = line.words().get(0).startMs();
@@ -409,10 +409,6 @@ record WordTiming(int start, int end, long startMs, long endMs,
             result[i] = bounds.get(i);
         }
         return result;
-    }
-
-    private static boolean isSingleWord(String text) {
-        return countWords(text) == 1;
     }
 
     private static int countWords(String text) {

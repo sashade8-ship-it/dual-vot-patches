@@ -492,11 +492,6 @@ public final class LyricsManager {
         runOnLookupThread(() -> TrackOffsetStore.put(track, ms));
     }
 
-    /** Only reached on a real track change, so a loop cannot discard the offset it comes round for again. */
-    private void loadTemporaryOffsetMs(TrackInfo track) {
-        temporaryOffsetMs = TrackOffsetStore.get(track);
-    }
-
     /** Injection point; main thread. */
     public void onSetMetadata(@Nullable MediaMetadata metadata) {
         Utils.verifyOnMainThread();
@@ -689,7 +684,8 @@ public final class LyricsManager {
         currentMediaUri = mediaUri;
         currentTrack = track;
         currentVideoId = videoId;
-        loadTemporaryOffsetMs(track);
+        // Only reached on a real track change, so a loop cannot discard the offset it comes round for again.
+        temporaryOffsetMs = TrackOffsetStore.get(track);
         // A rebinding keeps the previous track's lyric, which is what makes it worth
         // telling apart from the video the track was committed for.
         if (!sameTrack) {

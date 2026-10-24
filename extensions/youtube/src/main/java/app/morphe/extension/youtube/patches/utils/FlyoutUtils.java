@@ -555,7 +555,7 @@ public final class FlyoutUtils {
         }
 
         if (nextButtonIndex > 0) {
-            addDivider(flyoutPanel, nextButtonIndex);
+            addFlyoutMenuItem(flyoutPanel, null, null, null, nextButtonIndex, true);
         }
 
         // Reset 'topFlyoutMenuVisible' field, once the buttons have been injected into the player's
@@ -639,11 +639,6 @@ public final class FlyoutUtils {
             int index
     ) {
         return addFlyoutMenuItem(flyoutPanel, icon, text, clickListener, index, false);
-    }
-
-    @SuppressWarnings("UnusedReturnValue")
-    private static int addDivider(Object flyoutPanel, int index) {
-        return addFlyoutMenuItem(flyoutPanel, null, null, null, index, true);
     }
 
     private static int addFlyoutMenuItem(
@@ -958,7 +953,9 @@ public final class FlyoutUtils {
             return;
         }
 
-        byte[] flyoutBuffer = getFlyoutBuffer(bufferObject);
+        byte[] flyoutBuffer = bufferObject instanceof ProtocolBufferFieldInterface bufferInterface
+                ? bufferInterface.patch_getBuffer()
+                : null;
         if (flyoutBuffer == null) {
             return;
         }
@@ -1047,13 +1044,6 @@ public final class FlyoutUtils {
                 parent = parent.getParent();
             }
         }
-    }
-
-    private static byte[] getFlyoutBuffer(@Nullable Object bufferObject) {
-        if (!(bufferObject instanceof ProtocolBufferFieldInterface bufferInterface)) {
-            return null;
-        }
-        return bufferInterface.patch_getBuffer();
     }
 
     public static void setFlyoutVideoId(byte[] buffer, String rawDescription) {
