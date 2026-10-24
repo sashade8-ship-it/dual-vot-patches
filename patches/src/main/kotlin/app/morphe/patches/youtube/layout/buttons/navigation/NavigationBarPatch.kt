@@ -360,7 +360,7 @@ val navigationBarPatch = bytecodePatch(
         // and the navigation bar to the top of the keyboard, so the navigation bar is moved above
         // the keyboard. Without it, the keyboard covers the bottom of the page and the navigation bar
         // stays at the bottom of the screen. The keyboard height is replaced with no margin,
-        // so the keyboard covers them again.
+        // so the keyboard covers them again, except while the legacy miniplayer is shown.
         PageBottomMarginFingerprint.let {
             it.method.apply {
                 // The keyboard height and the window inset are put in the same register,
@@ -372,17 +372,13 @@ val navigationBarPatch = bytecodePatch(
                             (this as BuilderInstruction21t).target.location.index == insetIndex
                 }
                 val keyboardRegister = getInstruction<OneRegisterInstruction>(keyboardBranchIndex).registerA
-                val freeRegister = getFreeRegisterProvider(insetIndex + 1, 1).getFreeRegister4Bit()
 
                 addInstructionsAtControlFlowLabel(
                     insetIndex + 1,
                     """
                         if-eqz v$keyboardRegister, :keyboard_hidden
-                        invoke-static { }, $EXTENSION_CLASS->isTranslucentNavigationBarForced()Z
-                        move-result v$freeRegister
-                        if-eqz v$freeRegister, :keyboard_hidden
-                        const/4 v$marginRegister, 0x0
-                        invoke-static { }, $EXTENSION_CLASS->setKeyboardMarginRemoved()V
+                        invoke-static/range { v$marginRegister .. v$marginRegister }, $EXTENSION_CLASS->getKeyboardMargin(I)I
+                        move-result v$marginRegister
                         :keyboard_hidden
                         nop
                     """

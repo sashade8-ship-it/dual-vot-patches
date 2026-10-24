@@ -70,6 +70,7 @@ import app.morphe.extension.youtube.innertube.IconOuterClass.YTIconType;
 import app.morphe.extension.youtube.patches.spoof.SpoofOSNamePatch;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.NavigationBar;
+import app.morphe.extension.youtube.shared.PlayerType;
 
 @SuppressWarnings("unused")
 public final class NavigationBarPatch {
@@ -309,9 +310,44 @@ public final class NavigationBarPatch {
 
     /**
      * Injection point.
+     * <p>
+     * The bottom margin of the layout that holds the page, the player and the navigation bar while
+     * the keyboard is open. With the feature flags turned on by
+     * {@link #useTranslucentNavigationBar(boolean)}, the keyboard height is removed from it, so
+     * the keyboard covers them again.
+     * <p>
+     * The legacy miniplayer, such as the minimal type before 21.29, rests at the bottom of that
+     * layout, so while it is shown the layout ends at the top of the keyboard instead
+     * (https://github.com/MorpheApp/morphe-patches/issues/4003). The margin of the app leaves
+     * the height of the system navigation buttons for the navigation bar, which is hidden while
+     * the keyboard is open, so the full keyboard height is used. The other miniplayers are moved
+     * above the keyboard by {@link MinimalMiniplayerPatch}.
+     *
+     * @param original The keyboard height the app uses as the margin.
      */
-    public static void setKeyboardMarginRemoved() {
+    public static int getKeyboardMargin(int original) {
+        if (!translucentNavigationBarForced) {
+            return original;
+        }
+
+        try {
+            if (PlayerType.getCurrent() == PlayerType.WATCH_WHILE_MINIMIZED
+                    && !MiniplayerPatch.getCurrentMiniplayerType().isModern()
+                    && Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                Activity activity = Utils.getActivity();
+                WindowInsets insets = activity == null
+                        ? null
+                        : activity.getWindow().getDecorView().getRootWindowInsets();
+                if (insets != null) {
+                    return Math.max(original, insets.getInsets(WindowInsets.Type.ime()).bottom);
+                }
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "getKeyboardMargin failure", ex);
+        }
+
         keyboardMarginRemoved = true;
+        return 0;
     }
 
     static boolean isKeyboardMarginRemoved() {
