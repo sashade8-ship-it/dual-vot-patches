@@ -24,6 +24,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import app.morphe.extension.music.patches.lyrics.model.Lyrics;
 import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
 import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
+import app.morphe.extension.music.patches.lyrics.parsers.LRCParser;
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.requests.Requester;
@@ -353,6 +354,8 @@ public final class DeezerProvider extends ScoredSongProvider {
         }
 
         if (lines.isEmpty()) return null;
+
+        LRCParser.fillEstimatedEnds(lines);
 
         String sourceUrl = "https://www.deezer.com/track/" + trackId;
         return new Lyrics(lines, name(), true, null, null, null, creditLines,

@@ -246,7 +246,7 @@ public class StreamingDataRequest {
     }
 
     /**
-     * Resolves a video that the app never opened, using the latest player headers.
+     * Uses headers captured during playback so a song can be downloaded without first playing it.
      * Deliberately not cached, so downloads cannot evict the streams of videos being watched.
      */
     public static StreamingDataRequest fetchRequestForDownload(String videoId,
