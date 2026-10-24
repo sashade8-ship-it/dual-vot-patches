@@ -1,3 +1,13 @@
+## 1.49.0-dev.3-dualvot.8.5.3 (2026-10-24)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.49.0-dev.3](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.3).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.49.0-dev.1-dualvot.8.5.3 (2026-10-23)
 
 ### Automated Morphe update
@@ -406,6 +416,39 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.49.0-dev.3](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.2...v1.49.0-dev.3) (2026-10-24)
+
+### 🐛 Bug Fixes
+
+* **Reddit - Redgifs audio:** Error toast is shown when network request fails ([6707f0e](https://github.com/MorpheApp/morphe-patches/commit/6707f0e1215ba3620586b95e5c0f8b8576339a86))
+* **YouTube:** 21.43 navigation tabs cannot be hidden ([68b01ca](https://github.com/MorpheApp/morphe-patches/commit/68b01cad1f9419b4dc0e9141659b4def6c3660a4))
+
+## [1.49.0-dev.2](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.1...v1.49.0-dev.2) (2026-10-24)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Disable continue watching prompt:** Prompt can still appear during playback ([#3996](https://github.com/MorpheApp/morphe-patches/issues/3996)) ([64e3e0e](https://github.com/MorpheApp/morphe-patches/commit/64e3e0ec5eb8f98e8f8f7e11ba754fc52c3af47f))
+* **YouTube - Feed card layout:** Horizontal shelves lose the card background when their header is scrolled out of the list ([60489d8](https://github.com/MorpheApp/morphe-patches/commit/60489d84d49c85c44b8007af2de39ee6b82147cb))
+* **YouTube - Feed card layout:** Videos of the horizontal shelves are cut by the left edge of the card ([c0ec5ae](https://github.com/MorpheApp/morphe-patches/commit/c0ec5ae17781305f490e589d2d53a6bc01cead46))
+* **YouTube - Hide status bar:** Status bar covers the top bar or leaves an empty bar above it ([#3997](https://github.com/MorpheApp/morphe-patches/issues/3997)) ([bf6fbe0](https://github.com/MorpheApp/morphe-patches/commit/bf6fbe0c75728741f7d51a11a20e3bf2312faba9))
+* **YouTube - Navigation bar:** Empty band below the reply bar of the comment replies ([bac5823](https://github.com/MorpheApp/morphe-patches/commit/bac5823bdd42beba2dd79f94010e2001b33017f7))
+* **YouTube - Navigation bar:** No connection and back online bars are covered by the system navigation buttons ([2576962](https://github.com/MorpheApp/morphe-patches/commit/2576962149ab22aadc16a26853c9b7154b0d9322))
+* **YouTube - Navigation bar:** System navigation buttons cannot be seen in the Shorts player with the light theme ([0115896](https://github.com/MorpheApp/morphe-patches/commit/011589657684ba34a7523f3b17af152c5962ae6e))
+* **YouTube - Navigation buttons:** Create button is not hidden with the new navigation bar layout ([47f511c](https://github.com/MorpheApp/morphe-patches/commit/47f511c7ae41de2b2ac83257d5a93c4df1216526))
+* **YouTube - Playback speed:** Channel speed whitelist does not work for Shorts ([be733a6](https://github.com/MorpheApp/morphe-patches/commit/be733a6883cdf4c5fc8176668afb1e7f5c22cb9f))
+* **YouTube - Shorts autoplay:** Overlay is out of place when going back to a Short that advanced with the comments open ([60efeb5](https://github.com/MorpheApp/morphe-patches/commit/60efeb58d08ba0e347928c7f4f903a689b474bfd))
+* **YouTube Music - Downloads:** Fix missing metadata in downloaded songs ([#3984](https://github.com/MorpheApp/morphe-patches/issues/3984)) ([7988621](https://github.com/MorpheApp/morphe-patches/commit/7988621db650eb2c32e7cab53731508ad733d5b9))
+* **YouTube Music - Downloads:** Fix wrong song downloads ([#3978](https://github.com/MorpheApp/morphe-patches/issues/3978)) ([7259e27](https://github.com/MorpheApp/morphe-patches/commit/7259e27ade3bd1f76cd89f2ecad07d86f39d0335))
+* **YouTube:** Morphe flyout menu items are missing in the new popup menu ([d2accff](https://github.com/MorpheApp/morphe-patches/commit/d2accff5135170a4288f326d89b25a81f688f063))
+
+### ✨ New Features
+
+* **YouTube Music - Third-party lyrics:** enhance sync engine, providers, AI translation, and RTL word sync ([#3877](https://github.com/MorpheApp/morphe-patches/issues/3877)) ([e092212](https://github.com/MorpheApp/morphe-patches/commit/e0922124073fe53b6ff335893b8208af512f34e7))
+
+### 🚀 Updated App Support
+
+* **YouTube:** Add experimental support for `21.43.523` ([6c413e5](https://github.com/MorpheApp/morphe-patches/commit/6c413e5b7bab279add97ac084b39b0d44c8ca059))
 
 ## [1.49.0-dev.1](https://github.com/MorpheApp/morphe-patches/compare/v1.48.0...v1.49.0-dev.1) (2026-10-23)
 
