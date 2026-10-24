@@ -1,3 +1,13 @@
+## 1.49.0-dev.5-dualvot.8.5.3 (2026-10-24)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.49.0-dev.5](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.5).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.49.0-dev.4-dualvot.8.5.3 (2026-10-24)
 
 ### Automated Morphe update
@@ -426,6 +436,14 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.49.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.4...v1.49.0-dev.5) (2026-10-24)
+
+### 🐛 Bug Fixes
+
+* Temporarily change expired PoToken check to log only instead of a user dialog ([1669acd](https://github.com/MorpheApp/morphe-patches/commit/1669acdea4e56f6d1e812d3c0f74ee691bc2e4cd))
+* **YouTube - Miniplayer:** Minimal miniplayer is covered by the keyboard before 21.29 ([5cd2eb2](https://github.com/MorpheApp/morphe-patches/commit/5cd2eb2f8d710e3a724d309dbf98fc845e78cb94))
+* **YouTube - Theme:** Custom background colors are not applied with 21.43 ([#4019](https://github.com/MorpheApp/morphe-patches/issues/4019)) ([9cc833f](https://github.com/MorpheApp/morphe-patches/commit/9cc833f626bc456d142a6eafe2a613a3f2cc3784))
 
 ## [1.49.0-dev.4](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.3...v1.49.0-dev.4) (2026-10-24)
 
