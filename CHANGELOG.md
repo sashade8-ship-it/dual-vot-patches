@@ -1,3 +1,13 @@
+## 1.49.0-dev.6-dualvot.8.5.3 (2026-10-25)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.49.0-dev.6](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.6).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.49.0-dev.5-dualvot.8.5.3 (2026-10-24)
 
 ### Automated Morphe update
@@ -436,6 +446,26 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.49.0-dev.6](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.5...v1.49.0-dev.6) (2026-10-25)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Captions:** Captions not shown in picture-in-picture on 21.16 - 21.28 ([#4024](https://github.com/MorpheApp/morphe-patches/issues/4024)) ([b2688c5](https://github.com/MorpheApp/morphe-patches/commit/b2688c5eb957f3ffd142595ff4ee7b491e3b86ae))
+* **YouTube - Hide layout components:** Fix actions blocked by Hide Snackbar ([#4038](https://github.com/MorpheApp/morphe-patches/issues/4038)) ([9a0fee9](https://github.com/MorpheApp/morphe-patches/commit/9a0fee9ec2846ba2db31cbfc2e4c2ac9b14895b7))
+* **YouTube - Playback speed:** Channel speed whitelist is not applied to preloaded Shorts ([4f108b5](https://github.com/MorpheApp/morphe-patches/commit/4f108b596a71adbbf223b59faaabcfbe2469d95a))
+
+### ✨ New Features
+
+* **YouTube - Add to queue:** Add "Native queue" setting ([#3953](https://github.com/MorpheApp/morphe-patches/issues/3953)) ([372eea2](https://github.com/MorpheApp/morphe-patches/commit/372eea295ec4521b9ccdb93a3f188f81a6ad1a6c))
+* **YouTube - Downloads:** Add "Quick download on tap" setting ([#3883](https://github.com/MorpheApp/morphe-patches/issues/3883)) ([dd97d93](https://github.com/MorpheApp/morphe-patches/commit/dd97d93628a3feb7bc8758139b01fbe42a532778))
+* **YouTube - Media notification controls:** Add options to seek with Previous & Next buttons ([#3955](https://github.com/MorpheApp/morphe-patches/issues/3955)) ([2b07abb](https://github.com/MorpheApp/morphe-patches/commit/2b07abb628fec3bf625a09ab7d019f915c4dfa23))
+* **YouTube - Navigation bar:** Add "Navigation bar style" setting ([db9af37](https://github.com/MorpheApp/morphe-patches/commit/db9af377093121e575fec80ba40e0025dfd66f81))
+
+### 🚀 Updated App Support
+
+* **Reddit:** Add experimental support for `2026.43.0` ([6407d5e](https://github.com/MorpheApp/morphe-patches/commit/6407d5efa0f7d99fb54909bc39e2074e8f60ac42))
+* **Reddit:** Add support for `2026.40.0` ([fcc02f7](https://github.com/MorpheApp/morphe-patches/commit/fcc02f77d5a9d7a13b74d14c12b302f9d9902c61))
 
 ## [1.49.0-dev.5](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.4...v1.49.0-dev.5) (2026-10-24)
 
