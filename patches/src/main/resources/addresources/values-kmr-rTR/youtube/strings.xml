@@ -452,8 +452,8 @@ Info: May not work on live streams"</string>
   <string name="morphe_queue_restore_title">Lîsteyê di nav beşan de bidomîne</string>
   <string name="morphe_queue_restore_summary">Lîste piştî destkirina serî lêve tê parastin</string>
   <string name="morphe_swap_save_and_queue_actions_title">Veguherîneya kirina tomarkirinê û kirina rêzê</string>
-  <string name="morphe_queue_override_flyout_menu_title">Bi serkirîkirina pêşniyarên rêzika peydakirinê</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Lihevîneya Morphe li şûna hejmara YouTube\'yê vekirin</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_entry_1">Bixweber</string>
   <string name="morphe_queue_add_flyout_menu_title">Bendeleya rêza flyout-a feed-ê zêde bike</string>
   <string name="morphe_queue_add_flyout_menu_summary">Bendeleya flyout-ê ya zêde zêde dike. Heke \"Zêde bikeye rêzê\" nîşan neyê, vê çalak bike.</string>
   <string name="morphe_local_queue_remove">Lêkirin</string>
@@ -481,6 +481,7 @@ Info: May not work on live streams"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Derxistina ji lîsteyê kirin û dîsa bar kirin</string>
   <string name="morphe_queue_manager_open_queue">Lîsteyê vekirin</string>
   <string name="morphe_queue_manager_save_queue">Lîsteyê li lîsteyê parastin</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Open channel from live avatar</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Prevents the live stream from opening when tapping the channel\'s avatar</string>
@@ -661,8 +662,7 @@ Divê 'kukiyên jêrnivîsan' bên peyda kirin."</string>
   <string name="morphe_navigation_bar_animations_summary">Tevahîyên veşêrinî dema ku di navbera taban de guherîn</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Kêmbara otomatîk a kêmbara navîgasyonê qeybidine.</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Desteyê nivîskî bi hevsengî neşêre dema ku bi hêsanî tîkê dike</string>
-  <string name="morphe_disable_translucent_navigation_title">Barê navîgasyonê ya nîvzelal neçalak bike</string>
-  <string name="morphe_disable_translucent_navigation_summary">Barê navîgasyonê û barê rewşê bi temamî nezelal dike</string>
+  <string name="morphe_navigation_bar_style_entry_1">Bixweber</string>
   <string name="morphe_toolbar_screen_title">Rêz</string>
   <string name="morphe_toolbar_screen_summary">Hilbijêre ku kîjan pêkhateyên di menuya veşêrîn de xuya dibe</string>
   <string name="morphe_hide_toolbar_cast_button_title">Butona birêveberînê veşêrin</string>

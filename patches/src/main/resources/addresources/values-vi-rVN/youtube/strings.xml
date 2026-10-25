@@ -473,6 +473,16 @@ Sau khi mở một video có nút Ask một lần, tính năng này hoạt độ
   <string name="morphe_external_downloader_screen_summary">Tải video, podcast hoặc nhạc bằng ứng dụng tải xuống của bên thứ ba</string>
   <string name="morphe_external_downloader_overlay_button_title">Hiển thị nút tải xuống lớp phủ người chơi</string>
   <string name="morphe_external_downloader_overlay_button_summary">Hiển thị một nút trong trình phát video mở ứng dụng tải xuống bên ngoài của bạn</string>
+  <string name="morphe_external_downloader_quick_menu_title">Tải xuống nhanh chóng</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Thông báo tải xuống trong nền. Chạm và giữ để mở trình tải xuống. Hoạt động với YTDLnis và YTindir.</string>
+  <string name="morphe_external_downloader_mark_watched_title">Đánh dấu các tệp đã tải xuống là đã xem</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Các video được tải xuống bằng công cụ tải xuống bên ngoài sẽ được thêm vào lịch sử xem YouTube của bạn.</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Trung bình (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Tải nhanh</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Âm thanh</string>
+  <string name="morphe_external_downloader_quick_options">Tất cả tùy chọn</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Dịch giọng nói</string>
   <string name="morphe_vot_screen_summary">Đọc to phụ đề video bằng tính năng chuyển văn bản thành giọng nói trên thiết bị, đồng bộ với video</string>
@@ -588,14 +598,14 @@ Lưu ý: Có thể không hoạt động với video phát trực tiếp"</strin
   <string name="morphe_queue_restore_summary">Hàng chờ vẫn được lưu sau khi tắt đi bật lại ứng dụng</string>
   <string name="morphe_swap_save_and_queue_actions_title">Đổi chỗ Lưu và tùy chọn Hàng chờ</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Chạm để xem các tùy chọn hàng đợi, chạm và giữ để lưu vào Watch later</string>
-  <string name="morphe_queue_override_flyout_menu_title">Ghi đè nút hàng chờ trong trang video</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Mở hàng chờ Morphe thay vì hàng chờ YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Phát mục tiếp theo trong hàng đợi</string>
+  <string name="morphe_queue_type_entry_1">Mặc định</string>
+  <string name="morphe_queue_type_entry_2">Hàng chờ gốc</string>
+  <string name="morphe_queue_type_entry_3">Hàng chờ Morphe</string>
+  <string name="morphe_queue_type_entry_4">Máy khách hàng chờ Morphe phía client</string>
   <string name="morphe_queue_add_flyout_menu_title">Thêm menu hàng chờ trên trang video</string>
   <string name="morphe_queue_add_flyout_menu_summary">Thêm tùy chọn vào menu bổ sung. Bật tùy chọn này nếu không thấy \"Thêm vào hàng chờ\"</string>
-  <string name="morphe_local_queue_title">Hàng đợi kiểu Premium</string>
-  <string name="morphe_local_queue_summary">"Thay thế hàng đợi Morphe bằng hàng đợi được lưu trên thiết bị, tự động phát liên tục và có thể sắp xếp lại bằng cách kéo
-
-Thông tin: Video tiếp theo trong hàng đợi chỉ bắt đầu phát khi YouTube đang hiển thị trên màn hình"</string>
   <string name="morphe_local_queue_sheet_title">Hàng đợi</string>
   <string name="morphe_local_queue_open">Hàng đợi (%s)</string>
   <string name="morphe_local_queue_clear">Xóa tất cả</string>
@@ -640,6 +650,20 @@ Thông tin: Video tiếp theo trong hàng đợi chỉ bắt đầu phát khi Yo
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Xóa và tải lại video</string>
   <string name="morphe_queue_manager_open_queue">Mở hàng chờ</string>
   <string name="morphe_queue_manager_save_queue">Lưu hàng chờ vào danh sách phát</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Danh sách phát đã lưu</string>
+  <string name="morphe_native_playlist_queue_saved_to">Đã lưu vào %s</string>
+  <string name="morphe_native_playlist_queue_clear">Xóa hàng đợi</string>
+  <string name="morphe_native_playlist_queue_cleared">Hàng đợi đã được xóa</string>
+  <string name="morphe_native_playlist_queue_title">Hàng chờ</string>
+  <string name="morphe_native_playlist_queue_last">Phát cuối trong hàng chờ</string>
+  <string name="morphe_native_playlist_queue_next">Phát mục tiếp theo trong hàng chờ</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube không thể hiển thị danh sách chờ.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Hàng đợi chưa sẵn sàng cho video này. Hãy mở trình phát video và thử lại.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Thêm Mix vào hàng chờ hay xem Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Xem</string>
+  <string name="morphe_native_playlist_queue_add_mix">Thêm vào hàng chờ</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Đang tải bản phối…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Mở kênh khi bấm vào ảnh đại diện có sự kiện trực tiếp</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Không mở video phát trực tiếp khi bấm vào ảnh đại diện của kênh</string>
@@ -853,8 +877,11 @@ Cần thiết lập \"Cookie phụ đề\""</string>
   <string name="morphe_navigation_bar_animations_summary">Tạo hoạt ảnh khi chuyển tab</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Tắt tự động ẩn thanh điều hướng</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Giữ thanh điều hướng hiển thị khi cuộn</string>
-  <string name="morphe_disable_translucent_navigation_title">Vô hiệu hóa thanh điều hướng trong suốt</string>
-  <string name="morphe_disable_translucent_navigation_summary">Làm cho thanh điều hướng và thanh trạng thái hoàn toàn không trong suốt</string>
+  <string name="morphe_navigation_bar_style_title">Kiểu thanh điều hướng</string>
+  <string name="morphe_navigation_bar_style_entry_1">Mặc định</string>
+  <string name="morphe_navigation_bar_style_entry_2">Bán trong suốt</string>
+  <string name="morphe_navigation_bar_style_entry_3">Trong suốt</string>
+  <string name="morphe_navigation_bar_style_entry_4">Đục</string>
   <string name="morphe_toolbar_screen_title">Thanh công cụ</string>
   <string name="morphe_toolbar_screen_summary">Chọn những thành phần sẽ xuất hiện trên thanh công cụ</string>
   <string name="morphe_hide_toolbar_cast_button_title">Ẩn nút truyền</string>

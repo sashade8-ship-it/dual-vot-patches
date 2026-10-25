@@ -473,6 +473,16 @@ Nadat 'n video met die Ask-knoppie een keer oopgemaak is, werk die funksie met a
   <string name="morphe_external_downloader_screen_summary">Laai video\'s, podkaste of liedjies af met derdeparty-aflaai-programme</string>
   <string name="morphe_external_downloader_overlay_button_title">Wys speler-oorlade-aflaai-knoppie</string>
   <string name="morphe_external_downloader_overlay_button_summary">Wys \'n knoppie in die video-speler wat jou eksterne aflaailaar oopmaak</string>
+  <string name="morphe_external_downloader_quick_menu_title">Vinnige aflaai met \'n tik</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Aanwysings om in die agtergrond af te laai. Tik en hou in om die aflaai-program oop te maak. Werk met YTDLnis en YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Merk aflaaiings as gekyk</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Video\'s wat met \'n eksterne aflaai-program afgelaai is, word by jou YouTube-kykgeskiedenis gevoeg</string>
+  <string name="morphe_external_downloader_quick_video_quality">Volle HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Matig (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Vinnige aflaai</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Klank</string>
+  <string name="morphe_external_downloader_quick_options">Alle opsies</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Vertaalde stem over</string>
   <string name="morphe_vot_screen_summary">Lees video-onderskrifte hardop voor met behulp van teks-na-spraak op die toestel, gesinkroniseer met die afspeel</string>
@@ -588,14 +598,14 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <string name="morphe_queue_restore_summary">Tou word behou na die herbegin van die app</string>
   <string name="morphe_swap_save_and_queue_actions_title">Ruil die Spaar en Waglys-aksies</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Tik vir tou-opsies, tik en hou om na Kyk later te stoor</string>
-  <string name="morphe_queue_override_flyout_menu_title">Vervang voedingsvloei-wyser-knoppie</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Oop die Morphe-ry vir die YouTube-ry</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Speel volgende in wagtelys tipe</string>
+  <string name="morphe_queue_type_entry_1">Verstek</string>
+  <string name="morphe_queue_type_entry_2">Inheemse wagtelys</string>
+  <string name="morphe_queue_type_entry_3">Morphe wagtelys</string>
+  <string name="morphe_queue_type_entry_4">Morphe wagtelys kliënt sykant</string>
   <string name="morphe_queue_add_flyout_menu_title">Voeg voer flyout-tou-menu-item by</string>
   <string name="morphe_queue_add_flyout_menu_summary">Voeg \'n bykomende flyout-item by. Skakel dit aan as \"Voeg by tou\" nie gewys word nie</string>
-  <string name="morphe_local_queue_title">Premium-styl-tou</string>
-  <string name="morphe_local_queue_summary">"Vervang die Morphe-tou met een wat op die toestel bly, vanself deurspeel, en deur te sleep herrangskik kan word
-
-Inligting: Die volgende video in die tou begin eers wanneer YouTube op die skerm is"</string>
   <string name="morphe_local_queue_sheet_title">Tou</string>
   <string name="morphe_local_queue_open">Waglys (%s)</string>
   <string name="morphe_local_queue_clear">Wis alles</string>
@@ -640,6 +650,20 @@ Inligting: Die volgende video in die tou begin eers wanneer YouTube op die skerm
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Verwyder en herlaai video</string>
   <string name="morphe_queue_manager_open_queue">Maak waglys oop</string>
   <string name="morphe_queue_manager_save_queue">Stoor waglys na spyskaart</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Afspellys gestoor</string>
+  <string name="morphe_native_playlist_queue_saved_to">Gestoor na %s</string>
+  <string name="morphe_native_playlist_queue_clear">Maak wagtelys skoon</string>
+  <string name="morphe_native_playlist_queue_cleared">Wagtelys skoongemaak</string>
+  <string name="morphe_native_playlist_queue_title">Wagtelys</string>
+  <string name="morphe_native_playlist_queue_last">Speel laaste in wagtelys</string>
+  <string name="morphe_native_playlist_queue_next">Speel volgende in wagtelys</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube kon nie die wagtelys vertoon nie.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Die wagtelys is nie gereed vir hierdie video nie. Maak die videospeler oop en probeer weer.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Voeg Mengsel by wagtelys of kyk Mengsel?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Kyk</string>
+  <string name="morphe_native_playlist_queue_add_mix">Voeg by wagtelys</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Besig om Mengsel te laai...</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Open kanaal van regstreekse avatar</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Voorkom dat die regstreekse uitsending oopmaak wanneer jy op die kanaal se avatar tik</string>
@@ -853,8 +877,11 @@ Om Instellings toe te gaan, skakel die Instelling-knoppie in via Algemeen → We
   <string name="morphe_navigation_bar_animations_summary">Makes the status bar fully opaque</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Deaktiveer outomatiese verberg van navigasiebalk</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Makes the navigation bar fully opaque in light mode</string>
-  <string name="morphe_disable_translucent_navigation_title">Deaktiveer semi-deursigtige navigasiebalk remercie</string>
-  <string name="morphe_disable_translucent_navigation_summary">Maak die navigasie- en statusbalk volledig opaak</string>
+  <string name="morphe_navigation_bar_style_title">Navigasiebalkstyl</string>
+  <string name="morphe_navigation_bar_style_entry_1">Verstek</string>
+  <string name="morphe_navigation_bar_style_entry_2">Deurskynend</string>
+  <string name="morphe_navigation_bar_style_entry_3">Deursigtig</string>
+  <string name="morphe_navigation_bar_style_entry_4">Opaak</string>
   <string name="morphe_toolbar_screen_title">Wenkbalk</string>
   <string name="morphe_toolbar_screen_summary">Kies watter komponente in die lêertooskassie vertoon moet word</string>
   <string name="morphe_hide_toolbar_cast_button_title">Hide \'Audio Track\' menu footer</string>

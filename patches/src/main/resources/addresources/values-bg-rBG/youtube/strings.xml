@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">Изтегляйте видеа, подкасти или песни чрез външни приложения за изтегляне</string>
   <string name="morphe_external_downloader_overlay_button_title">Показване на бутона за изтегляне в припокриването на плеъра</string>
   <string name="morphe_external_downloader_overlay_button_summary">Показва бутон във видео плеъра, който отваря външния ви изтегляч</string>
+  <string name="morphe_external_downloader_quick_menu_title">Бързо изтегляне с докосване</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Подкани за изтегляне във фонов режим. Докоснете и задръжте, за да отворите програмата за изтегляне. Работи с YTDLnis и YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Маркиране на изтеглянията като гледани</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Видеата, изтеглени с външен инструмент за изтегляне, се добавят към вашия историк на гледане в YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Средно (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Бързо изтегляне</string>
+  <string name="morphe_external_downloader_quick_video">Видео</string>
+  <string name="morphe_external_downloader_quick_audio">Аудио</string>
+  <string name="morphe_external_downloader_quick_options">Всички опции</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Превод на глас зад кадър</string>
   <string name="morphe_vot_screen_summary">Четете надписите на видеото на глас, използвайки вграден текстов говор, синхронизиран с възпроизвеждането</string>
@@ -588,14 +598,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">Опашката се запазва след рестартиране на приложението</string>
   <string name="morphe_swap_save_and_queue_actions_title">Размяна на действията Запази и Опашка</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Докоснете за опциите на опашката, докоснете и задръжте, за да запазите в „Гледай по-късно“</string>
-  <string name="morphe_queue_override_flyout_menu_title">Бутон за заместване на опашката на канала</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Отваря опашката на Morphe вместо опашката на YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Пускане на следващо в опашката</string>
+  <string name="morphe_queue_type_entry_1">По подразбиране</string>
+  <string name="morphe_queue_type_entry_2">Родна опашка</string>
+  <string name="morphe_queue_type_entry_3">Morphe опашка</string>
+  <string name="morphe_queue_type_entry_4">Morphe опашка от страна на клиента</string>
   <string name="morphe_queue_add_flyout_menu_title">Добавяне на елемент от менюто за излитащ прозорец на емисията</string>
   <string name="morphe_queue_add_flyout_menu_summary">Добавя допълнителен елемент в излитащия прозорец. Активирайте това, ако „Добавяне към опашката“ не се показва</string>
-  <string name="morphe_local_queue_title">Опашка в стил Premium</string>
-  <string name="morphe_local_queue_summary">"Заменя опашката на Morphe с такава, която се съхранява на устройството, възпроизвежда се самостоятелно и може да бъде пренареждана чрез плъзгане
-
-Информация: Следващото видео от опашката стартира само когато YouTube е на екрана"</string>
   <string name="morphe_local_queue_sheet_title">Опашка</string>
   <string name="morphe_local_queue_open">Чакаща опашка (%s)</string>
   <string name="morphe_local_queue_clear">Изчисти всичко</string>
@@ -640,6 +650,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Премахване от опашката и презареждане на видеото</string>
   <string name="morphe_queue_manager_open_queue">Отваряне на опашката</string>
   <string name="morphe_queue_manager_save_queue">Запазване на опашката в плейлист</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Плейлистът е запазен</string>
+  <string name="morphe_native_playlist_queue_saved_to">Запазено в %s</string>
+  <string name="morphe_native_playlist_queue_clear">Изчистване на опашката</string>
+  <string name="morphe_native_playlist_queue_cleared">Опашката е изчистена</string>
+  <string name="morphe_native_playlist_queue_title">Опашка</string>
+  <string name="morphe_native_playlist_queue_last">Пускане на последното в опашката</string>
+  <string name="morphe_native_playlist_queue_next">Пускане на следващото в опашката</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube не може да покаже опашката.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Опашката не е готова за това видео. Отворете видео плейъра и опитайте отново.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Добавяне на микс към опашката или гледане на микса?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Гледане</string>
+  <string name="morphe_native_playlist_queue_add_mix">Добавяне към опашката</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Зареждане на микс…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Отворете канал от аватара на живо</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Предотвратява отварянето на излъчването на живо при докосване на аватара на канала</string>
@@ -853,8 +877,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">Анимира преходите при превключване между табовете</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Забрани автоматичното скриване на навигационната лента</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Поддържа навигационната лента видима при превъртане</string>
-  <string name="morphe_disable_translucent_navigation_title">Деактивиране на полупрозрачния навигационен панел</string>
-  <string name="morphe_disable_translucent_navigation_summary">Прави навигационния панел и лентата за статус напълно непрозрачни</string>
+  <string name="morphe_navigation_bar_style_title">Стил на навигационната лента</string>
+  <string name="morphe_navigation_bar_style_entry_1">По подразбиране</string>
+  <string name="morphe_navigation_bar_style_entry_2">Полупрозрачен</string>
+  <string name="morphe_navigation_bar_style_entry_3">Прозрачен</string>
+  <string name="morphe_navigation_bar_style_entry_4">Непрозрачен</string>
   <string name="morphe_toolbar_screen_title">Тойбър</string>
   <string name="morphe_toolbar_screen_summary">Изберете кои компоненти да се показват в лентата с инструменти</string>
   <string name="morphe_hide_toolbar_cast_button_title">Бутон за предаване на Тв</string>

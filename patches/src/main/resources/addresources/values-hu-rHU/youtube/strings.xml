@@ -473,6 +473,16 @@ Egy alkalommal megnyitott, Ask gombbal ellátott videó esetén a funkció minde
   <string name="morphe_external_downloader_screen_summary">Töltsön le videókat, podcastokat vagy dalokat harmadik féles alkalmazásokkal</string>
   <string name="morphe_external_downloader_overlay_button_title">Klejítőpanel letöltés gomb mutatása a lejátszóban</string>
   <string name="morphe_external_downloader_overlay_button_summary">Gomb megjelenítése a videolejátszón, amely megnyitja a külső letöltőt</string>
+  <string name="morphe_external_downloader_quick_menu_title">Gyors letöltés egy érintéssel</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Kérdézi, hogy letöltse a háttérben. Nyomassa hosszan a letöltő megnyitásához. Kompatibilis a YTDLnis és a YTindir alkalmazásokkal</string>
+  <string name="morphe_external_downloader_mark_watched_title">Letöltések megjelölése megtekintettként</string>
+  <string name="morphe_external_downloader_mark_watched_summary">A külső letöltővel letöltött videók hozzá vannak adják a YouTube megtekintési előzményekhez</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Közepes (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Gyors letöltés</string>
+  <string name="morphe_external_downloader_quick_video">Videó</string>
+  <string name="morphe_external_downloader_quick_audio">Hang</string>
+  <string name="morphe_external_downloader_quick_options">Összes beállítás</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Hangfelirat hangos felolvasása</string>
   <string name="morphe_vot_screen_summary">Olvassa fel a videó feliratait hangosan a készüléken található szöveg-beszéddé alakító segítségével, szinkronban a lejátszással.</string>
@@ -588,14 +598,14 @@ Figyelem: Lehet, hogy az élő közvetítéseknél nem működik"</string>
   <string name="morphe_queue_restore_summary">A sor az alkalmazás újraindítása után is megőrizhető</string>
   <string name="morphe_swap_save_and_queue_actions_title">Csere a Mentés és a Sorba rendezés műveletekhez</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Koppintson a sor beállításaihoz, tartsa lenyomva a \'Megnézem később\' listára mentéshez. ,\"key\":\"morphe_swap_save_and_queue_actions_summary\",\"context\":\"morphe_swap_save_and_queue_actions_summary\",\"maxLength\":null,\"terms\":[]}</string>
-  <string name="morphe_queue_override_flyout_menu_title">A Morphe sor felülbírálása a lejálistában</string>
-  <string name="morphe_queue_override_flyout_menu_summary">A Morphe sorbanálítást nyit meg a YouTube sor helyett.</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Lejátszás a következő sorban</string>
+  <string name="morphe_queue_type_entry_1">Alapértelmezett</string>
+  <string name="morphe_queue_type_entry_2">Beépített sor</string>
+  <string name="morphe_queue_type_entry_3">Morphe sor</string>
+  <string name="morphe_queue_type_entry_4">Morphe klienstoldali sor</string>
   <string name="morphe_queue_add_flyout_menu_title">Sor menüelem hozzáadása a hírfolyam felugró menühöz</string>
   <string name="morphe_queue_add_flyout_menu_summary">Hozzáad egy további felugró menüelemet. Engedélyezze, ha a \"Hozzáadás a sorhoz\" nem jelenik meg.</string>
-  <string name="morphe_local_queue_title">Prémium stílusú várólista</string>
-  <string name="morphe_local_queue_summary">"A Morphe-várólistát egy olyan várólistára cseréli, amely az eszközön tárolódik, magától végigjátssza a listát, és húzással átrendezhető
-
-Információ: A várólista következő videója csak akkor indul el, ha a YouTube éppen a képernyőn van"</string>
   <string name="morphe_local_queue_sheet_title">Várólista</string>
   <string name="morphe_local_queue_open">Sor (%s)</string>
   <string name="morphe_local_queue_clear">Összes törlése</string>
@@ -640,6 +650,20 @@ Információ: A várólista következő videója csak akkor indul el, ha a YouTu
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Eltávolítás a sorból és videó újratöltése</string>
   <string name="morphe_queue_manager_open_queue">Sor megnyitása</string>
   <string name="morphe_queue_manager_save_queue">A sor mentése lejálistához</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Lejátszási lista mentve</string>
+  <string name="morphe_native_playlist_queue_saved_to">Mentve ide: %s</string>
+  <string name="morphe_native_playlist_queue_clear">Sor törlése</string>
+  <string name="morphe_native_playlist_queue_cleared">A sor törölve</string>
+  <string name="morphe_native_playlist_queue_title">Sor</string>
+  <string name="morphe_native_playlist_queue_last">Lejátszás az utolsó sorban</string>
+  <string name="morphe_native_playlist_queue_next">Lejátszás a következő sorban</string>
+  <string name="morphe_native_playlist_queue_unavailable">A YouTube nem tudta megjeleníteni a sort.</string>
+  <string name="morphe_native_playlist_queue_not_ready">A sor nem kész erre a videóra. Nyissa meg a videolejátszót, majd próbálja újra.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Mix hozzáadása a sornak vagy Mix lejátszása?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Lejátszás</string>
+  <string name="morphe_native_playlist_queue_add_mix">Hozzáadás a sorhoz</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Mix betöltése…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Csatorna megnyitása az élő avatarból</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Megakadályozza, hogy az élő közvetítés megnyíljon a csatorna avatarjára koppintva</string>
@@ -853,8 +877,11 @@ A Beállítások eléréséhez engedélyezze a Beállítások gombot az Általá
   <string name="morphe_navigation_bar_animations_summary">Animálja az átmeneteket a lapok között váltáskor</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Kapcsold ki az automatikus elrejtést a navigációs sávra</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">A navigációs sáv látható marad a görgetés közben</string>
-  <string name="morphe_disable_translucent_navigation_title">Átlátszó navigációs sáv letiltása</string>
-  <string name="morphe_disable_translucent_navigation_summary">Teljesen átlátszatlaná teszi a navigációs és az állapotsort</string>
+  <string name="morphe_navigation_bar_style_title">Navigációs sáv stílusa</string>
+  <string name="morphe_navigation_bar_style_entry_1">Alapértelmezett</string>
+  <string name="morphe_navigation_bar_style_entry_2">Félt पारátlan</string>
+  <string name="morphe_navigation_bar_style_entry_3">Átlátszó</string>
+  <string name="morphe_navigation_bar_style_entry_4">Átlátszatlan</string>
   <string name="morphe_toolbar_screen_title">Eszközevek sorozata</string>
   <string name="morphe_toolbar_screen_summary">Válassza ki, mely komponensek jelenjenek meg az eszköztáron</string>
   <string name="morphe_hide_toolbar_cast_button_title">Átküldés gomb elrejtése</string>

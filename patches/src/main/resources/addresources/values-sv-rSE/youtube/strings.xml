@@ -473,6 +473,16 @@ När en video med Ask-knappen har öppnats en gång fungerar funktionen med alla
   <string name="morphe_external_downloader_screen_summary">Ladda ner videor, poddar eller låtar med nedladdningsappar från tredje part</string>
   <string name="morphe_external_downloader_overlay_button_title">Visa nedladdningsknapp för spelaröverlag</string>
   <string name="morphe_external_downloader_overlay_button_summary">Visar en knapp i videospelaren som öppnar din externa nedladdare</string>
+  <string name="morphe_external_downloader_quick_menu_title">Snabb nedladdning vid tryck</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Frågar om att ladda ner i bakgrunden. Tryck och håll intryckt för att öppna nedladdaren. Fungerar med YTDLnis och YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Markera nedladdningar som sedda</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Videos som laddas ner med en extern nedladdare läggs till i din YouTube-visningshistorik</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Medel (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Snabb nedladdning</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Ljud</string>
+  <string name="morphe_external_downloader_quick_options">Alla alternativ</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Voice over-översättning</string>
   <string name="morphe_vot_screen_summary">Läs upp video-textning med hjälp av enhetens text-till-tal, synkroniserat med uppspelning</string>
@@ -588,14 +598,14 @@ Information: Kanske inte fungerar i livestreamar"</string>
   <string name="morphe_queue_restore_summary">Kön behålls efter omstart av appen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Byt plats på åtgärderna Spara och Kö</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Tryck för köalternativ, tryck och håll för att spara till Titta senare</string>
-  <string name="morphe_queue_override_flyout_menu_title">Åsidosätt flyout-knappen för kö i flödet</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Öppnar Morphe-kön istället för YouTube-kön</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Spelar nästa i kötyp</string>
+  <string name="morphe_queue_type_entry_1">Standard</string>
+  <string name="morphe_queue_type_entry_2">Inbyggd kön</string>
+  <string name="morphe_queue_type_entry_3">Morphe-kö</string>
+  <string name="morphe_queue_type_entry_4">Morphe-köklientsida</string>
   <string name="morphe_queue_add_flyout_menu_title">Lägg till menyalternativ för kö i flödernas flyout-meny</string>
   <string name="morphe_queue_add_flyout_menu_summary">Lägger till ett extra flyout-objekt. Aktivera detta om \"Lägg till i kön\" inte visas</string>
-  <string name="morphe_local_queue_title">Kö i Premiumstil</string>
-  <string name="morphe_local_queue_summary">"Ersätter Morphe-kön med en som finns på enheten, spelas upp automatiskt och kan sorteras om genom att dra
-
-Info: Nästa video i kön startar bara medan YouTube är på skärmen"</string>
   <string name="morphe_local_queue_sheet_title">Kö</string>
   <string name="morphe_local_queue_open">Kö (%s)</string>
   <string name="morphe_local_queue_clear">Rensa alla</string>
@@ -640,6 +650,20 @@ Info: Nästa video i kön startar bara medan YouTube är på skärmen"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Ta bort och ladda om video</string>
   <string name="morphe_queue_manager_open_queue">Öppna kön</string>
   <string name="morphe_queue_manager_save_queue">Spara kön till spellista</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Spellista sparad</string>
+  <string name="morphe_native_playlist_queue_saved_to">Sparad till %s</string>
+  <string name="morphe_native_playlist_queue_clear">Rensa kö</string>
+  <string name="morphe_native_playlist_queue_cleared">Kön rensad</string>
+  <string name="morphe_native_playlist_queue_title">Kö</string>
+  <string name="morphe_native_playlist_queue_last">Spela sista i kö</string>
+  <string name="morphe_native_playlist_queue_next">Spela nästa i kö</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube kunde inte visa kön.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Kön är inte redo för den här videon. Öppna videospelaren och försök igen.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Lägg till Mix i kö eller titta på Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Titta</string>
+  <string name="morphe_native_playlist_queue_add_mix">Lägg till i kö</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Läser in Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Öppna kanal från liveprofilbild</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Förhindrar att livestreamen öppnas när du trycker på kanalens profilbild</string>
@@ -853,8 +877,11 @@ För att komma åt Inställningar aktiverar du Inställningsknappen via Allmänt
   <string name="morphe_navigation_bar_animations_summary">Animerar övergångarna när du byter mellan flikar</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Inaktivera att navigeringsfältet döljs automatiskt</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Håller navigeringsfältet synligt när du skrollar</string>
-  <string name="morphe_disable_translucent_navigation_title">Inaktivera genomskinligt navigeringsfält</string>
-  <string name="morphe_disable_translucent_navigation_summary">Gör navigerings- och statusfältet helt ogenomskinligt</string>
+  <string name="morphe_navigation_bar_style_title">Stil för navigeringsfält</string>
+  <string name="morphe_navigation_bar_style_entry_1">Standard</string>
+  <string name="morphe_navigation_bar_style_entry_2">Genomskinlig</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
+  <string name="morphe_navigation_bar_style_entry_4">Opak</string>
   <string name="morphe_toolbar_screen_title">Verktygsfält</string>
   <string name="morphe_toolbar_screen_summary">Välj vilka komponenter som visas i verktygsfältet</string>
   <string name="morphe_hide_toolbar_cast_button_title">Dölj knappen Casta</string>

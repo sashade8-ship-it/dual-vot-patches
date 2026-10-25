@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">הורד סרטונים, פודקאסטים או שירים באמצעות אפליקציות הורדה של צד שלישי</string>
   <string name="morphe_external_downloader_overlay_button_title">הצג כפתור הורדה לשכבת הביצוען</string>
   <string name="morphe_external_downloader_overlay_button_summary">מציג כפתור בעתני הוידאו שפותח את מנהל ההורדות החיצוני שלך</string>
+  <string name="morphe_external_downloader_quick_menu_title">הורדה מהירה בנגיעה</string>
+  <string name="morphe_external_downloader_quick_menu_summary">מציע להוריד ברקע. לחיצה ארוכה תפתח את תוכנת ההורדה. עובד עם YTDLnis ו-YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">סמן הורדות כנצפות</string>
+  <string name="morphe_external_downloader_mark_watched_summary">סרטונים שהורדו באמצעות תוכנת הורדה חיצונית יתווספו להיסטוריית הצפייה שלך ב-YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">בינוני (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">הורדה מהירה</string>
+  <string name="morphe_external_downloader_quick_video">סרטון</string>
+  <string name="morphe_external_downloader_quick_audio">שמע</string>
+  <string name="morphe_external_downloader_quick_options">כל האפשרויות</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">תרגום דיבוב</string>
   <string name="morphe_vot_screen_summary">קריאת כתוביות הסרטון בקול רם באמצעות טקסט לדיבור מקומי, בסנכרון עם ההפעלה</string>
@@ -588,14 +598,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">התור נשמר גם לאחר הפעלה מחדש של האפליקציה</string>
   <string name="morphe_swap_save_and_queue_actions_title">החלף בין פעולות שמירה לתור</string>
   <string name="morphe_swap_save_and_queue_actions_summary">הקש כדי לראות אפשרויות תור, הקש והחזק כדי לשמור לצפייה מאוחרת</string>
-  <string name="morphe_queue_override_flyout_menu_title">כפתור החלפת תור הפיד</string>
-  <string name="morphe_queue_override_flyout_menu_summary">פותח את תור ה-Morphe במקום את התור של YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">נגן הבא בתור</string>
+  <string name="morphe_queue_type_entry_1">ברירת מחדל</string>
+  <string name="morphe_queue_type_entry_2">תור מקורי</string>
+  <string name="morphe_queue_type_entry_3">תור Morphe</string>
+  <string name="morphe_queue_type_entry_4">לקוח תור Morphe בצד המשתמש</string>
   <string name="morphe_queue_add_flyout_menu_title">הוסף הזנה לתור</string>
   <string name="morphe_queue_add_flyout_menu_summary">מוסיף פריט תפריט מוקפץ נוסף. הפעל זאת אם \'הוסף לתור\' אינו מוצג</string>
-  <string name="morphe_local_queue_title">תור בסגנון פרימיום</string>
-  <string name="morphe_local_queue_summary">"מחליף את התור של Morphe בתור שמאוחסן במכשיר, מתנגן מעצמו, וניתן לסדר אותו מחדש על ידי גרירה
-
-מידע: הסרטון הבא בתור מתחיל להתנגן רק בזמן ש-YouTube מוצג על המסך"</string>
   <string name="morphe_local_queue_sheet_title">תור</string>
   <string name="morphe_local_queue_open">תור (%s)</string>
   <string name="morphe_local_queue_clear">נקה הכל</string>
@@ -640,6 +650,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">הסר וטען מחדש וידאו</string>
   <string name="morphe_queue_manager_open_queue">פתח תור</string>
   <string name="morphe_queue_manager_save_queue">שמור תור לרשימת השמעה</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">רשימת ניגונים נשמרה</string>
+  <string name="morphe_native_playlist_queue_saved_to">נשמר ל%s</string>
+  <string name="morphe_native_playlist_queue_clear">נקה תור</string>
+  <string name="morphe_native_playlist_queue_cleared">התור נוקה</string>
+  <string name="morphe_native_playlist_queue_title">תור</string>
+  <string name="morphe_native_playlist_queue_last">נגן את האחרון בתור</string>
+  <string name="morphe_native_playlist_queue_next">נגן הבא בתור</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube לא הצליח להציג את התור.</string>
+  <string name="morphe_native_playlist_queue_not_ready">התור אינו מוכן עבור וידאו זה. פתח את נגן הוידאו ונסה שוב.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">להוסיף Mix לתור או לצפות ב-Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">צפה</string>
+  <string name="morphe_native_playlist_queue_add_mix">הוסף לתור</string>
+  <string name="morphe_native_playlist_queue_loading_mix">טוען Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">פתח ערוץ מאווטאר חי</string>
   <string name="morphe_open_channel_of_live_avatar_summary">מונע את פתיחת השידור החי בעת הקשה על האווטאר של הערוץ</string>
@@ -853,8 +877,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">מבצע אנימציות מעברים בעת מעבר בין כרטיסיות</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">השבת הסתרת אוטומטית של סרגל הניווט</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">שומר את סרגל הניווט גלוי בזמן גלילה</string>
-  <string name="morphe_disable_translucent_navigation_title">השבת שורת ניווט שקופה</string>
-  <string name="morphe_disable_translucent_navigation_summary">הופך את שורת הניווט ושורת המצב לאטומות לחלוטין</string>
+  <string name="morphe_navigation_bar_style_title">סגנון סרגל ניווט</string>
+  <string name="morphe_navigation_bar_style_entry_1">ברירת מחדל</string>
+  <string name="morphe_navigation_bar_style_entry_2">חצי שקוף</string>
+  <string name="morphe_navigation_bar_style_entry_3">שקוף</string>
+  <string name="morphe_navigation_bar_style_entry_4">אטום</string>
   <string name="morphe_toolbar_screen_title">סרגל כלים</string>
   <string name="morphe_toolbar_screen_summary">בחר אילו רכיבים יופיעו בסרגל הכלים</string>
   <string name="morphe_hide_toolbar_cast_button_title">הסתר לחצן העברה</string>

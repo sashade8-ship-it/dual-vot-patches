@@ -145,6 +145,13 @@ Om in te loggen, druk je op 'doorgaan' onderaan"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Verbergt de knoppen Vorige en Volgende in mediameldingen, op het vergrendelscherm en in de hoofdtelefoonbediening</string>
   <string name="morphe_disable_notification_media_seekbar_title">Schuifregelaar uitschakelen</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Voorkomt dat de schuifregelaar op het vergrendelscherm en in het meldingspaneel wordt versleept</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Zoeken met knoppen Vorige &amp; Volgende</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Bedieningselementen voor mediemeldingen, vergrendelscherm en koptelefoon wijzigen om te zoeken in plaats van video\'s te veranderen</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Spoellengte achteruit</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Seconden om terug te spoelen met de vorige knop</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Spoellengte vooruit</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Seconden om vooruit te spoelen met de volgende knop</string>
+  <string name="morphe_seek_notification_media_length_invalid">De zoeklengte moet tussen 1 en %s seconden liggen. Standaardwaarde wordt gebruikt</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Uitschakelen van het QUIC-protocol</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

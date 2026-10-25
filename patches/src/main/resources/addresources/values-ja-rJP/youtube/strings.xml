@@ -474,6 +474,16 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <string name="morphe_external_downloader_screen_summary">サードパーティ製ダウンロード アプリで、動画、ポッドキャスト、楽曲をダウンロードします</string>
   <string name="morphe_external_downloader_overlay_button_title">プレーヤー オーバーレイに外部ダウンローダーを呼び出すボタンを表示します</string>
   <string name="morphe_external_downloader_overlay_button_summary">ビデオ プレーヤーに、外部ダウンローダーを開くボタンを表示します</string>
+  <string name="morphe_external_downloader_quick_menu_title">タップでクイックダウンロード</string>
+  <string name="morphe_external_downloader_quick_menu_summary">バックグラウンドでのダウンロードを促します。長押しするとダウンローダーが開きます。YTDLnisおよびYTindirで動作します</string>
+  <string name="morphe_external_downloader_mark_watched_title">ダウンロード済みとして既読にする</string>
+  <string name="morphe_external_downloader_mark_watched_summary">外部ダウンローダーでダウンロードされたビデオがYouTubeの視聴履歴に追加されます</string>
+  <string name="morphe_external_downloader_quick_video_quality">フルHD（1080p）</string>
+  <string name="morphe_external_downloader_quick_audio_quality">中（192kbps）</string>
+  <string name="morphe_external_downloader_quick_menu_header">クイックダウンロード</string>
+  <string name="morphe_external_downloader_quick_video">動画</string>
+  <string name="morphe_external_downloader_quick_audio">オーディオ</string>
+  <string name="morphe_external_downloader_quick_options">すべてのオプション</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">吹き替え翻訳</string>
   <string name="morphe_vot_screen_summary">動画字幕を翻訳し、デバイス上のテキスト読み上げ機能で字幕の翻訳を字幕に同期しながら読み上げます</string>
@@ -589,14 +599,14 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_queue_restore_summary">アプリを終了または再起動したときにキューを保持します</string>
   <string name="morphe_swap_save_and_queue_actions_title">「後で見るに保存」ボタンの動作を入れ替える</string>
   <string name="morphe_swap_save_and_queue_actions_summary">タップするとキュー オプションを表示します。長押しすると、動画を [後で見る] に保存します</string>
-  <string name="morphe_queue_override_flyout_menu_title">フィードのフライアウト メニューのキューの項目の動作を上書き</string>
-  <string name="morphe_queue_override_flyout_menu_summary">YouTube のキューの代わりに Morphe のキューを開きます</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">キューに次へ再生するタイプ</string>
+  <string name="morphe_queue_type_entry_1">デフォルト</string>
+  <string name="morphe_queue_type_entry_2">ネイティブキュー</string>
+  <string name="morphe_queue_type_entry_3">Morphe キュー</string>
+  <string name="morphe_queue_type_entry_4">Morpheキュー（クライアント側）</string>
   <string name="morphe_queue_add_flyout_menu_title">フィードのフライアウト メニューにキューの項目を追加</string>
   <string name="morphe_queue_add_flyout_menu_summary">フィードのフライアウト メニューにキューの項目を追加します。「キューに追加」が表示されない場合に、この機能を有効にしてください</string>
-  <string name="morphe_local_queue_title">Premium 風キュー</string>
-  <string name="morphe_local_queue_summary">"Morphe キューを Premium 風キューに置き換えます。Premium 風キューは、デバイスに保存される、ドラッグによる並び替えが可能なキューであり、キュー内の動画を自動再生します
-
-制限事項: キューの次の動画が自動的に再生されるのは YouTube が画面に表示されている間に限られます"</string>
   <string name="morphe_local_queue_sheet_title">キュー</string>
   <string name="morphe_local_queue_open">キュー (%s)</string>
   <string name="morphe_local_queue_clear">すべて消去</string>
@@ -641,6 +651,20 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">削除して動画を再読み込み</string>
   <string name="morphe_queue_manager_open_queue">キューを開く</string>
   <string name="morphe_queue_manager_save_queue">キューをプレイリストとして保存</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">プレイリストが保存されました</string>
+  <string name="morphe_native_playlist_queue_saved_to">%s に保存済み</string>
+  <string name="morphe_native_playlist_queue_clear">キューをクリア</string>
+  <string name="morphe_native_playlist_queue_cleared">キューをクリアしました</string>
+  <string name="morphe_native_playlist_queue_title">キュー</string>
+  <string name="morphe_native_playlist_queue_last">キューの最後に追加</string>
+  <string name="morphe_native_playlist_queue_next">キューの最初に追加</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube はキューを表示できませんでした。</string>
+  <string name="morphe_native_playlist_queue_not_ready">この動画にはキューが準備されていません。ビデオプレーヤーを開いて再度お試しください。</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Mix をキューに追加しますか、それとも Mix を視聴しますか？</string>
+  <string name="morphe_native_playlist_queue_watch_mix">視聴</string>
+  <string name="morphe_native_playlist_queue_add_mix">キューに追加</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Mix を読み込み中…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">ライブ配信中のチャンネル アイコンからチャンネルを開く</string>
   <string name="morphe_open_channel_of_live_avatar_summary">ライブ配信中のチャンネル アイコンをタップしたときにライブ配信ではなくチャンネル ページを開きます</string>
@@ -854,8 +878,11 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_navigation_bar_animations_summary">タブの切り替えをアニメーションで表現します</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">ナビゲーション バーの自動非表示を無効化</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">スクロール中にナビゲーション バーを常に表示します</string>
-  <string name="morphe_disable_translucent_navigation_title">ナビゲーション バーの半透明表示を無効化</string>
-  <string name="morphe_disable_translucent_navigation_summary">ナビゲーション バーとステータスバーが透けないようになります</string>
+  <string name="morphe_navigation_bar_style_title">ナビゲーション バーのスタイル</string>
+  <string name="morphe_navigation_bar_style_entry_1">デフォルト</string>
+  <string name="morphe_navigation_bar_style_entry_2">半透明</string>
+  <string name="morphe_navigation_bar_style_entry_3">透明</string>
+  <string name="morphe_navigation_bar_style_entry_4">不透明</string>
   <string name="morphe_toolbar_screen_title">ツールバー</string>
   <string name="morphe_toolbar_screen_summary">ツールバーに表示するコンポーネントを設定します</string>
   <string name="morphe_hide_toolbar_cast_button_title">キャストボタンを非表示</string>

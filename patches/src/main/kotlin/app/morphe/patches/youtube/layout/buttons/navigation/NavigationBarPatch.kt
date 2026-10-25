@@ -178,7 +178,7 @@ val navigationBarPatch = bytecodePatch(
         navPreferences += listOf(
             SwitchPreference("morphe_hide_navigation_new_content_dot"),
             SwitchPreference("morphe_navigation_bar_animations", summary = true),
-            SwitchPreference("morphe_disable_translucent_navigation", summary = true)
+            ListPreference("morphe_navigation_bar_style")
         )
 
         if (is_20_31_or_greater) {
@@ -224,11 +224,11 @@ val navigationBarPatch = bytecodePatch(
 
         // Turning on the feature flags of the translucent navigation bar, and the fixes for what
         // they break. Every fix checks that the flags are turned on by this patch, so the fixes do
-        // nothing if the flags are left to the account.
+        // nothing if the flags are left to the account, as with the default navigation bar style.
 
         // The translucent navigation bar comes from three feature flags that not every account
         // gets, so they are turned on to make the bar look the same on every account, and the opaque
-        // option below paints over the same translucent bar everywhere. The flag that makes the bar
+        // style below paints over the same translucent bar everywhere. The flag that makes the bar
         // cover the system navigation buttons is turned on only when the window is drawn edge to
         // edge. The blur and the feed behind the bar do not change the room left for the system
         // navigation buttons, so they are also turned on without it.
@@ -248,33 +248,19 @@ val navigationBarPatch = bytecodePatch(
             }
         }
 
-        // The blurred background of the translucent navigation bar draws a copy of the watch layout,
-        // so the player surface is drawn twice in every frame, at two positions. Android 12 and 13
-        // send the two positions to the surface from two threads at the same time, and the app
-        // crashes while the player moves, such as when it is slowly dragged down to the miniplayer
-        // (https://github.com/MorpheApp/morphe-patches/pull/3684#issuecomment-6322984709).
-        // Android 14 sends them one after the other. On older versions the copy is not drawn,
-        // so the bar keeps its translucent color, without the blur.
+        // The blurred background of the translucent navigation bar is drawn only if the canvas is
+        // hardware accelerated. The transparent and opaque styles leave it out, as it can crash
+        // the app on Android 12 and 13.
         NavigationBarBlurDrawFingerprint.let {
             it.method.apply {
                 val index = it.instructionMatches[1].index
                 val hardwareAcceleratedRegister = getInstruction<OneRegisterInstruction>(index).registerA
-                val freeRegisters = getFreeRegisterProvider(index + 1, 2)
-                val sdkRegister = freeRegisters.getFreeRegister4Bit()
-                val minSdkRegister = freeRegisters.getFreeRegister4Bit()
 
-                addInstructionsWithLabels(
+                addInstructions(
                     index + 1,
-                    $$"""
-                        invoke-static { }, $$EXTENSION_CLASS->isTranslucentNavigationBarBackgroundForced()Z
-                        move-result v$$sdkRegister
-                        if-eqz v$$sdkRegister, :draw_blur
-                        sget v$$sdkRegister, Landroid/os/Build$VERSION;->SDK_INT:I
-                        const/16 v$$minSdkRegister, 0x22
-                        if-ge v$$sdkRegister, v$$minSdkRegister, :draw_blur
-                        const/4 v$$hardwareAcceleratedRegister, 0x0
-                        :draw_blur
-                        nop
+                    """
+                        invoke-static { v$hardwareAcceleratedRegister }, $EXTENSION_CLASS->useNavigationBarBlur(Z)Z
+                        move-result v$hardwareAcceleratedRegister
                     """
                 )
             }
@@ -506,9 +492,9 @@ val navigationBarPatch = bytecodePatch(
             )
         }
 
-        // Paint over the translucent status bar and navigation bar, instead of turning off the
-        // feature flags that drive them. Those flags also switch the app out of edge to edge, which
-        // moves the whole window layout and breaks everything measuring against it.
+        // With the opaque style, paint over the translucent status bar and navigation bar, instead
+        // of turning off the feature flags that drive them. Those flags also switch the app out of
+        // edge to edge, which moves the whole window layout and breaks everything measuring against it.
         addBottomBarContainerHook("$EXTENSION_CLASS->setNavigationBarOpaque(Landroid/view/View;)V")
 
         // The translucent theme hands the window a transparent color for the system navigation

@@ -151,6 +151,13 @@ Pritisnite \"nadaljujte\", da se prijavite"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Skrije gumba za prejšnjo in naslednjo skladbo v medijskem obvestilu, na zaklenjenem zaslonu in v kontrolnikih za slušalke.</string>
   <string name="morphe_disable_notification_media_seekbar_title">Onemogoči drsnik.</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Prepreči vlečenje drsnika na zaklenjenem zaslonu in plošči z obvestili.</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Išči s gumijema <b>Prejšnji</b> in <b>Naslednji</b></string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Spremeni nadzore za obvestilo o medijih, zaklenjen zaslon in slušalke za iskanje namesto spreminjanja videoposnetkov</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Dolžina vračanja</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Sekund za vračanje s gumbom Prejšnji</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Dolžina pospešenega predvajanja</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Sekund za pospešeno predvajanje s gumbom Naslednji</string>
+  <string name="morphe_seek_notification_media_length_invalid">Dolžina iskanja mora biti med 1 in %s sekundami. Uporablja se privzeto vrednost</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Onemogoči protokol QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

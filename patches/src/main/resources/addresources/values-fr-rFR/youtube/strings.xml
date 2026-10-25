@@ -473,6 +473,16 @@ Après avoir ouvert une fois une vidéo avec le bouton 'Posez une question', la 
   <string name="morphe_external_downloader_screen_summary">Téléchargez des vidéos, des podcasts ou des chansons avec des applications de téléchargement tierces</string>
   <string name="morphe_external_downloader_overlay_button_title">Afficher le bouton de téléchargement du lecteur superposé</string>
   <string name="morphe_external_downloader_overlay_button_summary">Affiche un bouton dans le lecteur vidéo qui ouvre votre téléchargeur externe</string>
+  <string name="morphe_external_downloader_quick_menu_title">Téléchargement rapide au toucher</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Propose le téléchargement en arrière-plan. Appuyez longuement pour ouvrir le téléchargeur. Compatible avec YTDLnis et YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Marquer les téléchargements comme regardés</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Les vidéos téléchargées avec un téléchargeur externe sont ajoutées à votre historique de visionnage YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Moyen (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Téléchargement rapide</string>
+  <string name="morphe_external_downloader_quick_video">Vidéo</string>
+  <string name="morphe_external_downloader_quick_audio">Audio</string>
+  <string name="morphe_external_downloader_quick_options">Toutes les options</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Traduction en voix off</string>
   <string name="morphe_vot_screen_summary">Lisez les sous-titres de la vidéo à voix haute à l\'aide de la synthèse vocale sur l\'appareil, synchronisée avec la lecture</string>
@@ -489,7 +499,7 @@ Après avoir ouvert une fois une vidéo avec le bouton 'Posez une question', la 
 
 Appuyez ici pour ouvrir MyMemory.translated.net"</string>
   <string name="morphe_vot_mymemory_email_title">E-mail MyMemory</string>
-  <string name="morphe_vot_mymemory_email_summary">Optionnel. Entrez votre adresse e-mail MyMemory pour augmenter la limite quotidienne de 5,000 à 50,000 caractères. Laissez vide pour utiliser la limite anonyme</string>
+  <string name="morphe_vot_mymemory_email_summary">Facultatif. Entrez votre adresse e-mail MyMemory pour augmenter la limite quotidienne de 5,000 à 50,000 caractères. Laissez vide pour utiliser la limite anonyme</string>
   <string name="morphe_vot_openrouter_info_summary">"Traduction IA payante via OpenRouter. Rechargez une seule fois et traduisez des milliers de vidéos. Mistral Nemo est l'option la moins chère, Gemma 4 offre la meilleure qualité.
 
 Appuyez ici pour ouvrir OpenRouter.ai"</string>
@@ -588,14 +598,14 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_queue_restore_summary">La file d\'attente est conservée après le redémarrage de l\'application</string>
   <string name="morphe_swap_save_and_queue_actions_title">Inverser les actions \'Enregistrer\' et \'File d\'attente\'</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Appuyez pour afficher les options de la file d\'attente, appuyez longuement pour enregistrer dans \'À regarder plus tard</string>
-  <string name="morphe_queue_override_flyout_menu_title">Remplacer le bouton de file d\'attente du menu déroulant</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Ouvre la file d\'attente Morphe au lieu de la file d\'attente YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Lecture suivante dans la file d\'attente</string>
+  <string name="morphe_queue_type_entry_1">Par défaut</string>
+  <string name="morphe_queue_type_entry_2">File d\'attente native</string>
+  <string name="morphe_queue_type_entry_3">File d\'attente Morphe</string>
+  <string name="morphe_queue_type_entry_4">Client de file d\'attente Morphe</string>
   <string name="morphe_queue_add_flyout_menu_title">Ajouter l\'élément file d\'attente au menu déroulant du flux</string>
   <string name="morphe_queue_add_flyout_menu_summary">Ajoute un élément supplémentaire au menu déroulant. Activez cette option si \'Ajouter à la file d’attente\' n\'est pas affiché</string>
-  <string name="morphe_local_queue_title">File d\'attente de type Premium </string>
-  <string name="morphe_local_queue_summary">"Remplace la file d'attente Morphe par une file d'attente stockée sur l'appareil, qui se lit automatiquement jusqu'au bout et dont l'ordre peut être modifié par glisser-déposer
-
-Info : La vidéo suivante dans la file d'attente ne démarre que lorsque YouTube est à l'écran"</string>
   <string name="morphe_local_queue_sheet_title">File d\'attente</string>
   <string name="morphe_local_queue_open">File d\'attente (%s)</string>
   <string name="morphe_local_queue_clear">Tout effacer</string>
@@ -640,6 +650,20 @@ Info : La vidéo suivante dans la file d'attente ne démarre que lorsque YouTube
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Supprimer et recharger la vidéo</string>
   <string name="morphe_queue_manager_open_queue">Ouvrir la file d\'attente</string>
   <string name="morphe_queue_manager_save_queue">Enregistrer la file d\'attente dans une playlist</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Playlist enregistrée</string>
+  <string name="morphe_native_playlist_queue_saved_to">Enregistré dans %s</string>
+  <string name="morphe_native_playlist_queue_clear">Vider la file d\'attente</string>
+  <string name="morphe_native_playlist_queue_cleared">File d\'attente vidée</string>
+  <string name="morphe_native_playlist_queue_title">File d\'attente</string>
+  <string name="morphe_native_playlist_queue_last">Lire le dernier de la file d\'attente</string>
+  <string name="morphe_native_playlist_queue_next">Lire ensuite dans la file d\'attente</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube n\'a pas pu afficher la file d\'attente.</string>
+  <string name="morphe_native_playlist_queue_not_ready">La file d\'attente n\'est pas prête pour cette vidéo. Ouvrez le lecteur vidéo et réessayez.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Ajouter le Mix à la file d\'attente ou regarder le Mix ?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Regarder</string>
+  <string name="morphe_native_playlist_queue_add_mix">Ajouter à la file d\'attente</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Chargement du Mix… </string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Ouvrir la chaîne depuis l\'avatar du direct</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Empêche l\'ouverture du direct lorsqu\'on appuie sur l\'avatar de la chaîne</string>
@@ -853,8 +877,11 @@ Pour accéder aux paramètres, activez le bouton 'Paramètres' via Général →
   <string name="morphe_navigation_bar_animations_summary">Anime les transitions lors du passage d\'un onglet à un autre</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Désactiver le masquage automatique de la barre de navigation</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Garde la barre de navigation visible lors du défilement</string>
-  <string name="morphe_disable_translucent_navigation_title">Désactiver la barre de navigation translucide</string>
-  <string name="morphe_disable_translucent_navigation_summary">Rend les barres de navigation et d\'état complètement opaques</string>
+  <string name="morphe_navigation_bar_style_title">Style de la barre de navigation</string>
+  <string name="morphe_navigation_bar_style_entry_1">Par défaut</string>
+  <string name="morphe_navigation_bar_style_entry_2">Translucide</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
+  <string name="morphe_navigation_bar_style_entry_4">Opaque</string>
   <string name="morphe_toolbar_screen_title">Barre d\'outils</string>
   <string name="morphe_toolbar_screen_summary">Choisissez les composants qui apparaissent dans la barre d\'outils</string>
   <string name="morphe_hide_toolbar_cast_button_title">Masquer le bouton \'Caster\'</string>

@@ -473,6 +473,16 @@ Kartą atvėrus vaizdo įrašą su mygtuku „Ask“, funkcija veikia su visais 
   <string name="morphe_external_downloader_screen_summary">Atsisiųskite vaizdo įrašus, tinklalaides ar dainas trečiųjų šalių atsisiuntimo programėlėmis</string>
   <string name="morphe_external_downloader_overlay_button_title">Rodyti peržiūros valdiklį atsisiuntimo mygtuką</string>
   <string name="morphe_external_downloader_overlay_button_summary">Vaizdo grotuvėje rodomas mygtukas, kuris atverčia jūsų išorinę atsisiuntimo programą</string>
+  <string name="morphe_external_downloader_quick_menu_title">Greitas atsisiuntimas paspaudus</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Klausia, ar atsisiųsti fone. Paspauskite ir palaikykite, kad atidarytumėte atsisiuntikliai. Veikia su YTDLnis ir YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Pažymėti atsisiuntimus kaip peržiūrėtus</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Su išoriniu atsisiuntikliu atsisiųsti vaizdo įrašai pridedami į jūsų YouTube peržiūrų istoriją</string>
+  <string name="morphe_external_downloader_quick_video_quality">Pilnas HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Vidutinė (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Greitas atsisiuntimas</string>
+  <string name="morphe_external_downloader_quick_video">Vaizdo įrašai</string>
+  <string name="morphe_external_downloader_quick_audio">Garsas</string>
+  <string name="morphe_external_downloader_quick_options">Visi nustatymai</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Balso vertimas</string>
   <string name="morphe_vot_screen_summary">Skaito vaizdo įrašo subtitrus garsiai naudodamas įrenginio teksto į kalbą sintezatorių, sinchronizuotą su atkūrimu</string>
@@ -588,14 +598,14 @@ Informacija: gali neveikti tiesioginių transliacijų atveju"</string>
   <string name="morphe_queue_restore_summary">Eilė išsaugoma iš naujo paleidus programą</string>
   <string name="morphe_swap_save_and_queue_actions_title">Sukeisti „Išsaugoti“ ir „Eilė“ veiksmus</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Bakstelėkite, kad atidarytumėte eilės parinktis; palaikykite, kad išsaugotumėte žiūrėti vėliau</string>
-  <string name="morphe_queue_override_flyout_menu_title">Perrašyti kanalo išskleidžiamojo meniu eilės mygtuką</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Atidaro Morphe eilę, o ne „YouTube“ eilę</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Groti kitą eilėje</string>
+  <string name="morphe_queue_type_entry_1">Numatytasis</string>
+  <string name="morphe_queue_type_entry_2">Natūrali eilė</string>
+  <string name="morphe_queue_type_entry_3">Morphe eilė</string>
+  <string name="morphe_queue_type_entry_4">Morphe eilės klientinė pusė</string>
   <string name="morphe_queue_add_flyout_menu_title">Pridėti meniu elementą „Eilė“ prie sklaidos kanalo išskleidžiamojo meniu</string>
   <string name="morphe_queue_add_flyout_menu_summary">Prideda papildomą išskleidžiamojo meniu elementą. Įgalinkite, jei „Pridėti į eilę“ nerodomas</string>
-  <string name="morphe_local_queue_title">Premium stiliaus eilė</string>
-  <string name="morphe_local_queue_summary">"Pakeičia Morphe eilę tokia, kuri yra įrenginyje, groja automatiškai ir kurią galima pertvarkyti vilkiant
-
-Info: kitas eilėje esantis vaizdo įrašas paleidžiamas tik tada, kai YouTube yra ekrane"</string>
   <string name="morphe_local_queue_sheet_title">Eilė</string>
   <string name="morphe_local_queue_open">Eilė (%s)</string>
   <string name="morphe_local_queue_clear">Išvalyti viską</string>
@@ -640,6 +650,20 @@ Info: kitas eilėje esantis vaizdo įrašas paleidžiamas tik tada, kai YouTube 
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Pašalinti ir iš naujo įkelti vaizdo įrašą</string>
   <string name="morphe_queue_manager_open_queue">Atidaryti eilę</string>
   <string name="morphe_queue_manager_save_queue">Išsaugoti eilę grojaraštyje</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Grojaraštis išsaugotas</string>
+  <string name="morphe_native_playlist_queue_saved_to">Išsaugota %s</string>
+  <string name="morphe_native_playlist_queue_clear">Valyti eilę</string>
+  <string name="morphe_native_playlist_queue_cleared">Eilė išvalyta</string>
+  <string name="morphe_native_playlist_queue_title">Eilė</string>
+  <string name="morphe_native_playlist_queue_last">Groti paskutinį eilėje</string>
+  <string name="morphe_native_playlist_queue_next">Groti kitą eilėje</string>
+  <string name="morphe_native_playlist_queue_unavailable">„YouTube“ negali rodyti eilės.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Eilė dar nepasiruošusi šiam vaizdo įrašui. Atidarykite vaizdo įrašo grotuvą ir bandykite dar kartą.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Pridėti mišinį prie eilės ar žiūrėti mišinį?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Žiūrėti</string>
+  <string name="morphe_native_playlist_queue_add_mix">Pridėti prie eilės</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Įkeliama mišinys…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Atidaryti kanalą iš tiesioginės transliacijos avataro</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Neleidžia tiesioginei transliacijai atsidaryti palietus kanalo avatarą</string>
@@ -853,8 +877,11 @@ Norėdami gauti prieigą prie nustatymų, įgalinkite Nustatymų mygtuką: Bendr
   <string name="morphe_navigation_bar_animations_summary">Animuoja perėjimus keičiant skirtukus</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Išjungti automatinį naršymo juostos slėpimą</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Naršymo juosta išlieka matoma slenkant</string>
-  <string name="morphe_disable_translucent_navigation_title">Išjungti permatomą naršymo juostą</string>
-  <string name="morphe_disable_translucent_navigation_summary">Padaro naršymo ir būsenos juostas visiškai nepermatomas</string>
+  <string name="morphe_navigation_bar_style_title">Naršymo juostos stilius</string>
+  <string name="morphe_navigation_bar_style_entry_1">Numatytasis</string>
+  <string name="morphe_navigation_bar_style_entry_2">Šviesu</string>
+  <string name="morphe_navigation_bar_style_entry_3">Skaidrus</string>
+  <string name="morphe_navigation_bar_style_entry_4">Nepermatomas</string>
   <string name="morphe_toolbar_screen_title">Įrankių juosta</string>
   <string name="morphe_toolbar_screen_summary">Pasirinkite, kurie komponentai rodomi įrankių juostoje</string>
   <string name="morphe_hide_toolbar_cast_button_title">Slėpti „Cast“ mygtuką</string>

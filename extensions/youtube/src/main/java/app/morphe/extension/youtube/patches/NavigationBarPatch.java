@@ -88,7 +88,24 @@ public final class NavigationBarPatch {
 
     private static final boolean SWAP_CREATE_WITH_NOTIFICATIONS_BUTTON = Settings.SWAP_CREATE_WITH_NOTIFICATIONS_BUTTON.get();
 
-    private static final boolean DISABLE_TRANSLUCENT_NAVIGATION = Settings.DISABLE_TRANSLUCENT_NAVIGATION.get();
+    public enum NavigationBarStyle {
+        /**
+         * The feature flags of the translucent navigation bar are left to the account,
+         * and the fixes for what they break are off.
+         */
+        DEFAULT,
+        TRANSLUCENT,
+        /**
+         * Translucent, without the blurred background.
+         */
+        TRANSPARENT,
+        /**
+         * Transparent, painted over with the app background.
+         */
+        OPAQUE
+    }
+
+    private static final NavigationBarStyle NAVIGATION_BAR_STYLE = Settings.NAVIGATION_BAR_STYLE.get();
 
     private static final boolean NARROW_NAVIGATION_BUTTONS = Settings.NARROW_NAVIGATION_BUTTONS.get();
 
@@ -220,8 +237,14 @@ public final class NavigationBarPatch {
      * The app draws the window behind the system navigation buttons only on Android 12 and later,
      * so on older versions the flags are always turned off, or the room is added twice
      * (https://github.com/MorpheApp/morphe-patches/issues/3864).
+     * <p>
+     * With {@link NavigationBarStyle#DEFAULT} the flags are left to the account.
      */
     public static boolean useTranslucentNavigationBar(boolean original) {
+        if (NAVIGATION_BAR_STYLE == NavigationBarStyle.DEFAULT) {
+            return original;
+        }
+
         boolean translucent = original;
         try {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
@@ -272,13 +295,17 @@ public final class NavigationBarPatch {
      * <p>
      * The blurred, translucent background of the navigation bar and the feed laid out behind it
      * only change how the bar looks, not the room left for the system navigation buttons, so they
-     * are turned on from Android 12 also when the window is not drawn edge to edge. If
-     * the translucent navigation bar is turned off, they follow
-     * {@link #useTranslucentNavigationBar(boolean)} instead.
+     * are turned on from Android 12 also when the window is not drawn edge to edge. With
+     * {@link NavigationBarStyle#OPAQUE}, they follow {@link #useTranslucentNavigationBar(boolean)}
+     * instead. With {@link NavigationBarStyle#DEFAULT} they are left to the account.
      */
     public static boolean useTranslucentNavigationBarBackground(boolean original) {
+        if (NAVIGATION_BAR_STYLE == NavigationBarStyle.DEFAULT) {
+            return original;
+        }
+
         final boolean translucent;
-        if (!DISABLE_TRANSLUCENT_NAVIGATION && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        if (NAVIGATION_BAR_STYLE != NavigationBarStyle.OPAQUE && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             translucent = true;
         } else {
             translucent = useTranslucentNavigationBar(original);
@@ -300,6 +327,25 @@ public final class NavigationBarPatch {
      */
     public static boolean isTranslucentNavigationBarBackgroundForced() {
         return translucentNavigationBarBackgroundForced;
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * The blurred background of the navigation bar draws a copy of the watch layout, so the player
+     * surface is drawn twice in every frame, at two positions. Android 12 and 13 send the two
+     * positions to the surface from two threads at the same time, and the app crashes while
+     * the player moves, such as when it is slowly dragged down to the miniplayer
+     * (https://github.com/MorpheApp/morphe-patches/pull/3684#issuecomment-6322984709).
+     * With {@link NavigationBarStyle#TRANSPARENT} and {@link NavigationBarStyle#OPAQUE} the copy
+     * is not drawn, so the bar keeps its translucent color, without the blur.
+     *
+     * @param hardwareAccelerated If the canvas is hardware accelerated, which the blur is drawn for.
+     */
+    public static boolean useNavigationBarBlur(boolean hardwareAccelerated) {
+        return hardwareAccelerated && !(translucentNavigationBarBackgroundForced
+                && (NAVIGATION_BAR_STYLE == NavigationBarStyle.TRANSPARENT
+                || NAVIGATION_BAR_STYLE == NavigationBarStyle.OPAQUE));
     }
 
     /**
@@ -560,7 +606,7 @@ public final class NavigationBarPatch {
      *                           behind the system navigation buttons or gesture handle.
      */
     public static void setNavigationBarOpaque(View bottomBarContainer) {
-        if (!DISABLE_TRANSLUCENT_NAVIGATION) return;
+        if (NAVIGATION_BAR_STYLE != NavigationBarStyle.OPAQUE) return;
 
         try {
             OpaqueSystemBars.apply(bottomBarContainer);
@@ -575,7 +621,7 @@ public final class NavigationBarPatch {
      * @param original The color the app theme gives the system navigation buttons.
      */
     public static int getSystemNavigationBarColor(int original) {
-        if (!DISABLE_TRANSLUCENT_NAVIGATION) return original;
+        if (NAVIGATION_BAR_STYLE != NavigationBarStyle.OPAQUE) return original;
 
         try {
             return OpaqueSystemBars.systemNavigationBarColor(original);

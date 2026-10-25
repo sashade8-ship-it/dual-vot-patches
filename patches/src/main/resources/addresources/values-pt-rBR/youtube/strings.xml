@@ -473,6 +473,16 @@ Depois que um vídeo com o botão Ask for aberto uma vez, o recurso funciona com
   <string name="morphe_external_downloader_screen_summary">Faça o download de vídeos, podcasts ou músicas com apps de terceiros</string>
   <string name="morphe_external_downloader_overlay_button_title">Exibir botão de download da sobreposição do player</string>
   <string name="morphe_external_downloader_overlay_button_summary">Mostra um botão no player de vídeo que abre seu app de download externo</string>
+  <string name="morphe_external_downloader_quick_menu_title">Download rápido ao tocar</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Solicita o download em segundo plano. Toque e segure para abrir o baixador. Funciona com YTDLnis e YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Marcar downloads como assistidos</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Vídeos baixados com um baixador externo são adicionados ao seu histórico de exibição do YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Médio (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Download rápido</string>
+  <string name="morphe_external_downloader_quick_video">Vídeo</string>
+  <string name="morphe_external_downloader_quick_audio">Áudio</string>
+  <string name="morphe_external_downloader_quick_options">Todas as opções</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Tradução por voz</string>
   <string name="morphe_vot_screen_summary">Leia as legendas do vídeo em voz alta usando a conversão de texto em fala no dispositivo, sincronizada com a reprodução</string>
@@ -588,14 +598,14 @@ Nota: pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_queue_restore_summary">A fila é mantida após reiniciar o aplicativo</string>
   <string name="morphe_swap_save_and_queue_actions_title">Trocar as ações de Salvar e Fila</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Toque para ver as opções da fila, toque e segure para salvar em \"Assistir mais tarde\"</string>
-  <string name="morphe_queue_override_flyout_menu_title">Substituir botão da fila no feed</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Abre a fila do Morphe em vez da fila do YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Reproduzir a seguir na fila</string>
+  <string name="morphe_queue_type_entry_1">Padrão</string>
+  <string name="morphe_queue_type_entry_2">Fila nativa</string>
+  <string name="morphe_queue_type_entry_3">Fila do Morphe</string>
+  <string name="morphe_queue_type_entry_4">Fila do Morphe no cliente</string>
   <string name="morphe_queue_add_flyout_menu_title">Adicionar item de fila ao menu suspenso do feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Adiciona um item adicional ao menu suspenso. Ative isto se \"Adicionar à fila\" não for exibido</string>
-  <string name="morphe_local_queue_title">Fila estilo Premium</string>
-  <string name="morphe_local_queue_summary">"Substitui a fila do Morphe por uma que fica no dispositivo, é reproduzida sozinha e pode ser reordenada arrastando
-
-Info: o próximo vídeo da fila só é iniciado quando o YouTube está na tela"</string>
   <string name="morphe_local_queue_sheet_title">Fila</string>
   <string name="morphe_local_queue_open">Fila (%s)</string>
   <string name="morphe_local_queue_clear">Limpar tudo</string>
@@ -640,6 +650,20 @@ Info: o próximo vídeo da fila só é iniciado quando o YouTube está na tela"<
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Remover e recarregar vídeo</string>
   <string name="morphe_queue_manager_open_queue">Abrir a fila</string>
   <string name="morphe_queue_manager_save_queue">Salvar a fila em uma playlist</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Lista de reprodução salva</string>
+  <string name="morphe_native_playlist_queue_saved_to">Salvo em %s</string>
+  <string name="morphe_native_playlist_queue_clear">Limpar fila</string>
+  <string name="morphe_native_playlist_queue_cleared">Fila limpa</string>
+  <string name="morphe_native_playlist_queue_title">Fila</string>
+  <string name="morphe_native_playlist_queue_last">Adicionar à fila</string>
+  <string name="morphe_native_playlist_queue_next">Reproduzir a seguir na fila</string>
+  <string name="morphe_native_playlist_queue_unavailable">O YouTube não pôde exibir a fila.</string>
+  <string name="morphe_native_playlist_queue_not_ready">A fila não está pronta para este vídeo. Abra o player de vídeo e tente novamente.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Adicionar Mix à fila ou assistir ao Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Assistir</string>
+  <string name="morphe_native_playlist_queue_add_mix">Adicionar à fila</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Carregando o Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Não abrir live ao tocar no avatar do canal</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Impedir a abertura de transmissões ao vivo ao tocar no avatar do canal</string>
@@ -853,8 +877,11 @@ Para acessar as Configurações, ative o botão Configurações via Geral → Ba
   <string name="morphe_navigation_bar_animations_summary">Anima as transições ao alternar entre as abas</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Desativar ocultação automática da barra de navegação</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Mantém a barra de navegação visível durante a rolagem</string>
-  <string name="morphe_disable_translucent_navigation_title">Desativar barra de navegação translúcida</string>
-  <string name="morphe_disable_translucent_navigation_summary">Deixa a barra de navegação e a barra de status totalmente opacas</string>
+  <string name="morphe_navigation_bar_style_title">Estilo da barra de navegação</string>
+  <string name="morphe_navigation_bar_style_entry_1">Padrão</string>
+  <string name="morphe_navigation_bar_style_entry_2">Translúcido</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparente</string>
+  <string name="morphe_navigation_bar_style_entry_4">Opaco</string>
   <string name="morphe_toolbar_screen_title">Barra de ferramentas</string>
   <string name="morphe_toolbar_screen_summary">Escolha quais componentes aparecem na barra de ferramentas</string>
   <string name="morphe_hide_toolbar_cast_button_title">Ocultar botão Transmitir</string>

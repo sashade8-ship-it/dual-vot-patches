@@ -473,6 +473,16 @@ Ko enkrat odprete video s gumbom Zastavi, bo funkcija delovala za vse videe, tud
   <string name="morphe_external_downloader_screen_summary">Prenesite videoposnetke, podkaste ali pesmi z aplikacijami za prenos tretje osebe</string>
   <string name="morphe_external_downloader_overlay_button_title">Prikaži gumb za prenos predvajalnika v prepletu</string>
   <string name="morphe_external_downloader_overlay_button_summary">Prikaže gumb v video predvajalniku, ki odpre vaš zunanji program za prenos</string>
+  <string name="morphe_external_downloader_quick_menu_title">Hitri prenos ob prijemu</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Poziva za prenos v ozadju. Pritisnite in držite za odprtje prenoshnika. Deluje z YTDLnis in YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Označi prenose kot ogledane</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Videoposnetki, preneseni z zunanjim prenoshnikom, so dodani v zgodovino ogledov na YouTubu</string>
+  <string name="morphe_external_downloader_quick_video_quality">Polna HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Srednje (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Hitri prenos</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Avdio</string>
+  <string name="morphe_external_downloader_quick_options">Vse možnosti</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Prevajanje z glasom</string>
   <string name="morphe_vot_screen_summary">Prebiranje napisov videoposnetka v glas z uporabo pretvorbe besedila v govor v napravi, sinhronizirano s predvajanjem</string>
@@ -588,14 +598,14 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_queue_restore_summary">Vrsta se shrani tudi po ponovnem zagonu aplikacije</string>
   <string name="morphe_swap_save_and_queue_actions_title">Zamenjaj shranjevanje in možnosti vrste v čakalnico</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Tapnite za možnosti čakalne vrste, tapnite in zadržite za shranjevanje v Watch later.</string>
-  <string name="morphe_queue_override_flyout_menu_title">Gumb za nadomestitev vrste vrstičnega menija</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Odpre vrsto Morphe namesto vrste YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Način predvajanja naslednjega v čakalni vrsti</string>
+  <string name="morphe_queue_type_entry_1">Privzeto</string>
+  <string name="morphe_queue_type_entry_2">Sistemskaka čakalna vrsta</string>
+  <string name="morphe_queue_type_entry_3">Morphe čakalna vrsta</string>
+  <string name="morphe_queue_type_entry_4">Odjemalec Morphe čakalne vrste</string>
   <string name="morphe_queue_add_flyout_menu_title">Dodaj element menija v čakalno vrsto</string>
   <string name="morphe_queue_add_flyout_menu_summary">Doda dodaten element menija. Omogočite to, če \"Dodaj v čakalno vrsto\" ni prikazano</string>
-  <string name="morphe_local_queue_title">Čakalna vrsta v slogu Premium</string>
-  <string name="morphe_local_queue_summary">"Nadomesti čakalno vrsto Morphe z vrsto, ki je na napravi, se predvaja samodejno in jo je mogoče preurediti s povlekom
-
-Info: Naslednji videoposnetek v čakalni vrsti se začne le, ko je YouTube na zaslonu"</string>
   <string name="morphe_local_queue_sheet_title">Čakalna vrsta</string>
   <string name="morphe_local_queue_open">Vrstič (%s)</string>
   <string name="morphe_local_queue_clear">Počisti vse</string>
@@ -640,6 +650,20 @@ Info: Naslednji videoposnetek v čakalni vrsti se začne le, ko je YouTube na za
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Odstrani in ponovno naloži videoposnetek</string>
   <string name="morphe_queue_manager_open_queue">Odpri vrsto</string>
   <string name="morphe_queue_manager_save_queue">Shrani vrsto v predvajalni seznam</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Seznam predvajanja je bil shranjen</string>
+  <string name="morphe_native_playlist_queue_saved_to">Shranjeno v %s</string>
+  <string name="morphe_native_playlist_queue_clear">Počisti čakalno vrsto</string>
+  <string name="morphe_native_playlist_queue_cleared">Čakalna vrsta je počišena</string>
+  <string name="morphe_native_playlist_queue_title">Čakalna vrsta</string>
+  <string name="morphe_native_playlist_queue_last">Predvajaj zadnji v čakalni vrsti</string>
+  <string name="morphe_native_playlist_queue_next">Predvajaj naslednjega v čakalni vrsti</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube ni mogel prikazati čakalne vrste.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Čakalna vrsta ni pripravljena za ta videoposnetek. Odprite predvajalnik videoposnetkov in poskusite znova.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Dodaj Mix v čakalno vrsto ali si oglejte Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Ogled</string>
+  <string name="morphe_native_playlist_queue_add_mix">Dodaj v čakalno vrsto</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Nalaganje Meša…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Odprite kanal iz avatarja v živo</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Preprečuje, da bi se prenos v živo odprl ob dotiku avatarja kanala</string>
@@ -853,8 +877,11 @@ Za dostop do Nastavitev omogočajte gumb Nastavitve prek Splošno → Orodna vrs
   <string name="morphe_navigation_bar_animations_summary">Naredi vrstico za navigacijo popolnoma neprozorno v svetlem načinu</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Onemogoči samodejno skrivanje navigacijske vrstice</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Naredi vrstico za navigacijo popolnoma neprozorno v temnem načinu</string>
-  <string name="morphe_disable_translucent_navigation_title">Onemogoči polprozorno navigacijsko vrsto</string>
-  <string name="morphe_disable_translucent_navigation_summary">Navigacijsko vrsto in vrsto stanja naredi popolnoma neprozorno</string>
+  <string name="morphe_navigation_bar_style_title">Slog navigacijske vrstice</string>
+  <string name="morphe_navigation_bar_style_entry_1">Privzeto</string>
+  <string name="morphe_navigation_bar_style_entry_2">Poltransparentno</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparentno</string>
+  <string name="morphe_navigation_bar_style_entry_4">Neprozorno</string>
   <string name="morphe_toolbar_screen_title">Orodje.</string>
   <string name="morphe_toolbar_screen_summary">Skrij podnapisna stopala menija \'Zvok\'</string>
   <string name="morphe_hide_toolbar_cast_button_title">Skrij gumb za prenos</string>

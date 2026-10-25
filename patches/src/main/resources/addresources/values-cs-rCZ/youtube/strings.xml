@@ -473,6 +473,16 @@ Po jednom otevření videa s tlačítkem Ask funguje funkce se všemi videi, i k
   <string name="morphe_external_downloader_screen_summary">Stahujte videa, podcasty nebo písně pomocí aplikací pro stahování třetích stran</string>
   <string name="morphe_external_downloader_overlay_button_title">Zobrazí tlačítko pro stahování v přehrávači playeru</string>
   <string name="morphe_external_downloader_overlay_button_summary">Zobrazí v přehrávači videí tlačítko, které otevře váš externí downloader</string>
+  <string name="morphe_external_downloader_quick_menu_title">Rychlé stahování klepnutím</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Nabídne stahování na pozadí. Stiskněte a podržte pro otevření stahovače. Funguje s YTDLnis a YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Označit stažené soubory jako zhlídnuté</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Videa stažená externím stahovačem jsou přidána do vaší historie zhlídnutí na YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Střední (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Rychlé stahování</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Zvuk</string>
+  <string name="morphe_external_downloader_quick_options">Všechny možnosti</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Hlasový překlad</string>
   <string name="morphe_vot_screen_summary">Přečte titulky videa nahlas pomocí text-to-speech v zařízení, synchronizovaně s přehráváním</string>
@@ -588,14 +598,14 @@ Upozornění: Možná nebude fungovat u živých přenosů"</string>
   <string name="morphe_queue_restore_summary">Fronta je zachována i po restartu aplikace</string>
   <string name="morphe_swap_save_and_queue_actions_title">Prohoďte akce Uložit a Zařadit do fronty</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Klepněte pro možnosti fronty, klepněte a podržte pro uložení do seznamu Přehrát později</string>
-  <string name="morphe_queue_override_flyout_menu_title">Přepsat frontu flyout nabídky</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Otevře frontu Morphe místo fronty YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Typ dalšího položky ve frontě</string>
+  <string name="morphe_queue_type_entry_1">Výchozí</string>
+  <string name="morphe_queue_type_entry_2">Nativní fronta</string>
+  <string name="morphe_queue_type_entry_3">Fronta Morphe</string>
+  <string name="morphe_queue_type_entry_4">Strana klienta fronty Morphe</string>
   <string name="morphe_queue_add_flyout_menu_title">Přidat položku nabídky pro frontu rozbalovací nabídky feedu</string>
   <string name="morphe_queue_add_flyout_menu_summary">Přidává další položku rozbalovací nabídky. Povolte to, pokud se nezobrazuje položka \"Přidat do fronty\"</string>
-  <string name="morphe_local_queue_title">Fronta ve stylu Premium</string>
-  <string name="morphe_local_queue_summary">"Nahradí frontu Morphe frontou, která je uložená v zařízení, přehrává se sama a lze ji přetahováním změnit pořadí
-
-Info: Další video ve frontě se spustí pouze tehdy, když je YouTube na obrazovce"</string>
   <string name="morphe_local_queue_sheet_title">Fronta</string>
   <string name="morphe_local_queue_open">Fronta (%s)</string>
   <string name="morphe_local_queue_clear">Vymazat vše</string>
@@ -640,6 +650,20 @@ Info: Další video ve frontě se spustí pouze tehdy, když je YouTube na obraz
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Odebrat a znovu načíst video</string>
   <string name="morphe_queue_manager_open_queue">Otevřít frontu</string>
   <string name="morphe_queue_manager_save_queue">Uložit frontu do playlistu</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Playlist uložen</string>
+  <string name="morphe_native_playlist_queue_saved_to">Uloženo do %s</string>
+  <string name="morphe_native_playlist_queue_clear">Vymazat frontu</string>
+  <string name="morphe_native_playlist_queue_cleared">Fronta vymazána</string>
+  <string name="morphe_native_playlist_queue_title">Fronta</string>
+  <string name="morphe_native_playlist_queue_last">Přehrát jako poslední ve frontě</string>
+  <string name="morphe_native_playlist_queue_next">Přehrát další ve frontě</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube nemůže zobrazit frontu.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Fronta není pro toto video připravena. Otevřete přehrávač videí a zkuste to znovu.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Přidat Mix do fronty nebo sledovat Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Sledovat</string>
+  <string name="morphe_native_playlist_queue_add_mix">Přidat do fronty</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Načítání Mixu…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Otevření kanálu z živé avataru</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Zabraňuje otevření živého přenosu klepnutím na avatar kanálu</string>
@@ -851,8 +875,11 @@ Pro přístup k Nastavení povolte tlačítko Nastavení přes Obecné → Nást
   <string name="morphe_navigation_bar_animations_summary">Animuje přechody při přepínání mezi kartami</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Vypnout automatické skrývání navigační lišty</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Ponechá navigační lištu viditelnou i při posouvání</string>
-  <string name="morphe_disable_translucent_navigation_title">Deaktivovat průsvitný navigační panel</string>
-  <string name="morphe_disable_translucent_navigation_summary">Nastaví navigační panel a stavový řádek jako plně neprůhledné</string>
+  <string name="morphe_navigation_bar_style_title">Styl navigačního panelu</string>
+  <string name="morphe_navigation_bar_style_entry_1">Výchozí</string>
+  <string name="morphe_navigation_bar_style_entry_2">Poloprůhledný</string>
+  <string name="morphe_navigation_bar_style_entry_3">Průhledný</string>
+  <string name="morphe_navigation_bar_style_entry_4">Neprůhledný</string>
   <string name="morphe_toolbar_screen_title">Nástrojová lišta</string>
   <string name="morphe_toolbar_screen_summary">Vyberte, které prvky se zobrazí v nástrojové liště</string>
   <string name="morphe_hide_toolbar_cast_button_title">Skrýt tlačítko odesílání</string>

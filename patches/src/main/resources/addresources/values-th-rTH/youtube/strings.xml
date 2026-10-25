@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">ดาวน์โหลดวิดีโอ พอดแคสต์ หรือเพลงด้วยแอปดาวน์โหลดของบุคคลที่สาม</string>
   <string name="morphe_external_downloader_overlay_button_title">แสดงปุ่มดาวน์โหลดซ้อนทับของเครื่องเล่น</string>
   <string name="morphe_external_downloader_overlay_button_summary">แสดงปุ่มในเครื่องเล่นวิดีโอที่จะเปิดตัวดาวน์โหลดภายนอกของคุณ</string>
+  <string name="morphe_external_downloader_quick_menu_title">ดาวน์โหลดด่วนเพียงแตะ</string>
+  <string name="morphe_external_downloader_quick_menu_summary">แจ้งเตือนเพื่อดาวน์โหลดในพื้นหลัง แตะค้างเพื่อเปิดตัวดาวน์โหลด ใช้งานกับ YTDLnis และ YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">ทำเครื่องหมายการดาวน์โหลดว่าเป็นที่ดูแล้ว</string>
+  <string name="morphe_external_downloader_mark_watched_summary">วิดีโอที่ดาวน์โหลดด้วยตัวดาวน์โหลดภายนอกจะถูกเพิ่มลงในประวัติการรับชม YouTube ของคุณ</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">ปานกลาง (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">ดาวน์โหลดด่วน</string>
+  <string name="morphe_external_downloader_quick_video">วิดีโอ</string>
+  <string name="morphe_external_downloader_quick_audio">เสียง</string>
+  <string name="morphe_external_downloader_quick_options">ตัวเลือกทั้งหมด</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">การแปลเสียงบรรยาย</string>
   <string name="morphe_vot_screen_summary">อ่านคำบรรยายวิดีโอออกเสียงด้วยระบบแปลงข้อความเป็นเสียงบนอุปกรณ์ โดยซิงโครไนซ์กับการเล่น</string>
@@ -588,14 +598,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">คิวจะถูกเก็บไว้หลังจากการปิดและเปิดแอปอีกครั้ง</string>
   <string name="morphe_swap_save_and_queue_actions_title">สลับการดำเนินการบันทึกและคิว</string>
   <string name="morphe_swap_save_and_queue_actions_summary">แตะเพื่อดูตัวเลือกในคิว แตะค้างไว้เพื่อบันทึกไปยังดูภายหลัง</string>
-  <string name="morphe_queue_override_flyout_menu_title">แทนที่ปุ่มคิวในเมนูแบบเลื่อนออกของฟีด</string>
-  <string name="morphe_queue_override_flyout_menu_summary">เปิดคิว Morphe แทนคิว YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">ประเภทเล่นถัดไปในคิว</string>
+  <string name="morphe_queue_type_entry_1">ค่าเริ่มต้นThe</string>
+  <string name="morphe_queue_type_entry_2">คิวแบบเนทีฟ</string>
+  <string name="morphe_queue_type_entry_3">คิว Morphe</string>
+  <string name="morphe_queue_type_entry_4">ไคลเอนต์ฝั่งไคลเอนต์ของคิว Morphe</string>
   <string name="morphe_queue_add_flyout_menu_title">เพิ่มรายการคิวในเมนูแบบเลื่อนออกของฟีด</string>
   <string name="morphe_queue_add_flyout_menu_summary">เพิ่มรายการเมนูแบบเลื่อนออกเพิ่มเติม เปิดใช้งานนี้หาก \"เพิ่มในคิว\" ไม่แสดง</string>
-  <string name="morphe_local_queue_title">คิวแบบพรีเมียม</string>
-  <string name="morphe_local_queue_summary">"แทนที่คิว Morphe ด้วยคิวที่ถูกเก็บในอุปกรณ์ เล่นต่อเนื่องได้เอง และจัดลำดับใหม่ได้ด้วยการลาก
-
-ข้อมูล: วิดีโอถัดไปในคิวจะเริ่มเล่นเฉพาะเมื่อ YouTube อยู่บนหน้าจอเท่านั้น"</string>
   <string name="morphe_local_queue_sheet_title">คิว</string>
   <string name="morphe_local_queue_open">คิว (%s)</string>
   <string name="morphe_local_queue_clear">ล้างทั้งหมด</string>
@@ -640,6 +650,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">ลบและรีโหลดวิดีโอ</string>
   <string name="morphe_queue_manager_open_queue">เปิดคิว</string>
   <string name="morphe_queue_manager_save_queue">บันทึกคิวไปยังเพลย์ลิสต์</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">บันทึกเพลย์ลิสต์แล้ว</string>
+  <string name="morphe_native_playlist_queue_saved_to">บันทึกไปยัง %s</string>
+  <string name="morphe_native_playlist_queue_clear">ล้างคิว</string>
+  <string name="morphe_native_playlist_queue_cleared">ล้างคิวเรียบร้อยแล้ว</string>
+  <string name="morphe_native_playlist_queue_title">คิว</string>
+  <string name="morphe_native_playlist_queue_last">เล่นล่าสุดในคิว</string>
+  <string name="morphe_native_playlist_queue_next">เล่นถัดไปในคิว</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube ไม่สามารถแสดงคิวได้</string>
+  <string name="morphe_native_playlist_queue_not_ready">คิวยังไม่พร้อมสำหรับวิดีโอนี้ เปิดเครื่องเล่นวิดีโอและลองอีกครั้ง</string>
+  <string name="morphe_native_playlist_queue_mix_choice">เพิ่ม Mix ไปยังคิวหรือดู Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">ดู</string>
+  <string name="morphe_native_playlist_queue_add_mix">เพิ่มไปยังคิว</string>
+  <string name="morphe_native_playlist_queue_loading_mix">กำลังโหลด Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">เปิดช่องจากอวาตาร์สด</string>
   <string name="morphe_open_channel_of_live_avatar_summary">ป้องกันไม่ให้การถ่ายทอดสดเปิดเมื่อแตะที่อวาตาร์ของช่อง</string>
@@ -853,8 +877,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">เคลื่อนไหวการเปลี่ยนภาพเมื่อสลับระหว่างแท็บ</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">ปิดใช้งานการซ่อนแถบนำทางอัตโนมัติ</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">ทำให้แถบนำทางมองเห็นได้ในขณะที่เลื่อน</string>
-  <string name="morphe_disable_translucent_navigation_title">ปิดการใช้งานแถบนำทางแบบโปร่งแสง</string>
-  <string name="morphe_disable_translucent_navigation_summary">ทำให้การนำทางและแถบสถานะทึบแสงโดยสมบูรณ์</string>
+  <string name="morphe_navigation_bar_style_title">สไตล์ของแถบนำทาง</string>
+  <string name="morphe_navigation_bar_style_entry_1">ค่าเริ่มต้น</string>
+  <string name="morphe_navigation_bar_style_entry_2">โปร่งแสง</string>
+  <string name="morphe_navigation_bar_style_entry_3">โปร่งใส</string>
+  <string name="morphe_navigation_bar_style_entry_4">ทึบแสง</string>
   <string name="morphe_toolbar_screen_title">แถบเครื่องมือ</string>
   <string name="morphe_toolbar_screen_summary">เลือกส่วนประกอบที่จะปรากฏในแถบเครื่องมือ</string>
   <string name="morphe_hide_toolbar_cast_button_title">ซ่อนปุ่มแคสต์</string>

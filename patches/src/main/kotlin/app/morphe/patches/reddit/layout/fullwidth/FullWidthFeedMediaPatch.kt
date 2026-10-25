@@ -20,6 +20,7 @@ import app.morphe.patches.reddit.misc.settings.settingsPatch
 import app.morphe.patches.reddit.misc.version.is_2026_24_0_or_greater
 import app.morphe.patches.reddit.misc.version.is_2026_36_0_or_greater
 import app.morphe.patches.reddit.misc.version.is_2026_38_0_or_greater
+import app.morphe.patches.reddit.misc.version.is_2026_43_0_or_greater
 import app.morphe.patches.reddit.misc.version.versionCheckPatch
 import app.morphe.patches.reddit.shared.Constants.COMPATIBILITY_REDDIT
 import app.morphe.util.findInstructionIndicesReversedOrThrow
@@ -296,7 +297,8 @@ val fullWidthFeedMediaPatch = bytecodePatch(
 
         if (is_2026_36_0_or_greater) {
             // Galleries in the post details. Same register limits as videos.
-            PostDetailGalleryFingerprint.method.addInstructions(
+            (if (is_2026_43_0_or_greater) PostDetailGalleryFingerprint
+            else PostDetailGalleryLegacyFingerprint).method.addInstructions(
                 0,
                 """
                     invoke-static/range { p13 .. p13 }, $EXTENSION_CLASS->isMediaInsetEnabled(Z)Z

@@ -473,6 +473,16 @@ Pagkatapos buksan ang isang video na may Ask button, gagana ang feature sa lahat
   <string name="morphe_external_downloader_screen_summary">Mag-download ng mga video, podcast, o kanta gamit ang mga app na pang-download ng third-party</string>
   <string name="morphe_external_downloader_overlay_button_title">Ipakita ang button para sa pag-download ng overlay ng player</string>
   <string name="morphe_external_downloader_overlay_button_summary">Ipinapakita ang button sa video player na nagbubukas ng iyong panlabas na downloader</string>
+  <string name="morphe_external_downloader_quick_menu_title">Mabilis na download sa isang tap</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Nag-uudyok na mag-download sa background. I-tap at i-hold para buksan ang downloader. Gumagana kasama ang YTDLnis at YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Markahan ang mga download bilang napanood na</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Ang mga video na na-download gamit ang external downloader ay idinaragdag sa iyong YouTube watch history</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Katamtaman (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Mabilis na pag-download</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Audio</string>
+  <string name="morphe_external_downloader_quick_options">Lahat ng opsyon</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Pagsasalin ng boses</string>
   <string name="morphe_vot_screen_summary">Basahin nang malakas ang mga caption ng video gamit ang text-to-speech sa iyong device, na naka-synchronize sa pagpapatugtog</string>
@@ -588,14 +598,14 @@ Impormasyon: Maaaring hindi gumana sa mga live stream"</string>
   <string name="morphe_queue_restore_summary">Ang pila ay nananatili kahit i-restart ang app</string>
   <string name="morphe_swap_save_and_queue_actions_title">Palitan ang Save at Queue na aksyon</string>
   <string name="morphe_swap_save_and_queue_actions_summary">I-tap para sa mga opsyon ng queue, i-tap at i-hold upang i-save sa Panoorin Mamaya</string>
-  <string name="morphe_queue_override_flyout_menu_title">Palitan ang pila ng feed flyout na buton</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Binubuksan ang pila ng Morphe sa halip na ang pila ng YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">I-play susunod sa pila</string>
+  <string name="morphe_queue_type_entry_1">Awtomatiko</string>
+  <string name="morphe_queue_type_entry_2">Katutubong pila</string>
+  <string name="morphe_queue_type_entry_3">Pila ng Morphe</string>
+  <string name="morphe_queue_type_entry_4">Pila ng Morphe client-side</string>
   <string name="morphe_queue_add_flyout_menu_title">Idagdag ang feed flyout queue na menu item</string>
   <string name="morphe_queue_add_flyout_menu_summary">Nagdaragdag ng karagdagang flyout item. I-enable ito kung hindi ipinapakita ang \"Idagdag sa queue\".</string>
-  <string name="morphe_local_queue_title">Pilang istilong Premium</string>
-  <string name="morphe_local_queue_summary">"Pinapalitan nito ang pila ng Morphe ng isang pila na nasa device, kusang nagpe-play, at maaaring muling ayusin sa pamamagitan ng pag-drag
-
-Impormasyon: Magsisimula lang ang susunod na naka-pilang video habang nasa screen ang YouTube"</string>
   <string name="morphe_local_queue_sheet_title">Pila</string>
   <string name="morphe_local_queue_open">Pila (%s)</string>
   <string name="morphe_local_queue_clear">I-clear lahat</string>
@@ -640,6 +650,20 @@ Impormasyon: Magsisimula lang ang susunod na naka-pilang video habang nasa scree
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Alisin at i-reload ang video</string>
   <string name="morphe_queue_manager_open_queue">Buksan ang queue</string>
   <string name="morphe_queue_manager_save_queue">I-save ang queue sa playlist</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Nai-save ang Playlist</string>
+  <string name="morphe_native_playlist_queue_saved_to">Na-save sa %s</string>
+  <string name="morphe_native_playlist_queue_clear">Linisin ang pila</string>
+  <string name="morphe_native_playlist_queue_cleared">Nalinis ang pila</string>
+  <string name="morphe_native_playlist_queue_title">Pila</string>
+  <string name="morphe_native_playlist_queue_last">I-play huling nasa pila</string>
+  <string name="morphe_native_playlist_queue_next">I-play susunod sa pila</string>
+  <string name="morphe_native_playlist_queue_unavailable">Hindi maipakita ang pila ng YouTube.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Hindi handa ang pila para sa bidyong ito. Buksan ang manonood ng video at subukan ulit.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Magdagdag ng Mix sa pila o panoorin ang Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Manood</string>
+  <string name="morphe_native_playlist_queue_add_mix">Magdagdag sa pila</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Naglo-load ng Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Buksan ang channel mula sa live avatar</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Pinipigilan ang live stream na magbukas kapag tina-tap ang avatar ng channel</string>
@@ -853,8 +877,11 @@ Para i-access ang Settings, i-enable ang Settings button sa pamamagitan ng Gener
   <string name="morphe_navigation_bar_animations_summary">Inaanimate ang mga transisyon kapag lumilipat sa pagitan ng mga tab</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">I-disable ang auto-hiding navigation bar</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Pinapanatili ang navigation bar na visible habang nag-scroll</string>
-  <string name="morphe_disable_translucent_navigation_title">I-disable ang translucent navigation bar</string>
-  <string name="morphe_disable_translucent_navigation_summary">Ginagawang ganap na opaque ang navigation at status bar</string>
+  <string name="morphe_navigation_bar_style_title">Estilo ng navigation bar</string>
+  <string name="morphe_navigation_bar_style_entry_1">Awtomatiko</string>
+  <string name="morphe_navigation_bar_style_entry_2">Translucent</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
+  <string name="morphe_navigation_bar_style_entry_4">Opaque</string>
   <string name="morphe_toolbar_screen_title">Toolbar</string>
   <string name="morphe_toolbar_screen_summary">Pumili kung aling mga component ang lilitaw sa flyout menu</string>
   <string name="morphe_hide_toolbar_cast_button_title">Itago ang \'Audio Track\' menu</string>

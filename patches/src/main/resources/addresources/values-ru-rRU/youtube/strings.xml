@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">Скачивайте видео, подкасты или песни с помощью сторонних приложений для скачивания</string>
   <string name="morphe_external_downloader_overlay_button_title">Показать кнопку загрузки оверлея плеера</string>
   <string name="morphe_external_downloader_overlay_button_summary">Показывает кнопку в видеоплеере, которая открывает ваше внешнее приложение для загрузки</string>
+  <string name="morphe_external_downloader_quick_menu_title">Быстрая загрузка одним касанием</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Запрос на загрузку в фоновом режиме. Нажмите и удерживайте, чтобы открыть загрузчик. Работает с YTDLnis и YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Отмечать загрузки как просмотренные</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Видео, загруженные с помощью внешнего загрузчика, будут добавлены в вашу историю просмотров YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Среднее (192 кбит/с)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Быстрая загрузка</string>
+  <string name="morphe_external_downloader_quick_video">Видео</string>
+  <string name="morphe_external_downloader_quick_audio">Аудио</string>
+  <string name="morphe_external_downloader_quick_options">Все параметры</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Перевод от Google и других сервисов</string>
   <string name="morphe_vot_screen_summary">Перевод субтитров через Google и другие сервисы с синхронной озвучкой</string>
@@ -590,14 +600,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">Очередь сохраняется после перезапуска приложения</string>
   <string name="morphe_swap_save_and_queue_actions_title">Поменять местами действия \"Сохранить\" и \"В очередь\"</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Нажмите для параметров очереди, нажмите и удерживайте для сохранения в «Смотреть позже»</string>
-  <string name="morphe_queue_override_flyout_menu_title">Кнопка для переопределения очереди всплывающего окна каналов</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Открывает очередь Morphe вместо очереди YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Воспроизвести следующим в очереди</string>
+  <string name="morphe_queue_type_entry_1">По умолчанию</string>
+  <string name="morphe_queue_type_entry_2">Системная очередь</string>
+  <string name="morphe_queue_type_entry_3">Очередь Morphe</string>
+  <string name="morphe_queue_type_entry_4">Клиентская очередь Morphe</string>
   <string name="morphe_queue_add_flyout_menu_title">Добавить пункт меню очереди во всплывающее меню ленты</string>
   <string name="morphe_queue_add_flyout_menu_summary">Добавляет дополнительный элемент всплывающего меню. Включите это, если пункт \"Добавить в очередь\" не отображается.</string>
-  <string name="morphe_local_queue_title">Очередь в стиле Premium</string>
-  <string name="morphe_local_queue_summary">"Заменяет очередь Morphe на очередь, которая хранится на устройстве, воспроизводится сама и может быть переупорядочена перетаскиванием
-
-Информация: следующее видео из очереди запускается только тогда, когда YouTube находится на экране"</string>
   <string name="morphe_local_queue_sheet_title">Очередь</string>
   <string name="morphe_local_queue_open">Очередь (%s)</string>
   <string name="morphe_local_queue_clear">Очистить всё</string>
@@ -642,6 +652,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Удалить из очереди и перезагрузить видео</string>
   <string name="morphe_queue_manager_open_queue">Открыть очередь</string>
   <string name="morphe_queue_manager_save_queue">Сохранить очередь в плейлист</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Плейлист сохранён</string>
+  <string name="morphe_native_playlist_queue_saved_to">Сохранено в %s</string>
+  <string name="morphe_native_playlist_queue_clear">Очистить очередь</string>
+  <string name="morphe_native_playlist_queue_cleared">Очередь очищена</string>
+  <string name="morphe_native_playlist_queue_title">Очередь</string>
+  <string name="morphe_native_playlist_queue_last">Воспроизвести последним в очереди</string>
+  <string name="morphe_native_playlist_queue_next">Воспроизвести следующим в очереди</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube не может показать очередь.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Очередь не готова для этого видео. Откройте плеер и повторите попытку.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Добавить Микс в очередь или прослушать?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Слушать</string>
+  <string name="morphe_native_playlist_queue_add_mix">Добавить в очередь</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Загрузка Микса…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Открыть канал из аватара прямой трансляции</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Запрещает открытие прямой трансляции при нажатии на аватар канала</string>
@@ -855,8 +879,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">Анимирует переходы между вкладками</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Выключить авто скрытие панели навигации</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Не скрывать панель навигации при прокрутке</string>
-  <string name="morphe_disable_translucent_navigation_title">Отключить полупрозрачность панели навигации</string>
-  <string name="morphe_disable_translucent_navigation_summary">Делает панель навигации и строку состояния полностью непрозрачными</string>
+  <string name="morphe_navigation_bar_style_title">Стиль панели навигации</string>
+  <string name="morphe_navigation_bar_style_entry_1">По умолчанию</string>
+  <string name="morphe_navigation_bar_style_entry_2">Полупрозрачный</string>
+  <string name="morphe_navigation_bar_style_entry_3">Прозрачный</string>
+  <string name="morphe_navigation_bar_style_entry_4">Непрозрачный</string>
   <string name="morphe_toolbar_screen_title">Панель инструментов</string>
   <string name="morphe_toolbar_screen_summary">Выберите, какие компоненты отображаются на панели инструментов</string>
   <string name="morphe_hide_toolbar_cast_button_title">Скрыть кнопку \"Трансляция\"</string>

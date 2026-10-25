@@ -473,6 +473,7 @@ Məhdudiyyətlər:
   <string name="morphe_external_downloader_screen_summary">Üçüncü tərəf yükləmə tətbiqləri ilə videoları, podkastları və ya mahnıları yüklə</string>
   <string name="morphe_external_downloader_overlay_button_title">Oynadıcı örtüyü yükləmə düyməsini göstər</string>
   <string name="morphe_external_downloader_overlay_button_summary">Video oynadıcıda xarici yükləyicinizi açan düyməni göstərir</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Səs üstələyici tərcümə</string>
   <string name="morphe_vot_screen_summary">Cihazdakı mətni nitqə çevirməni istifadə edərək video titrlərini oynatma ilə sinxronlaşdırıb ucadan oxu</string>
@@ -588,14 +589,10 @@ Məlumat: Canlı yayımlarda işləməyə bilər"</string>
   <string name="morphe_queue_restore_summary">Tətbiq yenidən başladıldıqdan sonra növbə qorunur</string>
   <string name="morphe_swap_save_and_queue_actions_title">Saxla və Növbə fəaliyyətlərini dəyişdir</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Növbə seçimləri üçün toxun, sonra Baxmağa saxlamaq üçün toxun və saxla</string>
-  <string name="morphe_queue_override_flyout_menu_title">Axında açılan növbə düyməsini əvəzlə</string>
-  <string name="morphe_queue_override_flyout_menu_summary">YouTube növbəsi əvəzinə Morphe növbəsini açır</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_entry_1">Varsayılan</string>
   <string name="morphe_queue_add_flyout_menu_title">Axına açılan növbə menyusu elementini əlavə et</string>
   <string name="morphe_queue_add_flyout_menu_summary">Əlavə açılan elementi əlavə edir. \"Növbəyə əlavə et\" görünmürsə, bunu aktivləşdir</string>
-  <string name="morphe_local_queue_title">Premium üslubu növbəsi</string>
-  <string name="morphe_local_queue_summary">"Morphe növbəsini cihazda olan, ardıcıl oynadılan və sürüşdürərək sıralana bilən növbə ilə əvəzləyir
-​
-Məlumat: Növbədəki növbəti video yalnız YouTube ekranda olduqda başlayır"</string>
   <string name="morphe_local_queue_sheet_title">Növbə</string>
   <string name="morphe_local_queue_open">Növbə (%s)</string>
   <string name="morphe_local_queue_clear">Hamısını təmizlə</string>
@@ -640,6 +637,11 @@ Məlumat: Növbədəki növbəti video yalnız YouTube ekranda olduqda başlayı
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Videonu sil və yenidən yüklə</string>
   <string name="morphe_queue_manager_open_queue">Növbəni aç</string>
   <string name="morphe_queue_manager_save_queue">Növbəni pleylistdə saxla</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_title">Növbə</string>
+  <string name="morphe_native_playlist_queue_last">Növbədə sonuncu oynat</string>
+  <string name="morphe_native_playlist_queue_next">Növbədə növbətidə oynat</string>
+  <string name="morphe_native_playlist_queue_add_mix">Növbəyə əlavə et</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Canlı profildən kanalı aç</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Kanalın profilinə toxunduqda canlı yayımın açılmasın əngəlləyir</string>
@@ -853,8 +855,11 @@ Tənzimləmələrə daxil olmaq üçün Ümumi → Alət Cərgəsi→ Tənzimlə
   <string name="morphe_navigation_bar_animations_summary">Tabellər arasında keçərkən keçidləri canlandırır</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Fəaliyyət cərgəsin avtomatik gizlətməsini qapat</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Sürüşdürərkən fəaliyyət zolağın görünən saxlayır</string>
-  <string name="morphe_disable_translucent_navigation_title">Yarımşəffaf fəaliyyət cərgəsin qapat</string>
-  <string name="morphe_disable_translucent_navigation_summary">Fəaliyyət və status cərgəsini tamamilə qeyri-şəffaf edir</string>
+  <string name="morphe_navigation_bar_style_title">Fəaliyyət cərgəsi üslubu</string>
+  <string name="morphe_navigation_bar_style_entry_1">İlkin</string>
+  <string name="morphe_navigation_bar_style_entry_2">Yarımşəffaf</string>
+  <string name="morphe_navigation_bar_style_entry_3">Şəffaf</string>
+  <string name="morphe_navigation_bar_style_entry_4">Tutqun</string>
   <string name="morphe_toolbar_screen_title">Alət cərgəsi</string>
   <string name="morphe_toolbar_screen_summary">Alətlər zolağında hansı elementlər görünür seç</string>
   <string name="morphe_hide_toolbar_cast_button_title">Yayımla düyməsini gizlət</string>

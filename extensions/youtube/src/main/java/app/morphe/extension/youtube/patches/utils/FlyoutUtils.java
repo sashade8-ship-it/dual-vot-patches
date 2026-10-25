@@ -757,6 +757,7 @@ public final class FlyoutUtils {
         currentButtonIndex++;
 
         visibleFlyoutButtons.add(new Pair<>(currentButtonName, currentButtonIndex));
+        //noinspection SizeReplaceableByIsEmpty
         if (buttonText != null && buttonText.length() > 0) {
             visibleFlyoutButtonTexts.putIfAbsent(currentButtonName, buttonText.toString());
         }
@@ -948,7 +949,10 @@ public final class FlyoutUtils {
             isMyTabHistoryFlyout = false;
             String videoId = videoIdInterface.patch_getVideoId();
             if (videoId != null) {
+                // An empty typed ID must clear the previous menu's video as well.
                 flyoutVideoId = videoId;
+                flyoutPlaylistId = "";
+                isShortFlyout = false;
             }
             return;
         }

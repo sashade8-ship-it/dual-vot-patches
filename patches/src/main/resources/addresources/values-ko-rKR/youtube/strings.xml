@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">서드파티 다운로드 앱을 사용하여 동영상, 팟캐스트 또는 노래를 다운로드할 수 있습니다</string>
   <string name="morphe_external_downloader_overlay_button_title">플레이어 오버레이 다운로드 버튼 표시하기</string>
   <string name="morphe_external_downloader_overlay_button_summary">동영상 플레이어에서 외부 다운로더를 실행하는 버튼을 표시합니다</string>
+  <string name="morphe_external_downloader_quick_menu_title">탭 한 번으로 빠른 다운로드하기</string>
+  <string name="morphe_external_downloader_quick_menu_summary">백그라운드에서 다운로드할 수 있도록 프롬프트를 제공합니다. 길게 탭하면 다운로더가 열립니다. YTDLnis 및 YTindir와 호환됩니다</string>
+  <string name="morphe_external_downloader_mark_watched_title">다운로드한 영상을 시청 완료로 표시하기</string>
+  <string name="morphe_external_downloader_mark_watched_summary">외부 다운로더를 사용하여 다운로드한 동영상을 YouTube 시청 기록에 추가합니다</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">중간 (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">빠른 다운로드</string>
+  <string name="morphe_external_downloader_quick_video">동영상</string>
+  <string name="morphe_external_downloader_quick_audio">오디오</string>
+  <string name="morphe_external_downloader_quick_options">모든 옵션</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">음성 번역</string>
   <string name="morphe_vot_screen_summary">기기의 텍스트 음성 변환(TTS)을 사용하여 재생에 맞춰 동기화된 동영상 자막을 읽어줍니다</string>
@@ -590,14 +600,14 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_queue_restore_summary">앱을 다시 시작한 후에도 현재 재생목록이 유지됩니다</string>
   <string name="morphe_swap_save_and_queue_actions_title">저장과 현재 재생목록 작업 교환하기</string>
   <string name="morphe_swap_save_and_queue_actions_summary">버튼을 탭하여 현재 재생목록 옵션을 실행할 수 있고, 길게 탭하면 \'나중에 볼 동영상\'에 저장됩니다</string>
-  <string name="morphe_queue_override_flyout_menu_title">\'현재 재생목록\' 피드 메뉴 재정의하기</string>
-  <string name="morphe_queue_override_flyout_menu_summary">\'현재 재생목록에서 다음 순서로 재생\' 메뉴를 탭하면 YouTube 현재 재생목록 대신 Morphe 현재 재생목록이 실행됩니다</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">\'현재 재생목록에서 다음 순서로 재생\' 유형</string>
+  <string name="morphe_queue_type_entry_1">기본값</string>
+  <string name="morphe_queue_type_entry_2">기본 현재 재생목록</string>
+  <string name="morphe_queue_type_entry_3">Morohe 현재 재생목록</string>
+  <string name="morphe_queue_type_entry_4">Morohe 현재 재생목록 클라이언트 사이드</string>
   <string name="morphe_queue_add_flyout_menu_title">\'현재 재생목록\' 메뉴 항목 추가하기</string>
   <string name="morphe_queue_add_flyout_menu_summary">추가적인 메뉴 구성요소 항목을 추가합니다. \'현재 재생목록에서 다음 순서로 재생\' 메뉴가 표시되지 않는 경우에 이 옵션을 활성화하세요</string>
-  <string name="morphe_local_queue_title">Premium 스타일 현재 재생목록</string>
-  <string name="morphe_local_queue_summary">"Morphe 현재 재생목록을 기기에 저장되고 자동으로 재생되며, 드래그하여 순서를 변경할 수 있는 현재 재생목록으로 대체합니다
-
-알림: 현재 재생목록에 있는 다음 동영상은 YouTube가 화면에 표시되어 있을 때만 재생이 시작됩니다"</string>
   <string name="morphe_local_queue_sheet_title">현재 재생목록</string>
   <string name="morphe_local_queue_open">현재 재생목록 (%s)</string>
   <string name="morphe_local_queue_clear">모두 지우기</string>
@@ -642,6 +652,20 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">현재 재생목록에서 제거하고 동영상 새로고침</string>
   <string name="morphe_queue_manager_open_queue">현재 재생목록 열기</string>
   <string name="morphe_queue_manager_save_queue">현재 재생목록을 재생목록에 저장</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">현재 재생목록이 저장되었습니다</string>
+  <string name="morphe_native_playlist_queue_saved_to">%s에 저장되었습니다</string>
+  <string name="morphe_native_playlist_queue_clear">현재 재생목록 지우기</string>
+  <string name="morphe_native_playlist_queue_cleared">현재 재생목록이 지워졌습니다</string>
+  <string name="morphe_native_playlist_queue_title">현재 재생목록</string>
+  <string name="morphe_native_playlist_queue_last">현재 재생목록의 마지막으로 재생</string>
+  <string name="morphe_native_playlist_queue_next">현재 재생목록에서 다음 순서로 재생</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube에서 현재 재생목록을 표시할 수 없습니다</string>
+  <string name="morphe_native_playlist_queue_not_ready">이 동영상에 대한 현재 재생목록이 준비되지 않았습니다. 동영상 플레이어를 열고 다시 시도하세요</string>
+  <string name="morphe_native_playlist_queue_mix_choice">믹스를 현재 재생목록에 추가하시겠습니까, 아니면 시청하시겠습니까?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">시청</string>
+  <string name="morphe_native_playlist_queue_add_mix">패치 목록에 추가</string>
+  <string name="morphe_native_playlist_queue_loading_mix">믹스를 불러오는 중…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">라이브 아바타 채널 열기</string>
   <string name="morphe_open_channel_of_live_avatar_summary">채널 아바타를 탭했을 경우에 실시간 스트림이 재생되지 않도록 합니다</string>
@@ -855,8 +879,11 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_navigation_bar_animations_summary">하단바에서 탭 전환 시 애니메이션을 표시합니다</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">하단바 자동 숨기기 비활성화하기</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">피드에서 스크롤하는 경우에 하단바를 숨기지 않습니다</string>
-  <string name="morphe_disable_translucent_navigation_title">반투명 하단바 비활성화하기</string>
-  <string name="morphe_disable_translucent_navigation_summary">하단바와 상태바를 완전히 불투명하게 만듭니다</string>
+  <string name="morphe_navigation_bar_style_title">하단바 스타일</string>
+  <string name="morphe_navigation_bar_style_entry_1">기본값</string>
+  <string name="morphe_navigation_bar_style_entry_2">반투명</string>
+  <string name="morphe_navigation_bar_style_entry_3">투명</string>
+  <string name="morphe_navigation_bar_style_entry_4">불투명</string>
   <string name="morphe_toolbar_screen_title">툴바</string>
   <string name="morphe_toolbar_screen_summary">툴바에 표시할 구성 요소를 설정할 수 있습니다</string>
   <string name="morphe_hide_toolbar_cast_button_title">크롬캐스트 버튼 숨기기</string>

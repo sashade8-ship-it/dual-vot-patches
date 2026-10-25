@@ -151,6 +151,13 @@ Tryck på Fortsätt nedan för att logga in"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Döljer knapparna Föregående och Nästa i medieaviseringen, på låsskärmen och för hörlursstyrning</string>
   <string name="morphe_disable_notification_media_seekbar_title">Inaktivera sökfältet</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Förhindrar att sökreglaget kan dras på låsskärmen och i aviseringspanelen</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Sök med <b>föregående &amp; nästa</b>-knappar</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Ändrar kontrollerna för meddelandeanvisning, låsskärm och hörlurar så att de söker istället för att byta videor</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Återinspelningslängd</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Antal sekunder för återinspelningsåtgärd med föregående-knapp</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Spola fram-längd</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Antal sekunder för spola fram med nästa-knapp</string>
+  <string name="morphe_seek_notification_media_length_invalid">Söklängden måste vara mellan 1 och %s sekunder. Använder standardvärde</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Inaktivera QUIC-protokoll</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

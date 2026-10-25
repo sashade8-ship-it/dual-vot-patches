@@ -151,6 +151,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Скрывает кнопки «Предыдущий» и «Следующий» в медиауведомлении, на экране блокировки и в элементах управления гарнитуры</string>
   <string name="morphe_disable_notification_media_seekbar_title">Отключить ползунок перемотки</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Предотвращает перетаскивание ползунка перемотки на экране блокировки и в панели уведомлений</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Поиск с помощью кнопок <b>&amp;</b> «Назад» и «Вперёд»</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Изменено управление уведомлениями о медиафайлах, экраном блокировки и наушниками: поиск вместо переключения видео</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Длина перемотки назад</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Количество секунд для перемотки назад кнопкой «Назад»</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Длина перемотки вперёд</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Количество секунд для перемотки вперёд кнопкой «Вперёд»</string>
+  <string name="morphe_seek_notification_media_length_invalid">Длина поиска должна быть от 1 до %s секунд. Используется значение по умолчанию</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Отключить протокол QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

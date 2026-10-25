@@ -151,6 +151,13 @@ Da bi se prijavili, pritisnite nastavi ispod"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Sakriva dugmad za prethodni i sledeći video u medijskom obaveštenju, na zaključanom ekranu i u kontrolama na slušalicama</string>
   <string name="morphe_disable_notification_media_seekbar_title">Onemogući klizač</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Sprečava prevlačenje klizača na zaključanom ekranu i u panelu za obaveštenja</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Traži sa dugmićima Prethodni &amp; Sledeći</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Promene kontrole za obaveštenje o medijima, zaključani ekran i slušalice za traženje umesto menjanja videa</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Dužina brzanja unazad</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Sekundi za brzanje unazad pomoću dugmeta Prethodni</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Dužina brzog napredovanja</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Sekundi za brzo napredovanje pomoću dugmeta Sledeći</string>
+  <string name="morphe_seek_notification_media_length_invalid">Dužina traženja mora biti između %s i 1 sekundi. Koristi se podrazumevana vrednost</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Onemogući protokol QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

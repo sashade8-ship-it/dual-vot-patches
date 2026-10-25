@@ -474,6 +474,16 @@ Soru düğmesine sahip olan bir video bir kez açıldıktan sonra bu özellik, m
   <string name="morphe_external_downloader_screen_summary">Üçüncü taraf indirme uygulamalarıyla videolar, podcast\'ler veya şarkılar indirin</string>
   <string name="morphe_external_downloader_overlay_button_title">Oynatıcı paneli indirme düğmesini göster</string>
   <string name="morphe_external_downloader_overlay_button_summary">Video oynatıcısında harici indiricinizi açan bir düğme gösterir</string>
+  <string name="morphe_external_downloader_quick_menu_title">Dokunulduğunda hızlı indir</string>
+  <string name="morphe_external_downloader_quick_menu_summary">İndirme işlemini arka planda başlatır. İndiriciyi açmak için dokunun ve basılı tutun. YTDLnis ve YTindir ile çalışır</string>
+  <string name="morphe_external_downloader_mark_watched_title">İndirilenleri izlendi olarak işaretle</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Harici indirici ile indirilen videolar YouTube izleme geçmişinize eklenir</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Orta (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Hızlı indir</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Ses</string>
+  <string name="morphe_external_downloader_quick_options">Tüm seçenekler</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Seslendirme çevirisi</string>
   <string name="morphe_vot_screen_summary">Cihaz üzerindeki metin-konuşma özelliğini kullanarak video altyazılarını oynatmayla senkronize bir şekilde yüksek sesle okuyun.</string>
@@ -589,14 +599,14 @@ Bilgi: Canlı yayınlarda çalışmayabilir"</string>
   <string name="morphe_queue_restore_summary">Uygulama yeniden başlatıldığında sıra korunur</string>
   <string name="morphe_swap_save_and_queue_actions_title">Kaydet ve Sıra eylemlerini değiştir</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Sıra seçenekleri için dokunun, \'Daha Sonra İzle\'ye kaydetmek için basılı tutun</string>
-  <string name="morphe_queue_override_flyout_menu_title">Akış açılır sıra düğmesini kullan</string>
-  <string name="morphe_queue_override_flyout_menu_summary">YouTube sırası yerine Morphe sırasını açar</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Sıranın başına ekleme tipi</string>
+  <string name="morphe_queue_type_entry_1">Varsayılan</string>
+  <string name="morphe_queue_type_entry_2">Yerel sıra</string>
+  <string name="morphe_queue_type_entry_3">Morphe sırası</string>
+  <string name="morphe_queue_type_entry_4">İstemci taraflı Morphe sırası</string>
   <string name="morphe_queue_add_flyout_menu_title">Akış açılır menüsüne kuyruk menü öğesi ekle</string>
   <string name="morphe_queue_add_flyout_menu_summary">Ek bir açılır menü öğesi ekler. \"Kuyruğa ekle\" gösterilmiyorsa bunu etkinleştirin.</string>
-  <string name="morphe_local_queue_title">Premium tarzı kuyruk</string>
-  <string name="morphe_local_queue_summary">"Morphe kuyruğunu cihazda bulunan, kendi kendine oynayan ve sürükleyerek yeniden sıralanabilen bir kuyrukla değiştirir
-
-Bilgi: Sıradaki video yalnızca YouTube ekrandayken başlar"</string>
   <string name="morphe_local_queue_sheet_title">Kuyruk</string>
   <string name="morphe_local_queue_open">Kuyruk (%s)</string>
   <string name="morphe_local_queue_clear">Tümünü temizle</string>
@@ -641,6 +651,20 @@ Bilgi: Sıradaki video yalnızca YouTube ekrandayken başlar"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Videoyu kaldır ve yeniden yükle</string>
   <string name="morphe_queue_manager_open_queue">Sırayı aç</string>
   <string name="morphe_queue_manager_save_queue">Sırayı oynatma listesine kaydet</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Oynatma listesi kaydedildi</string>
+  <string name="morphe_native_playlist_queue_saved_to">%s\'ye kaydedildi</string>
+  <string name="morphe_native_playlist_queue_clear">Sırayı temizle</string>
+  <string name="morphe_native_playlist_queue_cleared">Sıra temizlendi</string>
+  <string name="morphe_native_playlist_queue_title">Sıra</string>
+  <string name="morphe_native_playlist_queue_last">Sıranın sonuna ekle</string>
+  <string name="morphe_native_playlist_queue_next">Sıranın başına ekle</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube sırayı görüntüleyemedi.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Bu video için sıra hazır değil. Video oynatıcıyı açın ve tekrar deneyin.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Mix sıraya mı eklensin yoksa izlensin mi?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">İzle</string>
+  <string name="morphe_native_playlist_queue_add_mix">Sıraya ekle</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Mix yükleniyor…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Canlı avatardan kanalı aç</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Kanal avatarına dokunulduğunda canlı yayının açılmasını engeller</string>
@@ -854,8 +878,11 @@ Ayarlar'a erişmek için Ayarlar düğmesini Genel → Araç Çubuğu → Ayarla
   <string name="morphe_navigation_bar_animations_summary">Sekmeler arasında animasyonlu geçişler yapar</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Gezinme çubuğunun otomatik gizlenmesini devre dışı bırak</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Kaydırırken gezinme çubuğunu görünür tutar</string>
-  <string name="morphe_disable_translucent_navigation_title">Yarı saydam gezinti çubuğunu devre dışı bırak</string>
-  <string name="morphe_disable_translucent_navigation_summary">Gezinti ve durum çubuğunu tamamen opak hale getirir</string>
+  <string name="morphe_navigation_bar_style_title">Gezinme çubuğu stili</string>
+  <string name="morphe_navigation_bar_style_entry_1">Varsayılan</string>
+  <string name="morphe_navigation_bar_style_entry_2">Yarı saydam</string>
+  <string name="morphe_navigation_bar_style_entry_3">Şeffaf</string>
+  <string name="morphe_navigation_bar_style_entry_4">Opak</string>
   <string name="morphe_toolbar_screen_title">Araç Çubuğu</string>
   <string name="morphe_toolbar_screen_summary">Araç çubuğunda hangi bileşenlerin görüneceğini seçin</string>
   <string name="morphe_hide_toolbar_cast_button_title">Yayınla düğmesini gizle</string>

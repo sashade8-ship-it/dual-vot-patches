@@ -473,6 +473,16 @@ După ce un videoclip cu butonul Ask este deschis o dată, funcția funcționeaz
   <string name="morphe_external_downloader_screen_summary">Descărcă videoclipuri, podcasturi sau melodii folosind aplicaţii de descărcare terţe</string>
   <string name="morphe_external_downloader_overlay_button_title">Arată butonul de descărcare al suprapunerii playerului</string>
   <string name="morphe_external_downloader_overlay_button_summary">Afișează un buton în playerul video care deschide descărcătorul extern</string>
+  <string name="morphe_external_downloader_quick_menu_title">Descărcare rapidă la atingere</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Solicită descărcarea în fundal. Apasă și menține pentru a deschide programul de descărcare. Funcționează cu YTDLnis și YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Marchează descărcările ca vizionate</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Videoclipurile descărcate cu un program de descărcare extern sunt adăugate în istoricul de vizionare YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Mediu (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Descărcare rapidă</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Audio</string>
+  <string name="morphe_external_downloader_quick_options">Toate opțiunile</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Traducere cu voce peste</string>
   <string name="morphe_vot_screen_summary">Citește cu voce tare subtitrările video folosind text-to-speech pe dispozitiv, sincronizat cu redarea</string>
@@ -588,14 +598,14 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_queue_restore_summary">Coada este păstrată după repornirea aplicației</string>
   <string name="morphe_swap_save_and_queue_actions_title">Schimbă acțiunile Salvare și Coadă</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Atingeți pentru opțiunile de coadă, atingeți și mențineți apăsat pentru a salva în Urmărește mai târziu.</string>
-  <string name="morphe_queue_override_flyout_menu_title">Înlocuire coadă flyout feed buton</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Deschide coada Morphe în loc de coada YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Redare următorul în coadă</string>
+  <string name="morphe_queue_type_entry_1">Implicit</string>
+  <string name="morphe_queue_type_entry_2">Coadă nativă</string>
+  <string name="morphe_queue_type_entry_3">Coadă Morphe</string>
+  <string name="morphe_queue_type_entry_4">Coadă Morphe client</string>
   <string name="morphe_queue_add_flyout_menu_title">Adaugă element de meniu pentru coada flyout de feed</string>
   <string name="morphe_queue_add_flyout_menu_summary">Adaugă un element suplimentar de flyout. Activează această opțiune dacă \"Adaugă în coadă\" nu este afișat.</string>
-  <string name="morphe_local_queue_title">Coadă în stil Premium</string>
-  <string name="morphe_local_queue_summary">"Înlocuiește coada Morphe cu una care este stocată pe dispozitiv, se redă singură și poate fi reordonată prin glisare
-
-Informații: Următorul videoclip din coadă pornește doar cât timp YouTube este afișat pe ecran"</string>
   <string name="morphe_local_queue_sheet_title">Coadă</string>
   <string name="morphe_local_queue_open">Coda (%s)</string>
   <string name="morphe_local_queue_clear">Șterge tot</string>
@@ -640,6 +650,20 @@ Informații: Următorul videoclip din coadă pornește doar cât timp YouTube es
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Înlătură din coadă și reîncarcă video</string>
   <string name="morphe_queue_manager_open_queue">Deschide coada</string>
   <string name="morphe_queue_manager_save_queue">Salvează coada în playlist</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Playlist salvat</string>
+  <string name="morphe_native_playlist_queue_saved_to">Salvat în %s</string>
+  <string name="morphe_native_playlist_queue_clear">Golește coada</string>
+  <string name="morphe_native_playlist_queue_cleared">Coada a fost golită</string>
+  <string name="morphe_native_playlist_queue_title">Coadă</string>
+  <string name="morphe_native_playlist_queue_last">Redare ultimul din coadă</string>
+  <string name="morphe_native_playlist_queue_next">Redare următorul în coadă</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube nu a putut afișa coada.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Coada nu este pregătită pentru acest video. Deschide player-ul video și încearcă din nou.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Adaugă Mix la coadă sau privește Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Privește</string>
+  <string name="morphe_native_playlist_queue_add_mix">Adaugă la coadă</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Se încarcă Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Deschide canalul din avatarul live</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Împiedică deschiderea transmisiunii live atunci când apeși pe avatarul canalului</string>
@@ -853,8 +877,11 @@ Pentru a accesa Setările, activați butonul Setări prin General → Bara de in
   <string name="morphe_navigation_bar_animations_summary">Ascunde meniul Ascultă cu YouTube Music</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Dezactivează ascunderea automată a barei de navigare</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Ascunde meniul Urmărește în VR</string>
-  <string name="morphe_disable_translucent_navigation_title">Dezactivează bara de navigare translucidă</string>
-  <string name="morphe_disable_translucent_navigation_summary">Face bara de navigare și bara de stare complet opace</string>
+  <string name="morphe_navigation_bar_style_title">Stilul barei de navigare</string>
+  <string name="morphe_navigation_bar_style_entry_1">Implicit</string>
+  <string name="morphe_navigation_bar_style_entry_2">Translucid</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
+  <string name="morphe_navigation_bar_style_entry_4">Opac</string>
   <string name="morphe_toolbar_screen_title">Bara de navigare</string>
   <string name="morphe_toolbar_screen_summary">Ascunde previzualizarea videoclipului următor în ecran complet înainte de începerea redării automate</string>
   <string name="morphe_hide_toolbar_cast_button_title">Ascunde butonul Distribuție</string>

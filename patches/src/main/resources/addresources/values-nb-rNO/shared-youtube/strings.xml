@@ -151,6 +151,13 @@ Trykk på Fortsett nedenfor for å logge på"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Skjuler forrige- og neste-knappene i medievarslingen, på låseskjermen og i hodetelefonkontrollene.</string>
   <string name="morphe_disable_notification_media_seekbar_title">Deaktiver søkebjelken</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Forhindrer at søkebjelken kan dras på låseskjermen og i varslingspanelet.</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Søk med <b>&amp;</b> forrige og neste-knapper</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Endrer kontrollene for meldinger om medieavspilling, låseskjerm og hodetelefoner til å søke i stedet for å bytte videoer</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Tilbakespolingslengde</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Antall sekunder å tilbakespole med Forrige-knappen</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Fremoverspolingslengde</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Antall sekunder å spole fremover med Neste-knappen</string>
+  <string name="morphe_seek_notification_media_length_invalid">Søkelengden må være mellom 1 og %s sekunder. Bruker standardverdi</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Deaktiver QUIC-protokollen</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

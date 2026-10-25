@@ -331,7 +331,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_stats_hidden_all_title">Прихованих відео за весь час</string>
   <string name="morphe_hide_stats_hidden_24h_reset_title">Скинути лічильник за останні 24 години?</string>
   <string name="morphe_hide_stats_hidden_all_reset_title">Скинути лічильник за весь час?</string>
-  <string name="morphe_hide_aislist_screen_title">Фільтр AI каналів</string>
+  <string name="morphe_hide_aislist_screen_title">Фільтр ШІ каналів</string>
   <string name="morphe_hide_aislist_screen_summary">Приховує відео з каналів, позначених спільнотою AiSList як згенеровані штучним інтелектом</string>
   <string name="morphe_hide_aislist_blocklist_category_title">Список блокування: висока впевненість</string>
   <string name="morphe_hide_aislist_warnlist_category_title">Список попереджень: помірна впевненість</string>
@@ -352,25 +352,25 @@ Second \"item\" text"</string>
   <string name="morphe_hide_aislist_attribution_summary">"AiSList це список YouTube-каналів із відкритим кодом, які публікують контент, створений ШІ, і який підтримують волонтери. Користувачі повідомляють про канали, і їх перевіряють, перш ніж додати
 
 Список завантажується з GitHub, а відео фільтруються на вашому пристрої"</string>
-  <string name="morphe_aislist_submit_category_title">Повідомити про AI-канали</string>
+  <string name="morphe_aislist_submit_category_title">Повідомити про ШІ-канали</string>
   <string name="morphe_aislist_submit_flyout_menu_title">Додати пункт звітування до меню відео</string>
   <string name="morphe_aislist_submit_flyout_menu_summary">Додає пункт до меню відео для звітування про канал відео до AiSList</string>
   <string name="morphe_aislist_submit_username_title">Ім\'я відправника</string>
   <string name="morphe_aislist_submit_username_summary">Ім\'я, що показується поруч із вашими звітами в публічному рейтингу AiSList. Звітування недоступне, поки це поле порожнє</string>
-  <string name="morphe_aislist_submit_title">Повідомити AI-канал</string>
+  <string name="morphe_aislist_submit_title">Повідомити ШІ-канал</string>
   <string name="morphe_aislist_submit_dialog_message">"Надіслати %s до AiSList, використовуючи це відео як доказ?
 
 Повідомляйте лише про канали, які:
-• Використовують AI-голоси, візуали, сценарії чи музику як основний контент
-• Масово створюють контент за допомогою AI-інструментів з мінімальною людською роботою
+• Використовують ШІ-голоси, візуали, сценарії чи музику як основний контент
+• Масово створюють контент за допомогою ШІ-інструментів з мінімальною людською роботою
 
-Не повідомляйте про канали, які лише обговорюють AI, або використовують AI лише для деяких частин своїх відео.
+Не повідомляйте про канали, які лише обговорюють ШІ, або використовують ШІлише для деяких частин своїх відео.
 
 Звіти публічні та розглядаються перед додаванням каналу до списку. Видалення можливе лише через запит на GitHub"</string>
   <string name="morphe_aislist_submit_already_blocklisted">Цей канал вже є в списку блокування AiSList</string>
   <string name="morphe_aislist_submit_already_warnlisted">Цей канал вже є в списку попереджень AiSList</string>
   <string name="morphe_aislist_submit_dialog_confirm">Повідомити</string>
-  <string name="morphe_aislist_submit_no_username">Встановіть ім\'я відправника в налаштуваннях фільтра AI-каналів, щоб повідомляти про канали</string>
+  <string name="morphe_aislist_submit_no_username">Встановіть ім\'я відправника в налаштуваннях фільтра ШІ-каналів, щоб повідомляти про канали</string>
   <string name="morphe_aislist_submit_resolving">Пошук каналу…</string>
   <string name="morphe_aislist_submit_failed_channel">Не вдалося знайти канал цього відео</string>
   <string name="morphe_aislist_submit_success">Про канал повідомлено, очікується перевірка</string>
@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">Завантажувати відео, подкасти або пісні за допомогою сторонніх застосунків для завантаження</string>
   <string name="morphe_external_downloader_overlay_button_title">Показувати кнопку завантаження в оверлеї плеєра</string>
   <string name="morphe_external_downloader_overlay_button_summary">Показує кнопку у відеоплеєрі, яка відкриває ваш зовнішній завантажувач</string>
+  <string name="morphe_external_downloader_quick_menu_title">Швидке завантаження одним натисканням</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Запитує про завантаження у фоновому режимі. Натисніть і утримуйте, щоб відкрити програму для завантажень. Працює з YTDLnis та YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Позначати завантажені як переглянуті</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Відео, завантажені зовнішньою програмою для завантажень, додаються до вашої історії переглядів YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Середнє (192 кбіт/с)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Швидке завантаження</string>
+  <string name="morphe_external_downloader_quick_video">Відео</string>
+  <string name="morphe_external_downloader_quick_audio">Аудіо</string>
+  <string name="morphe_external_downloader_quick_options">Усі параметри</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Голосовий переклад</string>
   <string name="morphe_vot_screen_summary">Зачитує субтитри відео вголос за допомогою локального синтезу мовлення, синхронізованого з відтворенням</string>
@@ -588,14 +598,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">Черга зберігається після перезапуску застосунку</string>
   <string name="morphe_swap_save_and_queue_actions_title">Поміняти місцями кнопки \"Зберегти\" та \"Додати в чергу\"</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Натисніть для параметрів черги, утримуйте, щоб зберегти до \"Переглянути пізніше\"</string>
-  <string name="morphe_queue_override_flyout_menu_title">Замінити кнопку черги у висувному меню стрічки</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Відкриває чергу Morphe замість черги YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Тип черги \'Відтворити наступним\'</string>
+  <string name="morphe_queue_type_entry_1">Типові</string>
+  <string name="morphe_queue_type_entry_2">Системна черга</string>
+  <string name="morphe_queue_type_entry_3">Черга Morphe</string>
+  <string name="morphe_queue_type_entry_4">Клієнтська черга Morphe</string>
   <string name="morphe_queue_add_flyout_menu_title">Додати пункт меню черги у висувне меню стрічки</string>
   <string name="morphe_queue_add_flyout_menu_summary">Додає додатковий пункт у висувне меню. Увімкніть цю опцію, якщо пункт \"Додати до черги\" не показується</string>
-  <string name="morphe_local_queue_title">Черга в стилі Premium</string>
-  <string name="morphe_local_queue_summary">"Замінює чергу Morphe на таку, що зберігається на пристрої, відтворюється самостійно та може бути переупорядкована перетягуванням
-
-Інформація: наступне відео в черзі запускається лише поки YouTube відкрито на екрані"</string>
   <string name="morphe_local_queue_sheet_title">Черга</string>
   <string name="morphe_local_queue_open">Черга (%s)</string>
   <string name="morphe_local_queue_clear">Очистити все</string>
@@ -640,6 +650,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Видалити з черги та перезавантажити відео</string>
   <string name="morphe_queue_manager_open_queue">Відкрити чергу</string>
   <string name="morphe_queue_manager_save_queue">Зберегти чергу як список відтворення</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Список відтворення збережено</string>
+  <string name="morphe_native_playlist_queue_saved_to">Збережено в %s</string>
+  <string name="morphe_native_playlist_queue_clear">Очистити чергу</string>
+  <string name="morphe_native_playlist_queue_cleared">Чергу очищено</string>
+  <string name="morphe_native_playlist_queue_title">Черга</string>
+  <string name="morphe_native_playlist_queue_last">Відтворити останнім у черзі</string>
+  <string name="morphe_native_playlist_queue_next">Відтворити наступним у черзі</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube не може відобразити чергу.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Черга не готова для цього відео. Відкрийте плеєр відео та спробуйте знову.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Додати Мікс до черги чи переглянути Мікс?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Переглянути</string>
+  <string name="morphe_native_playlist_queue_add_mix">Додати до черги</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Завантаження Міксу…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Відкривати канал через аватар трансляції</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Запобігає відкриттю трансляції при натисканні на аватар каналу</string>
@@ -853,8 +877,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">Анімує переходи між вкладками</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Вимкнути автоприховування панелі навігації</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Залишає панель навігації видимою під час прокручування</string>
-  <string name="morphe_disable_translucent_navigation_title">Вимкнути напівпрозорість навігаційної панелі</string>
-  <string name="morphe_disable_translucent_navigation_summary">Робить навігаційну панель та панель стану повністю непрозорими</string>
+  <string name="morphe_navigation_bar_style_title">Стиль панелі навігації</string>
+  <string name="morphe_navigation_bar_style_entry_1">Типовий</string>
+  <string name="morphe_navigation_bar_style_entry_2">Напівпрозорий</string>
+  <string name="morphe_navigation_bar_style_entry_3">Прозорий</string>
+  <string name="morphe_navigation_bar_style_entry_4">Непрозорий</string>
   <string name="morphe_toolbar_screen_title">Панель інструментів</string>
   <string name="morphe_toolbar_screen_summary">Виберіть, які компоненти будуть показуватися на панелі інструментів</string>
   <string name="morphe_hide_toolbar_cast_button_title">Приховати кнопку \"Трансляція\"</string>
@@ -953,7 +980,7 @@ Second \"item\" text"</string>
   <string name="morphe_shorts_player_screen_title">Плеєр Shorts</string>
   <string name="morphe_shorts_player_screen_summary">Виберіть, які компоненти будуть показуватися у плеєрі Shorts</string>
   <string name="morphe_disable_shorts_double_tap_to_like_title">Вимкнути подвійне натискання для вподобання</string>
-  <string name="morphe_hide_shorts_ai_button_title">Приховати кнопку \"AI\"</string>
+  <string name="morphe_hide_shorts_ai_button_title">Приховати кнопку \"ШІ\"</string>
   <string name="morphe_hide_shorts_auto_dubbed_label_title">Приховати мітку \"Дубляж\"</string>
   <string name="morphe_hide_shorts_channel_bar_title">Приховати панель каналу</string>
   <string name="morphe_hide_shorts_comments_button_title">Приховати кнопку \"Коментарі\"</string>

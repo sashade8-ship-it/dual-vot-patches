@@ -463,6 +463,16 @@ Eftir að myndband með Ask hnappi hefur verið opnað einu sinni, virkar eiginl
   <string name="morphe_external_downloader_screen_summary">Niðurhalaðu myndbönd, hlaðvarpa eða lög með niðurhalssforritum frá þriðja aðila.</string>
   <string name="morphe_external_downloader_overlay_button_title">Sýna takka fyrir niðurhald ofanborðs spilara</string>
   <string name="morphe_external_downloader_overlay_button_summary">Sýnir takka í myndbands-spilara sem opnar ytri niðurhalara</string>
+  <string name="morphe_external_downloader_quick_menu_title">Hraðhleðsla með einu snerti</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Beðir um að hlaða niður í bakgrunni. Snertu og haltuu inni til að opna hleðsluforritið. Virkar með YTDLnis og YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Merkja hlaðnir myndbönd sem horft</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Myndbönd sem hlaðin eru niður með utanaumhúss hleðsluforriti eru bætt við horfunsögu YouTube</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Miðlungs (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Fljótleg niðurhal</string>
+  <string name="morphe_external_downloader_quick_video">Myndband</string>
+  <string name="morphe_external_downloader_quick_audio">Hljóð</string>
+  <string name="morphe_external_downloader_quick_options">Allar stillingar</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Þýðing á raddsegulmagni</string>
   <string name="morphe_vot_screen_summary">Les upp undirtitla myndbandsins með texta-til-tala á tækinu, samhæmt með endursendingu</string>
@@ -576,14 +586,14 @@ API lykillinn þinn ætti aldrei að deila. Allir með aðgang að honum geta no
   <string name="morphe_queue_restore_summary">Biðlisti er vistaður eftir endurræsingar appinu</string>
   <string name="morphe_swap_save_and_queue_actions_title">Skipta um röð á Vista og Biðlista aðgerðum</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Snertu fyrir biðraðarvalkosti, snertu og haltu til að vista í Horfa síðar.</string>
-  <string name="morphe_queue_override_flyout_menu_title">Rafmagnúðu biðröð fljótfallsins</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Opnar Morphe biðröðina í stað YouTube biðröðarinnar</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Spila næst í biðröð</string>
+  <string name="morphe_queue_type_entry_1">Sjálfgefið</string>
+  <string name="morphe_queue_type_entry_2">Innfædd biðröð</string>
+  <string name="morphe_queue_type_entry_3">Morphe biðröð</string>
+  <string name="morphe_queue_type_entry_4">Morphe biðröð á viðskiptavinahlið</string>
   <string name="morphe_queue_add_flyout_menu_title">Bæta við flugvalsatriði fyrir fréttastraum</string>
   <string name="morphe_queue_add_flyout_menu_summary">Bætir við auka flugvalsatriði. Virkjaðu þetta ef \"Bæta í biðröð\" er ekki sýnt</string>
-  <string name="morphe_local_queue_title">Biðröð í Premium-stíl</string>
-  <string name="morphe_local_queue_summary">"Skiptir út Morphe-biðröðinni fyrir biðröð sem er geymd á tækinu, spilast af sjálfu sér og er hægt að endurraða með því að draga
-
-Upplýsingar: Næsta myndband í biðröðinni byrjar aðeins meðan YouTube er á skjánum"</string>
   <string name="morphe_local_queue_sheet_title">Biðröð</string>
   <string name="morphe_local_queue_open">Biðröð (%s)</string>
   <string name="morphe_local_queue_clear">Hreinsa allt</string>
@@ -628,6 +638,20 @@ Upplýsingar: Næsta myndband í biðröðinni byrjar aðeins meðan YouTube er 
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Fjarlægja og endurhlaða myndband</string>
   <string name="morphe_queue_manager_open_queue">Opna biðlista</string>
   <string name="morphe_queue_manager_save_queue">Vista biðlista í spilalista</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Ljóðlisti vistaður</string>
+  <string name="morphe_native_playlist_queue_saved_to">Vistað í %s</string>
+  <string name="morphe_native_playlist_queue_clear">Hreinsa biðröð</string>
+  <string name="morphe_native_playlist_queue_cleared">Biðröð hreinsuð</string>
+  <string name="morphe_native_playlist_queue_title">Biðröð</string>
+  <string name="morphe_native_playlist_queue_last">Spila síðast í biðröð</string>
+  <string name="morphe_native_playlist_queue_next">Spila næst í biðröð</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube gat ekki sýnt biðröðina.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Biðröðin er ekki tilbúin fyrir þetta myndband. Opnaðu spilunarpallinn og reyndu aftur.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Bæta Mix við biðröð eða horfa á Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Horfa á</string>
+  <string name="morphe_native_playlist_queue_add_mix">Bæta við biðröð</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Hleður Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Opnaðu rás frá lifandi hlaut</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Kemur í veg fyrir að lifleg streyma opni þegar þeir ýta á hlaut rásarinnar</string>
@@ -839,8 +863,11 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <string name="morphe_navigation_bar_animations_summary">Hreyfir umhverfi þegar skipt er á milli flipa</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Lokað sjálfvirkum hópum</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Geymir stjórnarborðið sýnilegt á meðan skellt er</string>
-  <string name="morphe_disable_translucent_navigation_title">Óvirkja gjálflega stýristöng</string>
-  <string name="morphe_disable_translucent_navigation_summary">Gerir stýristöngina og stöðustönguna algjörlega ógegnsæja</string>
+  <string name="morphe_navigation_bar_style_title">Stíll vistunarlínunnar</string>
+  <string name="morphe_navigation_bar_style_entry_1">Sjálfgefið</string>
+  <string name="morphe_navigation_bar_style_entry_2">Hálfgagnsætt</string>
+  <string name="morphe_navigation_bar_style_entry_3">Gagnsætt</string>
+  <string name="morphe_navigation_bar_style_entry_4">Ógagnsætt</string>
   <string name="morphe_toolbar_screen_title">Tólaborð</string>
   <string name="morphe_toolbar_screen_summary">Veldu hvaða þættir birtast á verkfærastikunni</string>
   <string name="morphe_hide_toolbar_cast_button_title">Felur Cast hnappinn</string>

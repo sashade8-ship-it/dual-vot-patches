@@ -266,7 +266,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_comments_section_title">隐藏评论区</string>
   <string name="morphe_hide_comments_section_in_home_feed_title">隐藏主页动态的评论区</string>
   <string name="morphe_hide_comments_community_guidelines_title">隐藏社区指南</string>
-  <string name="morphe_hide_comments_create_a_short_button_title">隐藏“创建 Short”按钮</string>
+  <string name="morphe_hide_comments_create_a_short_button_title">隐藏“创作短视频”按钮</string>
   <string name="morphe_hide_comments_dislike_button_title">隐藏点踩按钮</string>
   <string name="morphe_hide_comments_emoji_button_title">隐藏表情符号按钮</string>
   <string name="morphe_hide_comments_filter_bar_options_title">隐藏筛选栏选项</string>
@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">使用第三方下载应用程序下载视频、播客或歌曲</string>
   <string name="morphe_external_downloader_overlay_button_title">显示播放器覆盖层下载按钮</string>
   <string name="morphe_external_downloader_overlay_button_summary">在视频播放器中显示一个打开外部下载器的按钮</string>
+  <string name="morphe_external_downloader_quick_menu_title">点击快速下载</string>
+  <string name="morphe_external_downloader_quick_menu_summary">提示在后台下载。长按以打开下载器。支持 YTDLnis 和 YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">将下载内容标记为已观看</string>
+  <string name="morphe_external_downloader_mark_watched_summary">使用外部下载器下载的视频将添加到您的 YouTube 观看历史记录中</string>
+  <string name="morphe_external_downloader_quick_video_quality">全高清（1080p）</string>
+  <string name="morphe_external_downloader_quick_audio_quality">中（192 kbps）</string>
+  <string name="morphe_external_downloader_quick_menu_header">快速下载</string>
+  <string name="morphe_external_downloader_quick_video">视频</string>
+  <string name="morphe_external_downloader_quick_audio">音频</string>
+  <string name="morphe_external_downloader_quick_options">所有选项</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">语音旁白翻译</string>
   <string name="morphe_vot_screen_summary">使用设备上的文本转语音功能朗读视频字幕，并与播放同步</string>
@@ -588,14 +598,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">重启应用后队列仍会保留</string>
   <string name="morphe_swap_save_and_queue_actions_title">交换保存和队列操作</string>
   <string name="morphe_swap_save_and_queue_actions_summary">点击可查看队列选项，长按可保存到“稍后观看”</string>
-  <string name="morphe_queue_override_flyout_menu_title">覆盖信息流浮动队列按钮</string>
-  <string name="morphe_queue_override_flyout_menu_summary">打开 Morphe 队列，而不是 YouTube 队列</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">在队列中播放下一个</string>
+  <string name="morphe_queue_type_entry_1">默认</string>
+  <string name="morphe_queue_type_entry_2">原生队列</string>
+  <string name="morphe_queue_type_entry_3">Morphe 队列</string>
+  <string name="morphe_queue_type_entry_4">Morphe 客户端队列</string>
   <string name="morphe_queue_add_flyout_menu_title">添加信息流弹出菜单项</string>
   <string name="morphe_queue_add_flyout_menu_summary">添加额外的弹出菜单项。如果未显示“添加到队列”，请启用此选项</string>
-  <string name="morphe_local_queue_title">Premium 样式队列</string>
-  <string name="morphe_local_queue_summary">"将 Morphe 队列替换为设备本地队列，可自行连续播放，并可通过拖动重新排序
-
-提示：仅当 YouTube 在屏幕上时，下一个队列视频才会开始播放"</string>
   <string name="morphe_local_queue_sheet_title">队列</string>
   <string name="morphe_local_queue_open">队列 (%s)</string>
   <string name="morphe_local_queue_clear">全部清除</string>
@@ -640,6 +650,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">移除并重新加载视频</string>
   <string name="morphe_queue_manager_open_queue">打开队列</string>
   <string name="morphe_queue_manager_save_queue">将队列保存到播放列表</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">播放列表已保存</string>
+  <string name="morphe_native_playlist_queue_saved_to">已保存至 %s</string>
+  <string name="morphe_native_playlist_queue_clear">清除队列</string>
+  <string name="morphe_native_playlist_queue_cleared">队列已清除</string>
+  <string name="morphe_native_playlist_queue_title">队列</string>
+  <string name="morphe_native_playlist_queue_last">在队列末尾播放</string>
+  <string name="morphe_native_playlist_queue_next">在队列中播放下一个</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube 无法显示队列。</string>
+  <string name="morphe_native_playlist_queue_not_ready">该视频队列尚未就绪。请打开视频播放器并再试一次。</string>
+  <string name="morphe_native_playlist_queue_mix_choice">将混音添加到队列或观看混音？</string>
+  <string name="morphe_native_playlist_queue_watch_mix">观看</string>
+  <string name="morphe_native_playlist_queue_add_mix">添加到队列</string>
+  <string name="morphe_native_playlist_queue_loading_mix">正在加载混音……</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">从直播头像打开频道</string>
   <string name="morphe_open_channel_of_live_avatar_summary">防止点击频道头像时打开直播</string>
@@ -824,7 +848,7 @@ Second \"item\" text"</string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_shorts_button_title">隐藏 Shorts 按钮</string>
   <!-- 'Create' has no display name. Translate normally. -->
-  <string name="morphe_hide_create_button_title">隐藏创建按钮</string>
+  <string name="morphe_hide_create_button_title">隐藏创作按钮</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
   <string name="morphe_hide_subscriptions_button_title">隐藏订阅按钮</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
@@ -835,7 +859,7 @@ Second \"item\" text"</string>
   <string name="morphe_show_settings_button_index_title">设置按钮位置</string>
   <string name="morphe_show_settings_button_type_title">设置按钮操作</string>
   <string name="morphe_show_settings_button_type_summary">启用时打开 Morphe 设置，禁用时打开 YouTube 设置</string>
-  <string name="morphe_swap_create_with_notifications_button_title">交换“创建”按钮与“通知”按钮</string>
+  <string name="morphe_swap_create_with_notifications_button_title">交换“创作”按钮与“通知”按钮</string>
   <string name="morphe_swap_create_with_notifications_button_summary">如果更改此设置没有生效，请尝试切换到无痕模式。</string>
   <string name="morphe_hide_navigation_button_labels_title">隐藏导航栏按钮标签</string>
   <string name="morphe_hide_navigation_new_content_dot_title">隐藏新内容圆点</string>
@@ -853,8 +877,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">软光上子检查些“通过”软光浩通的新闻</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">禁用自动隐藏导航栏</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">隐藏“音轨”菜单页脚</string>
-  <string name="morphe_disable_translucent_navigation_title">Disable translucent navigation bar</string>
-  <string name="morphe_disable_translucent_navigation_summary">Makes the navigation and status bar fully opaque</string>
+  <string name="morphe_navigation_bar_style_title">导航栏样式</string>
+  <string name="morphe_navigation_bar_style_entry_1">默认</string>
+  <string name="morphe_navigation_bar_style_entry_2">半透明</string>
+  <string name="morphe_navigation_bar_style_entry_3">透明</string>
+  <string name="morphe_navigation_bar_style_entry_4">不透明</string>
   <string name="morphe_toolbar_screen_title">工具栏</string>
   <string name="morphe_toolbar_screen_summary">选择工具栏中显示哪些组件</string>
   <string name="morphe_hide_toolbar_cast_button_title">隐藏“投屏”按钮</string>

@@ -151,6 +151,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Αποκρύπτει τα κουμπιά Προηγούμενο και Επόμενο στην ειδοποίηση πολυμέσων, στην οθόνη κλειδώματος και στα χειριστήρια ακουστικών</string>
   <string name="morphe_disable_notification_media_seekbar_title">Απενεργοποίηση γραμμής αναζήτησης</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Αποτρέπει τη μεταφορά της γραμμής αναζήτησης στην οθόνη κλειδώματος και στον πίνακα ειδοποιήσεων</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Αναζήτηση με τα κουμπιά Προηγούμενο &amp; Επόμενο</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Οι ελέγχοι για τις ειδοποιήσεις πολυμέσων, την οθόνη κλειδώματος και τα ακουστικά αναζητούν αντί να αλλάζουν τα βίντεο</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Μήκος επαναφοράς</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Δευτερόλεπτα για επαναφορά με το κουμπί Προηγούμενο</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Μήκος ταχείας προώθησης</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Δευτερόλεπτα για ταχεία προώθηση με το κουμπί Επόμενο</string>
+  <string name="morphe_seek_notification_media_length_invalid">Το μήκος αναζήτησης πρέπει να είναι μεταξύ 1 και %s δευτερολέπτων. Χρήση προεπιλεγμένης τιμής</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Απενεργοποίηση πρωτοκόλλου QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

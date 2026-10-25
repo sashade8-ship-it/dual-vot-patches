@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">তৃতীয় পক্ষের ডাউনলোড অ্যাপ্লিকেশন ব্যবহার করে ভিডিও, পডকাস্ট বা গান ডাউনলোড করুন</string>
   <string name="morphe_external_downloader_overlay_button_title">প্লেয়ার ওভারলে ডাউনলোড বোতাম দেখান</string>
   <string name="morphe_external_downloader_overlay_button_summary">ভিডিও প্লেয়ারে একটি বোতাম দেখায় যা আপনার বাহ্যিক ডাউনলোডার খole</string>
+  <string name="morphe_external_downloader_quick_menu_title">ট্যাপ করলে দ্রুত ডাউনলোড করুন</string>
+  <string name="morphe_external_downloader_quick_menu_summary">ব্যাকগ্রাউন্ডে ডাউনলোড করার প্রম্পট দেয়। ডাউনলোডার খুলতে ট্যাপ করে ধরে রাখুন। YTDLnis এবং YTindir-এর সাথে কাজ করে</string>
+  <string name="morphe_external_downloader_mark_watched_title">ডাউনলোডগুলিকে দেখা হয়েছে হিসেবে চিহ্নিত করুন</string>
+  <string name="morphe_external_downloader_mark_watched_summary">এক্সটারনাল ডাউনলোডার দিয়ে ডাউনলোড করা ভিডিওগুলি আপনার YouTube ওয়াচ হিস্ট্রিতে যোগ করা হবে</string>
+  <string name="morphe_external_downloader_quick_video_quality">ফুল এইচডি (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">মাধ্যম (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">দ্রুত ডাউনলোড</string>
+  <string name="morphe_external_downloader_quick_video">ভিডিও</string>
+  <string name="morphe_external_downloader_quick_audio">অডিও</string>
+  <string name="morphe_external_downloader_quick_options">সকল বিকল্প</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">ভয়েস ওভার অনুবাদ</string>
   <string name="morphe_vot_screen_summary">ডিভাইসের টেক্সট-টু-স্পিচ ব্যবহার করে প্লেব্যাকের সাথে মিলিয়ে ভিডিও ক্যাপশন পড়ে শোনান</string>
@@ -588,14 +598,14 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_queue_restore_summary">অ্যাপ পুনরায় চালু করার পরেও সারিটি রাখা হবে</string>
   <string name="morphe_swap_save_and_queue_actions_title">সেভ এবং কিউ অ্যাকশনগুলির স্থান পরিবর্তন করুন</string>
   <string name="morphe_swap_save_and_queue_actions_summary">কিউ অপশনের জন্য ট্যাপ করুন, ওয়াচ লেটারে সংরক্ষণ করতে ট্যাপ করে ধরে রাখুন</string>
-  <string name="morphe_queue_override_flyout_menu_title">ফিড ফ্লাইআউট সারিবদ্ধকরণ বোতামটি প্রতিস্থাপন করুন</string>
-  <string name="morphe_queue_override_flyout_menu_summary">YouTube সারির পরিবর্তে Morphe সারি খোলে</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">অন্তর্ভুক্ত তালিকায় পরবর্তীটি চালান</string>
+  <string name="morphe_queue_type_entry_1">ডিফল্ট</string>
+  <string name="morphe_queue_type_entry_2">নেটিভ কিউ</string>
+  <string name="morphe_queue_type_entry_3">Morphe কিউ</string>
+  <string name="morphe_queue_type_entry_4">Morphe ক্লায়েন্ট সайд কিউ</string>
   <string name="morphe_queue_add_flyout_menu_title">ফিড ফ্লাইআউট কিউ মেনু আইটেম যুক্ত করুন</string>
   <string name="morphe_queue_add_flyout_menu_summary">একটি অতিরিক্ত ফ্লাইআউট আইটেম যোগ করে। যদি \"কিউতে যোগ করুন\" দেখানো না হয় তবে এটি সক্ষম করুন।</string>
-  <string name="morphe_local_queue_title">প্রিমিয়াম-স্টাইলের সারি</string>
-  <string name="morphe_local_queue_summary">"Morphe সারির বদলে ডিভাইসে থাকা একটি সারি ব্যবহার করে, যা নিজে নিজে চলতে থাকে এবং টেনে পুনর্বিন্যাস করা যায়
-
-তথ্য: পরবর্তী সারিবদ্ধ ভিডিওটি শুধুমাত্র YouTube স্ক্রিনে থাকাকালীন শুরু হয়"</string>
   <string name="morphe_local_queue_sheet_title">সারি</string>
   <string name="morphe_local_queue_open">সারি (%s)</string>
   <string name="morphe_local_queue_clear">সব মুছুন</string>
@@ -640,6 +650,20 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">queue থেকে সরান এবং ভিডিও রিফ্রেশ করুন</string>
   <string name="morphe_queue_manager_open_queue">queue খুলুন</string>
   <string name="morphe_queue_manager_save_queue">প্লেলিস্টে queue সংরক্ষণ করুন</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">প্লেলিস্ট সংরক্ষিত হয়েছে</string>
+  <string name="morphe_native_playlist_queue_saved_to">%s এ সংরক্ষিত হয়েছে</string>
+  <string name="morphe_native_playlist_queue_clear">কিউ মুছুন</string>
+  <string name="morphe_native_playlist_queue_cleared">কিউ পরিষ্কার করা হয়েছে</string>
+  <string name="morphe_native_playlist_queue_title">কিউ</string>
+  <string name="morphe_native_playlist_queue_last">কিউ-তে শেষটি চালান</string>
+  <string name="morphe_native_playlist_queue_next">কিউ-তে পরবর্তীটি চালান</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube কিউ প্রদর্শন করতে পারেননি।</string>
+  <string name="morphe_native_playlist_queue_not_ready">এই ভিডিওর জন্য কিউ তৈরি নয়। ভিডিও প্লেয়ার খুলুন এবং আবার চেষ্টা করুন।</string>
+  <string name="morphe_native_playlist_queue_mix_choice">মিক্সকে কিউতে যোগ করবেন নাকি মিক্স দেখবেন?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">দেখুন</string>
+  <string name="morphe_native_playlist_queue_add_mix">ভিডিও তালিকায় যুক্ত করুন</string>
+  <string name="morphe_native_playlist_queue_loading_mix">মিক্স লোড হচ্ছে…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">লাইভ অবতার থেকে চ্যানেল খুলুন</string>
   <string name="morphe_open_channel_of_live_avatar_summary">চ্যানেলের অবতার ট্যাপ করার সময় লাইভ স্ট্রিম খুলতে বাধা দেয়।</string>
@@ -853,8 +877,11 @@ OpenRouter.ai ওপেন করতে এখানে ট্যাপ কর�
   <string name="morphe_navigation_bar_animations_summary">ট্যাবের মধ্যে পরিবর্তন করার সময় অ্যানিমেশন তৈরি করে</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">স্বয়ংক্রিয়ভাবে নেভিগেশন বার লুকানো নিষ্ক্রিয় করুন</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">স্ক্রোল করার সময় নেভিগেশন বারটি দৃশ্যমান রাখে</string>
-  <string name="morphe_disable_translucent_navigation_title">Disable translucent navigation bar</string>
-  <string name="morphe_disable_translucent_navigation_summary">Makes the navigation and status bar fully opaque</string>
+  <string name="morphe_navigation_bar_style_title">নেভিগেশন বার স্টাইল</string>
+  <string name="morphe_navigation_bar_style_entry_1">ডিফল্ট</string>
+  <string name="morphe_navigation_bar_style_entry_2">অর্ধস্বচ্ছ</string>
+  <string name="morphe_navigation_bar_style_entry_3">স্বচ্ছ</string>
+  <string name="morphe_navigation_bar_style_entry_4">অস্বচ্ছ</string>
   <string name="morphe_toolbar_screen_title">টুলবার</string>
   <string name="morphe_toolbar_screen_summary">টুলবারে কোন উপাদানগুলো প্রদর্শিত হবে তা নির্বাচন করুন</string>
   <string name="morphe_hide_toolbar_cast_button_title">কাস্ট বোতামটি লুকান</string>

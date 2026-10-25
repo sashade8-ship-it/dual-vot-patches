@@ -474,6 +474,16 @@ Nachdem ein Video mit der Ask-Schaltfläche einmal geöffnet wurde, funktioniert
   <string name="morphe_external_downloader_screen_summary">Videos, Podcasts oder Songs mit externen Download-Apps herunterladen</string>
   <string name="morphe_external_downloader_overlay_button_title">Schaltfläche zum Herunterladen der Player-Overlay anzeigen</string>
   <string name="morphe_external_downloader_overlay_button_summary">Zeigt eine Schaltfläche im Videoplayer, die Ihren externen Downloader öffnet</string>
+  <string name="morphe_external_downloader_quick_menu_title">Schneller Download per Fingertipp</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Aufforderungen zum Download im Hintergrund. Halten Sie zum Öffnen des Downloaders gedrückt. Funktioniert mit YTDLnis und YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Downloads als gesehen markieren</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Mit einem externen Downloader heruntergeladene Videos werden zu Ihrem YouTube-Verlauf hinzugefügt</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full-HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Mittel (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Schnell herunterladen</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Audio</string>
+  <string name="morphe_external_downloader_quick_options">Alle Optionen</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Sprachausgabe-Übersetzung</string>
   <string name="morphe_vot_screen_summary">Lies die Videountertitel laut mithilfe der Text-to-Speech-Funktion des Geräts, synchronisiert mit der Wiedergabe.</string>
@@ -589,14 +599,14 @@ Info: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <string name="morphe_queue_restore_summary">Warteschlange wird nach Neustart der App beibehalten</string>
   <string name="morphe_swap_save_and_queue_actions_title">Tausche Speichern- und Warteschlangenaktionen</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Tippen für Warteschlangenoptionen, tippen und halten, um zu „Später ansehen“ hinzuzufügen.</string>
-  <string name="morphe_queue_override_flyout_menu_title">Überschreiben-Schaltfläche für Feed-Flyout-Warteschlange</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Öffnet die Morphe-Warteschlange anstelle der YouTube-Warteschlange</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Als Nächstes in der Warteschlange spielen</string>
+  <string name="morphe_queue_type_entry_1">Standard</string>
+  <string name="morphe_queue_type_entry_2">Eingebaute Warteschlange</string>
+  <string name="morphe_queue_type_entry_3">Morphe-Warteschlange</string>
+  <string name="morphe_queue_type_entry_4">Clientseitige Morphe-Warteschlange</string>
   <string name="morphe_queue_add_flyout_menu_title">Menüpunkt für Flyout-Warteschlange im Feed hinzufügen</string>
   <string name="morphe_queue_add_flyout_menu_summary">Fügt einen zusätzlichen Flyout-Eintrag hinzu. Aktivieren Sie diese Option, wenn \"Zur Warteschlange hinzufügen\" nicht angezeigt wird</string>
-  <string name="morphe_local_queue_title">Warteschlange im Premium-Stil</string>
-  <string name="morphe_local_queue_summary">"Ersetzt die Morphe-Warteschlange durch eine, die auf dem Gerät gespeichert ist, automatisch weiter abspielt und durch Ziehen neu angeordnet werden kann.
-
-Info: Das nächste Video in der Warteschlange startet nur, solange YouTube auf dem Bildschirm angezeigt wird"</string>
   <string name="morphe_local_queue_sheet_title">Warteschlange</string>
   <string name="morphe_local_queue_open">Warteschlange (%s)</string>
   <string name="morphe_local_queue_clear">Alle löschen</string>
@@ -641,6 +651,20 @@ Info: Das nächste Video in der Warteschlange startet nur, solange YouTube auf d
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Aus der Warteschlange entfernen und Video neu laden</string>
   <string name="morphe_queue_manager_open_queue">Warteschlange öffnen</string>
   <string name="morphe_queue_manager_save_queue">Warteschlange in Wiedergabeliste speichern</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Wiedergabeliste gespeichert</string>
+  <string name="morphe_native_playlist_queue_saved_to">In %s gespeichert</string>
+  <string name="morphe_native_playlist_queue_clear">Warteschlange leeren</string>
+  <string name="morphe_native_playlist_queue_cleared">Warteschlange gelöscht</string>
+  <string name="morphe_native_playlist_queue_title">Warteschlange</string>
+  <string name="morphe_native_playlist_queue_last">Als Letztes in der Warteschlange spielen</string>
+  <string name="morphe_native_playlist_queue_next">Als Nächstes in der Warteschlange spielen</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube kann die Warteschlange nicht anzeigen.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Die Warteschlange ist für dieses Video nicht bereit. Öffnen Sie den Videoplayer und versuchen Sie es erneut.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Mix zur Warteschlange hinzufügen oder Mix ansehen?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Ansehen</string>
+  <string name="morphe_native_playlist_queue_add_mix">Zur Warteschlange hinzufügen</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Mix wird geladen…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Kanal vom Live-Avatar aus öffnen</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Verhindert, dass der Livestream geöffnet wird, wenn Sie auf das Avatar des Kanals tippen</string>
@@ -854,8 +878,11 @@ Um auf Einstellungen zuzugreifen, aktivieren Sie die Schaltfläche „Einstellun
   <string name="morphe_navigation_bar_animations_summary">Audio Track-Menü-Fußzeile ausblenden</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Auto-Ausblenden der Navigationsleiste deaktivieren</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Audio Track-Menü-Header ausblenden</string>
-  <string name="morphe_disable_translucent_navigation_title">Transluzente Navigationsleiste deaktivieren</string>
-  <string name="morphe_disable_translucent_navigation_summary">Macht die Navigations- und Statusleiste vollständig undurchsichtig</string>
+  <string name="morphe_navigation_bar_style_title">Stil der Navigationsleiste</string>
+  <string name="morphe_navigation_bar_style_entry_1">Standard</string>
+  <string name="morphe_navigation_bar_style_entry_2">Transluzent</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
+  <string name="morphe_navigation_bar_style_entry_4">Undurchsichtig</string>
   <string name="morphe_toolbar_screen_title">Leiste</string>
   <string name="morphe_toolbar_screen_summary">Wähle aus, welche Schaltflächen in der Toolbar erscheinen sollen</string>
   <string name="morphe_hide_toolbar_cast_button_title">Schaltfläche „Übertragen“ ausblenden</string>

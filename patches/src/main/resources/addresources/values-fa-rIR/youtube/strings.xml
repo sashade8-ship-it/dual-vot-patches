@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">دانلود موزیک‌ویدئوها، پادکست‌ها یا آهنگ‌ها با برنامه‌های دانلودکنندهٔ شخص ثالث</string>
   <string name="morphe_external_downloader_overlay_button_title">نمایش دکمهٔ دانلود رویهم‌افتاده پخش‌کننده</string>
   <string name="morphe_external_downloader_overlay_button_summary">یک دکمه در پخش‌کنندهٔ ویدئو نمایش می‌دهد که دانلودکنندهٔ خارجی شما را باز می‌کند</string>
+  <string name="morphe_external_downloader_quick_menu_title">دانلود سریع با یک ضربه</string>
+  <string name="morphe_external_downloader_quick_menu_summary">درخواست دانلود در پس‌زمینه. برای باز کردن دانلودر، ضربه داده و نگه دارید. با YTDLnis و YTindir سازگار است</string>
+  <string name="morphe_external_downloader_mark_watched_title">علامت‌گذاری دانلودها به عنوان تماشا شده</string>
+  <string name="morphe_external_downloader_mark_watched_summary">ویدیوهای دانلود شده با یک دانلودر خارجی به تاریخچه تماشای YouTube شما اضافه می‌شوند</string>
+  <string name="morphe_external_downloader_quick_video_quality">کیفیت ویدیو</string>
+  <string name="morphe_external_downloader_quick_audio_quality">میانگین (192 کیلوبیت بر ثانیه)</string>
+  <string name="morphe_external_downloader_quick_menu_header">دانلود سریع</string>
+  <string name="morphe_external_downloader_quick_video">ویدئو</string>
+  <string name="morphe_external_downloader_quick_audio">صدا</string>
+  <string name="morphe_external_downloader_quick_options">همه گزینه‌ها</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">ترجمهٔ صوتی</string>
   <string name="morphe_vot_screen_summary">زیرنویس‌های ویدئو را با تبدیل متن به گفتار روی دستگاه و همگام با پخش، بلند می‌خواند</string>
@@ -588,14 +598,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">صف پس از راه‌اندازی دوبارهٔ برنامه حفظ می‌شود</string>
   <string name="morphe_swap_save_and_queue_actions_title">جابه‌جایی عملیات ذخیره و صف</string>
   <string name="morphe_swap_save_and_queue_actions_summary">برای گزینه‌های صف ضربه بزنید؛ برای ذخیره در «بعداً تماشا می‌کنم» لمس طولانی کنید</string>
-  <string name="morphe_queue_override_flyout_menu_title">جایگزینی دکمهٔ صف منوی بازشوی خوراک</string>
-  <string name="morphe_queue_override_flyout_menu_summary">به‌جای صف YouTube، صف Morphe را باز می‌کند</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">پخش بعدی در صف</string>
+  <string name="morphe_queue_type_entry_1">پیش‌فرض</string>
+  <string name="morphe_queue_type_entry_2">صف بومی</string>
+  <string name="morphe_queue_type_entry_3">صف Morphe</string>
+  <string name="morphe_queue_type_entry_4">کلاینت صف Morphe</string>
   <string name="morphe_queue_add_flyout_menu_title">افزودن مورد منوی صف به منوی بازشوی خوراک</string>
   <string name="morphe_queue_add_flyout_menu_summary">یک مورد بازشوی اضافی اضافه می‌کند. اگر «افزودن به صف» نمایش داده نمی‌شود، این گزینه را فعال کنید</string>
-  <string name="morphe_local_queue_title">صف به سبک پریمیوم</string>
-  <string name="morphe_local_queue_summary">"صف Morphe را با صفی جایگزین میکند که روی دستگاه قرار دارد، خودبهخود پخش میشود و میتوان با کشیدن، ترتیب آن را تغییر داد
-
-اطلاعات: ویدیوی بعدی در صف فقط وقتی شروع میشود که YouTube روی صفحه باشد"</string>
   <string name="morphe_local_queue_sheet_title">صف</string>
   <string name="morphe_local_queue_open">صف (%s)</string>
   <string name="morphe_local_queue_clear">پاک کردن همه</string>
@@ -640,6 +650,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">حذف و بارگذاری دوبارهٔ ویدئو</string>
   <string name="morphe_queue_manager_open_queue">بازکردن صف</string>
   <string name="morphe_queue_manager_save_queue">ذخیرهٔ صف در فهرست پخش</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">لیست پخش ذخیره شد</string>
+  <string name="morphe_native_playlist_queue_saved_to">ذخیره شده در %s</string>
+  <string name="morphe_native_playlist_queue_clear">پاک کردن صف</string>
+  <string name="morphe_native_playlist_queue_cleared">صف پاک شد</string>
+  <string name="morphe_native_playlist_queue_title">صف</string>
+  <string name="morphe_native_playlist_queue_last">پخش آخرین مورد در صف</string>
+  <string name="morphe_native_playlist_queue_next">پخش بعدی در صف</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube قادر به نمایش صف نیست.</string>
+  <string name="morphe_native_playlist_queue_not_ready">صف برای این ویدیو آماده نیست. پخش کننده ویدیو را باز کنید و دوباره تلاش کنید.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">افزودن Mix به صف یا تماشای Mix؟</string>
+  <string name="morphe_native_playlist_queue_watch_mix">تماشا</string>
+  <string name="morphe_native_playlist_queue_add_mix">افزودن به صف</string>
+  <string name="morphe_native_playlist_queue_loading_mix">در حال بارگیری Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">بازکردن کانال از آواتار زنده</string>
   <string name="morphe_open_channel_of_live_avatar_summary">هنگام ضربه‌زدن روی آواتار کانال، از بازشدن پخش زنده جلوگیری می‌کند</string>
@@ -853,8 +877,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">هنگام جابه‌جایی بین برگه‌ها، انتقال‌ها را متحرک می‌کند</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">غیرفعال‌کردن پنهان‌شدن خودکار نوار پیمایش</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">هنگام پیمایش، نوار پیمایش را قابل مشاهده نگه می‌دارد</string>
-  <string name="morphe_disable_translucent_navigation_title">غیرفعال‌کردن نوار پیمایش نیمه‌شفاف</string>
-  <string name="morphe_disable_translucent_navigation_summary">نوار پیمایش و نوار وضعیت را کاملاً کدر می‌کند</string>
+  <string name="morphe_navigation_bar_style_title">استایل نوار پیمایش</string>
+  <string name="morphe_navigation_bar_style_entry_1">پیش‌فرض</string>
+  <string name="morphe_navigation_bar_style_entry_2">نیمه‌شفاف</string>
+  <string name="morphe_navigation_bar_style_entry_3">شفاف</string>
+  <string name="morphe_navigation_bar_style_entry_4">کدر</string>
   <string name="morphe_toolbar_screen_title">نوار ابزار</string>
   <string name="morphe_toolbar_screen_summary">انتخاب کنید کدام مؤلفه‌ها در نوار ابزار نمایش داده شوند</string>
   <string name="morphe_hide_toolbar_cast_button_title">پنهان‌کردن دکمهٔ ارسال</string>

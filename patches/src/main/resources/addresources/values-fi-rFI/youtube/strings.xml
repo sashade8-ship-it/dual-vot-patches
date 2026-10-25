@@ -473,6 +473,16 @@ Kerran kun video \"Kysy\"-painikkeella avataan, ominaisuus toimii kaikkien video
   <string name="morphe_external_downloader_screen_summary">Lataa videoita, podcasteja tai kappaleita kolmannen osapuolen lataussovelluksilla</string>
   <string name="morphe_external_downloader_overlay_button_title">Näytä pelaajan peitteen latauspainike</string>
   <string name="morphe_external_downloader_overlay_button_summary">Näyttää paineen videonsoittimessa, joka avaa ulkoisen lataussovelluksen</string>
+  <string name="morphe_external_downloader_quick_menu_title">Pikalataus napautuksella</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Pyytää lataamaan taustalla. Napauta ja pidä pohjassa avataksesi latausohjelman. Toimii YTDLnis- ja YTindir-ohjelmien kanssa</string>
+  <string name="morphe_external_downloader_mark_watched_title">Merkitse lataukset katsotuiksi</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Ulkoisella latausohjelmalla ladatut videot lisätään YouTube-katseluhistoriaasi</string>
+  <string name="morphe_external_downloader_quick_video_quality">Täysi HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Keskitaso (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Pikalataus</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Ääni</string>
+  <string name="morphe_external_downloader_quick_options">Kaikki asetukset</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Ääniratateksti</string>
   <string name="morphe_vot_screen_summary">Lue videon tekstitykset ääneen laitteen tekstistä puheeksi -toiminnolla, synkronoitu toiston kanssa</string>
@@ -588,14 +598,14 @@ Tieto: Ei välttämättä toimi suoratoistoissa"</string>
   <string name="morphe_queue_restore_summary">Jono säilyy sovelluksen uudelleenkäynnistyksen jälkeen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Vaihda Tallenna- ja Jonotoiminnot</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Napauta jonon asetuksia varten, napauta ja pidä painettuna tallentaaksesi Katso myöhemmin -listalle</string>
-  <string name="morphe_queue_override_flyout_menu_title">Korvaa syötteen pikavalikkojonon painike</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Avaa Morphe-jono YouTuben jonon sijaan</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Nouda seuraava jonossa-tyyppi</string>
+  <string name="morphe_queue_type_entry_1">Oletus</string>
+  <string name="morphe_queue_type_entry_2">Alkuperäinen jono</string>
+  <string name="morphe_queue_type_entry_3">Morphen jono</string>
+  <string name="morphe_queue_type_entry_4">Morphen jono asiakaspuolella</string>
   <string name="morphe_queue_add_flyout_menu_title">Lisää valikkokohta syötejonon ponnahdusvalikkoon</string>
   <string name="morphe_queue_add_flyout_menu_summary">Lisää lisäponnahdusvalikkokohdan. Ota tämä käyttöön, jos \"Lisää jonoon\" ei näy.</string>
-  <string name="morphe_local_queue_title">Premium-tyylinen jono</string>
-  <string name="morphe_local_queue_summary">"Korvaa Morphe-jonon laitteessa olevalla jonolla, joka toistaa itsestään ja jonka järjestystä voi muuttaa vetämällä
-
-Info: Seuraava jonossa oleva video käynnistyy vain silloin, kun YouTube on näytöllä"</string>
   <string name="morphe_local_queue_sheet_title">Jono</string>
   <string name="morphe_local_queue_open">Jono (%s)</string>
   <string name="morphe_local_queue_clear">Tyhjennä kaikki</string>
@@ -640,6 +650,20 @@ Info: Seuraava jonossa oleva video käynnistyy vain silloin, kun YouTube on näy
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Poista jonosta ja lataa video uudelleen</string>
   <string name="morphe_queue_manager_open_queue">Avaa jono</string>
   <string name="morphe_queue_manager_save_queue">Tallenna jono soittolistalle</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Soittolista tallennettu</string>
+  <string name="morphe_native_playlist_queue_saved_to">Tallennettu kohteeseen %s</string>
+  <string name="morphe_native_playlist_queue_clear">Tyhjennä jono</string>
+  <string name="morphe_native_playlist_queue_cleared">Jono tyhjennetty</string>
+  <string name="morphe_native_playlist_queue_title">Jono</string>
+  <string name="morphe_native_playlist_queue_last">Toista viimeinen jonossa</string>
+  <string name="morphe_native_playlist_queue_next">Toista seuraava jonossa</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube ei voinut näyttää jonoa.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Jono ei ole valmis tähän videoon. Avaa videotoistin ja yritä uudelleen.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Lisää Mix jsoon vai katso Mixiä?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Katso</string>
+  <string name="morphe_native_playlist_queue_add_mix">Lisää johonkin</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Mixin lataus…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Avaa kanava suorasta avatartista</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Estää suoratoiston avaamisen, kun napautat kanavan avataria</string>
@@ -853,8 +877,11 @@ Avataksesi asetukset, ota käyttöön Asetukset-painike kohdasta Yleiset → Ty�
   <string name="morphe_navigation_bar_animations_summary">Animoi siirtymät välilehtien välillä</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Poista automaattisen piilottamisen käytöstä navigointipalkissa</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Pitää navigointipalkin näkyvillä vieritettäessä</string>
-  <string name="morphe_disable_translucent_navigation_title">Poista läpikuultava navigointipalkki käytöstä</string>
-  <string name="morphe_disable_translucent_navigation_summary">Tekee navigointi- ja tilapalkin täysin peittäväksi</string>
+  <string name="morphe_navigation_bar_style_title">Navigointipalkin tyyli</string>
+  <string name="morphe_navigation_bar_style_entry_1">Oletus</string>
+  <string name="morphe_navigation_bar_style_entry_2">Puoliläpinäkyvä</string>
+  <string name="morphe_navigation_bar_style_entry_3">Läpinäkyvä</string>
+  <string name="morphe_navigation_bar_style_entry_4">Peittävä</string>
   <string name="morphe_toolbar_screen_title">Työkalupalkki</string>
   <string name="morphe_toolbar_screen_summary">Valitse, mitkä komponentit näkyvät työkalupalkissa</string>
   <string name="morphe_hide_toolbar_cast_button_title">Piilota Cast-painike</string>

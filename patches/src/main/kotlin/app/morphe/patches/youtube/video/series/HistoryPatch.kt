@@ -139,8 +139,10 @@ internal fun BytecodePatchContext.wireHistory() {
             fieldAccess(definingClass = "this", type = "L"),
         )
         val endpointField = create.getInstruction(endpointIndex).getReference<FieldReference>()!!
-        val routeMethod = BrowseRouteFingerprint(endpointField.type)
-            .instructionMatches.first().getMethodCalled()
+        val routeMethod = BrowseRouteFingerprint(endpointField.type).matchAll()
+            .map { it.instructionMatches.first().getMethodCalled() }
+            .distinctBy { it.toString() }
+            .single()
 
         fragment.methods.add(
             ImmutableMethod(

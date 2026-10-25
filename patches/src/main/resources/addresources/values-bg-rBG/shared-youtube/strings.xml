@@ -143,6 +143,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Скрива бутоните „Предишна“ и „Следваща“ в известията за медии, на заключения екран и в контролите на слушалките</string>
   <string name="morphe_disable_notification_media_seekbar_title">Деактивиране на лентата за превъртане</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Предотвратява плъзгането на лентата за превъртане на заключения екран и в панела за известия</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Търсене с бутони \"Предишен\" и \"Следващ\"</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Променя управлението на нотификацията за медиите, заключения екран и слушалките да търси вместо да смня видеоклипове</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Дължина на превъртане назад</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Секунди за превъртане назад с бутона \"Предишен\"</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Дължина на превъртане напред</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Секунди за превъртане напред с бутона \"Следващ\"</string>
+  <string name="morphe_seek_notification_media_length_invalid">Дължината на търсене трябва да е между 1 и %s секунди. Използва се стойност по подразбиране</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Изключи протокола QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

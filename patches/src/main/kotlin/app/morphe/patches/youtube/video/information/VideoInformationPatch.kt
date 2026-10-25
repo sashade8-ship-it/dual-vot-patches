@@ -574,6 +574,19 @@ val videoInformationPatch = bytecodePatch(
                         "invoke-direct { p0, p1 }, $helperMethod"
                     )
                 }
+
+                // A preloaded playback, such as the next Short, becomes the current one without loadVideo().
+                currentPlaybackFingerprint(playerResponseType).let { currentPlayback ->
+                    currentPlayback.method.apply {
+                        val index = currentPlayback.instructionMatches.last().index
+                        val playerResponseRegister = getInstruction<FiveRegisterInstruction>(index).registerC
+
+                        addInstruction(
+                            index,
+                            "invoke-direct { p0, v$playerResponseRegister }, $helperMethod"
+                        )
+                    }
+                }
             }
         }
 

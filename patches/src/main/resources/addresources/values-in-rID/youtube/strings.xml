@@ -473,6 +473,16 @@ Setelah video dengan tombol Ask dibuka satu kali, fitur ini berfungsi untuk semu
   <string name="morphe_external_downloader_screen_summary">Unduh video, podcast, atau lagu menggunakan aplikasi pihak ketiga</string>
   <string name="morphe_external_downloader_overlay_button_title">Tampilkan tombol unduh tumpang tindih pemutar</string>
   <string name="morphe_external_downloader_overlay_button_summary">Menampilkan tombol di pemutar video yang membuka pengunduh eksternal Anda</string>
+  <string name="morphe_external_downloader_quick_menu_title">Unduh cepat saat diketuk</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Perintah untuk mengunduh di latar belakang. Ketuk dan tahan untuk membuka pengunduh. Berfungsi dengan YTDLnis dan YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Tandai unduhan sebagai sudah ditonton</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Video yang diunduh menggunakan pengunduh eksternal akan ditambahkan ke riwayat tontonan YouTube Anda</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Sedang (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Unduhan cepat</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Audio</string>
+  <string name="morphe_external_downloader_quick_options">Semua opsi</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Terjemahan sulih suara</string>
   <string name="morphe_vot_screen_summary">Baca teks keterangan video dengan suara keras menggunakan fitur text-to-speech bawaan perangkat, yang disinkronkan dengan pemutaran video</string>
@@ -588,14 +598,14 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_queue_restore_summary">Antrean disimpan setelah memulai ulang aplikasi</string>
   <string name="morphe_swap_save_and_queue_actions_title">Tukar Tindakan Simpan dan Antrean</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Ketuk untuk pilihan antrean, ketuk dan tahan untuk menyimpan ke Tonton Nanti</string>
-  <string name="morphe_queue_override_flyout_menu_title">Gantikan tombol antrean feed flyout</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Membuka antrean Morphe daripada antrean YouTube</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Jenis Putar video berikutnya dalam antrean</string>
+  <string name="morphe_queue_type_entry_1">Bawaan</string>
+  <string name="morphe_queue_type_entry_2">Antrean Native</string>
+  <string name="morphe_queue_type_entry_3">Antrean Morphe</string>
+  <string name="morphe_queue_type_entry_4">Antrean Morphe sisi klien</string>
   <string name="morphe_queue_add_flyout_menu_title">Tambahkan item menu antrean feed flyout</string>
   <string name="morphe_queue_add_flyout_menu_summary">Menambahkan item flyout tambahan. Aktifkan ini jika \"Tambahkan ke antrean\" tidak ditampilkan</string>
-  <string name="morphe_local_queue_title">Antrean gaya Premium</string>
-  <string name="morphe_local_queue_summary">"Menggantikan antrean Morphe dengan antrean yang berada di perangkat, dapat diputar sendiri, dan dapat diurutkan ulang dengan menyeret
-
-Info: Video berikutnya dalam antrean hanya mulai diputar saat YouTube sedang berada di layar"</string>
   <string name="morphe_local_queue_sheet_title">Antrean</string>
   <string name="morphe_local_queue_open">Antrean (%s)</string>
   <string name="morphe_local_queue_clear">Bersihkan semua</string>
@@ -603,7 +613,7 @@ Info: Video berikutnya dalam antrean hanya mulai diputar saat YouTube sedang ber
   <string name="morphe_local_queue_empty_hint">Gunakan Putar berikutnya dalam antrean pada video apa pun</string>
   <string name="morphe_local_queue_now_playing">Sedang diputar</string>
   <string name="morphe_local_queue_play_next">Putar berikutnya dalam antrean</string>
-  <string name="morphe_local_queue_play_last">Putar terakhir di antrean</string>
+  <string name="morphe_local_queue_play_last">Putar video terakhir dalam antrean</string>
   <string name="morphe_local_queue_reorder">Urutkan ulang</string>
   <string name="morphe_local_queue_remove">Hapus</string>
   <string name="morphe_local_queue_added">Ditambahkan ke antrean</string>
@@ -640,6 +650,20 @@ Info: Video berikutnya dalam antrean hanya mulai diputar saat YouTube sedang ber
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Hapus dan muat ulang video</string>
   <string name="morphe_queue_manager_open_queue">Buka antrean</string>
   <string name="morphe_queue_manager_save_queue">Simpan antrean ke daftar putar</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Daftar Putar disimpan</string>
+  <string name="morphe_native_playlist_queue_saved_to">Disimpan ke %s</string>
+  <string name="morphe_native_playlist_queue_clear">Hapus antrean</string>
+  <string name="morphe_native_playlist_queue_cleared">Antrean dibersihkan</string>
+  <string name="morphe_native_playlist_queue_title">Antrean</string>
+  <string name="morphe_native_playlist_queue_last">Putar video terakhir dalam antrean</string>
+  <string name="morphe_native_playlist_queue_next">Putar video berikutnya dalam antrean</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube tidak dapat menampilkan antrean.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Antrean belum siap untuk video ini. Buka pemutar video lalu coba lagi.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Tambahkan Mix ke antrean atau tonton Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Tonton</string>
+  <string name="morphe_native_playlist_queue_add_mix">Tambahkan ke antrean</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Memuat Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Buka saluran dari avatar siaran langsung</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Mencegah siaran langsung terbuka saat mengetuk avatar saluran</string>
@@ -853,8 +877,11 @@ Untuk mengakses Setelan, aktifkan tombol Setelan melalui Umum → Bilah Alat →
   <string name="morphe_navigation_bar_animations_summary">Menganimasikan transisi saat beralih antar tab</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Nonaktifkan otomatis menyembunyikan bilah navigasi</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Menjaga bilah navigasi tetap terlihat saat menggulir</string>
-  <string name="morphe_disable_translucent_navigation_title">Nonaktifkan bilah navigasi transparan</string>
-  <string name="morphe_disable_translucent_navigation_summary">Membuat bilah navigasi dan bilah status menjadi sepenuhnya buram</string>
+  <string name="morphe_navigation_bar_style_title">Gaya bilah navigasi</string>
+  <string name="morphe_navigation_bar_style_entry_1">Bawaan</string>
+  <string name="morphe_navigation_bar_style_entry_2">Translusen</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparan</string>
+  <string name="morphe_navigation_bar_style_entry_4">Buram</string>
   <string name="morphe_toolbar_screen_title">Bilah alat</string>
   <string name="morphe_toolbar_screen_summary">Pilih komponen mana yang akan ditampilkan di bilah alat</string>
   <string name="morphe_hide_toolbar_cast_button_title">Sembunyikan tombol Transmisi</string>

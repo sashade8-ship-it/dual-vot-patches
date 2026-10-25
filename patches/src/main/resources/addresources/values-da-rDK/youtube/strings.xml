@@ -471,6 +471,16 @@ Efter at en video med Ask-knappen er åbnet én gang, fungerer funktionen med al
   <string name="morphe_external_downloader_screen_summary">Download videoer, podcasts eller sange med tredjeparts download-apps</string>
   <string name="morphe_external_downloader_overlay_button_title">Vis knappen til download af spilleroverlejring</string>
   <string name="morphe_external_downloader_overlay_button_summary">Viser en knap i videoafspilleren, der åbner din eksterne downloadprogram</string>
+  <string name="morphe_external_downloader_quick_menu_title">Hurtig download ved tryk</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Opfordrer til download i baggrunden. Tryk og hold for at åbne downloaderen. Virker med YTDLnis og YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Marker downloads som set</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Videoer downloadet med en ekstern downloader tilføjes til din YouTube-historik</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Medium (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">Hurtig download</string>
+  <string name="morphe_external_downloader_quick_video">Video</string>
+  <string name="morphe_external_downloader_quick_audio">Lyd</string>
+  <string name="morphe_external_downloader_quick_options">Alle valgmuligheder</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Tekstlæsning</string>
   <string name="morphe_vot_screen_summary">Læs videoundertitler højt ved hjælp af tekst-til-tale på enheden, synkroniseret med afspilningen</string>
@@ -586,14 +596,14 @@ Info: Virker muligvis ikke på live streams"</string>
   <string name="morphe_queue_restore_summary">Køen bevares efter genstart af appen</string>
   <string name="morphe_swap_save_and_queue_actions_title">Byt rundt på Gem og Kø-handlinger</string>
   <string name="morphe_swap_save_and_queue_actions_summary">Tryk for kø-indstillinger, tryk og hold for at gemme til Se senere</string>
-  <string name="morphe_queue_override_flyout_menu_title">Erstat feed flyout kø-knap</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Åbner Morphe-køen i stedet for YouTube-køen</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">Afspil næste i kø</string>
+  <string name="morphe_queue_type_entry_1">Standard</string>
+  <string name="morphe_queue_type_entry_2">Indbygget kø</string>
+  <string name="morphe_queue_type_entry_3">Morphe-kø</string>
+  <string name="morphe_queue_type_entry_4">Morphe-klientkø</string>
   <string name="morphe_queue_add_flyout_menu_title">Tilføj feed-flyout-kø-menupunkt</string>
   <string name="morphe_queue_add_flyout_menu_summary">Tilføjer et ekstra flyout-element. Aktiver dette, hvis \"Tilføj til kø\" ikke vises.</string>
-  <string name="morphe_local_queue_title">Kø i premium-stil</string>
-  <string name="morphe_local_queue_summary">"Erstatter Morphe-køen med en, der findes på enheden, spiller automatisk videre, og kan omarrangeres ved at trække
-
-Info: Den næste video i køen starter kun, mens YouTube er på skærmen"</string>
   <string name="morphe_local_queue_sheet_title">Kø</string>
   <string name="morphe_local_queue_open">Kø (%s)</string>
   <string name="morphe_local_queue_clear">Ryd alt</string>
@@ -638,6 +648,20 @@ Info: Den næste video i køen starter kun, mens YouTube er på skærmen"</strin
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">Fjern og genindlæs video</string>
   <string name="morphe_queue_manager_open_queue">Åbn køen</string>
   <string name="morphe_queue_manager_save_queue">Gem køen til afspilningsliste</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">Afsnittet er gemt</string>
+  <string name="morphe_native_playlist_queue_saved_to">Gemt til %s</string>
+  <string name="morphe_native_playlist_queue_clear">Ryd kø</string>
+  <string name="morphe_native_playlist_queue_cleared">Kø ryddet</string>
+  <string name="morphe_native_playlist_queue_title">Kø</string>
+  <string name="morphe_native_playlist_queue_last">Afspil sidste i kø</string>
+  <string name="morphe_native_playlist_queue_next">Afspil næste i kø</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube kunne ikke vise køen.</string>
+  <string name="morphe_native_playlist_queue_not_ready">Koen er ikke klar til denne video. Åbn videospilleren, og prøv igen.</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Tilføj Mix til kø eller afspil Mix?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">Afspil</string>
+  <string name="morphe_native_playlist_queue_add_mix">Tilføj til kø</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Indlæser Mix…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">Åbn kanal fra live-avatar</string>
   <string name="morphe_open_channel_of_live_avatar_summary">Forhindrer livestreamingen i at åbne, når du trykker på kanalens avatar</string>
@@ -849,8 +873,11 @@ For at få adgang til Indstillinger skal du aktivere indstillingsknappen via Gen
   <string name="morphe_navigation_bar_animations_summary">Animerer overgange, når der skiftes mellem faner</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">Deaktiver automatisk skjuling af navigationslinjen</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">Holder navigationslinjen synlig under rulning</string>
-  <string name="morphe_disable_translucent_navigation_title">Deaktiver gennemsigtig navigationslinje</string>
-  <string name="morphe_disable_translucent_navigation_summary">Gør navigations- og statuslinjen helt uigennemsigtig</string>
+  <string name="morphe_navigation_bar_style_title">Navigationsbjælkestil</string>
+  <string name="morphe_navigation_bar_style_entry_1">Standard</string>
+  <string name="morphe_navigation_bar_style_entry_2">Gennemsigtig</string>
+  <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
+  <string name="morphe_navigation_bar_style_entry_4">Uigennemsigtig</string>
   <string name="morphe_toolbar_screen_title">Værktøjslinje</string>
   <string name="morphe_toolbar_screen_summary">Vælg, hvilke komponenter der vises i værktøjslinjen</string>
   <string name="morphe_hide_toolbar_cast_button_title">Skjul Cast-knappen</string>

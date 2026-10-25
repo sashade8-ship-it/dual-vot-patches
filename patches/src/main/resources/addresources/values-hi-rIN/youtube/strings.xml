@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">तृतीय-पक्ष डाउनलोडिंग ऐप्स के साथ वीडियो, पॉडकास्ट या गाने डाउनलोड करें</string>
   <string name="morphe_external_downloader_overlay_button_title">प्लेयर ओवरले डाउनलोड बटन दिखाएं</string>
   <string name="morphe_external_downloader_overlay_button_summary">वीडियो प्लेयर में एक बटन दिखाता है जो बाहरी डाउनलोडर खोलता है</string>
+  <string name="morphe_external_downloader_quick_menu_title">टैप करने पर त्वरित डाउनलोड</string>
+  <string name="morphe_external_downloader_quick_menu_summary">बैकग्राउंड में डाउनलोड करने के लिए संकेत देता है। डाउनलोडर खोलने के लिए टैप करके रखें। YTDLnis और YTindir के साथ काम करता है</string>
+  <string name="morphe_external_downloader_mark_watched_title">डाउनलोड्स को देखा गया मार्क करें</string>
+  <string name="morphe_external_downloader_mark_watched_summary">बाहरी डाउनलोडर के साथ डाउनलोड किए गए वीडियो आपके YouTube वॉच हिस्ट्री में जोड़ दिए जाते हैं</string>
+  <string name="morphe_external_downloader_quick_video_quality">फुल एचडी (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">मध्यम (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">त्वरित डाउनलोड</string>
+  <string name="morphe_external_downloader_quick_video">वीडियो</string>
+  <string name="morphe_external_downloader_quick_audio">ऑडियो</string>
+  <string name="morphe_external_downloader_quick_options">सभी विकल्प</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">वॉइस ओवर अनुवाद</string>
   <string name="morphe_vot_screen_summary">डिवाइस पर टेक्स्ट-टू-स्पीच का उपयोग करके वीडियो कैप्शन को ज़ोर से पढ़ें, जो प्लेबैक के साथ सिंक्रनाइज़ किया गया है।</string>
@@ -588,14 +598,14 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_queue_restore_summary">ऐप को पुनरारंभ करने के बाद कतार बनी रहती है</string>
   <string name="morphe_swap_save_and_queue_actions_title">स्वैप सेव और क्यू क्रियाएँ</string>
   <string name="morphe_swap_save_and_queue_actions_summary">कतार विकल्पों के लिए टैप करें, बाद में देखने के लिए सहेजने हेतु टैप और होल्ड करें</string>
-  <string name="morphe_queue_override_flyout_menu_title">फ़ीड फ्लाईआउट कतार बटन को ओवरराइड करें</string>
-  <string name="morphe_queue_override_flyout_menu_summary">Morphe कतार को YouTube कतार के बजाय खोलता है</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">अगला कतार में चलाएँ</string>
+  <string name="morphe_queue_type_entry_1">डिफ़ॉल्ट</string>
+  <string name="morphe_queue_type_entry_2">नेटिव कतार</string>
+  <string name="morphe_queue_type_entry_3">Morphe कतार</string>
+  <string name="morphe_queue_type_entry_4">Morphe क्लाइंट-साइड कतार</string>
   <string name="morphe_queue_add_flyout_menu_title">फ़ीड फ़्लाईआउट कतार मेनू आइटम जोड़ें</string>
   <string name="morphe_queue_add_flyout_menu_summary">एक अतिरिक्त फ़्लाईआउट आइटम जोड़ता है। यदि \"कतार में जोड़ें\" नहीं दिखाया गया है तो इसे सक्षम करें।</string>
-  <string name="morphe_local_queue_title">प्रीमियम-शैली कतार</string>
-  <string name="morphe_local_queue_summary">"Morphe कतार को एक ऐसी कतार से बदलता है जो डिवाइस पर रहती है, अपने आप चलती रहती है, और जिसे खींचकर पुनः क्रमबद्ध किया जा सकता है
-
-जानकारी: कतार में अगला वीडियो केवल तभी शुरू होता है जब YouTube स्क्रीन पर होता है"</string>
   <string name="morphe_local_queue_sheet_title">कतार</string>
   <string name="morphe_local_queue_open">कतार (%s)</string>
   <string name="morphe_local_queue_clear">सभी साफ़ करें</string>
@@ -640,6 +650,20 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">क्यू से हटाएं और वीडियो रीलोड करें</string>
   <string name="morphe_queue_manager_open_queue">क्यू खोलें</string>
   <string name="morphe_queue_manager_save_queue">प्लेलिस्ट में क्यू सहेजें</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">प्लेलिस्ट सहेजा गया</string>
+  <string name="morphe_native_playlist_queue_saved_to">%s में सहेजा गया</string>
+  <string name="morphe_native_playlist_queue_clear">कतार खाली करें</string>
+  <string name="morphe_native_playlist_queue_cleared">कतार खाली की गई</string>
+  <string name="morphe_native_playlist_queue_title">कतार</string>
+  <string name="morphe_native_playlist_queue_last">आखिरी कतार में चलाएँ</string>
+  <string name="morphe_native_playlist_queue_next">अगला कतार में चलाएँ</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube कतार प्रदर्शित नहीं कर सका।</string>
+  <string name="morphe_native_playlist_queue_not_ready">यह वीडियो के लिए कतार तैयार नहीं है। वीडियो प्लेयर खोलें और पुनः प्रयास करें।</string>
+  <string name="morphe_native_playlist_queue_mix_choice">मिक्स कतार में जोड़ें या मिक्स देखें?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">देखें</string>
+  <string name="morphe_native_playlist_queue_add_mix">कतार में जोड़ें</string>
+  <string name="morphe_native_playlist_queue_loading_mix">मिक्स लोड हो रहा है…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">लाइव अवतार से चैनल खोलें</string>
   <string name="morphe_open_channel_of_live_avatar_summary">चैनल के अवतार पर टैप करने पर लाइव स्ट्रीम को खुलने से रोकता है</string>
@@ -853,8 +877,11 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_navigation_bar_animations_summary">स्टेटस बार को पूरी तरह से अपारदर्शी बनाता है</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">ऑटो-हाइडिंग नेविगेशन बार को निष्क्रिय करें</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">लाइट मोड में नेविगेशन बार को पूरी तरह से अपारदर्शी बनाता है</string>
-  <string name="morphe_disable_translucent_navigation_title">पारदर्शी नेविगेशन बार अक्षम करें</string>
-  <string name="morphe_disable_translucent_navigation_summary">नेविगेशन और स्टेटस बार को पूरी तरह अपारदर्शी बनाता है</string>
+  <string name="morphe_navigation_bar_style_title">नेविगेशन बार स्टाइल</string>
+  <string name="morphe_navigation_bar_style_entry_1">डिफ़ॉल्ट</string>
+  <string name="morphe_navigation_bar_style_entry_2">अर्धपारदर्शी</string>
+  <string name="morphe_navigation_bar_style_entry_3">पारदर्शी</string>
+  <string name="morphe_navigation_bar_style_entry_4">अपारदर्शी</string>
   <string name="morphe_toolbar_screen_title">टूलबार</string>
   <string name="morphe_toolbar_screen_summary">टूलबार में कौन से घटक दिखाई दें, यह चुनें</string>
   <string name="morphe_hide_toolbar_cast_button_title">\'ऑडियो ट्रैक\' मेनू फ़ूटर छुपाएं</string>

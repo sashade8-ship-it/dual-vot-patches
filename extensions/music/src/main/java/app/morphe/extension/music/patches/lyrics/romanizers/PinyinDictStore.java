@@ -335,6 +335,7 @@ public final class PinyinDictStore {
             if (cut >= 0) reading = reading.substring(0, cut).trim();
             cut = reading.indexOf(' ');
             if (cut > 0) reading = reading.substring(0, cut);
+            //noinspection SizeReplaceableByIsEmpty
             if (reading.length() > 0) return reading.toLowerCase(Locale.ROOT);
         }
         return null;

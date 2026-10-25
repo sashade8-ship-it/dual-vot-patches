@@ -473,6 +473,16 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_screen_summary">使用第三方下載應用程式下載影片、播客或歌曲</string>
   <string name="morphe_external_downloader_overlay_button_title">顯示播放器覆蓋層下載按鈕</string>
   <string name="morphe_external_downloader_overlay_button_summary">在影片播放器中顯示一個按鈕，該按鈕可開啟您的外部下載器</string>
+  <string name="morphe_external_downloader_quick_menu_title">點擊快速下載</string>
+  <string name="morphe_external_downloader_quick_menu_summary">提示在背景下載。長按以開啟下載器。支援 YTDLnis 與 YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">將下載內容標記為已觀看</string>
+  <string name="morphe_external_downloader_mark_watched_summary">使用外部下載器下載的影片將被添加到您的 YouTube 觀看記錄中</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">Medium (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">快速下載</string>
+  <string name="morphe_external_downloader_quick_video">影片</string>
+  <string name="morphe_external_downloader_quick_audio">音訊</string>
+  <string name="morphe_external_downloader_quick_options">所有選項</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">語音轉錄翻譯</string>
   <string name="morphe_vot_screen_summary">使用裝置上的文字轉語音功能朗讀影片字幕，並與播放同步</string>
@@ -588,14 +598,14 @@ Second \"item\" text"</string>
   <string name="morphe_queue_restore_summary">重新啟動應用程式後，佇列會保留</string>
   <string name="morphe_swap_save_and_queue_actions_title">交換「儲存」和「加入佇列」動作</string>
   <string name="morphe_swap_save_and_queue_actions_summary">點擊以開啟佇列選項，長按以儲存至「稍後觀看」</string>
-  <string name="morphe_queue_override_flyout_menu_title">覆蓋播放列表彈出視窗按鈕</string>
-  <string name="morphe_queue_override_flyout_menu_summary">開啟 Morphe 佇列，而非 YouTube 佇列</string>
+  <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">佇列中下一個播放類型</string>
+  <string name="morphe_queue_type_entry_1">預設</string>
+  <string name="morphe_queue_type_entry_2">原生佇列</string>
+  <string name="morphe_queue_type_entry_3">Morphe 佇列</string>
+  <string name="morphe_queue_type_entry_4">Morphe 佇列客戶端</string>
   <string name="morphe_queue_add_flyout_menu_title">新增動態消息彈出式佇列選單項目</string>
   <string name="morphe_queue_add_flyout_menu_summary">新增額外的彈出式項目。若未顯示「加入佇列」，請啟用此選項</string>
-  <string name="morphe_local_queue_title">Premium 風格佇列</string>
-  <string name="morphe_local_queue_summary">"以存在於裝置上、可自行播放且可拖曳重新排序的佇列取代 Morphe 佇列
-
-資訊：下一個佇列中的影片只會在 YouTube 位於畫面上時開始播放"</string>
   <string name="morphe_local_queue_sheet_title">佇列</string>
   <string name="morphe_local_queue_open">佇列 (%s)</string>
   <string name="morphe_local_queue_clear">全部清除</string>
@@ -640,6 +650,20 @@ Second \"item\" text"</string>
   <string name="morphe_queue_manager_remove_from_queue_and_reload_video">移除並重新載入影片</string>
   <string name="morphe_queue_manager_open_queue">開啟佇列</string>
   <string name="morphe_queue_manager_save_queue">將佇列儲存至播放列表</string>
+  <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">已儲存播放清單</string>
+  <string name="morphe_native_playlist_queue_saved_to">已儲存在 %s</string>
+  <string name="morphe_native_playlist_queue_clear">清除佇列</string>
+  <string name="morphe_native_playlist_queue_cleared">佇列已清除</string>
+  <string name="morphe_native_playlist_queue_title">佇列</string>
+  <string name="morphe_native_playlist_queue_last">佇列中最後一個播放</string>
+  <string name="morphe_native_playlist_queue_next">播放佇列中的下一個</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube 無法顯示佇列。</string>
+  <string name="morphe_native_playlist_queue_not_ready">佇列尚未為此影片就緒。開啟影片播放器，然後再試一次。</string>
+  <string name="morphe_native_playlist_queue_mix_choice">將混合音樂新增至佇列或觀看混合音樂？</string>
+  <string name="morphe_native_playlist_queue_watch_mix">觀看</string>
+  <string name="morphe_native_playlist_queue_add_mix">新增至佇列</string>
+  <string name="morphe_native_playlist_queue_loading_mix">載入混合音樂中……</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
   <string name="morphe_open_channel_of_live_avatar_title">從直播形象開啟頻道</string>
   <string name="morphe_open_channel_of_live_avatar_summary">防止點擊頻道形象時開啟直播</string>
@@ -853,8 +877,11 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_animations_summary">在切換分頁時，讓轉換效果更生動</string>
   <string name="morphe_disable_auto_hide_navigation_bar_title">停用自動隱藏導航欄</string>
   <string name="morphe_disable_auto_hide_navigation_bar_summary">在捲動時，保持導覽列可見</string>
-  <string name="morphe_disable_translucent_navigation_title">停用半透明導覽列</string>
-  <string name="morphe_disable_translucent_navigation_summary">讓導覽列和狀態列完全不透明</string>
+  <string name="morphe_navigation_bar_style_title">導覽列樣式</string>
+  <string name="morphe_navigation_bar_style_entry_1">預設</string>
+  <string name="morphe_navigation_bar_style_entry_2">半透明</string>
+  <string name="morphe_navigation_bar_style_entry_3">透明</string>
+  <string name="morphe_navigation_bar_style_entry_4">不透明</string>
   <string name="morphe_toolbar_screen_title">工具列</string>
   <string name="morphe_toolbar_screen_summary">選擇工具列中顯示的元件</string>
   <string name="morphe_hide_toolbar_cast_button_title">隱藏「投放」按鈕</string>

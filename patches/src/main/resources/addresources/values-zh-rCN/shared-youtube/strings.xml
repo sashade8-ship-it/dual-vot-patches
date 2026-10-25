@@ -151,6 +151,13 @@ Second \"item\" text"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">在媒体通知、锁屏和耳机控制中隐藏上一个和下一个按钮</string>
   <string name="morphe_disable_notification_media_seekbar_title">禁用进度条</string>
   <string name="morphe_disable_notification_media_seekbar_summary">防止在锁屏和通知面板上拖动进度条</string>
+  <string name="morphe_seek_notification_media_prev_next_title">使用上一首 &amp; 下一首按钮搜索</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">更改媒体通知、锁屏和耳机的控制以进行搜索而不是切换视频</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">倒带长度</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">使用上一首按钮倒带的秒数</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">快进长度</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">使用下一首按钮快进的秒数</string>
+  <string name="morphe_seek_notification_media_length_invalid">搜索长度必须在 %s 到 1 秒之间。使用默认值</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">禁用QUIC协议</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

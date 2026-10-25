@@ -150,6 +150,13 @@ Oturum açmak için, devam et butonuna basın."</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Medya bildirimi, kilit ekranı ve kulaklık kontrollerindeki Önceki ve Sonraki butonlarını gizler</string>
   <string name="morphe_disable_notification_media_seekbar_title">İlerleme çubuğunu devre dışı bırak</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Bildirim panelindeki ve kilit ekranındaki ilerleme çubuğunu sürüklemeyi engeller</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Önceki &amp; Sonraki düğmeleriyle arama</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Medybildirimi, kilit ekranı ve kulaklık için medya kontrolünü videoları değiştirmek yerine arama yapmak üzere değiştirir</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Geri sarma süresi</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Önceki düğmesiyle geri sarılacak saniye sayısı</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">İleri sarma süresi</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Sonraki düğmesiyle ileri sarılacak saniye sayısı</string>
+  <string name="morphe_seek_notification_media_length_invalid">Arama süresi 1 ile %s saniye arasında olmalıdır. Varsayılan kullanılıyor</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">QUIC protokolünü devre dışı bırak</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->
