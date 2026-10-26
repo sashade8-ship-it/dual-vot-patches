@@ -435,6 +435,17 @@ Second \"item\" text"</string>
   <string name="morphe_feed_long_press_menu_summary">ضربه زدن و نگه داشتن در هر جایی از یک ویدیوی فید، منوی آن را باز می‌کند</string>
   <string name="morphe_feed_watch_later_button_title">نمایش دکمه \"تماشا بعداً\" روی تصاویر بندانگشتی</string>
   <string name="morphe_feed_watch_later_button_summary">یک دکمه \"تماشا بعداً\" روی تصاویر بندانگشتی ویدیوهای فید نمایش داده می‌شود. ضربه زدن و نگه داشتن آن گزینه ذخیره در لیست پخش را باز می‌کند</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">دانلود تصاویر پست</string>
+  <string name="morphe_post_image_download_summary">یک دکمه دانلود در کنار دکمه اشتراک‌گذاری پست‌های دارای تصویر یا GIF نمایش داده می‌شود و یک گزینه دانلود به منوی آن‌ها اضافه می‌گردد</string>
+  <string name="morphe_post_image_download_flyout">دانلود تصاویر</string>
+  <string name="morphe_post_image_download_flyout_single">دانلود تصویر</string>
+  <string name="morphe_post_image_download_started">در حال دانلود %s تصویر…</string>
+  <string name="morphe_post_image_download_started_single">در حال دانلود تصویر…</string>
+  <string name="morphe_post_image_download_saved">%1$s تصویر در %2$s ذخیره شد</string>
+  <string name="morphe_post_image_download_saved_single">تصویر در %s ذخیره شد</string>
+  <string name="morphe_post_image_download_failed">دانلود تصویر امکان‌پذیر نبود</string>
+  <string name="morphe_post_image_download_not_found">تصویری در این پست یافت نشد</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">افزودن آیتم Ask به منوی پرواز</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">افزودن آیتم خلاصه‌سازی ویدیو به منوی پرواز فید</string>
@@ -882,6 +893,7 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_style_entry_2">نیمه‌شفاف</string>
   <string name="morphe_navigation_bar_style_entry_3">شفاف</string>
   <string name="morphe_navigation_bar_style_entry_4">کدر</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">این استایل ممکن است توسط دستگاه شما یا نسخه YouTube پشتیبانی نشود و می‌تواند باعث بروز مشکلاتی در چیدمان یا کرش شود</string>
   <string name="morphe_toolbar_screen_title">نوار ابزار</string>
   <string name="morphe_toolbar_screen_summary">انتخاب کنید کدام مؤلفه‌ها در نوار ابزار نمایش داده شوند</string>
   <string name="morphe_hide_toolbar_cast_button_title">پنهان‌کردن دکمهٔ ارسال</string>
@@ -1109,7 +1121,9 @@ Second \"item\" text"</string>
   <string name="morphe_tablet_layout_in_player_summary">"طرح‌بندی قدیمی پخش‌کننده را بازیابی می‌کند
 
 محدودیت: اگر «بازیابی نوار عملیات قدیمی ویدئو» خاموش باشد، ممکن است روی‌هم‌افتادگی «ویدئوهای بیشتر» در دسترس نباشد"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">فعال‌سازی این گزینه ممکن است برخی از ویژگی‌های طرح‌بندی پخش‌کننده، مانند بخش نظرات یا \'ویدئوهای بیشتر\' که در زیر پخش‌کننده نمایش داده می‌شوند را مختل کند</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"فعال کردن این گزینه ممکن است برخی از ویژگی‌های چیدمان پلیر، مانند بخش نظرات یا \"ویدیوهای بیشتر\" که در پایین پلیر نمایش داده می‌شوند را مختل کند.
+
+چیدمان تبلت دیگر توسط YouTube پشتیبانی نمی‌شود و در نسخه‌های اخیر YouTube به طور جزئی یا کامل خراب شده است. برای داشتن یک چیدمان تبلت کاربردی، نسخه 20.21.37 YouTube را پچ کنید"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 — بازگردانی رفتار قبلی کپشن‌ها</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - بازیابی ذخیره در فهرست پخش</string>
@@ -1377,6 +1391,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">وقتی سرعت پخش پیش‌فرض جدیدی ذخیره شود، اعلانی نمایش می‌دهد</string>
   <string name="morphe_playback_speed_default_title">سرعت پخش پیش‌فرض</string>
   <string name="morphe_shorts_playback_speed_default_title">سرعت پخش پیش‌فرض در Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">به‌خاطر سپردن سرعت پخش در Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">تنظیمات سرعت پخش دستی شما در Shorts را برای تمام Shortsهای آینده اعمال می‌کند. اگر خاموش باشد، پس از بستن پخش‌کننده Shorts، سرعت به حالت پیش‌فرض بازمی‌گردد</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">نمایش سرعت پخش در منوی Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">یک مورد سرعت پخش را به منوی پخش‌کننده Shorts اضافه می‌کند</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">سرعت پخش · %s</string>
   <string name="morphe_remember_playback_speed_toast">سرعت پخش پیش‌فرض به این مقدار تغییر کرد: %s</string>
   <string name="morphe_disable_playback_speed_music_title">استفاده از سرعت معمولی برای موسیقی</string>
   <string name="morphe_disable_playback_speed_music_summary">ویدئوهای موسیقی را همیشه با سرعت 1.0x پخش می‌کند</string>

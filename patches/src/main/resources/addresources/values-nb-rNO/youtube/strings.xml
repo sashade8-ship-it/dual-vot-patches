@@ -435,6 +435,17 @@ Rapporter er offentlige og blir gjennomgått før en kanal legges til en liste. 
   <string name="morphe_feed_long_press_menu_summary">Å trykke og holde nede hvor som helst på en feed-video åpner menyen for den</string>
   <string name="morphe_feed_watch_later_button_title">Vis \"Se senere\"-knapp på miniatyrbilder</string>
   <string name="morphe_feed_watch_later_button_summary">En \"Se senere\"-knapp vises på miniatyrbildene til feed-videene. Trykk og hold for å lagre i spilleliste</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Last ned bilder fra innlegg</string>
+  <string name="morphe_post_image_download_summary">En nedlastingsknapp vises ved siden av Del-knappen for innlegg med bilder eller GIF-er, og et nedlastingsvalg legges til i menyen deres</string>
+  <string name="morphe_post_image_download_flyout">Last ned bilder</string>
+  <string name="morphe_post_image_download_flyout_single">Last ned bilde</string>
+  <string name="morphe_post_image_download_started">Laster ned %s bilder…</string>
+  <string name="morphe_post_image_download_started_single">Laster ned bilde…</string>
+  <string name="morphe_post_image_download_saved">%1$s bilder lagret i %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Bilde lagret i %s</string>
+  <string name="morphe_post_image_download_failed">Kunne ikke laste ned bildet</string>
+  <string name="morphe_post_image_download_not_found">Ingen bilder funnet i dette innlegget</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Legg til Ask-objekt i uttrekksmenyen</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Legger til et videooppsummeringsobjekt i strømmens uttrekksmeny</string>
@@ -882,6 +893,7 @@ For å nå Innstillinger, aktiver Innstillingsknappen via Generelt → Verktøyl
   <string name="morphe_navigation_bar_style_entry_2">Gjennomsiktig</string>
   <string name="morphe_navigation_bar_style_entry_3">Gjennomsiktig</string>
   <string name="morphe_navigation_bar_style_entry_4">Ugjennomsiktig</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Denne stilen støttes kanskje ikke av enheten din eller YouTube-versjonen, og kan forårsake layoutproblemer eller krasj</string>
   <string name="morphe_toolbar_screen_title">Verktøylinje</string>
   <string name="morphe_toolbar_screen_summary">Velg hvilke komponenter som vises i popup-menyen</string>
   <string name="morphe_hide_toolbar_cast_button_title">Skjul Kast-knapp</string>
@@ -1109,7 +1121,9 @@ Bil-layout
   <string name="morphe_tablet_layout_in_player_summary">"Gjenoppretter det gamle spillerlayoutet
 
 Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mulig at 'Flere videoer'-overlegg ikke er tilgjengelig"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Aktivering av denne innstillingen kan ødelegge noen spillerutformingsfunksjoner, som kommentarseksjonen eller «Flere videoer» som vises under spilleren</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Aktivering av dette kan ødelegge enkelte layoutfunksjoner i spilleren, som kommentarfeltet eller \"Flere videoer\" som vises under spilleren.
+
+Nettbrettlayout støttes ikke lenger av YouTube, og er delvis eller helt ødelagt i nyere YouTube-versjoner. For en fungerende nettbrettlayout, patch YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Gjenopprett gammel tekstringsatferd</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 – Gjenopprett gammel lagring til spilleliste</string>
@@ -1377,6 +1391,11 @@ Videoer blir forespurt med et kort prefiks av den hashet video-ID-en, så server
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Viser et varsel når en ny standard avspillingshastighet er lagret</string>
   <string name="morphe_playback_speed_default_title">Standard avspillingshastighet</string>
   <string name="morphe_shorts_playback_speed_default_title">Standard avspillingshastighet for Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Husk avspillingshastighet på Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Bruk ditt manuelle valg av Shorts-hastighet på alle fremtidige Shorts. Hvis dette er av, går hastigheten tilbake til standard etter at Shorts-spilleren lukkes</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Vis avspillingshastighet i Shorts-menyen</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Legger til et element for avspillingshastighet i menyen til Shorts-spilleren</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Avspillingshastighet · %s</string>
   <string name="morphe_remember_playback_speed_toast">Endret standard avspillingshastighet til: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Bruk normal hastighet for musikk</string>
   <string name="morphe_disable_playback_speed_music_summary">Spill alltid av musikkvideoer med 1,0x hastighet</string>

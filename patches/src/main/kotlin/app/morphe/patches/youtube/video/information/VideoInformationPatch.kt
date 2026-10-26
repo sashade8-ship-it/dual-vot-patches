@@ -76,7 +76,7 @@ internal const val EXTENSION_PLAYBACK_SPEED_MENU_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/VideoInformation$PlaybackSpeedMenuInterface;"
 internal const val EXTENSION_EXOPLAYER_INTERFACE =
     "Lapp/morphe/extension/shared/patches/ExoPlayerInterface;"
-private const val EXTENSION_VIDEO_QUALITY_MENU_INTERFACE =
+internal const val EXTENSION_VIDEO_QUALITY_MENU_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/VideoInformation$VideoQualityMenuInterface;"
 internal const val EXTENSION_VIDEO_QUALITY_INTERFACE =
     $$"Lapp/morphe/extension/youtube/patches/VideoInformation$VideoQualityInterface;"

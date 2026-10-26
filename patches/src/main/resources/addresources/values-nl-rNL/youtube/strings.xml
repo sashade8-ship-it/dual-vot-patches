@@ -435,6 +435,16 @@ Rapporten zijn openbaar en worden beoordeeld voordat een kanaal aan een lijst wo
   <string name="morphe_feed_long_press_menu_summary">Korte of lange aanraking ergens op een feedvideo opent het menu</string>
   <string name="morphe_feed_watch_later_button_title">Button \"Later bekijken\" weergeven op miniatuurafbeeldingen</string>
   <string name="morphe_feed_watch_later_button_summary">Er wordt een knop \"Later bekijken\" weergegeven op de miniatuurafbeeldingen van feedvideo\'s. Tikken en vasthouden opent Opslaan in afspeellijst</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Berafbeeldingen downloaden</string>
+  <string name="morphe_post_image_download_summary">Er wordt een downloadknop getoond naast de deelknop van berichten met afbeeldingen of GIF\'s, en er wordt een downloaditem toegevoegd aan hun menu</string>
+  <string name="morphe_post_image_download_flyout">Afbeeldingen downloaden</string>
+  <string name="morphe_post_image_download_flyout_single">Afbeelding downloaden</string>
+  <string name="morphe_post_image_download_started">{one,1 afbeelding downloaden…|other,%s afbeeldingen downloaden…}</string>
+  <string name="morphe_post_image_download_started_single">Afbeelding downloaden…</string>
+  <string name="morphe_post_image_download_saved_single">Afbeelding opgeslagen in %s</string>
+  <string name="morphe_post_image_download_failed">De afbeelding kon niet worden gedownload</string>
+  <string name="morphe_post_image_download_not_found">Geen afbeelding gevonden in dit bericht</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Ask-item aan uitklapmenu toevoegen</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Videofatsummarisatie-item toevoegen aan het feed-uitklapmenu</string>
@@ -880,6 +890,7 @@ Om Instellingen te openen, schakel je de knop Instellingen in via Algemeen → G
   <string name="morphe_navigation_bar_style_entry_2">Translucent</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparant</string>
   <string name="morphe_navigation_bar_style_entry_4">Ondoorzichtig</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Deze stijl wordt mogelijk niet ondersteund door je apparaat of YouTube-versie, wat kan leiden tot lay-outproblemen of crashes</string>
   <string name="morphe_toolbar_screen_title">Werkbalk</string>
   <string name="morphe_toolbar_screen_summary">Kies welke componenten in de werkbalk verschijnen</string>
   <string name="morphe_hide_toolbar_cast_button_title">Verberg Cast-knop</string>
@@ -1107,7 +1118,9 @@ Automotive-indeling
   <string name="morphe_tablet_layout_in_player_summary">"Herstelt de oude player layout
 
 Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer video's\" overlay mogelijk niet beschikbaar"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Het inschaken hiervan kan enkele lay-outfuncties van de speler breken, zoals het reactiegedeelte of \'Meer video\'s\' onder de speler</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Het inschakelen hiervan kan sommige lay-outfuncties van de speler verbreken, zoals de commentaarsectie of 'Meer video's' onder de speler.
+
+De tabletlay-out wordt niet langer ondersteund door YouTube en is gedeeltelijk of volledig defect in recente YouTube-versies. Voor een werkende tabletlay-out, patch YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Herstel het oude gedrag van ondertitels</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Herstel oude Shorts-speler pictogrammen</string>
@@ -1375,6 +1388,11 @@ Video's worden opgevraagd via een kort voorvoegsel van de gehashte video-ID, zod
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Toont een melding wanneer een nieuwe standaard afspeelsnelheid is opgeslagen</string>
   <string name="morphe_playback_speed_default_title">Standaard afspeelsnelheid</string>
   <string name="morphe_shorts_playback_speed_default_title">Standaard afspeelsnelheid op Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Onthoud afspeelsnelheid bij Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Past je handmatige selectie van de Shorts-snelheid toe op alle toekomstige Shorts. Als deze optie is uitgeschakeld, keert de snelheid terug naar de standaardwaarde na het sluiten van de Shorts-speler</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Toon afspeelsnelheid in het Shorts-menu</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Voegt een item voor afspeelsnelheid toe aan het menu van de Shorts-speler</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Afspeelsnelheid · %s</string>
   <string name="morphe_remember_playback_speed_toast">Standaard afspeelsnelheid gewijzigd naar: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Gebruik normale snelheid voor muziek</string>
   <string name="morphe_disable_playback_speed_music_summary">Speel muziekvideo\'s altijd af op 1.0x snelheid</string>

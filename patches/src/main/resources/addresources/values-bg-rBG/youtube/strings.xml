@@ -435,6 +435,16 @@ Second \"item\" text"</string>
   <string name="morphe_feed_long_press_menu_summary">Докасването и задържането навсякъде по видео в лентата отваря неговото меню</string>
   <string name="morphe_feed_watch_later_button_title">Показване на бутона \"Изглеждане по-късно\" върху миниатюрите</string>
   <string name="morphe_feed_watch_later_button_summary">Бутонът \"Изглеждане по-късно\" се показва върху миниатюрите на видеата в лентата. Докосването и задържането му отваря \"Записване към плейлист\"</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Изтегляне на изображения от публикации</string>
+  <string name="morphe_post_image_download_summary">Бутон за изтегляне се показва до бутона „Споделяне“ на публикации с изображения или GIF-ове, а елемент за изтегляне се добавя в тяхното меню</string>
+  <string name="morphe_post_image_download_flyout">Изтегляне на изображения</string>
+  <string name="morphe_post_image_download_flyout_single">Изтегляне на изображение</string>
+  <string name="morphe_post_image_download_started">Изтегляне на %s изображения…</string>
+  <string name="morphe_post_image_download_started_single">Изтегляне на изображение…</string>
+  <string name="morphe_post_image_download_saved_single">Изображението е запазено в %s</string>
+  <string name="morphe_post_image_download_failed">Изображението не можа да бъде изтеглено</string>
+  <string name="morphe_post_image_download_not_found">В този пост не е намерено изображение</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Добавяне на елемент Ask в изплъзгащото се меню</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Добавяне на елемент за обобщение на видео към изплъзгащото се меню на емисията</string>
@@ -882,6 +892,7 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_style_entry_2">Полупрозрачен</string>
   <string name="morphe_navigation_bar_style_entry_3">Прозрачен</string>
   <string name="morphe_navigation_bar_style_entry_4">Непрозрачен</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Този стил може да не се поддържа от вашето устройство или версия на YouTube и може да причини проблеми с оформянето или сривове</string>
   <string name="morphe_toolbar_screen_title">Тойбър</string>
   <string name="morphe_toolbar_screen_summary">Изберете кои компоненти да се показват в лентата с инструменти</string>
   <string name="morphe_hide_toolbar_cast_button_title">Бутон за предаване на Тв</string>
@@ -1109,7 +1120,9 @@ Second \"item\" text"</string>
   <string name="morphe_tablet_layout_in_player_summary">"Възстановява стария вид на плейъра
 
 Ограничение: Ако „Възстановяване на старата лента за действия във видеоклипа“ е изключено, покритието „Още видеоклипове“ може да не е достъпно"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Активирането на това може да наруши някои функции на макета на плейъра, като секцията за коментари или „Още видеоклипове“, показани под плейъра</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Активирането на това може да наруши някои функции на оформянето на плейъра, като раздела с коментари или \"Още видеоклипове\", показани под плейъра.
+
+Таблет оформянето вече не се поддържа от YouTube и е частично или напълно счупено в последните версии на YouTube. За работещо таблет оформяне, пачнете YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Възстановяване на старото поведение на субтитрите</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Възстанови старите запазвания в списъка</string>
@@ -1377,6 +1390,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Показва известие, когато бъде запазена нова скорост на възпроизвеждане по подразбиране</string>
   <string name="morphe_playback_speed_default_title">Надписите са показани</string>
   <string name="morphe_shorts_playback_speed_default_title">Скорост по подразбиране за възпроизвеждане в Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Запомни скоростта на възпроизвеждане в Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Прилага вашия ръчен избор на скорост за Shorts към всички бъдещи Shorts. Ако е изключено, скоростта се връща към стойността по подразбиране след затваряне на плейъра на Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Показвай скоростта на възпроизвеждане в менюто на Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Добавя елемент за скорост на възпроизвеждане в менюто на плейъра за Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Скорост на възпроизвеждане · %s</string>
   <string name="morphe_remember_playback_speed_toast">Променена подразбираема скорост на възпроизвеждане на: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Използвайте нормална скорост за музика</string>
   <string name="morphe_disable_playback_speed_music_summary">Винаги пускайте музикални видеа на скорост 1.0x</string>

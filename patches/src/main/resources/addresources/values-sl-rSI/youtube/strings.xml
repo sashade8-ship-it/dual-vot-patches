@@ -435,6 +435,16 @@ Prijave so javne in so pregledane, preden je kanal dodan na seznam. Odstranitev 
   <string name="morphe_feed_long_press_menu_summary">Če povsod na videu v toku dotaknete se in držite, se odpre njegov meni</string>
   <string name="morphe_feed_watch_later_button_title">Prikaži gumb »Ogled kasneje« na sličicah</string>
   <string name="morphe_feed_watch_later_button_summary">Na sličicah video posnetkov v toku je prikazan gumb Ogled kasneje. Z dotikom in držanjem odprete Shrani v seznam predvajanja</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Prenesi slike objav</string>
+  <string name="morphe_post_image_download_summary">Poleg gumba za deljenje objav s slikami ali GIF-i se prikaže gumb za prenos, v njihov meni pa se doda možnost prenosa</string>
+  <string name="morphe_post_image_download_flyout">Prenesi slike</string>
+  <string name="morphe_post_image_download_flyout_single">Prenesi sliko</string>
+  <string name="morphe_post_image_download_started">Prenašanje %s slik…</string>
+  <string name="morphe_post_image_download_started_single">Prenašanje slike…</string>
+  <string name="morphe_post_image_download_saved_single">Slika shranjena v %s</string>
+  <string name="morphe_post_image_download_failed">Slike ni bilo mogoče prenesti</string>
+  <string name="morphe_post_image_download_not_found">V tem objavi ni bilo najdene slike</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Dodaj element Zastavi v meni za hitro klicanje</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">V meni za hitro klicanje glavnega toka dodajte element za povzetek videa</string>
@@ -882,6 +892,7 @@ Za dostop do Nastavitev omogočajte gumb Nastavitve prek Splošno → Orodna vrs
   <string name="morphe_navigation_bar_style_entry_2">Poltransparentno</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparentno</string>
   <string name="morphe_navigation_bar_style_entry_4">Neprozorno</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Ta slog morda ni podprt v vaši napravi ali različici YouTube, kar lahko povzroči težave s pomizbo ali sesuve</string>
   <string name="morphe_toolbar_screen_title">Orodje.</string>
   <string name="morphe_toolbar_screen_summary">Skrij podnapisna stopala menija \'Zvok\'</string>
   <string name="morphe_hide_toolbar_cast_button_title">Skrij gumb za prenos</string>
@@ -1109,7 +1120,9 @@ Postavitev za avtomobile
   <string name="morphe_tablet_layout_in_player_summary">"Ponastavi prejšnjo postavitev predvajalnika
 
 Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izklopljena, »Več videoposnetkov« morda ne bo na voljo"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Omogočanje tega lahko moti nekatere značilnosti postavitve predvajalnika, kot je odsek za komentarje ali »Več videoposnetkov« pod predvajalnikom</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Omogočitev tega lahko povzroči težave s nekaterimi funkcijami pomizbe predvajalnika, kot so razdelek s komentarji ali \"Več videov\", ki se prikazujejo pod predvajalnikom.
+
+Pomizba za tablične računalnike ni več podprta v YouTube in je v novjših različicah YouTube deloma ali popolnoma neuporabna. Za delujočo pomizbo za tablične računalnike uporabite popravek za YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Obnovi staro obnašanje podnapisov</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Ponastavi staro shranjevanje v seznam predvajanja</string>
@@ -1377,6 +1390,11 @@ Videoposnetki so zahtevani s kratko predpono zgoščenega ID-ja videoposnetka, t
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Prikaže obvestilo, ko se shrani nova privzeta hitrost predvajanja</string>
   <string name="morphe_playback_speed_default_title">Privzeta hitrost predvajanja</string>
   <string name="morphe_shorts_playback_speed_default_title">Privzeta hitrost predvajanja pri kratkih videoposnetkih</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Zapomni si hitrost predvajanja v Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Uporabi vaš ročni izbor hitrosti v Shorts za vse prihodnje Shorts. Če je ta možnost izklopljena, se hitrost po zaprtju predvajalnika Shorts vrne na privzeto.</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Prikaži hitrost predvajanja v meniju Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">K meniju predvajalnika Shorts doda možnost hitrosti predvajanja</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Hitrost predvajanja · %s</string>
   <string name="morphe_remember_playback_speed_toast">Spremenjena privzeta hitrost predvajanja na: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Uporabi normalno hitrost za glasbo</string>
   <string name="morphe_disable_playback_speed_music_summary">Vedno predvajaj glasbene videospote s hitrostjo 1,0x</string>

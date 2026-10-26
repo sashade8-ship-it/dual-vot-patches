@@ -150,13 +150,13 @@ Aby się zalogować, naciśnij \"Kontynuuj\" poniżej"</string>
   <string name="morphe_hide_notification_media_prev_next_summary">Ukrywa przyciski Poprzedni i Następny w powiadomieniu o multimediach, na ekranie blokady i w sterowaniu słuchawkami</string>
   <string name="morphe_disable_notification_media_seekbar_title">Wyłącz pasek postępu</string>
   <string name="morphe_disable_notification_media_seekbar_summary">Zapobiega przeciąganiu paska postępu na ekranie blokady i w panelu powiadomień</string>
-  <string name="morphe_seek_notification_media_prev_next_title">Szukaj za pomocą przycisków Poprzedni i Następny</string>
-  <string name="morphe_seek_notification_media_prev_next_summary">Zmienia sterowanie powiadomieniem o mediach, ekranem blokady oraz słuchawkami, aby przenosić zamiast zmieniać filmy</string>
-  <string name="morphe_seek_notification_media_rewind_length_title">Długość cofania</string>
-  <string name="morphe_seek_notification_media_rewind_length_summary">Ilość sekund do cofnięcia przyciskiem Poprzedni</string>
-  <string name="morphe_seek_notification_media_fast_forward_length_title">Długość przewijania do przodu</string>
-  <string name="morphe_seek_notification_media_fast_forward_length_summary">Ilość sekund do przewinięcia do przodu przyciskiem Następny</string>
-  <string name="morphe_seek_notification_media_length_invalid">Długość przesuwania musi być między 1 a %s sekundy. Użycie domyślnej</string>
+  <string name="morphe_seek_notification_media_prev_next_title">Przewijaj przyciskami Poprzedni i Następny</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">Zmienia działanie przycisków w powiadomieniu multimedialnym, na ekranie blokady oraz na słuchawkach na przewijanie zamiast przełączania filmów</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">Czas przewijania do tyłu</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">Liczba sekund przewijania do tyłu przyciskiem Poprzedni</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">Czas przewijania do przodu</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">Liczba sekund przewijania do przodu przyciskiem Następny</string>
+  <string name="morphe_seek_notification_media_length_invalid">Czas przewijania musi wynosić od 1 do %s sekund. Użyto wartości domyślnej</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
   <string name="morphe_disable_quic_protocol_title">Wyłącz protokół QUIC</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->

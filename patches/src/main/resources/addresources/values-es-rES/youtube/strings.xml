@@ -435,6 +435,17 @@ Los reportes son públicos y se revisan antes de añadir un canal a una lista. L
   <string name="morphe_feed_long_press_menu_summary">Tocar y mantener pulsado en cualquier parte de un vídeo del feed abre su menú</string>
   <string name="morphe_feed_watch_later_button_title">Mostrar botón \"Ver más tarde\" en las miniaturas</string>
   <string name="morphe_feed_watch_later_button_summary">Se muestra un botón \"Ver más tarde\" en las miniaturas de los vídeos del feed. Tocar y mantener pulsado abre Guardar en lista</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Descargar imágenes de publicaciones</string>
+  <string name="morphe_post_image_download_summary">Se muestra un botón de descarga junto al botón Compartir de las publicaciones con imágenes o GIFs, y se añade un elemento de descarga a su menú</string>
+  <string name="morphe_post_image_download_flyout">Descargar imágenes</string>
+  <string name="morphe_post_image_download_flyout_single">Descargar imagen</string>
+  <string name="morphe_post_image_download_started">Descargando %s imágenes…</string>
+  <string name="morphe_post_image_download_started_single">Descargando imagen…</string>
+  <string name="morphe_post_image_download_saved">Se han guardado %1$s imágenes en %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Imagen guardada en %s</string>
+  <string name="morphe_post_image_download_failed">No se pudo descargar la imagen</string>
+  <string name="morphe_post_image_download_not_found">No se encontró ninguna imagen en esta publicación</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Añadir elemento «Preguntar» al menú desplegable</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Añade un elemento de resumen de vídeo al menú desplegable del feed</string>
@@ -882,6 +893,7 @@ Para acceder a los ajustes, activa el botón de ajustes a través de General →
   <string name="morphe_navigation_bar_style_entry_2">Translúcido</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparente</string>
   <string name="morphe_navigation_bar_style_entry_4">Opaco</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Es posible que tu dispositivo o la versión de YouTube no admitan este estilo, lo que puede causar problemas de diseño o cierres inesperados</string>
   <string name="morphe_toolbar_screen_title">Barra de herramientas</string>
   <string name="morphe_toolbar_screen_summary">Elige qué componentes aparecen en la barra de herramientas</string>
   <string name="morphe_hide_toolbar_cast_button_title">Ocultar botón Transmitir</string>
@@ -1109,7 +1121,9 @@ Diseño para automóviles
   <string name="morphe_tablet_layout_in_player_summary">"Restaura el diseño antiguo del reproductor
 
 Limitación: si la opción 'Restaurar antigua barra de acciones de vídeo' está desactivada, es posible que la superposición 'Más vídeos' no esté disponible"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Activar esto puede hacer que algunas funciones del diseño del reproductor dejen de funcionar, como la sección de comentarios o \'Más vídeos\' debajo del reproductor</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Activar esto puede afectar algunas funciones del diseño del reproductor, como la sección de comentarios o \"Más videos\" que se muestran debajo del reproductor.
+
+El diseño de tableta ya no es compatible con YouTube y está parcial o totalmente roto en las versiones recientes de YouTube. Para obtener un diseño de tableta funcional, aplica el parche a YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Restaurar comportamiento antiguo de los subtítulos</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restaurar guardado antiguo de lista de reproducción</string>
@@ -1377,6 +1391,11 @@ Los videos se solicitan mediante un prefijo corto del ID de video con hash, por 
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Muestra una notificación cuando se guarda una nueva velocidad de reproducción predeterminada</string>
   <string name="morphe_playback_speed_default_title">Velocidad predeterminada de reproducción</string>
   <string name="morphe_shorts_playback_speed_default_title">Velocidad de reproducción predeterminada en Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Recordar la velocidad de reproducción en Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Aplica la velocidad de reproducción de Shorts que hayas seleccionado manualmente a todos los Shorts futuros. Si está desactivada, la velocidad vuelve al valor predeterminado tras cerrar el reproductor de Shorts.</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Mostrar la velocidad de reproducción en el menú de Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Añade una opción de velocidad de reproducción al menú del reproductor de Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Velocidad de reproducción · %s</string>
   <string name="morphe_remember_playback_speed_toast">Se ha cambiado la velocidad de reproducción predeterminada a: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Usar velocidad normal para la música</string>
   <string name="morphe_disable_playback_speed_music_summary">Reproduce siempre los vídeos musicales a una velocidad de 1.0x</string>

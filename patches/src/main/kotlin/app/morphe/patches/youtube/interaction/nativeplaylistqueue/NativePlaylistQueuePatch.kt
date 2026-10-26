@@ -35,6 +35,7 @@ internal const val PLAYER_CONTROLS_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylis
 internal const val MEDIA_CONTROLS_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylistQueuePatch\$MediaControls;"
 internal const val NOTIFICATION_CONTROLS_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylistQueuePatch\$NotificationControls;"
 internal const val SERVICE_NAVIGATOR_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylistQueuePatch\$ServiceNavigator;"
+internal const val DIRECT_NAVIGATOR_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylistQueuePatch\$DirectQueueNavigator;"
 internal const val NATIVE_PLAYBACK_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylistQueuePatch\$NativePlayback;"
 internal const val REPEAT_HEADER_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylistQueuePatch\$RepeatHeader;"
 internal const val ROW_CLICK_INTERFACE = "$EXTENSION_PACKAGE/NativePlaylistQueuePatch\$RowClick;"

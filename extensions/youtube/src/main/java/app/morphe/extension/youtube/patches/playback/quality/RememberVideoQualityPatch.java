@@ -12,7 +12,6 @@ package app.morphe.extension.youtube.patches.playback.quality;
 
 import static app.morphe.extension.shared.StringRef.str;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.protobuf.MessageLite;
@@ -50,8 +49,20 @@ public class RememberVideoQualityPatch {
     private static volatile String userSelectedQualityVideoId = "";
     private static volatile int userSelectedQualityResolution = VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE;
 
-    private static void setUserSelectedQuality(int resolution) {
+    /**
+     * If the quality selected by the user was selected in the Shorts quality menu.
+     */
+    private static volatile boolean userSelectedQualityIsShorts;
+
+    /**
+     * The quality selected in the Shorts quality menu, until the menu sets it.
+     */
+    @Nullable
+    private static volatile VideoQualityInterface shortsMenuSelectedQuality;
+
+    private static void setUserSelectedQuality(int resolution, boolean isShorts) {
         userSelectedQualityResolution = resolution;
+        userSelectedQualityIsShorts = isShorts;
         userSelectedQualityVideoId = VideoInformation.getVideoId();
     }
 
@@ -96,25 +107,18 @@ public class RememberVideoQualityPatch {
         qualitySetting.save(qualityResolution);
 
         if (Settings.REMEMBER_VIDEO_QUALITY_LAST_SELECTED_TOAST.get()) {
-            String qualityLabel = qualityResolution + "p";
-            final String toastStringId = getString(shortPlayerOpen, isMobile);
-            Utils.showToastShort(str(toastStringId, qualityLabel));
+            final String toastStringId;
+            if (shortPlayerOpen && isMobile) {
+                toastStringId = "morphe_remember_video_quality_toast_shorts_mobile";
+            } else if (shortPlayerOpen) {
+                toastStringId = "morphe_remember_video_quality_toast_shorts_wifi";
+            } else if (isMobile) {
+                toastStringId = "morphe_remember_video_quality_toast_mobile";
+            } else {
+                toastStringId = "morphe_remember_video_quality_toast_wifi";
+            }
+            Utils.showToastShort(str(toastStringId, qualityResolution + "p"));
         }
-    }
-
-    @NonNull
-    private static String getString(boolean shortPlayerOpen, boolean isMobile) {
-        final String toastStringId;
-        if (shortPlayerOpen && isMobile) {
-            toastStringId = "morphe_remember_video_quality_toast_shorts_mobile";
-        } else if (shortPlayerOpen) {
-            toastStringId = "morphe_remember_video_quality_toast_shorts_wifi";
-        } else if (isMobile) {
-            toastStringId = "morphe_remember_video_quality_toast_mobile";
-        } else {
-            toastStringId = "morphe_remember_video_quality_toast_wifi";
-        }
-        return toastStringId;
     }
 
     /**
@@ -149,8 +153,12 @@ public class RememberVideoQualityPatch {
         // The video ID of the player is updated only once the video starts, so the selected
         // quality is not used once the player response of another video is received,
         // such as the next video of the autoplay.
-        if (isQualitySelectedByUser() && VideoInformation.getPlayerResponseVideoId()
-                .equals(VideoInformation.getVideoId())) {
+        // The Shorts player starts the next Short before its player response is received,
+        // so a quality selected in the Shorts quality menu is not used, otherwise the next Short
+        // would start with it. The Short it was selected for keeps it with the formats saved
+        // with the quality last selected (see useSelectedQualityFormats).
+        if (isQualitySelectedByUser() && !userSelectedQualityIsShorts
+                && VideoInformation.getPlayerResponseVideoId().equals(VideoInformation.getVideoId())) {
             final int selectedResolution = userSelectedQualityResolution;
             Logger.printDebug(() -> "initialVideoQuality selected by the user: " + selectedResolution);
             // With 'Auto' selected, YouTube chooses the quality.
@@ -187,27 +195,32 @@ public class RememberVideoQualityPatch {
             }
 
             final int preferredQuality = getDefaultQualityResolution();
-            return preferredQuality == VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE
-                    ? -1
-                    : getAvailableQualityResolution(preferredQuality);
+            if (preferredQuality == VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE) {
+                return -1;
+            }
+
+            // The quality last selected is used as the only quality allowed by the player.
+            // If the video does not have it, all lower qualities are allowed and
+            // the player chooses one of them automatically, such as 720p for the size of the player.
+            // So the highest quality of the current video that is not above the default quality
+            // is used, or the default quality if the qualities of the video are not known yet
+            // or all of them are above it (the player then uses the lowest quality).
+            VideoQualityInterface[] qualities = VideoInformation.getCurrentQualities();
+            if (qualities != null) {
+                // Ordered from largest to smallest, with index 0 being 'Auto'.
+                for (VideoQualityInterface quality : qualities) {
+                    final int resolution = quality.patch_getResolution();
+                    if (resolution != VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE && resolution <= preferredQuality) {
+                        return resolution;
+                    }
+                }
+            }
+
+            return preferredQuality;
         } catch (Exception ex) {
             Logger.printException(() -> "getLastSelectedVideoQuality failure", ex);
             return -1;
         }
-    }
-
-    /**
-     * @return The resolution the SABR requests must keep: the quality selected by the user
-     *         for the current video, otherwise the default quality.
-     *         -1 to send the requests unchanged, with 'Auto' selected or no default quality.
-     */
-    private static int getStickyVideoQuality() {
-        if (isQualitySelectedByUser()) {
-            final int selectedResolution = userSelectedQualityResolution;
-            return selectedResolution > 0 ? selectedResolution : -1;
-        }
-
-        return getLastSelectedVideoQuality();
     }
 
     /**
@@ -228,7 +241,16 @@ public class RememberVideoQualityPatch {
                 return null;
             }
 
-            final int resolution = getStickyVideoQuality();
+            // The requests keep the quality selected by the user for the current video,
+            // otherwise the default quality. They are sent unchanged with 'Auto' selected
+            // or no default quality.
+            final int resolution;
+            if (isQualitySelectedByUser()) {
+                final int selectedResolution = userSelectedQualityResolution;
+                resolution = selectedResolution > 0 ? selectedResolution : -1;
+            } else {
+                resolution = getLastSelectedVideoQuality();
+            }
             if (resolution < 0) {
                 return null;
             }
@@ -267,30 +289,6 @@ public class RememberVideoQualityPatch {
     }
 
     /**
-     * The quality last selected is used as the only quality allowed by the player.
-     * If the video does not have it, all lower qualities are allowed and
-     * the player chooses one of them automatically, such as 720p for the size of the player.
-     *
-     * @return The highest quality of the current video that is not above the preferred quality,
-     *         or the preferred quality if the qualities of the video are not known yet
-     *         or all of them are above it (the player then uses the lowest quality).
-     */
-    private static int getAvailableQualityResolution(int preferredQuality) {
-        VideoQualityInterface[] qualities = VideoInformation.getCurrentQualities();
-        if (qualities != null) {
-            // Ordered from largest to smallest, with index 0 being 'Auto'.
-            for (VideoQualityInterface quality : qualities) {
-                final int resolution = quality.patch_getResolution();
-                if (resolution != VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE && resolution <= preferredQuality) {
-                    return resolution;
-                }
-            }
-        }
-
-        return preferredQuality;
-    }
-
-    /**
      * Injection point.
      * @param userSelectedQualityIndex Element index of {@link VideoInformation#getCurrentQualities()}.
      */
@@ -300,11 +298,19 @@ public class RememberVideoQualityPatch {
             if (currentQualities == null) {
                 Logger.printDebug(() -> "Cannot save default quality, qualities is null");
                 // The resolution is not known, so a reload uses the quality saved by YouTube.
-                setUserSelectedQuality(VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE);
+                setUserSelectedQuality(VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE, true);
+                clearShortsMenuSelectedQuality();
                 return;
             }
-            final int resolution = currentQualities[userSelectedQualityIndex].patch_getResolution();
-            setUserSelectedQuality(resolution);
+            VideoQualityInterface quality = currentQualities[userSelectedQualityIndex];
+            final int resolution = quality.patch_getResolution();
+            setUserSelectedQuality(resolution, true);
+            if (resolution == VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE) {
+                // 'Auto' has no formats, so the menu sets it by its resolution.
+                clearShortsMenuSelectedQuality();
+            } else {
+                shortsMenuSelectedQuality = quality;
+            }
 
             if (shouldRememberVideoQuality()) {
                 saveDefaultQuality(resolution);
@@ -312,6 +318,44 @@ public class RememberVideoQualityPatch {
         } catch (Exception ex) {
             Logger.printException(() -> "userChangedShortsQuality failure", ex);
         }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * The Shorts quality menu sets the selected quality by its resolution, which YouTube can get
+     * wrong, such as 720 for the 480p quality of some Shorts (see
+     * {@link VideoInformation#fixVideoQualityResolution(String, int)}). The player then plays
+     * another quality. The player finds a quality by its formats, so the quality selected in
+     * the menu is set instead, as with the quality menu of regular videos.
+     *
+     * @param menu The object the Shorts quality menu sets the quality with.
+     * @return If the quality selected was set, so the menu must not set it by its resolution.
+     */
+    public static boolean setShortsMenuSelectedQuality(VideoQualityMenuInterface menu) {
+        VideoQualityInterface quality = shortsMenuSelectedQuality;
+        clearShortsMenuSelectedQuality();
+        if (quality == null) {
+            return false;
+        }
+
+        try {
+            menu.patch_setQuality(quality);
+            return true;
+        } catch (Exception ex) {
+            Logger.printException(() -> "setShortsMenuSelectedQuality failure", ex);
+            return false;
+        }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called after the Shorts quality menu handled a click, so the quality selected is not set
+     * by another caller if the menu did not set it.
+     */
+    public static void clearShortsMenuSelectedQuality() {
+        shortsMenuSelectedQuality = null;
     }
 
     /**
@@ -328,7 +372,7 @@ public class RememberVideoQualityPatch {
     public static void userChangedQuality(int videoResolution) {
         Utils.verifyOnMainThread();
         Logger.printDebug(() -> "User changed quality to: " + videoResolution);
-        setUserSelectedQuality(videoResolution);
+        setUserSelectedQuality(videoResolution, false);
 
         if (shouldRememberVideoQuality()) {
             saveDefaultQuality(videoResolution);
@@ -366,5 +410,24 @@ public class RememberVideoQualityPatch {
      */
     public static boolean useAdvancedVideoQualitySetting() {
         return isDefaultQualitySet();
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * If this flag is on, the formats of the quality selected in the quality menu are saved with
+     * the quality last selected, and the player keeps playing them. If it is off, only the resolution
+     * YouTube gives the quality is saved, and the player can switch to another quality of that resolution,
+     * such as 720p60 after selecting a 480p quality that YouTube gives the resolution 720
+     * (see {@link VideoInformation#fixVideoQualityResolution(String, int)}).
+     * <p>
+     * With this flag on, Shorts played with the default quality can restart from the beginning
+     * when the formats change, and the formats saved for a Short are also used for the next Shorts.
+     * So it is on only while the Short the user selected the quality for is playing.
+     *
+     * @return If the formats of the selected quality are saved and used by the player.
+     */
+    public static boolean useSelectedQualityFormats(boolean original) {
+        return ShortsPlayerState.isOpen() && isQualitySelectedByUser();
     }
 }

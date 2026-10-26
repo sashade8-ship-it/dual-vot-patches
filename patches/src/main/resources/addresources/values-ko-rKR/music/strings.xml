@@ -427,7 +427,7 @@ SABR 프로토콜을 사용하여 재생하는 경우 (동영상 스트림 속�
   <string name="morphe_music_listenbrainz_token_toast_saved">토큰을 저장하였습니다</string>
   <string name="morphe_music_listenbrainz_token_toast_invalid_warning">경고: 저장된 토큰이 유효하지 않습니다!</string>
   <string name="morphe_music_lastfm_love_on_like_title">좋아요한 트랙에 좋아요 표시하기</string>
-  <string name="morphe_music_lastfm_love_on_like_summary">YouTube Music에서 트랙에 좋아요를 누르면 Last.fm에서도 자동으로 좋아요가 표시됩니다 (좋아요를 해제하거나 싫어요를 누르면 자동으로 좋아요가 해제됩니다)</string>
+  <string name="morphe_music_lastfm_love_on_like_summary">YouTube Music에서 트랙에 좋아요를 탭하면 Last.fm에서도 자동으로 좋아요가 표시됩니다 (좋아요를 해제하거나 싫어요를 탭하면 자동으로 좋아요가 해제됩니다)</string>
   <string name="morphe_music_lastfm_token_title">Last.fm 계정</string>
   <string name="morphe_music_lastfm_token_summary_logged_in">\'%s\'으로 로그인되어 있습니다. 계정을 관리하려면 탭하세요</string>
   <string name="morphe_music_lastfm_token_dialog_instruction">Last.fm 자격 증명을 입력하여 로그인하세요</string>
@@ -584,7 +584,7 @@ LOGIN_INFO"</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->
   <string name="morphe_music_lyrics_translate_hide">번역됨</string>
   <string name="morphe_music_lyrics_translation_language_title">번역 언어</string>
-  <string name="morphe_music_lyrics_romanize_language_title">로마자 변환 언어</string>
+  <string name="morphe_music_lyrics_romanize_language_title">로마자 표기 언어</string>
   <string name="morphe_music_lyrics_translating">번역하는 중…</string>
   <string name="morphe_music_lyrics_translate_failed">가사를 번역할 수 없습니다</string>
   <string name="morphe_music_lyrics_romanize_hide">로마자 표기됨</string>

@@ -436,6 +436,17 @@ Raporlar herkese açıktır ve bir kanal listeye eklenmeden önce incelenir. Kal
   <string name="morphe_feed_long_press_menu_summary">Akış video üzerinde herhangi bir yere dokunup basılı tutmak, menüyü açar</string>
   <string name="morphe_feed_watch_later_button_title">Küçük resimlerde Daha Sonra İzle düğmesini göster</string>
   <string name="morphe_feed_watch_later_button_summary">Akış videolarının küçük resimlerinde bir Daha Sonra İzle düğmesi gösterilir. Dokunulup basılı tutulduğunda Çalma listesine kaydet açılır</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Gönderi görsellerini indir</string>
+  <string name="morphe_post_image_download_summary">Görsel veya GIF içeren gönderilerin Paylaş düğmesinin yanında bir indirme düğmesi gösterilir ve menülerine bir indirme öğesi eklenir</string>
+  <string name="morphe_post_image_download_flyout">Görselleri indir</string>
+  <string name="morphe_post_image_download_flyout_single">Görseli indir</string>
+  <string name="morphe_post_image_download_started">%s görsel indiriliyor…</string>
+  <string name="morphe_post_image_download_started_single">Görsel indiriliyor…</string>
+  <string name="morphe_post_image_download_saved">%1$s görsel %2$s konumuna kaydedildi</string>
+  <string name="morphe_post_image_download_saved_single">Görsel %s konumuna kaydedildi</string>
+  <string name="morphe_post_image_download_failed">Görsel indirilemedi</string>
+  <string name="morphe_post_image_download_not_found">Bu gönderide görsel bulunamadı</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Soru ögesini açılır menüye ekle</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Akış açılır menüsüne bir video özetlendirme ögesi ekler</string>
@@ -883,6 +894,7 @@ Ayarlar'a erişmek için Ayarlar düğmesini Genel → Araç Çubuğu → Ayarla
   <string name="morphe_navigation_bar_style_entry_2">Yarı saydam</string>
   <string name="morphe_navigation_bar_style_entry_3">Şeffaf</string>
   <string name="morphe_navigation_bar_style_entry_4">Opak</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Bu stil, cihazınız veya YouTube sürümünüz tarafından desteklenmiyor olabilir; bu durum yerleşim sorunlarına veya çökmelere neden olabilir</string>
   <string name="morphe_toolbar_screen_title">Araç Çubuğu</string>
   <string name="morphe_toolbar_screen_summary">Araç çubuğunda hangi bileşenlerin görüneceğini seçin</string>
   <string name="morphe_hide_toolbar_cast_button_title">Yayınla düğmesini gizle</string>
@@ -1110,7 +1122,9 @@ Otomotiv düzeni
   <string name="morphe_tablet_layout_in_player_summary">"Eski oynatıcı düzenini geri yükler
 
 Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha fazla video' katmanı kullanılamayabilir"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Bunu etkinleştirmek, yorum bölümü veya oynatıcının altında gösterilen \"Daha fazla video\" gibi bazı oynatıcı düzeni özelliklerini bozabilir</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Bunu etkinleştirilmek, oynatıcının altında gösterilen yorumlar veya 'Daha fazla video' kısımları gibi bazı oynatıcı düzen özelliklerini bozabilir.
+
+Tablet düzeni artık YouTube tarafından desteklenmiyor ve güncel YouTube sürümlerinde kısmen veya tamamen bozulmuş durumda. Çalışan bir tablet düzeni için, Youtube 20.21.37'yi yamalayın"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Eski altyazı davranışını geri yükle</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Oynatma listesine kaydetme için eski düzeni geri getir</string>
@@ -1378,6 +1392,11 @@ Videolar, karma video kimliğinin kısa bir önekiyle istenir; bu nedenle sunucu
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Yeni bir varsayılan oynatma hızı kaydedildiğinde bir bildirim gösterir</string>
   <string name="morphe_playback_speed_default_title">Varsayılan oynatma hızı</string>
   <string name="morphe_shorts_playback_speed_default_title">Shorts\'ta varsayılan oynatma hızı</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Shorts\'ta oynatma hızını hatırla</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Manuel Shorts hız seçimini gelecekteki tüm Shorts\'lara uygular. Kapalıysa, Shorts oynatıcısı kapatıldıktan sonra hız varsayılana döner</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Oynatma hızını Shorts menüsünde göster</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Shorts oynatıcı menüsüne bir Oynatma hızı öğesi ekler</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Oynatma hızı · %s</string>
   <string name="morphe_remember_playback_speed_toast">Varsayılan oynatma hızı %s olarak değiştirildi</string>
   <string name="morphe_disable_playback_speed_music_title">Müzik için normal hızı kullan</string>
   <string name="morphe_disable_playback_speed_music_summary">Müzik videolarını her zaman 1.0x hızında oynat</string>

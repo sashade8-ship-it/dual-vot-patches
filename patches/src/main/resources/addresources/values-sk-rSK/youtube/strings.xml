@@ -435,6 +435,16 @@ Hlásenia sú verejné a pred pridaním kanála do zoznamu sa posudzujú. Odstr�
   <string name="morphe_feed_long_press_menu_summary">Klepnutím a podrž kdekoľvek na videu v feedi sa otvorí jeho ponuka</string>
   <string name="morphe_feed_watch_later_button_title">Zobraziť tlačidlo „Pozrieť neskôr“ na miniatúrach</string>
   <string name="morphe_feed_watch_later_button_summary">Na miniatúrach videí vo feedi sa zobrazuje tlačidlo Pozrieť neskôr. Klepnutím a podrž ho otvoríš Uloženie do playlistu</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Stiahnuť obrázky z príspevkov</string>
+  <string name="morphe_post_image_download_summary">Vedľa tlačidla zdieľať príspevkov s obrázkami alebo GIFmi sa zobrazí tlačidlo sťahovania a do ich menu sa pridá položka sťahovania</string>
+  <string name="morphe_post_image_download_flyout">Stiahnuť obrázky</string>
+  <string name="morphe_post_image_download_flyout_single">Stiahnuť obrázok</string>
+  <string name="morphe_post_image_download_started">Sťahovanie %s obrázkov…</string>
+  <string name="morphe_post_image_download_started_single">Sťahovanie obrázka…</string>
+  <string name="morphe_post_image_download_saved_single">Obrázok uložený do %s</string>
+  <string name="morphe_post_image_download_failed">Nebolo možné sťahovať obrázok</string>
+  <string name="morphe_post_image_download_not_found">V tomto príspevku nebol nájdený žiadny obrázok</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Pridať položku Opýtať sa do rozbaľovacieho menu</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Pridá položku na zhrnutie videa do rozbaľovacieho menu predplatného</string>
@@ -882,6 +892,7 @@ Ak chcete získať prístup k Nastaveniam, povoľte tlačidlo Nastavenia cez Vš
   <string name="morphe_navigation_bar_style_entry_2">Polopriehľadný</string>
   <string name="morphe_navigation_bar_style_entry_3">Priehľadný</string>
   <string name="morphe_navigation_bar_style_entry_4">Nepriehľadný</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Tento štýl nemusí byť podporovaný vaším zariadením alebo verziou YouTube, čo môže spôsobiť problémy s rozložením alebo pády</string>
   <string name="morphe_toolbar_screen_title">Panel nástrojov</string>
   <string name="morphe_toolbar_screen_summary">Vyberte, ktoré komponenty sa zobrazia v lište nástrojov</string>
   <string name="morphe_hide_toolbar_cast_button_title">Skryť tlačidlo Prenos</string>
@@ -1108,7 +1119,9 @@ Rozloženie pre automobil
   <string name="morphe_tablet_layout_in_player_summary">"Obnoví staré rozloženie prehrávača
 
 Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrstva 'Ďalšie videá' nemusí byť k dispozícii"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Povolenie tejto možnosti môže narušiť niektoré funkcie rozloženia prehrávača, ako je sekcia komentárov alebo \"Viac videí\" zobrazených pod prehrávačom</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Povolenie tejto možnosti môže narušiť niektoré funkcie rozloženia prehrávača, ako napríklad sekciu komentárov alebo „Ďalšie videá“ zobrazené pod prehrávačom.
+
+Rozloženie pre tablety už YouTube nepodporuje a v novších verziách YouTube je čiastočne alebo úplne nefunkčné. Pre fungujúce rozloženie pre tablety použite patch pre YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Obnoviť staré správanie titulkov</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Obnoví staré ukladanie do zoznamu videí</string>
@@ -1376,6 +1389,11 @@ Videá sú vyžadované krátkym prefixom hashed video ID, takže server nemôž
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Zobrazí upozornenie, keď sa uloží nová predvolená rýchlosť prehrávania</string>
   <string name="morphe_playback_speed_default_title">Predvolená rýchlosť prehrávania</string>
   <string name="morphe_shorts_playback_speed_default_title">Predvolená rýchlosť prehrávania na Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Zapamätať rýchlosť prehrávania v Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Aplikuje váš manuálny výber rýchlosti Shorts na všetky budúce Shorts. Ak je vypnuté, rýchlosť sa po zatvorení prehrávača Shorts vráti na predvolenú</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Zobrazovať rýchlosť prehrávania v menu Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Pridáva položku Rýchlosť prehrávania do menu prehrávača Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Rýchlosť prehrávania · %s</string>
   <string name="morphe_remember_playback_speed_toast">Predvolená rýchlosť prehrávania bola zmenená na: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Použite normálnu rýchlosť pre hudbu</string>
   <string name="morphe_disable_playback_speed_music_summary">Hudobné videá vždy prehrajte rýchlosťou 1.0x</string>

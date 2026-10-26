@@ -435,6 +435,16 @@ Tá tuairiscí poiblí agus déantar athbhreithniú orthu sula gcuirtear cainéa
   <string name="morphe_feed_long_press_menu_summary">Má dhéanann tú sconadh agus coinneáil in áit ar bith ar fhíseán sa bhfotha, osclófar a roghchlár</string>
   <string name="morphe_feed_watch_later_button_title">Taispeáin an cnaipe \'Féach níos déanaí\' ar mhionsamhla</string>
   <string name="morphe_feed_watch_later_button_summary">Tá cnaipe \'Féach níos déanaí\' le feiceáil ar mhionsamhla físeán sa fhotha. Má dhéanann tú sconna air agus é a choinneáil brúite, osclófar an rogha \'Sábháil chuig seinmliosta\'</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Íoslódáil íomhánna posta</string>
+  <string name="morphe_post_image_download_summary">Taispeirtear cnaipe íoslódála in aice le cnaipe Comhroinn postála a bhfuil íomhánna nó GIFa leo, agus cuirtear ítem íoslódála lenaic santáirlithe</string>
+  <string name="morphe_post_image_download_flyout">Íomhánna a íoslódáil</string>
+  <string name="morphe_post_image_download_flyout_single">Íomhá a íoslódáil</string>
+  <string name="morphe_post_image_download_started">Ag íoslódáil %s íomhánna…</string>
+  <string name="morphe_post_image_download_started_single">Ag íoslódáil íomhánna…</string>
+  <string name="morphe_post_image_download_saved_single">Sábháilte an íomhá chuig %s</string>
+  <string name="morphe_post_image_download_failed">Níorbh fhéidir an íomhá a íoslódáil</string>
+  <string name="morphe_post_image_download_not_found">Níor aimsíodh aon íomhá sa phóst seo</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Cuir an mhír Fiafraigh leis an roghchlár aníos</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Cuireann sé mír achoimrithe físe leis an roghchlár aníos sa bhfotha</string>
@@ -882,6 +892,7 @@ Chun rochtain a fháil ar na Socruithe, cuir an cnaipe Socruithe ar chumas trí 
   <string name="morphe_navigation_bar_style_entry_2">Tréshoilseach</string>
   <string name="morphe_navigation_bar_style_entry_3">Trédhearcach</string>
   <string name="morphe_navigation_bar_style_entry_4">Teimhneach</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Seans go nach bhfuil an stíl seo tacaíte ag do ghlúma nó ag an leagan YouTube, agus seans go gcuirfeadh sé cúiseanna eaclaise le leआउट nó go gcuirfeadh sé an fear leisure as gnó</string>
   <string name="morphe_toolbar_screen_title">Barra Uirlisí</string>
   <string name="morphe_toolbar_screen_summary">Roghnaigh cé na comhpháirteanna a thaispeántar sa bharra uirlisí</string>
   <string name="morphe_hide_toolbar_cast_button_title">Folaigh an cnaipe Cast</string>
@@ -1109,7 +1120,9 @@ Leagan amach gluaisteán
   <string name="morphe_tablet_layout_in_player_summary">"Athchóiríonn sé leagan amach an tsean-imreoir
 
 Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múchta, b'fhéidir nach mbeidh forleagan 'Tuilleadh físeáin' ar fáil"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Má chuirtear an ghné seo ar siúl, d\'fhéadfadh sé roinnt gnéithe den leagan amach atá ag an seinnteoir a bhriseadh, mar shampla rannóg na dtráchtanna nó \'Tuilleadh físeán\' a thaispeántar thíos faoin seinnteoir</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"D'fhéadfadh an activating seo roinnt gnéithe leआउट an pleigheara a bhriseadh, mar shampla an rann commenting nó 'Tuilleadh físeán' a thaispeántar faoin pleighear.
+
+Níl tacaíocht agat a thuilleadh ag YouTube le leआउट tábléid, agus tá sé briste go páirteach nó go hiomlán ar leaganacha YouTube nua. Chun leआउट tábléid a fháil, patch YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Athchóirigh iompar fotheidil d\'aois</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Athchóirigh an sean-shábháil chuig an seinmliosta</string>
@@ -1377,6 +1390,11 @@ Iarrtar físeáin le réimír ghearr den aitheantóir físeáin hasáilte, mar s
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Taispeánann sé fógra nuair a shábháiltear luas athsheinm réamhshocraithe nua</string>
   <string name="morphe_playback_speed_default_title">Luas athsheinm réamhshocraithe</string>
   <string name="morphe_shorts_playback_speed_default_title">Luas athsheinm réamhshocraithe ar Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Cuimhnigh luas athsheinm ar Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Cuireann sé do rogha luas Shorts láimhe i bhfeidhm ar gach Shorts sa todhchaí. Má tharlaíonn sé go bhfuil sé múchta, filleann an luas ar an réamhshocradh tar éis an tíosaithe Shorts a dhúnadh</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Taispeáin luas athsheinm sa roghshaothar Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Cuireann íomhá Luas athsheinm le menú imleactóra Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Luas athsheinm · %s</string>
   <string name="morphe_remember_playback_speed_toast">Athraíodh an luas athsheinm réamhshocraithe go: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Úsáid gnáthluas don cheol</string>
   <string name="morphe_disable_playback_speed_music_summary">Seinn físeáin cheoil i gcónaí ag luas 1.0x</string>

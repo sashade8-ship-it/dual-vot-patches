@@ -435,6 +435,17 @@ Laporan bersifat publik dan ditinjau sebelum saluran ditambahkan ke daftar. Peng
   <string name="morphe_feed_long_press_menu_summary">Mengetuk dan menahan di mana saja pada video umpan membuka menunya</string>
   <string name="morphe_feed_watch_later_button_title">Tampilkan tombol Tonton nanti pada thumbnail</string>
   <string name="morphe_feed_watch_later_button_summary">Tombol Tonton nanti ditampilkan pada thumbnail video umpan. Mengetuk dan menekannya akan membuka Simpan ke daftar putar</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Unduh gambar postingan</string>
+  <string name="morphe_post_image_download_summary">Tombol unduh ditampilkan di samping tombol Bagikan pada postingan dengan gambar atau GIF, dan item unduh ditambahkan ke menu mereka</string>
+  <string name="morphe_post_image_download_flyout">Unduh gambar</string>
+  <string name="morphe_post_image_download_flyout_single">Unduh gambar</string>
+  <string name="morphe_post_image_download_started">Mengunduh %s gambar…</string>
+  <string name="morphe_post_image_download_started_single">Mengunduh gambar…</string>
+  <string name="morphe_post_image_download_saved">%1$s gambar disimpan ke %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Gambar disimpan ke %s</string>
+  <string name="morphe_post_image_download_failed">Tidak dapat mengunduh gambar</string>
+  <string name="morphe_post_image_download_not_found">Tidak ditemukan gambar dalam postingan ini</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Tambahkan item Ask ke menu flyout</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Menambahkan item ringkasan video ke menu flyout umpan</string>
@@ -473,7 +484,7 @@ Setelah video dengan tombol Ask dibuka satu kali, fitur ini berfungsi untuk semu
   <string name="morphe_external_downloader_screen_summary">Unduh video, podcast, atau lagu menggunakan aplikasi pihak ketiga</string>
   <string name="morphe_external_downloader_overlay_button_title">Tampilkan tombol unduh tumpang tindih pemutar</string>
   <string name="morphe_external_downloader_overlay_button_summary">Menampilkan tombol di pemutar video yang membuka pengunduh eksternal Anda</string>
-  <string name="morphe_external_downloader_quick_menu_title">Unduh cepat saat diketuk</string>
+  <string name="morphe_external_downloader_quick_menu_title">Unduhan cepat sekali ketuk</string>
   <string name="morphe_external_downloader_quick_menu_summary">Perintah untuk mengunduh di latar belakang. Ketuk dan tahan untuk membuka pengunduh. Berfungsi dengan YTDLnis dan YTindir</string>
   <string name="morphe_external_downloader_mark_watched_title">Tandai unduhan sebagai sudah ditonton</string>
   <string name="morphe_external_downloader_mark_watched_summary">Video yang diunduh menggunakan pengunduh eksternal akan ditambahkan ke riwayat tontonan YouTube Anda</string>
@@ -717,7 +728,7 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
   <string name="morphe_swipe_overlay_timeout_title">Batas waktu hamparan usap</string>
   <string name="morphe_swipe_overlay_timeout_summary">Jumlah milidetik hamparan terlihat</string>
   <string name="morphe_swipe_overlay_background_opacity_title">Opasitas latar belakang hamparan usap</string>
-  <string name="morphe_swipe_overlay_background_opacity_summary">Sesuaikan level transparansi (0 transparan, 100 buram)</string>
+  <string name="morphe_swipe_overlay_background_opacity_summary">Sesuaikan level transparansi (0 transparan, 100 pekat)</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_title">Warna kecerahan lapisan usap</string>
   <string name="morphe_swipe_overlay_progress_brightness_color_summary">Atur warna bilah kemajuan kontrol kecerahan</string>
   <string name="morphe_swipe_overlay_progress_volume_color_title">Warna volume lapisan usap</string>
@@ -881,7 +892,8 @@ Untuk mengakses Setelan, aktifkan tombol Setelan melalui Umum → Bilah Alat →
   <string name="morphe_navigation_bar_style_entry_1">Bawaan</string>
   <string name="morphe_navigation_bar_style_entry_2">Translusen</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparan</string>
-  <string name="morphe_navigation_bar_style_entry_4">Buram</string>
+  <string name="morphe_navigation_bar_style_entry_4">Solid</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Gaya ini mungkin tidak didukung oleh perangkat atau versi YouTube Anda, dan dapat menyebabkan masalah tata letak atau crash</string>
   <string name="morphe_toolbar_screen_title">Bilah alat</string>
   <string name="morphe_toolbar_screen_summary">Pilih komponen mana yang akan ditampilkan di bilah alat</string>
   <string name="morphe_hide_toolbar_cast_button_title">Sembunyikan tombol Transmisi</string>
@@ -1075,7 +1087,7 @@ Setelan → Pemutaran (atau Pemutaran Otomatis) → Putar video berikutnya secar
   <string name="morphe_mute_video_button_title">Tampilkan tombol Bisu</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
   <string name="morphe_player_overlay_opacity_title">Opasitas hamparan pemutar</string>
-  <string name="morphe_player_overlay_opacity_summary">Sesuaikan tingkat transparansi (0 adalah transparan, 100 adalah buram)</string>
+  <string name="morphe_player_overlay_opacity_summary">Sesuaikan tingkat transparansi (0 adalah transparan, 100 pekat)</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
   <string name="morphe_searchbar_type_title">Bilah penelusuran</string>
   <string name="morphe_searchbar_type_entry_disabled">Dinonaktifkan</string>
@@ -1109,7 +1121,9 @@ Tata letak Otomotif
   <string name="morphe_tablet_layout_in_player_summary">"Mengembalikan tata letak pemutar lama
 
 Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Video lainnya' mungkin tidak tersedia"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Mengaktifkan ini dapat mengganggu beberapa elemen tata letak pemutar, seperti bagian komentar atau \'Video lainnya\' yang ditampilkan di bawah pemutar</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Mengaktifkan fitur ini dapat merusak beberapa fitur tata letak pemutar, seperti bagian komentar atau 'Video lainnya' yang ditampilkan di bawah pemutar.
+
+Tata letak tablet tidak lagi didukung oleh YouTube, dan sebagian atau seluruhnya rusak pada versi YouTube terbaru. Untuk tata letak tablet yang berfungsi, tambal YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Kembalikan perilaku teks lama</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Kembalikan penyimpanan lama ke daftar putar</string>
@@ -1212,7 +1226,7 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_miniplayer_width_dip_summary">Atur ukuran awal di layar, dalam piksel</string>
   <string name="morphe_miniplayer_width_dip_invalid_toast">Ukuran piksel harus antara %1$s dan %2$s</string>
   <string name="morphe_miniplayer_opacity_title">Opasitas hamparan</string>
-  <string name="morphe_miniplayer_opacity_summary">Sesuaikan tingkat transparansi (0 adalah transparan, 100 adalah buram)</string>
+  <string name="morphe_miniplayer_opacity_summary">Sesuaikan tingkat transparansi (0 adalah transparan, 100 pekat)</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
   <string name="morphe_back_button_always_exits_feed_title">Tombol kembali menutup feed</string>
   <string name="morphe_back_button_always_exits_feed_summary">Menekan tombol kembali akan selalu menutup aplikasi bukannya menggulir feed ke atas</string>
@@ -1377,6 +1391,11 @@ Video diminta dengan awalan pendek dari ID video yang di-hash, sehingga server t
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Menampilkan notifikasi saat kecepatan pemutaran bawaan baru disimpan</string>
   <string name="morphe_playback_speed_default_title">Kecepatan pemutaran bawaan</string>
   <string name="morphe_shorts_playback_speed_default_title">Kecepatan pemutaran default di Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Ingat kecepatan pemutaran di Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Menerapkan pilihan kecepatan Shorts manual Anda ke semua Shorts berikutnya. Jika dinonaktifkan, kecepatan akan kembali ke bawaan setelah pemutar Shorts ditutup</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Tampilkan kecepatan pemutaran di menu Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Menambahkan item kecepatan pemutaran ke menu pemutar Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Kecepatan pemutaran · %s</string>
   <string name="morphe_remember_playback_speed_toast">Mengubah kecepatan bawaan menjadi: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Gunakan kecepatan normal untuk musik</string>
   <string name="morphe_disable_playback_speed_music_summary">Selalu putar video musik dengan kecepatan 1.0x</string>

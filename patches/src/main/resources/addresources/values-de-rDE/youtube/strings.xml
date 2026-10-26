@@ -436,6 +436,17 @@ Meldungen sind öffentlich und werden überprüft, bevor ein Kanal zu einer List
   <string name="morphe_feed_long_press_menu_summary">Das Tippen und Gedrückthalten irgendwo auf einem Feed-Video öffnet dessen Menü</string>
   <string name="morphe_feed_watch_later_button_title">Schaltfläche \"Später ansehen\" auf Vorschaubildern anzeigen</string>
   <string name="morphe_feed_watch_later_button_summary">Auf den Vorschaubildern von Feed-Videos wird eine Schaltfläche \"Später ansehen\" angezeigt. Durch Tippen und Gedrückthalten wird \"In Wiedergachelste speichern\" geöffnet</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Beitragsbilder herunterladen</string>
+  <string name="morphe_post_image_download_summary">Neben der Teilen-Schaltfläche von Beiträgen mit Bildern oder GIFs wird eine Download-Schaltfläche angezeigt und dem Menü wird ein Download-Punkt hinzugefügt</string>
+  <string name="morphe_post_image_download_flyout">Bilder herunterladen</string>
+  <string name="morphe_post_image_download_flyout_single">Bild herunterladen</string>
+  <string name="morphe_post_image_download_started">%s Bilder werden heruntergeladen…</string>
+  <string name="morphe_post_image_download_started_single">Bild wird heruntergeladen…</string>
+  <string name="morphe_post_image_download_saved">%1$s Bilder unter %2$s gespeichert</string>
+  <string name="morphe_post_image_download_saved_single">Bild unter %s gespeichert</string>
+  <string name="morphe_post_image_download_failed">Das Bild konnte nicht heruntergeladen werden</string>
+  <string name="morphe_post_image_download_not_found">In diesem Beitrag wurde kein Bild gefunden</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Ask-Element zum Flyoutmenü hinzufügen</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Fügt einen Artikel zur Zusammenfassung von Videos im Feed-Flyoutmenü hinzu</string>
@@ -883,6 +894,7 @@ Um auf Einstellungen zuzugreifen, aktivieren Sie die Schaltfläche „Einstellun
   <string name="morphe_navigation_bar_style_entry_2">Transluzent</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
   <string name="morphe_navigation_bar_style_entry_4">Undurchsichtig</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Dieser Stil wird möglicherweise von Ihrem Gerät oder Ihrer YouTube-Version nicht unterstützt und kann zu Layoutproblemen oder Abstürzen führen</string>
   <string name="morphe_toolbar_screen_title">Leiste</string>
   <string name="morphe_toolbar_screen_summary">Wähle aus, welche Schaltflächen in der Toolbar erscheinen sollen</string>
   <string name="morphe_hide_toolbar_cast_button_title">Schaltfläche „Übertragen“ ausblenden</string>
@@ -1110,7 +1122,9 @@ Automotive-Layout
   <string name="morphe_tablet_layout_in_player_summary">"Stellt das alte Player-Layout wieder her
 
 Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert ist, ist das Overlay \"Mehr Videos\" möglicherweise nicht verfügbar"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Das Aktivieren dieser Option kann einige Player-Layout-Funktionen beeinträchtigen, z. B. den Kommentarbereich oder „Weitere Videos“ unterhalb des Players</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Die Aktivierung dieser Funktion kann einige Layout-Features des Players beeinträchtigen, wie z. B. den Kommentarbereich oder die unter dem Player angezeigten \"Weiteren Videos\".
+
+Das Tablet-Layout wird von YouTube nicht mehr unterstützt und ist in aktuellen YouTube-Versionen teilweise oder vollständig defekt. Für ein funktionierendes Tablet-Layout patchen Sie YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Altes Untertitelverhalten wiederherstellen</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Alte Shorts Spielersymbole wiederherstellen</string>
@@ -1378,6 +1392,11 @@ Videos werden über ein kurzes Präfix der gehashten Video-ID angefordert, sodas
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Zeigt eine Benachrichtigung an, wenn eine neue Standard-Wiedergabegeschwindigkeit gespeichert wurde</string>
   <string name="morphe_playback_speed_default_title">Standard Wiedergabegeschwindigkeit</string>
   <string name="morphe_shorts_playback_speed_default_title">Standard-Wiedergabegeschwindigkeit für Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Wiedergabegeschwindigkeit bei Shorts merken</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Wendet Ihre manuelle Auswahl der Shorts-Geschwindigkeit auf alle zukünftigen Shorts an. Wenn diese Option deaktiviert ist, kehrt die Geschwindigkeit nach dem Schließen des Shorts-Players zum Standardwert zurück</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Wiedergabegeschwindigkeit im Shorts-Menü anzeigen</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Fügt dem Menü des Shorts-Players einen Punkt für die Wiedergabegeschwindigkeit hinzu</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Abspielgeschwindigkeit · %s</string>
   <string name="morphe_remember_playback_speed_toast">Standard-Wiedergabegeschwindigkeit geändert zu: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Verwende normale Geschwindigkeit für Musik</string>
   <string name="morphe_disable_playback_speed_music_summary">Spiele Musikvideos immer mit 1,0-facher Geschwindigkeit ab</string>

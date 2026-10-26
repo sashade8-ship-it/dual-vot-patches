@@ -237,38 +237,32 @@ internal object NextGenWatchLayoutOnInterceptTouchEventFingerprint : Fingerprint
     parameters = listOf("Landroid/view/MotionEvent;")
 )
 
-private object TopBarControllerFingerprint : Fingerprint(
-    returnType = "Landroid/os/Parcelable;",
-    parameters = listOf(),
-    filters = listOf(
-        string("instance-offset")
-    )
-)
+private const val RECYCLER_VIEW_CLASS_TYPE = "Landroid/support/v7/widget/RecyclerView;"
 
 /**
- * If the top bars of the home and other pages can be laid out behind the status bar.
- * Returns false while the player is maximized, in fullscreen or sliding between them.
+ * Called on every layout of a list. If the list has a new size, the size is kept and the list
+ * is detached and attached again when an orientation change is pending.
  */
-internal fun getTopBarBehindStatusBarFingerprint(
-    playerTypeEnumType: String
-) = object : Fingerprint(
-    classFingerprint = TopBarControllerFingerprint,
-    returnType = "Z",
-    parameters = listOf(),
+internal object ListLayoutChangeFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf(RECYCLER_VIEW_CLASS_TYPE),
     filters = listOf(
-        methodCall( // Player is sliding.
-            definingClass = playerTypeEnumType,
-            returnType = "Z"
-        ),
-        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately()),
-        methodCall( // Player is maximized or in fullscreen.
-            definingClass = playerTypeEnumType,
-            returnType = "Z",
-            location = MatchAfterWithin(5)
-        ),
-        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately())
+        methodCall(definingClass = RECYCLER_VIEW_CLASS_TYPE, name = "getWidth"),
+        methodCall(definingClass = RECYCLER_VIEW_CLASS_TYPE, name = "getHeight", location = MatchAfterWithin(2)),
+        // Forces the size to be applied again.
+        fieldAccess(opcode = Opcode.IGET_BOOLEAN, type = "Z", location = MatchAfterWithin(2)),
+        // Last width and height.
+        fieldAccess(opcode = Opcode.IGET, type = "I", location = MatchAfterWithin(2)),
+        fieldAccess(opcode = Opcode.IGET, type = "I", location = MatchAfterWithin(2)),
+        // Same size, only attaches the list.
+        methodCall(parameters = listOf(RECYCLER_VIEW_CLASS_TYPE), returnType = "V", location = MatchAfterWithin(3)),
+        // New size, kept as the last width and height.
+        fieldAccess(opcode = Opcode.IPUT, type = "I", location = MatchAfterWithin(3)),
+        fieldAccess(opcode = Opcode.IPUT, type = "I", location = MatchAfterImmediately()),
+        // An orientation change is pending, and the list is detached and attached again.
+        fieldAccess(opcode = Opcode.IGET_BOOLEAN, type = "Z", location = MatchAfterImmediately())
     )
-) {}
+)
 
 private object MiniplayerDimensionsCalculatorParentFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),

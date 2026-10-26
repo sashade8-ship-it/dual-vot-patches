@@ -121,7 +121,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_video_thumbnail_title">Скрыть миниатюру видео</string>
   <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
   <string name="morphe_hide_video_labels_title">Скрыть метки видео</string>
-  <string name="morphe_hide_video_labels_summary">Скрывает метки, такие как «Автодубляж» / «Дубляж», «Получает комиссию», «Популярное», «Люди также смотрели», «товар(ы)» и «Вам может понравиться»</string>
+  <string name="morphe_hide_video_labels_summary">Скрывает метки типа \'Авто дублирование\' / \'Дублированный\', \'Получает комиссионные\', \'Нашумевший\', \'Люди также смотрели\', \'товар(ы)\' и \'Вам также может понравиться\'</string>
   <string name="morphe_hide_view_count_title">Скрыть количество просмотров</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
   <string name="morphe_hide_view_count_summary">"Ограничения:
@@ -435,6 +435,17 @@ Second \"item\" text"</string>
   <string name="morphe_feed_long_press_menu_summary">Нажатие и удержание в любом месте видео из ленты открывает его меню</string>
   <string name="morphe_feed_watch_later_button_title">Показывать кнопку «Позже» на превью видео</string>
   <string name="morphe_feed_watch_later_button_summary">На превью видео из ленты отображается кнопка «Позже». Нажатие и удержание открывает сохранение в плейлист</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Скачать изображения из поста</string>
+  <string name="morphe_post_image_download_summary">Рядом с кнопкой «Поделиться» в постах с изображениями или GIF-файлами отображается кнопка скачивания, а в их меню добавляется пункт «Скачать»</string>
+  <string name="morphe_post_image_download_flyout">Скачать изображения</string>
+  <string name="morphe_post_image_download_flyout_single">Скачать изображение</string>
+  <string name="morphe_post_image_download_started">Загрузка %s изображений…</string>
+  <string name="morphe_post_image_download_started_single">Загрузка изображения…</string>
+  <string name="morphe_post_image_download_saved">%1$s изображения, сохраненные в %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Изображение сохранено в %s</string>
+  <string name="morphe_post_image_download_failed">Не удалось загрузить изображение</string>
+  <string name="morphe_post_image_download_not_found">В этом посте изображения не найдены</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Добавить Ask в меню</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Добавляет элемент сводки видео в меню ленты</string>
@@ -884,6 +895,7 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_style_entry_2">Полупрозрачный</string>
   <string name="morphe_navigation_bar_style_entry_3">Прозрачный</string>
   <string name="morphe_navigation_bar_style_entry_4">Непрозрачный</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Этот стиль может не поддерживаться вашим устройством или версией YouTube, что может привести к проблемам с разметкой или сбоям</string>
   <string name="morphe_toolbar_screen_title">Панель инструментов</string>
   <string name="morphe_toolbar_screen_summary">Выберите, какие компоненты отображаются на панели инструментов</string>
   <string name="morphe_hide_toolbar_cast_button_title">Скрыть кнопку \"Трансляция\"</string>
@@ -1111,7 +1123,9 @@ Second \"item\" text"</string>
   <string name="morphe_tablet_layout_in_player_summary">"Восстанавливает старый макет плеера
 
 Ограничение: Если «Восстановить старую панель управления видео» отключена, наложение «Ещё видео» может быть недоступно"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Включение этой функции может нарушить некоторые элементы макета проигрывателя, такие как раздел комментариев или «Ещё видео», показанные ниже проигрывателя</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Включение этой функции может нарушить работу некоторых элементов интерфейса плеера, таких как раздел комментариев или блок «Другие видео» под плеером.
+
+Планшетный интерфейс больше не поддерживается YouTube и частично или полностью не работает в последних версиях YouTube. Для корректной работы планшетного интерфейса используйте патч для YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Восстановить прежнее поведение субтитров</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Восстановить старое сохранение в список воспроизведения</string>
@@ -1379,6 +1393,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Показывает уведомление при сохранении новой скорости воспроизведения по умолчанию</string>
   <string name="morphe_playback_speed_default_title">Скорость воспроизведения по умолчанию</string>
   <string name="morphe_shorts_playback_speed_default_title">Скорость воспроизведения по умолчанию для Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Запоминать скорость воспроизведения в Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Применяет выбранную вами скорость воспроизведения Shorts ко всем последующим Shorts. Если функция отключена, скорость возвращается к значению по умолчанию после закрытия плеера Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Показывать скорость воспроизведения в меню Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Добавляет пункт \"Скорость воспроизведения\" в меню плеера Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Скорость воспроизведения · %s</string>
   <string name="morphe_remember_playback_speed_toast">Изменена скорость воспроизведения по умолчанию на: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Использовать нормальную скорость для музыки</string>
   <string name="morphe_disable_playback_speed_music_summary">Всегда воспроизводить музыкальные видео на скорости 1.0x</string>

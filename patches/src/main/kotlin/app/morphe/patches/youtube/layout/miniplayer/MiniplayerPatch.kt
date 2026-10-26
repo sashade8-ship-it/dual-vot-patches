@@ -21,6 +21,7 @@ import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.numberOfParameterRegisters
+import app.morphe.patcher.util.proxy.mutableTypes.MutableField.Companion.toMutable
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.smali.ExternalLabel
@@ -46,7 +47,6 @@ import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
-import app.morphe.patches.youtube.shared.PlayerTypeEnumFingerprint
 import app.morphe.patches.youtube.shared.openVideoIntentPatch
 import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.patches.youtube.video.format.hookAdaptiveFormat
@@ -55,6 +55,7 @@ import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.indexOfFirstInstructionOrThrow
+import app.morphe.util.indexOfFirstInstructionReversedOrThrow
 import app.morphe.util.indexOfFirstLiteralInstructionOrThrow
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -66,6 +67,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.immutable.ImmutableField
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
@@ -443,19 +445,59 @@ val miniplayerPatch = bytecodePatch(
 
         // endregion
 
-        // region Watch transition animation.
+        // region List rebuilt after exiting fullscreen.
 
-        // While the player is maximized, the home is laid out below the status bar instead of
-        // behind it. The home is then laid out again when the minimize animation ends, and the
-        // feed is black until it is drawn again. Without the animation the layout is never
-        // changed, so the home keeps the layout of the minimized player.
-        getTopBarBehindStatusBarFingerprint(PlayerTypeEnumFingerprint.originalClassDef.type).let {
+        // After an orientation change a list is detached and attached again the next time its
+        // size changes, and it is empty for a frame. Exiting fullscreen brings the list back
+        // unchanged, and the rebuild otherwise happens later, such as when scrolling the watch
+        // page or when the home is laid out again after minimizing the player.
+        ListLayoutChangeFingerprint.let {
+            val pendingField = it.instructionMatches[8].getFieldAccessed()
+
+            // Orientation the last size of the list was laid out in.
+            val sizeOrientationField = ImmutableField(
+                it.classDef.type,
+                "patch_sizeOrientation",
+                "I",
+                AccessFlags.PUBLIC.value,
+                null,
+                null,
+                null
+            ).toMutable()
+            it.classDef.fields.add(sizeOrientationField)
+
             it.method.apply {
-                listOf(it.instructionMatches[1].index, it.instructionMatches[3].index)
-                    .sortedDescending().forEach { index ->
-                        val register = getInstruction<OneRegisterInstruction>(index).registerA
-                        addInstruction(index + 1, "const/16 v$register, 0x0")
-                    }
+                // New size, kept as the last width and height.
+                val sizeKeptIndex = it.instructionMatches[7].index + 1
+                val orientationRegister = findFreeRegister(sizeKeptIndex)
+
+                addInstructions(
+                    sizeKeptIndex,
+                    """
+                        invoke-static { p1 }, $EXTENSION_CLASS->getListOrientation(Landroid/view/View;)I
+                        move-result v$orientationRegister
+                        iput v$orientationRegister, p0, $sizeOrientationField
+                    """
+                )
+
+                // Same size, before the list is attached. The controller register is reused there.
+                val sameSizeIndex = indexOfFirstInstructionReversedOrThrow(
+                    it.instructionMatches[5].index,
+                    Opcode.IGET_OBJECT
+                )
+                val pendingRegister = findFreeRegister(sameSizeIndex)
+                val sizeOrientationRegister = findFreeRegister(sameSizeIndex, pendingRegister)
+
+                addInstructionsAtControlFlowLabel(
+                    sameSizeIndex,
+                    """
+                        iget-boolean v$pendingRegister, p0, $pendingField
+                        iget v$sizeOrientationRegister, p0, $sizeOrientationField
+                        invoke-static { p1, v$pendingRegister, v$sizeOrientationRegister }, $EXTENSION_CLASS->getListRebuildPending(Landroid/view/View;ZI)Z
+                        move-result v$pendingRegister
+                        iput-boolean v$pendingRegister, p0, $pendingField
+                    """
+                )
             }
         }
 

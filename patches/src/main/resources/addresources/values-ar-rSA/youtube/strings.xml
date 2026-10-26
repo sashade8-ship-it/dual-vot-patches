@@ -435,6 +435,17 @@ Second \"item\" text"</string>
   <string name="morphe_feed_long_press_menu_summary">يؤدي الضغط مع الاستمرار في أي مكان على فيديو في الخلاصة إلى فتح قائمته</string>
   <string name="morphe_feed_watch_later_button_title">عرض زر \"المشاهدة لاحقًا\" على المصغرات</string>
   <string name="morphe_feed_watch_later_button_summary">يتم عرض زر المشاهدة لاحقًا على مصغرات فيديوهات الخلاصة. يؤدي الضغط مع الاستمرار عليه إلى فتح الحفظ في قوائم التشغيل</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">تنزيل صور المنشورات</string>
+  <string name="morphe_post_image_download_summary">يظهر زر التنزيل بجانب زر المشاركة في المنشورات التي تحتوي على صور أو ملفات GIF، كما يتم إضافة عنصر تنزيل إلى القائمة الخاصة بها</string>
+  <string name="morphe_post_image_download_flyout">تنزيل الصور</string>
+  <string name="morphe_post_image_download_flyout_single">تنزيل الصورة</string>
+  <string name="morphe_post_image_download_started">جارٍ تنزيل %s من الصور...</string>
+  <string name="morphe_post_image_download_started_single">جارٍ تنزيل الصورة…</string>
+  <string name="morphe_post_image_download_saved">%1$s صور حُفظت في %2$s</string>
+  <string name="morphe_post_image_download_saved_single">تم حفظ الصورة في %s</string>
+  <string name="morphe_post_image_download_failed">تعذر تنزيل الصورة</string>
+  <string name="morphe_post_image_download_not_found">لم يتم العثور على صورة في هذا المنشور</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">إضافة عنصر اسأل إلى القائمة المنبثقة</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">إضافة عنصر تلخيص الفيديو إلى قائمة الخلاصة المنبثقة</string>
@@ -886,6 +897,7 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_navigation_bar_style_entry_2">شبه شفاف</string>
   <string name="morphe_navigation_bar_style_entry_3">شفاف</string>
   <string name="morphe_navigation_bar_style_entry_4">معتم</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">قد لا يكون هذا النمط مدعومًا من قبل جهازك أو إصدار YouTube، ويمكن أن يتسبب في مشكلات في التخطيط أو توقف التطبيق عن العمل</string>
   <string name="morphe_toolbar_screen_title">شريط الأدوات</string>
   <string name="morphe_toolbar_screen_summary">اختر المكونات التي تظهر في شريط الأدوات</string>
   <string name="morphe_hide_toolbar_cast_button_title">إخفاء زر البث</string>
@@ -1113,7 +1125,9 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_tablet_layout_in_player_summary">"استعادة تخطيط المشغل القديم
 
 القيود: إذا تم إيقاف تشغيل 'استعادة شريط إجراءات الفيديو القديم'، فقد لا يتوفر عنصر 'المزيد من الفيديوهات'"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">قد يؤدي تمكين هذا إلى تعطيل بعض ميزات تخطيط المشغل، مثل قسم التعليقات أو \'مزيد من الفيديوهات\' المعروضة أسفل المشغل</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"قد يؤدي تمكين هذا الخيار إلى تعطل بعض ميزات تخطيط المشغل، مثل قسم التعليقات أو 'المزيد من الفيديوهات' المعروضة أسفل المشغل.
+
+لم يعد تخطيط الجهاز اللوحي مدعومًا من قبل YouTube، وهو معطل جزئيًا أو كليًا في إصدارات YouTube الحديثة. للحصول على تخطيط جهاز لوحي يعمل، قم بتعديل الإصدار YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - استعادة سلوك الترجمة القديم</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - استعادة الحفظ القديم إلى قائمة التشغيل</string>
@@ -1381,6 +1395,11 @@ Mistral Nemo هو الخيار الأرخص، بينما توفر Gemma 4 أعل
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">يعرض إشعارًا عند حفظ سرعة تشغيل افتراضية جديدة</string>
   <string name="morphe_playback_speed_default_title">سرعة التشغيل الافتراضية</string>
   <string name="morphe_shorts_playback_speed_default_title">سرعة التشغيل الافتراضية على فيديوهات Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">تذكر تغييرات سرعة التشغيل على فيديوهات Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">يطبق اختيارك اليدوي لسرعة Shorts على جميع فيديوهات Shorts المستقبلية. إذا تم إيقاف هذا الخيار، تعود السرعة إلى الوضع الافتراضي بعد إغلاق مشغل Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">عرض سرعة التشغيل في قائمة Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">يضيف عنصر سرعة التشغيل إلى قائمة مشغل Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">سرعة التشغيل · %s</string>
   <string name="morphe_remember_playback_speed_toast">تم تغيير سرعة التشغيل الافتراضية إلى: %s</string>
   <string name="morphe_disable_playback_speed_music_title">استخدام السرعة العادية للموسيقى</string>
   <string name="morphe_disable_playback_speed_music_summary">تشغيل فيديوهات الموسيقى دائمًا بسرعة 1.0x</string>

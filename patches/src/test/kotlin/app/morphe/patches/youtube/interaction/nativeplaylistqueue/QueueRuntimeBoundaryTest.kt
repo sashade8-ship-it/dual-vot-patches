@@ -1506,13 +1506,13 @@ class QueueRuntimeBoundaryTest {
                     }
                     public static void queueTypeSelection() throws Exception {
                         Settings.QUEUE_TYPE.value = QueueType.NATIVE;
-                        require(!(boolean) call("isNativeQueueDisabled"), "Native queue type must enable native queue");
+                        require(AddToQueuePatch.isNativeQueueEnabled(), "Native queue type must enable native queue");
                         Settings.QUEUE_TYPE.value = QueueType.MORPHE;
-                        require((boolean) call("isNativeQueueDisabled"), "Morphe queue type must disable native queue");
+                        require(!AddToQueuePatch.isNativeQueueEnabled(), "Morphe queue type must disable native queue");
                         Settings.QUEUE_TYPE.value = QueueType.LOCAL;
-                        require((boolean) call("isNativeQueueDisabled"), "Premium-style queue type must disable native queue");
+                        require(!AddToQueuePatch.isNativeQueueEnabled(), "Premium-style queue type must disable native queue");
                         Settings.QUEUE_TYPE.value = QueueType.DEFAULT;
-                        require((boolean) call("isNativeQueueDisabled"), "Default queue type must disable native queue");
+                        require(!AddToQueuePatch.isNativeQueueEnabled(), "Default queue type must disable native queue");
                     }
                     public static void acceptedHandoff() throws Exception {
                         Settings.QUEUE_TYPE.value = QueueType.NATIVE;
