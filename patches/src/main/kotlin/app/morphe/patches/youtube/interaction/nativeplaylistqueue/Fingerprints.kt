@@ -1002,11 +1002,43 @@ internal object PlaylistRepeatCapabilitiesFingerprint : Fingerprint(
     returnType = "V",
     parameters = listOf("L", "L", "I"),
     filters = listOf(
-        fieldAccess(type = "Z", opcode = Opcode.IGET_BOOLEAN),
+        // Tie the flags to the repeat button. Newer binders contain a similar
+        // boolean pair for shuffle visibility before this repeat section.
+        fieldAccess(
+            type = "Lcom/google/android/apps/youtube/app/watch/panel/ui/PlaylistLoopButtonView;",
+            opcode = Opcode.IGET_OBJECT
+        ),
+        fieldAccess(type = "Z", opcode = Opcode.IGET_BOOLEAN, location = MatchAfterImmediately()),
         opcode(Opcode.IF_NEZ, location = MatchAfterImmediately()),
         fieldAccess(type = "Z", opcode = Opcode.IGET_BOOLEAN, location = MatchAfterImmediately()),
-        opcode(Opcode.IF_EQZ, location = MatchAfterImmediately()),
-        methodCall("Lcom/google/android/apps/youtube/app/watch/panel/ui/PlaylistLoopButtonView;->setEnabled(Z)V")
+        // Both branch shapes compute the short-circuit OR of these two flags.
+        methodCall(
+            "Lcom/google/android/apps/youtube/app/watch/panel/ui/PlaylistLoopButtonView;->setEnabled(Z)V",
+            location = MatchAfterWithin(6)
+        )
+    )
+)
+
+/** The binder restores this stored native listener when its shuffle view is shown. */
+internal fun playlistShuffleListenerFingerprint(binder: Method, shuffleView: FieldReference) = Fingerprint(
+    definingClass = binder.definingClass,
+    name = binder.name,
+    parameters = binder.parameterTypes.map { it.toString() },
+    returnType = binder.returnType,
+    filters = listOf(
+        fieldAccess(reference = shuffleView, opcode = Opcode.IGET_OBJECT),
+        // Older binders first set enabled from the native shuffle capability.
+        methodCall("Landroid/widget/ImageView;->setVisibility(I)V", location = MatchAfterWithin(3)),
+        fieldAccess(
+            definingClass = "this",
+            type = "Landroid/view/View\$OnClickListener;",
+            opcode = Opcode.IGET_OBJECT,
+            location = MatchAfterImmediately()
+        ),
+        methodCall(
+            "Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View\$OnClickListener;)V",
+            location = MatchAfterImmediately()
+        )
     )
 )
 
@@ -1085,6 +1117,80 @@ internal fun playlistServiceNavigatorFingerprint(wrapperType: String) = Fingerpr
     )
 )
 
+/** The direct-backend watch navigator reports failed starts through this stable diagnostic. */
+internal object DirectQueueNavigatorFingerprint : Fingerprint(
+    returnType = "V",
+    filters = listOf(string("Watch Page unable to start playback, "))
+)
+
+/** The active native backend is assigned from the same factory used by the legacy sequencer. */
+internal fun directQueueBackendFingerprint(navigatorType: String, playbackType: String) = Fingerprint(
+    definingClass = navigatorType,
+    returnType = "V",
+    filters = listOf(
+        methodCall(returnType = playbackType),
+        opcode(Opcode.MOVE_RESULT_OBJECT, location = MatchAfterImmediately()),
+        fieldAccess(
+            definingClass = "this",
+            type = playbackType,
+            opcode = Opcode.IPUT_OBJECT,
+            location = MatchAfterImmediately()
+        )
+    )
+)
+
+internal fun directQueuePlayerOwnerFingerprint(navigatorType: String, playerOwnerType: String) = Fingerprint(
+    definingClass = navigatorType,
+    name = "<init>",
+    filters = listOf(fieldAccess(definingClass = "this", type = playerOwnerType, opcode = Opcode.IPUT_OBJECT))
+)
+
+internal fun directQueueNavigateFingerprint(navigatorType: String, requestType: String) = Fingerprint(
+    definingClass = navigatorType,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    parameters = listOf(requestType),
+    returnType = "V"
+)
+
+/** The native backend's capability check, before watch-history window policy is added. */
+internal fun directQueueBackendAvailabilityFingerprint(backend: FieldReference, requestType: String) = Fingerprint(
+    definingClass = backend.definingClass,
+    accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
+    parameters = listOf(requestType),
+    returnType = "Z",
+    filters = listOf(
+        fieldAccess(reference = backend, opcode = Opcode.IGET_OBJECT),
+        methodCall(
+            definingClass = backend.type,
+            opcode = Opcode.INVOKE_VIRTUAL,
+            parameters = listOf(requestType),
+            returnType = "I",
+            location = MatchAfterWithin(2)
+        )
+    )
+)
+
+internal fun queueNavigationIntentFieldFingerprint(requestType: String, enumType: String) = Fingerprint(
+    definingClass = requestType,
+    name = "<init>",
+    parameters = listOf(enumType, "L", "L"),
+    filters = listOf(fieldAccess(definingClass = "this", type = enumType, opcode = Opcode.IPUT_OBJECT))
+)
+
+/**
+ * A newer watch navigator forwards queue requests to the same playback service.
+ * Other navigation patches can prepend guards, so match the forwarding tail.
+ */
+internal fun playlistServiceDelegateFingerprint(navigate: MethodReference) = Fingerprint(
+    parameters = navigate.parameterTypes.map { it.toString() },
+    returnType = "V",
+    filters = listOf(
+        fieldAccess(definingClass = "this", type = navigate.definingClass, opcode = Opcode.IGET_OBJECT),
+        methodCall(reference = navigate, location = MatchAfterImmediately()),
+        opcode(Opcode.RETURN_VOID, location = MatchAfterImmediately())
+    )
+)
+
 /** Only the ordinary watch-page callback is replaced; casting/no-op delegates keep control. */
 internal fun notificationForegroundSkipFingerprint(callbackType: String, request: FieldReference) = Fingerprint(
     interfaces = listOf(callbackType),
@@ -1096,6 +1202,7 @@ internal fun notificationForegroundSkipFingerprint(callbackType: String, request
 /** The playback service checks whether a navigation request can be dispatched. */
 internal fun playlistServiceCanNavigateFingerprint(serviceType: String, requestType: String) = Fingerprint(
     definingClass = serviceType,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "Z",
     parameters = listOf(requestType)
 )

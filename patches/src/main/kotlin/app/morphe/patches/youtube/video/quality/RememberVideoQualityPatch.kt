@@ -16,6 +16,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLa
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
+import app.morphe.patcher.util.smali.ExternalLabel
 import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
 import app.morphe.patches.shared.misc.fix.proto.parseByteArrayMethodRef
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
@@ -28,6 +29,8 @@ import app.morphe.patches.youtube.shared.VideoQualityChangedFingerprint
 import app.morphe.patches.youtube.shared.hookVideoIntent
 import app.morphe.patches.youtube.shared.openVideoIntentPatch
 import app.morphe.patches.youtube.video.information.EXTENSION_VIDEO_QUALITY_INTERFACE
+import app.morphe.patches.youtube.video.information.EXTENSION_VIDEO_QUALITY_MENU_INTERFACE
+import app.morphe.patches.youtube.video.information.SetVideoQualityFingerprint
 import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.findFieldFromToString
@@ -35,11 +38,13 @@ import app.morphe.patcher.util.findFreeRegister
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.patcher.util.getFreeRegisterProvider
 import app.morphe.patcher.util.getReference
+import app.morphe.patcher.util.matchSingle
 import app.morphe.util.indexOfFirstInstructionReversedOrThrow
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
@@ -270,10 +275,49 @@ val rememberVideoQualityPatch = bytecodePatch {
         hookVideoIntent(EXTENSION_CLASS, detectVideo = true, detectShorts = true)
 
         // Inject a call to remember the selected quality for Shorts.
-        VideoQualityItemOnClickFingerprint.method.addInstruction(
-            0,
-            "invoke-static { p3 }, $EXTENSION_CLASS->userChangedShortsQuality(I)V"
-        )
+        VideoQualityItemOnClickFingerprint.method.apply {
+            addInstruction(
+                0,
+                "invoke-static { p3 }, $EXTENSION_CLASS->userChangedShortsQuality(I)V"
+            )
+
+            findInstructionIndicesReversedOrThrow(Opcode.RETURN_VOID).forEach { index ->
+                addInstructionsAtControlFlowLabel(
+                    index,
+                    "invoke-static { }, $EXTENSION_CLASS->clearShortsMenuSelectedQuality()V"
+                )
+            }
+        }
+
+        // The Shorts quality menu sets the selected quality by its resolution, which YouTube can get
+        // wrong, such as 720 for the 480p quality of some Shorts, so another quality is played.
+        // The quality selected is set instead, as the quality menu of regular videos does.
+        val setResolutionMethod = getSetVideoQualityResolutionFingerprint(
+            SetVideoQualityFingerprint.instructionMatches[1].getFieldAccessed().type
+        ).matchSingle().method
+
+        getVideoQualityItemSetResolutionFingerprint(setResolutionMethod.toString()).matchAll().forEach {
+            it.method.apply {
+                val index = it.instructionMatches.first().index
+                val setResolutionInstruction = getInstruction<FiveRegisterInstruction>(index)
+                val menuRegister = setResolutionInstruction.registerC
+                val qualitySetRegister = findFreeRegister(
+                    index,
+                    menuRegister,
+                    setResolutionInstruction.registerD
+                )
+
+                addInstructionsAtControlFlowLabel(
+                    index,
+                    """
+                        invoke-static { v$menuRegister }, $EXTENSION_CLASS->setShortsMenuSelectedQuality($EXTENSION_VIDEO_QUALITY_MENU_INTERFACE)Z
+                        move-result v$qualitySetRegister
+                        if-nez v$qualitySetRegister, :quality_set
+                    """,
+                    ExternalLabel("quality_set", getInstruction(index + 1))
+                )
+            }
+        }
 
         // Inject a call to remember the user selected quality for regular videos.
         // The quality object is used, as its name is needed to get the fixed resolution.
@@ -294,15 +338,22 @@ val rememberVideoQualityPatch = bytecodePatch {
 
         // If this flag is enabled, Shorts restart whenever the quality changes.
         // The restart uses the initial quality of the Short, so the quality selected by the user is lost.
-        listOf(
-            ShortsQualityChangeObserverPrimaryFeatureFlagFingerprint,
-            ShortsQualityChangeObserverSecondaryFeatureFlagFingerprint
-        ).forEach { fingerprint ->
-            fingerprint.matchAll().forEach {
-                it.method.insertLiteralOverride(
-                    it.instructionMatches.first().index, false
-                )
-            }
+        ShortsQualityChangeObserverPrimaryFeatureFlagFingerprint.matchAll().forEach {
+            it.method.insertLiteralOverride(
+                it.instructionMatches.first().index, false
+            )
+        }
+
+        // The secondary flag also saves the formats of the quality selected in the quality menu with the quality
+        // last selected, so the player keeps playing them. Without the formats only the resolution YouTube
+        // gives the quality is saved, and the player can switch to another quality of that resolution,
+        // such as 720p60 after selecting a 480p quality that YouTube gives the resolution 720.
+        // The flag is enabled only for the Short the user selected the quality for.
+        ShortsQualityChangeObserverSecondaryFeatureFlagFingerprint.matchAll().forEach {
+            it.method.insertLiteralOverride(
+                it.instructionMatches.first().index,
+                "$EXTENSION_CLASS->useSelectedQualityFormats(Z)Z"
+            )
         }
     }
 }

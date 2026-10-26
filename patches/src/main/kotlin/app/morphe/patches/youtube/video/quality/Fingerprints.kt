@@ -247,6 +247,33 @@ internal object VideoQualityItemOnClickFingerprint : Fingerprint(
     )
 )
 
+/**
+ * The method of the quality menu that sets the quality by its resolution.
+ */
+internal fun getSetVideoQualityResolutionFingerprint(videoQualityMenuType: String) = Fingerprint(
+    definingClass = videoQualityMenuType,
+    returnType = "V",
+    parameters = listOf("I")
+)
+
+/**
+ * The item click listener of the Shorts quality menu, which sets the selected quality by its resolution.
+ * The listener is either the menu of [VideoQualityItemOnClickFingerprint] or a class it calls.
+ */
+internal fun getVideoQualityItemSetResolutionFingerprint(setResolutionMethod: String) = Fingerprint(
+    name = "onItemClick",
+    returnType = "V",
+    parameters = listOf(
+        "Landroid/widget/AdapterView;",
+        "Landroid/view/View;",
+        "I",
+        "J"
+    ),
+    filters = listOf(
+        methodCall(smali = setResolutionMethod)
+    )
+)
+
 internal object ShowVideoQualityQuickMenuFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "V",

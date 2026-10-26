@@ -593,4 +593,6 @@ internal fun installNativeQueueEngine(
             "invoke-static {}, $EXTENSION_CLASS->onNativeQueueSelection()V"
         )
     }
+
+    wrapperType
 }

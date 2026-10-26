@@ -37,9 +37,12 @@ import app.morphe.patches.youtube.layout.sharesheet.openSystemShareSheetPatch
 import app.morphe.patches.youtube.misc.backgroundplayback.backgroundPlaybackPatch
 import app.morphe.patches.youtube.misc.fix.videoactionbar.restoreOldVideoActionBarPatch
 import app.morphe.patches.youtube.misc.medianotification.mediaNotificationControlsPatchYouTube
+import app.morphe.patches.youtube.misc.playservice.is_21_32_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_42_or_greater
 import app.morphe.patches.youtube.misc.spoof.spoofVideoStreamsPatch
 import app.morphe.patches.youtube.video.quality.rememberVideoQualityPatch
 import app.morphe.patches.youtube.video.series.seriesTrackerPatch
+import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.Opcodes
 import com.android.tools.smali.dexlib2.analysis.ClassPath
@@ -49,12 +52,14 @@ import com.android.tools.smali.dexlib2.analysis.MethodAnalyzer
 import com.android.tools.smali.dexlib2.analysis.RegisterType
 import com.android.tools.smali.dexlib2.dexbacked.DexBackedDexFile
 import com.android.tools.smali.dexlib2.iface.ClassDef
+import com.android.tools.smali.dexlib2.iface.Method
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.Instruction
 import com.android.tools.smali.dexlib2.iface.instruction.NarrowLiteralInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OffsetInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.RegisterRangeInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
@@ -108,7 +113,11 @@ fun main(arguments: Array<String>) {
             verifyNativeMixTap(dexDir, mode != "unselected")
         }
     }
-    Patcher(PatcherConfig(input, workspace, verifier = verifier)).use { patcher ->
+    // Disable only when isolating a known upstream validation failure; normal
+    // patch application and SDK/native contract verification still run.
+    val validateFingerprints = System.getProperty("queueValidateFingerprints", "true").toBooleanStrict()
+    println("Fingerprint validation enabled: $validateFingerprints")
+    Patcher(PatcherConfig(input, workspace, verifier = verifier, validate = validateFingerprints)).use { patcher ->
         patcher += selected
         runBlocking {
             patcher().collect { result ->
@@ -471,11 +480,227 @@ private fun verifyNativeRowMenuPaths(directory: File, selected: Boolean) {
     println("Native row menu dispatch preserves original callback and dismissal branches")
 }
 
+/** A wrapper used by the watch page must expose the same backend as its native service. */
+private fun verifyNativeServiceDelegates(classes: List<ClassDef>, selected: Boolean) {
+    val services = classes.filter {
+        SERVICE_NAVIGATOR_INTERFACE in it.interfaces && !AccessFlags.INTERFACE.isSet(it.accessFlags)
+    }
+    if (!selected) {
+        check(services.isEmpty()) { "Playback service bridges leaked into an unselected build" }
+        return
+    }
+    val service = services.single { owner -> owner.methods.single { it.name == "patch_getQueuePlayback" }
+        .implementation!!.instructions.any { it.opcode == Opcode.INSTANCE_OF } }
+    val navigate = service.methods.single { it.name == "patch_navigateQueue" }
+        .implementation!!.instructions.mapNotNull { (it as? ReferenceInstruction)?.reference as? MethodReference }
+        .single { it.definingClass == service.type }
+    val delegates = classes.mapNotNull { owner ->
+        val forwarder = owner.methods.singleOrNull { method ->
+            val code = method.implementation?.instructions?.toList()?.takeLast(3) ?: return@singleOrNull false
+            code.size == 3 && code[0].opcode == Opcode.IGET_OBJECT &&
+                    ((code[0] as ReferenceInstruction).reference as FieldReference).type == service.type &&
+                    (code[1] as? ReferenceInstruction)?.reference == navigate && code[2].opcode == Opcode.RETURN_VOID
+        }
+        forwarder?.let { owner to it }
+    }
+    for ((delegate, forwarder) in delegates) {
+        check(SERVICE_NAVIGATOR_INTERFACE in delegate.interfaces) {
+            "Native navigator wrapper cannot resolve its playback backend"
+        }
+        val fields = mutableSetOf<FieldReference>()
+        for (name in listOf("patch_getVideoId", "patch_getQueuePlayback")) {
+            val bridge = delegate.methods.single { it.name == name }
+            val code = bridge.implementation!!.instructions.toList()
+            fields += (code.first() as ReferenceInstruction).reference as FieldReference
+            val call = (code[1] as ReferenceInstruction).reference as MethodReference
+            check(code[1].opcode == Opcode.INVOKE_INTERFACE && call.definingClass == SERVICE_NAVIGATOR_INTERFACE &&
+                    call.name == name && call.parameterTypes == bridge.parameterTypes && call.returnType == bridge.returnType) {
+                "Native navigator wrapper must resolve identity and backend from its service"
+            }
+        }
+        check(fields.size == 1 && fields.single().type == service.type) {
+            "Native navigator wrapper must use one playback service for identity and backend"
+        }
+        val dispatch = delegate.methods.single { it.name == "patch_navigateQueue" }
+            .implementation!!.instructions.mapNotNull { (it as? ReferenceInstruction)?.reference as? MethodReference }
+        check(dispatch.single() == forwarder) {
+            "Native queue navigation must retain hooks on the wrapper's original dispatch"
+        }
+        val capability = delegate.methods.single { it.name == "patch_canNavigateQueue" }
+            .implementation!!.instructions.mapNotNull { (it as? ReferenceInstruction)?.reference as? MethodReference }
+            .single()
+        check(capability.definingClass == delegate.type && capability.parameterTypes == forwarder.parameterTypes &&
+                capability.returnType == "Z") { "Native queue must retain the wrapper's navigation eligibility" }
+    }
+    val playbackType = classes.single { NATIVE_PLAYBACK_INTERFACE in it.interfaces }.type
+    val requestType = navigate.parameterTypes.single()
+    val directNavigators = classes.filter { owner ->
+        owner.fields.any { it.type == playbackType } && owner.methods.any {
+            com.android.tools.smali.dexlib2.AccessFlags.PUBLIC.isSet(it.accessFlags) &&
+                    it.returnType == "V" && it.parameterTypes == listOf(requestType)
+        }
+    }
+    for (owner in directNavigators) {
+        check(SERVICE_NAVIGATOR_INTERFACE in owner.interfaces) {
+            "Native direct-backend navigator cannot resolve its active playback backend"
+        }
+        val getter = owner.methods.single { it.name == "patch_getQueuePlayback" }
+            .implementation!!.instructions.toList()
+        check(getter.size == 2 && getter[0].opcode == Opcode.IGET_OBJECT &&
+                ((getter[0] as ReferenceInstruction).reference as FieldReference).type == playbackType &&
+                getter[1].opcode == Opcode.RETURN_OBJECT) {
+            "Native navigator must expose its owned backend without substituting a cached response"
+        }
+        for ((name, result) in listOf("patch_navigateQueue" to "V", "patch_canNavigateQueue" to "Z")) {
+            val call = owner.methods.single { it.name == name }.implementation!!.instructions
+                .mapNotNull { (it as? ReferenceInstruction)?.reference as? MethodReference }.single()
+            check(call.definingClass == owner.type && call.parameterTypes == listOf(requestType) && call.returnType == result) {
+                "Native direct-backend navigator must retain its own navigation and eligibility paths"
+            }
+        }
+        val identity = owner.methods.single { it.name == "patch_getVideoId" }.implementation!!.instructions
+            .mapNotNull { (it as? ReferenceInstruction)?.reference as? FieldReference }.toList()
+        val legacyIdentity = service.methods.single { it.name == "patch_getVideoId" }.implementation!!.instructions
+            .mapNotNull { (it as? ReferenceInstruction)?.reference as? FieldReference }.toList()
+        check(identity.first().definingClass == owner.type && identity.first().type == legacyIdentity.first().type &&
+                identity.drop(1) == legacyIdentity.drop(1)) {
+            "Native navigator identity must come from its own player, using the existing active-ID getter"
+        }
+    }
+    check(services.size == delegates.size + directNavigators.size + 1) { "Unexpected playback service bridge" }
+    println("Native direct-backend navigators verified: ${directNavigators.size}")
+    println("Native playback service and ${delegates.size} forwarding navigator(s) verified")
+}
+
+/** A committed queue target must load even when the watch-history window cannot move. */
+private fun verifyNativeQueueWindow(classes: List<ClassDef>, selected: Boolean) {
+    val owners = classes.filter { DIRECT_NAVIGATOR_INTERFACE in it.interfaces }
+    check(owners.size == if (selected && is_21_42_or_greater) 1 else 0) {
+        "Unexpected owned-queue watch-window bridge"
+    }
+    if (owners.isEmpty()) return
+    val owner = owners.single()
+    val playbackType = classes.single { NATIVE_PLAYBACK_INTERFACE in it.interfaces }.type
+    fun calls(method: Method) =
+        method.implementation!!.instructions.mapNotNull {
+            (it as? ReferenceInstruction)?.reference as? MethodReference
+        }.toList()
+    val capability = calls(owner.methods.single { it.name == "patch_canNavigateNativeQueue" }).single()
+    val nativeCapability = owner.methods.single { it.toString() == capability.toString() }
+    check(capability.returnType == "Z" && capability.definingClass == owner.type &&
+            nativeCapability.implementation!!.instructions.any {
+                ((it as? ReferenceInstruction)?.reference as? FieldReference)?.type == playbackType
+            } && calls(nativeCapability).any {
+                it.definingClass == playbackType && it.returnType == "I"
+            }) { "Queue availability must retain the owned native backend's capability restrictions" }
+    val availability = calls(owner.methods.single { it.name == "patch_canNavigateQueue" }).single()
+    check(availability != capability) { "Queue capability must not recurse into the watch-window policy" }
+    val nativeAvailability = owner.methods.single { it.toString() == availability.toString() }
+        .implementation!!.instructions.toList()
+    val override = nativeAvailability.indexOfFirst {
+        ((it as? ReferenceInstruction)?.reference as? MethodReference)?.name == "nativeQueueNavigationAvailability"
+    }
+    check(override >= 0 && nativeAvailability[override + 1].opcode == Opcode.MOVE_RESULT &&
+            nativeAvailability[override + 2].opcode == Opcode.IF_LTZ &&
+            nativeAvailability[override + 3].opcode == Opcode.RETURN &&
+            nativeAvailability.drop(override + 4).any {
+                (it as? ReferenceInstruction)?.reference?.toString() == capability.toString()
+            }) { "Owned capability must override history availability while other playback retains its native policy" }
+    val navigate = calls(owner.methods.single { it.name == "patch_navigateQueue" }).single()
+    val dispatch = owner.methods.single { it.toString() == navigate.toString() }
+    val code = dispatch.implementation!!.instructions.toList()
+    val gates = code.indices.filter {
+        (code[it] as? ReferenceInstruction)?.reference?.toString() == availability.toString()
+    }
+    check(gates.size == 2) { "Native pre-commit and post-commit checks must remain present" }
+    val gate = gates.last()
+    val retain = code.indexOfFirst {
+        ((it as? ReferenceInstruction)?.reference as? MethodReference)?.name == "retainCommittedQueueNavigation"
+    }
+    check(retain > gate && code[gate - 3].opcode == Opcode.IF_EQZ &&
+            ((code[gate - 2] as? ReferenceInstruction)?.reference as? FieldReference)?.type == playbackType &&
+            code[gate - 1].opcode == Opcode.IF_EQZ && code[gate + 1].opcode == Opcode.MOVE_RESULT &&
+            code[retain - 1].opcode == Opcode.IF_NEZ && code[retain + 1].opcode == Opcode.MOVE_RESULT &&
+            code[retain + 3].opcode == Opcode.IF_EQZ) {
+        "Only an accepted non-null queue target may bypass the post-commit history fallback"
+    }
+    val invoke = code[retain] as RegisterRangeInstruction
+    check(invoke.registerCount == 2 && invoke.startRegister == dispatch.implementation!!.registerCount - 2) {
+        "Post-commit ownership must use preserved dispatcher parameters, not reused native locals"
+    }
+    println("Native queue capabilities and accepted-target loading are independent of watch history")
+}
+
+/** Verify repeat operands and the existing shuffle view/listener, not just an enabled flag. */
+private fun verifyNativeQueueHeader(classes: List<ClassDef>, selected: Boolean) {
+    val headers = classes.filter { REPEAT_HEADER_INTERFACE in it.interfaces }
+    check(headers.size == if (selected) 1 else 0) { "Unexpected native queue header bridge" }
+    if (!selected) return
+    val header = headers.single()
+    val repeat = header.methods.single { it.name == "patch_enableRepeat" }.implementation!!.instructions.toList()
+    val repeatView = repeat.mapNotNull { (it as? ReferenceInstruction)?.reference as? FieldReference }
+        .single { it.type == "Lcom/google/android/apps/youtube/app/watch/panel/ui/PlaylistLoopButtonView;" }
+    val enabled = "Lcom/google/android/apps/youtube/app/watch/panel/ui/PlaylistLoopButtonView;->setEnabled(Z)V"
+    val binder = header.methods.single { method -> method.name != "patch_enableRepeat" &&
+            method.implementation?.instructions?.any { (it as? ReferenceInstruction)?.reference?.toString() == enabled } == true }
+        .implementation!!.instructions.toList()
+    val call = binder.indexOfFirst { (it as? ReferenceInstruction)?.reference?.toString() == enabled }
+    val view = (0 until call).last { (binder[it] as? ReferenceInstruction)?.reference == repeatView }
+    val nativeFlags = binder.subList(view + 1, call).mapNotNull {
+        ((it as? ReferenceInstruction)?.reference as? FieldReference)?.takeIf { field -> field.type == "Z" }
+    }.toSet()
+    val writtenFlags = repeat.filter { it.opcode == Opcode.IPUT_BOOLEAN }.map {
+        (it as ReferenceInstruction).reference as FieldReference
+    }.toSet()
+    check(nativeFlags.size == 2 && writtenFlags == nativeFlags) {
+        "Queue repeat must update the repeat button's operands, never the shuffle/hide flags"
+    }
+    val render = header.methods.single { it.name == "patch_setRepeatMode" }.implementation!!.instructions
+        .mapNotNull { (it as? ReferenceInstruction)?.reference as? MethodReference }.single()
+    val nativeRender = header.methods.single { it.toString() == render.toString() }.implementation!!.instructions
+        .mapNotNull { (it as? ReferenceInstruction)?.reference as? MethodReference }.toList()
+    check(render.parameterTypes == listOf("I", "Z") && render.returnType == "V" &&
+            nativeRender.any { it.definingClass == repeatView.type && it.name == "setSelected" } &&
+            nativeRender.any { it.definingClass == repeatView.type && it.name == "refreshDrawableState" }) {
+        "Queue repeat rendering must retain native selected and repeat-one drawable states"
+    }
+    val shuffle = header.methods.single { it.name == "patch_setShuffleAvailable" }
+        .implementation!!.instructions.toList()
+    val visibility = shuffle.indexOfFirst { (it as? ReferenceInstruction)?.reference?.toString() ==
+            "Landroid/widget/ImageView;->setVisibility(I)V" }
+    check(visibility > 0 && shuffle[visibility - 1].opcode == Opcode.CONST_4 &&
+            (shuffle[visibility - 1] as NarrowLiteralInstruction).narrowLiteral == 0) {
+        "Owned queue shuffle must be visible even when the native binder hides unsupported shuffle"
+    }
+    val listenerCall = "Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View\$OnClickListener;)V"
+    val listenerFields = header.fields.filter { it.type == "Landroid/view/View\$OnClickListener;" }
+    if (listenerFields.isNotEmpty()) {
+        val listener = shuffle.mapNotNull { (it as? ReferenceInstruction)?.reference as? FieldReference }
+            .single { it.type == "Landroid/view/View\$OnClickListener;" }
+        check(shuffle.any { (it as? ReferenceInstruction)?.reference?.toString() == listenerCall } &&
+                binder.indices.any { index -> (binder[index] as? ReferenceInstruction)?.reference == listener &&
+                        (binder.getOrNull(index + 1) as? ReferenceInstruction)?.reference?.toString() == listenerCall }) {
+            "Owned queue shuffle must restore the binder's stored native listener"
+        }
+    } else {
+        // The oldest supported header installs its native listener once in the constructor.
+        check(header.methods.single { it.name == "<init>" }.implementation!!.instructions.any {
+            (it as? ReferenceInstruction)?.reference?.toString() == listenerCall
+        } && shuffle.none { (it as? ReferenceInstruction)?.reference?.toString() == listenerCall }) {
+            "Owned queue shuffle must retain the constructor's native listener"
+        }
+    }
+    println("Native queue repeat flags and shuffle visibility/listener restoration verified")
+}
+
 /** SDK structural checks do not catch a base protobuf value stored in a concrete panel field. */
 private fun verifyNativePanelAssignment(directory: File, selected: Boolean) {
     val dexFiles = directory.listFiles()!!.filter { it.extension == "dex" }.map { file ->
         file.inputStream().buffered().use { DexBackedDexFile.fromInputStream(Opcodes.getDefault(), it) }
     }
+    verifyNativeServiceDelegates(dexFiles.flatMap { it.classes }, selected)
+    verifyNativeQueueWindow(dexFiles.flatMap { it.classes }, selected)
+    verifyNativeQueueHeader(dexFiles.flatMap { it.classes }, selected)
     val playbackInterface = EXTENSION_CLASS.removeSuffix(";") + "\$NativePlayback;"
     val owners = dexFiles.flatMap { it.classes }.filter { playbackInterface in it.interfaces }
     check(owners.size == if (selected) 1 else 0) { "Unexpected native playback bridge inclusion" }
@@ -670,7 +895,7 @@ private fun verifyNativeQueueUndo(directory: File, selected: Boolean) {
         }
         val touch = closeHandlers.single { it.returnType == "Z" &&
                 it.parameterTypes == listOf("Landroid/view/View;", "Landroid/view/MotionEvent;") }
-        for ((gesture, expectedCalls) in listOf(fling to 2, touch to 1)) {
+        for ((gesture, expectedCalls) in listOf(fling to if (is_21_32_or_greater) 1 else 2, touch to 1)) {
             val instructions = gesture.implementation!!.instructions.toList()
             val dismissCalls = instructions.indices.filter {
                 (instructions[it] as? ReferenceInstruction)?.reference?.toString() == original.toString()
@@ -683,6 +908,7 @@ private fun verifyNativeQueueUndo(directory: File, selected: Boolean) {
                             (instructions[it] as FiveRegisterInstruction).registerCount == 0 } &&
                     dismissCalls.all { instructions[it].opcode == Opcode.INVOKE_VIRTUAL &&
                             instructions[it + 1].opcode in if (gesture.returnType == "V") setOf(Opcode.RETURN_VOID)
+                            else if (gesture == fling && is_21_32_or_greater) setOf(Opcode.RETURN)
                             else setOf(Opcode.GOTO, Opcode.GOTO_16, Opcode.GOTO_32) }) {
                 "Accepted gesture dismissals must each capture Undo and keep their original continuation"
             }

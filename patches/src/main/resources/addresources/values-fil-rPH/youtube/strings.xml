@@ -435,6 +435,17 @@ Pampubliko ang mga ulat at sinusuri ang mga ito bago idagdag ang isang channel s
   <string name="morphe_feed_long_press_menu_summary">Ang pagtatakbo at paghawak ng matagal sa kahit saan sa isang feed video ay nagbubukas ng kanyang menu</string>
   <string name="morphe_feed_watch_later_button_title">Ipakita ang Watch later button sa mga thumbnail</string>
   <string name="morphe_feed_watch_later_button_summary">Isang Watch later button ay ipinapakita sa mga thumbnail ng feed videos. Ang pag-tap at paghawak nito ay nagbubukas ng Save to playlist</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">I-download ang mga imahe ng post</string>
+  <string name="morphe_post_image_download_summary">May lalabas na button para sa pag-download sa tabi ng button na Share ng mga post na may mga imahe o GIF, at may idaragdag na download item sa kanilang menu</string>
+  <string name="morphe_post_image_download_flyout">I-download ang mga imahe</string>
+  <string name="morphe_post_image_download_flyout_single">I-download ang imahe</string>
+  <string name="morphe_post_image_download_started">Dina-download ang %s na mga imahe…</string>
+  <string name="morphe_post_image_download_started_single">Dina-download ang imahe…</string>
+  <string name="morphe_post_image_download_saved">%1$s na imahe ang na-save sa %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Na-save ang imahe sa %s</string>
+  <string name="morphe_post_image_download_failed">Hindi ma-download ang imahe</string>
+  <string name="morphe_post_image_download_not_found">Walang nakitang imahe sa post na ito</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Idagdag ang Ask item sa flyout menu</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Idinadagdag ang video summarize item sa feed flyout menu</string>
@@ -882,6 +893,7 @@ Para i-access ang Settings, i-enable ang Settings button sa pamamagitan ng Gener
   <string name="morphe_navigation_bar_style_entry_2">Translucent</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
   <string name="morphe_navigation_bar_style_entry_4">Opaque</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Maaaring hindi suportado ang istilong ito ng iyong device o bersyon ng YouTube, at maaaring magdulot ng mga isyu sa layout o crash</string>
   <string name="morphe_toolbar_screen_title">Toolbar</string>
   <string name="morphe_toolbar_screen_summary">Pumili kung aling mga component ang lilitaw sa flyout menu</string>
   <string name="morphe_hide_toolbar_cast_button_title">Itago ang \'Audio Track\' menu</string>
@@ -1107,7 +1119,9 @@ Layout ng automotive
   <string name="morphe_tablet_layout_in_player_summary">"Ibinabalik ang lumang layout ng player
 
 Limitasyon: Kung ang 'Ibalik ang lumang video action bar' ay naka-off, maaaring hindi magamit ang overlay na 'Higit pang mga video'"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Ang pag-enable nito ay maaaring sirain ang ilang features ng player layout, tulad ng comment section o \'More videos\' na ipinapakita sa ibaba ng player</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Ang pag-enable nito ay maaaring makasira sa ilang feature ng layout ng player, gaya ng comment section o 'Higit pang mga video' na ipinapakita sa ibaba ng player.
+
+Hindi na suportado ng YouTube ang tablet layout, at bahagya o ganap na itong sira sa mga kamakailang bersyon ng YouTube. Para sa isang gumaganang tablet layout, i-patch ang YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Ibalik ang dating pag-uugali ng mga caption</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Ibalik ang lumang save sa playlist</string>
@@ -1375,6 +1389,11 @@ Ang mga video ay hinihiling ng isang maikling prefix ng hashed video ID, kaya hi
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Nagpapakita ng notification kapag nai-save ang isang bagong default na bilis ng pag-playback</string>
   <string name="morphe_playback_speed_default_title">Default na bilis ng pag-playback</string>
   <string name="morphe_shorts_playback_speed_default_title">Default na bilis ng playback sa Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Tandaan ang playback speed sa Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Ilalapat ang iyong manwal na pagpili ng bilis ng Shorts sa lahat ng mga susunod na Shorts. Kung naka-off, babalik ang bilis sa default pagkatapos isara ang Shorts player</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Ipakita ang Playback speed sa menu ng Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Nagdaragdag ng item na Playback speed sa menu ng Shorts player</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Bilis ng playback · %s</string>
   <string name="morphe_remember_playback_speed_toast">Binago ang default playback speed sa: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Gamitin ang normal na bilis para sa musika</string>
   <string name="morphe_disable_playback_speed_music_summary">Laging patugtugin ang mga music video sa bilis na 1.0x</string>

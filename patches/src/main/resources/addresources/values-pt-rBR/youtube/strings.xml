@@ -435,6 +435,17 @@ As denúncias são públicas e passam por revisão antes de um canal ser adicion
   <string name="morphe_feed_long_press_menu_summary">Clicar e segurar em qualquer lugar em um vídeo do feed abre seu menu</string>
   <string name="morphe_feed_watch_later_button_title">Mostrar botão \"Assistir mais tarde\" nas miniaturas</string>
   <string name="morphe_feed_watch_later_button_summary">Um botão \"Assistir mais tarde\" é exibido nas miniaturas dos vídeos do feed. Clicar e segurar nele salva na playlist</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Baixar imagens da publicação</string>
+  <string name="morphe_post_image_download_summary">Um botão de download é exibido ao lado do botão Compartilhar de publicações com imagens ou GIFs, e um item de download é adicionado ao menu delas</string>
+  <string name="morphe_post_image_download_flyout">Baixar imagens</string>
+  <string name="morphe_post_image_download_flyout_single">Baixar imagem</string>
+  <string name="morphe_post_image_download_started">Baixando %s imagens…</string>
+  <string name="morphe_post_image_download_started_single">Baixando imagem…</string>
+  <string name="morphe_post_image_download_saved">%1$s imagens salvas em %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Imagem salva em %s</string>
+  <string name="morphe_post_image_download_failed">Não foi possível baixar a imagem</string>
+  <string name="morphe_post_image_download_not_found">Nenhuma imagem encontrada nesta publicação</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Adicionar item Perguntar ao menu flutuante</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Adiciona um item de resumo de vídeo ao menu flutuador do feed</string>
@@ -882,6 +893,7 @@ Para acessar as Configurações, ative o botão Configurações via Geral → Ba
   <string name="morphe_navigation_bar_style_entry_2">Translúcido</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparente</string>
   <string name="morphe_navigation_bar_style_entry_4">Opaco</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Este estilo pode não ser suportado pelo seu dispositivo ou versão do YouTube, e pode causar problemas de layout ou travamentos</string>
   <string name="morphe_toolbar_screen_title">Barra de ferramentas</string>
   <string name="morphe_toolbar_screen_summary">Escolha quais componentes aparecem na barra de ferramentas</string>
   <string name="morphe_hide_toolbar_cast_button_title">Ocultar botão Transmitir</string>
@@ -1109,7 +1121,9 @@ Layout automotivo
   <string name="morphe_tablet_layout_in_player_summary">"Restaura o layout antigo do player de vídeo
 
 Limitação: Se 'Restaurar barra de ações de vídeo antiga' estiver desativado, a sobreposição 'Mais vídeos' pode não estar disponível"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Habilitar isso pode quebrar alguns recursos de layout do player, como a seção de comentários ou \'Mais vídeos\' exibidos abaixo do player</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Ativar isso pode quebrar alguns recursos de layout do player, como a seção de comentários ou \"Mais vídeos\" exibidos abaixo do player.
+
+O layout de tablet não é mais suportado pelo YouTube e está parcial ou totalmente quebrado em versões recentes do YouTube. Para um layout de tablet funcional, aplique o patch no YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Restaurar comportamento antigo de legendas</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restaurar velho save para playlist</string>
@@ -1377,6 +1391,11 @@ Os vídeos são solicitados por um prefixo curto do ID do vídeo com hash, entã
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Mostra uma notificação quando uma nova velocidade de reprodução padrão é salva</string>
   <string name="morphe_playback_speed_default_title">Velocidade padrão de reprodução</string>
   <string name="morphe_shorts_playback_speed_default_title">Velocidade padrão de reprodução nos Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Lembrar a velocidade de reprodução nos Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Aplica a sua seleção manual de velocidade dos Shorts a todos os Shorts futuros. Se estiver desativado, a velocidade retorna ao padrão após fechar o player do Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Mostrar velocidade de reprodução no menu do Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Adiciona um item de Velocidade de reprodução ao menu do player do Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Velocidade de reprodução · %s</string>
   <string name="morphe_remember_playback_speed_toast">Velocidade de reprodução padrão alterada para: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Usar velocidade normal para música</string>
   <string name="morphe_disable_playback_speed_music_summary">Sempre reproduzir videoclipes de música na velocidade de 1.0x</string>

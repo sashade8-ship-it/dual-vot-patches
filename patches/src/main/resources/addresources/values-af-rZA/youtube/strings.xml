@@ -435,6 +435,17 @@ Verslae is openbaar en word nagegaan voordat 'n kanaal by 'n lys gevoeg word. Ve
   <string name="morphe_feed_long_press_menu_summary">Tik en hou enige plek op ’n voedingsvideo open sy menu</string>
   <string name="morphe_feed_watch_later_button_title">Wys Kiek later-knoop by duimborde</string>
   <string name="morphe_feed_watch_later_button_summary">\'n Koppeling \"Later kyk\" word op die kortprentjies van voedvideo\'s vertoon. Tik en hou dit in om \"Bewaar by afspeellys\" te open</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Laai plasingsbeelde af</string>
+  <string name="morphe_post_image_download_summary">\'n Aflaai-knoppie word langs die Deel-knoppie van plasinge met beelde of GIF\'s vertoon, en \'n aflaai-item word by hul spyskaart gevoeg</string>
+  <string name="morphe_post_image_download_flyout">Laai beelde af</string>
+  <string name="morphe_post_image_download_flyout_single">Laai beeld af</string>
+  <string name="morphe_post_image_download_started">Laai %s beelde af…</string>
+  <string name="morphe_post_image_download_started_single">Laai beeld af…</string>
+  <string name="morphe_post_image_download_saved">%1$s beelde gestoor in %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Beeld gestoor in %s</string>
+  <string name="morphe_post_image_download_failed">Kon nie die beeld aflaai nie</string>
+  <string name="morphe_post_image_download_not_found">Geen beeld in hierdie plasing gevind nie</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Voeg Ask-item by vlieëmenu</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Voeg \'n video-opvattingsitem by die voervaartuig-vlieëmenu</string>
@@ -882,6 +893,7 @@ Om Instellings toe te gaan, skakel die Instelling-knoppie in via Algemeen → We
   <string name="morphe_navigation_bar_style_entry_2">Deurskynend</string>
   <string name="morphe_navigation_bar_style_entry_3">Deursigtig</string>
   <string name="morphe_navigation_bar_style_entry_4">Opaak</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Hierdie styl word moontlik nie deur jou toestel of YouTube-weergawe ondersteun nie, en kan uitlegprobleme of crashes veroorsaak</string>
   <string name="morphe_toolbar_screen_title">Wenkbalk</string>
   <string name="morphe_toolbar_screen_summary">Kies watter komponente in die lêertooskassie vertoon moet word</string>
   <string name="morphe_hide_toolbar_cast_button_title">Hide \'Audio Track\' menu footer</string>
@@ -1109,7 +1121,9 @@ Motoruitleg
   <string name="morphe_tablet_layout_in_player_summary">"Herstel die ou speleruitleg
 
 Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer video's' oorvleueling nie beskikbaar wees nie"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Deaktiverings van hierdie opsie kan sommige speler-lay-outfunksies breek, soos die opmerkingafdeling of \'Meer video\'s</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Die aktivering hiervan kan sommige speler-uitlegkenmerke breek, soos die kommentaar-afdeling of 'Meer video's' wat onder die speler vertoon word.
+
+Die tablet-uitleg word nie meer deur YouTube ondersteun nie, en is gedeeltelik of volledig gebreek in onlangse YouTube-weergawes. Vir 'n werkende tablet-uitleg, patch YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Herstel ou onderskrifgedrag</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Herstel ou stoor na snelys</string>
@@ -1377,6 +1391,11 @@ Video's word met 'n kort voorvoegsel van die gehashte video-ID aangevra, sodat d
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Wys \'n kennisgewing wanneer \'n nuwe verstek speel snelheid gered word</string>
   <string name="morphe_playback_speed_default_title">Verstek speel spoed</string>
   <string name="morphe_shorts_playback_speed_default_title">Verstek spelspoed vir Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Onthou terugspeelspoed op Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Pas jou handmatige Shorts-spoedkeuse toe op alle toekomstige Shorts. As dit af is, keer die spoed terug na die standaard nadat die Shorts-speler gesluit is</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Wys terugspeelspoed in die Shorts-kieslys</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Voeg \'n terugspeelspoed-item by die Shorts-spelerkieslys</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Terugspeelspoed · %s</string>
   <string name="morphe_remember_playback_speed_toast">Veranderde verstek speelkspoed na: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Gebruik normale spoed vir musiek</string>
   <string name="morphe_disable_playback_speed_music_summary">Speel musiekvideo\'s altyd teen 1.0x spoed</string>

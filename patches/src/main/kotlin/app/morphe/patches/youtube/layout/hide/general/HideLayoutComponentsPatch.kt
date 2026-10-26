@@ -19,12 +19,14 @@ import app.morphe.patcher.extensions.InstructionExtensions.removeInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.util.findFreeRegister
+import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.getReference
+import app.morphe.patcher.util.numberOfParameterRegistersLogical
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.registersUsed
 import app.morphe.patcher.util.smali.ExternalLabel
 import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
+import app.morphe.patches.shared.misc.litho.context.EXTENSION_CONTEXT_INTERFACE
 import app.morphe.patches.shared.misc.litho.filter.addLithoFilter
 import app.morphe.patches.shared.misc.litho.node.hookTreeNodeResult
 import app.morphe.patches.shared.misc.proto.hookElement
@@ -82,6 +84,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
+import app.morphe.patches.shared.misc.litho.filter.EXTENSION_CLASS as LITHO_FILTER_EXTENSION_CLASS
 
 private const val LAYOUT_COMPONENTS_FILTER =
     "Lapp/morphe/extension/youtube/patches/components/LayoutComponentsFilter;"
@@ -412,22 +415,24 @@ val hideLayoutComponentsPatch = bytecodePatch(
         // region hide mix playlists
 
         ParseElementFromBufferFingerprint.let {
-            it.method.apply {
-                val insertIndex = it.instructionMatches.first().index
+            // The conversion context parameter is reused before the filter is called.
+            it.method.cloneParameters().apply {
+                // Cloning adds move instructions to the start of the method.
+                val insertIndex = it.instructionMatches.first().index + numberOfParameterRegistersLogical
 
-                val byteArrayParameter = "p3"
-                val returnEmptyComponentIndex = it.instructionMatches[4].index
+                val returnEmptyComponentIndex = it.instructionMatches[4].index + numberOfParameterRegistersLogical
                 val returnEmptyComponentInstruction = getInstruction(returnEmptyComponentIndex)
                 val returnEmptyComponentRegister = (returnEmptyComponentInstruction as FiveRegisterInstruction).registerC
-                val freeRegister = findFreeRegister(insertIndex, returnEmptyComponentRegister)
 
+                // p2 is the conversion context and p3 is the byte array. p4 is free after cloning.
                 addInstructionsAtControlFlowLabel(
                     insertIndex,
                     """
-                        invoke-static { $byteArrayParameter }, $LAYOUT_COMPONENTS_FILTER->filterMixPlaylists([B)Z
-                        move-result v$freeRegister 
-                        if-eqz v$freeRegister, :show
-                        move-object v$returnEmptyComponentRegister, p1   # Required for 19.47
+                        invoke-static/range { p3 .. p3 }, $LAYOUT_COMPONENTS_FILTER->filterMixPlaylists([B)Z
+                        move-result p4
+                        if-eqz p4, :show
+                        invoke-static/range { p2 .. p2 }, $LITHO_FILTER_EXTENSION_CLASS->removeFilteredElementListItem($EXTENSION_CONTEXT_INTERFACE)V
+                        move-object/from16 v$returnEmptyComponentRegister, p1   # Required for 19.47
                         goto :return_empty_component
                         :show
                         nop

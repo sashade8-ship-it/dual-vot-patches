@@ -435,6 +435,16 @@ Prijave su javne i pregledaju se pre nego što kanal bude dodat na listu. Uklanj
   <string name="morphe_feed_long_press_menu_summary">Dodirivanjem i držanjem bilo gde na videu u protoku otvara se njegov meni</string>
   <string name="morphe_feed_watch_later_button_title">Prikaži dugme „Gledaj kasnije“ na sličicama</string>
   <string name="morphe_feed_watch_later_button_summary">Dugme „Gledaj kasnije“ se prikazuje na sličicama videa u protoku. Dodirivanjem i držanjem njega otvara se opcija Sačuvaj u listu za reprodukciju</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Preuzmi slike iz objave</string>
+  <string name="morphe_post_image_download_summary">Dugme za preuzimanje se prikazuje pored dugmeta za deljenje objava sa slikama ili GIF-ovima, a stavka za preuzimanje je dodata u njihov meni</string>
+  <string name="morphe_post_image_download_flyout">Preuzmi slike</string>
+  <string name="morphe_post_image_download_flyout_single">Preuzmi sliku</string>
+  <string name="morphe_post_image_download_started">Preuzimanje %s slika…</string>
+  <string name="morphe_post_image_download_started_single">Preuzimanje slike…</string>
+  <string name="morphe_post_image_download_saved_single">Slika je sačuvana u %s</string>
+  <string name="morphe_post_image_download_failed">Nije bilo moguće preuzeti sliku</string>
+  <string name="morphe_post_image_download_not_found">U ovoj objavi nije pronađena slika</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Dodajte stavku Ask u flyout meni</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Dodaje stavku za brzo pregledavanje videa u feed flyout meniju</string>
@@ -882,6 +892,7 @@ Da biste pristupili Podešavanjima, omogućite dugme Podešavanja putem General 
   <string name="morphe_navigation_bar_style_entry_2">Polutransparentno</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparentno</string>
   <string name="morphe_navigation_bar_style_entry_4">Neprozirno</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Ovaj stil možda nije podržan na vašem uređaju ili verziji YouTube-a, i može uzrokovati probleme sa rasporedom ili rušenje aplikacije</string>
   <string name="morphe_toolbar_screen_title">Traka za alatke</string>
   <string name="morphe_toolbar_screen_summary">Izaberite koje komponente se pojavljuju u padajućem meniju</string>
   <string name="morphe_hide_toolbar_cast_button_title">Sakrij dugme „Prebacuj”</string>
@@ -1109,7 +1120,9 @@ Raspored za automobil
   <string name="morphe_tablet_layout_in_player_summary">"Vraća stari raspored plejera
 
 Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prekrivanje \"Više video zapisa\" možda neće biti dostupno"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Omogućavanje ovog možda će pokvariti neke funkcije rasporeda plejera, kao što su odeljak za komentare ili \'Još videa\' prikazani ispod plejera</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Omogućavanjem ovoga mogu se pokvariti neke funkcije rasporeda plejera, kao što su odeljak sa komentarima ili \"Više video zapisa\" koji se prikazuju ispod plejera.
+
+Raspored za tablete više nije podržan od strane YouTube-a i delimično ili potpuno je pokvaren u novijim verzijama YouTube-a. Za funkcionalan raspored za tablete, instalirajte zakrpu za YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Vrati staro ponašanje titlova</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Vraća stare ikonice Shorts plejera</string>
@@ -1377,6 +1390,11 @@ Video snimci se zahtevaju kratkim prefiksom hešovanog ID-ja, tako da server ne 
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Prikazuje obaveštenje kada je sačuvana nova podrazumevana brzina reprodukcije</string>
   <string name="morphe_playback_speed_default_title">Podrazumevana brzina reprodukcije</string>
   <string name="morphe_shorts_playback_speed_default_title">Podrazumevana brzina reprodukcije na Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Zapamti brzinu reprodukcije na Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Primenjuje vaš ručni izbor brzine Shorts na sve buduće Shorts. Ako je isključeno, brzina se vraća na podrazumevanu nakon zatvaranja Shorts plejera</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Prikaži brzinu reprodukcije u Shorts meniju</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Dodaje stavku za brzinu reprodukcije u meni Shorts plejera</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Brzina reprodukcije · %s</string>
   <string name="morphe_remember_playback_speed_toast">Podrazumevana brzina reprodukcije je promenjena u: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Koristite normalnu brzinu za muziku</string>
   <string name="morphe_disable_playback_speed_music_summary">Uvek puštajte muzičke spotove brzinom 1.0x</string>

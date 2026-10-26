@@ -436,6 +436,17 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <string name="morphe_feed_long_press_menu_summary">フィードの動画をどこでもよいので長押しすると、フライアウト メニューを開きます</string>
   <string name="morphe_feed_watch_later_button_title">サムネイルに「後で見る」ボタンを表示</string>
   <string name="morphe_feed_watch_later_button_summary">フィード動画のサムネイルに「後で見る」ボタンが表示され、それをタップして長押しすると「プレイリストに保存」が開きます</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">投稿画像のダウンロード</string>
+  <string name="morphe_post_image_download_summary">画像またはGIFを含む投稿の共有ボタンの隣にダウンロードボタンが表示され、メニューにダウンロード項目が追加されます</string>
+  <string name="morphe_post_image_download_flyout">画像をダウンロード</string>
+  <string name="morphe_post_image_download_flyout_single">画像をダウンロード</string>
+  <string name="morphe_post_image_download_started">%s枚の画像をダウンロード中…</string>
+  <string name="morphe_post_image_download_started_single">画像をダウンロード中…</string>
+  <string name="morphe_post_image_download_saved">%1$s枚の画像を %2$s に保存しました</string>
+  <string name="morphe_post_image_download_saved_single">画像を %s に保存しました</string>
+  <string name="morphe_post_image_download_failed">画像のダウンロードに失敗しました</string>
+  <string name="morphe_post_image_download_not_found">このポストに画像は見つかりませんでした</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">「動画を要約して」をフライアウト メニューに追加</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">「この動画について質問する」欄を、欄内の「動画を要約して」がタップされた状態で開く項目を、フィードのフライアウト メニューに追加します</string>
@@ -883,6 +894,7 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_navigation_bar_style_entry_2">半透明</string>
   <string name="morphe_navigation_bar_style_entry_3">透明</string>
   <string name="morphe_navigation_bar_style_entry_4">不透明</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">このスタイルはお使いのデバイスまたはYouTubeのバージョンでサポートされていない可能性があり、レイアウトの問題やクラッシュの原因となることがあります</string>
   <string name="morphe_toolbar_screen_title">ツールバー</string>
   <string name="morphe_toolbar_screen_summary">ツールバーに表示するコンポーネントを設定します</string>
   <string name="morphe_hide_toolbar_cast_button_title">キャストボタンを非表示</string>
@@ -1110,7 +1122,9 @@ Automotive レイアウト
   <string name="morphe_tablet_layout_in_player_summary">"動画プレーヤーのレイアウトを以前のスタイルに戻します
 
 制限事項: [アクションバーを旧仕様に戻す] がオフのとき、「その他の動画」オーバーレイが表示されない場合があります"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">これを有効にすると、コメントセクションやプレイヤー下部に表示される「他の動画」など、一部のプレイヤーレイアウト機能が壊れる可能性があります</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"これを有効にすると、コメント欄やプレイヤー下に表示される「おすすめ動画」など、一部のプレイヤーレイアウト機能が正しく動作しなくなる可能性があります。
+
+タブレットレイアウトはYouTubeによってサポートされなくなったため、最近のYouTubeバージョンでは部分的または完全に機能しません。タブレットレイアウトを動作させるには、YouTube 20.21.37にパッチを適用してください"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - 字幕の動作を旧仕様に戻す</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 -「再生リストに保存」を旧仕様に戻す</string>
@@ -1378,6 +1392,11 @@ Automotive レイアウト
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">設定の [デフォルトの再生速度] に新しい値が保存されたときに通知を表示します</string>
   <string name="morphe_playback_speed_default_title">デフォルトの再生速度</string>
   <string name="morphe_shorts_playback_speed_default_title">ショートの再生速度のデフォルト値</string>
+  <string name="morphe_shorts_remember_playback_speed_title">ショートの再生速度を記憶</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">手動で選択したショートの再生速度を、今後のすべてのショートに適用します。オフにすると、ショートプレーヤーを閉じた後に速度がデフォルトに戻ります</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">ショートのメニューに再生速度を表示</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">ショートプレーヤーのメニューに再生速度項目を追加します</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">再生速度 · %s</string>
   <string name="morphe_remember_playback_speed_toast">デフォルトの再生速度の変更: %s</string>
   <string name="morphe_disable_playback_speed_music_title">音楽動画を通常速度で再生</string>
   <string name="morphe_disable_playback_speed_music_summary">音楽動画を常に 1.0 倍速で再生します</string>

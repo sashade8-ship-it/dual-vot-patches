@@ -17,7 +17,16 @@ Second \"item\" text"</string>
 -->
 <resources>
   <!-- misc.androidauto.androidAutoPatch -->
+  <string name="morphe_music_android_auto_last_played">අවසන් ධාවනය</string>
+  <string name="morphe_music_android_auto_subscriptions">ග්‍රාහකත්වයන්</string>
+  <string name="morphe_music_android_auto_videos">දෘශ්‍ය පට</string>
+  <string name="morphe_music_android_auto_other_results">වෙනත් ප්‍රතිඵල</string>
+  <string name="morphe_music_android_auto_uploaded_songs">උඩුගත කළ ගීත</string>
+  <string name="morphe_music_android_auto_uploaded_albums">උඩුගත කළ ඇල්බම්</string>
+  <string name="morphe_music_android_auto_uploaded_artists">උඩුගත කළ කලාකරුවන්</string>
   <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">නැවත්වීමට සහ නැවත පටන් ගැනීමට host එකේ Jam patch එක යාවත්කාලින කරන්න </string>
+  <string name="morphe_music_jam_probe_title">Jam පෝලිම් හවුල්කරණය</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <!-- misc.album.albumMusicVideoPatch -->

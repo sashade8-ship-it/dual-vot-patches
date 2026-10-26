@@ -435,6 +435,17 @@ Raportit ovat julkisia ja ne tarkistetaan ennen kuin kanava lisätään listaan.
   <string name="morphe_feed_long_press_menu_summary">Kosketus ja pitopohjassa missä tahansa syötteiden videolla avaa sen valikon</string>
   <string name="morphe_feed_watch_later_button_title">Näytä Katso myhemmin -painike pääkkeissä</string>
   <string name="morphe_feed_watch_later_button_summary">Katso myöhemmin -painike näkyy syötteiden videoiden pienoiskuville. Kosketus ja pitopohjassa avaa Tallenna soittoluetteloon</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Lataa julkaisun kuvat</string>
+  <string name="morphe_post_image_download_summary">Latauspainike näytetään kuvien tai GIF-animaatioiden sisältävien julkaisujen Jaa-painikkeen vieressä, ja latauskohta lisätään niiden valikkoon</string>
+  <string name="morphe_post_image_download_flyout">Lataa kuvat</string>
+  <string name="morphe_post_image_download_flyout_single">Lataa kuva</string>
+  <string name="morphe_post_image_download_started">Ladataan %s kuvaa…</string>
+  <string name="morphe_post_image_download_started_single">Ladataan kuvaa…</string>
+  <string name="morphe_post_image_download_saved">%1$s kuvaa tallennettu kohteeseen %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Kuva tallennettu kohteeseen %s</string>
+  <string name="morphe_post_image_download_failed">Kuvaa ei voitu ladata</string>
+  <string name="morphe_post_image_download_not_found">Tästä julkaisusta ei löydetty kuvaa</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Lisää \"Kysy\"-kohde ponnahdusvalikkoon</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Lisää videon tiivistäminen-sivunne kohteen syötteen ponnahdusvalikossa</string>
@@ -882,6 +893,7 @@ Avataksesi asetukset, ota käyttöön Asetukset-painike kohdasta Yleiset → Ty�
   <string name="morphe_navigation_bar_style_entry_2">Puoliläpinäkyvä</string>
   <string name="morphe_navigation_bar_style_entry_3">Läpinäkyvä</string>
   <string name="morphe_navigation_bar_style_entry_4">Peittävä</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Laitteesi tai YouTube-versiosi ei välttämättä tue tätä tyyliä, mikä voi aiheuttaa asetteluongelmia tai kaatumisia</string>
   <string name="morphe_toolbar_screen_title">Työkalupalkki</string>
   <string name="morphe_toolbar_screen_summary">Valitse, mitkä komponentit näkyvät työkalupalkissa</string>
   <string name="morphe_hide_toolbar_cast_button_title">Piilota Cast-painike</string>
@@ -1109,7 +1121,9 @@ Auton asettelu
   <string name="morphe_tablet_layout_in_player_summary">"Palauttaa vanhan soittimen asettelun
 
 Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lisää videoita\" -peittokuvio ei välttämättä ole käytettävissä"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Tämän käyttöönotto voi rikkoa joitakin toiston asettelun ominaisuuksia, kuten kommenttiosion tai ’Lisää videoita’ soittimen alapuolella</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Tämän ottaminen käyttöön voi rikkoa joitakin soittimen asettelun ominaisuuksia, kuten kommenttiosion tai soittimen alapuolella näkyvät \"Lisää videoita\" -videot.
+
+YouTube ei tue enää tablettiasettelua, ja se on osittain tai kokonaan rikki uusimmissa YouTube-versioissa. Toimivan tablettiasettelun saamiseksi asenna päivitys YouTube-versioon 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Palauta vanha tekstitysten käyttäytyminen</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Palauta vanhat tallenteet soittimeen</string>
@@ -1377,6 +1391,11 @@ Videoita pyydetään lyhyellä etuliitteellä hajautetusta video-ID:stä, joten 
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Näyttää ilmoituksen, kun uusi oletustoistonopeus on tallennettu</string>
   <string name="morphe_playback_speed_default_title">Toiston oletusnopeus</string>
   <string name="morphe_shorts_playback_speed_default_title">Shortsien oletustoistojnopeus</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Muista toistonopeus Shorts-videoissa</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Käyttää manuaalista Shorts-nopeuden valintaasi kaikkiin tuleviin Shorts-videoihin. Jos asetus on pois päältä, nopeus palautuu oletusarvoon Shorts-soittimen sulkemisen jälkeen</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Näytä toistonopeus Shorts-valikossa</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Lisää toistonopeus-valinta Shorts-soittimen valikkoon</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Toistonopeus · %s</string>
   <string name="morphe_remember_playback_speed_toast">Oletusarvoinen toistonopeus muutettu: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Käytä normaalinopeutta musiikille</string>
   <string name="morphe_disable_playback_speed_music_summary">Toista musiikkivideot aina 1.0x nopeudella</string>

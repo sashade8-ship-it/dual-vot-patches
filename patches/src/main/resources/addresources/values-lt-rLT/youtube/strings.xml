@@ -435,6 +435,16 @@ Pranešimai yra vieši ir peržiūrimi prieš pridedant kanalą į sąrašą. Pa
   <string name="morphe_feed_long_press_menu_summary">Paspaudus ir palaikius bet kuria feed video vieta, atidaromas jo meniu</string>
   <string name="morphe_feed_watch_later_button_title">Rodyti „Pažiūrėti vėliau“ mygtuką prie miniatiūrų</string>
   <string name="morphe_feed_watch_later_button_summary">Ant nuotykų srauto vaizdo įrašų miniatiūrų rodomas mygtukas „Pažiūrėti vėliau“. Paspaudus ir laikant jį, atidaroma parinktis „Įtraukti į grojaraštį“</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Atsisiųsti įrašų nuotraukas</string>
+  <string name="morphe_post_image_download_summary">Šalia įrašų su nuotraukomis arba GIF failais esančio bendrinimo mygtuko rodomas atsisiuntimo mygtukas, o jų meniu pridedama atsisiuntimo parinktis</string>
+  <string name="morphe_post_image_download_flyout">Atsisiųsti nuotraukas</string>
+  <string name="morphe_post_image_download_flyout_single">Atsisiųsti nuotrauką</string>
+  <string name="morphe_post_image_download_started">Atsiunčiamas %s vaizdai…</string>
+  <string name="morphe_post_image_download_started_single">Atsiunčiamas vaizdas…</string>
+  <string name="morphe_post_image_download_saved_single">Vaizdas išsaugotas į %s</string>
+  <string name="morphe_post_image_download_failed">Nepavyko atsisiųsti vaizdo</string>
+  <string name="morphe_post_image_download_not_found">Šiame įraše vaizdo nerasta</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Pridėti „Ask“ elementą į iškylančiąjį meniu</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Pridėti vaizdo įrašo apibendrinimo elementą į feed\'o iškylančiąjį meniu</string>
@@ -882,6 +892,7 @@ Norėdami gauti prieigą prie nustatymų, įgalinkite Nustatymų mygtuką: Bendr
   <string name="morphe_navigation_bar_style_entry_2">Šviesu</string>
   <string name="morphe_navigation_bar_style_entry_3">Skaidrus</string>
   <string name="morphe_navigation_bar_style_entry_4">Nepermatomas</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Šio stiliaus jūsų įrenginys arba „YouTube“ versija gali nepalaikyti, vilketas gali sukelti išdėstymo problemų arba programos lūžimus</string>
   <string name="morphe_toolbar_screen_title">Įrankių juosta</string>
   <string name="morphe_toolbar_screen_summary">Pasirinkite, kurie komponentai rodomi įrankių juostoje</string>
   <string name="morphe_hide_toolbar_cast_button_title">Slėpti „Cast“ mygtuką</string>
@@ -1109,7 +1120,9 @@ Automobilio maketas
   <string name="morphe_tablet_layout_in_player_summary">"Atkuria senąjį grotuvo maketą
 
 Apribojimas: jei parinktis „Atkurti senąją vaizdo įrašo veiksmų juostą“ išjungta, perdanga „Daugiau vaizdo įrašų“ gali būti nepasiekiama"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Įgalinus šią parinktį gali būti sugriauta kai kurie grojimo plano elementai, pvz., komentarų skiltis arba „Daugiau vaizdo įrašų“ rodymas po valdikliu</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Įjungus šią funkciją gali neveikti kai kurios grotuvo išdėstymo funkcijos, pavyzdžiui, komentarų skiltis arba po grotuvu rodomi „Kiti vaizdo įrašai“.
+
+„YouTube“ nebepalaiko planšetinio išdėstymo, todėl naujesnėse „YouTube“ versijose jis veikia dalinai arba visai neveikia. Norėdami gauti veikiančią planšetinio išdėstymo versiją, naudokite „YouTube“ 20.21.37 pataisą"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 – Atkurti senąją subtitrų elgseną</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 – atkurti senąjį išsaugojimą į grojaraštį</string>
@@ -1377,6 +1390,11 @@ Vaizdo įrašai užklausiami pagal trumpą maišyto vaizdo įrašo ID priešdėl
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Rodo pranešimą, kai išsaugomas naujas numatytasis atkūrimo greitis</string>
   <string name="morphe_playback_speed_default_title">Numatytasis atkūrimo greitis</string>
   <string name="morphe_shorts_playback_speed_default_title">Numatytoji „Shorts“ vaizdo įrašo atkūrimo sparta</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Prisiminti atkūrimo greitį Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Tavo rankiniu būdu pasirinktas Shorts greitis bus taikomas visiems būsimiems Shorts. Jei išjungta, uždarius Shorts grotuvą, greitis grįžta į standartinį</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Rodyti atkūrimo greitį Shorts meniu</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Prideda atkūrimo greities punktą į Shorts grotuvo meniu</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Atgrojimo greitis · %s</string>
   <string name="morphe_remember_playback_speed_toast">Numatytasis atkūrimo greitis pakeistas į: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Muzikai naudoti įprastą greitį</string>
   <string name="morphe_disable_playback_speed_music_summary">Muzikos vaizdo įrašus visada leisti 1,0x greičiu</string>

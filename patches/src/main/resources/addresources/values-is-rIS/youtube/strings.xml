@@ -425,6 +425,17 @@ Tilkynningar eru opinberar og endurskoðaðar áður en rás er bætt við lista
   <string name="morphe_feed_long_press_menu_summary">Þegar þú smeltir og heldur niður einhversstaðar á feed-myndbandi opnast valmynd þess</string>
   <string name="morphe_feed_watch_later_button_title">Sýna hnappinn \"Skjáa síðar\" á þumabörðum</string>
   <string name="morphe_feed_watch_later_button_summary">Hnappurinn \"Skjáa síðar\" birtist á þumabörðum feed-mynda. Þegar þú smeltir og heldur honum niður opnarðu Vista í spilunarlista</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Sækja niður myndir úr færslum</string>
+  <string name="morphe_post_image_download_summary">Sækkjunarhnappur birtist við hliðina á deiluhnappi færslna með myndum eða GIF-um, og sækkjunarmatrixi er bætt við valmynd þeirra</string>
+  <string name="morphe_post_image_download_flyout">Sækja niður myndir</string>
+  <string name="morphe_post_image_download_flyout_single">Sækja niður mynd</string>
+  <string name="morphe_post_image_download_started">Sæki niður %s myndir…</string>
+  <string name="morphe_post_image_download_started_single">Hleður niður mynd…</string>
+  <string name="morphe_post_image_download_saved">%1$s myndir vistar í %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Mynd vist í %s</string>
+  <string name="morphe_post_image_download_failed">Gat ekki hlaðið niður myndinni</string>
+  <string name="morphe_post_image_download_not_found">Engin mynd fannst í þessu færslunni</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Bæta Ask hlut í útflytvalmynd</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Bætir myndbandssamantektarefni í færiborðsútflytvalynduna</string>
@@ -868,6 +879,7 @@ Til að laga þetta skaltu kveikja á 'Spoofa myndstreymi' og breyta 'Sjálfgefn
   <string name="morphe_navigation_bar_style_entry_2">Hálfgagnsætt</string>
   <string name="morphe_navigation_bar_style_entry_3">Gagnsætt</string>
   <string name="morphe_navigation_bar_style_entry_4">Ógagnsætt</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Þessi stíll gæti ekki ráðinn af tækinu þínu eða YouTube útgáfunni og getur valdið vandamálum við uppsetningu eða hruni</string>
   <string name="morphe_toolbar_screen_title">Tólaborð</string>
   <string name="morphe_toolbar_screen_summary">Veldu hvaða þættir birtast á verkfærastikunni</string>
   <string name="morphe_hide_toolbar_cast_button_title">Felur Cast hnappinn</string>
@@ -1092,7 +1104,9 @@ Bílaútlit
   <string name="morphe_tablet_layout_in_player_summary">"Endurskipar gamla útlit spilarans
 
 Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleiri myndbönd' lagskiptarinn ekki verið tiltæk"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Virkun þessa gæti truflað suma spilunaruppsetningar eiginleika, svo sem athugasemdahluta eða „Fleiri myndbönd“ sýnd neðan við spilarann</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Með því að virkja þetta gætu sumir eiginleikar uppsetningar spilarans skemst, svo sem athugasemdadeildin eða \"Meiri myndbönd\" sem sýnd eru neðan spilarans.
+
+Uppsetning fyrir spjaldtölvur er ekki lengur studduð af YouTube og er að hluta eða algjörlega óvirkar í nýlegum YouTube útgáfum. Til að fá virka uppsetningu fyrir spjaldtölvur, uppfærið YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Endurheimta gamla textahegðun</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Endursafnaðu gamla vistun á spilalista</string>
@@ -1360,6 +1374,11 @@ Myndbönd eru beðin um með stuttu forskeyti af dulkóðaða myndbandskenni, sv
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Sýnir tilkynningu þegar nýja sjálfgild hraða er vistað</string>
   <string name="morphe_playback_speed_default_title">Sjálfgefin hríf</string>
   <string name="morphe_shorts_playback_speed_default_title">Grunn-spilunartíðni á Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Muna spilnunarhraða í Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Beitur handvirka hraða Shorts til allra framtíðar Shorts. Ef þetta er slökkt snýr hraðinn aftur í sjálfgefið eftir að Shorts spilaranum er lokað</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Sýna endurtilspilunarhraða í Shorts valmyndinni</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Bætir endurtilspilunarhraða í valmynd Shorts spilarans</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Endurtilspilunarhraði · %s</string>
   <string name="morphe_remember_playback_speed_toast">Breytt sjálfvirka hraða í: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Notaðu venjulegan hraða fyrir tónlist</string>
   <string name="morphe_disable_playback_speed_music_summary">Spila alltaf tónlistarmyndbönd á 1,0x hraða</string>

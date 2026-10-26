@@ -435,6 +435,17 @@ Rapoartele sunt publice și sunt analizate înainte ca un canal să fie adăugat
   <string name="morphe_feed_long_press_menu_summary">Atingerea și menținerea apăsării oriunde pe un video din feed deschide meniul acestuia</string>
   <string name="morphe_feed_watch_later_button_title">Arată butonul „Vizionează mai târziu” pe miniaturi</string>
   <string name="morphe_feed_watch_later_button_summary">Un buton Vizionează mai târziu este afișat pe miniaturile videoclipurilor din feed. Atingerea și menținerea apăsării asupra lui deschide Opțiuni salvare playlist</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Descarcă imaginile postării</string>
+  <string name="morphe_post_image_download_summary">Un buton de descărcare este afișat lângă butonul Share al postărilor cu imagini sau GIF-uri, iar un element de descărcare este adăugat în meniul acestora</string>
+  <string name="morphe_post_image_download_flyout">Descarcă imaginile</string>
+  <string name="morphe_post_image_download_flyout_single">Descarcă imaginea</string>
+  <string name="morphe_post_image_download_started">Se descarcă %s imagini…</string>
+  <string name="morphe_post_image_download_started_single">Se descarcă imaginea…</string>
+  <string name="morphe_post_image_download_saved">%1$s imagini salvate în %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Imaginea a fost salvată în %s</string>
+  <string name="morphe_post_image_download_failed">Imaginea nu a putut fi descărcată</string>
+  <string name="morphe_post_image_download_not_found">Nu s-a găsit nicio imagine în această postare</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Adăugarea elementului Ask la meniul flyout</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Adaugă un element de sumarizare video în meniul flyout al șirului de alimentare</string>
@@ -882,6 +893,7 @@ Pentru a accesa Setările, activați butonul Setări prin General → Bara de in
   <string name="morphe_navigation_bar_style_entry_2">Translucid</string>
   <string name="morphe_navigation_bar_style_entry_3">Transparent</string>
   <string name="morphe_navigation_bar_style_entry_4">Opac</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Acest stil s-ar putea să nu fie suportat de dispozitivul tău sau de versiunea de YouTube și poate cauza probleme de layout sau prăbușiri</string>
   <string name="morphe_toolbar_screen_title">Bara de navigare</string>
   <string name="morphe_toolbar_screen_summary">Ascunde previzualizarea videoclipului următor în ecran complet înainte de începerea redării automate</string>
   <string name="morphe_hide_toolbar_cast_button_title">Ascunde butonul Distribuție</string>
@@ -1109,7 +1121,9 @@ Aspect auto
   <string name="morphe_tablet_layout_in_player_summary">"Restabilește aspectul vechi al playerului
 
 Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, stratul 'Mai multe videoclipuri' ar putea să nu fie disponibil"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Activarea acestei opțiuni poate afecta unele caracteristici ale aspectului player-ului, cum ar fi secțiunea de comentarii sau „Mai multe videoclipuri” afișată sub player</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Activarea acestei opțiuni poate afecta unele funcții de layout ale playerului, cum ar fi secțiunea de comentarii sau „Mai multe videoclipuri” afișate sub player.
+
+Layout-ul pentru tabletă nu mai este suportat de YouTube și este parțial sau complet defect în versiunile recente de YouTube. Pentru un layout de tabletă funcțional, patch-uiește YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Restabilește comportamentul vechi al subtitrărilor</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restore old save to playlist</string>
@@ -1377,6 +1391,11 @@ Videoclipurile sunt solicitate printr-un prefix scurt al ID-ului video cu hash, 
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Afișează o notificare când se salvează o viteză de redare implicită nouă</string>
   <string name="morphe_playback_speed_default_title">Viteza de redare implicită</string>
   <string name="morphe_shorts_playback_speed_default_title">Viteza de redare implicită pe Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Memorează viteza de redare pentru Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Aplică selecția manuală a vitezei pentru Shorts tuturor clipurilor Shorts viitoare. Dacă este dezactivată, viteza revine la cea implicită după închiderea playerului Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Afișează viteza de redare în meniul Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Adaugă un element de viteză de redare în meniul playerului Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Viteză de redare · %s</string>
   <string name="morphe_remember_playback_speed_toast">Viteza de redare implicită a fost modificată la: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Utilizaţi viteza normală pentru muzică</string>
   <string name="morphe_disable_playback_speed_music_summary">Reda înviteza videoclipurile muzicale în mod constant la 1.0x</string>

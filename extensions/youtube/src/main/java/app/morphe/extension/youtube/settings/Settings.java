@@ -120,6 +120,8 @@ public class Settings extends SharedYouTubeSettings {
     public static final FloatSetting PLAYBACK_SPEED_DEFAULT = new FloatSetting("morphe_playback_speed_default", -2.0f);
     // -2.0f is YouTube's "auto" entry and disables the Shorts override.
     public static final FloatSetting SHORTS_PLAYBACK_SPEED_DEFAULT = new FloatSetting("morphe_shorts_playback_speed_default", -2.0f);
+    public static final BooleanSetting SHORTS_REMEMBER_PLAYBACK_SPEED = new BooleanSetting("morphe_shorts_remember_playback_speed", FALSE);
+    public static final BooleanSetting SHORTS_PLAYBACK_SPEED_FLYOUT_BUTTON = new BooleanSetting("morphe_shorts_playback_speed_flyout_button", TRUE);
     public static final FloatSetting PLAYBACK_AUDIO_PITCH_DEFAULT = new FloatSetting("morphe_playback_audio_pitch_default", -2.0f);
     public static final BooleanSetting CUSTOM_SPEED_MENU = new BooleanSetting("morphe_custom_speed_menu", TRUE);
     public static final BooleanSetting DISABLE_PLAYBACK_SPEED_MUSIC = new BooleanSetting("morphe_disable_playback_speed_music", FALSE, true);
@@ -356,6 +358,9 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting VIDEO_QUALITY_DIALOG_BUTTON = new BooleanSetting("morphe_video_quality_dialog_button", FALSE, true);
     public static final BooleanSetting VIDEO_QUALITY_DIALOG_BUTTON_RESOLUTION = new BooleanSetting("morphe_video_quality_dialog_button_resolution", FALSE, parent(VIDEO_QUALITY_DIALOG_BUTTON));
 
+    // Post image download
+    public static final BooleanSetting POST_IMAGE_DOWNLOAD = new BooleanSetting("morphe_post_image_download", TRUE);
+
     // Feed view count
     public static final BooleanSetting FEED_VIEW_COUNT = new BooleanSetting("morphe_feed_view_count", FALSE, true);
     public static final StringSetting FEED_VIEW_COUNT_PATHS = new StringSetting("morphe_feed_view_count_paths", "", false, false);
@@ -578,7 +583,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting NARROW_NAVIGATION_BUTTONS = new BooleanSetting("morphe_narrow_navigation_buttons", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));
     public static final BooleanSetting DISABLE_AUTO_HIDE_NAVIGATION_BAR = new BooleanSetting("morphe_disable_auto_hide_navigation_bar", FALSE, true, parentNot(HIDE_NAVIGATION_BAR));
     public static final BooleanSetting NAVIGATION_BAR_ANIMATIONS = new BooleanSetting("morphe_navigation_bar_animations", FALSE, parentNot(HIDE_NAVIGATION_BAR));
-    public static final EnumSetting<NavigationBarStyle> NAVIGATION_BAR_STYLE = new EnumSetting<>("morphe_navigation_bar_style", NavigationBarStyle.DEFAULT, true, parentNot(HIDE_NAVIGATION_BAR));
+    public static final EnumSetting<NavigationBarStyle> NAVIGATION_BAR_STYLE = new EnumSetting<>("morphe_navigation_bar_style", NavigationBarStyle.DEFAULT, true, "morphe_navigation_bar_style_user_dialog_message", parentNot(HIDE_NAVIGATION_BAR));
 
     // Toolbar
     public static final BooleanSetting HIDE_TOOLBAR_CAST_BUTTON = new BooleanSetting("morphe_hide_toolbar_cast_button", TRUE, true);

@@ -17,6 +17,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
+import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -53,10 +55,12 @@ import app.morphe.extension.youtube.patches.AddToQueuePatch;
 import app.morphe.extension.youtube.patches.FeedVideoActionsPatch;
 import app.morphe.extension.youtube.patches.LocalQueuePatch;
 import app.morphe.extension.youtube.patches.PictureinPictureButtonPatch;
+import app.morphe.extension.youtube.patches.PostImageDownloadPatch;
 import app.morphe.extension.youtube.patches.SaveToWatchLaterPatch;
 import app.morphe.extension.youtube.patches.VideoDelayPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
 import app.morphe.extension.youtube.patches.components.PlayerFlyoutMenuComponentsFilter;
+import app.morphe.extension.youtube.patches.playback.speed.ShortsPlaybackSpeedFlyoutPatch;
 import app.morphe.extension.youtube.patches.utils.requests.ChannelIdRequest;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.videoplayer.PictureinPictureButton;
@@ -322,6 +326,11 @@ public final class FlyoutUtils {
     private static boolean videoMarkedAsForKids;
     private static boolean isMyTabHistoryFlyout;
     private static boolean isShortFlyout;
+    /**
+     * If the open menu is the menu of the Shorts player, which has another layout
+     * and only gets the playback speed item.
+     */
+    private static boolean isShortsPlayerFlyout;
     private static ChannelIdRequest flyoutChannelIdRequest;
 
     public static byte[] getAsciiBytes(String string) {
@@ -485,6 +494,7 @@ public final class FlyoutUtils {
         flyoutPlaylistId = "";
         flyoutChannelId = "";
         flyoutChannelName = "";
+        isShortsPlayerFlyout = false;
     }
 
     private static void addFlyoutElements(Object flyoutPanel) {
@@ -494,7 +504,34 @@ public final class FlyoutUtils {
         // onto whatever this call adds instead.
         customItemTextRefs.clear();
 
+        isShortsPlayerFlyout = ShortsPlaybackSpeedFlyoutPatch.isPatchIncluded()
+                && ShortsPlaybackSpeedFlyoutPatch.showFlyoutButton(isShortFlyout);
+        if (isShortsPlayerFlyout) {
+            nextButtonIndex = ShortsPlaybackSpeedFlyoutPatch.addFlyoutButton(flyoutPanel, nextButtonIndex);
+        } else {
+            nextButtonIndex = addVideoFlyoutButtons(flyoutPanel, nextButtonIndex);
+        }
+
+        if (nextButtonIndex > 0) {
+            addFlyoutMenuItem(flyoutPanel, null, null, null, nextButtonIndex, true);
+        }
+
+        // Reset 'topFlyoutMenuVisible' field, once the buttons have been injected into the player's
+        // overlay settings, to prevent them from also being added into nested menus.
+        PlayerFlyoutMenuComponentsFilter.resetTopFlyoutMenuVisible();
+    }
+
+    private static int addVideoFlyoutButtons(Object flyoutPanel, int nextButtonIndex) {
         final String flyoutVideoId = getFlyoutVideoId();
+
+        // Only added to the menus of posts with images.
+        if (PostImageDownloadPatch.ENABLED) {
+            nextButtonIndex = PostImageDownloadPatch.addFlyoutButton(
+                    flyoutPanel,
+                    nextButtonIndex,
+                    senderViewRef.get()
+            );
+        }
 
         // region to show the following buttons only for specific flyout menus.
         final String allButtonsVideoId;
@@ -554,13 +591,7 @@ public final class FlyoutUtils {
             );
         }
 
-        if (nextButtonIndex > 0) {
-            addFlyoutMenuItem(flyoutPanel, null, null, null, nextButtonIndex, true);
-        }
-
-        // Reset 'topFlyoutMenuVisible' field, once the buttons have been injected into the player's
-        // overlay settings, to prevent them from also being added into nested menus.
-        PlayerFlyoutMenuComponentsFilter.resetTopFlyoutMenuVisible();
+        return nextButtonIndex;
     }
 
     /**
@@ -817,10 +848,37 @@ public final class FlyoutUtils {
         }
 
         if (menuContainer == null) {
-            return null;
+            return isShortsPlayerFlyout
+                    ? getShortsPlayerMenuInfo(flyoutPanel, popupWindow)
+                    : null;
         }
 
         return new FlyoutMenuInfo(menuContainer, adjustedIndex, popupWindow);
+    }
+
+    /**
+     * The menu container of the Shorts player menu is the vertical layout that holds the list of the menu.
+     * The items are injected above the list, so after the bottom sheet handle.
+     */
+    @Nullable
+    private static FlyoutMenuInfo getShortsPlayerMenuInfo(Object flyoutPanel, @Nullable PopupWindow popupWindow) {
+        View root = getFlyoutRootView(flyoutPanel);
+        if (root instanceof ViewGroup rootGroup) {
+            View child = Utils.getChildView(rootGroup, true,
+                    view -> view instanceof RecyclerView || view instanceof AbsListView);
+            ViewParent parent = child == null ? null : child.getParent();
+            while (parent instanceof ViewGroup parentGroup && child != root) {
+                if (parentGroup instanceof LinearLayout linearLayout
+                        && linearLayout.getOrientation() == LinearLayout.VERTICAL) {
+                    return new FlyoutMenuInfo(linearLayout, linearLayout.indexOfChild(child), popupWindow);
+                }
+                child = parentGroup;
+                parent = parentGroup.getParent();
+            }
+        }
+
+        Logger.printDebug(() -> "Shorts player menu container not found");
+        return null;
     }
 
     /**
@@ -840,6 +898,18 @@ public final class FlyoutUtils {
                 return linearLayout;
             }
             view = view instanceof ViewGroup viewGroup ? viewGroup.getChildAt(0) : null;
+        }
+        return null;
+    }
+
+    @Nullable
+    private static View getFlyoutRootView(Object flyoutPanel) {
+        if (flyoutPanel instanceof PopupWindow popupWindow) {
+            return popupWindow.getContentView();
+        }
+        if (flyoutPanel instanceof Dialog dialog) {
+            Window window = dialog.getWindow();
+            return window == null ? null : window.getDecorView();
         }
         return null;
     }

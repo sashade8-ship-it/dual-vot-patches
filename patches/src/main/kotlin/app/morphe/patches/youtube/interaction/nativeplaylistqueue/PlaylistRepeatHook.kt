@@ -11,11 +11,13 @@ import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.getReference
+import app.morphe.patches.youtube.misc.playservice.is_21_20_or_greater
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 /** Keep native repeat handling; turn only the owned queue's shuffle into a list command. */
 internal fun installPlaylistRepeat(
@@ -25,6 +27,7 @@ internal fun installPlaylistRepeat(
     val binding = PlaylistRepeatBindingFingerprint.match()
     val headerType = binding.originalClassDef.type
     val header = mutableClassDefBy(headerType)
+    val renderState = binding.instructionMatches.last().instruction.getReference<MethodReference>()!!
     val navigator = playlistHeaderNavigatorFingerprint(navigatorType)
         .instructionMatches.single().instruction.getReference<FieldReference>()!!
     val panel = playlistHeaderPanelFingerprint(binding.originalMethod)
@@ -42,11 +45,24 @@ internal fun installPlaylistRepeat(
         "Native playlist queue: repeat capabilities and state must share their native binder"
     }
 
-    val repeatAll = capabilities.instructionMatches[0].instruction.getReference<FieldReference>()!!
-    val repeatOne = capabilities.instructionMatches[2].instruction.getReference<FieldReference>()!!
-    check(repeatAll != repeatOne && repeatAll.definingClass == headerType && repeatOne.definingClass == headerType) {
+    val repeatFlags = capabilities.instructionMatches.mapNotNull {
+        it.instruction.getReference<FieldReference>()?.takeIf { field -> field.type == "Z" }
+    }
+    check(repeatFlags.size == 2 && repeatFlags.distinct().size == 2 &&
+            repeatFlags.all { it.definingClass == headerType }) {
         "Native playlist queue: repeat capabilities must be distinct fields on the bound header"
     }
+    val (repeatAll, repeatOne) = repeatFlags
+    // 21.16 installs the listener in the constructor. The supported 21.20+
+    // binders instead keep a listener field so they can hide/restore the action.
+    val restoreShuffleListener = if (is_21_20_or_greater) {
+        val listener = playlistShuffleListenerFingerprint(binding.originalMethod, shuffleView)
+            .instructionMatches[2].instruction.getReference<FieldReference>()!!
+        """
+            iget-object v1, p0, $listener
+            invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View${'$'}OnClickListener;)V
+        """
+    } else ""
 
     header.interfaces.add(REPEAT_HEADER_INTERFACE)
     header.addBridgeMethod(
@@ -86,16 +102,33 @@ internal fun installPlaylistRepeat(
         """
     )
 
+    // Reuse the native selected/loop-one drawable state after an owned panel bind.
+    header.addBridgeMethod(
+        "patch_setRepeatMode",
+        listOf("I"),
+        "V",
+        1,
+        """
+            const/4 v0, 0x0
+            invoke-virtual {p0, p1, v0}, $renderState
+            return-void
+        """
+    )
+
     header.addBridgeMethod(
         "patch_setShuffleAvailable",
         listOf("Z"),
         "V",
-        1,
+        2,
         """
             iget-object v0, p0, $shuffleView
             invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
-            const/4 p1, 0x0
-            invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setSelected(Z)V
+            # This runs only for the owned local queue. Native binders can hide an
+            # unsupported shuffle action and clear its listener; restore both.
+            const/4 v1, 0x0
+            invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+            invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setSelected(Z)V
+            $restoreShuffleListener
             return-void
         """
     )

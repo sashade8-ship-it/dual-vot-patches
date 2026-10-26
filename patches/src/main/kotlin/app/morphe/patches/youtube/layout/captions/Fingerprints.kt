@@ -523,3 +523,107 @@ internal fun getCaptionTrackEventFingerprint(trackType: String) = object : Finge
         )
     )
 ) {}
+
+/**
+ * Cue range manager seek. Its class also adds and removes cue ranges.
+ */
+internal object CueRangeManagerSeekFingerprint : Fingerprint(
+    returnType = "J",
+    parameters = listOf("J", "J", "Z"),
+    filters = listOf(
+        string("CueRangeManager", StringComparisonType.CONTAINS)
+    )
+)
+
+/**
+ * Server flag to start cue ranges that are added while the video time is inside them.
+ */
+internal object EnterCueRangeOnAddFeatureFlagFingerprint : Fingerprint(
+    returnType = "Z",
+    parameters = listOf(),
+    filters = listOf(
+        literal(45415907L)
+    )
+)
+
+/**
+ * Adds a list of cue ranges. Matches at the cast of each cue range and the flag check.
+ */
+internal fun getAddCueRangesFingerprint(enterCueRangeOnAddFlagMethod: MethodReference) = object : Fingerprint(
+    classFingerprint = CueRangeManagerSeekFingerprint,
+    returnType = "V",
+    parameters = listOf("Ljava/util/List;"),
+    filters = listOf(
+        methodCall(smali = "Ljava/util/Iterator;->next()Ljava/lang/Object;"),
+        opcode(Opcode.CHECK_CAST, MatchAfterWithin(2)),
+        methodCall(reference = enterCueRangeOnAddFlagMethod),
+        opcode(Opcode.MOVE_RESULT, MatchAfterImmediately())
+    )
+) {}
+
+/**
+ * Caption cue, a cue range with the caption windows it shows when it starts.
+ */
+internal fun getCaptionCueConstructorFingerprint(cueRangeType: String) = object : Fingerprint(
+    superclass = cueRangeType,
+    name = "<init>",
+    returnType = "V",
+    parameters = listOf("J", "J", "Ljava/util/List;", "L"),
+    filters = listOf(
+        methodCall(
+            definingClass = cueRangeType,
+            name = "<init>"
+        )
+    )
+) {}
+
+/**
+ * Captions of a fully loaded caption track.
+ * Matches at the field of the sorted times the captions change at.
+ */
+internal object CaptionWindowsConstructorFingerprint : Fingerprint(
+    name = "<init>",
+    returnType = "V",
+    parameters = listOf("Ljava/util/List;"),
+    filters = listOf(
+        newInstance("Ljava/util/TreeSet;"),
+        methodCall(smali = "Ljava/util/TreeSet;->addAll(Ljava/util/Collection;)Z"),
+        newInstance("Ljava/util/ArrayList;"),
+        methodCall(smali = "Lj$/util/DesugarCollections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;"),
+        opcode(Opcode.MOVE_RESULT_OBJECT, MatchAfterImmediately()),
+        fieldAccess(
+            opcode = Opcode.IPUT_OBJECT,
+            definingClass = "this",
+            type = "Ljava/util/List;",
+            location = MatchAfterImmediately()
+        )
+    )
+)
+
+/**
+ * Caption chunk loader. Matches at the field of the captions it loads from.
+ */
+internal fun getCaptionChunkLoaderConstructorFingerprint(captionWindowsType: String) = object : Fingerprint(
+    name = "<init>",
+    returnType = "V",
+    filters = listOf(
+        newInstance("Ljava/util/TreeMap;"),
+        fieldAccess(
+            opcode = Opcode.IPUT_OBJECT,
+            definingClass = "this",
+            type = captionWindowsType
+        )
+    )
+) {}
+
+/**
+ * Loads the caption cues that start in the chunk of a video time.
+ */
+internal fun getCaptionChunkLoaderFingerprint(loaderType: String) = object : Fingerprint(
+    definingClass = loaderType,
+    returnType = "V",
+    parameters = listOf("J"),
+    filters = listOf(
+        methodCall(smali = "Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V")
+    )
+) {}

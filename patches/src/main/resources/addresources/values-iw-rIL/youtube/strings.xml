@@ -435,6 +435,16 @@ Second \"item\" text"</string>
   <string name="morphe_feed_long_press_menu_summary">חיפוש ועורך בכל מקום בודק המשיר פתחם את מהשיר שלו</string>
   <string name="morphe_feed_watch_later_button_title">הצג את בטו׳דת \"הצג בידוע חור\" בתויערות</string>
   <string name="morphe_feed_watch_later_button_summary">בטו׳דת \"הצג בידוע חור\" תציע בתויערות של וידועי המשיר. חיפוש ועורך הו מזמן חסון לכריזה</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">הורדת תמונות פוסט</string>
+  <string name="morphe_post_image_download_summary">כפתור הורדה מוצג לצד כפתור השיתוף של פוסטים עם תמונות או GIF, ופריט הורדה מתווסף לתפריט שלהם</string>
+  <string name="morphe_post_image_download_flyout">הורדת תמונות</string>
+  <string name="morphe_post_image_download_flyout_single">הורדת תמונה</string>
+  <string name="morphe_post_image_download_started">הורדת %s תמונות...</string>
+  <string name="morphe_post_image_download_started_single">מוריד תמונה…</string>
+  <string name="morphe_post_image_download_saved_single">התמונה נשמרה ב-%s</string>
+  <string name="morphe_post_image_download_failed">לא ניתן להוריד את התמונה</string>
+  <string name="morphe_post_image_download_not_found">לא נמצאה תמונה בפוסט זה</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">הוספת פריט שאל לתפריט קיבול</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">מוסיף פריט סיכום וידאו לתפריט קיבול הזרם</string>
@@ -882,6 +892,7 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_style_entry_2">חצי שקוף</string>
   <string name="morphe_navigation_bar_style_entry_3">שקוף</string>
   <string name="morphe_navigation_bar_style_entry_4">אטום</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">סגנון זה עשוי שלא להיות נתמך על ידי המכשיר שלך או גרסת ה-YouTube, ועלול לגרום לבעיות פריסה או לקריסות</string>
   <string name="morphe_toolbar_screen_title">סרגל כלים</string>
   <string name="morphe_toolbar_screen_summary">בחר אילו רכיבים יופיעו בסרגל הכלים</string>
   <string name="morphe_hide_toolbar_cast_button_title">הסתר לחצן העברה</string>
@@ -1109,7 +1120,9 @@ Second \"item\" text"</string>
   <string name="morphe_tablet_layout_in_player_summary">"משחזר את פריסת הנגן הישנה
 
 מגבלה: אם \"שחזר סרגל הפעולות של הווידאו הישן\" כבוי, ייתכן ש-\"עוד סרטונים\" לא יהיה זמין"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">הפעלת פעולה זו עלולה לשבץ חלק מתכונות פריסת הנגן, כמו אזור התגובות או \'סרטונים נוספים\' המוצגים מתחת לנגן</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"הפעלת אפשרות זו עלולה לשבש חלק מתכונות הפריסה של הנגן, כגון אזור התגובות או \"סרטונים נוספים\" המוצגים מתחת לנגן.
+
+פריסת הטאבלט אינה נתמכת יותר על ידי YouTube, והיא פגומה חלקית או באופן מלא בגרסאות YouTube האחרונות. לקבלת פריסת טאבלט תקינה, יש להחיל פאץ' ל-YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - שחזור התנהגות הכתוביות הישנה</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - שחזר שפופרות ישנות לפלייליסט</string>
@@ -1377,6 +1390,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">מציג הודעה כאשר נשמרת מהירות הפעלה ברירת מחדל</string>
   <string name="morphe_playback_speed_default_title">מהירות הפעלה ברירת מחדל</string>
   <string name="morphe_shorts_playback_speed_default_title">מהירות הפעלה ברירת מחדל ב-Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">זכור מהירות הפעלה ב-Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">מחיל את בחירת מהירות ה-Shorts הידנית שלך על כל ה-Shorts בעתיד. אם האפשרות כבויה, המהירות תחזור לברירת המחדל לאחר סגירת נגן ה-Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">הצג מהירות הפעלה בתפריט ה-Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">מוסיף פריט של מהירות הפעלה לתפריט הנגן של Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">מהירות הפעלה · %s</string>
   <string name="morphe_remember_playback_speed_toast">מהירות ההשמעה המוגדרת כברירת מחדל שונתה ל: %s</string>
   <string name="morphe_disable_playback_speed_music_title">השתמש במהירות רגילה למוזיקה</string>
   <string name="morphe_disable_playback_speed_music_summary">נגן תמיד סרטוני מוזיקה במהירות 1.0x</string>

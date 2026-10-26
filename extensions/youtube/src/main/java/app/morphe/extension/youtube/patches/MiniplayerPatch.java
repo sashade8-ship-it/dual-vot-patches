@@ -569,6 +569,39 @@ public final class MiniplayerPatch {
 
     /**
      * Injection point.
+     *
+     * @return The orientation the list is laid out in.
+     */
+    public static int getListOrientation(View list) {
+        return list.getResources().getConfiguration().orientation;
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * After an orientation change, YouTube detaches and attaches a list again the next time its
+     * size changes, and the list is empty for a frame until its items are laid out again.
+     * Exiting fullscreen brings the list back with the size and orientation it had before,
+     * so nothing has to be rebuilt. Left pending, the list is rebuilt the next time its size
+     * changes for other reasons, such as when the player shrinks while scrolling the watch page,
+     * or when the home is laid out again after minimizing the player, and the black frame
+     * shows then.
+     *
+     * @param rebuildPending  If the list is rebuilt the next time its size changes.
+     * @param sizeOrientation The orientation the current size of the list was laid out in,
+     *                        or 0 if not known yet.
+     */
+    public static boolean getListRebuildPending(View list, boolean rebuildPending, int sizeOrientation) {
+        if (rebuildPending && sizeOrientation == getListOrientation(list)) {
+            Logger.printDebug(() -> "Skipping rebuild of list with unchanged size and orientation");
+            return false;
+        }
+
+        return rebuildPending;
+    }
+
+    /**
+     * Injection point.
      */
     public static int getMiniplayerDefaultSize(int original) {
         if (CURRENT_TYPE.isModern()) {

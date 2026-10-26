@@ -435,6 +435,17 @@ Báo cáo được công khai và được xem xét trước khi một kênh đ�
   <string name="morphe_feed_long_press_menu_summary">Chạm và giữ ở bất kỳ đâu trên video nguồn sẽ mở menu của video đó</string>
   <string name="morphe_feed_watch_later_button_title">Hiển thị nút Xem sau trên hình thu nhỏ</string>
   <string name="morphe_feed_watch_later_button_summary">Nút Xem sau được hiển thị trên hình thu nhỏ của các video nguồn. Chạm và giữ vào nút này để lưu vào danh sách phát</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Tải hình ảnh bài đăng</string>
+  <string name="morphe_post_image_download_summary">Một nút tải xuống sẽ hiển thị cạnh nút Chia sẻ của các bài đăng có hình ảnh hoặc GIF, và một mục tải xuống sẽ được thêm vào menu của chúng</string>
+  <string name="morphe_post_image_download_flyout">Tải các hình ảnh</string>
+  <string name="morphe_post_image_download_flyout_single">Tải hình ảnh</string>
+  <string name="morphe_post_image_download_started">Đang tải %s hình ảnh…</string>
+  <string name="morphe_post_image_download_started_single">Đang tải hình ảnh…</string>
+  <string name="morphe_post_image_download_saved">%1$s hình ảnh đã được lưu vào %2$s</string>
+  <string name="morphe_post_image_download_saved_single">Hình ảnh đã được lưu vào %s</string>
+  <string name="morphe_post_image_download_failed">Không thể tải hình ảnh</string>
+  <string name="morphe_post_image_download_not_found">Không tìm thấy hình ảnh nào trong bài viết này</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Thêm mục Hỏi vào menu bay ra</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Thêm mục tóm tắt video vào menu bay ra của nguồn cấp dữ liệu</string>
@@ -882,6 +893,7 @@ Cần thiết lập \"Cookie phụ đề\""</string>
   <string name="morphe_navigation_bar_style_entry_2">Bán trong suốt</string>
   <string name="morphe_navigation_bar_style_entry_3">Trong suốt</string>
   <string name="morphe_navigation_bar_style_entry_4">Đục</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Kiểu này có thể không được thiết bị hoặc phiên bản YouTube của bạn hỗ trợ, và có thể gây ra sự cố bố cục hoặc treo ứng dụng</string>
   <string name="morphe_toolbar_screen_title">Thanh công cụ</string>
   <string name="morphe_toolbar_screen_summary">Chọn những thành phần sẽ xuất hiện trên thanh công cụ</string>
   <string name="morphe_hide_toolbar_cast_button_title">Ẩn nút truyền</string>
@@ -1109,7 +1121,9 @@ Bố cục ô tô
   <string name="morphe_tablet_layout_in_player_summary">"Khôi phục bố cục trình phát cũ
 
 Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị tắt, lớp phủ \"Thêm video\" có thể không xuất hiện"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Việc bật tính năng này có thể làm hỏng một số tính năng bố trí trình phát, chẳng hạn như phần bình luận hoặc \'Video khác\' hiển thị bên dưới trình phát</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Việc bật tính năng này có thể làm hỏng một số tính năng bố cục của trình phát, chẳng hạn như phần bình luận hoặc 'Video khác' hiển thị bên dưới trình phát.
+
+Bố cục máy tính bảng không còn được YouTube hỗ trợ và bị hỏng một phần hoặc toàn bộ trên các phiên bản YouTube gần đây. Để có bố cục máy tính bảng hoạt động, hãy vá YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Khôi phục hành vi phụ đề cũ</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Khôi phục ‘Lưu vào danh sách phát’ kiểu cũ</string>
@@ -1377,6 +1391,11 @@ Video được yêu cầu bằng một tiền tố ngắn của ID video đã b�
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Hiển thị thông báo khi lưu tốc độ phát mặc định mới</string>
   <string name="morphe_playback_speed_default_title">Tốc độ phát mặc định</string>
   <string name="morphe_shorts_playback_speed_default_title">Tốc độ phát mặc định trên Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Nhớ tốc độ phát trên Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Áp dụng lựa chọn tốc độ Shorts thủ công của bạn cho tất cả các Shorts trong tương lai. Nếu tắt, tốc độ sẽ trở về mặc định sau khi đóng trình phát Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Hiện Tốc độ phát trong menu Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Thêm mục Tốc độ phát vào menu trình phát Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Tốc độ phát · %s</string>
   <string name="morphe_remember_playback_speed_toast">Đã đổi tốc độ phát mặc định thành: %s</string>
   <string name="morphe_disable_playback_speed_music_title">Sử dụng tốc độ phát bình thường đối với nhạc</string>
   <string name="morphe_disable_playback_speed_music_summary">Luôn phát video nhạc với tốc độ 1.0x</string>

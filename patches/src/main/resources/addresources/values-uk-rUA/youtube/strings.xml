@@ -435,6 +435,15 @@ Second \"item\" text"</string>
   <string name="morphe_feed_long_press_menu_summary">Натискання та утримування будь-де на відео в стрічці відкриває його меню</string>
   <string name="morphe_feed_watch_later_button_title">Показувати кнопку \"Дивитися пізніше\" на мініатюрах</string>
   <string name="morphe_feed_watch_later_button_summary">Кнопка \"Дивитися пізніше\" показується на мініатюрах відео в стрічці. Натискання та утримування її відкриває \"Зберегти в список відтворення\"</string>
+  <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">Завантажити зображення допису</string>
+  <string name="morphe_post_image_download_summary">Поруч із кнопкою «Поділитися» в допистах із зображеннями або GIF відображається кнопка завантаження, а в їхнє меню додається пункт завантаження</string>
+  <string name="morphe_post_image_download_flyout">Завантажити зображення</string>
+  <string name="morphe_post_image_download_flyout_single">Завантажити зображення</string>
+  <string name="morphe_post_image_download_started_single">Завантаження зображення…</string>
+  <string name="morphe_post_image_download_saved_single">Зображення збережено у %s</string>
+  <string name="morphe_post_image_download_failed">Не вдалося завантажити зображення</string>
+  <string name="morphe_post_image_download_not_found">У цьому дописі не знайдено зображень</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">Додати пункт \"Запитати\" у спливне меню</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">Додає пункт підсумовування відео до спливного меню стрічки</string>
@@ -474,9 +483,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_overlay_button_title">Показувати кнопку завантаження в оверлеї плеєра</string>
   <string name="morphe_external_downloader_overlay_button_summary">Показує кнопку у відеоплеєрі, яка відкриває ваш зовнішній завантажувач</string>
   <string name="morphe_external_downloader_quick_menu_title">Швидке завантаження одним натисканням</string>
-  <string name="morphe_external_downloader_quick_menu_summary">Запитує про завантаження у фоновому режимі. Натисніть і утримуйте, щоб відкрити програму для завантажень. Працює з YTDLnis та YTindir</string>
-  <string name="morphe_external_downloader_mark_watched_title">Позначати завантажені як переглянуті</string>
-  <string name="morphe_external_downloader_mark_watched_summary">Відео, завантажені зовнішньою програмою для завантажень, додаються до вашої історії переглядів YouTube</string>
+  <string name="morphe_external_downloader_quick_menu_summary">Запити на завантаження у фоновому режимі. Натисніть і утримуйте, щоб відкрити завантажувач. Працює з YTDLnis та YTindir</string>
+  <string name="morphe_external_downloader_mark_watched_title">Позначити завантаження як переглянуті</string>
+  <string name="morphe_external_downloader_mark_watched_summary">Відео, завантажені за допомогою зовнішнього завантажувача, додаються до історії переглядів YouTube</string>
   <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
   <string name="morphe_external_downloader_quick_audio_quality">Середнє (192 кбіт/с)</string>
   <string name="morphe_external_downloader_quick_menu_header">Швидке завантаження</string>
@@ -882,6 +891,7 @@ Second \"item\" text"</string>
   <string name="morphe_navigation_bar_style_entry_2">Напівпрозорий</string>
   <string name="morphe_navigation_bar_style_entry_3">Прозорий</string>
   <string name="morphe_navigation_bar_style_entry_4">Непрозорий</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">Цей стиль може не підтримуватися вашим пристроєм або версією YouTube, що може призвести до проблем із макетом або збоїв</string>
   <string name="morphe_toolbar_screen_title">Панель інструментів</string>
   <string name="morphe_toolbar_screen_summary">Виберіть, які компоненти будуть показуватися на панелі інструментів</string>
   <string name="morphe_hide_toolbar_cast_button_title">Приховати кнопку \"Трансляція\"</string>
@@ -1108,7 +1118,9 @@ Second \"item\" text"</string>
   <string name="morphe_tablet_layout_in_player_summary">"Відновлює старий макет плеєра
 
 Обмеження: якщо \"Відновити стару панель дій відео\" вимкнено, накладка \"Інші відео\" може бути недоступна"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">Увімкнення цієї функції може порушити роботу деяких елементів компонування плеєра, як-от розділ коментарів або \"Інші відео\" під плеєром</string>
+  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Увімкнення цієї функції може порушити деякі елементи макета плеєра, такі як розділ коментарів або «Більше відео», що відображаються під плеєром.
+
+Макет для планшетів більше не підтримується YouTube і частково або повністю не працює в останніх версіях YouTube. Для коректної роботи макета для планшетів встановіть патч для YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Відновити стару поведінку субтитрів</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Відновити старе збереження до списку відтворення</string>
@@ -1376,6 +1388,11 @@ Second \"item\" text"</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">Показує сповіщення при збереженні нової типової швидкості відтворення</string>
   <string name="morphe_playback_speed_default_title">Типова швидкість відтворення</string>
   <string name="morphe_shorts_playback_speed_default_title">Типова швидкість відтворення в Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Запам\'ятовувати швидкість відтворення в Shorts</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">Застосовує ваш ручний вибір швидкості Shorts до всіх наступних Shorts. Якщо вимкнено, швидкість повертається до стандартної після закриття плеєра Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Показувати швидкість відтворення в меню Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Додає пункт «Швидкість відтворення» до меню плеєра Shorts</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">Швидкість відтворення · %s</string>
   <string name="morphe_remember_playback_speed_toast">Типову швидкість відтворення змінено на %s</string>
   <string name="morphe_disable_playback_speed_music_title">Використовувати звичайну швидкість для музики</string>
   <string name="morphe_disable_playback_speed_music_summary">Завжди відтворювати музичні відео зі швидкістю 1.0x</string>
