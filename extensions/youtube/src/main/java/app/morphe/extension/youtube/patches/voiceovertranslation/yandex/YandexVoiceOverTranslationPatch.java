@@ -311,17 +311,21 @@ public class YandexVoiceOverTranslationPatch {
     private static volatile long translationGeneration = 0;
 
     public static void initialize(@SuppressWarnings("unused") VideoInformation.PlaybackController controller) {
-        VideoState.getOnChange().addObserver(state -> {
-            if (state == VideoState.PLAYING) {
-                Utils.runOnMainThread(() -> resumeAudio(-1));
-            } else {
-                Utils.runOnMainThread(() -> {
-                    mainHandler.removeCallbacks(pauseCheckRunnable);
-                    pauseAudio();
-                });
-            }
-            return kotlin.Unit.INSTANCE;
-        });
+        // A value-returning method reference supports both the Kotlin Function1
+        // event API and the Java Consumer API introduced in Morphe 1.49 dev.7.
+        VideoState.getOnChange().addObserver(YandexVoiceOverTranslationPatch::onVideoStateChanged);
+    }
+
+    private static kotlin.Unit onVideoStateChanged(VideoState state) {
+        if (state == VideoState.PLAYING) {
+            Utils.runOnMainThread(() -> resumeAudio(-1));
+        } else {
+            Utils.runOnMainThread(() -> {
+                mainHandler.removeCallbacks(pauseCheckRunnable);
+                pauseAudio();
+            });
+        }
+        return kotlin.Unit.INSTANCE;
     }
 
     public static void onVideoIdChanged(String videoId) {
