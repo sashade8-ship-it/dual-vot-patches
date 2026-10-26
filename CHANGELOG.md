@@ -1,3 +1,11 @@
+## 1.49.0-dev.7-dualvot.8.5.4 (2026-10-26)
+
+### Fixes
+
+* Fix the Yandex player-state crash caused by missing Kotlin runtime classes.
+* Fix PiP observer registration and removal without loading Kotlin on Java-only bases.
+* Add regression tests that run with Kotlin classes unavailable.
+
 ## 1.49.0-dev.7-dualvot.8.5.3 (2026-10-26)
 
 ### Automated Morphe update
