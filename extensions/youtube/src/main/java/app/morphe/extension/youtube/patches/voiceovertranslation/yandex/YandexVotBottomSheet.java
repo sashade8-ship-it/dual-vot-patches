@@ -35,6 +35,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
+import java.util.function.Consumer;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.Utils;
@@ -168,7 +169,14 @@ public class YandexVotBottomSheet {
             currentDialog = new WeakReference<>(dialog);
 
             // Dismiss when entering PiP mode.
-            Function1<PlayerType, Unit> playerTypeObserver = new Function1<>() {
+            // Keep one observer identity for registration and removal on both
+            // Kotlin Function1 (stable) and Java Consumer (Morphe 1.49 dev.7+).
+            class PlayerTypeObserver implements Function1<PlayerType, Unit>, Consumer<PlayerType> {
+                @Override
+                public void accept(PlayerType type) {
+                    invoke(type);
+                }
+
                 @Override
                 public Unit invoke(PlayerType type) {
                     SheetBottomDialog.SlideDialog current = currentDialog.get();
@@ -179,7 +187,8 @@ public class YandexVotBottomSheet {
                     }
                     return Unit.INSTANCE;
                 }
-            };
+            }
+            PlayerTypeObserver playerTypeObserver = new PlayerTypeObserver();
             PlayerType.getOnChange().addObserver(playerTypeObserver);
             dialog.setOnDismissListener(d -> {
                 PlayerType.getOnChange().removeObserver(playerTypeObserver);
