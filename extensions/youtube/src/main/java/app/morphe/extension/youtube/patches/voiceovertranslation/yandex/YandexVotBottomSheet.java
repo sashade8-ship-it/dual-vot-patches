@@ -47,8 +47,6 @@ import app.morphe.extension.shared.ui.SheetBottomDialog;
 import app.morphe.extension.youtube.patches.playback.speed.CustomPlaybackSpeedPatch;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function1;
 
 @SuppressWarnings("unused")
 public class YandexVotBottomSheet {
@@ -169,29 +167,24 @@ public class YandexVotBottomSheet {
             currentDialog = new WeakReference<>(dialog);
 
             // Dismiss when entering PiP mode.
-            // Keep one observer identity for registration and removal on both
-            // Kotlin Function1 (stable) and Java Consumer (Morphe 1.49 dev.7+).
-            class PlayerTypeObserver implements Function1<PlayerType, Unit>, Consumer<PlayerType> {
-                @Override
-                public void accept(PlayerType type) {
-                    invoke(type);
-                }
+            class PlayerTypeObserver implements Consumer<PlayerType> {
+                Runnable removeObserver;
 
                 @Override
-                public Unit invoke(PlayerType type) {
+                public void accept(PlayerType type) {
                     SheetBottomDialog.SlideDialog current = currentDialog.get();
                     if (current == null || !current.isShowing()) {
-                        PlayerType.getOnChange().removeObserver(this);
+                        removeObserver.run();
                     } else if (type == PlayerType.WATCH_WHILE_PICTURE_IN_PICTURE) {
                         current.dismiss();
                     }
-                    return Unit.INSTANCE;
                 }
             }
             PlayerTypeObserver playerTypeObserver = new PlayerTypeObserver();
-            PlayerType.getOnChange().addObserver(playerTypeObserver);
+            playerTypeObserver.removeObserver = YandexPlayerEvents.observe(
+                    PlayerType.getOnChange(), playerTypeObserver);
             dialog.setOnDismissListener(d -> {
-                PlayerType.getOnChange().removeObserver(playerTypeObserver);
+                playerTypeObserver.removeObserver.run();
                 TextView current = currentStatusText != null ? currentStatusText.get() : null;
                 if (current != null) current.removeCallbacks(STATUS_COUNTDOWN_TICK);
                 currentStatusText = null;
