@@ -393,6 +393,9 @@ Verslae is openbaar en word nagegaan voordat 'n kanaal by 'n lys gevoeg word. Ve
   <string name="morphe_hide_shopping_links_title">Verberg winkel skakels</string>
   <string name="morphe_hide_video_ads_title">Verberg video advertensies</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Verberg YouTube Premium-promosies</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Laai…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Huidige kanaal:</string>
   <string name="morphe_channel_whitelist_add">Voeg toe aan witlys</string>
@@ -409,6 +412,9 @@ Verslae is openbaar en word nagegaan voordat 'n kanaal by 'n lys gevoeg word. Ve
   <string name="morphe_channel_search_results">Kanaalsoekresultate</string>
   <string name="morphe_channel_search_no_results">Niks op hierdie kanaal gevind nie</string>
   <string name="morphe_channel_search_failed">Kon nie hierdie kanaal deursoek nie</string>
+  <string name="morphe_channel_search_videos">Video\'s</string>
+  <string name="morphe_channel_search_posts">Plasinge</string>
+  <string name="morphe_channel_search_no_posts">Geen plasinge op hierdie kanaal stem ooreen nie</string>
   <string name="morphe_channel_search_sort_relevance">Relevansie</string>
   <string name="morphe_channel_search_sort_most_viewed">Meeste gekyk</string>
   <string name="morphe_channel_search_sort_least_viewed">Minste gekyk</string>
@@ -494,6 +500,9 @@ Nadat 'n video met die Ask-knoppie een keer oopgemaak is, werk die funksie met a
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Klank</string>
   <string name="morphe_external_downloader_quick_options">Alle opsies</string>
+  <string name="morphe_shorts_download_flyout_button_title">Wys aflaai in Shorts-kieslys</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Voeg \'n eksterne aflaaier-uitvoukieslysitem by die Shorts-speler</string>
+  <string name="morphe_shorts_download_flyout_title">Aflaai</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Vertaalde stem over</string>
   <string name="morphe_vot_screen_summary">Lees video-onderskrifte hardop voor met behulp van teks-na-spraak op die toestel, gesinkroniseer met die afspeel</string>
@@ -1121,9 +1130,6 @@ Motoruitleg
   <string name="morphe_tablet_layout_in_player_summary">"Herstel die ou speleruitleg
 
 Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer video's' oorvleueling nie beskikbaar wees nie"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Die aktivering hiervan kan sommige speler-uitlegkenmerke breek, soos die kommentaar-afdeling of 'Meer video's' wat onder die speler vertoon word.
-
-Die tablet-uitleg word nie meer deur YouTube ondersteun nie, en is gedeeltelik of volledig gebreek in onlangse YouTube-weergawes. Vir 'n werkende tablet-uitleg, patch YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Herstel ou onderskrifgedrag</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Herstel ou stoor na snelys</string>
@@ -1626,4 +1632,17 @@ Automaties opname is opsioneel. Dit stop in incognito of wanneer die rekening ve
   <string name="morphe_series_tracker_no_search_results">Geen reekse gevind nie</string>
   <string name="morphe_series_tracker_untitled_episode">Ongenommerde aflaai</string>
   <string name="morphe_series_tracker_unavailable_episode">Onbeskikbaar aflaai</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico-kommentare</string>
+  <string name="morphe_niconico_comments_screen_summary">Wys regstreekse kletsteks en kletsteks-herhaling as kommentare wat oor die video rol</string>
+  <string name="morphe_niconico_comments_summary">Wys \'n oorleg-knoppie in die videospeler. Tik om kommentare te wys of weg te steek, tik en hou in vir vinnige instellings</string>
+  <string name="morphe_niconico_comments_font_size_title">Kommentaar-lettergrootte</string>
+  <string name="morphe_niconico_comments_font_size_summary">Teksgrootte van die kommentare (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Kommentaar-opasiteit</string>
+  <string name="morphe_niconico_comments_opacity_summary">Opasiteit van die kommentaar-teks en agtergronde</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Reisduur</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Hoeveel sekondes dit neem vir kommentaar om oor die skerm te beweeg. Laer waardes beweeg vinniger</string>
+  <string name="morphe_niconico_comments_max_length_title">Maksimum kommentarlengte</string>
+  <string name="morphe_niconico_comments_max_length_summary">Steek kommentaar weg met meer karakters as hierdie. Elke emoji tel as een karakter</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Geen limiet</string>
 </resources>

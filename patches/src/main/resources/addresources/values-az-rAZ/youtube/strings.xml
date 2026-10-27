@@ -393,6 +393,9 @@ Məhdudiyyətlər:
   <string name="morphe_hide_shopping_links_title">Alış-veriş linklərini gizlət</string>
   <string name="morphe_hide_video_ads_title">Video reklamlarını gizlət</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium reklamlarını gizlət</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Yüklənir…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Hazırkı kanal:</string>
   <string name="morphe_channel_whitelist_add">Ağ siyahıya əlavə et</string>
@@ -409,6 +412,9 @@ Məhdudiyyətlər:
   <string name="morphe_channel_search_results">Kanal axtarış nəticələri</string>
   <string name="morphe_channel_search_no_results">Bu kanalda heç nə tapılmadı</string>
   <string name="morphe_channel_search_failed">Bu kanalda axtarış etmək olmadı</string>
+  <string name="morphe_channel_search_videos">Videolar</string>
+  <string name="morphe_channel_search_posts">Postlar</string>
+  <string name="morphe_channel_search_no_posts">Bu kanalda uyğun post yoxdur</string>
   <string name="morphe_channel_search_sort_relevance">Uyğunluq</string>
   <string name="morphe_channel_search_sort_most_viewed">Ən çox baxılan</string>
   <string name="morphe_channel_search_sort_least_viewed">Ən az baxılan</string>
@@ -494,6 +500,7 @@ Məhdudiyyətlər:
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Səs</string>
   <string name="morphe_external_downloader_quick_options">Bütün seçimlər</string>
+  <string name="morphe_shorts_download_flyout_title">Yüklə</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Səs üstələyici tərcümə</string>
   <string name="morphe_vot_screen_summary">Cihazdakı mətni nitqə çevirməni istifadə edərək video titrlərini oynatma ilə sinxronlaşdırıb ucadan oxu</string>
@@ -1121,9 +1128,6 @@ Avtomobil tərtibatı
   <string name="morphe_tablet_layout_in_player_summary">"Köhnə oynadıcı tərtibatını bərpa edir
 
 Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'Daha çox video' örtüyü mövcud olmaya bilər"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Bunu aktivləşdirmək oynadıcının aşağısında göstərilən şərhlər bölməsi və ya 'Daha çox video' kimi bəzi oynadıcı tərtibatı xüsusiyyətlərini poza bilər.
-
-Planşet tərtibatı artıq YouTube tərəfindən dəstəklənmir və son YouTube versiyalarında qismən və ya tamamilə pozulub. İşlək planşet tərtibatı üçün YouTube 20.21.37-ni yamaqla"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Köhnə titrlərin davranışını bərpa et</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Köhnə pleylistdə saxlanı bərpa et</string>
@@ -1626,4 +1630,5 @@ Məhdudiyyət: Köhnə üslub üçün \"Daha çox video\" örtüyünə qayıdır
   <string name="morphe_series_tracker_no_search_results">Seriya tapılmadı</string>
   <string name="morphe_series_tracker_untitled_episode">Başlıqsız epizod</string>
   <string name="morphe_series_tracker_unavailable_episode">Əlçatmaz epizod</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
 </resources>

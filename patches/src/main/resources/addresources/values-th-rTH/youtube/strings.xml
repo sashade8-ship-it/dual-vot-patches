@@ -393,6 +393,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shopping_links_title">ซ่อนลิงก์ร้านค้า</string>
   <string name="morphe_hide_video_ads_title">ซ่อนโฆษณาวิดีโอ</string>
   <string name="morphe_hide_youtube_premium_promotions_title">ซ่อนการโปรโมต YouTube Premium</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">กำลังโหลด…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">ช่องปัจจุบัน:</string>
   <string name="morphe_channel_whitelist_add">เพิ่มลงในรายการที่อนุญาต</string>
@@ -409,6 +412,9 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">ผลการค้นหาช่อง</string>
   <string name="morphe_channel_search_no_results">ไม่พบผลลัพธ์ในช่องนี้</string>
   <string name="morphe_channel_search_failed">ไม่สามารถค้นหาช่องนี้ได้</string>
+  <string name="morphe_channel_search_videos">วิดีโอ</string>
+  <string name="morphe_channel_search_posts">โพสต์</string>
+  <string name="morphe_channel_search_no_posts">ไม่มีโพสต์ในช่องนี้ที่ตรงกัน</string>
   <string name="morphe_channel_search_sort_relevance">ความเกี่ยวข้อง</string>
   <string name="morphe_channel_search_sort_most_viewed">ดูมากที่สุด</string>
   <string name="morphe_channel_search_sort_least_viewed">ดูน้อยที่สุด</string>
@@ -494,6 +500,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_quick_video">วิดีโอ</string>
   <string name="morphe_external_downloader_quick_audio">เสียง</string>
   <string name="morphe_external_downloader_quick_options">ตัวเลือกทั้งหมด</string>
+  <string name="morphe_shorts_download_flyout_button_title">แสดงการดาวน์โหลดในเมนู Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_summary">เพิ่มรายการเมนู Flyout ของโปรแกรมดาวน์โหลดภายนอกในตัวเล่น Shorts</string>
+  <string name="morphe_shorts_download_flyout_title">ดาวน์โหลด</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">การแปลเสียงบรรยาย</string>
   <string name="morphe_vot_screen_summary">อ่านคำบรรยายวิดีโอออกเสียงด้วยระบบแปลงข้อความเป็นเสียงบนอุปกรณ์ โดยซิงโครไนซ์กับการเล่น</string>
@@ -1121,9 +1130,6 @@ Second \"item\" text"</string>
   <string name="morphe_tablet_layout_in_player_summary">"คืนรูปแบบเครื่องเล่นแบบเก่า
 
 ข้อจำกัด: หากปิด 'คืนแถบการทำงานของวิดีโอแบบเก่า' ภาพซ้อนทับ 'วิดีโอเพิ่มเติม' อาจใช้งานไม่ได้"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"การเปิดใช้งานสิ่งนี้อาจทำให้คุณสมบัติบางอย่างของเลย์เอาต์เครื่องเล่นเสียหาย เช่น ส่วนความคิดเห็นหรือ 'วิดีโอเพิ่มเติม' ที่แสดงด้านล่างเครื่องเล่น
-
-เลย์เอาต์สำหรับแท็บเล็ตไม่ได้รับการรองรับโดย YouTube อีกต่อไป และอาจใช้งานไม่ได้บางส่วนหรือทั้งหมดใน YouTube เวอร์ชันล่าสุด สำหรับเลย์เอาต์แท็บเล็ตที่ใช้งานได้ ให้แพตช์ YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - กู้คืนพฤติกรรมคำบรรยายแบบเดิม</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - คืนค่าไอคอนเครื่องเล่น Shorts เก่า</string>
@@ -1626,4 +1632,17 @@ AVC (H.264)
   <string name="morphe_series_tracker_no_search_results">ไม่พบซีรี่ส์</string>
   <string name="morphe_series_tracker_untitled_episode">ตอนที่ไม่มีชื่อเรื่อง</string>
   <string name="morphe_series_tracker_unavailable_episode">ตอนที่ไม่สามารถใช้งานได้</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">ความคิดเห็นแบบ Niconico</string>
+  <string name="morphe_niconico_comments_screen_summary">แสดงแชทสดและแชทรีเพลย์เป็นความคิดเห็นที่เลื่อนผ่านวิดีโอ</string>
+  <string name="morphe_niconico_comments_summary">แสดงปุ่มโอเวอร์เลย์ในเครื่องเล่นวิดีโอ แตะเพื่อแสดงหรือซ่อนความคิดเห็น แตะค้างไว้เพื่อเข้าสู่การตั้งค่าด่วน</string>
+  <string name="morphe_niconico_comments_font_size_title">ขนาดตัวอักษรของความคิดเห็น</string>
+  <string name="morphe_niconico_comments_font_size_summary">ขนาดข้อความของความคิดเห็น (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">ความโปร่งใสของความคิดเห็น</string>
+  <string name="morphe_niconico_comments_opacity_summary">ความโปร่งใสของข้อความความคิดเห็นและพื้นหลัง</string>
+  <string name="morphe_niconico_comments_travel_duration_title">ระยะเวลาในการเคลื่อนที่</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">จำนวนวินาทีที่ความคิดเห็นใช้ในการเลื่อนผ่านหน้าจอ ค่าที่น้อยกว่าจะเคลื่อนที่เร็วกว่า</string>
+  <string name="morphe_niconico_comments_max_length_title">ความยาวคอมเมนต์สูงสุด</string>
+  <string name="morphe_niconico_comments_max_length_summary">ซ่อนคอมเมนต์ที่มีตัวอักษรมากกว่าจำนวนนี้ แต่ละอิโมจิจะนับเป็นหนึ่งตัวอักษร</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">ไม่มีขีดจำกัด</string>
 </resources>

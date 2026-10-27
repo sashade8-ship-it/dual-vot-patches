@@ -383,6 +383,9 @@ Tilkynningar eru opinberar og endurskoðaðar áður en rás er bætt við lista
   <string name="morphe_hide_shopping_links_title">Fela verslunarhlökki</string>
   <string name="morphe_hide_video_ads_title">Fela vídeó auglýsingar</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Felaðu YouTube Premium kynningu</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Hlaða…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Núverandi rás:</string>
   <string name="morphe_channel_whitelist_add">Bæta við á hvítlista</string>
@@ -399,6 +402,9 @@ Tilkynningar eru opinberar og endurskoðaðar áður en rás er bætt við lista
   <string name="morphe_channel_search_results">Leitarniðurstöður rása</string>
   <string name="morphe_channel_search_no_results">Ekkert fannst á þessari rás</string>
   <string name="morphe_channel_search_failed">Ekki tókst að leita í þessari rás</string>
+  <string name="morphe_channel_search_videos">Myndbönd</string>
+  <string name="morphe_channel_search_posts">Póstar</string>
+  <string name="morphe_channel_search_no_posts">Engar færslur á þessum rás samsvara</string>
   <string name="morphe_channel_search_sort_relevance">Mikilvægi</string>
   <string name="morphe_channel_search_sort_most_viewed">Mest áhorft</string>
   <string name="morphe_channel_search_sort_least_viewed">Minnst áhorft</string>
@@ -484,6 +490,9 @@ Eftir að myndband með Ask hnappi hefur verið opnað einu sinni, virkar eiginl
   <string name="morphe_external_downloader_quick_video">Myndband</string>
   <string name="morphe_external_downloader_quick_audio">Hljóð</string>
   <string name="morphe_external_downloader_quick_options">Allar stillingar</string>
+  <string name="morphe_shorts_download_flyout_button_title">Sýna niðurhal í Shorts-valmynd</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Bætir við útvíkkuðu niðurhalstæki í Shorts-spilaranum</string>
+  <string name="morphe_shorts_download_flyout_title">Niðurhal</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Þýðing á raddsegulmagni</string>
   <string name="morphe_vot_screen_summary">Les upp undirtitla myndbandsins með texta-til-tala á tækinu, samhæmt með endursendingu</string>
@@ -1104,9 +1113,6 @@ Bílaútlit
   <string name="morphe_tablet_layout_in_player_summary">"Endurskipar gamla útlit spilarans
 
 Takmörkun: Ef 'Endurskapa gamla stjórnbara myndbands' er slökkt, gæti 'Fleiri myndbönd' lagskiptarinn ekki verið tiltæk"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Með því að virkja þetta gætu sumir eiginleikar uppsetningar spilarans skemst, svo sem athugasemdadeildin eða \"Meiri myndbönd\" sem sýnd eru neðan spilarans.
-
-Uppsetning fyrir spjaldtölvur er ekki lengur studduð af YouTube og er að hluta eða algjörlega óvirkar í nýlegum YouTube útgáfum. Til að fá virka uppsetningu fyrir spjaldtölvur, uppfærið YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Endurheimta gamla textahegðun</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Endursafnaðu gamla vistun á spilalista</string>
@@ -1603,4 +1609,17 @@ Takmörkun: Snýr aftur í gamla 'Fleiri myndbönd' yfirlagsstílinn"</string>
   <string name="morphe_series_tracker_no_search_results"> Engar raddir fundust </string>
   <string name="morphe_series_tracker_untitled_episode"> Ritlaus episod </string>
   <string name="morphe_series_tracker_unavailable_episode"> Ótiltæk episod </string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico athugasemdir</string>
+  <string name="morphe_niconico_comments_screen_summary">Sýna beina spjall og endurtöku spjalls sem athugasemdir sem renna yfir myndbandið</string>
+  <string name="morphe_niconico_comments_summary">Sýnir yfirlegga hnapp í myndbandaspilaranum. Ýttu til að sýna eða fela athugasemdir, ýttu og haltuu inni fyrir fljótstillingar</string>
+  <string name="morphe_niconico_comments_font_size_title">Leturstærð athugasemda</string>
+  <string name="morphe_niconico_comments_font_size_summary">Textastærð athugasemda (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Gegnumsýni athugasemda</string>
+  <string name="morphe_niconico_comments_opacity_summary">Gegnumsýni athugasemdatexta og bakgrunns</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Ferðatími</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Hversu margar sekúndur tekur athugasemdum að fara yfir skjáinn. Lægri gildi hreyfast hraðar</string>
+  <string name="morphe_niconico_comments_max_length_title">Hámarks lengd athugasemdar</string>
+  <string name="morphe_niconico_comments_max_length_summary">Fela athugasemdir sem innihalda fleiri staf en þetta. Hver tiltekni tákn taldist eins og einn stafur</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Engin takmörkun</string>
 </resources>

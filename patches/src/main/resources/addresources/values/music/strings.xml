@@ -605,8 +605,29 @@ Required cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
     <string name="morphe_music_lyrics_mediasession_summary">Shows the current line on the lock screen, Android Auto and Bluetooth. Needs Android 11 or newer</string>
     <string name="morphe_music_lyrics_miniplayer_title">Show Miniplayer Lyrics</string>
     <string name="morphe_music_lyrics_miniplayer_summary">Shows the current line in the miniplayer, with the track moved to the subtitle</string>
-    <string name="morphe_music_lyrics_display_artist_first_title">Artist and Title display order</string>
-    <string name="morphe_music_lyrics_display_artist_first_summary">Toggle the display order of Artist and Title in the Miniplayer and MediaSession. ON \"Artist - Title\" and OFF \"Title - Artist\" Does not affect lyrics search</string>
+    <string name="morphe_music_lyrics_mini_track_format_title">Song title/artist format</string>
+    <string name="morphe_music_lyrics_mini_track_format_summary">Format of the track shown with the lyrics in the Miniplayer and MediaSession. {t} is the title, {a} is the artist and {v} is the version, such as Acoustic, when the lyrics source provides one. Text between two colons is only shown when every variable inside it has a value; write \\: for a plain colon. Each line is shown in turn, moving on whenever the lyric changes</string>
+    <string name="morphe_music_lyrics_mini_encapsulation_title">Lyric line format</string>
+    <string name="morphe_music_lyrics_mini_encapsulation_summary">Format of the lyrics line in the Miniplayer and MediaSession. {lrc} is the line and {n} is how many times in a row it is sung. Text between colons is only shown when the line repeats. Use \\: for a colon</string>
+    <string name="morphe_music_lyrics_mini_encapsulation_invalid">The format must contain {lrc}</string>
+    <string name="morphe_music_lyrics_mini_track_format_menu_summary">Artist-line template and animation timing</string>
+    <string name="morphe_music_lyrics_mini_artist_min_label">Minimum screen time (ms)</string>
+    <string name="morphe_music_lyrics_mini_artist_max_label">Maximum screen time (ms)</string>
+    <string name="morphe_music_lyrics_mini_artist_timing_explanation">For multiline animations only. Keep each frame for at least the minimum time. At the maximum, advance the artist line even when the lyric stays the same.</string>
+    <string name="morphe_music_lyrics_mini_artist_timing_invalid">Minimum must be 0 or greater. Maximum must be greater than 0 and at least the minimum.</string>
+    <string name="morphe_music_lyrics_mini_line_limits_title">Line length limits</string>
+    <string name="morphe_music_lyrics_mini_line_limits_summary">Lyric and artist line limits, and full-width character weight</string>
+    <string name="morphe_music_lyrics_mini_line_limits_lyrics">"Lyric line limit
+Split longer lyrics into balanced halves. 0 disables splitting."</string>
+    <string name="morphe_music_lyrics_mini_line_limits_artist">"Artist line limit
+Split the populated track format into cycling frames. 0 disables splitting."</string>
+    <string name="morphe_music_lyrics_mini_line_limits_weight">"Full-width character weight
+Applies to both limits. At 1.75, four full-width characters count as 7."</string>
+    <string name="morphe_music_lyrics_mini_line_limits_invalid">Enter whole-number limits from 0 to 10000 and a character weight greater than 0</string>
+    <string name="morphe_music_lyrics_mini_instrumental_title">Instrumental break</string>
+    <string name="morphe_music_lyrics_mini_instrumental_summary">Shown in the Miniplayer and MediaSession during an instrumental break. Each line is one animation frame. {t} is the title, {a} is the artist and {lrc} is the last lyrics line</string>
+    <string name="morphe_music_lyrics_mini_next_offset_ms_title">Miniplayer and MediaSession timing offset</string>
+    <string name="morphe_music_lyrics_mini_next_offset_ms_summary">Shifts when the next line is shown in the Miniplayer and MediaSession. Use a negative value if lines show up late, for example on the lock screen</string>
     <string name="morphe_settings_music_lyrics_metadata_title">Filters</string>
     <string name="morphe_music_lyrics_custom_regex_title">Metadata regex</string>
     <string name="morphe_music_lyrics_custom_regex_summary">Regular expression applied to titles, artists, and albums before looking up lyrics and when scoring whether two titles match. Leave empty to disable both. The default removes common clutter like \"Official Video\", \"Remaster\", \"【插曲】\", and \"- Topic\"</string>
@@ -614,6 +635,10 @@ Required cookies: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID
     <string name="morphe_music_lyrics_text_filter_summary">Regular expression applied to the original lyrics text only (not translations or romanizations). Leave empty to disable</string>
     <string name="morphe_music_lyrics_credit_line_regex_title">Info line markers</string>
     <string name="morphe_music_lyrics_credit_line_regex_summary">If lyrics are incorrectly filtered to the bottom, adjust or clear this. Comma-separated markers: lines containing a marker followed by a colon are shown as credit info at the bottom. Leave empty to disable</string>
+    <string name="morphe_music_lyrics_force_capitalize_title">Capitalize first letter</string>
+    <string name="morphe_music_lyrics_force_capitalize_summary">Capitalizes the first letter of each lyrics line</string>
+    <string name="morphe_music_lyrics_strip_trailing_punctuation_title">Remove trailing punctuation</string>
+    <string name="morphe_music_lyrics_strip_trailing_punctuation_summary">Removes full stops, commas, colons and semicolons at the end of lyrics lines. Question marks, exclamation marks, ellipses, quotes and brackets are kept</string>
     <string name="morphe_music_lyrics_text_size_title">Text size</string>
     <string name="morphe_music_lyrics_text_size_summary">Size of the lyrics text</string>
     <string name="morphe_music_lyrics_offset_ms_title">Global timing offset</string>

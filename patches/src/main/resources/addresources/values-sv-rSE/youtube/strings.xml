@@ -393,6 +393,9 @@ Rapporter är offentliga och granskas innan en kanal läggs till i en lista. Bor
   <string name="morphe_hide_shopping_links_title">Dölj butikslänkar</string>
   <string name="morphe_hide_video_ads_title">Dölj videoannonser</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Dölj YouTube Premium-kampanjer</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Läser in …</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Nuvarande kanal:</string>
   <string name="morphe_channel_whitelist_add">Lägg till i vitlistan</string>
@@ -409,6 +412,9 @@ Rapporter är offentliga och granskas innan en kanal läggs till i en lista. Bor
   <string name="morphe_channel_search_results">Sökresultat för kanaler</string>
   <string name="morphe_channel_search_no_results">Inget hittades i den här kanalen</string>
   <string name="morphe_channel_search_failed">Det gick inte att söka i den här kanalen</string>
+  <string name="morphe_channel_search_videos">Videor</string>
+  <string name="morphe_channel_search_posts">Inlägg</string>
+  <string name="morphe_channel_search_no_posts">Inga inlägg i den här kanalen matchar</string>
   <string name="morphe_channel_search_sort_relevance">Relevans</string>
   <string name="morphe_channel_search_sort_most_viewed">Mest visade</string>
   <string name="morphe_channel_search_sort_least_viewed">Minst visade</string>
@@ -442,6 +448,7 @@ Rapporter är offentliga och granskas innan en kanal läggs till i en lista. Bor
   <string name="morphe_post_image_download_flyout_single">Ladda ned bild</string>
   <string name="morphe_post_image_download_started">Laddar ned %s bilder …</string>
   <string name="morphe_post_image_download_started_single">Laddar ned bild…</string>
+  <string name="morphe_post_image_download_saved">%1$s bilder sparade till %2$s</string>
   <string name="morphe_post_image_download_saved_single">Bilden sparades i %s</string>
   <string name="morphe_post_image_download_failed">Det gick inte att ladda ned bilden</string>
   <string name="morphe_post_image_download_not_found">Ingen bild hittades i det här inlägget</string>
@@ -493,6 +500,9 @@ När en video med Ask-knappen har öppnats en gång fungerar funktionen med alla
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Ljud</string>
   <string name="morphe_external_downloader_quick_options">Alla alternativ</string>
+  <string name="morphe_shorts_download_flyout_button_title">Visa nedladdning i Shorts-menyn</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Lägger till ett menyalternativ för extern nedladdare i Shorts-spelaren</string>
+  <string name="morphe_shorts_download_flyout_title">Ladda ned</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Voice over-översättning</string>
   <string name="morphe_vot_screen_summary">Läs upp video-textning med hjälp av enhetens text-till-tal, synkroniserat med uppspelning</string>
@@ -1120,9 +1130,6 @@ Billayout
   <string name="morphe_tablet_layout_in_player_summary">"Återställer den gamla spelarlayouten
 
 Begränsning: Om 'Återställ gammalt videoåtgärdsfält' är avstängt kan överlägget 'Fler videor' inte vara tillgängligt"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Om detta aktiveras kan vissa layoutfunktioner i spelaren sluta fungera, till exempel kommentarsfältet eller \"Fler videor\" som visas under spelaren.
-
-Surfplattelayout stöds inte längre av YouTube och är delvis eller helt trasig i nyare versioner av YouTube. För en fungerande surfplattelayout, patcha YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Återställ det gamla undertextbeteendet</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 – Återställ gamla Spara i spellista</string>
@@ -1625,4 +1632,17 @@ Automatisk inspelning är valfri. Den stoppas i inkognito-läge eller när konto
   <string name="morphe_series_tracker_no_search_results">Inga serier hittades</string>
   <string name="morphe_series_tracker_untitled_episode">Avsnitt utan titel</string>
   <string name="morphe_series_tracker_unavailable_episode">Otillgängligt avsnitt</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico-kommentarer</string>
+  <string name="morphe_niconico_comments_screen_summary">Visa livechatt och chattuppspelning som kommentarer som rullar över videon</string>
+  <string name="morphe_niconico_comments_summary">Visar en overlay-knapp i videospelaren. Tryck för att visa eller dölja kommentarer, tryck och håll kvar för snabbinställningar</string>
+  <string name="morphe_niconico_comments_font_size_title">Kommentarernas teckensnittsstorlek</string>
+  <string name="morphe_niconico_comments_font_size_summary">Textstorlek för kommentarerna (12–40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Kommentarernas opacitet</string>
+  <string name="morphe_niconico_comments_opacity_summary">Opacitet för kommentarstext och bakgrunder</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Rörelsens varaktighet</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Hur många sekunder kommentarerna tar på sig att korsa skärmen. Lägre värden rör sig snabbare</string>
+  <string name="morphe_niconico_comments_max_length_title">Max kommentarlängd</string>
+  <string name="morphe_niconico_comments_max_length_summary">Döljer kommentarer som har fler tecken än detta. Varje emoji räknas som ett tecken</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Ingen gräns</string>
 </resources>

@@ -111,7 +111,7 @@ public class SharedYouTubeSettings extends BaseSettings {
     public static final LongSetting EXTERNAL_POTOKEN_PROVIDER_EXPIRED_DIALOG_LAST_SHOWN = new LongSetting("morphe_external_potoken_provider_expired_dialog_last_shown", 0L, false, false);
 
     // Downloads
-    public static final EnumSetting<DownloadMode> DOWNLOAD_MODE = new EnumSetting<>("morphe_download_mode", DownloadMode.DEFAULT);
+    public static final EnumSetting<DownloadMode> DOWNLOAD_MODE = new EnumSetting<>("morphe_download_mode", DownloadMode.IN_APP);
     // YouTube only.
     public static final BooleanSetting EXTERNAL_DOWNLOADER_OVERLAY_BUTTON = new BooleanSetting("morphe_external_downloader_overlay_button", FALSE, true);
     // YouTube Music only.

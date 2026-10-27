@@ -74,6 +74,7 @@ public final class LithoFilterPatch {
     public interface ListSectionInterface {
         /**
          * Removes the item from the section, which lays itself out again without it.
+         * The rows of the grids are laid out again too, also when the section is no longer a grid.
          *
          * @return If the section has the item.
          */
@@ -279,6 +280,20 @@ public final class LithoFilterPatch {
 
     /**
      * Injection point.
+     * Called when a section of a list is released, such as when the list is created again.
+     * <p>
+     * A released section can share the list of its items with the section that replaces it.
+     * Removing an item through the released section would not lay out the rows of the new one
+     * again, and the rows that are views of the list would throw on the next access.
+     */
+    public static void removeListSection(ListSectionInterface section) {
+        synchronized (listSections) {
+            listSections.removeIf(reference -> reference.get() == section);
+        }
+    }
+
+    /**
+     * Injection point.
      * Called when the whole element is hidden.
      * <p>
      * Hiding an element replaces it with an empty component, but the item of the element stays
@@ -301,75 +316,62 @@ public final class LithoFilterPatch {
                     Object item = listItemDecorator.patch_getListItem();
                     if (item != null) {
                         // The lists can only be changed on the main thread.
-                        Utils.runOnMainThread(() -> removeListItem(item));
+                        Utils.runOnMainThread(() -> {
+                            // The sections group their items into the rows of some grids, such as
+                            // the related videos, and lay the rows out again. Other grids, such as
+                            // the feed, have a list for each item.
+                            List<ListSectionInterface> sections = new ArrayList<>();
+                            synchronized (listSections) {
+                                Iterator<WeakReference<ListSectionInterface>> iterator = listSections.iterator();
+                                while (iterator.hasNext()) {
+                                    ListSectionInterface section = iterator.next().get();
+                                    if (section == null) {
+                                        iterator.remove();
+                                        continue;
+                                    }
+                                    sections.add(section);
+                                }
+                            }
+
+                            // Removing the item notifies the list observers, so it is done outside the lock.
+                            for (ListSectionInterface section : sections) {
+                                if (section.patch_removeListItem(item)) {
+                                    Logger.printDebug(() -> "Removed list item of filtered element: " + item);
+                                    return;
+                                }
+                            }
+
+                            List<?> itemList = null;
+                            int itemIndex = -1;
+                            synchronized (observableLists) {
+                                Iterator<WeakReference<List<?>>> iterator = observableLists.iterator();
+                                while (iterator.hasNext()) {
+                                    List<?> list = iterator.next().get();
+                                    if (list == null) {
+                                        iterator.remove();
+                                        continue;
+                                    }
+
+                                    itemIndex = list.indexOf(item);
+                                    if (itemIndex >= 0) {
+                                        itemList = list;
+                                        break;
+                                    }
+                                }
+                            }
+
+                            // Removing the item notifies the list observers, so it is done outside the lock.
+                            if (itemList != null) {
+                                itemList.remove(itemIndex);
+                                Logger.printDebug(() -> "Removed list item of filtered element: " + item);
+                            }
+                        });
                     }
                 }
             }
         } catch (Exception ex) {
             Logger.printException(() -> "removeFilteredElementListItem failure", ex);
         }
-    }
-
-    private static void removeListItem(Object item) {
-        // The sections group their items into the rows of some grids, such as the related videos,
-        // and lay the rows out again. Other grids, such as the feed, have a list for each item.
-        if (removeListSectionItem(item) || removeObservableListItem(item)) {
-            Logger.printDebug(() -> "Removed list item of filtered element: " + item);
-        }
-    }
-
-    private static boolean removeListSectionItem(Object item) {
-        List<ListSectionInterface> sections = new ArrayList<>();
-        synchronized (listSections) {
-            Iterator<WeakReference<ListSectionInterface>> iterator = listSections.iterator();
-            while (iterator.hasNext()) {
-                ListSectionInterface section = iterator.next().get();
-                if (section == null) {
-                    iterator.remove();
-                    continue;
-                }
-                sections.add(section);
-            }
-        }
-
-        // Removing the item notifies the list observers, so it is done outside the lock.
-        for (ListSectionInterface section : sections) {
-            if (section.patch_removeListItem(item)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private static boolean removeObservableListItem(Object item) {
-        List<?> itemList = null;
-        int itemIndex = -1;
-
-        synchronized (observableLists) {
-            Iterator<WeakReference<List<?>>> iterator = observableLists.iterator();
-            while (iterator.hasNext()) {
-                List<?> list = iterator.next().get();
-                if (list == null) {
-                    iterator.remove();
-                    continue;
-                }
-
-                itemIndex = list.indexOf(item);
-                if (itemIndex >= 0) {
-                    itemList = list;
-                    break;
-                }
-            }
-        }
-
-        // Removing the item notifies the list observers, so it is done outside the lock.
-        if (itemList != null) {
-            itemList.remove(itemIndex);
-            return true;
-        }
-
-        return false;
     }
 
     private static boolean useLegacyLithoFiltering() {

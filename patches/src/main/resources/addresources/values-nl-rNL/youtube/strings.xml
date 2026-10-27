@@ -393,6 +393,9 @@ Rapporten zijn openbaar en worden beoordeeld voordat een kanaal aan een lijst wo
   <string name="morphe_hide_shopping_links_title">Winkellinks verbergen</string>
   <string name="morphe_hide_video_ads_title">Video-advertenties verbergen</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium promoties verbergen</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Bezig met laden…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Huidig kanaal:</string>
   <string name="morphe_channel_whitelist_add">Toevoegen aan de witte lijst</string>
@@ -409,6 +412,9 @@ Rapporten zijn openbaar en worden beoordeeld voordat een kanaal aan een lijst wo
   <string name="morphe_channel_search_results">Zoekresultaten voor kanalen</string>
   <string name="morphe_channel_search_no_results">Niets gevonden op dit kanaal</string>
   <string name="morphe_channel_search_failed">Kan dit kanaal niet doorzoeken</string>
+  <string name="morphe_channel_search_videos">Video\'s</string>
+  <string name="morphe_channel_search_posts">Berichten</string>
+  <string name="morphe_channel_search_no_posts">Geen berichten op dit kanaal komen overeen</string>
   <string name="morphe_channel_search_sort_relevance">Relevantie</string>
   <string name="morphe_channel_search_sort_most_viewed">Meest bekeken</string>
   <string name="morphe_channel_search_sort_least_viewed">Minst bekeken</string>
@@ -442,6 +448,7 @@ Rapporten zijn openbaar en worden beoordeeld voordat een kanaal aan een lijst wo
   <string name="morphe_post_image_download_flyout_single">Afbeelding downloaden</string>
   <string name="morphe_post_image_download_started">{one,1 afbeelding downloaden…|other,%s afbeeldingen downloaden…}</string>
   <string name="morphe_post_image_download_started_single">Afbeelding downloaden…</string>
+  <string name="morphe_post_image_download_saved">%1$s afbeeldingen opgeslagen in %2$s</string>
   <string name="morphe_post_image_download_saved_single">Afbeelding opgeslagen in %s</string>
   <string name="morphe_post_image_download_failed">De afbeelding kon niet worden gedownload</string>
   <string name="morphe_post_image_download_not_found">Geen afbeelding gevonden in dit bericht</string>
@@ -493,6 +500,9 @@ Nadat een video met de Ask-knop eenmaal is geopend, werkt de functie voor alle v
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Audio</string>
   <string name="morphe_external_downloader_quick_options">Alle opties</string>
+  <string name="morphe_shorts_download_flyout_button_title">\"Shorts\" weergeven in menu Downloaden</string>
+  <string name="morphe_shorts_download_flyout_button_summary">\"Shorts\"-speler krijgt item voor extern downloadmenu</string>
+  <string name="morphe_shorts_download_flyout_title">Download</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Spraakvertaling</string>
   <string name="morphe_vot_screen_summary">Lees ondertitels hardop voor met behulp van tekst-naar-spraak op het apparaat, gesynchroniseerd met het afspelen</string>
@@ -1118,9 +1128,6 @@ Automotive-indeling
   <string name="morphe_tablet_layout_in_player_summary">"Herstelt de oude player layout
 
 Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer video's\" overlay mogelijk niet beschikbaar"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Het inschakelen hiervan kan sommige lay-outfuncties van de speler verbreken, zoals de commentaarsectie of 'Meer video's' onder de speler.
-
-De tabletlay-out wordt niet langer ondersteund door YouTube en is gedeeltelijk of volledig defect in recente YouTube-versies. Voor een werkende tabletlay-out, patch YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Herstel het oude gedrag van ondertitels</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Herstel oude Shorts-speler pictogrammen</string>
@@ -1623,4 +1630,17 @@ Automatische registratie is optioneel. Deze stopt in incognito-modus of bij een 
   <string name="morphe_series_tracker_no_search_results">Geen series gevonden</string>
   <string name="morphe_series_tracker_untitled_episode">Naamloze aflevering</string>
   <string name="morphe_series_tracker_unavailable_episode">Niet beschikbare aflevering</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico-reacties</string>
+  <string name="morphe_niconico_comments_screen_summary">Toon livechat en chat-replays als reacties die over de video scrollen</string>
+  <string name="morphe_niconico_comments_summary">Toont een overlay-knop in de videospeler. Tik om de reacties te tonen of te verbergen, houd ingedrukt voor snelle instellingen</string>
+  <string name="morphe_niconico_comments_font_size_title">Lettertypegrootte reacties</string>
+  <string name="morphe_niconico_comments_font_size_summary">Tekstgrootte van de reacties (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Opaciteit reacties</string>
+  <string name="morphe_niconico_comments_opacity_summary">Opaciteit van de reactietekst en achtergronden</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Reistijd</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Hoeveel seconden reacties erover doen om het scherm te kruisen. Lagere waarden bewegen sneller</string>
+  <string name="morphe_niconico_comments_max_length_title">Maximale lengte van opmerking</string>
+  <string name="morphe_niconico_comments_max_length_summary">Verbergt opmerkingen met meer tekens dan dit. Elke emoji telt als één teken</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Geen limiet</string>
 </resources>

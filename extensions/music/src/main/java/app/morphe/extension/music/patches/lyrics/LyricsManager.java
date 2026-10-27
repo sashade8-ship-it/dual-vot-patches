@@ -34,19 +34,19 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import app.morphe.extension.music.patches.lyrics.derive.LyricsRomanizer;
 import app.morphe.extension.music.patches.lyrics.derive.SectionDetector;
 import app.morphe.extension.music.patches.lyrics.model.Lyrics;
 import app.morphe.extension.music.patches.lyrics.model.LyricsBracketSplitter;
 import app.morphe.extension.music.patches.lyrics.model.LyricsFilter;
 import app.morphe.extension.music.patches.lyrics.model.LyricsFilterDefaults;
 import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
-import app.morphe.extension.music.patches.lyrics.model.LyricsMerge;
 import app.morphe.extension.music.patches.lyrics.model.LyricsPreference;
 import app.morphe.extension.music.patches.lyrics.model.MetadataCleaner;
+import app.morphe.extension.music.patches.lyrics.model.MiniLyricsFormatter;
 import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
-import app.morphe.extension.music.patches.lyrics.model.Word;
+import app.morphe.extension.music.patches.lyrics.model.TrackVersion;
 import app.morphe.extension.music.patches.lyrics.parsers.CharactersConverter;
+import app.morphe.extension.music.patches.lyrics.requests.DeezerProvider;
 import app.morphe.extension.music.patches.lyrics.requests.LocalLyricsFetcher;
 import app.morphe.extension.music.patches.lyrics.requests.LunaBeatProvider;
 import app.morphe.extension.music.patches.lyrics.requests.LyricsProvider;
@@ -156,6 +156,10 @@ public final class LyricsManager {
     /** Content/file URI of the currently displayed track, when played from local storage. */
     @Nullable
     private volatile Uri currentMediaUri;
+
+    /** Version of the current track, for {v} of the track format. Null until it is looked up. */
+    @Nullable
+    private volatile TrackVersion currentVersion;
 
     /** Raw (un-cleaned) title/artist of the current track, used for the MediaStore lookup. */
     @Nullable
@@ -288,8 +292,6 @@ public final class LyricsManager {
         }
     }
 
-    private int lastHighlightedIndex = -1;
-
     private int temporaryOffsetMs = 0;
 
     private LyricsManager() {
@@ -300,6 +302,31 @@ public final class LyricsManager {
             MetadataCleaner.resolveSettingBlocking(LyricsFilterDefaults.LYRICS_CUSTOM_REGEX.get());
             MetadataCleaner.resolveSettingBlocking(LyricsFilterDefaults.LYRICS_TEXT_FILTER.get());
             MetadataCleaner.resolveSettingBlocking(LyricsFilterDefaults.LYRICS_CREDIT_LINE_REGEX.get());
+        });
+    }
+
+    /**
+     * Looks up the track's version on Deezer, only when the miniplayer or the media session
+     * show the track format and it has {v}. If the lookup fails, the title shows without {v}.
+     */
+    private void requestVersion(TrackInfo track) {
+        if (!Settings.LYRICS_ENABLED.get()
+                || !(Settings.LYRICS_MINIPLAYER.get() || Settings.LYRICS_MEDIASESSION.get())
+                || !MiniLyricsFormatter.usesVariant(Settings.LYRICS_MINI_TRACK_FORMAT.get())) {
+            return;
+        }
+        final TrackInfo query = TrackVersion.query(track, currentRawTitle, currentRawArtist);
+        runOnLookupThread(() -> {
+            final TrackVersion version;
+            try {
+                version = DeezerProvider.fetchVersion(query);
+            } catch (Exception ex) {
+                Logger.printInfo(() -> "Deezer version lookup failed", ex);
+                return;
+            }
+            if (track.equals(currentTrack)) {
+                currentVersion = version;
+            }
         });
     }
 
@@ -402,6 +429,11 @@ public final class LyricsManager {
     }
 
     @Nullable
+    public TrackVersion getCurrentVersion() {
+        return currentVersion;
+    }
+
+    @Nullable
     public String getCurrentRawTitle() {
         return currentRawTitle;
     }
@@ -426,7 +458,6 @@ public final class LyricsManager {
         lastFrameTimeUptimeMs = -1;
         estimate = 0;
         smoothPosition = 0;
-        lastHighlightedIndex = -1;
     }
 
     private void updateSample(long newPosition, long now) {
@@ -684,6 +715,10 @@ public final class LyricsManager {
         currentMediaUri = mediaUri;
         currentTrack = track;
         currentVideoId = videoId;
+        if (!sameTrack) {
+            currentVersion = null;
+            requestVersion(track);
+        }
         // Only reached on a real track change, so a loop cannot discard the offset it comes round for again.
         temporaryOffsetMs = TrackOffsetStore.get(track);
         // A rebinding keeps the previous track's lyric, which is what makes it worth
@@ -835,7 +870,6 @@ public final class LyricsManager {
         }
         shownFingerprints.clear();
         filteredCache.clear();
-        lastHighlightedIndex = -1;
         suppressForRequest = -1;
         staleLyricsDropped = false;
         preferredFingerprint = null;
@@ -2295,25 +2329,25 @@ private void reorderQueueByRemembered() {
         });
     }
 
-    @NonNull
-    public String getCurrentLineText() {
-        Lyrics lyrics = currentLyrics;
-        if (lyrics == null || !lyrics.synced() || lyrics.isEmpty()) {
-            return "";
-        }
-        final int index = lyrics.indexForPosition(getPositionMs(), lastHighlightedIndex);
-        lastHighlightedIndex = index;
-        if (index < 0) {
-            return "";
-        }
-        String text = lyrics.lines().get(index).text();
-        return text == null ? "" : text;
-    }
-
     public boolean areLyricsSynced() {
         Lyrics lyrics = currentLyrics;
         return lyrics != null && lyrics.synced() && !lyrics.isEmpty();
     }
 
+    /**
+     * The text the miniplayer and the media session show for the current position.
+     * See {@link LyricsPresentation#miniLine}.
+     */
+    @Nullable
+    public String getCurrentLineText() {
+        Lyrics lyrics = currentLyrics;
+        if (lyrics == null || !lyrics.synced() || lyrics.isEmpty()) {
+            return null;
+        }
+        TrackInfo track = currentTrack;
+        final long durationMs = track == null ? 0 : track.durationSeconds() * 1000L;
+        return LyricsPresentation.miniLine(lyrics, durationMs, getPositionMs(),
+                currentRawTitle, currentRawArtist);
+    }
 
 }

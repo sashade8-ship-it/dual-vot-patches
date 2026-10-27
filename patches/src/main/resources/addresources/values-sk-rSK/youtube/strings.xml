@@ -393,6 +393,9 @@ Hlásenia sú verejné a pred pridaním kanála do zoznamu sa posudzujú. Odstr�
   <string name="morphe_hide_shopping_links_title">Skryť odkazy na nákupy</string>
   <string name="morphe_hide_video_ads_title">Skryť videoreklamy</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Skryť YouTube Premium promo</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Načítava sa…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Aktuálny kanál:</string>
   <string name="morphe_channel_whitelist_add">Pridať do bielej listiny</string>
@@ -409,6 +412,9 @@ Hlásenia sú verejné a pred pridaním kanála do zoznamu sa posudzujú. Odstr�
   <string name="morphe_channel_search_results">Výsledky vyhľadávania kanálov</string>
   <string name="morphe_channel_search_no_results">Na tomto kanáli sa nič nenašlo</string>
   <string name="morphe_channel_search_failed">Vyhľadávanie v tomto kanáli sa nepodarilo</string>
+  <string name="morphe_channel_search_videos">Videá</string>
+  <string name="morphe_channel_search_posts">Príspevky</string>
+  <string name="morphe_channel_search_no_posts">Na tomto kanáli sa nenašli žiadne príspevky</string>
   <string name="morphe_channel_search_sort_relevance">Relevantnosť</string>
   <string name="morphe_channel_search_sort_most_viewed">Najsledovanejšie</string>
   <string name="morphe_channel_search_sort_least_viewed">Najmenej sledované</string>
@@ -442,6 +448,7 @@ Hlásenia sú verejné a pred pridaním kanála do zoznamu sa posudzujú. Odstr�
   <string name="morphe_post_image_download_flyout_single">Stiahnuť obrázok</string>
   <string name="morphe_post_image_download_started">Sťahovanie %s obrázkov…</string>
   <string name="morphe_post_image_download_started_single">Sťahovanie obrázka…</string>
+  <string name="morphe_post_image_download_saved">%1$s obrázkov uložených do %2$s</string>
   <string name="morphe_post_image_download_saved_single">Obrázok uložený do %s</string>
   <string name="morphe_post_image_download_failed">Nebolo možné sťahovať obrázok</string>
   <string name="morphe_post_image_download_not_found">V tomto príspevku nebol nájdený žiadny obrázok</string>
@@ -493,6 +500,9 @@ Po jednom otvorení videa s tlačidlom Opýtať sa bude funkcia fungovať pre v�
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Zvuk</string>
   <string name="morphe_external_downloader_quick_options">Všetky možnosti</string>
+  <string name="morphe_shorts_download_flyout_button_title">Zobraziť sťahovanie v ponuke Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Pridá položku externého menu na stiahnutie do prehrávača Shorts</string>
+  <string name="morphe_shorts_download_flyout_title">Stiahnuť</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Preklad hlasového komentára</string>
   <string name="morphe_vot_screen_summary">Nahlas prečítajte titulky videa pomocou text-to-speech priamo v zariadení, synchronizovane s prehrávaním</string>
@@ -1119,9 +1129,6 @@ Rozloženie pre automobil
   <string name="morphe_tablet_layout_in_player_summary">"Obnoví staré rozloženie prehrávača
 
 Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrstva 'Ďalšie videá' nemusí byť k dispozícii"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Povolenie tejto možnosti môže narušiť niektoré funkcie rozloženia prehrávača, ako napríklad sekciu komentárov alebo „Ďalšie videá“ zobrazené pod prehrávačom.
-
-Rozloženie pre tablety už YouTube nepodporuje a v novších verziách YouTube je čiastočne alebo úplne nefunkčné. Pre fungujúce rozloženie pre tablety použite patch pre YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Obnoviť staré správanie titulkov</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Obnoví staré ukladanie do zoznamu videí</string>
@@ -1624,4 +1631,17 @@ Automatické zaznamenávanie je voliteľné. Zastaví sa v režime inkognito ale
   <string name="morphe_series_tracker_no_search_results">Nenašli sa žiadne seriály</string>
   <string name="morphe_series_tracker_untitled_episode">Epizóda bez názvu</string>
   <string name="morphe_series_tracker_unavailable_episode">Epizóda nedostupná</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Komentáre Niconico</string>
+  <string name="morphe_niconico_comments_screen_summary">Zobrazuje živý čet a opakovanie četu ako komentáre, ktoré pretekajú cez video</string>
+  <string name="morphe_niconico_comments_summary">Zobrazuje tlačidlo v prehrávači videa. Klepnutím zobrazíte alebo skryjete komentáre, podržaním otvoríte rýchle nastavenia</string>
+  <string name="morphe_niconico_comments_font_size_title">Veľkosť písma komentárov</string>
+  <string name="morphe_niconico_comments_font_size_summary">Veľkosť textu komentárov (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Nepriehľadnosť komentárov</string>
+  <string name="morphe_niconico_comments_opacity_summary">Nepriehľadnosť textu a pozadia komentárov</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Doba prechodu</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Koľko sekúnd trvá, kým komentáre prejdú cez obrazovku. Nižšie hodnoty znamenajú rýchlejší pohyb</string>
+  <string name="morphe_niconico_comments_max_length_title">Maximálna dĺžka komentára</string>
+  <string name="morphe_niconico_comments_max_length_summary">Skryje komentáre s väčším počtom znakov, ako je uvedené. Každý emoji sa počíta ako jeden znak</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Bez obmedzenia</string>
 </resources>

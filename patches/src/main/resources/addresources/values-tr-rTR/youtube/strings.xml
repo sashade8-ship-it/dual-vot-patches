@@ -394,6 +394,9 @@ Raporlar herkese açıktır ve bir kanal listeye eklenmeden önce incelenir. Kal
   <string name="morphe_hide_shopping_links_title">Alışveriş bağlantılarını gizle</string>
   <string name="morphe_hide_video_ads_title">Video reklamlarını gizle</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium promosyonlarını gizle</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Yükleniyor...</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Şu anki kanal:</string>
   <string name="morphe_channel_whitelist_add">Beyaz listeye ekle</string>
@@ -410,6 +413,9 @@ Raporlar herkese açıktır ve bir kanal listeye eklenmeden önce incelenir. Kal
   <string name="morphe_channel_search_results">Kanal arama sonuçları</string>
   <string name="morphe_channel_search_no_results">Bu kanalda sonuç bulunamadı</string>
   <string name="morphe_channel_search_failed">Bu kanalda arama yapılamadı</string>
+  <string name="morphe_channel_search_videos">Videolar</string>
+  <string name="morphe_channel_search_posts">Gönderiler</string>
+  <string name="morphe_channel_search_no_posts">Bu kanalda eşleşen gönderi bulunamadı</string>
   <string name="morphe_channel_search_sort_relevance">Alaka</string>
   <string name="morphe_channel_search_sort_most_viewed">En çok izlenen</string>
   <string name="morphe_channel_search_sort_least_viewed">En az izlenen</string>
@@ -495,6 +501,9 @@ Soru düğmesine sahip olan bir video bir kez açıldıktan sonra bu özellik, m
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Ses</string>
   <string name="morphe_external_downloader_quick_options">Tüm seçenekler</string>
+  <string name="morphe_shorts_download_flyout_button_title">Shorts menüsünde indiriciyi göster</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Shorts oynatıcısına harici indirici açılır menü öğesi ekler</string>
+  <string name="morphe_shorts_download_flyout_title">İndir</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Seslendirme çevirisi</string>
   <string name="morphe_vot_screen_summary">Cihaz üzerindeki metin-konuşma özelliğini kullanarak video altyazılarını oynatmayla senkronize bir şekilde yüksek sesle okuyun.</string>
@@ -1122,9 +1131,6 @@ Otomotiv düzeni
   <string name="morphe_tablet_layout_in_player_summary">"Eski oynatıcı düzenini geri yükler
 
 Sınırlamalar: 'Eski video eylem çubuğunu geri yükle' kapatılırsa, 'Daha fazla video' katmanı kullanılamayabilir"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Bunu etkinleştirilmek, oynatıcının altında gösterilen yorumlar veya 'Daha fazla video' kısımları gibi bazı oynatıcı düzen özelliklerini bozabilir.
-
-Tablet düzeni artık YouTube tarafından desteklenmiyor ve güncel YouTube sürümlerinde kısmen veya tamamen bozulmuş durumda. Çalışan bir tablet düzeni için, Youtube 20.21.37'yi yamalayın"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Eski altyazı davranışını geri yükle</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Oynatma listesine kaydetme için eski düzeni geri getir</string>
@@ -1628,4 +1634,17 @@ Otomatik kayıt özelliği isteğe bağlıdır; gizli modda veya hesap değişti
   <string name="morphe_series_tracker_no_search_results">Dizi bulunamadı</string>
   <string name="morphe_series_tracker_untitled_episode">İsimsiz bölüm</string>
   <string name="morphe_series_tracker_unavailable_episode">Mevcut olmayan bölüm</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico yorumları</string>
+  <string name="morphe_niconico_comments_screen_summary">Canlı sohbeti ve sohbet tekrarını, videonun üzerinden kayan yorumlar olarak göster</string>
+  <string name="morphe_niconico_comments_summary">Video oynatıcıda bir ekran üstü düğmesi gösterir. Yorumları göstermek veya gizlemek için dokunun, hızlı ayarlar için basılı tutun</string>
+  <string name="morphe_niconico_comments_font_size_title">Yorum yazı tipi boyutu</string>
+  <string name="morphe_niconico_comments_font_size_summary">Yorumların metin boyutu (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Yorum opaklığı</string>
+  <string name="morphe_niconico_comments_opacity_summary">Yorum metninin ve arka planlarının opaklığı</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Yolculuk süresi</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Yorumların ekranı geçmesi için geçen saniye sayısı. Düşük değerler daha hızlı hareket eder</string>
+  <string name="morphe_niconico_comments_max_length_title">Maksimum yorum uzunluğu</string>
+  <string name="morphe_niconico_comments_max_length_summary">Bunu aşan karakter sayısına sahip yorumları gizler. Her emoji bir karakter olarak sayılır</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Sınırsız</string>
 </resources>

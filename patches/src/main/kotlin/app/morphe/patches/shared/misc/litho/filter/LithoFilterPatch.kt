@@ -421,6 +421,16 @@ internal fun sharedLithoFilterPatch(
                 val itemsField = it.instructionMatches[2].getFieldAccessed()
                 val removeItemMethod = it.method
 
+                // Removing an item does not lay out the rows again when the section is no longer
+                // a grid, such as when a single item is left, and the old rows that are views of
+                // the items would throw on the next access.
+                val (isGridMethod, layOutRowsMethod, updateSectionMethod) =
+                    ListSectionUpdateRowsFingerprint.instructionMatches.let { matches ->
+                        listOf(0, 3, 4).map { index ->
+                            matches[index].instruction.getReference<MethodReference>()!!
+                        }
+                    }
+
                 it.classDef.apply {
                     interfaces.add(EXTENSION_LIST_SECTION_INTERFACE)
 
@@ -433,7 +443,7 @@ internal fun sharedLithoFilterPatch(
                             AccessFlags.PUBLIC.value or AccessFlags.FINAL.value,
                             null,
                             null,
-                            MutableMethodImplementation(3),
+                            MutableMethodImplementation(4),
                         ).toMutable().apply {
                             addInstructionsWithLabels(
                                 0,
@@ -441,13 +451,32 @@ internal fun sharedLithoFilterPatch(
                                     iget-object v0, p0, $itemsField
                                     invoke-interface { v0, p1 }, Ljava/util/List;->contains(Ljava/lang/Object;)Z
                                     move-result v0
-                                    if-eqz v0, :not_found
+                                    if-eqz v0, :done
+                                    invoke-direct { p0 }, $isGridMethod
+                                    move-result v1
                                     invoke-virtual { p0, p1 }, $removeItemMethod
-                                    :not_found
+                                    if-eqz v1, :done
+                                    invoke-direct { p0 }, $isGridMethod
+                                    move-result v1
+                                    if-nez v1, :done
+                                    iget-object v1, p0, $itemsField
+                                    invoke-interface { v1 }, Ljava/util/List;->isEmpty()Z
+                                    move-result v1
+                                    if-nez v1, :done
+                                    invoke-virtual { p0 }, $layOutRowsMethod
+                                    invoke-virtual { p0 }, $updateSectionMethod
+                                    :done
                                     return v0
                                 """
                             )
                         }
+                    )
+
+                    // The released sections stop receiving the removed items.
+                    ListSectionReleaseFingerprint.method.addInstruction(
+                        0,
+                        "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->" +
+                                "removeListSection($EXTENSION_LIST_SECTION_INTERFACE)V"
                     )
 
                     // Only the constructors that call the constructor of the superclass,
