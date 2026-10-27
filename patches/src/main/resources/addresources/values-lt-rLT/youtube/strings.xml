@@ -393,6 +393,9 @@ Pranešimai yra vieši ir peržiūrimi prieš pridedant kanalą į sąrašą. Pa
   <string name="morphe_hide_shopping_links_title">Slėpti apsipirkimo nuorodas</string>
   <string name="morphe_hide_video_ads_title">Slėpti vaizdo įrašų reklamas</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Slėpti „YouTube Premium“ reklamas</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Įkeliama…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Dabartinis kanalas:</string>
   <string name="morphe_channel_whitelist_add">Pridėti į baltąjį sąrašą</string>
@@ -409,6 +412,9 @@ Pranešimai yra vieši ir peržiūrimi prieš pridedant kanalą į sąrašą. Pa
   <string name="morphe_channel_search_results">Kanalo paieškos rezultatai</string>
   <string name="morphe_channel_search_no_results">Šiame kanale nieko nerasta</string>
   <string name="morphe_channel_search_failed">Nepavyko atlikti paieškos šiame kanale</string>
+  <string name="morphe_channel_search_videos">Vaizdo įrašai</string>
+  <string name="morphe_channel_search_posts">Įrašai</string>
+  <string name="morphe_channel_search_no_posts">Šiame kanale nėra sutinkančių įrašų</string>
   <string name="morphe_channel_search_sort_relevance">Aktualumas</string>
   <string name="morphe_channel_search_sort_most_viewed">Daugiausia peržiūrų</string>
   <string name="morphe_channel_search_sort_least_viewed">Mažiausiai peržiūrų</string>
@@ -442,6 +448,7 @@ Pranešimai yra vieši ir peržiūrimi prieš pridedant kanalą į sąrašą. Pa
   <string name="morphe_post_image_download_flyout_single">Atsisiųsti nuotrauką</string>
   <string name="morphe_post_image_download_started">Atsiunčiamas %s vaizdai…</string>
   <string name="morphe_post_image_download_started_single">Atsiunčiamas vaizdas…</string>
+  <string name="morphe_post_image_download_saved">%1$s nuotraukos išsaugytos į %2$s</string>
   <string name="morphe_post_image_download_saved_single">Vaizdas išsaugotas į %s</string>
   <string name="morphe_post_image_download_failed">Nepavyko atsisiųsti vaizdo</string>
   <string name="morphe_post_image_download_not_found">Šiame įraše vaizdo nerasta</string>
@@ -493,6 +500,9 @@ Kartą atvėrus vaizdo įrašą su mygtuku „Ask“, funkcija veikia su visais 
   <string name="morphe_external_downloader_quick_video">Vaizdo įrašai</string>
   <string name="morphe_external_downloader_quick_audio">Garsas</string>
   <string name="morphe_external_downloader_quick_options">Visi nustatymai</string>
+  <string name="morphe_shorts_download_flyout_button_title">Rodyti atsisiuntimą „Shorts“ meniu</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Prideda išorinio atsisiuntimo įskiepio meniu punktą „Shorts“ grotuveje</string>
+  <string name="morphe_shorts_download_flyout_title">Atsisiųsti</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Balso vertimas</string>
   <string name="morphe_vot_screen_summary">Skaito vaizdo įrašo subtitrus garsiai naudodamas įrenginio teksto į kalbą sintezatorių, sinchronizuotą su atkūrimu</string>
@@ -1120,9 +1130,6 @@ Automobilio maketas
   <string name="morphe_tablet_layout_in_player_summary">"Atkuria senąjį grotuvo maketą
 
 Apribojimas: jei parinktis „Atkurti senąją vaizdo įrašo veiksmų juostą“ išjungta, perdanga „Daugiau vaizdo įrašų“ gali būti nepasiekiama"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Įjungus šią funkciją gali neveikti kai kurios grotuvo išdėstymo funkcijos, pavyzdžiui, komentarų skiltis arba po grotuvu rodomi „Kiti vaizdo įrašai“.
-
-„YouTube“ nebepalaiko planšetinio išdėstymo, todėl naujesnėse „YouTube“ versijose jis veikia dalinai arba visai neveikia. Norėdami gauti veikiančią planšetinio išdėstymo versiją, naudokite „YouTube“ 20.21.37 pataisą"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 – Atkurti senąją subtitrų elgseną</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 – atkurti senąjį išsaugojimą į grojaraštį</string>
@@ -1625,4 +1632,17 @@ Automatinis įrašymas yra neprivalomas. Jis sustabdomas slaptojo režimo metu a
   <string name="morphe_series_tracker_no_search_results">Jokių serijų nerasta</string>
   <string name="morphe_series_tracker_untitled_episode">Be pavadinimo epizodas</string>
   <string name="morphe_series_tracker_unavailable_episode">Nepasiekiamas epizodas</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico komentarai</string>
+  <string name="morphe_niconico_comments_screen_summary">Rodyti gyvą pokalbį ir pokalbių atkūrimą kaip komentarus, kurie rieda per vaizdo įrašą</string>
+  <string name="morphe_niconico_comments_summary">Vaizdo įrašo spusteleklio ekrane rodo mygtuką. Bakstelėkite, kad parodytumėte arba paslėptumėte komentarus, arba bakstelėkite ir laikykite greitiesiems nustatymams</string>
+  <string name="morphe_niconico_comments_font_size_title">Komentarų šrifto dydis</string>
+  <string name="morphe_niconico_comments_font_size_summary">Komentarų teksto dydis (12–40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Komentarų skaidrumas</string>
+  <string name="morphe_niconico_comments_opacity_summary">Komentarų teksto ir fono skaidrumas</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Keliavimo trukmė</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Kiek sekundžių komentarams reikia, kad perekryžtų ekraną. Mažesni reikšmės juda greičiau</string>
+  <string name="morphe_niconico_comments_max_length_title">Maksimalus komentarų ilgis</string>
+  <string name="morphe_niconico_comments_max_length_summary">Paslepia komentarus, kuriuose yra daugiau simbolių nei nustatyta. Kiekvienas emoji skaičiuojamas kaip vienas simbolis</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Be apribojimų</string>
 </resources>

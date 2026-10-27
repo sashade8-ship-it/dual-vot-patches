@@ -18,6 +18,7 @@ Second \"item\" text"</string>
 <resources>
   <!-- misc.androidauto.androidAutoPatch -->
   <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_cancel">Адмяніць</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
   <!-- misc.album.albumMusicVideoPatch -->
@@ -25,6 +26,8 @@ Second \"item\" text"</string>
   <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
   <!-- interaction.downloads.downloadsPatch -->
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the menu. -->
+  <string name="morphe_music_downloads_close">Закрыць</string>
+  <string name="morphe_music_downloads_delete">Выдаліць</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
   <!-- ad.hideAdsPatch -->
@@ -68,6 +71,7 @@ Second \"item\" text"</string>
   <!-- 'scrobbling' must be kept untranslated -->
   <!-- 'scrobbling' must be kept untranslated -->
   <!-- layout.lyrics.lyricsPatch -->
+  <string name="morphe_music_lyrics_section_display_title">Адлюстраванне</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
   <!-- Tappable label under the lyrics that turns the translation on. -->
   <string name="morphe_romanize_language_DEFAULT">Аўтаматычна</string>

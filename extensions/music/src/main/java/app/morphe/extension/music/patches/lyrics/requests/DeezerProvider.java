@@ -24,9 +24,11 @@ import java.util.concurrent.atomic.AtomicLong;
 import app.morphe.extension.music.patches.lyrics.model.Lyrics;
 import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
 import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
+import app.morphe.extension.music.patches.lyrics.model.TrackVersion;
 import app.morphe.extension.music.patches.lyrics.parsers.LRCParser;
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.requests.Requester;
 
 public final class DeezerProvider extends ScoredSongProvider {
@@ -188,6 +190,77 @@ public final class DeezerProvider extends ScoredSongProvider {
     private static synchronized void dropJwt() {
         cachedJwt = null;
         jwtExpiryMs = 0;
+    }
+
+    /** Lookups that succeeded, including tracks without a version. Failed requests are retried. */
+    private static final Map<TrackInfo, TrackVersion> versions = Utils.createSizeRestrictedMap(64, true);
+
+    /**
+     * The version of the track, from the title_short and title_version fields of Deezer's own
+     * search results. The variant is empty when Deezer has no exact match or the track has no
+     * version.
+     *
+     * @param track Untouched metadata, see {@link TrackVersion#query}.
+     * @throws IOException If a request fails.
+     */
+    public static TrackVersion fetchVersion(TrackInfo track) throws Exception {
+        synchronized (versions) {
+            TrackVersion cached = versions.get(track);
+            if (cached != null) return cached;
+        }
+        TrackVersion result = lookupVersion(track);
+        synchronized (versions) {
+            versions.put(track, result);
+        }
+        return result;
+    }
+
+    private static TrackVersion lookupVersion(TrackInfo track) throws Exception {
+        LyricsRequests.throttle(lastRequestTime, REQUEST_THROTTLE_MS);
+        String url = SEARCH_URL
+                + "?q=" + LyricsRequests.encode(track.artist() + " - " + track.title())
+                + "&limit=10&output=json";
+        JSONArray data = getJson(url).optJSONArray("data");
+        if (data == null) throw new IOException("Deezer search has no results array");
+
+        final String wantedTitle = TrackVersion.normalize(track.title());
+        final String wantedArtist = TrackVersion.normalize(track.artist());
+        // The full title is matched first. Short title equality alone would confuse the
+        // original recording with a remix or acoustic version of that same song.
+        for (int pass = 0; pass < 2; pass++) {
+            for (int i = 0, length = data.length(); i < length; i++) {
+                JSONObject item = data.optJSONObject(i);
+                if (item == null) continue;
+                JSONObject artist = item.optJSONObject("artist");
+                if (artist == null || !wantedArtist.equals(TrackVersion.normalize(artist.optString("name", "")))) {
+                    continue;
+                }
+                final String full = item.optString("title", "");
+                final String shortTitle = item.optString("title_short", "");
+                final String version = item.optString("title_version", "");
+                final boolean matches = pass == 0
+                        ? wantedTitle.equals(TrackVersion.normalize(full))
+                        : TrackVersion.matchesStructuredTitle(track.title(), full, shortTitle, version);
+                if (matches && !shortTitle.isBlank()) {
+                    return new TrackVersion(shortTitle, TrackVersion.clean(version));
+                }
+            }
+        }
+        return new TrackVersion(track.title(), "");
+    }
+
+    /** A Deezer error comes back as a 200 with an error object, so that counts as a failure too. */
+    private static JSONObject getJson(String url) throws Exception {
+        HttpURLConnection connection = LyricsRequests.openConnection(url, Map.of("Accept", "application/json"));
+        try {
+            final int httpCode = connection.getResponseCode();
+            if (httpCode != Requester.HTTP_STATUS_CODE_SUCCESS) throw new IOException("Deezer HTTP " + httpCode);
+            JSONObject json = Requester.parseJSONObject(connection);
+            if (json.has("error")) throw new IOException("Deezer error: " + json.optString("error"));
+            return json;
+        } finally {
+            connection.disconnect();
+        }
     }
 
     @Nullable

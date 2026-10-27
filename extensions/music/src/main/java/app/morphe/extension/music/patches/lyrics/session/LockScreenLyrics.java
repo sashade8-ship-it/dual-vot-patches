@@ -18,6 +18,7 @@ import java.lang.ref.WeakReference;
 import java.util.Objects;
 
 import app.morphe.extension.music.patches.lyrics.LyricsManager;
+import app.morphe.extension.music.patches.lyrics.LyricsPresentation;
 import app.morphe.extension.music.patches.lyrics.model.MetadataCleaner;
 import app.morphe.extension.music.patches.lyrics.model.TrackInfo;
 import app.morphe.extension.music.settings.Settings;
@@ -63,9 +64,11 @@ public final class LockScreenLyrics {
     @Nullable
     private static String cachedCleanedArtist;
 
-    /** Title pushed on the last tick, to avoid redundant {@code setMetadata} calls. */
+    /** Title and artist pushed on the last tick, to avoid redundant {@code setMetadata} calls. */
     @Nullable
     private static volatile String lastPushedTitle;
+    @Nullable
+    private static String lastPushedArtist;
 
     /** Set when the app pushes fresh metadata, so the next tick pushes it again. */
     private static volatile boolean needsRepush;
@@ -94,6 +97,12 @@ public final class LockScreenLyrics {
     private LockScreenLyrics() {
     }
 
+    /** Pushes the current line again, as a lyrics setting changed how it is shown. */
+    public static void onSettingsChanged() {
+        needsRepush = true;
+        tick();
+    }
+
     /**
      * Observed at the app's {@code MediaSession.setMetadata} call site. Captures the session
      * and original metadata and (re)starts the ticker when the feature is enabled.
@@ -110,6 +119,9 @@ public final class LockScreenLyrics {
 
             String rt = original.getString(MediaMetadata.METADATA_KEY_TITLE);
             String ra = original.getString(MediaMetadata.METADATA_KEY_ARTIST);
+            if (!Objects.equals(rt, realTitle) || !Objects.equals(ra, realArtist)) {
+                LyricsPresentation.resetTrackCycle();
+            }
             realTitle = rt;
             realArtist = ra;
 
@@ -191,19 +203,23 @@ public final class LockScreenLyrics {
         }
 
         String newTitle = getCurrentLine();
-        if (!needsRepush && newTitle.equals(lastPushedTitle)) {
+        String artist = getTrackLine();
+        if (!needsRepush && newTitle.equals(lastPushedTitle) && artist.equals(lastPushedArtist)) {
             ticker.schedule();
             return;
         }
 
-        MediaMetadata metadata = buildMetadata(newTitle);
+        MediaMetadata metadata = buildMetadata(newTitle, artist);
         if (metadata == null) {
             ticker.schedule();
             return;
         }
 
         session.setMetadata(metadata);
+        LyricNotificationRefresh.refresh(session, newTitle,
+                metadata.getString(MediaMetadata.METADATA_KEY_DISPLAY_SUBTITLE));
         lastPushedTitle = newTitle;
+        lastPushedArtist = artist;
         needsRepush = false;
         nudgePlaybackState(session);
 
@@ -251,6 +267,11 @@ public final class LockScreenLyrics {
         MediaMetadata original = originalMetadata;
         if (session != null && original != null) {
             session.setMetadata(original);
+            String title = original.getString(MediaMetadata.METADATA_KEY_DISPLAY_TITLE);
+            String text = original.getString(MediaMetadata.METADATA_KEY_DISPLAY_SUBTITLE);
+            LyricNotificationRefresh.refresh(session,
+                    title != null ? title : original.getString(MediaMetadata.METADATA_KEY_TITLE),
+                    text != null ? text : original.getString(MediaMetadata.METADATA_KEY_ARTIST));
             nudgePlaybackState(session);
         }
         lastPushedTitle = null;
@@ -276,33 +297,32 @@ public final class LockScreenLyrics {
 
     private static String getCurrentLine() {
         String line = LyricsManager.getInstance().getCurrentLineText();
-        if (line.isEmpty()) {
+        if (line == null) {
             String rt = realTitle;
             return rt == null ? "" : rt;
         }
         return line;
     }
 
-    private static MediaMetadata buildMetadata(String title) {
+    /** The track format shown as the artist, or the plain artist if the title is unknown. */
+    private static String getTrackLine() {
+        String ra = realArtist;
+        String artist = ra == null ? "" : ra;
+        String rt = realTitle;
+        return rt == null || rt.isEmpty() ? artist : LyricsPresentation.trackLabel(rt, artist);
+    }
+
+    @Nullable
+    private static MediaMetadata buildMetadata(String title, String artist) {
         MediaMetadata.Builder builder = metadataBuilder;
         if (builder == null) {
             return null;
         }
 
-        String ra = realArtist;
-        String artist = ra == null ? "" : ra;
-        String display = artist;
-
-        String rt = realTitle;
-        if (rt != null && !rt.isEmpty()) {
-            display = new TrackInfo(rt, artist, "", 0)
-                    .displayWith(Settings.LYRICS_DISPLAY_ARTIST_FIRST.get());
-        }
-
         builder.putString(MediaMetadata.METADATA_KEY_TITLE, title);
         builder.putString(MediaMetadata.METADATA_KEY_DISPLAY_TITLE, title);
-        builder.putString(MediaMetadata.METADATA_KEY_ARTIST, display);
-        builder.putString(MediaMetadata.METADATA_KEY_DISPLAY_SUBTITLE, display);
+        builder.putString(MediaMetadata.METADATA_KEY_ARTIST, artist);
+        builder.putString(MediaMetadata.METADATA_KEY_DISPLAY_SUBTITLE, artist);
         return builder.build();
     }
 }

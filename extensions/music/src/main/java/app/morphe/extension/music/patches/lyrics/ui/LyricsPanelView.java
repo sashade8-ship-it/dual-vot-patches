@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntConsumer;
 
 import app.morphe.extension.music.patches.lyrics.LyricsManager;
+import app.morphe.extension.music.patches.lyrics.LyricsPresentation;
 import app.morphe.extension.music.patches.lyrics.derive.LyricsRomanizer;
 import app.morphe.extension.music.patches.lyrics.derive.LyricsTranslator;
 import app.morphe.extension.music.patches.lyrics.derive.QuickLRCClient;
@@ -1195,7 +1196,7 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
             final LyricsLineView prevView = i < prevCount
                     && prevViews.get(i) instanceof LyricsLineView pv ? pv : null;
             final boolean reusePrevious = prevView != null && !contentInBuild;
-            final List<LyricsSpanBuilder.WordTiming> gapTimings = reusePrevious
+            List<LyricsSpanBuilder.WordTiming> gapTimings = reusePrevious
                     && i < prevSpans.size()
                     ? prevSpans.get(i) : Collections.emptyList();
             lineWordSpans.add(reusePrevious ? gapTimings : new ArrayList<>());
@@ -1207,17 +1208,34 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
             // same-content rebuild reuses the previous row so toggles never blink existing text.
             int gapOrigStart = 0;
             if (preserveHidePosition) {
-                LyricsSpanBuilder.BuildResult result =
-                        LyricsSpanBuilder.buildLineText(line, gapTimings, i,
-                                perWordRomaji, romanizedLines, translatedLines, onlyMode,
-                                baseLinePaint, isRightAligned);
+                gapOrigStart = computeOriginalTextStart(line, i, onlySnap, romanizedSnap,
+                        translatedSnap, perWordRomajiSnap);
+                LyricsSpanBuilder.BuildResult result;
+                if (LyricsPresentation.isFormattingEnabled()) {
+                    // The previous spans are offsets in the filtered text, so the line is built
+                    // again from the raw word timings and filtered once more.
+                    final List<LyricsSpanBuilder.WordTiming> rawTimings = LyricsSpanBuilder
+                            .computeWordTimings(newLyrics.lines(), i, onlySnap != OnlyMode.NONE);
+                    final LyricsSpanBuilder.BuildResult raw = LyricsSpanBuilder.buildLineText(line,
+                            rawTimings, i, perWordRomaji, romanizedLines, translatedLines, onlyMode,
+                            baseLinePaint, isRightAligned);
+                    final LyricsSpanBuilder.PresentedLine presentation = LyricsSpanBuilder.present(raw,
+                            LyricsViewSupport.wordSpansFor(raw, onlySnap != OnlyMode.NONE, rawTimings,
+                                    gapOrigStart), gapOrigStart);
+                    result = presentation.display();
+                    gapTimings = presentation.words();
+                    gapOrigStart = presentation.originalStart();
+                    lineWordSpans.set(i, gapTimings);
+                } else {
+                    result = LyricsSpanBuilder.buildLineText(line, gapTimings, i,
+                            perWordRomaji, romanizedLines, translatedLines, onlyMode,
+                            baseLinePaint, isRightAligned);
+                }
                 lineView.setText(result.text());
                 lineView.setTranslationBounds(result.transStart(), result.transEnd());
                 lineView.setRomanizationBounds(result.romaStart(), result.romaEnd(),
                         result.readingSpans() != null && !result.readingSpans().isEmpty());
                 lineView.setSmallRunHoldsWords(result.smallRunHoldsWords());
-                gapOrigStart = computeOriginalTextStart(line, i, onlySnap, romanizedSnap,
-                        translatedSnap, perWordRomajiSnap);
             } else if (reusePrevious) {
                 lineView.setText(prevView.getText());
                 lineView.setTranslationBounds(prevView.transStart, prevView.transEnd);
@@ -1228,7 +1246,7 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
                 lineView.romaReveal = prevView.romaReveal;
                 gapOrigStart = prevView.originalTextStart;
             } else {
-                String rawText = line.text().isEmpty() ? "♪" : line.text();
+                String rawText = line.text().isEmpty() ? "♪" : LyricsPresentation.formatText(line.text());
                 boolean isRtl = ScriptDetector.isLineRtl(rawText);
                 SpannableString initialText = new SpannableString(rawText);
                 initialText.setSpan(new AlignmentSpan.Standard(LyricsSpanBuilder.resolveAlignment(isRtl, isRightAligned)),
@@ -1438,10 +1456,14 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
                                                 allTimings.get(i), i,
                                                 perWordRomaji, romanizedLines, translatedLines, onlyMode,
                                                 baseLinePaint, lineRightAligned[i]);
+                                final LyricsSpanBuilder.PresentedLine presentation = LyricsSpanBuilder.present(result,
+                                        LyricsViewSupport.wordSpansFor(result, only, allTimings.get(i), allOrigStarts.get(i)),
+                                        only ? 0 : allOrigStarts.get(i));
+                                result = presentation.display();
+                                lineOriginalStarts.set(i, presentation.originalStart());
                                 tv.setText(result.text());
                                 lineUnsungSpans.set(i, result.unsungSpan());
-                                lineWordSpans.set(i, LyricsViewSupport.wordSpansFor(result, only,
-                                        allTimings.get(i), allOrigStarts.get(i)));
+                                lineWordSpans.set(i, presentation.words());
                                 if (tv instanceof LyricsLineView lineView) {
                                     lineView.setTranslationBounds(result.transStart(), result.transEnd());
                                     lineView.setRomanizationBounds(result.romaStart(), result.romaEnd(),
@@ -2204,7 +2226,7 @@ if (state == LyricsManager.State.LOADED && newLyrics == lyrics
                 }
                 // A copy takes what the panel is showing, so an only mode hands over the
                 // translation or romanization the lines are rendered from.
-                text.append(textToCopyAt(lines.get(i), i));
+                text.append(LyricsPresentation.formatText(textToCopyAt(lines.get(i), i)));
             }
 
             ClipboardManager clipboard = (ClipboardManager) getContext()

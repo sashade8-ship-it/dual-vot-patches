@@ -393,6 +393,9 @@ Báo cáo được công khai và được xem xét trước khi một kênh đ�
   <string name="morphe_hide_shopping_links_title">Ẩn liên kết mua sắm</string>
   <string name="morphe_hide_video_ads_title">Ẩn video quảng cáo</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Ẩn quảng cáo khuyến mãi YouTube Premium</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Đang tải…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Kênh hiện tại:</string>
   <string name="morphe_channel_whitelist_add">Thêm vào danh sách ngoại lệ</string>
@@ -409,6 +412,9 @@ Báo cáo được công khai và được xem xét trước khi một kênh đ�
   <string name="morphe_channel_search_results">Kết quả tìm kiếm kênh</string>
   <string name="morphe_channel_search_no_results">Không tìm thấy gì trên kênh này</string>
   <string name="morphe_channel_search_failed">Không thể tìm kiếm trên kênh này</string>
+  <string name="morphe_channel_search_videos">Video</string>
+  <string name="morphe_channel_search_posts">Bài viết</string>
+  <string name="morphe_channel_search_no_posts">Không có bài viết nào trên kênh này khớp</string>
   <string name="morphe_channel_search_sort_relevance">Mức độ liên quan</string>
   <string name="morphe_channel_search_sort_most_viewed">Xem nhiều nhất</string>
   <string name="morphe_channel_search_sort_least_viewed">Xem ít nhất</string>
@@ -494,6 +500,9 @@ Sau khi mở một video có nút Ask một lần, tính năng này hoạt độ
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Âm thanh</string>
   <string name="morphe_external_downloader_quick_options">Tất cả tùy chọn</string>
+  <string name="morphe_shorts_download_flyout_button_title">Hiển thị tải xuống trong menu Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Thêm mục menu bay ngoài trình tải xuống bên thứ ba vào trình phát Shorts</string>
+  <string name="morphe_shorts_download_flyout_title">Tải về</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Dịch giọng nói</string>
   <string name="morphe_vot_screen_summary">Đọc to phụ đề video bằng tính năng chuyển văn bản thành giọng nói trên thiết bị, đồng bộ với video</string>
@@ -1121,9 +1130,6 @@ Bố cục ô tô
   <string name="morphe_tablet_layout_in_player_summary">"Khôi phục bố cục trình phát cũ
 
 Hạn chế: Nếu tùy chọn \"Khôi phục thanh thao tác video cũ\" bị tắt, lớp phủ \"Thêm video\" có thể không xuất hiện"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Việc bật tính năng này có thể làm hỏng một số tính năng bố cục của trình phát, chẳng hạn như phần bình luận hoặc 'Video khác' hiển thị bên dưới trình phát.
-
-Bố cục máy tính bảng không còn được YouTube hỗ trợ và bị hỏng một phần hoặc toàn bộ trên các phiên bản YouTube gần đây. Để có bố cục máy tính bảng hoạt động, hãy vá YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Khôi phục hành vi phụ đề cũ</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Khôi phục ‘Lưu vào danh sách phát’ kiểu cũ</string>
@@ -1626,4 +1632,17 @@ Tự động ghi là tùy chọn. Nó dừng lại khi ở chế độ ẩn danh
   <string name="morphe_series_tracker_no_search_results">Không tìm thấy loạt tập nào</string>
   <string name="morphe_series_tracker_untitled_episode">Tập không tiêu đề</string>
   <string name="morphe_series_tracker_unavailable_episode">Tập không khả dụng</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Bình luận Niconico</string>
+  <string name="morphe_niconico_comments_screen_summary">Hiển thị trò chuyện trực tiếp và phát lại trò chuyện dưới dạng các bình luận chạy ngang qua video</string>
+  <string name="morphe_niconico_comments_summary">Hiển thị một nút lớp phủ trong trình phát video. Nhấn để hiện hoặc ẩn bình luận, nhấn và giữ để mở cài đặt nhanh</string>
+  <string name="morphe_niconico_comments_font_size_title">Kích thước phông chữ bình luận</string>
+  <string name="morphe_niconico_comments_font_size_summary">Kích thước văn bản của các bình luận (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Độ mờ bình luận</string>
+  <string name="morphe_niconico_comments_opacity_summary">Độ mờ của văn bản và nền bình luận</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Thời gian di chuyển</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Số giây mà các bình luận cần để đi hết màn hình. Giá trị càng thấp thì di chuyển càng nhanh</string>
+  <string name="morphe_niconico_comments_max_length_title">Độ dài bình luận tối đa</string>
+  <string name="morphe_niconico_comments_max_length_summary">Ẩn các bình luận có nhiều ký tự hơn giá trị này. Mỗi emoji được tính là một ký tự</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Không giới hạn</string>
 </resources>

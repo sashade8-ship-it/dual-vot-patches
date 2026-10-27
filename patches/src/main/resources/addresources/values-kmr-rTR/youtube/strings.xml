@@ -313,6 +313,8 @@ Sînorkirin:
   <string name="morphe_hide_shopping_links_title">Girêkên firotinê veşêrin</string>
   <string name="morphe_hide_video_ads_title">Reklamên vîdyoyê veşêrin</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Promosyonên YouTube Premium veşêre</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Kanalê niha:</string>
   <string name="morphe_channel_whitelist_add">Tê bikirin listeya spî</string>
@@ -1115,4 +1117,5 @@ Sînordarî: Ger 'Restore old video action bar' veqetandibe, 'More videos' dîti
   <string name="morphe_player_icon_style_entry_auto">Otomatîk</string>
   <string name="morphe_player_icon_style_entry_default">Bixweber</string>
   <!-- video.series.seriesTrackerPatch -->
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
 </resources>

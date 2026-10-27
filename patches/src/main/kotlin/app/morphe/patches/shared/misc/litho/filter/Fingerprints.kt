@@ -184,3 +184,54 @@ internal object ListSectionRemoveItemFingerprint : Fingerprint(
         opcode(Opcode.IF_EQZ, location = MatchAfterImmediately())
     )
 )
+
+/**
+ * Releases a section of a list, such as when the list is created again.
+ * The section stops listening to the events, such as the removal of its items.
+ */
+internal object ListSectionReleaseFingerprint : Fingerprint(
+    classFingerprint = ListSectionRemoveItemFingerprint,
+    accessFlags = listOf(AccessFlags.PUBLIC),
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        fieldAccess(opcode = Opcode.IGET_OBJECT, definingClass = "this"),
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            parameters = listOf("Ljava/lang/Object;"),
+            returnType = "V",
+            location = MatchAfterImmediately()
+        )
+    )
+)
+
+/**
+ * Updates a section of a list after its items are removed. A grid lays out its rows again,
+ * otherwise the items are removed one by one.
+ */
+internal object ListSectionUpdateRowsFingerprint : Fingerprint(
+    classFingerprint = ListSectionRemoveItemFingerprint,
+    returnType = "V",
+    filters = listOf(
+        // If the section is a grid.
+        methodCall(opcode = Opcode.INVOKE_DIRECT, definingClass = "this", returnType = "Z", parameters = listOf()),
+        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately()),
+        opcode(Opcode.IF_EQZ, location = MatchAfterImmediately()),
+        // Lays out the rows again.
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            definingClass = "this",
+            returnType = "V",
+            parameters = listOf(),
+            location = MatchAfterImmediately()
+        ),
+        // Updates the rest of the section, such as the show more button. It is right after
+        // laying out the rows on some versions, and after removing the items on others.
+        methodCall(
+            opcode = Opcode.INVOKE_VIRTUAL,
+            definingClass = "this",
+            returnType = "V",
+            parameters = listOf()
+        )
+    )
+)

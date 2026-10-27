@@ -181,7 +181,35 @@ val lyricsPatch = bytecodePatch(
                     SwitchPreference("morphe_music_lyrics_sb_matching", summary = true),
                     SwitchPreference("morphe_music_lyrics_miniplayer", summary = true),
                     SwitchPreference("morphe_music_lyrics_mediasession", summary = true),
-                    SwitchPreference("morphe_music_lyrics_display_artist_first", summary = true)
+                    NonInteractivePreference(
+                        key = "morphe_music_lyrics_mini_track_format",
+                        summaryKey = "morphe_music_lyrics_mini_track_format_menu_summary",
+                        tag = "app.morphe.extension.music.settings.preference.LyricsTrackFormatPreference",
+                        selectable = true,
+                        dependency = "morphe_music_lyrics_enabled"
+                    ),
+                    TextPreference(
+                        key = "morphe_music_lyrics_mini_encapsulation",
+                        tag = "app.morphe.extension.music.settings.preference.LyricsEncapsulationPreference"
+                    ),
+                    NonInteractivePreference(
+                        key = "morphe_music_lyrics_mini_line_limits",
+                        summaryKey = "morphe_music_lyrics_mini_line_limits_summary",
+                        tag = "app.morphe.extension.music.settings.preference.LyricsLineLimitsPreference",
+                        selectable = true,
+                        dependency = "morphe_music_lyrics_enabled"
+                    ),
+                    TextPreference(
+                        key = "morphe_music_lyrics_mini_instrumental",
+                        inputType = InputType.TEXT_MULTI_LINE
+                    ),
+                    NonInteractivePreference(
+                        key = "morphe_music_lyrics_mini_next_offset_ms",
+                        summaryKey = "morphe_music_lyrics_mini_next_offset_ms_summary",
+                        tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference",
+                        selectable = true,
+                        dependency = "morphe_music_lyrics_enabled"
+                    )
                 )
             ),
             PreferenceCategory(
@@ -225,7 +253,9 @@ val lyricsPatch = bytecodePatch(
                     TextPreference(
                         key = "morphe_music_lyrics_credit_line_regex",
                         inputType = InputType.TEXT_MULTI_LINE
-                    )
+                    ),
+                    SwitchPreference("morphe_music_lyrics_force_capitalize", summary = true),
+                    SwitchPreference("morphe_music_lyrics_strip_trailing_punctuation", summary = true)
                 )
             ),
             screenInfoPreferenceCategory(

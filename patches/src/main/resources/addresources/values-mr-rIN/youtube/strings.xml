@@ -298,6 +298,8 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shopping_links_title">शॉपिंग लिंक्स लपवा</string>
   <string name="morphe_hide_video_ads_title">व्हिडिओ जाहिराती लपवा</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium जाहिरात वृत्तपत्रे लपवा</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
@@ -1047,4 +1049,5 @@ OpenRouter.ai उघडण्यासाठी येथे टॅप करा
   <string name="morphe_restore_old_video_action_bar_title">व्हिडिओ ॲक्शन बार पूर्वीसारखे पुनर्संचयित करा</string>
   <!-- layout.player.icons.playerIconStylePatch -->
   <!-- video.series.seriesTrackerPatch -->
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
 </resources>

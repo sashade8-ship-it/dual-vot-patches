@@ -39,6 +39,26 @@ internal object OfflineVideoEndpointFingerprint : Fingerprint(
 )
 
 /**
+ * Saves or removes a playlist, such as from the Download button of a playlist page header.
+ */
+internal object OfflinePlaylistEndpointFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf(
+        "L",
+        "Ljava/util/Map;",
+        "Ljava/lang/String;", // Playlist ID
+        "L", // Action
+    ),
+    filters = listOf(
+        anyInstruction(
+            string("Unsupported Offline Playlist Action: "), // 20.x
+            string("Unsupported Offline Playlist Action: %d") // 21.x
+        )
+    )
+)
+
+/**
  * Matches the offline video endpoint method, to find the call that saves a video with its offlineability renderer.
  * The quality picker and the Premium upsell of the video are both shown by the called method.
  */

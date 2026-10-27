@@ -393,6 +393,9 @@ Prijave su javne i pregledaju se pre nego što kanal bude dodat na listu. Uklanj
   <string name="morphe_hide_shopping_links_title">Sakrij linkove za kupovinu</string>
   <string name="morphe_hide_video_ads_title">Sakrij video oglase</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Sakrij promocije za YouTube Premium</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Učitavanje…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Trenutni kanal:</string>
   <string name="morphe_channel_whitelist_add">Dodaj na listu dozvoljenih kanala</string>
@@ -409,6 +412,9 @@ Prijave su javne i pregledaju se pre nego što kanal bude dodat na listu. Uklanj
   <string name="morphe_channel_search_results">Rezultati pretrage kanala</string>
   <string name="morphe_channel_search_no_results">Ništa nije pronađeno na ovom kanalu</string>
   <string name="morphe_channel_search_failed">Pretraga ovog kanala nije uspela</string>
+  <string name="morphe_channel_search_videos">Video snimci</string>
+  <string name="morphe_channel_search_posts">Objave</string>
+  <string name="morphe_channel_search_no_posts">Nijedna objava na ovom kanalu se ne poklapa</string>
   <string name="morphe_channel_search_sort_relevance">Relevantnost</string>
   <string name="morphe_channel_search_sort_most_viewed">Najgledanije</string>
   <string name="morphe_channel_search_sort_least_viewed">Najmanje gledano</string>
@@ -442,6 +448,7 @@ Prijave su javne i pregledaju se pre nego što kanal bude dodat na listu. Uklanj
   <string name="morphe_post_image_download_flyout_single">Preuzmi sliku</string>
   <string name="morphe_post_image_download_started">Preuzimanje %s slika…</string>
   <string name="morphe_post_image_download_started_single">Preuzimanje slike…</string>
+  <string name="morphe_post_image_download_saved">%1$s slika je sačuvano u %2$s</string>
   <string name="morphe_post_image_download_saved_single">Slika je sačuvana u %s</string>
   <string name="morphe_post_image_download_failed">Nije bilo moguće preuzeti sliku</string>
   <string name="morphe_post_image_download_not_found">U ovoj objavi nije pronađena slika</string>
@@ -493,6 +500,9 @@ Nakon što se jednom otupi video sa dugmetom Ask, funkcija radi sa svim videima,
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Audio</string>
   <string name="morphe_external_downloader_quick_options">Sve opcije</string>
+  <string name="morphe_shorts_download_flyout_button_title">Prikaži preuzimanje u izborniku Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Dodaje stavku menija za spoljno preuzimanje u reproduktor Shorts</string>
+  <string name="morphe_shorts_download_flyout_title">Preuzmi</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Prevod sinhronizovane titlova</string>
   <string name="morphe_vot_screen_summary">Učita titlove iz videa i izgovara ih pomoću ugrađenog pretvarača teksta u govor, sinhronizovano sa reprodukcijom</string>
@@ -1120,9 +1130,6 @@ Raspored za automobil
   <string name="morphe_tablet_layout_in_player_summary">"Vraća stari raspored plejera
 
 Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prekrivanje \"Više video zapisa\" možda neće biti dostupno"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Omogućavanjem ovoga mogu se pokvariti neke funkcije rasporeda plejera, kao što su odeljak sa komentarima ili \"Više video zapisa\" koji se prikazuju ispod plejera.
-
-Raspored za tablete više nije podržan od strane YouTube-a i delimično ili potpuno je pokvaren u novijim verzijama YouTube-a. Za funkcionalan raspored za tablete, instalirajte zakrpu za YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Vrati staro ponašanje titlova</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Vraća stare ikonice Shorts plejera</string>
@@ -1625,4 +1632,17 @@ Automatsko snimanje je opciono. Zaustavlja se u privatnom modu ili kada se nalog
   <string name="morphe_series_tracker_no_search_results">Nema pronađenih serija</string>
   <string name="morphe_series_tracker_untitled_episode">Epizoda bez naslova</string>
   <string name="morphe_series_tracker_unavailable_episode">Dostupna epizoda</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico komentari</string>
+  <string name="morphe_niconico_comments_screen_summary">Prikaži live chat i ponovnice chata kao komentare koji klize preko videa</string>
+  <string name="morphe_niconico_comments_summary">Prikazuje overlay dugme u video plejeru. Dodirnite da prikažete ili sakrijete komentare, zadržite dodir za brza podešavanja</string>
+  <string name="morphe_niconico_comments_font_size_title">Veličina fonta komentara</string>
+  <string name="morphe_niconico_comments_font_size_summary">Veličina teksta komentara (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Opacitet komentara</string>
+  <string name="morphe_niconico_comments_opacity_summary">Opacitet teksta i pozadina komentara</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Trajanje putovanja</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Koliko sekundi je potrebno komentarima da pređu ekran. Niže vrednosti se kreću brže</string>
+  <string name="morphe_niconico_comments_max_length_title">Maksimalna dužina komentara</string>
+  <string name="morphe_niconico_comments_max_length_summary">Skriva komentare koji imaju više znakova od ovoga. Svaki emoji se računa kao jedan znak</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Bez ograničenja</string>
 </resources>

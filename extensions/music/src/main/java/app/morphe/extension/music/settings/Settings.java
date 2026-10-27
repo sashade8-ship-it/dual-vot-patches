@@ -18,11 +18,13 @@ import app.morphe.extension.music.patches.PlaylistTrackTapPatch.TapAction;
 import app.morphe.extension.music.patches.lyrics.derive.AiProviders;
 import app.morphe.extension.music.patches.lyrics.derive.OpenAIClient;
 import app.morphe.extension.music.patches.lyrics.model.LyricsFilterDefaults;
+import app.morphe.extension.music.patches.lyrics.model.MiniLyricsFormatter;
 import app.morphe.extension.music.sponsorblock.MusicSponsorBlockConfig;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.patches.DownloadMode;
 import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.shared.settings.EnumSetting;
+import app.morphe.extension.shared.settings.FloatSetting;
 import app.morphe.extension.shared.settings.IntegerSetting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.settings.StringSetting;
@@ -247,7 +249,17 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting LYRICS_SB_MATCHING = new BooleanSetting("morphe_music_lyrics_sb_matching", TRUE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_MEDIASESSION = new BooleanSetting("morphe_music_lyrics_mediasession", FALSE, false, parent(LYRICS_ENABLED));
     public static final BooleanSetting LYRICS_MINIPLAYER = new BooleanSetting("morphe_music_lyrics_miniplayer", FALSE, false, parent(LYRICS_ENABLED));
-    public static final BooleanSetting LYRICS_DISPLAY_ARTIST_FIRST = new BooleanSetting("morphe_music_lyrics_display_artist_first", FALSE, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final BooleanSetting LYRICS_FORCE_CAPITALIZE = new BooleanSetting("morphe_music_lyrics_force_capitalize", FALSE, false, parent(LYRICS_ENABLED));
+    public static final BooleanSetting LYRICS_STRIP_TRAILING_PUNCTUATION = new BooleanSetting("morphe_music_lyrics_strip_trailing_punctuation", FALSE, false, parent(LYRICS_ENABLED));
+    public static final StringSetting LYRICS_MINI_TRACK_FORMAT = new StringSetting("morphe_music_lyrics_mini_track_format", MiniLyricsFormatter.DEFAULT_TRACK_FORMAT, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final StringSetting LYRICS_MINI_ENCAPSULATION = new StringSetting("morphe_music_lyrics_mini_encapsulation", MiniLyricsFormatter.DEFAULT_ENCAPSULATION, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final IntegerSetting LYRICS_MINI_CHAR_LIMIT = new IntegerSetting("morphe_music_lyrics_mini_char_limit", 0, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final IntegerSetting LYRICS_MINI_ARTIST_CHAR_LIMIT = new IntegerSetting("morphe_music_lyrics_mini_artist_char_limit", 0, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final IntegerSetting LYRICS_MINI_ARTIST_MIN_MS = new IntegerSetting("morphe_music_lyrics_mini_artist_min_ms", 1500, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final IntegerSetting LYRICS_MINI_ARTIST_MAX_MS = new IntegerSetting("morphe_music_lyrics_mini_artist_max_ms", 3000, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final FloatSetting LYRICS_MINI_FULL_WIDTH_MULTIPLIER = new FloatSetting("morphe_music_lyrics_mini_full_width_multiplier", 1.75f, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final StringSetting LYRICS_MINI_INSTRUMENTAL = new StringSetting("morphe_music_lyrics_mini_instrumental", MiniLyricsFormatter.DEFAULT_INSTRUMENTAL, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
+    public static final IntegerSetting LYRICS_MINI_NEXT_OFFSET_MS = new IntegerSetting("morphe_music_lyrics_mini_next_offset_ms", -800, false, parentsAll(parent(LYRICS_ENABLED), parentsAny(LYRICS_MINIPLAYER, LYRICS_MEDIASESSION)));
     public static final BooleanSetting LYRICS_USE_EMBEDDED = new BooleanSetting("morphe_music_lyrics_use_embedded", TRUE, true, parent(LYRICS_ENABLED));
     public static final StringSetting LYRICS_CAPTION_COOKIES = new StringSetting("morphe_music_lyrics_caption_cookies", "", false, parent(LYRICS_ENABLED));
 
@@ -293,6 +305,7 @@ public class Settings extends SharedYouTubeSettings {
     private static final BooleanSetting DEPRECATED_PERMANENT_REPEAT = new BooleanSetting("morphe_music_permanent_repeat", FALSE, true);
     private static final BooleanSetting DEPRECATED_LYRICS_USE_AI_TRANSLATION = new BooleanSetting("morphe_music_lyrics_use_ai_translation", FALSE, false);
     private static final BooleanSetting DEPRECATED_LYRICS_USE_AI_ROMANIZATION = new BooleanSetting("morphe_music_lyrics_use_ai_romanization", FALSE, false);
+    private static final BooleanSetting DEPRECATED_LYRICS_DISPLAY_ARTIST_FIRST = new BooleanSetting("morphe_music_lyrics_display_artist_first", FALSE, false);
 
     static {
         migrateOldSettingToNew(DEPRECATED_EXTERNAL_DOWNLOADER_FLYOUT_BUTTON, DEPRECATED_EXTERNAL_DOWNLOADER_FLYOUT_MENU);
@@ -302,6 +315,7 @@ public class Settings extends SharedYouTubeSettings {
         migrateDownloadButtonOverride();
         migrateLyricsAiSwitchToProvider(DEPRECATED_LYRICS_USE_AI_TRANSLATION, LYRICS_TRANSLATION_PROVIDER);
         migrateLyricsAiSwitchToProvider(DEPRECATED_LYRICS_USE_AI_ROMANIZATION, LYRICS_ROMANIZATION_PROVIDER);
+        migrateLyricsArtistFirstToTrackFormat();
         if ("openrouter".equals(LYRICS_TRANSLATION_PROVIDER.get()) || "openai".equals(LYRICS_TRANSLATION_PROVIDER.get())) {
             LYRICS_TRANSLATION_PROVIDER.save(AiProviders.OPENAI_COMPATIBLE);
         }
@@ -332,6 +346,8 @@ public class Settings extends SharedYouTubeSettings {
         SeekBarPreference.register(new SeekBarConfig(LYRICS_TEXT_SIZE,
                 18, 36, 2, "sp"));
         SeekBarPreference.register(new SeekBarConfig(LYRICS_OFFSET_MS,
+                -2000, 2000, 100, "ms"));
+        SeekBarPreference.register(new SeekBarConfig(LYRICS_MINI_NEXT_OFFSET_MS,
                 -2000, 2000, 100, "ms"));
         SeekBarPreference.register(new SeekBarConfig(PLAYBACK_SPEED,
                 25, 300, 5, "%"));
@@ -366,6 +382,14 @@ public class Settings extends SharedYouTubeSettings {
             provider.save(AiProviders.OPENAI_COMPATIBLE);
         }
         oldSwitch.resetToDefault();
+    }
+
+    /** The artist first switch was replaced with the track label format. */
+    private static void migrateLyricsArtistFirstToTrackFormat() {
+        if (DEPRECATED_LYRICS_DISPLAY_ARTIST_FIRST.get() && LYRICS_MINI_TRACK_FORMAT.isSetToDefault()) {
+            LYRICS_MINI_TRACK_FORMAT.save(MiniLyricsFormatter.ARTIST_FIRST_TRACK_FORMAT);
+        }
+        DEPRECATED_LYRICS_DISPLAY_ARTIST_FIRST.resetToDefault();
     }
 
     private static void migrateDownloadButtonOverride() {

@@ -394,6 +394,9 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <string name="morphe_hide_shopping_links_title">商品へのリンクを非表示</string>
   <string name="morphe_hide_video_ads_title">動画広告を非表示</string>
   <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium の広告を非表示</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">読み込み中…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">現在のチャンネル:</string>
   <string name="morphe_channel_whitelist_add">ホワイトリストに追加</string>
@@ -408,8 +411,11 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <string name="morphe_channel_search_summary">チャンネルページに、そのチャンネルだけを検索する別の検索ボタンを追加します</string>
   <string name="morphe_channel_search_hint">チャンネル内を検索</string>
   <string name="morphe_channel_search_results">チャンネル内の検索結果</string>
-  <string name="morphe_channel_search_no_results">このチャンネル内では見つかりませんでした</string>
+  <string name="morphe_channel_search_no_results">このチャンネル内にはありません</string>
   <string name="morphe_channel_search_failed">このチャンネル内を検索できませんでした</string>
+  <string name="morphe_channel_search_videos">動画</string>
+  <string name="morphe_channel_search_posts">投稿</string>
+  <string name="morphe_channel_search_no_posts">このチャンネル内に一致する投稿はありません</string>
   <string name="morphe_channel_search_sort_relevance">関連度順</string>
   <string name="morphe_channel_search_sort_most_viewed">視聴回数が多い順</string>
   <string name="morphe_channel_search_sort_least_viewed">視聴回数が少ない順</string>
@@ -437,16 +443,16 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <string name="morphe_feed_watch_later_button_title">サムネイルに「後で見る」ボタンを表示</string>
   <string name="morphe_feed_watch_later_button_summary">フィード動画のサムネイルに「後で見る」ボタンが表示され、それをタップして長押しすると「プレイリストに保存」が開きます</string>
   <!-- interaction.postimages.postImageDownloadPatch -->
-  <string name="morphe_post_image_download_title">投稿画像のダウンロード</string>
-  <string name="morphe_post_image_download_summary">画像またはGIFを含む投稿の共有ボタンの隣にダウンロードボタンが表示され、メニューにダウンロード項目が追加されます</string>
+  <string name="morphe_post_image_download_title">投稿の画像をダウンロード</string>
+  <string name="morphe_post_image_download_summary">画像または GIF 画像を含む投稿の共有ボタンの隣に、表示中の画像をダウンロードするボタンを表示します。同様の投稿のフライアウト メニューに、投稿内のすべての画像をダウンロードするための項目を追加します</string>
   <string name="morphe_post_image_download_flyout">画像をダウンロード</string>
   <string name="morphe_post_image_download_flyout_single">画像をダウンロード</string>
-  <string name="morphe_post_image_download_started">%s枚の画像をダウンロード中…</string>
+  <string name="morphe_post_image_download_started">%s 個の画像をダウンロード中…</string>
   <string name="morphe_post_image_download_started_single">画像をダウンロード中…</string>
-  <string name="morphe_post_image_download_saved">%1$s枚の画像を %2$s に保存しました</string>
-  <string name="morphe_post_image_download_saved_single">画像を %s に保存しました</string>
+  <string name="morphe_post_image_download_saved">%2$s に %1$s 個の画像を保存しました</string>
+  <string name="morphe_post_image_download_saved_single">%s に画像を保存しました</string>
   <string name="morphe_post_image_download_failed">画像のダウンロードに失敗しました</string>
-  <string name="morphe_post_image_download_not_found">このポストに画像は見つかりませんでした</string>
+  <string name="morphe_post_image_download_not_found">この投稿には画像がありません</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
   <string name="morphe_ask_summarize_flyout_menu_title">「動画を要約して」をフライアウト メニューに追加</string>
   <string name="morphe_ask_summarize_flyout_menu_summary">「この動画について質問する」欄を、欄内の「動画を要約して」がタップされた状態で開く項目を、フィードのフライアウト メニューに追加します</string>
@@ -495,6 +501,9 @@ AI について扱っているだけのチャンネルや、動画の一部に A
   <string name="morphe_external_downloader_quick_video">動画</string>
   <string name="morphe_external_downloader_quick_audio">オーディオ</string>
   <string name="morphe_external_downloader_quick_options">すべてのオプション</string>
+  <string name="morphe_shorts_download_flyout_button_title">Shortsメニューでダウンロードを表示する</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Shortsプレーヤーに外部ダウンローダーフライアウトメニュー項目を追加します</string>
+  <string name="morphe_shorts_download_flyout_title">ダウンロード</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">吹き替え翻訳</string>
   <string name="morphe_vot_screen_summary">動画字幕を翻訳し、デバイス上のテキスト読み上げ機能で字幕の翻訳を字幕に同期しながら読み上げます</string>
@@ -893,8 +902,8 @@ APIキーは決して共有しないでください。アクセス権を持つ�
   <string name="morphe_navigation_bar_style_entry_1">デフォルト</string>
   <string name="morphe_navigation_bar_style_entry_2">半透明</string>
   <string name="morphe_navigation_bar_style_entry_3">透明</string>
-  <string name="morphe_navigation_bar_style_entry_4">不透明</string>
-  <string name="morphe_navigation_bar_style_user_dialog_message">このスタイルはお使いのデバイスまたはYouTubeのバージョンでサポートされていない可能性があり、レイアウトの問題やクラッシュの原因となることがあります</string>
+  <string name="morphe_navigation_bar_style_entry_4">全く透けない</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">このスタイルは、デバイスや YouTube のバージョンによってはサポートされていない場合があり、レイアウトの問題やクラッシュを引き起こす可能性があります</string>
   <string name="morphe_toolbar_screen_title">ツールバー</string>
   <string name="morphe_toolbar_screen_summary">ツールバーに表示するコンポーネントを設定します</string>
   <string name="morphe_hide_toolbar_cast_button_title">キャストボタンを非表示</string>
@@ -1122,9 +1131,6 @@ Automotive レイアウト
   <string name="morphe_tablet_layout_in_player_summary">"動画プレーヤーのレイアウトを以前のスタイルに戻します
 
 制限事項: [アクションバーを旧仕様に戻す] がオフのとき、「その他の動画」オーバーレイが表示されない場合があります"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"これを有効にすると、コメント欄やプレイヤー下に表示される「おすすめ動画」など、一部のプレイヤーレイアウト機能が正しく動作しなくなる可能性があります。
-
-タブレットレイアウトはYouTubeによってサポートされなくなったため、最近のYouTubeバージョンでは部分的または完全に機能しません。タブレットレイアウトを動作させるには、YouTube 20.21.37にパッチを適用してください"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - 字幕の動作を旧仕様に戻す</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 -「再生リストに保存」を旧仕様に戻す</string>
@@ -1354,19 +1360,19 @@ Automotive レイアウト
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
   <string name="morphe_video_quality_default_entry_1">自動</string>
   <string name="morphe_remember_video_quality_last_selected_title">画質を保存</string>
-  <string name="morphe_remember_video_quality_last_selected_summary">画質メニューでの画質の変更を、設定の「デフォルトの画質」に反映し、すべての動画に適用します</string>
+  <string name="morphe_remember_video_quality_last_selected_summary">画質メニューでの画質の変更を、設定の [デフォルトの画質] に反映し、すべての動画に適用します</string>
   <string name="morphe_remember_video_quality_last_selected_toast_title">画質変更の通知</string>
   <string name="morphe_remember_video_quality_last_selected_toast_summary">設定の [デフォルトの画質] または [ショートのデフォルトの画質] に新しい値が保存されたときに通知を表示します</string>
   <string name="morphe_video_quality_default_wifi_title">デフォルトの画質 (Wi-Fi)</string>
   <string name="morphe_video_quality_default_mobile_title">デフォルトの画質 (モバイル)</string>
   <string name="morphe_remember_shorts_quality_last_selected_title">ショートの画質を保存</string>
-  <string name="morphe_remember_shorts_quality_last_selected_summary">画質メニューでの画質の変更を、設定の「ショートのデフォルトの画質」に反映し、すべてのショート動画に適用します</string>
-  <string name="morphe_shorts_quality_default_wifi_title">デフォルトのショートの画質 (Wi-Fi)</string>
-  <string name="morphe_shorts_quality_default_mobile_title">デフォルトのショートの画質 (モバイル)</string>
-  <string name="morphe_remember_video_quality_toast_mobile">デフォルトの画質 (モバイル) の変更: %s</string>
-  <string name="morphe_remember_video_quality_toast_wifi">デフォルトの画質 (Wi-Fi) の変更: %s</string>
-  <string name="morphe_remember_video_quality_toast_shorts_mobile">ショートの画質 (モバイル) の変更: %s</string>
-  <string name="morphe_remember_video_quality_toast_shorts_wifi">ショートの画質 (Wi-Fi) の変更: %s</string>
+  <string name="morphe_remember_shorts_quality_last_selected_summary">画質メニューでの画質の変更を、設定の [ショートのデフォルトの画質] に反映し、すべてのショート動画に適用します</string>
+  <string name="morphe_shorts_quality_default_wifi_title">ショートのデフォルトの画質 (Wi-Fi)</string>
+  <string name="morphe_shorts_quality_default_mobile_title">ショートのデフォルトの画質 (モバイル)</string>
+  <string name="morphe_remember_video_quality_toast_mobile">デフォルトの画質 (モバイル): %s</string>
+  <string name="morphe_remember_video_quality_toast_wifi">デフォルトの画質 (Wi-Fi): %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">ショートの画質 (モバイル): %s</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">ショートの画質 (Wi-Fi): %s</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
   <string name="morphe_playback_speed_dialog_button_title">再生速度ボタンを表示</string>
   <string name="morphe_playback_speed_dialog_button_summary">長押しすると、再生速度をデフォルトの値にリセットします</string>
@@ -1391,13 +1397,13 @@ Automotive レイアウト
   <string name="morphe_remember_playback_speed_last_selected_toast_title">再生速度変更の通知</string>
   <string name="morphe_remember_playback_speed_last_selected_toast_summary">設定の [デフォルトの再生速度] に新しい値が保存されたときに通知を表示します</string>
   <string name="morphe_playback_speed_default_title">デフォルトの再生速度</string>
-  <string name="morphe_shorts_playback_speed_default_title">ショートの再生速度のデフォルト値</string>
-  <string name="morphe_shorts_remember_playback_speed_title">ショートの再生速度を記憶</string>
-  <string name="morphe_shorts_remember_playback_speed_summary">手動で選択したショートの再生速度を、今後のすべてのショートに適用します。オフにすると、ショートプレーヤーを閉じた後に速度がデフォルトに戻ります</string>
-  <string name="morphe_shorts_playback_speed_flyout_button_title">ショートのメニューに再生速度を表示</string>
-  <string name="morphe_shorts_playback_speed_flyout_button_summary">ショートプレーヤーのメニューに再生速度項目を追加します</string>
+  <string name="morphe_shorts_playback_speed_default_title">ショートのデフォルトの再生速度</string>
+  <string name="morphe_shorts_remember_playback_speed_title">ショートの再生速度を保存</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">再生速度メニューでのショート動画の再生速度の変更を、設定の [ショートのデフォルトの再生速度] に反映し、すべてのショート動画に適用します。ショート プレーヤーを閉じるとデフォルトの値が適用されるため、この機能がオフの場合、ショート プレーヤーを閉じると変更した値からデフォルトの値に戻ります</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">ショートのメニューに「再生速度」を表示</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">ショート プレーヤーのフライアウト メニューに「再生速度」を追加します</string>
   <string name="morphe_shorts_playback_speed_flyout_title">再生速度 · %s</string>
-  <string name="morphe_remember_playback_speed_toast">デフォルトの再生速度の変更: %s</string>
+  <string name="morphe_remember_playback_speed_toast">デフォルトの再生速度: %s</string>
   <string name="morphe_disable_playback_speed_music_title">音楽動画を通常速度で再生</string>
   <string name="morphe_disable_playback_speed_music_summary">音楽動画を常に 1.0 倍速で再生します</string>
   <string name="morphe_playback_speed_channel_whitelist_title">チャンネル再生速度ホワイトリスト</string>
@@ -1627,4 +1633,17 @@ AV1 での動画再生はカクつくか、フレームが欠落する可能性�
   <string name="morphe_series_tracker_no_search_results">シリーズが見つかりません</string>
   <string name="morphe_series_tracker_untitled_episode">タイトルなしのエピソード</string>
   <string name="morphe_series_tracker_unavailable_episode">利用不可なエピソード</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">ニコニコ風コメント</string>
+  <string name="morphe_niconico_comments_screen_summary">ライブチャットとチャットのリプレイを、ビデオ上を流れるコメントとして表示します</string>
+  <string name="morphe_niconico_comments_summary">ビデオプレーヤーにオーバーレイボタンを表示します。タップするとコメントの表示/非表示を切り替え、長押しすると簡易設定を表示します</string>
+  <string name="morphe_niconico_comments_font_size_title">コメントのフォントサイズ</string>
+  <string name="morphe_niconico_comments_font_size_summary">コメントのテキストサイズ (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">コメントの不透明度</string>
+  <string name="morphe_niconico_comments_opacity_summary">コメントのテキストと背景の不透明度</string>
+  <string name="morphe_niconico_comments_travel_duration_title">移動時間</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">コメントが画面を横切るまでの秒数です。値を小さくすると移動速度が上がります</string>
+  <string name="morphe_niconico_comments_max_length_title">コメントの最大文字数</string>
+  <string name="morphe_niconico_comments_max_length_summary">これより長い文字数のコメントを非表示にします。絵文字は1文字としてカウントされます</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">制限なし</string>
 </resources>

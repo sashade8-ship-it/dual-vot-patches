@@ -25,6 +25,7 @@ import java.util.Locale;
 
 import app.morphe.extension.music.patches.lyrics.LyricsManager;
 import app.morphe.extension.music.patches.lyrics.model.LyricsFilterDefaults;
+import app.morphe.extension.music.patches.lyrics.session.LockScreenLyrics;
 import app.morphe.extension.music.patches.lyrics.session.MiniplayerLyrics;
 import app.morphe.extension.music.settings.Settings;
 import app.morphe.extension.shared.Logger;
@@ -117,9 +118,25 @@ public final class LyricsPanelInstaller {
                 updateKeepScreenOn(isLyricsPanelOpen());
                 return;
             }
-            if (Settings.LYRICS_MINIPLAYER.key.equals(key)
-                    || Settings.LYRICS_DISPLAY_ARTIST_FIRST.key.equals(key)) {
+            final boolean formatting = Settings.LYRICS_FORCE_CAPITALIZE.key.equals(key)
+                    || Settings.LYRICS_STRIP_TRAILING_PUNCTUATION.key.equals(key);
+            if (formatting) {
+                // Also shown in the miniplayer and the media session.
                 MiniplayerLyrics.onSettingsChanged();
+                LockScreenLyrics.onSettingsChanged();
+            } else if (Settings.LYRICS_MINIPLAYER.key.equals(key)
+                    || Settings.LYRICS_MEDIASESSION.key.equals(key)
+                    || Settings.LYRICS_MINI_TRACK_FORMAT.key.equals(key)
+                    || Settings.LYRICS_MINI_ENCAPSULATION.key.equals(key)
+                    || Settings.LYRICS_MINI_CHAR_LIMIT.key.equals(key)
+                    || Settings.LYRICS_MINI_ARTIST_CHAR_LIMIT.key.equals(key)
+                    || Settings.LYRICS_MINI_ARTIST_MIN_MS.key.equals(key)
+                    || Settings.LYRICS_MINI_ARTIST_MAX_MS.key.equals(key)
+                    || Settings.LYRICS_MINI_FULL_WIDTH_MULTIPLIER.key.equals(key)
+                    || Settings.LYRICS_MINI_INSTRUMENTAL.key.equals(key)
+                    || Settings.LYRICS_MINI_NEXT_OFFSET_MS.key.equals(key)) {
+                MiniplayerLyrics.onSettingsChanged();
+                LockScreenLyrics.onSettingsChanged();
                 return;
             }
             final LyricsPanelView panelView = panelReference.get();
@@ -133,9 +150,9 @@ public final class LyricsPanelInstaller {
                 panelView.applyToolbarButtonSettings();
             } else if (Settings.LYRICS_TEXT_SIZE.key.equals(key)) {
                 panelView.applyTextSize();
-            } else if (Settings.LYRICS_SWAP_TRANS_ROMA.key.equals(key)
+            } else if (formatting || Settings.LYRICS_SWAP_TRANS_ROMA.key.equals(key)
                     || Settings.LYRICS_TAP_TO_SEEK.key.equals(key)) {
-                // Both are read while the line is laid out, so the lines need rebuilding.
+                // These are read while the line is laid out, so the lines need rebuilding.
                 panelView.applyLyricLayoutSettings();
             } else if (Settings.LYRICS_WORD_SYNC.key.equals(key)) {
                 panelView.applyWordSyncSetting();
@@ -383,7 +400,7 @@ public final class LyricsPanelInstaller {
     @Nullable
     private static ViewGroup findLyricsPanelContent(View root) {
         TextView title = findVisibleTitle(root);
-        if (title != null && isLyricsTitle(title)) {
+        if (isLyricsTitle(title)) {
             // Heading and content share a panel, so the container comes from the heading's
             // own panel rather than a global lookup.
             return findPanelContent(title);

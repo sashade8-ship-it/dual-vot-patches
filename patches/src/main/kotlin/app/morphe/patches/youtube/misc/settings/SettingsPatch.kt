@@ -408,7 +408,7 @@ internal fun modifyActivityForSettingsInjection(
         )
     }.let(activityOnCreateClass.methods::add)
 
-    // Override finish() to intercept back gesture.
+    // Override finish() to intercept back gesture, and to show the restart dialog if needed.
     ImmutableMethod(
         activityOnCreateClass.type,
         if (isYouTubeMusic) "finish" else "onBackPressed",
@@ -426,11 +426,11 @@ internal fun modifyActivityForSettingsInjection(
         addInstructions(
             0,
             """
-                invoke-static {}, $extensionClassType->$extensionMethodName()Z
+                invoke-static { p0 }, $extensionClassType->$extensionMethodName(Landroid/app/Activity;)Z
                 move-result v0
-                if-nez v0, :search_handled
+                if-nez v0, :handled
                 $invokeFinishOpcode { p0 }, Landroid/app/Activity;->finish()V
-                :search_handled
+                :handled
                 return-void
             """
         )

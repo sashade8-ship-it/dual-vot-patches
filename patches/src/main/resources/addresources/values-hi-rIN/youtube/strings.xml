@@ -393,6 +393,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shopping_links_title">쇼핑 링크 숨기기</string>
   <string name="morphe_hide_video_ads_title">छुपाएं वीडियो विज्ञापन</string>
   <string name="morphe_hide_youtube_premium_promotions_title">छुपाएं YouTube प्रीमियम प्रोमोशन</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">लोड हो रहा है…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">वर्तमान चैनल:</string>
   <string name="morphe_channel_whitelist_add">व्हाइटलिस्ट में जोड़ें</string>
@@ -409,6 +412,9 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">चैनल खोज परिणाम</string>
   <string name="morphe_channel_search_no_results">इस चैनल पर कुछ नहीं मिला</string>
   <string name="morphe_channel_search_failed">इस चैनल में खोज नहीं की जा सकी</string>
+  <string name="morphe_channel_search_videos">वीडियो</string>
+  <string name="morphe_channel_search_posts">पोस्ट</string>
+  <string name="morphe_channel_search_no_posts">इस चैनल पर कोई पोस्ट मेल नहीं खाता</string>
   <string name="morphe_channel_search_sort_relevance">प्रासंगिकता</string>
   <string name="morphe_channel_search_sort_most_viewed">सबसे अधिक देखे गए</string>
   <string name="morphe_channel_search_sort_least_viewed">सबसे कम देखे गए</string>
@@ -494,6 +500,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_quick_video">वीडियो</string>
   <string name="morphe_external_downloader_quick_audio">ऑडियो</string>
   <string name="morphe_external_downloader_quick_options">सभी विकल्प</string>
+  <string name="morphe_shorts_download_flyout_button_title">Shorts मेनू में डाउनलोड दिखाएं</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Shorts प्लेयर में बाहरी डाउनलोडर फ्लाउट मेनू आइटम जोड़ें</string>
+  <string name="morphe_shorts_download_flyout_title">डाउनलोड करें</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">वॉइस ओवर अनुवाद</string>
   <string name="morphe_vot_screen_summary">डिवाइस पर टेक्स्ट-टू-स्पीच का उपयोग करके वीडियो कैप्शन को ज़ोर से पढ़ें, जो प्लेबैक के साथ सिंक्रनाइज़ किया गया है।</string>
@@ -1121,9 +1130,6 @@ OpenRouter.ai खोलने के लिए यहां टैप करे�
   <string name="morphe_tablet_layout_in_player_summary">"पुराने प्लेयर लेआउट को पुनर्स्थापित करता है
 
 सीमा: यदि 'पुराने वीडियो एक्शन बार को पुनर्स्थापित करें' बंद कर दिया गया है, तो 'अधिक वीडियो' ओवरले उपलब्ध नहीं हो सकता है"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"इसे सक्षम करने से प्लेयर लेआउट की कुछ विशेषताएं खराब हो सकती हैं, जैसे कि कमेंट सेक्शन या प्लेयर के नीचे दिखाए गए 'More videos'।
-
-टैबलेट लेआउट अब YouTube द्वारा समर्थित नहीं है, और हाल के YouTube वर्ज़न में आंशिक या पूरी तरह से खराब है। एक वर्किंग टैबलेट लेआउट के लिए, YouTube 20.21.37 को पैच करें"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - पुराने कैप्शन व्यवहार को पुनर्स्थापित करें</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - पुराने सेव को प्लेलिस्ट में पुन: स्थापित करें</string>
@@ -1626,4 +1632,17 @@ AV1 के साथ वीडियो प्लेबैक में झट�
   <string name="morphe_series_tracker_no_search_results">कोई सीरीज़ नहीं मिली</string>
   <string name="morphe_series_tracker_untitled_episode">शीर्षकहीन एपिसोड</string>
   <string name="morphe_series_tracker_unavailable_episode">अनुपलब्ध एपिसोड</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico कमेंट्स</string>
+  <string name="morphe_niconico_comments_screen_summary">लाइव चैट और चैट रिप्ले को कमेंट्स के रूप में दिखाएं जो वीडियो में स्क्रॉल होते हैं</string>
+  <string name="morphe_niconico_comments_summary">वीडियो प्लेयर में एक ओवरले बटन दिखाता है। कमेंट्स दिखाने या छिपाने के लिए टैप करें, क्विक सेटिंग्स के लिए टैप करके रखें</string>
+  <string name="morphe_niconico_comments_font_size_title">कमेंट फ़ॉन्ट आकार</string>
+  <string name="morphe_niconico_comments_font_size_summary">कमेंट्स के टेक्स्ट का आकार (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">कमेंट ओपेसिटी</string>
+  <string name="morphe_niconico_comments_opacity_summary">कमेंट टेक्स्ट और बैकग्राउंड की ओपेसिटी</string>
+  <string name="morphe_niconico_comments_travel_duration_title">ट्रैवल ड्यूरेशन</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">कमेंट्स को स्क्रीन पार करने में कितने सेकंड लगते हैं। कम वैल्यू तेज़ी से चलती हैं</string>
+  <string name="morphe_niconico_comments_max_length_title">कमेंट की अधिकतम लंबाई</string>
+  <string name="morphe_niconico_comments_max_length_summary">इससे अधिक वर्णों वाले कमेंट छुपाएं। प्रत्येक इमोजी को एक वर्ण माना जाएगा</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">कोई सीमा नहीं</string>
 </resources>

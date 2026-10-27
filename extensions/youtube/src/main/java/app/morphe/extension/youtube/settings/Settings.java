@@ -15,6 +15,7 @@ import static app.morphe.extension.shared.sponsorblock.objects.CategoryBehaviour
 import java.util.List;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.StringRef;
 import app.morphe.extension.shared.patches.CustomFontPatch.FontType;
 import app.morphe.extension.shared.patches.DownloadMode;
 import app.morphe.extension.shared.settings.BooleanSetting;
@@ -305,6 +306,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting SANITIZE_VIDEO_SUBTITLE = new BooleanSetting("morphe_sanitize_video_subtitle", FALSE);
     public static final BooleanSetting EXTERNAL_DOWNLOADER_QUICK_MENU = new BooleanSetting("morphe_external_downloader_quick_menu", FALSE, new ExternalDownloaderAvailability());
     public static final BooleanSetting EXTERNAL_DOWNLOADER_MARK_WATCHED = new BooleanSetting("morphe_external_downloader_mark_watched", FALSE, new ExternalDownloaderAvailability());
+    public static final BooleanSetting SHORTS_DOWNLOAD_FLYOUT_BUTTON = new BooleanSetting("morphe_shorts_download_flyout_button", TRUE, DOWNLOAD_MODE.availability(DownloadMode.EXTERNAL));
 
     // Overlay buttons
     public static final BooleanSetting FULLSCREEN_VIDEO_SCALE_BUTTON = new BooleanSetting("morphe_fullscreen_video_scale_button", FALSE, true);
@@ -541,7 +543,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting DISABLE_LAYOUT_UPDATES = new BooleanSetting("morphe_disable_layout_updates", FALSE, true,"morphe_disable_layout_updates_user_dialog_message");
     public static final BooleanSetting RESTORE_OLD_SETTINGS_MENUS = new BooleanSetting("morphe_restore_old_settings_menus", FALSE, true);
     public static final EnumSetting<FormFactor> CHANGE_FORM_FACTOR = new EnumSetting<>("morphe_change_form_factor", FormFactor.DEFAULT, true, "morphe_change_form_factor_user_dialog_message");
-    public static final BooleanSetting TABLET_LAYOUT_IN_PLAYER = new BooleanSetting("morphe_tablet_layout_in_player", FALSE, true, "morphe_tablet_layout_in_player_user_dialog_message", new TabletLayoutInPlayerAvailability());
+    public static final BooleanSetting TABLET_LAYOUT_IN_PLAYER = new BooleanSetting("morphe_tablet_layout_in_player", FALSE, true, new TabletLayoutInPlayerAvailability());
     public static final BooleanSetting BYPASS_IMAGE_REGION_RESTRICTIONS = new BooleanSetting("morphe_bypass_image_region_restrictions", FALSE, true);
     public static final BooleanSetting GRADIENT_LOADING_SCREEN = new BooleanSetting("morphe_gradient_loading_screen", FALSE, true);
     public static final EnumSetting<HeaderLogo> HEADER_LOGO = new EnumSetting<>("morphe_header_logo", HeaderLogo.DEFAULT, true);
@@ -707,6 +709,16 @@ public class Settings extends SharedYouTubeSettings {
     public static final FloatSetting SWIPE_BRIGHTNESS_VALUE = new FloatSetting("morphe_swipe_brightness_value", -1f);
     public static final BooleanSetting SWIPE_LOWEST_VALUE_ENABLE_AUTO_BRIGHTNESS = new BooleanSetting("morphe_swipe_lowest_value_enable_auto_brightness", FALSE, true, new SwipeActionAvailability(SwipeZoneAction.BRIGHTNESS));
     public static final IntegerSetting SWIPE_ZONE_WIDTH = new IntegerSetting("morphe_swipe_zone_width", 37, true, new SideSwipeZonesAvailability());
+
+    // Niconico comments
+    public static final BooleanSetting NICONICO_COMMENTS = new BooleanSetting("morphe_niconico_comments", FALSE, true);
+    public static final BooleanSetting NICONICO_COMMENTS_SHOWN = new BooleanSetting("morphe_niconico_comments_shown", TRUE);
+    public static final IntegerSetting NICONICO_COMMENTS_FONT_SIZE = new IntegerSetting("morphe_niconico_comments_font_size", 20, parent(NICONICO_COMMENTS));
+    public static final IntegerSetting NICONICO_COMMENTS_OPACITY = new IntegerSetting("morphe_niconico_comments_opacity", 100, parent(NICONICO_COMMENTS));
+    public static final IntegerSetting NICONICO_COMMENTS_TRAVEL_DURATION = new IntegerSetting("morphe_niconico_comments_travel_duration", 7, parent(NICONICO_COMMENTS));
+    /** Max comment length slider value that shows all comments. */
+    public static final int NICONICO_COMMENTS_MAX_LENGTH_NO_LIMIT = 100;
+    public static final IntegerSetting NICONICO_COMMENTS_MAX_LENGTH = new IntegerSetting("morphe_niconico_comments_max_length", NICONICO_COMMENTS_MAX_LENGTH_NO_LIMIT, parent(NICONICO_COMMENTS));
 
     // Voice over translation
     public static final BooleanSetting VOT_ENABLED = new BooleanSetting("morphe_vot_enabled", FALSE, true);
@@ -1199,5 +1211,14 @@ public class Settings extends SharedYouTubeSettings {
                 10, 25, 1, "x", 10));
         SeekBarPreference.register(new SeekBarConfig(VIDEO_DELAY,
                 0, 5000, 25, "ms"));
+        SeekBarPreference.register(new SeekBarConfig(NICONICO_COMMENTS_FONT_SIZE,
+                12, 40, 1, "sp"));
+        SeekBarPreference.register(new SeekBarConfig(NICONICO_COMMENTS_OPACITY,
+                10, 100, 10, "%"));
+        SeekBarPreference.register(new SeekBarConfig(NICONICO_COMMENTS_TRAVEL_DURATION,
+                3, 15, 1, "s"));
+        SeekBarPreference.register(new SeekBarConfig(NICONICO_COMMENTS_MAX_LENGTH,
+                10, NICONICO_COMMENTS_MAX_LENGTH_NO_LIMIT, 10, "", 1,
+                StringRef.sf("morphe_niconico_comments_max_length_no_limit")));
     }
 }

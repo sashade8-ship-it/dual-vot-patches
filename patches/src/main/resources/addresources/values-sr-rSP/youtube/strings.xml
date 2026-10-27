@@ -393,6 +393,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_shopping_links_title">Сакриј линкове за куповину</string>
   <string name="morphe_hide_video_ads_title">Сакриј видео огласе</string>
   <string name="morphe_hide_youtube_premium_promotions_title">Сакриј промоције за YouTube Premium</string>
+  <!-- layout.flyout.flyoutPatch -->
+  <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">Учитавање…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
   <string name="morphe_channel_whitelist_current_channel">Тренутни канал:</string>
   <string name="morphe_channel_whitelist_add">Додај на белу листу</string>
@@ -409,6 +412,9 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_results">Резултати претраге канала</string>
   <string name="morphe_channel_search_no_results">Ништа није пронађено на овом каналу</string>
   <string name="morphe_channel_search_failed">Претрага овог канала није успела</string>
+  <string name="morphe_channel_search_videos">Видео снимци</string>
+  <string name="morphe_channel_search_posts">Објаве</string>
+  <string name="morphe_channel_search_no_posts">Нема објава на овом каналију које одговарају претрази</string>
   <string name="morphe_channel_search_sort_relevance">Релевантност</string>
   <string name="morphe_channel_search_sort_most_viewed">Најгледанији</string>
   <string name="morphe_channel_search_sort_least_viewed">Најмање гледани</string>
@@ -494,6 +500,9 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_quick_video">Видео</string>
   <string name="morphe_external_downloader_quick_audio">Аудио</string>
   <string name="morphe_external_downloader_quick_options">Све опције</string>
+  <string name="morphe_shorts_download_flyout_button_title">Прикажи преузимање у менију Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Додаје ставку спољног менија за преузимање на плејер Shorts</string>
+  <string name="morphe_shorts_download_flyout_title">Преузми</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Превод гласовног надзора</string>
   <string name="morphe_vot_screen_summary">Учитавајте титлове видео записа наглас користећи текст у говор на уређају, синхронизовано са репродукцијом</string>
@@ -1104,9 +1113,6 @@ Second \"item\" text"</string>
   <string name="morphe_tablet_layout_in_player_summary">"Враћа стари изглед плејера
 
 Ограничење: Ако је „Враћање старе траке акција видеа“ искључено, преклапање „Више видеа“ можда неће бити доступно"</string>
-  <string name="morphe_tablet_layout_in_player_user_dialog_message">"Омогућавање овога може покварити неке функције изгледаја плејера, као што су одељак за коментаре или „Више видео записа“ приказани испод плејера.
-
-YouTube више не подржава таблет изглед, и он је делимично или потпуно некоректен у новијим верзијама YouTube-а. За функционалан таблет изглед, патчујте YouTube 20.21.37"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
   <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Врати старо понашање титлова</string>
   <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Враћа старе иконице плејера</string>
@@ -1609,4 +1615,17 @@ AVC (H.264)
   <string name="morphe_series_tracker_no_search_results">Ne pronađene serije</string>
   <string name="morphe_series_tracker_untitled_episode">Bez naziva epizode</string>
   <string name="morphe_series_tracker_unavailable_episode">Neдоступna epizoda</string>
+  <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico коментари</string>
+  <string name="morphe_niconico_comments_screen_summary">Прикажи разговор уживо и снимак разговора као коментаре који се померају преко видео снимка</string>
+  <string name="morphe_niconico_comments_summary">Приказује преклопно dugme у видео плејеру. Додирните да прикажете или сакријете коментаре, додирните и задржите за брза подешавања</string>
+  <string name="morphe_niconico_comments_font_size_title">Величина fonte коментара</string>
+  <string name="morphe_niconico_comments_font_size_summary">Величина текста коментара (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">Прозирност коментара</string>
+  <string name="morphe_niconico_comments_opacity_summary">Прозирност текста коментара и позадина</string>
+  <string name="morphe_niconico_comments_travel_duration_title">Трајање кретања</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Колико секунда је потребно коментарима да пређу екран. Мање вредности се померају брже</string>
+  <string name="morphe_niconico_comments_max_length_title">Максимална дужина коментара</string>
+  <string name="morphe_niconico_comments_max_length_summary">Сакрива коментарe са више знакова од овога. Сваки емоџи се рачуна као један знак</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Без ограничења</string>
 </resources>

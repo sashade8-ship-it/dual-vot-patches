@@ -112,6 +112,12 @@ public final class FeedVideoCardsPatch {
 
     private static final byte[] THUMBNAIL_PATH = "/vi".getBytes(StandardCharsets.US_ASCII);
 
+    /**
+     * Invisible format characters, such as the ones the elements of the classic layout add
+     * after the title (U+2060 to U+2064), which the card does not show.
+     */
+    private static final Pattern FORMAT_CHARACTERS_PATTERN = Pattern.compile("\\p{Cf}+");
+
     /** Text -> video id, or {@link #AMBIGUOUS}. Oldest texts are removed first. */
     @GuardedBy("itself")
     private static final Map<String, String> textVideoIds = Utils
@@ -132,24 +138,19 @@ public final class FeedVideoCardsPatch {
     }
 
     /**
-     * @return If the video plays in the feed, where the inline player shows its own buttons
-     *         over the thumbnail, such as the mute and the captions buttons.
-     */
-    public static boolean isPlayingInline(@Nullable String videoId) {
-        if (videoId == null || PlayerType.getCurrent() != PlayerType.INLINE_MINIMAL) {
-            return false;
-        }
-        return videoId.equals(VideoInformation.getVideoId())
-                || videoId.equals(VideoInformation.getPlayerResponseVideoId());
-    }
-
-    /**
-     * @return If what is drawn on the thumbnail of the card is hidden now.
+     * @return If what is drawn on the thumbnail of the card is hidden now, because the video plays
+     *         in the feed, where the inline player shows its own buttons over the thumbnail,
+     *         such as the mute and the captions buttons.
      */
     public static boolean isCardPlayingInline(ComponentHost host) {
         // The video of the card that was laid out, or null if it is not known.
         String videoId = cardVideoIds.get(host);
-        return isPlayingInline(PLAYLIST.equals(videoId) ? null : videoId);
+        if (videoId == null || PLAYLIST.equals(videoId)
+                || PlayerType.getCurrent() != PlayerType.INLINE_MINIMAL) {
+            return false;
+        }
+        return videoId.equals(VideoInformation.getVideoId())
+                || videoId.equals(VideoInformation.getPlayerResponseVideoId());
     }
 
     /**
@@ -201,6 +202,13 @@ public final class FeedVideoCardsPatch {
             return true;
         }
         return false;
+    }
+
+    /**
+     * @return The text as it's matched between an element and a card.
+     */
+    private static String normalizeText(CharSequence text) {
+        return FORMAT_CHARACTERS_PATTERN.matcher(text).replaceAll("").trim();
     }
 
     private static boolean isVideoText(String text) {
@@ -268,7 +276,7 @@ public final class FeedVideoCardsPatch {
 
             synchronized (textVideoIds) {
                 for (ProtoNode node : textNodes) {
-                    String text = node.getText().trim();
+                    String text = normalizeText(node.getText());
                     if (!isVideoText(text)) {
                         continue;
                     }
@@ -465,7 +473,7 @@ public final class FeedVideoCardsPatch {
         if (textContent != null) {
             for (CharSequence text : textContent.getTextItems()) {
                 if (text != null) {
-                    String item = text.toString().trim();
+                    String item = normalizeText(text);
                     if (isVideoText(item) && !texts.contains(item)) {
                         texts.add(item);
                     }
@@ -479,37 +487,24 @@ public final class FeedVideoCardsPatch {
         }
     }
 
-    @Nullable
-    private static Activity findActivity(Context context) {
-        while (context instanceof ContextWrapper wrapper) {
-            if (context instanceof Activity activity) {
-                return activity;
-            }
-            context = wrapper.getBaseContext();
-        }
-        return null;
-    }
-
     /**
      * The share sheet and other bottom sheets are dialogs that can show the thumbnail and the texts
      * of the opened video, so they look like a card. Feeds are in the window of the activity.
      */
     public static boolean isInDialog(ComponentHost host) {
-        Activity activity = findActivity(host.getContext());
-        if (activity != null && activity.getWindow() != null) {
+        Context context = host.getContext();
+        while (context instanceof ContextWrapper wrapper && !(context instanceof Activity)) {
+            context = wrapper.getBaseContext();
+        }
+        if (context instanceof Activity activity && activity.getWindow() != null) {
             View decorView = activity.getWindow().peekDecorView();
             if (decorView != null && host.getRootView() != decorView) {
                 return true;
             }
         }
-        return isInBottomSheet(host);
-    }
 
-    /**
-     * Bottom sheets that are shown in the window of the activity.
-     */
-    private static boolean isInBottomSheet(View view) {
-        ViewParent parent = view.getParent();
+        // Bottom sheets that are shown in the window of the activity.
+        ViewParent parent = host.getParent();
         while (parent instanceof View parentView) {
             final int id = parentView.getId();
             // Generated ids, which have no package, are not resources.
