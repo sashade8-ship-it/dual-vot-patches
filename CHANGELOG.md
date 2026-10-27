@@ -1,3 +1,13 @@
+## 1.49.0-dev.9-dualvot.8.5.4 (2026-10-27)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.49.0-dev.9](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.9).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.49.0-dev.8-dualvot.8.5.4 (2026-10-27)
 
 ### Automated Morphe update
@@ -474,6 +484,31 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.49.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.8...v1.49.0-dev.9) (2026-10-27)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Downloads:** Downloaded videos that work at first may not work later ([90d011d](https://github.com/MorpheApp/morphe-patches/commit/90d011dc007cf7e433196fd27f392c87d32363f6))
+* **YouTube - Feed video actions:** Watch later button is missing after scrolling up ([51dfd75](https://github.com/MorpheApp/morphe-patches/commit/51dfd7565426be389f61dc5f34196cc762a103fe))
+* **YouTube - Feed video actions:** Watch later button opens the channel in right to left languages ([0e058e8](https://github.com/MorpheApp/morphe-patches/commit/0e058e8d184650326d81a243d083ae9bd6f3f942))
+* **YouTube - Feed view count:** View count badge covers the duration in right to left languages ([b012535](https://github.com/MorpheApp/morphe-patches/commit/b01253535eb65761f896042d46ba1fed002232c2))
+* **YouTube:** Channel page community posts do not load when feed "Hide community posts" is enabled ([#4110](https://github.com/MorpheApp/morphe-patches/issues/4110)) ([b54aaec](https://github.com/MorpheApp/morphe-patches/commit/b54aaecaa26e8e6e4491b0c54193cd2b2b6e0f2c))
+* **YouTube:** Feed thumbnail badges are missing after scrolling up, show a loading spinner until they are loaded ([03ef708](https://github.com/MorpheApp/morphe-patches/commit/03ef708f724c9af7f784b75ead9da58b8cede5f4))
+* **YouTube:** Remove legacy litho buffer filtering code required for app versions less than 20.22, change legacy support to `20.26.46` ([0ce43f7](https://github.com/MorpheApp/morphe-patches/commit/0ce43f7b8bf0119f295f269b939186ff264b5d48))
+* **YouTube:** Watch page feed lags when scrolling ([35e4123](https://github.com/MorpheApp/morphe-patches/commit/35e412375a1de62b500e2c9ca70c0ca5a18fb793))
+
+### ✨ New Features
+
+* Validate custom header and icon folders when the option is set ([fbb095d](https://github.com/MorpheApp/morphe-patches/commit/fbb095dbd6b9bf7410e4cff38b664d2fb3048aeb))
+* **YouTube - Custom branding:** Add experimental YouTube launcher icons ([#4114](https://github.com/MorpheApp/morphe-patches/issues/4114)) ([de9e6e4](https://github.com/MorpheApp/morphe-patches/commit/de9e6e4e7953f6192991e35025ed644806948ecd))
+* **YouTube - Theme:** Add experimental YT splash screen animation ([#4109](https://github.com/MorpheApp/morphe-patches/issues/4109)) ([1f24e84](https://github.com/MorpheApp/morphe-patches/commit/1f24e8433b26aed7a0e8cd21bf6c719526e7ecc4))
+* **YouTube:** Hidden a new type of community post ([fb51b72](https://github.com/MorpheApp/morphe-patches/commit/fb51b722e05df50e98302f87996525b349d0474b))
+* **YouTube:** Redirect Watch later saves to a chosen playlist ([#4016](https://github.com/MorpheApp/morphe-patches/issues/4016)) ([04e791d](https://github.com/MorpheApp/morphe-patches/commit/04e791d3d1c9fa8c8c352c61b18a6348311a8a27))
+
+### 🚀 Updated App Support
+
+* **YouTube Music:** Add experimental support for `9.43.51` ([141aa8f](https://github.com/MorpheApp/morphe-patches/commit/141aa8fedea935664df73154cdc1823e893c5b88))
 
 ## [1.49.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.7...v1.49.0-dev.8) (2026-10-27)
 
