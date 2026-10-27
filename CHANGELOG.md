@@ -1,3 +1,13 @@
+## 1.49.0-dev.8-dualvot.8.5.4 (2026-10-27)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 1.49.0-dev.8](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v1.49.0-dev.8).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 1.49.0-dev.7-dualvot.8.5.4 (2026-10-26)
 
 ### Fixes
@@ -464,6 +474,27 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [1.49.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.7...v1.49.0-dev.8) (2026-10-27)
+
+### 🐛 Bug Fixes
+
+* **YouTube - Channel whitelists:** Flyout menu opens with a delay while the channel is fetched ([5fed7fc](https://github.com/MorpheApp/morphe-patches/commit/5fed7fc701421b701263f742a6ba38fd4cc89dd5))
+* **YouTube - Litho filter:** Crash when scrolling a list after a filtered element is removed ([6d43157](https://github.com/MorpheApp/morphe-patches/commit/6d4315757768d792614915d0867079437505fab9))
+* **YouTube - Playback speed:** Use the bold icon for the Shorts player menu item ([c710042](https://github.com/MorpheApp/morphe-patches/commit/c710042f6cf3f068141e89cd833dd580d7b64b8c))
+* **YouTube - Player icon style:** Add Ionicons picture in picture button icon ([68b8628](https://github.com/MorpheApp/morphe-patches/commit/68b86282725f73c3a92602c792457371ddb88c8e))
+* **YouTube - Premium-style queue:** Fix missing titles and stale now playing row ([#3795](https://github.com/MorpheApp/morphe-patches/issues/3795)) ([ef28427](https://github.com/MorpheApp/morphe-patches/commit/ef28427f63c30329b33b8d83c439c95b731a4fb6))
+* **YouTube - Premium-style queue:** Play the queue when the player Next button is pressed ([#3796](https://github.com/MorpheApp/morphe-patches/issues/3796)) ([ef8dcef](https://github.com/MorpheApp/morphe-patches/commit/ef8dcef6a9ef888a075fb97d963719ddf82d6b42))
+* **YouTube - Return YouTube Dislike:** Feed thumbnail like count is not shown with the Classic feed card layout ([15a1700](https://github.com/MorpheApp/morphe-patches/commit/15a170042639ca8bc0b4d871b781c29d00926fb2))
+* **YouTube Music - Downloads:** Fix song menu downloads for accounts without Premium ([#4086](https://github.com/MorpheApp/morphe-patches/issues/4086)) ([93c6893](https://github.com/MorpheApp/morphe-patches/commit/93c689374b0ef72cb97d6c73881ecdb132ce7e91))
+
+### ✨ New Features
+
+* **YouTube - Channel search:** Search the posts of the channel ([#4078](https://github.com/MorpheApp/morphe-patches/issues/4078)) ([93bd035](https://github.com/MorpheApp/morphe-patches/commit/93bd0351362da6c75eb40f47d0ea0e37c632eb1c))
+* **YouTube - Downloads:** Add download item to the Shorts menu ([#4099](https://github.com/MorpheApp/morphe-patches/issues/4099)) ([7159826](https://github.com/MorpheApp/morphe-patches/commit/715982644742ca770a1c61fe292a77bb1ce11296))
+* **YouTube - Downloads:** Add playlist downloads for accounts without Premium ([456e0db](https://github.com/MorpheApp/morphe-patches/commit/456e0db9603f0930a4893e3f24ee3eee8bd4e5f9))
+* **YouTube Music - Third-party lyrics:** Streamline lyrics viewing experience  ([#4002](https://github.com/MorpheApp/morphe-patches/issues/4002)) ([00a4bf4](https://github.com/MorpheApp/morphe-patches/commit/00a4bf457e8df233b21e6f73b244b0c12e91e53e))
+* **YouTube:** Add Niconico-style live/replay comments ([#4080](https://github.com/MorpheApp/morphe-patches/issues/4080)) ([e9f77d7](https://github.com/MorpheApp/morphe-patches/commit/e9f77d7c5932499ababf91481b883c30e96ccd1c))
 
 ## [1.49.0-dev.7](https://github.com/MorpheApp/morphe-patches/compare/v1.49.0-dev.6...v1.49.0-dev.7) (2026-10-26)
 
