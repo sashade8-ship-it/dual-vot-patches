@@ -18,6 +18,7 @@ import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.StringRef;
 import app.morphe.extension.shared.patches.CustomFontPatch.FontType;
 import app.morphe.extension.shared.patches.DownloadMode;
+import app.morphe.extension.shared.patches.SplashAnimationPatch.SplashScreenAnimationStyle;
 import app.morphe.extension.shared.settings.BooleanSetting;
 import app.morphe.extension.shared.settings.EnumSetting;
 import app.morphe.extension.shared.settings.FloatSetting;
@@ -341,6 +342,11 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting SAVE_TO_WATCH_LATER_FLYOUT_BUTTON = new BooleanSetting("morphe_save_to_watch_later_flyout_button", FALSE);
     public static final BooleanSetting KIDS_SAVE_TO_WATCH_LATER_FLYOUT_BUTTON = new BooleanSetting("morphe_save_to_watch_later_kids_flyout_button", TRUE);
     public static final BooleanSetting SHORTS_SAVE_TO_WATCH_LATER_FLYOUT_BUTTON = new BooleanSetting("morphe_save_to_watch_later_shorts_flyout_button", TRUE);
+    /**
+     * Playlist ID selected in the picker. Empty to keep the stock Watch later playlist.
+     */
+    public static final StringSetting SAVE_TO_WATCH_LATER_REDIRECT_PLAYLIST_ID = new StringSetting("morphe_save_to_watch_later_redirect_playlist_id", "", false);
+    public static final StringSetting SAVE_TO_WATCH_LATER_REDIRECT_PLAYLIST_TITLE = new StringSetting("morphe_save_to_watch_later_redirect_playlist_title", "", false);
     public static final EnumSetting<QueueType> QUEUE_TYPE = new EnumSetting<>("morphe_queue_type", QueueType.MORPHE);
     public static final StringSetting LOCAL_QUEUE_ITEMS = new StringSetting("morphe_local_queue_items", "", false, false);
     public static final BooleanSetting QUEUE_RESTORE = new BooleanSetting("morphe_queue_restore", FALSE, parentsAll(parent(SAVE_TO_WATCH_LATER_OVERLAY_BUTTON), new NotLocalQueueAvailability()));
@@ -1051,6 +1057,13 @@ public class Settings extends SharedYouTubeSettings {
         // 21.36+ has many visual glitches and problems with old thin player icons
         if (VersionCheckPatch.IS_21_36_OR_GREATER && !RESTORE_OLD_PLAYER_BUTTONS.isSetToDefault()) {
             RESTORE_OLD_PLAYER_BUTTONS.resetToDefault();
+        }
+
+        // The Rive startup animation requires 21.39+.
+        if (!VersionCheckPatch.IS_21_39_OR_GREATER
+                && SharedYouTubeSettings.SPLASH_SCREEN_STYLE.get() == SplashScreenAnimationStyle.RIVE_GLOW) {
+            Logger.printInfo(() -> "Resetting Rive splash screen animation style");
+            SharedYouTubeSettings.SPLASH_SCREEN_STYLE.resetToDefault();
         }
 
         // Android XR, Android XR Downgraded, and visionOS 1.03 are not selectable in the settings and are selected by spoof stream patch if needed.

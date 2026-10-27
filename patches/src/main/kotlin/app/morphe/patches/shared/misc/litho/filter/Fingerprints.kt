@@ -13,7 +13,6 @@ package app.morphe.patches.shared.misc.litho.filter
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.InstructionLocation.MatchAfterWithin
-import app.morphe.patcher.OpcodesFilter
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
@@ -61,12 +60,6 @@ internal object LithoFilterFingerprint : Fingerprint(
     )
 )
 
-internal object LithoFilterLegacyMethodFingerprint : Fingerprint(
-    definingClass = EXTENSION_CLASS,
-    name = "useLegacyLithoFiltering",
-    returnType = "Z"
-)
-
 internal object ProtobufBufferEncodeFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     returnType = "[B",
@@ -81,18 +74,6 @@ internal object ProtobufBufferEncodeFingerprint : Fingerprint(
             definingClass = "Lcom/google/android/libraries/elements/adl/UpbMessage;",
             name = "jniEncode"
         )
-    )
-)
-
-internal object ProtobufBufferReferenceFingerprint : Fingerprint(
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
-    returnType = "V",
-    parameters = listOf("I", "Ljava/nio/ByteBuffer;"),
-    filters = OpcodesFilter.opcodesToFilters(
-        Opcode.IPUT,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.MOVE_RESULT,
-        Opcode.SUB_INT_2ADDR,
     )
 )
 

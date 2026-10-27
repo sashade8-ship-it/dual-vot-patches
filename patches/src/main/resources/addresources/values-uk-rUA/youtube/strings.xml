@@ -500,8 +500,8 @@ Second \"item\" text"</string>
   <string name="morphe_external_downloader_quick_video">Відео</string>
   <string name="morphe_external_downloader_quick_audio">Аудіо</string>
   <string name="morphe_external_downloader_quick_options">Усі параметри</string>
-  <string name="morphe_shorts_download_flyout_button_title">Показати завантаження в меню Shorts</string>
-  <string name="morphe_shorts_download_flyout_button_summary">Додає пункт меню зовнішнього завантажувача у спливаюче вікно плеєра Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_title">Показувати \"Завантаження\" в меню Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Додає до плеєра Shorts пункт спливного меню зовнішнього завантажувача</string>
   <string name="morphe_shorts_download_flyout_title">Завантажити</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Голосовий переклад</string>
@@ -613,6 +613,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Дозволяє зберегти відео для дітей у \"Дивитися пізніше\" зі спливного меню</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Показувати кнопку \"Зберегти в \'Дивитися пізніше\'\" у спливному меню Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Дозволяє зберегти Shorts в \"Дивитися пізніше\" зі спливного меню</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Перенаправляти \"Дивитися пізніше\" до списку відтворення</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Переглянути пізніше</string>
   <string name="morphe_queue_flyout_title">Додати до черги Morphe</string>
   <string name="morphe_queue_restore_title">Зберігати чергу між сесіями</string>
   <string name="morphe_queue_restore_summary">Черга зберігається після перезапуску застосунку</string>
@@ -835,8 +837,6 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_2">Ніколи не показувати</string>
   <string name="morphe_auto_captions_style_entry_3">Показувати при увімкненому звуці</string>
   <string name="morphe_auto_captions_style_entry_4">Показувати при вимкненому звуці</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Показувати автоматичні субтитри</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Приховати автоматичні субтитри</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Бажана мова субтитрів</string>
   <string name="morphe_preferred_caption_language_summary">Спочатку вибирає субтитри постачальника, потім автоматично перекладає їх на бажану мову</string>
@@ -1116,6 +1116,7 @@ Second \"item\" text"</string>
 • Кнопки \"Ремікс\" та \"Звук\" недоступні в Shorts
 • Накладка \"Більше відео\" може бути недоступна
 • Відображається нерозгорнута стара панель дій відео
+• Пункти спливного меню можуть працювати неправильно
 
 Автомобільний макет
 • Стрічка організована за темами та каналами
@@ -1246,6 +1247,7 @@ Second \"item\" text"</string>
   <string name="morphe_fix_status_bar_layout_title">Виправити перекриття верхніх панелей рядком стану</string>
   <string name="morphe_fix_status_bar_layout_summary">Підтримує сталий макет рядка стану, щоб він не перекривав верхні панелі та не залишав порожнього місця над плеєром. Вимкніть це, якщо застосунок аварійно завершує роботу або верхні панелі виглядають неправильно</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Сяйво</string>
   <string name="morphe_theme_color_light_title">Фон світлої теми</string>
   <string name="morphe_theme_color_light_entry_2">Білий</string>
   <string name="morphe_theme_color_light_entry_3">Material You (білий)</string>
@@ -1268,6 +1270,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Встановлює додатковий колір смуги прогресу відтворення відео</string>
   <string name="morphe_seekbar_custom_color_invalid">Недійсне значення кольору смуги відтворення</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Оригінальний аналог</string>
+  <string name="morphe_custom_branding_icon_entry_9">Оригінальний торт</string>
+  <string name="morphe_custom_branding_icon_entry_10">Оригінальний метал</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Логотип заголовка</string>
   <string name="morphe_header_logo_entry_1">Стандартний</string>

@@ -12,13 +12,16 @@ package app.morphe.patches.youtube.interaction.downloads
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
+import app.morphe.patcher.patch.BytecodePatchContext
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.registersUsed
 import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
 import app.morphe.patches.shared.misc.fix.proto.parseByteArrayWithRegistryMethodRef
+import app.morphe.patches.shared.misc.fix.proto.protoDefaultInstanceFingerprint
 import app.morphe.patches.shared.misc.proto.hookElement
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference
@@ -107,6 +110,12 @@ private const val EXTENSION_BUTTON = "Lapp/morphe/extension/youtube/videoplayer/
 private const val GET_GENERATED_REGISTRY =
     "Lcom/google/protobuf/ExtensionRegistryLite;->getGeneratedRegistry()Lcom/google/protobuf/ExtensionRegistryLite;"
 
+/**
+ * @return The default instance field of a proto message, which the message is parsed with.
+ */
+private fun BytecodePatchContext.protoDefaultInstance(messageType: String) =
+    protoDefaultInstanceFingerprint(messageType).instructionMatches.first().getFieldAccessed()
+
 @Suppress("unused")
 val downloadsPatch = bytecodePatch(
     name = "Downloads",
@@ -180,7 +189,7 @@ val downloadsPatch = bytecodePatch(
                     if-eqz v0, :keep_command
 
                     # The endpoint is an extension, which is lost if parsed without the registry.
-                    sget-object v1, $commandType->a:$commandType
+                    sget-object v1, ${protoDefaultInstance(commandType)}
                     invoke-static { }, $GET_GENERATED_REGISTRY
                     move-result-object v2
                     invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
@@ -205,7 +214,7 @@ val downloadsPatch = bytecodePatch(
                     move-result-object v0
                     if-eqz v0, :keep_offlineability
 
-                    sget-object v1, $offlineabilityType->a:$offlineabilityType
+                    sget-object v1, ${protoDefaultInstance(offlineabilityType)}
                     invoke-static { }, $GET_GENERATED_REGISTRY
                     move-result-object v2
                     invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
@@ -235,7 +244,7 @@ val downloadsPatch = bytecodePatch(
                     if-eqz v0, :keep_upsell_response
 
                     # The endpoint of the command is an extension, which is lost if parsed without the registry.
-                    sget-object v1, $responseType->a:$responseType
+                    sget-object v1, ${protoDefaultInstance(responseType)}
                     invoke-static { }, $GET_GENERATED_REGISTRY
                     move-result-object v2
                     invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
@@ -312,6 +321,33 @@ val downloadsPatch = bytecodePatch(
                     move-result-object v$playerResponseModelRegister
                 """
             )
+        }
+
+        // Keep saved videos playable, if the server disables them when they are refreshed.
+        UpdateOfflineVideoPolicyFingerprint.matchAll().forEach { match ->
+            // The method has too few free registers.
+            match.method.cloneParameters().apply {
+                val offlineStateType = parameterTypes[2].toString()
+
+                addInstructionsWithLabels(
+                    0,
+                    """
+                        invoke-static/range { p4 .. p4 }, $EXTENSION_IN_APP_DOWNLOADS_CLASS->replaceDisabledOfflineState(Lcom/google/protobuf/MessageLite;)[B
+                        move-result-object v0
+                        if-eqz v0, :keep_offline_state
+
+                        sget-object v1, ${protoDefaultInstance(offlineStateType)}
+                        invoke-static { }, $GET_GENERATED_REGISTRY
+                        move-result-object v2
+                        invoke-static { v1, v0, v2 }, ${parseByteArrayWithRegistryMethodRef.get()!!}
+                        move-result-object v0
+                        check-cast v0, $offlineStateType
+                        move-object/from16 p4, v0
+                        :keep_offline_state
+                        nop
+                    """
+                )
+            }
         }
 
         // endregion

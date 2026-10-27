@@ -613,6 +613,8 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Umożliwia zapisywanie filmów przeznaczonych dla dzieci na liście \"Do obejrzenia\" z poziomu menu</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Pokaż przycisk \"Zapisz do obejrzenia\" w menu Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Umożliwia zapisywanie filmów Short na liście \"Do obejrzenia\" z poziomu menu</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Przekieruj \"Do obejrzenia później\" do playlisty</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Do obejrzenia</string>
   <string name="morphe_queue_flyout_title">Dodaj do kolejki Morphe</string>
   <string name="morphe_queue_restore_title">Zachowaj kolejkę po wyjściu</string>
   <string name="morphe_queue_restore_summary">Kolejka nie zniknie po ponownym uruchomieniu aplikacji</string>
@@ -835,8 +837,6 @@ Uwaga: Może nie działać na transmisjach na żywo"</string>
   <string name="morphe_auto_captions_style_entry_2">Nigdy nie pokazuj</string>
   <string name="morphe_auto_captions_style_entry_3">Pokazuj przy włączonym dźwięku</string>
   <string name="morphe_auto_captions_style_entry_4">Pokazuj przy wyciszonym dźwięku</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Pokaż automatyczne napisy</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Ukryj automatyczne napisy</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Preferowany język napisów</string>
   <string name="morphe_preferred_caption_language_summary">Najpierw wybiera napisy dostawcy, a następnie automatycznie tłumaczy je na preferowany język</string>
@@ -1111,19 +1111,20 @@ To ustawienie działa tylko wtedy, gdy autoodtwarzanie jest wyłączone. Możesz
   <string name="morphe_change_form_factor_user_dialog_message">"Zmiany obejmują:
 
 Układ tabletowy
-• Posty są ukryte
-• Ustawienie odtwarzania na stronie głównej nie jest dostępne
-• Przyciski Remiks i Dźwięk nie są dostępne w Shortsach
-• Nakładka \"Więcej filmów\" może nie być dostępna
-• Stary pasek akcji filmu nie jest zwinięty
+• Posty społeczności są ukryte
+• Ustawienie odtwarzania w kanałach nie jest dostępne
+• Przyciski Remiks i Dźwięk nie są dostępne w Shorts
+• Nakładka „Więcej filmów” może nie być dostępna
+• Pokazany jest nierozwinięty stary pasek akcji filmu
+• Elementy menu wyskakującego mogą nie działać poprawnie
 
 Układ samochodowy
-• Strona główna jest uporządkowana według tematów i kanałów
-• Ustawienie odtwarzania na stronie głównej nie jest dostępne
-• Przyciski Remiks i Dźwięk nie są dostępne w Shortsach
-• Nakładka \"Więcej filmów\" może nie być dostępna
-• Filmy Short otwierają się w zwykłym odtwarzaczu
-• Stary pasek akcji filmu nie jest zwinięty"</string>
+• Kanały są uporządkowane według tematów i kanałów
+• Ustawienie odtwarzania w kanałach nie jest dostępne
+• Przyciski Remiks i Dźwięk nie są dostępne w Shorts
+• Nakładka „Więcej filmów” może nie być dostępna
+• Shorts otwierają się w standardowym odtwarzaczu
+• Pokazany jest nierozwinięty stary pasek akcji filmu"</string>
   <string name="morphe_tablet_layout_in_player_title">Włącz układ tabletowy w odtwarzaczu</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Przywraca stary układ odtwarzacza
@@ -1246,6 +1247,7 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_fix_status_bar_layout_title">Napraw pasek stanu zasłaniający górne paski</string>
   <string name="morphe_fix_status_bar_layout_summary">Utrzymuje spójny układ paska stanu, dzięki czemu nie zasłania on górnych pasków ani nie zostawia pustego miejsca nad odtwarzaczem. Wyłącz tę opcję, jeśli aplikacja ulega awarii lub górne paski wyświetlają się nieprawidłowo</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Poświata</string>
   <string name="morphe_theme_color_light_title">Tło jasnego motywu</string>
   <string name="morphe_theme_color_light_entry_2">Białe</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Biały)</string>
@@ -1268,6 +1270,9 @@ Ograniczenie: Jeśli opcja \"Przywróć stary pasek akcji filmu\" jest wyłączo
   <string name="morphe_seekbar_custom_color_accent_summary">Ustaw dodatkowy kolor paska postępu</string>
   <string name="morphe_seekbar_custom_color_invalid">Nieprawidłowa wartość koloru</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Oryginał analogowy</string>
+  <string name="morphe_custom_branding_icon_entry_9">Oryginalny tort</string>
+  <string name="morphe_custom_branding_icon_entry_10">Oryginalny metal</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo w nagłówku</string>
   <string name="morphe_header_logo_entry_1">Domyślne</string>
@@ -1643,5 +1648,5 @@ Ograniczenie: Przywraca stary wygląd nakładki \"Więcej filmów\""</string>
   <string name="morphe_niconico_comments_travel_duration_summary">Ile sekund komentarze potrzebują, aby przemieścić się przez ekran. Niższe wartości oznaczają szybszy ruch</string>
   <string name="morphe_niconico_comments_max_length_title">Maksymalna długość komentarza</string>
   <string name="morphe_niconico_comments_max_length_summary">Ukrywa komentarze, które mają więcej znaków niż ta wartość. Każdy emoji liczy się jako jeden znak</string>
-  <string name="morphe_niconico_comments_max_length_no_limit">Brak limitu</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">Bez limitu</string>
 </resources>

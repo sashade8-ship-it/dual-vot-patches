@@ -548,7 +548,7 @@ SABR再生（動画ストリームのスプーフがオフ）"</string>
   <string name="morphe_music_lyrics_mediasession_summary">ロック画面、Android Auto、Bluetooth で現在の行を表示。Android 11 以降が必要</string>
   <string name="morphe_music_lyrics_miniplayer_title">ミニプレイヤーの歌詞を表示</string>
   <string name="morphe_music_lyrics_miniplayer_summary">ミニプレイヤーで現在行を表示し、トラックをサブタイトルに移動</string>
-  <string name="morphe_music_lyrics_mini_track_format_title">曲名/アーティストの形式</string>
+  <string name="morphe_music_lyrics_mini_track_format_title">曲名 / アーティスト名のフォーマット</string>
   <string name="morphe_music_lyrics_mini_track_format_summary">ミニプレイヤーおよびMediaSessionで歌詞と共に表示されるトラックの形式です。{t}は曲名、{a}はアーティスト、{v}は歌詞ソースが提供している場合のアコースティックなどのバージョンを表します。2つのコロンで囲まれたテキストは、その中のすべての変数に値がある場合にのみ表示されます。通常のコロンを表示するには\\:と入力してください。各行は歌詞が変わるたびに順番に表示されます</string>
   <string name="morphe_music_lyrics_mini_encapsulation_title">歌詞行の形式</string>
   <string name="morphe_music_lyrics_mini_encapsulation_summary">ミニプレイヤーおよびMediaSessionにおける歌詞行の形式です。{lrc}は歌詞の行、{n}はその行が連続して歌われる回数を表します。コロンで囲まれたテキストは、行が繰り返される場合にのみ表示されます。コロンを表示するには\\:を使用してください</string>

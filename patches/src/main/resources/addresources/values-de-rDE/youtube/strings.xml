@@ -614,6 +614,8 @@ Info: Funktioniert möglicherweise nicht bei Livestreams"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Ermöglicht das Speichern von kinderbezogenen Videos in \'Später ansehen\' über das Flyout-Menü</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Zeige die Schaltfläche \'Speichern in Später ansehen\' im Shorts-Flyout</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Ermöglicht das Speichern von Shorts in \'Später ansehen\' über das Flyout-Menü</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">\"Später ansehen\" an Playlist weiterleiten</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Später ansehen</string>
   <string name="morphe_queue_flyout_title">Zur Morphe-Warteschlange hinzufügen</string>
   <string name="morphe_queue_restore_title">Warteschlange zwischen Sitzungen beibehalten</string>
   <string name="morphe_queue_restore_summary">Warteschlange wird nach Neustart der App beibehalten</string>
@@ -836,8 +838,6 @@ Um das zu beheben, aktiviere 'Video-Streams vortäuschen' und ändere den 'Stand
   <string name="morphe_auto_captions_style_entry_2">Nie anzeigen</string>
   <string name="morphe_auto_captions_style_entry_3">Bei Stummschaltung anzeigen</string>
   <string name="morphe_auto_captions_style_entry_4">Zeige bei stummgeschaltet</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Zeige automatische Untertitel</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Verberge automatische Untertitel</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Bevorzugte Untertitelsprache</string>
   <string name="morphe_preferred_caption_language_summary">Wählt zuerst die Untertitel des Anbieters aus und übersetzt sie dann automatisch in die bevorzugte Sprache</string>
@@ -1110,22 +1110,23 @@ Einstellungen → Wiedergabe (oder Automatische Wiedergabe) → Nächstes Video 
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Tablets</string>
   <string name="morphe_change_form_factor_entry_4">Automobil</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Die Änderungen umfassen:
+  <string name="morphe_change_form_factor_user_dialog_message">"Änderungen umfassen:
 
 Tablet-Layout
-• Community-Beiträge sind ausgeblendet
-• Die Einstellung 'Wiedergabe in Feeds' ist nicht verfügbar
-• Remix-Button und Sound-Button sind in Shorts nicht verfügbar
-• 'Weitere Videos'-Overlay ist möglicherweise nicht verfügbar
-• Die alte, nicht eingeklappte Video-Aktionsleiste wird angezeigt
+• Community-Beiträge werden ausgeblendet
+• Die Einstellung \"Wiedergabe in Feeds\" ist nicht verfügbar
+• Remix-Schaltfläche und Sound-Schaltfläche sind in Shorts nicht verfügbar
+• Das Overlay \"Weitere Videos\" ist möglicherweise nicht verfügbar
+• Nicht zusammengeklappte alte Video-Aktionsleiste wird angezeigt
+• Flyout-Menüelemente funktionieren möglicherweise nicht korrekt
 
-Automotive-Layout
+Automobil-Layout
 • Der Feed ist nach Themen und Kanälen organisiert
-• Die Einstellung 'Wiedergabe in Feeds' ist nicht verfügbar
-• Remix-Button und Sound-Button sind in Shorts nicht verfügbar
-• 'Weitere Videos'-Overlay ist möglicherweise nicht verfügbar
-• Shorts werden im normalen Player geöffnet
-• Die alte, nicht eingeklappte Video-Aktionsleiste wird angezeigt"</string>
+• Die Einstellung \"Wiedergabe in Feeds\" ist nicht verfügbar
+• Remix-Schaltfläche und Sound-Schaltfläche sind in Shorts nicht verfügbar
+• Das Overlay \"Weitere Videos\" ist möglicherweise nicht verfügbar
+• Shorts öffnen sich im regulären Player
+• Nicht zusammengeklappte alte Video-Aktionsleiste wird angezeigt"</string>
   <string name="morphe_tablet_layout_in_player_title">Tablet-Layout im Player aktivieren</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Stellt das alte Player-Layout wieder her
@@ -1248,6 +1249,7 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_fix_status_bar_layout_title">Statusleiste verhindert nicht das Überdecken der oberen Leisten</string>
   <string name="morphe_fix_status_bar_layout_summary">Behält das Layout der Statusleiste bei, sodass sie die oberen Leisten nicht überdeckt und über dem Player kein leerer Raum entsteht. Schalten Sie diese Option aus, wenn die App abstürzt oder die oberen Leisten falsch aussehen</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Leuchten</string>
   <string name="morphe_theme_color_light_title">Hintergrund des hellen Designs</string>
   <string name="morphe_theme_color_light_entry_2">Weiß</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Weiß)</string>
@@ -1270,6 +1272,9 @@ Einschränkung: Wenn \"Alte Video-Aktionsleiste wiederherstellen\" deaktiviert i
   <string name="morphe_seekbar_custom_color_accent_summary">Die Sekundärfarbe des Videofortschrittsbalkens</string>
   <string name="morphe_seekbar_custom_color_invalid">Ungültiger Farbwert</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Original analog</string>
+  <string name="morphe_custom_branding_icon_entry_9">Original-Kuchen</string>
+  <string name="morphe_custom_branding_icon_entry_10">Original-Metall</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Header-Logo</string>
   <string name="morphe_header_logo_entry_1">Standard</string>

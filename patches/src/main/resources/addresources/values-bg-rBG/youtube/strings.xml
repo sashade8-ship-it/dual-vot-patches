@@ -414,7 +414,7 @@ Second \"item\" text"</string>
   <string name="morphe_channel_search_failed">Неуспешно търсене в този канал</string>
   <string name="morphe_channel_search_videos">Видеа</string>
   <string name="morphe_channel_search_posts">Публикации</string>
-  <string name="morphe_channel_search_no_posts">Няма публикации в този канал, които съвпадат</string>
+  <string name="morphe_channel_search_no_posts">Няма публикации в този канал, които  да съвпадат</string>
   <string name="morphe_channel_search_sort_relevance">Уместност</string>
   <string name="morphe_channel_search_sort_most_viewed">Най-гледани</string>
   <string name="morphe_channel_search_sort_least_viewed">Най-малко гледани</string>
@@ -613,6 +613,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Позволява запазването на видеоклипове, свързани с деца, в „Гледай по-късно“ от изскачащото меню.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Показване на бутона „Запазване в ‘Гледай по-късно’“ в изскачащото меню на Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Позволява запазване на Shorts в „Гледай по-късно“ от изскачащото меню</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Пренасочване на \"Гледай по-късно\" към плейлист</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Гледай по-късно</string>
   <string name="morphe_queue_flyout_title">Добавяне към опашката на Morphe</string>
   <string name="morphe_queue_restore_title">Запазване на опашката между сесиите</string>
   <string name="morphe_queue_restore_summary">Опашката се запазва след рестартиране на приложението</string>
@@ -835,8 +837,6 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_2">Никога не показвай</string>
   <string name="morphe_auto_captions_style_entry_3">Прави лентата на състоянието напълно непрозрачна</string>
   <string name="morphe_auto_captions_style_entry_4">Показване при мълчание</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Показване на автоматични надписи</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Скриване на автоматични надписи</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Предпочитан език на субтитрите</string>
   <string name="morphe_preferred_caption_language_summary">Първо избира субтитрите от доставчика, след което автоматично превежда на предпочитания език</string>
@@ -1111,20 +1111,21 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_4">Автомобилна</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Промените включват:
 
-Оформление за таблет
-• Публикациите в общността са скрити
-• Настройката за възпроизвеждане в feed не е налична
+Таблет разположение
+• Публикациите на общността са скрити
+• Настройката за възпроизвеждане във фидовете не е налична
 • Бутонът Remix и бутонът Sound не са налични в Shorts
-• Наслагването „Още видеа“ може да не е налично
-• Показва се некомпактната стара лента за действия на видеото
+• Оверлеят \"Още видеоклипове\" може да не е наличен
+• Показва се старата лента за действия на видеоклипове, която не е сгъната
+• Елементите на изскачащото меню може да не работят правилно
 
-Оформление за автомобил
-• Feed е организиран по теми и канали
-• Настройката за възпроизвеждане в feed не е налична
+Автомобилен интерфейс
+• Фидът е организиран по теми и канали
+• Настройката за възпроизвеждане във фидовете не е налична
 • Бутонът Remix и бутонът Sound не са налични в Shorts
-• Наслагването „Още видеа“ може да не е налично
-• Shorts се отварят в стандартния плейър
-• Показва се некомпактната стара лента за действия на видеото"</string>
+• Оверлеят \"Още видеоклипове\" може да не е наличен
+• Shorts се отварят в обичайния плейър
+• Показва се старата лента за действия на видеоклипове, която не е сгъната"</string>
   <string name="morphe_tablet_layout_in_player_title">Активиране на оформление за таблет в плейъра</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Възстановява стария вид на плейъра
@@ -1247,6 +1248,7 @@ Second \"item\" text"</string>
   <string name="morphe_fix_status_bar_layout_title">Оправя статус бара да не покрива горните ленти</string>
   <string name="morphe_fix_status_bar_layout_summary">Поддържа последователен макет на статус бара, така че той да не покрива горните ленти и да не оставя празно пространство над плеъра. Изключете тази опция, ако приложението се счупи или горните ленти изглеждат неправилно</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Сяяне</string>
   <string name="morphe_theme_color_light_title">Фон на светлата тема</string>
   <string name="morphe_theme_color_light_entry_2">Бяло</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Бяло)‎</string>
@@ -1269,6 +1271,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Задайте вторичния цвят на лентата за напредък на видеото</string>
   <string name="morphe_seekbar_custom_color_invalid">Редовно</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Оригинален аналог</string>
+  <string name="morphe_custom_branding_icon_entry_9">Оригинална торта</string>
+  <string name="morphe_custom_branding_icon_entry_10">Оригинален метал</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Табло за Home</string>
   <string name="morphe_header_logo_entry_1">Табло за Abonations</string>

@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.lang.ref.WeakReference;
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -109,13 +108,6 @@ public final class LithoFilterPatch {
     private static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
     /**
-     * Because litho filtering is multithreaded and the buffer is passed in from a different injection point,
-     * the buffer is saved to a ThreadLocal so each calling thread does not interfere with other threads.
-     * Used for 20.21 and lower.
-     */
-    private static final ThreadLocal<byte[]> bufferThreadLocal = new ThreadLocal<>();
-
-    /**
      * Observable lists that hold the items of the lists, such as the feed.
      * The lists use the equality of their content, so they are kept by reference instead of in a set.
      */
@@ -181,24 +173,6 @@ public final class LithoFilterPatch {
     }
 
     /**
-     * Injection point.  Called off the main thread.
-     * Targets 20.21 and lower.
-     */
-    public static void setProtoBuffer(@Nullable ByteBuffer buffer) {
-        if (buffer == null || !buffer.hasArray()) {
-            // It appears the buffer can be cleared out just before the call to #filter()
-            // Ignore this null value and retain the last buffer that was set.
-            Logger.printDebug(() -> "Ignoring null or empty buffer: " + buffer);
-        } else {
-            // Set the buffer to a thread local.  The buffer will remain in memory, even after the call to #filter completes.
-            // This is intentional, as it appears the buffer can be set once and then filtered multiple times.
-            // The buffer will be cleared from memory after a new buffer is set by the same thread,
-            // or when the calling thread eventually dies.
-            bufferThreadLocal.set(buffer.array());
-        }
-    }
-
-    /**
      * Injection point.
      */
     public static boolean isFiltered(ContextInterface contextInterface, @Nullable byte[] bytes,
@@ -220,14 +194,8 @@ public final class LithoFilterPatch {
                 accessibility = "";
             }
 
-            byte[] buffer = useLegacyLithoFiltering()
-                    ? bufferThreadLocal.get()
-                    : bytes;
-            // Potentially the buffer may have been null or never set up until now.
-            // Use an empty buffer so the litho id/path filters that do not use a buffer still work.
-            if (buffer == null) {
-                buffer = EMPTY_BYTE_ARRAY;
-            }
+            // Use an empty buffer if there is none, so the litho id/path filters that do not use a buffer still work.
+            byte[] buffer = bytes == null ? EMPTY_BYTE_ARRAY : bytes;
 
             LithoFilterParameters parameter = new LithoFilterParameters(
                     contextInterface, identifier, pathBuilder, accessibility,
@@ -372,10 +340,6 @@ public final class LithoFilterPatch {
         } catch (Exception ex) {
             Logger.printException(() -> "removeFilteredElementListItem failure", ex);
         }
-    }
-
-    private static boolean useLegacyLithoFiltering() {
-        return false; // Method is modified during patching.
     }
 
     /**

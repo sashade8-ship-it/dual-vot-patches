@@ -500,8 +500,8 @@ Nadat een video met de Ask-knop eenmaal is geopend, werkt de functie voor alle v
   <string name="morphe_external_downloader_quick_video">Video</string>
   <string name="morphe_external_downloader_quick_audio">Audio</string>
   <string name="morphe_external_downloader_quick_options">Alle opties</string>
-  <string name="morphe_shorts_download_flyout_button_title">\"Shorts\" weergeven in menu Downloaden</string>
-  <string name="morphe_shorts_download_flyout_button_summary">\"Shorts\"-speler krijgt item voor extern downloadmenu</string>
+  <string name="morphe_shorts_download_flyout_button_title">Download tonen in Shorts-menu</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Voegt een extern downloadmenu-item toe aan de Shorts-speler</string>
   <string name="morphe_shorts_download_flyout_title">Download</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Spraakvertaling</string>
@@ -613,6 +613,8 @@ Info: Werkt mogelijk niet op livestreams"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Hiermee kunt u kindgerelateerde video\'s opslaan in \'Later bekijken\' via het flyoutmenu</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Toon de knop \'Opslaan in Later bekijken\' in het flyoutmenu voor Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Hiermee kunt u Shorts opslaan in \'Later bekijken\' via het flyoutmenu</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Stuur \'Later bekijken\' door naar afspeellijst</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Later bekijken</string>
   <string name="morphe_queue_flyout_title">Toevoegen aan Morphe-wachtrij</string>
   <string name="morphe_queue_restore_title">Wachtrij behouden tussen sessies</string>
   <string name="morphe_queue_restore_summary">Wachtrij blijft behouden na het opnieuw starten van de app</string>
@@ -835,8 +837,6 @@ Om dit op te lossen, schakel 'Videostreams vervalsen' in en wijzig de 'Standaard
   <string name="morphe_auto_captions_style_entry_2">Nooit tonen</string>
   <string name="morphe_auto_captions_style_entry_3">Weergeven wanneer gedempt</string>
   <string name="morphe_auto_captions_style_entry_4">Toon als gemuteerd</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Toon automatisch ondertitels</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Verberg automatisch ondertitels</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Voorkeurstaal voor ondertiteling</string>
   <string name="morphe_preferred_caption_language_summary">Selecteert eerst de ondertiteling van de provider en vertaalt deze vervolgens automatisch naar de voorkeurstaal</string>
@@ -1107,22 +1107,23 @@ Instellingen → Weergave (of automatisch afspelen) → Volgende video automatis
   <string name="morphe_change_form_factor_entry_2">Telefoon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Auto</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Wijzigingen omvatten:
+  <string name="morphe_change_form_factor_user_dialog_message">"Wijzigingen zijn onder meer:
 
 Tablet-indeling
-• Community-posts zijn verborgen
-• De instelling 'Afspelen in feeds' is niet beschikbaar
-• Remix-knop en geluidsknop zijn niet beschikbaar in Shorts
-• De overlay 'Meer video's' is mogelijk niet beschikbaar
-• De niet-ingeklapte oude video-actiebalk wordt weergegeven
+• Communityberichten zijn verborgen
+• Instelling voor afspelen in feeds is niet beschikbaar
+• Remix-knop en Geluidsknop zijn niet beschikbaar in Shorts
+• Overlay 'Meer video's' is mogelijk niet beschikbaar
+• Niet ingeklapte oude actiebalk voor video's wordt weergegeven
+• Items in het uitklapmenu werken mogelijk niet correct
 
-Automotive-indeling
-• Feed is georganiseerd op onderwerpen en kanalen
-• De instelling 'Afspelen in feeds' is niet beschikbaar
-• Remix-knop en geluidsknop zijn niet beschikbaar in Shorts
-• De overlay 'Meer video's' is mogelijk niet beschikbaar
-• Shorts openen in de normale speler
-• De niet-ingeklapte oude video-actiebalk wordt weergegeven"</string>
+Auto-indeling
+• Feed is georganiseerd per onderwerp en kanaal
+• Instelling voor afspelen in feeds is niet beschikbaar
+• Remix-knop en Geluidsknop zijn niet beschikbaar in Shorts
+• Overlay 'Meer video's' is mogelijk niet beschikbaar
+• Shorts worden geopend in de reguliere speler
+• Niet ingeklapte oude actiebalk voor video's wordt weergegeven"</string>
   <string name="morphe_tablet_layout_in_player_title">Schakel tabletindeling in de speler in</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Herstelt de oude player layout
@@ -1245,6 +1246,7 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_fix_status_bar_layout_title">Statusbalk oplossen die bovenste balken bedekt</string>
   <string name="morphe_fix_status_bar_layout_summary">Houdt de lay-out van de statusbalk consistent, zodat deze de bovenste balken niet bedekt en er geen lege ruimte boven de speler overblijft. Schakel dit uit als de app crasht of als de bovenste balken verkeerd eruitzien</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Gloed</string>
   <string name="morphe_theme_color_light_title">Achtergrond van het lichtthema</string>
   <string name="morphe_theme_color_light_entry_2">Wit</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Wit)</string>
@@ -1267,6 +1269,9 @@ Beperking: Als 'Herstel oude video acties balk' is uitgeschakeld, is de \"Meer v
   <string name="morphe_seekbar_custom_color_accent_summary">Stel de secundaire kleur van de video voortgangsbalk in</string>
   <string name="morphe_seekbar_custom_color_invalid">Ongeldige waarde voor de kleur van de schuifregelaar</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Originele analoog</string>
+  <string name="morphe_custom_branding_icon_entry_9">Originele cake</string>
+  <string name="morphe_custom_branding_icon_entry_10">Origineel metaal</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Headerlogo</string>
   <string name="morphe_header_logo_entry_1">Standaard</string>
@@ -1640,7 +1645,7 @@ Automatische registratie is optioneel. Deze stopt in incognito-modus of bij een 
   <string name="morphe_niconico_comments_opacity_summary">Opaciteit van de reactietekst en achtergronden</string>
   <string name="morphe_niconico_comments_travel_duration_title">Reistijd</string>
   <string name="morphe_niconico_comments_travel_duration_summary">Hoeveel seconden reacties erover doen om het scherm te kruisen. Lagere waarden bewegen sneller</string>
-  <string name="morphe_niconico_comments_max_length_title">Maximale lengte van opmerking</string>
-  <string name="morphe_niconico_comments_max_length_summary">Verbergt opmerkingen met meer tekens dan dit. Elke emoji telt als één teken</string>
+  <string name="morphe_niconico_comments_max_length_title">Maximale commentlengte</string>
+  <string name="morphe_niconico_comments_max_length_summary">Verbergt comments met meer tekens dan dit. Elke emoji telt als één teken</string>
   <string name="morphe_niconico_comments_max_length_no_limit">Geen limiet</string>
 </resources>

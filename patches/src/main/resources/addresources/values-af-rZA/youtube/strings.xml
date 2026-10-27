@@ -613,6 +613,8 @@ Info: Werk moontlik nie op regstreekse uitsendings nie"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Dit laat jou toe om kinderverwante video\'s vanuit die kieslys na \'Kyk later\' te stoor.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Wys die \'Stoor na Kyk later\'-knoppie in die kortvideokieslys</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Dit laat jou toe om kortvideo\'s vanuit die kieslys na \'Kyk later\' te stoor.</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Stuur \"Kyk later\" na speellys toe</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Kyk later</string>
   <string name="morphe_queue_flyout_title">Voeg by Morphe-tou</string>
   <string name="morphe_queue_restore_title">Behou tou tussen sessies</string>
   <string name="morphe_queue_restore_summary">Tou word behou na die herbegin van die app</string>
@@ -835,8 +837,6 @@ Om dit reg te stel, skakel 'Vervals videostrome' aan en verander die 'Verstekkli
   <string name="morphe_auto_captions_style_entry_2">Nooit wys nie</string>
   <string name="morphe_auto_captions_style_entry_3">Show when unmuted</string>
   <string name="morphe_auto_captions_style_entry_4">Wys wanneer gedemp</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Wys outo-onderskrifte</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Verberg outo-onderskrifte</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Voorkeur-onderskriftaal</string>
   <string name="morphe_preferred_caption_language_summary">Kies eers verskaffer-onderskrifte, en vertaal hulle dan outomaties na die voorkeurtaal</string>
@@ -1109,22 +1109,23 @@ Instellings → Weergawe (of outoplay) → Speel volgende video outomaties"</str
   <string name="morphe_change_form_factor_entry_2">Foon</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Outomaties</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Veranderinge sluit in:
+  <string name="morphe_change_form_factor_user_dialog_message">"Veranderings sluit in:
 
-Tabletuitleg
-• Gemeenskapsplasings is versteek
-• Die instelling 'Terugspeel in feeds' is nie beskikbaar nie
-• Remix-knoppie en klankknoppie is nie in Shorts beskikbaar nie
-• Die 'Meer video's'-oorleg mag dalk nie beskikbaar wees nie
-• Die nie-ingeklapte ou video-aksiebalk word gewys
+Tablet-uitleg
+• Gemeenskappepsplasings is versteek
+• 'Playback in feeds'-instelling is nie beskikbaar nie
+• Remix-knoppie en Klank-knoppie is nie beskikbaar in Shorts nie
+• 'Meer video's'-oorvleuning is moontlik nie beskikbaar nie
+• Nie-ingeklapte ou video-aksiebalk word vertoon
+• Uitklapmenu-items werk moontlik nie korrek nie
 
-Motoruitleg
-• Die feed word volgens onderwerpe en kanale georganiseer
-• Die instelling 'Terugspeel in feeds' is nie beskikbaar nie
-• Remix-knoppie en klankknoppie is nie in Shorts beskikbaar nie
-• Die 'Meer video's'-oorleg mag dalk nie beskikbaar wees nie
-• Shorts word in die gewone speler geopen
-• Die nie-ingeklapte ou video-aksiebalk word gewys"</string>
+Automotive-uitleg
+• Feed is georganiseer volgens onderwerpe en kanale
+• 'Playback in feeds'-instelling is nie beskikbaar nie
+• Remix-knoppie en Klank-knoppie is nie beskikbaar in Shorts nie
+• 'Meer video's'-oorvleuning is moontlik nie beskikbaar nie
+• Shorts maak oop in die gewone speler
+• Nie-ingeklapte ou video-aksiebalk word vertoon"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktiveer tablet-uitleg in die speler</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Herstel die ou speleruitleg
@@ -1247,6 +1248,7 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_fix_status_bar_layout_title">Verander die statusbalk sodat dit nie die boonste barkies bedek nie</string>
   <string name="morphe_fix_status_bar_layout_summary">Hou die uitleg van die statusbalk konsekwent, sodat dit nie die boonste barkies bedek en geen spasie bo die speler los nie. Skakel dit af as die app ineenstort of die boonste barkies verkeerd lyk</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Gloei</string>
   <string name="morphe_theme_color_light_title">Ligte tema-agtergrond</string>
   <string name="morphe_theme_color_light_entry_2">Wit</string>
   <string name="morphe_theme_color_light_entry_3">Jou Materiaal (Wit)     </string>
@@ -1269,6 +1271,9 @@ Beperking: Indien 'Herstel ou video-aksiebalk' afgeskakel is, mag die 'Meer vide
   <string name="morphe_seekbar_custom_color_accent_summary">Stel die sekondêre kleur van die videovorderingsbalk</string>
   <string name="morphe_seekbar_custom_color_invalid">Ongeldige soekbalk kleurwaarde</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Oorspronklike analoog</string>
+  <string name="morphe_custom_branding_icon_entry_9">Oorspronklike koek</string>
+  <string name="morphe_custom_branding_icon_entry_10">Oorspronklike metaal</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Header logo</string>
   <string name="morphe_header_logo_entry_1">Verstek</string>

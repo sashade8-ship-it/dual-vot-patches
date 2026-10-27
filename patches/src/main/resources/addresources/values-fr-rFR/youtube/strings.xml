@@ -501,7 +501,7 @@ Après avoir ouvert une fois une vidéo avec le bouton 'Posez une question', la 
   <string name="morphe_external_downloader_quick_audio">Audio</string>
   <string name="morphe_external_downloader_quick_options">Toutes les options</string>
   <string name="morphe_shorts_download_flyout_button_title">Afficher le téléchargement dans le menu Shorts</string>
-  <string name="morphe_shorts_download_flyout_button_summary">Ajoute un élément de menu déroulant de l\'extranet de téléchargement au lecteur Shorts</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Ajoute un élément de téléchargement externe dans le menu déroulant du lecteur Shorts</string>
   <string name="morphe_shorts_download_flyout_title">Télécharger</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
   <string name="morphe_vot_screen_title">Traduction en voix off</string>
@@ -613,6 +613,8 @@ Info : Peut ne pas fonctionner sur les diffusions en direct"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Permet d\'enregistrer les vidéos pour enfants dans \'À regarder plus tard\' depuis le menu déroulant</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Afficher le bouton \'Enregistrer dans \"À regarder plus tard\"\' dans le menu déroulant shorts </string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Permet d\'enregistrer les shorts dans \'À regarder plus tard\' depuis le menu déroulant</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Rediriger \'À regarder plus tard\' vers une playlist</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">À regarder plus tard</string>
   <string name="morphe_queue_flyout_title">Ajouter à la file d\'attente Morphe</string>
   <string name="morphe_queue_restore_title">Conserver la file d\'attente entre les sessions</string>
   <string name="morphe_queue_restore_summary">La file d\'attente est conservée après le redémarrage de l\'application</string>
@@ -835,8 +837,6 @@ Pour corriger cela, activez 'Falsifier les flux vidéo' et définissez 'Client p
   <string name="morphe_auto_captions_style_entry_2">Ne jamais afficher</string>
   <string name="morphe_auto_captions_style_entry_3">Afficher quand non coupé</string>
   <string name="morphe_auto_captions_style_entry_4">Afficher quand coupé</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Afficher les sous-titres automatiques</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Masquer les sous-titres automatiques</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Langue préférée des sous-titres</string>
   <string name="morphe_preferred_caption_language_summary">Sélectionne d\'abord les sous-titres fournis, puis les traduit automatiquement dans la langue préférée</string>
@@ -1118,9 +1118,10 @@ Mise en page pour tablette
 • Le bouton 'Remixer' et le bouton 'Son' ne sont pas disponibles dans les Shorts
 • L'overlay 'Plus de vidéos' peut ne pas être disponible
 • L'ancienne barre d'actions vidéo non réduite est affichée
+• Les éléments du menu déroulant peuvent ne pas fonctionner correctement
 
 Mise en page pour automobile
-• Le flux est organisé par thèmes et chaînes
+• Le flux est organisé par topics et chaînes
 • Le paramètre de lecture dans les flux n'est pas disponible
 • Le bouton 'Remixer' et le bouton 'Son' ne sont pas disponibles dans les Shorts
 • L'overlay 'Plus de vidéos' peut ne pas être disponible
@@ -1248,6 +1249,7 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_fix_status_bar_layout_title">Corriger la barre d\'état qui recouvre les barres supérieures</string>
   <string name="morphe_fix_status_bar_layout_summary">Maintient une mise en page cohérente de la barre d\'état, afin qu\'elle ne masque pas les barres supérieures et ne laisse aucun espace vide au-dessus du lecteur. Désactivez cette option si l\'application plante ou si les barres supérieures s\'affichent incorrectement</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Lueur</string>
   <string name="morphe_theme_color_light_title">Arrière-plan du thème clair</string>
   <string name="morphe_theme_color_light_entry_2">Blanc</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Blanc)</string>
@@ -1270,6 +1272,9 @@ Limitation : Si 'Restaurer l'ancienne barre d'actions vidéo' est désactivé, l
   <string name="morphe_seekbar_custom_color_accent_summary">Définir la couleur secondaire de la barre de progression de la vidéo</string>
   <string name="morphe_seekbar_custom_color_invalid">Valeur invalide pour la couleur de la barre de progression</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Originale analogique</string>
+  <string name="morphe_custom_branding_icon_entry_9">Originale gâteau</string>
+  <string name="morphe_custom_branding_icon_entry_10">Originale métal</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo d\'en-tête</string>
   <string name="morphe_header_logo_entry_1">Par défaut</string>
@@ -1635,15 +1640,15 @@ L'enregistrement automatique est facultatif. Il s'arrête en navigation privée 
   <string name="morphe_series_tracker_unavailable_episode">Épisode indisponible</string>
   <!-- layout.niconicocomments.niconicoCommentsPatch -->
   <string name="morphe_niconico_comments_screen_title">Commentaires Niconico</string>
-  <string name="morphe_niconico_comments_screen_summary">Affiche le chat en direct et le replay du chat sous forme de commentaires qui défilent sur la vidéo</string>
-  <string name="morphe_niconico_comments_summary">Affiche un bouton overlay dans le lecteur vidéo. Appuyez pour afficher ou masquer les commentaires, appuyez longuement pour accéder aux paramètres rapides</string>
+  <string name="morphe_niconico_comments_screen_summary">Afficher le chat en direct et le replay du chat sous forme de commentaires qui défilent sur la vidéo</string>
+  <string name="morphe_niconico_comments_summary">Affiche un bouton en superposition dans le lecteur vidéo. Appuyez pour afficher ou masquer les commentaires, ou maintenez-le enfoncé pour accéder rapidement aux paramètres.</string>
   <string name="morphe_niconico_comments_font_size_title">Taille de la police des commentaires</string>
   <string name="morphe_niconico_comments_font_size_summary">Taille du texte des commentaires (12-40 sp)</string>
   <string name="morphe_niconico_comments_opacity_title">Opacité des commentaires</string>
-  <string name="morphe_niconico_comments_opacity_summary">Opacité du texte et des arrière-plans des commentaires</string>
+  <string name="morphe_niconico_comments_opacity_summary">Opacité du texte et de l\'arrière-plan des commentaires</string>
   <string name="morphe_niconico_comments_travel_duration_title">Durée du trajet</string>
-  <string name="morphe_niconico_comments_travel_duration_summary">Nombre de secondes que mettent les commentaires pour traverser l\'écran. Des valeurs plus basses augmentent la vitesse</string>
-  <string name="morphe_niconico_comments_max_length_title">Longueur maximale du commentaire</string>
-  <string name="morphe_niconico_comments_max_length_summary">Masque les commentaires comportant plus de caractères que cette valeur. Chaque emoji compte pour un caractère</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">Combien de secondes les commentaires mettent à traverser l\'écran. Des valeurs plus faibles les font défiler plus rapidement</string>
+  <string name="morphe_niconico_comments_max_length_title">Longueur maximale des commentaires</string>
+  <string name="morphe_niconico_comments_max_length_summary">Masque les commentaires contenant plus de caractères que cette limite. Chaque emoji compte pour un caractère</string>
   <string name="morphe_niconico_comments_max_length_no_limit">Aucune limite</string>
 </resources>

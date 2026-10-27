@@ -613,6 +613,8 @@ Eolas: Seans nach n-oibreoidh sé ar shruthanna beo"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Ceadaítear físeáin a bhaineann le páistí a shábháil sa liosta \'Féach níos déanaí\' ón roghchlár aníos.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Taispeáin an cnaipe \'Sábháil le breathnú air níos déanaí\' sa phainéal aníos do na físeáin ghearra.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Ceadaíonn sé físeáin ghearra a shábháil sa liosta \'Féach níos déanaí\' ón roghchlár aníos.</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Athdhionaigh \"Féach níos déanaí\" chuig liosta pleanála</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Féach níos déanaí</string>
   <string name="morphe_queue_flyout_title">Cuir leis an scuaine Morphe</string>
   <string name="morphe_queue_restore_title">Coinnigh scuaine idir seisiúin</string>
   <string name="morphe_queue_restore_summary">Coinnítear an scuaine tar éis an aip a atosú</string>
@@ -835,8 +837,6 @@ Chun é seo a shocrú, cuir 'Spoof video streams' ar siúl agus athraigh an 'Cli
   <string name="morphe_auto_captions_style_entry_2">Ná taispeáin riamh</string>
   <string name="morphe_auto_captions_style_entry_3">Taispeáin nuair nach bhfuil sé díbhalbhaigh</string>
   <string name="morphe_auto_captions_style_entry_4">Taispeáin nuair a bhíonn sé balbhaithe</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Taispeáin fotheidil uathoibríocha</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Folaigh fotheidil uathoibríocha</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Teanga na bhfo-theideal is fearr leat</string>
   <string name="morphe_preferred_caption_language_summary">Roghnaíonn sé fotheidil an tsoláthraí ar dtús, agus ansin aistríonn sé go huathoibríoch iad go dtí an teanga is fearr leat.</string>
@@ -1247,6 +1247,7 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_fix_status_bar_layout_title">Ceartaigh an barra stádais a bhíonn ag clúdach na mbarraí uachtaracha</string>
   <string name="morphe_fix_status_bar_layout_summary">Coinníonn sé leagan amach an bharra stádais comhsheasmhach, ionas nach gclúdaíonn sé na barraí uachtaracha agus nach bhfágann sé spás folamh os cionn an imreora. Múch an rogha seo má thuairteálann an aip nó má bhíonn cuma mhícheart ar na barraí uachtaracha.</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Breo</string>
   <string name="morphe_theme_color_light_title">Cúlra téama éadrom</string>
   <string name="morphe_theme_color_light_entry_2">Bán</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Bán)</string>
@@ -1269,6 +1270,9 @@ Teorainn: Mura bhfuil 'Barra gníomhaíochta seanfhíseáin athchóirithe' múch
   <string name="morphe_seekbar_custom_color_accent_summary">Socraigh an dath tánaisteach den bharra dul chun cinn físe</string>
   <string name="morphe_seekbar_custom_color_invalid">Luach datha barra cuardaigh neamhbhailí</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Anallóg Bunaidh</string>
+  <string name="morphe_custom_branding_icon_entry_9">Cáca bunaidh</string>
+  <string name="morphe_custom_branding_icon_entry_10">Miatal bunaidh</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Lógó ceanntásca</string>
   <string name="morphe_header_logo_entry_1">Réamhshocrú</string>

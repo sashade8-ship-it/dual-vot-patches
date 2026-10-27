@@ -613,6 +613,8 @@ Informacija: gali neveikti tiesioginių transliacijų atveju"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Leidžia išsaugoti su vaikais susijusius vaizdo įrašus sąraše „Žiūrėti vėliau“ iš iškylančiojo meniu</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Rodyti „Išsaugoti žiūrėti vėliau“ mygtuką „Shorts“ iškylančiajame meniu</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Leidžia išsaugoti „Shorts“ įrašus sąraše „Žiūrėti vėliau“ iš iškylančiojo meniu</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Per nukreipti „Žiūrėti vėliau“ į playlistą</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Žiūrėti vėliau</string>
   <string name="morphe_queue_flyout_title">Pridėti į Morphe eilę</string>
   <string name="morphe_queue_restore_title">Išsaugoti eilę tarp seansų</string>
   <string name="morphe_queue_restore_summary">Eilė išsaugoma iš naujo paleidus programą</string>
@@ -835,8 +837,6 @@ Norėdami tai ištaisyti, įjunkite „Maskuoti vaizdo įrašų srautus“ ir pa
   <string name="morphe_auto_captions_style_entry_2">Niekada nerodyti</string>
   <string name="morphe_auto_captions_style_entry_3">Rodyti, kai garsas įjungtas</string>
   <string name="morphe_auto_captions_style_entry_4">Rodyti, kai garsas išjungtas</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Rodyti automatinius subtitrus</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Slėpti automatinius subtitrus</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Pageidaujama subtitrų kalba</string>
   <string name="morphe_preferred_caption_language_summary">Pirmiausia parenka teikėjo subtitrus, tada automatiškai išverčia į pageidaujamą kalbą</string>
@@ -1111,20 +1111,21 @@ Nustatymai → Atkūrimas (arba Automatinis atkūrimas) → Automatiškai leisti
   <string name="morphe_change_form_factor_entry_4">Automobilyje</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Pakeitimai apima:
 
-Planšetės maketas
+Planšetės išdėstymas
 • Bendruomenės įrašai paslėpti
-• Nustatymas „Atkūrimas sklaidos kanaluose“ nepasiekiamas
-• „Remix“ ir „Garsas“ mygtukai nepasiekiami „Shorts“
-• „Daugiau vaizdo įrašų“ perdanga gali būti nepasiekiama
-• Rodoma nesutraukta senoji vaizdo įrašo veiksmų juosta
+• Peržiūros šerdyje nustatymas nėra prieinamas
+• „Remix“ ir „Garso“ mygtukai yra neprieinami „Shorts“
+• „Daugiau video“ persegimas gali būti neprieinamas
+• Rodo nesutrauktą senosios veiksmų juostos vaizdo įrašo
+„Flyout“ meniu elementai gali neveikti tinkamai
 
-Automobilio maketas
-• Srautas suskirstytas pagal temas ir kanalus
-• Nustatymas „Atkūrimas sklaidos kanaluose“ nepasiekiamas
-• „Remix“ ir „Garsas“ mygtukai nepasiekiami „Shorts“
-• „Daugiau vaizdo įrašų“ perdanga gali būti nepasiekiama
-• „Shorts“ atidaromi įprastame grotuve
-• Rodoma nesutraukta senoji vaizdo įrašo veiksmų juosta"</string>
+Automobilio išdėstymas
+• Šerdis organizuojama pagal temas ir kanalus
+• Peržiūros šerdyje nustatymas nėra prieinamas
+• „Remix“ ir „Garso“ mygtukai yra neprieinami „Shorts“
+• „Daugiau video“ persegimas gali būti neprieinamas
+• „Shorts“ atidaromi reguliariame grotuve
+• Rodo nesutrauktą senosios veiksmų juostos vaizdo įrašo"</string>
   <string name="morphe_tablet_layout_in_player_title">Įjungti planšetės išdėstymą grotuve</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Atkuria senąjį grotuvo maketą
@@ -1247,6 +1248,7 @@ Apribojimas: jei parinktis „Atkurti senąją vaizdo įrašo veiksmų juostą�
   <string name="morphe_fix_status_bar_layout_title">Ištaisyti būsenos juostą, dengiančią viršutines juostas</string>
   <string name="morphe_fix_status_bar_layout_summary">Laiko būsenos juostos išdėstymą nuoseklų, kad ji nengeltų viršutinių juostų ir nepaliktų tuščios vietos virš grojimo įrenginio. Išjunkite šią parinktį, jei programėlė žlunga arba viršutinės juostos atrodo netinkamai</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Švytėjimas</string>
   <string name="morphe_theme_color_light_title">Šviesios temos fonas</string>
   <string name="morphe_theme_color_light_entry_2">Balta</string>
   <string name="morphe_theme_color_light_entry_3">Material You (balta)</string>
@@ -1269,6 +1271,9 @@ Apribojimas: jei parinktis „Atkurti senąją vaizdo įrašo veiksmų juostą�
   <string name="morphe_seekbar_custom_color_accent_summary">Nustatykite antrinę vaizdo įrašo eigos juostos spalvą</string>
   <string name="morphe_seekbar_custom_color_invalid">Neteisinga slankiklio spalvos reikšmė</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Originalus analogas</string>
+  <string name="morphe_custom_branding_icon_entry_9">Originalus tortas</string>
+  <string name="morphe_custom_branding_icon_entry_10">Originalus metalas</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Antraštės logotipas</string>
   <string name="morphe_header_logo_entry_1">Numatyta</string>

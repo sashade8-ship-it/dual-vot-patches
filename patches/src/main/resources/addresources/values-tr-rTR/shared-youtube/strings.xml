@@ -18,10 +18,12 @@ Second \"item\" text"</string>
 -->
 <resources>
   <!-- layout.theme.splashAnimationPatch -->
-  <string name="morphe_splash_screen_animation_style_title">Başlangıç animasyonu</string>
-  <string name="morphe_splash_screen_animation_style_entry_1">Devre dışı</string>
-  <string name="morphe_splash_screen_animation_style_entry_2">Renkli</string>
-  <string name="morphe_splash_screen_animation_style_entry_3">Tek renk</string>
+  <string name="morphe_splash_screen_style_title">Başlangıç animasyonu</string>
+  <string name="morphe_splash_screen_style_entry_1">Devre dışı</string>
+  <string name="morphe_splash_screen_style_entry_2">Renkli</string>
+  <string name="morphe_splash_screen_style_entry_3">Renkli Morphe</string>
+  <string name="morphe_splash_screen_style_entry_4">Tek renk</string>
+  <string name="morphe_splash_screen_style_entry_5">Tek renkli Morphe</string>
   <!-- misc.initialization.initializationPatch -->
   <string name="morphe_restart_first_run">Kurulumu tamamlamak için yeniden başlatın</string>
   <!-- layout.branding.baseCustomBrandingPatch -->

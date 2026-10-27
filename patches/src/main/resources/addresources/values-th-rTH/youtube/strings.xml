@@ -613,6 +613,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">อนุญาตให้บันทึกวิดีโอที่เกี่ยวข้องกับเด็กไว้ใน \'ดูภายหลัง\' จากเมนูแบบเลื่อนออก</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">แสดงปุ่มบันทึกไปยังดูภายหลังในเมนูแบบเลื่อนออกของ Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">อนุญาตให้บันทึก Shorts ไว้ใน \'ดูภายหลัง\' จากเมนูแบบเลื่อนออก</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">เปลี่ยนเส้นทาง \"ดูภายหลัง\" ไปยังเพลย์ลิสต์</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">ดูต่อภายหลัง</string>
   <string name="morphe_queue_flyout_title">เพิ่มลงในคิว Morphe</string>
   <string name="morphe_queue_restore_title">คงคิวไว้ระหว่างการใช้งาน</string>
   <string name="morphe_queue_restore_summary">คิวจะถูกเก็บไว้หลังจากการปิดและเปิดแอปอีกครั้ง</string>
@@ -835,8 +837,6 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_2">ไม่แสดง</string>
   <string name="morphe_auto_captions_style_entry_3">แสดงเมื่อไม่ได้ปิดเสียง</string>
   <string name="morphe_auto_captions_style_entry_4">แสดงเมื่อเงียบเสียง</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">แสดงคำบรรยายอัตโนมัติ</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">ซ่อนคำบรรยายอัตโนมัติ</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">ภาษาคำบรรยายที่ต้องการ</string>
   <string name="morphe_preferred_caption_language_summary">เลือกคำบรรยายที่ผู้ให้บริการจัดเตรียมไว้ก่อน จากนั้นจึงแปลเป็นภาษาที่ต้องการโดยอัตโนมัติ</string>
@@ -1109,22 +1109,23 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">โทรศัพท์</string>
   <string name="morphe_change_form_factor_entry_3">แท็บเล็ต</string>
   <string name="morphe_change_form_factor_entry_4">ยานยนต์</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"มีการเปลี่ยนแปลงดังนี้:
+  <string name="morphe_change_form_factor_user_dialog_message">"การเปลี่ยนแปลงรวมถึง:
 
-เลย์เอาต์สำหรับแท็บเล็ต
-• โพสต์จากชุมชนจะถูกซ่อนไว้
-• จะไม่มีตัวเลือกการเล่นในฟีด
-• จะไม่มีปุ่มรีมิกซ์และปุ่มเสียงใน Shorts
-• อาจไม่สามารถใช้งานภาพซ้อนทับ 'วิดีโอเพิ่มเติม' ได้
-• แถบการทำงานของวิดีโอแบบเดิมที่ไม่ยุบจะแสดงขึ้น
+เลย์เอาต์แท็บเล็ต
+• โพสต์จากชุมชนจะถูกซ่อน
+• การตั้งค่าการเล่นในฟีดไม่สามารถใช้งาน
+• ปุ่มรีมิกซ์และปุ่มเสียงไม่สามารถใช้งานใน Shorts
+• ภาพซ้อนทับ 'วิดีโอเพิ่มเติม' อาจไม่ปรากฏ
+• แถบดำเนินการวิดีโอแบบเก่าที่ไม่ยุบจะแสดง
+• รายการเมนูป๊อปอัพอาจทำงานไม่ถูกต้อง
 
-เลย์เอาต์สำหรับรถยนต์
-• ฟีดจะถูกจัดระเบียบตามหัวข้อและช่อง
-• จะไม่มีตัวเลือกการเล่นในฟีด
-• จะไม่มีปุ่มรีมิกซ์และปุ่มเสียงใน Shorts
-• อาจไม่สามารถใช้งานภาพซ้อนทับ 'วิดีโอเพิ่มเติม' ได้
+เลย์เอาต์รถยนต์
+• ฟीडจัดเรียงตามหัวข้อและช่อง
+• การตั้งค่าการเล่นในฟีดไม่สามารถใช้งาน
+• ปุ่มรีมิกซ์และปุ่มเสียงไม่สามารถใช้งานใน Shorts
+• ภาพซ้อนทับ 'วิดีโอเพิ่มเติม' อาจไม่ปรากฏ
 • Shorts จะเปิดในเครื่องเล่นปกติ
-• แถบการทำงานของวิดีโอแบบเดิมที่ไม่ยุบจะแสดงขึ้น"</string>
+• แถบดำเนินการวิดีโอแบบเก่าที่ไม่ยุบจะแสดง"</string>
   <string name="morphe_tablet_layout_in_player_title">เปิดใช้งานรูปแบบแท็บเล็ตในเครื่องเล่น</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"คืนรูปแบบเครื่องเล่นแบบเก่า
@@ -1247,6 +1248,7 @@ Second \"item\" text"</string>
   <string name="morphe_fix_status_bar_layout_title">แก้ไขแถบสถานะไม่ให้บังแถบด้านบน</string>
   <string name="morphe_fix_status_bar_layout_summary">คงรูปแบบของแถบสถานะให้สอดคล้องกัน เพื่อไม่ให้เกิดการบังแถบด้านบนและเหลือพื้นที่ว่างเปล่าเหนือเครื่องเล่น เปิดการใช้งานนี้หากแอปค้างหรือแถบด้านบนแสดงผลผิดปกติ</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">เรืองแสง</string>
   <string name="morphe_theme_color_light_title">พื้นหลังธีมสว่าง</string>
   <string name="morphe_theme_color_light_entry_2">สีขาว</string>
   <string name="morphe_theme_color_light_entry_3">Material You (สีขาว)</string>
@@ -1269,6 +1271,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_summary">ตั้งค่าสีรองของแถบความคืบหน้าของวิดีโอ</string>
   <string name="morphe_seekbar_custom_color_invalid">ค่าสีแถบเลื่อนไม่ถูกต้อง</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">อนาล็อกต้นฉบับ</string>
+  <string name="morphe_custom_branding_icon_entry_9">เค้กต้นฉบับ</string>
+  <string name="morphe_custom_branding_icon_entry_10">โลหะต้นฉบับ</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">โลโก้ส่วนหัว</string>
   <string name="morphe_header_logo_entry_1">ค่าเริ่มต้น</string>

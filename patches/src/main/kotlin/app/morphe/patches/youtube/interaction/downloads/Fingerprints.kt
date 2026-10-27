@@ -134,6 +134,26 @@ internal object OfflinePlayerResponseFingerprint : Fingerprint(
 )
 
 /**
+ * Updates the offline state of a saved video with the state of the 'player/refresh' response.
+ * Matches two methods, one for each of the two ways the app refreshes saved videos.
+ */
+internal object UpdateOfflineVideoPolicyFingerprint : Fingerprint(
+    returnType = "V",
+    parameters = listOf(
+        "L",
+        "J", // Time of the refresh.
+        "L", // Offline state.
+        "L" // Video policy.
+    ),
+    filters = listOf(
+        anyInstruction(
+            string("[Offline] UpdateVideoPolicy failed for video "), // 20.x
+            string("[Offline] UpdateVideoPolicy failed for video %s") // 21.x
+        )
+    )
+)
+
+/**
  * Creates a player response model from the bytes of a player response.
  */
 internal fun playerResponseModelFromBytesFingerprint(playerResponseModel: String) = Fingerprint(

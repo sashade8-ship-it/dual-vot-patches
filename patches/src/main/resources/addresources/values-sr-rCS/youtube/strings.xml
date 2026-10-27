@@ -613,6 +613,8 @@ Napomena: Možda neće raditi na direktnim prenosima"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Omogućava čuvanje video snimaka povezanih sa decom u listi „Pogledaj kasnije“ iz menija koji se otvara.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Prikaži dugme Sačuvaj u listu „Pogledaj kasnije“ u meniju Shortsa.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Omogućava čuvanje Shortsa u listi „Pogledaj kasnije“ iz menija koji se otvara.</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Preusmeri \"Gledaj kasnije\" na plejlistu</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Za kasnije</string>
   <string name="morphe_queue_flyout_title">Dodaj u Morphe red</string>
   <string name="morphe_queue_restore_title">Zadrži red čekanja između sesija</string>
   <string name="morphe_queue_restore_summary">Red čekanja je sačuvan nakon ponovnog pokretanja aplikacije</string>
@@ -835,8 +837,6 @@ Da biste to popravili, uključite 'Spoof video strimovi' i promenite 'Podrazumev
   <string name="morphe_auto_captions_style_entry_2">Nikada ne prikaži</string>
   <string name="morphe_auto_captions_style_entry_3">Pokaži kada je zvuk isključen</string>
   <string name="morphe_auto_captions_style_entry_4">Prikaži kada mutiran</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Prikaži automatske titlove</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Sakrij automatske titlove</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Željeni jezik titlova</string>
   <string name="morphe_preferred_caption_language_summary">Prvo bira titlove provajdera, a zatim ih automatski prevodi na željeni jezik</string>
@@ -1111,20 +1111,21 @@ Postavke → Reprodukcija (ili Automatsko puštanje) → Automatski pusti slede�
   <string name="morphe_change_form_factor_entry_4">Automobilski</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Promene uključuju:
 
-Raspored za tablet
+Tablet raspored
 • Objave zajednice su sakrivene
-• Postavka „Reprodukcija u prikazu sadržaja“ nije dostupna
-• Dugme Remiks i dugme Zvuk nisu dostupni u Shorts-u
-• Prekrivač „Još video snimaka“ možda neće biti dostupan
-• Prikazuje se stara, nesažeta traka sa radnjama za video
+• Postavka reprodukcije u feedu nije dostupna
+• Dugme za remixovanje i dugme za zvuk nisu dostupni u Shorts-u
+• Preklapanje 'Još videa' možda nije dostupno
+• Priказuje se nerasklapana stara akcijska traka za video
+• Stavke flyout menija možda neće raditi ispravno
 
-Raspored za automobil
-• Prizak sadržaja je organizovan po temama i kanalima
-• Postavka „Reprodukcija u prikazu sadržaja“ nije dostupna
-• Dugme Remiks i dugme Zvuk nisu dostupni u Shorts-u
-• Prekrivač „Još video snimaka“ možda neće biti dostupan
-• Shorts se otvaraju u standardnom video plejeru
-• Prikazuje se stara, nesažeta traka sa radnjama za video"</string>
+Automotive raspored
+• Feed je organizovan po temama i kanalima
+• Postavka reprodukcije u feedu nije dostupna
+• Dugme za remixovanje i dugme za zvuk nisu dostupni u Shorts-u
+• Preklapanje 'Još videa' možda nije dostupno
+• Shorts se otvara u regularnom plejeru
+• Priказuje se nerasklapana stara akcijska traka za video"</string>
   <string name="morphe_tablet_layout_in_player_title">Omogući izgled za tablet u plejeru</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Vraća stari raspored plejera
@@ -1247,6 +1248,7 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_fix_status_bar_layout_title">Popravi statusnu traku koja prekriva gornje trake</string>
   <string name="morphe_fix_status_bar_layout_summary">Održava dosledan izgled statusne trake, tako da ne prekrije gornje trake i ostavlja prazan prostor iznad plejera. Isključite ovo ako aplikacija padne ili gornje trake izgledaju pogrešno</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Sjaj</string>
   <string name="morphe_theme_color_light_title">Pozadina svetle teme</string>
   <string name="morphe_theme_color_light_entry_2">Bela</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Bela)</string>
@@ -1269,6 +1271,9 @@ Ograničenje: Ako je \"Vrati staru traku sa akcijama za video\" isključen, prek
   <string name="morphe_seekbar_custom_color_accent_summary">Postavi sekundarnu boju trake za napredak videa</string>
   <string name="morphe_seekbar_custom_color_invalid">Nevažeća vrednost boje trake za premotavanje</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Originalni analog</string>
+  <string name="morphe_custom_branding_icon_entry_9">Originalna torta</string>
+  <string name="morphe_custom_branding_icon_entry_10">Originalni metal</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logotip u zaglavlju</string>
   <string name="morphe_header_logo_entry_1">Podrazumevani</string>

@@ -613,6 +613,8 @@ Avviso: Potrebbe non funzionare sui video in diretta"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Consente di salvare video per bambini in \'Guarda più tardi\' dal menu a comparsa</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Mostra il pulsante Salva in Guarda più tardi nel menu a comparsa degli Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Consente di salvare gli Shorts in \'Guarda più tardi\' dal menu a comparsa</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Reindirizza Guarda più tardi alla playlist</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Guarda più tardi</string>
   <string name="morphe_queue_flyout_title">Aggiungi alla coda di Morphe</string>
   <string name="morphe_queue_restore_title">Mantieni la coda tra le sessioni</string>
   <string name="morphe_queue_restore_summary">La coda viene mantenuta anche riavviando l\'app</string>
@@ -835,8 +837,6 @@ Per risolvere, attiva 'Spoof dei flussi video' e cambia il 'Client predefinito' 
   <string name="morphe_auto_captions_style_entry_2">Mai mostrare</string>
   <string name="morphe_auto_captions_style_entry_3">Mostra con audio</string>
   <string name="morphe_auto_captions_style_entry_4">Mostra quando silenzioso</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Mostra i sottotitoli automatici</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Nascondi i sottotitoli automatici</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Lingua preferita per i sottotitoli</string>
   <string name="morphe_preferred_caption_language_summary">Seleziona prima i sottotitoli del provider, poi li traduce automaticamente nella lingua preferita</string>
@@ -1247,6 +1247,7 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_fix_status_bar_layout_title">Correggi la barra di stato che copre le barre superiori</string>
   <string name="morphe_fix_status_bar_layout_summary">Mantiene coerente il layout della barra di stato, in modo che non copra le barre superiori e non lasci spazio vuoto sopra il player. Disattiva questa opzione se l\'app si arresta in modo anomalo o se le barre superiori appaiono errate</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Bagliore</string>
   <string name="morphe_theme_color_light_title">Sfondo del tema chiaro</string>
   <string name="morphe_theme_color_light_entry_2">Bianco</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Bianco)</string>
@@ -1269,6 +1270,9 @@ Limitazione: se \"Ripristina la vecchia barra delle azioni video\" è disattivat
   <string name="morphe_seekbar_custom_color_accent_summary">Imposta il colore secondario della barra di avanzamento del video</string>
   <string name="morphe_seekbar_custom_color_invalid">Valore del colore della barra di avanzamento non valido</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Analogico originale</string>
+  <string name="morphe_custom_branding_icon_entry_9">Torta originale</string>
+  <string name="morphe_custom_branding_icon_entry_10">Metallo originale</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo dell\'intestazione</string>
   <string name="morphe_header_logo_entry_1">Predefinito</string>

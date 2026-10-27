@@ -613,6 +613,8 @@ Info: Mungkin tidak berfungsi pada siaran langsung"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Memungkinkan Anda menyimpan video terkait anak-anak ke \'Tonton Nanti\' melalui menu flyout.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Tampilkan tombol Simpan ke Tonton Nanti di flyout Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Memungkinkan Anda menyimpan Shorts ke \'Tonton Nanti\' melalui menu flyout.</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Alihkan Tonton nanti ke daftar putar</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Tonton nanti</string>
   <string name="morphe_queue_flyout_title">Tambahkan ke antrean Morphe</string>
   <string name="morphe_queue_restore_title">Simpan antrean antar sesi</string>
   <string name="morphe_queue_restore_summary">Antrean disimpan setelah memulai ulang aplikasi</string>
@@ -835,8 +837,6 @@ Untuk mengatasinya, aktifkan 'Palsukan aliran video' dan ubah 'Klien bawaan' men
   <string name="morphe_auto_captions_style_entry_2">Jangan pernah tampilkan</string>
   <string name="morphe_auto_captions_style_entry_3">Tampilkan saat audio tidak dibisukan</string>
   <string name="morphe_auto_captions_style_entry_4">Tampilkan saat audio dibisukan</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Tampilkan teks otomatis</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Sembunyikan teks otomatis</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Bahasa teks pilihan</string>
   <string name="morphe_preferred_caption_language_summary">Memilih subtitle dari penyedia terlebih dahulu, lalu menerjemahkan secara otomatis ke bahasa pilihan</string>
@@ -1247,6 +1247,7 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_fix_status_bar_layout_title">Perbaiki status bar yang menutupi bar atas</string>
   <string name="morphe_fix_status_bar_layout_summary">Menjaga tata letak status bar konsisten, sehingga tidak menutupi bar atas dan tidak meninggalkan ruang kosong di atas pemutar. Matikan ini jika aplikasi mengalami crash atau bar atas terlihat salah</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Bercahaya</string>
   <string name="morphe_theme_color_light_title">Latar belakang tema terang</string>
   <string name="morphe_theme_color_light_entry_2">Putih</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Putih)</string>
@@ -1269,6 +1270,9 @@ Batasan: Jika 'Kembalikan bilah tindakan video lama' dinonaktifkan, hamparan 'Vi
   <string name="morphe_seekbar_custom_color_accent_summary">Atur warna sekunder bilah kemajuan video</string>
   <string name="morphe_seekbar_custom_color_invalid">Nilai warna bilah geser tidak sah</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Analog asli</string>
+  <string name="morphe_custom_branding_icon_entry_9">Kue asli</string>
+  <string name="morphe_custom_branding_icon_entry_10">Logam asli</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo Header</string>
   <string name="morphe_header_logo_entry_1">Bawaan</string>

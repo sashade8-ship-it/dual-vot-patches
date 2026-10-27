@@ -613,6 +613,8 @@ Info: Fungerer kanskje ikke på direktesendinger"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Lar deg lagre barnerelaterte videoer i «Se senere» fra uttrekksmenyen.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Vis «Lagre i Se senere»-knappen i uttrekksmenyen for Shorts.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Lar deg lagre Shorts i «Se senere» fra uttrekksmenyen.</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Omdiriger \"Se senere\" til spilleliste</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Se senere</string>
   <string name="morphe_queue_flyout_title">Legg til i Morphe-kø</string>
   <string name="morphe_queue_restore_title">Behold køen mellom øktene</string>
   <string name="morphe_queue_restore_summary">Køen beholdes etter omstart av appen</string>
@@ -835,8 +837,6 @@ For å fikse dette, slå på 'Forfalsk videostrømmer' og endre 'Standardklient'
   <string name="morphe_auto_captions_style_entry_2">Aldri vis</string>
   <string name="morphe_auto_captions_style_entry_3">Vis når den er dempet</string>
   <string name="morphe_auto_captions_style_entry_4">Vises når dempet</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Auto</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Viser automatisk undertekst</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Foretrukket undertittelsspråk</string>
   <string name="morphe_preferred_caption_language_summary">Velger leverandørens undertekster først, og oversetter deretter automatisk til det foretrukne språket</string>
@@ -1109,22 +1109,23 @@ Innstillinger → Avspilling (eller Autoplay) → Spill av neste video automatis
   <string name="morphe_change_form_factor_entry_2">Telefon</string>
   <string name="morphe_change_form_factor_entry_3">Nettbrett</string>
   <string name="morphe_change_form_factor_entry_4">Bil</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Endringene inkluderer:
+  <string name="morphe_change_form_factor_user_dialog_message">"Endringene omfatter:
 
-Nettbrett-layout
-• Fellesskapsinnlegg er skjult
+Nettbrettvisning
+• Innlegg fra fellesskapet er skjult
 • Innstillingen for avspilling i feed er ikke tilgjengelig
-• Remix-knappen og lydknappen er ikke tilgjengelige i Shorts
-• 'Flere videoer'-overlegget er kanskje ikke tilgjengelig
-• Den gamle videohandlingslinjen vises uten å være kollapset
+• Knappene \"Gjenbruk\" og \"Lyd\" er ikke tilgjengelige i Shorts
+• Legg til video-visning kan ikke være tilgjengelig
+• Den ikke sammenfalte, gamle-handlingslinjen for video vises
+• Flyutmenyalternativer fungerer kanskje ikke korrekt
 
-Bil-layout
+Bilvisning
 • Feed er organisert etter emner og kanaler
 • Innstillingen for avspilling i feed er ikke tilgjengelig
-• Remix-knappen og lydknappen er ikke tilgjengelige i Shorts
-• 'Flere videoer'-overlegget er kanskje ikke tilgjengelig
-• Shorts åpnes i den vanlige spilleren
-• Den gamle videohandlingslinjen vises uten å være kollapset"</string>
+• Knappene \"Gjenbruk\" og \"Lyd\" er ikke tilgjengelige i Shorts
+• Legg til video-visning kan ikke være tilgjengelig
+• Shorts åpnes i vanlig spiller
+• Den ikke sammenfalte, gamle-handlingslinjen for video vises"</string>
   <string name="morphe_tablet_layout_in_player_title">Aktiver nettbrettlayout i spilleren</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Gjenoppretter det gamle spillerlayoutet
@@ -1247,6 +1248,7 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_fix_status_bar_layout_title">Fiks at statuslinjen dekker toppbaren</string>
   <string name="morphe_fix_status_bar_layout_summary">Holder utseendet til statuslinjen konsistent, slik at den ikke dekker topparene og etterlater ingen tom plass over avspilleren. Skru dette av hvis appen krasjer eller topparene ser feil ut</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Glød</string>
   <string name="morphe_theme_color_light_title">Bakgrunn for lyst tema</string>
   <string name="morphe_theme_color_light_entry_2">Hvit</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Hvit)</string>
@@ -1269,6 +1271,9 @@ Begrensning: Hvis 'Gjenopprett gammel videoaksjonslinje' er slått av, er det mu
   <string name="morphe_seekbar_custom_color_accent_summary">Angi sekundærfargen på videofremdriftslinjen</string>
   <string name="morphe_seekbar_custom_color_invalid">Invalid seekbar color value</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Original analog</string>
+  <string name="morphe_custom_branding_icon_entry_9">Original kake</string>
+  <string name="morphe_custom_branding_icon_entry_10">Original metall</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Header logo</string>
   <string name="morphe_header_logo_entry_1">Standard</string>

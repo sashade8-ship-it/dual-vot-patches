@@ -669,6 +669,8 @@ Info: May not work on live streams"</string>
     <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Allows saving kid related videos in the \'Watch later\' from the flyout menu</string>
     <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Show Save to Watch later button in the shorts flyout</string>
     <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Allows saving shorts in the \'Watch later\' from the flyout menu</string>
+    <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Redirect Watch later to playlist</string>
+    <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Watch later</string>
     <string name="morphe_queue_flyout_title">Add to Morphe queue</string>
     <string name="morphe_queue_restore_title">Keep queue between sessions</string>
     <string name="morphe_queue_restore_summary">Queue is kept after restarting the app</string>
@@ -903,8 +905,6 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_auto_captions_style_entry_2">Never show</string>
     <string name="morphe_auto_captions_style_entry_3">Show when unmuted</string>
     <string name="morphe_auto_captions_style_entry_4">Show when muted</string>
-    <string name="morphe_auto_captions_style_legacy_entry_1">Show auto captions</string>
-    <string name="morphe_auto_captions_style_legacy_entry_2">Hide auto captions</string>
 
     <!-- layout.captions.preferredCaptionLanguagePatch -->
     <string name="morphe_preferred_caption_language_title">Preferred caption language</string>
@@ -1217,6 +1217,7 @@ Tablet layout
 • Remix button and Sound button are not available in Shorts
 • 'More videos' overlay may not be available
 • Non collapsed old video action bar is shown
+• Flyout menu items may not work correctly
 
 Automotive layout
 • Feed is organized by topics and channels
@@ -1363,6 +1364,7 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_fix_status_bar_layout_summary">Keeps the layout of the status bar consistent, so it does not cover the top bars and leaves no empty space above the player. Turn this off if the app crashes or the top bars look wrong</string>
 
     <!-- layout.theme.themePatch -->
+    <string name="morphe_splash_screen_style_entry_6">Glow</string>
     <string name="morphe_theme_color_light_title">Light theme background</string>
     <string name="morphe_theme_color_light_entry_2">White</string>
     <string name="morphe_theme_color_light_entry_3">Material You (White)</string>
@@ -1390,6 +1392,9 @@ Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' o
     <string name="morphe_custom_branding_name_entry_2" translatable="false">YouTube Morphe</string>
     <string name="morphe_custom_branding_name_entry_3" translatable="false">YT Morphe</string>
     <string name="morphe_custom_branding_name_entry_4" translatable="false">YT</string>
+    <string name="morphe_custom_branding_icon_entry_8">Original analog</string>
+    <string name="morphe_custom_branding_icon_entry_9">Original cake</string>
+    <string name="morphe_custom_branding_icon_entry_10">Original metal</string>
 
     <!-- layout.branding.header.changeHeaderPatch -->
     <string name="morphe_header_logo_title">Header logo</string>

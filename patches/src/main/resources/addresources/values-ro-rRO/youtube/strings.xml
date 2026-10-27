@@ -613,6 +613,8 @@ Info: S-ar putea să nu funcționeze pe transmisiuni live"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Permite salvarea videoclipurilor pentru copii în „Vizionează mai târziu” din meniul derulant</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Afișează butonul Salvează în Vizionează mai târziu în meniul pentru Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Permite salvarea shorts-urilor în „Vizionează mai târziu” din meniul derulant</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Redirecționează „ulterior” către o listă de redare</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Urmărește mai târziu</string>
   <string name="morphe_queue_flyout_title">Adaugă în coada Morphe</string>
   <string name="morphe_queue_restore_title">Menține coada între sesiuni</string>
   <string name="morphe_queue_restore_summary">Coada este păstrată după repornirea aplicației</string>
@@ -835,8 +837,6 @@ Pentru a remedia, activează 'Falsifică fluxurile video' și schimbă 'clientul
   <string name="morphe_auto_captions_style_entry_2">Nu arată niciodată</string>
   <string name="morphe_auto_captions_style_entry_3">Face bara de stare complet opacă</string>
   <string name="morphe_auto_captions_style_entry_4">Arată când mut</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Arată subtitrări automate</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Ascunde subtitrări automate</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Limba preferată pentru subtitrări</string>
   <string name="morphe_preferred_caption_language_summary">Selectează mai întâi subtitrările furnizorului, apoi traduce automat în limba preferată</string>
@@ -1111,20 +1111,21 @@ Setări → Redare (sau Redare automată) → Redare automată următorul videoc
   <string name="morphe_change_form_factor_entry_4">Automatizări</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Modificările includ:
 
-Aspect tablet
-• Postările comunității sunt ascunse
-• Setarea de redare în fluxuri nu este disponibilă
+Aspect tabletă
+• Postările din comunitate sunt ascunse
+• Setarea redare în feed nu este disponibilă
 • Butonul Remix și butonul Sunet nu sunt disponibile în Shorts
-• Suprapunerea 'Mai multe videoclipuri' poate să nu fie disponibilă
-• Bara de acțiuni veche a videoclipului este afișată necontractată
+• Suprapunerea „Alte videoclipuri” poate să nu fie disponibilă
+• Se afișează bara de acțiuni video vechi, nepredisată
+• Elementele meniului lateral (flyout) pot să nu funcționeze corect
 
-Aspect auto
-• Fluxul este organizat pe subiecte și canale
-• Setarea de redare în fluxuri nu este disponibilă
+Aspect pentru automotive
+• Feed-ul este organizat pe subiecte și canale
+• Setarea redare în feed nu este disponibilă
 • Butonul Remix și butonul Sunet nu sunt disponibile în Shorts
-• Suprapunerea 'Mai multe videoclipuri' poate să nu fie disponibilă
-• Shorts se deschid în playerul obișnuit
-• Bara de acțiuni veche a videoclipului este afișată necontractată"</string>
+• Suprapunerea „Alte videoclipuri” poate să nu fie disponibilă
+• Shorts se deschide în playerul obișnuit
+• Se afișează bara de acțiuni video vechi, nepredisată"</string>
   <string name="morphe_tablet_layout_in_player_title">Activează aspectul tabletă în player</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Restabilește aspectul vechi al playerului
@@ -1247,6 +1248,7 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_fix_status_bar_layout_title">Corectează bara de stare pentru a nu acoperi barele superioare</string>
   <string name="morphe_fix_status_bar_layout_summary">Păstrează aspectul fermei de stare constant, astfel încât să nu acopere barele superioare și să lase spațiu liber deasupra player-ului. Dezactivează această opțiune dacă aplicația se blochează sau dacă barele superioare arată incorect</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Strălucire</string>
   <string name="morphe_theme_color_light_title">Fundalul temei luminoase</string>
   <string name="morphe_theme_color_light_entry_2">Alb</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Alb)</string>
@@ -1269,6 +1271,9 @@ Limitare: Dacă 'Restaurare bara de acțiuni video veche' este dezactivată, str
   <string name="morphe_seekbar_custom_color_accent_summary">Stabilește culoarea secundară a barei de progres video</string>
   <string name="morphe_seekbar_custom_color_invalid">Valoare culoare bară căutare nevalidă</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Analog original</string>
+  <string name="morphe_custom_branding_icon_entry_9">Prăjitură originală</string>
+  <string name="morphe_custom_branding_icon_entry_10">Metal original</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Siglă antet</string>
   <string name="morphe_header_logo_entry_1">Implicit</string>

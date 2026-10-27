@@ -613,6 +613,8 @@ Poznámka: Možno nebude fungovať na živých prenosoch"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Umožňuje z rozbaľovacej ponuky ukladať videá pre deti do zoznamu „Pozrieť neskôr“</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Zobraziť tlačidlo „Uložiť na pozretie neskôr“ v rozbaľovacej ponuke pre Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Umožňuje z rozbaľovacej ponuky ukladať Shorts do zoznamu „Pozrieť neskôr“</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Presmerovať „Pozrieť neskôr“ do zoznamu prevádzania</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Pozrieť neskôr</string>
   <string name="morphe_queue_flyout_title">Pridať do fronty Morphe</string>
   <string name="morphe_queue_restore_title">Uchovajte si rad medzi reláciami</string>
   <string name="morphe_queue_restore_summary">Rad zostane zachovaný aj po reštarte aplikácie</string>
@@ -835,8 +837,6 @@ Ak to chcete vyriešiť, zapnite 'Spoofovať video streamy' a zmeňte 'Predvolen
   <string name="morphe_auto_captions_style_entry_2">Nikdy nezobrazovať</string>
   <string name="morphe_auto_captions_style_entry_3">Zobrazovať, keď je zvuk vypnutý</string>
   <string name="morphe_auto_captions_style_entry_4">Zobraziť, keď je zvuk stlmený</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Zobraziť automatické titulky</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Skryť automatické titulky</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Preferovaný jazyk titulkov</string>
   <string name="morphe_preferred_caption_language_summary">Najprv vyberie titulky poskytovateľa a potom ich automaticky preloží do preferovaného jazyka</string>
@@ -1113,17 +1113,19 @@ Nastavenia → Prehrávanie (alebo Automatické prehrávanie) → Automaticky pr
 
 Rozloženie pre tablet
 • Príspevky komunity sú skryté
-• Nastavenie prehrávania vo feedoch nie je k dispozícii
-• Tlačidlo Remix a tlačidlo Zvuk nie sú v službe Shorts k dispozícii
-• Prekrytie „Ďalšie videá“ nemusí byť k dispozícii
-• Zobrazuje sa rozbalený starý panel akcií videa
+• Nastavenie prehrávania vo feedi nie je k dispozícii
+• Tlačidlá Remixovať a Zvuk nie sú k dispozícii v Shorts
+• Vrstva 'Ďalšie videá' nemusí byť k dispozícii
+• Zobrazuje sa nezbalený starý panel akcií videa
+• Položky vyskakovacieho menu nemusia fungovať správne
 
 Rozloženie pre automobil
-• Feed je usporiadaný podľa tém a kanálov
-• Nastavenie prehrávania vo feedoch nie je k dispozícii
-• Tlačidlo Remix a tlačidlo Zvuk nie sú v službe Shorts k dispozícii
+• Feed je organizovaný podľa tém a kanálov
+• Nastavenie prehrávania vo feedi nie je k dispozícii
+• Tlačidlá Remixovať a Zvuk nie sú k dispozícii v Shorts
+• Vrstva 'Ďalšie videá' nemusí byť k dispozícii
 • Shorts sa otvárajú v bežnom prehrávači
-• Zobrazuje sa rozbalený starý panel akcií videa"</string>
+• Zobrazuje sa nezbalený starý panel akcií videa"</string>
   <string name="morphe_tablet_layout_in_player_title">Povoliť rozloženie tabletu v prehrávači</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Obnoví staré rozloženie prehrávača
@@ -1246,6 +1248,7 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_fix_status_bar_layout_title">Opraviť stavový riadok, ktorý zakrýva horné panely</string>
   <string name="morphe_fix_status_bar_layout_summary">Udržuje konzistentné rozloženie stavového riadka, takže nezakrýva horné panely a nenecháva prázdny priestor nad prehrávačom. Toto vypnite, ak sa aplikácia zrúti alebo horné panely vyzerajú nesprávne</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Žiarenie</string>
   <string name="morphe_theme_color_light_title">Pozadie svetlého motívu</string>
   <string name="morphe_theme_color_light_entry_2">Biela</string>
   <string name="morphe_theme_color_light_entry_3">Material You (biely)</string>
@@ -1268,6 +1271,9 @@ Obmedzenie: Ak je vypnutá možnosť 'Obnoviť starú lištu akcií videa', vrst
   <string name="morphe_seekbar_custom_color_accent_summary">Nastavte sekundárnu farbu pruhu priebehu videa</string>
   <string name="morphe_seekbar_custom_color_invalid">Neplatná farba ukazovateľa priebehu</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Pôvodný analóg</string>
+  <string name="morphe_custom_branding_icon_entry_9">Pôvodná torta</string>
+  <string name="morphe_custom_branding_icon_entry_10">Pôvodný kov</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logo hlavičky</string>
   <string name="morphe_header_logo_entry_1">Predvolené</string>

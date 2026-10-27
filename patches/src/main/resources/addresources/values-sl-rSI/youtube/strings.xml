@@ -613,6 +613,8 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Omogoča shranjevanje videoposnetkov za otroke v \'Ogled pozneje\' iz pojavnega menija</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Prikaži gumb Shrani v Ogled pozneje v pojavnem meniju Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Omogoča shranjevanje kratkih videoposnetkov v \'Ogled pozneje\' iz pojavnega menija</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Preusmerji \"Glej pozneje\" na seznam predvajanja</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Glej pozneje</string>
   <string name="morphe_queue_flyout_title">Dodaj v Morphe čakalno vrsto</string>
   <string name="morphe_queue_restore_title">Ohranite vrsto med sejami</string>
   <string name="morphe_queue_restore_summary">Vrsta se shrani tudi po ponovnem zagonu aplikacije</string>
@@ -835,8 +837,6 @@ Opozorilo: morda ne deluje na prenosih v živo"</string>
   <string name="morphe_auto_captions_style_entry_2">Nikoli ne prikazuj.</string>
   <string name="morphe_auto_captions_style_entry_3">Prikaži, ko je izključen zvok</string>
   <string name="morphe_auto_captions_style_entry_4">Pokaži, ko je izklopljeno.</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Pokaži samodejne podnapise.</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Skrij samodejne podnapise.</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Prednostni jezik podnapisov</string>
   <string name="morphe_preferred_caption_language_summary">Najprej izbere podnapise ponudnika, nato samodejno prevede v želeni jezik</string>
@@ -1111,20 +1111,21 @@ Nastavitve → Predvajanje (ali Samodejno predvajanje) → Samodejno predvajanje
   <string name="morphe_change_form_factor_entry_4">Avto</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Spremembe vključujejo:
 
-Postavitev za tablice
+Razporeditev za tablična računalnika
 • Objave skupnosti so skrite
-• Nastavitev predvajanja v virih ni na voljo
-• Gumba Remix in Zvok v Shorts nista na voljo
-• Prekrivni element »Več videoposnetkov« morda ni na voljo
-• Prikazana je stara vrstica z dejanji videa v razširjenem stanju
+• Nastavitev predvajanja v viru ni na voljo
+• Gumb za združevanje in gumb Zvok nista na voljo v prilogah Shorts
+• Prekrivno okno 'Več videoposnetkov' morda ne bo na voljo
+• Prikaže se nekompaktirana starejša vrstica dejanj za videoposnetke
+• elementi izpadnega menija morda ne bodo pravilno delovali
 
-Postavitev za avtomobile
-• Vir je organiziran po temah in kanalih
-• Nastavitev predvajanja v virih ni na voljo
-• Gumba Remix in Zvok v Shorts nista na voljo
-• Prekrivni element »Več videoposnetkov« morda ni na voljo
-• Shorts se odprejo v običajnem predvajalniku
-• Prikazana je stara vrstica z dejanji videa v razširjenem stanju"</string>
+Razporeditev za avtomobile
+• Vir je organiziran po tematskih skupinah in kanalih
+• Nastavitev predvajanja v viru ni na voljo
+• Gumb za združevanje in gumb Zvok nista na voljo v prilogah Shorts
+• Prekrivno okno 'Več videoposnetkov' morda ne bo na voljo
+• Priloge Shorts se odprejo v običajnem predvajalniku
+• Prikaže se nekompaktirana starejša vrstica dejanj za videoposnetke"</string>
   <string name="morphe_tablet_layout_in_player_title">Omogoči postavitev za tablične računalnike v predvajalniku</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Ponastavi prejšnjo postavitev predvajalnika
@@ -1247,6 +1248,7 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_fix_status_bar_layout_title">Odpravi pokritje zgornjih vrstic s strani vrstice stanja</string>
   <string name="morphe_fix_status_bar_layout_summary">Ohranja dosledno zasnovo vrstice stanja, tako da ne prekriva zgornjih vrstic in ne pušča praznega prostora nad predvajalnikom. To funkcijo izklopite, če se aplikacija sesuje ali zgornje vrstice ne izgledajo pravilno</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Sijaj</string>
   <string name="morphe_theme_color_light_title">Ozadje svetle teme</string>
   <string name="morphe_theme_color_light_entry_2">Bela</string>
   <string name="morphe_theme_color_light_entry_3">Material You (bela)</string>
@@ -1269,6 +1271,9 @@ Omejitev: Če je možnost »Ponastavi staro vrstico za videoposnetke« izkloplje
   <string name="morphe_seekbar_custom_color_accent_summary">Nastavite sekundarno barvo vrstice za napredovanje videa</string>
   <string name="morphe_seekbar_custom_color_invalid">Neveljavna vrednost barvnega drsnika</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Izvirni analog</string>
+  <string name="morphe_custom_branding_icon_entry_9">Izvirna torta</string>
+  <string name="morphe_custom_branding_icon_entry_10">Izvirni kovin</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logotip naslova</string>
   <string name="morphe_header_logo_entry_1">Privzeto</string>

@@ -613,6 +613,8 @@ Informação: Pode não funcionar em transmissões ao vivo"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Permite salvar vídeos relacionados a crianças em \'Assistir mais tarde\' pelo menu.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Mostrar o botão Salvar em \'Assistir mais tarde\' no menu de Shorts.</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Permite salvar Shorts em \'Assistir mais tarde\' pelo menu.</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Redirecionar \"Assistir mais tarde\" para a playlist</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Assistir depois</string>
   <string name="morphe_queue_flyout_title">Adicionar à fila do Morphe</string>
   <string name="morphe_queue_restore_title">Manter fila entre as sessões</string>
   <string name="morphe_queue_restore_summary">A fila é mantida após reiniciar o aplicativo</string>
@@ -835,8 +837,6 @@ Para corrigir isso, ative 'Falsificar streams de vídeo' e altere o 'Cliente pad
   <string name="morphe_auto_captions_style_entry_2">Não mostrar nunca</string>
   <string name="morphe_auto_captions_style_entry_3">Mostrar quando não está mudo</string>
   <string name="morphe_auto_captions_style_entry_4">Exibir quando silenciado</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Exibir legendas automáticas</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Ocultar legendas automáticas</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Idioma preferido das legendas</string>
   <string name="morphe_preferred_caption_language_summary">Seleciona primeiro as legendas do provedor e depois traduz automaticamente para o idioma preferido</string>
@@ -1109,22 +1109,23 @@ Configurações → Reprodução (ou Reprodução automática) → Reproduzir o 
   <string name="morphe_change_form_factor_entry_2">Telemóvel</string>
   <string name="morphe_change_form_factor_entry_3">Tablet</string>
   <string name="morphe_change_form_factor_entry_4">Automotivo</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"As mudanças incluem:
+  <string name="morphe_change_form_factor_user_dialog_message">"As alterações incluem:
 
 Layout para tablet
-• As publicações da comunidade ficam ocultas
-• A configuração de reprodução em feeds não está disponível
-• Os botões Remix e Som não estão disponíveis no Shorts
+• As postagens da comunidade estão ocultas
+• A configuração Reprodução nos feeds não está disponível
+• O botão Remix e o botão Som não estão disponíveis no Shorts
 • A sobreposição 'Mais vídeos' pode não estar disponível
-• A antiga barra de ações do vídeo é exibida expandida
+• A barra de ação de vídeo antiga sem colapso é exibida
+• Os itens do menu flutuante podem não funcionar corretamente
 
-Layout automotivo
+Layout para automóvel
 • O feed é organizado por tópicos e canais
-• A configuração de reprodução em feeds não está disponível
-• Os botões Remix e Som não estão disponíveis no Shorts
+• A configuração Reprodução nos feeds não está disponível
+• O botão Remix e o botão Som não estão disponíveis no Shorts
 • A sobreposição 'Mais vídeos' pode não estar disponível
-• Os Shorts abrem no player normal
-• A antiga barra de ações do vídeo é exibida expandida"</string>
+• Os Shorts abrem no player regular
+• A barra de ação de vídeo antiga sem colapso é exibida"</string>
   <string name="morphe_tablet_layout_in_player_title">Habilitar layout de tablet no player</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Restaura o layout antigo do player
@@ -1247,6 +1248,7 @@ Limitação: Se 'Restaurar a barra de ação de vídeo antiga' estiver desativad
   <string name="morphe_fix_status_bar_layout_title">Corrigir barra de status cobrindo as barras superiores</string>
   <string name="morphe_fix_status_bar_layout_summary">Mantém o layout da barra de status consistente, para que não cubra as barras superiores e não deixe espaço vazio acima do player. Desative isso se o aplicativo travar ou se as barras superiores estiverem incorretas</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Brilho</string>
   <string name="morphe_theme_color_light_title">Cor de fundo do tema claro</string>
   <string name="morphe_theme_color_light_entry_2">Branco</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Branco)</string>
@@ -1269,6 +1271,9 @@ Limitação: Se 'Restaurar a barra de ação de vídeo antiga' estiver desativad
   <string name="morphe_seekbar_custom_color_accent_summary">Defina a cor secundária da barra de progresso do vídeo</string>
   <string name="morphe_seekbar_custom_color_invalid">Valor de cor de seekbar inválido</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Análogo original</string>
+  <string name="morphe_custom_branding_icon_entry_9">Bolo original</string>
+  <string name="morphe_custom_branding_icon_entry_10">Metal original</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Logotipo do cabeçalho</string>
   <string name="morphe_header_logo_entry_1">Padrão</string>

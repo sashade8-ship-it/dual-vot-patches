@@ -287,10 +287,7 @@ public final class InAppDownloadsPatch {
             // and only the offline state token and player config are kept from the declined response.
             OfflinePlayerResponse.Builder builder = OfflinePlayerResponse.parseFrom(streams.streamingData()).toBuilder();
             builder.setStreamingData(savableStreamingData(builder.getStreamingData()))
-                    .setOfflineState(OfflineState.newBuilder()
-                            .setToken(original.getOfflineState().getToken())
-                            .setPolicyLifetimeSeconds(OFFLINE_POLICY_LIFETIME_SECONDS)
-                            .setAction(OfflineStateAction.OFFLINE_STATE_ACTION_OK));
+                    .setOfflineState(playableOfflineState(original.getOfflineState().getToken()));
 
             // Without the ExoPlayer config the app only looks at the progressive formats, which are not savable.
             // The player config of the app's own response fits the device, so it's kept if there is one.
@@ -308,6 +305,48 @@ public final class InAppDownloadsPatch {
             Logger.printException(() -> "replaceDeclinedOfflinePlayerResponse failure", ex);
             return null;
         }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called off the main thread with the offline state the server gives a saved video when the app
+     * refreshes its saved videos, which the server schedules about every 12 hours.
+     * The server disables saved videos that need Premium to be saved, such as music videos,
+     * and the app then shows an error instead of playing them.
+     *
+     * @param offlineState New offline state of a saved video.
+     * @return An offline state that keeps the video playable, or null to keep the original.
+     */
+    @Nullable
+    public static byte[] replaceDisabledOfflineState(@Nullable MessageLite offlineState) {
+        try {
+            if (Settings.DOWNLOAD_MODE.get() != DownloadMode.IN_APP || offlineState == null) {
+                return null;
+            }
+
+            OfflineState state = OfflineState.parseFrom(offlineState.toByteArray());
+            if (state.getAction() != OfflineStateAction.OFFLINE_STATE_ACTION_DISABLE) {
+                return null;
+            }
+
+            Logger.printDebug(() -> "Replacing disabled offline state with reason: " + state.getDisabledReason());
+            return playableOfflineState(state.getToken()).toByteArray();
+        } catch (Exception ex) {
+            Logger.printException(() -> "replaceDisabledOfflineState failure", ex);
+            return null;
+        }
+    }
+
+    /**
+     * @return Offline state that keeps a saved video playable, without asking the server again for a long time.
+     */
+    private static OfflineState playableOfflineState(String token) {
+        return OfflineState.newBuilder()
+                .setToken(token)
+                .setPolicyLifetimeSeconds(OFFLINE_POLICY_LIFETIME_SECONDS)
+                .setAction(OfflineStateAction.OFFLINE_STATE_ACTION_OK)
+                .build();
     }
 
     /**

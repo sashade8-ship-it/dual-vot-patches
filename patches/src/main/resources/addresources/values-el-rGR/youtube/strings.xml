@@ -613,6 +613,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Επιτρέπει την αποθήκευση βίντεο που αφορούν παιδιά στη λίστα «Παρακολούθηση αργότερα» από το αναδυόμενο μενού</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Εμφάνιση του κουμπιού «Αποθήκευση για παρακολούθηση αργότερα» στο αναδυόμενο μενού των Shorts</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Επιτρέπει την αποθήκευση των Shorts στη λίστα «Παρακολούθηση αργότερα» από το αναδυόμενο μενού</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Ανακατεύθυνση της λίστας \"Δείτε αργότερα\" σε λίστα αναπαραγωγής</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Παρακολούθηση αργότερα</string>
   <string name="morphe_queue_flyout_title">Προσθήκη στην ουρά Morphe</string>
   <string name="morphe_queue_restore_title">Διατήρηση ουράς μεταξύ των περιόδων σύνδεσης</string>
   <string name="morphe_queue_restore_summary">Η ουρά διατηρείται μετά την επανεκκίνηση της εφαρμογής</string>
@@ -835,8 +837,6 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_2">Δεν εμφανίζεται ποτέ</string>
   <string name="morphe_auto_captions_style_entry_3">Απόκρυψη τμήματος Κουίζ</string>
   <string name="morphe_auto_captions_style_entry_4">Εμφάνιση όταν σιωπηλός</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Εμφάνιση αυτόματων υπότιτλων</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Απόκρυψη αυτόματων υπότιτλων</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Προτιμώμενη γλώσσα υποτίτλων</string>
   <string name="morphe_preferred_caption_language_summary">Επιλέγει πρώτα τους υποτίτλους του παρόχου και στη συνέχεια μεταφράζει αυτόματα στην προτιμώμενη γλώσσα</string>
@@ -1109,7 +1109,23 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_2">Τηλέφωνο</string>
   <string name="morphe_change_form_factor_entry_3">Ταμπλετ</string>
   <string name="morphe_change_form_factor_entry_4">Αυτοκίνητο</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Οι αλλαγές περιλαμβάνουν:\n\nΔιάταξη tablet\n• Οι αναρτήσεις κοινότητας είναι κρυφές\n• Η ρύθμιση «Αναπαραγωγή στις ροές» δεν είναι διαθέσιμη\n• Το κουμπί Remix και το κουμπί ήχου δεν είναι διαθέσιμα στα Shorts\n• Η επικάλυψη «Περισσότερα βίντεο» ενδέχεται να μην είναι διαθέσιμη\n• Εμφανίζεται η μη συμπτυγμένη παλιά γραμμή ενεργειών βίντεο\n\nΔιάταξη αυτοκινήτου\n• Η ροή είναι οργανωμένη ανά θέμα και κανάλι\n• Η ρύθμιση «Αναπαραγωγή στις ροές» δεν είναι διαθέσιμη\n• Το κουμπί Remix και το κουμπί ήχου δεν είναι διαθέσιμα στα Shorts\n• Η επικάλυψη «Περισσότερα βίντεο» ενδέχεται να μην είναι διαθέσιμη\n• Τα Shorts ανοίγουν στο κανονικό πρόγραμμα αναπαραγωγής\n• Εμφανίζεται η μη συμπτυγμένη παλιά γραμμή ενεργειών βίντεο"</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"Οι αλλαγές περιλαμβάνουν:
+
+Διάταξη tablet
+• Τα δημοσιεύματα της κοινότητας κρύβονται
+• Η ρύθμιση αναπαραγωγής στα feeds δεν είναι διαθέσιμη
+• Το κουμπί Remix και το κουμπί Ήχος δεν είναι διαθέσιμα στα Shorts
+• Το υπέρθεμα «Περισσότερα βίντεο» μπορεί να μην είναι διαθέσιμο
+• Εμφανίζεται η παλιά μπάρα εργαλείων μη συμπιεσμένων βίντεο
+• Τα στοιχεία του αναδιπλούμενου μενού μπορεί να μην λειτουργούν σωστά
+
+Διάταξη automotive
+• Το feed οργανώνεται ανά θέμα και κανάλι
+• Η ρύθμιση αναπαραγωγής στα feeds δεν είναι διαθέσιμη
+• Το κουμπί Remix και το κουμπί Ήχος δεν είναι διαθέσιμα στα Shorts
+• Το υπέρθεμα «Περισσότερα βίντεο» μπορεί να μην είναι διαθέσιμο
+• Τα Shorts ανοίγουν στον συνηθισμένο player
+• Εμφανίζεται η παλιά μπάρα εργαλείων μη συμπιεσμένων βίντεο"</string>
   <string name="morphe_tablet_layout_in_player_title">Ενεργοποίηση διάταξης για tablet στον παίκτη</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Επαναφέρει την παλιά διάταξη του παίκτη
@@ -1232,6 +1248,7 @@ Second \"item\" text"</string>
   <string name="morphe_fix_status_bar_layout_title">Διόρθωση κατάστασης μπάρας να καλύπτει τις πάνω μπάρες</string>
   <string name="morphe_fix_status_bar_layout_summary">Διατηρεί τη διάταξη της μπάρας κατάστασης συνεπή, ώστε να μην καλύπτει τις πάνω μπάρες και δεν αφήνει κενό χώρο πάνω από τον παίκτη. Απενεργοποιήστε αυτό αν η εφαρμογή καταρρεύσει ή οι πάνω μπάρες φαίνονται λάθος</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Λάμψη</string>
   <string name="morphe_theme_color_light_title">Φόντο φωτεινού θέματος</string>
   <string name="morphe_theme_color_light_entry_2">Λευκό</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Λευκό)</string>
@@ -1254,6 +1271,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_summary">Ορίστε το δευτερεύον χρώμα της γραμμής προόδου του βίντεο</string>
   <string name="morphe_seekbar_custom_color_invalid">Μη έγκυρη τιμή χρώματος γραμμής προόδου</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Αρχικό αναλογικό</string>
+  <string name="morphe_custom_branding_icon_entry_9">Πρωτότυπη τούρτα</string>
+  <string name="morphe_custom_branding_icon_entry_10">Πρωτότυπο μέταλλο</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Λογότυπο επικεφαλίδας</string>
   <string name="morphe_header_logo_entry_1">Προεπιλογή</string>

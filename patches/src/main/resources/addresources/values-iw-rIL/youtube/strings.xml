@@ -613,6 +613,8 @@ Second \"item\" text"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">מאפשר לשמור סרטונים הקשורים לילדים ברשימת \'צפה מאוחר יותר\' מהתפריט הנפתח</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">הצג כפתור שמירה ל\'צפה מאוחר יותר\' בתפריט הנפתח של הסרטונים הקצרים</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">מאפשר לשמור סרטונים קצרים ברשימת \'צפה מאוחר יותר\' מהתפריט הנפתח</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">הפנה את \"צפייה מאוחר יותר\" לפלייליסט</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">לצפייה בהמשך</string>
   <string name="morphe_queue_flyout_title">הוסף לתור Morphe</string>
   <string name="morphe_queue_restore_title">שמור תור בין הפעלות</string>
   <string name="morphe_queue_restore_summary">התור נשמר גם לאחר הפעלה מחדש של האפליקציה</string>
@@ -835,8 +837,6 @@ Second \"item\" text"</string>
   <string name="morphe_auto_captions_style_entry_2">אל תהצג</string>
   <string name="morphe_auto_captions_style_entry_3">הצג כאשר הושתיק</string>
   <string name="morphe_auto_captions_style_entry_4">הצג בעת שתק</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">הצג כתוביות אוטומטיות</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">הסתר כתוביות אוטומטיות</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">שפת כתוביות מועדפת</string>
   <string name="morphe_preferred_caption_language_summary">בוחר תחילה בכתוביות של הספק, ולאחר מכן מתרגם אותן אוטומטית לשפה המועדפת</string>
@@ -1111,20 +1111,21 @@ Second \"item\" text"</string>
   <string name="morphe_change_form_factor_entry_4">רכב</string>
   <string name="morphe_change_form_factor_user_dialog_message">"השינויים כוללים:
 
-פריסת טאבלט
-• פוסטים קהילתיים מוסתרים
-• הגדרת השמעה בפידים אינה זמינה
-• כפתור רמיקס וכפתור סאונד אינם זמינים ב-Shorts
-• שכבת 'עוד סרטונים' עשויה לא להיות זמינה
-• סרגל פעולות וידאו ישן שאינו מקופל מוצג
+מסמך טאבלט
+• פוסטים בקהילה מוסתרים
+• הגדרת ניגון בריבים אינה זמינה
+• כפתורי הרמיקס וצליל אינם זמינים בסרטונים קצרים
+• ייתכן ששכבת העל 'סרטונים נוספים' לא תהיה זמינה
+• יישור הפעולה הישן לא המקופל של הסרטון מוצג
+• פריטי תפריט קופץ עשויים לא לעבוד כראוי
 
-פריסה לרכב
-• הפיד מאורגן לפי נושאים וערוצים
-• הגדרת השמעה בפידים אינה זמינה
-• כפתור רמיקס וכפתור סאונד אינם זמינים ב-Shorts
-• שכבת 'עוד סרטונים' עשויה לא להיות זמינה
-• Shorts נפתחים בנגן הרגיל
-• סרגל פעולות וידאו ישן שאינו מקופל מוצג"</string>
+מסמך רכב
+• הריב מסודר לפי נושאים וערוצים
+• הגדרת ניגון בריבים אינה זמינה
+• כפתורים של הרמיקס וצליל אינם זמינים בסרטונים קצרים
+• ייתכן ששכבת העל 'סרטונים נוספים' לא תהיה זמינה
+• סרטונים קצרים נפתחים בנגן הרגיל
+• יישור הפעולה הישן לא המקופל של הסרטון מוצג"</string>
   <string name="morphe_tablet_layout_in_player_title">הפעל פריסת טאבלט בנגן</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"משחזר את פריסת הנגן הישנה
@@ -1247,6 +1248,7 @@ Second \"item\" text"</string>
   <string name="morphe_fix_status_bar_layout_title">תיקון מסך החיווי שמכסה את הפסים העליונים</string>
   <string name="morphe_fix_status_bar_layout_summary">שומר על עקביות תצורת מסך החיווי, כך שהוא לא יכסה את הפסים העליונים ולא יישאר רווח ריק מעל הנגן. כבה אפשרות זו אם האפליקציה קורסת או שהפסים העליונים נראים לא תקין</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">זוהר</string>
   <string name="morphe_theme_color_light_title">רקע של ערכת נושא בהירה</string>
   <string name="morphe_theme_color_light_entry_2">לבן</string>
   <string name="morphe_theme_color_light_entry_3">Material You (לבן)</string>
@@ -1269,6 +1271,9 @@ Second \"item\" text"</string>
   <string name="morphe_seekbar_custom_color_accent_summary">הגדר את הצבע המשני של סרגל התקדמות הסרטון</string>
   <string name="morphe_seekbar_custom_color_invalid">ערך צבע סרגל דילוג לא חוקי</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">אנלוג מקורי</string>
+  <string name="morphe_custom_branding_icon_entry_9">עוגה מקורית</string>
+  <string name="morphe_custom_branding_icon_entry_10">מתכת מקורית</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">לוגו כותרת</string>
   <string name="morphe_header_logo_entry_1">ברירת מחדל</string>

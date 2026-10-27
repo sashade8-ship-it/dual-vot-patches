@@ -613,6 +613,8 @@ Tieto: Ei välttämättä toimi suoratoistoissa"</string>
   <string name="morphe_save_to_watch_later_kids_flyout_button_summary">Sallii lapsiin liittyvien videoiden tallentamisen \'Katso myöhemmin\' -luetteloon ponnahdusvalikosta</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Näytä Tallenna myöhemmin -painike Shortsit-ponnahdusvalikossa</string>
   <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Sallii Shortsien tallentamisen \'Katso myöhemmin\' -luetteloon ponnahdusvalikosta</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">Ohjaa Katso myöhemmin -lista soittolistalle</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">Katso myöhemmin</string>
   <string name="morphe_queue_flyout_title">Lisää Morphe-jonoon</string>
   <string name="morphe_queue_restore_title">Pidä jono käytössä istuntojen välillä</string>
   <string name="morphe_queue_restore_summary">Jono säilyy sovelluksen uudelleenkäynnistyksen jälkeen</string>
@@ -835,8 +837,6 @@ Korjaa tämä ottamalla käyttöön 'Väärennä videovirrat' ja vaihtamalla 'Ol
   <string name="morphe_auto_captions_style_entry_2">Älä näytä koskaan</string>
   <string name="morphe_auto_captions_style_entry_3">Ota tekstityskeksit käyttöön</string>
   <string name="morphe_auto_captions_style_entry_4">Näytä, kun mykistetty</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Näytä automaattiset tekstitykset</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Piilota automaattiset tekstitykset</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Ensisijainen tekstityskieli</string>
   <string name="morphe_preferred_caption_language_summary">Valitsee ensin tarjoajan tekstitykset ja kääntää ne sitten automaattisesti ensisijaiselle kielelle</string>
@@ -1111,20 +1111,21 @@ Asetukset → Toisto (tai Automaattinen toisto) → Toista seuraava video"</stri
   <string name="morphe_change_form_factor_entry_4">Ajoneuvo</string>
   <string name="morphe_change_form_factor_user_dialog_message">"Muutokset sisältävät:
 
-Tabletin asettelu
-• Yhteisön julkaisut ovat piilotettuja
+Tablettiasettelu
+• Yhteisöpostaukset on piilotettu
 • Toisto syötteissä -asetus ei ole käytettävissä
-• Remix-painike ja äänipainike eivät ole käytettävissä Shortseissa
-• 'Lisää videoita' -peittokuva ei ehkä ole käytettävissä
-• Vanha, tiivistämätön video-toimintapalkki on näkyvissä
+• Remix-painike ja Ääni-painike eivät ole käytettävissä Shorts-videoilla
+• \"Lisää videoita\" -peitekerros ei välttämättä ole käytettävissä
+• Vanha videon toimintopalkki näkyy laajennettuna
+• Avautuvan valikon kohteet eivät välttämättä toimi oikein
 
 Auton asettelu
 • Syöte on järjestetty aiheiden ja kanavien mukaan
 • Toisto syötteissä -asetus ei ole käytettävissä
-• Remix-painike ja äänipainike eivät ole käytettävissä Shortseissa
-• 'Lisää videoita' -peittokuva ei ehkä ole käytettävissä
-• Shorts avautuvat tavallisessa soittimessa
-• Vanha, tiivistämätön video-toimintapalkki on näkyvissä"</string>
+• Remix-painike ja Ääni-painike eivät ole käytettävissä Shorts-videoilla
+• \"Lisää videoita\" -peitekerros ei välttämättä ole käytettävissä
+• Shorts-videot avautuvat tavalliseen soittimeen
+• Vanha videon toimintopalkki näkyy laajennettuna"</string>
   <string name="morphe_tablet_layout_in_player_title">Ota tablettiasettelun käyttöön soittimessa</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Palauttaa vanhan soittimen asettelun
@@ -1247,6 +1248,7 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_fix_status_bar_layout_title">Korjaa tilapalkin peittämistä yläpalkkien kanssa</string>
   <string name="morphe_fix_status_bar_layout_summary">Pysäyttää tilapalkin asettelun johdonmukaisuuden, joten se ei peitä yläpalkkeja ja jättää tyhjää tilaa soittimen yläpuolelle. Poista tämä käytöstä, jos sovellus kaatuu tai yläpalkit näyttävät vääriltä</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">Hehku</string>
   <string name="morphe_theme_color_light_title">Vaalean teeman tausta</string>
   <string name="morphe_theme_color_light_entry_2">Valkoinen</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Valkoinen)()</string>
@@ -1269,6 +1271,9 @@ Rajoitus: Jos \"Palauta vanha videotoimintopalkki\" on poissa käytöstä, \"Lis
   <string name="morphe_seekbar_custom_color_accent_summary">Aseta videon etenemispalkin toissijainen väri</string>
   <string name="morphe_seekbar_custom_color_invalid">Virheellinen etenemispalkin väriarvo</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">Alkuperäinen analogi</string>
+  <string name="morphe_custom_branding_icon_entry_9">Alkuperäinen kakku</string>
+  <string name="morphe_custom_branding_icon_entry_10">Alkuperäinen metalli</string>
   <!-- layout.branding.header.changeHeaderPatch -->
   <string name="morphe_header_logo_title">Ylätunnisteen logo</string>
   <string name="morphe_header_logo_entry_1">Oletus</string>

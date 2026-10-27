@@ -831,8 +831,6 @@ Ukuze ulungise lokhu, vula 'Spoof video streams' bese ushintsha 'Default client'
   <string name="morphe_auto_captions_style_entry_2">Ungazikhombisile nakaze</string>
   <string name="morphe_auto_captions_style_entry_3">Khombisa lapho kukhishwe ukuthula</string>
   <string name="morphe_auto_captions_style_entry_4">Khombisa lapho kuthulekisiwe</string>
-  <string name="morphe_auto_captions_style_legacy_entry_1">Khombisa izincazelo ezizenzakalelayo</string>
-  <string name="morphe_auto_captions_style_legacy_entry_2">Fihla imibhalo yesizulu ezenzakalayo</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
   <string name="morphe_preferred_caption_language_title">Ulimi lwezincazelo olukhethiwe</string>
   <string name="morphe_preferred_caption_language_summary">Khetha izincazelo zomhlinzeki kuqala, bese ihumusha ngokuzenzakalelayo olimini olukhethiwe</string>
@@ -1105,22 +1103,6 @@ Settings $\rightarrow$ Playback (noma Autoplay) $\rightarrow$ Autoplay next vide
   <string name="morphe_change_form_factor_entry_2">Ucingo</string>
   <string name="morphe_change_form_factor_entry_3">Ithebhulethi</string>
   <string name="morphe_change_form_factor_entry_4">Ezimoto</string>
-  <string name="morphe_change_form_factor_user_dialog_message">"Izinguquko zihlanganisa:
-
-Ukulungiselelwa kwebulethe
-• Izithamo zomphakathi zifihliwe
-• Isetingu sokudlala ku-feed asitholakali
-• Inkinobho ye-Remix nenkinobho ye-Sound azitholakali ku-Shorts
-• I-overlay ethi 'More videos' kungenzeka ingatholakali
-• I-action bar endala yevidiyo engakhiwe iyabonakala
-
-Ukulungiselelwa kwezimoto
-• I-feed ihleleke ngokwemixhumano namachannel
-• Isetingu sokudlala ku-feed asitholakali
-• Inkinobho ye-Remix nenkinobho ye-Sound azitholakali ku-Shorts
-• I-overlay ethi 'More videos' kungenzeka ingatholakali
-• I-Shorts ivuleka kumdlali ovamile
-• I-action bar endala yevidiyo engakhiwe iyabonakala"</string>
   <string name="morphe_tablet_layout_in_player_title">Vumela ukulungiseka kwe-tablet kudlali</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
   <string name="morphe_tablet_layout_in_player_summary">"Buyisela ukulungiselelwa kwedlali yakudala
