@@ -834,7 +834,7 @@ def merge_streaming_data_request_stable_client_order(ours: str) -> str:
 
 def merge_streaming_data_request_dev10(source: str) -> str:
     """Keep upstream authentication and Dual's independent request flag."""
-    pattern = (r"<<<<<<< HEAD\n"
+    pattern = (r"<<<<<<< (?:HEAD|ours)\n"
         r"        return new StreamingDataRequest\(videoId, false, lastPlayerHeaders, true,\n"
         r"                clientOrder, true, false\);\n=======\n"
         r"(        // The auth hook keeps the headers even if spoofing is off, but it is not used by all apps\.\n"
