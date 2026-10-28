@@ -20,8 +20,12 @@ import app.morphe.patches.shared.misc.settings.preference.ListPreference
 import app.morphe.util.ResourceGroup
 import app.morphe.util.copyResources
 import java.io.File
+import java.util.logging.Logger
 
 const val CUSTOM_HEADER_RESOURCE_NAME = "morphe_header_custom"
+
+// Must be named in the 'app.morphe' namespace, otherwise the log is not published.
+private val logger = Logger.getLogger(ResourcePatchContext::class.java.name)
 
 internal fun baseChangeHeaderPatch(
     targetResourceDirectoryNames: Map<String, String>,
@@ -102,13 +106,23 @@ internal fun baseChangeHeaderPatch(
 /**
  * The images of the custom header folder at [path], each in the folder of its density, or null
  * when the folder has none of [densities] or leaves out one of [fileNames] in a density it has.
+ * The reason is logged, as a failed option validation does not say what is wrong.
  */
 private fun customHeaderImages(path: String, densities: Set<String>, fileNames: Array<String>): List<File>? {
-    val densityFolders = File(path.trim()).listFiles { file -> file.isDirectory && file.name in densities }
-        ?.takeIf { it.isNotEmpty() }
-        ?: return null
+    val folder = File(path.trim())
+    val densityFolders = folder.listFiles { file -> file.isDirectory && file.name in densities }
+    if (densityFolders.isNullOrEmpty()) {
+        logger.warning("Custom header folder must contain one of ${densities.joinToString()}: ${folder.absolutePath}")
+        return null
+    }
 
-    return densityFolders.flatMap { folder ->
-        fileNames.map(folder::resolve).takeIf { images -> images.all(File::isFile) } ?: return null
+    return densityFolders.flatMap { densityFolder ->
+        val images = fileNames.map(densityFolder::resolve)
+        val missing = images.filterNot(File::isFile)
+        if (missing.isNotEmpty()) {
+            logger.warning("Custom header folder ${densityFolder.name} is missing: ${missing.joinToString { it.name }}")
+            return null
+        }
+        images
     }
 }

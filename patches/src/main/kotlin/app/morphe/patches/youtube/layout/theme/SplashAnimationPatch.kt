@@ -187,6 +187,13 @@ val splashAnimationPatch = bytecodePatch {
                 }
             }
 
+            // The system splash screen is kept until the glow animation has drawn,
+            // otherwise a blank screen is shown while the animation loads.
+            RiveCanvasSessionSetLatestBitmapFingerprint.method.addInstruction(
+                0,
+                "invoke-static { }, $EXTENSION_CLASS->onRiveFrameAvailable()V"
+            )
+
             // The Rive animation is loaded in the background, and a home feed that is
             // shown quickly closes the animation before it has drawn anything. The animation
             // is instead closed when it ends, or by the timeout of the app if it never does.

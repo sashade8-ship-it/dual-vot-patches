@@ -113,14 +113,22 @@ private val notificationIconPngDirectories = mapOf(
 /**
  * The icon files of the custom icon folder at [path], each in the resource folder it goes to, or
  * null when the folder has none or holds only part of the adaptive icon in a density.
+ * The reason is logged, as a failed option validation does not say what is wrong.
  */
 private fun customIconFiles(path: String): List<File>? {
     val folder = File(path.trim())
-    if (!folder.isDirectory) return null
+    if (!folder.isDirectory) {
+        logger.warning("Custom icon path is not a folder: ${folder.absolutePath}")
+        return null
+    }
 
     val adaptiveIcons = mipmapDirectories.keys.flatMap { density ->
         val layers = USER_CUSTOM_ADAPTIVE_FILE_NAMES.map { folder.resolve("$density/$it") }.filter(File::isFile)
-        if (layers.isNotEmpty() && layers.size != USER_CUSTOM_ADAPTIVE_FILE_NAMES.size) return null
+        if (layers.isNotEmpty() && layers.size != USER_CUSTOM_ADAPTIVE_FILE_NAMES.size) {
+            logger.warning("Custom icon folder $density must contain all of " +
+                    "${USER_CUSTOM_ADAPTIVE_FILE_NAMES.joinToString()} but only has ${layers.joinToString { it.name }}")
+            return null
+        }
         layers
     }
     val optionalIcons = listOf(
@@ -128,7 +136,10 @@ private fun customIconFiles(path: String): List<File>? {
         "drawable/$USER_CUSTOM_NOTIFICATION_ICON_XML_FILE_NAME"
     ) + notificationIconPngDirectories.keys.map { "$it/$USER_CUSTOM_NOTIFICATION_ICON_PNG_FILE_NAME" }
 
-    return (adaptiveIcons + optionalIcons.map(folder::resolve).filter(File::isFile)).ifEmpty { null }
+    return (adaptiveIcons + optionalIcons.map(folder::resolve).filter(File::isFile)).ifEmpty {
+        logger.warning("Custom icon folder has none of the expected icon files: ${folder.absolutePath}")
+        null
+    }
 }
 
 internal const val EXTENSION_CLASS = "Lapp/morphe/extension/shared/patches/CustomBrandingPatch;"

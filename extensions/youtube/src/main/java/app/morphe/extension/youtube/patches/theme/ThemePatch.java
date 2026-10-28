@@ -10,6 +10,8 @@
 
 package app.morphe.extension.youtube.patches.theme;
 
+import static app.morphe.extension.shared.StringRef.str;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -17,14 +19,19 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Spinner;
 
 import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.airbnb.lottie.LottieAnimationView;
 
@@ -35,6 +42,7 @@ import java.util.Map;
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.SplashAnimationPatch;
 import app.morphe.extension.shared.patches.SplashAnimationPatch.SplashScreenAnimationStyle;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
@@ -93,17 +101,59 @@ public class ThemePatch extends BaseThemePatch {
     }
 
     /**
-     * The glow animation is drawn on a dark square in the middle of the screen,
-     * and the rest of the screen is given the same color.
+     * The dark backdrop the glow animation is drawn on.
      */
     @ColorInt
     private static final int RIVE_GLOW_ORIGINAL_BACKGROUND_COLOR = 0xFF09090A;
 
     /**
-     * The dark square of the glow animation, as it is written in the Rive file:
+     * The backdrop color of the glow animation, as it is written in the Rive file:
      * a color keyframe (property key 88) followed by the ARGB color in little endian order.
      */
     private static final byte[] RIVE_GLOW_BACKGROUND_KEYFRAME = { 0x58, 0x0A, 0x09, 0x09, (byte) 0xFF };
+
+    /**
+     * The glow animation is made for a 440 x 956 phone screen, but the app shows only
+     * a square in the middle of it, and the glow is cut off at the edges of the square.
+     */
+    private static final float RIVE_GLOW_ARTBOARD_WIDTH = 440;
+    private static final float RIVE_GLOW_ARTBOARD_HEIGHT = 956;
+
+    /**
+     * The artboard size of the glow animation, as it is written in the Rive file:
+     * the width (property key 7) and height (property key 8), each followed by a little endian float.
+     */
+    private static final byte[] RIVE_GLOW_ARTBOARD_SIZE = {
+            0x07, 0x00, 0x00, (byte) 0xDC, 0x43,
+            0x08, 0x00, 0x00, 0x6F, 0x44
+    };
+
+    private static final byte RIVE_PROPERTY_KEY_WIDTH = 7;
+    private static final byte RIVE_PROPERTY_KEY_HEIGHT = 8;
+    private static final byte RIVE_PROPERTY_KEY_ORIGIN_X = 11;
+    private static final byte RIVE_PROPERTY_KEY_ORIGIN_Y = 12;
+
+    /**
+     * The timeline of the glow animation, as it is written in the Rive file: a linear animation
+     * (type 31) named "Timeline 1", 150 frames long, that loops. Its keyed objects follow it.
+     */
+    private static final byte[] RIVE_GLOW_TIMELINE = {
+            0x1F, 0x37, 0x0A, 'T', 'i', 'm', 'e', 'l', 'i', 'n', 'e', ' ', '1',
+            0x39, (byte) 0x96, 0x01, 0x3B, 0x01, 0x00
+    };
+
+    /**
+     * Keyframes added to the timeline of the glow animation. The animation starts with a glow
+     * that covers the whole screen, and it fades in from the backdrop instead of appearing at once:
+     * the artboard (keyed object type 25, object id 0) has its opacity (keyed property type 26,
+     * property key 18) go from 0 at frame 0 to 1 at frame 20 (linear keyframes of type 30).
+     */
+    private static final byte[] RIVE_GLOW_FADE_IN_KEYFRAMES = {
+            0x19, 0x33, 0x00, 0x00,
+            0x1A, 0x35, 0x12, 0x00,
+            0x1E, 0x44, 0x01, 0x46, 0x00, 0x00, 0x00, 0x00, 0x00,
+            0x1E, 0x43, 0x14, 0x44, 0x01, 0x46, 0x00, 0x00, (byte) 0x80, 0x3F, 0x00
+    };
 
     /**
      * The key the app keeps the Rive file of a raw resource in memory with, followed by the resource id.
@@ -116,8 +166,54 @@ public class ThemePatch extends BaseThemePatch {
     @ColorInt
     private static volatile int riveGlowBackgroundColor;
 
+    /**
+     * The artboard size that fills the screen at the scale the app draws the glow animation with,
+     * or 0 to keep the original size.
+     */
+    private static volatile float riveGlowArtboardWidth;
+    private static volatile float riveGlowArtboardHeight;
+
+    /**
+     * How long the system splash screen is kept at most while the glow animation loads.
+     */
+    private static final long RIVE_SPLASH_SCREEN_TIMEOUT_MILLISECONDS = 1500;
+
+    /**
+     * How long the system splash screen fades out when the glow animation has drawn.
+     */
+    private static final long RIVE_SPLASH_SCREEN_FADE_OUT_MILLISECONDS = 300;
+
+    /**
+     * Removes the system splash screen that is kept while the glow animation loads,
+     * or null if it is not kept. Used on the main thread.
+     */
+    @Nullable
+    private static volatile Runnable riveSplashScreenRemover;
+
+    private static boolean riveSplashScreenCrashChecked;
+
     private static boolean isRiveSplashScreenEnabled() {
         return SharedYouTubeSettings.SPLASH_SCREEN_STYLE.get() == SplashScreenAnimationStyle.RIVE_GLOW;
+    }
+
+    /**
+     * Some devices crash when drawing the glow animation, because the Rive renderer
+     * uses GPU features they do not have. If the app closed while the animation was shown,
+     * the animation is turned off. Checked once when the app starts, before this launch
+     * shows the animation.
+     */
+    private static synchronized void checkRiveSplashScreenCrash() {
+        if (riveSplashScreenCrashChecked) {
+            return;
+        }
+        riveSplashScreenCrashChecked = true;
+
+        if (Settings.RIVE_SPLASH_SCREEN_SHOWING.get()) {
+            Logger.printInfo(() -> "App closed while the glow splash screen was shown, resetting splash screen style");
+            Settings.RIVE_SPLASH_SCREEN_SHOWING.save(false);
+            SharedYouTubeSettings.SPLASH_SCREEN_STYLE.resetToDefault();
+            Utils.showToastLong(str("morphe_splash_screen_style_glow_not_supported"));
+        }
     }
 
     private static boolean isRiveGlowFile(int resourceId) {
@@ -128,6 +224,14 @@ public class ThemePatch extends BaseThemePatch {
      * Injection point.
      */
     public static boolean useRiveSplashScreen(boolean original) {
+        try {
+            if (isRiveSplashScreenEnabled()) {
+                checkRiveSplashScreenCrash();
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "useRiveSplashScreen failure", ex);
+        }
+
         return isRiveSplashScreenEnabled();
     }
 
@@ -201,18 +305,104 @@ public class ThemePatch extends BaseThemePatch {
                 color = RIVE_GLOW_ORIGINAL_BACKGROUND_COLOR;
             }
 
+            // The app draws the artboard to cover a square view, so the width of the artboard
+            // fits the square. The view is changed to fill the screen, and the artboard is
+            // given the shape of the screen at that same scale.
+            float artboardWidth = 0;
+            float artboardHeight = 0;
+            ViewGroup.LayoutParams params = animationView.getLayoutParams();
+            if (context instanceof Activity activity && params.width > 0) {
+                final float artboardUnitsPerPixel = RIVE_GLOW_ARTBOARD_WIDTH / params.width;
+                Rect windowBounds = getWindowBounds(activity);
+                artboardWidth = windowBounds.width() * artboardUnitsPerPixel;
+                artboardHeight = windowBounds.height() * artboardUnitsPerPixel;
+
+                params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                params.height = ViewGroup.LayoutParams.MATCH_PARENT;
+                animationView.setLayoutParams(params);
+            } else {
+                Logger.printDebug(() -> "Glow animation view is not a fixed size");
+            }
+
+            riveGlowArtboardWidth = artboardWidth;
+            riveGlowArtboardHeight = artboardHeight;
             riveGlowBackgroundColor = color;
             parent.setBackgroundColor(color);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && context instanceof Activity activity) {
+                keepSplashScreenUntilRiveFrame(activity);
+            }
+
+            // The app removes the view when the animation is closed.
+            Settings.RIVE_SPLASH_SCREEN_SHOWING.save(true);
+            animationView.addOnAttachStateChangeListener(new View.OnAttachStateChangeListener() {
+                @Override
+                public void onViewAttachedToWindow(@NonNull View view) {
+                }
+
+                @Override
+                public void onViewDetachedFromWindow(@NonNull View view) {
+                    view.removeOnAttachStateChangeListener(this);
+                    Settings.RIVE_SPLASH_SCREEN_SHOWING.save(false);
+                }
+            });
         } catch (Exception ex) {
             Logger.printException(() -> "setRiveSplashScreenBackground failure", ex);
         }
     }
 
     /**
+     * The system removes its splash screen when the app has drawn, which is before
+     * the glow animation has loaded. The splash screen is instead kept until the
+     * animation has drawn, and then it fades out while the animation fades in.
+     */
+    @RequiresApi(Build.VERSION_CODES.S)
+    private static void keepSplashScreenUntilRiveFrame(Activity activity) {
+        activity.getSplashScreen().setOnExitAnimationListener(splashScreenView -> {
+            riveSplashScreenRemover = () -> splashScreenView.animate()
+                    .alpha(0)
+                    .setDuration(RIVE_SPLASH_SCREEN_FADE_OUT_MILLISECONDS)
+                    .withEndAction(splashScreenView::remove);
+
+            // In case the animation never draws.
+            Utils.runOnMainThreadDelayed(ThemePatch::removeRiveSplashScreen,
+                    RIVE_SPLASH_SCREEN_TIMEOUT_MILLISECONDS);
+        });
+    }
+
+    private static void removeRiveSplashScreen() {
+        Runnable remover = riveSplashScreenRemover;
+        if (remover != null) {
+            riveSplashScreenRemover = null;
+            remover.run();
+        }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called for each frame the Rive renderer draws.
+     */
+    public static void onRiveFrameAvailable() {
+        if (riveSplashScreenRemover != null) {
+            Utils.runOnMainThreadNowOrLater(ThemePatch::removeRiveSplashScreen);
+        }
+    }
+
+    private static Rect getWindowBounds(Activity activity) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            return activity.getWindowManager().getCurrentWindowMetrics().getBounds();
+        }
+
+        DisplayMetrics metrics = activity.getResources().getDisplayMetrics();
+        return new Rect(0, 0, metrics.widthPixels, metrics.heightPixels);
+    }
+
+    /**
      * Injection point.
      * <p>
      * The app keeps the Rive file of a raw resource in memory, and the key of the glow animation
-     * is changed for each background color. Otherwise a file with the background color of
+     * is changed for each background color and artboard size. Otherwise a file changed for
      * an earlier launch would be used.
      *
      * @param key The key of a raw resource, which is the prefix followed by the resource id.
@@ -222,10 +412,10 @@ public class ThemePatch extends BaseThemePatch {
         try {
             final int backgroundColor = riveGlowBackgroundColor;
             if (backgroundColor != 0
-                    && backgroundColor != RIVE_GLOW_ORIGINAL_BACKGROUND_COLOR
                     && key.startsWith(RIVE_RAW_RESOURCE_KEY_PREFIX)
                     && isRiveGlowFile(Integer.parseInt(key.substring(RIVE_RAW_RESOURCE_KEY_PREFIX.length())))) {
-                return key + "_" + Integer.toHexString(backgroundColor);
+                return key + "_" + Integer.toHexString(backgroundColor)
+                        + "_" + riveGlowArtboardWidth + "x" + riveGlowArtboardHeight;
             }
         } catch (Exception ex) {
             Logger.printException(() -> "getRiveRawResourceKey failure", ex);
@@ -238,7 +428,7 @@ public class ThemePatch extends BaseThemePatch {
      * Injection point.
      * <p>
      * Called when the app reads the Rive file of a raw resource it has not cached yet.
-     * The splash screen reads its file after the background is set.
+     * The splash screen reads its file after the background and size are set.
      *
      * @param fileBytes  The Rive file of a raw resource, or null if it could not be read.
      * @param resourceId The raw resource the file was read from.
@@ -248,28 +438,79 @@ public class ThemePatch extends BaseThemePatch {
     public static byte[] getRiveFile(@Nullable byte[] fileBytes, int resourceId) {
         try {
             final int backgroundColor = riveGlowBackgroundColor;
-            if (fileBytes == null
-                    || backgroundColor == 0
-                    || backgroundColor == RIVE_GLOW_ORIGINAL_BACKGROUND_COLOR
-                    || !isRiveGlowFile(resourceId)) {
+            if (fileBytes == null || backgroundColor == 0 || !isRiveGlowFile(resourceId)) {
                 return fileBytes;
             }
 
-            final int index = indexOf(fileBytes, RIVE_GLOW_BACKGROUND_KEYFRAME);
-            if (index < 0) {
-                Logger.printException(() -> "Could not find the background color of the glow animation");
+            if (backgroundColor != RIVE_GLOW_ORIGINAL_BACKGROUND_COLOR) {
+                setRiveGlowBackgroundColor(fileBytes, backgroundColor);
+            }
+
+            final float artboardWidth = riveGlowArtboardWidth;
+            final float artboardHeight = riveGlowArtboardHeight;
+            if (artboardWidth > 0 && artboardHeight > 0) {
+                fileBytes = setRiveGlowArtboardSize(fileBytes, artboardWidth, artboardHeight);
+            }
+
+            final int timelineIndex = indexOf(fileBytes, RIVE_GLOW_TIMELINE);
+            if (timelineIndex < 0) {
+                Logger.printException(() -> "Could not find the timeline of the glow animation");
                 return fileBytes;
             }
 
-            // Replace the color after the property key.
-            ByteBuffer.wrap(fileBytes, index + 1, Integer.BYTES)
-                    .order(ByteOrder.LITTLE_ENDIAN)
-                    .putInt(backgroundColor);
+            return replaceBytes(fileBytes, timelineIndex + RIVE_GLOW_TIMELINE.length, 0,
+                    RIVE_GLOW_FADE_IN_KEYFRAMES);
         } catch (Exception ex) {
             Logger.printException(() -> "getRiveFile failure", ex);
         }
 
         return fileBytes;
+    }
+
+    private static void setRiveGlowBackgroundColor(byte[] fileBytes, @ColorInt int color) {
+        final int index = indexOf(fileBytes, RIVE_GLOW_BACKGROUND_KEYFRAME);
+        if (index < 0) {
+            Logger.printException(() -> "Could not find the background color of the glow animation");
+            return;
+        }
+
+        // Replace the color after the property key.
+        ByteBuffer.wrap(fileBytes, index + 1, Integer.BYTES)
+                .order(ByteOrder.LITTLE_ENDIAN)
+                .putInt(color);
+    }
+
+    private static byte[] setRiveGlowArtboardSize(byte[] fileBytes, float width, float height) {
+        final int index = indexOf(fileBytes, RIVE_GLOW_ARTBOARD_SIZE);
+        if (index < 0) {
+            Logger.printException(() -> "Could not find the artboard size of the glow animation");
+            return fileBytes;
+        }
+
+        // The content is drawn from the origin of the artboard, which is a fraction of its size.
+        // The origin keeps the content in the middle of the resized artboard.
+        final float originX = (width - RIVE_GLOW_ARTBOARD_WIDTH) / 2 / width;
+        final float originY = (height - RIVE_GLOW_ARTBOARD_HEIGHT) / 2 / height;
+
+        // Each property is a one byte property key followed by a float.
+        byte[] artboardProperties = ByteBuffer.allocate(4 * (1 + Float.BYTES))
+                .order(ByteOrder.LITTLE_ENDIAN)
+                .put(RIVE_PROPERTY_KEY_WIDTH).putFloat(width)
+                .put(RIVE_PROPERTY_KEY_HEIGHT).putFloat(height)
+                .put(RIVE_PROPERTY_KEY_ORIGIN_X).putFloat(originX)
+                .put(RIVE_PROPERTY_KEY_ORIGIN_Y).putFloat(originY)
+                .array();
+
+        return replaceBytes(fileBytes, index, RIVE_GLOW_ARTBOARD_SIZE.length, artboardProperties);
+    }
+
+    private static byte[] replaceBytes(byte[] array, int index, int length, byte[] replacement) {
+        final int end = index + length;
+        return ByteBuffer.allocate(array.length - length + replacement.length)
+                .put(array, 0, index)
+                .put(replacement)
+                .put(array, end, array.length - end)
+                .array();
     }
 
     private static int indexOf(byte[] array, byte[] target) {

@@ -182,6 +182,16 @@ internal object RiveReadRawResourceFingerprint : Fingerprint(
     )
 )
 
+/**
+ * Stores each frame the Rive renderer draws.
+ */
+internal object RiveCanvasSessionSetLatestBitmapFingerprint : Fingerprint(
+    definingClass = "Lapp/rive/RiveCanvasSession;",
+    name = "access\$setLatestBitmap\$p",
+    returnType = "V",
+    parameters = listOf("Lapp/rive/RiveCanvasSession;", "Landroid/graphics/Bitmap;")
+)
+
 internal object LottieLayerColorFingerprint : Fingerprint(
     parameters = listOf(
         "Landroid/graphics/Canvas;",

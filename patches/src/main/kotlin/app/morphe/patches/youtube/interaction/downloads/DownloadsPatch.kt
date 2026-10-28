@@ -37,7 +37,6 @@ import app.morphe.patches.youtube.misc.playercontrols.legacyPlayerControlsPatch
 import app.morphe.patches.youtube.misc.proto.elementProtoParserHookPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
-import app.morphe.patches.youtube.misc.spoof.spoofVideoStreamsPatch
 import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.util.ResourceGroup
@@ -129,7 +128,6 @@ val downloadsPatch = bytecodePatch(
         videoInformationPatch,
         legacyPlayerControlsPatch,
         fixProtoLibraryPatch,
-        spoofVideoStreamsPatch,
         elementProtoParserHookPatch,
         flyoutPatch
     )
