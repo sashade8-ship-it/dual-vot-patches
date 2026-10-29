@@ -143,7 +143,7 @@ public class VideoQualityDialogButton {
                     if (resolution != VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE &&
                             resolution <= defaultResolution) {
                         Logger.printDebug(() -> "Resetting quality to: " + quality);
-                        VideoInformation.changeQuality(quality);
+                        VideoInformation.changeQuality(RememberVideoQualityPatch.getPlayableQuality(quality));
                         return true;
                     }
                 }
@@ -307,9 +307,8 @@ public class VideoQualityDialogButton {
             listView.setOnItemClickListener((parent, view, which, id) -> {
                 try {
                     final int originalIndex = which + 1; // Adjust for automatic.
-                    VideoQualityInterface selectedQuality = currentQualities[originalIndex];
-                    RememberVideoQualityPatch.userChangedQuality(selectedQuality.patch_getResolution());
-                    VideoInformation.changeQuality(selectedQuality);
+                    VideoInformation.changeQuality(
+                            RememberVideoQualityPatch.userChangedQuality(currentQualities[originalIndex]));
 
                     dialog.dismiss();
                 } catch (Exception ex) {

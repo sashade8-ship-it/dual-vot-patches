@@ -12,15 +12,21 @@ import static app.morphe.extension.shared.StringRef.str;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ArgbEvaluator;
+import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.text.Layout;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.PathInterpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -30,6 +36,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 import app.morphe.extension.music.patches.lyrics.model.LyricsLine;
 import app.morphe.extension.music.settings.Settings;
@@ -40,18 +47,59 @@ final class LyricsViewSupport {
 
     private static final float FOOTER_ALPHA = 0.6f;
 
-    private static final long HIGHLIGHT_FADE_DURATION_MILLISECONDS = 200;
+    private static final long HIGHLIGHT_FADE_DURATION_MILLISECONDS = 320;
 
     private static final String LYRICS_SOURCE_KEY = "morphe_music_lyrics_source_label";
 
     private static final float FOOTER_TEXT_SIZE_SP = 16;
 
-    private static final float BACKGROUND_TEXT_SIZE_FACTOR = 0.85f;
+    private static final float BACKGROUND_TEXT_SIZE_FACTOR = 0.7f;
     private static final float SECTION_TAG_TEXT_SIZE_FACTOR = 0.45f;
 
     private static final float SECTION_DOT_INSET_FACTOR = 0.18f;
 
+    /** Lines other than the active one shrink a little, on top of dimming. */
+    static final float ACTIVE_LINE_SCALE = 1.0f;
+    static final float INACTIVE_LINE_SCALE = 0.95f;
+
     private static final ArgbEvaluator BUTTON_COLOR_EVALUATOR = new ArgbEvaluator();
+
+    /** Compose LinearOutSlowInEasing. */
+    static final TimeInterpolator LINEAR_OUT_SLOW_IN =
+            new PathInterpolator(0f, 0f, 0.2f, 1f);
+
+    /** Compose FastOutSlowInEasing. */
+    static final TimeInterpolator FAST_OUT_SLOW_IN =
+            new PathInterpolator(0.4f, 0f, 0.2f, 1f);
+
+    /**
+     * MIUI and HyperOS draw the bold system font too thin, most visibly on CJK text, so these
+     * devices get a heavier weight on top.
+     */
+    private static final boolean IS_XIAOMI = isXiaomi();
+
+    private static boolean isXiaomi() {
+        String manufacturer = Build.MANUFACTURER.toLowerCase(Locale.ROOT);
+        String brand = Build.BRAND.toLowerCase(Locale.ROOT);
+        return manufacturer.contains("xiaomi") || brand.contains("xiaomi")
+                || brand.contains("redmi") || brand.contains("poco");
+    }
+
+    /** Bolds a paint for lyrics; a typeface set on it afterwards undoes the weight. */
+    static void applyLyricsBoldPaint(Paint paint) {
+        paint.setTypeface(Typeface.DEFAULT_BOLD);
+        paint.setFlags(paint.getFlags()
+                | Paint.ANTI_ALIAS_FLAG
+                | Paint.SUBPIXEL_TEXT_FLAG
+                | Paint.LINEAR_TEXT_FLAG);
+        paint.setFontVariationSettings(IS_XIAOMI ? "'wght' 750" : "'wght' 700");
+        paint.setFakeBoldText(IS_XIAOMI);
+    }
+
+    /** Draws a line a little tighter, except a joining script, which spacing would break apart. */
+    static float lineLetterSpacing(@Nullable CharSequence text, float textSizeSp) {
+        return LyricsSpanBuilder.containsJoiningScript(text) ? 0f : -0.5f / Math.max(12f, textSizeSp);
+    }
 
     private LyricsViewSupport() {
     }
@@ -76,12 +124,12 @@ final class LyricsViewSupport {
         }
         int total = 0;
         for (int i = 0; i < group.getChildCount(); i++) {
-            final View child = group.getChildAt(i);
-            if (child == text) {
+            View child = group.getChildAt(i);
+            if (child == text || child.getVisibility() == View.GONE) {
                 continue;
             }
             int height = child.getHeight();
-            final ViewGroup.LayoutParams lp = child.getLayoutParams();
+            ViewGroup.LayoutParams lp = child.getLayoutParams();
             if (height <= 0 && lp != null && lp.height > 0) {
                 height = lp.height;
             }
@@ -100,11 +148,11 @@ final class LyricsViewSupport {
         final int size = scaledPixels(row.getContext(), LyricsPanelView.SECTION_DOT_SIZE_FACTOR);
         final int gap = scaledPixels(row.getContext(), LyricsPanelView.SECTION_DOT_GAP_FACTOR);
         for (int i = 0; i < row.getChildCount(); i++) {
-            final View dot = row.getChildAt(i);
+            View dot = row.getChildAt(i);
             if (dot == null) {
                 continue;
             }
-            final LinearLayout.LayoutParams params =
+            LinearLayout.LayoutParams params =
                     (LinearLayout.LayoutParams) dot.getLayoutParams();
             if (params == null) {
                 continue;
@@ -120,17 +168,21 @@ final class LyricsViewSupport {
      * The words the karaoke pass paints for one line.
      *
      * <p>An only mode drops the original and measures its reading against the text it draws, so the
-     * reading's words already sit on the {@code origStart} base and the original's are not in that text
+     * reading's words already sit on the {@code originalStart} base and the original's are not in that text
      * at all; a plain mode keeps the original, which is the base {@link #withReading} moves the reading's
      * onto. Deciding by the reading alone would rob a plain mode of the words it paints.
      */
     static List<LyricsSpanBuilder.WordTiming> wordSpansFor(
             LyricsSpanBuilder.BuildResult result, boolean only,
-            List<LyricsSpanBuilder.WordTiming> lineTimings, int origStart) {
+            List<LyricsSpanBuilder.WordTiming> lineTimings) {
         if (!only) {
-            return withReading(lineTimings, result, origStart);
+            // Syllable readings are drawn by the view from the same timings that light the lyric.
+            if (result.showSyllableRomanization()) {
+                return result.readingSpans();
+            }
+            return withReading(lineTimings, result);
         }
-        final List<LyricsSpanBuilder.WordTiming> spans = result.readingSpans();
+        List<LyricsSpanBuilder.WordTiming> spans = result.readingSpans();
         return spans == null || spans.isEmpty() ? Collections.emptyList() : spans;
     }
 
@@ -141,13 +193,13 @@ final class LyricsViewSupport {
      */
     static List<LyricsSpanBuilder.WordTiming> withReading(
             List<LyricsSpanBuilder.WordTiming> lineTimings,
-            LyricsSpanBuilder.BuildResult result, int origStart) {
-        final List<LyricsSpanBuilder.WordTiming> readingSpans = result.readingSpans();
+            LyricsSpanBuilder.BuildResult result) {
+        List<LyricsSpanBuilder.WordTiming> readingSpans = result.readingSpans();
         if (readingSpans == null || readingSpans.isEmpty() || result.romaStart() < 0) {
             return lineTimings;
         }
-        final int shift = result.romaStart() - origStart;
-        final List<LyricsSpanBuilder.WordTiming> combined =
+        final int shift = result.romaStart() - result.originalStart();
+        List<LyricsSpanBuilder.WordTiming> combined =
                 new ArrayList<>(lineTimings.size() + readingSpans.size());
         combined.addAll(lineTimings);
         for (LyricsSpanBuilder.WordTiming span : readingSpans) {
@@ -157,24 +209,48 @@ final class LyricsViewSupport {
         return combined;
     }
 
-    /** Eases the highlight between lines the way the built-in panel does. */
+    /** Eases the highlight between lines the way the built-in panel does, shrinking the dimmed ones. */
     static void fadeTo(TextView lineView, float alpha) {
         if (!(lineView instanceof LyricsLineView view)) {
+            return;
+        }
+        if (view.isSecondary()) {
+            // A background vocal shows and hides with its own expansion instead.
+            if (view.fadeAnimator != null) {
+                view.fadeAnimator.cancel();
+                view.fadeAnimator = null;
+            }
+            view.lineAlpha = 1f;
+            view.fadeTargetAlpha = 1f;
+            return;
+        }
+        // Called on every highlight tick, so a fade already heading here is left to finish.
+        if (view.fadeAnimator != null && Math.abs(view.fadeTargetAlpha - alpha) < 0.005f) {
             return;
         }
         if (view.fadeAnimator != null) {
             view.fadeAnimator.cancel();
             view.fadeAnimator = null;
         }
-        if (Math.abs(view.lineAlpha - alpha) < 0.01f) {
+        view.fadeTargetAlpha = alpha;
+        final float targetScale = alpha >= 1f ? ACTIVE_LINE_SCALE : INACTIVE_LINE_SCALE;
+        final float startAlpha = view.lineAlpha;
+        final float startScale = view.lineScale;
+        if (Math.abs(startAlpha - alpha) < 0.01f && Math.abs(startScale - targetScale) < 0.005f) {
             view.lineAlpha = alpha;
+            view.lineScale = targetScale;
+            applyLineScaleTransform(view, targetScale);
             view.invalidate();
             return;
         }
-        final ValueAnimator animator = ValueAnimator.ofFloat(view.lineAlpha, alpha);
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f);
         animator.setDuration(HIGHLIGHT_FADE_DURATION_MILLISECONDS);
+        animator.setInterpolator(FAST_OUT_SLOW_IN);
         animator.addUpdateListener(animation -> {
-            view.lineAlpha = (float) animation.getAnimatedValue();
+            final float t = (float) animation.getAnimatedValue();
+            view.lineAlpha = startAlpha + (alpha - startAlpha) * t;
+            view.lineScale = startScale + (targetScale - startScale) * t;
+            applyLineScaleTransform(view, view.lineScale);
             view.invalidate();
         });
         animator.addListener(new AnimatorListenerAdapter() {
@@ -187,6 +263,24 @@ final class LyricsViewSupport {
         });
         view.fadeAnimator = animator;
         animator.start();
+    }
+
+    static void applyLineScaleTransform(LyricsLineView view, float scale) {
+        if (view.isSecondary()) {
+            return;
+        }
+        final int w = view.getWidth();
+        final int h = view.getHeight();
+        if (w > 0) {
+            final boolean isEnd = view.isRightAligned()
+                    || (view.getGravity() & Gravity.HORIZONTAL_GRAVITY_MASK) == Gravity.END;
+            view.setPivotX(isEnd ? w - view.getPaddingRight() : view.getPaddingLeft());
+        }
+        if (h > 0) {
+            view.setPivotY(h * 0.5f);
+        }
+        view.setScaleX(scale);
+        view.setScaleY(scale);
     }
 
     static void applyFooterStyle(TextView footer) {
@@ -262,11 +356,11 @@ final class LyricsViewSupport {
             button.setBackground(pill);
         }
 
-        final ColorStateList pillColor = pill.getColor();
+        ColorStateList pillColor = pill.getColor();
         final int fromBackground = pillColor == null ? background : pillColor.getDefaultColor();
         final int fromForeground = button.getCurrentTextColor();
         // All of them: the dual pill's far twin would keep the inactive tint while it is up.
-        final Drawable[] icons = button.getCompoundDrawablesRelative();
+        Drawable[] icons = button.getCompoundDrawablesRelative();
 
         // Nothing to ease from before the panel is on screen, or when nothing changed.
         if (!button.isAttachedToWindow()

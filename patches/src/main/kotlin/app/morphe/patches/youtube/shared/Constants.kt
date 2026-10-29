@@ -28,20 +28,15 @@ internal object Constants {
                 isExperimental = true
             ),
             AppTarget(
+                version = "21.30.216",
+                minSdk = 29
+            ),
+            AppTarget(
                 version = "21.28.208", // Last version with different miniplayers.
-                minSdk = 29,
-                isExperimental = true
+                minSdk = 29
             ),
             AppTarget(
                 version = "21.23.492", // Last version for Android 9.0
-                minSdk = 28
-            ),
-            AppTarget(
-                version = "21.20.405",
-                minSdk = 28
-            ),
-            AppTarget(
-                version = "21.16.256",
                 minSdk = 28
             ),
             AppTarget(

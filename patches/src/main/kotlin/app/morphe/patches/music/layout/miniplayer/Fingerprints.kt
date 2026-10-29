@@ -58,6 +58,13 @@ internal object NavigationBarTabLayoutFingerprint : Fingerprint(
     )
 )
 
+internal object SwitchToggleColorParentFingerprint : Fingerprint(
+    classFingerprint = MiniPlayerConstructorFingerprint,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("L", "J")
+)
+
 internal object SwitchToggleColorFingerprint : Fingerprint(
     classFingerprint = MiniPlayerConstructorFingerprint,
     accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),

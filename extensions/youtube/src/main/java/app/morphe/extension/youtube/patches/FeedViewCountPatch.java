@@ -27,6 +27,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.GuardedBy;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -35,6 +36,7 @@ import com.facebook.litho.TextContent;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
@@ -47,9 +49,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.patches.components.ContextInterface;
 import app.morphe.extension.youtube.patches.components.LayoutComponentsFilter;
 import app.morphe.extension.youtube.patches.utils.FeedVideoCardsPatch;
+import app.morphe.extension.youtube.patches.utils.ProtoNode;
 import app.morphe.extension.youtube.settings.Settings;
 
 /**
@@ -97,12 +101,6 @@ public final class FeedViewCountPatch {
 
     /** Allowed difference of sizes and positions that are compared. */
     private static final int TOLERANCE_DP = 4;
-    /**
-     * Largest space between the thumbnail and the left, top and right edges of the card.
-     * Cards of some layouts show the thumbnail inset from their edges, such as by 12 dp.
-     */
-    private static final int MAX_THUMBNAIL_INSET_DP = 16;
-
     /** Space between the duration badge and the edges of the thumbnail, if the badge is not found. */
     private static final int FALLBACK_MARGIN_DP = 8;
     /** A little more space than the duration badge has, so the count is not at the very edge. */
@@ -114,9 +112,6 @@ public final class FeedViewCountPatch {
     private static final int FALLBACK_HEIGHT_DP = 20;
     /** Cards of a grid of up to three columns, such as the feed in landscape. */
     private static final float MIN_GRID_CARD_WIDTH_OF_SCREEN = 0.3f;
-    /** A duration badge larger than this is not the badge itself, but a host around it. */
-    private static final int MAX_DURATION_WIDTH_DP = 120;
-    private static final int MAX_DURATION_HEIGHT_DP = 32;
     private static final int MIN_DURATION_HEIGHT_DP = 12;
     private static final int PADDING_DP = 5;
     private static final int GAP_DP = 3;
@@ -148,6 +143,28 @@ public final class FeedViewCountPatch {
 
     /** Root hosts that show a view count. Used only on the main thread. */
     private static final Map<ComponentHost, ViewCountBadge> badges = new WeakHashMap<>();
+
+    /** Spaces, which texts of the same view count can show differently, such as "4.7 M" and "4.7M". */
+    private static final Pattern SPACES_PATTERN = Pattern.compile("[\\s  ]+");
+
+    /** Number of videos whose view count is kept. */
+    private static final int MAX_VIDEO_VIEW_COUNTS = 200;
+
+    /**
+     * View count of the element of a video, and the text of the duration badge on its thumbnail,
+     * such as "12:34". The badge of a card must show the same text, so the view count of
+     * another video is not shown if the card is matched to the wrong video.
+     */
+    private record ElementViewCount(String viewCount, String badgeText) {
+    }
+
+    /**
+     * Video id -> view count of the element of the video, used while the texts below the title
+     * of its card are not drawn yet. Oldest videos are removed first.
+     */
+    @GuardedBy("itself")
+    private static final Map<String, ElementViewCount> videoViewCounts = Utils
+            .createSizeRestrictedMap(MAX_VIDEO_VIEW_COUNTS, true);
 
     private FeedViewCountPatch() {
     }
@@ -601,6 +618,68 @@ public final class FeedViewCountPatch {
     }
 
     /**
+     * Called by {@link FeedVideoCardsPatch} when the element of a video that is not live is loaded,
+     * before its cards are drawn. Litho draws only the part of a card that is shown, so a card that
+     * enters from the bottom of the list shows its thumbnail before the texts below its title.
+     * The view count of the element is kept, so the badge shows it as soon as the thumbnail is shown.
+     * <p>
+     * Only the text shown below the title is used, such as "Channel  4.7M  2 days ago":
+     * the text with a part that the element also has as a text of its own, such as "4.7M".
+     * Usually called off the main thread.
+     */
+    public static void onVideoElementLoaded(String videoId, List<ProtoNode> textNodes) {
+        if (!ENABLED) {
+            return;
+        }
+        try {
+            Set<String> texts = new HashSet<>();
+            String badgeText = null;
+            for (ProtoNode node : textNodes) {
+                String text = node.getText();
+                texts.add(SPACES_PATTERN.matcher(text).replaceAll(""));
+                if (badgeText == null && FeedVideoCardsPatch.isVideoBadgeText(text.trim())) {
+                    badgeText = text.trim();
+                }
+            }
+            if (badgeText == null) {
+                return;
+            }
+            Locale locale = Locale.getDefault();
+            for (ProtoNode node : textNodes) {
+                String text = node.getText();
+                if (text.length() > MAX_SUBTITLE_LENGTH) {
+                    continue;
+                }
+                List<Segment> segments = splitSegments(text);
+                if (segments.size() < 2) {
+                    continue;
+                }
+                boolean hasCountText = false;
+                for (Segment segment : segments) {
+                    if (segment.hasNumber()
+                            && texts.contains(SPACES_PATTERN.matcher(segment.text).replaceAll(""))) {
+                        hasCountText = true;
+                        break;
+                    }
+                }
+                if (!hasCountText) {
+                    continue;
+                }
+                ViewCountMatch match = findViewCount(text, locale);
+                if (match != null
+                        && texts.contains(SPACES_PATTERN.matcher(match.parsed.count).replaceAll(""))) {
+                    synchronized (videoViewCounts) {
+                        videoViewCounts.put(videoId, new ElementViewCount(match.parsed.count, badgeText));
+                    }
+                    return;
+                }
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "onVideoElementLoaded failure", ex);
+        }
+    }
+
+    /**
      * Injection point.
      * <p>
      * Called when a Litho text is created or reused. Usually called off the main thread.
@@ -655,6 +734,9 @@ public final class FeedViewCountPatch {
         Rect duration;
         /** If the card shows a duration or a live badge, which videos do. */
         boolean hasDuration;
+        /** Text of the first duration or live badge found, such as "12:34". */
+        @Nullable
+        String badgeText;
         /**
          * The thumbnail, if a host of its size shows the duration, or else its image.
          * Cards of some layouts show it inset from their edges.
@@ -728,10 +810,15 @@ public final class FeedViewCountPatch {
                         root.offsetDescendantRectToMyCoords(host, rect);
                     }
                     info.addText(text, rect);
-                    if (!FeedVideoCardsPatch.isVideoBadgeText(text.toString().trim())) {
+                    String badgeText = text.toString().trim();
+                    if (!FeedVideoCardsPatch.isVideoBadgeText(badgeText)
+                            || !FeedVideoCardsPatch.isThumbnailBadge(root, rect)) {
                         continue;
                     }
                     info.hasDuration = true;
+                    if (info.badgeText == null) {
+                        info.badgeText = badgeText;
+                    }
                     if (info.duration == null) {
                         if (isDurationBadgeShaped(root, rect)) {
                             info.duration = new Rect(rect);
@@ -826,7 +913,7 @@ public final class FeedViewCountPatch {
      */
     private static boolean isThumbnailShaped(ComponentHost root, Rect rect) {
         final float density = root.getResources().getDisplayMetrics().density;
-        final int maxInset = Math.round(MAX_THUMBNAIL_INSET_DP * density);
+        final int maxInset = Math.round(FeedVideoCardsPatch.MAX_THUMBNAIL_INSET_DP * density);
         final int width = rect.width();
         return width > 0
                 && rect.left <= maxInset
@@ -844,9 +931,9 @@ public final class FeedViewCountPatch {
         final float density = root.getResources().getDisplayMetrics().density;
         // Thumbnails are 16:9 or square, such as of music videos.
         return rect.width() > 0
-                && rect.width() <= MAX_DURATION_WIDTH_DP * density
+                && rect.width() <= FeedVideoCardsPatch.MAX_DURATION_WIDTH_DP * density
                 && rect.height() >= MIN_DURATION_HEIGHT_DP * density
-                && rect.height() <= MAX_DURATION_HEIGHT_DP * density
+                && rect.height() <= FeedVideoCardsPatch.MAX_DURATION_HEIGHT_DP * density
                 && (isRtl(root) ? rect.centerX() < root.getWidth() / 2 : rect.centerX() > root.getWidth() / 2)
                 && rect.bottom <= root.getWidth() + TOLERANCE_DP * density;
     }
@@ -919,7 +1006,7 @@ public final class FeedViewCountPatch {
                 || (FeedVideoCardsPatch.isVideoShaped(host, MIN_GRID_CARD_WIDTH_OF_SCREEN)
                 && !FeedVideoCardsPatch.isPlaylistCard(host)
                 && !FeedVideoCardsPatch.hasHorizontalList(host));
-        if (checkCard && !FeedVideoCardsPatch.isInDialog(host)) {
+        if (checkCard && !FeedVideoCardsPatch.isInDialog(host) && !FeedVideoCardsPatch.isLiveCard(host)) {
             CardInfo info = new CardInfo(getTextsTop(host));
             findCardInfo(host, host, info, new Rect());
             if (videoId != null || info.hasDuration) {
@@ -942,6 +1029,22 @@ public final class FeedViewCountPatch {
                         info.texts.removeIf(placed -> placed.top < textsTop);
                     }
                     viewCount = findViewCountInTexts(info.texts);
+                }
+                if (viewCount == null) {
+                    // The texts below the title are not drawn yet,
+                    // such as while only the thumbnail of a card that enters the list is shown.
+                    String cardVideoId = videoId != null
+                            ? videoId
+                            : FeedVideoCardsPatch.findVideoIdByDescription(host);
+                    if (cardVideoId != null && info.badgeText != null) {
+                        ElementViewCount element;
+                        synchronized (videoViewCounts) {
+                            element = videoViewCounts.get(cardVideoId);
+                        }
+                        if (element != null && element.badgeText.equals(info.badgeText)) {
+                            viewCount = element.viewCount;
+                        }
+                    }
                 }
                 final String id = videoId == null ? "unknown" : videoId;
                 if (viewCount == null) {

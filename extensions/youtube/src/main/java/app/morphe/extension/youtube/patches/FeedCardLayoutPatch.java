@@ -325,6 +325,12 @@ public class FeedCardLayoutPatch {
             ByteTrieSearch.convertStringsToBytes(String.valueOf(SHELF_HEADER_LABEL_MARKER))
     );
     /**
+     * Link to the movies page, in the bytes of the movies.
+     */
+    private static final ByteTrieSearch moviesPageSearch = new ByteTrieSearch(
+            ByteTrieSearch.convertStringsToBytes("FEstorefront")
+    );
+    /**
      * Thumbnails of the Shorts, the same that the Shorts filter looks for.
      */
     private static final ByteTrieSearch shortsThumbnailSearch = new ByteTrieSearch(
@@ -613,13 +619,17 @@ public class FeedCardLayoutPatch {
                             break toCard;
                         }
 
-                        // The filters find the hidden Shorts, live streams and mix playlists by the classic layout.
+                        // The filters find the hidden Shorts, live streams, mix playlists and movies by the classic layout.
                         if (thumbnail.getBadgeStyle() == THUMBNAIL_BADGE_STYLE_LIVE
                                 && Settings.HIDE_LIVE_STREAMS.get()) {
                             break toCard;
                         }
                         // The mix playlists are found by the url of the mix, which the cards don't have.
                         if (LayoutComponentsFilter.filterMixPlaylists(bytes)) {
+                            break toCard;
+                        }
+                        // The movies are found by the link to the movies page, as in the ads filter.
+                        if (Settings.HIDE_MOVIES_SECTION.get() && moviesPageSearch.matches(bytes)) {
                             break toCard;
                         }
                         if ((Settings.HIDE_SHORTS_HOME.get() || Settings.HIDE_SHORTS_SUBSCRIPTIONS.get()

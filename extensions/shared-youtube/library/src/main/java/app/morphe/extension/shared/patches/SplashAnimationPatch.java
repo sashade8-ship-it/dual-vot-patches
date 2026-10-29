@@ -55,6 +55,16 @@ public class SplashAnimationPatch {
          */
         RIVE_GLOW(1, false),
         /**
+         * YouTube 21.30+ Rive animation of the Morphe logo coming into focus out of a glow,
+         * played in place of the Rive startup animation of the app.
+         * Low memory devices get the Morphe animation of {@link #MORPHE_COLOR} instead.
+         */
+        RIVE_GLOW_MORPHE(1, false),
+        /**
+         * Another Morphe Glow animation, the same as {@link #RIVE_GLOW_MORPHE} except for the animation played.
+         */
+        RIVE_GLOW_MORPHE_2(1, false),
+        /**
          * Morphe animation of the launcher icon, which replaces the Lottie animation of the app.
          */
         MORPHE_COLOR(1, false),
@@ -91,6 +101,20 @@ public class SplashAnimationPatch {
             this.style = style;
             this.isMonochrome = isMonochrome;
         }
+
+        /**
+         * If the style plays a Rive animation, which YouTube 21.30+ can play.
+         */
+        public boolean isRive() {
+            return this == RIVE_GLOW || isRiveGlowMorphe();
+        }
+
+        /**
+         * If the style plays a Morphe Rive animation in place of the Rive startup animation of the app.
+         */
+        public boolean isRiveGlowMorphe() {
+            return this == RIVE_GLOW_MORPHE || this == RIVE_GLOW_MORPHE_2;
+        }
     }
 
     /**
@@ -100,6 +124,31 @@ public class SplashAnimationPatch {
     private static final String BRAND_PRIMARY_COLOR = "[0.117647,0.352941,0.658824,1]";
     private static final String BRAND_SECONDARY_COLOR = "[0,0.686275,0.682353,1]";
     private static final String BRAND_GRADIENT = "[0,0.117647,0.352941,0.658824,1,0,0.686275,0.682353]";
+
+    /**
+     * If the app plays the Rive animations, which YouTube 21.30+ does.
+     */
+    private static boolean isRiveIncluded() {
+        return false; // Modified during patching.
+    }
+
+    /**
+     * The default style, which is the Morphe glow animation if the app has the Rive animations.
+     */
+    public static SplashScreenAnimationStyle getDefaultStyle() {
+        return isRiveIncluded()
+                ? SplashScreenAnimationStyle.RIVE_GLOW_MORPHE
+                : getDefaultLottieStyle();
+    }
+
+    /**
+     * The default style that is not a Rive animation.
+     */
+    public static SplashScreenAnimationStyle getDefaultLottieStyle() {
+        return CustomBrandingPatch.isPatchIncluded()
+                ? SplashScreenAnimationStyle.MORPHE_COLOR
+                : SplashScreenAnimationStyle.FPS_60_ONE_SECOND;
+    }
 
     public static boolean isMonochrome() {
         return SharedYouTubeSettings.SPLASH_SCREEN_STYLE.get().isMonochrome;
@@ -113,7 +162,8 @@ public class SplashAnimationPatch {
      */
     public static boolean setBrandedSplashAnimation(LottieAnimationView view) {
         SplashScreenAnimationStyle style = SharedYouTubeSettings.SPLASH_SCREEN_STYLE.get();
-        if (style != SplashScreenAnimationStyle.MORPHE_COLOR && style != SplashScreenAnimationStyle.MORPHE_MONOCHROME) {
+        if (style != SplashScreenAnimationStyle.MORPHE_COLOR && style != SplashScreenAnimationStyle.MORPHE_MONOCHROME
+                && !style.isRiveGlowMorphe()) {
             return false;
         }
 

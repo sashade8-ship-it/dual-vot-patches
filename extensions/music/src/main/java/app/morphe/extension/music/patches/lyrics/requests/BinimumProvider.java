@@ -60,7 +60,7 @@ public final class BinimumProvider implements LyricsProvider {
         }
 
         // A title with a video tag is asked again without it.
-        final String cleanTitle = track.title()
+        String cleanTitle = track.title()
                 .replace("(Official Video)", "")
                 .replace("(Official Music Video)", "")
                 .replace("(Official Audio)", "")

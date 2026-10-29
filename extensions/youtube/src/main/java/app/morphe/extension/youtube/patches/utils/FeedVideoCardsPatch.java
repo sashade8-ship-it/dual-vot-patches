@@ -115,6 +115,12 @@ public final class FeedVideoCardsPatch {
     private static final String AMBIGUOUS = "";
 
     /**
+     * Delimiter of the parts of the accessibility description of a video card,
+     * such as "Title - 12 minutes - Channel - 4.7M views - 2 days ago - play video".
+     */
+    private static final String DESCRIPTION_DELIMITER = " - ";
+
+    /**
      * Result for a card without a duration on its thumbnail, such as a mix or a playlist,
      * which shows the thumbnail of its first video. Nothing is drawn on these cards.
      * Elements of videos can include playlist ids too, such as the mix a music video
@@ -137,6 +143,21 @@ public final class FeedVideoCardsPatch {
     @GuardedBy("itself")
     private static final Map<String, String> textVideoIds = Utils
             .createSizeRestrictedMap(MAX_TEXTS, true);
+
+    /**
+     * Icon of the badge of a live video on its thumbnail, such as 'yt_outline_experimental_live_black_24'.
+     * The live badge text depends on the language, and the avatar of a channel that is live
+     * shows the same text on its other videos.
+     */
+    private static final Pattern LIVE_ICON_PATTERN = Pattern.compile("^yt_\\w+_live_\\w+$");
+
+    /** Number of live videos that are kept. */
+    private static final int MAX_LIVE_VIDEOS = 200;
+
+    /** Live videos, by video id. Oldest videos are removed first. */
+    @GuardedBy("itself")
+    private static final Map<String, Boolean> liveVideoIds = Utils
+            .createSizeRestrictedMap(MAX_LIVE_VIDEOS, true);
 
     /** Root host -> video of the card, of the cards laid out last. Used only on the main thread. */
     private static final Map<ComponentHost, String> cardVideoIds = Collections.synchronizedMap(
@@ -173,6 +194,19 @@ public final class FeedVideoCardsPatch {
      */
     public static boolean isPlaylistCard(ComponentHost host) {
         return PLAYLIST.equals(cardVideoIds.get(host));
+    }
+
+    /**
+     * @return If the card is a live video, which has no like count yet and shows its number of viewers.
+     */
+    public static boolean isLiveCard(ComponentHost host) {
+        String videoId = cardVideoIds.get(host);
+        if (videoId == null) {
+            return false;
+        }
+        synchronized (liveVideoIds) {
+            return liveVideoIds.containsKey(videoId);
+        }
     }
 
     /**
@@ -312,24 +346,55 @@ public final class FeedVideoCardsPatch {
                 return bytes;
             }
 
-            synchronized (textVideoIds) {
-                for (ProtoNode node : textNodes) {
-                    String text = normalizeText(node.getText());
-                    if (!isVideoText(text)) {
-                        continue;
-                    }
-                    String previous = textVideoIds.get(text);
-                    if (previous == null) {
-                        textVideoIds.put(text, videoId);
-                    } else if (!previous.equals(videoId)) {
-                        textVideoIds.put(text, AMBIGUOUS);
-                    }
+            boolean live = false;
+            for (ProtoNode node : textNodes) {
+                if (LIVE_ICON_PATTERN.matcher(node.getText()).matches()) {
+                    live = true;
+                    break;
                 }
+            }
+            synchronized (liveVideoIds) {
+                if (live) {
+                    liveVideoIds.put(videoId, Boolean.TRUE);
+                } else {
+                    // The live stream ended.
+                    liveVideoIds.remove(videoId);
+                }
+            }
+
+            for (ProtoNode node : textNodes) {
+                addVideoText(videoId, node.getText());
+            }
+            if (!live) {
+                FeedViewCountPatch.onVideoElementLoaded(videoId, textNodes);
             }
         } catch (Exception ex) {
             Logger.printException(() -> "onElementLoaded failure", ex);
         }
         return bytes;
+    }
+
+    /**
+     * Adds a text shown by the cards of a video. Also called for the titles that replace the title
+     * of a video on its cards, such as original titles and DeArrow titles, which the elements
+     * of the video do not include. Can be called on any thread.
+     */
+    public static void addVideoText(String videoId, @Nullable String text) {
+        if (!ENABLED || text == null) {
+            return;
+        }
+        String normalized = normalizeText(text);
+        if (!isVideoText(normalized)) {
+            return;
+        }
+        synchronized (textVideoIds) {
+            String previous = textVideoIds.get(normalized);
+            if (previous == null) {
+                textVideoIds.put(normalized, videoId);
+            } else if (!previous.equals(videoId)) {
+                textVideoIds.put(normalized, AMBIGUOUS);
+            }
+        }
     }
 
     public static boolean isVideoShaped(ComponentHost host) {
@@ -484,22 +549,54 @@ public final class FeedVideoCardsPatch {
     }
 
     /**
+     * Largest space between the thumbnail and the left, top and right edges of the card.
+     * Cards of some layouts show the thumbnail inset from their edges, such as by 12 dp.
+     */
+    public static final int MAX_THUMBNAIL_INSET_DP = 16;
+    /** A duration badge larger than this is not the badge itself, but a host around it. */
+    public static final int MAX_DURATION_WIDTH_DP = 120;
+    public static final int MAX_DURATION_HEIGHT_DP = 32;
+
+    /**
+     * @param rect The host that shows a badge text, such as a duration or 'LIVE', relative to the root host.
+     * @return If the text is a badge of the thumbnail: the host is as wide as the thumbnail and starts in it,
+     *         such as the host of the whole thumbnail, or it's as large as a badge, on the side of the duration
+     *         (the right, or the left in right to left languages). Not a badge text elsewhere on the card,
+     *         such as the live badge on the avatar of a channel that is live, at the top of its page.
+     */
+    public static boolean isThumbnailBadge(ComponentHost root, Rect rect) {
+        final float density = root.getResources().getDisplayMetrics().density;
+        final int width = root.getWidth();
+        if (rect.width() >= width - 2 * MAX_THUMBNAIL_INSET_DP * density
+                && rect.top < width * THUMBNAIL_RATIO) {
+            return true;
+        }
+        return rect.width() <= MAX_DURATION_WIDTH_DP * density
+                && rect.height() <= MAX_DURATION_HEIGHT_DP * density
+                && (FeedViewCountPatch.isRtl(root) ? rect.centerX() < width / 2 : rect.centerX() > width / 2);
+    }
+
+    /**
      * Videos show their duration, or a badge such as the live badge, on the thumbnail.
      * Mixes, playlists and Shorts do not.
      */
-    private static boolean hasVideoBadge(ComponentHost host) {
+    private static boolean hasVideoBadge(ComponentHost root, ComponentHost host, Rect rect) {
         TextContent textContent = host.getTextContent();
         if (textContent != null) {
             for (CharSequence text : textContent.getTextItems()) {
-                if (text != null) {
-                    if (isVideoBadgeText(text.toString().trim())) {
+                if (text != null && isVideoBadgeText(text.toString().trim())) {
+                    rect.set(0, 0, host.getWidth(), host.getHeight());
+                    if (host != root) {
+                        root.offsetDescendantRectToMyCoords(host, rect);
+                    }
+                    if (isThumbnailBadge(root, rect)) {
                         return true;
                     }
                 }
             }
         }
         for (int i = 0, count = host.getChildCount(); i < count; i++) {
-            if (host.getChildAt(i) instanceof ComponentHost child && hasVideoBadge(child)) {
+            if (host.getChildAt(i) instanceof ComponentHost child && hasVideoBadge(root, child, rect)) {
                 return true;
             }
         }
@@ -596,7 +693,7 @@ public final class FeedVideoCardsPatch {
         if (texts.isEmpty()) {
             return NOT_READY;
         }
-        if (!hasVideoBadge(root)) {
+        if (!hasVideoBadge(root, root, new Rect())) {
             // A mix or a playlist, which shows a badge without a duration.
             return PLAYLIST;
         }
@@ -615,6 +712,35 @@ public final class FeedVideoCardsPatch {
         // The texts of a mix or a playlist, which are never shared with a video.
         // A single short text can belong to an element of another video that was not seen.
         return findBestMatch(scores);
+    }
+
+    /**
+     * Litho draws only the part of a card that is shown, so a card that enters from the bottom
+     * of the list shows its thumbnail before its texts, and its video is not known by its texts.
+     * The accessibility description of the card is set already, and starts with the title,
+     * such as "Title - 12 minutes - Channel - 4.7M views - 2 days ago - play video".
+     *
+     * @return The video of the card found by the start of its description, or null if not known.
+     */
+    @Nullable
+    public static String findVideoIdByDescription(ComponentHost root) {
+        CharSequence description = root.getContentDescription();
+        if (description == null) {
+            return null;
+        }
+        String text = description.toString();
+        synchronized (textVideoIds) {
+            // A title can contain the delimiter too, so the longest start of the description
+            // that is a text of a video is used.
+            for (int end = text.lastIndexOf(DESCRIPTION_DELIMITER); end > 0;
+                 end = text.lastIndexOf(DESCRIPTION_DELIMITER, end - 1)) {
+                String videoId = textVideoIds.get(normalizeText(text.substring(0, end)));
+                if (videoId != null) {
+                    return videoId.equals(AMBIGUOUS) ? null : videoId;
+                }
+            }
+        }
+        return null;
     }
 
     /**

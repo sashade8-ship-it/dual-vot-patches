@@ -142,7 +142,7 @@ public final class FeedEngagementCountsPatch {
         if (!ENABLED) {
             return;
         }
-        if (videoId != null && FeedVideoCardsPatch.isInDialog(host)) {
+        if (videoId != null && (FeedVideoCardsPatch.isInDialog(host) || FeedVideoCardsPatch.isLiveCard(host))) {
             videoId = null;
         }
         CountsBadge badge = badges.get(host);

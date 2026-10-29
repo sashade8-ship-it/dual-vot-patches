@@ -537,6 +537,13 @@ public final class FeedVideoActionsPatch {
 
         if (menuButton == null) {
             if (card != null) {
+                // Litho mounts only the part of a card that is shown, so the menu button below
+                // the thumbnail, such as of the classic layout, is not mounted while only the
+                // thumbnail is shown, as when the card leaves the screen. The button is kept
+                // until the card is fully shown and still has no menu button.
+                if (card.badgeAdded && isVideoShaped(host) && FeedVideoCardsPatch.scheduleScrollCheck(host)) {
+                    return card;
+                }
                 if (card.badgeAdded) {
                     host.getOverlay().remove(card.badge);
                     card.badgeAdded = false;

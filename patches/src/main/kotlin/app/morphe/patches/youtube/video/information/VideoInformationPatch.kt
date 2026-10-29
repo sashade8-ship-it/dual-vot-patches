@@ -384,6 +384,11 @@ val videoInformationPatch = bytecodePatch(
                     field.type == "I"
                 }
 
+                // The IDs of the formats of the quality, the last constructor parameter.
+                val formatIdsField = fields.single { field ->
+                    field.type == it.method.parameterTypes.last()
+                }
+
                 // Add interface and helper methods to allow extension code to call obfuscated methods.
                 interfaces.add(EXTENSION_VIDEO_QUALITY_INTERFACE)
                 methods.add(
@@ -426,6 +431,27 @@ val videoInformationPatch = bytecodePatch(
                                 invoke-static { v1, v0 }, $EXTENSION_CLASS->fixVideoQualityResolution(Ljava/lang/String;I)I
                                 move-result v0
                                 return v0
+                            """
+                        )
+                    }
+                )
+
+                methods.add(
+                    ImmutableMethod(
+                        type,
+                        "patch_getFormatIds",
+                        listOf(),
+                        "Ljava/util/Collection;",
+                        AccessFlags.PUBLIC.value or AccessFlags.FINAL.value,
+                        null,
+                        null,
+                        MutableMethodImplementation(2),
+                    ).toMutable().apply {
+                        addInstructions(
+                            0,
+                            """
+                                iget-object v0, p0, $formatIdsField
+                                return-object v0
                             """
                         )
                     }

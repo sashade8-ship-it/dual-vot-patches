@@ -19,10 +19,16 @@ final class LyricsColors {
     static final String APP_SECONDARY_TEXT_COLOR = "ytm_text_color_secondary";
 
     /** Dimmed until the word is sung. */
-    static final float UNSUNG_ALPHA = 0.4f;
+    static final float UNSUNG_ALPHA = 0.35f;
 
-    /** Smaller than the lyric it reads, so at the same weight the two would read as one line. */
-    static final float ACTIVE_READING_ALPHA = 0.4f;
+    /** The reading of the active line once it is lit, or all along when it is not read word by word. */
+    static final float ACTIVE_READING_ALPHA = 0.85f;
+
+    /** The translation of the active line. */
+    static final float ACTIVE_TRANSLATION_ALPHA = 0.6f;
+
+    /** A background vocal while it is shown. */
+    static final float ACTIVE_BG_ALPHA = 0.8f;
 
     static int secondaryTextColor() {
         ensureColorCache();
@@ -34,7 +40,7 @@ final class LyricsColors {
         if (secondary != 0) {
             return secondary;
         }
-        return Color.argb(0x66, Color.red(base), Color.green(base), Color.blue(base));
+        return Color.argb(0x99, Color.red(base), Color.green(base), Color.blue(base));
     }
 
     private static int cachedLineColor;

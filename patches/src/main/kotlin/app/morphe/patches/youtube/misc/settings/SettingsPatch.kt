@@ -48,9 +48,12 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.shared.misc.settings.settingsPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.misc.fix.accessibility.fixCaptionsAccessibilityPatch
 import app.morphe.patches.youtube.misc.fix.accessibility.fixShortsAccessibilityPatch
+import app.morphe.patches.youtube.misc.fix.accessibility.fixTouchExplorationPatch
 import app.morphe.patches.youtube.misc.fix.contentprovider.fixContentProviderPatch
 import app.morphe.patches.youtube.misc.fix.likebutton.fixLikeButtonPatch
+import app.morphe.patches.youtube.misc.fix.padding.fixPagePaddingPatch
 import app.morphe.patches.youtube.misc.fix.pipchatbar.fixPipChatBarPatch
 import app.morphe.patches.youtube.misc.fix.playbackspeed.fixPlaybackSpeedWhilePlayingPatch
 import app.morphe.patches.youtube.misc.fix.preference.fixPreferenceIconPatch
@@ -220,12 +223,15 @@ val settingsPatch = bytecodePatch(
         versionCheckPatch,
         // Currently there is no easy way to make patches mandatory,
         // so for now these are all dependents of this patch.
+        fixCaptionsAccessibilityPatch,
         fixShortsAccessibilityPatch,
+        fixTouchExplorationPatch,
         fixPlaybackSpeedWhilePlayingPatch,
         fixPreferenceIconPatch,
         fixLikeButtonPatch,
         fixContentProviderPatch,
         fixPipChatBarPatch,
+        fixPagePaddingPatch,
         addLicensePatch,
         removeLinkVerification,
         crashLogPatch(

@@ -9,6 +9,7 @@ package app.morphe.extension.reddit.settings;
 
 import static app.morphe.extension.shared.StringRef.str;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -175,6 +176,7 @@ public class RedditActivityHook {
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new Dialog(getActivity(), getTheme()) {
                 @Override
+                @SuppressLint("GestureBackNavigation")
                 public void onBackPressed() {
                     closeSettings();
                 }

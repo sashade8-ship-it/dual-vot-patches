@@ -28,6 +28,7 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_21_02_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_03_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_12_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_43_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -36,6 +37,7 @@ import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.util.findFieldFromToString
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.indexOfFirstInstructionOrThrow
+import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
@@ -140,12 +142,20 @@ val ambientModePatch = bytecodePatch(
                     PowerSaveModeSyntheticFingerprint.matchOrNull(
                                         mutableClassDefBy(reference.definingClass)
                                     )?.method?.hook()
+
+                    // 21.43+ inlines the lambda into the receiver.
+                    if (is_21_43_or_greater) hook()
                 }
             }
         }
 
         if (is_21_43_or_greater) {
             IntentActionSyntheticAlternativeFingerprint.method.hook()
+
+            // 21.43+ inlines the lambdas that read the first value for the Ambient mode receiver.
+            // The receiver is registered on the main thread, or asynchronously if a server flag is on.
+            powerSaveModeInitialValueFingerprint(PowerSaveModeReceiverRegisterFingerprint.method).method.hook()
+            PowerSaveModeInitialValueAsyncFingerprint.method.hook()
         } else if (is_21_03_or_greater) {
             IntentActionSyntheticAlternativeLegacyFingerprint.method.hook()
         }
@@ -169,6 +179,13 @@ val ambientModePatch = bytecodePatch(
                     move-result v$register
                 """
             )
+        }
+
+        // Black background experiment: ambient mode is always inactive, whatever the
+        // CinematicContainerRenderer, power save mode or flyout menu toggle say.
+        // Turn it off, so the watch page uses the same ambient mode and layout as outside the experiment.
+        if (is_21_12_or_greater) AmbientModeBlackBackgroundFeatureFlagFingerprint.matchAllMethodIndicesForEach { index ->
+            insertLiteralOverride(index, false)
         }
 
         // The /next response can have no CinematicContainerRenderer, a static color style

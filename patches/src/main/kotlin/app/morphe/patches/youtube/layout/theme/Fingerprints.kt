@@ -1,6 +1,6 @@
 /*
  * Copyright 2026 Morphe.
- * https://github.com/MorpheApp/morphe-patches
+ * https://github.com/MorpheApp/morphe-patches/pull/4135
  *
  * Original hard forked code:
  * https://github.com/ReVanced/revanced-patches/commit/724e6d61b2ecd868c1a9a37d465a688e83a74799
@@ -106,7 +106,7 @@ internal object RiveSplashScreenViewFingerprint : Fingerprint(
 )
 
 /**
- * 21.39+ Sets the view that the Rive animation is drawn in.
+ * 21.30 - 21.31 and 21.35+ sets the view that the Rive animation is drawn in.
  */
 internal object RiveSplashScreenAnimationViewFingerprint : Fingerprint(
     definingClass = YOUTUBE_MAIN_ACTIVITY_CLASS_TYPE,
@@ -136,6 +136,37 @@ internal object RiveSplashScreenAnimationViewFingerprint : Fingerprint(
 )
 
 /**
+ * 21.32 - 21.34 sets the view that the Rive animation is drawn in,
+ * with a resource id that was loaded earlier for another view.
+ */
+internal object RiveSplashScreenAnimationViewLegacyFingerprint : Fingerprint(
+    definingClass = YOUTUBE_MAIN_ACTIVITY_CLASS_TYPE,
+    name = "onCreate",
+    returnType = "V",
+    parameters = listOf("Landroid/os/Bundle;"),
+    filters = listOf(
+        methodCall(name = "findViewById"),
+        opcode(
+            opcode = Opcode.MOVE_RESULT_OBJECT,
+            location = MatchAfterImmediately()
+        ),
+        checkCast(
+            "Landroid/widget/ImageView;",
+            location = MatchAfterImmediately()
+        ),
+        fieldAccess(
+            opcode = Opcode.IPUT_OBJECT,
+            type = "Landroid/widget/ImageView;",
+            location = MatchAfterImmediately()
+        ),
+        literal(
+            RIVE_THEMED_SPLASH_SCREEN_FEATURE_FLAG,
+            location = MatchAfterWithin(2)
+        )
+    )
+)
+
+/**
  * Closes the startup animation as soon as the home feed is shown.
  */
 internal object SplashScreenOnStartFingerprint : Fingerprint(
@@ -145,6 +176,24 @@ internal object SplashScreenOnStartFingerprint : Fingerprint(
     filters = listOf(
         literal(1073815019L),
         literal(1073828809L)
+    )
+)
+
+internal object SplashScreenOnStopFingerprint : Fingerprint(
+    classFingerprint = RiveSplashScreenViewFingerprint,
+    name = "onStop",
+    returnType = "V"
+)
+
+/**
+ * Removes the splash screen.
+ */
+internal object SplashScreenRemoveFingerprint : Fingerprint(
+    classFingerprint = RiveSplashScreenViewFingerprint,
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        string("SAU_REMOVE_SPLASH_ANIMATION|ANIMATION_SHOWN")
     )
 )
 
@@ -161,8 +210,7 @@ internal object RiveRawResourceSourceFingerprint : Fingerprint(
             opcode = Opcode.IPUT_OBJECT,
             type = "Ljava/lang/String;",
             location = MatchAfterWithin(3)
-        ),
-        string("resId must not be 0")
+        )
     )
 )
 
@@ -190,6 +238,13 @@ internal object RiveCanvasSessionSetLatestBitmapFingerprint : Fingerprint(
     name = "access\$setLatestBitmap\$p",
     returnType = "V",
     parameters = listOf("Lapp/rive/RiveCanvasSession;", "Landroid/graphics/Bitmap;")
+)
+
+internal object SplashAnimationIsRiveIncludedFingerprint : Fingerprint(
+    definingClass = "Lapp/morphe/extension/shared/patches/SplashAnimationPatch;",
+    name = "isRiveIncluded",
+    returnType = "Z",
+    parameters = listOf()
 )
 
 internal object LottieLayerColorFingerprint : Fingerprint(
