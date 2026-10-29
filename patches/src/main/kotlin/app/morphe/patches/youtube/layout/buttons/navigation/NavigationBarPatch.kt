@@ -626,6 +626,9 @@ val navigationBarPatch = bytecodePatch(
         }
 
         PivotBarRendererListFingerprint.let {
+            // The Series tracker patch hooks the same index, which shifts it.
+            it.clearMatch()
+
             it.method.apply {
                 val insertMatch = it.instructionMatches[2]
                 val insertIndex = insertMatch.index

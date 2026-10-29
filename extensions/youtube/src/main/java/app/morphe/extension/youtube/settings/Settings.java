@@ -786,6 +786,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final EnumSetting<SponsorBlockDuration> SB_AUTO_HIDE_SKIP_BUTTON_DURATION = new EnumSetting<>("morphe_sb_auto_hide_skip_button_duration", SponsorBlockDuration.FOUR_SECONDS, parent(SB_ENABLED));
     public static final BooleanSetting SB_TOAST_ON_SKIP = new BooleanSetting("morphe_sb_toast_on_skip", TRUE, parent(SB_ENABLED));
     public static final EnumSetting<SponsorBlockDuration> SB_TOAST_ON_SKIP_DURATION = new EnumSetting<>("morphe_sb_toast_on_skip_duration", SponsorBlockDuration.FOUR_SECONDS, parentsAll(SB_ENABLED, SB_TOAST_ON_SKIP));
+    public static final BooleanSetting SB_OFFLINE_SEGMENTS = new BooleanSetting("morphe_sb_offline_segments", TRUE, parent(SB_ENABLED));
     public static final BooleanSetting SB_TOAST_ON_CONNECTION_ERROR = new BooleanSetting("morphe_sb_toast_on_connection_error", TRUE, parent(SB_ENABLED));
     public static final BooleanSetting SB_TRACK_SKIP_COUNT = new BooleanSetting("morphe_sb_track_skip_count", TRUE, parent(SB_ENABLED));
     public static final FloatSetting SB_SEGMENT_MIN_DURATION = new FloatSetting("morphe_sb_min_segment_duration", 0F, parent(SB_ENABLED));
