@@ -143,15 +143,15 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v1.49.0-dev.10-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.49.0-dev.10-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;194 patches total
+> **[v1.49.0-dev.11-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v1.49.0-dev.11-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;194 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;109 patches</summary>
 <br>
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;21.43.523 | 🧪&nbsp;21.42.241 | 🧪&nbsp;21.28.208 | 21.23.492 | 21.20.405 | 21.16.256 | 20.51.39 | 20.26.46 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 🧪&nbsp;21.43.523 | 🧪&nbsp;21.42.241 | 21.30.216 | 21.28.208 | 21.23.492 | 20.51.39 | 20.26.46 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
@@ -219,7 +219,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Hide video action buttons](#hide-video-action-buttons) | Adds options to hide video action buttons in fullscreen and portrait modes. |  |
 | [Loop video](#loop-video) | Adds an option to loop videos and display loop video button in the video player. |  |
 | [Media notification controls](#media-notification-controls) | Adds options to disable the seekbar and previous/next buttons in the media notification and headphone controls. |  |
-| [Miniplayer](#miniplayer) | Adds options to change the in-app minimized player. Patching 21.28.206 and lower has more miniplayer types to choose from. |  |
+| [Miniplayer](#miniplayer) | Adds options to change the in-app minimized player. Patching 21.28.208 and lower has more miniplayer types to choose from. |  |
 | [Mute button](#mute-button) | Adds an option to show a player button that mutes the video audio. |  |
 | [Navigation bar](#navigation-bar) | Adds options to hide and change the bottom navigation bar (such as the Shorts button) and the upper navigation toolbar. | • Hide Search app shortcut<br>• Hide Subscriptions app shortcut |
 | [Network proxy](#network-proxy) | Adds settings to route supported network requests through an HTTP or HTTPS proxy. Including this patch may cause connectivity problems on certain devices |  |
@@ -336,7 +336,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;2026.43.0 | 🧪&nbsp;2026.42.0 | 🧪&nbsp;2026.41.0 | 2026.40.0 | 2026.24.0 | 2026.10.0 |
+| 🧪&nbsp;2026.44.0 | 🧪&nbsp;2026.43.0 | 🧪&nbsp;2026.42.0 | 2026.40.0 | 2026.24.0 | 2026.10.0 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
