@@ -18,7 +18,37 @@ SPEC.loader.exec_module(sync_upstream)
 
 class SyncUpstreamTests(unittest.TestCase):
     def test_stable200_keeps_offline_guard_auth_and_direct_streams(self):
-        conflict = '<<<<<<< HEAD\n        return new StreamingDataRequest(videoId, false, lastPlayerHeaders, true,\n                clientOrder, true, false);\n=======\n        // The auth hook keeps the headers even if spoofing is off, but it is not used by all apps.\n        Map<String, String> headers = AuthUtils.getAuthorization().isEmpty()\n                ? lastPlayerHeaders\n                : AuthUtils.getRequestHeader();\n        return new StreamingDataRequest(videoId, false, headers, true, clientOrder, true);\n>>>>>>> v2.0.0\n' + '<<<<<<< HEAD\n    private static StreamData fetch(\n            String videoId,\n            boolean isInline,\n            Map<String, String> playerHeaders,\n            boolean includeVideoDetails,\n            ClientType[] clientOrder,\n            boolean isDownload,\n            boolean directStreamsOnly\n    ) {\n=======\n    private static StreamData fetch(String videoId, boolean isInline, Map<String, String> playerHeaders,\n                                    boolean includeVideoDetails, ClientType[] clientOrder, boolean isDownload) {\n        if (!Utils.isNetworkConnected()) {\n            Logger.printDebug(() -> "Network not connected, skipping stream fetch for: " + videoId);\n            return null;\n        }\n\n>>>>>>> v2.0.0\n'
+        conflict = (
+            '<<<<<<< HEAD\n'
+            '        return new StreamingDataRequest(videoId, false, lastPlayerHeaders, true,\n'
+            '                clientOrder, true, false);\n'
+            '=======\n'
+            '        // The auth hook keeps the headers even if spoofing is off, but it is not used by all apps.\n'
+            '        Map<String, String> headers = AuthUtils.getAuthorization().isEmpty()\n'
+            '                ? lastPlayerHeaders\n'
+            '                : AuthUtils.getRequestHeader();\n'
+            '        return new StreamingDataRequest(videoId, false, headers, true, clientOrder, true);\n'
+            '>>>>>>> v2.0.0\n'
+            '<<<<<<< HEAD\n'
+            '    private static StreamData fetch(\n'
+            '            String videoId,\n'
+            '            boolean isInline,\n'
+            '            Map<String, String> playerHeaders,\n'
+            '            boolean includeVideoDetails,\n'
+            '            ClientType[] clientOrder,\n'
+            '            boolean isDownload,\n'
+            '            boolean directStreamsOnly\n'
+            '    ) {\n'
+            '=======\n'
+            '    private static StreamData fetch(String videoId, boolean isInline, Map<String, String> playerHeaders,\n'
+            '                                    boolean includeVideoDetails, ClientType[] clientOrder, boolean isDownload) {\n'
+            '        if (!Utils.isNetworkConnected()) {\n'
+            '            Logger.printDebug(() -> "Network not connected, skipping stream fetch for: " + videoId);\n'
+            '            return null;\n'
+            '        }\n'
+            '\n'
+            '>>>>>>> v2.0.0\n'
+        )
         merged = sync_upstream.merge_streaming_data_request_stable200(conflict)
         self.assertIn("AuthUtils.getRequestHeader()", merged)
         self.assertIn("clientOrder, true, false);", merged)
@@ -26,8 +56,10 @@ class SyncUpstreamTests(unittest.TestCase):
         self.assertIn("if (!Utils.isNetworkConnected())", merged)
         self.assertIn("return null;", merged)
         self.assertNotIn("<<<<<<<", merged)
+        self.assertEqual(sync_upstream.merge_streaming_data_request_stable200(
+            conflict.replace(">>>>>>> v2.0.0", ">>>>>>> refs/tags/v2.0.0")), merged)
         for invalid in (conflict.replace("skipping stream fetch", "changed"),
-                        conflict + "<<<<<<< extra\n", conflict + '<<<<<<< HEAD\n    private static StreamData fetch(\n            String videoId,\n            boolean isInline,\n            Map<String, String> playerHeaders,\n            boolean includeVideoDetails,\n            ClientType[] clientOrder,\n            boolean isDownload,\n            boolean directStreamsOnly\n    ) {\n=======\n    private static StreamData fetch(String videoId, boolean isInline, Map<String, String> playerHeaders,\n                                    boolean includeVideoDetails, ClientType[] clientOrder, boolean isDownload) {\n        if (!Utils.isNetworkConnected()) {\n            Logger.printDebug(() -> "Network not connected, skipping stream fetch for: " + videoId);\n            return null;\n        }\n\n>>>>>>> v2.0.0\n'):
+                        conflict + conflict):
             with self.subTest(invalid=invalid), self.assertRaises(sync_upstream.SyncError):
                 sync_upstream.merge_streaming_data_request_stable200(invalid)
 
