@@ -17,6 +17,33 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_stable200_test_dependencies_keep_both_test_only_libraries(self):
+        ours = (
+            '    // Legacy event fixtures only; never package Kotlin into the Java-only extension.\n'
+            '    testImplementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0")\n'
+        )
+        theirs = '    testImplementation(libs.morphe.extensions.library)\n'
+        conflict = "<<<<<<< HEAD\n" + ours + "=======\n" + theirs + ">>>>>>> origin/main\n"
+        self.assertEqual(sync_upstream.merge_stable200_test_dependencies(
+            "before\n" + conflict + "after\n"), "before\n" + ours + theirs + "after\n")
+        for invalid in (conflict.replace("2.4.0", "unknown"), conflict + conflict,
+                        conflict + "<<<<<<< extra\n"):
+            with self.subTest(invalid=invalid), self.assertRaises(sync_upstream.SyncError):
+                sync_upstream.merge_stable200_test_dependencies(invalid)
+
+    def test_stable200_test_dependency_unknown_blobs_remain_unresolved(self):
+        for stage in range(3):
+            blobs = list(sync_upstream.STABLE200_TEST_DEPENDENCY_BLOBS)
+            blobs[stage] = "unknown"
+            with (
+                self.subTest(stage=stage),
+                mock.patch.object(sync_upstream, "unresolved_paths", return_value=["extensions/youtube/build.gradle.kts"]),
+                mock.patch.object(sync_upstream, "output_of", side_effect=blobs),
+                mock.patch.object(sync_upstream, "run") as run,
+            ):
+                sync_upstream.resolve_stable200_test_dependencies()
+                run.assert_not_called()
+
     def test_stable200_keeps_offline_guard_auth_and_direct_streams(self):
         conflict = (
             '<<<<<<< HEAD\n'

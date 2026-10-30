@@ -1126,6 +1126,47 @@ def resolve_dev1498_vot_sheet_conflict() -> None:
     run("git", "add", "--", path)
 
 
+STABLE200_TEST_DEPENDENCY_BLOBS = (
+    "7a2fff6a111f9da115c1687986b3f5fa64888287",
+    "d61a7a1901f678649db40ed60f44d8cc99fca653",
+    "1c48977a87c29654a927b6c39d305f56f15c94d8",
+)
+
+
+def merge_stable200_test_dependencies(source: str) -> str:
+    """Keep legacy event fixtures and the upstream test library, both test-only."""
+    pattern = (
+        r"(?m)^<<<<<<< [^\n]+\n"
+        r'    // Legacy event fixtures only; never package Kotlin into the Java-only extension.\n'
+        r'    testImplementation\("org.jetbrains.kotlin:kotlin-stdlib:2.4.0"\)\n'
+        r"=======\n"
+        r'    testImplementation\(libs.morphe.extensions.library\)\n'
+        r">>>>>>> [^\n]+\n"
+    )
+    replacement = (
+        '    // Legacy event fixtures only; never package Kotlin into the Java-only extension.\n'
+        '    testImplementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0")\n'
+        '    testImplementation(libs.morphe.extensions.library)\n'
+    )
+    merged, count = re.subn(pattern, lambda _: replacement, source)
+    if count != 1 or re.search(r"(?m)^(<<<<<<<|=======|>>>>>>>)(?: |$)", merged):
+        raise SyncError("Unexpected stable 2.0.0 test dependency conflict")
+    return merged
+
+
+def resolve_stable200_test_dependencies() -> None:
+    path = "extensions/youtube/build.gradle.kts"
+    if path not in unresolved_paths():
+        return
+    blobs = tuple(output_of("git", "rev-parse", f":{stage}:{path}") for stage in (1, 2, 3))
+    if blobs != STABLE200_TEST_DEPENDENCY_BLOBS:
+        return
+    destination = ROOT / path
+    merged = merge_stable200_test_dependencies(destination.read_text(encoding="utf-8"))
+    destination.write_text(merged, encoding="utf-8", newline="")
+    run("git", "add", "--", path)
+
+
 def merge_ref(
     ref: str,
     project_preference: str,
@@ -1169,6 +1210,7 @@ def merge_ref(
     resolve_dev148_settings_conflict()
     resolve_stable148_settings_conflict()
     resolve_youtube_junit_conflict()
+    resolve_stable200_test_dependencies()
     resolve_dev1498_vot_sheet_conflict()
 
     remaining = unresolved_paths()
