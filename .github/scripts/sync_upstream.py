@@ -140,6 +140,13 @@ STREAMING_DATA_REQUEST_DEV10_CONFLICT_BLOBS = (
     "6b52423befc0e3b83e2b641d6514c0c3f30e42f8",
 )
 
+# Cumulative stable 2.0.0 combines authenticated downloads and the offline guard.
+STREAMING_DATA_REQUEST_STABLE200_CONFLICT_BLOBS = (
+    "256eb94549f0142ebc1d3de6d7e52e661b86cce9",
+    "019242eca43f0530c027f10f96e7e309be2768f9",
+    "6891092a6c638c97e6958f5fdfde6ae15c6e1948",
+)
+
 # One-time, fail-closed merge of Morphe 1.48.0-dev.8 Series Tracker with
 # Dual VoT's Yandex settings. Any different source versions require review.
 DEV148_SETTINGS_PATH = (
@@ -850,6 +857,50 @@ def merge_streaming_data_request_dev10(source: str) -> str:
     return merged
 
 
+def merge_streaming_data_request_stable200(source: str) -> str:
+    """Keep the upstream offline guard, download auth, and Dual direct streams."""
+    pattern = re.escape(
+        '<<<<<<< HEAD\n'
+        '    private static StreamData fetch(\n'
+        '            String videoId,\n'
+        '            boolean isInline,\n'
+        '            Map<String, String> playerHeaders,\n'
+        '            boolean includeVideoDetails,\n'
+        '            ClientType[] clientOrder,\n'
+        '            boolean isDownload,\n'
+        '            boolean directStreamsOnly\n'
+        '    ) {\n'
+        '=======\n'
+        '    private static StreamData fetch(String videoId, boolean isInline, Map<String, String> playerHeaders,\n'
+        '                                    boolean includeVideoDetails, ClientType[] clientOrder, boolean isDownload) {\n'
+        '        if (!Utils.isNetworkConnected()) {\n'
+        '            Logger.printDebug(() -> "Network not connected, skipping stream fetch for: " + videoId);\n'
+        '            return null;\n'
+        '        }\n'
+        '\n'
+    ) + r">>>>>>> [^\n]+\n"
+    replacement = (
+        '    private static StreamData fetch(\n'
+        '            String videoId,\n'
+        '            boolean isInline,\n'
+        '            Map<String, String> playerHeaders,\n'
+        '            boolean includeVideoDetails,\n'
+        '            ClientType[] clientOrder,\n'
+        '            boolean isDownload,\n'
+        '            boolean directStreamsOnly\n'
+        '    ) {\n'
+        '        if (!Utils.isNetworkConnected()) {\n'
+        '            Logger.printDebug(() -> "Network not connected, skipping stream fetch for: " + videoId);\n'
+        '            return null;\n'
+        '        }\n'
+        '\n'
+    )
+    merged, count = re.subn(pattern, lambda _: replacement, source)
+    if count != 1:
+        raise SyncError("Unexpected stable 2.0.0 streaming conflict shape")
+    return merge_streaming_data_request_dev10(merged)
+
+
 def resolve_streaming_data_request_conflict() -> None:
     if STREAMING_DATA_REQUEST_PATH not in unresolved_paths():
         return
@@ -858,9 +909,13 @@ def resolve_streaming_data_request_conflict() -> None:
         output_of("git", "rev-parse", f":{stage}:{STREAMING_DATA_REQUEST_PATH}")
         for stage in (1, 2, 3)
     )
-    if stage_blobs == STREAMING_DATA_REQUEST_DEV10_CONFLICT_BLOBS:
+    if stage_blobs in (STREAMING_DATA_REQUEST_DEV10_CONFLICT_BLOBS,
+                       STREAMING_DATA_REQUEST_STABLE200_CONFLICT_BLOBS):
         destination = ROOT / STREAMING_DATA_REQUEST_PATH
-        merged = merge_streaming_data_request_dev10(destination.read_text(encoding="utf-8"))
+        merge_known = (merge_streaming_data_request_stable200
+                       if stage_blobs == STREAMING_DATA_REQUEST_STABLE200_CONFLICT_BLOBS
+                       else merge_streaming_data_request_dev10)
+        merged = merge_known(destination.read_text(encoding="utf-8"))
         destination.write_text(merged, encoding="utf-8", newline="")
         run("git", "add", "--", STREAMING_DATA_REQUEST_PATH)
         return
