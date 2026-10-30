@@ -63,6 +63,7 @@ import app.morphe.extension.youtube.patches.FeedVideoActionsPatch;
 import app.morphe.extension.youtube.patches.LocalQueuePatch;
 import app.morphe.extension.youtube.patches.PictureinPictureButtonPatch;
 import app.morphe.extension.youtube.patches.PostImageDownloadPatch;
+import app.morphe.extension.youtube.patches.PostTranslatePatch;
 import app.morphe.extension.youtube.patches.SaveToWatchLaterPatch;
 import app.morphe.extension.youtube.patches.VideoDelayPatch;
 import app.morphe.extension.youtube.patches.VideoInformation;
@@ -415,9 +416,18 @@ public final class FlyoutUtils {
      * via the video player's comments button.
      */
     public static byte[] onCommentsLoaded(byte[] bytes) {
-        List<Integer> kidsVideoElementsBytesIndexes = byteIndexesOf(bytes, KIDS_VIDEO_ELEMENTS_BYTES);
-        if (!kidsVideoElementsBytesIndexes.isEmpty() &&
-                kidsVideoElementsBytesIndexes.size() == KIDS_VIDEO_ELEMENTS_BYTES.size() - 1) {
+        if (bytes == null) {
+            return null;
+        }
+
+        // Every element is searched on the main thread, see FeedVideoCardsPatch.getElementText().
+        int found = 0;
+        for (byte[] search : KIDS_VIDEO_ELEMENTS_BYTES) {
+            if (FeedVideoCardsPatch.contains(bytes, search)) {
+                found++;
+            }
+        }
+        if (found == KIDS_VIDEO_ELEMENTS_BYTES.size() - 1) {
             videoMarkedAsForKids = true;
         }
 
@@ -624,6 +634,15 @@ public final class FlyoutUtils {
         // Only added to the menus of posts with images.
         if (PostImageDownloadPatch.ENABLED) {
             nextButtonIndex = PostImageDownloadPatch.addFlyoutButton(
+                    flyoutPanel,
+                    nextButtonIndex,
+                    senderViewRef.get()
+            );
+        }
+
+        // Only added to the menus of posts with a text.
+        if (PostTranslatePatch.ENABLED) {
+            nextButtonIndex = PostTranslatePatch.addFlyoutButton(
                     flyoutPanel,
                     nextButtonIndex,
                     senderViewRef.get()

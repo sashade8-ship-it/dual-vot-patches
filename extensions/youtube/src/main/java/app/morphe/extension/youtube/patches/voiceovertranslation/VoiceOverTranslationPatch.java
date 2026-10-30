@@ -952,7 +952,7 @@ public class VoiceOverTranslationPatch {
                 showOpenRouterCreditsDialog(activity);
             });
         } else {
-            Utils.showToastLong(str("morphe_vot_openrouter_error", httpCode));
+            Utils.showSnackbarLong(str("morphe_vot_openrouter_error", httpCode));
         }
     }
 
@@ -997,7 +997,7 @@ public class VoiceOverTranslationPatch {
                 showMyMemoryQuotaDialog(activity, nextAvailableAt);
             });
         } else {
-            Utils.showToastLong(str("morphe_vot_mymemory_error", responseStatus));
+            Utils.showSnackbarLong(str("morphe_vot_mymemory_error", responseStatus));
         }
     }
 

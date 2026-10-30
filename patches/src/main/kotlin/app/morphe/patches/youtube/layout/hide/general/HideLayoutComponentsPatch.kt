@@ -51,6 +51,9 @@ import app.morphe.patches.youtube.layout.hide.updatescreen.hideUpdateScreenPatch
 import app.morphe.patches.youtube.misc.engagement.engagementPanelHookPatch
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
 import app.morphe.patches.youtube.misc.litho.node.treeNodeElementHookPatch
+import app.morphe.patches.youtube.misc.navigation.addBrowseIdHook
+import app.morphe.patches.youtube.misc.navigation.addSearchResultsHook
+import app.morphe.patches.youtube.misc.navigation.browseIdHookPatch
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_11_or_greater
@@ -111,6 +114,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
         settingsPatch,
         engagementPanelHookPatch,
         navigationBarHookPatch,
+        browseIdHookPatch,
         versionCheckPatch,
         hideHorizontalShelvesPatch,
         hideUpdateScreenPatch,
@@ -394,6 +398,11 @@ val hideLayoutComponentsPatch = bytecodePatch(
 
         addLithoFilter(LAYOUT_COMPONENTS_FILTER)
         addLithoFilter(DESCRIPTION_COMPONENTS_FILTER)
+
+        // The community posts are not hidden on the community page of a channel.
+        addBrowseIdHook("$LAYOUT_COMPONENTS_FILTER->setBrowseId(Ljava/lang/String;)V")
+        addSearchResultsHook("$LAYOUT_COMPONENTS_FILTER->clearBrowseId()V")
+
         if (is_20_31_or_greater) {
             addLithoFilter(EXPLORE_MENU_FILTER)
         }

@@ -9,6 +9,7 @@ dependencies {
     testImplementation("org.json:json:20240303")
     // Legacy event fixtures only; never package Kotlin into the Java-only extension.
     testImplementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0")
+    testImplementation(libs.morphe.extensions.library)
 
     compileOnly(libs.annotation)
     compileOnly(libs.morphe.extensions.library)
@@ -25,6 +26,9 @@ configure<ApplicationExtension> {
     defaultConfig {
         minSdk = 26
     }
+
+    // Logger calls android.util.Log, which throws in local unit tests unless stubbed.
+    testOptions.unitTests.isReturnDefaultValues = true
 }
 
 protobuf {
