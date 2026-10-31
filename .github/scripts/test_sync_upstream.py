@@ -542,8 +542,8 @@ class SyncUpstreamTests(unittest.TestCase):
             self.assertNotIn("VotOriginalVolumePatch", source)
 
     def test_merges_direct_streams_with_upstream_download_requests(self):
-        root = MODULE_PATH.parents[2]
-        source = (root / sync_upstream.STREAMING_DATA_REQUEST_PATH).read_text(
+        # Pin the historical input: current runtime source evolves after each sync.
+        source = (MODULE_PATH.parent / "fixtures/StreamingDataRequest-before-downloads.java").read_text(
             encoding="utf-8"
         )
 
@@ -572,8 +572,8 @@ class SyncUpstreamTests(unittest.TestCase):
         )
 
     def test_merges_explicit_download_clients_with_direct_stream_requests(self):
-        root = MODULE_PATH.parents[2]
-        source = (root / sync_upstream.STREAMING_DATA_REQUEST_PATH).read_text(
+        # Pin the historical input: current runtime source evolves after each sync.
+        source = (MODULE_PATH.parent / "fixtures/StreamingDataRequest-before-downloads.java").read_text(
             encoding="utf-8"
         )
         source_with_downloads = (
@@ -602,8 +602,8 @@ class SyncUpstreamTests(unittest.TestCase):
         )
 
     def test_merges_cumulative_stable_download_changes(self):
-        root = MODULE_PATH.parents[2]
-        source = (root / sync_upstream.STREAMING_DATA_REQUEST_PATH).read_text(
+        # Pin the historical input: current runtime source evolves after each sync.
+        source = (MODULE_PATH.parent / "fixtures/StreamingDataRequest-before-downloads.java").read_text(
             encoding="utf-8"
         )
 
