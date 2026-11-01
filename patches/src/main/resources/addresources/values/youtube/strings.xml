@@ -479,7 +479,7 @@ Reports are public and are reviewed before a channel is added to a list. Removal
     <string name="morphe_feed_long_press_menu_title">Tap and hold to open video menu</string>
     <string name="morphe_feed_long_press_menu_summary">Tapping and holding anywhere on a feed video opens its menu</string>
     <string name="morphe_feed_watch_later_button_title">Show Watch later button on thumbnails</string>
-    <string name="morphe_feed_watch_later_button_summary">A Watch later button is shown on the thumbnails of feed videos. Tapping and holding it opens Save to playlist</string>
+    <string name="morphe_feed_watch_later_button_summary">A Watch later button is shown on the thumbnails of feed videos, with a check mark if the video is saved. Tapping it saves or removes the video, and tapping and holding it opens Save to playlist</string>
 
     <!-- interaction.postimages.postImageDownloadPatch -->
     <string name="morphe_post_image_download_title">Download post images</string>
@@ -939,6 +939,10 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <!-- layout.captions.captionsPatch -->
     <string name="morphe_captions_screen_title">Captions</string>
     <string name="morphe_captions_screen_summary">Manage automatic captions and caption cookies</string>
+    <string name="morphe_captions_languages_title">Language and translation</string>
+    <string name="morphe_captions_presentation_title">Appearance and behavior</string>
+    <string name="morphe_captions_advanced_title">Advanced</string>
+    <string name="morphe_captions_advanced_summary">Cookie and transcript options</string>
 
     <!-- layout.captions.autoCaptionsPatch -->
     <string name="morphe_auto_captions_style_title">Auto captions visibility</string>
@@ -949,11 +953,11 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
 
     <!-- layout.captions.preferredCaptionLanguagePatch -->
     <string name="morphe_preferred_caption_language_title">Preferred caption language</string>
-    <string name="morphe_preferred_caption_language_summary">Selects provider subtitles first, then automatically translates to the preferred language</string>
+    <string name="morphe_preferred_caption_language_summary">Automatically selects a caption language for each video</string>
     <string name="morphe_preferred_caption_language_entry_off">Off</string>
 
     <!-- layout.captions.autoTranslateCaptionsPatch -->
-    <string name="morphe_auto_translate_additional_languages_title">Add additional auto-translate languages</string>
+    <string name="morphe_auto_translate_additional_languages_title">Additional auto-translate languages</string>
     <string name="morphe_auto_translate_additional_languages_summary">Adds more languages to the auto-translate menu</string>
 
     <!-- layout.captions.captionCookiesPatch -->
@@ -973,8 +977,19 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_fix_transcript_title">Fix transcript</string>
     <string name="morphe_fix_transcript_summary">Resolves a precondition check failure that can prevent the transcript from loading</string>
     <string name="morphe_captions_in_pip_title">Show captions in picture-in-picture</string>
+
+    <!-- layout.captions.captionViewportPatch -->
+    <string name="morphe_caption_scale_title">Caption size</string>
+    <string name="morphe_caption_scale_summary">Applies to single-language and bilingual captions</string>
+
+    <!-- layout.captions.stableCaptionBlocksPatch -->
     <string name="morphe_stable_caption_blocks_title">Stable caption blocks</string>
-    <string name="morphe_stable_caption_blocks_summary">Group automatic captions into stable, readable blocks. Some words may appear before they are spoken. Restart required.</string>
+    <string name="morphe_stable_caption_blocks_summary">Group single-language automatic captions into stable, readable blocks. Bilingual captions always use blocks. Some words may appear before they are spoken</string>
+    <string name="morphe_secondary_caption_language_title">Secondary caption language</string>
+    <string name="morphe_secondary_caption_language_summary">Shows a second language with the captions, and adds a Bilingual captions toggle to the captions menu</string>
+    <string name="morphe_dual_captions_enabled_title">Bilingual captions</string>
+    <string name="morphe_caption_block_translation_failed">Some caption translations are unavailable. Showing available captions.</string>
+    <string name="morphe_caption_blocks_too_large">Both caption languages do not fit in this player. Showing the primary language.</string>
 
     <!-- layout.buttons.navigation.navigationButtonsPatch -->
     <string name="morphe_navigation_buttons_screen_title">Navigation buttons</string>
@@ -1270,10 +1285,10 @@ Automotive layout
 • Shorts open in the regular player
 • Non collapsed old video action bar is shown"</string>
     <string name="morphe_tablet_layout_in_player_title">Enable tablet layout in player</string>
-    <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
+    <!-- "Video action bar layout" must be translated the same as morphe_video_action_bar_layout_title -->
     <string name="morphe_tablet_layout_in_player_summary">"Restores the old player layout
 
-Limitation: If \'Restore old video action bar\' is turned off, \'More videos\' overlay may not be available"</string>
+Limitation: If \'Video action bar layout\' is not Classic, \'More videos\' overlay may not be available"</string>
 
     <!-- misc.spoof.appversion.spoofAppVersionPatch -->
     <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Restore old captions behavior</string>
@@ -1686,10 +1701,11 @@ Video playback with AV1 may stutter or drop frames"</string>
     <string name="morphe_spoof_video_streams_stats_for_nerds_title">Show spoofing in \'Stats for nerds\'</string>
 
     <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
-    <string name="morphe_restore_old_video_action_bar_title">Restore old video action bar</string>
-    <string name="morphe_restore_old_video_action_bar_summary">"Fixes video action buttons cannot be hidden
-
-Limitation: Reverts to old style \'More videos\' overlay"</string>
+    <string name="morphe_video_action_bar_layout_title">Video action bar layout</string>
+    <string name="morphe_video_action_bar_layout_entry_1">Default</string>
+    <string name="morphe_video_action_bar_layout_entry_2">Classic</string>
+    <string name="morphe_video_action_bar_layout_entry_3">Minimal</string>
+    <string name="morphe_video_action_bar_layout_user_dialog_message">Limitation: Classic reverts to old style \'More videos\' overlay</string>
 
     <!-- layout.player.icons.playerIconStylePatch -->
     <string name="morphe_player_icon_style_title">Player icon style</string>
@@ -1867,6 +1883,30 @@ Automatic recording is optional. It stops in incognito or when the account chang
     <string name="morphe_niconico_comments_max_length_title">Max comment length</string>
     <string name="morphe_niconico_comments_max_length_summary">Hides comments with more characters than this. Each emoji counts as one character</string>
     <string name="morphe_niconico_comments_max_length_no_limit">No limit</string>
+
+    <string name="morphe_live_chat_translate_screen_title">Live chat translation</string>
+    <string name="morphe_live_chat_translate_screen_summary">Translate live chat and live chat replay messages</string>
+    <string name="morphe_live_chat_translate_title">Translate live chat</string>
+    <string name="morphe_live_chat_translate_summary">Translates live chat and live chat replay messages once they are on screen</string>
+    <string name="morphe_live_chat_translate_language_title">Translation language</string>
+    <string name="morphe_live_chat_translate_exclude_title">Excluded languages</string>
+    <string name="morphe_live_chat_translate_exclude_summary">Comma separated language codes such as id,en. Messages in these languages are not translated</string>
+    <string name="morphe_live_chat_translate_copy_button_title">Show copy message button</string>
+    <string name="morphe_live_chat_translate_copy_button_summary">Adds a small copy button to every chat message</string>
+    <string name="morphe_live_chat_translate_copied">Message copied to clipboard</string>
+    <string name="morphe_live_chat_translate_style_title">Translation style</string>
+    <string name="morphe_live_chat_translate_style_translated_only">Translated only</string>
+    <string name="morphe_live_chat_translate_style_original_and_translated">Original (translated)</string>
+    <string name="morphe_live_chat_translate_style_translated_and_original">(Translated) original</string>
+    <string name="morphe_live_chat_translate_bold_title">Bold translated text</string>
+    <string name="morphe_live_chat_translate_bold_summary">Shows the translated text in bold</string>
+    <string name="morphe_live_chat_translate_use_color_title">Custom translated text color</string>
+    <string name="morphe_live_chat_translate_use_color_summary">Applies a custom color to the translated text</string>
+    <string name="morphe_live_chat_translate_color_title">Translated text color</string>
+    <string name="morphe_live_chat_translate_color_summary">Set the hex color of the translated text</string>
+    <string name="morphe_live_chat_translate_max_length_title">Maximum message length</string>
+    <string name="morphe_live_chat_translate_max_length_summary">Longer messages are shown untranslated</string>
+    <string name="morphe_live_chat_translate_max_length_no_limit">No limit</string>
     <string name="morphe_vot_enabled_title">Enable Google and other translations</string>
     <string name="dualvot_yandex_screen_title">Yandex translation</string>
     <string name="dualvot_yandex_screen_summary">Configure Yandex translation and its player button</string>

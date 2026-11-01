@@ -51,6 +51,7 @@ import app.morphe.extension.youtube.patches.ForceAnimationsPatch.AnimationsMode;
 import app.morphe.extension.youtube.patches.ForceFullscreenLandscapePatch.LargeScreenAvailability;
 import app.morphe.extension.youtube.patches.FullscreenVideoScalePatch.VideoScaleMode;
 import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RestoreOldPlayerButtonsAvailability;
+import app.morphe.extension.youtube.patches.RestoreOldVideoActionBarPatch.VideoActionBarLayout;
 import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerAnyModernAvailability;
 import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerDragAndDropAvailability;
 import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerHideOverlayButtonsAvailability;
@@ -62,6 +63,7 @@ import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerMinimalBar
 import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerOverlayOpacityAvailability;
 import app.morphe.extension.youtube.patches.MiniplayerPatch.MiniplayerType;
 import app.morphe.extension.youtube.patches.NavigationBarPatch.NavigationBarStyle;
+import app.morphe.extension.youtube.patches.LiveChatTranslatePatch.TranslationStyle;
 import app.morphe.extension.youtube.patches.OpenShortsInRegularPlayerPatch.ShortsPlayerType;
 import app.morphe.extension.youtube.patches.OpenVideosFullscreenHookPatch.OpenFullscreenMode;
 import app.morphe.extension.youtube.patches.PictureinPictureButtonPatch.PipButtonPatchAvailability;
@@ -417,6 +419,10 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting CAPTIONS_IN_PIP = new BooleanSetting("morphe_captions_in_pip", TRUE);
     public static final BooleanSetting STABLE_CAPTION_BLOCKS = new BooleanSetting("morphe_stable_caption_blocks", FALSE, true,
             () -> Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q);
+    public static final BooleanSetting DUAL_CAPTIONS_ENABLED = new BooleanSetting("morphe_dual_captions_enabled", TRUE);
+    public static final StringSetting SECONDARY_CAPTION_LANGUAGE = new StringSetting("morphe_secondary_caption_language", "off", true,
+            () -> Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q);
+    public static final IntegerSetting CAPTION_SCALE = new IntegerSetting("morphe_caption_scale", 100, true);
 
     // Miniplayer
     public static final BooleanSetting MINIPLAYER_DISABLE_RESUMING = new BooleanSetting("morphe_miniplayer_disable_resuming", FALSE, true);
@@ -432,6 +438,18 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting MINIPLAYER_HIDE_OVERLAY_BUTTONS = new BooleanSetting("morphe_miniplayer_hide_overlay_buttons", FALSE, true, new MiniplayerHideOverlayButtonsAvailability());
     public static final IntegerSetting MINIPLAYER_WIDTH_DIP = new IntegerSetting("morphe_miniplayer_width_dip", 192, true, new MiniplayerAnyModernAvailability());
     public static final IntegerSetting MINIPLAYER_OPACITY = new IntegerSetting("morphe_miniplayer_opacity", 100, true, new MiniplayerOverlayOpacityAvailability());
+
+    // Live chat translation
+    public static final int LIVE_CHAT_TRANSLATE_MAX_LENGTH_NO_LIMIT = 500;
+    public static final BooleanSetting LIVE_CHAT_TRANSLATE = new BooleanSetting("morphe_live_chat_translate", FALSE);
+    public static final StringSetting LIVE_CHAT_TRANSLATE_LANGUAGE = new StringSetting("morphe_live_chat_translate_language", "default", parent(LIVE_CHAT_TRANSLATE));
+    public static final StringSetting LIVE_CHAT_TRANSLATE_EXCLUDE = new StringSetting("morphe_live_chat_translate_exclude", "", parent(LIVE_CHAT_TRANSLATE));
+    public static final BooleanSetting LIVE_CHAT_TRANSLATE_COPY_BUTTON = new BooleanSetting("morphe_live_chat_translate_copy_button", FALSE, parent(LIVE_CHAT_TRANSLATE));
+    public static final EnumSetting<TranslationStyle> LIVE_CHAT_TRANSLATE_STYLE = new EnumSetting<>("morphe_live_chat_translate_style", TranslationStyle.ORIGINAL_AND_TRANSLATED, parent(LIVE_CHAT_TRANSLATE));
+    public static final BooleanSetting LIVE_CHAT_TRANSLATE_BOLD = new BooleanSetting("morphe_live_chat_translate_bold", FALSE, parent(LIVE_CHAT_TRANSLATE));
+    public static final BooleanSetting LIVE_CHAT_TRANSLATE_USE_COLOR = new BooleanSetting("morphe_live_chat_translate_use_color", TRUE, parent(LIVE_CHAT_TRANSLATE));
+    public static final StringSetting LIVE_CHAT_TRANSLATE_COLOR = new StringSetting("morphe_live_chat_translate_color", "#38BDF8", parentsAll(LIVE_CHAT_TRANSLATE, LIVE_CHAT_TRANSLATE_USE_COLOR));
+    public static final IntegerSetting LIVE_CHAT_TRANSLATE_MAX_LENGTH = new IntegerSetting("morphe_live_chat_translate_max_length", LIVE_CHAT_TRANSLATE_MAX_LENGTH_NO_LIMIT, parent(LIVE_CHAT_TRANSLATE));
 
     // Comments
     public static final BooleanSetting HIDE_COMMENTS_CAROUSEL = new BooleanSetting("morphe_hide_comments_carousel", FALSE);
@@ -534,7 +552,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_SHOP_BUTTON = new BooleanSetting("morphe_hide_shop_button", FALSE, true, parentNot(HIDE_ACTION_BAR));
     public static final BooleanSetting HIDE_STOP_ADS_BUTTON = new BooleanSetting("morphe_hide_stop_ads_button", FALSE, true, parentNot(HIDE_ACTION_BAR));
     public static final BooleanSetting HIDE_THANKS_BUTTON = new BooleanSetting("morphe_hide_thanks_button", FALSE, true, parentNot(HIDE_ACTION_BAR));
-    public static final BooleanSetting RESTORE_OLD_VIDEO_ACTION_BAR = new BooleanSetting("morphe_restore_old_video_action_bar", VersionCheckPatch.IS_21_36_OR_GREATER ? FALSE : TRUE, true);
+    public static final EnumSetting<VideoActionBarLayout> VIDEO_ACTION_BAR_LAYOUT = new EnumSetting<>("morphe_video_action_bar_layout", VersionCheckPatch.IS_21_36_OR_GREATER ? VideoActionBarLayout.DEFAULT : VideoActionBarLayout.CLASSIC, true, "morphe_video_action_bar_layout_user_dialog_message");
     public static final StringSetting INNERTUBE_COLD_CONFIG_DATA = new StringSetting("morphe_innertube_cold_config_data", "", false, false);
     public static final StringSetting INNERTUBE_COLD_HASH_DATA = new StringSetting("morphe_innertube_cold_hash_data", "", false, false);
 
@@ -862,6 +880,7 @@ public class Settings extends SharedYouTubeSettings {
     private static final BooleanSetting DEPRECATED_COPY_VIDEO_URL_TIMESTAMP = new BooleanSetting("morphe_copy_video_url_timestamp", TRUE, true, parent(DEPRECATED_COPY_VIDEO_URL));
     private static final BooleanSetting DEPRECATED_COPY_VIDEO_URL_BUTTON = new BooleanSetting("morphe_copy_video_url_button", FALSE, true);
     private static final BooleanSetting DEPRECATED_COPY_VIDEO_URL_BUTTON_TIMESTAMP = new BooleanSetting("morphe_copy_video_url_button_timestamp", TRUE, true, parent(DEPRECATED_COPY_VIDEO_URL_BUTTON));
+    private static final BooleanSetting DEPRECATED_RESTORE_OLD_VIDEO_ACTION_BAR = new BooleanSetting("morphe_restore_old_video_action_bar", VersionCheckPatch.IS_21_36_OR_GREATER ? FALSE : TRUE);
     private static final BooleanSetting DEPRECATED_DISABLE_RESUMING_SHORTS_PLAYER = new BooleanSetting("morphe_disable_resuming_shorts_player", FALSE);
     private static final BooleanSetting DEPRECATED_DISABLE_SIGNIN_TO_TV_POPUP = new BooleanSetting("morphe_disable_signin_to_tv_popup", FALSE);
     private static final BooleanSetting DEPRECATED_EXTERNAL_DOWNLOADER = new BooleanSetting("morphe_external_downloader", FALSE);
@@ -943,6 +962,13 @@ public class Settings extends SharedYouTubeSettings {
     private static final BooleanSetting DEPRECATED_DISABLE_TRANSLUCENT_NAVIGATION = new BooleanSetting("morphe_disable_translucent_navigation", FALSE);
 
     static {
+        if (!DEPRECATED_RESTORE_OLD_VIDEO_ACTION_BAR.isSetToDefault()) {
+            VIDEO_ACTION_BAR_LAYOUT.save(DEPRECATED_RESTORE_OLD_VIDEO_ACTION_BAR.get()
+                    ? VideoActionBarLayout.CLASSIC
+                    : VideoActionBarLayout.DEFAULT);
+            DEPRECATED_RESTORE_OLD_VIDEO_ACTION_BAR.resetToDefault();
+        }
+
         migrateOldSettingToNew(DEPRECATED_BYPASS_URL_REDIRECTS, BYPASS_LINK_REDIRECTS);
         migrateOldSettingToNew(DEPRECATED_COPY_VIDEO_URL, DEPRECATED_COPY_VIDEO_URL_BUTTON);
         migrateOldSettingToNew(DEPRECATED_COPY_VIDEO_URL_TIMESTAMP, DEPRECATED_COPY_VIDEO_URL_BUTTON_TIMESTAMP);
@@ -1214,6 +1240,8 @@ public class Settings extends SharedYouTubeSettings {
     // Register SeekBar UI configs so the single shared SeekBarPreference class knows the
     // range, step, unit, integer setting that uses it.
     static {
+        SeekBarPreference.register(new SeekBarConfig(CAPTION_SCALE,
+                30, 150, 5, "%"));
         SeekBarPreference.register(new SeekBarConfig(SWIPE_ZONE_WIDTH,
                 5, 50, 1, "%"));
         SeekBarPreference.register(new SeekBarConfig(SWIPE_OVERLAY_OPACITY,
@@ -1261,5 +1289,8 @@ public class Settings extends SharedYouTubeSettings {
         SeekBarPreference.register(new SeekBarConfig(NICONICO_COMMENTS_MAX_LENGTH,
                 10, NICONICO_COMMENTS_MAX_LENGTH_NO_LIMIT, 10, "", 1,
                 StringRef.sf("morphe_niconico_comments_max_length_no_limit")));
+        SeekBarPreference.register(new SeekBarConfig(LIVE_CHAT_TRANSLATE_MAX_LENGTH,
+                20, LIVE_CHAT_TRANSLATE_MAX_LENGTH_NO_LIMIT, 20, "", 1,
+                StringRef.sf("morphe_live_chat_translate_max_length_no_limit")));
     }
 }
