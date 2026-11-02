@@ -289,6 +289,9 @@ Changes include:
     <string name="morphe_hide_comments_emoji_button_title">Hide Emoji button</string>
     <string name="morphe_hide_comments_filter_bar_options_title">Hide filter bar options</string>
     <string name="morphe_hide_comments_filter_bar_options_summary">Hides all filter bar options except \'Top\' and \'Newest\'</string>
+    <string name="morphe_hide_comments_gif_button_title">Hide GIF button</string>
+    <string name="morphe_hide_comments_gifs_and_images_title">Hide GIFs and images</string>
+    <string name="morphe_hide_comments_gifs_and_images_summary">Hides GIFs and images attached to comments and replies</string>
     <string name="morphe_hide_comments_gift_animation_and_cards_title">Hide gift animation and cards</string>
     <string name="morphe_hide_comments_gift_button_title">Hide Gift button</string>
     <string name="morphe_hide_comments_info_button_title">Hide Info button</string>
@@ -569,6 +572,7 @@ Export folder: %s"</string>
     <string name="morphe_export_download_folder_change">Change folder</string>
     <string name="morphe_export_download_folder_changed">Export folder changed</string>
     <string name="morphe_export_download_folder_reset">Export folder reset</string>
+    <string name="morphe_export_download_folder_missing">Could not find export folder %s</string>
     <string name="morphe_export_download_flyout_title">Export to device</string>
     <string name="morphe_export_download_started">Exporting video</string>
     <string name="morphe_export_download_progress">Exporting video: %d%%</string>
@@ -1037,7 +1041,6 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
 
     <string name="morphe_toolbar_screen_title">Toolbar</string>
     <string name="morphe_toolbar_screen_summary">Choose which components appear in the toolbar</string>
-    <string name="morphe_hide_toolbar_cast_button_title">Hide Cast button</string>
     <string name="morphe_hide_toolbar_chat_button_title">Hide Chat button</string>
     <string name="morphe_hide_toolbar_microphone_button_title">Hide Microphone button</string>
     <string name="morphe_hide_toolbar_search_button_title">Hide Search button</string>
@@ -1096,6 +1099,7 @@ To show the \'Audio Track\' menu, change \'Spoof video streams\' to any client e
     <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
     <string name="morphe_hide_captions_button_title">Hide Captions button</string>
     <string name="morphe_hide_cast_button_title">Hide Cast button</string>
+    <string name="morphe_hide_cast_button_summary">Hides the Cast button in the video player and toolbar</string>
     <string name="morphe_hide_collapse_button_title">Hide Collapse button</string>
     <string name="morphe_hide_fullscreen_button_title">Hide Fullscreen button</string>
     <string name="morphe_hide_player_control_buttons_background_title">Hide player controls background</string>
@@ -1284,11 +1288,6 @@ Automotive layout
 • 'More videos' overlay may not be available
 • Shorts open in the regular player
 • Non collapsed old video action bar is shown"</string>
-    <string name="morphe_tablet_layout_in_player_title">Enable tablet layout in player</string>
-    <!-- "Video action bar layout" must be translated the same as morphe_video_action_bar_layout_title -->
-    <string name="morphe_tablet_layout_in_player_summary">"Restores the old player layout
-
-Limitation: If \'Video action bar layout\' is not Classic, \'More videos\' overlay may not be available"</string>
 
     <!-- misc.spoof.appversion.spoofAppVersionPatch -->
     <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - Restore old captions behavior</string>
@@ -1703,9 +1702,10 @@ Video playback with AV1 may stutter or drop frames"</string>
     <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
     <string name="morphe_video_action_bar_layout_title">Video action bar layout</string>
     <string name="morphe_video_action_bar_layout_entry_1">Default</string>
-    <string name="morphe_video_action_bar_layout_entry_2">Classic</string>
+    <string name="morphe_video_action_bar_layout_entry_2">Classic One-Row</string>
     <string name="morphe_video_action_bar_layout_entry_3">Minimal</string>
-    <string name="morphe_video_action_bar_layout_user_dialog_message">Limitation: Classic reverts to old style \'More videos\' overlay</string>
+    <string name="morphe_video_action_bar_layout_entry_4">Classic Two-Rows</string>
+    <string name="morphe_video_action_bar_layout_user_dialog_message">Limitation: Classic layouts revert to old style \'More videos\' overlay</string>
 
     <!-- layout.player.icons.playerIconStylePatch -->
     <string name="morphe_player_icon_style_title">Player icon style</string>
