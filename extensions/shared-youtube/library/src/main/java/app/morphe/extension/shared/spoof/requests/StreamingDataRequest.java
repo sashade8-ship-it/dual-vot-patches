@@ -62,13 +62,18 @@ import app.morphe.extension.shared.spoof.potoken.PoTokenManager;
  */
 public class StreamingDataRequest {
 
-    public record StreamData(
-            byte[] streamingData,
-            @Nullable byte[] playerConfig,
-            boolean hasAndroidMedia,
-            boolean usesSabr,
-            String clientUserAgent
-    ) {
+    /**
+     * @param client Client the streams are of.
+     */
+    public record StreamData(byte[] streamingData, @Nullable byte[] playerConfig, boolean hasAndroidMedia,
+                             ClientType client) {
+        public boolean usesSabr() {
+            return client.requireSABR;
+        }
+
+        public String clientUserAgent() {
+            return client.userAgent;
+        }
     }
 
     private static volatile ClientType[] clientOrderToUse = ClientType.values();
@@ -140,8 +145,26 @@ public class StreamingDataRequest {
     private static final Map<String, StreamingDataRequest> cache = Collections.synchronizedMap(
             Utils.createSizeRestrictedMap(50));
 
+    /**
+     * Client of the streams last given to the player.
+     * Several videos are fetched at once, such as the inline previews of the search results
+     * or the next track of the queue, so the last fetch to finish can be of another video.
+     */
     private static volatile ClientType lastSpoofedClientType;
-    private static volatile boolean fallbackWithTVDash;
+
+    /**
+     * Clients of the streams given to the player, by video id.
+     * The streams of another video can be given before the player is set up for a video,
+     * so the player chooses SABR from the client of that video and not from the last one.
+     */
+    private static final Map<String, ClientType> playerClients = Collections.synchronizedMap(
+            Utils.createSizeRestrictedMap(50));
+
+    /**
+     * If the last TV SABR response built on the thread is of a live stream, which is fetched again with TV DASH.
+     * A fetch runs on a single thread, and other fetches running at the same time must not see this.
+     */
+    private static final ThreadLocal<Boolean> fallbackWithTVDashOnThread = ThreadLocal.withInitial(() -> false);
     private static volatile Map<String, String> lastPlayerHeaders = Collections.emptyMap();
 
     /**
@@ -164,6 +187,27 @@ public class StreamingDataRequest {
 
     public static boolean getLastSpoofedClientUseSABR() {
         ClientType client = lastSpoofedClientType;
+        return client != null && client.requireSABR;
+    }
+
+    /**
+     * @param client Client of the streams given to the player for the video,
+     *               or null if the player uses the streams of the app.
+     */
+    public static void setPlayerClient(String videoId, @Nullable ClientType client) {
+        lastSpoofedClientType = client;
+        if (client == null) {
+            playerClients.remove(videoId);
+        } else {
+            playerClients.put(videoId, client);
+        }
+    }
+
+    /**
+     * @return If the streams given to the player for the video are SABR streams.
+     */
+    public static boolean playerClientUsesSABR(@Nullable String videoId) {
+        ClientType client = videoId == null ? null : playerClients.get(videoId);
         return client != null && client.requireSABR;
     }
 
@@ -489,7 +533,7 @@ public class StreamingDataRequest {
             if ((clientType == ClientType.TV_SABR || clientType == ClientType.TV_SABR_WII_U)
                     && Utils.containsAny(streamingData.getServerAbrStreamingUrl(), "yt_live_broadcast", "yt_premiere_broadcast")) {
                 Logger.printDebug(() -> "Live stream detected, fallback to TV dash");
-                fallbackWithTVDash = true;
+                fallbackWithTVDashOnThread.set(true);
                 return null;
             }
 
@@ -543,12 +587,7 @@ public class StreamingDataRequest {
                 playerConfigBuffer = playerConfigBuilder.build().toByteArray();
             }
 
-            return new StreamData(
-                    streamingDataBuffer,
-                    playerConfigBuffer,
-                    hasAndroidMedia,
-                    clientType.requireSABR,
-                    clientType.userAgent);
+            return new StreamData(streamingDataBuffer, playerConfigBuffer, hasAndroidMedia, clientType);
         } catch (IOException ex) {
             Logger.printException(() -> "Failed to write player response for video stream", ex);
             return null;
@@ -600,10 +639,12 @@ public class StreamingDataRequest {
 
             HttpURLConnection connection =
                     send(clientType, videoId, authorization, showErrorToast, includeVideoDetails);
+            fallbackWithTVDashOnThread.set(false);
             StreamData streamingData = buildPlayerResponseBuffer(clientType, connection, videoId, isInline);
 
-            if ((clientType == ClientType.TV_SABR || clientType == ClientType.TV_SABR_WII_U) && fallbackWithTVDash) {
-                fallbackWithTVDash = false;
+            if ((clientType == ClientType.TV_SABR || clientType == ClientType.TV_SABR_WII_U)
+                    && fallbackWithTVDashOnThread.get()) {
+                fallbackWithTVDashOnThread.set(false);
                 clientType = ClientType.TV_DASH;
                 HttpURLConnection fallBackConnection =
                         send(clientType, videoId, authorization, showErrorToast, includeVideoDetails);
@@ -611,9 +652,9 @@ public class StreamingDataRequest {
             }
 
             if (streamingData != null) {
-                // Stats for nerds describes playback, not a direct/download request.
+                // Stats for nerds and the SABR choice describe what is playing,
+                // so the client is set when the streams are given to the player, and not here.
                 if (!isDownload && !directStreamsOnly) {
-                    lastSpoofedClientType = clientType;
                     // The first attempt is with the default client.
                     PreferredClientCheck.onStreamsFetched(videoId, i == 1, clientType);
                 }
@@ -643,7 +684,6 @@ public class StreamingDataRequest {
             return null;
         }
 
-        lastSpoofedClientType = null;
         handleConnectionError(str("morphe_spoof_video_streams_no_clients_toast"), null, true);
 
         ClientType preferredClient = clients[0];

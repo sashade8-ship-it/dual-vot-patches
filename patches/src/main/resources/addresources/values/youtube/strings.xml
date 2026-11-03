@@ -477,6 +477,11 @@ Reports are public and are reviewed before a channel is added to a list. Removal
     <string name="morphe_copy_comments_title">Copy comments</string>
     <string name="morphe_copy_comments_summary">Tap and hold a comment to copy it</string>
     <string name="morphe_copy_comments_success">Comment copied to clipboard</string>
+    <string name="morphe_copy_select_text_title">Select text of descriptions and posts</string>
+    <string name="morphe_copy_select_text_summary">Tap and hold a video description or a post to select and copy any part of it</string>
+    <string name="morphe_copy_select_text_dialog_title">Select text</string>
+    <string name="morphe_copy_select_text_copy_all">Copy all</string>
+    <string name="morphe_copy_select_text_success">Text copied to clipboard</string>
 
     <!-- interaction.feedactions.feedVideoActionsPatch -->
     <string name="morphe_feed_long_press_menu_title">Tap and hold to open video menu</string>
@@ -1010,6 +1015,11 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_hide_notifications_button_title">Hide Notifications button</string>
     <string name="morphe_show_search_button_title">Show Search button</string>
     <string name="morphe_show_search_button_index_title">Search button position</string>
+    <!-- 'Watch later' should be translated using the same localized wording YouTube displays for the playlist. -->
+    <string name="morphe_show_watch_later_button_title">Show Watch later button</string>
+    <string name="morphe_show_watch_later_button_index_title">Watch later button position</string>
+    <!-- 'Watch later' should be translated using the same localized wording YouTube displays for the playlist. -->
+    <string name="morphe_watch_later_navigation_label">Watch later</string>
     <string name="morphe_show_settings_button_title">Show Settings button</string>
     <string name="morphe_show_settings_button_index_title">Settings button position</string>
     <string name="morphe_show_settings_button_type_title">Settings button action</string>
@@ -1883,6 +1893,12 @@ Automatic recording is optional. It stops in incognito or when the account chang
     <string name="morphe_niconico_comments_max_length_title">Max comment length</string>
     <string name="morphe_niconico_comments_max_length_summary">Hides comments with more characters than this. Each emoji counts as one character</string>
     <string name="morphe_niconico_comments_max_length_no_limit">No limit</string>
+    <string name="morphe_niconico_comments_live_streams_title">Show on live streams</string>
+    <string name="morphe_niconico_comments_live_streams_summary">Live streams and their replays</string>
+    <string name="morphe_niconico_comments_live_premieres_title">Show on premieres</string>
+    <string name="morphe_niconico_comments_live_premieres_summary">Premieres while they are playing</string>
+    <string name="morphe_niconico_comments_ended_premieres_title">Show on ended premieres</string>
+    <string name="morphe_niconico_comments_ended_premieres_summary">Chat replay of premieres that have ended</string>
 
     <string name="morphe_live_chat_translate_screen_title">Live chat translation</string>
     <string name="morphe_live_chat_translate_screen_summary">Translate live chat and live chat replay messages</string>
@@ -1891,6 +1907,11 @@ Automatic recording is optional. It stops in incognito or when the account chang
     <string name="morphe_live_chat_translate_language_title">Translation language</string>
     <string name="morphe_live_chat_translate_exclude_title">Excluded languages</string>
     <string name="morphe_live_chat_translate_exclude_summary">Comma separated language codes such as id,en. Messages in these languages are not translated</string>
+    <string name="morphe_live_chat_translate_provider_title">Translation provider</string>
+    <string name="morphe_live_chat_translate_provider_google">Google Translate</string>
+    <string name="morphe_live_chat_translate_provider_deepl">DeepL</string>
+    <string name="morphe_live_chat_translate_deepl_api_key_title">DeepL API key</string>
+    <string name="morphe_live_chat_translate_deepl_api_key_summary">Your DeepL API key. Google Translate is used if DeepL fails, such as when the monthly limit of the key is reached</string>
     <string name="morphe_live_chat_translate_copy_button_title">Show copy message button</string>
     <string name="morphe_live_chat_translate_copy_button_summary">Adds a small copy button to every chat message</string>
     <string name="morphe_live_chat_translate_copied">Message copied to clipboard</string>
