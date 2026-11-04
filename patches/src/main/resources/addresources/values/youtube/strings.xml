@@ -837,6 +837,10 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swipe_left_zone_title">Left swipe gesture</string>
     <string name="morphe_swipe_right_zone_title">Right swipe gesture</string>
     <string name="morphe_swipe_top_zone_title">Top swipe gesture</string>
+    <string name="morphe_swipe_seek_title">Swipe to seek</string>
+    <string name="morphe_swipe_seek_summary">Swipe left or right on the fullscreen player to move the seekbar, and release to seek</string>
+    <string name="morphe_swipe_seek_sensitivity_title">Seek swipe sensitivity</string>
+    <string name="morphe_swipe_seek_sensitivity_summary">How far the seekbar moves for each swipe</string>
     <string name="morphe_swipe_zone_preview_title" translatable="false"> </string>
     <string name="morphe_swipe_zone_width_title">Left/Right zone width</string>
     <string name="morphe_swipe_zone_width_summary">Percentage of each screen edge reserved for left and right swipe gestures (5-50)</string>
@@ -1005,9 +1009,9 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_caption_block_translation_failed">Some caption translations are unavailable. Showing available captions.</string>
     <string name="morphe_caption_blocks_too_large">Both caption languages do not fit in this player. Showing the primary language.</string>
 
-    <!-- layout.buttons.navigation.navigationButtonsPatch -->
-    <string name="morphe_navigation_buttons_screen_title">Navigation buttons</string>
-    <string name="morphe_navigation_buttons_screen_summary">Choose which buttons appear in the bottom navigation bar</string>
+    <!-- layout.buttons.navigation.navigationBarPatch -->
+    <string name="morphe_navigation_bar_screen_title">Navigation bar</string>
+    <string name="morphe_navigation_bar_screen_summary">Choose which buttons appear in the bottom navigation bar</string>
     <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
     <string name="morphe_hide_home_button_title">Hide Home button</string>
     <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
