@@ -143,9 +143,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v2.1.0-dev.7-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.1.0-dev.7-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;197 patches total
+> **[v2.1.0-dev.8-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.1.0-dev.8-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;198 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;112 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;113 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -265,6 +265,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Video delay](#video-delay) | Adds an option to delay the video, to keep it in sync with laggy Bluetooth audio. |  |
 | [Video quality](#video-quality) | Adds options to set default video qualities and always use the advanced video quality menu. |  |
 | [Voice over translation](#voice-over-translation) | Adds additional voice over languages using text-to-speech synchronized to the video playback. |  |
+| [Watch later improvements](#watch-later-improvements) | Adds options to widen the drag handles of the Watch later videos and to hide the snackbar shown after removing a video. |  |
 | [Wide search bar](#wide-search-bar) | Adds a wide search bar to the top of the home and subscription feed. |  |
 | [Yandex voice-over translation](#yandex-voice-over-translation) | Adds a separate Yandex translation button alongside Morphe voice-over translation. |  |
 
