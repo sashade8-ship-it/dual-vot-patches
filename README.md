@@ -143,7 +143,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v2.1.0-dev.8-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.1.0-dev.8-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;198 patches total
+> **[v2.1.0-dev.10-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.1.0-dev.10-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;198 patches total
 <details>
 <summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;113 patches</summary>
 <br>
@@ -294,7 +294,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Disable DRC audio](#disable-drc-audio) | Adds an option to disable DRC (Dynamic Range Compression) audio. |  |
 | [Disable QUIC protocol](#disable-quic-protocol) | Adds an option to disable QUIC (Quick UDP Internet Connections) network protocol. |  |
 | [Disable dislike redirection](#disable-dislike-redirection) | Adds an option to prevent skipping to the next track when the dislike button is pressed. |  |
-| [Downloads](#downloads) | Adds support to download songs using the in-app download button, either with an external downloader app or inside YouTube Music. |  |
+| [Downloads](#downloads) | Adds support to download songs, albums and playlists using the in-app download button, either with an external downloader app or inside YouTube Music. |  |
 | [Enable audio/video switch](#enable-audio-video-switch) | Adds an option to switch between the audio and the video version of a track by redirecting videoId. |  |
 | [Enable debugging](#enable-debugging) | Adds options for debugging and exporting Morphe logs to the clipboard. |  |
 | [Enable exclusive audio playback](#enable-exclusive-audio-playback) | Enables the option to play audio without video. |  |

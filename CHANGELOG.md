@@ -1,3 +1,13 @@
+## 2.1.0-dev.10-dualvot.8.5.4 (2026-11-04)
+
+### Automated Morphe update
+
+* Update the pre-release base to [Morphe Patches 2.1.0-dev.10](
+  https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0-dev.10).
+* Preserve Google/other and Yandex voice-over translation, mutual exclusion,
+  volume controls, and automatic reset when the video changes.
+* Build and structural Dual VoT checks passed before publication.
+
 ## 2.1.0-dev.8-dualvot.8.5.4 (2026-11-04)
 
 ### Automated Morphe update
@@ -464,6 +474,26 @@
 * Add 1% adjustment buttons and 5% slider steps to the built-in volume
   controls, plus matching speech-rate controls.
 * Base the integration on Morphe Patches 1.36.0.
+
+## [2.1.0-dev.10](https://github.com/MorpheApp/morphe-patches/compare/v2.1.0-dev.9...v2.1.0-dev.10) (2026-11-04)
+
+### 🐛 Bug Fixes
+
+* **YouTube Music:** Non-experimental targets do not patch ([2ca8ae1](https://github.com/MorpheApp/morphe-patches/commit/2ca8ae1098f2a1c964ddb26703fa9b0b178c736d))
+
+## [2.1.0-dev.9](https://github.com/MorpheApp/morphe-patches/compare/v2.1.0-dev.8...v2.1.0-dev.9) (2026-11-04)
+
+### ✨ New Features
+
+* **YouTube - Swipe controls:** Add swipe to seek ([#4364](https://github.com/MorpheApp/morphe-patches/issues/4364)) ([d211d79](https://github.com/MorpheApp/morphe-patches/commit/d211d79e44bae50663523ee7c0eb89c47b145ec6))
+* **YouTube Music - Downloads:** Add album and playlist downloads ([#4398](https://github.com/MorpheApp/morphe-patches/issues/4398)) ([156b0c9](https://github.com/MorpheApp/morphe-patches/commit/156b0c94d488d30e8f495cfb844c24d1028e3530))
+
+### 🐛 Bug Fixes
+
+* **Spoof video streams:** Do not block get_watch, initplayback, or Onesie requests ([#4373](https://github.com/MorpheApp/morphe-patches/issues/4373)) ([9d38c68](https://github.com/MorpheApp/morphe-patches/commit/9d38c684386881683d257713591cc0a3281fe587))
+* **YouTube Music - Downloads:** Dowloading with flyout menu shows premium popup ([#4382](https://github.com/MorpheApp/morphe-patches/issues/4382)) ([4b6c282](https://github.com/MorpheApp/morphe-patches/commit/4b6c282157b9d6ba8564d4042ce888d1108dba1c))
+* **YouTube Music - Downloads:** Downloads screen freezes with a large catalogue ([#4396](https://github.com/MorpheApp/morphe-patches/issues/4396)) ([e429778](https://github.com/MorpheApp/morphe-patches/commit/e4297782630de4216fe6eb03f7eee84c0ba9252f))
+* **YouTube Music - Downloads:** Offline playback crashes with a large queue ([#4397](https://github.com/MorpheApp/morphe-patches/issues/4397)) ([ba12903](https://github.com/MorpheApp/morphe-patches/commit/ba12903f57a6c7c61fb4f6a02e46b96fbef1b412))
 
 ## [2.1.0-dev.8](https://github.com/MorpheApp/morphe-patches/compare/v2.1.0-dev.7...v2.1.0-dev.8) (2026-11-04)
 
