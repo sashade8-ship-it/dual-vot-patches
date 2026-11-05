@@ -33,6 +33,7 @@ import androidx.annotation.Nullable;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.CodedInputStream;
 import com.google.protobuf.CodedOutputStream;
+import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 import com.google.protobuf.WireFormat;
 
@@ -70,6 +71,7 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.AvatarVie
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.AvatarViewModelHolder;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ButtonViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ButtonViewModelHolder;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CardLayoutExperiments;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CapabilitiesSubscriptionConfig;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ChannelAvatar;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ClientResource;
@@ -515,7 +517,7 @@ public class FeedCardLayoutPatch {
          * Whether the uri and the fields were taken from an element.
          */
         private volatile boolean fromElement;
-        private long cacheLookupTime;
+        private volatile long cacheLookupTime;
         private long checkTime;
 
         VideoTemplate(String name, int modelField, int themeField, int capabilitiesField) {
@@ -568,9 +570,15 @@ public class FeedCardLayoutPatch {
                                 }
                             }
                         }
+                    } catch (InvalidProtocolBufferException ex) {
+                        // The app rewrites the cache while it runs, so the file can be read while it's
+                        // incomplete. The uri found before is kept, and the cache is read again soon.
+                        Logger.printDebug(() -> "Template cache is being written", ex);
+                        cacheLookupTime = System.currentTimeMillis() - TEMPLATE_LOOKUP_INTERVAL_MILLIS + 1000;
+                        return;
                     } catch (Exception ex) {
-                        cached = null;
                         Logger.printException(() -> "getUri failure", ex);
+                        return;
                     }
                     // An element of the template can be seen while the cache is read.
                     if (!fromElement && !Objects.equals(uri, cached)) {
@@ -1346,9 +1354,16 @@ public class FeedCardLayoutPatch {
                 View view = getDrawableView(drawable);
                 while (view != null) {
                     // The card can be drawn before it's added to the list.
-                    CardOutlineProvider outline = getCardOutline(view.getContentDescription());
-                    if (outline != null) {
-                        setCardOutline(view, outline);
+                    if (isCardLabel(view.getContentDescription())) {
+                        // The label can be on a view inside the list item, which the padding of the card
+                        // already moves in, so the outline is set on the list item, or on the column of a row of cards.
+                        View item = view;
+                        View column = view;
+                        while (item.getParent() instanceof View parentView && !(parentView instanceof RecyclerView)) {
+                            column = item;
+                            item = parentView;
+                        }
+                        setCardOutline(isCardRow(item) ? column : item, CARD_OUTLINE);
                         inCard = true;
                         break;
                     }
@@ -1481,13 +1496,45 @@ public class FeedCardLayoutPatch {
     }
 
     private static void updateCardOutline(View child) {
-        CardOutlineProvider outline = getCardOutline(child.getContentDescription());
+        if (isCardRow(child)) {
+            setCardOutline(child, null);
+            ViewGroup row = (ViewGroup) child;
+            for (int i = 0, count = row.getChildCount(); i < count; i++) {
+                View column = row.getChildAt(i);
+                setCardOutline(column, hasLabelMarker(column, CARD_LABEL_MARKER, 0) ? CARD_OUTLINE : null);
+            }
+            return;
+        }
+
+        // The label is on the list item, or on a view inside it.
+        CardOutlineProvider outline = hasLabelMarker(child, CARD_LABEL_MARKER, 0) ? CARD_OUTLINE : null;
         // The items of the feed are cards, also the ones that YouTube sends as cards and are not converted.
         if (outline == null && child.getParent() instanceof RecyclerView recyclerView
                 && recyclerView.getId() == getFeedId() && !isChipBar(child)) {
             outline = FEED_ITEM_OUTLINE;
         }
         setCardOutline(child, outline);
+    }
+
+    /**
+     * The grids of the watch page on large screens have a row of cards per list item, with each card
+     * in a column of the row. The padding of the card moves the content inside the column,
+     * so the outline is set on the columns. The label is on the column or on a view inside it,
+     * and a column is narrower than a list item that is one card.
+     */
+    private static boolean isCardRow(View item) {
+        if (!(item instanceof ViewGroup row) || isCardLabel(item.getContentDescription())) {
+            return false;
+        }
+        final int cardContentWidth = item.getWidth() - 2 * CARD_OUTLINE.horizontalPadding;
+        for (int i = 0, count = row.getChildCount(); i < count; i++) {
+            View column = row.getChildAt(i);
+            final int width = column.getWidth();
+            if (width > 0 && width < cardContentWidth - 2 && hasLabelMarker(column, CARD_LABEL_MARKER, 0)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -1516,14 +1563,7 @@ public class FeedCardLayoutPatch {
     /**
      * The accessibility label of the converted videos ends with an invisible character,
      * to find the cards in lists that have other items.
-     *
-     * @return The outline of the card, or null if the label is not the label of a card.
      */
-    @Nullable
-    private static CardOutlineProvider getCardOutline(@Nullable CharSequence label) {
-        return isCardLabel(label) ? CARD_OUTLINE : null;
-    }
-
     private static boolean isCardLabel(@Nullable CharSequence label) {
         return endsWith(label, CARD_LABEL_MARKER);
     }
@@ -1796,12 +1836,28 @@ public class FeedCardLayoutPatch {
                     continue;
                 }
 
+                // The rows of cards of the grids have the cards in the columns of the row.
+                if (isCardRow(item)) {
+                    ViewGroup row = (ViewGroup) item;
+                    final int horizontalPadding = Dim.dp(CARD_HORIZONTAL_PADDING_DP);
+                    final int verticalPadding = Dim.dp(CARD_VERTICAL_PADDING_DP);
+                    for (int j = 0, columns = row.getChildCount(); j < columns; j++) {
+                        View column = row.getChildAt(j);
+                        if (isCardWithoutBackground(column)) {
+                            final float x = row.getX() + column.getX();
+                            final float y = row.getY() + column.getY();
+                            canvas.drawRoundRect(x + horizontalPadding, y + verticalPadding,
+                                    x + column.getWidth() - horizontalPadding,
+                                    y + column.getHeight() - verticalPadding,
+                                    CARD_CORNER_RADIUS, CARD_CORNER_RADIUS, getShelfPaint(list.getContext()));
+                        }
+                    }
+                    continue;
+                }
+
                 View header = item;
                 final boolean shelfHeader = isShelfHeader(header);
-                // The cards without inline playback, such as the playlists, have no background below the thumbnail.
-                CharSequence label = item.getContentDescription();
-                final boolean cardWithoutBackground = isCardLabel(label) && label.length() > 1
-                        && label.charAt(label.length() - 2) == NO_INLINE_PLAYBACK_CARD_LABEL_MARKER;
+                final boolean cardWithoutBackground = isCardWithoutBackground(item);
                 if (!shelfHeader && !shelfCardItems.containsKey(item) && !cardWithoutBackground) {
                     continue;
                 }
@@ -2183,17 +2239,38 @@ public class FeedCardLayoutPatch {
      * The labels of the shelf header and of the Shorts are on views inside the list item.
      */
     private static boolean hasLabelMarker(View view, char marker, int depth) {
-        if (endsWith(view.getContentDescription(), marker)) {
-            return true;
+        return findLabelMarker(view, marker, depth) != null;
+    }
+
+    /**
+     * @return The label of the view or of a view inside it that ends with the marker,
+     *         or null if no label ends with the marker.
+     */
+    @Nullable
+    private static CharSequence findLabelMarker(View view, char marker, int depth) {
+        CharSequence label = view.getContentDescription();
+        if (endsWith(label, marker)) {
+            return label;
         }
         if (depth < 4 && view instanceof ViewGroup group && !(view instanceof RecyclerView)) {
             for (int i = 0, count = group.getChildCount(); i < count; i++) {
-                if (hasLabelMarker(group.getChildAt(i), marker, depth + 1)) {
-                    return true;
+                CharSequence childLabel = findLabelMarker(group.getChildAt(i), marker, depth + 1);
+                if (childLabel != null) {
+                    return childLabel;
                 }
             }
         }
-        return false;
+        return null;
+    }
+
+    /**
+     * The cards without inline playback, such as the playlists, have no background below the thumbnail.
+     * The label is on the card, or on a view inside it, depending on the server experiments of the account.
+     */
+    private static boolean isCardWithoutBackground(View card) {
+        CharSequence label = findLabelMarker(card, CARD_LABEL_MARKER, 0);
+        return label != null && label.length() > 1
+                && label.charAt(label.length() - 2) == NO_INLINE_PLAYBACK_CARD_LABEL_MARKER;
     }
 
     /**
@@ -2458,13 +2535,21 @@ public class FeedCardLayoutPatch {
         return builder.build();
     }
 
+    /**
+     * The experiments that the templates of the cards and of the classic layout read are sent by the server
+     * for the layout of the account, and some change the layout, such as one that leaves the menu button out
+     * of the cards. The converted elements would get the experiments meant for the other layout, so they have
+     * only the experiments of the style of the cards, which the cards turn on and the classic layout turns off.
+     * Every other experiment of the cards is left out, also the ones that the server adds later.
+     */
     private static ElementContext setCardExperiments(ElementContext context, boolean enabled) {
-        ElementsExperiments experiments = context.getElementsExperiments();
         return context.toBuilder()
-                .setElementsExperiments(experiments.toBuilder()
-                        .setCardLayoutExperiments(experiments.getCardLayoutExperiments().toBuilder()
+                .setElementsExperiments(context.getElementsExperiments().toBuilder()
+                        .setCardLayoutExperiments(CardLayoutExperiments.newBuilder()
                                 .setEnableColorSampledBackground(enabled)
-                                .setEnableMetadataBackground(enabled)))
+                                .setEnableMetadataBackground(enabled))
+                        .clearLockupExperiments()
+                        .clearLockupMetadataExperiments())
                 .build();
     }
 
