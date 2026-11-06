@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import io
 import re
 import struct
@@ -18,6 +19,51 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_stable210_streaming_matches_verified_dev_and_rejects_changed_sides(self):
+        conflict = (MODULE_PATH.parent / "fixtures/StreamingDataRequest-stable210-conflicts.txt").read_text(
+            encoding="utf-8"
+        )
+        merged = sync_upstream.merge_streaming_data_request_stable210(conflict)
+        # Exact source already published in v2.1.0-dev.11-dualvot.8.5.4;
+        # upstream stable has the same streaming source as dev.11.
+        self.assertEqual(hashlib.sha256(merged.encode()).hexdigest(),
+                         "aa67af93c3113a37b4e8c617810fb2f59ffc0fccbfeacfc6f716fc9e6b322b78")
+        self.assertIn("public static StreamingDataRequest fetchDirectStreamRequest(", merged)
+        self.assertIn("DIRECT_STREAM_CLIENT_ORDER, false, true);", merged)
+        self.assertIn("public static StreamingDataRequest getOrFetchRequest(", merged)
+        self.assertIn("!isDownload && !directStreamsOnly", merged)
+        sides = re.findall(r"(?m)^<<<<<<< [^\n]+\n(.*?)^=======\n(.*?)^>>>>>>> [^\n]+\n",
+                           conflict, re.DOTALL | re.MULTILINE)
+        for ours, theirs in sides:
+            for side in (ours, theirs):
+                # The empty documentation side is checked by changing its separator.
+                invalid = (conflict.replace(side, side + "unreviewed change\n", 1) if side
+                           else conflict.replace("=======\n", "unreviewed change\n=======\n", 1))
+                with self.subTest(side=side[:60]), self.assertRaises(sync_upstream.SyncError):
+                    sync_upstream.merge_streaming_data_request_stable210(invalid)
+        for invalid in ("", conflict + conflict, conflict + "<<<<<<< extra\n"):
+            with self.subTest(invalid=invalid[:60]), self.assertRaises(sync_upstream.SyncError):
+                sync_upstream.merge_streaming_data_request_stable210(invalid)
+
+    def test_stable210_resolver_dispatches_exact_blobs(self):
+        conflict = (MODULE_PATH.parent / "fixtures/StreamingDataRequest-stable210-conflicts.txt").read_text(
+            encoding="utf-8"
+        )
+        path = sync_upstream.STREAMING_DATA_REQUEST_PATH
+        destination = mock.Mock()
+        destination.read_text.return_value = conflict
+        root = mock.Mock()
+        root.__truediv__ = mock.Mock(return_value=destination)
+        with (mock.patch.object(sync_upstream, "ROOT", root),
+              mock.patch.object(sync_upstream, "unresolved_paths", return_value=[path]),
+              mock.patch.object(sync_upstream, "output_of",
+                                side_effect=sync_upstream.STREAMING_DATA_REQUEST_STABLE210_CONFLICT_BLOBS),
+              mock.patch.object(sync_upstream, "run") as run):
+            sync_upstream.resolve_streaming_data_request_conflict()
+            destination.write_text.assert_called_once_with(
+                sync_upstream.merge_streaming_data_request_stable210(conflict), encoding="utf-8", newline="")
+            run.assert_called_once_with("git", "add", "--", path)
+
     def test_dev2110_streaming_keeps_reuse_and_uncached_dual_api(self):
         conflict = (MODULE_PATH.parent / "fixtures/StreamingDataRequest-dev2110-conflicts.txt").read_text(
             encoding="utf-8"
@@ -219,6 +265,10 @@ class SyncUpstreamTests(unittest.TestCase):
 
     def test_dev210_unknown_inputs_remain_unresolved(self):
         cases = (
+            (sync_upstream.STREAMING_DATA_REQUEST_STABLE210_CONFLICT_BLOBS,
+             sync_upstream.STREAMING_DATA_REQUEST_PATH, sync_upstream.resolve_streaming_data_request_conflict),
+            (sync_upstream.STABLE210_ARRAYS_CONFLICT_BLOBS,
+             sync_upstream.DUAL_YANDEX_ARRAYS_PATH, sync_upstream.resolve_dual_yandex_arrays_conflict),
             (sync_upstream.STREAMING_DATA_REQUEST_DEV2110_CONFLICT_BLOBS,
              sync_upstream.STREAMING_DATA_REQUEST_PATH, sync_upstream.resolve_streaming_data_request_conflict),
             (sync_upstream.STREAMING_DATA_REQUEST_DEV217_CONFLICT_BLOBS,
