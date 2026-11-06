@@ -60,6 +60,12 @@ internal object RiveSplashScreenFeatureFlagFingerprint : Fingerprint(
     )
 )
 
+/**
+ * 21.44+ bootstrap flag to use the 'rive-android-v1' library instead of the Rive library
+ * of the startup animation. If it is on, the app does not play the Rive startup animation.
+ */
+internal const val RIVE_V1_LIBRARY_BOOTSTRAP_FLAG = 1073831080
+
 internal const val RIVE_THEMED_SPLASH_SCREEN_FEATURE_FLAG = 1073830411L
 
 /**
@@ -188,13 +194,15 @@ internal object SplashScreenOnStopFingerprint : Fingerprint(
  * Schedules the splash screen to close after a timeout of 2.5 seconds.
  * Must be matched against the method of [SplashScreenStyleFingerprint] or [SplashScreenStyleDelegateFingerprint].
  */
+internal val SPLASH_SCREEN_TIMEOUT_CALL = methodCall(
+    parameters = listOf("Ljava/lang/Runnable;", "J", "Ljava/util/concurrent/TimeUnit;")
+)
+
 internal object SplashScreenTimeoutFingerprint : Fingerprint(
     returnType = "V",
     filters = listOf(
         literal(2500L),
-        methodCall(
-            parameters = listOf("Ljava/lang/Runnable;", "J", "Ljava/util/concurrent/TimeUnit;")
-        )
+        SPLASH_SCREEN_TIMEOUT_CALL
     )
 )
 

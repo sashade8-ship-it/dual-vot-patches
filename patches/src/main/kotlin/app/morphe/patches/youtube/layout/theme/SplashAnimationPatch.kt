@@ -16,10 +16,11 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
-import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.patch.patch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.returnEarly
 import app.morphe.patches.shared.layout.branding.startupAnimationResourcePatch
+import app.morphe.patches.shared.misc.debugging.BootstrapStoreReadFingerprint
 import app.morphe.patches.shared.misc.lottie.LOTTIE_ANIMATION_VIEW_CLASS_TYPE
 import app.morphe.patches.shared.misc.lottie.LottieAnimationViewSetAnimationIntFingerprint
 import app.morphe.patches.shared.misc.lottie.lottieAnimationPatch
@@ -36,6 +37,7 @@ import app.morphe.patches.youtube.misc.playservice.is_21_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_35_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_39_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_44_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_45_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
@@ -56,7 +58,7 @@ private const val EXTENSION_CLASS =
  * Hands the animation the app plays while it starts over to extension code,
  * which decides what is played and with which colors.
  */
-val splashAnimationPatch = bytecodePatch {
+val splashAnimationPatch = patch {
 
     dependsOn(
         sharedExtensionPatch,
@@ -197,6 +199,26 @@ val splashAnimationPatch = bytecodePatch {
                 }
             }
 
+            // 21.44+ has a second Rive library that the server can turn on,
+            // and the app then shows the Lottie animation instead of the Rive animation.
+            if (is_21_44_or_greater) {
+                BootstrapStoreReadFingerprint.method.addInstructionsWithLabels(
+                    0,
+                    """
+                        const v0, $RIVE_V1_LIBRARY_BOOTSTRAP_FLAG
+                        move/from16 v1, p1
+                        if-ne v0, v1, :read_flag
+                        invoke-static { }, $EXTENSION_CLASS->disableRiveV1Library()Z
+                        move-result v0
+                        if-eqz v0, :read_flag
+                        const-wide/16 v0, 0x0
+                        return-wide v0
+                        :read_flag
+                        nop
+                    """
+                )
+            }
+
             // The match of the instruction that sets the view field.
             val (animationViewFingerprint, animationViewMatchIndex) =
                 if (is_21_31_or_greater && !is_21_35_or_greater) {
@@ -292,9 +314,13 @@ val splashAnimationPatch = bytecodePatch {
             }
 
             // The Rive animation can be shown longer than the timeout of the app.
-            SplashScreenTimeoutFingerprint.match(splashScreenStyleFingerprint.method).let {
-                it.method.apply {
-                    val index = it.instructionMatches.last().index
+            splashScreenStyleFingerprint.method.apply {
+                // 21.45+ also starts the timeout for the Rive animation.
+                if (is_21_45_or_greater) {
+                    findInstructionIndicesReversedOrThrow(SPLASH_SCREEN_TIMEOUT_CALL)
+                } else {
+                    listOf(SplashScreenTimeoutFingerprint.match(this).instructionMatches.last().index)
+                }.forEach { index ->
                     // The delay is the long after the Runnable.
                     val delayRegister = getInstruction<FiveRegisterInstruction>(index).registerE
 

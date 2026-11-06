@@ -1,6 +1,7 @@
 /*
  * Copyright 2026 Morphe.
  * https://github.com/MorpheApp/morphe-patches/pull/2528
+ * https://github.com/MorpheApp/morphe-patches/pull/4436
  *
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to this code.
  */
@@ -166,7 +167,7 @@ public final class LocalDownloadManager {
                 || new File(directory, videoId + ".m4a").isFile();
     }
 
-    private static File getDownloadDirectory() {
+    static File getDownloadDirectory() {
         return new File(Utils.getContext().getExternalFilesDir(Environment.DIRECTORY_MUSIC), "Morphe");
     }
 
@@ -233,6 +234,7 @@ public final class LocalDownloadManager {
             }
             Logger.printDebug(() -> "Saved " + destination + " (" + destination.length() + " bytes)");
 
+            OfflineCatalogue.added(videoId);
             notifyTrackSaved();
             if (!quiet) Utils.showToastShort(str("morphe_music_downloads_complete"));
             return true;

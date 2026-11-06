@@ -9,8 +9,9 @@ package app.morphe.patches.music.misc.settings
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
-import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.patch.resourcePatch
+import app.morphe.patcher.patch.patch
+import app.morphe.patcher.patch.readXml
+import app.morphe.patcher.patch.resourceXml
 import app.morphe.patcher.util.cloneParameters
 import app.morphe.patcher.util.getFreeRegisterProvider
 import app.morphe.patcher.util.p0Register
@@ -49,7 +50,6 @@ import app.morphe.patches.shared.misc.settings.settingsPatch
 import app.morphe.patches.youtube.misc.settings.modifyActivityForSettingsInjection
 import app.morphe.util.ResourceGroup
 import app.morphe.util.copyResources
-import app.morphe.util.copyXmlNode
 import app.morphe.util.inputStreamFromBundledResource
 import app.morphe.util.insertLiteralOverride
 
@@ -57,7 +57,7 @@ private const val MUSIC_ACTIVITY_HOOK_CLASS = "Lapp/morphe/extension/music/setti
 
 private val preferences = mutableSetOf<BasePreference>()
 
-private val settingsResourcePatch = resourcePatch {
+private val settingsResourcePatch = patch {
     dependsOn(
         settingsPatch(
             rootPreferences = listOf(
@@ -106,32 +106,27 @@ private val settingsResourcePatch = resourcePatch {
         // Set the style for the Morphe settings to follow the style of the music settings,
         // namely: action bar height, menu item padding and remove horizontal dividers.
         val targetResource = "values/styles.xml"
-        inputStreamFromBundledResource(
-            "settings/music",
-            targetResource
-        )!!.let { inputStream ->
-            "resources".copyXmlNode(
-                document(inputStream),
-                document("res/$targetResource")
-            ).close()
-        }
+        readXml(inputStreamFromBundledResource("settings/music", targetResource)!!).use { source ->
+            resourceXml("res/$targetResource").use { styles ->
+                source.root.children.forEach { styles.root.appendCopy(it) }
 
-        // Remove horizontal dividers from the music settings.
-        val styleFile = get("res/values/styles.xml")
-        styleFile.writeText(
-            styleFile.readText()
-                .replace(
-                    "allowDividerAbove\">true",
-                    "allowDividerAbove\">false"
-                ).replace(
-                    "allowDividerBelow\">true",
-                    "allowDividerBelow\">false"
-                )
-        )
+                // Remove horizontal dividers from the music settings.
+                styles.root.children.forEach { style ->
+                    style.children("item").forEach { item ->
+                        val name = item.attribute("name").orEmpty()
+                        if ((name.endsWith("allowDividerAbove") || name.endsWith("allowDividerBelow")) &&
+                            item.text == "true"
+                        ) {
+                            item.text = "false"
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-val settingsPatch = bytecodePatch(
+val settingsPatch = patch(
     description = "Adds settings for Morphe to YouTube Music."
 ) {
     dependsOn(
