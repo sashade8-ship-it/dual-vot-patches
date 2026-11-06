@@ -19,6 +19,47 @@ SPEC.loader.exec_module(sync_upstream)
 
 
 class SyncUpstreamTests(unittest.TestCase):
+    def test_stable210_dev_strings_keep_git_merge_and_reject_unknown_inputs(self):
+        for path, (blobs, digest) in sync_upstream.STABLE210_DEV_STRING_CONFLICTS.items():
+            locale = path.split("/")[-3]
+            conflict = (MODULE_PATH.parent / f"fixtures/strings-stable210-dev-{locale}.txt").read_text(
+                encoding="utf-8"
+            )
+            # Adjacent automatic merges must survive; never take a whole file side.
+            source = "unchanged Dual translations\n" + conflict + "merged upstream translations\n"
+            theirs = re.search(r"(?m)^=======\n(.*?)^>>>>>>> ", conflict, re.DOTALL)[1]
+            merged = sync_upstream.merge_stable210_dev_strings(source, digest)
+            self.assertEqual(merged, "unchanged Dual translations\n" + theirs + "merged upstream translations\n")
+            for invalid in (source.replace("=======\n", "changed ours\n=======\n"),
+                            source.replace(theirs, theirs + "changed theirs\n"),
+                            source + conflict, source + "<<<<<<< extra\n", ""):
+                with self.subTest(path=path), self.assertRaises(sync_upstream.SyncError):
+                    sync_upstream.merge_stable210_dev_strings(invalid, digest)
+            destination = mock.Mock()
+            destination.read_text.return_value = source
+            root = mock.Mock()
+            root.__truediv__ = mock.Mock(return_value=destination)
+            with (mock.patch.object(sync_upstream, "ROOT", root),
+                  mock.patch.object(sync_upstream, "unresolved_paths", return_value=[path]),
+                  mock.patch.object(sync_upstream, "output_of", side_effect=blobs),
+                  mock.patch.object(sync_upstream, "run") as run):
+                sync_upstream.resolve_dual_yandex_string_conflicts()
+                destination.write_text.assert_called_once_with(merged, encoding="utf-8", newline="")
+                run.assert_called_once_with("git", "add", "--", path)
+            for stage in range(3):
+                unknown = list(blobs)
+                unknown[stage] = "unknown"
+                with (mock.patch.object(sync_upstream, "unresolved_paths", return_value=[path]),
+                      mock.patch.object(sync_upstream, "output_of", side_effect=unknown),
+                      mock.patch.object(sync_upstream, "run") as run,
+                      mock.patch.object(sync_upstream, "merge_dual_yandex_strings",
+                                        side_effect=sync_upstream.SyncError("unreviewed source")),
+                      mock.patch.object(sync_upstream, "merge_stable210_dev_strings") as merge,
+                      self.assertRaises(sync_upstream.SyncError)):
+                    sync_upstream.resolve_dual_yandex_string_conflicts()
+                merge.assert_not_called()
+                self.assertFalse(any(call.args[:2] == ("git", "add") for call in run.call_args_list))
+
     def test_stable210_streaming_matches_verified_dev_and_rejects_changed_sides(self):
         conflict = (MODULE_PATH.parent / "fixtures/StreamingDataRequest-stable210-conflicts.txt").read_text(
             encoding="utf-8"

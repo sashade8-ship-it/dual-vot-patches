@@ -416,10 +416,48 @@ def merge_dual_yandex_strings(base: str, ours: str, theirs: str) -> str:
     return prefix + block + merged_upstream[closing.start() :]
 
 
+STABLE210_DEV_STRING_CONFLICTS = {
+    "patches/src/main/resources/addresources/values/youtube/strings.xml": (
+        ("289dd38f1fbf966e962ea79ed0faba97dc5cddaa",
+         "e0653829831dff946ec51b8b9442dbe0e5cf5911",
+         "fe1946b4695a95c74c8ce362177dfc1ef58acb41"),
+        "fe4d8b183527d2ae6c585d3e1122168aeec63dd2bf53fadf6acde463d6bed312",
+    ),
+    "patches/src/main/resources/addresources/values-ru-rRU/youtube/strings.xml": (
+        ("83f96f1c272a9f98b22ab3fe207a8b547f701711",
+         "7f908f6dceee15dd809edea9efbfdffec66bf800",
+         "a3d4844cf6f2b9e73227b678b9b3d55c804d73bf"),
+        "4d1ccac3eb19fc3870af97321a797f6473ea04b1374d7d151027b8ff56cf6ac2",
+    ),
+}
+
+
+def merge_stable210_dev_strings(source: str, expected: str) -> str:
+    """Keep Git's merged translations and the four new stable timed-comment labels."""
+    pattern = r"(?m)^<<<<<<< [^\n]+\n(.*?)^=======\n(.*?)^>>>>>>> [^\n]+\n"
+    conflicts = list(re.finditer(pattern, source, re.DOTALL | re.MULTILINE))
+    if (len(conflicts) != 1
+            or hashlib.sha256((conflicts[0][1] + "\0" + conflicts[0][2]).encode()).hexdigest() != expected):
+        raise SyncError("Unexpected stable 2.1.0 to dev string conflict sides")
+    merged = re.sub(pattern, lambda m: m[2], source, flags=re.DOTALL | re.MULTILINE)
+    if re.search(r"(?m)^(<<<<<<<|=======|>>>>>>>)(?: |$)", merged):
+        raise SyncError("Unresolved stable 2.1.0 to dev strings")
+    return merged
+
+
 def resolve_dual_yandex_string_conflicts() -> None:
     for path in unresolved_paths():
         if DUAL_YANDEX_STRINGS_PATH.fullmatch(path) is None:
             continue
+        known = STABLE210_DEV_STRING_CONFLICTS.get(path)
+        if known is not None:
+            blobs = tuple(output_of("git", "rev-parse", f":{stage}:{path}") for stage in (1, 2, 3))
+            if blobs == known[0]:
+                destination = ROOT / path
+                merged = merge_stable210_dev_strings(destination.read_text(encoding="utf-8"), known[1])
+                destination.write_text(merged, encoding="utf-8", newline="")
+                run("git", "add", "--", path)
+                continue
         base = run("git", "show", f":1:{path}", capture=True).stdout
         ours = run("git", "show", f":2:{path}", capture=True).stdout
         theirs = run("git", "show", f":3:{path}", capture=True).stdout
