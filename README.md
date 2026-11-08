@@ -143,9 +143,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v2.2.0-dev.1-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.2.0-dev.1-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;202 patches total
+> **[v2.2.0-dev.2-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.2.0-dev.2-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;203 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;114 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;115 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -225,6 +225,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Navigation bar](#navigation-bar) | Adds options to hide and change the bottom navigation bar (such as the Shorts button) and the upper navigation toolbar. | • Hide Search app shortcut<br>• Hide Subscriptions app shortcut |
 | [Network proxy](#network-proxy) | Adds settings to route supported network requests through an HTTP or HTTPS proxy. Including this patch may cause connectivity problems on certain devices |  |
 | [Niconico comments](#niconico-comments) | Adds an option to show live chat and chat replay as comments that scroll across the video. |  |
+| [On-the-go player](#on-the-go-player) | Adds an option to open a panel with large playback controls from the On-the-go item of the video player menu. |  |
 | [Open Shorts in regular player](#open-shorts-in-regular-player) | Adds options to open Shorts in the regular video player. |  |
 | [Open channel of live avatar](#open-channel-of-live-avatar) | Adds an option to prevent a channel's current live video from opening when tapping its avatar. |  |
 | [Open links externally](#open-links-externally) | Adds an option to always open links in your browser instead of with the in-app browser. |  |
@@ -312,7 +313,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Jam queue sharing](#jam-queue-sharing) | Shares the host queue and playback controls through an authenticated Jam bridge. Root installation is not supported. |  |
 | [Media notification controls](#media-notification-controls) | Adds options to disable the seekbar and previous/next buttons in the media notification and headphone controls. |  |
 | [Miniplayer previous and next buttons](#miniplayer-previous-and-next-buttons) | Adds options to show previous and next track buttons in the miniplayer. |  |
-| [Navigation bar](#navigation-bar) | Adds options to hide navigation bar, labels and buttons. |  |
+| [Navigation bar](#navigation-bar) | Adds options to hide navigation bar, labels and buttons, and to show the navigation bar as glass. |  |
 | [Network proxy](#network-proxy) | Adds settings to route supported network requests through an HTTP or HTTPS proxy. Including this patch may cause connectivity problems on certain devices |  |
 | [Play albums songs](#play-albums-songs) | Adds an option to play the song version of album tracks instead of music videos. |  |
 | [Playback speed](#playback-speed) | Adds options to change the playback speed and pitch of tracks. |  |
