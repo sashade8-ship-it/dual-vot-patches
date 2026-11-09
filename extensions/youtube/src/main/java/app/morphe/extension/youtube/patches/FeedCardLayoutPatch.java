@@ -79,6 +79,8 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.Collectio
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CollectionStackColors;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CollectionThumbnailViewModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CommandContext;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CompactPlaylistData;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.CompactPlaylistModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ComponentType;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ContentImage;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ContentMetadata;
@@ -112,6 +114,7 @@ import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.OpenPopup
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.RendererContext;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ShelfHeaderData;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ShelfHeaderModel;
+import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.GridVideoMetadata;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.GridVideoModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ShortsShelfModel;
 import app.morphe.extension.youtube.innertube.FeedCardLayoutOuterClass.ShortsVideoCellData;
@@ -193,6 +196,16 @@ public class FeedCardLayoutPatch {
     private static final String SHORTS_VIDEO_CELL_TEMPLATE = "shorts_video_cell.eml";
     private static final String SHORTS_SHELF_TEMPLATE = "shorts_shelf.eml";
     private static final String GRID_VIDEO_TEMPLATE = "grid_video_wrapper.eml";
+    /**
+     * Template of the playlists and the podcasts of the vertical shelves, such as in the channel home,
+     * with the same model as {@link #GRID_VIDEO_TEMPLATE}.
+     */
+    private static final String GRID_COLLECTION_TEMPLATE = "grid_video.eml";
+    /**
+     * Template of the playlists and the podcasts in a row of a list, such as in the vertical shelves
+     * of the channel home, below the playlists of {@link #GRID_COLLECTION_TEMPLATE}.
+     */
+    private static final String COMPACT_PLAYLIST_TEMPLATE = "compact_playlist.eml";
 
     private static final int LOCKUP_CONTENT_TYPE_VIDEO = 1;
     private static final int LOCKUP_CONTENT_TYPE_PLAYLIST = 2;
@@ -323,6 +336,11 @@ public class FeedCardLayoutPatch {
      * Comments panel of the watch page. Newer clients use the first id.
      */
     private static final String[] COMMENTS_PANEL_IDS = {"comment-item-section", "engagement-panel-comments-section"};
+    /**
+     * Start of the ids of the replies panels that the comments open, such as 'FEcomment_watch_replies_panel'.
+     */
+    private static final String COMMENT_REPLIES_PANEL_ID_PREFIX = "FEcomment";
+    private static final String ENGAGEMENT_PANEL_SURFACE_UNKNOWN = "ENGAGEMENT_PANEL_SURFACE_UNKNOWN";
 
     /**
      * Invisible characters at the end of the accessibility labels of the cards and of their comment button.
@@ -369,7 +387,8 @@ public class FeedCardLayoutPatch {
      */
     private static final String[] elementTemplates = CARD_LAYOUT
             ? new String[]{CLASSIC_TEMPLATE, SHELF_HEADER_TEMPLATE, HORIZONTAL_SHELF_TEMPLATE,
-            SHORTS_VIDEO_CELL_TEMPLATE, SHORTS_SHELF_TEMPLATE, GRID_VIDEO_TEMPLATE}
+            SHORTS_VIDEO_CELL_TEMPLATE, SHORTS_SHELF_TEMPLATE, GRID_VIDEO_TEMPLATE, GRID_COLLECTION_TEMPLATE,
+            COMPACT_PLAYLIST_TEMPLATE}
             : new String[]{CARD_TEMPLATE};
     /**
      * Label of the shelf headers, in the bytes of the converted elements.
@@ -1133,14 +1152,45 @@ public class FeedCardLayoutPatch {
                                         .setHeader(modernShelfHeader(shelf.getHeader()))))
                                 .build();
                     }
-                } else if (isTemplate(uri, GRID_VIDEO_TEMPLATE) && model.hasGridVideoModel()) {
+                } else if ((isTemplate(uri, GRID_VIDEO_TEMPLATE) || isTemplate(uri, GRID_COLLECTION_TEMPLATE))
+                        && model.hasGridVideoModel()) {
                     // The label of the videos of the vertical shelves ends with an invisible character,
                     // to draw the shelf below the header as a card.
                     GridVideoModel video = model.getGridVideoModel();
+                    String label = video.getAccessibilityText();
+                    if (label.isEmpty()) {
+                        // The playlists and the podcasts have no label, so they get the label of their texts,
+                        // as a compact playlist, such as "Title - Channel · Playlist - 20 videos - Updated 2 days ago".
+                        // Accessibility services read the label instead of the texts.
+                        GridVideoMetadata metadata = video.getData().getMetadata();
+                        StringBuilder texts = new StringBuilder();
+                        for (ByteString text : List.of(metadata.getTitle(), metadata.getSubtitle(),
+                                video.getData().getThumbnail().getCollectionCountText(), metadata.getDetails())) {
+                            if (!text.isEmpty()) {
+                                if (texts.length() > 0) {
+                                    texts.append(" - ");
+                                }
+                                texts.append(text.toStringUtf8());
+                            }
+                        }
+                        label = texts.toString();
+                    }
                     converted = componentType.toBuilder()
                             .setModel(ElementModel.newBuilder().setGridVideoModel(video.toBuilder()
-                                    .setAccessibilityText(video.getAccessibilityText() + VIDEO_SHELF_ROW_LABEL_MARKER)))
+                                    .setAccessibilityText(label + VIDEO_SHELF_ROW_LABEL_MARKER)))
                             .build();
+                } else if (isTemplate(uri, COMPACT_PLAYLIST_TEMPLATE) && model.hasCompactPlaylistModel()) {
+                    // The playlists in a row of a vertical shelf are drawn on the card of the shelf too.
+                    CompactPlaylistModel playlist = model.getCompactPlaylistModel();
+                    CompactPlaylistData data = playlist.getData();
+                    if (!data.getAccessibilityText().isEmpty()) {
+                        converted = componentType.toBuilder()
+                                .setModel(ElementModel.newBuilder().setCompactPlaylistModel(playlist.toBuilder()
+                                        .setData(data.toBuilder()
+                                                .setAccessibilityText(data.getAccessibilityText()
+                                                        + VIDEO_SHELF_ROW_LABEL_MARKER))))
+                                .build();
+                    }
                 }
             } else if (isTemplate(uri, CARD_TEMPLATE) && model.hasLockupModel()) {
                 LockupModel card = model.getLockupModel();
@@ -2509,6 +2559,34 @@ public class FeedCardLayoutPatch {
             Logger.printException(() -> "openCommentsPanel failure", ex);
         }
         return false;
+    }
+
+    /**
+     * Injection point.
+     * The commands of the comments, such as the command that opens the replies, show their panel without a surface,
+     * and the app shows a panel without a surface with the panels of the watch page, which is not open.
+     *
+     * @return If the panel can be shown over the feed, when the feed shows the comments panel.
+     */
+    public static boolean isPanelWithoutSurface(@Nullable Enum<?> surface) {
+        return ACTION_BUTTONS && surface != null && ENGAGEMENT_PANEL_SURFACE_UNKNOWN.equals(surface.name())
+                && !PlayerType.getCurrent().isMaximizedOrFullscreen();
+    }
+
+    /**
+     * Injection point.
+     *
+     * @param shownPanelId The panel that is shown over the feed, if any.
+     * @return If the panel without a surface is shown over the feed, with the comments panel that the cards opened.
+     */
+    public static boolean showPanelOverFeed(@Nullable String shownPanelId) {
+        if (shownPanelId == null || !(Utils.equalsAny(shownPanelId, COMMENTS_PANEL_IDS)
+                || shownPanelId.startsWith(COMMENT_REPLIES_PANEL_ID_PREFIX))) {
+            return false;
+        }
+
+        Logger.printDebug(() -> "Showing the panel over the feed, above: " + shownPanelId);
+        return true;
     }
 
     /**
