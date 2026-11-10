@@ -32,7 +32,6 @@ import app.morphe.extension.shared.settings.AppLanguage;
 import app.morphe.extension.shared.settings.Setting;
 import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.spoof.requests.StreamingDataRequest;
-import app.morphe.extension.shared.spoof.requests.VisitorIdRequester;
 
 @SuppressWarnings("unused")
 public class SpoofVideoStreamsPatch {
@@ -152,8 +151,7 @@ public class SpoofVideoStreamsPatch {
         StreamingDataRequest.setClientOrderToUse(availableClients, client);
 
         if (SPOOF_VIDEO_STREAMS) {
-            // Prefetch visitorId for default client.
-            Utils.runOnBackgroundThread(() -> VisitorIdRequester.getVisitorId(client));
+            Utils.runOnBackgroundThread(StreamingDataRequest::prepareClients);
         }
     }
 
@@ -477,9 +475,9 @@ public class SpoofVideoStreamsPatch {
                         if (config != null) {
                             Logger.printDebug(() -> "Overriding player config: " + videoId);
                             // This config replaces the whole config of the app, which tells how the
-                            // video is played inline, such as a muted preview in the feed.
+                            // video is played inline, such as a muted preview in the feed, and how it is buffered.
                             return buffers.hasAndroidMedia() && appPlayerConfig != null
-                                    ? StreamingDataRequest.addInlinePlayback(config, appPlayerConfig)
+                                    ? StreamingDataRequest.addAppPlayerConfig(config, appPlayerConfig)
                                     : config;
                         }
                     }

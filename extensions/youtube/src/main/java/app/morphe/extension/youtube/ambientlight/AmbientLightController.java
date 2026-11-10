@@ -50,6 +50,7 @@ import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.youtube.patches.AmbientModePatch;
+import app.morphe.extension.youtube.patches.FeedCardLayoutPatch;
 import app.morphe.extension.youtube.settings.Settings;
 import app.morphe.extension.youtube.shared.PlayerType;
 
@@ -307,7 +308,12 @@ public final class AmbientLightController {
      * Injection point.
      */
     public static int getLithoColor(Drawable drawable, int color) {
-        if (!seeThrough) return color;
+        // The cards of the feed card layout stay opaque, as their content has its own opaque backgrounds.
+        if (!seeThrough || FeedCardLayoutPatch.cardBackgrounds.containsKey(drawable)) return color;
+        // Another window of the app, such as the comment box that opens with the keyboard,
+        // takes the focus from the watch page. It has no light behind it, so it keeps its colors.
+        View root = rootRef.get();
+        if (root == null || !root.hasWindowFocus()) return color;
 
         try {
             final int replacement = AmbientLightMath.seeThroughColor(color, pageColor);
@@ -477,7 +483,12 @@ public final class AmbientLightController {
         final int top = location[1];
         final int right = left + player.getWidth();
         final int bottom = top + player.getHeight();
+        // While the page scrolls, the player gets shorter and crops the video, which keeps its size.
         int[] videoBounds = videoInWindow(video);
+        videoBounds[0] = Math.max(videoBounds[0], left);
+        videoBounds[1] = Math.max(videoBounds[1], top);
+        videoBounds[2] = Math.min(videoBounds[2], right);
+        videoBounds[3] = Math.min(videoBounds[3], bottom);
 
         // This runs for every frame the app draws, and the answer rarely changes.
         int[] geometry = {left, top, right, bottom, videoBounds[0], videoBounds[1], videoBounds[2], videoBounds[3],

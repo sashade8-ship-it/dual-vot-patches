@@ -722,9 +722,12 @@ public final class VideoInformation {
             final long videoLength = getVideoLength();
 
             // Prevent issues such as play/ pause button or autoplay not working.
-            final long adjustedSeekTime = Math.min(seekTime, videoLength - 250);
+            // The video length is rounded to whole seconds, so the stream can end up to half a second
+            // before it. A seek closer to the end can land on the last frame, and the video never ends:
+            // the player keeps the pause button instead of the replay button and autoplay does not start.
+            final long adjustedSeekTime = Math.min(seekTime, videoLength - 1000);
             if (videoTime <= seekTime && videoTime >= adjustedSeekTime) {
-                // Both the current video time and the seekTo are in the last 250ms of the video.
+                // Both the current video time and the seekTo are in the last second of the video.
                 // Ignore this seek call, otherwise if a video ends with multiple closely timed segments
                 // then seeking here can create an infinite loop of skip attempts.
                 Logger.printDebug(() -> "Ignoring seekTo call as video playback is almost finished. "
@@ -977,12 +980,7 @@ public final class VideoInformation {
         Utils.verifyOnMainThread();
 
         if (currentPlaybackSpeedMenuInterface == null) {
-            Logger.LogMessage logMessage = () -> "Debug: Cannot change playback speed, menu interface is null";
-            if (Settings.DEBUG.get()) {
-                Logger.printException(logMessage);
-            } else {
-                Logger.printDebug(logMessage);
-            }
+            Logger.printExceptionIfDebug(() -> "Debug: Cannot change playback speed, menu interface is null");
             return;
         }
         if (playbackSpeed <= 0 || playbackSpeed > PLAYBACK_SPEED_MAXIMUM) {
@@ -1023,12 +1021,7 @@ public final class VideoInformation {
             exoPlayerInterface.patch_setPlaybackParameters(speed, pitch);
             Logger.printDebug(() -> "Video playbackParameters changed, speed: " + speed + " pitch: " + pitch);
         } else {
-            Logger.LogMessage logMessage = () -> "Debug: Cannot change speed parameters, menu interface is null";
-            if (Settings.DEBUG.get()) {
-                Logger.printException(logMessage);
-            } else {
-                Logger.printDebug(logMessage);
-            }
+            Logger.printExceptionIfDebug(() -> "Debug: Cannot change speed parameters, menu interface is null");
         }
     }
 
