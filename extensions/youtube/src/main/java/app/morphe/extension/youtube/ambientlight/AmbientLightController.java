@@ -43,12 +43,16 @@ import java.lang.ref.WeakReference;
 import java.nio.ShortBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.WeakHashMap;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
+import app.morphe.extension.shared.settings.preference.SeekBarPreference;
 import app.morphe.extension.youtube.patches.AmbientModePatch;
 import app.morphe.extension.youtube.patches.FeedCardLayoutPatch;
 import app.morphe.extension.youtube.settings.Settings;
@@ -106,7 +110,8 @@ public final class AmbientLightController {
     private static final int FULL_STRENGTH = 256;
     private static final long DIM_DURATION_MS = 180;
     private static final long RESTORE_DURATION_MS = 1_600;
-    private static final long RESTORE_DELAY_MS = 3_000;
+    /** Scrolling has stopped once no scroll was seen for this long, as the scrolls are throttled. */
+    private static final long SCROLL_END_MS = 200;
     private static final long FADE_STEP_MS = 33;
     /** Share of the way to the wanted cover for each capture, so that scene cuts do not pump. */
     private static final float COVER_EASING = 0.25f;
@@ -123,6 +128,8 @@ public final class AmbientLightController {
     private static final int SCENE_CUT_DIFFERENCE = 40;
     /** Share of the previous light kept for each capture, out of 256. */
     private static final int SMOOTHING_KEEP = 64;
+    /** Captures in a row that can be converted ones. A change that stays longer is a change of the video. */
+    private static final int MAX_CONVERTED_CAPTURES = 15;
 
     /** A background this small is a button, and keeps its color. */
     private static final float BUTTON_MAX_WIDTH_SCREEN_RATIO = 0.45f;
@@ -208,6 +215,8 @@ public final class AmbientLightController {
     /** False while the light still has to reach the current picture. */
     private static volatile boolean settled;
     private static volatile int stillCaptures;
+    /** Set when a surface got a new buffer, which is empty until the light is drawn again. */
+    private static volatile boolean redraw;
     /** Strength of the light over the page color, out of 256. */
     private static volatile int strength = FULL_STRENGTH;
     /** The part of the video the colors of the light come from, without black bars. In readback pixels. */
@@ -221,6 +230,12 @@ public final class AmbientLightController {
     // Used only on the worker thread.
     private static final int[] readbackPixels = new int[READBACK_WIDTH * READBACK_HEIGHT];
     private static final int[] pictureColors = new int[PICTURE_WIDTH * PICTURE_HEIGHT];
+    /** The last capture as it came, and as the light used it. */
+    private static final int[] lastCapture = new int[PICTURE_WIDTH * PICTURE_HEIGHT];
+    private static final int[] lastPicture = new int[PICTURE_WIDTH * PICTURE_HEIGHT];
+    private static boolean hasLastPicture;
+    private static int convertedCaptures;
+    private static int brighterCaptures;
     private static final int[] near = new int[PICTURE_WIDTH * PICTURE_HEIGHT];
     private static final int[] far = new int[FAR_WIDTH * FAR_HEIGHT];
     private static final float[] nearLinear = new float[PICTURE_WIDTH * PICTURE_HEIGHT * LIGHT_CHANNELS];
@@ -253,11 +268,20 @@ public final class AmbientLightController {
     };
 
     private static final ViewTreeObserver.OnScrollChangedListener scrollListener = () -> {
-        if (SystemClock.uptimeMillis() - lastPageTouch <= TOUCH_SCROLL_WINDOW_MS) onInteraction();
+        if (SystemClock.uptimeMillis() - lastPageTouch <= TOUCH_SCROLL_WINDOW_MS) onInteraction(true);
     };
 
     private static final Runnable restoreLight = () -> setDimmed(false);
     private static final Runnable fadeStep = AmbientLightController::stepFade;
+    private static final Runnable tickRunnable = AmbientLightController::tick;
+
+    /**
+     * Drawables that keep their color until they are mounted in the window of the watch page.
+     * Main thread.
+     */
+    private static final Map<Drawable, Boolean> pendingDrawables = new WeakHashMap<>();
+    /** Drawables the light shows through. Main thread. */
+    private static final Map<Drawable, Boolean> seeThroughDrawables = new WeakHashMap<>();
 
     /**
      * Injection point.
@@ -310,18 +334,27 @@ public final class AmbientLightController {
     public static int getLithoColor(Drawable drawable, int color) {
         // The cards of the feed card layout stay opaque, as their content has its own opaque backgrounds.
         if (!seeThrough || FeedCardLayoutPatch.cardBackgrounds.containsKey(drawable)) return color;
-        // Another window of the app, such as the comment box that opens with the keyboard,
-        // takes the focus from the watch page. It has no light behind it, so it keeps its colors.
-        View root = rootRef.get();
-        if (root == null || !root.hasWindowFocus()) return color;
 
         try {
             final int replacement = AmbientLightMath.seeThroughColor(color, pageColor);
             Rect bounds = drawable.getBounds();
-            if (replacement == 0 && bounds.width() < buttonMaxWidth && bounds.height() < buttonMaxHeight) {
+            if (replacement == color
+                    || (replacement == 0 && bounds.width() < buttonMaxWidth && bounds.height() < buttonMaxHeight)) {
                 return color;
             }
-            return replacement;
+            // A color is often chosen before its drawable is on screen, and only the window of the
+            // watch page has the light behind it. Another window, such as the comment box that
+            // opens with the keyboard, would show its own background through the drawable.
+            View host = hostOf(drawable);
+            if (host != null && host.getRootView() == rootRef.get()) {
+                pendingDrawables.remove(drawable);
+                seeThroughDrawables.put(drawable, Boolean.TRUE);
+                return replacement;
+            }
+
+            seeThroughDrawables.remove(drawable);
+            pendingDrawables.put(drawable, Boolean.TRUE);
+            return color;
         } catch (Exception ex) {
             Logger.printException(() -> "getLithoColor failure", ex);
             return color;
@@ -391,8 +424,9 @@ public final class AmbientLightController {
         active = true;
         settled = false;
         pageCleared = false;
-        root.getViewTreeObserver().addOnPreDrawListener(preDrawListener);
-        root.getViewTreeObserver().addOnScrollChangedListener(scrollListener);
+        ViewTreeObserver viewTreeObserver = root.getViewTreeObserver();
+        viewTreeObserver.addOnPreDrawListener(preDrawListener);
+        viewTreeObserver.addOnScrollChangedListener(scrollListener);
         View touchWatcher = new TouchWatcher(root.getContext());
         ((ViewGroup) root).addView(touchWatcher);
         touchWatcherRef = new WeakReference<>(touchWatcher);
@@ -408,8 +442,9 @@ public final class AmbientLightController {
 
         View root = rootRef.get();
         if (root != null) {
-            root.getViewTreeObserver().removeOnPreDrawListener(preDrawListener);
-            root.getViewTreeObserver().removeOnScrollChangedListener(scrollListener);
+            ViewTreeObserver viewTreeObserver = root.getViewTreeObserver();
+            viewTreeObserver.removeOnPreDrawListener(preDrawListener);
+            viewTreeObserver.removeOnScrollChangedListener(scrollListener);
             ((ViewGroup) root).removeView(touchWatcherRef.get());
         }
         removeSurfaces(pageSurfaces, 0);
@@ -429,6 +464,7 @@ public final class AmbientLightController {
     private static void resetPicture() {
         drawnLayout = null;
         resetSmoothing = true;
+        hasLastPicture = false;
     }
 
     /**
@@ -437,6 +473,7 @@ public final class AmbientLightController {
     private static void onPreDraw() {
         try {
             if (!active) return;
+            updateDrawables();
             updateLayout();
             if (!pageCleared) return;
 
@@ -451,12 +488,65 @@ public final class AmbientLightController {
         }
     }
 
+    @Nullable
+    private static View hostOf(Drawable drawable) {
+        Drawable.Callback callback = drawable.getCallback();
+        while (callback instanceof Drawable drawableCallback) {
+            callback = drawableCallback.getCallback();
+        }
+        return callback instanceof View view ? view : null;
+    }
+
+    /**
+     * Litho mounts a drawable again, also in another window of the app such as the comment box,
+     * and keeps its color when its bounds stay the same. This runs before the watch page draws,
+     * so a drawable shows the light only while it is in the window of the watch page.
+     */
+    private static void updateDrawables() {
+        if (seeThroughDrawables.isEmpty() && pendingDrawables.isEmpty()) return;
+        View root = rootRef.get();
+        List<Drawable> changed = new ArrayList<>();
+
+        // Drawables that left the watch page get their own color back, and wait to be mounted again.
+        for (Iterator<Drawable> iterator = seeThroughDrawables.keySet().iterator(); iterator.hasNext(); ) {
+            Drawable drawable = iterator.next();
+            View host = hostOf(drawable);
+            if (host == null || host.getRootView() != root) {
+                iterator.remove();
+                changed.add(drawable);
+            }
+        }
+        // Drawables that are mounted in another window keep their own color.
+        for (Iterator<Drawable> iterator = pendingDrawables.keySet().iterator(); iterator.hasNext(); ) {
+            Drawable drawable = iterator.next();
+            View host = hostOf(drawable);
+            if (host == null) continue;
+            iterator.remove();
+            if (host.getRootView() == root) changed.add(drawable);
+        }
+
+        // This calls getLithoColor, which adds the drawables to the maps again.
+        for (Drawable drawable : changed) {
+            chooseColorAgain(drawable);
+        }
+    }
+
+    /**
+     * The color of a drawable is chosen when its bounds change.
+     */
+    private static void chooseColorAgain(Drawable drawable) {
+        Rect bounds = new Rect(drawable.getBounds());
+        drawable.setBounds(0, 0, 0, 0);
+        drawable.setBounds(bounds);
+        drawable.invalidateSelf();
+    }
+
     private static void clearPage() {
         View page = pageRef.get();
         View video = videoRef.get();
         ViewGroup player = playerRef.get();
-        if (page instanceof ViewGroup && video != null && player != null) {
-            View branch = childContaining((ViewGroup) page, video);
+        if (page instanceof ViewGroup pageViewGroup && video != null && player != null) {
+            View branch = childContaining(pageViewGroup, video);
             SeeThroughPage.apply(page, branch == null ? player : branch, pageColor);
         }
     }
@@ -537,7 +627,8 @@ public final class AmbientLightController {
                                       boolean aboveVideo, List<int[]> rects, List<Region> regions) {
         int[] parentLocation = new int[2];
         parent.getLocationInWindow(parentLocation);
-        for (int i = 0; i < rects.size(); i++) {
+
+        for (int i = 0, size = rects.size(); i < size; i++) {
             int[] rect = rects.get(i);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                     rect[2] - rect[0], rect[3] - rect[1], Gravity.TOP | Gravity.START);
@@ -567,7 +658,14 @@ public final class AmbientLightController {
     }
 
     private static void requestFrame() {
+        redraw = true;
         settled = false;
+        // The next capture is half a second away while the picture is still.
+        if (stillCaptures >= STILL_CAPTURES_BEFORE_SLOWDOWN) {
+            stillCaptures = 0;
+            mainHandler.removeCallbacks(tickRunnable);
+            tickScheduled = false;
+        }
         scheduleTick();
     }
 
@@ -578,7 +676,7 @@ public final class AmbientLightController {
     private static void scheduleTick() {
         if (active && !tickScheduled) {
             tickScheduled = true;
-            mainHandler.post(AmbientLightController::tick);
+            mainHandler.post(tickRunnable);
         }
     }
 
@@ -606,7 +704,7 @@ public final class AmbientLightController {
             if (!captureInFlight) capture(video, current);
 
             tickScheduled = true;
-            mainHandler.postDelayed(AmbientLightController::tick, interval);
+            mainHandler.postDelayed(tickRunnable, interval);
         } catch (Exception ex) {
             Logger.printException(() -> "tick failure", ex);
         }
@@ -688,12 +786,31 @@ public final class AmbientLightController {
             AmbientLightMath.downsample(readbackPixels, READBACK_WIDTH, readbackBounds,
                     pictureColors, PICTURE_WIDTH, PICTURE_HEIGHT);
 
+            // A device cannot convert a converted capture again, so two such steps in a row are
+            // the video getting brighter.
+            brighterCaptures = hasLastPicture && AmbientLightMath.isConverted(lastCapture, pictureColors)
+                    ? brighterCaptures + 1 : 0;
+            final boolean converted = hasLastPicture && brighterCaptures < 2
+                    && convertedCaptures < MAX_CONVERTED_CAPTURES
+                    && AmbientLightMath.isConverted(lastPicture, pictureColors);
+            System.arraycopy(pictureColors, 0, lastCapture, 0, lastCapture.length);
+            if (converted) {
+                convertedCaptures++;
+                AmbientLightMath.undoConversion(pictureColors);
+            } else {
+                convertedCaptures = 0;
+            }
+            hasLastPicture = true;
+            System.arraycopy(pictureColors, 0, lastPicture, 0, lastPicture.length);
+
             final int difference = AmbientLightMath.difference(near, pictureColors);
             final boolean unchanged = difference <= UNCHANGED_DIFFERENCE;
+            final boolean emptySurface = redraw;
+            redraw = false;
             if (unchanged && current == drawnLayout) {
                 stillCaptures++;
-                if (stepCover()) {
-                    present(current);
+                if (stepCover() || emptySurface) {
+                    if (!present(current)) redraw = true;
                 } else {
                     settled = true;
                 }
@@ -736,7 +853,7 @@ public final class AmbientLightController {
             }
             final float change = AmbientLightMath.encodeVisible(light, encodedLight, presentedLight, width, height, gridVideo);
             final boolean visible = current != drawnLayout || change >= MIN_VISIBLE_CHANGE;
-            if (!visible && !coverMoved) return;
+            if (!visible && !coverMoved && !emptySurface) return;
 
             if (visible) {
                 float[] shown = encodedLight;
@@ -748,6 +865,8 @@ public final class AmbientLightController {
             if (present(current)) {
                 drawnLayout = current;
                 if (!pageCleared) mainHandler.post(AmbientLightController::onFrameShown);
+            } else {
+                redraw = true;
             }
         } catch (Exception ex) {
             Logger.printException(() -> "process failure", ex);
@@ -803,13 +922,19 @@ public final class AmbientLightController {
         return true;
     }
 
-    private static void onInteraction() {
+    private static void onInteraction(boolean scrolled) {
+        if (!Settings.ENHANCED_AMBIENT_MODE_DIM_WHILE_SCROLLING.get()) return;
+
         final long now = SystemClock.uptimeMillis();
         if (now - lastInteraction < INTERACTION_THROTTLE_MS) return;
+        final long restoreDelay = SeekBarPreference.clampToRange(Settings.ENHANCED_AMBIENT_MODE_DIM_DURATION) * 1_000L;
+        // Without a delay, a touch that does not scroll would only make the light blink.
+        if (restoreDelay == 0 && !scrolled) return;
+
         lastInteraction = now;
         setDimmed(true);
         mainHandler.removeCallbacks(restoreLight);
-        mainHandler.postDelayed(restoreLight, RESTORE_DELAY_MS);
+        mainHandler.postDelayed(restoreLight, Math.max(restoreDelay, SCROLL_END_MS));
     }
 
     private static void setDimmed(boolean value) {
@@ -860,7 +985,7 @@ public final class AmbientLightController {
         public boolean onTouchEvent(MotionEvent event) {
             if (event.getActionMasked() == MotionEvent.ACTION_DOWN && !isOnPlayer(event)) {
                 lastPageTouch = SystemClock.uptimeMillis();
-                onInteraction();
+                onInteraction(false);
             }
             return false;
         }
