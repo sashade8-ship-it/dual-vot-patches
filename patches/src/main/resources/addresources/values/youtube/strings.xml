@@ -757,6 +757,10 @@ Info: May not work on live streams"</string>
     <string name="morphe_play_all_button_type_entry_12">Members only live streams</string>
     <string name="morphe_play_all_button_not_available_toast">Unable to generate playlist due to channel ID mismatch</string>
 
+    <!-- interaction.playlistpanel.playlistPanelButtonPatch -->
+    <string name="morphe_playlist_panel_button_title">Show Playlist button</string>
+    <string name="morphe_playlist_panel_button_summary">Tap to open the playlist panel. Shown only when playing a playlist</string>
+
     <!-- interaction.reload.reloadVideoPatch -->
     <string name="morphe_reload_video_button_title">Show Reload video button</string>
     <string name="morphe_dismiss_player_not_available_toast">Video ID is unavailable. Please manually reload the video</string>
@@ -1303,9 +1307,26 @@ Settings → Playback (or Autoplay) → Autoplay next video"</string>
     <string name="morphe_disable_player_popup_panels_title">Disable player popup panels</string>
     <string name="morphe_disable_player_popup_panels_summary">Disables playlist and live chat panels from opening automatically</string>
 
+    <!-- layout.player.playlistpanel.fullscreenPlaylistPanelPatch -->
+    <string name="morphe_fullscreen_playlist_panel_title">Show playlist panel in fullscreen</string>
+    <string name="morphe_fullscreen_playlist_panel_summary_on">Playlist panel opens over the fullscreen player</string>
+    <string name="morphe_fullscreen_playlist_panel_summary_off">Playlist panel exits fullscreen on tablets</string>
+
     <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
     <string name="morphe_disable_playlist_autoplay_title">Disable playlist autoplay</string>
     <string name="morphe_disable_playlist_autoplay_summary">Prevents playlists from automatically advancing to the next video</string>
+
+    <!-- interaction.autoplay.autoplayControlPatch -->
+    <string name="morphe_autoplay_control_title">Autoplay control</string>
+    <string name="morphe_autoplay_control_summary">Adds a player button and a rule for the next video. Playlists and queues go on, a Mix stops after a number of videos, a suggested video never plays. Tap the button for the next mode, tap and hold for the list</string>
+    <string name="morphe_autoplay_mode_title">Autoplay mode</string>
+    <string name="morphe_autoplay_mode_entry_1">Auto</string>
+    <string name="morphe_autoplay_mode_entry_2">Single</string>
+    <string name="morphe_autoplay_mode_entry_3">Off</string>
+    <string name="morphe_autoplay_mix_stop_after_title">Mix length</string>
+    <string name="morphe_autoplay_mix_stop_after_summary">In mode Auto, a Mix stops after this many videos. 0 = no limit</string>
+    <string name="morphe_autoplay_mix_length">Mix: %s videos</string>
+    <string name="morphe_autoplay_mix_no_limit">Mix: no limit</string>
 
     <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
     <string name="morphe_continue_watching_prompt_title">\'Continue watching?\' prompt</string>
@@ -1393,10 +1414,6 @@ Automotive layout
     <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - Restore old save to playlist</string>
     <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - Disable bold icons</string>
     <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - Restore channel name below video player</string>
-
-    <!-- misc.sharesheet.openSystemShareSheetPatch -->
-    <string name="morphe_open_system_share_sheet_title">Open system share sheet</string>
-    <string name="morphe_open_system_share_sheet_summary">Opens the system share sheet instead of the in-app one when sharing content</string>
 
     <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
     <string name="morphe_override_youtube_music_buttons_title">Override YouTube Music buttons</string>
@@ -1615,12 +1632,6 @@ Videos are requested by a short prefix of the hashed video ID, so the server can
     <string name="morphe_dearrow_error">DeArrow is temporarily not available (status code: %s)</string>
     <string name="morphe_dearrow_error_generic">DeArrow is temporarily not available</string>
 
-    <!-- misc.announcements.announcementsPatch -->
-    <string name="morphe_announcements_title" translatable="false">Show Morphe announcements</string>
-    <string name="morphe_announcements_enabled_summary" translatable="false">Show announcements on startup</string>
-    <string name="morphe_announcements_connection_failed" translatable="false">Failed connecting to announcements provider</string>
-    <string name="morphe_announcements_dialog_dismiss" translatable="false">Dismiss</string>
-
     <!-- misc.playercontrols.playerControlsPatch -->
     <string name="morphe_restore_old_player_buttons_title">Restore old player button style</string>
     <string name="morphe_restore_old_player_buttons_summary">Reverts the bold video player controls to the older, thinner visual style</string>
@@ -1668,26 +1679,21 @@ Videos are requested by a short prefix of the hashed video ID, so the server can
     <string name="morphe_video_delay_dialog_input_hint">Delay in milliseconds</string>
 
     <!-- video.quality.rememberVideoQualityPatch -->
-    <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
-    <string name="morphe_video_quality_default_entry_1">Auto</string>
-    <string name="morphe_remember_video_quality_last_selected_title">Remember video quality</string>
-    <string name="morphe_remember_video_quality_last_selected_summary">Applies your manual quality selection to all future videos</string>
-    <string name="morphe_remember_video_quality_last_selected_toast_title">Quality change notifications</string>
-    <string name="morphe_remember_video_quality_last_selected_toast_summary">Shows a notification when a new default quality is saved</string>
-    <string name="morphe_video_quality_default_wifi_title">Default video quality on Wi-Fi network</string>
-    <string name="morphe_video_quality_default_mobile_title">Default video quality on mobile network</string>
     <string name="morphe_remember_shorts_quality_last_selected_title">Remember Shorts quality</string>
     <string name="morphe_remember_shorts_quality_last_selected_summary">Applies your manual quality selection to all future Shorts</string>
     <string name="morphe_shorts_quality_default_wifi_title">Default Shorts quality on Wi-Fi network</string>
     <string name="morphe_shorts_quality_default_mobile_title">Default Shorts quality on mobile network</string>
-    <string name="morphe_remember_video_quality_toast_mobile">Changed default mobile quality to: %s</string>
-    <string name="morphe_remember_video_quality_toast_wifi">Changed default Wi-Fi quality to: %s</string>
     <string name="morphe_remember_video_quality_toast_shorts_mobile">Changed Shorts mobile quality to: %s</string>
     <string name="morphe_remember_video_quality_toast_shorts_wifi">Changed Shorts Wi-Fi quality to: %s</string>
 
     <!-- video.speed.button.playbackSpeedButtonPatch -->
     <string name="morphe_playback_speed_dialog_button_title">Show Playback speed button</string>
     <string name="morphe_playback_speed_dialog_button_summary">Tap and hold to reset speed to default</string>
+    <string name="morphe_playback_speed_button_cycle_title">Tap Playback speed button to cycle speeds</string>
+    <string name="morphe_playback_speed_button_cycle_summary">Tap goes to the next speed in the list. Tap and hold opens the speed menu</string>
+    <string name="morphe_playback_speed_button_cycle_speeds_title">Playback speed button speeds</string>
+    <string name="morphe_playback_speed_button_cycle_speeds_summary">Speeds a tap cycles through, one per line. After the last speed, a tap goes back to the first</string>
+    <string name="morphe_playback_speed_button_cycle_speeds_invalid">Invalid speed cycle list, reset to default</string>
 
     <!-- video.quality.button.videoQualityDialogButtonPatch -->
     <string name="morphe_video_quality_dialog_button_title">Show Quality button</string>

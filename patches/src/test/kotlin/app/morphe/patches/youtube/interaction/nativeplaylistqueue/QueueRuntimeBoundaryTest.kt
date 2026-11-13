@@ -416,10 +416,6 @@ class QueueRuntimeBoundaryTest {
                 package app.morphe.extension.youtube.patches.utils;
                 public class LocalQueueSheet { public static void show(android.app.Activity activity) {} }
             """,
-            "ChannelIdRequest" to """
-                package app.morphe.extension.youtube.patches.utils.requests;
-                public class ChannelIdRequest { public static String getVideoTitleIfAvailable(String video) { return video; } }
-            """,
             "PlayerType" to """
                 package app.morphe.extension.youtube.shared;
                 public enum PlayerType {
@@ -636,7 +632,7 @@ class QueueRuntimeBoundaryTest {
             """
         ).map { (name, source) -> File(output, "$name.java").apply { writeText(source.trimIndent()) } }
         val fixture = File(output, "RuntimeFixture.java").apply {
-            writeText("""
+            writeText($$"""
                 package app.morphe.extension.youtube.patches.queue;
                 import android.content.SharedPreferences;
                 import app.morphe.extension.shared.*;
@@ -663,6 +659,10 @@ class QueueRuntimeBoundaryTest {
                         Settings.NATIVE_QUEUE_FETCH_ON_SCROLL.value = enabled;
                     }
                     static int clears;
+                    // The patch holds controllers, backends and page sources only weakly.
+                    // Keep them reachable so a garbage collection cannot clear them mid scenario.
+                    static final List<Object> retained = new java.util.ArrayList<>();
+                    static <T> T retain(T value) { retained.add(value); return value; }
                     static NativePlaylistQueuePatch.NativePlayback backend(boolean local, boolean clearSucceeds) {
                         return (NativePlaylistQueuePatch.NativePlayback) Proxy.newProxyInstance(owner.getClassLoader(),
                             new Class<?>[]{NativePlaylistQueuePatch.NativePlayback.class}, (proxy, method, args) -> {
@@ -676,10 +676,10 @@ class QueueRuntimeBoundaryTest {
                     static PlaylistQueue install(NativePlaylistQueuePatch.NativePlayback playback) throws Exception {
                         PlaylistQueue queue = new PlaylistQueue("abcdefghijk", "Playing").playNext("ZYXWVUTSRQP");
                         field("queue").set(null, queue);
-                        field("nativePlaybackRef").set(null, new WeakReference<>(playback));
+                        field("nativePlaybackRef").set(null, new WeakReference<>(retain(playback)));
                         field("publishedModel").set(null, new Object());
                         field("pendingQueueStart").set(null, new QueueStart(queue, ""));
-                        Class<?> undo = Class.forName(owner.getName() + "${'$'}PendingUndo");
+                        Class<?> undo = Class.forName(owner.getName() + "$PendingUndo");
                         Constructor<?> create = undo.getDeclaredConstructors()[0]; create.setAccessible(true);
                         field("pendingUndo").set(null, create.newInstance("token", queue, new WeakReference<>(playback), null));
                         clears = 0; Logger.errors = 0; QueueFullscreenActions.refreshes = 0;
@@ -926,7 +926,7 @@ class QueueRuntimeBoundaryTest {
                             "A stale Last callback must not start a new queue");
                     }
                     static Controller playlistController(boolean mix, boolean minimized) throws Exception {
-                        var controller = new Controller(new Playback());
+                        var controller = retain(new Controller(new Playback()));
                         controller.playlist = mix ? "RD-mix" : "PL-account";
                         controller.playingPanel = ordinaryWindow(controller.playlist);
                         controller.pageSource = new PageSource();
@@ -985,7 +985,7 @@ class QueueRuntimeBoundaryTest {
                             var controller = new Controller(new Playback());
                             controller.playlist = playlist;
                             controller.playingPanel = playlist.isEmpty() ? null : ordinaryWindow(playlist);
-                            PlaylistPages.attach(new PageSource());
+                            PlaylistPages.attach(retain(new PageSource()));
                             controller.playback.local = false;
                             VideoInformation.playlist = playlist;
                             field("controllerRef").set(null, new WeakReference<>(controller));
@@ -1060,7 +1060,7 @@ class QueueRuntimeBoundaryTest {
                         require(NativePlaylistQueuePatch.shouldIgnorePlaylistResponse(controller.playback, source)
                                 && NativePlaylistQueuePatch.shouldIgnorePlaylistModel(controller, () -> "PL-account"),
                             "Late source responses stay excluded after Clear on the same player");
-                        Class<?> undo = Class.forName(owner.getName() + "${'$'}PendingUndo");
+                        Class<?> undo = Class.forName(owner.getName() + "$PendingUndo");
                         Constructor<?> create = undo.getDeclaredConstructors()[0]; create.setAccessible(true);
                         field("pendingUndo").set(null, create.newInstance("converted", before,
                             new WeakReference<>(controller.playback), null));
@@ -1274,7 +1274,7 @@ class QueueRuntimeBoundaryTest {
                     }
                     static PageSource startIdlePlaylist(PageSource source) throws Exception {
                         app.morphe.extension.youtube.shared.PlayerType.current = app.morphe.extension.youtube.shared.PlayerType.NONE;
-                        PlaylistPages.attach(source);
+                        PlaylistPages.attach(retain(source));
                         Runnable action = NativePlaylistQueuePatch.getPlaylistQueueAction("WL", false);
                         require(action != null, "Offer a collection action without playback");
                         action.run();

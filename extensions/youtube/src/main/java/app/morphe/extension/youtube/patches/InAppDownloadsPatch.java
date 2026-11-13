@@ -22,8 +22,6 @@ import java.util.Map;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.shared.ResourceUtils;
-import app.morphe.extension.shared.patches.BaseInAppDownloadsPatch;
-import app.morphe.extension.shared.patches.DownloadMode;
 import app.morphe.extension.shared.innertube.Offline.ButtonCommand;
 import app.morphe.extension.shared.innertube.Offline.DownloadButtonColor;
 import app.morphe.extension.shared.innertube.Offline.DownloadButtonLayout;
@@ -36,10 +34,14 @@ import app.morphe.extension.shared.innertube.Offline.FlexibleActionsViewModel;
 import app.morphe.extension.shared.innertube.Offline.OfflineCommand;
 import app.morphe.extension.shared.innertube.Offline.OfflineDownloadAction;
 import app.morphe.extension.shared.innertube.Offline.OfflineDownloadActionCommand;
+import app.morphe.extension.shared.innertube.Offline.OfflineFormat;
 import app.morphe.extension.shared.innertube.Offline.OfflinePlaylistAction;
 import app.morphe.extension.shared.innertube.Offline.OfflinePlaylistEndpoint;
+import app.morphe.extension.shared.innertube.Offline.OfflineabilityRenderer;
 import app.morphe.extension.shared.innertube.Offline.PlaylistDownloadButtonViewModel;
 import app.morphe.extension.shared.innertube.Offline.PlaylistDownloadStatusEntityId;
+import app.morphe.extension.shared.patches.BaseInAppDownloadsPatch;
+import app.morphe.extension.shared.patches.DownloadMode;
 import app.morphe.extension.youtube.patches.utils.FeedVideoCardsPatch;
 import app.morphe.extension.youtube.patches.utils.ProtoNode;
 import app.morphe.extension.youtube.settings.Settings;
@@ -75,6 +77,11 @@ public final class InAppDownloadsPatch extends BaseInAppDownloadsPatch {
     private static final String PLAYLIST_DOWNLOAD_BUTTON_IDENTIFIER = "playlist-download-button";
 
     /**
+     * Height of the 1080p download quality.
+     */
+    private static final int FULL_HD_QUALITY_HEIGHT = 1080;
+
+    /**
      * Injection point.
      * <p>
      * Called for every command the app resolves.
@@ -108,6 +115,114 @@ public final class InAppDownloadsPatch extends BaseInAppDownloadsPatch {
             return saveVideoCommand(videoId, List.of()).toByteArray();
         } catch (Exception ex) {
             Logger.printException(() -> "replaceDownloadActionCommand failure", ex);
+            return null;
+        }
+    }
+
+    /**
+     * Injection point.
+     *
+     * @param settingCategories            Setting categories of the server.
+     * @param offlineSettingCategoryClass  Class of the offline setting category.
+     * @return If the offline setting category must be added to the setting categories.
+     */
+    public static boolean needsOfflineSettingCategory(List<?> settingCategories,
+                                                      Class<?> offlineSettingCategoryClass) {
+        try {
+            if (!isInAppDownloadMode()) {
+                return false;
+            }
+
+            for (Object settingCategory : settingCategories) {
+                if (offlineSettingCategoryClass.isInstance(settingCategory)) {
+                    return false;
+                }
+            }
+
+            Logger.printDebug(() -> "Adding offline setting category");
+            return true;
+        } catch (Exception ex) {
+            Logger.printException(() -> "needsOfflineSettingCategory failure", ex);
+            return false;
+        }
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called when the offline setting category is created, for the download quality setting
+     * and its 1080p quality, which the server can turn off.
+     *
+     * @param original If the server enables the setting.
+     */
+    public static boolean unlockOfflineSetting(boolean original) {
+        return original || isInAppDownloadMode();
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * Called once when the offline settings are created. The app hides the download qualities
+     * that are taller than the shorter side of the screen, so a 720p screen can only save 720p.
+     *
+     * @param maxHeight Height of the highest download quality the app offers.
+     */
+    public static int getMaxDownloadQualityHeight(int maxHeight) {
+        return isInAppDownloadMode()
+                ? Math.max(maxHeight, FULL_HD_QUALITY_HEIGHT)
+                : maxHeight;
+    }
+
+    /**
+     * Injection point.
+     * <p>
+     * YouTube override of the base unlock, which additionally adds the default download types
+     * the server omitted. The recommended downloads of the Downloads page list only 360p and 144p,
+     * since the server omits the qualities it would not automatically download.
+     * This also applies to the unlock of the base, which unlocks Premium locked formats
+     * but keeps the entries of the server.
+     * The same shared save method shows the quality picker of every download entry point,
+     * so this keeps every entry point saving with the same qualities.
+     * <p>
+     * YouTube Music keeps the formats of the server and does not use this method.
+     *
+     * @param offlineability Offlineability renderer of the video or playlist.
+     * @return The renderer with every quality available, or null to keep the original.
+     */
+    @Nullable
+    public static byte[] unlockOfflineability(@Nullable Object offlineability) {
+        try {
+            if (!isInAppDownloadMode()) {
+                return null;
+            }
+
+            byte[] unlocked = BaseInAppDownloadsPatch.unlockOfflineability(offlineability);
+            byte[] source = unlocked;
+            if (source == null && offlineability instanceof MessageLite message) {
+                // The base kept the original: the server lists formats and none are Premium locked.
+                source = message.toByteArray();
+            }
+            if (source == null) {
+                return null;
+            }
+
+            // The base may have unlocked the Premium locked formats, but it always keeps the
+            // entries of the server. The types the server omitted are added as well,
+            // so the picker shows every quality.
+            OfflineabilityRenderer renderer = OfflineabilityRenderer.parseFrom(source);
+            List<OfflineFormat> merged = mergeMissingFormatTypes(renderer.getFormatsList());
+            if (merged == null) {
+                return unlocked;
+            }
+
+            Logger.printDebug(() -> "Adding offline formats the server omitted");
+            return renderer.toBuilder()
+                    .clearFormats()
+                    .addAllFormats(merged)
+                    .build()
+                    .toByteArray();
+        } catch (Exception ex) {
+            Logger.printException(() -> "unlockOfflineability failure", ex);
             return null;
         }
     }
@@ -290,6 +405,7 @@ public final class InAppDownloadsPatch extends BaseInAppDownloadsPatch {
      * @return The interaction logger of the app that logs nothing.
      */
     @Nullable
+    @SuppressWarnings("SameReturnValue")
     private static Object getNoOpInteractionLogger() {
         return null; // Modified during patching.
     }

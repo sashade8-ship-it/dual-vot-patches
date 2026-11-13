@@ -155,6 +155,7 @@
         <item>TV</item>
         <item>TV Simply</item>
         <item>visionOS</item>
+        <item>visionOS Experimental</item>
     </string-array>
     <string-array name="morphe_spoof_video_streams_client_type_entry_values">
         <item>ANDROID_CREATOR</item>
@@ -164,6 +165,7 @@
         <item>TV_SABR</item>
         <item>TV_SIMPLY</item>
         <item>VISIONOS_1_02</item>
+        <item>VISIONOS_1_06</item>
     </string-array>
     <string-array name="morphe_spoof_video_streams_player_js_variant_entries">
         <item>House Brand</item>
@@ -631,6 +633,18 @@
         <item>ur</item>
     </string-array>
 
+    <!-- interaction.autoplay.autoplayControlPatch -->
+    <string-array name="morphe_autoplay_mode_entries">
+        <item>@string/morphe_autoplay_mode_entry_1</item>
+        <item>@string/morphe_autoplay_mode_entry_2</item>
+        <item>@string/morphe_autoplay_mode_entry_3</item>
+    </string-array>
+    <string-array name="morphe_autoplay_mode_entry_values">
+        <item>AUTO</item>
+        <item>SINGLE</item>
+        <item>OFF</item>
+    </string-array>
+
     <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
     <string-array name="morphe_open_videos_fullscreen_entries">
         <item>@string/morphe_open_videos_fullscreen_entry_1</item>
@@ -903,28 +917,6 @@
     </string-array>
 
     <!-- video.quality.rememberVideoQualityPatch -->
-    <string-array name="morphe_video_quality_default_entries">
-        <item>@string/morphe_video_quality_default_entry_1</item>
-        <item>2160p</item>
-        <item>1440p</item>
-        <item>1080p</item>
-        <item>720p</item>
-        <item>480p</item>
-        <item>360p</item>
-        <item>240p</item>
-        <item>144p</item>
-    </string-array>
-    <string-array name="morphe_video_quality_default_entry_values">
-        <item>-2</item>
-        <item>2160</item>
-        <item>1440</item>
-        <item>1080</item>
-        <item>720</item>
-        <item>480</item>
-        <item>360</item>
-        <item>240</item>
-        <item>144</item>
-    </string-array>
     <!-- Forcing video qualities lower than what's available doesn't work with Shorts, such as 144p.
          If 144p is forced, after a few seconds the quality resets back to 720p/1080p. -->
     <string-array name="morphe_shorts_quality_default_entries">

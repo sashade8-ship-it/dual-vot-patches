@@ -5,6 +5,7 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.annotation)
     testImplementation(libs.junit)
     testImplementation(libs.json)
     // Legacy event fixtures only; never package Kotlin into the Java-only extension.

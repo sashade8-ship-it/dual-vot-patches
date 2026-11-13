@@ -18,6 +18,7 @@ import java.util.Set;
  * When each line counts as sung for the highlight and the scroll: overlapping lines are grouped
  * so they stay lit together, and a line keeps its highlight into the pause after it.
  */
+@SuppressWarnings("unused")
 public final class LyricsRetiming {
     /** Lines overlapping by more than this are sung together. */
     private static final long RETIMING_OVERLAP_THRESHOLD_MS = 250L;
@@ -40,20 +41,8 @@ public final class LyricsRetiming {
     private static final float SCROLL_DELAY_INCREMENT_RATIO = 0.1f;
     public static final long HIGHLIGHT_LOOK_AHEAD_MS = 190L;
 
-    public static final class RetimedEntry {
-        public final LyricsLine line;
-        public final long startMs;
-        public final long actualEndTimeMs;
-        public final long adjustedEndTimeMs;
-        public final boolean isSecondary;
-
-        public RetimedEntry(LyricsLine line, long startMs, long actualEndTimeMs, long adjustedEndTimeMs, boolean isSecondary) {
-            this.line = line;
-            this.startMs = startMs;
-            this.actualEndTimeMs = actualEndTimeMs;
-            this.adjustedEndTimeMs = adjustedEndTimeMs;
-            this.isSecondary = isSecondary;
-        }
+    public record RetimedEntry(LyricsLine line, long startMs, long actualEndTimeMs,
+                               long adjustedEndTimeMs, boolean isSecondary) {
 
         public long effectiveEndMs() {
             return Math.max(actualEndTimeMs, adjustedEndTimeMs);
@@ -182,7 +171,7 @@ public final class LyricsRetiming {
             }
         }
 
-        if (primaryIndex != -1 && activeIndices != null && !activeIndices.isEmpty()) {
+        if (primaryIndex != -1) {
             int groupEnd = activeIndices.size() - 1;
             int groupStart = groupEnd;
             while (groupStart > 0 && areConsecutiveMainLines(
