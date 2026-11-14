@@ -55,6 +55,18 @@ final class SeeThroughPage {
      * player leaves fullscreen, YouTube draws black under it.
      */
     private static final int PAGE_CONTENT_ID = ResourceUtils.getIdentifier(ResourceType.ID, "video_metadata_layout");
+    /**
+     * Holds what is below the player in the first column of a tablet, where the content of the
+     * page is the second column only. YouTube draws black under it in the same way.
+     */
+    private static final int PAGE_INFO_PANEL_ID = ResourceUtils.getIdentifier(ResourceType.ID, "watch_info_panel");
+    /**
+     * Holds the controls of the miniplayer. While the player is on its way to the miniplayer or
+     * back, YouTube can stretch it over the page as a backdrop of one color, under the player
+     * and the content of the page, starting a few frames before the player moves. It hides the
+     * light of the page, so it shows the light as the page does.
+     */
+    private static final int PAGE_BACKDROP_ID = ResourceUtils.getIdentifier(ResourceType.ID, "floaty_bar_controls_view");
     /** Holds the list of the watch page and the headers that stick to its top, such as the filter chips. */
     private static final int STICKY_HEADER_CONTAINER_ID =
             ResourceUtils.getIdentifier(ResourceType.ID, "sticky_header_container");
@@ -68,18 +80,29 @@ final class SeeThroughPage {
     @Nullable
     private static Drawable hostBackground;
     private static WeakReference<ViewGroup> stickyHeaderContainerRef = new WeakReference<>(null);
+    /** The headers and the items of the list that are shown, and those of the frame before. */
+    private static List<View> listItems = new ArrayList<>();
+    private static List<View> listItemsBefore = new ArrayList<>();
+    /** The color the page was last cleared for. */
+    private static int pageColor;
     private static WeakReference<View> pageContentRef = new WeakReference<>(null);
     @Nullable
     private static Drawable pageContentBackground;
+    private static WeakReference<View> pageInfoPanelRef = new WeakReference<>(null);
+    @Nullable
+    private static Drawable pageInfoPanelBackground;
     /** If the content of the page is fading, which is when YouTube draws black under it. */
     private static boolean pageContentFading;
     private static boolean pageContentVisible = true;
     private static volatile float pageContentAlpha = 1f;
     private static float pageLightAlpha = 1f;
+    /** The light over the backdrop of the page, which keeps its own background. */
+    private static WeakReference<LightDrawable> pageBackdropLightRef = new WeakReference<>(null);
     private static final List<WeakReference<View>> systemBarBackgrounds = new ArrayList<>(2);
     private static WeakReference<View> clippedListRef = new WeakReference<>(null);
     private static final Rect hostLightBounds = new Rect();
     private static final Rect contentLightBounds = new Rect();
+    private static final Rect backdropBounds = new Rect();
     private static final Rect listClipBounds = new Rect();
 
     /**
@@ -93,8 +116,11 @@ final class SeeThroughPage {
             page.setBackground(new LightDrawable(page));
         }
         cleared.keySet().removeIf(view -> !view.isAttachedToWindow());
+        SeeThroughPage.pageColor = pageColor;
         clearBackgrounds(page, player, page.getWidth() / 3, pageColor, 0);
         lightPageContent(page);
+        lightPageInfoPanel(page);
+        lightPageBackdrop(page, player);
 
         if (STICKY_HEADER_CONTAINER_ID != 0 && page.findViewById(STICKY_HEADER_CONTAINER_ID) instanceof ViewGroup container
                 && stickyHeaderContainerRef.get() != container) {
@@ -130,6 +156,65 @@ final class SeeThroughPage {
         pageContentBackground = null;
     }
 
+    private static void lightPageInfoPanel(View page) {
+        View panel = PAGE_INFO_PANEL_ID == 0 ? null : page.findViewById(PAGE_INFO_PANEL_ID);
+        if (panel == null || panel.getBackground() instanceof LightDrawable) return;
+
+        restorePageInfoPanel();
+        pageInfoPanelRef = new WeakReference<>(panel);
+        pageInfoPanelBackground = panel.getBackground();
+        panel.setBackground(new LightDrawable(panel));
+    }
+
+    private static void restorePageInfoPanel() {
+        View panel = pageInfoPanelRef.get();
+        if (panel != null) panel.setBackground(pageInfoPanelBackground);
+        pageInfoPanelRef = new WeakReference<>(null);
+        pageInfoPanelBackground = null;
+    }
+
+    private static void lightPageBackdrop(View page, View player) {
+        View backdrop = PAGE_BACKDROP_ID == 0 ? null : page.findViewById(PAGE_BACKDROP_ID);
+        // The light on the backdrop is under the views that are drawn after the backdrop. It
+        // must not cover the player and the content of the page.
+        if (backdrop != null && !(page instanceof ViewGroup group && isChildBefore(group, backdrop, player)
+                && isChildBefore(group, backdrop, pageContentRef.get()))) {
+            backdrop = null;
+        }
+        LightDrawable light = pageBackdropLightRef.get();
+        if (backdrop == (light == null ? null : light.view)) return;
+
+        restorePageBackdrop();
+        if (backdrop == null) return;
+        light = new LightDrawable(backdrop);
+        // An overlay is drawn over what the view draws, and under the views that come after it.
+        backdrop.getOverlay().add(light);
+        pageBackdropLightRef = new WeakReference<>(light);
+    }
+
+    /**
+     * @return If two views are children of a group, and the first is drawn before the second.
+     */
+    private static boolean isChildBefore(ViewGroup group, View first, @Nullable View second) {
+        final int index = group.indexOfChild(first);
+        return index >= 0 && second != null && group.indexOfChild(second) > index;
+    }
+
+    private static void restorePageBackdrop() {
+        LightDrawable light = pageBackdropLightRef.get();
+        if (light != null) light.view.getOverlay().remove(light);
+        pageBackdropLightRef = new WeakReference<>(null);
+    }
+
+    /**
+     * @return If a view is as large as the page, which the backdrop is only while it is the
+     *         backdrop.
+     */
+    private static boolean fillsPage(View view) {
+        View host = hostRef.get();
+        return host != null && view.getWidth() == host.getWidth() && view.getHeight() == host.getHeight();
+    }
+
     static boolean isPageContentFading() {
         return pageContentFading;
     }
@@ -149,16 +234,17 @@ final class SeeThroughPage {
      */
     @Nullable
     static Rect lightBounds() {
-        return lightBounds(hostRef.get(), null, hostLightBounds);
+        return lightBounds(hostRef.get(), null, 1f, hostLightBounds);
     }
 
     /**
-     * @return The part of the window that a view fills with the light, with nothing of what is
-     *         under it showing through, or null. The view is looked at up to an ancestor.
+     * @param alpha How much the view shows of itself, from 0 to 1.
+     * @return The part of the window where a view that shows this much of itself draws the
+     *         light, or null. The view is looked at up to an ancestor.
      */
     @Nullable
-    private static Rect lightBounds(@Nullable View view, @Nullable View ancestor, Rect bounds) {
-        if (view == null || !(view.getBackground() instanceof LightDrawable) || !isDrawnPlain(view, ancestor)) {
+    private static Rect lightBounds(@Nullable View view, @Nullable View ancestor, float alpha, Rect bounds) {
+        if (view == null || !(view.getBackground() instanceof LightDrawable) || !isDrawn(view, ancestor, alpha)) {
             return null;
         }
         return view.getGlobalVisibleRect(bounds) ? bounds : null;
@@ -169,13 +255,24 @@ final class SeeThroughPage {
      *         showing through. The view is looked at up to an ancestor.
      */
     static boolean isDrawnPlain(View view, @Nullable View ancestor) {
+        return isDrawn(view, ancestor, 1f);
+    }
+
+    /**
+     * @param alpha How much the view shows of itself, from 0 to 1.
+     * @return If a view is shown where it is laid out, and shows this much of itself. The view
+     *         is looked at up to an ancestor.
+     */
+    private static boolean isDrawn(View view, @Nullable View ancestor, float alpha) {
         if (!view.isShown()) return false;
 
+        float expectedAlpha = alpha;
         for (View current = view; current != null && current != ancestor; ) {
-            if (current.getAlpha() != 1f || current.getScaleX() != 1f || current.getScaleY() != 1f
+            if (current.getAlpha() != expectedAlpha || current.getScaleX() != 1f || current.getScaleY() != 1f
                     || current.getRotation() != 0f) {
                 return false;
             }
+            expectedAlpha = 1f;
             current = current.getParent() instanceof View parent ? parent : null;
         }
         return true;
@@ -198,6 +295,18 @@ final class SeeThroughPage {
         if (host != null) host.invalidate();
         View content = pageContentRef.get();
         if (content != null) content.invalidate();
+        View panel = pageInfoPanelRef.get();
+        if (panel != null) panel.invalidate();
+        invalidateBackdropLight();
+    }
+
+    /**
+     * Main thread. The backdrop leaves the light out where the player and the content of the page
+     * are, so it draws the light again when they have moved.
+     */
+    static void invalidateBackdropLight() {
+        LightDrawable light = pageBackdropLightRef.get();
+        if (light != null && light.view.getVisibility() == View.VISIBLE) light.view.invalidate();
     }
 
     /**
@@ -207,6 +316,7 @@ final class SeeThroughPage {
     static void invalidateMovedLight() {
         invalidateIfMoved(hostRef.get());
         invalidateIfMoved(pageContentRef.get());
+        invalidateIfMoved(pageInfoPanelRef.get());
     }
 
     private static void invalidateIfMoved(@Nullable View view) {
@@ -252,10 +362,9 @@ final class SeeThroughPage {
             return contentAppeared;
         }
 
-        View list = null;
+        RecyclerView list = null;
         for (int i = 0; i < container.getChildCount(); i++) {
-            View child = container.getChildAt(i);
-            if (child instanceof RecyclerView) {
+            if (container.getChildAt(i) instanceof RecyclerView child) {
                 list = child;
                 break;
             }
@@ -265,11 +374,23 @@ final class SeeThroughPage {
             return contentAppeared;
         }
 
+        // YouTube shows the filter chips as an item of the list first and then as a header that
+        // sticks, each with the color of the page as its background. What shows up in the list is
+        // cleared before it is drawn, and not only when the page is cleared again.
+        List<View> before = listItems;
+        listItems = listItemsBefore;
+        listItemsBefore = before;
+        listItems.clear();
+        for (int i = 0; i < list.getChildCount(); i++) {
+            clearIfNew(list.getChildAt(i));
+        }
+
         final float listTop = list.getY();
         float headersBottom = listTop;
         for (int i = 0; i < container.getChildCount(); i++) {
             View header = container.getChildAt(i);
             if (header == list || header.getVisibility() != View.VISIBLE || header.getHeight() == 0) continue;
+            clearIfNew(header);
             final float top = header.getY();
             // Only a header that sticks to the top covers the list. A header that scrolls
             // with the list is drawn over its own empty item.
@@ -279,6 +400,16 @@ final class SeeThroughPage {
         }
         setListClip(list, (int) (headersBottom - listTop));
         return contentAppeared;
+    }
+
+    private static void clearIfNew(View item) {
+        if (item.getVisibility() != View.VISIBLE) return;
+
+        listItems.add(item);
+        View page = hostRef.get();
+        if (page != null && !listItemsBefore.contains(item)) {
+            clearBackgrounds(item, null, page.getWidth() / 3, pageColor, 0);
+        }
     }
 
     /**
@@ -313,8 +444,12 @@ final class SeeThroughPage {
         pageContentFading = false;
         pageContentVisible = true;
         restorePageContent();
+        restorePageInfoPanel();
+        restorePageBackdrop();
         setListClip(null, 0);
         stickyHeaderContainerRef = new WeakReference<>(null);
+        listItems.clear();
+        listItemsBefore.clear();
         View host = hostRef.get();
         if (host != null) {
             host.setBackground(hostBackground);
@@ -366,8 +501,9 @@ final class SeeThroughPage {
     /**
      * Shows the light in a view. While the surfaces show the light, it removes what was drawn
      * below the view, such as the home feed below the page. While the player moves, it draws
-     * the light itself. The page has it as its background, and so has the content of the page,
-     * as YouTube draws black under the content while the page changes.
+     * the light itself. The page has it as its background, and so have the content of the page
+     * and the panel below the player of a tablet, as YouTube draws black under them while the
+     * page changes. The backdrop of the page has it over what it draws.
      */
     private static final class LightDrawable extends Drawable {
         private final View view;
@@ -390,10 +526,27 @@ final class SeeThroughPage {
             drawnLeft = location[0];
             drawnTop = location[1];
             View content = pageContentRef.get();
+            LightDrawable backdropLight = pageBackdropLightRef.get();
+            View backdrop = backdropLight == null ? null : backdropLight.view;
             // The content fades by itself, with its light. Where it shows all of its own light,
             // the page under it does not draw.
-            final float alpha = view == content ? 1f : pageLightAlpha;
-            Rect covered = view == content ? null : lightBounds(content, view, contentLightBounds);
+            final boolean fadesByItself = view == content || view == pageInfoPanelRef.get();
+            final float alpha = fadesByItself ? 1f : pageLightAlpha;
+            Rect covered;
+            if (fadesByItself) {
+                covered = null;
+            } else if (this == backdropLight) {
+                if (!fillsPage(view)) return;
+                // The light of the content fades as much over the backdrop, so the two look
+                // like one light as long as they do not lie on each other.
+                covered = lightBounds(content, hostRef.get(), alpha, contentLightBounds);
+            } else if (backdrop != null && fillsPage(backdrop) && isDrawnPlain(backdrop, view)
+                    && backdrop.getGlobalVisibleRect(backdropBounds)) {
+                // The backdrop hides the page here, and shows the light itself.
+                covered = backdropBounds;
+            } else {
+                covered = lightBounds(content, view, 1f, contentLightBounds);
+            }
             if (!AmbientLightController.drawWindowLight(canvas, view, true, alpha, covered)) {
                 canvas.drawColor(0, PorterDuff.Mode.CLEAR);
             }
