@@ -587,6 +587,8 @@ After a video with the Ask button is opened once, the feature works with all vid
     <string name="morphe_disable_chapter_skip_double_tap_summary">Disables the two-finger double-tap gesture that skips chapters, which may be accidentally triggered with one finger</string>
 
     <!-- interaction.downloads.downloadsPatch -->
+    <string name="morphe_offline_video_quality_1440p">Quad HD (1440p)</string>
+    <string name="morphe_offline_video_quality_2160p">4K (2160p)</string>
     <string name="morphe_external_downloader_screen_summary">Download videos, podcasts, or songs with third-party downloading apps</string>
     <string name="morphe_external_downloader_overlay_button_title">Show player overlay download button</string>
     <string name="morphe_external_downloader_overlay_button_summary">Shows a button in the video player that opens your external downloader</string>
@@ -603,6 +605,10 @@ After a video with the Ask button is opened once, the feature works with all vid
     <string name="morphe_shorts_download_flyout_button_title">Show download in Shorts menu</string>
     <string name="morphe_shorts_download_flyout_button_summary">Adds a download item to the menu of the Shorts player</string>
     <string name="morphe_shorts_download_flyout_title">Download</string>
+    <string name="morphe_feed_download_flyout_button_title">Show download in video menus</string>
+    <string name="morphe_feed_download_flyout_button_summary">Adds a download item to the menus of videos in the feed that have none, such as videos that YouTube only lets Premium members download</string>
+    <string name="morphe_download_force_4k_title">Force 4K download availability</string>
+    <string name="morphe_download_force_4k_summary">Offers 1440p and 4K downloads even if YouTube decides this device cannot play them. Such videos may play without video inside YouTube, but can be exported to your device</string>
     <string name="morphe_export_download_folder_title">Export saved videos</string>
     <string name="morphe_export_download_folder_summary">"Export in-app saved videos to your device storage using the in-app downloads flyout menu. Tap to change the export folder
 
@@ -1623,7 +1629,7 @@ Automotive layout
     <string name="morphe_dearrow_titles_player_title">Player playlists &amp; recommendations</string>
     <string name="morphe_dearrow_titles_search_title">Search results</string>
     <string name="morphe_dearrow_titles_icon_title">Show DeArrow icon</string>
-    <string name="morphe_dearrow_titles_icon_summary">Shows the DeArrow icon on crowdsourced video titles. Tap the icon to show the original title and thumbnail</string>
+    <string name="morphe_dearrow_titles_icon_summary">Shows the DeArrow icon on the titles of videos with a crowdsourced title or thumbnail. Tap the icon to show the original title and thumbnail</string>
     <string name="morphe_dearrow_casual_mode_title">Casual mode</string>
     <string name="morphe_dearrow_casual_mode_summary">Shows the original title instead of the DeArrow title if DeArrow users voted they like the original title</string>
     <string name="morphe_dearrow_casual_mode_min_votes_title">Minimum casual votes to show original title</string>
@@ -1729,6 +1735,17 @@ Videos are requested by a short prefix of the hashed video ID, so the server can
 
     <!-- misc.gms.accountCredentialsInvalidTextPatch -->
     <string name="microg_offline_account_login_error">If you recently changed your account login details, then uninstall and reinstall MicroG</string>
+
+    <!-- misc.debugging.enableDebuggingPatch -->
+    <string name="morphe_debug_save_push_notifications_title">Save push notifications</string>
+    <string name="morphe_debug_save_push_notifications_summary">Saves received push notifications to a file in the app data. The file can include private information, such as notification texts and channel names</string>
+    <string name="morphe_debug_saved_push_notifications_title">Export saved push notifications</string>
+    <string name="morphe_debug_saved_push_notifications_summary">Export or clear the saved push notifications</string>
+    <string name="morphe_debug_saved_push_notifications_count">Saved push notifications: %s</string>
+    <string name="morphe_debug_saved_push_notifications_none_found">No saved push notifications found</string>
+    <string name="morphe_debug_saved_push_notifications_export_success">Push notifications exported successfully</string>
+    <string name="morphe_debug_saved_push_notifications_export_failed">Failed to export push notifications</string>
+    <string name="morphe_debug_saved_push_notifications_cleared">Saved push notifications cleared</string>
 
     <!-- misc.links.bypassLinkRedirectsPatch -->
     <string name="morphe_bypass_link_redirects_title">Bypass link redirects</string>
