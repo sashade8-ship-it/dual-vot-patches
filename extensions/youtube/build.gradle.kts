@@ -7,6 +7,8 @@ plugins {
 dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.json)
+    // Legacy event fixtures only; never package Kotlin into the Java-only extension.
+    testImplementation("org.jetbrains.kotlin:kotlin-stdlib:2.4.0")
     testImplementation(libs.morphe.extensions.library)
     testImplementation(project(":extensions:shared:library"))
 
