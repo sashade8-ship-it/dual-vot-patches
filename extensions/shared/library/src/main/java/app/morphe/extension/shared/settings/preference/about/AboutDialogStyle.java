@@ -259,9 +259,9 @@ final class AboutDialogStyle {
         return DOCUMENT_START
                 .replace("{dir}", Utils.isRightToLeftLocale(
                         BaseSettings.MORPHE_LANGUAGE.get().getLocale()) ? "rtl" : "ltr")
-                .replace("{bg}", Utils.getColorHexString(ThemeUtils.getDialogBackgroundColor()))
+                .replace("{bg}", Utils.getColorHexString(ThemeUtils.getAppBackgroundColor()))
                 .replace("{fg}", Utils.getColorHexString(ThemeUtils.getAppForegroundColor()))
-                .replace("{accent}", opaqueHex(accent))
+                .replace("{accent}", String.format(Locale.US, "#%06X", accent & 0xFFFFFF))
                 // Whichever of black and white stands out of the accent.
                 .replace("{on-accent}", luma(accent) >= 128 ? "#101010" : "#FFFFFF")
                 .replace("{mega}", Utils.isDarkModeEnabled() ? MEGA_DARK : MEGA_LIGHT);
@@ -296,7 +296,7 @@ final class AboutDialogStyle {
             return fallback;
         }
 
-        final int contrast = Math.abs(luma(accent) - luma(ThemeUtils.getDialogBackgroundColor()));
+        final int contrast = Math.abs(luma(accent) - luma(ThemeUtils.getAppBackgroundColor()));
         return contrast < MIN_ACCENT_CONTRAST ? fallback : accent;
     }
 
@@ -306,13 +306,6 @@ final class AboutDialogStyle {
      */
     private static int luma(@ColorInt int color) {
         return (299 * Color.red(color) + 587 * Color.green(color) + 114 * Color.blue(color)) / 1000;
-    }
-
-    /**
-     * @return The color as #RRGGBB, which the stylesheet appends an alpha to where it needs one.
-     */
-    private static String opaqueHex(@ColorInt int color) {
-        return String.format(Locale.US, "#%06X", color & 0xFFFFFF);
     }
 
     static final String DOCUMENT_END = "</body></html>";

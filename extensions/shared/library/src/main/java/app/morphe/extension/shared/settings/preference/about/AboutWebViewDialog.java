@@ -36,9 +36,15 @@ class AboutWebViewDialog extends Dialog {
 
     private final String htmlContent;
 
-    public AboutWebViewDialog(@NonNull Context context, @NonNull String htmlContent) {
+    /**
+     * If the page is pre-formatted text, such as license notices, which can be zoomed and needs no JavaScript.
+     */
+    private final boolean zoomableText;
+
+    public AboutWebViewDialog(@NonNull Context context, @NonNull String htmlContent, boolean zoomableText) {
         super(context, android.R.style.Theme_DeviceDefault_NoActionBar);
         this.htmlContent = htmlContent;
+        this.zoomableText = zoomableText;
     }
 
     /**
@@ -61,8 +67,8 @@ class AboutWebViewDialog extends Dialog {
         // same color the page is, rather than whatever the device theme happens to be.
         Window window = getWindow();
         if (window != null) {
-            window.setBackgroundDrawable(new ColorDrawable(ThemeUtils.getDialogBackgroundColor()));
-            window.setNavigationBarColor(ThemeUtils.getDialogBackgroundColor());
+            window.setBackgroundDrawable(new ColorDrawable(ThemeUtils.getAppBackgroundColor()));
+            window.setNavigationBarColor(ThemeUtils.getAppBackgroundColor());
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 window.setNavigationBarContrastEnforced(true);
             }
@@ -72,11 +78,20 @@ class AboutWebViewDialog extends Dialog {
         webView.setLayoutParams(new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT));
-        webView.setVerticalScrollBarEnabled(false); // Disable the vertical scrollbar.
-        webView.setOverScrollMode(View.OVER_SCROLL_NEVER);
-        webView.getSettings().setJavaScriptEnabled(true);
+        if (zoomableText) {
+            webView.getSettings().setJavaScriptEnabled(false);
+            webView.getSettings().setUseWideViewPort(true);
+            webView.getSettings().setLoadWithOverviewMode(true);
+            webView.getSettings().setSupportZoom(true);
+            webView.getSettings().setBuiltInZoomControls(true);
+            webView.getSettings().setDisplayZoomControls(false);
+        } else {
+            webView.setVerticalScrollBarEnabled(false); // Disable the vertical scrollbar.
+            webView.setOverScrollMode(View.OVER_SCROLL_NEVER);
+            webView.getSettings().setJavaScriptEnabled(true);
+        }
         // A WebView paints white until the page is parsed, which flashes as the dialog opens.
-        webView.setBackgroundColor(ThemeUtils.getDialogBackgroundColor());
+        webView.setBackgroundColor(ThemeUtils.getAppBackgroundColor());
         webView.setWebViewClient(createWebViewClient());
         webView.loadDataWithBaseURL(null, htmlContent, "text/html", "utf-8", null);
 

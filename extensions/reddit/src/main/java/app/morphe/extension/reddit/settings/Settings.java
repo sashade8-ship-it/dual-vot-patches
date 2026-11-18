@@ -9,9 +9,12 @@ package app.morphe.extension.reddit.settings;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 import static app.morphe.extension.shared.settings.Setting.migrateOldSettingToNew;
+import static app.morphe.extension.shared.settings.Setting.parent;
 
+import app.morphe.extension.reddit.patches.TabletGridFeedPatch.GridColumns;
 import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.BooleanSetting;
+import app.morphe.extension.shared.settings.EnumSetting;
 import app.morphe.extension.shared.settings.FloatSetting;
 import app.morphe.extension.shared.settings.StringSetting;
 
@@ -38,6 +41,17 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_RESOURCES_SHELF = new BooleanSetting("morphe_hide_resources_shelf", FALSE, true);
     public static final BooleanSetting HIDE_START_A_COMMUNITY_SHELF = new BooleanSetting("morphe_hide_start_a_community_shelf", FALSE, true);
 
+    // Filters
+    /**
+     * Flair filters such as gaming::Discussion, one per line.
+     */
+    public static final StringSetting FLAIR_FILTERS = new StringSetting("morphe_flair_filters", "");
+    public static final BooleanSetting FLAIR_FILTERS_REMEMBER_SEEN = new BooleanSetting("morphe_flair_filters_remember_seen", FALSE);
+    /**
+     * Regular expressions, one per line.
+     */
+    public static final StringSetting KEYWORD_FILTERS = new StringSetting("morphe_keyword_filters", "");
+
     // Layout
     public static final BooleanSetting COPY_TEXT = new BooleanSetting("morphe_copy_text", FALSE, true, "morphe_copy_text_user_dialog_message");
     public static final BooleanSetting CUSTOM_FONT = new BooleanSetting("morphe_custom_font", FALSE, true);
@@ -63,6 +77,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting SHOW_FLAIRS_IN_HOME_FEED = new BooleanSetting("morphe_show_flairs_in_home_feed", FALSE, true, "morphe_show_flairs_in_home_feed_user_dialog_message");
     public static final BooleanSetting SHOW_VIEW_COUNT = new BooleanSetting("morphe_show_view_count", FALSE, true);
     public static final BooleanSetting SWAP_POST_VOTE_COMMENT_BUTTONS = new BooleanSetting("morphe_swap_post_vote_comment_buttons", FALSE, true);
+    public static final BooleanSetting TABLET_GRID_FEED = new BooleanSetting("morphe_tablet_grid_feed", TRUE);
+    public static final EnumSetting<GridColumns> TABLET_GRID_COLUMNS = new EnumSetting<>("morphe_tablet_grid_columns", GridColumns.AUTO, parent(TABLET_GRID_FEED));
 
     // Miscellaneous
     public static final StringSetting DOWNLOAD_FOLDER = new StringSetting("morphe_download_folder", "");
@@ -76,6 +92,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting REDGIFS_AUDIO = new BooleanSetting("morphe_redgifs_audio", TRUE, true);
     public static final BooleanSetting REDGIFS_HD = new BooleanSetting("morphe_redgifs_hd", FALSE);
     public static final BooleanSetting SANITIZE_SHARING_LINKS = new BooleanSetting("morphe_sanitize_sharing_links", TRUE);
+    public static final BooleanSetting SHARE_POST_CONTENT = new BooleanSetting("morphe_share_post_content", FALSE);
 
     /**
      * Highest app version that was ever launched. Used to detect an app downgrade.
