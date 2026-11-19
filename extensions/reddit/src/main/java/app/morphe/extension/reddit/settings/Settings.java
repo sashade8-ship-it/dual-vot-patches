@@ -11,6 +11,9 @@ import static java.lang.Boolean.TRUE;
 import static app.morphe.extension.shared.settings.Setting.migrateOldSettingToNew;
 import static app.morphe.extension.shared.settings.Setting.parent;
 
+import app.morphe.extension.reddit.patches.FeedAutoScrollPatch.ScrollSpeed;
+import app.morphe.extension.reddit.patches.PostSidePanelPatch.FeedDim;
+import app.morphe.extension.reddit.patches.PostSidePanelPatch.PanelWidth;
 import app.morphe.extension.reddit.patches.TabletGridFeedPatch.GridColumns;
 import app.morphe.extension.shared.settings.BaseSettings;
 import app.morphe.extension.shared.settings.BooleanSetting;
@@ -58,12 +61,15 @@ public class Settings extends BaseSettings {
     public static final StringSetting CUSTOM_FONT_FILE_PATH = new StringSetting("morphe_custom_font_file_path", "", true);
     public static final BooleanSetting DISABLE_MODERN_HOME = new BooleanSetting("morphe_disable_modern_home", FALSE, true);
     public static final BooleanSetting DISABLE_SCREENSHOT_POPUP = new BooleanSetting("morphe_disable_screenshot_popup", TRUE, true);
+    public static final BooleanSetting FEED_AUTO_SCROLL = new BooleanSetting("morphe_feed_auto_scroll", FALSE, true);
+    public static final EnumSetting<ScrollSpeed> FEED_AUTO_SCROLL_SPEED = new EnumSetting<>("morphe_feed_auto_scroll_speed", ScrollSpeed.MEDIUM, parent(FEED_AUTO_SCROLL));
     public static final FloatSetting FEED_MEDIA_MAX_HEIGHT = new FloatSetting("morphe_feed_media_max_height", 1.33f);
     public static final BooleanSetting FLIP_POST_ACTION_BAR = new BooleanSetting("morphe_flip_post_action_bar", FALSE, true);
     public static final BooleanSetting FORCE_SYSTEM_FONT = new BooleanSetting("morphe_force_system_font", FALSE, true);
     public static final BooleanSetting FULL_WIDTH_FEED_MEDIA = new BooleanSetting("morphe_full_width_feed_media", FALSE, true);
     public static final BooleanSetting HIDE_ASK_BUTTON = new BooleanSetting("morphe_hide_ask_button", FALSE, true);
     public static final BooleanSetting HIDE_COMMUNITIES_SHELF = new BooleanSetting("morphe_hide_communities_shelf", FALSE, true);
+    public static final BooleanSetting HIDE_INTERACTIVE_POSTS = new BooleanSetting("morphe_hide_interactive_posts", FALSE, true);
     public static final BooleanSetting HIDE_JOIN_CONVERSATION_BUTTON = new BooleanSetting("morphe_hide_join_conversation_button", FALSE);
     public static final BooleanSetting HIDE_MEDIA_VIEWER_OVERLAY = new BooleanSetting("morphe_hide_media_viewer_overlay", FALSE);
     public static final BooleanSetting HIDE_TRENDING_SHELVES = new BooleanSetting("morphe_hide_trending_shelves", FALSE, true);
@@ -71,6 +77,11 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting KEEP_FEED_POSITION = new BooleanSetting("morphe_keep_feed_position", TRUE);
     public static final BooleanSetting MEDIA_VIEWER_BLACK_BACKGROUND = new BooleanSetting("morphe_media_viewer_black_background", FALSE);
     public static final FloatSetting MEDIA_VIEWER_FADE = new FloatSetting("morphe_media_viewer_fade", 1f);
+    public static final BooleanSetting POST_SIDE_PANEL = new BooleanSetting("morphe_post_side_panel", TRUE);
+    public static final EnumSetting<PanelWidth> POST_SIDE_PANEL_WIDTH =
+            new EnumSetting<>("morphe_post_side_panel_width", PanelWidth.ONE_THIRD, parent(POST_SIDE_PANEL));
+    public static final EnumSetting<FeedDim> POST_SIDE_PANEL_DIM =
+            new EnumSetting<>("morphe_post_side_panel_dim", FeedDim.MEDIUM, parent(POST_SIDE_PANEL));
     public static final BooleanSetting REMEMBER_COLLAPSED_COMMENTS = new BooleanSetting("morphe_remember_collapsed_comments", TRUE);
     public static final BooleanSetting REMOVE_NOTIFICATION_DIALOG = new BooleanSetting("morphe_remove_notification_dialog", FALSE, true);
     public static final BooleanSetting REMOVE_NSFW_DIALOG = new BooleanSetting("morphe_remove_nsfw_dialog", FALSE, true);
