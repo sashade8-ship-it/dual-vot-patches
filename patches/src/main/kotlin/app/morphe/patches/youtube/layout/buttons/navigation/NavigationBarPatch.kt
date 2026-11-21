@@ -53,9 +53,11 @@ import app.morphe.patches.youtube.misc.navigation.addBottomBarContainerHook
 import app.morphe.patches.youtube.misc.navigation.hookNavigationButtonCreated
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_20_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_23_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_30_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_35_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_42_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_45_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -614,19 +616,66 @@ val navigationBarPatch = patch(
         }
 
         if (is_20_31_or_greater) {
-            buildList {
-                add(AutoHideNavigationBarOnFeedScrollingFingerprint)
-                if (is_21_23_or_greater) add(AutoHideNavigationBarOnDismissMiniplayerFingerprint)
-            }.forEach {
-                it.method.addInstructionsWithLabels(
+            AutoHideNavigationBarOnFeedScrollingFingerprint.let {
+                it.method.apply {
+                    val index = it.instructionMatches.last().index
+                    val register = getInstruction<OneRegisterInstruction>(index).registerA
+
+                    addInstructions(
+                        index + 1,
+                        """
+                            invoke-static { }, $EXTENSION_CLASS->getFeedScrollNavigationBarBehavior()I
+                            move-result v$register
+                        """
+                    )
+
+                    if (!is_21_20_or_greater) {
+                        insertLiteralOverride(
+                            45677535L,
+                            "$EXTENSION_CLASS->useAutoHideNavigationBarFlag(Z)Z"
+                        )
+                    }
+                }
+            }
+
+            // The app hides the navigation bar while scrolling only on the pages the server sets, and how
+            // it hides the bar depends on the account, so the app never hides it and the extension hides it
+            // for every page and account instead. The parameters are the list and the distance scrolled.
+            ListScrolledFingerprint.method.addInstruction(
+                0,
+                "invoke-static { p0, p2 }, $EXTENSION_CLASS->onListScrolled(Landroid/view/View;I)V"
+            )
+
+            // The AI search results hide the navigation bar through the controllers whatever the page sets.
+            // The controllers are not called, and the header of the page still follows the scroll.
+            if (is_21_42_or_greater) {
+                SearchResultsAutoHideNavigationBarFingerprint.let {
+                    it.method.apply {
+                        val flagResult = it.instructionMatches[6]
+                        addInstruction(
+                            flagResult.index + 1,
+                            "const/4 v${flagResult.getInstruction<OneRegisterInstruction>().registerA}, 0x0"
+                        )
+
+                        val nullCheck = it.instructionMatches[2]
+                        addInstruction(
+                            nullCheck.index,
+                            "const/4 v${nullCheck.getInstruction<OneRegisterInstruction>().registerA}, 0x0"
+                        )
+                    }
+                }
+            }
+
+            if (is_21_23_or_greater) {
+                AutoHideNavigationBarOnDismissMiniplayerFingerprint.method.addInstructionsWithLabels(
                     0,
                     """
                         invoke-static { }, $EXTENSION_CLASS->disableAutoHidingNavigationBar()Z
-                        move-result v0      
+                        move-result v0
                         if-eqz v0, :show
-                        return-void      
+                        return-void
                         :show
-                        nop      
+                        nop
                     """
                 )
             }

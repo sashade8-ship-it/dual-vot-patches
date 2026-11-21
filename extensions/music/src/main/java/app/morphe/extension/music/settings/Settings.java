@@ -63,6 +63,7 @@ public class Settings extends SharedYouTubeSettings {
 
     // General
     public static final BooleanSetting PAUSE_WHEN_MUTED = new BooleanSetting("morphe_music_pause_when_muted", FALSE, true);
+    public static final BooleanSetting SONOS_CAST = new BooleanSetting("morphe_music_sonos_cast", FALSE, true);
 
     // General (Layout)
     public static final EnumSetting<StartPage> CHANGE_START_PAGE = new EnumSetting<>("morphe_change_start_page", StartPage.DEFAULT, true);
@@ -250,6 +251,7 @@ public class Settings extends SharedYouTubeSettings {
 
     // Player
     public static final BooleanSetting AB_LOOP = new BooleanSetting("morphe_music_ab_loop", FALSE);
+    public static final BooleanSetting APPLE_MUSIC_ARTWORK = new BooleanSetting("morphe_music_apple_music_artwork", FALSE, true);
     public static final BooleanSetting AUTO_SONG_VERSION = new BooleanSetting("morphe_music_auto_song_version", FALSE);
     public static final BooleanSetting DISABLE_AUDIO_DUCKING = new BooleanSetting("morphe_music_disable_audio_ducking", FALSE, true);
     public static final BooleanSetting DISABLE_AUTO_CAPTIONS = new BooleanSetting("morphe_music_disable_auto_captions", FALSE);

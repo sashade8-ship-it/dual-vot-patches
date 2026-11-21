@@ -67,7 +67,10 @@ Changes include:
     <string name="morphe_hide_account_menu_title">Enable Library / You bottom menu filter</string>
     <string name="morphe_hide_account_menu_filter_strings_title">Library / You bottom menu filter</string>
     <string name="morphe_hide_account_menu_filter_strings_summary">Enter the Library / You bottom menu names to filter by, separated by new lines</string>
+    <string name="morphe_hide_account_menu_badges_title">Hide Badges</string>
     <string name="morphe_hide_account_menu_downloads_title">Hide Downloads</string>
+    <string name="morphe_hide_account_menu_liked_videos_title">Hide \'Liked videos\'</string>
+    <string name="morphe_hide_account_menu_watch_later_title">Hide \'Watch later\'</string>
     <string name="morphe_hide_album_cards_title">Hide album cards</string>
     <string name="morphe_hide_album_cards_summary">Hides the album cards under the artist description</string>
     <string name="morphe_hide_artist_cards_title">Hide artist cards</string>
@@ -447,6 +450,8 @@ Limitations:
     <string name="morphe_minimal_comments_button_summary">Hides the sliding cards and its page selector, displayed on the comments button</string>
     <string name="morphe_hide_comments_timestamp_button_title">Hide Timestamp button</string>
     <string name="morphe_hide_comments_top_fans_button_title">Hide \'Top fans\' button</string>
+    <string name="morphe_hide_comments_topics_title">Hide \'Topics\'</string>
+    <string name="morphe_hide_comments_topics_summary">Hides the \'Topics\' filter bar option and the \'Topic\' comment previews below the video</string>
     <string name="morphe_hide_comments_translate_button_title">Hide Translate button</string>
     <string name="morphe_hide_comments_zero_state_title">Hide \'No comments yet\' message</string>
     <string name="morphe_sanitize_comments_highlighted_search_links_title">Sanitize highlighted search links</string>
@@ -1111,6 +1116,40 @@ To fix this, turn on \'Spoof video streams\' and change the \'Default client\' t
     <string name="morphe_swipe_change_video_title">Enable swipe to change videos</string>
     <string name="morphe_swipe_change_video_summary">Swipe in fullscreen mode to skip to the next or previous video</string>
 
+    <!-- interaction.holdgesture.holdGesturePatch -->
+    <string name="morphe_hold_gesture_screen_title">Hold gesture</string>
+    <string name="morphe_hold_gesture_screen_summary">Change and lock the playback speed by dragging after tapping and holding</string>
+    <string name="morphe_hold_gesture_title">Enable hold gesture</string>
+    <string name="morphe_hold_gesture_summary">Tapping and holding the video can be followed by a drag. The speed while holding is the tap and hold playback speed</string>
+    <string name="morphe_hold_gesture_press_to_swipe_summary">Not used while press to swipe is on. Tap to change</string>
+    <string name="morphe_hold_gesture_press_to_swipe_dialog_title">Press to swipe is on</string>
+    <string name="morphe_hold_gesture_press_to_swipe_dialog_message">The hold gesture and the press to swipe gesture of the swipe controls both start with tapping and holding, so only one of them can be on.</string>
+    <string name="morphe_hold_gesture_press_to_swipe_dialog_turn_off">Turn off press to swipe</string>
+    <string name="morphe_hold_gesture_press_to_swipe_toast">Hold gesture is not used while press to swipe is on</string>
+    <string name="morphe_hold_gesture_dialog_title">Hold gesture is on</string>
+    <string name="morphe_hold_gesture_dialog_turn_off">Turn off hold gesture</string>
+    <string name="morphe_hold_gesture_haptic_feedback_title">Enable haptic feedback</string>
+    <string name="morphe_hold_gesture_haptic_feedback_summary">Vibrates when the speed changes and when the speed is locked</string>
+    <string name="morphe_hold_gesture_speed_swipe_title">Drag sideways to change the speed</string>
+    <string name="morphe_hold_gesture_speed_swipe_summary">After tapping and holding, drag left to play slower and right to play faster. Farther out, the speed keeps changing until the finger comes back</string>
+    <string name="morphe_hold_gesture_speed_step_title">Speed step</string>
+    <string name="morphe_hold_gesture_speed_sensitivity_title">Drag sensitivity</string>
+    <string name="morphe_hold_gesture_speed_sensitivity_entry_1">Low</string>
+    <string name="morphe_hold_gesture_speed_sensitivity_entry_2">Normal</string>
+    <string name="morphe_hold_gesture_speed_sensitivity_entry_3">High</string>
+    <string name="morphe_hold_gesture_speed_min_title">Slowest speed</string>
+    <string name="morphe_hold_gesture_speed_min_summary">The slowest speed a drag can reach</string>
+    <string name="morphe_hold_gesture_speed_max_title">Fastest speed</string>
+    <string name="morphe_hold_gesture_speed_max_summary">The fastest speed a drag can reach (up to 8)</string>
+    <string name="morphe_hold_gesture_lock_title">Drag down to lock the speed</string>
+    <string name="morphe_hold_gesture_lock_summary">After tapping and holding, drag down to keep the speed when the finger is lifted. Tap the badge or tap and hold again to unlock</string>
+    <string name="morphe_hold_gesture_lock_badge_always_title">Always show the lock badge</string>
+    <string name="morphe_hold_gesture_lock_badge_always_summary">The badge of a locked speed stays visible while the player controls are hidden</string>
+    <string name="morphe_hold_gesture_unlock_on_video_change_title">Unlock when the video changes</string>
+    <string name="morphe_hold_gesture_unlock_on_video_change_summary">A locked speed ends when another video starts</string>
+    <string name="morphe_hold_gesture_lock_hint">Pull down to lock</string>
+    <string name="morphe_hold_gesture_lock_release">Release to lock %s</string>
+
     <!-- layout.captions.captionsPatch -->
     <string name="morphe_captions_screen_title">Captions</string>
     <string name="morphe_captions_screen_summary">Manage automatic captions and caption cookies</string>
@@ -1223,6 +1262,17 @@ To access Settings, enable the Settings button via General → Toolbar → Show 
     <string name="morphe_navigation_bar_glass_bottom_margin_summary">Adjust the space between the glass navigation bar and the bottom of the screen or the system navigation</string>
     <string name="morphe_navigation_bar_glass_size_title">Glass navigation bar size</string>
     <string name="morphe_navigation_bar_glass_size_summary">Adjust the height, the width and the button spacing of the glass navigation bar, with a preview. Buttons that do not fit in the width of the screen are hidden</string>
+    <string name="morphe_glass_menus_screen_title">Glass menus</string>
+    <string name="morphe_glass_menus_screen_summary">Menus as frosted glass over the blurred content behind them</string>
+    <string name="morphe_glass_menus_title">Enable glass menus</string>
+    <string name="morphe_glass_menus_summary">Shows menus and bottom sheets as frosted glass, with the content behind them blurred</string>
+    <string name="morphe_glass_menus_user_dialog_message">Menus are shown nearly opaque while the battery saver is on, or if the device does not support blur</string>
+    <string name="morphe_glass_menus_opacity_title">Glass opacity</string>
+    <string name="morphe_glass_menus_opacity_summary">How much the menu covers the blurred content (0 is clear, 100 is opaque)</string>
+    <string name="morphe_glass_menus_blur_title">Blur</string>
+    <string name="morphe_glass_menus_blur_summary">How much the content behind the menu is blurred</string>
+    <string name="morphe_glass_menus_dim_title">Dim</string>
+    <string name="morphe_glass_menus_dim_summary">How much the screen around a bottom sheet is darkened</string>
     <string name="morphe_navigation_bar_glass_size_height">Height</string>
     <string name="morphe_navigation_bar_glass_size_width">Maximum width</string>
     <string name="morphe_navigation_bar_glass_size_button_spacing">Button spacing</string>
@@ -1858,11 +1908,6 @@ AVC (H.264)
 
     <!-- video.quality.hidePremiumVideoQualityPatch -->
     <string name="morphe_hide_premium_video_quality_title">Hide Premium quality options</string>
-
-    <!-- video.quality.prioritizeVideoQualityPatch -->
-    <string name="morphe_video_quality_prioritize_title">Prioritize video quality</string>
-    <string name="morphe_video_quality_prioritize_summary">Prioritizes the highest available video quality over codec efficiency</string>
-    <string name="morphe_video_quality_prioritize_dialog">If this setting is turned off, then older videos can show no video quality options</string>
 
     <!-- misc.spoof.spoofVideoStreamsPatch -->
     <string name="morphe_spoof_video_streams_av1_title">Allow \'Android VR\' / \'visionOS\' AV1</string>
