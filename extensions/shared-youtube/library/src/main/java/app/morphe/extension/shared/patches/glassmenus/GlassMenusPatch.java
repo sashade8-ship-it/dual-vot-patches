@@ -5,7 +5,7 @@
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to this code.
  */
 
-package app.morphe.extension.youtube.patches.glassmenus;
+package app.morphe.extension.shared.patches.glassmenus;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -31,11 +31,13 @@ import android.os.SystemClock;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewOutlineProvider;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
 
+import androidx.annotation.ChecksSdkIntAtLeast;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -46,8 +48,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.IdentityHashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
 import java.util.WeakHashMap;
 import java.util.function.Consumer;
@@ -57,16 +61,16 @@ import app.morphe.extension.shared.ResourceType;
 import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.shared.settings.Setting;
+import app.morphe.extension.shared.settings.SharedYouTubeSettings;
 import app.morphe.extension.shared.settings.preference.SeekBarPreference;
 import app.morphe.extension.shared.theme.ThemeUtils;
 import app.morphe.extension.shared.ui.Dim;
-import app.morphe.extension.youtube.settings.Settings;
 
 /**
- * Draws the menus of the app as frosted glass: the bottom sheets (the menu of a video, the player settings,
- * the share sheet), the popup menus, the sheet to save a video to a playlist, the dialogs that are a panel at the
- * bottom of the screen (the video quality, the download quality) and the sheets of Morphe
- * (playback speed, voice over translation).
+ * Draws the menus of YouTube and YT Music as frosted glass: the bottom sheets (the menu of a video or a song,
+ * the player settings, the share sheet), the dialogs that are a panel at the bottom of the screen
+ * (the video quality, the download quality) and the sheets of Morphe (playback speed, voice over translation).
+ * In YouTube also the popup menus and the sheet to save a video to a playlist.
  * <p>
  * Only the content behind the menu is blurred ({@link BlurRegion}), and the menu is a translucent tint of the app
  * background with a light rim, so the blurred content shows through it. The rest of the screen is only dimmed, as
@@ -85,6 +89,7 @@ public final class GlassMenusPatch {
     static final int MIN_OPACITY_WITHOUT_BLUR = 92;
 
     private static final int DESIGN_BOTTOM_SHEET = ResourceUtils.getIdentifier(ResourceType.ID, "design_bottom_sheet");
+    // YouTube only.
     private static final int PLAYLIST_LIST = ResourceUtils.getIdentifier(ResourceType.ID, "list");
     private static final int PLAYLIST_CLOSE_BAR =
             ResourceUtils.getIdentifier(ResourceType.ID, "add_to_playlist_bottom_sheet_close_button");
@@ -118,7 +123,7 @@ public final class GlassMenusPatch {
      */
     private static final int CORNERS_TOP = 1;
     /**
-     * No round corners.
+     * Does not round the corners.
      */
     private static final int CORNERS_NONE = 2;
 
@@ -150,25 +155,28 @@ public final class GlassMenusPatch {
      */
     public static final class GlassMenusAvailability implements Setting.Availability {
         @Override
+        @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
         public boolean isAvailable() {
             return Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
         }
     }
 
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean isEnabled() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && Settings.GLASS_MENUS.get();
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && SharedYouTubeSettings.GLASS_MENUS.get();
     }
 
     private static int opacityPercent() {
-        return SeekBarPreference.clampToRange(Settings.GLASS_MENUS_OPACITY);
+        return SeekBarPreference.clampToRange(SharedYouTubeSettings.GLASS_MENUS_OPACITY);
     }
 
     private static int blurRadiusPx() {
-        return Dim.dp(SeekBarPreference.clampToRange(Settings.GLASS_MENUS_BLUR));
+        return Dim.dp(SeekBarPreference.clampToRange(SharedYouTubeSettings.GLASS_MENUS_BLUR));
     }
 
     private static float dimAmount() {
-        return SeekBarPreference.clampToRange(Settings.GLASS_MENUS_DIM) / 100f;
+        return SeekBarPreference.clampToRange(SharedYouTubeSettings.GLASS_MENUS_DIM) / 100f;
     }
 
     /**
@@ -185,7 +193,8 @@ public final class GlassMenusPatch {
 
             View sheet = dialog.findViewById(DESIGN_BOTTOM_SHEET);
             if (sheet != null) {
-                GlassSurface.apply(sheet, CORNERS_AUTO);
+                // The panel of the sheet is a fill inside it, with a margin at the top and the sides.
+                GlassSurface.apply(sheet, CORNERS_AUTO, true);
             }
         } catch (Throwable ex) {
             Logger.printException(() -> "onBottomSheetDialog failure", ex);
@@ -206,7 +215,8 @@ public final class GlassMenusPatch {
     }
 
     /**
-     * Injection point: a popup menu, before it is shown. The app can set its content view after this call.
+     * Injection point (YouTube only): a popup menu, before it is shown. The app can set its content view after
+     * this call.
      */
     public static void onPopupWindow(@Nullable PopupWindow popup) {
         if (popup == null || !isEnabled()) return;
@@ -229,7 +239,8 @@ public final class GlassMenusPatch {
     }
 
     /**
-     * Injection point: the view of the sheet to save a video to a playlist, which is not a bottom sheet dialog.
+     * Injection point (YouTube only): the view of the sheet to save a video to a playlist, which is not a bottom
+     * sheet dialog.
      */
     public static void onAddToPlaylistView(@Nullable View root) {
         if (root == null || !isEnabled()) return;
@@ -269,6 +280,7 @@ public final class GlassMenusPatch {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.S)
     private static void styleWindowPanel(Window window, View decor) {
         try {
             if (window.getAttributes().height != WindowManager.LayoutParams.WRAP_CONTENT) return;
@@ -300,7 +312,7 @@ public final class GlassMenusPatch {
             Deque<View> queue = new ArrayDeque<>();
             queue.add(window.getDecorView());
             while (!queue.isEmpty()) {
-                View view = queue.poll();
+                View view = queue.remove();
                 if (view.getBackground() instanceof ShapeDrawable shape
                         && Color.alpha(shape.getPaint().getColor()) == 255) {
                     GlassSurface.apply(view, CORNERS_AUTO);
@@ -401,7 +413,34 @@ public final class GlassMenusPatch {
          * is detached. They are never removed: the app can use the background of a view it set.
          */
         private final Set<Drawable> hiddenDrawables = Collections.newSetFromMap(new IdentityHashMap<>());
+        /**
+         * The fills of the menu color that were hidden, and the view each is drawn in. The panel of the menu is
+         * where these are: the view drawn as glass can be larger than the panel, such as the bottom sheet, whose
+         * panel is a fill inside it with a margin at the top and the sides.
+         */
+        private final Map<Drawable, View> panelFills = new IdentityHashMap<>();
+        /**
+         * How far the panel of the menu is inside the view, at each side.
+         */
+        private final Rect panelInsets = new Rect();
+        private final Rect panel = new Rect();
+        private final Rect fillBounds = new Rect();
+        private final Outline fillOutline = new Outline();
+        private final int[] viewLocation = new int[2];
+        private final int[] hostLocation = new int[2];
+        /**
+         * The background of the view: the blur and the tint.
+         */
+        private LayerDrawable layers;
         private long lastLithoScan;
+        private int lastLithoChanges;
+        /**
+         * If the views of the menu were laid out again since the fills of Litho were checked. Litho mounts new
+         * fills when it lays out, such as on every letter typed in the comment box, and a new fill must be hidden
+         * before it is drawn, or the menu flickers opaque.
+         */
+        private boolean laidOut;
+        private final ViewTreeObserver.OnGlobalLayoutListener layoutListener = () -> laidOut = true;
         /**
          * When the menu was attached. Litho is checked on every frame right after, so the menu is not shown
          * opaque before the glass, and then less often.
@@ -417,15 +456,25 @@ public final class GlassMenusPatch {
         private boolean roundTop = true;
         private final int[] location = new int[2];
 
+        /**
+         * If the glass is drawn only where the fills of the menu color are, and not over the whole view.
+         */
+        private final boolean findPanel;
+
         static void apply(View view, int corners) {
+            apply(view, corners, false);
+        }
+
+        static void apply(View view, int corners, boolean findPanel) {
             if (glassViews.add(view)) {
-                new GlassSurface(view, corners);
+                new GlassSurface(view, corners, findPanel);
             }
         }
 
-        private GlassSurface(View view, int corners) {
+        private GlassSurface(View view, int corners, boolean findPanel) {
             this.view = view;
             this.corners = corners;
+            this.findPanel = findPanel;
 
             originalBackground = view.getBackground();
             tint = new GlassDrawable(corners == CORNERS_NONE ? 0 : cornerRadiusOf(originalBackground));
@@ -434,7 +483,13 @@ public final class GlassMenusPatch {
             menuColors.addAll(menuColors(view.getContext()));
             sampleOriginalBackground();
 
-            view.setBackground(tint);
+            setBackgroundLayers();
+            view.setOutlineProvider(new ViewOutlineProvider() {
+                @Override
+                public void getOutline(View outlineView, Outline outline) {
+                    tint.getOutline(outline);
+                }
+            });
             if (corners != CORNERS_NONE) {
                 view.setClipToOutline(true);
             }
@@ -457,22 +512,26 @@ public final class GlassMenusPatch {
         public void onViewAttachedToWindow(@NonNull View attached) {
             try {
                 // The blur belongs to the window the view is attached to.
-                windowManager = view.getContext().getSystemService(WindowManager.class);
+                WindowManager manager = view.getContext().getSystemService(WindowManager.class);
+                windowManager = manager;
                 blur = BlurRegion.create(view);
                 if (blur != null) {
-                    view.setBackground(new LayerDrawable(new Drawable[]{blur, tint}));
+                    setBackgroundLayers();
                     if (BlurRegion.isSamsungWindowBlurSupported()) {
                         onBlurEnabledChanged(true);
                     } else {
                         BlurRegion.setBlurRadius(blur, 0);
                         // Called right away with the current state, and again when the system turns the blur
                         // on or off.
-                        windowManager.addCrossWindowBlurEnabledListener(blurListener);
+                        if (manager != null) {
+                            manager.addCrossWindowBlurEnabledListener(blurListener);
+                        }
                     }
                 }
                 updateCorners(true);
                 attachedTime = SystemClock.uptimeMillis();
                 view.getViewTreeObserver().addOnPreDrawListener(this);
+                view.getViewTreeObserver().addOnGlobalLayoutListener(layoutListener);
                 if (Logger.isDebugEnabled()) {
                     view.postDelayed(this::logViewTree, 800);
                 }
@@ -485,22 +544,113 @@ public final class GlassMenusPatch {
         public void onViewDetachedFromWindow(@NonNull View detached) {
             try {
                 view.getViewTreeObserver().removeOnPreDrawListener(this);
+                view.getViewTreeObserver().removeOnGlobalLayoutListener(layoutListener);
                 for (Drawable drawable : hiddenDrawables) {
                     drawable.setColorFilter(null);
                 }
                 hiddenDrawables.clear();
+                panelFills.clear();
                 if (blur != null) {
                     if (windowManager != null && !BlurRegion.isSamsungWindowBlurSupported()) {
                         windowManager.removeCrossWindowBlurEnabledListener(blurListener);
                     }
                     blur = null;
                     blurEnabled = false;
-                    view.setBackground(tint);
+                    setBackgroundLayers();
                     updateOpacity();
                 }
                 windowManager = null;
             } catch (Throwable ex) {
                 Logger.printException(() -> "GlassSurface detach failure", ex);
+            }
+        }
+
+        /**
+         * The background of the view: the blur and the tint, both drawn within the panel of the menu.
+         */
+        private void setBackgroundLayers() {
+            layers = new LayerDrawable(blur != null
+                    ? new Drawable[]{blur, tint}
+                    : new Drawable[]{tint});
+            setLayerInsets();
+            view.setBackground(layers);
+        }
+
+        private void setLayerInsets() {
+            for (int i = 0, count = layers.getNumberOfLayers(); i < count; i++) {
+                layers.setLayerInset(i, panelInsets.left, panelInsets.top, panelInsets.right, panelInsets.bottom);
+            }
+        }
+
+        /**
+         * Finds the panel of the menu, the area of the fills of the menu color, and draws the glass only there.
+         */
+        private void updatePanel() {
+            if (!findPanel) return;
+            final int width = view.getWidth();
+            final int height = view.getHeight();
+            if (width <= 0 || height <= 0) return;
+
+            view.getLocationInWindow(viewLocation);
+            panel.setEmpty();
+            Drawable largest = null;
+            long largestArea = 0;
+            Iterator<Map.Entry<Drawable, View>> iterator = panelFills.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry<Drawable, View> entry = iterator.next();
+                Drawable drawable = entry.getKey();
+                View host = entry.getValue();
+                // The fill is no longer drawn in the menu. It is added again if it is mounted again.
+                if (LithoFills.hostOf(drawable) != host || !LithoFills.isInside(host, view)) {
+                    iterator.remove();
+                    continue;
+                }
+                if (!host.isShown()) continue;
+
+                fillBounds.set(drawable.getBounds());
+                if (fillBounds.isEmpty()) continue;
+                host.getLocationInWindow(hostLocation);
+                fillBounds.offset(hostLocation[0] - viewLocation[0], hostLocation[1] - viewLocation[1]);
+                if (!fillBounds.intersect(0, 0, width, height)) continue;
+
+                panel.union(fillBounds);
+                final long area = (long) fillBounds.width() * fillBounds.height();
+                if (area > largestArea) {
+                    largestArea = area;
+                    largest = drawable;
+                }
+            }
+
+            boolean changed = false;
+            final int left = panel.isEmpty() ? 0 : panel.left;
+            final int top = panel.isEmpty() ? 0 : panel.top;
+            final int right = panel.isEmpty() ? 0 : width - panel.right;
+            final int bottom = panel.isEmpty() ? 0 : height - panel.bottom;
+            if (left != panelInsets.left || top != panelInsets.top
+                    || right != panelInsets.right || bottom != panelInsets.bottom) {
+                panelInsets.set(left, top, right, bottom);
+                setLayerInsets();
+                // The layers are placed again only when the bounds change.
+                Rect bounds = layers.copyBounds();
+                layers.setBounds(0, 0, 0, 0);
+                layers.setBounds(bounds);
+                changed = true;
+                Logger.printDebug(() -> "Glass menu panel insets: " + left + ", " + top + ", " + right + ", " + bottom);
+            }
+
+            if (largest != null && corners != CORNERS_NONE) {
+                fillOutline.setEmpty();
+                largest.getOutline(fillOutline);
+                final float radius = fillOutline.getRadius();
+                if (radius > 0 && radius != tint.radius) {
+                    tint.setRadius(radius);
+                    changed = true;
+                }
+            }
+
+            if (changed) {
+                updateCorners(true);
+                view.invalidate();
             }
         }
 
@@ -526,11 +676,19 @@ public final class GlassMenusPatch {
                 }
                 updateCorners(false);
                 final long now = SystemClock.uptimeMillis();
-                final boolean scanLitho = now - attachedTime < LITHO_SCAN_EVERY_FRAME_MS
+                final int lithoChanges = LithoFills.changes();
+                final boolean scanLitho = laidOut
+                        || lithoChanges != lastLithoChanges
+                        || now - attachedTime < LITHO_SCAN_EVERY_FRAME_MS
                         || now - lastLithoScan >= LITHO_SCAN_INTERVAL_MS;
-                if (scanLitho) lastLithoScan = now;
+                if (scanLitho) {
+                    lastLithoScan = now;
+                    lastLithoChanges = lithoChanges;
+                    laidOut = false;
+                }
                 removeMenuBackgrounds(view);
                 if (scanLitho) hideLithoFills();
+                updatePanel();
             } catch (Throwable ex) {
                 Logger.printException(() -> "GlassSurface onPreDraw failure", ex);
             }
@@ -547,7 +705,7 @@ public final class GlassMenusPatch {
                 if (windowManager == null) return;
                 view.getLocationOnScreen(location);
                 final int screenBottom = windowManager.getCurrentWindowMetrics().getBounds().bottom;
-                bottom = location[1] + view.getHeight() < screenBottom - Dim.dp(2);
+                bottom = location[1] + view.getHeight() - panelInsets.bottom < screenBottom - Dim.dp(2);
             }
             if (!force && top == roundTop && bottom == roundBottom) return;
 
@@ -575,7 +733,9 @@ public final class GlassMenusPatch {
                     hide(background);
                 } else if (background != null && child.getWidth() >= minWidth) {
                     // Only fills of the menu, not small views such as buttons or a progress circle.
-                    hideIfMenuColor(background);
+                    if (hideIfMenuColor(background) && findPanel) {
+                        panelFills.put(background, child);
+                    }
                 }
                 removeMenuBackgrounds(child);
             }
@@ -588,20 +748,25 @@ public final class GlassMenusPatch {
             final int minWidth = view.getWidth() / 2;
             for (LithoFills.Fill fill : LithoFills.fillsInside(view)) {
                 Drawable drawable = fill.drawable();
-                if (drawable.getBounds().width() >= minWidth && isMenuColor(fill.color()) && hide(drawable)) {
-                    fill.host().invalidate();
+                if (drawable.getBounds().width() >= minWidth && isMenuColor(fill.color())) {
+                    if (findPanel) panelFills.put(drawable, fill.host());
+                    if (hide(drawable)) {
+                        fill.host().invalidate();
+                    }
                 }
             }
         }
 
         /**
-         * Hides a drawable of the color of the menu with a transparent color filter. The drawable itself is not
+         * Hides a drawable that has the color of the menu with a transparent color filter. The drawable itself is not
          * changed, as the app can draw it again elsewhere, and the filter is removed when the menu is detached.
+         *
+         * @return If the drawable has the color of the menu.
          */
-        private void hideIfMenuColor(Drawable drawable) {
+        private boolean hideIfMenuColor(Drawable drawable) {
             // Checked every time: the drawable a wrapper holds can change.
             List<Drawable> chain = new ArrayList<>();
-            if (!isMenuColor(SolidColors.colorOf(drawable, chain))) return;
+            if (!isMenuColor(SolidColors.colorOf(drawable, chain))) return false;
 
             // A wrapper may not pass the filter on, so every drawable down to the color gets it.
             boolean hidden = false;
@@ -609,6 +774,7 @@ public final class GlassMenusPatch {
                 hidden |= hide(link);
             }
             if (hidden) drawable.invalidateSelf();
+            return true;
         }
 
         /**
@@ -690,7 +856,7 @@ public final class GlassMenusPatch {
     private static final class GlassDrawable extends Drawable {
         private static final float RIM_WIDTH = Dim.dp(1);
 
-        final float radius;
+        float radius;
         private boolean roundTop = true;
         private boolean roundBottom = true;
         private final Paint fill = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -706,7 +872,7 @@ public final class GlassMenusPatch {
             final boolean dark = Utils.isDarkModeEnabled();
             final int background = ThemeUtils.getAppBackgroundColor();
             // A menu is raised above the page, so it is a little lighter than the page, as in the app.
-            fill.setColor(blend(background, Color.WHITE, dark ? 0.08f : 0.6f));
+            fill.setColor(blendWithWhite(background, dark ? 0.08f : 0.6f));
 
             rim.setStyle(Paint.Style.STROKE);
             rim.setStrokeWidth(RIM_WIDTH);
@@ -720,6 +886,12 @@ public final class GlassMenusPatch {
             invalidateSelf();
         }
 
+        void setRadius(float radius) {
+            this.radius = radius;
+            updatePaths();
+            invalidateSelf();
+        }
+
         void setRoundCorners(boolean top, boolean bottom) {
             roundTop = top;
             roundBottom = bottom;
@@ -727,12 +899,13 @@ public final class GlassMenusPatch {
             invalidateSelf();
         }
 
-        private static int blend(int color, int with, float amount) {
+        private static int blendWithWhite(@ColorInt int color, float amount) {
             final float keep = 1 - amount;
+            final float white = 255 * amount;
             return Color.rgb(
-                    (int) (Color.red(color) * keep + Color.red(with) * amount),
-                    (int) (Color.green(color) * keep + Color.green(with) * amount),
-                    (int) (Color.blue(color) * keep + Color.blue(with) * amount));
+                    (int) (Color.red(color) * keep + white),
+                    (int) (Color.green(color) * keep + white),
+                    (int) (Color.blue(color) * keep + white));
         }
 
         @Override
@@ -792,6 +965,7 @@ public final class GlassMenusPatch {
         public void setColorFilter(@Nullable ColorFilter colorFilter) {
         }
 
+        @Deprecated
         @Override
         public int getOpacity() {
             return PixelFormat.TRANSLUCENT;

@@ -234,7 +234,10 @@ To sign in, press continue below"</string>
     <string name="morphe_prioritize_video_quality_dialog">If this setting is turned off, then older videos can show no video quality options</string>
 
     <!-- misc.audio.drc.disableDRCAudioPatch  -->
-    <string name="morphe_disable_drc_audio_title">Disable DRC audio</string>
+    <string name="morphe_disable_drc_audio_stream_title">Disable DRC audio</string>
+    <string name="morphe_disable_drc_audio_stream_summary">Plays the original audio instead of the version with compressed dynamic range</string>
+    <string name="morphe_disable_loudness_normalization_title">Disable loudness normalization</string>
+    <string name="morphe_disable_loudness_normalization_summary">Plays loud audio at its original volume instead of lowering it to a standard level</string>
 
     <!-- misc.audio.tracks.forceOriginalAudioPatch -->
     <string name="morphe_force_original_audio_title">Force original audio language</string>
@@ -245,6 +248,30 @@ To sign in, press continue below"</string>
     <string name="morphe_skip_silence_summary">Automatically skips silent pauses in video audio</string>
     <string name="morphe_skip_silence_minimum_pause_title">Minimum pause length</string>
     <string name="morphe_skip_silence_minimum_pause_summary">Only pauses at least this long are shortened. Takes effect when the next video starts</string>
+
+    <!-- misc.videoeffects.videoEffectsPatch -->
+    <string name="morphe_video_effect_title">Video effect</string>
+    <string name="morphe_video_effect_entry_none">Off</string>
+    <string name="morphe_video_effects_custom_title">Edit video effects</string>
+    <string name="morphe_video_effects_custom_summary">Change, rename, delete or add video effects. Effects are shader code, so an AI chatbot can write new ones</string>
+    <string name="morphe_video_effects_custom_empty">No video effects. Tap Add effect to make one.</string>
+    <string name="morphe_video_effects_custom_add">Add effect</string>
+    <string name="morphe_video_effects_custom_restore">Restore defaults</string>
+    <string name="morphe_video_effects_custom_add_title">New effect</string>
+    <string name="morphe_video_effects_custom_edit_title">Edit effect</string>
+    <string name="morphe_video_effects_custom_name_hint">Name</string>
+    <string name="morphe_video_effects_custom_name_empty">Enter a name for the effect</string>
+    <string name="morphe_video_effects_custom_name_exists">An effect with this name already exists</string>
+    <string name="morphe_video_effects_custom_copy_code">Copy code</string>
+    <string name="morphe_video_effects_custom_error_title">Effect has an error</string>
+    <string name="morphe_video_effects_custom_error_message">"Videos are shown without the effect until the code is fixed. Give this error to the AI that wrote the code:
+
+%s"</string>
+    <string name="morphe_video_effects_custom_copy_error">Copy error</string>
+    <string name="morphe_video_effects_custom_save_anyway">Save anyway</string>
+    <string name="morphe_video_effects_custom_delete">Delete</string>
+    <string name="morphe_video_effects_custom_delete_title">Delete effect?</string>
+    <string name="morphe_video_effects_custom_delete_message">%s will be deleted.</string>
 
     <!-- misc.proxy.networkProxyPatch -->
     <string name="morphe_proxy_screen_title">Network proxy</string>
@@ -375,6 +402,19 @@ If later turned off, it is recommended to clear the app data to prevent UI bugs"
     <string name="morphe_custom_font_file_summary">Pick a TTF or OTF font file</string>
     <string name="morphe_custom_font_file_invalid">The picked file is not a TTF or OTF font</string>
     <string name="morphe_custom_font_failed_to_load">Custom font could not be loaded and is turned off</string>
+
+    <!-- layout.glassmenus.glassMenusPatch -->
+    <string name="morphe_glass_menus_screen_title">Glass menus</string>
+    <string name="morphe_glass_menus_screen_summary">Menus as frosted glass over the blurred content behind them</string>
+    <string name="morphe_glass_menus_title">Enable glass menus</string>
+    <string name="morphe_glass_menus_summary">Shows menus and bottom sheets as frosted glass, with the content behind them blurred</string>
+    <string name="morphe_glass_menus_user_dialog_message">Menus are shown nearly opaque while the battery saver is on, or if the device does not support blur</string>
+    <string name="morphe_glass_menus_opacity_title">Glass opacity</string>
+    <string name="morphe_glass_menus_opacity_summary">How much the menu covers the blurred content (0 is clear, 100 is opaque)</string>
+    <string name="morphe_glass_menus_blur_title">Blur</string>
+    <string name="morphe_glass_menus_blur_summary">How much the content behind the menu is blurred</string>
+    <string name="morphe_glass_menus_dim_title">Dim</string>
+    <string name="morphe_glass_menus_dim_summary">How much the screen around a bottom sheet is darkened</string>
 
     <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
     <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->

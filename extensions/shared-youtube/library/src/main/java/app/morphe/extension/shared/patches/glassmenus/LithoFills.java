@@ -5,7 +5,7 @@
  * See the included NOTICE file for GPLv3 Section 7 terms that apply to this code.
  */
 
-package app.morphe.extension.youtube.patches.glassmenus;
+package app.morphe.extension.shared.patches.glassmenus;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -34,14 +34,27 @@ final class LithoFills {
 
     private static final Map<Drawable, Integer> colors = new WeakHashMap<>();
 
+    /**
+     * Counts the opaque fills Litho has drawn, so a menu can hide a new fill before it is drawn.
+     */
+    private static volatile int changes;
+
     static void onColor(Drawable drawable, @ColorInt int color) {
         synchronized (colors) {
             if (Color.alpha(color) >= 0xF0) {
                 colors.put(drawable, color);
+                changes++;
             } else {
                 colors.remove(drawable);
             }
         }
+    }
+
+    /**
+     * @return A number that changes when Litho draws an opaque fill.
+     */
+    static int changes() {
+        return changes;
     }
 
     /**
@@ -76,7 +89,7 @@ final class LithoFills {
      * @return The view that draws the drawable. Litho can mount it in a wrapper drawable.
      */
     @Nullable
-    private static View hostOf(Drawable drawable) {
+    static View hostOf(Drawable drawable) {
         Drawable.Callback callback = drawable.getCallback();
         while (callback instanceof Drawable parent) {
             callback = parent.getCallback();
@@ -84,7 +97,7 @@ final class LithoFills {
         return callback instanceof View view ? view : null;
     }
 
-    private static boolean isInside(View child, View view) {
+    static boolean isInside(View child, View view) {
         for (Object current = child; current instanceof View currentView; current = currentView.getParent()) {
             if (currentView == view) return true;
         }
