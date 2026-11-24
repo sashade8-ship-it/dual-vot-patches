@@ -12,11 +12,15 @@ import static app.morphe.extension.shared.StringRef.str;
 import android.content.Context;
 import android.preference.PreferenceScreen;
 
+import app.morphe.extension.reddit.patches.AlwaysShowHidePatch;
 import app.morphe.extension.reddit.patches.AutoModeratorCommentsPatch;
 import app.morphe.extension.reddit.patches.CollapseAllCommentsPatch;
+import app.morphe.extension.reddit.patches.ColorizeCommentIndentLinesPatch;
 import app.morphe.extension.reddit.patches.CopyTextPatch;
 import app.morphe.extension.reddit.patches.CustomFontPatch;
+import app.morphe.extension.reddit.patches.DisableHomeFeedAutoRefreshPatch;
 import app.morphe.extension.reddit.patches.DisableModernHomePatch;
+import app.morphe.extension.reddit.patches.DisableRefreshOnBackPatch;
 import app.morphe.extension.reddit.patches.DisableScreenshotPopupPatch;
 import app.morphe.extension.reddit.patches.FeedAutoScrollPatch;
 import app.morphe.extension.reddit.patches.FeedMediaMaxHeightPatch;
@@ -68,6 +72,7 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
     public boolean getSettingsStatus() {
         return DisableModernHomePatch.isPatchIncluded() ||
                 HomeFeedTabsPatch.isPatchIncluded() ||
+                DisableRefreshOnBackPatch.isPatchIncluded() ||
                 DisableScreenshotPopupPatch.isPatchIncluded() ||
                 CopyTextPatch.isPatchIncluded() ||
                 CustomFontPatch.isPatchIncluded() ||
@@ -80,9 +85,11 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
                 HideRelatedPostsSectionPatch.isPatchIncluded() ||
                 HideTrendingShelvesPatch.isPatchIncluded() ||
                 HideVideosForYouShelfPatch.isPatchIncluded() ||
+                AlwaysShowHidePatch.isPatchIncluded() ||
                 FullWidthFeedMediaPatch.isPatchIncluded() ||
                 MediaViewerFadePatch.isPatchIncluded() ||
                 KeepFeedPositionPatch.isPatchIncluded() ||
+                DisableHomeFeedAutoRefreshPatch.isPatchIncluded() ||
                 FeedMediaMaxHeightPatch.isPatchIncluded() ||
                 HideMediaViewerComponentsPatch.isPatchIncluded() ||
                 MediaViewerBlackBackgroundPatch.isPatchIncluded() ||
@@ -96,6 +103,7 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
                 FullScreenReplyPatch.isPatchIncluded() ||
                 AutoModeratorCommentsPatch.isPatchIncluded() ||
                 CollapseAllCommentsPatch.isPatchIncluded() ||
+                ColorizeCommentIndentLinesPatch.isPatchIncluded() ||
                 RememberCollapsedCommentsPatch.isPatchIncluded() ||
                 TabletGridFeedPatch.isPatchIncluded() ||
                 FeedAutoScrollPatch.isPatchIncluded() ||
@@ -130,6 +138,13 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
             addPreference(new BooleanSettingPreference(
                     context,
                     Settings.HOME_FEED_TABS
+            ));
+        }
+
+        if (DisableRefreshOnBackPatch.isPatchIncluded()) {
+            addPreference(new BooleanSettingPreference(
+                    context,
+                    Settings.DISABLE_REFRESH_ON_BACK
             ));
         }
 
@@ -208,6 +223,13 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
             ));
         }
 
+        if (AlwaysShowHidePatch.isPatchIncluded()) {
+            addPreference(new BooleanSettingPreference(
+                    context,
+                    Settings.ALWAYS_SHOW_HIDE
+            ));
+        }
+
         if (HighQualityAvatarsPatch.isPatchIncluded()) {
             addPreference(new BooleanSettingPreference(
                     context,
@@ -258,6 +280,13 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
             addPreference(new BooleanSettingPreference(
                     context,
                     Settings.KEEP_FEED_POSITION
+            ));
+        }
+
+        if (DisableHomeFeedAutoRefreshPatch.isPatchIncluded()) {
+            addPreference(new BooleanSettingPreference(
+                    context,
+                    Settings.DISABLE_HOME_FEED_AUTO_REFRESH
             ));
         }
 
@@ -336,6 +365,17 @@ public class LayoutPreferenceCategory extends ConditionalPreferenceCategory {
             addPreference(new CustomDialogListPreference(
                     context,
                     Settings.COLLAPSE_ALL_COMMENTS_SCOPE
+            ));
+        }
+
+        if (ColorizeCommentIndentLinesPatch.isPatchIncluded()) {
+            addPreference(new BooleanSettingPreference(
+                    context,
+                    Settings.COLORIZE_COMMENT_INDENT_LINES
+            ));
+            addPreference(new CustomDialogListPreference(
+                    context,
+                    Settings.COLORIZE_COMMENT_INDENT_LINES_PALETTE
             ));
         }
 

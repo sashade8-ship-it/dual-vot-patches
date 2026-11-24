@@ -30,6 +30,8 @@ To use an older version, you must &lt;b>uninstall&lt;/b> Reddit and then install
     <string name="morphe_hide_comment_ads_title">Hide comment ads</string>
 
     <string name="morphe_screen_navigation_bar_title">Navigation bar</string>
+    <string name="morphe_disable_bottom_bar_auto_hide_title">Disable bottom bar auto-hide</string>
+    <string name="morphe_disable_bottom_bar_auto_hide_summary">Keeps the bottom navigation bar visible while scrolling</string>
     <string name="morphe_hide_answers_button_title">Hide Answers button</string>
     <string name="morphe_hide_chat_button_title">Hide Chat button</string>
     <string name="morphe_hide_create_button_title">Hide Create button</string>
@@ -83,8 +85,7 @@ To use an older version, you must &lt;b>uninstall&lt;/b> Reddit and then install
 
     <string name="morphe_screen_layout_title">Layout</string>
     <string name="morphe_copy_text_title">Copy text</string>
-    <string name="morphe_copy_text_summary">Allows selecting and copying text in posts and comments. Disables collapsing comments</string>
-    <string name="morphe_copy_text_user_dialog_message">Collapsing comments will stop working while Copy text is enabled</string>
+    <string name="morphe_copy_text_summary">Allows selecting and copying text in posts and comments</string>
     <string name="morphe_custom_font_title">Custom font</string>
     <string name="morphe_custom_font_summary">Load a custom TTF or OTF font file from the path below. Enabling this also turns off Force system font</string>
     <string name="morphe_custom_font_file_path_title">Custom font file</string>
@@ -96,6 +97,8 @@ To use an older version, you must &lt;b>uninstall&lt;/b> Reddit and then install
     <string name="morphe_disable_modern_home_title">Disable modern home UI</string>
     <string name="morphe_home_feed_tabs_title">Home feed tabs</string>
     <string name="morphe_home_feed_tabs_summary">Shows the For You, Following and Popular tabs on the home feed, and allows swiping between them. Following needs a signed in account</string>
+    <string name="morphe_disable_refresh_on_back_title">Disable refresh on back to exit</string>
+    <string name="morphe_disable_refresh_on_back_summary">Back on the home feed no longer scrolls to the top and reloads. Press back twice to leave the app</string>
     <string name="morphe_disable_screenshot_popup_title">Disable screenshot popup</string>
     <string name="morphe_disable_screenshot_popup_summary">Disables the popup that appears when taking a screenshot</string>
     <string name="morphe_feed_auto_scroll_title">Feed auto-scroll</string>
@@ -129,13 +132,14 @@ To use an older version, you must &lt;b>uninstall&lt;/b> Reddit and then install
     <string name="morphe_hide_trending_shelves_title">Hide Trending shelves</string>
     <string name="morphe_hide_trending_shelves_summary">Hides the Trending shelves from feed and search suggestions</string>
     <string name="morphe_hide_videos_for_you_shelf_title">Hide \'Videos for you\' shelf</string>
+    <string name="morphe_always_show_hide_title">Always show Hide</string>
+    <string name="morphe_always_show_hide_summary">Shows Hide in the menu of feed posts, also when Reddit shows recommendation options such as \'Show fewer posts like this\'</string>
     <string name="morphe_remove_notification_dialog_title">Remove notification suggestion dialog</string>
     <string name="morphe_remove_notification_dialog_summary">Automatically dismisses the notification suggestion dialog when visiting a subreddit</string>
     <string name="morphe_high_quality_avatars_title">High quality avatars</string>
     <string name="morphe_high_quality_avatars_summary">Shows user avatars in full resolution</string>
     <string name="morphe_search_hidden_profiles_title">Search hidden profiles</string>
-    <string name="morphe_search_hidden_profiles_summary">Shows a button on profiles that hide their posts or comments, to find their posts with Reddit search</string>
-    <string name="morphe_search_hidden_profiles_button">Search</string>
+    <string name="morphe_search_hidden_profiles_summary">Makes the profile search find the posts of profiles that hide their posts or comments</string>
     <string name="morphe_show_flairs_in_home_feed_title">Show flairs in home feed</string>
     <string name="morphe_show_flairs_in_home_feed_summary">Shows post flair badges in the home feed</string>
     <string name="morphe_show_flairs_in_home_feed_user_dialog_message">Some feed items may not show a flair</string>
@@ -177,6 +181,8 @@ To use an older version, you must &lt;b>uninstall&lt;/b> Reddit and then install
     <string name="morphe_media_viewer_fade_summary">Strength of the dark fade behind the caption when viewing images and videos, from 0 (no fade) to 1 (Reddit\'s default)</string>
     <string name="morphe_keep_feed_position_title">Keep feed position</string>
     <string name="morphe_keep_feed_position_summary">Keeps the feed at the same position after closing a post, image or video, instead of moving the opened post to the top</string>
+    <string name="morphe_disable_home_feed_auto_refresh_title">Disable home feed auto-refresh</string>
+    <string name="morphe_disable_home_feed_auto_refresh_summary">Returning to the app after a while no longer reloads the home feed and moves it to the top. Pull to refresh still works</string>
     <string name="morphe_post_side_panel_title">Post side panel</string>
     <string name="morphe_post_side_panel_summary">On wide tablet screens, posts open in a panel next to the feed</string>
     <string name="morphe_post_side_panel_width_title">Panel width</string>
@@ -266,6 +272,12 @@ To use an older version, you must &lt;b>uninstall&lt;/b> Reddit and then install
     <string name="morphe_collapse_all_comments_scope_entry_replies">Replies (top comments stay open)</string>
     <string name="morphe_collapse_all_comments_scope_entry_nested_replies">Replies to replies (direct replies stay open)</string>
     <string name="morphe_collapse_all_comments_button">Collapse or expand all comments</string>
+    <string name="morphe_colorize_comment_indent_lines_title">Colorize comment indent lines</string>
+    <string name="morphe_colorize_comment_indent_lines_summary">Gives each reply level its own line color so long threads are easier to follow</string>
+    <string name="morphe_colorize_comment_indent_lines_palette_title">Line colors</string>
+    <string name="morphe_colorize_comment_indent_lines_palette_entry_rainbow">Rainbow (bright)</string>
+    <string name="morphe_colorize_comment_indent_lines_palette_entry_pastel">Pastel (soft)</string>
+    <string name="morphe_colorize_comment_indent_lines_palette_entry_muted">Muted (blends in with the page)</string>
     <string name="morphe_remember_collapsed_comments_title">Remember collapsed comments</string>
     <string name="morphe_remember_collapsed_comments_summary">Comments you collapse stay collapsed when you reopen the post</string>
     <string name="morphe_app_icon_title">App icon</string>

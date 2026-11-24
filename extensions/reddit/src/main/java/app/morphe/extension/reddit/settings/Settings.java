@@ -14,6 +14,7 @@ import static app.morphe.extension.shared.settings.Setting.parentNot;
 
 import app.morphe.extension.reddit.patches.AutoModeratorCommentsPatch.AutoModeratorComments;
 import app.morphe.extension.reddit.patches.CollapseAllCommentsPatch.CollapseAllScope;
+import app.morphe.extension.reddit.patches.ColorizeCommentIndentLinesPatch.CommentLinePalette;
 import app.morphe.extension.reddit.patches.FeedAutoScrollPatch.ScrollSpeed;
 import app.morphe.extension.reddit.patches.PostSidePanelPatch.FeedDim;
 import app.morphe.extension.reddit.patches.PostSidePanelPatch.PanelWidth;
@@ -31,6 +32,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_POST_ADS = new BooleanSetting("morphe_hide_post_ads", TRUE, true);
 
     // Navigation bar
+    public static final BooleanSetting DISABLE_BOTTOM_BAR_AUTO_HIDE = new BooleanSetting("morphe_disable_bottom_bar_auto_hide", FALSE);
     public static final BooleanSetting HIDE_ANSWERS_BUTTON = new BooleanSetting("morphe_hide_answers_button", FALSE, true);
     public static final BooleanSetting HIDE_CHAT_BUTTON = new BooleanSetting("morphe_hide_chat_button", FALSE, true);
     public static final BooleanSetting HIDE_CREATE_BUTTON = new BooleanSetting("morphe_hide_create_button", FALSE, true);
@@ -69,13 +71,18 @@ public class Settings extends BaseSettings {
     public static final StringSetting KEYWORD_FILTERS = new StringSetting("morphe_keyword_filters", "");
 
     // Layout
+    public static final BooleanSetting ALWAYS_SHOW_HIDE = new BooleanSetting("morphe_always_show_hide", FALSE);
     public static final EnumSetting<AutoModeratorComments> AUTOMODERATOR_COMMENTS = new EnumSetting<>("morphe_automoderator_comments", AutoModeratorComments.SHOW);
     public static final BooleanSetting COLLAPSE_ALL_COMMENTS = new BooleanSetting("morphe_collapse_all_comments", TRUE);
     public static final EnumSetting<CollapseAllScope> COLLAPSE_ALL_COMMENTS_SCOPE = new EnumSetting<>("morphe_collapse_all_comments_scope", CollapseAllScope.TOP_COMMENTS, parent(COLLAPSE_ALL_COMMENTS));
-    public static final BooleanSetting COPY_TEXT = new BooleanSetting("morphe_copy_text", FALSE, true, "morphe_copy_text_user_dialog_message");
+    public static final BooleanSetting COLORIZE_COMMENT_INDENT_LINES = new BooleanSetting("morphe_colorize_comment_indent_lines", FALSE);
+    public static final EnumSetting<CommentLinePalette> COLORIZE_COMMENT_INDENT_LINES_PALETTE = new EnumSetting<>("morphe_colorize_comment_indent_lines_palette", CommentLinePalette.RAINBOW, parent(COLORIZE_COMMENT_INDENT_LINES));
+    public static final BooleanSetting COPY_TEXT = new BooleanSetting("morphe_copy_text", FALSE, true);
     public static final BooleanSetting CUSTOM_FONT = new BooleanSetting("morphe_custom_font", FALSE, true);
     public static final StringSetting CUSTOM_FONT_FILE_PATH = new StringSetting("morphe_custom_font_file_path", "", true);
+    public static final BooleanSetting DISABLE_HOME_FEED_AUTO_REFRESH = new BooleanSetting("morphe_disable_home_feed_auto_refresh", FALSE);
     public static final BooleanSetting DISABLE_MODERN_HOME = new BooleanSetting("morphe_disable_modern_home", FALSE, true);
+    public static final BooleanSetting DISABLE_REFRESH_ON_BACK = new BooleanSetting("morphe_disable_refresh_on_back", FALSE);
     public static final BooleanSetting DISABLE_SCREENSHOT_POPUP = new BooleanSetting("morphe_disable_screenshot_popup", TRUE, true);
     public static final BooleanSetting FEED_AUTO_SCROLL = new BooleanSetting("morphe_feed_auto_scroll", FALSE, true);
     public static final EnumSetting<ScrollSpeed> FEED_AUTO_SCROLL_SPEED = new EnumSetting<>("morphe_feed_auto_scroll_speed", ScrollSpeed.MEDIUM, parent(FEED_AUTO_SCROLL));
