@@ -39,3 +39,33 @@ internal object TouchFeedbackDrawableConstructorFingerprint : Fingerprint(
         )
     )
 )
+
+/**
+ * Shows the "Please wait" progress dialog before the download quality menu. Matches 2 methods: the download button of
+ * a video and the download option of a menu.
+ */
+internal object DownloadProgressDialogFingerprint : Fingerprint(
+    filters = listOf(
+        resourceLiteral(ResourceType.STRING, "offline_stream_selection_waiting"),
+        methodCall(smali = "Landroid/app/ProgressDialog;->show()V"),
+    )
+)
+
+/**
+ * Shows a menu of a command as a list popup anchored to the view that opened it, such as the dropdown of the
+ * Shorts header, or the menus of the feed on the accounts of an A/B test. Matches 1 or 2 methods.
+ */
+internal object MenuListPopupWindowShowFingerprint : Fingerprint(
+    returnType = "V",
+    filters = listOf(
+        methodCall(smali = "Landroid/widget/ListPopupWindow;->setDropDownGravity(I)V"),
+        methodCall(
+            smali = "Landroid/widget/ListPopupWindow;->setAnchorView(Landroid/view/View;)V",
+            location = MatchAfterWithin(5)
+        ),
+        methodCall(
+            smali = "Landroid/widget/ListPopupWindow;->show()V",
+            location = MatchAfterWithin(5)
+        ),
+    )
+)

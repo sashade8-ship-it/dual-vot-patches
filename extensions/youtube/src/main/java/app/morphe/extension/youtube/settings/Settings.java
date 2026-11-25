@@ -63,7 +63,9 @@ import app.morphe.extension.youtube.patches.FeedCardLayoutPatch.FeedCardLayout;
 import app.morphe.extension.youtube.patches.FeedEngagementCountsPatch.FeedCountsPosition;
 import app.morphe.extension.youtube.patches.ForceAnimationsPatch.AnimationsMode;
 import app.morphe.extension.youtube.patches.ForceFullscreenLandscapePatch.LargeScreenAvailability;
+import app.morphe.extension.youtube.patches.FullscreenVideoScalePatch.VideoAlignmentAvailability;
 import app.morphe.extension.youtube.patches.FullscreenVideoScalePatch.VideoScaleMode;
+import app.morphe.extension.youtube.patches.FullscreenVideoScalePatch.VideoVerticalAlignment;
 import app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RestoreOldPlayerButtonsAvailability;
 import app.morphe.extension.youtube.patches.LiveChatTranslatePatch.DeepLAvailability;
 import app.morphe.extension.youtube.patches.LiveChatTranslatePatch.TranslationProvider;
@@ -199,7 +201,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final StringSetting  HIDE_FEED_FLYOUT_MENU_FILTER_STRINGS = new StringSetting("morphe_hide_feed_flyout_menu_filter_strings", "", true, parent(HIDE_FEED_FLYOUT_MENU));
     public static final BooleanSetting HIDE_FLOATING_MICROPHONE_BUTTON = new BooleanSetting("morphe_hide_floating_microphone_button", TRUE, true);
     public static final BooleanSetting HIDE_GET_PREMIUM_BUTTON = new BooleanSetting("morphe_hide_get_premium_button", FALSE);
-    public static final BooleanSetting HIDE_HORIZONTAL_SHELVES = new BooleanSetting("morphe_hide_horizontal_shelves", TRUE);
+    public static final BooleanSetting HIDE_HORIZONTAL_SHELVES = new BooleanSetting("morphe_hide_horizontal_shelves", FALSE);
     public static final BooleanSetting HIDE_IMAGE_SHELF = new BooleanSetting("morphe_hide_image_shelf", TRUE);
     public static final BooleanSetting HIDE_HISTORY_SHELF = new BooleanSetting("morphe_hide_history_shelf", FALSE);
     public static final BooleanSetting HIDE_INVITE_TO_MESSAGE_CARD = new BooleanSetting("morphe_hide_invite_to_message_card", FALSE);
@@ -349,6 +351,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final EnumSetting<FullscreenMode> EXIT_FULLSCREEN = new EnumSetting<>("morphe_exit_fullscreen", FullscreenMode.DISABLED);
     public static final BooleanSetting FORCE_FULLSCREEN_LANDSCAPE = new BooleanSetting("morphe_force_fullscreen_landscape", FALSE, new LargeScreenAvailability());
     public static final EnumSetting<VideoScaleMode> FULLSCREEN_VIDEO_SCALE = new EnumSetting<>("morphe_fullscreen_video_scale", VideoScaleMode.DEFAULT);
+    public static final EnumSetting<VideoVerticalAlignment> FULLSCREEN_VIDEO_ALIGNMENT = new EnumSetting<>("morphe_fullscreen_video_alignment", VideoVerticalAlignment.CENTER, new VideoAlignmentAvailability());
     public static final BooleanSetting HIDE_ASK_GEMINI_BUTTON = new BooleanSetting("morphe_hide_ask_gemini_button", FALSE);
     public static final BooleanSetting HIDE_AUTOPLAY_PREVIEW = new BooleanSetting("morphe_hide_autoplay_preview", FALSE, true);
     public static final BooleanSetting HIDE_CHANNEL_BAR = new BooleanSetting("morphe_hide_channel_bar", FALSE);
@@ -383,6 +386,7 @@ public class Settings extends SharedYouTubeSettings {
     // Overlay buttons
     public static final BooleanSetting FULLSCREEN_VIDEO_SCALE_BUTTON = new BooleanSetting("morphe_fullscreen_video_scale_button", FALSE, true);
     public static final BooleanSetting FULLSCREEN_VIDEO_SCALE_BUTTON_FULLSCREEN_ONLY = new BooleanSetting("morphe_fullscreen_video_scale_button_fullscreen_only", FALSE, parent(FULLSCREEN_VIDEO_SCALE_BUTTON));
+    public static final BooleanSetting FULLSCREEN_VIDEO_ALIGNMENT_BUTTON = new BooleanSetting("morphe_fullscreen_video_alignment_button", FALSE, true);
     public static final BooleanSetting COPY_VIDEO_LINK_BUTTON = new BooleanSetting("morphe_copy_video_link_button", FALSE, true);
     public static final BooleanSetting COPY_VIDEO_LINK_WITH_TIMESTAMP_BUTTON = new BooleanSetting("morphe_copy_video_link_with_timestamp_button", TRUE, true, parent(COPY_VIDEO_LINK_BUTTON));
     public static final BooleanSetting HIDE_AUTOPLAY_BUTTON = new BooleanSetting("morphe_hide_autoplay_button", FALSE, true);
@@ -717,6 +721,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final StringSetting CUSTOM_MUSIC_PACKAGE_NAME = new StringSetting("morphe_custom_music_package_name", "", true, parent(OVERRIDE_YOUTUBE_MUSIC_BUTTONS));
     public static final EnumSetting<StartPage> CHANGE_START_PAGE = new EnumSetting<>("morphe_change_start_page", StartPage.DEFAULT, true);
     public static final BooleanSetting HIDE_STATUS_BAR = new BooleanSetting("morphe_hide_status_bar", FALSE, true);
+    public static final BooleanSetting HIDE_STATUS_BAR_AVOID_CUTOUT = new BooleanSetting("morphe_hide_status_bar_avoid_cutout", FALSE, true, parent(HIDE_STATUS_BAR));
     public static final BooleanSetting FIX_STATUS_BAR_LAYOUT = new BooleanSetting("morphe_fix_status_bar_layout", TRUE, true);
     public static final BooleanSetting WINDOW_BELOW_STATUS_BAR = new BooleanSetting("morphe_window_below_status_bar", FALSE, false, false);
     public static final BooleanSetting WINDOW_ABOVE_NAVIGATION_BAR = new BooleanSetting("morphe_window_above_navigation_bar", FALSE, false, false);
