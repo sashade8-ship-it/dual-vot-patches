@@ -494,6 +494,7 @@ val hideLayoutComponentsPatch = patch(
         addLithoFilter(CUSTOM_FILTER)
         addSpanFilter(SANITIZE_VIDEO_SUBTITLE_FILTER)
         addSpanFilter(SEARCH_LINKS_FILTER)
+        hookElement("$KEYWORD_FILTER->onElementLoaded")
         hookTreeNodeResult("$COMMENTS_FILTER->hideCommentsFilterBarOptions")
 
         // region hide mix playlists
@@ -659,6 +660,12 @@ val hideLayoutComponentsPatch = patch(
         // region hide page header buttons
 
         hookElement("$LAYOUT_COMPONENTS_FILTER->hidePageHeaderButtons")
+
+        // endregion
+
+        // region hide 'Members only' chip
+
+        hookElement("$LAYOUT_COMPONENTS_FILTER->hideMembersOnlyChip")
 
         // endregion
 

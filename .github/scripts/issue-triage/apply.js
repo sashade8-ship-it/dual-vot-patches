@@ -9,6 +9,7 @@ const {
   LABEL_BUG,
   LABEL_FEATURE,
   MISSING_INFO_MARKER,
+  VERSION_CLOSE_MARKER,
   POSSIBLE_DUPLICATE_PREFIX,
   ensureLabel,
   removeLabelIfPresent,
@@ -104,14 +105,18 @@ function parseVersionProblems(json) {
 
 /**
  * Comments the version problems, and closes the issue as not planned unless closeIssue is false.
+ * A closed issue is reopened by reopen-edited.js when the author edits it and the versions are then supported.
  */
 async function commentVersionProblems(github, owner, repo, issueNumber, versionProblems, closeIssue) {
-  await github.rest.issues.createComment({
-    owner,
-    repo,
-    issue_number: issueNumber,
-    body: versionProblems.join('\n\n'),
-  });
+  const body = closeIssue
+    ? [
+        VERSION_CLOSE_MARKER,
+        ...versionProblems,
+        'Once this is fixed, edit this issue with the new versions and it will be reopened automatically. ' +
+          'Please do not open a new issue for this bug.',
+      ].join('\n\n')
+    : versionProblems.join('\n\n');
+  await github.rest.issues.createComment({ owner, repo, issue_number: issueNumber, body });
   if (!closeIssue) return;
   await github.rest.issues.update({
     owner,
@@ -136,8 +141,18 @@ module.exports = async ({ github, getOctokit, context, core }) => {
     core.info(`#${issueNumber} is closed, only the title and type label are changed`);
   }
 
+  let decision = null;
+  if (process.env.DECISION) {
+    try {
+      decision = JSON.parse(process.env.DECISION);
+    } catch (error) {
+      // Fails the run, but an issue with version problems is still closed below.
+      core.setFailed(`Could not parse the triage decision: ${error.message}`);
+    }
+  }
+
   // Without a decision, such as when the analyze job failed, an issue with version problems is still closed.
-  if (!process.env.DECISION) {
+  if (!decision) {
     if (!open || versionProblems.length === 0) {
       core.info('No triage decision, nothing to do');
       return;
@@ -148,14 +163,6 @@ module.exports = async ({ github, getOctokit, context, core }) => {
       .addList(['No triage decision. Close for its versions'])
       .write();
     if (live) await commentVersionProblems(github, owner, repo, issueNumber, versionProblems, true);
-    return;
-  }
-
-  let decision;
-  try {
-    decision = JSON.parse(process.env.DECISION);
-  } catch (error) {
-    core.setFailed(`Could not parse the triage decision: ${error.message}`);
     return;
   }
 
