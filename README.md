@@ -143,14 +143,14 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 #### Patches list
 
 <!-- PATCHES_START -->
-> **[v2.4.0-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.4.0-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;267 patches total
+> **[v2.5.0-dev.2-dualvot.8.5.4](https://github.com/sashade8-ship-it/dual-vot-patches/releases/tag/v2.5.0-dev.2-dualvot.8.5.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;267 patches total
 <details>
 <summary>📦 YouTube Music&nbsp;&nbsp;•&nbsp;&nbsp;63 patches</summary>
 <br>
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;9.47.51 | 🧪&nbsp;9.46.51 | 🧪&nbsp;9.45.51 | 🧪&nbsp;9.44.52 | 9.30.53 | 9.20.53 | 9.15.51 |
+| 🧪&nbsp;9.47.52 | 🧪&nbsp;9.46.55 | 🧪&nbsp;9.45.52 | 🧪&nbsp;9.44.52 | 9.30.53 | 9.20.53 | 9.15.51 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
@@ -227,7 +227,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 
 **🎯 Supported versions:**
 
-| 🧪&nbsp;21.47.483 | 🧪&nbsp;21.46.522 | 🧪&nbsp;21.45.82 | 21.30.216 | 21.28.208 | 21.23.492 | 20.51.39 | 20.26.46 |
+| 🧪&nbsp;21.47.483 | 🧪&nbsp;21.46.524 | 🧪&nbsp;21.45.90 | 21.30.216 | 21.28.208 | 21.23.492 | 20.51.39 | 20.26.46 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
@@ -298,7 +298,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Hide player overlay buttons](#hide-player-overlay-buttons) | Adds options to hide the player Cast, Autoplay, Captions, Previous & Next buttons, and to hide or change the opacity of the player control buttons background. |  |
 | [Hide related video overlay](#hide-related-video-overlay) | Adds an option to hide the related video overlay shown when swiping up in fullscreen. |  |
 | [Hide related videos](#hide-related-videos) | Adds options to hide related videos. |  |
-| [Hide status bar](#hide-status-bar) | Adds an option to hide the system status bar. Swipe down from the top edge to show it for a moment. |  |
+| [Hide status bar](#hide-status-bar) | Adds options to hide the system status bar, always or only in the tabletop mode of foldable devices. Swipe down from the top edge to show it for a moment. |  |
 | [Hide timestamp](#hide-timestamp) | Adds an option to hide the timestamp in the bottom left of the video player. |  |
 | [Hide video action buttons](#hide-video-action-buttons) | Adds options to hide video action buttons in fullscreen and portrait modes. |  |
 | [Hold gesture](#hold-gesture) | Adds options to change the playback speed, to keep it and to run actions by dragging after tapping and holding the video player. |  |
@@ -342,7 +342,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Seekbar](#seekbar) | Adds options to show old seekbar thumbnails, disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, enabling seeking in live streams, customizing the seekbar thumb with an image or GIF, and expanding the live stream DVR duration. |  |
 | [Series tracking](#series-tracking) | Adds a series library to History with local progress and episode continuation. This patch works with YouTube 21.02 and newer. |  |
 | [Settings menu filter](#settings-menu-filter) | Adds an option to hide items on the standard YouTube settings screen by their visible name. |  |
-| [Shorts autoplay](#shorts-autoplay) | Adds options to automatically play the next Short. |  |
+| [Shorts autoplay](#shorts-autoplay) | Adds options to automatically play the next Short, and a Shorts player menu item to turn it on or off. |  |
 | [Shorts icon style](#shorts-icon-style) | Adds an option to change the style of the Shorts action button icons. | • Custom icons |
 | [Skip live Shorts](#skip-live-shorts) | Automatically skips live streams that appear in the Shorts feed. |  |
 | [Skip silence](#skip-silence) | Adds an option to automatically skip silent pauses in audio playback. |  |
@@ -378,7 +378,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 |----------|----------------|-----------|
 | [Always show Hide](#always-show-hide) | Adds an option to always show Hide in the menu of feed posts, also when Reddit replaces it with recommendation options. This patch works with Reddit 2026.40.0 and newer. |  |
 | [App icon](#app-icon) | Adds an option to select from the Reddit app icons available in the manifest. |  |
-| [AutoModerator comments](#automoderator-comments) | Adds an option to collapse or hide comments from u/AutoModerator. |  |
+| [AutoModerator comments](#automoderator-comments) | Adds an option to collapse or hide comments from u/AutoModerator, other bot accounts and comments pinned by moderators. |  |
 | [Collapse all comments](#collapse-all-comments) | Adds an option to show a button next to the comment count of a post that collapses or expands all comments. This patch works with Reddit 2026.40.0 and newer. |  |
 | [Colorize comment indent lines](#colorize-comment-indent-lines) | Adds an option to give each reply level in a comment thread its own line color. |  |
 | [Copy text](#copy-text) | Adds an option to make post and comment text selectable and copyable. This patch works with Reddit 2026.24.0 and newer. |  |
