@@ -83,10 +83,7 @@ val loopCountPatch = patch(
             it.classDef.addPatchInterface(
                 EXTENSION_MENU_INTERFACE,
                 "patch_closeMenu",
-                """
-                    invoke-virtual { p0 }, ${it.originalMethod}
-                    return-void
-                """
+                it.originalMethod
             )
 
             it.method.addInstructionsWithLabels(
@@ -117,11 +114,8 @@ val loopCountPatch = patch(
 
         navigationIntentHook(EXTENSION_CLASS, "onNavigation")
 
-        val requestConstructor = NavigationRequestFingerprint.originalMethod
-        val requestType = requestConstructor.definingClass
-        val setRepeatMode = navigatorSetRepeatModeFingerprint(
-            requestConstructor.parameterTypes.drop(1).map { it.toString() }
-        ).originalMethod
+        val requestType = NavigationRequestFingerprint.originalClassDef.type
+        val setRepeatMode = NavigatorSetRepeatModeFingerprint.originalMethod
 
         // After the navigation hook, as the hook can replace the navigation methods.
         // Each navigator gives itself to the extension before the navigation hook of this patch runs.
@@ -138,10 +132,7 @@ val loopCountPatch = patch(
                 navigatorClass.addPatchInterface(
                     EXTENSION_NAVIGATOR_INTERFACE,
                     "patch_setNavigatorRepeatMode",
-                    """
-                        invoke-interface { p0, p1 }, $setRepeatMode
-                        return-void
-                    """
+                    setRepeatMode
                 )
             }
 

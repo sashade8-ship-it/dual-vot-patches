@@ -142,6 +142,7 @@ val miniplayerPatch = patch(
         if (!is_21_29_or_greater) {
             preferences += NonInteractivePreference(
                 key = "morphe_miniplayer_opacity",
+                summaryKey = "morphe_opacity_summary",
                 tag = "app.morphe.extension.shared.settings.preference.SeekBarPreference"
             )
         }
@@ -536,11 +537,7 @@ val miniplayerPatch = patch(
             }
         }
 
-        Fingerprint(
-            definingClass = MiniplayerHorizontalDragPlaybackFingerprint.instructionMatches[2]
-                .getMethodCalled().definingClass,
-            name = "onAnimationEnd",
-        ).method.addInstructionsWithLabels(
+        MiniplayerHorizontalDragAnimationEndFingerprint.method.addInstructionsWithLabels(
             0,
             """
                 invoke-static { }, $EXTENSION_CLASS->pausePlaybackWithHorizontalDrag()Z

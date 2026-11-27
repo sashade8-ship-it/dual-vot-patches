@@ -45,6 +45,7 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.shared.misc.settings.preference.TextPreference
 import app.morphe.patches.shared.misc.settings.preference.noTitleUnsortedPreferenceCategory
 import app.morphe.patches.youtube.layout.seekbar.seekbarColorPatch
+import app.morphe.patches.youtube.misc.engagement.engagementPanelHookPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_06_or_greater
@@ -59,6 +60,7 @@ import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.shared.LayoutConstructorFingerprint
 import app.morphe.util.findInstructionIndicesReversedOrThrow
 import app.morphe.util.insertLiteralOverride
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 private const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/theme/ThemePatch;"
@@ -386,6 +388,8 @@ val themePatch = baseThemePatch(
             settingsPatch,
             seekbarColorPatch,
             versionCheckPatch,
+            // The fade of the collapsed description is removed only in the description panel.
+            engagementPanelHookPatch,
             baseThemeResourcePatch(
                 includeLightColor = true,
                 colorNamesDark = youTubeColorNamesDark,
@@ -404,6 +408,34 @@ val themePatch = baseThemePatch(
     executeBlock = {
         // The feed video cards have the same color as backgrounds that are themed.
         lithoDrawableColorHook("$EXTENSION_CLASS->getFeedCardColor(Landroid/graphics/drawable/Drawable;I)I")
+
+        // The colors of the linear gradients of Elements components are values the server gives, such as the fade
+        // at the end of the collapsed description into the background of the app.
+        ElementsLinearGradientConstructorFingerprint.matchAll().forEach {
+            it.method.addInstructions(
+                0,
+                """
+                    invoke-static/range { p4 .. p4 }, $EXTENSION_CLASS->getGradientColors([I)[I
+                    move-result-object p4
+                """
+            )
+        }
+
+        // The view below the ambient mode image is always black, and 21.47+ shows it behind the whole watch page.
+        CinematicBackgroundPropertyFingerprint.let {
+            it.method.apply {
+                val index = it.instructionMatches[1].index
+                val register = getInstruction<FiveRegisterInstruction>(index).registerD
+
+                addInstructions(
+                    index,
+                    """
+                        invoke-static { v$register }, $EXTENSION_CLASS->getCinematicBackgroundColor(I)I
+                        move-result v$register
+                    """
+                )
+            }
+        }
 
         // A patched theme color cannot be changed, so there is nothing to select.
         val colorPreferences = if (usePatchedThemeColor) {
