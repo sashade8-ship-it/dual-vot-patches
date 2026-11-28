@@ -43,6 +43,7 @@ public class Settings extends BaseSettings {
 
     // Navigation bar
     public static final BooleanSetting DISABLE_BOTTOM_BAR_AUTO_HIDE = new BooleanSetting("morphe_disable_bottom_bar_auto_hide", FALSE);
+    public static final BooleanSetting HIGH_CONTRAST_NAVIGATION_BUTTONS = new BooleanSetting("morphe_high_contrast_navigation_buttons", FALSE, true);
     public static final BooleanSetting GLASS_NAVIGATION_BAR = new BooleanSetting("morphe_glass_navigation_bar", FALSE, true);
     public static final EnumSetting<GlassColor> GLASS_NAVIGATION_BAR_COLOR = new EnumSetting<>("morphe_glass_navigation_bar_color", GlassColor.AUTO, true, parent(GLASS_NAVIGATION_BAR));
     public static final EnumSetting<GlassStyle> GLASS_NAVIGATION_BAR_STYLE = new EnumSetting<>("morphe_glass_navigation_bar_style", GlassStyle.TINTED, true, parent(GLASS_NAVIGATION_BAR));
@@ -59,6 +60,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_ANSWERS_BUTTON = new BooleanSetting("morphe_hide_answers_button", FALSE, true);
     public static final BooleanSetting HIDE_CHAT_BUTTON = new BooleanSetting("morphe_hide_chat_button", FALSE, true);
     public static final BooleanSetting HIDE_CREATE_BUTTON = new BooleanSetting("morphe_hide_create_button", FALSE, true);
+    public static final BooleanSetting SUBREDDIT_CREATE_BUTTON = new BooleanSetting("morphe_subreddit_create_button", FALSE, true, parent(HIDE_CREATE_BUTTON));
     public static final BooleanSetting HIDE_DISCOVER_BUTTON = new BooleanSetting("morphe_hide_discover_button", FALSE, true);
     public static final BooleanSetting HIDE_GAMES_BUTTON = new BooleanSetting("morphe_hide_games_button", FALSE, true);
 

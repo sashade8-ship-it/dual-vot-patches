@@ -185,6 +185,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting HIDE_ACCOUNT_MENU_DOWNLOADS = new BooleanSetting("morphe_hide_account_menu_downloads", FALSE);
     public static final BooleanSetting HIDE_ACCOUNT_MENU_LIKED_VIDEOS = new BooleanSetting("morphe_hide_account_menu_liked_videos", FALSE);
     public static final BooleanSetting HIDE_ACCOUNT_MENU_WATCH_LATER = new BooleanSetting("morphe_hide_account_menu_watch_later", FALSE);
+    public static final BooleanSetting HIDE_ACCOUNT_MENU_PRIVACY_TOS_FOOTER = new BooleanSetting("morphe_hide_account_menu_privacy_tos_footer", FALSE);
     public static final BooleanSetting HIDE_ALBUM_CARDS = new BooleanSetting("morphe_hide_album_cards", FALSE, true);
     public static final BooleanSetting HIDE_ARTIST_CARDS = new BooleanSetting("morphe_hide_artist_cards", FALSE);
     public static final BooleanSetting HIDE_CHANNEL_BUTTONS = new BooleanSetting("morphe_hide_channel_buttons", FALSE);
@@ -346,6 +347,7 @@ public class Settings extends SharedYouTubeSettings {
     public static final BooleanSetting DISABLE_FULLSCREEN_SLIDING_GESTURE = new BooleanSetting("morphe_disable_fullscreen_sliding_down_gesture", FALSE);
     public static final BooleanSetting DISABLE_FULLSCREEN_DRAGGED_DOWN_GESTURE = new BooleanSetting("morphe_disable_fullscreen_dragged_down_gesture", FALSE);
     public static final BooleanSetting DISABLE_FULLSCREEN_ZOOM_GESTURE = new BooleanSetting("morphe_disable_fullscreen_zoom_gesture", FALSE);
+    public static final BooleanSetting RESTORE_OLD_CAST_BEHAVIOR = new BooleanSetting("morphe_restore_old_cast_behavior", FALSE, true);
     public static final BooleanSetting RESTORE_PINCH_TO_ZOOM = new BooleanSetting("morphe_restore_pinch_to_zoom", FALSE);
     public static final BooleanSetting DISABLE_ROLLING_NUMBER_ANIMATIONS = new BooleanSetting("morphe_disable_rolling_number_animations", FALSE);
     public static final EnumSetting<FullscreenMode> EXIT_FULLSCREEN = new EnumSetting<>("morphe_exit_fullscreen", FullscreenMode.DISABLED);
@@ -1650,7 +1652,7 @@ public class Settings extends SharedYouTubeSettings {
         SeekBarPreference.register(new SeekBarConfig(VOT_MAX_SPEECH_RATE,
                 10, 25, 1, "x", 10));
         SeekBarPreference.register(new SeekBarConfig(VIDEO_DELAY,
-                0, 5000, 25, "ms"));
+                -5000, 5000, 25, "ms"));
         SeekBarPreference.register(new SeekBarConfig(RIVE_SPLASH_SCREEN_DURATION,
                 1000, 3000, 200, "s", 1000));
         SeekBarPreference.register(new SeekBarConfig(NICONICO_COMMENTS_FONT_SIZE,
